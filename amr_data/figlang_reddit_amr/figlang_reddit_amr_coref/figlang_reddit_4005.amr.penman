@@ -1,0 +1,43 @@
+# ::snt The reason the Gardens terrain has terrible performance isn't because of "banner wind physics"; it's because it's pushing twice as many draw calls, and up to 4x the polygon count.
+# ::tokens ["The", "reason", "the", "Gardens", "terrain", "has", "terrible", "performance", "is", "n't", "because", "of", "\"", "banner", "wind", "physics", "\"", ";", "it", "'s", "because", "it", "'s", "pushing", "twice", "as", "many", "draw", "calls", ",", "and", "up", "to", "4x", "the", "polygon", "count", "."]
+# ::lemmas ["the", "reason", "the", "Gardens", "terrain", "have", "terrible", "performance", "be", "not", "because", "of", "\"", "banner", "wind", "physic", "\"", ";", "it", "be", "because", "it", "be", "push", "twice", "as", "many", "draw", "call", ",", "and", "up", "to", "4x", "the", "polygon", "count", "."]
+(c1-9 / multi-sentence
+      :snt1 (c1-4 / cause-01
+                  :ARG0 (c1-20 / physics
+                               :mod (c1-5 / wind
+                                          :ARG1-of (c1-8 / thin-03)))
+                  :ARG1 (c1-19 / perform-02
+                               :ARG0 (c1-6 / terrain
+                                           :name (c1-10 / name
+                                                        :op1 "Gardens"))
+                               :ARG1-of (c1-11 / terrible-01))
+                  :polarity -)
+      :snt2 (c1-0 / cause-01
+                  :ARG0 (c1-16 / and
+                               :op1 (c1-13 / push-01
+                                           :ARG0 (c1-3 / it)
+                                           :ARG1 (c1-7 / call-02
+                                                       :mod (c1-1 / draw-02)
+                                                       :ARG1-of (c1-17 / have-quant-91
+                                                                       :ARG3 (c1-14 / times
+                                                                                    :quant 2)
+                                                                       :ARG4 (c1-15 / count-01
+                                                                                    :ARG1 (c1-12 / polygon)))))
+                               :op2 (c1-18 / up-to
+                                           :op1 (c1-2 / product-of
+                                                      :op2 c1-15
+                                                      :op1 4)))
+                  :ARG1 c1-19))
+
+# ::snt Why is it drawing so many triangles though?
+# ::tokens ["Why", "is", "it", "drawing", "so", "many", "triangles", "though", "?"]
+# ::lemmas ["why", "be", "it", "draw", "so", "many", "triangle", "though", "?"]
+(c2-4 / have-concession-91
+      :ARG1 (c2-3 / cause-01
+                  :ARG0 (c2-2 / amr-unknown)
+                  :ARG1 (c2-0 / draw-01
+                              :ARG0 (c2-7 / it)
+                              :ARG1 (c2-5 / triangle
+                                          :ARG1-of (c2-6 / have-quant-91
+                                                         :ARG2 (c2-8 / many)
+                                                         :ARG3 (c2-1 / so))))))

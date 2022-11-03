@@ -1,0 +1,57 @@
+# ::snt : More shots fired just off Parliament Hill. Police telling everyone to take cover.
+# ::tokens [":", "More", "shots", "fired", "just", "off", "Parliament", "Hill", ".", "Police", "telling", "everyone", "to", "take", "cover", "."]
+# ::lemmas [":", "more", "shot", "fire", "just", "off", "Parliament", "Hill", ".", "police", "tell", "everyone", "to", "take", "cover", "."]
+(c1-5 / multi-sentence
+      :snt1 (c1-10 / fire-01
+                   :ARG1 (c1-6 / shot
+                               :quant (c1-2 / more))
+                   :location (c1-9 / off
+                                   :op1 (c1-3 / building
+                                              :name (c1-7 / name
+                                                          :op1 "Parliament"
+                                                          :op2 "Hill"))
+                                   :mod (c1-1 / just)))
+      :snt2 (c1-0 / tell-01
+                  :ARG0 (c1-8 / police)
+                  :ARG1 (c1-11 / cover-01
+                               :ARG1 (c1-4 / everyone
+                                           :ARG2-of c1-0))))
+
+# ::snt ": More shots fired just off Parliament Hill. Police telling everyone to take cover.
+# ::tokens ["\"", ":", "More", "shots", "fired", "just", "off", "Parliament", "Hill", ".", "Police", "telling", "everyone", "to", "take", "cover", "."]
+# ::lemmas ["\"", ":", "more", "shot", "fire", "just", "off", "Parliament", "Hill", ".", "police", "tell", "everyone", "to", "take", "cover", "."]
+(c2-5 / multi-sentence
+      :snt1 (c2-10 / fire-01
+                   :ARG1 (c2-6 / shot
+                               :quant (c2-2 / more))
+                   :location (c2-9 / off
+                                   :op1 (c2-3 / building
+                                              :name (c2-7 / name
+                                                          :op1 "Parliament"
+                                                          :op2 "Hill"))
+                                   :mod (c2-1 / just)))
+      :snt2 (c2-0 / tell-01
+                  :ARG0 (c2-8 / police)
+                  :ARG1 (c2-11 / cover-01
+                               :ARG1 (c2-4 / everyone
+                                           :ARG2-of c2-0))))
+
+# ::snt my god, sending prayers. Has he been shot dead I just read on Twitter
+# ::tokens ["my", "god", ",", "sending", "prayers", ".", "Has", "he", "been", "shot", "dead", "I", "just", "read", "on", "Twitter"]
+# ::lemmas ["my", "god", ",", "send", "prayer", ".", "have", "he", "be", "shoot", "dead", "i", "just", "read", "on", "Twitter"]
+(c3-4 / multi-sentence
+      :snt1 (c3-8 / send-01
+                  :ARG0 (c3-9 / person
+                              :name (c3-10 / name
+                                           :op1 "God")
+                              :poss (c3-7 / i))
+                  :ARG1 (c3-5 / pray-01
+                              :ARG0 c3-9))
+      :snt2 (c3-1 / read-01
+                  :ARG0 (c3-11 / i)
+                  :ARG1 (c3-12 / die-01
+                               :ARG1 (c3-6 / he))
+                  :ARG3 (c3-0 / publication
+                              :name (c3-3 / name
+                                          :op1 "Twitter"))
+                  :time (c3-2 / just)))

@@ -1,0 +1,62 @@
+# ::snt Eh
+# ::tokens ["Eh"]
+# ::lemmas ["eh"]
+(c1-0 / eh)
+
+# ::snt Play.It.Loud
+# ::tokens ["Play", ".", "It", ".", "Loud"]
+# ::lemmas ["play", ".", "it", ".", "loud"]
+(c2-1 / play-01
+      :ARG0 (c2-0 / you)
+      :mod (c2-2 / loud)
+      :mode imperative)
+
+# ::snt Phenomenal to see the robot mock his moves but still prefer to see him do it
+# ::tokens ["Phenomenal", "to", "see", "the", "robot", "mock", "his", "moves", "but", "still", "prefer", "to", "see", "him", "do", "it"]
+# ::lemmas ["phenomenal", "to", "see", "the", "robot", "mock", "his", "move", "but", "still", "prefer", "to", "see", "he", "do", "it"]
+(c3-8 / contrast-01
+      :ARG1 (c3-0 / fantastic-02
+                  :ARG1 (c3-3 / see-01
+                              :ARG1 (c3-2 / mock-01
+                                          :ARG0 (c3-4 / robot)
+                                          :ARG1 (c3-5 / move-03
+                                                      :ARG0 (c3-6 / he)))))
+      :ARG2 (c3-7 / prefer-01
+                  :ARG0 (c3-9 / i)
+                  :ARG1 (c3-1 / see-01
+                              :ARG1 (c3-10 / do-02
+                                           :ARG0 c3-6
+                                           :ARG1 c3-2))
+                  :mod (c3-11 / still)))
+
+# ::snt Cool. What's Cat Saddler up to?
+# ::tokens ["Cool", ".", "What", "'s", "Cat", "Saddler", "up", "to", "?"]
+# ::lemmas ["cool", ".", "what", "be", "Cat", "Saddler", "up", "to", "?"]
+(c4-0 / multi-sentence
+      :snt1 (c4-3 / cool-04)
+      :snt2 (c4-5 / up-to
+                  :op1 (c4-4 / amr-unknown
+                             :domain (c4-2 / person
+                                           :name (c4-1 / name
+                                                       :op1 "Cat"
+                                                       :op2 "Saddler")))))
+
+# ::snt Ok, that song &amp; vid is dope.
+# ::tokens ["Ok", ",", "that", "song", "&", "amp", ";", "vid", "is", "dope", "."]
+# ::lemmas ["ok", ",", "that", "song", "&", "amp", ";", "vid", "be", "dope", "."]
+(c5-7 / dope
+      :domain (c5-3 / video)
+      :ARG1-of (c5-0 / okay-04)
+      :topic (c5-6 / and
+                   :op1 (c5-2 / song
+                              :mod (c5-5 / that))
+                   :op2 (c5-4 / person
+                              :name (c5-1 / name
+                                          :op1 "amp"))))
+
+# ::snt nice to hear that.
+# ::tokens ["nice", "to", "hear", "that", "."]
+# ::lemmas ["nice", "to", "hear", "that", "."]
+(c7-1 / nice-01
+      :ARG1 (c7-0 / hear-01
+                  :ARG1 (c7-2 / that)))

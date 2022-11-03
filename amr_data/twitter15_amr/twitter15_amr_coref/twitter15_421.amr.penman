@@ -1,0 +1,99 @@
+# ::snt mm practice. ..
+# ::tokens ["mm", "practice", ".", ".."]
+# ::lemmas ["mm", "practice", ".", ".."]
+(c1-0 / practice-01)
+
+# ::snt soooooo...if we all got of 'em, that'd be billion
+# ::tokens ["soooooo", "...", "if", "we", "all", "got", "of", "'em", ",", "that", "'d", "be", "billion"]
+# ::lemmas ["soooooo", "...", "if", "we", "all", "get", "of", "'em", ",", "that", "would", "be", "billion"]
+(c2-4 / multi-sentence
+      :snt1 (c2-0 / so)
+      :snt2 (c2-5 / have-condition-91
+                  :ARG1 (c2-1 / monetary-quantity
+                              :unit (c2-7 / dollar)
+                              :quant 10000000000)
+                  :ARG2 (c2-8 / get-01
+                              :ARG0 (c2-6 / we
+                                          :mod (c2-3 / all))
+                              :ARG1 (c2-2 / they))))
+
+# ::snt Bwahahahaha
+# ::tokens ["Bwahahahaha"]
+# ::lemmas ["bwahahahaha"]
+(c3-0 / laugh-01
+      :mode expressive)
+
+# ::snt R GOD IS SUPREME R GOD HAS BLESSED AMERICA OVER YEARS. R GOD IS A GOD OF LOVES. HE"S MY GOD.
+# ::tokens ["R", "GOD", "IS", "SUPREME", "R", "GOD", "HAS", "BLESSED", "AMERICA", "OVER", "YEARS", ".", "R", "GOD", "IS", "A", "GOD", "OF", "LOVES", ".", "HE\"S", "MY", "GOD", "."]
+# ::lemmas ["r", "GOD", "be", "SUPREME", "R", "GOD", "have", "BLESSED", "AMERICA", "over", "YEARS", ".", "r", "GOD", "be", "a", "god", "of", "LOVES", ".", "HE\"S", "MY", "GOD", "."]
+(c4-10 / multi-sentence
+       :snt1 (c4-9 / promise-01
+                   :ARG0 (c4-16 / person
+                                :name (c4-14 / name
+                                             :op1 "God"))
+                   :ARG1 (c4-0 / it))
+       :snt2 (c4-4 / bankrupt-01
+                   :ARG0 (c4-8 / person
+                               :name (c4-13 / name
+                                            :op1 "God"))
+                   :ARG1 (c4-2 / country
+                               :name (c4-6 / name
+                                           :op1 "America"))
+                   :duration (c4-7 / multiple
+                                   :op1 (c4-17 / temporal-quantity
+                                               :unit (c4-12 / year)
+                                               :quant 1)))
+       :snt3 (c4-19 / god
+                    :ARG0-of (c4-1 / love-01)
+                    :domain (c4-5 / person
+                                  :name (c4-15 / name
+                                               :op1 "God")))
+       :snt4 (c4-11 / god
+                    :poss (c4-3 / i)
+                    :domain (c4-18 / he)))
+
+# ::snt Don't mess with these ladies! Sharia my ass lol
+# ::tokens ["Do", "n't", "mess", "with", "these", "ladies", "!", "Sharia", "my", "ass", "lol"]
+# ::lemmas ["do", "not", "mess", "with", "these", "lady", "!", "Sharia", "my", "ass", "lol"]
+(c5-4 / multi-sentence
+      :snt1 (c5-9 / mess-01
+                  :ARG0 (c5-7 / you)
+                  :ARG1 (c5-2 / lady
+                              :mod (c5-3 / this))
+                  :mode imperative
+                  :polarity -)
+      :snt2 (c5-0 / sharia
+                  :ARG1-of (c5-6 / laugh-01
+                                 :ARG0 (c5-1 / i
+                                             :part (c5-8 / ass))
+                                 :manner (c5-5 / loud))
+                  :mode expressive))
+
+# ::snt Time to look for other options than...
+# ::tokens ["Time", "to", "look", "for", "other", "options", "than", "..."]
+# ::lemmas ["time", "to", "look", "for", "other", "option", "than", "..."]
+(c7-1 / time
+      :time-of (c7-0 / look-01
+                     :ARG1 (c7-2 / option
+                                 :mod (c7-3 / other)
+                                 :ARG2-of (c7-4 / except-01))))
+
+# ::snt Update
+# ::tokens ["Update"]
+# ::lemmas ["update"]
+(c8-0 / update-02)
+
+# ::snt :Down with laws that allows a married man to have an unlimited number of mistresses.
+# ::tokens [":", "Down", "with", "laws", "that", "allows", "a", "married", "man", "to", "have", "an", "unlimited", "number", "of", "mistresses", "."]
+# ::lemmas [":", "down", "with", "law", "that", "allow", "a", "married", "man", "to", "have", "an", "unlimited", "number", "of", "mistress", "."]
+(c9-9 / down-01
+      :prep-with (c9-2 / law
+                       :ARG0-of (c9-8 / allow-01
+                                      :ARG1 (c9-7 / have-03
+                                                  :ARG0 (c9-3 / man
+                                                              :ARG1-of (c9-0 / marry-01))
+                                                  :ARG1 (c9-1 / person
+                                                              :ARG0-of (c9-4 / mistress-01)
+                                                              :quant (c9-5 / number
+                                                                           :ARG1-of (c9-6 / limit-01
+                                                                                          :polarity -)))))))

@@ -1,0 +1,26 @@
+# ::snt This didnt age well. fever, severe body aches and migraine
+# ::tokens ["This", "did", "nt", "age", "well", ".", "fever", ",", "severe", "body", "aches", "and", "migraine"]
+# ::lemmas ["this", "do", "not", "age", "well", ".", "fever", ",", "severe", "body", "ache", "and", "migraine"]
+(c1-8 / multi-sentence
+      :snt1 (c1-2 / age-01
+                  :ARG1 (c1-6 / this)
+                  :ARG1-of (c1-5 / well-09)
+                  :polarity -)
+      :snt2 (c1-9 / and
+                  :op1 (c1-3 / fever)
+                  :op2 (c1-1 / ache-01
+                             :ARG0 (c1-7 / body)
+                             :mod (c1-0 / severe))
+                  :op3 (c1-4 / migraine)))
+
+# ::snt We hope all goes well with your appointment!
+# ::tokens ["We", "hope", "all", "goes", "well", "with", "your", "appointment", "!"]
+# ::lemmas ["we", "hope", "all", "go", "well", "with", "your", "appointment", "!"]
+(c2-3 / hope-01
+      :ARG0 (c2-1 / we)
+      :ARG1 (c2-4 / go-on-15
+                  :ARG1 (c2-0 / appointment-02
+                              :ARG0 (c2-5 / you))
+                  :mod (c2-6 / all)
+                  :ARG1-of (c2-2 / well-09))
+      :mode expressive)

@@ -1,0 +1,370 @@
+# ::snt Hi
+# ::tokens ["Hi"]
+# ::lemmas ["hi"]
+(c1-0 / hi)
+
+# ::snt he should bee grateful instead of constantly dissing his role.
+# ::tokens ["he", "should", "bee", "grateful", "instead", "of", "constantly", "dissing", "his", "role", "."]
+# ::lemmas ["he", "should", "bee", "grateful", "instead", "of", "constantly", "diss", "his", "role", "."]
+(c2-0 / recommend-01
+      :ARG1 (c2-4 / appreciate-02
+                  :ARG0 (c2-1 / he)
+                  :ARG1-of (c2-3 / instead-of-91
+                                 :ARG2 (c2-5 / disrespect-01
+                                             :ARG0 c2-1
+                                             :ARG1 (c2-6 / role
+                                                         :poss c2-1)
+                                             :manner (c2-2 / constant)))))
+
+# ::snt he has been doing a lot of talking and interviews. No one here in the USA new who he was before frog.
+# ::tokens ["he", "has", "been", "doing", "a", "lot", "of", "talking", "and", "interviews", ".", "No", "one", "here", "in", "the", "USA", "new", "who", "he", "was", "before", "frog", "."]
+# ::lemmas ["he", "have", "be", "do", "a", "lot", "of", "talking", "and", "interview", ".", "no", "one", "here", "in", "the", "USA", "new", "who", "he", "be", "before", "frog", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-15 / do-02
+                   :ARG0 (c3-5 / he)
+                   :ARG1 (c3-3 / and
+                               :op1 (c3-14 / talk-01
+                                           :ARG0 c3-5)
+                               :op2 (c3-13 / interview-01
+                                           :ARG1 c3-5)
+                               :quant (c3-6 / lot)))
+      :snt2 (c3-2 / new-01
+                  :ARG0 (c3-7 / no-one
+                              :location (c3-12 / here
+                                               :location (c3-10 / country
+                                                                :name (c3-8 / name
+                                                                            :op1 "USA"))))
+                  :ARG1 (c3-4 / he
+                              :time (c3-0 / before
+                                          :op1 (c3-9 / person
+                                                     :name (c3-11 / name
+                                                                  :op1 "Frog"))))))
+
+# ::snt I think he said this for his stalkers JDO and minions
+# ::tokens ["I", "think", "he", "said", "this", "for", "his", "stalkers", "JDO", "and", "minions"]
+# ::lemmas ["i", "think", "he", "say", "this", "for", "his", "stalker", "JDO", "and", "minion"]
+(c4-7 / think-01
+      :ARG0 (c4-8 / i)
+      :ARG1 (c4-3 / say-01
+                  :ARG0 (c4-5 / he)
+                  :ARG1 (c4-9 / this)
+                  :ARG2 (c4-4 / and
+                              :op1 (c4-6 / person
+                                         :name (c4-1 / name
+                                                     :op1 "JDO")
+                                         :ARG0-of (c4-0 / stalk-02
+                                                        :ARG1 c4-5))
+                              :op2 (c4-2 / minion
+                                         :poss c4-6))))
+
+# ::snt he fears for his life that's a joke. He could never be as big as John Lennon.
+# ::tokens ["he", "fears", "for", "his", "life", "that", "'s", "a", "joke", ".", "He", "could", "never", "be", "as", "big", "as", "John", "Lennon", "."]
+# ::lemmas ["he", "fear", "for", "his", "life", "that", "be", "a", "joke", ".", "he", "could", "never", "be", "as", "big", "as", "John", "Lennon", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-0 / fear-01
+                  :ARG0 (c5-6 / he)
+                  :ARG1 (c5-7 / life
+                              :poss c5-6)
+                  :ARG2-of (c5-11 / joke-01))
+      :snt2 (c5-8 / possible-01
+                  :ARG1 (c5-10 / have-degree-91
+                               :ARG1 (c5-5 / he)
+                               :ARG2 (c5-1 / big)
+                               :ARG3 (c5-9 / equal)
+                               :ARG4 (c5-3 / person
+                                           :name (c5-4 / name
+                                                       :op1 "John"
+                                                       :op2 "Lennon"))
+                               :time (c5-12 / ever))
+                  :polarity -))
+
+# ::snt Fantastic!!Happy Friday, Kendra!! mmmuuaa
+# ::tokens ["Fantastic!!Happy", "Friday", ",", "Kendra", "!", "!", "mmmuuaa"]
+# ::lemmas ["Fantastic!!Happy", "Friday", ",", "Kendra", "!", "!", "mmmuuaa"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / fantastic-02
+                  :mode expressive)
+      :snt2 (c6-3 / say-01
+                  :ARG1 (c6-4 / happy-01
+                              :ARG1 (c6-7 / date-entity
+                                          :weekday (c6-6 / friday)))
+                  :ARG2 (c6-5 / person
+                              :name (c6-2 / name
+                                          :op1 "Kendra"))))
+
+# ::snt To each other: 'What are you wearing? Clothes?'
+# ::tokens ["To", "each", "other", ":", "'", "What", "are", "you", "wearing", "?", "Clothes", "?", "'"]
+# ::lemmas ["to", "each", "other", ":", "'", "what", "be", "you", "wear", "?", "clothe", "?", "'"]
+(c7-7 / ask-01
+      :ARG0 (c7-0 / other
+                  :mod (c7-2 / each))
+      :ARG1 (c7-6 / and
+                  :op1 (c7-3 / wear-01
+                             :ARG0 (c7-1 / you)
+                             :ARG1 (c7-4 / amr-unknown))
+                  :op2 (c7-5 / clothes
+                             :polarity (c7-8 / amr-unknown)))
+      :ARG2 c7-0)
+
+# ::snt Fantastic
+# ::tokens ["Fantastic"]
+# ::lemmas ["fantastic"]
+(c8-0 / fantastic-02)
+
+# ::snt im doing more as they come up.
+# ::tokens ["i", "m", "doing", "more", "as", "they", "come", "up", "."]
+# ::lemmas ["i", "m", "do", "more", "as", "they", "come", "up", "."]
+(c9-4 / do-02
+      :ARG0 (c9-2 / i)
+      :ARG1 (c9-0 / more)
+      :time (c9-1 / come-up-13
+                  :ARG1 (c9-3 / they)))
+
+# ::snt It was a very good interview... Waiting the next...
+# ::tokens ["It", "was", "a", "very", "good", "interview", "...", "Waiting", "the", "next", "..."]
+# ::lemmas ["it", "be", "a", "very", "good", "interview", "...", "wait", "the", "next", "..."]
+(c10-0 / multi-sentence
+       :snt1 (c10-5 / interview-01
+                    :ARG1-of (c10-6 / good-02
+                                    :degree (c10-3 / very))
+                    :domain (c10-2 / it))
+       :snt2 (c10-4 / wait-01
+                    :time (c10-1 / next)))
+
+# ::snt Shared this exact sentiment with over the weekend.
+# ::tokens ["Shared", "this", "exact", "sentiment", "with", "over", "the", "weekend", "."]
+# ::lemmas ["share", "this", "exact", "sentiment", "with", "over", "the", "weekend", "."]
+(c16-1 / share-01
+       :ARG1 (c16-0 / sentiment
+                    :mod (c16-2 / exact)
+                    :mod (c16-4 / this))
+       :time (c16-3 / weekend))
+
+# ::snt $we are the same futurum est et futurae?
+# ::tokens ["$", "we", "are", "the", "same", "futurum", "est", "et", "futurae", "?"]
+# ::lemmas ["$", "we", "be", "the", "same", "futurum", "est", "et", "futurae", "?"]
+(c17-1 / same-01
+       :polarity (c17-6 / amr-unknown)
+       :ARG1 (c17-4 / we)
+       :ARG2 (c17-5 / and
+                    :op1 (c17-0 / futurum)
+                    :op2 (c17-2 / futurum)
+                    :op3 (c17-3 / futurae)))
+
+# ::snt afk : []
+# ::tokens ["afk", ":", "[", "]"]
+# ::lemmas ["afk", ":", "[", "]"]
+(c18-2 / say-01
+       :ARG0 (c18-3 / person
+                    :name (c18-1 / name
+                                 :op1 "afk"))
+       :ARG1 (c18-4 / thing
+                    :mod (c18-0 / [])))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c19-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c20-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c21-0 / amr-empty)
+
+# ::snt having kids matters
+# ::tokens ["having", "kids", "matters"]
+# ::lemmas ["have", "kid", "matter"]
+(c22-1 / matter-01
+       :ARG1 (c22-0 / have-05
+                    :ARG1 (c22-2 / kid)))
+
+# ::snt this is why they all forget : []
+# ::tokens ["this", "is", "why", "they", "all", "forget", ":", "[", "]"]
+# ::lemmas ["this", "be", "why", "you", "all", "forget", ":", "[", "]"]
+(c23-1 / cause-01
+       :ARG0 (c23-2 / this)
+       :ARG1 (c23-0 / forget-01
+                    :ARG0 (c23-4 / they
+                                 :mod (c23-3 / all))))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c24-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c25-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c27-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c28-0 / amr-empty)
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c29-0 / amr-empty)
+
+# ::snt *weather changing*
+# ::tokens ["*", "weather", "changing", "*"]
+# ::lemmas ["*", "weather", "change", "*"]
+(c30-0 / change-01
+       :ARG1 (c30-1 / weather))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c31-0 / amr-empty)
+
+# ::snt memristor ? []
+# ::tokens ["memristor", "?", "[", "]"]
+# ::lemmas ["memristor", "?", "[", "]"]
+(c32-2 / person
+       :polarity (c32-3 / amr-unknown)
+       :ARG0-of (c32-1 / have-org-role-91
+                       :ARG2 (c32-0 / minister)))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c33-0 / amr-empty)
+
+# ::snt yes... we're observing a collision : []
+# ::tokens ["yes", "...", "we", "'re", "observing", "a", "collision", ":", "[", "]"]
+# ::lemmas ["yes", "...", "we", "be", "observe", "a", "collision", ":", "[", "]"]
+(c34-0 / observe-01
+       :ARG0 (c34-2 / we)
+       :ARG1 (c34-1 / collide-01))
+
+# ::snt but $I prefer JT : []
+# ::tokens ["but", "$", "I", "prefer", "JT", ":", "[", "]"]
+# ::lemmas ["but", "$", "i", "prefer", "JT", ":", "[", "]"]
+(c35-4 / contrast-01
+       :ARG2 (c35-3 / prefer-01
+                    :ARG0 (c35-5 / i)
+                    :ARG1 (c35-2 / person
+                                 :name (c35-1 / name
+                                              :op1 "JT"))
+                    :ARG2 (c35-6 / thing
+                                 :mod (c35-0 / []))))
+
+# ::snt is the official contact : []
+# ::tokens ["is", "the", "official", "contact", ":", "[", "]"]
+# ::lemmas ["be", "the", "official", "contact", ":", "[", "]"]
+(c36-0 / contact-01
+       :mod (c36-1 / official))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c38-0 / amr-empty)
+
+# ::snt They are both there from here.
+# ::tokens ["They", "are", "both", "there", "from", "here", "."]
+# ::lemmas ["they", "be", "both", "there", "from", "here", "."]
+(c39-0 / be-from-91
+       :ARG1 (c39-3 / they
+                    :mod (c39-1 / both))
+       :ARG2 (c39-2 / here))
+
+# ::snt possibly jit in under hr now that siri isn't running hot : []
+# ::tokens ["possibly", "jit", "in", "under", "hr", "now", "that", "siri", "is", "n't", "running", "hot", ":", "[", "]"]
+# ::lemmas ["possibly", "jit", "in", "under", "hr", "now", "that", "siri", "be", "not", "run", "hot", ":", "[", "]"]
+(c40-5 / possible-01
+       :ARG1 (c40-0 / be-temporally-at-91
+                    :ARG1 (c40-7 / it)
+                    :ARG2 (c40-9 / under
+                                 :op1 (c40-8 / temporal-quantity
+                                             :unit (c40-4 / hour)
+                                             :quant 1))
+                    :time (c40-1 / now
+                                 :time-of (c40-3 / run-01
+                                                 :ARG1 (c40-2 / iri)
+                                                 :ARG1-of (c40-6 / hot-05)
+                                                 :polarity -))))
+
+# ::snt $I think we just traded futures.
+# ::tokens ["$", "I", "think", "we", "just", "traded", "futures", "."]
+# ::lemmas ["$", "i", "think", "we", "just", "trade", "future", "."]
+(c41-2 / think-01
+       :ARG0 (c41-3 / i)
+       :ARG1 (c41-4 / trade-01
+                    :ARG0 (c41-1 / we)
+                    :ARG1 (c41-0 / futures)
+                    :time (c41-5 / just)))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c42-0 / amr-empty)
+
+# ::snt Where the light is
+# ::tokens ["Where", "the", "light", "is"]
+# ::lemmas ["where", "the", "light", "be"]
+(c43-1 / thing
+       :location-of (c43-0 / light))
+
+# ::snt Ha.. its just a capital "i" not a lower case "L".My mind is growing.
+# ::tokens ["Ha", "..", "its", "just", "a", "capital", "\"", "i", "\"", "not", "a", "lower", "case", "\"", "L\"", ".", "My", "mind", "is", "growing", "."]
+# ::lemmas ["ha", "..", "its", "just", "a", "capital", "\"", "i", "\"", "not", "a", "low", "case", "\"", "l\"", ".", "my", "mind", "be", "grow", "."]
+(c44-0 / multi-sentence
+       :snt1 (c44-2 / ha
+                    :mode expressive)
+       :snt2 (c44-5 / contrast-01
+                    :ARG1 (c44-12 / capital
+                                  :mod (c44-7 / just)
+                                  :value "i")
+                    :ARG2 (c44-6 / case-04
+                                 :ARG1 (c44-1 / string-entity
+                                              :value "L")
+                                 :ARG1-of (c44-8 / have-degree-91
+                                                 :ARG2 (c44-3 / low-04)
+                                                 :ARG3 (c44-4 / more))))
+       :snt3 (c44-10 / grow-01
+                     :ARG1 (c44-11 / mind
+                                   :part-of (c44-9 / i))))
+
+# ::snt look at my "Following" and tell us what you see.
+# ::tokens ["look", "at", "my", "\"", "Following", "\"", "and", "tell", "us", "what", "you", "see", "."]
+# ::lemmas ["look", "at", "my", "\"", "Following", "\"", "and", "tell", "we", "what", "you", "see", "."]
+(c45-7 / and
+       :op1 (c45-3 / look-01
+                   :ARG0 (c45-1 / you)
+                   :ARG1 (c45-0 / follow-02
+                                :ARG0 (c45-6 / i))
+                   :mode imperative)
+       :op2 (c45-5 / tell-01
+                   :ARG0 c45-1
+                   :ARG1 (c45-8 / thing
+                                :ARG1-of (c45-2 / see-01
+                                                :ARG0 c45-1))
+                   :ARG2 (c45-4 / we)
+                   :mode imperative))
+
+# ::snt []
+# ::tokens ["[", "]"]
+# ::lemmas ["[", "]"]
+(c47-0 / amr-empty)
+
+# ::snt every1 still here ? []
+# ::tokens ["every1", "still", "here", "?", "[", "]"]
+# ::lemmas ["every1", "still", "here", "?", "[", "]"]
+(c48-0 / be-located-at-91
+       :ARG1 (c48-2 / event
+                    :mod (c48-5 / every
+                                :op1 1000))
+       :ARG2 (c48-3 / here)
+       :mod (c48-1 / still)
+       :polarity (c48-4 / amr-unknown))

@@ -1,0 +1,51 @@
+# ::snt One day. I took Tylenol which may have helped.
+# ::tokens ["One", "day", ".", "I", "took", "Tylenol", "which", "may", "have", "helped", "."]
+# ::lemmas ["One", "day", ".", "i", "take", "Tylenol", "which", "may", "have", "help", "."]
+(c1-7 / multi-sentence
+      :snt1 (c1-0 / day
+                  :mod (c1-2 / one))
+      :snt2 (c1-4 / take-01
+                  :ARG0 (c1-6 / i)
+                  :ARG1 (c1-5 / product
+                              :name (c1-8 / name
+                                          :op1 "Tylenol")
+                              :ARG0-of (c1-1 / help-01
+                                             :ARG1-of (c1-3 / possible-01)))))
+
+# ::snt How long did your fever last after the vaccine
+# ::tokens ["How", "long", "did", "your", "fever", "last", "after", "the", "vaccine"]
+# ::lemmas ["how", "long", "do", "your", "fever", "last", "after", "the", "vaccine"]
+(c2-3 / last-01
+      :ARG1 (c2-1 / fever
+                  :poss (c2-4 / you))
+      :ARG2 (c2-0 / amr-unknown)
+      :time (c2-5 / after
+                  :op1 (c2-2 / vaccine)))
+
+# ::snt Thanks! I expect Ill be just fine tomorrow.
+# ::tokens ["Thanks", "!", "I", "expect", "Ill", "be", "just", "fine", "tomorrow", "."]
+# ::lemmas ["thank", "!", "i", "expect", "Ill", "be", "just", "fine", "tomorrow", "."]
+(c3-7 / multi-sentence
+      :snt1 (c3-4 / thank-01
+                  :ARG0 (c3-6 / i)
+                  :ARG1 (c3-8 / you)
+                  :mode expressive)
+      :snt2 (c3-9 / expect-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 (c3-0 / fine-04
+                              :ARG1 (c3-3 / i)
+                              :mod (c3-5 / just)
+                              :time (c3-1 / tomorrow))))
+
+# ::snt Hopefully you feel better soon!!!
+# ::tokens ["Hopefully", "you", "feel", "better", "soon", "!", "!", "!"]
+# ::lemmas ["hopefully", "you", "feel", "well", "soon", "!", "!", "!"]
+(c4-3 / hope-01
+      :ARG1 (c4-1 / feel-01
+                  :ARG0 (c4-6 / you)
+                  :ARG1 (c4-2 / well-05
+                              :ARG1 c4-6
+                              :ARG2-of (c4-4 / have-degree-91
+                                             :ARG1 c4-6
+                                             :ARG3 (c4-5 / more)))
+                  :time (c4-0 / soon)))

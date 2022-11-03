@@ -1,0 +1,65 @@
+# ::snt : : At least four people believed to have been...
+# ::tokens [":", ":", "At", "least", "four", "people", "believed", "to", "have", "been", "..."]
+# ::lemmas [":", ":", "At", "least", "four", "people", "believe", "to", "have", "be", "..."]
+(c2-2 / believe-01
+      :ARG1 (c2-0 / person
+                  :quant (c2-1 / at-least
+                               :op1 4)))
+
+# ::snt abc news in australia providing exceptional coverage.
+# ::tokens ["abc", "news", "in", "australia", "providing", "exceptional", "coverage", "."]
+# ::lemmas ["abc", "news", "in", "australia", "provide", "exceptional", "coverage", "."]
+(c3-4 / provide-01
+      :ARG0 (c3-0 / broadcast-program
+                  :name (c3-2 / name
+                              :op1 "abc"
+                              :op2 "News")
+                  :location (c3-6 / country
+                                  :name (c3-3 / name
+                                              :op1 "Australia")))
+      :ARG1 (c3-5 / cover-03
+                  :mod (c3-1 / exceptional)))
+
+# ::snt OMG NO
+# ::tokens ["OMG", "NO"]
+# ::lemmas ["OMG", "NO"]
+(c4-0 / oh-my-god
+      :mode expressive)
+
+# ::snt FAKE FAKE CRISIS ACTORS THE PRESS IS IN ON IT! HERE'S THRE REAL TERRORISTS
+# ::tokens ["FAKE", "FAKE", "CRISIS", "ACTORS", "THE", "PRESS", "IS", "IN", "ON", "IT", "!", "HERE", "'S", "THRE", "REAL", "TERRORISTS"]
+# ::lemmas ["fake", "fake", "CRISIS", "actors", "the", "press", "be", "in", "ON", "IT", "!", "here", "be", "THRE", "real", "TERRORISTS"]
+(c5-1 / multi-sentence
+      :snt1 (c5-6 / claim-01
+                  :ARG0 (c5-4 / person
+                              :ARG0-of (c5-10 / act-01
+                                              :ARG1 (c5-5 / crisis)))
+                  :ARG1 (c5-2 / be-located-at-91
+                              :ARG1 (c5-9 / press)
+                              :ARG2 (c5-3 / it)))
+      :snt2 (c5-8 / terrorist
+                  :ARG1-of (c5-7 / real-04
+                                 :polarity -)
+                  :location (c5-0 / here)))
+
+# ::snt fyi, this is not about religion but they are just the people out of devoid humanity &amp; collide hrv.
+# ::tokens ["fyi", ",", "this", "is", "not", "about", "religion", "but", "they", "are", "just", "the", "people", "out", "of", "devoid", "humanity", "&", "amp", ";", "collide", "hrv", "."]
+# ::lemmas ["fyi", ",", "this", "be", "not", "about", "religion", "but", "they", "be", "just", "the", "people", "out", "of", "devoid", "humanity", "&", "amp", ";", "collide", "hrv", "."]
+(c6-12 / say-01
+       :ARG0 (c6-3 / i)
+       :ARG1 (c6-8 / contrast-01
+                   :ARG1 (c6-7 / concern-02
+                               :ARG0 (c6-14 / this)
+                               :ARG1 (c6-9 / religion)
+                               :polarity -)
+                   :ARG2 (c6-6 / person
+                               :domain (c6-11 / they)
+                               :mod (c6-0 / just)
+                               :ARG1-of (c6-2 / out-06
+                                              :ARG2 (c6-10 / devoid-02
+                                                           :ARG1 (c6-1 / humanity)))
+                               :ARG0-of (c6-13 / collide-01
+                                               :ARG1 (c6-5 / television))
+                               :ARG2-of c6-12))
+       :name (c6-4 / name
+                   :op1 "fyi"))

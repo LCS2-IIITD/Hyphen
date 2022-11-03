@@ -1,0 +1,361 @@
+# ::snt ele t com ebola
+# ::tokens ["ele", "t", "com", "ebola"]
+# ::lemmas ["ele", "t", "com", "ebola"]
+(c1-2 / be-from-91
+      :ARG2 (c1-1 / company
+                  :name (c1-0 / name
+                              :op1 " ebola")))
+
+# ::snt This is not funny, people are dying from this. You should be ashamed of yourself.
+# ::tokens ["This", "is", "not", "funny", ",", "people", "are", "dying", "from", "this", ".", "You", "should", "be", "ashamed", "of", "yourself", "."]
+# ::lemmas ["this", "be", "not", "funny", ",", "people", "be", "die", "from", "this", ".", "you", "should", "be", "ashamed", "of", "yourself", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-1 / funny
+                  :domain (c2-9 / this)
+                  :polarity -)
+      :snt2 (c2-4 / die-01
+                  :ARG1 (c2-3 / person)
+                  :ARG1-of (c2-5 / cause-01
+                                 :ARG0 (c2-7 / this)))
+      :snt3 (c2-6 / recommend-01
+                  :ARG1 (c2-8 / shame-02
+                              :ARG0 (c2-0 / you
+                                          :ARG1-of c2-8))
+                  :ARG2 c2-0))
+
+# ::snt fs Joe
+# ::tokens ["fs", "Joe"]
+# ::lemmas ["fs", "Joe"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "Joe")
+      :mod (c3-2 / fucking
+                 :mode expressive))
+
+# ::snt fake rumour
+# ::tokens ["fake", "rumour"]
+# ::lemmas ["fake", "rumour"]
+(c4-0 / rumor-01
+      :ARG1-of (c4-1 / fake-02))
+
+# ::snt Stop it! Hope you get Ebola, you utter twat : Unconfirmed reports claim Essien has contracted Ebola.
+# ::tokens ["Stop", "it", "!", "Hope", "you", "get", "Ebola", ",", "you", "utter", "twat", ":", "Unconfirmed", "reports", "claim", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas ["stop", "it", "!", "hope", "you", "get", "Ebola", ",", "you", "utter", "twat", ":", "unconfirmed", "report", "claim", "Essien", "have", "contract", "Ebola", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-13 / stop-01
+                   :ARG0 (c5-1 / you
+                               :mod (c5-16 / twat
+                                           :mod (c5-3 / utter)))
+                   :ARG1 (c5-4 / it)
+                   :mode imperative)
+      :snt2 (c5-0 / hope-01
+                  :ARG0 (c5-10 / i)
+                  :ARG1 (c5-11 / get-01
+                               :ARG0 (c5-12 / you)
+                               :ARG1 (c5-8 / disease
+                                           :name (c5-5 / name
+                                                       :op1 "Ebola"))))
+      :snt3 (c5-9 / claim-01
+                  :ARG0 (c5-14 / report-01
+                               :ARG1 (c5-15 / contract-02
+                                            :ARG0 (c5-7 / person
+                                                        :name (c5-6 / name
+                                                                    :op1 "Essien"))
+                                            :ARG1 c5-8)
+                               :ARG1-of (c5-17 / confirm-01
+                                               :polarity -))))
+
+# ::snt its false sel... Someone made up a rumor
+# ::tokens ["its", "false", "sel", "...", "Someone", "made", "up", "a", "rumor"]
+# ::lemmas ["its", "false", "sel", "...", "someone", "make", "up", "a", "rumor"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / false
+                  :domain (c6-2 / it))
+      :snt2 (c6-3 / make-up-10
+                  :ARG0 (c6-5 / someone)
+                  :ARG1 (c6-4 / rumor-01)))
+
+# ::snt What? ": Unconfirmed reports claim that Michael Essien has contracted Ebola. "
+# ::tokens ["What", "?", "\"", ":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", ".", "\""]
+# ::lemmas ["what", "?", "\"", ":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", ".", "\""]
+(c7-0 / multi-sentence
+      :snt1 (c7-9 / amr-unknown)
+      :snt2 (c7-6 / claim-01
+                  :ARG0 (c7-5 / report-01
+                              :ARG1-of (c7-4 / confirm-01
+                                             :polarity -))
+                  :ARG1 (c7-8 / contract-02
+                              :ARG0 (c7-3 / person
+                                          :name (c7-1 / name
+                                                      :op1 "Michael"
+                                                      :op2 "Essien"))
+                              :ARG1 (c7-7 / disease
+                                          :name (c7-2 / name
+                                                      :op1 "Ebola")))))
+
+# ::snt if it is unconfirmed, why do you tweet it?
+# ::tokens ["if", "it", "is", "unconfirmed", ",", "why", "do", "you", "tweet", "it", "?"]
+# ::lemmas ["if", "it", "be", "unconfirmed", ",", "why", "do", "you", "tweet", "it", "?"]
+(c8-4 / tweet-02
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-1 / it)
+      :ARG1-of (c8-3 / cause-01
+                     :ARG0 (c8-5 / amr-unknown))
+      :condition (c8-2 / confirm-01
+                       :ARG1 c8-1
+                       :polarity -))
+
+# ::snt rah
+# ::tokens ["rah"]
+# ::lemmas ["rah"]
+(c9-0 / rah)
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c10-5 / claim-01
+       :ARG0 (c10-4 / report-01
+                    :ARG1-of (c10-3 / confirm-01
+                                    :polarity -))
+       :ARG1 (c10-7 / contract-02
+                    :ARG0 (c10-2 / person
+                                 :name (c10-0 / name
+                                              :op1 "Michael"
+                                              :op2 "Essien"))
+                    :ARG1 (c10-6 / disease
+                                 :name (c10-1 / name
+                                              :op1 "Ebola"))))
+
+# ::snt he has its so sad
+# ::tokens ["he", "has", "its", "so", "sad"]
+# ::lemmas ["he", "have", "its", "so", "sad"]
+(c11-0 / have-03
+       :ARG0 (c11-3 / he)
+       :ARG1 (c11-2 / sad-02
+                    :ARG1 c11-3
+                    :degree (c11-1 / so)))
+
+# ::snt my family are not african. Denied.
+# ::tokens ["my", "family", "are", "not", "african", ".", "Denied", "."]
+# ::lemmas ["my", "family", "be", "not", "african", ".", "deny", "."]
+(c12-2 / multi-sentence
+       :snt1 (c12-5 / person
+                    :mod (c12-7 / country
+                                :name (c12-4 / name
+                                             :op1 "Africa")
+                                :polarity -)
+                    :ARG0-of (c12-0 / have-rel-role-91
+                                    :ARG1 (c12-3 / i)
+                                    :ARG2 (c12-1 / family)))
+       :snt2 (c12-6 / deny-01))
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c13-5 / claim-01
+       :ARG0 (c13-4 / report-01
+                    :ARG1-of (c13-3 / confirm-01
+                                    :polarity -))
+       :ARG1 (c13-7 / contract-02
+                    :ARG0 (c13-2 / person
+                                 :name (c13-0 / name
+                                              :op1 "Michael"
+                                              :op2 "Essien"))
+                    :ARG1 (c13-6 / disease
+                                 :name (c13-1 / name
+                                              :op1 "Ebola"))))
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c14-5 / claim-01
+       :ARG0 (c14-4 / report-01
+                    :ARG1-of (c14-3 / confirm-01
+                                    :polarity -))
+       :ARG1 (c14-7 / contract-02
+                    :ARG0 (c14-2 / person
+                                 :name (c14-0 / name
+                                              :op1 "Michael"
+                                              :op2 "Essien"))
+                    :ARG1 (c14-6 / disease
+                                 :name (c14-1 / name
+                                              :op1 "Ebola"))))
+
+# ::snt how would someone start such a bizarre rumour about Essien?Human beings are heartless
+# ::tokens ["how", "would", "someone", "start", "such", "a", "bizarre", "rumour", "about", "Essien?Human", "beings", "are", "heartless"]
+# ::lemmas ["how", "would", "someone", "start", "such", "a", "bizarre", "rumour", "about", "Essien?Human", "being", "be", "heartless"]
+(c15-6 / cause-01
+       :ARG0 (c15-8 / amr-unknown)
+       :ARG1 (c15-7 / start-01
+                    :ARG0 (c15-2 / someone)
+                    :ARG1 (c15-5 / rumor-01
+                                 :ARG1 (c15-4 / person
+                                              :name (c15-3 / name
+                                                           :op1 "Essien"))
+                                 :mod (c15-1 / bizarre
+                                             :mod (c15-0 / such)))))
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c16-5 / claim-01
+       :ARG0 (c16-4 / report-01
+                    :ARG1-of (c16-3 / confirm-01
+                                    :polarity -))
+       :ARG1 (c16-7 / contract-02
+                    :ARG0 (c16-2 / person
+                                 :name (c16-0 / name
+                                              :op1 "Michael"
+                                              :op2 "Essien"))
+                    :ARG1 (c16-6 / disease
+                                 :name (c16-1 / name
+                                              :op1 "Ebola"))))
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola. !
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", ".", "!"]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", ".", "!"]
+(c17-5 / claim-01
+       :ARG0 (c17-4 / report-01
+                    :ARG1-of (c17-3 / confirm-01
+                                    :polarity -))
+       :ARG1 (c17-7 / contract-02
+                    :ARG0 (c17-2 / person
+                                 :name (c17-0 / name
+                                              :op1 "Michael"
+                                              :op2 "Essien"))
+                    :ARG1 (c17-6 / disease
+                                 :name (c17-1 / name
+                                              :op1 "Ebola"))))
+
+# ::snt DEUS E MAIS E SEROO ISSO?
+# ::tokens ["DEUS", "E", "MAIS", "E", "SEROO", "ISSO", "?"]
+# ::lemmas ["deu", "e", "MAIS", "e", "SEROO", "ISSO", "?"]
+(c18-0 / serious-01
+       :polarity (c18-2 / amr-unknown)
+       :ARG1 (c18-1 / they))
+
+# ::snt Yeah it's sad when your family gets it. Idiot. : he has its so sad
+# ::tokens ["Yeah", "it", "'s", "sad", "when", "your", "family", "gets", "it", ".", "Idiot", ".", ":", "he", "has", "its", "so", "sad"]
+# ::lemmas ["yeah", "it", "be", "sad", "when", "your", "family", "get", "it", ".", "Idiot", ".", ":", "he", "have", "its", "so", "sad"]
+(c19-3 / multi-sentence
+       :snt1 (c19-12 / sad-02
+                     :ARG0 (c19-9 / get-01
+                                  :ARG0 (c19-2 / family
+                                               :ARG1-of (c19-0 / have-org-role-91
+                                                               :ARG0 (c19-1 / you)
+                                                               :ARG2 (c19-8 / member)))
+                                  :ARG1 (c19-7 / it))
+                     :mod (c19-11 / yeah))
+       :snt2 (c19-10 / idiot
+                     :domain (c19-13 / he))
+       :snt3 (c19-6 / sad-02
+                    :ARG0 (c19-4 / it)
+                    :degree (c19-5 / so)))
+
+# ::snt Fuck off. You're an attention seeking cunt.
+# ::tokens ["Fuck", "off", ".", "You", "'re", "an", "attention", "seeking", "cunt", "."]
+# ::lemmas ["fuck", "off", ".", "you", "be", "an", "attention", "seek", "cunt", "."]
+(c20-2 / multi-sentence
+       :snt1 (c20-1 / fuck-off-03)
+       :snt2 (c20-3 / cunt
+                    :domain (c20-0 / you)
+                    :ARG0-of (c20-4 / seek-01
+                                    :ARG1 (c20-5 / attend-02))))
+
+# ::snt Umdlali webhola vele RT : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens ["Umdlali", "webhola", "vele", "RT", ":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas ["Umdlali", "webhola", "vele", "RT", ":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c21-8 / say-01
+       :ARG1 (c21-4 / claim-01
+                    :ARG0 (c21-3 / report-01
+                                 :ARG1-of (c21-5 / confirm-01
+                                                 :polarity -))
+                    :ARG1 (c21-7 / contract-02
+                                 :ARG0 (c21-2 / person
+                                              :name (c21-0 / name
+                                                           :op1 "Michael"
+                                                           :op2 "Essien"))
+                                 :ARG1 (c21-6 / disease
+                                              :name (c21-1 / name
+                                                           :op1 "Ebola"))))
+       :ARG2 (c21-10 / publication
+                     :name (c21-9 / name
+                                  :op1 "Umdlali"
+                                  :op2 "Webhola"
+                                  :op3 "Vle"
+                                  :op4 "RT")))
+
+# ::snt Ok : Unconfirmed reports claim that Michael Essien has contracted Ebola.
+# ::tokens ["Ok", ":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", "."]
+# ::lemmas ["ok", ":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", "."]
+(c22-0 / multi-sentence
+       :snt1 (c22-1 / okay-01)
+       :snt2 (c22-6 / claim-01
+                    :ARG0 (c22-5 / report-01
+                                 :ARG1-of (c22-7 / confirm-01
+                                                 :polarity -))
+                    :ARG1 (c22-9 / contract-02
+                                 :ARG0 (c22-4 / person
+                                              :name (c22-2 / name
+                                                           :op1 "Michael"
+                                                           :op2 "Essien"))
+                                 :ARG1 (c22-8 / disease
+                                              :name (c22-3 / name
+                                                           :op1 "Ebola")))))
+
+# ::snt Who mentioned it being funny? 'UNCONFIRMED reports'.... to translate: 'it might not be true, but...'
+# ::tokens ["Who", "mentioned", "it", "being", "funny", "?", "'", "UNCONFIRMED", "reports", "'", "....", "to", "translate", ":", "'", "it", "might", "not", "be", "true", ",", "but", "...", "'"]
+# ::lemmas ["who", "mention", "it", "be", "funny", "?", "'", "unconfirmed", "report", "'", "....", "to", "translate", ":", "'", "it", "might", "not", "be", "true", ",", "but", "...", "'"]
+(c23-1 / multi-sentence
+       :snt1 (c23-3 / mention-01
+                    :ARG0 (c23-11 / amr-unknown)
+                    :ARG1 (c23-0 / funny
+                                 :domain (c23-2 / it)))
+       :snt2 (c23-4 / report-01
+                    :ARG1-of (c23-5 / declare-02
+                                    :polarity -))
+       :snt3 (c23-10 / translate-01
+                     :ARG2 (c23-6 / contrast-01
+                                  :ARG1 (c23-7 / possible-01
+                                               :ARG1 (c23-8 / true-01
+                                                            :ARG1 (c23-9 / it)
+                                                            :ARG2-of c23-6
+                                                            :polarity -)))))
+
+# ::snt O QUE TEM O MEU HOMEM??
+# ::tokens ["O", "QUE", "TEM", "O", "MEU", "HOMEM", "?", "?"]
+# ::lemmas ["o", "QUE", "TEM", "O", "MEU", "HOMEM", "?", "?"]
+(c24-2 / call-01
+       :ARG1 (c24-1 / person
+                    :name (c24-0 / name
+                                 :op1 "Que"
+                                 :op2 "TEM")
+                    :ARG2-of c24-2)
+       :polarity (c24-3 / amr-unknown))
+
+# ::snt MEU DEUS OLHA ISSO
+# ::tokens ["MEU", "DEUS", "OLHA", "ISSO"]
+# ::lemmas ["MEU", "deu", "OLHA", "ISSO"]
+(c25-2 / case-03
+       :mod (c25-1 / country
+                   :name (c25-0 / name
+                                :op1 "Egypt")))
+
+# ::snt : Unconfirmed reports claim that Michael Essien has contracted Ebola. unconfirmed.....
+# ::tokens [":", "Unconfirmed", "reports", "claim", "that", "Michael", "Essien", "has", "contracted", "Ebola", ".", "unconfirmed", "....."]
+# ::lemmas [":", "unconfirmed", "report", "claim", "that", "Michael", "Essien", "have", "contract", "Ebola", ".", "unconfirmed", "....."]
+(c26-0 / multi-sentence
+       :snt1 (c26-6 / claim-01
+                    :ARG0 (c26-5 / report-01
+                                 :ARG1-of (c26-4 / confirm-01
+                                                 :polarity -))
+                    :ARG1 (c26-8 / contract-02
+                                 :ARG0 (c26-3 / person
+                                              :name (c26-1 / name
+                                                           :op1 "Michael"
+                                                           :op2 "Essien"))
+                                 :ARG1 (c26-7 / disease
+                                              :name (c26-2 / name
+                                                           :op1 "Ebola"))))
+       :snt2 (c26-9 / confirm-01
+                    :polarity -))

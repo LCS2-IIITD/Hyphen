@@ -1,0 +1,35 @@
+# ::snt Even after taking in a million migrants, Germany has nearly 700,000 open job vacancies
+# ::tokens ["Even", "after", "taking", "in", "a", "million", "migrants", ",", "Germany", "has", "nearly", "700,000", "open", "job", "vacancies"]
+# ::lemmas ["even", "after", "take", "in", "a", "million", "migrant", ",", "Germany", "have", "nearly", "700,000", "open", "job", "vacancy"]
+(c1-2 / have-03
+      :ARG0 (c1-1 / country
+                  :name (c1-10 / name
+                               :op1 "Germany"))
+      :ARG1 (c1-3 / vacancy
+                  :quant (c1-6 / nearly
+                               :op1 700000)
+                  :mod (c1-7 / job
+                             :ARG1-of (c1-4 / open-07)))
+      :concession (c1-0 / after
+                        :op1 (c1-5 / take-in-06
+                                   :ARG0 c1-1
+                                   :ARG1 (c1-8 / person
+                                               :ARG0-of (c1-9 / migrate-01)
+                                               :quant 1000000))
+                        :mod (c1-11 / even)))
+
+# ::snt Thats because none of those migrants have skills to fill those positions
+# ::tokens ["That", "s", "because", "none", "of", "those", "migrants", "have", "skills", "to", "fill", "those", "positions"]
+# ::lemmas ["that", "s", "because", "none", "of", "those", "migrant", "have", "skill", "to", "fill", "those", "position"]
+(c2-2 / cause-01
+      :ARG0 (c2-4 / have-03
+                  :ARG0 (c2-7 / person
+                              :ARG0-of (c2-8 / migrate-01)
+                              :mod (c2-6 / that)
+                              :quant (c2-9 / none))
+                  :ARG1 (c2-0 / skill
+                              :ARG0-of (c2-1 / fill-06
+                                             :ARG1 (c2-5 / position
+                                                         :mod (c2-3 / that))))
+                  :polarity -)
+      :ARG1 (c2-10 / that))

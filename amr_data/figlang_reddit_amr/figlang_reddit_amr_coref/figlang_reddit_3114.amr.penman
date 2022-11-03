@@ -1,0 +1,47 @@
+# ::snt A hotdog toaster.
+# ::tokens ["A", "hotdog", "toaster", "."]
+# ::lemmas ["a", "hotdog", "toaster", "."]
+(c1-1 / toaster
+      :mod (c1-0 / hotdog))
+
+# ::snt I was in my late 20s before I found out that hot dogs are already cooked and we merely heat them.
+# ::tokens ["I", "was", "in", "my", "late", "20s", "before", "I", "found", "out", "that", "hot", "dogs", "are", "already", "cooked", "and", "we", "merely", "heat", "them", "."]
+# ::lemmas ["i", "be", "in", "my", "late", "20", "before", "i", "find", "out", "that", "hot", "dog", "be", "already", "cook", "and", "we", "merely", "heat", "they", "."]
+(c2-1 / age-01
+      :ARG1 (c2-10 / i)
+      :ARG2 (c2-7 / late
+                  :op1 (c2-6 / temporal-quantity
+                             :unit (c2-12 / year)
+                             :quant 20))
+      :time (c2-8 / before
+                  :op1 (c2-2 / find-out-03
+                             :ARG0 c2-10
+                             :ARG1 (c2-13 / and
+                                          :op1 (c2-3 / cook-01
+                                                     :ARG1 (c2-5 / hot-dog)
+                                                     :time (c2-0 / already))
+                                          :op2 (c2-9 / heat-01
+                                                     :ARG0 (c2-4 / we)
+                                                     :ARG1 c2-5
+                                                     :mod (c2-11 / mere))))))
+
+# ::snt uhm, on ours in europe there is a warning saying you have to properly cook them or you basically will die
+# ::tokens ["uhm", ",", "on", "ours", "in", "europe", "there", "is", "a", "warning", "saying", "you", "have", "to", "properly", "cook", "them", "or", "you", "basically", "will", "die"]
+# ::lemmas ["uhm", ",", "on", "ours", "in", "europe", "there", "be", "a", "warning", "say", "you", "have", "to", "properly", "cook", "they", "or", "you", "basically", "will", "die"]
+(c3-3 / warn-01
+      :ARG1 (c3-6 / or
+                  :op1 (c3-4 / obligate-01
+                             :ARG1 (c3-11 / you)
+                             :ARG2 (c3-2 / cook-01
+                                         :ARG0 c3-11
+                                         :ARG1 (c3-7 / they)
+                                         :manner (c3-9 / proper)))
+                  :op2 (c3-0 / die-01
+                             :ARG1 c3-11
+                             :mod (c3-8 / basic)))
+      :location (c3-1 / continent
+                      :name (c3-10 / name
+                                   :op1 "Europe")
+                      :poss (c3-12 / we))
+      :mod (c3-5 / umm
+                 :mode expressive))

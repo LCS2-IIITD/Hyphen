@@ -1,0 +1,30 @@
+# ::subgraphs [["c1-0", "c1-2", "c1-1"], ["c2-1", "c2-0"], ["c4-2", "c4-0", "c4-1"], ["c5-1", "c5-2", "c5-0"], ["c6-4", "c6-3", "c6-2", "c6-1", "c6-0", "c6-5"]]
+(d / dummy
+   :COMMENT (c1-0 / compatible
+                  :prep-with (c1-2 / product
+                                   :name (c1-1 / name
+                                               :op1 "Spiderose"
+                                               :SAME c2-0)))
+   :COMMENT (c2-1 / person
+                  :name (c2-0 / name
+                              :op1 "Prune")
+                  :COREF c6-2
+                  :COREF c5-2)
+   :COMMENT (c4-2 / say
+                  :ARG1 (c4-0 / amr
+                              :value "Ilov")
+                  :ARG2 (c4-1 / man))
+   :COMMENT (c5-1 / look
+                  :ARG0 (c5-2 / she
+                              :SAME c6-2)
+                  :ARG1 (c5-0 / beautiful
+                              :ARG1 c5-2
+                              :SAME c6-1)
+                  :SAME c6-3)
+   :COMMENT (c6-4 / and
+                  :op1 (c6-3 / look
+                             :ARG0 (c6-2 / she)
+                             :ARG1 (c6-1 / beautiful
+                                         :degree (c6-0 / so)))
+                  :op2 (c6-5 / glitter
+                             :ARG1 c6-2)))

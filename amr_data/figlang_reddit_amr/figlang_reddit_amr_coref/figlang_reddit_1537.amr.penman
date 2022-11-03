@@ -1,0 +1,42 @@
+# ::snt Nvidia in Nintendo Switch
+# ::tokens ["Nvidia", "in", "Nintendo", "Switch"]
+# ::lemmas ["Nvidia", "in", "Nintendo", "Switch"]
+(c1-3 / company
+      :name (c1-1 / name
+                  :op1 "Nvidia")
+      :medium (c1-0 / product
+                    :name (c1-2 / name
+                                :op1 "Nintendo"
+                                :op2 "Switch")))
+
+# ::snt So, it will cost way more than an AMD based console?
+# ::tokens ["So", ",", "it", "will", "cost", "way", "more", "than", "an", "AMD", "based", "console", "?"]
+# ::lemmas ["so", ",", "it", "will", "cost", "way", "more", "than", "an", "AMD", "base", "console", "?"]
+(c2-4 / cost-01
+      :ARG1 (c2-9 / it)
+      :ARG2 (c2-10 / monetary-quantity
+                   :ARG1-of (c2-6 / have-quant-91
+                                  :ARG3 (c2-3 / more
+                                              :quant (c2-5 / way))
+                                  :ARG4 (c2-0 / cost-01
+                                              :ARG1 (c2-7 / console
+                                                          :ARG1-of (c2-8 / base-02
+                                                                         :ARG2 (c2-1 / company
+                                                                                     :name (c2-11 / name
+                                                                                                  :op1 "AMD")))))))
+      :polarity (c2-2 / amr-unknown))
+
+# ::snt Very sure a comparable SoC from AMD is just as expensive.
+# ::tokens ["Very", "sure", "a", "comparable", "SoC", "from", "AMD", "is", "just", "as", "expensive", "."]
+# ::lemmas ["very", "sure", "a", "comparable", "SoC", "from", "AMD", "be", "just", "as", "expensive", "."]
+(c3-0 / sure-02
+      :ARG1 (c3-3 / have-degree-91
+                  :ARG1 (c3-7 / SoC
+                              :source (c3-2 / company
+                                            :name (c3-8 / name
+                                                        :op1 "AMD"))
+                              :ARG1-of (c3-1 / comparable-03))
+                  :ARG2 (c3-9 / expensive)
+                  :ARG3 (c3-4 / equal
+                              :mod (c3-6 / just)))
+      :degree (c3-5 / very))

@@ -1,0 +1,21 @@
+# ::snt This is fake news
+# ::tokens ["This", "is", "fake", "news"]
+# ::lemmas ["this", "be", "fake", "news"]
+(c1-1 / news
+      :ARG1-of (c1-0 / fake-02)
+      :domain (c1-2 / this))
+
+# ::snt Bitch ! They don't need to have them good men .
+# ::tokens ["Bitch", "!", "They", "do", "n't", "need", "to", "have", "them", "good", "men", "."]
+# ::lemmas ["bitch", "!", "they", "do", "not", "need", "to", "have", "they", "good", "man", "."]
+(c4-3 / say-01
+      :ARG1 (c4-2 / need-01
+                  :ARG0 (c4-5 / they)
+                  :ARG1 (c4-4 / have-03
+                              :ARG0 c4-5
+                              :ARG1 (c4-1 / man
+                                          :ARG1-of (c4-6 / good-02)
+                                          :domain c4-5))
+                  :polarity -)
+      :ARG2 (c4-0 / bitch)
+      :mode expressive)

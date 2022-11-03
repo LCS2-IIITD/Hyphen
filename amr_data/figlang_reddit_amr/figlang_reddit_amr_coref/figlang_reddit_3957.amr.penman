@@ -1,0 +1,37 @@
+# ::snt MEME MAGICK | Martin Shkreli was wearing a Pepe pin in a Bloomberg interview today
+# ::tokens ["MEME", "MAGICK", "|", "Martin", "Shkreli", "was", "wearing", "a", "Pepe", "pin", "in", "a", "Bloomberg", "interview", "today"]
+# ::lemmas ["MEME", "MAGICK", "|", "Martin", "Shkreli", "be", "wear", "a", "Pepe", "pin", "in", "a", "Bloomberg", "interview", "today"]
+(c1-11 / multi-sentence
+       :snt1 (c1-10 / person
+                    :name (c1-12 / name
+                                 :op1 "MEME"
+                                 :op2 "MAGICK"))
+       :snt2 (c1-3 / wear-01
+                   :ARG0 (c1-7 / person
+                               :name (c1-9 / name
+                                           :op1 "Martin"
+                                           :op2 "Shkreli"))
+                   :ARG1 (c1-5 / pin
+                               :mod (c1-4 / person
+                                          :name (c1-6 / name
+                                                      :op1 "Pepe")))
+                   :time (c1-8 / today)
+                   :subevent-of (c1-2 / interview-01
+                                      :ARG0 (c1-0 / publication
+                                                  :name (c1-1 / name
+                                                              :op1 "Bloomberg"))
+                                      :ARG1 c1-7)))
+
+# ::snt Serious question: why is Pepe typically so sad?
+# ::tokens ["Serious", "question", ":", "why", "is", "Pepe", "typically", "so", "sad", "?"]
+# ::lemmas ["serious", "question", ":", "why", "be", "Pepe", "typically", "so", "sad", "?"]
+(c2-3 / question-01
+      :ARG1 (c2-2 / cause-01
+                  :ARG0 (c2-1 / amr-unknown)
+                  :ARG1 (c2-0 / sad-02
+                              :ARG1 (c2-7 / person
+                                          :name (c2-8 / name
+                                                      :op1 "Pepe"))
+                              :ARG1-of (c2-5 / typical-02)
+                              :degree (c2-6 / so)))
+      :ARG1-of (c2-4 / serious-02))

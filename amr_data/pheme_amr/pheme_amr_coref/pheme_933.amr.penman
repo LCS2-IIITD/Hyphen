@@ -1,0 +1,134 @@
+# ::snt : No arrests last night in (per )&lt;--- nice
+# ::tokens [":", "No", "arrests", "last", "night", "in", "(", "per", ")", "&", "lt;---", "nice"]
+# ::lemmas [":", "no", "arrest", "last", "night", "in", "(", "per", ")", "&", "lt;---", "nice"]
+(c2-5 / and
+      :op1 (c2-1 / arrest-01
+                 :time (c2-4 / date-entity
+                             :dayperiod (c2-2 / night)
+                             :mod (c2-0 / yesterday))
+                 :polarity -)
+      :op2 (c2-3 / nice-01))
+
+# ::snt it's about time. They are going to confirm the name
+# ::tokens ["it", "'s", "about", "time", ".", "They", "are", "going", "to", "confirm", "the", "name"]
+# ::lemmas ["it", "be", "about", "time", ".", "they", "be", "go", "to", "confirm", "the", "name"]
+(c3-0 / multi-sentence
+      :snt1 (c3-1 / be-temporally-at-91
+                  :ARG2 (c3-6 / about-time))
+      :snt2 (c3-3 / confirm-01
+                  :ARG0 (c3-5 / they)
+                  :ARG1 (c3-4 / thing
+                              :ARG2-of (c3-2 / name-01))))
+
+# ::snt It's Obama fault. ": No arrests last night in (per )"
+# ::tokens ["It", "'s", "Obama", "fault", ".", "\"", ":", "No", "arrests", "last", "night", "in", "(", "per", ")", "\""]
+# ::lemmas ["it", "be", "Obama", "fault", ".", "\"", ":", "no", "arrest", "last", "night", "in", "(", "per", ")", "\""]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / fault-01
+                  :ARG1 (c4-6 / person
+                              :name (c4-4 / name
+                                          :op1 "Obama"))
+                  :ARG2 (c4-3 / it))
+      :snt2 (c4-10 / arrest-01
+                   :time (c4-7 / date-entity
+                               :dayperiod (c4-5 / night)
+                               :mod (c4-0 / yesterday))
+                   :medium (c4-9 / publication
+                                 :ARG1-of (c4-8 / cite-01))
+                   :polarity -))
+
+# ::snt : No arrests last night in (per )
+# ::tokens [":", "No", "arrests", "last", "night", "in", "(", "per", ")"]
+# ::lemmas [":", "no", "arrest", "last", "night", "in", "(", "per", ")"]
+(c5-4 / arrest-01
+      :time (c5-3 / date-entity
+                  :dayperiod (c5-1 / night)
+                  :mod (c5-0 / yesterday))
+      :location (c5-2 / per)
+      :polarity -)
+
+# ::snt just a shooting, assault, and damaged cops cars so far
+# ::tokens ["just", "a", "shooting", ",", "assault", ",", "and", "damaged", "cops", "cars", "so", "far"]
+# ::lemmas ["just", "a", "shooting", ",", "assault", ",", "and", "damage", "cop", "car", "so", "far"]
+(c6-7 / and
+      :op1 (c6-6 / shoot-02)
+      :op2 (c6-2 / assault-01)
+      :op3 (c6-3 / damage-01
+                 :ARG1 (c6-4 / car
+                             :poss (c6-5 / cop)))
+      :mod (c6-0 / just)
+      :time (c6-1 / so-far))
+
+# ::snt nobody was doing anything wrong except for that Nazi fuck who shot and thinks its funny.
+# ::tokens ["nobody", "was", "doing", "anything", "wrong", "except", "for", "that", "Nazi", "fuck", "who", "shot", "and", "thinks", "its", "funny", "."]
+# ::lemmas ["nobody", "be", "do", "anything", "wrong", "except", "for", "that", "Nazi", "fuck", "who", "shoot", "and", "think", "its", "funny", "."]
+(c7-7 / do-02
+      :ARG0 (c7-4 / nobody)
+      :ARG1 (c7-10 / anything
+                   :ARG1-of (c7-0 / wrong-02))
+      :ARG2-of (c7-2 / except-01
+                     :ARG1 (c7-1 / fuck
+                                 :mod (c7-6 / political-movement
+                                            :name (c7-5 / name
+                                                        :op1 "Nazism"))
+                                 :ARG0-of (c7-8 / shoot-02)
+                                 :ARG0-of (c7-9 / think-01
+                                                :ARG1 (c7-3 / funny-02
+                                                            :ARG1 c7-8)))))
+
+# ::snt pls Share it if you against POLICE BRUTALITY
+# ::tokens ["pls", "Share", "it", "if", "you", "against", "POLICE", "BRUTALITY"]
+# ::lemmas ["pls", "share", "it", "if", "you", "against", "POLICE", "BRUTALITY"]
+(c8-5 / share-01
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-3 / it)
+      :condition (c8-2 / oppose-01
+                       :ARG0 c8-0
+                       :ARG1 (c8-1 / bias-01
+                                   :ARG1 (c8-4 / police)))
+      :mode imperative)
+
+# ::snt I just watched the governor and the police on and they are going to release the name today
+# ::tokens ["I", "just", "watched", "the", "governor", "and", "the", "police", "on", "and", "they", "are", "going", "to", "release", "the", "name", "today"]
+# ::lemmas ["i", "just", "watch", "the", "governor", "and", "the", "police", "on", "and", "they", "be", "go", "to", "release", "the", "name", "today"]
+(c9-12 / and
+       :op1 (c9-1 / watch-01
+                  :ARG0 (c9-4 / i)
+                  :ARG1 (c9-3 / and
+                              :op1 (c9-6 / person
+                                         :ARG0-of (c9-0 / have-org-role-91
+                                                        :ARG2 (c9-8 / governor)))
+                              :op2 (c9-11 / police))
+                  :time (c9-2 / just))
+       :op2 (c9-7 / release-01
+                  :ARG0 c9-3
+                  :ARG1 (c9-10 / thing
+                               :ARG2-of (c9-5 / name-01))
+                  :time (c9-9 / today)))
+
+# ::snt : : No arrests last night in (per )&lt;--- nice Anonymous has spoken
+# ::tokens [":", ":", "No", "arrests", "last", "night", "in", "(", "per", ")", "&", "lt;---", "nice", "Anonymous", "has", "spoken"]
+# ::lemmas [":", ":", "no", "arrest", "last", "night", "in", "(", "per", ")", "&", "lt;---", "nice", "Anonymous", "have", "speak"]
+(c10-11 / and
+        :op1 (c10-2 / arrest-01
+                    :time (c10-6 / date-entity
+                                 :dayperiod (c10-3 / night)
+                                 :mod (c10-0 / yesterday))
+                    :location (c10-4 / and
+                                     :op1 (c10-5 / per)
+                                     :op2 (c10-1 / lt))
+                    :polarity -)
+        :op2 (c10-9 / speak-01
+                    :ARG0 (c10-10 / person
+                                  :name (c10-7 / name
+                                               :op1 "Anonymous")
+                                  :ARG1-of (c10-8 / nice-01))))
+
+# ::snt No arrests last night in (per )
+# ::tokens ["No", "arrests", "last", "night", "in", "(", "per", ")"]
+# ::lemmas ["no", "arrest", "last", "night", "in", "(", "per", ")"]
+(c11-3 / arrest-01
+       :time (c11-2 / date-entity
+                    :dayperiod (c11-0 / night)
+                    :mod (c11-1 / yesterday))
+       :polarity -)

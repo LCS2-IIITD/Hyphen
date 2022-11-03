@@ -1,0 +1,213 @@
+# ::snt How!?! XD
+# ::tokens ["How", "!", "?", "!", "XD"]
+# ::lemmas ["how", "!", "?", "!", "XD"]
+(c1-1 / have-manner-91
+      :ARG2 (c1-2 / amr-unknown)
+      :mod (c1-0 / XD)
+      :mode expressive)
+
+# ::snt Is this a joke?
+# ::tokens ["Is", "this", "a", "joke", "?"]
+# ::lemmas ["be", "this", "a", "joke", "?"]
+(c3-1 / joke-01
+      :polarity (c3-2 / amr-unknown)
+      :ARG2 (c3-0 / this))
+
+# ::snt Looking for Web Developer? Contact me or
+# ::tokens ["Looking", "for", "Web", "Developer", "?", "Contact", "me", "or"]
+# ::lemmas ["look", "for", "web", "Developer", "?", "contact", "i", "or"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / look-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-2 / person
+                              :ARG0-of (c4-8 / develop-02
+                                             :ARG1 (c4-4 / web)))
+                  :polarity (c4-7 / amr-unknown))
+      :snt2 (c4-5 / contact-01
+                  :ARG0 c4-0)
+      :ARG1 (c4-6 / i))
+
+# ::snt He looks like Huey Lewis in a Members Only jacket.
+# ::tokens ["He", "looks", "like", "Huey", "Lewis", "in", "a", "Members", "Only", "jacket", "."]
+# ::lemmas ["he", "look", "like", "Huey", "Lewis", "in", "a", "member", "only", "jacket", "."]
+(c5-5 / look-02
+      :ARG0 (c5-3 / he)
+      :ARG1 (c5-4 / person
+                  :name (c5-1 / name
+                              :op1 "Huey"
+                              :op2 "Lewis"))
+      :ARG2 (c5-6 / jacket
+                  :mod (c5-2 / member
+                             :mod (c5-0 / only))))
+
+# ::snt WTF r u talking about???
+# ::tokens ["WTF", "r", "u", "talking", "about", "?", "?", "?"]
+# ::lemmas ["WTF", "r", "u", "talk", "about", "?", "?", "?"]
+(c6-3 / talk-01
+      :ARG0 (c6-2 / you)
+      :ARG1 (c6-0 / amr-unknown)
+      :mod (c6-1 / fuck
+                 :mode expressive))
+
+# ::snt And is wearing Forrest Gump shoes
+# ::tokens ["And", "is", "wearing", "Forrest", "Gump", "shoes"]
+# ::lemmas ["and", "be", "wear", "Forrest", "Gump", "shoe"]
+(c7-3 / and
+      :op2 (c7-1 / wear-01
+                 :ARG1 (c7-0 / shoe
+                             :name (c7-2 / name
+                                         :op1 "Forrest"
+                                         :op2 "Gump"))))
+
+# ::snt Wouldn't he be like years old?
+# ::tokens ["Would", "n't", "he", "be", "like", "years", "old", "?"]
+# ::lemmas ["would", "not", "he", "be", "like", "years", "old", "?"]
+(c8-1 / resemble-01
+      :ARG1 (c8-2 / he)
+      :ARG2 (c8-3 / temporal-quantity
+                  :unit (c8-0 / year)
+                  :quant 1)
+      :polarity (c8-4 / amr-unknown)
+      :polarity -)
+
+# ::snt Is it me or does he look like Zack Morris in the picture
+# ::tokens ["Is", "it", "me", "or", "does", "he", "look", "like", "Zack", "Morris", "in", "the", "picture"]
+# ::lemmas ["be", "it", "i", "or", "do", "he", "look", "like", "Zack", "Morris", "in", "the", "picture"]
+(c9-6 / amr-choice
+      :op1 (c9-5 / i)
+      :op2 (c9-4 / look-02
+                 :ARG0 (c9-2 / he)
+                 :ARG1 (c9-3 / person
+                             :name (c9-0 / name
+                                         :op1 "Zack"
+                                         :op2 "Morris"))
+                 :location (c9-1 / picture)))
+
+# ::snt Awesome. Love him!
+# ::tokens ["Awesome", ".", "Love", "him", "!"]
+# ::lemmas ["Awesome", ".", "love", "he", "!"]
+(c10-1 / multi-sentence
+       :snt1 (c10-3 / awe-01
+                    :mode expressive)
+       :snt2 (c10-2 / love-01
+                    :ARG1 (c10-0 / he)))
+
+# ::snt Transition to a non binary computer?
+# ::tokens ["Transition", "to", "a", "non", "binary", "computer", "?"]
+# ::lemmas ["transition", "to", "a", "non", "binary", "computer", "?"]
+(c11-3 / transition-01
+       :polarity (c11-0 / amr-unknown)
+       :ARG2 (c11-2 / computer
+                    :mod (c11-1 / binary
+                                :polarity -)))
+
+# ::snt wonder if he will transition
+# ::tokens ["wonder", "if", "he", "will", "transition"]
+# ::lemmas ["wonder", "if", "he", "will", "transition"]
+(c12-1 / wonder-01
+       :ARG0 (c12-3 / i)
+       :ARG1 (c12-2 / truth-value
+                    :polarity-of (c12-4 / transition-01
+                                        :ARG0 (c12-0 / he))))
+
+# ::snt Sarah has the best smile and laugh
+# ::tokens ["Sarah", "has", "the", "best", "smile", "and", "laugh"]
+# ::lemmas ["Sarah", "have", "the", "good", "smile", "and", "laugh"]
+(c13-3 / have-03
+       :ARG0 (c13-4 / person
+                    :name (c13-0 / name
+                                 :op1 "Sarah"))
+       :ARG1 (c13-7 / and
+                    :op1 (c13-2 / smile-01
+                                :ARG0 c13-4)
+                    :op2 (c13-5 / laugh-01
+                                :ARG0 c13-4)
+                    :ARG1-of (c13-6 / have-degree-91
+                                    :ARG2 (c13-8 / good-02
+                                                 :ARG1 c13-7)
+                                    :ARG3 (c13-1 / most))))
+
+# ::snt Absolutely . Nice seeing recent warmer welcome by team. He may be uncomfortable but playful banter w/ definitely brings a smile.
+# ::tokens ["Absolutely", ".", "Nice", "seeing", "recent", "warmer", "welcome", "by", "team", ".", "He", "may", "be", "uncomfortable", "but", "playful", "banter", "w/", "definitely", "brings", "a", "smile", "."]
+# ::lemmas ["absolutely", ".", "nice", "see", "recent", "warm", "welcome", "by", "team", ".", "he", "may", "be", "uncomfortable", "but", "playful", "banter", "w/", "definitely", "bring", "a", "smile", "."]
+(c14-9 / multi-sentence
+       :snt1 (c14-12 / nice-01
+                     :ARG1 (c14-0 / see-01
+                                  :ARG0 (c14-17 / i)
+                                  :ARG1 (c14-15 / welcome-01
+                                                :ARG0 (c14-6 / team)
+                                                :ARG1 c14-17
+                                                :time (c14-13 / recent)
+                                                :ARG1-of (c14-4 / have-degree-91
+                                                                :ARG2 (c14-2 / warm-07
+                                                                             :ARG1 c14-15)
+                                                                :ARG3 (c14-5 / more)))))
+       :snt2 (c14-14 / possible-01
+                     :ARG1 (c14-11 / comfortable-02
+                                   :ARG0 (c14-8 / banter-01
+                                                :ARG0 (c14-16 / he)
+                                                :mod (c14-10 / playful)
+                                                :ARG0-of (c14-7 / cause-01
+                                                                :ARG1 (c14-1 / bring-01
+                                                                             :ARG0 c14-8
+                                                                             :ARG1 (c14-3 / smile-01)
+                                                                             :mod (c14-18 / definite))))
+                                   :polarity -)))
+
+# ::snt HOW I need ANSWERS!!!
+# ::tokens ["HOW", "I", "need", "ANSWERS", "!", "!", "!"]
+# ::lemmas ["how", "i", "need", "ANSWERS", "!", "!", "!"]
+(c15-1 / need-01
+       :ARG0 (c15-2 / i)
+       :ARG1 (c15-0 / explain-01)
+       :manner (c15-3 / amr-unknown))
+
+# ::snt He is not alive. He is a fictional character.
+# ::tokens ["He", "is", "not", "alive", ".", "He", "is", "a", "fictional", "character", "."]
+# ::lemmas ["he", "be", "not", "alive", ".", "he", "be", "a", "fictional", "character", "."]
+(c16-1 / multi-sentence
+       :snt1 (c16-3 / live-01
+                    :ARG0 (c16-2 / he)
+                    :polarity -)
+       :snt2 (c16-4 / character
+                    :domain (c16-5 / he)
+                    :mod (c16-0 / fiction)))
+
+# ::snt Wow!!!
+# ::tokens ["Wow", "!", "!", "!"]
+# ::lemmas ["wow", "!", "!", "!"]
+(c17-0 / wow-01
+       :mode expressive)
+
+# ::snt Cant wait
+# ::tokens ["Ca", "nt", "wait"]
+# ::lemmas ["can", "nt", "wait"]
+(c18-0 / wait-01
+       :ARG1 (c18-1 / you)
+       :ARG1-of (c18-2 / possible-01))
+
+# ::snt If this is a dream or some grandson thing, I'm suing
+# ::tokens ["If", "this", "is", "a", "dream", "or", "some", "grandson", "thing", ",", "I", "'m", "suing"]
+# ::lemmas ["if", "this", "be", "a", "dream", "or", "some", "grandson", "thing", ",", "i", "be", "sue"]
+(c19-2 / sue-02
+       :ARG0 (c19-5 / i)
+       :condition (c19-0 / or
+                         :op1 (c19-8 / dream-01
+                                     :ARG0 c19-5
+                                     :ARG1 (c19-6 / this))
+                         :op2 (c19-9 / thing
+                                     :topic (c19-4 / person
+                                                   :ARG0-of (c19-3 / have-rel-role-91
+                                                                   :ARG2 (c19-7 / grandson))
+                                                   :mod (c19-1 / some))
+                                     :domain c19-6)))
+
+# ::snt Do my eyes deceive me!?!?
+# ::tokens ["Do", "my", "eyes", "deceive", "me", "!", "?", "!", "?"]
+# ::lemmas ["do", "my", "eye", "deceive", "i", "!", "?", "!", "?"]
+(c20-0 / deceive-01
+       :polarity (c20-3 / amr-unknown)
+       :ARG0 (c20-1 / eye
+                    :part-of (c20-2 / i
+                                    :ARG1-of c20-0))
+       :mode expressive)

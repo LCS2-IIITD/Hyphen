@@ -1,0 +1,29 @@
+# ::snt Love
+# ::tokens ["Love"]
+# ::lemmas ["Love"]
+(c1-0 / love-01)
+
+# ::snt They described it &amp; it sounded so good! Elderberry and lemon!
+# ::tokens ["They", "described", "it", "&", "amp", ";", "it", "sounded", "so", "good", "!", "Elderberry", "and", "lemon", "!"]
+# ::lemmas ["they", "describe", "it", "&", "amp", ";", "it", "sound", "so", "good", "!", "Elderberry", "and", "lemon", "!"]
+(c2-1 / multi-sentence
+      :snt1 (c2-10 / describe-01
+                   :ARG0 (c2-8 / they)
+                   :ARG1 (c2-7 / it))
+      :snt2 (c2-2 / sound-01
+                  :ARG1 (c2-3 / it)
+                  :ARG2 (c2-9 / good-02
+                              :degree (c2-0 / so))
+                  :snt3 (c2-4 / and
+                              :op1 (c2-5 / elderberry)
+                              :op2 (c2-6 / lemon))))
+
+# ::snt Carvel ice cream cake?!?
+# ::tokens ["Carvel", "ice", "cream", "cake", "?", "!", "?"]
+# ::lemmas ["carvel", "ice", "cream", "cake", "?", "!", "?"]
+(c3-2 / cake
+      :polarity (c3-4 / amr-unknown)
+      :mod (c3-3 / ice-cream)
+      :mod (c3-1 / product
+                 :name (c3-0 / name
+                             :op1 "Carvel")))

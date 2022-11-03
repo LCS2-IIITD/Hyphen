@@ -1,0 +1,104 @@
+# ::snt Hahahahaha!!! No you didnt
+# ::tokens ["Hahahahaha", "!", "!", "!", "No", "you", "did", "nt"]
+# ::lemmas ["Hahahahaha", "!", "!", "!", "no", "you", "do", "not"]
+(c1-1 / multi-sentence
+      :snt1 (c1-3 / haha
+                  :mode expressive)
+      :snt2 (c1-0 / do-02
+                  :ARG0 (c1-2 / you)
+                  :polarity -))
+
+# ::snt nothing against eating ass just don't complaint about the vaccine
+# ::tokens ["nothing", "against", "eating", "ass", "just", "do", "n't", "complaint", "about", "the", "vaccine"]
+# ::lemmas ["nothing", "against", "eat", "ass", "just", "do", "not", "complaint", "about", "the", "vaccine"]
+(c2-1 / complain-01
+      :ARG0 (c2-4 / nothing
+                  :topic (c2-5 / eat-01
+                               :ARG1 (c2-0 / ass)))
+      :ARG1 (c2-2 / vaccine)
+      :mod (c2-3 / just)
+      :polarity -)
+
+# ::snt U aint have to come for me like that g
+# ::tokens ["U", "ai", "nt", "have", "to", "come", "for", "me", "like", "that", "g"]
+# ::lemmas ["u", "be", "not", "have", "to", "come", "for", "i", "like", "that", "g"]
+(c3-1 / obligate-01
+      :ARG1 (c3-5 / you)
+      :ARG2 (c3-0 / come-01
+                  :ARG1 c3-5
+                  :ARG4 (c3-4 / i)
+                  :manner (c3-3 / resemble-01
+                                :ARG2 (c3-2 / that)))
+      :polarity -)
+
+# ::snt That's a goal for for me lol
+# ::tokens ["That", "'s", "a", "goal", "for", "for", "me", "lol"]
+# ::lemmas ["that", "be", "a", "goal", "for", "for", "i", "lol"]
+(c4-3 / goal
+      :domain (c4-0 / that)
+      :beneficiary (c4-4 / i)
+      :ARG2-of (c4-1 / laugh-01
+                     :ARG0 c4-4
+                     :manner (c4-2 / loud)
+                     :mode expressive))
+
+# ::snt I forget that not everyone does it. It feels fun to do tbh and the people I have done it to have really enjoyed it. But its just something you gotta do when ready.
+# ::tokens ["I", "forget", "that", "not", "everyone", "does", "it", ".", "It", "feels", "fun", "to", "do", "tbh", "and", "the", "people", "I", "have", "done", "it", "to", "have", "really", "enjoyed", "it", ".", "But", "its", "just", "something", "you", "got", "ta", "do", "when", "ready", "."]
+# ::lemmas ["i", "forget", "that", "not", "everyone", "do", "it", ".", "it", "feel", "fun", "to", "do", "tbh", "and", "the", "people", "i", "have", "do", "it", "to", "have", "really", "enjoy", "it", ".", "but", "its", "just", "something", "you", "got", "to", "do", "when", "ready", "."]
+(c5-7 / multi-sentence
+      :snt1 (c5-18 / forget-01
+                   :ARG0 (c5-1 / i)
+                   :ARG1 (c5-0 / do-02
+                               :ARG0 (c5-8 / everyone
+                                           :polarity -)
+                               :ARG1 (c5-11 / it)))
+      :snt2 (c5-17 / and
+                   :op1 (c5-13 / feel-01
+                               :ARG0 (c5-12 / i)
+                               :ARG1 (c5-14 / fun-01
+                                            :ARG1 (c5-15 / do-02
+                                                         :ARG0 c5-12
+                                                         :ARG1 (c5-21 / it)))
+                               :ARG1-of (c5-19 / honest-01
+                                               :ARG0 c5-12))
+                   :op2 (c5-20 / enjoy-01
+                               :ARG0 (c5-23 / person
+                                            :ARG0-of (c5-10 / do-02
+                                                            :ARG1 c5-21))
+                               :ARG1 c5-21
+                               :degree (c5-6 / really)))
+      :snt3 (c5-2 / contrast-01
+                  :ARG2 (c5-4 / obligate-01
+                              :ARG1 (c5-16 / you)
+                              :ARG2 (c5-5 / do-02
+                                          :ARG0 c5-16
+                                          :ARG1 (c5-9 / something)
+                                          :time (c5-3 / ready-02
+                                                      :ARG1 c5-16
+                                                      :ARG2 c5-5)
+                                          :mod (c5-22 / just)))))
+
+# ::snt Never tried it, but I would
+# ::tokens ["Never", "tried", "it", ",", "but", "I", "would"]
+# ::lemmas ["never", "try", "it", ",", "but", "i", "would"]
+(c6-0 / contrast-01
+      :ARG1 (c6-3 / try-01
+                  :ARG0 (c6-4 / i)
+                  :ARG1 (c6-2 / it)
+                  :time (c6-5 / ever)
+                  :polarity -)
+      :ARG2 (c6-1 / try-01
+                  :ARG0 c6-4
+                  :ARG1 c6-2))
+
+# ::snt You dont eat ass??? Thats wild
+# ::tokens ["You", "do", "nt", "eat", "ass", "?", "?", "?", "That", "s", "wild"]
+# ::lemmas ["you", "do", "not", "eat", "ass", "?", "?", "?", "that", "s", "wild"]
+(c7-3 / multi-sentence
+      :snt1 (c7-6 / eat-01
+                  :ARG0 (c7-4 / you)
+                  :ARG1 (c7-0 / ass)
+                  :polarity (c7-5 / amr-unknown)
+                  :polarity -)
+      :snt2 (c7-1 / wild
+                  :domain (c7-2 / that)))

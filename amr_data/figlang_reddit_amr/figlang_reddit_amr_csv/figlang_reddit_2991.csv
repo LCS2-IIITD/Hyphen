@@ -1,0 +1,58 @@
+comment,amr
+"If the US nationwide minimum wage went to $15 Jan 1, 2016, what would the unemployment rate be on December 31, 2016?","# ::snt If the US nationwide minimum wage went to $15 Jan 1, 2016, what would the unemployment rate be on December 31, 2016?
+(r / rate-01
+      :ARG1 (e / employ-01
+            :polarity -)
+      :ARG2 (a / amr-unknown)
+      :condition (g / go-01
+            :ARG1 (w / wage
+                  :mod (m / minimum)
+                  :location (c / country
+                        :name (n / name
+                              :op1 ""US""))
+                  :mod (n2 / nationwide))
+            :ARG4 (m2 / monetary-quantity
+                  :quant 15
+                  :unit (d / dollar))
+            :time (d2 / date-entity
+                  :day 1
+                  :month 1
+                  :year 2016)))"
+"If you currently work two jobs at $7.25/hour for a total of 80 hours per week, and after the change you work one job at $15/hour for 40 hours per week, are you better or worse off?","# ::snt If you currently work two jobs at $7.25/hour for a total of 80 hours per week, and after the change you work one job at $15/hour for 40 hours per week, are you better or worse off?
+(h / have-condition-91
+      :ARG1 (o / or
+            :op1 (w / well-off-06
+                  :ARG1 (y / you)
+                  :ARG2-of (h2 / have-degree-91
+                        :ARG1 y
+                        :ARG3 (m / more)))
+            :op2 (w2 / well-off-06
+                  :ARG1 y
+                  :ARG2-of (h3 / have-degree-91
+                        :ARG1 y
+                        :ARG3 (m2 / more)))
+            :polarity (a / amr-unknown))
+      :ARG2 (a2 / and
+            :op1 (w3 / work-01
+                  :ARG0 y
+                  :ARG1 (j / job
+                        :quant 2
+                        :ARG1-of (r / rate-entity-91
+                              :ARG2 (t / temporal-quantity
+                                    :quant 7.25
+                                    :unit (h4 / hour))))
+                  :time (c / current)
+                  :duration (t2 / temporal-quantity
+                        :quant 80
+                        :unit (h5 / hour)
+                        :ARG1-of (t3 / total-01)))
+            :op2 (w4 / work-01
+                  :ARG0 y
+                  :ARG1 (j2 / job
+                        :quant 1
+                        :ARG1-of (r2 / rate-entity-91
+                              :ARG2 (t4 / temporal-quantity
+                                    :quant 40
+                                    :unit (h6 / hour))))
+                  :duration (a3 / after
+                        :op1 (c2 / change-01)))))"

@@ -1,0 +1,95 @@
+# ::snt That sub is cancer
+# ::tokens ["That", "sub", "is", "cancer"]
+# ::lemmas ["that", "sub", "be", "cancer"]
+(c1-0 / disease
+      :name (c1-1 / name
+                  :op1 "cancer")
+      :domain (c1-2 / sub))
+
+# ::snt [Even year olds are on there]()
+# ::tokens ["[", "Even", "year", "olds", "are", "on", "there", "]", "(", ")"]
+# ::lemmas ["[", "even", "year", "old", "be", "on", "there", "]", "(", ")"]
+(c2-2 / be-located-at-91
+      :ARG1 (c2-3 / person
+                  :age (c2-1 / temporal-quantity
+                             :unit (c2-4 / year)
+                             :quant 1)
+                  :mod (c2-5 / even))
+      :ARG2 (c2-0 / there))
+
+# ::snt I think she was eavesdropping on another mother in the store with a child, otherwise that's one uppity year old... lol
+# ::tokens ["I", "think", "she", "was", "eavesdropping", "on", "another", "mother", "in", "the", "store", "with", "a", "child", ",", "otherwise", "that", "'s", "one", "uppity", "year", "old", "...", "lol"]
+# ::lemmas ["i", "think", "she", "be", "eavesdrop", "on", "another", "mother", "in", "the", "store", "with", "a", "child", ",", "otherwise", "that", "be", "one", "uppity", "year", "old", "...", "lol"]
+(c3-13 / and
+       :op1 (c3-7 / think-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-17 / listen-01
+                               :ARG0 (c3-10 / she)
+                               :ARG1 (c3-19 / person
+                                            :ARG0-of (c3-14 / have-rel-role-91
+                                                            :ARG1 c3-10
+                                                            :ARG2 (c3-8 / mother))
+                                            :mod (c3-9 / another)
+                                            :location (c3-18 / store)
+                                            :accompanier (c3-16 / person
+                                                                :ARG0-of (c3-2 / have-rel-role-91
+                                                                               :ARG1 c3-10
+                                                                               :ARG2 (c3-5 / child))))))
+       :op2 (c3-11 / person
+                   :age (c3-6 / temporal-quantity
+                              :unit (c3-12 / year)
+                              :mod (c3-15 / uppity)
+                              :quant 1)
+                   :domain c3-10
+                   :condition (c3-4 / have-polarity-91
+                                    :ARG1 c3-17
+                                    :ARG2 -))
+       :op3 (c3-1 / laugh-01
+                  :ARG0 c3-3
+                  :manner (c3-0 / loud)
+                  :mode expressive))
+
+# ::snt This post contains sexist language, this is not acceptable.
+# ::tokens ["This", "post", "contains", "sexist", "language", ",", "this", "is", "not", "acceptable", "."]
+# ::lemmas ["this", "post", "contain", "sexist", "language", ",", "this", "be", "not", "acceptable", "."]
+(c4-1 / and
+      :op1 (c4-2 / contain-01
+                 :ARG0 (c4-7 / post-01
+                             :mod (c4-5 / this))
+                 :ARG1 (c4-6 / language
+                             :mod (c4-0 / sexist)))
+      :op2 (c4-4 / possible-01
+                 :ARG1 (c4-8 / accept-01
+                             :ARG1 (c4-3 / this))
+                 :polarity -))
+
+# ::snt Language that attacks someones sex or sexual orientation is not allowed.
+# ::tokens ["Language", "that", "attacks", "someones", "sex", "or", "sexual", "orientation", "is", "not", "allowed", "."]
+# ::lemmas ["language", "that", "attack", "someone", "sex", "or", "sexual", "orientation", "be", "not", "allow", "."]
+(c5-1 / allow-01
+      :ARG1 (c5-4 / language
+                  :ARG0-of (c5-6 / attack-01
+                                 :ARG1 (c5-3 / or
+                                             :op1 (c5-0 / sex-01
+                                                        :ARG0 (c5-5 / someone))
+                                             :op2 (c5-2 / orient-01
+                                                        :ARG1 c5-5
+                                                        :ARG2 c5-0))))
+      :polarity -)
+
+# ::snt Using the term "c---" and its variants pejoratively is offensive and should be avoided.
+# ::tokens ["Using", "the", "term", "\"", "c---", "\"", "and", "its", "variants", "pejoratively", "is", "offensive", "and", "should", "be", "avoided", "."]
+# ::lemmas ["use", "the", "term", "\"", "c---", "\"", "and", "its", "variant", "pejoratively", "be", "offensive", "and", "should", "be", "avoid", "."]
+(c6-2 / and
+      :op1 (c6-5 / offend-01
+                 :ARG0 (c6-3 / use-01
+                             :ARG1 (c6-9 / and
+                                         :op1 (c6-6 / term-01
+                                                    :ARG3 (c6-0 / string-entity
+                                                                :value "c---"))
+                                         :op2 (c6-4 / variant
+                                                    :poss c6-0
+                                                    :mod (c6-8 / pejorative)))))
+      :op2 (c6-7 / recommend-01
+                 :ARG1 (c6-1 / avoid-01
+                             :ARG1 c6-3)))

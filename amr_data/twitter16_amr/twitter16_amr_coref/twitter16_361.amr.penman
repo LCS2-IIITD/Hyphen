@@ -1,0 +1,97 @@
+# ::snt ..don't make me try. Sticking them on my forehead is enough.
+# ::tokens ["..", "do", "n't", "make", "me", "try", ".", "Sticking", "them", "on", "my", "forehead", "is", "enough", "."]
+# ::lemmas ["..", "do", "not", "make", "i", "try", ".", "stick", "they", "on", "my", "forehead", "be", "enough", "."]
+(c1-6 / multi-sentence
+      :snt1 (c1-2 / make-02
+                  :ARG0 (c1-5 / you)
+                  :ARG1 (c1-0 / try-01
+                              :ARG0 (c1-7 / i))
+                  :mode imperative
+                  :polarity -)
+      :snt2 (c1-10 / have-quant-91
+                   :ARG1 (c1-8 / stick-01
+                               :ARG1 (c1-3 / they)
+                               :ARG2 (c1-9 / forehead
+                                           :part-of (c1-1 / i)))
+                   :ARG3 (c1-4 / enough)))
+
+# ::snt : The stickers on fruit are edible. What???
+# ::tokens [":", "The", "stickers", "on", "fruit", "are", "edible", ".", "What", "?", "?", "?"]
+# ::lemmas [":", "the", "sticker", "on", "fruit", "be", "edible", ".", "what", "?", "?", "?"]
+(c2-3 / multi-sentence
+      :snt1 (c2-2 / edible
+                  :domain (c2-1 / thing
+                                :ARG1-of (c2-4 / stick-01
+                                               :ARG2 (c2-5 / fruit))))
+      :snt2 (c2-0 / amr-unknown))
+
+# ::snt : The stickers on fruit are edible.
+# ::tokens [":", "The", "stickers", "on", "fruit", "are", "edible", "."]
+# ::lemmas [":", "the", "sticker", "on", "fruit", "be", "edible", "."]
+(c3-3 / edible
+      :domain (c3-1 / thing
+                    :ARG1-of (c3-2 / stick-01
+                                   :ARG2 (c3-0 / fruit))))
+
+# ::snt almost everything is edible...digestible on the other hand, not so much
+# ::tokens ["almost", "everything", "is", "edible", "...", "digestible", "on", "the", "other", "hand", ",", "not", "so", "much"]
+# ::lemmas ["almost", "everything", "be", "edible", "...", "digestible", "on", "the", "other", "hand", ",", "not", "so", "much"]
+(c4-8 / contrast-01
+      :ARG1 (c4-2 / eat-01
+                  :ARG1 (c4-7 / everything
+                              :mod (c4-0 / almost))
+                  :ARG1-of (c4-6 / possible-01))
+      :ARG2 (c4-1 / eat-01
+                  :ARG1-of (c4-3 / possible-01
+                                 :mod (c4-4 / much
+                                            :degree (c4-5 / so))
+                                 :polarity -)
+                  :ARG1-of c4-8))
+
+# ::snt : The stickers on fruit are edible.
+# ::tokens [":", "The", "stickers", "on", "fruit", "are", "edible", "."]
+# ::lemmas [":", "the", "sticker", "on", "fruit", "be", "edible", "."]
+(c5-3 / edible
+      :domain (c5-1 / thing
+                    :ARG1-of (c5-2 / stick-01
+                                   :ARG2 (c5-0 / fruit))))
+
+# ::snt : The stickers on fruit are edible.
+# ::tokens [":", "The", "stickers", "on", "fruit", "are", "edible", "."]
+# ::lemmas [":", "the", "sticker", "on", "fruit", "be", "edible", "."]
+(c6-3 / edible
+      :domain (c6-1 / thing
+                    :ARG1-of (c6-2 / stick-01
+                                   :ARG2 (c6-0 / fruit))))
+
+# ::snt wow
+# ::tokens ["wow"]
+# ::lemmas ["wow"]
+(c8-0 / wow
+      :mode expressive)
+
+# ::snt Lots of things are edible. Just because it wont kill you, doesnt mean you should eat it.
+# ::tokens ["Lots", "of", "things", "are", "edible", ".", "Just", "because", "it", "wo", "nt", "kill", "you", ",", "does", "nt", "mean", "you", "should", "eat", "it", "."]
+# ::lemmas ["lot", "of", "thing", "be", "edible", ".", "just", "because", "it", "will", "not", "kill", "you", ",", "do", "not", "mean", "you", "should", "eat", "it", "."]
+(c9-7 / multi-sentence
+      :snt1 (c9-2 / edible
+                  :domain (c9-0 / thing
+                                :quant (c9-10 / lot)))
+      :snt2 (c9-3 / mean-01
+                  :ARG1 (c9-11 / cause-01
+                               :ARG0 (c9-4 / kill-01
+                                           :ARG0 (c9-8 / it)
+                                           :ARG1 (c9-6 / you)
+                                           :polarity -)
+                               :ARG1 (c9-1 / recommend-01
+                                           :ARG1 (c9-9 / eat-01
+                                                       :ARG0 c9-6
+                                                       :ARG1 c9-8))
+                               :mod (c9-5 / just))
+                  :polarity -))
+
+# ::snt Source?
+# ::tokens ["Source", "?"]
+# ::lemmas ["source", "?"]
+(c10-1 / source
+       :polarity (c10-0 / amr-unknown))

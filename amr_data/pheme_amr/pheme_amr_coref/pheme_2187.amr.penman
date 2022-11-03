@@ -1,0 +1,294 @@
+# ::snt OK, thank you.
+# ::tokens ["OK", ",", "thank", "you", "."]
+# ::lemmas ["ok", ",", "thank", "you", "."]
+(c1-1 / thank-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / you))
+
+# ::snt No, thank you. I appreciate your courtesy in asking.
+# ::tokens ["No", ",", "thank", "you", ".", "I", "appreciate", "your", "courtesy", "in", "asking", "."]
+# ::lemmas ["no", ",", "thank", "you", ".", "i", "appreciate", "your", "courtesy", "in", "asking", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-4 / no)
+      :snt2 (c2-8 / thank-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-0 / you))
+      :snt3 (c2-9 / appreciate-02
+                  :ARG0 (c2-6 / i)
+                  :ARG1 (c2-5 / courtesy
+                              :poss (c2-7 / you)
+                              :topic (c2-2 / ask-01
+                                           :ARG0 c2-7))))
+
+# ::snt innocent peoplerepent and turn to the Lord Jesus Christ
+# ::tokens ["innocent", "peoplerepent", "and", "turn", "to", "the", "Lord", "Jesus", "Christ"]
+# ::lemmas ["innocent", "peoplerepent", "and", "turn", "to", "the", "Lord", "Jesus", "Christ"]
+(c3-6 / and
+      :op1 (c3-2 / person
+                 :ARG1-of (c3-0 / innocent-01)
+                 :ARG0-of (c3-3 / repute-01))
+      :op2 (c3-4 / turn-01
+                 :ARG1 c3-2
+                 :direction (c3-5 / person
+                                  :name (c3-1 / name
+                                              :op1 "Lord"
+                                              :op2 "Jesus"
+                                              :op3 "Christ"))))
+
+# ::snt Hello. I work for . Can I have your permission to print your tweet in our network of newspapers.
+# ::tokens ["Hello", ".", "I", "work", "for", ".", "Can", "I", "have", "your", "permission", "to", "print", "your", "tweet", "in", "our", "network", "of", "newspapers", "."]
+# ::lemmas ["hello", ".", "i", "work", "for", ".", "can", "i", "have", "your", "permission", "to", "print", "your", "tweet", "in", "our", "network", "of", "newspaper", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-0 / hello)
+      :snt2 (c4-1 / work-01
+                  :ARG0 (c4-4 / i))
+      :snt3 (c4-8 / permit-01
+                  :ARG0 (c4-9 / i)
+                  :ARG1 (c4-11 / print-01
+                               :ARG0 c4-9
+                               :ARG1 (c4-10 / tweet-01
+                                            :ARG0 (c4-2 / you))
+                               :location (c4-6 / network
+                                               :consist-of (c4-7 / newspaper)
+                                               :poss (c4-5 / we)))
+                  :ARG2 c4-9
+                  :polite +))
+
+# ::snt fully agree ,it's criminals using religion to hide the crimes
+# ::tokens ["fully", "agree", ",", "it", "'s", "criminals", "using", "religion", "to", "hide", "the", "crimes"]
+# ::lemmas ["fully", "agree", ",", "it", "be", "criminal", "use", "religion", "to", "hide", "the", "crime"]
+(c5-7 / agree-01
+      :ARG1 (c5-1 / use-01
+                  :ARG0 (c5-2 / person
+                              :ARG2-of (c5-4 / criminal-03))
+                  :ARG1 (c5-3 / religion)
+                  :ARG2 (c5-0 / hide-01
+                              :ARG0 c5-2
+                              :ARG1 (c5-5 / crime-02)))
+      :ARG1-of (c5-6 / thankful-02))
+
+# ::snt We currently have it embedded in an online story. Would you like us to remove it from that?
+# ::tokens ["We", "currently", "have", "it", "embedded", "in", "an", "online", "story", ".", "Would", "you", "like", "us", "to", "remove", "it", "from", "that", "?"]
+# ::lemmas ["we", "currently", "have", "it", "embed", "in", "an", "online", "story", ".", "would", "you", "like", "we", "to", "remove", "it", "from", "that", "?"]
+(c6-4 / multi-sentence
+      :snt1 (c6-0 / have-03
+                  :ARG0 (c6-1 / we)
+                  :ARG1 (c6-6 / embed-01
+                              :ARG1 (c6-7 / it)
+                              :ARG2 (c6-12 / story
+                                           :medium (c6-5 / online)))
+                  :time (c6-10 / current))
+      :snt2 (c6-3 / like-02
+                  :polarity (c6-13 / amr-unknown)
+                  :ARG0 (c6-2 / you)
+                  :ARG1 (c6-9 / remove-01
+                              :ARG0 (c6-8 / we)
+                              :ARG1 (c6-11 / it)
+                              :ARG2 c6-12)))
+
+# ::snt In holly Quran Allah said You are not allow to kill any human without any reason. We don not know who are doing
+# ::tokens ["In", "holly", "Quran", "Allah", "said", "You", "are", "not", "allow", "to", "kill", "any", "human", "without", "any", "reason", ".", "We", "don", "not", "know", "who", "are", "doing"]
+# ::lemmas ["in", "holly", "Quran", "Allah", "say", "you", "be", "not", "allow", "to", "kill", "any", "human", "without", "any", "reason", ".", "we", "don", "not", "know", "who", "be", "do"]
+(c7-4 / multi-sentence
+      :snt1 (c7-14 / say-01
+                   :ARG0 (c7-10 / person
+                                :name (c7-8 / name
+                                            :op1 "Allah"))
+                   :ARG1 (c7-17 / allow-01
+                                :ARG1 (c7-15 / kill-01
+                                             :ARG0 (c7-1 / you)
+                                             :ARG1 (c7-0 / human
+                                                         :mod (c7-7 / any))
+                                             :ARG1-of (c7-12 / cause-01
+                                                             :ARG0 (c7-11 / reason
+                                                                          :mod (c7-9 / any))
+                                                             :polarity -))
+                                :location (c7-5 / book
+                                                :name (c7-13 / name
+                                                             :op1 "Quran")
+                                                :mod (c7-3 / holly))
+                                :polarity -))
+      :snt2 (c7-6 / know-01
+                  :ARG0 (c7-2 / we)
+                  :ARG1 (c7-16 / person
+                               :ARG0-of c7-15)
+                  :polarity -))
+
+# ::snt but the question is are the makers of such cartoons innocent ?
+# ::tokens ["but", "the", "question", "is", "are", "the", "makers", "of", "such", "cartoons", "innocent", "?"]
+# ::lemmas ["but", "the", "question", "be", "be", "the", "maker", "of", "such", "cartoon", "innocent", "?"]
+(c8-5 / contrast-01
+      :ARG2 (c8-1 / question-01
+                  :ARG1 (c8-2 / innocent-01
+                              :ARG1 (c8-3 / person
+                                          :ARG0-of (c8-0 / make-01
+                                                         :ARG1 (c8-4 / cartoon
+                                                                     :mod (c8-6 / such))))
+                              :polarity (c8-7 / amr-unknown))))
+
+# ::snt fuck you
+# ::tokens ["fuck", "you"]
+# ::lemmas ["fuck", "you"]
+(c9-1 / fuck-01
+      :ARG1 (c9-0 / you)
+      :mode imperative
+      :mode expressive)
+
+# ::snt OK, don't hesitate to let me know if you change your mind.
+# ::tokens ["OK", ",", "do", "n't", "hesitate", "to", "let", "me", "know", "if", "you", "change", "your", "mind", "."]
+# ::lemmas ["ok", ",", "do", "not", "hesitate", "to", "let", "i", "know", "if", "you", "change", "your", "mind", "."]
+(c10-0 / hesitate-01
+       :ARG0 (c10-1 / you)
+       :ARG1 (c10-2 / let-know-07
+                    :ARG0 c10-1
+                    :ARG1 (c10-5 / i)
+                    :ARG2 (c10-6 / change-01
+                                 :ARG0 c10-1
+                                 :ARG1 (c10-3 / mind-05
+                                              :ARG0 c10-1)))
+       :ARG1-of (c10-4 / okay-04)
+       :polarity -
+       :mode imperative)
+
+# ::snt me too
+# ::tokens ["me", "too"]
+# ::lemmas ["i", "too"]
+(c11-1 / i
+       :mod (c11-0 / too))
+
+# ::snt I have many Muslim friends and this murder is not done in their names
+# ::tokens ["I", "have", "many", "Muslim", "friends", "and", "this", "murder", "is", "not", "done", "in", "their", "names"]
+# ::lemmas ["i", "have", "many", "Muslim", "friend", "and", "this", "murder", "be", "not", "do", "in", "their", "name"]
+(c12-10 / and
+        :op1 (c12-0 / have-rel-role-91
+                    :ARG0 (c12-3 / i)
+                    :ARG1 (c12-6 / person
+                                 :mod (c12-7 / religious-group
+                                             :name (c12-4 / name
+                                                          :op1 "Islam"))
+                                 :quant (c12-2 / many))
+                    :ARG2 (c12-1 / friend))
+        :op2 (c12-8 / murder-01
+                    :manner (c12-5 / name-01
+                                   :ARG1 c12-6)
+                    :mod (c12-9 / this)
+                    :polarity -))
+
+# ::snt and as a Human Being
+# ::tokens ["and", "as", "a", "Human", "Being"]
+# ::lemmas ["and", "as", "a", "Human", "being"]
+(c13-1 / and
+       :op2 (c13-2 / being
+                   :mod (c13-0 / human)))
+
+# ::snt same here! Killers are killers,religion's just a cover divide us up &amp;fuel the hate,unity's the only answer!
+# ::tokens ["same", "here", "!", "Killers", "are", "killers", ",", "religion", "'s", "just", "a", "cover", "divide", "us", "up", "&", "amp;fuel", "the", "hate", ",", "unity", "'s", "the", "only", "answer", "!"]
+# ::lemmas ["same", "here", "!", "Killers", "be", "killer", ",", "religion", "'s", "just", "a", "cover", "divide", "we", "up", "&", "amp;fuel", "the", "hate", ",", "unity", "'s", "the", "only", "answer", "!"]
+(c14-1 / multi-sentence
+       :snt1 (c14-4 / same-01
+                    :location (c14-8 / here))
+       :snt2 (c14-2 / person
+                    :ARG0-of (c14-17 / kill-01)
+                    :domain (c14-5 / person
+                                   :ARG0-of (c14-15 / kill-01)))
+       :snt3 (c14-7 / and
+                    :op1 (c14-3 / divide-02
+                                :ARG0 (c14-19 / cover-03
+                                              :ARG1 (c14-11 / religion)
+                                              :mod (c14-0 / just))
+                                :ARG1 (c14-13 / we))
+                    :op2 (c14-16 / and
+                                 :op1 (c14-14 / up)
+                                 :op2 (c14-10 / amp))
+                    :op3 (c14-9 / fuel-01
+                                :ARG0 (c14-12 / unite-01)
+                                :ARG1 (c14-6 / hate-01))
+                    :op4 c14-12
+                    :ARG2-of (c14-20 / answer-01
+                                     :mod (c14-18 / only))))
+
+# ::snt Well said. Agree with you.
+# ::tokens ["Well", "said", ".", "Agree", "with", "you", "."]
+# ::lemmas ["well", "say", ".", "agree", "with", "you", "."]
+(c15-2 / multi-sentence
+       :snt1 (c15-4 / say-01
+                    :manner (c15-0 / well-09))
+       :snt2 (c15-5 / agree-01
+                    :ARG0 (c15-3 / i)
+                    :ARG2 (c15-1 / you)))
+
+# ::snt as a christian, all i can do i suspport freedom of speech
+# ::tokens ["as", "a", "christian", ",", "all", "i", "can", "do", "i", "suspport", "freedom", "of", "speech"]
+# ::lemmas ["as", "a", "christian", ",", "all", "i", "can", "do", "i", "suspport", "freedom", "of", "speech"]
+(c16-6 / cause-01
+       :ARG0 (c16-5 / religious-group
+                    :name (c16-3 / name
+                                 :op1 "Christian")
+                    :domain (c16-2 / i))
+       :ARG1 (c16-4 / possible-01
+                    :ARG1 (c16-7 / do-02
+                                 :ARG0 c16-2
+                                 :ARG1 (c16-9 / all
+                                              :ARG0 c16-2)
+                                 :ARG1 c16-9))
+       :ARG2 (c16-8 / support-01
+                    :ARG0 c16-2
+                    :ARG1 (c16-0 / free-04
+                                 :ARG3 (c16-1 / speak-01))))
+
+# ::snt As a French girl, right now I hope they have though like you...
+# ::tokens ["As", "a", "French", "girl", ",", "right", "now", "I", "hope", "they", "have", "though", "like", "you", "..."]
+# ::lemmas ["as", "a", "French", "girl", ",", "right", "now", "i", "hope", "they", "have", "though", "like", "you", "..."]
+(c17-0 / hope-01
+       :ARG0 (c17-2 / i
+                    :mod (c17-8 / girl
+                                :mod (c17-7 / country
+                                            :name (c17-4 / name
+                                                         :op1 "France"))))
+       :ARG1 (c17-10 / have-concession-91
+                     :ARG2 (c17-6 / resemble-01
+                                  :ARG1 (c17-9 / they)
+                                  :ARG2 (c17-1 / you)))
+       :time (c17-5 / now
+                    :mod (c17-3 / right)))
+
+# ::snt Bravo aux musulmans condamnant fermement l'attaque anti .
+# ::tokens ["Bravo", "aux", "musulmans", "condamnant", "fermement", "l'attaque", "anti", "."]
+# ::lemmas ["Bravo", "aux", "musulman", "condamnant", "fermement", "l'attaque", "anti", "."]
+(c18-0 / oppose-01
+       :ARG0 (c18-3 / person
+                    :mod (c18-4 / religious-group
+                                :name (c18-2 / name
+                                             :op1 "Islam"))
+                    :mod (c18-1 / ravo
+                                :mode expressive))
+       :manner (c18-5 / amr-unintelligible
+                      :value "l'attaque"))
+
+# ::snt If that's already up, then it doesn't really matter.
+# ::tokens ["If", "that", "'s", "already", "up", ",", "then", "it", "does", "n't", "really", "matter", "."]
+# ::lemmas ["if", "that", "be", "already", "up", ",", "then", "it", "do", "not", "really", "matter", "."]
+(c19-0 / have-condition-91
+       :ARG1 (c19-1 / matter-01
+                    :ARG1 (c19-4 / that)
+                    :ARG1-of (c19-3 / real-04)
+                    :polarity -)
+       :ARG2 (c19-2 / up-03
+                    :ARG1 c19-4
+                    :time (c19-5 / already)))
+
+# ::snt As a human being
+# ::tokens ["As", "a", "human", "being"]
+# ::lemmas ["as", "a", "human", "being"]
+(c20-1 / being
+       :mod (c20-0 / human))
+
+# ::snt det r vl en sjlvklarhet?
+# ::tokens ["det", "r", "vl", "en", "sjlvklarhet", "?"]
+# ::lemmas ["det", "r", "vl", "en", "sjlvklarhet", "?"]
+(c21-0 / string-entity
+       :polarity (c21-3 / amr-unknown)
+       :subevent-of (c21-2 / criminal-organization
+                           :name (c21-1 / name
+                                        :op1 "Sjlvklarhet"))
+       :value "det r vl")

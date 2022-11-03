@@ -1,0 +1,45 @@
+# ::snt Hello Sir , If i may ask . Can one be a communist and practising muslim at the same time ?
+# ::tokens ["Hello", "Sir", ",", "If", "i", "may", "ask", ".", "Can", "one", "be", "a", "communist", "and", "practising", "muslim", "at", "the", "same", "time", "?"]
+# ::lemmas ["hello", "Sir", ",", "if", "i", "may", "ask", ".", "can", "one", "be", "a", "communist", "and", "practise", "muslim", "at", "the", "same", "time", "?"]
+(c1-7 / multi-sentence
+      :snt1 (c1-10 / say-01
+                   :ARG1 (c1-16 / hello)
+                   :ARG2 (c1-19 / person
+                                :name (c1-8 / name
+                                            :op1 "Sir"))
+                   :condition (c1-17 / permit-01
+                                     :ARG1 (c1-15 / ask-01
+                                                  :ARG0 (c1-3 / i
+                                                              :ARG2-of c1-17))))
+      :snt2 (c1-12 / possible-01
+                   :ARG1 (c1-9 / and
+                               :op1 (c1-11 / person
+                                           :mod (c1-1 / political-movement
+                                                      :name (c1-2 / name
+                                                                  :op1 "communism"))
+                                           :domain (c1-4 / one))
+                               :op2 (c1-13 / practice-01
+                                           :ARG0 c1-4
+                                           :ARG1 (c1-20 / person
+                                                        :mod (c1-6 / religious-group
+                                                                   :name (c1-14 / name
+                                                                                :op1 "Islam"))))
+                               :time (c1-5 / time
+                                           :ARG1-of (c1-18 / same-01)))
+                   :polarity (c1-0 / amr-unknown)))
+
+# ::snt Yes . Communist is anyone who believes economic resources should be owned by society in common .
+# ::tokens ["Yes", ".", "Communist", "is", "anyone", "who", "believes", "economic", "resources", "should", "be", "owned", "by", "society", "in", "common", "."]
+# ::lemmas ["yes", ".", "Communist", "be", "anyone", "who", "believe", "economic", "resource", "should", "be", "own", "by", "society", "in", "common", "."]
+(c2-7 / political-movement
+      :name (c2-8 / name
+                  :op1 "communism")
+      :domain (c2-1 / anyone
+                    :ARG0-of (c2-5 / believe-01
+                                   :ARG1 (c2-4 / recommend-01
+                                               :ARG1 (c2-3 / own-01
+                                                           :ARG0 (c2-0 / society)
+                                                           :ARG1 (c2-2 / resource
+                                                                       :mod (c2-9 / economy))
+                                                           :ARG1-of (c2-6 / share-01
+                                                                          :ARG0 c2-0))))))

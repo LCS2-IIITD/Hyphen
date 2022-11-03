@@ -1,0 +1,77 @@
+# ::snt The news there is "se revendiquait d'Al Qaida"... haven't seen claim of Al-Q affiliation elsewhere.
+# ::tokens ["The", "news", "there", "is", "\"", "se", "revendiquait", "d'Al", "Qaida", "\"", "...", "have", "n't", "seen", "claim", "of", "Al", "-", "Q", "affiliation", "elsewhere", "."]
+# ::lemmas ["the", "news", "there", "be", "\"", "se", "revendiquait", "d'Al", "Qaida", "\"", "...", "have", "not", "see", "claim", "of", "Al", "-", "Q", "affiliation", "elsewhere", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / news
+                  :topic (c1-1 / revendiquait)))
+
+# ::snt The men with Kashnikovs shooting at journalist in office are COWARDS. Nobody in world will ever respect them.
+# ::tokens ["The", "men", "with", "Kashnikovs", "shooting", "at", "journalist", "in", "office", "are", "COWARDS", ".", "Nobody", "in", "world", "will", "ever", "respect", "them", "."]
+# ::lemmas ["the", "man", "with", "Kashnikovs", "shoot", "at", "journalist", "in", "office", "be", "COWARDS", ".", "nobody", "in", "world", "will", "ever", "respect", "they", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-9 / coward
+                  :domain (c2-7 / man
+                                :ARG0-of (c2-11 / shoot-02
+                                                :ARG2 (c2-0 / journalist)
+                                                :location (c2-3 / office))
+                                :poss (c2-8 / person
+                                            :name (c2-5 / name
+                                                        :op1 "Kashnikov"))))
+      :snt2 (c2-10 / respect-01
+                   :ARG0 (c2-6 / nobody
+                               :location (c2-1 / world))
+                   :ARG1 (c2-12 / they)
+                   :time (c2-4 / ever)))
+
+# ::snt except their radical brethren
+# ::tokens ["except", "their", "radical", "brethren"]
+# ::lemmas ["except", "their", "radical", "brother"]
+(c3-2 / except-01
+      :ARG1 (c3-3 / person
+                  :ARG0-of (c3-0 / have-rel-role-91
+                                 :ARG1 (c3-5 / they)
+                                 :ARG2 (c3-1 / brethren))
+                  :ARG1-of (c3-4 / radical-02)))
+
+# ::snt b voil une piste dj
+# ::tokens ["b", "voil", "une", "piste", "dj"]
+# ::lemmas ["b", "voil", "une", "piste", "dj"]
+(c4-4 / say-01
+      :ARG0 (c4-0 / i)
+      :ARG1 (c4-1 / voil-
+                  :mod (c4-3 / dj)
+                  :mode expressive)
+      :ARG2 (c4-2 / person))
+
+# ::snt Because they were, presumably, true Francophones.
+# ::tokens ["Because", "they", "were", ",", "presumably", ",", "true", "Francophones", "."]
+# ::lemmas ["because", "they", "be", ",", "presumably", ",", "true", "Francophones", "."]
+(c5-3 / cause-01
+      :ARG0 (c5-1 / person
+                  :domain (c5-5 / they)
+                  :mod (c5-2 / religious-group
+                             :name (c5-0 / name
+                                         :op1 "Francophone"))
+                  :ARG1-of (c5-4 / true-01)
+                  :ARG1-of (c5-6 / presume-01)))
+
+# ::snt Islamic terrorist have infiltrated multiple strata of society &amp; it will require greater vigilance to stop them.
+# ::tokens ["Islamic", "terrorist", "have", "infiltrated", "multiple", "strata", "of", "society", "&", "amp", ";", "it", "will", "require", "greater", "vigilance", "to", "stop", "them", "."]
+# ::lemmas ["Islamic", "terrorist", "have", "infiltrate", "multiple", "strata", "of", "society", "&", "amp", ";", "it", "will", "require", "great", "vigilance", "to", "stop", "they", "."]
+(c6-5 / infiltrate-01
+      :ARG0 (c6-13 / terrorist
+                   :mod (c6-10 / religious-group
+                               :name (c6-7 / name
+                                           :op1 "Islam")))
+      :ARG1 (c6-12 / strata
+                   :quant (c6-2 / multiple)
+                   :part-of (c6-14 / and
+                                   :op1 (c6-3 / society)
+                                   :op2 (c6-4 / amp)))
+      :ARG0-of (c6-6 / require-01
+                     :ARG1 (c6-8 / vigilant-01
+                                 :ARG0-of (c6-1 / stop-01
+                                                :ARG1 c6-13)
+                                 :ARG1-of (c6-0 / have-degree-91
+                                                :ARG2 (c6-11 / great)
+                                                :ARG3 (c6-9 / more)))))

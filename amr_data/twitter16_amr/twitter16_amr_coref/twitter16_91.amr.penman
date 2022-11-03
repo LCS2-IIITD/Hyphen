@@ -1,0 +1,55 @@
+# ::snt that's racist
+# ::tokens ["that", "'s", "racist"]
+# ::lemmas ["that", "be", "racist"]
+(c1-1 / racist
+      :domain (c1-0 / that))
+
+# ::snt It's a sarcastic comment, don't take it that seriously
+# ::tokens ["It", "'s", "a", "sarcastic", "comment", ",", "do", "n't", "take", "it", "that", "seriously"]
+# ::lemmas ["it", "be", "a", "sarcastic", "comment", ",", "do", "not", "take", "it", "that", "seriously"]
+(c2-0 / and
+      :op1 (c2-6 / comment-01
+                 :mod (c2-5 / sarcasm)
+                 :domain (c2-4 / it))
+      :op2 (c2-2 / take-04
+                 :ARG0 (c2-3 / you)
+                 :ARG1 c2-4
+                 :ARG2 (c2-1 / serious-01)
+                 :polarity -
+                 :mode imperative))
+
+# ::snt just because his biological father is muslim ?
+# ::tokens ["just", "because", "his", "biological", "father", "is", "muslim", "?"]
+# ::lemmas ["just", "because", "his", "biological", "father", "be", "muslim", "?"]
+(c3-10 / cause-01
+       :ARG0 (c3-6 / person
+                   :mod (c3-1 / religious-group
+                              :name (c3-7 / name
+                                          :op1 "Islam"))
+                   :domain (c3-4 / person
+                                 :ARG0-of (c3-9 / have-rel-role-91
+                                                :ARG1 (c3-5 / he)
+                                                :ARG2 (c3-8 / father))
+                                 :mod (c3-3 / biology)))
+       :polarity (c3-0 / amr-unknown)
+       :mod (c3-2 / just))
+
+# ::snt why??
+# ::tokens ["why", "?", "?"]
+# ::lemmas ["why", "?", "?"]
+(c4-1 / cause-01
+      :ARG0 (c4-0 / amr-unknown))
+
+# ::snt Stop using app Apple Products from today.
+# ::tokens ["Stop", "using", "app", "Apple", "Products", "from", "today", "."]
+# ::lemmas ["stop", "use", "app", "Apple", "Products", "from", "today", "."]
+(c5-3 / stop-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-2 / use-01
+                  :ARG0 c5-1
+                  :ARG1 (c5-4 / product
+                              :name (c5-5 / name
+                                          :op1 "Apple"
+                                          :op2 "Products")
+                              :time (c5-0 / today)))
+      :mode imperative)

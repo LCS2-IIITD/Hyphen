@@ -1,0 +1,152 @@
+# ::snt must be the worst terrorists in the world.
+# ::tokens ["must", "be", "the", "worst", "terrorists", "in", "the", "world", "."]
+# ::lemmas ["must", "be", "the", "bad", "terrorist", "in", "the", "world", "."]
+(c1-4 / infer-01
+      :ARG1 (c1-0 / have-degree-91
+                  :ARG1 (c1-5 / terrorist)
+                  :ARG2 (c1-3 / bad-07
+                              :ARG1 c1-5)
+                  :ARG3 (c1-2 / most)
+                  :ARG5 (c1-1 / world)))
+
+# ::snt civilian men, man employee &amp; women employees was running out multiple exits
+# ::tokens ["civilian", "men", ",", "man", "employee", "&", "amp", ";", "women", "employees", "was", "running", "out", "multiple", "exits"]
+# ::lemmas ["civilian", "man", ",", "man", "employee", "&", "amp", ";", "woman", "employee", "be", "run", "out", "multiple", "exit"]
+(c2-3 / multi-sentence
+      :snt1 (c2-11 / and
+                   :op1 (c2-7 / man
+                              :mod (c2-8 / civil))
+                   :op2 (c2-6 / person
+                              :ARG1-of (c2-5 / employ-01)
+                              :mod c2-8)
+                   :op3 (c2-10 / person
+                               :ARG1-of (c2-4 / employ-01
+                                              :ARG0 (c2-0 / woman))))
+      :snt2 (c2-9 / run-out-05
+                  :ARG1 (c2-1 / exit
+                              :quant (c2-2 / multiple))
+                  :ARG2 c2-0))
+
+# ::snt We'd like to know if they're men, women, or children.
+# ::tokens ["We", "'d", "like", "to", "know", "if", "they", "'re", "men", ",", "women", ",", "or", "children", "."]
+# ::lemmas ["we", "would", "like", "to", "know", "if", "they", "be", "man", ",", "woman", ",", "or", "child", "."]
+(c3-1 / like-02
+      :ARG0 (c3-0 / we)
+      :ARG1 (c3-4 / know-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-8 / truth-value
+                              :polarity-of (c3-3 / or
+                                                 :op1 (c3-2 / man)
+                                                 :op2 (c3-5 / woman)
+                                                 :op3 (c3-6 / child)
+                                                 :domain (c3-7 / they)))))
+
+# ::snt It's just a shame a load of them couldn't tackle the idiot but you don't know what he's got on him but a gun.
+# ::tokens ["It", "'s", "just", "a", "shame", "a", "load", "of", "them", "could", "n't", "tackle", "the", "idiot", "but", "you", "do", "n't", "know", "what", "he", "'s", "got", "on", "him", "but", "a", "gun", "."]
+# ::lemmas ["it", "be", "just", "a", "shame", "a", "load", "of", "they", "could", "not", "tackle", "the", "idiot", "but", "you", "do", "not", "know", "what", "he", "be", "get", "on", "he", "but", "a", "gun", "."]
+(c5-9 / contrast-01
+      :ARG1 (c5-13 / shame-02
+                   :ARG0 (c5-7 / possible-01
+                               :ARG1 (c5-14 / tackle-01
+                                            :ARG0 (c5-15 / person
+                                                         :ARG1-of (c5-3 / load-01)
+                                                         :ARG1-of (c5-4 / include-91
+                                                                        :ARG2 (c5-12 / they)))
+                                            :ARG1 (c5-10 / idiot))
+                               :polarity -)
+                   :mod (c5-0 / just))
+      :ARG2 (c5-8 / contrast-01
+                  :ARG1 (c5-5 / know-01
+                              :ARG0 (c5-1 / you)
+                              :ARG1 (c5-6 / thing
+                                          :ARG1-of (c5-2 / have-03
+                                                         :ARG0 c5-10
+                                                         :ARG2-of c5-8))
+                              :polarity -)
+                  :ARG0 c5-10
+                  :ARG1 (c5-11 / gun)))
+
+# ::snt obama ...where is our help in this.......im sure he will have a lie for us in the next press conf...as usual. send in our military.
+# ::tokens ["obama", "...", "where", "is", "our", "help", "in", "this", ".......", "im", "sure", "he", "will", "have", "a", "lie", "for", "us", "in", "the", "next", "press", "conf", "...", "as", "usual", ".", "send", "in", "our", "military", "."]
+# ::lemmas ["obama", "...", "where", "be", "our", "help", "in", "this", ".......", "im", "sure", "he", "will", "have", "a", "lie", "for", "we", "in", "the", "next", "press", "conf", "...", "as", "usual", ".", "send", "in", "our", "military", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-3 / person
+                  :name (c6-12 / name
+                               :op1 "Obama"))
+      :snt2 (c6-10 / be-located-at-91
+                   :ARG1 (c6-8 / help-01
+                               :ARG0 (c6-14 / we)
+                               :ARG1 (c6-20 / this))
+                   :ARG2 (c6-7 / amr-unknown))
+      :snt3 (c6-4 / sure-02
+                  :ARG0 (c6-16 / i)
+                  :ARG1 (c6-9 / lie-08
+                              :ARG0 (c6-6 / he)
+                              :beneficiary (c6-2 / we)
+                              :location (c6-19 / conf
+                                               :mod (c6-5 / press)
+                                               :mod (c6-18 / next))
+                              :mod (c6-15 / as-usual)))
+      :snt4 (c6-11 / send-01
+                   :ARG0 (c6-17 / you)
+                   :ARG1 (c6-13 / military
+                                :poss (c6-1 / we))
+                   :mode imperative))
+
+# ::snt I would have charged him immediately. if one dies, better than theblock is blown up. I would favor a police assault.
+# ::tokens ["I", "would", "have", "charged", "him", "immediately", ".", "if", "one", "dies", ",", "better", "than", "theblock", "is", "blown", "up", ".", "I", "would", "favor", "a", "police", "assault", "."]
+# ::lemmas ["i", "would", "have", "charge", "he", "immediately", ".", "if", "one", "die", ",", "well", "than", "theblock", "be", "blow", "up", ".", "i", "would", "favor", "a", "police", "assault", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-10 / charge-05
+                   :ARG0 (c7-6 / i)
+                   :ARG1 (c7-0 / he)
+                   :time (c7-11 / immediate))
+      :snt2 (c7-16 / have-condition-91
+                   :ARG1 (c7-7 / have-degree-91
+                               :ARG1 (c7-4 / blow-up-06
+                                           :ARG1 (c7-12 / block))
+                               :ARG2 (c7-13 / good-02)
+                               :ARG3 (c7-8 / more)
+                               :ARG4 c7-4)
+                   :ARG2 (c7-9 / die-01
+                               :ARG1 (c7-5 / one)))
+      :snt3 (c7-1 / favor-01
+                  :ARG0 (c7-3 / i)
+                  :ARG1 (c7-15 / assault-01
+                               :ARG0 (c7-14 / police))))
+
+# ::snt - INTEL ANALYST feels this Sydney drama is a staged flase flag operation
+# ::tokens ["-", "INTEL", "ANALYST", "feels", "this", "Sydney", "drama", "is", "a", "staged", "flase", "flag", "operation"]
+# ::lemmas ["-", "INTEL", "analyst", "feel", "this", "Sydney", "drama", "be", "a", "stage", "flase", "flag", "operation"]
+(c8-0 / feel-02
+      :ARG0 (c8-6 / publication
+                  :name (c8-4 / name
+                              :op1 "Independent"
+                              :op2 "Communications"))
+      :ARG1 (c8-1 / operate-01
+                  :ARG1 (c8-3 / flag
+                              :mod (c8-2 / flase))
+                  :ARG1-of (c8-9 / stage-01)
+                  :domain (c8-7 / drama
+                                :mod (c8-8 / city
+                                           :name (c8-5 / name
+                                                       :op1 "Sydney"))
+                                :mod (c8-10 / this))))
+
+# ::snt INTEL ANALYST has strong suspicion the SYDNEY event is a staged false flag drama
+# ::tokens ["INTEL", "ANALYST", "has", "strong", "suspicion", "the", "SYDNEY", "event", "is", "a", "staged", "false", "flag", "drama"]
+# ::lemmas ["INTEL", "ANALYST", "have", "strong", "suspicion", "the", "SYDNEY", "event", "be", "a", "stage", "false", "flag", "drama"]
+(c9-10 / suspect-01
+       :ARG0 (c9-2 / organization
+                   :name (c9-6 / name
+                               :op1 "INTEL"
+                               :op2 "Analmogy"))
+       :ARG1 (c9-8 / drama
+                   :domain (c9-3 / event
+                                 :location (c9-9 / city
+                                                 :name (c9-7 / name
+                                                             :op1 "Sydney")))
+                   :ARG1-of (c9-4 / stage-01)
+                   :mod (c9-0 / flag
+                              :mod (c9-5 / false)))
+       :ARG1-of (c9-1 / strong-02))

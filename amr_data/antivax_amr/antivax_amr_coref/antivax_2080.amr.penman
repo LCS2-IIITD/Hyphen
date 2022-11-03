@@ -1,0 +1,18 @@
+# ::snt Good luck! I received mine yesterday , my arm was just sore after
+# ::tokens ["Good", "luck", "!", "I", "received", "mine", "yesterday", ",", "my", "arm", "was", "just", "sore", "after"]
+# ::lemmas ["good", "luck", "!", "i", "receive", "mine", "yesterday", ",", "my", "arm", "be", "just", "sore", "after"]
+(c1-9 / multi-sentence
+      :snt1 (c1-4 / luck
+                  :ARG1-of (c1-6 / good-02))
+      :snt2 (c1-2 / and
+                  :op1 (c1-3 / receive-01
+                             :ARG0 (c1-8 / i
+                                         :part (c1-11 / arm))
+                             :ARG1 (c1-5 / luck
+                                         :poss c1-8)
+                             :time (c1-10 / yesterday))
+                  :op2 (c1-0 / sore
+                             :domain c1-11
+                             :time (c1-1 / after
+                                         :op1 c1-3)
+                             :mod (c1-7 / just))))

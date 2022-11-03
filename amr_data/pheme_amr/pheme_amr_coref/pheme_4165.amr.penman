@@ -1,0 +1,88 @@
+# ::snt Imma be there.
+# ::tokens ["Imma", "be", "there", "."]
+# ::lemmas ["Imma", "be", "there", "."]
+(c1-2 / be-located-at-91
+      :ARG1 (c1-1 / i)
+      :ARG2 (c1-0 / there))
+
+# ::snt A cleanup for has been organized. TOMORROW. Meet at am Wednesday August , N Florissant Rd, Ferguson, MO
+# ::tokens ["A", "cleanup", "for", "has", "been", "organized", ".", "TOMORROW", ".", "Meet", "at", "am", "Wednesday", "August", ",", "N", "Florissant", "Rd", ",", "Ferguson", ",", "MO"]
+# ::lemmas ["a", "cleanup", "for", "have", "be", "organize", ".", "TOMORROW", ".", "meet", "at", "am", "Wednesday", "August", ",", "N", "Florissant", "Rd", ",", "Ferguson", ",", "MO"]
+(c2-3 / multi-sentence
+      :snt1 (c2-4 / organize-01
+                  :ARG1 (c2-9 / clean-up-02)
+                  :time (c2-8 / date-entity
+                              :dayperiod (c2-5 / night)
+                              :month 8))
+      :snt2 (c2-7 / meet-03
+                  :ARG0 (c2-0 / you)
+                  :time (c2-1 / date-entity
+                              :weekday (c2-2 / wednesday))
+                  :location (c2-10 / road
+                                   :name (c2-6 / name
+                                               :op1 "N"
+                                               :op2 "Florissant"
+                                               :op3 "Road")
+                                   :location (c2-11 / city
+                                                    :name (c2-12 / name
+                                                                 :op1 "Ferguson")
+                                                    :location (c2-13 / state
+                                                                     :name (c2-14 / name
+                                                                                  :op1 "Missouri"))))
+                  :mode imperative))
+
+# ::snt You trashed it niggers, you clean it up!!!! RT : A cleanup for has been organized. TOMORROW.
+# ::tokens ["You", "trashed", "it", "niggers", ",", "you", "clean", "it", "up", "!", "!", "!", "!", "RT", ":", "A", "cleanup", "for", "has", "been", "organized", ".", "TOMORROW", "."]
+# ::lemmas ["you", "trash", "it", "nigger", ",", "you", "clean", "it", "up", "!", "!", "!", "!", "RT", ":", "a", "cleanup", "for", "have", "be", "organize", ".", "TOMORROW", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-11 / trash-01
+                   :ARG0 (c3-0 / you)
+                   :ARG1 (c3-3 / it)
+                   :ARG1-of (c3-4 / mean-01
+                                  :ARG2 (c3-6 / clean-up-02
+                                              :ARG0 (c3-9 / you)
+                                              :ARG1 (c3-7 / it))))
+      :snt2 (c3-2 / organize-01
+                  :ARG1 (c3-5 / clean-up-02)
+                  :time (c3-8 / date-entity
+                              :weekday (c3-10 / TOMORROW))))
+
+# ::snt Need to be a little more stealthy there dear....
+# ::tokens ["Need", "to", "be", "a", "little", "more", "stealthy", "there", "dear", "...."]
+# ::lemmas ["need", "to", "be", "a", "little", "more", "stealthy", "there", "dear", "...."]
+(c4-6 / say-01
+      :ARG1 (c4-4 / need-01
+                  :ARG0 (c4-5 / dear)
+                  :ARG1 (c4-3 / stealth
+                              :ARG2-of (c4-0 / have-degree-91
+                                             :ARG1 c4-5
+                                             :ARG3 (c4-2 / more
+                                                         :quant (c4-1 / little))))
+                  :location (c4-7 / there))
+      :ARG2 c4-5)
+
+# ::snt a clean up eh? what are they gonna do bring in the army and kill everyone now?
+# ::tokens ["a", "clean", "up", "eh", "?", "what", "are", "they", "gon", "na", "do", "bring", "in", "the", "army", "and", "kill", "everyone", "now", "?"]
+# ::lemmas ["a", "clean", "up", "eh", "?", "what", "be", "they", "going", "to", "do", "bring", "in", "the", "army", "and", "kill", "everyone", "now", "?"]
+(c5-0 / multi-sentence
+      :snt1 (c5-8 / clean-up-02
+                  :ARG1-of (c5-7 / request-confirmation-91))
+      :snt2 (c5-10 / and
+                   :op1 (c5-1 / bring-01
+                              :ARG0 (c5-9 / they)
+                              :ARG1 (c5-3 / army))
+                   :op2 (c5-4 / kill-01
+                              :ARG0 c5-9
+                              :ARG1 (c5-2 / everyone))
+                   :time (c5-5 / now)
+                   :mod (c5-6 / amr-unknown)))
+
+# ::snt you trashed it, you clean it up
+# ::tokens ["you", "trashed", "it", ",", "you", "clean", "it", "up"]
+# ::lemmas ["you", "trash", "it", ",", "you", "clean", "it", "up"]
+(c6-2 / clean-up-02
+      :ARG0 (c6-1 / you)
+      :ARG1 (c6-3 / it)
+      :condition (c6-0 / trash-01
+                       :ARG0 c6-1
+                       :ARG1 c6-3))

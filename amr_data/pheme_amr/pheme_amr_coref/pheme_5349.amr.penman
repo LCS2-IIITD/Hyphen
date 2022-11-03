@@ -1,0 +1,81 @@
+# ::snt sure. Just stay in your deserts!
+# ::tokens ["sure", ".", "Just", "stay", "in", "your", "deserts", "!"]
+# ::lemmas ["sure", ".", "just", "stay", "in", "your", "desert", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-5 / sure-02)
+      :snt2 (c1-3 / stay-01
+                  :ARG1 (c1-1 / you)
+                  :ARG3 (c1-4 / desert
+                              :poss c1-1)
+                  :mod (c1-0 / just)
+                  :mode imperative))
+
+# ::snt A real Muslim cannot be a terrorist. ***
+# ::tokens ["A", "real", "Muslim", "can", "not", "be", "a", "terrorist", ".", "*", "*", "*"]
+# ::lemmas ["a", "real", "Muslim", "can", "not", "be", "a", "terrorist", ".", "*", "*", "*"]
+(c2-2 / possible-01
+      :ARG1 (c2-4 / terrorist
+                  :domain (c2-5 / person
+                                :mod (c2-3 / religious-group
+                                           :name (c2-1 / name
+                                                       :op1 "Islam"))
+                                :ARG1-of (c2-0 / real-04)))
+      :polarity -)
+
+# ::snt A real Muslim cannot be a terrorist. ***
+# ::tokens ["A", "real", "Muslim", "can", "not", "be", "a", "terrorist", ".", "*", "*", "*"]
+# ::lemmas ["a", "real", "Muslim", "can", "not", "be", "a", "terrorist", ".", "*", "*", "*"]
+(c3-2 / possible-01
+      :ARG1 (c3-4 / terrorist
+                  :domain (c3-5 / person
+                                :mod (c3-3 / religious-group
+                                           :name (c3-1 / name
+                                                       :op1 "Islam"))
+                                :ARG1-of (c3-0 / real-04)))
+      :polarity -)
+
+# ::snt who decides who is, and who isn't a muslim?
+# ::tokens ["who", "decides", "who", "is", ",", "and", "who", "is", "n't", "a", "muslim", "?"]
+# ::lemmas ["who", "decide", "who", "be", ",", "and", "who", "be", "not", "a", "muslim", "?"]
+(c4-4 / decide-01
+      :ARG0 (c4-6 / amr-unknown)
+      :ARG1 (c4-0 / and
+                  :op1 (c4-2 / person
+                             :mod (c4-3 / religious-group
+                                        :name (c4-1 / name
+                                                    :op1 "Muslim")))
+                  :op2 (c4-5 / person
+                             :mod c4-3
+                             :polarity -)))
+
+# ::snt CACHONDO!
+# ::tokens ["CACHONDO", "!"]
+# ::lemmas ["CACHONDO", "!"]
+(c5-0 / cachonDO
+      :mode expressive)
+
+# ::snt like all religions are evilrepent and turn to the Lord Jesus Christ
+# ::tokens ["like", "all", "religions", "are", "evilrepent", "and", "turn", "to", "the", "Lord", "Jesus", "Christ"]
+# ::lemmas ["like", "all", "religion", "be", "evilrepent", "and", "turn", "to", "the", "Lord", "Jesus", "Christ"]
+(c6-5 / resemble-01
+      :ARG1 (c6-7 / and
+                  :op1 (c6-2 / repent
+                             :domain (c6-0 / religion
+                                           :mod (c6-1 / all))
+                             :polarity -)
+                  :op2 (c6-6 / turn-01
+                             :direction (c6-4 / person
+                                              :name (c6-3 / name
+                                                          :op1 "Lord"
+                                                          :op2 "Jesus"
+                                                          :op3 "Christ")))))
+
+# ::snt no true Scotsmen
+# ::tokens ["no", "true", "Scotsmen"]
+# ::lemmas ["no", "true", "Scotsmen"]
+(c7-1 / person
+      :mod (c7-3 / country
+                 :name (c7-0 / name
+                             :op1 "Scotland"))
+      :ARG1-of (c7-2 / true-01)
+      :polarity -)

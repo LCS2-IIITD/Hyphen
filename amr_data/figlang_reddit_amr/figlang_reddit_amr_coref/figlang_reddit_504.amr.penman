@@ -1,0 +1,52 @@
+# ::snt Jeff Ross Picks Random Guy to Play Piano, Comedy Gold Follows
+# ::tokens ["Jeff", "Ross", "Picks", "Random", "Guy", "to", "Play", "Piano", ",", "Comedy", "Gold", "Follows"]
+# ::lemmas ["Jeff", "Ross", "pick", "Random", "Guy", "to", "Play", "Piano", ",", "Comedy", "Gold", "Follows"]
+(c1-7 / pick-01
+      :ARG0 (c1-3 / person
+                  :name (c1-8 / name
+                              :op1 "Jeff"
+                              :op2 "Ross"))
+      :ARG1 (c1-6 / guy
+                  :mod (c1-4 / random)
+                  :ARG0-of (c1-2 / play-11
+                                 :ARG1 (c1-1 / piano)))
+      :medium (c1-0 / publication
+                    :name (c1-5 / name
+                                :op1 "Comedy"
+                                :op2 "Gold")))
+
+# ::snt Jeff Ross and "comedy gold" used in the same sentence, that in itself is comedy gold.
+# ::tokens ["Jeff", "Ross", "and", "\"", "comedy", "gold", "\"", "used", "in", "the", "same", "sentence", ",", "that", "in", "itself", "is", "comedy", "gold", "."]
+# ::lemmas ["Jeff", "Ross", "and", "\"", "comedy", "gold", "\"", "use", "in", "the", "same", "sentence", ",", "that", "in", "itself", "be", "comedy", "gold", "."]
+(c2-6 / gold
+      :mod (c2-3 / comedy)
+      :domain (c2-2 / and
+                    :op1 (c2-8 / person
+                               :name (c2-9 / name
+                                           :op1 "Jeff"
+                                           :op2 "Ross"))
+                    :op2 (c2-10 / gold
+                                :mod (c2-0 / comedy)
+                                :ARG1-of (c2-5 / use-01
+                                               :location (c2-1 / sentence
+                                                               :ARG1-of (c2-7 / same-01)))))
+      :mod (c2-4 / by-oneself))
+
+# ::snt Seriously, this isn't funny at all.
+# ::tokens ["Seriously", ",", "this", "is", "n't", "funny", "at", "all", "."]
+# ::lemmas ["seriously", ",", "this", "be", "not", "funny", "at", "all", "."]
+(c3-3 / funny
+      :domain (c3-2 / this)
+      :mod (c3-1 / at-all)
+      :ARG2-of (c3-0 / serious-01)
+      :polarity -)
+
+# ::snt I didn't really find the humor either
+# ::tokens ["I", "did", "n't", "really", "find", "the", "humor", "either"]
+# ::lemmas ["i", "do", "not", "really", "find", "the", "humor", "either"]
+(c4-0 / find-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-1 / humor)
+      :ARG1-of (c4-2 / real-04)
+      :mod (c4-4 / either)
+      :polarity -)

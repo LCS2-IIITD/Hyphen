@@ -1,0 +1,59 @@
+# ::snt ": The important name right now is Cpl. Nathan Cirillo. "
+# ::tokens ["\"", ":", "The", "important", "name", "right", "now", "is", "Cpl", ".", "Nathan", "Cirillo", ".", "\""]
+# ::lemmas ["\"", ":", "the", "important", "name", "right", "now", "be", "Cpl", ".", "Nathan", "Cirillo", ".", "\""]
+(c1-1 / name-01
+      :ARG1 (c1-3 / person
+                  :name (c1-2 / name
+                              :op1 "Cpl."
+                              :op2 "Nathan"
+                              :op3 "Cirillo"))
+      :ARG1-of (c1-0 / important-01)
+      :time (c1-4 / now
+                  :mod (c1-5 / right)))
+
+# ::snt : The important name right now is Cpl. Nathan Cirillo.
+# ::tokens [":", "The", "important", "name", "right", "now", "is", "Cpl", ".", "Nathan", "Cirillo", "."]
+# ::lemmas [":", "the", "important", "name", "right", "now", "be", "Cpl", ".", "Nathan", "Cirillo", "."]
+(c2-1 / name-01
+      :ARG1 (c2-3 / person
+                  :name (c2-2 / name
+                              :op1 "Cpl."
+                              :op2 "Nathan"
+                              :op3 "Cirillo"))
+      :ARG1-of (c2-0 / important-01)
+      :time (c2-4 / now
+                  :mod (c2-5 / right)))
+
+# ::snt Yes. Let our thoughts be with his friends and family. RT : The important name right now is Cpl. Nathan Cirillo.
+# ::tokens ["Yes", ".", "Let", "our", "thoughts", "be", "with", "his", "friends", "and", "family", ".", "RT", ":", "The", "important", "name", "right", "now", "is", "Cpl", ".", "Nathan", "Cirillo", "."]
+# ::lemmas ["yes", ".", "let", "our", "thought", "be", "with", "his", "friend", "and", "family", ".", "RT", ":", "the", "important", "name", "right", "now", "be", "Cpl", ".", "Nathan", "Cirillo", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-17 / yes)
+      :snt2 (c3-9 / let-01
+                  :ARG0 (c3-21 / you)
+                  :ARG1 (c3-22 / think-01
+                               :ARG0 (c3-15 / we)
+                               :ARG2 (c3-7 / and
+                                           :op1 (c3-3 / person
+                                                      :ARG0-of (c3-8 / have-rel-role-91
+                                                                     :ARG1 (c3-6 / he)
+                                                                     :ARG2 (c3-10 / friend)))
+                                           :op2 (c3-5 / person
+                                                      :ARG0-of c3-8
+                                                      :ARG1 c3-6
+                                                      :ARG2 (c3-18 / family))))
+                  :mode imperative)
+      :snt3 (c3-4 / say-01
+                  :ARG1 (c3-12 / name-01
+                               :ARG1 (c3-11 / person
+                                            :name (c3-19 / name
+                                                         :op1 "Nathan"
+                                                         :op2 "Cirillo")
+                                            :ARG0-of (c3-2 / have-org-role-91
+                                                           :ARG2 (c3-20 / colonel)))
+                               :ARG1-of (c3-16 / important-01)
+                               :time (c3-1 / now
+                                           :mod (c3-13 / right)))
+                  :ARG2 (c3-14 / publication
+                               :name c3-19
+                               :op1 "RT")))

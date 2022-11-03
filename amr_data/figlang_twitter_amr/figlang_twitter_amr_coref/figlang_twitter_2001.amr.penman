@@ -1,0 +1,67 @@
+# ::snt We have our first candidate for not understanding ... <URL>
+# ::tokens ["We", "have", "our", "first", "candidate", "for", "not", "understanding", "...", "<", "URL", ">"]
+# ::lemmas ["we", "have", "our", "first", "candidate", "for", "not", "understand", "...", "<", "URL", ">"]
+(c1-2 / have-03
+      :ARG0 (c1-1 / we)
+      :ARG1 (c1-0 / candidate
+                  :ord (c1-4 / ordinal-entity
+                             :value 1)
+                  :ARG0-of (c1-3 / understand-01
+                                 :polarity -)
+                  :poss c1-1))
+
+# ::snt ok , sorry I didn't get it . My humble apology and we miss you ! I'm the
+# ::tokens ["ok", ",", "sorry", "I", "did", "n't", "get", "it", ".", "My", "humble", "apology", "and", "we", "miss", "you", "!", "I", "'m", "the"]
+# ::lemmas ["ok", ",", "sorry", "i", "do", "not", "get", "it", ".", "my", "humble", "apology", "and", "we", "miss", "you", "!", "i", "be", "the"]
+(c2-12 / multi-sentence
+       :snt1 (c2-0 / sorry-01
+                   :ARG1 (c2-11 / i)
+                   :ARG2 (c2-10 / get-30
+                                :ARG0 c2-11
+                                :ARG1 (c2-5 / it)
+                                :polarity -)
+                   :ARG1-of (c2-9 / okay-04))
+       :snt2 (c2-2 / and
+                   :op1 (c2-14 / apologize-01
+                               :ARG0 (c2-6 / i)
+                               :ARG1-of (c2-7 / humble-01))
+                   :op2 (c2-3 / miss-01
+                              :ARG0 (c2-4 / we)
+                              :ARG1 (c2-13 / you)))
+       :snt3 (c2-8 / i
+                   :domain (c2-1 / amr-unknown)))
+
+# ::snt Thank you , I feel so stupid I really miss Bogut
+# ::tokens ["Thank", "you", ",", "I", "feel", "so", "stupid", "I", "really", "miss", "Bogut"]
+# ::lemmas ["thank", "you", ",", "i", "feel", "so", "stupid", "i", "really", "miss", "Bogut"]
+(c3-3 / thank-01
+      :ARG0 (c3-7 / i)
+      :ARG1 (c3-10 / you)
+      :ARG0-of (c3-2 / cause-01
+                     :ARG1 (c3-1 / feel-01
+                                 :ARG0 c3-7
+                                 :ARG1 (c3-0 / stupid
+                                             :degree (c3-6 / so))
+                                 :ARG0-of c3-2
+                                 :ARG1 (c3-8 / miss-02
+                                             :ARG0 c3-7
+                                             :ARG1 (c3-5 / person
+                                                         :name (c3-9 / name
+                                                                     :op1 "Bogut"))
+                                             :ARG1-of (c3-4 / real-04)))))
+
+# ::snt I take it you're a Warriors fan with the Golden Gate Bridge in your profile ?
+# ::tokens ["I", "take", "it", "you", "'re", "a", "Warriors", "fan", "with", "the", "Golden", "Gate", "Bridge", "in", "your", "profile", "?"]
+# ::lemmas ["i", "take", "it", "you", "be", "a", "Warriors", "fan", "with", "the", "Golden", "Gate", "Bridge", "in", "your", "profile", "?"]
+(c4-3 / take-04
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-1 / fan
+                  :mod (c4-2 / team
+                             :name (c4-6 / name
+                                         :op1 "Golden"
+                                         :op2 "Gate"
+                                         :op3 "Bridge"))
+                  :domain (c4-7 / you)
+                  :poss (c4-4 / profile
+                              :poss c4-7))
+      :polarity (c4-0 / amr-unknown))

@@ -1,0 +1,86 @@
+# ::snt My girlfriend didn't have any side effects besides a sore arm, I just felt totally drained. I'm sure it'll be fine!
+# ::tokens ["My", "girlfriend", "did", "n't", "have", "any", "side", "effects", "besides", "a", "sore", "arm", ",", "I", "just", "felt", "totally", "drained", ".", "I", "'m", "sure", "it", "'ll", "be", "fine", "!"]
+# ::lemmas ["my", "girlfriend", "do", "not", "have", "any", "side", "effect", "besides", "a", "sore", "arm", ",", "i", "just", "felt", "totally", "drain", ".", "i", "be", "sure", "it", "'ll", "be", "fine", "!"]
+(c1-4 / multi-sentence
+      :snt1 (c1-13 / affect-01
+                   :ARG0 (c1-18 / person
+                                :ARG0-of (c1-15 / have-rel-role-91
+                                                :ARG1 (c1-1 / i)
+                                                :ARG2 (c1-3 / girlfriend)))
+                   :ARG1 c1-1
+                   :mod (c1-7 / side)
+                   :ARG2-of (c1-6 / except-01
+                                  :ARG1 (c1-12 / sore
+                                               :domain (c1-5 / arm)))
+                   :polarity -)
+      :snt2 (c1-14 / feel-01
+                   :ARG0 (c1-8 / i)
+                   :ARG1 (c1-0 / drain-01
+                               :ARG2 c1-8
+                               :degree (c1-2 / total))
+                   :mod (c1-17 / just))
+      :snt3 (c1-9 / sure-02
+                  :ARG0 (c1-10 / i)
+                  :ARG1 (c1-11 / fine-04
+                               :ARG1 (c1-16 / it))))
+
+# ::snt Only presenting my work on a major project back to my boss' boss in a two hour video call first thing tomorrow morning... (Although they have said we can reschedule if I'm experiencing any side effects.)
+# ::tokens ["Only", "presenting", "my", "work", "on", "a", "major", "project", "back", "to", "my", "boss", "'", "boss", "in", "a", "two", "hour", "video", "call", "first", "thing", "tomorrow", "morning", "...", "(", "Although", "they", "have", "said", "we", "can", "reschedule", "if", "I", "'m", "experiencing", "any", "side", "effects", ".", ")"]
+# ::lemmas ["only", "present", "my", "work", "on", "a", "major", "project", "back", "to", "my", "boss", "'", "boss", "in", "a", "two", "hour", "video", "call", "first", "thing", "tomorrow", "morning", "...", "(", "although", "they", "have", "say", "we", "can", "reschedule", "if", "i", "be", "experience", "any", "side", "effect", ".", ")"]
+(c2-24 / present-01
+       :ARG0 (c2-2 / i)
+       :ARG1 (c2-4 / work-01
+                   :ARG0 c2-2
+                   :ARG1 (c2-21 / project
+                                :ARG1-of (c2-10 / major-02)))
+       :ARG2 (c2-16 / person
+                    :ARG0-of (c2-19 / have-rel-role-91
+                                    :ARG1 c2-2
+                                    :ARG2 (c2-22 / boss)))
+       :mod (c2-7 / only)
+       :manner (c2-3 / call-02
+                     :ARG0 c2-2
+                     :ARG1 c2-16
+                     :duration (c2-8 / temporal-quantity
+                                     :unit (c2-1 / hour)
+                                     :quant 2)
+                     :time (c2-0 / date-entity
+                                 :dayperiod (c2-18 / morning)
+                                 :mod (c2-5 / tomorrow))
+                     :mod (c2-6 / video))
+       :concession (c2-14 / say-01
+                          :ARG0 (c2-11 / they)
+                          :ARG1 (c2-15 / possible-01
+                                       :ARG1 (c2-9 / reschedule-01
+                                                   :ARG0 (c2-12 / we))
+                                       :condition (c2-13 / experience-01
+                                                         :ARG0 c2-2
+                                                         :ARG1 (c2-20 / effect-03
+                                                                      :ARG1 (c2-23 / side)
+                                                                      :mod (c2-17 / any))))))
+
+# ::snt I hope you don't have anything productive to get done, I basically slept for two days straight after my first jab, haha!
+# ::tokens ["I", "hope", "you", "do", "n't", "have", "anything", "productive", "to", "get", "done", ",", "I", "basically", "slept", "for", "two", "days", "straight", "after", "my", "first", "jab", ",", "haha", "!"]
+# ::lemmas ["i", "hope", "you", "do", "not", "have", "anything", "productive", "to", "get", "do", ",", "i", "basically", "sleep", "for", "two", "days", "straight", "after", "my", "first", "jab", ",", "haha", "!"]
+(c3-5 / hope-01
+      :ARG0 (c3-13 / i)
+      :ARG1 (c3-0 / do-02
+                  :ARG0 (c3-14 / you)
+                  :ARG1 (c3-2 / anything
+                              :ARG0-of (c3-10 / productive-03))
+                  :polarity -)
+      :ARG1-of (c3-3 / cause-01
+                     :ARG0 (c3-1 / sleep-01
+                                 :ARG0 c3-13
+                                 :mod (c3-11 / basic)
+                                 :duration (c3-8 / temporal-quantity
+                                                 :unit (c3-4 / day)
+                                                 :ARG1-of (c3-12 / straight-04)
+                                                 :quant 2)
+                                 :time (c3-15 / after
+                                              :op1 (c3-9 / jab-01
+                                                         :ARG0 c3-13
+                                                         :ord (c3-7 / ordinal-entity
+                                                                    :value 1)))
+                                 :mod (c3-6 / haha
+                                            :mode expressive))))

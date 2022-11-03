@@ -1,0 +1,41 @@
+# ::snt Ouch... Keyed M4
+# ::tokens ["Ouch", "...", "Keyed", "M4"]
+# ::lemmas ["ouch", "...", "Keyed", "M4"]
+(c1-3 / multi-sentence
+      :snt1 (c1-1 / ouch
+                  :mode expressive)
+      :snt2 (c1-4 / key-02
+                  :ARG1 (c1-0 / vehicle
+                              :name (c1-2 / name
+                                          :op1 "M4"))))
+
+# ::snt Whoever did that is a raging cunt.
+# ::tokens ["Whoever", "did", "that", "is", "a", "raging", "cunt", "."]
+# ::lemmas ["whoever", "do", "that", "be", "a", "rage", "cunt", "."]
+(c2-1 / cunt
+      :ARG0-of (c2-3 / rage-02)
+      :domain (c2-4 / person
+                    :ARG0-of (c2-0 / do-02
+                                   :ARG1 (c2-2 / that))))
+
+# ::snt Well seeing how most BMW drivers act on the road..... But yeah, shitty for someone to do that.
+# ::tokens ["Well", "seeing", "how", "most", "BMW", "drivers", "act", "on", "the", "road", ".....", "But", "yeah", ",", "shitty", "for", "someone", "to", "do", "that", "."]
+# ::lemmas ["well", "see", "how", "most", "BMW", "driver", "act", "on", "the", "road", ".....", "but", "yeah", ",", "shitty", "for", "someone", "to", "do", "that", "."]
+(c3-14 / multi-sentence
+       :snt1 (c3-0 / see-01
+                   :ARG1 (c3-10 / thing
+                                :manner-of (c3-3 / act-02
+                                                 :ARG0 (c3-13 / person
+                                                              :ARG0-of (c3-1 / drive-01)
+                                                              :mod (c3-4 / company
+                                                                         :name (c3-15 / name
+                                                                                      :op1 "BMW"))
+                                                              :quant (c3-5 / most))
+                                                 :location (c3-11 / road)))
+                   :mod (c3-6 / well))
+       :snt2 (c3-2 / contrast-01
+                   :ARG2 (c3-12 / shitty
+                                :domain (c3-7 / do-02
+                                              :ARG0 (c3-9 / someone)
+                                              :ARG1 (c3-8 / that))
+                                :mod (c3-16 / yeah))))

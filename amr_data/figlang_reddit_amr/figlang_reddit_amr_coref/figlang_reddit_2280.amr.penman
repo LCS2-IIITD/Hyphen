@@ -1,0 +1,61 @@
+# ::snt Have you ever seen something like this?
+# ::tokens ["Have", "you", "ever", "seen", "something", "like", "this", "?"]
+# ::lemmas ["have", "you", "ever", "see", "something", "like", "this", "?"]
+(c1-0 / see-01
+      :ARG0 (c1-5 / you)
+      :ARG1 (c1-4 / something
+                  :ARG1-of (c1-3 / resemble-01
+                                 :ARG2 (c1-2 / this)))
+      :time (c1-6 / ever)
+      :polarity (c1-1 / amr-unknown))
+
+# ::snt that bud has more bush than asian pornstars
+# ::tokens ["that", "bud", "has", "more", "bush", "than", "asian", "pornstars"]
+# ::lemmas ["that", "bud", "have", "more", "bush", "than", "asian", "pornstar"]
+(c2-3 / have-03
+      :ARG0 (c2-5 / bud
+                  :mod (c2-4 / that))
+      :ARG1 (c2-1 / bush
+                  :ARG1-of (c2-6 / have-quant-91
+                                 :ARG3 (c2-8 / more)
+                                 :ARG4 (c2-0 / star
+                                             :mod (c2-7 / pornography)
+                                             :mod (c2-2 / continent
+                                                        :name (c2-9 / name
+                                                                    :op1 "Asia"))))))
+
+# ::snt Or me after not shaving for about 2 months smh
+# ::tokens ["Or", "me", "after", "not", "shaving", "for", "about", "2", "months", "smh"]
+# ::lemmas ["or", "i", "after", "not", "shave", "for", "about", "2", "months", "smh"]
+(c3-2 / or
+      :op2 (c3-5 / i
+                 :time (c3-1 / after
+                             :op1 (c3-0 / shave-01
+                                        :ARG0 c3-5
+                                        :duration (c3-7 / about
+                                                        :op1 (c3-3 / temporal-quantity
+                                                                   :unit (c3-6 / month)
+                                                                   :quant 2))
+                                        :polarity -))
+                 :mod (c3-4 / smh
+                            :mode expressive)))
+
+# ::snt More like 2 weeks.
+# ::tokens ["More", "like", "2", "weeks", "."]
+# ::lemmas ["more", "like", "2", "weeks", "."]
+(c4-3 / resemble-01
+      :ARG2 (c4-2 / temporal-quantity
+                  :unit (c4-0 / week)
+                  :quant 2)
+      :mod (c4-1 / more))
+
+# ::snt Not everybody pubes work the same, bruh...
+# ::tokens ["Not", "everybody", "pubes", "work", "the", "same", ",", "bruh", "..."]
+# ::lemmas ["not", "everybody", "pubis", "work", "the", "same", ",", "bruh", "..."]
+(c5-0 / say-01
+      :ARG0 (c5-4 / i)
+      :ARG1 (c5-1 / work-01
+                  :ARG0 (c5-5 / everybody
+                              :polarity -)
+                  :ARG1-of (c5-3 / same-01))
+      :ARG2 (c5-2 / bruh))

@@ -1,0 +1,60 @@
+# ::snt PLANETARIUM - (Trailer 2016 - Natalie Portman, Lily-Rose Depp)
+# ::tokens ["PLANETARIUM", "-", "(", "Trailer", "2016", "-", "Natalie", "Portman", ",", "Lily", "-", "Rose", "Depp", ")"]
+# ::lemmas ["planetarium", "-", "(", "trailer", "2016", "-", "Natalie", "Portman", ",", "Lily", "-", "Rose", "Depp", ")"]
+(c1-8 / multi-sentence
+      :snt1 (c1-7 / publication
+                  :name (c1-9 / name
+                              :op1 "PLANETARIUM"))
+      :snt2 (c1-5 / trailer
+                  :time (c1-0 / date-entity
+                              :year 2016)
+                  :poss (c1-1 / and
+                              :op1 (c1-4 / person
+                                         :name (c1-6 / name
+                                                     :op1 "Natalie"
+                                                     :op2 "Portman"))
+                              :op2 (c1-2 / person
+                                         :name (c1-3 / name
+                                                     :op1 "Lily-Rose"
+                                                     :op2 "Depp")))))
+
+# ::snt Since this is french, can we assume a full frontal nude scene?
+# ::tokens ["Since", "this", "is", "french", ",", "can", "we", "assume", "a", "full", "frontal", "nude", "scene", "?"]
+# ::lemmas ["since", "this", "be", "french", ",", "can", "we", "assume", "a", "full", "frontal", "nude", "scene", "?"]
+(c2-4 / cause-01
+      :ARG0 (c2-0 / country
+                  :name (c2-10 / name
+                               :op1 "France")
+                  :domain (c2-7 / this))
+      :ARG1 (c2-9 / possible-01
+                  :ARG1 (c2-2 / assume-01
+                              :ARG0 (c2-5 / we)
+                              :ARG1 (c2-1 / scene
+                                          :mod (c2-8 / nude)
+                                          :mod (c2-3 / frontal
+                                                     :degree (c2-6 / full))))
+                  :polarity (c2-11 / amr-unknown)))
+
+# ::snt Yes but only with fat dudes
+# ::tokens ["Yes", "but", "only", "with", "fat", "dudes"]
+# ::lemmas ["yes", "but", "only", "with", "fat", "dude"]
+(c3-2 / contrast-01
+      :ARG1 (c3-5 / yes)
+      :ARG2 (c3-3 / have-03
+                  :ARG1 (c3-0 / dude
+                              :ARG1-of (c3-1 / fat-03)
+                              :mod (c3-4 / only))))
+
+# ::snt You clearly haven't seen Blue Is The Warmest Color.
+# ::tokens ["You", "clearly", "have", "n't", "seen", "Blue", "Is", "The", "Warmest", "Color", "."]
+# ::lemmas ["you", "clearly", "have", "not", "see", "Blue", "be", "the", "warm", "color", "."]
+(c4-0 / see-01
+      :ARG0 (c4-7 / you)
+      :ARG1 (c4-2 / color
+                  :ARG1-of (c4-4 / have-degree-91
+                                 :ARG2 (c4-3 / warm-07
+                                             :ARG1 c4-2)
+                                 :ARG3 (c4-6 / most))
+                  :domain (c4-5 / Blue))
+      :ARG1-of (c4-1 / clear-06)
+      :polarity -)

@@ -1,0 +1,53 @@
+# ::snt Let us never forget that Harry Potter straight up punched a wizard in the middle of the Ministry of Magic
+# ::tokens ["Let", "us", "never", "forget", "that", "Harry", "Potter", "straight", "up", "punched", "a", "wizard", "in", "the", "middle", "of", "the", "Ministry", "of", "Magic"]
+# ::lemmas ["let", "we", "never", "forget", "that", "Harry", "Potter", "straight", "up", "punch", "a", "wizard", "in", "the", "middle", "of", "the", "Ministry", "of", "Magic"]
+(c1-4 / let-01
+      :ARG0 (c1-2 / we)
+      :ARG1 (c1-1 / forget-01
+                  :ARG0 c1-2
+                  :ARG1 (c1-7 / punch-01
+                              :ARG0 (c1-6 / book
+                                          :name (c1-9 / name
+                                                      :op1 "Harry"
+                                                      :op2 "Potter"))
+                              :ARG1 (c1-10 / wizard)
+                              :manner (c1-0 / straight-04)
+                              :location (c1-8 / middle
+                                              :part-of (c1-5 / government-organization
+                                                             :name (c1-3 / name
+                                                                         :op1 "Ministry"
+                                                                         :op2 "of"
+                                                                         :op3 "Magic"))))
+                  :time (c1-11 / ever)
+                  :polarity -)
+      :mode imperative)
+
+# ::snt He was using somebody else's fist, so did Harry really punch anyone?
+# ::tokens ["He", "was", "using", "somebody", "else", "'s", "fist", ",", "so", "did", "Harry", "really", "punch", "anyone", "?"]
+# ::lemmas ["he", "be", "use", "somebody", "else", "'s", "fist", ",", "so", "do", "Harry", "really", "punch", "anyone", "?"]
+(c2-5 / use-01
+      :ARG0 (c2-4 / he)
+      :ARG1 (c2-2 / fist
+                  :part-of (c2-0 / somebody
+                                 :mod (c2-11 / else)))
+      :ARG0-of (c2-3 / cause-01
+                     :ARG1 (c2-8 / punch-01
+                                 :ARG0 (c2-6 / person
+                                             :name (c2-9 / name
+                                                         :op1 "Harry"))
+                                 :ARG1 (c2-1 / anyone)
+                                 :ARG1-of (c2-7 / real-04)
+                                 :polarity (c2-10 / amr-unknown))))
+
+# ::snt How can our punches be real if our fists aren't real?
+# ::tokens ["How", "can", "our", "punches", "be", "real", "if", "our", "fists", "are", "n't", "real", "?"]
+# ::lemmas ["how", "can", "our", "punch", "be", "real", "if", "our", "fist", "be", "not", "real", "?"]
+(c3-6 / possible-01
+      :ARG1 (c3-5 / real-04
+                  :ARG1 (c3-4 / punch
+                              :poss (c3-2 / we
+                                          :part (c3-1 / fist))))
+      :manner (c3-0 / amr-unknown)
+      :condition (c3-3 / real-04
+                       :ARG1 c3-1
+                       :polarity -))

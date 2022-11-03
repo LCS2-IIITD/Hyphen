@@ -1,0 +1,49 @@
+# ::snt Can we just move on?
+# ::tokens ["Can", "we", "just", "move", "on", "?"]
+# ::lemmas ["can", "we", "just", "move", "on", "?"]
+(c1-4 / possible-01
+      :polarity (c1-0 / amr-unknown)
+      :ARG1 (c1-5 / move-01
+                  :ARG1 (c1-1 / we)
+                  :mod (c1-2 / on)
+                  :mod (c1-3 / just)))
+
+# ::snt The only reason I become aware of black history month each year is people complaining about how we don't need black history month anymore.
+# ::tokens ["The", "only", "reason", "I", "become", "aware", "of", "black", "history", "month", "each", "year", "is", "people", "complaining", "about", "how", "we", "do", "n't", "need", "black", "history", "month", "anymore", "."]
+# ::lemmas ["the", "only", "reason", "i", "become", "aware", "of", "black", "history", "month", "each", "year", "be", "people", "complain", "about", "how", "we", "do", "not", "need", "black", "history", "month", "anymore", "."]
+(c2-2 / cause-01
+      :ARG0 (c2-0 / complain-01
+                  :ARG0 (c2-11 / person)
+                  :ARG1 (c2-13 / need-01
+                               :ARG0 (c2-3 / we)
+                               :ARG1 (c2-12 / month
+                                            :topic (c2-5 / history
+                                                         :ARG1-of (c2-10 / black-05)))
+                               :mod (c2-1 / anymore)
+                               :polarity -))
+      :ARG1 (c2-9 / realize-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 c2-12
+                  :frequency (c2-6 / rate-entity-91
+                                   :ARG3 (c2-8 / temporal-quantity
+                                               :unit (c2-14 / year)
+                                               :quant 1))
+                  :mod (c2-7 / only)))
+
+# ::snt I just don't get why black history month offends redditors so much.
+# ::tokens ["I", "just", "do", "n't", "get", "why", "black", "history", "month", "offends", "redditors", "so", "much", "."]
+# ::lemmas ["i", "just", "do", "not", "get", "why", "black", "history", "month", "offend", "redditor", "so", "much", "."]
+(c3-4 / understand-01
+      :ARG0 (c3-11 / i)
+      :ARG1 (c3-6 / thing
+                  :ARG0-of (c3-1 / cause-01
+                                 :ARG1 (c3-5 / offend-01
+                                             :ARG0 (c3-12 / month
+                                                          :mod (c3-3 / history
+                                                                     :ARG1-of (c3-9 / black-05)))
+                                             :ARG1 (c3-8 / person
+                                                         :ARG0-of (c3-7 / reddit-01))
+                                             :degree (c3-2 / much
+                                                           :degree (c3-0 / so)))))
+      :mod (c3-10 / just)
+      :polarity -)

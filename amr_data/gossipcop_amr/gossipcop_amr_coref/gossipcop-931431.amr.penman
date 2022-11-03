@@ -1,0 +1,75 @@
+# ::snt I feel so wanted
+# ::tokens ["I", "feel", "so", "wanted"]
+# ::lemmas ["i", "feel", "so", "want"]
+(c1-1 / feel-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-3 / want-01
+                  :degree (c1-0 / so)))
+
+# ::snt You watch it too?
+# ::tokens ["You", "watch", "it", "too", "?"]
+# ::lemmas ["you", "watch", "it", "too", "?"]
+(c2-2 / watch-01
+      :polarity (c2-1 / amr-unknown)
+      :ARG0 (c2-0 / you)
+      :ARG1 (c2-3 / it)
+      :mod (c2-4 / too))
+
+# ::snt hey
+# ::tokens ["hey"]
+# ::lemmas ["hey"]
+(c3-0 / hey)
+
+# ::snt Thank God I have someone to talk to about it
+# ::tokens ["Thank", "God", "I", "have", "someone", "to", "talk", "to", "about", "it"]
+# ::lemmas ["thank", "God", "i", "have", "someone", "to", "talk", "to", "about", "it"]
+(c4-4 / thank-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-5 / god)
+      :ARG2 (c4-2 / have-03
+                  :ARG0 c4-3
+                  :ARG1 (c4-0 / someone
+                              :ARG2-of (c4-6 / talk-01
+                                             :ARG0 c4-3
+                                             :ARG1 (c4-1 / it)))))
+
+# ::snt Are you a vanderpump fan?!
+# ::tokens ["Are", "you", "a", "vanderpump", "fan", "?", "!"]
+# ::lemmas ["be", "you", "a", "vanderpump", "fan", "?", "!"]
+(c5-0 / fan
+      :domain (c5-2 / you)
+      :mod (c5-1 / vanderpump)
+      :polarity (c5-3 / amr-unknown))
+
+# ::snt one man to the next so what's the baby's name with this guy? and I bet he thinks you are so amazing (in your head)
+# ::tokens ["one", "man", "to", "the", "next", "so", "what", "'s", "the", "baby", "'s", "name", "with", "this", "guy", "?", "and", "I", "bet", "he", "thinks", "you", "are", "so", "amazing", "(", "in", "your", "head", ")"]
+# ::lemmas ["one", "man", "to", "the", "next", "so", "what", "be", "the", "baby", "'s", "name", "with", "this", "guy", "?", "and", "i", "bet", "he", "think", "you", "be", "so", "amazing", "(", "in", "your", "head", ")"]
+(c6-5 / and
+      :op1 (c6-12 / ask-01
+                  :ARG0 (c6-11 / i)
+                  :ARG1 (c6-2 / name-01
+                              :ARG1 (c6-0 / baby)
+                              :ARG2 (c6-9 / amr-unknown)
+                              :prep-with (c6-13 / guy
+                                                :mod (c6-10 / this)))
+                  :ARG2 (c6-3 / man
+                              :prep-to (c6-6 / next)
+                              :quant 1))
+      :op2 (c6-7 / bet-01
+                 :ARG0 c6-11
+                 :ARG2 (c6-15 / think-01
+                              :ARG0 c6-13
+                              :ARG1 (c6-14 / amaze-01
+                                           :ARG0 (c6-1 / you
+                                                       :part (c6-8 / head))
+                                           :degree (c6-4 / so)
+                                           :location c6-8))))
+
+# ::snt Daichi saitoMONA MODEL
+# ::tokens ["Daichi", "saitoMONA", "MODEL"]
+# ::lemmas ["Daichi", "saitomona", "MODEL"]
+(c7-2 / model-01
+      :ARG0 (c7-0 / person
+                  :name (c7-1 / name
+                              :op1 "Daichi"
+                              :op2 "Sapito")))

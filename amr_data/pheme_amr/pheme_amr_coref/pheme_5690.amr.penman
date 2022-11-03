@@ -1,0 +1,227 @@
+# ::snt stratotanker? an aerial refueling aircraft...
+# ::tokens ["stratotanker", "?", "an", "aerial", "refueling", "aircraft", "..."]
+# ::lemmas ["stratotanker", "?", "an", "aerial", "refueling", "aircraft", "..."]
+(c1-4 / aircraft
+      :polarity (c1-0 / amr-unknown)
+      :ARG0-of (c1-2 / refuel-01
+                     :manner (c1-1 / aerial))
+      :domain (c1-3 / stratotanker))
+
+# ::snt Because France was condition war games at the time of the crash. A missile cannot be ruled out.
+# ::tokens ["Because", "France", "was", "condition", "war", "games", "at", "the", "time", "of", "the", "crash", ".", "A", "missile", "can", "not", "be", "ruled", "out", "."]
+# ::lemmas ["because", "France", "be", "condition", "war", "game", "at", "the", "time", "of", "the", "crash", ".", "a", "missile", "can", "not", "be", "rule", "out", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / cause-01
+                  :ARG0 (c2-4 / condition-01
+                              :ARG1 (c2-9 / country
+                                          :name (c2-2 / name
+                                                      :op1 "France"))
+                              :ARG2 (c2-6 / game
+                                          :mod (c2-0 / war))
+                              :time (c2-10 / crash-01)))
+      :snt2 (c2-3 / possible-01
+                  :ARG1 (c2-7 / rule-out-02
+                              :ARG1 (c2-8 / missile))
+                  :polarity -))
+
+# ::snt ok. i am not a aircraft pro
+# ::tokens ["ok", ".", "i", "am", "not", "a", "aircraft", "pro"]
+# ::lemmas ["ok", ".", "i", "be", "not", "a", "aircraft", "pro"]
+(c3-1 / pro
+      :mod (c3-3 / aircraft)
+      :domain (c3-2 / i)
+      :ARG1-of (c3-0 / okay-04)
+      :polarity -)
+
+# ::snt Mobile version.
+# ::tokens ["Mobile", "version", "."]
+# ::lemmas ["mobile", "version", "."]
+(c4-0 / version
+      :mod (c4-1 / mobile))
+
+# ::snt here: too?
+# ::tokens ["here", ":", "too", "?"]
+# ::lemmas ["here", ":", "too", "?"]
+(c5-1 / be-located-at-91
+      :polarity (c5-4 / amr-unknown)
+      :ARG1 (c5-2 / event
+                  :mod (c5-3 / too))
+      :ARG2 (c5-0 / here))
+
+# ::snt Condition war games ?
+# ::tokens ["Condition", "war", "games", "?"]
+# ::lemmas ["condition", "war", "game", "?"]
+(c6-1 / condition-01
+      :polarity (c6-3 / amr-unknown)
+      :ARG1 (c6-2 / game
+                  :mod (c6-0 / war)))
+
+# ::snt Marseille Bastia?
+# ::tokens ["Marseille", "Bastia", "?"]
+# ::lemmas ["Marseille", "Bastia", "?"]
+(c7-1 / person
+      :polarity (c7-2 / amr-unknown)
+      :name (c7-0 / name
+                  :op1 "Marseille"
+                  :op2 "Bastia"))
+
+# ::snt why a stratotanker and not a E-3F to help local response units ? //
+# ::tokens ["why", "a", "stratotanker", "and", "not", "a", "E-3F", "to", "help", "local", "response", "units", "?", "//"]
+# ::lemmas ["why", "a", "stratotanker", "and", "not", "a", "E-3F", "to", "help", "local", "response", "unit", "?", "//"]
+(c8-6 / cause-01
+      :ARG0 (c8-9 / amr-unknown)
+      :ARG1 (c8-5 / contrast-01
+                  :ARG1 (c8-8 / stratotanker)
+                  :ARG2 (c8-4 / product
+                              :name (c8-3 / name
+                                          :op1 "E-3F"))
+                  :purpose (c8-0 / help-01
+                                 :ARG0 c8-4
+                                 :ARG2 (c8-2 / unit
+                                             :ARG0-of (c8-7 / respond-01)
+                                             :ARG1-of (c8-1 / local-02)))))
+
+# ::snt If those gliders just east of that airforce plane's route aren't in that area regularly, the thirst is certainly real.
+# ::tokens ["If", "those", "gliders", "just", "east", "of", "that", "airforce", "plane", "'s", "route", "are", "n't", "in", "that", "area", "regularly", ",", "the", "thirst", "is", "certainly", "real", "."]
+# ::lemmas ["if", "those", "glider", "just", "east", "of", "that", "airforce", "plane", "'s", "route", "be", "not", "in", "that", "area", "regularly", ",", "the", "thirst", "be", "certainly", "real", "."]
+(c9-10 / real-04
+       :ARG1 (c9-14 / thirst-01)
+       :mod (c9-11 / certain)
+       :condition (c9-3 / be-located-at-91
+                        :ARG1 (c9-12 / glider
+                                     :mod (c9-13 / that)
+                                     :location (c9-6 / relative-position
+                                                     :op1 (c9-5 / route
+                                                                :poss (c9-9 / plane
+                                                                            :mod (c9-2 / military
+                                                                                       :name (c9-7 / name
+                                                                                                   :op1 "Airforce"))))
+                                                     :direction (c9-4 / east
+                                                                      :mod (c9-0 / just))))
+                        :ARG2 (c9-15 / area
+                                     :mod (c9-8 / that))
+                        :ARG1-of (c9-1 / regular-02)
+                        :polarity -))
+
+# ::snt Non-standard (left-hand turns) holding pattern.
+# ::tokens ["Non", "-", "standard", "(", "left", "-", "hand", "turns", ")", "holding", "pattern", "."]
+# ::lemmas ["non", "-", "standard", "(", "left", "-", "hand", "turn", ")", "hold", "pattern", "."]
+(c10-2 / pattern-01
+       :ARG1 (c10-4 / turn-01
+                    :ARG2 (c10-0 / hand
+                                 :ARG1-of (c10-1 / left-20))
+                    :ARG1-of (c10-3 / standard-02
+                                    :polarity -))
+       :ARG0-of (c10-5 / hold-01))
+
+# ::snt alles gut und gut gesichtet mein freund.
+# ::tokens ["alles", "gut", "und", "gut", "gesichtet", "mein", "freund", "."]
+# ::lemmas ["alle", "gut", "und", "gut", "gesichtet", "mein", "freund", "."]
+(c11-0 / freund
+       :domain (c11-5 / all
+                      :mod (c11-4 / gut)
+                      :mod (c11-3 / gut)
+                      :mod (c11-1 / gut))
+       :ARG1-of (c11-2 / personal-02))
+
+# ::snt Well found!
+# ::tokens ["Well", "found", "!"]
+# ::lemmas ["well", "find", "!"]
+(c12-1 / find-01
+       :ARG1-of (c12-0 / well-09))
+
+# ::snt and other plane with no call sign is araound
+# ::tokens ["and", "other", "plane", "with", "no", "call", "sign", "is", "araound"]
+# ::lemmas ["and", "other", "plane", "with", "no", "call", "sign", "be", "araound"]
+(c13-5 / and
+       :op2 (c13-1 / astound-01
+                   :ARG0 (c13-2 / plane
+                                :mod (c13-0 / other)
+                                :ARG0-of (c13-4 / signal-07
+                                                :ARG3 (c13-3 / call-02)
+                                                :polarity -))))
+
+# ::snt that's a glider
+# ::tokens ["that", "'s", "a", "glider"]
+# ::lemmas ["that", "be", "a", "glider"]
+(c14-1 / glider
+       :domain (c14-0 / that))
+
+# ::snt And another Germanwings flight as well....
+# ::tokens ["And", "another", "Germanwings", "flight", "as", "well", "...."]
+# ::lemmas ["and", "another", "Germanwings", "flight", "as", "well", "...."]
+(c15-5 / and
+       :op2 (c15-0 / fly-01
+                   :ARG1 (c15-1 / aircraft-type
+                                :name (c15-2 / name
+                                             :op1 "Germanwings"))
+                   :mod (c15-3 / another)
+                   :mod (c15-4 / as-well)))
+
+# ::snt Probably for refuelling jet fighter in the area.
+# ::tokens ["Probably", "for", "refuelling", "jet", "fighter", "in", "the", "area", "."]
+# ::lemmas ["probably", "for", "refuel", "jet", "fighter", "in", "the", "area", "."]
+(c16-2 / probable
+       :domain (c16-3 / refuel-01
+                      :ARG1 (c16-0 / jet
+                                   :ARG0-of (c16-1 / fight-01))
+                      :location (c16-4 / area)))
+
+# ::snt probably as radio relay station
+# ::tokens ["probably", "as", "radio", "relay", "station"]
+# ::lemmas ["probably", "as", "radio", "relay", "station"]
+(c17-1 / probable
+       :domain (c17-0 / station
+                      :ARG0-of (c17-2 / relay-01
+                                      :ARG1 (c17-3 / radio))))
+
+# ::snt : French Air Force Boeing C-135FR Stratotanker flying over crash site
+# ::tokens [":", "French", "Air", "Force", "Boeing", "C-135FR", "Stratotanker", "flying", "over", "crash", "site"]
+# ::lemmas [":", "French", "Air", "Force", "Boeing", "C-135FR", "Stratotanker", "fly", "over", "crash", "site"]
+(c18-0 / fly-01
+       :ARG2 (c18-8 / aircraft-type
+                    :name (c18-2 / name
+                                 :op1 "C-135FR"
+                                 :op2 "Stratotanker")
+                    :poss (c18-1 / military
+                                 :name (c18-3 / name
+                                              :op1 "Air"
+                                              :op2 "Force")
+                                 :poss (c18-6 / country
+                                              :name (c18-4 / name
+                                                           :op1 "France"))))
+       :path (c18-7 / site
+                    :location-of (c18-5 / crash-01)))
+
+# ::snt its disappeared!
+# ::tokens ["its", "disappeared", "!"]
+# ::lemmas ["its", "disappear", "!"]
+(c19-0 / disappear-01
+       :ARG1 (c19-1 / it))
+
+# ::snt your servers are having a rough time
+# ::tokens ["your", "servers", "are", "having", "a", "rough", "time"]
+# ::lemmas ["your", "server", "be", "have", "a", "rough", "time"]
+(c20-2 / rough-04
+       :ARG1 (c20-4 / time
+                    :poss (c20-1 / person
+                                 :ARG0-of (c20-3 / server-01
+                                                 :ARG1 (c20-0 / you)))))
+
+# ::snt Peut tre deja en vol dans le coin et suffisament quip pour faire la liaison radio.
+# ::tokens ["Peut", "tre", "deja", "en", "vol", "dans", "le", "coin", "et", "suffisament", "quip", "pour", "faire", "la", "liaison", "radio", "."]
+# ::lemmas ["Peut", "tre", "deja", "en", "vol", "dans", "le", "coin", "et", "suffisament", "quip", "pour", "faire", "la", "liaison", "radio", "."]
+(c21-10 / and
+        :op1 (c21-0 / have-polarity-91
+                    :degree (c21-5 / peut-deja)
+                    :op2-of c21-10
+                    :ARG2 -)
+        :op3 (c21-3 / et
+                    :op1 (c21-7 / coin)
+                    :op2 (c21-8 / secure-02))
+        :op4 (c21-4 / quip
+                    :ARG1-of (c21-9 / pour-02
+                                    :ARG3 (c21-1 / faire-03
+                                                 :ARG1 (c21-6 / radio
+                                                              :mod (c21-2 / liaison)))))
+        :ARG2 -)

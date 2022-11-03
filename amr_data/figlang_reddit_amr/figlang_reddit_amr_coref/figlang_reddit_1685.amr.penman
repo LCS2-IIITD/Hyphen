@@ -1,0 +1,49 @@
+# ::snt GDP growth in Europe for 2014
+# ::tokens ["GDP", "growth", "in", "Europe", "for", "2014"]
+# ::lemmas ["GDP", "growth", "in", "Europe", "for", "2014"]
+(c1-3 / grow-01
+      :ARG1 (c1-4 / product
+                  :ARG1-of (c1-6 / gross-03)
+                  :mod (c1-0 / domestic))
+      :location (c1-1 / continent
+                      :name (c1-5 / name
+                                  :op1 "Europe"))
+      :time (c1-2 / date-entity
+                  :year 2014))
+
+# ::snt Ukraine :(
+# ::tokens ["Ukraine", ":("]
+# ::lemmas ["Ukraine", ":("]
+(c2-1 / country
+      :name (c2-0 / name
+                  :op1 "Ukraine"))
+
+# ::snt wow
+# ::tokens ["wow"]
+# ::lemmas ["wow"]
+(c3-0 / wow
+      :mode expressive)
+
+# ::snt Losing roughly 1/10th of territory, several million people and the entire coal industry in one year doesn't help, even without the additional expenses on military.
+# ::tokens ["Losing", "roughly", "1/10th", "of", "territory", ",", "several", "million", "people", "and", "the", "entire", "coal", "industry", "in", "one", "year", "does", "n't", "help", ",", "even", "without", "the", "additional", "expenses", "on", "military", "."]
+# ::lemmas ["lose", "roughly", "1/10th", "of", "territory", ",", "several", "million", "people", "and", "the", "entire", "coal", "industry", "in", "one", "year", "do", "not", "help", ",", "even", "without", "the", "additional", "expense", "on", "military", "."]
+(c4-5 / help-01
+      :ARG0 (c4-9 / lose-02
+                  :ARG0 (c4-1 / and
+                              :op1 (c4-10 / person
+                                          :quant (c4-0 / several
+                                                       :op1 1000000))
+                              :op2 (c4-2 / industry
+                                         :mod (c4-3 / coal)
+                                         :mod (c4-14 / entire)))
+                  :ARG1 (c4-7 / territory
+                              :quant (c4-8 / roughly
+                                           :op1 "1/10"))
+                  :duration (c4-4 / temporal-quantity
+                                  :unit (c4-12 / year)
+                                  :quant 1))
+      :concession (c4-6 / expend-01
+                        :ARG2 (c4-11 / military)
+                        :mod (c4-13 / additional)
+                        :polarity -)
+      :polarity -)

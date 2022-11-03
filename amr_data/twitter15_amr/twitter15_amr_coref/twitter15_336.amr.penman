@@ -1,0 +1,101 @@
+# ::snt Defenitely.
+# ::tokens ["Defenitely", "."]
+# ::lemmas ["defenitely", "."]
+(c1-0 / defend-01)
+
+# ::snt . Follow
+# ::tokens [".", "Follow"]
+# ::lemmas [".", "follow"]
+(c2-0 / follow-02)
+
+# ::snt things everyone should know about
+# ::tokens ["things", "everyone", "should", "know", "about"]
+# ::lemmas ["thing", "everyone", "should", "know", "about"]
+(c3-0 / recommend-01
+      :ARG1 (c3-2 / know-01
+                  :ARG0 (c3-3 / everyone)
+                  :ARG1 (c3-1 / thing)))
+
+# ::snt sure why not
+# ::tokens ["sure", "why", "not"]
+# ::lemmas ["sure", "why", "not"]
+(c5-1 / sure-02
+      :concession (c5-0 / amr-unknown))
+
+# ::snt *NEW* Yung YK - One Huncho (AUDIO)
+# ::tokens ["*", "NEW", "*", "Yung", "YK", "-", "One", "Huncho", "(", "AUDIO", ")"]
+# ::lemmas ["*", "new", "*", "Yung", "YK", "-", "One", "Huncho", "(", "AUDIO", ")"]
+(c6-4 / new-01
+      :ARG1 (c6-0 / person
+                  :name (c6-3 / name
+                              :op1 "Yung"
+                              :op2 "YK")
+                  :ARG0-of (c6-2 / have-03
+                                 :ARG1 (c6-1 / language
+                                             :name c6-3
+                                             :op1 "One"
+                                             :op2 "Huncho"))))
+
+# ::snt yes, however you need team chemistry. IMO diversity too early could have killed many a startup companies, especially tech.
+# ::tokens ["yes", ",", "however", "you", "need", "team", "chemistry", ".", "IMO", "diversity", "too", "early", "could", "have", "killed", "many", "a", "startup", "companies", ",", "especially", "tech", "."]
+# ::lemmas ["yes", ",", "however", "you", "need", "team", "chemistry", ".", "imo", "diversity", "too", "early", "could", "have", "kill", "many", "a", "startup", "company", ",", "especially", "tech", "."]
+(c7-12 / multi-sentence
+       :snt1 (c7-17 / have-concession-91
+                    :ARG2 (c7-14 / need-01
+                                 :ARG0 (c7-13 / you)
+                                 :ARG1 (c7-2 / chemistry
+                                             :mod (c7-15 / team))))
+       :snt2 (c7-5 / opine-01
+                   :ARG0 (c7-1 / i)
+                   :ARG1 (c7-9 / possible-01
+                               :ARG1 (c7-18 / kill-01
+                                            :ARG0 (c7-6 / diversity
+                                                        :ARG1-of (c7-3 / have-degree-91
+                                                                       :ARG2 (c7-8 / early)
+                                                                       :ARG3 (c7-10 / too)))
+                                            :ARG1 (c7-16 / company
+                                                         :mod (c7-0 / startup)
+                                                         :quant (c7-7 / many)
+                                                         :example (c7-4 / tech
+                                                                        :mod (c7-11 / especially)))))))
+
+# ::snt I agree, we DO, yet we DON'T. There are as many that aren't (not even know it) than those "enlightened." Just sayin
+# ::tokens ["I", "agree", ",", "we", "DO", ",", "yet", "we", "DON'T.", "There", "are", "as", "many", "that", "are", "n't", "(", "not", "even", "know", "it", ")", "than", "those", "\"", "enlightened", ".", "\"", "Just", "sayin"]
+# ::lemmas ["i", "agree", ",", "we", "DO", ",", "yet", "we", "don't.", "there", "be", "as", "many", "that", "be", "not", "(", "not", "even", "know", "it", ")", "than", "those", "\"", "enlighten", ".", "\"", "just", "sayin"]
+(c8-8 / multi-sentence
+      :snt1 (c8-12 / agree-01
+                   :ARG0 (c8-3 / i)
+                   :ARG1 (c8-13 / do-02
+                                :ARG0 (c8-1 / we)
+                                :concession (c8-0 / do-02
+                                                  :ARG0 c8-1
+                                                  :polarity -)))
+      :snt2 (c8-5 / person
+                  :ARG1-of (c8-9 / have-quant-91
+                                 :ARG3 (c8-14 / equal)
+                                 :ARG4 (c8-15 / person
+                                              :ARG1-of (c8-6 / enlighten-01
+                                                             :polarity -)
+                                              :mod (c8-7 / that)))
+                  :ARG1-of (c8-2 / know-01
+                                 :mod (c8-11 / even)
+                                 :polarity -))
+      :snt3 (c8-4 / say-01
+                  :mod (c8-10 / just)))
+
+# ::snt agreed! Have you heard of ?
+# ::tokens ["agreed", "!", "Have", "you", "heard", "of", "?"]
+# ::lemmas ["agree", "!", "have", "you", "hear", "of", "?"]
+(c9-1 / multi-sentence
+      :snt1 (c9-4 / agree-01
+                  :mode expressive)
+      :snt2 (c9-2 / hear-01
+                  :polarity (c9-0 / amr-unknown)
+                  :ARG0 (c9-3 / you)))
+
+# ::snt rt pls?
+# ::tokens ["rt", "pls", "?"]
+# ::lemmas ["rt", "pls", "?"]
+(c10-0 / ask-01
+       :ARG1 (c10-1 / truth-value)
+       :ARG2 (c10-2 / you))

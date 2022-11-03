@@ -1,0 +1,79 @@
+# ::snt You are reporting even this? Smh
+# ::tokens ["You", "are", "reporting", "even", "this", "?", "Smh"]
+# ::lemmas ["you", "be", "report", "even", "this", "?", "smh"]
+(c1-2 / report-01
+      :polarity (c1-3 / amr-unknown)
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-5 / this
+                  :mod (c1-4 / even))
+      :mod (c1-1 / sigh-02
+                 :mode expressive))
+
+# ::snt Shit happens. Oppps.
+# ::tokens ["Shit", "happens", ".", "Oppps", "."]
+# ::lemmas ["shit", "happen", ".", "Oppps", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / shit-01)
+      :snt2 (c2-0 / oppose-01))
+
+# ::snt Its okay! The told the world he grabs women by the pussy. Im sure in the world that this has created, will be forgiven.
+# ::tokens ["Its", "okay", "!", "The", "told", "the", "world", "he", "grabs", "women", "by", "the", "pussy", ".", "I", "m", "sure", "in", "the", "world", "that", "this", "has", "created", ",", "will", "be", "forgiven", "."]
+# ::lemmas ["its", "okay", "!", "the", "tell", "the", "world", "he", "grab", "woman", "by", "the", "pussy", ".", "i", "m", "sure", "in", "the", "world", "that", "this", "have", "create", ",", "will", "be", "forgive", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-0 / okay-04
+                  :ARG1 (c3-10 / it))
+      :snt2 (c3-11 / tell-01
+                   :ARG0 (c3-5 / he)
+                   :ARG1 (c3-12 / grab-01
+                                :ARG0 c3-5
+                                :ARG1 (c3-8 / woman)
+                                :ARG2 (c3-6 / pussy))
+                   :ARG2 (c3-7 / world))
+      :snt3 (c3-3 / sure-02
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-1 / forgive-01
+                              :ARG1 (c3-13 / this
+                                           :ARG1-of (c3-9 / create-01
+                                                          :ARG0 c3-5))
+                              :location (c3-14 / world))))
+
+# ::snt HA! I love more now that I know she slipped
+# ::tokens ["HA", "!", "I", "love", "more", "now", "that", "I", "know", "she", "slipped"]
+# ::lemmas ["ha", "!", "i", "love", "more", "now", "that", "i", "know", "she", "slip"]
+(c4-2 / multi-sentence
+      :snt1 (c4-4 / ha
+                  :mode expressive)
+      :snt2 (c4-5 / love-01
+                  :ARG0 (c4-10 / i)
+                  :time (c4-1 / now)
+                  :ARG1-of (c4-9 / have-quant-91
+                                 :ARG3 (c4-6 / more))
+                  :ARG1-of (c4-8 / cause-01
+                                 :ARG0 (c4-7 / know-01
+                                             :ARG0 c4-10
+                                             :ARG1 (c4-3 / slip-01
+                                                         :ARG1 (c4-0 / she))))))
+
+# ::snt lol theres so much more going on in the world than a news anchor accidentally swearing, let the woman live
+# ::tokens ["lol", "there", "s", "so", "much", "more", "going", "on", "in", "the", "world", "than", "a", "news", "anchor", "accidentally", "swearing", ",", "let", "the", "woman", "live"]
+# ::lemmas ["lol", "there", "s", "so", "much", "more", "go", "on", "in", "the", "world", "than", "a", "news", "anchor", "accidentally", "swear", ",", "let", "the", "woman", "live"]
+(c5-16 / go-on-15
+       :ARG1 (c5-4 / event
+                   :location (c5-10 / world))
+       :ARG1-of (c5-5 / have-quant-91
+                      :ARG2 (c5-1 / much)
+                      :ARG3 (c5-6 / more
+                                  :degree (c5-3 / so))
+                      :ARG4 (c5-15 / and
+                                   :op1 (c5-0 / swear-02
+                                              :ARG0 (c5-7 / person
+                                                          :ARG0-of (c5-14 / anchor-01
+                                                                          :ARG1 (c5-2 / news)))
+                                              :manner (c5-11 / accidental))
+                                   :op2 (c5-8 / let-01
+                                              :ARG0 c5-7
+                                              :ARG1 (c5-17 / live-01
+                                                           :ARG0 (c5-9 / woman)))))
+       :ARG2-of (c5-12 / laugh-01
+                       :manner (c5-13 / loud)
+                       :mode expressive))

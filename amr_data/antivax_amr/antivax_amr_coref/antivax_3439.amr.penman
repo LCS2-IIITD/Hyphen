@@ -1,0 +1,53 @@
+# ::snt awww but hooray!
+# ::tokens ["awww", "but", "hooray", "!"]
+# ::lemmas ["awww", "but", "hooray", "!"]
+(c1-2 / contrast-01
+      :ARG1 (c1-0 / aw
+                  :mode expressive)
+      :ARG2 (c1-1 / hooray
+                  :mode expressive))
+
+# ::snt I literally just had this thought today on the phone with my pharmacy
+# ::tokens ["I", "literally", "just", "had", "this", "thought", "today", "on", "the", "phone", "with", "my", "pharmacy"]
+# ::lemmas ["i", "literally", "just", "have", "this", "thought", "today", "on", "the", "phone", "with", "my", "pharmacy"]
+(c2-2 / think-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-0 / this)
+      :time (c2-7 / today)
+      :medium (c2-3 / phone-01
+                    :ARG0 c2-6
+                    :ARG1 (c2-1 / pharmacy
+                                :poss c2-6))
+      :mod (c2-4 / literal)
+      :mod (c2-5 / just))
+
+# ::snt Good for you. I get nd shot next week. I had to wait til NY allowed people with BMI &gt;30.
+# ::tokens ["Good", "for", "you", ".", "I", "get", "nd", "shot", "next", "week", ".", "I", "had", "to", "wait", "til", "NY", "allowed", "people", "with", "BMI", "&", "gt;30", "."]
+# ::lemmas ["good", "for", "you", ".", "i", "get", "nd", "shoot", "next", "week", ".", "i", "have", "to", "wait", "til", "NY", "allow", "people", "with", "BMI", "&", "gt;30", "."]
+(c3-9 / multi-sentence
+      :snt1 (c3-8 / good-04
+                  :ARG2 (c3-16 / you))
+      :snt2 (c3-17 / get-01
+                   :ARG0 (c3-2 / i)
+                   :ARG1 (c3-13 / shoot-02
+                                :mod (c3-0 / dear))
+                   :time (c3-4 / week
+                               :mod (c3-10 / next)))
+      :snt3 (c3-6 / obligate-01
+                  :ARG1 (c3-14 / i)
+                  :ARG2 (c3-12 / wait-01
+                               :ARG1 c3-14
+                               :time (c3-20 / until
+                                            :op1 (c3-18 / allow-01
+                                                        :ARG0 (c3-21 / state
+                                                                     :name (c3-1 / name
+                                                                                 :op1 "NY"))
+                                                        :ARG1 (c3-22 / person
+                                                                     :ARG0-of (c3-19 / have-03
+                                                                                     :ARG1 (c3-11 / and
+                                                                                                  :op1 (c3-7 / thing
+                                                                                                             :name (c3-15 / name
+                                                                                                                          :op1 "BMI"))
+                                                                                                  :op2 (c3-5 / thing
+                                                                                                             :name (c3-3 / name
+                                                                                                                         :op1 "gt;30"))))))))))

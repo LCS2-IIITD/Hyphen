@@ -1,0 +1,215 @@
+# ::snt This is news?
+# ::tokens ["This", "is", "news", "?"]
+# ::lemmas ["this", "be", "news", "?"]
+(c1-2 / news
+      :polarity (c1-0 / amr-unknown)
+      :domain (c1-1 / this))
+
+# ::snt Why "pride"? Are we dealing with an accomplishment or an accident of birth?
+# ::tokens ["Why", "\"", "pride", "\"", "?", "Are", "we", "dealing", "with", "an", "accomplishment", "or", "an", "accident", "of", "birth", "?"]
+# ::lemmas ["why", "\"", "pride", "\"", "?", "be", "we", "deal", "with", "an", "accomplishment", "or", "an", "accident", "of", "birth", "?"]
+(c2-3 / multi-sentence
+      :snt1 (c2-8 / cause-01
+                  :ARG0 (c2-0 / amr-unknown)
+                  :ARG1 (c2-6 / pride-01))
+      :snt2 (c2-9 / deal-01
+                  :ARG0 (c2-7 / we)
+                  :ARG2 (c2-5 / amr-choice
+                              :op1 (c2-1 / accomplish-01
+                                         :ARG0 c2-7)
+                              :op2 (c2-4 / accident
+                                         :mod (c2-2 / bear-02)))))
+
+# ::snt : White House set aglow with rainbow pride | AP Photo
+# ::tokens [":", "White", "House", "set", "aglow", "with", "rainbow", "pride", "|", "AP", "Photo"]
+# ::lemmas [":", "White", "House", "set", "aglow", "with", "rainbow", "pride", "|", "AP", "Photo"]
+(c3-5 / set-08
+      :ARG1 (c3-3 / government-organization
+                  :name (c3-7 / name
+                              :op1 "White"
+                              :op2 "House"))
+      :ARG2 (c3-0 / aglow)
+      :ARG3 (c3-6 / pride-01
+                  :ARG0 (c3-1 / rainbow))
+      :ARG1-of (c3-8 / describe-01
+                     :ARG0 (c3-4 / publication
+                                 :name (c3-2 / name
+                                             :op1 "AP"
+                                             :op2 " Photo"))))
+
+# ::snt the ruling is fine, but jeez you dont need to rub it in. take care of the shit in the ME so it doesnt expand further over here.
+# ::tokens ["the", "ruling", "is", "fine", ",", "but", "jeez", "you", "do", "nt", "need", "to", "rub", "it", "in", ".", "take", "care", "of", "the", "shit", "in", "the", "ME", "so", "it", "does", "nt", "expand", "further", "over", "here", "."]
+# ::lemmas ["the", "ruling", "be", "fine", ",", "but", "jeez", "you", "do", "not", "need", "to", "rub", "it", "in", ".", "take", "care", "of", "the", "shit", "in", "the", "me", "so", "it", "do", "not", "expand", "far", "over", "here", "."]
+(c4-6 / multi-sentence
+      :snt1 (c4-13 / fine-04
+                   :ARG1 (c4-0 / rule-01)
+                   :concession-of (c4-10 / need-01
+                                         :ARG0 (c4-5 / you)
+                                         :ARG1 (c4-7 / rub-01
+                                                     :ARG0 c4-5
+                                                     :ARG1 c4-0
+                                                     :ARG2 (c4-8 / inside))
+                                         :mod (c4-1 / jeez
+                                                    :mode expressive)
+                                         :polarity -))
+      :snt2 (c4-15 / care-03
+                   :ARG1 (c4-9 / shit
+                               :location (c4-12 / world-region
+                                                :name (c4-3 / name
+                                                            :op1 "ME")))
+                   :purpose (c4-2 / expand-01
+                                  :ARG1 c4-12
+                                  :degree (c4-4 / further)
+                                  :location (c4-11 / over
+                                                   :op1 (c4-14 / here))
+                                  :polarity -)))
+
+# ::snt CONGRATULATIONS USA! I'm feeling great pride tonight.
+# ::tokens ["CONGRATULATIONS", "USA", "!", "I", "'m", "feeling", "great", "pride", "tonight", "."]
+# ::lemmas ["CONGRATULATIONS", "USA", "!", "i", "be", "feel", "great", "pride", "tonight", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-10 / congratulate-01
+                   :ARG1 (c5-5 / country
+                               :name (c5-7 / name
+                                           :op1 "USA"))
+                   :mode expressive)
+      :snt2 (c5-9 / feel-01
+                  :ARG0 (c5-6 / i)
+                  :ARG1 (c5-8 / pride-01
+                              :ARG0 c5-6
+                              :mod (c5-4 / great))
+                  :time (c5-1 / date-entity
+                              :dayperiod (c5-2 / night)
+                              :mod (c5-0 / today))))
+
+# ::snt oh shut up, grandpa.
+# ::tokens ["oh", "shut", "up", ",", "grandpa", "."]
+# ::lemmas ["oh", "shut", "up", ",", "grandpa", "."]
+(c6-3 / say-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-0 / shut-up-06
+                  :ARG0 (c6-4 / person
+                              :ARG0-of (c6-6 / have-rel-role-91
+                                             :ARG2 (c6-1 / grandpa))
+                              :ARG1-of c6-0)
+                  :mod (c6-5 / oh
+                             :mode expressive)
+                  :mode imperative)
+      :ARG2 c6-4)
+
+# ::snt Looks like the circus is in town.
+# ::tokens ["Looks", "like", "the", "circus", "is", "in", "town", "."]
+# ::lemmas ["look", "like", "the", "circus", "be", "in", "town", "."]
+(c7-0 / look-02
+      :ARG1 (c7-2 / circus
+                  :location (c7-1 / town)))
+
+# ::snt No fun when Tea Partiers get regarded as undesirable minorities,is it? This 'Taste Of Your Own Medicine' brought to u by Obamacare
+# ::tokens ["No", "fun", "when", "Tea", "Partiers", "get", "regarded", "as", "undesirable", "minorities", ",", "is", "it", "?", "This", "'", "Taste", "Of", "Your", "Own", "Medicine", "'", "brought", "to", "u", "by", "Obamacare"]
+# ::lemmas ["no", "fun", "when", "Tea", "Partiers", "get", "regard", "as", "undesirable", "minority", ",", "be", "it", "?", "this", "'", "taste", "of", "your", "own", "medicine", "'", "bring", "to", "u", "by", "Obamacare"]
+(c8-7 / multi-sentence
+      :snt1 (c8-14 / fun-01
+                   :time (c8-1 / regard-01
+                               :ARG1 (c8-11 / person
+                                            :mod (c8-6 / political-movement
+                                                       :name (c8-12 / name
+                                                                    :op1 "Tea"
+                                                                    :op2 "Party")))
+                               :ARG2 (c8-2 / minority
+                                           :ARG1-of (c8-15 / desire-01
+                                                           :polarity -)))
+                   :ARG1-of (c8-9 / request-confirmation-91)
+                   :polarity -)
+      :snt2 (c8-3 / bring-01
+                  :ARG0 (c8-13 / law
+                               :name (c8-4 / name
+                                           :op1 "Obamacare"))
+                  :ARG1 (c8-0 / taste
+                              :mod (c8-10 / medicine
+                                          :poss (c8-5 / you))
+                              :mod (c8-8 / this))
+                  :ARG2 c8-5))
+
+# ::snt Making a lot of people unjustifiable angry.
+# ::tokens ["Making", "a", "lot", "of", "people", "unjustifiable", "angry", "."]
+# ::lemmas ["make", "a", "lot", "of", "people", "unjustifiable", "angry", "."]
+(c9-2 / make-02
+      :ARG1 (c9-0 / anger-01
+                  :ARG1 (c9-3 / person
+                              :quant (c9-4 / lot))
+                  :ARG1-of (c9-1 / possible-01
+                                 :polarity -)))
+
+# ::snt If you agree with the Westboro Baptist Church on something, please reevaluate your life choices.
+# ::tokens ["If", "you", "agree", "with", "the", "Westboro", "Baptist", "Church", "on", "something", ",", "please", "reevaluate", "your", "life", "choices", "."]
+# ::lemmas ["if", "you", "agree", "with", "the", "Westboro", "Baptist", "Church", "on", "something", ",", "please", "reevaluate", "your", "life", "choice", "."]
+(c10-1 / reevaluate-01
+       :ARG0 (c10-2 / you)
+       :ARG1 (c10-7 / choose-01
+                    :ARG0 c10-2
+                    :ARG1 (c10-6 / live-01
+                                 :ARG0 c10-2))
+       :condition (c10-0 / agree-01
+                         :ARG0 c10-2
+                         :ARG1 (c10-3 / something)
+                         :ARG2 (c10-5 / organization
+                                      :name (c10-4 / name
+                                                   :op1 "Westboro"
+                                                   :op2 "Baptist"
+                                                   :op3 "Church")))
+       :mode imperative
+       :polite +)
+
+# ::snt :White House set aglow with rainbow pride | AP Photo
+# ::tokens [":", "White", "House", "set", "aglow", "with", "rainbow", "pride", "|", "AP", "Photo"]
+# ::lemmas [":", "White", "House", "set", "aglow", "with", "rainbow", "pride", "|", "AP", "Photo"]
+(c12-0 / and
+       :op1 (c12-5 / set-08
+                   :ARG1 (c12-3 / government-organization
+                                :name (c12-6 / name
+                                             :op1 "White"
+                                             :op2 "House"))
+                   :ARG2 (c12-8 / aglow)
+                   :ARG3 (c12-7 / pride-01
+                                :ARG0 c12-3
+                                :mod (c12-1 / rainbow)))
+       :op2 (c12-4 / publication
+                   :name (c12-2 / name
+                                :op1 "AP"
+                                :op2 " Photo")))
+
+# ::snt Wow, this is pretty incredible: : White House lit with rainbow pride | AP Photo
+# ::tokens ["Wow", ",", "this", "is", "pretty", "incredible", ":", ":", "White", "House", "lit", "with", "rainbow", "pride", "|", "AP", "Photo"]
+# ::lemmas ["wow", ",", "this", "be", "pretty", "incredible", ":", ":", "White", "House", "light", "with", "rainbow", "pride", "|", "AP", "Photo"]
+(c13-7 / incredible
+       :degree (c13-8 / pretty)
+       :domain (c13-1 / this
+                      :ARG1-of (c13-4 / mean-01
+                                      :ARG2 (c13-10 / light-04
+                                                    :ARG1 (c13-5 / government-organization
+                                                                 :name (c13-9 / name
+                                                                              :op1 "White"
+                                                                              :op2 "House"))
+                                                    :ARG2 (c13-6 / pride-01
+                                                                 :ARG0 (c13-2 / rainbow)))))
+       :ARG1-of (c13-11 / describe-01
+                        :ARG0 (c13-0 / publication
+                                     :name (c13-3 / name
+                                                  :op1 "AP"
+                                                  :op2 " Photo"))))
+
+# ::snt it is a great day to be an American!
+# ::tokens ["it", "is", "a", "great", "day", "to", "be", "an", "American", "!"]
+# ::lemmas ["it", "be", "a", "great", "day", "to", "be", "an", "American", "!"]
+(c14-0 / day
+       :mod (c14-1 / great)
+       :domain (c14-2 / person
+                      :mod (c14-4 / country
+                                  :name (c14-3 / name
+                                               :op1 "America"))))
+
+# ::snt SICK!!!
+# ::tokens ["SICK", "!", "!", "!"]
+# ::lemmas ["SICK", "!", "!", "!"]
+(c15-0 / sick-02
+       :mode expressive)

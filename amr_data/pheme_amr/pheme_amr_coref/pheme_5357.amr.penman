@@ -1,0 +1,978 @@
+# ::snt BINGO...That's right...
+# ::tokens ["BINGO", "...", "That", "'s", "right", "..."]
+# ::lemmas ["BINGO", "...", "that", "be", "right", "..."]
+(c1-3 / say-01
+      :ARG1 (c1-2 / right-06
+                  :ARG2 (c1-4 / that))
+      :ARG2 (c1-1 / person
+                  :name (c1-0 / name
+                              :op1 "BINGO")))
+
+# ::snt Terrorists are not muslims.A muslim can not be a terrorist.It's forbidden in Islam.
+# ::tokens ["Terrorists", "are", "not", "muslims", ".", "A", "muslim", "can", "not", "be", "a", "terrorist", ".", "It", "'s", "forbidden", "in", "Islam", "."]
+# ::lemmas ["terrorist", "be", "not", "muslim", ".", "a", "muslim", "can", "not", "be", "a", "terrorist", ".", "it", "be", "forbid", "in", "Islam", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-7 / person
+                  :mod (c2-8 / religious-group
+                             :name (c2-5 / name
+                                         :op1 "Islam"))
+                  :domain (c2-10 / terrorist)
+                  :polarity -)
+      :snt2 (c2-11 / possible-01
+                   :ARG1 (c2-9 / terrorist
+                               :domain (c2-2 / person
+                                             :mod (c2-4 / religious-group
+                                                        :name (c2-6 / name
+                                                                    :op1 "Muslim"))))
+                   :polarity -)
+      :snt3 (c2-0 / forbid-01
+                  :ARG1 (c2-3 / it)
+                  :location c2-4))
+
+# ::snt Right.And you should have used atomic bombs and killed innocent people.
+# ::tokens ["Right", ".", "And", "you", "should", "have", "used", "atomic", "bombs", "and", "killed", "innocent", "people", "."]
+# ::lemmas ["right", ".", "and", "you", "should", "have", "use", "atomic", "bomb", "and", "kill", "innocent", "people", "."]
+(c3-9 / and
+      :op2 (c3-7 / recommend-01
+                 :ARG1 (c3-3 / and
+                             :op1 (c3-1 / use-01
+                                        :ARG0 (c3-0 / you)
+                                        :ARG1 (c3-2 / bomb
+                                                    :mod (c3-5 / atom)))
+                             :op2 (c3-8 / kill-01
+                                        :ARG0 c3-0
+                                        :ARG1 (c3-6 / person
+                                                    :ARG1-of (c3-4 / innocent-01))))
+                 :ARG2 c3-0))
+
+# ::snt With insult, the countries of those terrorists are occupied, brothers killed, sisters raped.Nothing left to lose.
+# ::tokens ["With", "insult", ",", "the", "countries", "of", "those", "terrorists", "are", "occupied", ",", "brothers", "killed", ",", "sisters", "raped", ".", "Nothing", "left", "to", "lose", "."]
+# ::lemmas ["with", "insult", ",", "the", "country", "of", "those", "terrorist", "be", "occupy", ",", "brother", "kill", ",", "sister", "rape", ".", "nothing", "leave", "to", "lose", "."]
+(c4-12 / and
+       :op1 (c4-2 / occupy-01
+                  :ARG1 (c4-7 / country
+                              :poss (c4-11 / terrorist
+                                           :mod (c4-9 / that))))
+       :op2 (c4-4 / kill-01
+                  :ARG1 (c4-1 / brother))
+       :op3 (c4-6 / rape-01
+                  :ARG1 (c4-10 / sister))
+       :op4 (c4-0 / leave-17
+                  :ARG1 (c4-5 / nothing
+                              :ARG1-of (c4-8 / lose-02)))
+       :manner (c4-3 / insult-01))
+
+# ::snt And I will respect yours and those of others but I will never condone killing anyone.
+# ::tokens ["And", "I", "will", "respect", "yours", "and", "those", "of", "others", "but", "I", "will", "never", "condone", "killing", "anyone", "."]
+# ::lemmas ["and", "i", "will", "respect", "yours", "and", "those", "of", "other", "but", "i", "will", "never", "condone", "kill", "anyone", "."]
+(c5-11 / and
+       :op2 (c5-8 / contrast-01
+                  :ARG1 (c5-7 / respect-01
+                              :ARG0 (c5-4 / i)
+                              :ARG1 (c5-3 / and
+                                          :op1 (c5-0 / you)
+                                          :op2 (c5-6 / person
+                                                     :mod (c5-1 / other))))
+                  :ARG2 (c5-9 / condone-01
+                              :ARG0 c5-4
+                              :ARG1 (c5-10 / kill-01
+                                           :ARG1 (c5-5 / anyone))
+                              :time (c5-2 / ever)
+                              :polarity -)))
+
+# ::snt You haven't seen the cartoons about Prophet Muhammad. Keep him out.Nobody cares about the cartoons of terrorists
+# ::tokens ["You", "have", "n't", "seen", "the", "cartoons", "about", "Prophet", "Muhammad", ".", "Keep", "him", "out", ".", "Nobody", "cares", "about", "the", "cartoons", "of", "terrorists"]
+# ::lemmas ["you", "have", "not", "see", "the", "cartoon", "about", "Prophet", "Muhammad", ".", "keep", "he", "out", ".", "nobody", "care", "about", "the", "cartoon", "of", "terrorist"]
+(c6-2 / multi-sentence
+      :snt1 (c6-10 / see-01
+                   :ARG0 (c6-1 / you)
+                   :ARG1 (c6-8 / cartoon
+                               :topic (c6-6 / person
+                                            :name (c6-4 / name
+                                                        :op1 "Prophet"
+                                                        :op2 "Muhammad")))
+                   :polarity -)
+      :snt2 (c6-12 / keep-04
+                   :ARG0 c6-1
+                   :ARG1 (c6-3 / out-06
+                               :ARG1 (c6-0 / he))
+                   :mode imperative)
+      :snt3 (c6-7 / care-01
+                  :ARG0 (c6-5 / nobody)
+                  :ARG1 (c6-9 / cartoon
+                              :topic (c6-11 / terrorist))))
+
+# ::snt I am standing up to defend true Islam.I am against all kinds of terrorism and racism as well.
+# ::tokens ["I", "am", "standing", "up", "to", "defend", "true", "Islam", ".", "I", "am", "against", "all", "kinds", "of", "terrorism", "and", "racism", "as", "well", "."]
+# ::lemmas ["i", "be", "stand", "up", "to", "defend", "true", "Islam", ".", "i", "be", "against", "all", "kind", "of", "terrorism", "and", "racism", "as", "well", "."]
+(c7-0 / multi-sentence
+      :snt1 (c7-12 / stand-up-07
+                   :ARG1 (c7-3 / i)
+                   :purpose (c7-9 / defend-01
+                                  :ARG0 c7-3
+                                  :ARG1 (c7-8 / religious-group
+                                              :name (c7-5 / name
+                                                          :op1 "Islam")
+                                              :ARG1-of (c7-13 / true-01))))
+      :snt2 (c7-1 / oppose-01
+                  :ARG0 (c7-10 / i)
+                  :ARG1 (c7-14 / and
+                               :op1 (c7-11 / terrorism)
+                               :op2 (c7-4 / racism)
+                               :mod (c7-6 / kind
+                                          :mod (c7-2 / all)))
+                  :mod (c7-7 / as-well)))
+
+# ::snt is the one who irresponsibly provokes people and hides behind so called freedom of speech.
+# ::tokens ["is", "the", "one", "who", "irresponsibly", "provokes", "people", "and", "hides", "behind", "so", "called", "freedom", "of", "speech", "."]
+# ::lemmas ["be", "the", "one", "who", "irresponsibly", "provoke", "people", "and", "hide", "behind", "so", "call", "freedom", "of", "speech", "."]
+(c8-3 / one
+      :ARG0-of (c8-5 / provoke-01
+                     :ARG1 (c8-8 / person)
+                     :ARG1-of (c8-6 / responsible-02
+                                    :polarity -))
+      :ARG0-of (c8-0 / hide-01
+                     :location (c8-2 / behind
+                                     :op1 (c8-1 / free-04
+                                                :ARG3 (c8-7 / speak-01)
+                                                :mod (c8-4 / so-called)))))
+
+# ::snt even if the physics was similar, it wouldn't prove a creator or that the creator has a name "Allah"
+# ::tokens ["even", "if", "the", "physics", "was", "similar", ",", "it", "would", "n't", "prove", "a", "creator", "or", "that", "the", "creator", "has", "a", "name", "\"", "Allah", "\""]
+# ::lemmas ["even", "if", "the", "physics", "be", "similar", ",", "it", "would", "not", "prove", "a", "creator", "or", "that", "the", "creator", "have", "a", "name", "\"", "Allah", "\""]
+(c9-6 / prove-01
+      :ARG0 (c9-3 / it)
+      :ARG1 (c9-1 / or
+                  :op1 (c9-10 / person
+                              :ARG0-of (c9-8 / create-01))
+                  :op2 (c9-4 / name-01
+                             :ARG1 c9-10
+                             :ARG2 (c9-0 / person
+                                         :name (c9-5 / name
+                                                     :op1 "Allah"))))
+      :concession (c9-2 / even-if
+                        :op1 (c9-7 / resemble-01
+                                   :ARG1 (c9-9 / physics)))
+      :polarity -)
+
+# ::snt It's US who created terrorists .
+# ::tokens ["It", "'s", "US", "who", "created", "terrorists", "."]
+# ::lemmas ["it", "be", "US", "who", "create", "terrorist", "."]
+(c10-3 / create-01
+       :ARG0 (c10-2 / country
+                    :name (c10-0 / name
+                                 :op1 "US"))
+       :ARG1 (c10-1 / terrorist))
+
+# ::snt You are always the hero. But that is not the truth.You invaded Iraq claiming to bring democracy but you brought Abu-Gurayb.
+# ::tokens ["You", "are", "always", "the", "hero", ".", "But", "that", "is", "not", "the", "truth", ".", "You", "invaded", "Iraq", "claiming", "to", "bring", "democracy", "but", "you", "brought", "Abu", "-", "Gurayb", "."]
+# ::lemmas ["you", "be", "always", "the", "hero", ".", "but", "that", "be", "not", "the", "truth", ".", "you", "invade", "Iraq", "claim", "to", "bring", "democracy", "but", "you", "bring", "Abu", "-", "Gurayb", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-0 / hero
+                    :time (c11-14 / always)
+                    :domain (c11-1 / you))
+       :snt2 (c11-8 / contrast-01
+                    :ARG1 (c11-13 / true-01
+                                  :ARG1 (c11-4 / invade-01
+                                               :ARG0 (c11-11 / you)
+                                               :ARG1 (c11-7 / country
+                                                            :name (c11-5 / name
+                                                                         :op1 "Iraq"))
+                                               :manner (c11-12 / claim-01
+                                                               :ARG0 c11-11
+                                                               :ARG1 (c11-3 / bring-01
+                                                                            :ARG0 c11-11
+                                                                            :ARG1 (c11-9 / democracy))))
+                                  :polarity -)
+                    :ARG2 (c11-10 / bring-01
+                                  :ARG0 c11-11
+                                  :ARG1 (c11-15 / city
+                                                :name (c11-6 / name
+                                                             :op1 "Abu-Gurayb")))))
+
+# ::snt That is not war.That is massacre, genocide.You are the only country who ever used atomic bombs.
+# ::tokens ["That", "is", "not", "war", ".", "That", "is", "massacre", ",", "genocide", ".", "You", "are", "the", "only", "country", "who", "ever", "used", "atomic", "bombs", "."]
+# ::lemmas ["that", "be", "not", "war", ".", "that", "be", "massacre", ",", "genocide", ".", "you", "be", "the", "only", "country", "who", "ever", "use", "atomic", "bomb", "."]
+(c12-2 / multi-sentence
+       :snt1 (c12-0 / war
+                    :domain (c12-10 / that)
+                    :polarity -)
+       :snt2 (c12-8 / genocide-01
+                    :domain (c12-9 / that))
+       :snt3 (c12-7 / country
+                    :mod (c12-5 / only)
+                    :domain (c12-1 / you)
+                    :ARG0-of (c12-3 / use-01
+                                    :ARG1 (c12-4 / bomb
+                                                 :mod (c12-11 / atom))
+                                    :time (c12-6 / ever))))
+
+# ::snt Look.US invaded Afghanistan and created Al-Qaida.US invaded Iraq and created ISIS.
+# ::tokens ["Look", ".", "US", "invaded", "Afghanistan", "and", "created", "Al", "-", "Qaida", ".", "US", "invaded", "Iraq", "and", "created", "ISIS", "."]
+# ::lemmas ["look", ".", "US", "invade", "Afghanistan", "and", "create", "Al", "-", "Qaida", ".", "US", "invade", "Iraq", "and", "create", "ISIS", "."]
+(c13-1 / multi-sentence
+       :snt1 (c13-7 / look-01
+                    :ARG0 (c13-17 / you)
+                    :mode imperative)
+       :snt2 (c13-5 / and
+                    :op1 (c13-12 / invade-01
+                                 :ARG0 (c13-19 / country
+                                               :name (c13-8 / name
+                                                            :op1 "US"))
+                                 :ARG1 (c13-4 / country
+                                              :name (c13-18 / name
+                                                            :op1 "Afghanistan")))
+                    :op2 (c13-15 / create-01
+                                 :ARG0 c13-19
+                                 :ARG1 (c13-16 / criminal-organization
+                                               :name (c13-2 / name
+                                                            :op1 "Al-Qaida"))))
+       :snt3 (c13-11 / and
+                     :op1 (c13-14 / invade-01
+                                  :ARG0 (c13-0 / country
+                                               :name (c13-3 / name
+                                                            :op1 "US"))
+                                  :ARG1 (c13-10 / country
+                                                :name (c13-20 / name
+                                                              :op1 "Iraq")))
+                     :op2 (c13-13 / create-01
+                                  :ARG0 c13-0
+                                  :ARG1 (c13-9 / criminal-organization
+                                               :name (c13-6 / name
+                                                            :op1 "Islamic"
+                                                            :op2 "organization")))))
+
+# ::snt Find some other topics for your cartoons.Keep my religion out of it.You don't have the right to insult .
+# ::tokens ["Find", "some", "other", "topics", "for", "your", "cartoons", ".", "Keep", "my", "religion", "out", "of", "it", ".", "You", "do", "n't", "have", "the", "right", "to", "insult", "."]
+# ::lemmas ["find", "some", "other", "topic", "for", "your", "cartoon", ".", "keep", "my", "religion", "out", "of", "it", ".", "you", "do", "not", "have", "the", "right", "to", "insult", "."]
+(c14-2 / multi-sentence
+       :snt1 (c14-1 / find-01
+                    :ARG0 (c14-0 / you)
+                    :ARG1 (c14-14 / topic
+                                  :mod (c14-5 / other)
+                                  :mod (c14-13 / some)
+                                  :purpose (c14-10 / cartoon
+                                                   :poss c14-0))
+                    :mode imperative)
+       :snt2 (c14-7 / keep-04
+                    :ARG0 (c14-12 / you)
+                    :ARG1 (c14-9 / religion
+                                 :poss (c14-6 / i))
+                    :ARG2 (c14-3 / out-06
+                                 :ARG1 c14-9
+                                 :ARG2 c14-10)
+                    :mode imperative)
+       :snt3 (c14-8 / right-05
+                    :ARG1 (c14-4 / you)
+                    :ARG2 (c14-11 / insult-01
+                                  :ARG0 c14-4)
+                    :polarity -))
+
+# ::snt why would they create a terrorist group that worships Islam? Makes no sense.
+# ::tokens ["why", "would", "they", "create", "a", "terrorist", "group", "that", "worships", "Islam", "?", "Makes", "no", "sense", "."]
+# ::lemmas ["why", "would", "they", "create", "a", "terrorist", "group", "that", "worship", "Islam", "?", "make", "no", "sense", "."]
+(c15-1 / multi-sentence
+       :snt1 (c15-4 / cause-01
+                    :ARG0 (c15-10 / amr-unknown)
+                    :ARG1 (c15-3 / create-01
+                                 :ARG0 (c15-9 / they)
+                                 :ARG1 (c15-5 / group
+                                              :mod (c15-7 / terrorist)
+                                              :ARG0-of (c15-0 / worship-01
+                                                              :ARG1 (c15-6 / religious-group
+                                                                           :name (c15-2 / name
+                                                                                        :op1 "Islam"))))))
+       :snt2 (c15-8 / sense-02
+                    :ARG1 c15-3
+                    :polarity -))
+
+# ::snt why would they create a terrorist groups that worships Islam?
+# ::tokens ["why", "would", "they", "create", "a", "terrorist", "groups", "that", "worships", "Islam", "?"]
+# ::lemmas ["why", "would", "they", "create", "a", "terrorist", "group", "that", "worship", "Islam", "?"]
+(c16-3 / cause-01
+       :ARG0 (c16-8 / amr-unknown)
+       :ARG1 (c16-2 / create-01
+                    :ARG0 (c16-7 / they)
+                    :ARG1 (c16-4 / group
+                                 :mod (c16-6 / terrorist)
+                                 :ARG0-of (c16-0 / worship-01
+                                                 :ARG1 (c16-5 / religious-group
+                                                              :name (c16-1 / name
+                                                                           :op1 "Islam"))))))
+
+# ::snt so Isis taking over Iraq n Syria is example of American colonization? Lol.
+# ::tokens ["so", "Isis", "taking", "over", "Iraq", "n", "Syria", "is", "example", "of", "American", "colonization", "?", "Lol", "."]
+# ::lemmas ["so", "Isis", "take", "over", "Iraq", "n", "Syria", "be", "example", "of", "American", "colonization", "?", "Lol", "."]
+(c17-4 / infer-01
+       :ARG1 (c17-2 / exemplify-01
+                    :ARG0 (c17-13 / take-over-12
+                                  :ARG0 (c17-1 / military
+                                               :name (c17-5 / name
+                                                            :op1 "Isis"))
+                                  :ARG1 (c17-14 / and
+                                                :op1 (c17-9 / country
+                                                            :name (c17-6 / name
+                                                                         :op1 "Iraq"))
+                                                :op2 (c17-8 / country
+                                                            :name (c17-7 / name
+                                                                         :op1 "Syria"))))
+                    :ARG1 (c17-12 / colonize-01
+                                  :ARG0 (c17-15 / country
+                                                :name (c17-10 / name
+                                                              :op1 "America")))
+                    :polarity (c17-3 / amr-unknown)
+                    :mod (c17-0 / laugh-01
+                                :manner (c17-11 / loud)
+                                :mode expressive)))
+
+# ::snt why is ur religion particularly more sacred than the rest?
+# ::tokens ["why", "is", "ur", "religion", "particularly", "more", "sacred", "than", "the", "rest", "?"]
+# ::lemmas ["why", "be", "ur", "religion", "particularly", "more", "sacred", "than", "the", "rest", "?"]
+(c18-6 / cause-01
+       :ARG0 (c18-8 / amr-unknown)
+       :ARG1 (c18-0 / have-degree-91
+                    :ARG1 (c18-5 / religion
+                                 :poss (c18-1 / you))
+                    :ARG2 (c18-7 / sacred)
+                    :ARG3 (c18-2 / more)
+                    :ARG4 (c18-3 / rest)
+                    :mod (c18-4 / particular)))
+
+# ::snt threaten me with killing by atomic bombs and I am the radical...???You stupid racist looser...
+# ::tokens ["threaten", "me", "with", "killing", "by", "atomic", "bombs", "and", "I", "am", "the", "radical", "...", "???You", "stupid", "racist", "looser", "..."]
+# ::lemmas ["threaten", "i", "with", "kill", "by", "atomic", "bomb", "and", "i", "be", "the", "radical", "...", "???you", "stupid", "racist", "looser", "..."]
+(c19-7 / and
+       :op1 (c19-6 / threaten-01
+                   :ARG1 (c19-3 / kill-01
+                                :ARG1 (c19-2 / i)
+                                :instrument (c19-0 / bomb
+                                                   :mod (c19-1 / atom)))
+                   :ARG2 c19-2)
+       :op2 (c19-5 / radical-02
+                   :ARG1 c19-2)
+       :polarity (c19-4 / amr-unknown))
+
+# ::snt they don't need Middle East oil. Middle East can sell to who they want. Don't want their business?
+# ::tokens ["they", "do", "n't", "need", "Middle", "East", "oil", ".", "Middle", "East", "can", "sell", "to", "who", "they", "want", ".", "Do", "n't", "want", "their", "business", "?"]
+# ::lemmas ["they", "do", "not", "need", "Middle", "East", "oil", ".", "Middle", "East", "can", "sell", "to", "who", "they", "want", ".", "do", "not", "want", "their", "business", "?"]
+(c20-1 / multi-sentence
+       :snt1 (c20-6 / need-01
+                    :ARG0 (c20-12 / they)
+                    :ARG1 (c20-3 / oil
+                                 :mod (c20-0 / world-region
+                                             :name (c20-7 / name
+                                                          :op1 "Middle"
+                                                          :op2 "East")))
+                    :polarity -)
+       :snt2 (c20-8 / possible-01
+                    :ARG1 (c20-11 / sell-01
+                                  :ARG0 c20-0)
+                    :ARG2 (c20-13 / person
+                                  :ARG1-of (c20-5 / want-01
+                                                  :ARG0 (c20-10 / they))))
+       :snt3 (c20-2 / want-01
+                    :ARG0 (c20-9 / they)
+                    :ARG1 (c20-4 / business
+                                 :poss c20-9)
+                    :polarity (c20-14 / amr-unknown)
+                    :polarity -))
+
+# ::snt You'r right.So stop invading Muslim countries.
+# ::tokens ["You'r", "right", ".", "So", "stop", "invading", "Muslim", "countries", "."]
+# ::lemmas ["You'r", "right", ".", "so", "stop", "invade", "Muslim", "country", "."]
+(c21-1 / right-06
+       :ARG1 (c21-0 / you))
+
+# ::snt And you call me coward, radical or terrorist. The ghosts of Nagasaki and Hiroshima will never leave you alone.
+# ::tokens ["And", "you", "call", "me", "coward", ",", "radical", "or", "terrorist", ".", "The", "ghosts", "of", "Nagasaki", "and", "Hiroshima", "will", "never", "leave", "you", "alone", "."]
+# ::lemmas ["and", "you", "call", "i", "coward", ",", "radical", "or", "terrorist", ".", "the", "ghost", "of", "Nagasaki", "and", "Hiroshima", "will", "never", "leave", "you", "alone", "."]
+(c22-0 / multi-sentence
+       :snt1 (c22-2 / and
+                    :op2 (c22-16 / call-01
+                                 :ARG0 (c22-13 / you)
+                                 :ARG1 (c22-10 / i)
+                                 :ARG2 (c22-14 / or
+                                               :op1 (c22-1 / coward)
+                                               :op2 (c22-7 / radical-02)
+                                               :op3 (c22-18 / terrorist))))
+       :snt2 (c22-3 / leave-14
+                    :ARG0 (c22-8 / ghost
+                                 :poss (c22-9 / and
+                                              :op1 (c22-11 / city
+                                                           :name (c22-5 / name
+                                                                        :op1 "Nagasaki"))
+                                              :op2 (c22-12 / city
+                                                           :name (c22-15 / name
+                                                                         :op1 "Hiroshima"))))
+                    :ARG1 (c22-6 / alone
+                                 :domain (c22-17 / you))
+                    :time (c22-4 / ever)
+                    :polarity -))
+
+# ::snt there is no respect for terrorism or those who encourage it &amp; carry out such insane acts. They are the issue.
+# ::tokens ["there", "is", "no", "respect", "for", "terrorism", "or", "those", "who", "encourage", "it", "&", "amp", ";", "carry", "out", "such", "insane", "acts", ".", "They", "are", "the", "issue", "."]
+# ::lemmas ["there", "be", "no", "respect", "for", "terrorism", "or", "those", "who", "encourage", "it", "&", "amp", ";", "carry", "out", "such", "insane", "act", ".", "they", "be", "the", "issue", "."]
+(c23-0 / multi-sentence
+       :snt1 (c23-6 / respect-01
+                    :ARG1 (c23-1 / or
+                                 :op1 (c23-11 / terrorism)
+                                 :op2 (c23-5 / person
+                                             :ARG0-of (c23-2 / encourage-01
+                                                             :ARG1 (c23-12 / and
+                                                                           :op1 c23-11
+                                                                           :op2 (c23-3 / act-02
+                                                                                       :mod (c23-4 / insane
+                                                                                                   :degree (c23-10 / such)))))
+                                             :ARG0-of (c23-7 / carry-out-03
+                                                             :ARG1 c23-12)))
+                    :polarity -)
+       :snt2 (c23-8 / issue-02
+                    :ARG0 (c23-9 / they)))
+
+# ::snt disagree. Are you aware of the EV industry &amp; solar industry? They will help oil last longer. Great for economy.
+# ::tokens ["disagree", ".", "Are", "you", "aware", "of", "the", "EV", "industry", "&", "amp", ";", "solar", "industry", "?", "They", "will", "help", "oil", "last", "longer", ".", "Great", "for", "economy", "."]
+# ::lemmas ["disagree", ".", "be", "you", "aware", "of", "the", "EV", "industry", "&", "amp", ";", "solar", "industry", "?", "they", "will", "help", "oil", "last", "long", ".", "great", "for", "economy", "."]
+(c24-1 / multi-sentence
+       :snt1 (c24-4 / agree-01
+                    :ARG0 (c24-14 / i)
+                    :polarity -)
+       :snt2 (c24-11 / realize-01
+                     :ARG0 (c24-16 / you)
+                     :ARG1 (c24-13 / and
+                                   :op1 (c24-15 / industry
+                                                :topic (c24-8 / energy))
+                                   :op2 (c24-0 / industry
+                                               :topic (c24-2 / sun)))
+                     :polarity (c24-9 / amr-unknown))
+       :snt3 (c24-5 / help-01
+                    :ARG0 (c24-19 / they)
+                    :ARG1 (c24-6 / last-01
+                                 :ARG1 (c24-17 / oil)
+                                 :ARG2 (c24-18 / long-03
+                                               :ARG2-of (c24-3 / have-degree-91
+                                                               :ARG1 c24-6
+                                                               :ARG3 (c24-10 / more))))
+                    :ARG2 (c24-7 / economy))
+       :snt4 (c24-12 / great
+                     :beneficiary c24-7))
+
+# ::snt Believe it or not...There is only one God.And his name is Allah.
+# ::tokens ["Believe", "it", "or", "not", "...", "There", "is", "only", "one", "God", ".", "And", "his", "name", "is", "Allah", "."]
+# ::lemmas ["believe", "it", "or", "not", "...", "there", "be", "only", "one", "God", ".", "and", "his", "name", "be", "Allah", "."]
+(c25-2 / multi-sentence
+       :snt1 (c25-4 / or
+                    :op1 (c25-3 / believe-01
+                                :ARG0 (c25-0 / you)
+                                :ARG1 (c25-5 / it))
+                    :op2 (c25-9 / believe-01
+                                :ARG0 c25-0
+                                :ARG1 c25-5
+                                :polarity -))
+       :snt2 (c25-11 / and
+                     :op1 (c25-10 / god
+                                  :mod (c25-1 / only)
+                                  :quant 1)
+                     :op2 (c25-6 / name-01
+                                 :ARG1 (c25-8 / person
+                                              :name (c25-7 / name
+                                                           :op1 "Allah"))
+                                 :ARG2 c25-10)))
+
+# ::snt Sarkozy on in : prefer an excess of caricature to an excess of censorship
+# ::tokens ["Sarkozy", "on", "in", ":", "prefer", "an", "excess", "of", "caricature", "to", "an", "excess", "of", "censorship"]
+# ::lemmas ["Sarkozy", "on", "in", ":", "prefer", "an", "excess", "of", "caricature", "to", "an", "excess", "of", "censorship"]
+(c26-4 / prefer-01
+       :ARG0 (c26-7 / person
+                    :name (c26-3 / name
+                                 :op1 "Sarkozy"))
+       :ARG1 (c26-2 / excess
+                    :mod (c26-6 / caricature))
+       :ARG2 (c26-0 / excess
+                    :mod (c26-5 / censor-01))
+       :mod (c26-1 / on-in))
+
+# ::snt Saddam destroyed Iraq when he started a war. They were there to stop Saddam from killing over oil. Saddam elected?
+# ::tokens ["Saddam", "destroyed", "Iraq", "when", "he", "started", "a", "war", ".", "They", "were", "there", "to", "stop", "Saddam", "from", "killing", "over", "oil", ".", "Saddam", "elected", "?"]
+# ::lemmas ["Saddam", "destroy", "Iraq", "when", "he", "start", "a", "war", ".", "they", "be", "there", "to", "stop", "Saddam", "from", "kill", "over", "oil", ".", "Saddam", "elect", "?"]
+(c27-0 / multi-sentence
+       :snt1 (c27-3 / destroy-01
+                    :ARG0 (c27-2 / person
+                                 :name (c27-10 / name
+                                               :op1 "Saddam"))
+                    :ARG1 (c27-16 / country
+                                  :name (c27-15 / name
+                                                :op1 "Iraq"))
+                    :time (c27-4 / start-01
+                                 :ARG0 c27-2
+                                 :ARG1 (c27-11 / war-01
+                                               :ARG0 c27-2)))
+       :snt2 (c27-7 / be-located-at-91
+                    :ARG1 (c27-18 / they)
+                    :ARG2 (c27-17 / there)
+                    :purpose (c27-8 / stop-03
+                                    :ARG0 c27-18
+                                    :ARG1 (c27-5 / person
+                                                 :name (c27-1 / name
+                                                              :op1 "Saddam"))
+                                    :ARG2 (c27-13 / kill-01
+                                                  :ARG0 c27-5
+                                                  :ARG1-of (c27-12 / instead-of-91
+                                                                   :ARG2 (c27-14 / oil)))))
+       :snt3 (c27-9 / elect-01
+                    :ARG1 c27-5
+                    :polarity (c27-6 / amr-unknown)))
+
+# ::snt people are fed up with terrorists &amp; those that encourage it. Not Muslims on the same page. Cartoons are freedom of expression.
+# ::tokens ["people", "are", "fed", "up", "with", "terrorists", "&", "amp", ";", "those", "that", "encourage", "it", ".", "Not", "Muslims", "on", "the", "same", "page", ".", "Cartoons", "are", "freedom", "of", "expression", "."]
+# ::lemmas ["people", "be", "feed", "up", "with", "terrorists", "&", "amp", ";", "those", "that", "encourage", "it", ".", "not", "Muslims", "on", "the", "same", "page", ".", "cartoon", "be", "freedom", "of", "expression", "."]
+(c28-1 / multi-sentence
+       :snt1 (c28-0 / feed-up-03
+                    :ARG1 (c28-10 / person)
+                    :ARG2 (c28-16 / and
+                                  :op1 (c28-14 / terrorist)
+                                  :op2 (c28-6 / amp)
+                                  :domain (c28-15 / person
+                                                  :ARG0-of (c28-4 / encourage-01
+                                                                  :ARG2 (c28-7 / it)))))
+       :snt2 (c28-2 / person
+                    :mod (c28-11 / religious-group
+                                 :name (c28-9 / name
+                                              :op1 "Muslim"))
+                    :location (c28-13 / page
+                                      :ARG1-of (c28-12 / same-01))
+                    :polarity -)
+       :snt3 (c28-8 / free-04
+                    :ARG1 (c28-5 / spoon)
+                    :ARG3 (c28-3 / express-01)))
+
+# ::snt terrorist magazines are hate speech. They encourage murder &amp; chaos. Terrorism is insanity. Should be portrayed that way.
+# ::tokens ["terrorist", "magazines", "are", "hate", "speech", ".", "They", "encourage", "murder", "&", "amp", ";", "chaos", ".", "Terrorism", "is", "insanity", ".", "Should", "be", "portrayed", "that", "way", "."]
+# ::lemmas ["terrorist", "magazine", "be", "hate", "speech", ".", "they", "encourage", "murder", "&", "amp", ";", "chaos", ".", "terrorism", "be", "insanity", ".", "should", "be", "portray", "that", "way", "."]
+(c29-3 / multi-sentence
+       :snt1 (c29-13 / speak-01
+                     :ARG1-of (c29-0 / hate-01)
+                     :domain (c29-8 / magazine
+                                    :mod (c29-14 / terrorist)))
+       :snt2 (c29-4 / encourage-01
+                    :ARG0 (c29-12 / they)
+                    :ARG2 (c29-15 / and
+                                  :op1 (c29-2 / murder-01)
+                                  :op2 (c29-10 / chaos)))
+       :snt3 (c29-6 / insanity
+                    :domain (c29-7 / terrorism))
+       :snt4 (c29-9 / recommend-01
+                    :ARG1 (c29-11 / portray-01
+                                  :ARG1 (c29-1 / way
+                                               :mod (c29-5 / that)))))
+
+# ::snt similar? How? Solar system=netwonian physics, atom=quantum physics. Very different
+# ::tokens ["similar", "?", "How", "?", "Solar", "system", "=", "netwonian", "physics", ",", "atom", "=", "quantum", "physics", ".", "Very", "different"]
+# ::lemmas ["similar", "?", "how", "?", "solar", "system", "=", "netwonian", "physics", ",", "atom", "=", "quantum", "physics", ".", "very", "different"]
+(c30-0 / multi-sentence
+       :snt1 (c30-10 / resemble-01
+                     :polarity (c30-16 / amr-unknown))
+       :snt2 (c30-6 / amr-unknown
+                    :polarity (c30-8 / amr-unknown))
+       :snt3 (c30-14 / and
+                     :op1 (c30-3 / equal-01
+                                 :ARG1 (c30-13 / system
+                                               :mod (c30-4 / sun))
+                                 :ARG2 (c30-9 / physics
+                                              :mod (c30-7 / nucleus)))
+                     :op2 (c30-1 / equal-01
+                                 :ARG1 (c30-2 / atom)
+                                 :ARG2 (c30-15 / physics
+                                               :mod (c30-5 / quantum))))
+       :snt4 (c30-11 / differ-02
+                     :degree (c30-12 / very)))
+
+# ::snt That's right.So leave my religion to me.You don't have the right to make fun of religion.
+# ::tokens ["That", "'s", "right", ".", "So", "leave", "my", "religion", "to", "me", ".", "You", "do", "n't", "have", "the", "right", "to", "make", "fun", "of", "religion", "."]
+# ::lemmas ["that", "be", "right", ".", "so", "leave", "my", "religion", "to", "i", ".", "you", "do", "not", "have", "the", "right", "to", "make", "fun", "of", "religion", "."]
+(c31-3 / multi-sentence
+       :snt1 (c31-8 / right-02
+                    :ARG1 (c31-9 / that))
+       :snt2 (c31-2 / leave-02
+                    :ARG0 (c31-1 / you)
+                    :ARG1 (c31-6 / religion
+                                 :poss (c31-5 / i
+                                              :ARG2-of c31-2))
+                    :mode imperative)
+       :snt3 (c31-4 / right-05
+                    :ARG1 c31-1
+                    :polarity -)
+       :ARG2 (c31-7 / make-fun-04
+                    :ARG0 c31-1
+                    :ARG1 (c31-0 / religion)))
+
+# ::snt I agree.But when you provoke people you are responsible for the consequences. You have to act responsibly.
+# ::tokens ["I", "agree", ".", "But", "when", "you", "provoke", "people", "you", "are", "responsible", "for", "the", "consequences", ".", "You", "have", "to", "act", "responsibly", "."]
+# ::lemmas ["i", "agree", ".", "but", "when", "you", "provoke", "people", "you", "be", "responsible", "for", "the", "consequence", ".", "you", "have", "to", "act", "responsibly", "."]
+(c32-1 / multi-sentence
+       :snt1 (c32-12 / agree-01
+                     :ARG0 (c32-4 / i))
+       :snt2 (c32-8 / contrast-01
+                    :ARG2 (c32-7 / responsible-01
+                                 :ARG0 (c32-0 / you)
+                                 :ARG1 (c32-9 / consequence-03
+                                              :ARG3 (c32-6 / provoke-01
+                                                           :ARG0 c32-0
+                                                           :ARG1 (c32-11 / person)
+                                                           :time-of c32-7))))
+       :snt3 (c32-2 / obligate-01
+                    :ARG1 (c32-10 / you)
+                    :ARG2 (c32-3 / act-02
+                                 :ARG0 c32-10
+                                 :ARG1-of (c32-5 / responsible-02))))
+
+# ::snt Exactamant!
+# ::tokens ["Exactamant", "!"]
+# ::lemmas ["exactamant", "!"]
+(c33-0 / incredible
+       :mode expressive)
+
+# ::snt lets see this block button does what?
+# ::tokens ["lets", "see", "this", "block", "button", "does", "what", "?"]
+# ::lemmas ["let", "see", "this", "block", "button", "do", "what", "?"]
+(c34-4 / see-01
+       :ARG0 (c34-0 / we)
+       :ARG1 (c34-2 / do-02
+                    :ARG0 (c34-1 / button
+                                 :mod (c34-3 / block-01)
+                                 :mod (c34-5 / this))
+                    :ARG1 (c34-6 / amr-unknown))
+       :mode imperative)
+
+# ::snt oh yes US created ISIS n now they r bombing Isis. Such evil genius. R u retarded?
+# ::tokens ["oh", "yes", "US", "created", "ISIS", "n", "now", "they", "r", "bombing", "Isis", ".", "Such", "evil", "genius", ".", "R", "u", "retarded", "?"]
+# ::lemmas ["oh", "yes", "US", "create", "ISIS", "n", "now", "they", "r", "bomb", "Isis", ".", "such", "evil", "genius", ".", "r", "u", "retard", "?"]
+(c35-1 / multi-sentence
+       :snt1 (c35-15 / and
+                     :op1 (c35-10 / create-01
+                                  :ARG0 (c35-9 / country
+                                               :name (c35-6 / name
+                                                            :op1 "US"))
+                                  :ARG1 (c35-13 / criminal-organization
+                                                :name (c35-7 / name
+                                                             :op1 "Islamic"
+                                                             :op2 "organization")))
+                     :op2 (c35-2 / bomb-01
+                                 :ARG0 c35-9
+                                 :ARG1 c35-13
+                                 :time (c35-8 / now))
+                     :mod (c35-3 / oh
+                                 :mode expressive))
+       :snt2 (c35-11 / genius
+                     :mod (c35-4 / evil
+                                 :degree (c35-14 / such)))
+       :snt3 (c35-12 / retard-01
+                     :ARG1 (c35-0 / you)
+                     :polarity (c35-5 / amr-unknown)))
+
+# ::snt In this time of catastrophic economic crisis you need the oil in the middle east...!!!
+# ::tokens ["In", "this", "time", "of", "catastrophic", "economic", "crisis", "you", "need", "the", "oil", "in", "the", "middle", "east", "...", "!", "!", "!"]
+# ::lemmas ["in", "this", "time", "of", "catastrophic", "economic", "crisis", "you", "need", "the", "oil", "in", "the", "middle", "east", "...", "!", "!", "!"]
+(c36-4 / need-01
+       :ARG0 (c36-0 / you)
+       :ARG1 (c36-2 / oil
+                    :location (c36-1 / world-region
+                                     :name (c36-5 / name
+                                                  :op1 "Middle"
+                                                  :op2 "East")))
+       :time (c36-7 / crisis
+                    :mod (c36-3 / economy)
+                    :mod (c36-6 / catastrophic)
+                    :mod (c36-8 / this))
+       :mode expressive)
+
+# ::snt Not in person. I mean generally. Al-Qaida born in Afghanistan. ISIS born in Iraq.Both occupied by USA.
+# ::tokens ["Not", "in", "person", ".", "I", "mean", "generally", ".", "Al", "-", "Qaida", "born", "in", "Afghanistan", ".", "ISIS", "born", "in", "Iraq", ".", "Both", "occupied", "by", "USA", "."]
+# ::lemmas ["not", "in", "person", ".", "i", "mean", "generally", ".", "Al", "-", "Qaida", "bear", "in", "Afghanistan", ".", "ISIS", "bear", "in", "Iraq", ".", "both", "occupy", "by", "USA", "."]
+(c37-1 / multi-sentence
+       :snt1 (c37-4 / person
+                    :domain (c37-10 / i)
+                    :polarity -)
+       :snt2 (c37-8 / mean-01
+                    :ARG0 c37-10
+                    :ARG2 (c37-9 / general-02))
+       :snt3 (c37-6 / bear-02
+                    :ARG1 (c37-16 / criminal-organization
+                                  :name (c37-7 / name
+                                               :op1 "Al-Qaida"))
+                    :location (c37-5 / country
+                                     :name (c37-15 / name
+                                                   :op1 "Afghanistan")))
+       :snt4 (c37-11 / bear-02
+                     :ARG1 (c37-12 / criminal-organization
+                                   :name (c37-2 / name
+                                                :op1 "ISIS"))
+                     :location (c37-13 / country
+                                       :name (c37-3 / name
+                                                    :op1 "Iraq")))
+       :snt5 (c37-14 / occupy-01
+                     :ARG0 (c37-0 / country
+                                  :name (c37-18 / name
+                                                :op1 "USA"))
+                     :ARG1 (c37-17 / both)))
+
+# ::snt see now u insulted my religion n I will call u a bigoted asshole but I dont want to kill u
+# ::tokens ["see", "now", "u", "insulted", "my", "religion", "n", "I", "will", "call", "u", "a", "bigoted", "asshole", "but", "I", "do", "nt", "want", "to", "kill", "u"]
+# ::lemmas ["see", "now", "u", "insult", "my", "religion", "n", "i", "will", "call", "u", "a", "bigoted", "asshole", "but", "i", "do", "not", "want", "to", "kill", "u"]
+(c38-10 / see-01
+        :ARG0 (c38-0 / you)
+        :ARG1 (c38-12 / and
+                      :op1 (c38-4 / insult-01
+                                  :ARG0 c38-0
+                                  :ARG1 (c38-6 / religion
+                                               :poss (c38-8 / i)))
+                      :op2 (c38-7 / contrast-01
+                                  :ARG1 (c38-9 / call-01
+                                               :ARG0 c38-8
+                                               :ARG1 c38-0
+                                               :ARG2 (c38-3 / asshole
+                                                            :mod (c38-2 / bigot)))
+                                  :ARG2 (c38-1 / want-01
+                                               :ARG0 c38-8
+                                               :ARG1 (c38-11 / kill-01
+                                                             :ARG0 c38-8
+                                                             :ARG1 c38-0)
+                                               :polarity -)))
+        :time (c38-5 / now)
+        :mode imperative)
+
+# ::snt that is so years ago, thats war thats how war hors
+# ::tokens ["that", "is", "so", "years", "ago", ",", "that", "s", "war", "that", "s", "how", "war", "hors"]
+# ::lemmas ["that", "be", "so", "years", "ago", ",", "that", "s", "war", "that", "s", "how", "war", "hor"]
+(c39-2 / multi-sentence
+       :snt1 (c39-3 / be-temporally-at-91
+                    :ARG1 (c39-0 / war)
+                    :ARG2 (c39-7 / before
+                                 :op1 (c39-5 / now)
+                                 :quant (c39-6 / multiple
+                                               :op1 (c39-10 / temporal-quantity
+                                                            :unit (c39-1 / year)
+                                                            :quant 1)
+                                               :degree (c39-9 / so))))
+       :snt2 (c39-4 / war
+                    :mod (c39-8 / that)
+                    :manner (c39-11 / amr-unknown)))
+
+# ::snt Cartoons drawn for Charlie Hebdo
+# ::tokens ["Cartoons", "drawn", "for", "Charlie", "Hebdo"]
+# ::lemmas ["cartoon", "draw", "for", "Charlie", "Hebdo"]
+(c40-2 / draw-01
+       :ARG1 (c40-3 / cartoon)
+       :ARG3 (c40-1 / magazine
+                    :name (c40-0 / name
+                                 :op1 "Charlie"
+                                 :op2 "Ch Hebdo")))
+
+# ::snt :ghosts ? Hell my parents werent even born then. You radicalist
+# ::tokens [":", "ghosts", "?", "Hell", "my", "parents", "were", "nt", "even", "born", "then", ".", "You", "radicalist"]
+# ::lemmas [":", "ghost", "?", "hell", "my", "parent", "be", "not", "even", "bear", "then", ".", "you", "radicalist"]
+(c41-3 / multi-sentence
+       :snt1 (c41-10 / ghost
+                     :polarity (c41-13 / amr-unknown))
+       :snt2 (c41-5 / bear-02
+                    :ARG1 (c41-8 / person
+                                 :ARG0-of (c41-0 / have-rel-role-91
+                                                 :ARG1 (c41-7 / i)
+                                                 :ARG2 (c41-12 / parent)))
+                    :mod (c41-6 / even)
+                    :time (c41-11 / then)
+                    :mod (c41-2 / hell
+                                :mode expressive)
+                    :polarity -)
+       :snt3 (c41-4 / person
+                    :ARG1-of (c41-9 / radical-02)
+                    :domain (c41-1 / you)))
+
+# ::snt You see... You are also offended right ???That's how it feels dude...!!!Got it ???
+# ::tokens ["You", "see", "...", "You", "are", "also", "offended", "right", "?", "?", "?", "That", "'s", "how", "it", "feels", "dude", "...", "!!!Got", "it", "?", "?", "?"]
+# ::lemmas ["you", "see", "...", "you", "be", "also", "offend", "right", "?", "?", "?", "that", "be", "how", "it", "feel", "dude", "...", "!!!got", "it", "?", "?", "?"]
+(c42-2 / multi-sentence
+       :snt1 (c42-9 / see-01
+                    :ARG0 (c42-0 / you))
+       :snt2 (c42-3 / offend-01
+                    :ARG1 (c42-8 / you)
+                    :mod (c42-11 / also)
+                    :ARG1-of (c42-6 / request-confirmation-91))
+       :snt3 (c42-4 / say-01
+                    :ARG1 (c42-1 / feel-05
+                                 :ARG1 (c42-5 / it)
+                                 :manner (c42-10 / that))
+                    :ARG2 (c42-7 / dude)))
+
+# ::snt tell that to aq &amp; isis. They don't agree with you. They kill innocent people in the name of their god. They're insane.
+# ::tokens ["tell", "that", "to", "aq", "&", "amp", ";", "isis", ".", "They", "do", "n't", "agree", "with", "you", ".", "They", "kill", "innocent", "people", "in", "the", "name", "of", "their", "god", ".", "They", "'re", "insane", "."]
+# ::lemmas ["tell", "that", "to", "aq", "&", "amp", ";", "isis", ".", "they", "do", "not", "agree", "with", "you", ".", "they", "kill", "innocent", "people", "in", "the", "name", "of", "their", "god", ".", "they", "be", "insane", "."]
+(c43-1 / multi-sentence
+       :snt1 (c43-13 / tell-01
+                     :ARG0 (c43-0 / you)
+                     :ARG1 (c43-12 / that)
+                     :ARG2 (c43-8 / person
+                                  :name (c43-6 / name
+                                               :op1 "aq"
+                                               :op2 "&"
+                                               :op3 "amp"))
+                     :mode imperative)
+       :snt2 (c43-15 / agree-01
+                     :ARG0 (c43-7 / they)
+                     :ARG2 c43-0
+                     :polarity -)
+       :snt3 (c43-5 / kill-01
+                    :ARG0 (c43-3 / they)
+                    :ARG1 (c43-14 / person
+                                  :ARG1-of (c43-4 / innocent-01))
+                    :beneficiary (c43-2 / person
+                                        :name (c43-9 / name
+                                                     :op1 "God")
+                                        :poss c43-3))
+       :snt4 (c43-11 / insane
+                     :domain (c43-10 / they)))
+
+# ::snt doesn't justify killing innocent civilians in mass.
+# ::tokens ["does", "n't", "justify", "killing", "innocent", "civilians", "in", "mass", "."]
+# ::lemmas ["do", "not", "justify", "kill", "innocent", "civilian", "in", "mass", "."]
+(c44-0 / justify-01
+       :ARG1 (c44-4 / kill-01
+                    :ARG1 (c44-3 / civilian
+                                 :ARG1-of (c44-2 / innocent-01))
+                    :manner (c44-1 / mass))
+       :polarity -)
+
+# ::snt Because we do not worship cows, rats,snakes, monkeys or elephants...We believe in Allah. Allah is the only GOD.
+# ::tokens ["Because", "we", "do", "not", "worship", "cows", ",", "rats", ",", "snakes", ",", "monkeys", "or", "elephants", "...", "We", "believe", "in", "Allah", ".", "Allah", "is", "the", "only", "GOD", "."]
+# ::lemmas ["because", "we", "do", "not", "worship", "cow", ",", "rat", ",", "snake", ",", "monkey", "or", "elephant", "...", "we", "believe", "in", "Allah", ".", "Allah", "be", "the", "only", "GOD", "."]
+(c45-2 / multi-sentence
+       :snt1 (c45-12 / cause-01
+                     :ARG0 (c45-0 / worship-01
+                                  :ARG0 (c45-7 / we)
+                                  :ARG1 (c45-4 / or
+                                               :op1 (c45-11 / cow)
+                                               :op2 (c45-13 / rat
+                                                            :op3-of c45-4))
+                                  :op4 (c45-10 / monkey)
+                                  :op5 (c45-6 / elephant)
+                                  :polarity -))
+       :snt2 (c45-3 / believe-01
+                    :ARG0 (c45-5 / we)
+                    :ARG1 (c45-14 / person
+                                  :name (c45-8 / name
+                                               :op1 "Allah")))
+       :snt3 (c45-15 / god
+                     :mod (c45-1 / only)
+                     :domain (c45-16 / person
+                                     :name (c45-9 / name
+                                                  :op1 "Allah"))))
+
+# ::snt I do. But I haven't. I have merely stated that killing people for not holding a belief in the same god, is wrong.
+# ::tokens ["I", "do", ".", "But", "I", "have", "n't", ".", "I", "have", "merely", "stated", "that", "killing", "people", "for", "not", "holding", "a", "belief", "in", "the", "same", "god", ",", "is", "wrong", "."]
+# ::lemmas ["i", "do", ".", "but", "i", "have", "not", ".", "i", "have", "merely", "state", "that", "kill", "people", "for", "not", "hold", "a", "belief", "in", "the", "same", "god", ",", "be", "wrong", "."]
+(c46-4 / multi-sentence
+       :snt1 (c46-9 / do-02
+                    :ARG0 (c46-7 / i))
+       :snt2 (c46-10 / contrast-01
+                     :ARG1 (c46-2 / do-02
+                                  :ARG0 (c46-11 / i)
+                                  :polarity -)
+                     :ARG2 (c46-17 / do-02
+                                   :ARG0 c46-11
+                                   :polarity -))
+       :snt3 (c46-14 / state-01
+                     :ARG0 (c46-3 / i)
+                     :ARG1 (c46-1 / wrong-02
+                                  :ARG1 (c46-16 / kill-01
+                                                :ARG1 (c46-8 / person)
+                                                :ARG1-of (c46-12 / cause-01
+                                                                 :ARG0 (c46-0 / hold-02
+                                                                              :ARG0 c46-8
+                                                                              :ARG1 (c46-5 / believe-01
+                                                                                           :ARG0 c46-8
+                                                                                           :ARG1 (c46-13 / god
+                                                                                                         :ARG1-of (c46-6 / same-01)))
+                                                                              :polarity -)))
+                                  :mod (c46-15 / mere))))
+
+# ::snt Are you aware the whole world economy is going down and US will bankrupt very soon ???
+# ::tokens ["Are", "you", "aware", "the", "whole", "world", "economy", "is", "going", "down", "and", "US", "will", "bankrupt", "very", "soon", "?", "?", "?"]
+# ::lemmas ["be", "you", "aware", "the", "whole", "world", "economy", "be", "go", "down", "and", "US", "will", "bankrupt", "very", "soon", "?", "?", "?"]
+(c47-9 / realize-01
+       :ARG0 (c47-0 / you)
+       :ARG1 (c47-12 / and
+                     :op1 (c47-8 / down-03
+                                 :ARG1 (c47-3 / economy
+                                              :mod (c47-1 / world)
+                                              :mod (c47-5 / whole)))
+                     :op2 (c47-2 / bankrupt-01
+                                 :ARG1 (c47-10 / country
+                                               :name (c47-6 / name
+                                                            :op1 "US"))
+                                 :time (c47-11 / soon
+                                               :degree (c47-7 / very))))
+       :polarity (c47-4 / amr-unknown))
+
+# ::snt Islam needs to be doing more to discourage terrorism. People are expressing their thoughts through cartoons. Not harming anyone.
+# ::tokens ["Islam", "needs", "to", "be", "doing", "more", "to", "discourage", "terrorism", ".", "People", "are", "expressing", "their", "thoughts", "through", "cartoons", ".", "Not", "harming", "anyone", "."]
+# ::lemmas ["Islam", "need", "to", "be", "do", "more", "to", "discourage", "terrorism", ".", "people", "be", "express", "their", "thought", "through", "cartoon", ".", "not", "harm", "anyone", "."]
+(c48-2 / multi-sentence
+       :snt1 (c48-4 / need-01
+                    :ARG0 (c48-7 / religious-group
+                                 :name (c48-5 / name
+                                              :op1 "Islam"))
+                    :ARG1 (c48-8 / do-02
+                                 :ARG0 c48-7
+                                 :ARG1 (c48-6 / more)
+                                 :ARG2 (c48-1 / discourage-01
+                                              :ARG0 c48-7
+                                              :ARG2 (c48-13 / terrorism))))
+       :snt2 (c48-3 / express-01
+                    :ARG0 (c48-9 / person)
+                    :ARG1 (c48-11 / thing
+                                  :ARG1-of (c48-10 / think-01
+                                                   :ARG0 c48-9))
+                    :medium (c48-12 / cartoon))
+       :snt3 (c48-0 / harm-01
+                    :ARG1 (c48-14 / anyone)
+                    :polarity -))
+
+# ::snt that its cupcake go slaughter the innocent over your god? Thats a great answer to the issue. Gutless coward
+# ::tokens ["that", "its", "cupcake", "go", "slaughter", "the", "innocent", "over", "your", "god", "?", "That", "s", "a", "great", "answer", "to", "the", "issue", ".", "Gutless", "coward"]
+# ::lemmas ["that", "its", "cupcake", "go", "slaughter", "the", "innocent", "over", "your", "god", "?", "that", "s", "a", "great", "answer", "to", "the", "issue", ".", "gutless", "coward"]
+(c49-2 / multi-sentence
+       :snt1 (c49-11 / go-05
+                     :polarity (c49-17 / amr-unknown)
+                     :ARG0 (c49-10 / cupcake
+                                   :poss (c49-5 / it))
+                     :ARG1 (c49-14 / slaughter-01
+                                   :ARG0 c49-10
+                                   :ARG1 (c49-8 / person
+                                                :ARG1-of (c49-12 / innocent-01))
+                                   :ARG1-of (c49-1 / instead-of-91
+                                                   :ARG2 (c49-16 / person
+                                                                 :name (c49-6 / name
+                                                                              :op1 "God")
+                                                                 :poss (c49-0 / you)))))
+       :snt2 (c49-4 / answer-01
+                    :ARG1 (c49-3 / issue-02)
+                    :ARG2 (c49-15 / that)
+                    :mod (c49-9 / great))
+       :snt3 (c49-13 / coward
+                     :mod (c49-7 / gutless)))
+
+# ::snt really? How? These ppl were living n working in France.
+# ::tokens ["really", "?", "How", "?", "These", "ppl", "were", "living", "n", "working", "in", "France", "."]
+# ::lemmas ["really", "?", "how", "?", "these", "ppl", "be", "live", "n", "work", "in", "France", "."]
+(c50-2 / multi-sentence
+       :snt1 (c50-7 / real-04
+                    :polarity (c50-10 / amr-unknown))
+       :snt2 (c50-3 / and
+                    :op1 (c50-1 / live-01
+                                :ARG0 (c50-6 / person
+                                             :mod (c50-9 / this)))
+                    :op2 (c50-0 / work-01
+                                :ARG0 c50-6
+                                :location (c50-8 / country
+                                                 :name (c50-4 / name
+                                                              :op1 "France")))
+                    :polarity (c50-5 / amr-unknown)))

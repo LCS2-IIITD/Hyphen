@@ -1,0 +1,111 @@
+# ::snt &gt; Amateur or mentally ill?
+# ::tokens ["&", "gt", ";", "Amateur", "or", "mentally", "ill", "?"]
+# ::lemmas ["&", "gt", ";", "Amateur", "or", "mentally", "ill", "?"]
+(c1-3 / amr-choice
+      :op1 (c1-2 / amateur)
+      :op2 (c1-1 / ill-01
+                 :mod (c1-0 / mental)))
+
+# ::snt 'Four Lions' was portrayed as a comedy but really it's a searing, gritty documentary.
+# ::tokens ["'", "Four", "Lions", "'", "was", "portrayed", "as", "a", "comedy", "but", "really", "it", "'s", "a", "searing", ",", "gritty", "documentary", "."]
+# ::lemmas ["'", "Four", "Lions", "'", "be", "portray", "as", "a", "comedy", "but", "really", "it", "be", "a", "searing", ",", "gritty", "documentary", "."]
+(c2-4 / contrast-01
+      :ARG1 (c2-2 / portray-01
+                  :ARG1 (c2-0 / broadcast-program
+                              :name (c2-1 / name
+                                          :op1 "Four"
+                                          :op2 "Lions"))
+                  :ARG2 (c2-3 / comedy))
+      :ARG2 (c2-5 / documentary
+                  :domain c2-0
+                  :ARG0-of (c2-8 / sear-01)
+                  :mod (c2-6 / gritty)
+                  :ARG1-of (c2-7 / real-04)))
+
+# ::snt Not so funny for the hostages
+# ::tokens ["Not", "so", "funny", "for", "the", "hostages"]
+# ::lemmas ["not", "so", "funny", "for", "the", "hostage"]
+(c4-2 / funny
+      :degree (c4-0 / so)
+      :beneficiary (c4-1 / hostage)
+      :polarity -)
+
+# ::snt planted as usual.Young mind deliberately radicalised to achieve bigger objective,ppl like em don't represent ISLAM
+# ::tokens ["planted", "as", "usual", ".", "Young", "mind", "deliberately", "radicalised", "to", "achieve", "bigger", "objective", ",", "ppl", "like", "em", "do", "n't", "represent", "ISLAM"]
+# ::lemmas ["plant", "as", "usual", ".", "young", "mind", "deliberately", "radicalise", "to", "achieve", "big", "objective", ",", "ppl", "like", "em", "do", "not", "represent", "ISLAM"]
+(c5-4 / multi-sentence
+      :snt1 (c5-12 / plant-01
+                   :mod (c5-17 / as-usual))
+      :snt2 (c5-13 / radicalize-01
+                   :ARG1 (c5-11 / mind
+                                :mod (c5-1 / young))
+                   :manner (c5-14 / deliberate)
+                   :purpose (c5-8 / achieve-01
+                                  :ARG0 c5-11
+                                  :ARG1 (c5-6 / objective
+                                              :ARG1-of (c5-0 / have-degree-91
+                                                             :ARG2 (c5-5 / big)
+                                                             :ARG3 (c5-3 / more)))))
+      :snt3 (c5-9 / represent-01
+                  :ARG0 (c5-16 / person
+                               :ARG1-of (c5-7 / resemble-01
+                                              :ARG2 (c5-15 / they)))
+                  :ARG1 (c5-2 / religious-group
+                              :name (c5-10 / name
+                                           :op1 "Islam"))
+                  :polarity -))
+
+# ::snt This is getting funny. He has the wrong flag!
+# ::tokens ["This", "is", "getting", "funny", ".", "He", "has", "the", "wrong", "flag", "!"]
+# ::lemmas ["this", "be", "get", "funny", ".", "he", "have", "the", "wrong", "flag", "!"]
+(c6-3 / multi-sentence
+      :snt1 (c6-5 / get-03
+                  :ARG1 (c6-6 / this)
+                  :ARG2 (c6-2 / funny-02
+                              :ARG1 c6-6))
+      :snt2 (c6-0 / have-03
+                  :ARG0 (c6-7 / he)
+                  :ARG1 (c6-4 / flag
+                              :ARG2-of (c6-1 / wrong-04))))
+
+# ::snt I think of four lions when I see that new ad with the lost fun runners.Let's hope this ending isn't Morrisy.
+# ::tokens ["I", "think", "of", "four", "lions", "when", "I", "see", "that", "new", "ad", "with", "the", "lost", "fun", "runners", ".", "Let", "'s", "hope", "this", "ending", "is", "n't", "Morrisy", "."]
+# ::lemmas ["i", "think", "of", "four", "lion", "when", "i", "see", "that", "new", "ad", "with", "the", "lost", "fun", "runner", ".", "let", "us", "hope", "this", "ending", "be", "not", "Morrisy", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-15 / think-01
+                   :ARG0 (c7-6 / i)
+                   :ARG1 (c7-2 / lion
+                               :quant 4)
+                   :time (c7-13 / see-01
+                                :ARG0 c7-6
+                                :ARG1 (c7-17 / advertise-01
+                                             :ARG1 (c7-9 / person
+                                                         :ARG0-of (c7-10 / run-02)
+                                                         :ARG1-of (c7-12 / lose-02)
+                                                         :ARG0-of (c7-4 / fun-01))
+                                             :ARG1-of (c7-7 / new-01)
+                                             :mod (c7-14 / that))))
+      :snt2 (c7-0 / hope-01
+                  :ARG0 (c7-1 / we)
+                  :ARG1 (c7-5 / end-01
+                              :ARG1 (c7-8 / this)
+                              :mod (c7-16 / person
+                                          :name (c7-11 / name
+                                                       :op1 "Morrisy"))
+                              :polarity -)
+                  :mode imperative))
+
+# ::snt he's using the Al Nusra / Al Qaeda flag....
+# ::tokens ["he", "'s", "using", "the", "Al", "Nusra", "/", "Al", "Qaeda", "flag", "...."]
+# ::lemmas ["he", "be", "use", "the", "Al", "Nusra", "/", "Al", "Qaeda", "flag", "...."]
+(c8-2 / use-01
+      :ARG0 (c8-0 / he)
+      :ARG1 (c8-1 / flag
+                  :mod (c8-6 / criminal-organization
+                             :name (c8-3 / name
+                                         :op1 "Al"
+                                         :op2 "Nusra"))
+                  :mod (c8-5 / criminal-organization
+                             :name (c8-4 / name
+                                         :op1 "Al"
+                                         :op2 "Qaeda"))))

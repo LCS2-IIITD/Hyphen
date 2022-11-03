@@ -1,0 +1,127 @@
+# ::snt Be safe!
+# ::tokens ["Be", "safe", "!"]
+# ::lemmas ["be", "safe", "!"]
+(c1-1 / safe-01
+      :ARG1 (c1-0 / you)
+      :mode imperative)
+
+# ::snt stay safe. Unbelievable
+# ::tokens ["stay", "safe", ".", "Unbelievable"]
+# ::lemmas ["stay", "safe", ".", "unbelievable"]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / stay-01
+                  :ARG1 (c2-0 / you)
+                  :ARG3 (c2-1 / safe-01
+                              :ARG1 c2-0)
+                  :mode imperative)
+      :snt2 (c2-3 / possible-01
+                  :ARG1 (c2-5 / believe-01)
+                  :polarity -))
+
+# ::snt OMG! Be safe
+# ::tokens ["OMG", "!", "Be", "safe"]
+# ::lemmas ["OMG", "!", "be", "safe"]
+(c3-1 / safe-01
+      :ARG1 (c3-0 / you)
+      :mod (c3-2 / oh-my-god
+                 :mode expressive)
+      :mode imperative)
+
+# ::snt this will be spun to restrict law abiding gun owners. Just watch the knee jerk. Crazys and criminals don't follow the laws.
+# ::tokens ["this", "will", "be", "spun", "to", "restrict", "law", "abiding", "gun", "owners", ".", "Just", "watch", "the", "knee", "jerk", ".", "Crazys", "and", "criminals", "do", "n't", "follow", "the", "laws", "."]
+# ::lemmas ["this", "will", "be", "spin", "to", "restrict", "law", "abide", "gun", "owner", ".", "just", "watch", "the", "knee", "jerk", ".", "Crazys", "and", "criminal", "do", "not", "follow", "the", "law", "."]
+(c4-19 / multi-sentence
+       :snt1 (c4-10 / spin-03
+                    :ARG1 (c4-7 / this)
+                    :purpose (c4-3 / restrict-01
+                                   :ARG0 c4-7
+                                   :ARG1 (c4-14 / person
+                                                :ARG0-of (c4-17 / own-01
+                                                                :ARG1 (c4-15 / gun))
+                                                :ARG0-of (c4-16 / abide-01
+                                                                :ARG1 (c4-2 / law)))))
+       :snt2 (c4-0 / watch-01
+                   :ARG0 (c4-6 / you)
+                   :ARG1 (c4-8 / jerk-01
+                               :ARG1 (c4-18 / knee))
+                   :mod (c4-1 / just)
+                   :mode imperative)
+       :snt3 (c4-13 / follow-02
+                    :ARG0 (c4-4 / and
+                                :op1 (c4-20 / person
+                                            :ARG1-of (c4-9 / crazy-03))
+                                :op2 (c4-12 / person
+                                            :ARG2-of (c4-5 / criminal-03)))
+                    :ARG1 (c4-11 / law)
+                    :polarity -))
+
+# ::snt what is happening in Canada?
+# ::tokens ["what", "is", "happening", "in", "Canada", "?"]
+# ::lemmas ["what", "be", "happen", "in", "Canada", "?"]
+(c5-3 / event
+      :mod (c5-1 / amr-unknown)
+      :location (c5-0 / country
+                      :name (c5-2 / name
+                                  :op1 "Canada")))
+
+# ::snt nerve-racking!
+# ::tokens ["nerve", "-", "racking", "!"]
+# ::lemmas ["nerve", "-", "racking", "!"]
+(c6-0 / hack-04
+      :ARG1 (c6-1 / nerve)
+      :mode expressive)
+
+# ::snt WTH is happening?
+# ::tokens ["WTH", "is", "happening", "?"]
+# ::lemmas ["WTH", "be", "happen", "?"]
+(c7-0 / amr-unknown
+      :mod (c7-1 / heck
+                 :mode expressive))
+
+# ::snt Holy Christ! Please be safe!
+# ::tokens ["Holy", "Christ", "!", "Please", "be", "safe", "!"]
+# ::lemmas ["Holy", "Christ", "!", "please", "be", "safe", "!"]
+(c8-2 / multi-sentence
+      :snt1 (c8-3 / person
+                  :name (c8-5 / name
+                              :op1 "Christ")
+                  :mod (c8-1 / holy)
+                  :mode expressive)
+      :snt2 (c8-4 / safe-01
+                  :ARG1 (c8-0 / you)
+                  :mode imperative
+                  :polite +))
+
+# ::snt Be safe.
+# ::tokens ["Be", "safe", "."]
+# ::lemmas ["be", "safe", "."]
+(c9-1 / safe-01
+      :ARG1 (c9-0 / you))
+
+# ::snt Hope you are OK.
+# ::tokens ["Hope", "you", "are", "OK", "."]
+# ::lemmas ["hope", "you", "be", "ok", "."]
+(c10-1 / hope-01
+       :ARG0 (c10-2 / i)
+       :ARG1 (c10-3 / okay-03
+                    :ARG1 (c10-0 / you)))
+
+# ::snt be safe
+# ::tokens ["be", "safe"]
+# ::lemmas ["be", "safe"]
+(c11-1 / safe-01
+       :ARG1 (c11-0 / you)
+       :mode imperative)
+
+# ::snt stay safe Cormac.
+# ::tokens ["stay", "safe", "Cormac", "."]
+# ::lemmas ["stay", "safe", "Cormac", "."]
+(c12-4 / say-01
+       :ARG0 (c12-3 / i)
+       :ARG1 (c12-1 / stay-01
+                    :ARG1 (c12-2 / person
+                                 :name (c12-5 / name
+                                              :op1 "Cormac"))
+                    :ARG3 (c12-0 / safe-01
+                                 :ARG1 c12-2))
+       :ARG2 c12-2)

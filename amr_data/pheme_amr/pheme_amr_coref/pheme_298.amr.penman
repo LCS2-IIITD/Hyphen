@@ -1,0 +1,59 @@
+# ::snt ....these days people don't want to hear truth, even when it helps them grow....still under illusion ignorance is bliss....
+# ::tokens ["....", "these", "days", "people", "do", "n't", "want", "to", "hear", "truth", ",", "even", "when", "it", "helps", "them", "grow", "....", "still", "under", "illusion", "ignorance", "is", "bliss", "...."]
+# ::lemmas ["....", "these", "days", "people", "do", "not", "want", "to", "hear", "truth", ",", "even", "when", "it", "help", "they", "grow", "....", "still", "under", "illusion", "ignorance", "be", "bliss", "...."]
+(c1-2 / multi-sentence
+      :snt1 (c1-1 / want-01
+                  :ARG0 (c1-7 / person)
+                  :ARG1 (c1-0 / hear-01
+                              :ARG0 c1-7
+                              :ARG1 (c1-13 / truth))
+                  :time (c1-8 / day
+                              :mod (c1-11 / this))
+                  :concession (c1-5 / even-when
+                                    :op1 (c1-14 / help-01
+                                                :ARG0 c1-0
+                                                :ARG1 (c1-9 / grow-01
+                                                            :ARG1 c1-7)))
+                  :polarity -)
+      :snt2 (c1-4 / bliss
+                  :domain (c1-6 / ignorance)
+                  :mod (c1-12 / still)
+                  :condition (c1-3 / under
+                                   :op1 (c1-10 / illusion))))
+
+# ::snt L'Amrique se tient avec la France.
+# ::tokens ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+# ::lemmas ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+(c2-4 / tient-of
+      :ARG1 (c2-3 / city
+                  :name (c2-0 / name
+                              :op1 "L'Amrique"))
+      :ARG3 (c2-2 / country
+                  :name (c2-1 / name
+                              :op1 "France")))
+
+# ::snt Well quoted, Bianca.
+# ::tokens ["Well", "quoted", ",", "Bianca", "."]
+# ::lemmas ["well", "quote", ",", "Bianca", "."]
+(c3-4 / say-01
+      :ARG1 (c3-1 / quote-01
+                  :ARG2 (c3-3 / person
+                              :name (c3-2 / name
+                                          :op1 "Bianca"))
+                  :ARG1-of (c3-0 / well-09))
+      :ARG2 c3-3)
+
+# ::snt If you are for free speech then this is for you support buy it now
+# ::tokens ["If", "you", "are", "for", "free", "speech", "then", "this", "is", "for", "you", "support", "buy", "it", "now"]
+# ::lemmas ["if", "you", "be", "for", "free", "speech", "then", "this", "be", "for", "you", "support", "buy", "it", "now"]
+(c4-5 / support-01
+      :ARG0 (c4-0 / you)
+      :ARG1 (c4-2 / buy-01
+                  :ARG0 c4-0
+                  :ARG1 (c4-6 / this)
+                  :time (c4-4 / now)
+                  :mode imperative)
+      :condition c4-5
+      :ARG0 c4-0
+      :ARG1 (c4-3 / speak-01
+                  :ARG3-of (c4-1 / free-04)))

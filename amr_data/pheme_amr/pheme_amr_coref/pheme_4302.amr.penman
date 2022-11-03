@@ -1,0 +1,57 @@
+# ::snt Absolutely terrible!
+# ::tokens ["Absolutely", "terrible", "!"]
+# ::lemmas ["absolutely", "terrible", "!"]
+(c2-0 / terrible-01
+      :degree (c2-1 / absolute))
+
+# ::snt Goodbye Guido. Nice knowing you.
+# ::tokens ["Goodbye", "Guido", ".", "Nice", "knowing", "you", "."]
+# ::lemmas ["Goodbye", "Guido", ".", "nice", "know", "you", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-6 / say-01
+                  :ARG1 (c3-5 / goodbye)
+                  :ARG2 (c3-4 / person
+                              :name (c3-2 / name
+                                          :op1 "Guido")))
+      :snt2 (c3-3 / nice-01
+                  :ARG1 (c3-7 / know-02
+                              :ARG1 (c3-0 / you))))
+
+# ::snt . It seems to me the joke is more about ISIS leader wishing everyone good health. Check the cartoon bubble
+# ::tokens [".", "It", "seems", "to", "me", "the", "joke", "is", "more", "about", "ISIS", "leader", "wishing", "everyone", "good", "health", ".", "Check", "the", "cartoon", "bubble"]
+# ::lemmas [".", "it", "seem", "to", "i", "the", "joke", "be", "more", "about", "ISIS", "leader", "wish", "everyone", "good", "health", ".", "check", "the", "cartoon", "bubble"]
+(c4-4 / multi-sentence
+      :snt1 (c4-16 / seem-01
+                   :ARG1 (c4-0 / joke-01
+                               :ARG2 (c4-1 / wish-01
+                                           :ARG0 (c4-10 / person
+                                                        :ARG0-of (c4-3 / lead-02
+                                                                       :ARG1 (c4-12 / criminal-organization
+                                                                                    :name (c4-9 / name
+                                                                                                :op1 "Islamic"
+                                                                                                :op2 "organization"))))
+                                           :ARG1 (c4-2 / health
+                                                       :ARG1-of (c4-13 / good-02))
+                                           :ARG2 (c4-7 / everyone))
+                               :mod (c4-11 / more))
+                   :ARG2 (c4-8 / i))
+      :snt2 (c4-14 / check-01
+                   :ARG0 (c4-5 / you)
+                   :ARG1 (c4-6 / bubble
+                               :mod (c4-15 / cartoon))
+                   :mode imperative))
+
+# ::snt Why blindly obey their ? Read here:
+# ::tokens ["Why", "blindly", "obey", "their", "?", "Read", "here", ":"]
+# ::lemmas ["why", "blindly", "obey", "their", "?", "read", "here", ":"]
+(c5-2 / multi-sentence
+      :snt1 (c5-4 / obey-01
+                  :ARG0 (c5-8 / they)
+                  :ARG1 (c5-7 / they)
+                  :ARG1-of (c5-3 / blind-02)
+                  :ARG1-of (c5-6 / cause-01
+                                 :ARG0 (c5-9 / amr-unknown)))
+      :snt2 (c5-5 / read-01
+                  :ARG0 (c5-1 / you)
+                  :location (c5-0 / here)
+                  :mode imperative))

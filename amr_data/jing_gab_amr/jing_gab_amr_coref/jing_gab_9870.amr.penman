@@ -1,0 +1,69 @@
+# ::snt The Capitol Police have arrested Jackson A Cosko associated with the doxxing of senators.
+# ::tokens ["The", "Capitol", "Police", "have", "arrested", "Jackson", "A", "Cosko", "associated", "with", "the", "doxxing", "of", "senators", "."]
+# ::lemmas ["The", "Capitol", "Police", "have", "arrest", "Jackson", "A", "Cosko", "associate", "with", "the", "doxxing", "of", "senator", "."]
+(c1-1 / arrest-01
+      :ARG0 (c1-7 / police
+                  :mod (c1-2 / capitol))
+      :ARG1 (c1-4 / person
+                  :name (c1-8 / name
+                              :op1 "Jackson"
+                              :op2 "A"
+                              :op3 "Cosko")
+                  :ARG1-of (c1-9 / associate-01
+                                 :ARG2 (c1-0 / doxx-01
+                                             :ARG1 c1-4
+                                             :ARG0-of (c1-3 / have-org-role-91
+                                                            :ARG1 (c1-6 / government-organization
+                                                                        :name (c1-5 / name
+                                                                                    :op1 "Senate")))))))
+
+# ::snt Using the language is offensive to people with different sexual orientation and should not be used. You need to be more empathetic.
+# ::tokens ["Using", "the", "language", "is", "offensive", "to", "people", "with", "different", "sexual", "orientation", "and", "should", "not", "be", "used", ".", "You", "need", "to", "be", "more", "empathetic", "."]
+# ::lemmas ["use", "the", "language", "be", "offensive", "to", "people", "with", "different", "sexual", "orientation", "and", "should", "not", "be", "use", ".", "you", "need", "to", "be", "more", "empathetic", "."]
+(c2-12 / multi-sentence
+       :snt1 (c2-2 / and
+                   :op1 (c2-8 / offend-01
+                              :ARG0 (c2-7 / use-01
+                                          :ARG1 (c2-10 / language))
+                              :ARG1 (c2-11 / person
+                                           :ARG0-of (c2-6 / orient-01
+                                                          :ARG2 (c2-0 / sex)
+                                                          :ARG1-of (c2-1 / differ-02))))
+                   :op2 (c2-9 / recommend-01
+                              :ARG1 (c2-4 / use-01
+                                          :ARG1 c2-10)
+                              :polarity -))
+       :snt2 (c2-13 / need-01
+                    :ARG0 (c2-14 / you)
+                    :ARG1 (c2-15 / empathetic
+                                 :ARG2-of (c2-5 / have-degree-91
+                                                :ARG1 c2-14
+                                                :ARG3 (c2-3 / more)))))
+
+# ::snt There's no need to use such offensive language to get your point across.
+# ::tokens ["There", "'s", "no", "need", "to", "use", "such", "offensive", "language", "to", "get", "your", "point", "across", "."]
+# ::lemmas ["there", "be", "no", "need", "to", "use", "such", "offensive", "language", "to", "get", "your", "point", "across", "."]
+(c3-7 / need-01
+      :ARG1 (c3-2 / use-01
+                  :ARG0 (c3-8 / you)
+                  :ARG1 (c3-4 / language
+                              :ARG0-of (c3-3 / offend-01)
+                              :mod (c3-0 / such))
+                  :ARG2 (c3-5 / get-04
+                              :ARG0 c3-8
+                              :ARG1 (c3-1 / across
+                                          :domain (c3-6 / point-04
+                                                        :ARG0 c3-8))))
+      :polarity -)
+
+# ::snt There needs to be more sensitivity regarding language associated with the LGBT community.
+# ::tokens ["There", "needs", "to", "be", "more", "sensitivity", "regarding", "language", "associated", "with", "the", "LGBT", "community", "."]
+# ::lemmas ["there", "need", "to", "be", "more", "sensitivity", "regard", "language", "associate", "with", "the", "LGBT", "community", "."]
+(c4-7 / need-01
+      :ARG1 (c4-0 / sensitive-03
+                  :ARG1 (c4-3 / language
+                              :ARG1-of (c4-1 / associate-01
+                                             :ARG2 (c4-2 / community
+                                                         :mod (c4-4 / lesbian)
+                                                         :mod (c4-5 / gay-01))))
+                  :mod (c4-6 / more)))

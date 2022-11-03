@@ -1,0 +1,24 @@
+# ::snt I thought your arm hurts from all that jerkin'.
+# ::tokens ["I", "thought", "your", "arm", "hurts", "from", "all", "that", "jerkin", "'", "."]
+# ::lemmas ["i", "think", "your", "arm", "hurt", "from", "all", "that", "jerkin", "'", "."]
+(c2-4 / think-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-3 / hurt-02
+                  :ARG1 (c2-0 / arm
+                              :part-of (c2-7 / you))
+                  :ARG1-of (c2-1 / cause-01
+                                 :ARG0 (c2-5 / jerkin
+                                             :mod (c2-2 / that)
+                                             :mod (c2-8 / all)))))
+
+# ::snt My arm hurts now, this is your fault.
+# ::tokens ["My", "arm", "hurts", "now", ",", "this", "is", "your", "fault", "."]
+# ::lemmas ["my", "arm", "hurt", "now", ",", "this", "be", "your", "fault", "."]
+(c3-0 / and
+      :op1 (c3-2 / hurt-02
+                 :ARG1 (c3-7 / arm
+                             :part-of (c3-4 / i))
+                 :time (c3-5 / now))
+      :op2 (c3-1 / fault-01
+                 :ARG1 (c3-6 / you)
+                 :ARG2 (c3-3 / this)))

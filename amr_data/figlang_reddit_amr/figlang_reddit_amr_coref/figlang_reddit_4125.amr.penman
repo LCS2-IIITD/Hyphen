@@ -1,0 +1,64 @@
+# ::snt For my weekly design project, i did the women of star wars and their droids
+# ::tokens ["For", "my", "weekly", "design", "project", ",", "i", "did", "the", "women", "of", "star", "wars", "and", "their", "droids"]
+# ::lemmas ["for", "my", "weekly", "design", "project", ",", "i", "do", "the", "woman", "of", "star", "war", "and", "their", "droid"]
+(c1-0 / do-02
+      :ARG0 (c1-10 / i)
+      :ARG1 (c1-2 / and
+                  :op1 (c1-3 / woman
+                             :poss (c1-11 / war
+                                          :mod (c1-1 / star)))
+                  :op2 (c1-4 / droid
+                             :poss c1-3))
+      :purpose (c1-8 / project
+                     :topic (c1-5 / design-01)
+                     :poss c1-10
+                     :frequency (c1-7 / rate-entity-91
+                                      :ARG3 (c1-6 / temporal-quantity
+                                                  :unit (c1-9 / week)
+                                                  :quant 1))))
+
+# ::snt Cool, but I think K2 would object to being called Jyn's droid
+# ::tokens ["Cool", ",", "but", "I", "think", "K2", "would", "object", "to", "being", "called", "Jyn", "'s", "droid"]
+# ::lemmas ["cool", ",", "but", "i", "think", "K2", "would", "object", "to", "be", "call", "Jyn", "'s", "droid"]
+(c2-1 / contrast-01
+      :ARG1 (c2-0 / cool-04)
+      :ARG2 (c2-6 / think-01
+                  :ARG0 (c2-10 / i)
+                  :ARG1 (c2-4 / object-01
+                              :ARG0 (c2-8 / person
+                                          :name (c2-11 / name
+                                                       :op1 "K2"))
+                              :ARG1 (c2-3 / call-01
+                                          :ARG1 c2-8
+                                          :ARG2 (c2-5 / person
+                                                      :name (c2-7 / name
+                                                                  :op1 "Ricky")
+                                                      :poss (c2-2 / person
+                                                                  :name (c2-9 / name
+                                                                              :op1 "Jyn")))))))
+
+# ::snt And BB-8 is Poe's, not Rey's.
+# ::tokens ["And", "BB-8", "is", "Poe", "'s", ",", "not", "Rey", "'s", "."]
+# ::lemmas ["and", "bb-8", "be", "Poe", "'s", ",", "not", "Rey", "'s", "."]
+(c3-0 / and
+      :op2 (c3-7 / and
+                 :op1 (c3-5 / person
+                            :name (c3-6 / name
+                                        :op1 "Poe")
+                            :domain (c3-3 / thing
+                                          :name (c3-4 / name
+                                                      :op1 "BB-8")))
+                 :op2 (c3-2 / person
+                            :name (c3-1 / name
+                                        :op1 "Rey")
+                            :domain c3-3
+                            :polarity -)))
+
+# ::snt And same thing about other droids
+# ::tokens ["And", "same", "thing", "about", "other", "droids"]
+# ::lemmas ["and", "same", "thing", "about", "other", "droid"]
+(c4-2 / and
+      :op2 (c4-4 / thing
+                 :ARG1-of (c4-0 / same-01)
+                 :topic (c4-1 / droid
+                              :mod (c4-3 / other))))

@@ -1,0 +1,88 @@
+# ::snt this isn't over George
+# ::tokens ["this", "is", "n't", "over", "George"]
+# ::lemmas ["this", "be", "not", "over", "George"]
+(c1-1 / over-01
+      :ARG1 (c1-2 / this)
+      :ARG2 (c1-3 / person
+                  :name (c1-0 / name
+                              :op1 "George"))
+      :polarity -)
+
+# ::snt How about a story awarding the title of "Colonel" to Zimmerman?
+# ::tokens ["How", "about", "a", "story", "awarding", "the", "title", "of", "\"", "Colonel", "\"", "to", "Zimmerman", "?"]
+# ::lemmas ["how", "about", "a", "story", "award", "the", "title", "of", "\"", "Colonel", "\"", "to", "Zimmerman", "?"]
+(c2-6 / amr-unknown
+      :topic (c2-0 / story
+                   :ARG0-of (c2-3 / award-01
+                                  :ARG1 (c2-2 / title-01
+                                              :ARG2 (c2-4 / colonel))
+                                  :ARG2 (c2-1 / person
+                                              :name (c2-5 / name
+                                                          :op1 "Zimmerman")))))
+
+# ::snt in the real world, he already did
+# ::tokens ["in", "the", "real", "world", ",", "he", "already", "did"]
+# ::lemmas ["in", "the", "real", "world", ",", "he", "already", "do"]
+(c3-4 / do-02
+      :ARG0 (c3-2 / he)
+      :time (c3-3 / already)
+      :location (c3-0 / world
+                      :ARG1-of (c3-1 / real-04)))
+
+# ::snt Epic. Simply epic. : This Week's Top Story: George Zimmerman Wins Florida State Lottery
+# ::tokens ["Epic", ".", "Simply", "epic", ".", ":", "This", "Week", "'s", "Top", "Story", ":", "George", "Zimmerman", "Wins", "Florida", "State", "Lottery"]
+# ::lemmas ["epic", ".", "simply", "epic", ".", ":", "this", "Week", "'s", "Top", "Story", ":", "George", "Zimmerman", "win", "Florida", "State", "Lottery"]
+(c4-7 / multi-sentence
+      :snt1 (c4-14 / epic
+                   :domain (c4-4 / epic))
+      :snt2 (c4-12 / epic
+                   :mod (c4-0 / simple)
+                   :domain (c4-1 / story
+                                 :mod (c4-5 / top)
+                                 :time (c4-13 / week
+                                              :mod (c4-6 / this))
+                                 :topic (c4-9 / win-01
+                                              :ARG0 (c4-2 / person
+                                                          :name (c4-10 / name
+                                                                       :op1 "George"
+                                                                       :op2 "Zimmerman"))
+                                              :ARG1 (c4-3 / lottery
+                                                          :mod (c4-8 / state
+                                                                     :name (c4-11 / name
+                                                                                  :op1 "Florida")))))))
+
+# ::snt . finally something is going his way
+# ::tokens [".", "finally", "something", "is", "going", "his", "way"]
+# ::lemmas [".", "finally", "something", "be", "go", "his", "way"]
+(c5-2 / go-09
+      :ARG1 (c5-0 / something)
+      :ARG2 (c5-3 / way
+                  :poss (c5-1 / he))
+      :time (c5-4 / final))
+
+# ::snt is crazy!!
+# ::tokens ["is", "crazy", "!", "!"]
+# ::lemmas ["be", "crazy", "!", "!"]
+(c6-0 / crazy-03
+      :mode expressive)
+
+# ::snt Y'all see this? : This Week's Top Story: George Zimmerman Wins Florida State Lottery
+# ::tokens ["Y'all", "see", "this", "?", ":", "This", "Week", "'s", "Top", "Story", ":", "George", "Zimmerman", "Wins", "Florida", "State", "Lottery"]
+# ::lemmas ["Y'all", "see", "this", "?", ":", "this", "Week", "'s", "Top", "Story", ":", "George", "Zimmerman", "win", "Florida", "State", "Lottery"]
+(c7-0 / see-01
+      :polarity (c7-13 / amr-unknown)
+      :ARG0 (c7-11 / you
+                   :mod (c7-7 / all))
+      :ARG1 (c7-2 / story
+                  :mod (c7-5 / top)
+                  :time (c7-1 / week
+                              :mod (c7-6 / this))
+                  :topic (c7-9 / win-01
+                               :ARG0 (c7-3 / person
+                                           :name (c7-10 / name
+                                                        :op1 "George"
+                                                        :op2 "Zimmerman"))
+                               :ARG1 (c7-4 / lottery
+                                           :mod (c7-8 / state
+                                                      :name (c7-12 / name
+                                                                   :op1 "Florida"))))))

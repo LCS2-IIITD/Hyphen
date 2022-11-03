@@ -1,0 +1,74 @@
+# ::snt About Putin's where abouts? He has gone for a fishing holiday in Crimea
+# ::tokens ["About", "Putin", "'s", "where", "abouts", "?", "He", "has", "gone", "for", "a", "fishing", "holiday", "in", "Crimea"]
+# ::lemmas ["about", "Putin", "'s", "where", "abouts", "?", "he", "have", "go", "for", "a", "fishing", "holiday", "in", "Crimea"]
+(c1-2 / multi-sentence
+      :snt1 (c1-10 / about
+                   :op1 (c1-4 / amr-unknown)
+                   :topic (c1-7 / person
+                                :name (c1-5 / name
+                                            :op1 "Putin")))
+      :snt2 (c1-8 / go-02
+                  :ARG0 (c1-0 / he)
+                  :ARG4 (c1-1 / holiday
+                              :mod (c1-3 / fish-01)
+                              :location (c1-9 / peninsula
+                                              :name (c1-6 / name
+                                                          :op1 "Crimea")))))
+
+# ::snt If Putin remains out of sight for another week we conclude its in a palace coup or possibly been screwed by EU sanctions
+# ::tokens ["If", "Putin", "remains", "out", "of", "sight", "for", "another", "week", "we", "conclude", "its", "in", "a", "palace", "coup", "or", "possibly", "been", "screwed", "by", "EU", "sanctions"]
+# ::lemmas ["if", "Putin", "remain", "out", "of", "sight", "for", "another", "week", "we", "conclude", "its", "in", "a", "palace", "coup", "or", "possibly", "be", "screw", "by", "EU", "sanction"]
+(c2-11 / conclude-01
+       :ARG0 (c2-0 / we)
+       :ARG1 (c2-4 / or
+                   :op1 (c2-10 / coup-01
+                               :ARG0 (c2-9 / person
+                                           :name (c2-7 / name
+                                                       :op1 "Putin"))
+                               :location (c2-15 / palace))
+                   :op2 (c2-3 / possible-01
+                              :ARG1 (c2-13 / screw-02
+                                           :ARG0 (c2-5 / sanction-02
+                                                       :ARG0 (c2-1 / organization
+                                                                   :name (c2-8 / name
+                                                                               :op1 "EU")))
+                                           :ARG1 c2-9)))
+       :condition (c2-12 / remain-01
+                         :ARG1 c2-9
+                         :ARG3 (c2-2 / sight-01
+                                     :ARG1 c2-9
+                                     :polarity -)
+                         :duration (c2-14 / temporal-quantity
+                                          :unit (c2-6 / week)
+                                          :mod (c2-16 / another)
+                                          :quant 1)))
+
+# ::snt and what else?
+# ::tokens ["and", "what", "else", "?"]
+# ::lemmas ["and", "what", "else", "?"]
+(c3-2 / and
+      :op2 (c3-0 / else
+                 :domain (c3-1 / amr-unknown)))
+
+# ::snt Just curious, Is the job of the media to report on an ongoing event or to just speculate on things and spread hysteria?
+# ::tokens ["Just", "curious", ",", "Is", "the", "job", "of", "the", "media", "to", "report", "on", "an", "ongoing", "event", "or", "to", "just", "speculate", "on", "things", "and", "spread", "hysteria", "?"]
+# ::lemmas ["just", "curious", ",", "be", "the", "job", "of", "the", "medium", "to", "report", "on", "an", "ongoing", "event", "or", "to", "just", "speculate", "on", "thing", "and", "spread", "hysteria", "?"]
+(c4-8 / curious-01
+      :ARG0 (c4-4 / or
+                  :op1 (c4-0 / job
+                             :poss (c4-3 / media)
+                             :domain (c4-7 / report-01
+                                           :ARG0 c4-3
+                                           :ARG1 (c4-5 / event
+                                                       :ARG1-of (c4-9 / go-on-15))))
+                  :op2 (c4-12 / job
+                              :poss c4-3
+                              :domain (c4-13 / and
+                                             :op1 (c4-10 / speculate-01
+                                                         :ARG0 c4-3
+                                                         :ARG1 (c4-11 / thing))
+                                             :op2 (c4-6 / spread-01
+                                                        :ARG0 c4-3
+                                                        :ARG1 (c4-1 / hysteria))
+                                             :mod (c4-2 / just
+                                                        :mod-of c4-8)))))

@@ -1,0 +1,48 @@
+# ::snt Talk shit, get hit.
+# ::tokens ["Talk", "shit", ",", "get", "hit", "."]
+# ::lemmas ["talk", "shit", ",", "get", "hit", "."]
+(c1-1 / and
+      :op1 (c1-3 / talk-01
+                 :ARG0 (c1-4 / you)
+                 :ARG1 (c1-0 / shit)
+                 :mode imperative)
+      :op2 (c1-2 / hit-01
+                 :ARG1 c1-4
+                 :mode imperative))
+
+# ::snt I like watching people swing and miss.
+# ::tokens ["I", "like", "watching", "people", "swing", "and", "miss", "."]
+# ::lemmas ["i", "like", "watch", "people", "swing", "and", "miss", "."]
+(c2-3 / like-01
+      :ARG0 (c2-5 / i)
+      :ARG1 (c2-2 / watch-01
+                  :ARG0 c2-5
+                  :ARG1 (c2-1 / and
+                              :op1 (c2-0 / swing-01
+                                         :ARG0 (c2-4 / person))
+                              :op2 (c2-6 / miss-02
+                                         :ARG0 c2-4))))
+
+# ::snt He didnt miss, the big guy dodged it.
+# ::tokens ["He", "did", "nt", "miss", ",", "the", "big", "guy", "dodged", "it", "."]
+# ::lemmas ["he", "do", "not", "miss", ",", "the", "big", "guy", "dodge", "it", "."]
+(c3-1 / contrast-01
+      :ARG1 (c3-5 / miss-02
+                  :ARG0 (c3-2 / he)
+                  :polarity -)
+      :ARG2 (c3-0 / dodge-01
+                  :ARG0 (c3-3 / guy
+                              :mod (c3-6 / big))
+                  :ARG1 (c3-4 / it)))
+
+# ::snt Soooo he missed...Because the other guy dodged it
+# ::tokens ["Soooo", "he", "missed", "...", "Because", "the", "other", "guy", "dodged", "it"]
+# ::lemmas ["Soooo", "he", "miss", "...", "because", "the", "other", "guy", "dodge", "it"]
+(c4-2 / cause-01
+      :ARG0 (c4-0 / dodge-01
+                  :ARG0 (c4-5 / guy
+                              :mod (c4-4 / other))
+                  :ARG1 (c4-6 / it))
+      :ARG1 (c4-7 / miss-02
+                  :ARG0 (c4-3 / he)
+                  :mod (c4-1 / so)))

@@ -1,0 +1,55 @@
+# ::snt Nuts
+# ::tokens ["Nuts"]
+# ::lemmas ["nut"]
+(c1-0 / nuts)
+
+# ::snt I wholeheartedly disagree, in America our country is made better by the contributions of a variety of people.
+# ::tokens ["I", "wholeheartedly", "disagree", ",", "in", "America", "our", "country", "is", "made", "better", "by", "the", "contributions", "of", "a", "variety", "of", "people", "."]
+# ::lemmas ["i", "wholeheartedly", "disagree", ",", "in", "America", "our", "country", "be", "make", "well", "by", "the", "contribution", "of", "a", "variety", "of", "people", "."]
+(c2-0 / disagree-01
+      :ARG0 (c2-7 / i)
+      :ARG2 (c2-6 / better-01
+                  :ARG0 (c2-2 / contribute-01
+                              :ARG0 (c2-5 / person
+                                          :mod (c2-4 / variety)))
+                  :ARG1 (c2-1 / country
+                              :poss (c2-3 / we)
+                              :location-of c2-6)
+                  :name (c2-8 / name
+                              :op1 "America"))
+      :degree (c2-9 / wholehearted))
+
+# ::snt Just because you disagree with someone, doesn't mean they deserve to be ridiculed.
+# ::tokens ["Just", "because", "you", "disagree", "with", "someone", ",", "does", "n't", "mean", "they", "deserve", "to", "be", "ridiculed", "."]
+# ::lemmas ["just", "because", "you", "disagree", "with", "someone", ",", "do", "not", "mean", "they", "deserve", "to", "be", "ridicule", "."]
+(c3-6 / mean-01
+      :ARG2 (c3-0 / deserve-01
+                  :ARG0 (c3-1 / someone)
+                  :ARG1 (c3-3 / ridicule-01
+                              :ARG1 c3-1))
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-5 / disagree-01
+                                 :ARG0 (c3-7 / you)
+                                 :ARG1 c3-1
+                                 :mod (c3-4 / just)))
+      :polarity -)
+
+# ::snt I'll bet if you were beaten and raped every day you'd want to flee, too.
+# ::tokens ["I", "'ll", "bet", "if", "you", "were", "beaten", "and", "raped", "every", "day", "you", "'d", "want", "to", "flee", ",", "too", "."]
+# ::lemmas ["i", "'ll", "bet", "if", "you", "be", "beat", "and", "rape", "every", "day", "you", "would", "want", "to", "flee", ",", "too", "."]
+(c4-9 / bet-01
+      :ARG0 (c4-10 / i)
+      :ARG2 (c4-4 / want-01
+                  :ARG0 (c4-11 / you)
+                  :ARG1 (c4-3 / flee-05
+                              :ARG0 c4-11
+                              :mod (c4-7 / too))
+                  :condition (c4-2 / and
+                                   :op1 (c4-1 / beat-01
+                                              :ARG1 c4-11)
+                                   :op2 (c4-8 / rape-01
+                                              :ARG1 c4-11)
+                                   :frequency (c4-6 / rate-entity-91
+                                                    :ARG3 (c4-5 / temporal-quantity
+                                                                :unit (c4-0 / day)
+                                                                :quant 1)))))

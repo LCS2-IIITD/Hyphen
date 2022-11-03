@@ -1,0 +1,100 @@
+# ::snt Reached ??? I read in an other article she was forced.
+# ::tokens ["Reached", "?", "?", "?", "I", "read", "in", "an", "other", "article", "she", "was", "forced", "."]
+# ::lemmas ["reach", "?", "?", "?", "i", "read", "in", "an", "other", "article", "she", "be", "force", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-5 / reach-02
+                  :polarity (c1-7 / amr-unknown)
+                  :ARG0 (c1-4 / she))
+      :snt2 (c1-9 / read-01
+                  :ARG0 (c1-6 / i)
+                  :ARG1 (c1-8 / article
+                              :mod (c1-0 / other))
+                  :ARG3 (c1-1 / force-01
+                              :ARG1 (c1-2 / she))))
+
+# ::snt Looking for Web Developer? Contact me or
+# ::tokens ["Looking", "for", "Web", "Developer", "?", "Contact", "me", "or"]
+# ::lemmas ["look", "for", "web", "Developer", "?", "contact", "i", "or"]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / look-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-2 / person
+                              :ARG0-of (c2-8 / develop-02
+                                             :ARG1 (c2-4 / web)))
+                  :polarity (c2-7 / amr-unknown))
+      :snt2 (c2-5 / contact-01
+                  :ARG0 c2-0)
+      :ARG1 (c2-6 / i))
+
+# ::snt Gezzz, the kids are adults by now!?! Grow up Julie and Byron. This case been going on so long forgot their name. Smh!
+# ::tokens ["Gezzz", ",", "the", "kids", "are", "adults", "by", "now", "!", "?", "!", "Grow", "up", "Julie", "and", "Byron", ".", "This", "case", "been", "going", "on", "so", "long", "forgot", "their", "name", ".", "Smh", "!"]
+# ::lemmas ["Gezzz", ",", "the", "kid", "be", "adult", "by", "now", "!", "?", "!", "grow", "up", "Julie", "and", "Byron", ".", "this", "case", "been", "go", "on", "so", "long", "forgot", "their", "name", ".", "Smh", "!"]
+(c3-11 / multi-sentence
+       :snt1 (c3-8 / adult
+                   :domain (c3-4 / kid)
+                   :time (c3-10 / by
+                                :op1 (c3-18 / now))
+                   :polarity (c3-6 / amr-unknown))
+       :snt2 (c3-9 / grow-up-04
+                   :ARG1 (c3-3 / you)
+                   :ARG2 (c3-5 / and
+                               :op1 (c3-19 / person
+                                           :name (c3-13 / name
+                                                        :op1 "Julie"))
+                               :op2 (c3-12 / person
+                                           :name (c3-20 / name
+                                                        :op1 "Byron")))
+                   :mode imperative)
+       :snt3 (c3-17 / forget-01
+                    :ARG0 (c3-14 / case-03
+                                 :mod (c3-7 / this))
+                    :ARG1 (c3-15 / name
+                                 :poss (c3-16 / they))
+                    :ARG1-of (c3-1 / long-03
+                                   :degree (c3-0 / so)))
+       :snt4 (c3-2 / smh
+                   :mode expressive))
+
+# ::snt I honestly didn't know they split.
+# ::tokens ["I", "honestly", "did", "n't", "know", "they", "split", "."]
+# ::lemmas ["i", "honestly", "do", "not", "know", "they", "split", "."]
+(c4-2 / know-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-0 / split-01
+                  :ARG1 (c4-4 / they))
+      :ARG1-of (c4-1 / honest-01)
+      :polarity -)
+
+# ::snt A Gemini cant keep shit. A Sagittarius cant stay put.
+# ::tokens ["A", "Gemini", "ca", "nt", "keep", "shit", ".", "A", "Sagittarius", "ca", "nt", "stay", "put", "."]
+# ::lemmas ["a", "Gemini", "can", "not", "keep", "shit", ".", "a", "Sagittarius", "can", "not", "stay", "put", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-6 / possible-01
+                  :ARG1 (c5-7 / keep-01
+                              :ARG0 (c5-3 / planet
+                                          :name (c5-1 / name
+                                                      :op1 "Gemini"))
+                              :ARG1 (c5-4 / shit))
+                  :polarity -)
+      :snt2 (c5-10 / possible-01
+                   :ARG1 (c5-0 / stay-01
+                               :ARG1 (c5-8 / planet
+                                           :name (c5-5 / name
+                                                       :op1 "Sagittarius"))
+                               :ARG3 (c5-9 / put-01
+                                           :ARG1 c5-8))
+                   :polarity -))
+
+# ::snt That should be something private? Why are you behaving like vultures?
+# ::tokens ["That", "should", "be", "something", "private", "?", "Why", "are", "you", "behaving", "like", "vultures", "?"]
+# ::lemmas ["that", "should", "be", "something", "private", "?", "why", "be", "you", "behave", "like", "vulture", "?"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / recommend-01
+                  :ARG1 (c6-3 / something
+                              :ARG1-of (c6-7 / private-02)
+                              :domain (c6-9 / that)))
+      :snt2 (c6-8 / cause-01
+                  :ARG0 (c6-5 / amr-unknown)
+                  :ARG1 (c6-0 / behave-01
+                              :ARG0 (c6-1 / you)
+                              :ARG1 (c6-6 / vulture))))

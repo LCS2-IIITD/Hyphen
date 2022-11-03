@@ -1,0 +1,64 @@
+# ::snt BREAKING: Hostage taken after Charlie Hebdo suspects sighted north of Paris via
+# ::tokens ["BREAKING", ":", "Hostage", "taken", "after", "Charlie", "Hebdo", "suspects", "sighted", "north", "of", "Paris", "via"]
+# ::lemmas ["breaking", ":", "Hostage", "take", "after", "Charlie", "Hebdo", "suspect", "sight", "north", "of", "Paris", "via"]
+(c1-2 / break-01
+      :ARG1 (c1-11 / take-01
+                   :ARG1 (c1-0 / Hostage)
+                   :time (c1-12 / after
+                                :op1 (c1-10 / sight-01
+                                            :ARG1 (c1-6 / person
+                                                        :ARG2-of (c1-3 / suspect-01
+                                                                       :ARG1 (c1-1 / magazine
+                                                                                   :name (c1-4 / name
+                                                                                               :op1 "Charlie"
+                                                                                               :op2 " Hebdo"))))
+                                            :location (c1-7 / relative-position
+                                                            :op1 (c1-8 / city
+                                                                       :name (c1-5 / name
+                                                                                   :op1 "Paris"))
+                                                            :direction (c1-9 / north))))))
+
+# ::snt has the terrorist been nabbed
+# ::tokens ["has", "the", "terrorist", "been", "nabbed"]
+# ::lemmas ["have", "the", "terrorist", "be", "nab"]
+(c2-0 / nab-01
+      :ARG1 (c2-1 / terrorist)
+      :polarity (c2-2 / amr-unknown))
+
+# ::snt : BREAKING: Hostage taken after Charlie Hebdo suspects sighted north of Paris Praying for all
+# ::tokens [":", "BREAKING", ":", "Hostage", "taken", "after", "Charlie", "Hebdo", "suspects", "sighted", "north", "of", "Paris", "Praying", "for", "all"]
+# ::lemmas [":", "breaking", ":", "Hostage", "take", "after", "Charlie", "Hebdo", "suspect", "sight", "north", "of", "Paris", "pray", "for", "all"]
+(c3-2 / break-13
+      :ARG1 (c3-12 / take-01
+                   :ARG1 (c3-0 / host-01)
+                   :time (c3-14 / after
+                                :op1 (c3-11 / sight-01
+                                            :ARG1 (c3-7 / person
+                                                        :ARG2-of (c3-3 / suspect-01
+                                                                       :ARG1 (c3-13 / publication
+                                                                                    :name (c3-5 / name
+                                                                                                :op1 "Charlie"
+                                                                                                :op2 " Hebdo"))))
+                                            :location (c3-8 / relative-position
+                                                            :op1 (c3-9 / city
+                                                                       :name (c3-6 / name
+                                                                                   :op1 "Paris"))
+                                                            :direction (c3-10 / north))))
+                   :manner (c3-1 / pray-01
+                                 :beneficiary (c3-4 / all))))
+
+# ::snt Again.
+# ::tokens ["Again", "."]
+# ::lemmas ["again", "."]
+(c4-0 / again)
+
+# ::snt just shared your tweet on my site:
+# ::tokens ["just", "shared", "your", "tweet", "on", "my", "site", ":"]
+# ::lemmas ["just", "share", "your", "tweet", "on", "my", "site", ":"]
+(c5-4 / share-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-5 / tweet-01
+                  :ARG0 (c5-1 / you))
+      :ARG2 (c5-2 / site
+                  :poss c5-3)
+      :time (c5-0 / just))

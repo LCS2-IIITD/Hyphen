@@ -1,0 +1,75 @@
+# ::snt SOURCE????
+# ::tokens ["SOURCE", "?", "?", "?", "?"]
+# ::lemmas ["source", "?", "?", "?", "?"]
+(c1-1 / be-from-91
+      :polarity (c1-0 / amr-unknown))
+
+# ::snt Radio Canada tweeting same. must be true
+# ::tokens ["Radio", "Canada", "tweeting", "same", ".", "must", "be", "true"]
+# ::lemmas ["Radio", "Canada", "tweet", "same", ".", "must", "be", "true"]
+(c2-1 / multi-sentence
+      :snt1 (c2-0 / tweet-01
+                  :ARG0 (c2-3 / publication
+                              :name (c2-6 / name
+                                          :op1 "Radio"
+                                          :op2 "Canada"))
+                  :ARG1 (c2-5 / same-01))
+      :snt2 (c2-4 / infer-01
+                  :ARG1 (c2-2 / true-01)))
+
+# ::snt Sad day as soldier shot at War Memorial reportedly succumbs to injuries.
+# ::tokens ["Sad", "day", "as", "soldier", "shot", "at", "War", "Memorial", "reportedly", "succumbs", "to", "injuries", "."]
+# ::lemmas ["sad", "day", "as", "soldier", "shoot", "at", "War", "Memorial", "reportedly", "succumb", "to", "injury", "."]
+(c3-3 / day
+      :ARG0-of (c3-6 / sad-02)
+      :time-of (c3-2 / succumb-01
+                     :ARG0 (c3-0 / soldier
+                                 :ARG1-of (c3-1 / shoot-01
+                                                :location (c3-8 / building
+                                                                :name (c3-7 / name
+                                                                            :op1 "War"
+                                                                            :op2 "Memorial"))))
+                     :ARG1 (c3-4 / injure-01
+                                 :ARG1 c3-0)
+                     :ARG1-of (c3-5 / report-01)))
+
+# ::snt yes parliament attached at am eastern time
+# ::tokens ["yes", "parliament", "attached", "at", "am", "eastern", "time"]
+# ::lemmas ["yes", "parliament", "attach", "at", "am", "eastern", "time"]
+(c4-0 / attach-01
+      :ARG1 (c4-2 / parliament)
+      :time (c4-1 / date-entity
+                  :time "18:00"
+                  :timezone "EST"))
+
+# ::snt Just read that Soldier may still be alive.
+# ::tokens ["Just", "read", "that", "Soldier", "may", "still", "be", "alive", "."]
+# ::lemmas ["just", "read", "that", "Soldier", "may", "still", "be", "alive", "."]
+(c5-7 / read-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-4 / possible-01
+                  :ARG1 (c5-6 / live-01
+                              :ARG0 (c5-3 / person
+                                          :ARG0-of (c5-0 / have-org-role-91
+                                                         :ARG2 (c5-8 / soldier)))
+                              :mod (c5-1 / still)))
+      :mod (c5-2 / just))
+
+# ::snt The "five eyes" and western Europe "invite" this misery, still, the perpetrators are despicable.
+# ::tokens ["The", "\"", "five", "eyes", "\"", "and", "western", "Europe", "\"", "invite", "\"", "this", "misery", ",", "still", ",", "the", "perpetrators", "are", "despicable", "."]
+# ::lemmas ["the", "\"", "five", "eye", "\"", "and", "western", "Europe", "\"", "invite", "\"", "this", "misery", ",", "still", ",", "the", "perpetrator", "be", "despicable", "."]
+(c6-7 / and
+      :op1 (c6-5 / invade-01
+                 :ARG0 (c6-8 / and
+                             :op1 (c6-11 / eye
+                                         :quant 5)
+                             :op2 (c6-0 / world-region
+                                        :name (c6-10 / name
+                                                     :op1 "Western"
+                                                     :op2 "Europe")))
+                 :ARG1 (c6-2 / misery
+                             :mod (c6-1 / this)))
+      :op2 (c6-4 / despicable
+                 :domain (c6-6 / person
+                               :ARG0-of (c6-3 / perpetrate-01))
+                 :mod (c6-9 / still)))

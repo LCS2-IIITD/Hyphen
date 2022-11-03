@@ -1,0 +1,91 @@
+# ::snt Thanks for posting, Josh. Stay safe!
+# ::tokens ["Thanks", "for", "posting", ",", "Josh", ".", "Stay", "safe", "!"]
+# ::lemmas ["thank", "for", "post", ",", "Josh", ".", "stay", "safe", "!"]
+(c1-1 / multi-sentence
+      :snt1 (c1-7 / thank-01
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-5 / person
+                              :name (c1-4 / name
+                                          :op1 "Josh"))
+                  :ARG2 (c1-8 / post-01
+                              :ARG0 c1-5))
+      :snt2 (c1-6 / stay-01
+                  :ARG1 (c1-0 / you)
+                  :ARG3 (c1-2 / safe-01
+                              :ARG1 c1-0)
+                  :mode imperative))
+
+# ::snt -- so sad that this has occurred.
+# ::tokens ["--", "so", "sad", "that", "this", "has", "occurred", "."]
+# ::lemmas ["--", "so", "sad", "that", "this", "have", "occur", "."]
+(c2-0 / sad-02
+      :ARG0 (c2-2 / event
+                  :mod (c2-3 / this))
+      :degree (c2-1 / so))
+
+# ::snt Here's the footage shot by Globe reporter of gun fire in Parliament Hill building
+# ::tokens ["Here", "'s", "the", "footage", "shot", "by", "Globe", "reporter", "of", "gun", "fire", "in", "Parliament", "Hill", "building"]
+# ::lemmas ["here", "be", "the", "footage", "shoot", "by", "Globe", "reporter", "of", "gun", "fire", "in", "Parliament", "Hill", "building"]
+(c3-1 / footage
+      :medium (c3-0 / here)
+      :ARG1-of (c3-10 / shoot-02
+                      :ARG0 (c3-6 / person
+                                  :ARG0-of (c3-11 / have-org-role-91
+                                                  :ARG1 (c3-4 / newspaper
+                                                              :name (c3-5 / name
+                                                                          :op1 "Globe"))
+                                                  :ARG3 (c3-7 / report-01)))
+                      :ARG2 (c3-3 / fire-01
+                                  :ARG1 (c3-9 / gun)
+                                  :location (c3-2 / building
+                                                  :name (c3-8 / name
+                                                              :op1 "Parliament"
+                                                              :op2 "Hill")))))
+
+# ::snt are the fbi involved or is there a drill on as per
+# ::tokens ["are", "the", "fbi", "involved", "or", "is", "there", "a", "drill", "on", "as", "per"]
+# ::lemmas ["be", "the", "fbi", "involve", "or", "be", "there", "a", "drill", "on", "as", "per"]
+(c4-5 / amr-choice
+      :op1 (c4-1 / involve-01
+                 :ARG1 (c4-4 / government-organization
+                             :name (c4-2 / name
+                                         :op1 "Federal"
+                                         :op2 "Reserve"
+                                         :op3 "Bureau")))
+      :op2 (c4-3 / drill-02
+                 :mod (c4-0 / as-per-the-way)))
+
+# ::snt Starting to remind me of
+# ::tokens ["Starting", "to", "remind", "me", "of"]
+# ::lemmas ["start", "to", "remind", "i", "of"]
+(c5-0 / start-01
+      :ARG1 (c5-1 / remind-01
+                  :ARG1 (c5-2 / thing)
+                  :ARG2 (c5-3 / i)))
+
+# ::snt stay safe
+# ::tokens ["stay", "safe"]
+# ::lemmas ["stay", "safe"]
+(c6-0 / stay-01
+      :ARG1 (c6-1 / you)
+      :ARG3 (c6-2 / safe-01
+                  :ARG1 c6-1)
+      :mode imperative)
+
+# ::snt MT Cops running towards gunfire : Here's the footage shot in Parliament Hill building
+# ::tokens ["MT", "Cops", "running", "towards", "gunfire", ":", "Here", "'s", "the", "footage", "shot", "in", "Parliament", "Hill", "building"]
+# ::lemmas ["MT", "Cops", "run", "towards", "gunfire", ":", "here", "be", "the", "footage", "shoot", "in", "Parliament", "Hill", "building"]
+(c7-2 / multi-sentence
+      :snt1 (c7-7 / run-02
+                  :ARG0 (c7-8 / cop
+                              :mod (c7-6 / military
+                                         :name (c7-4 / name
+                                                     :op1 "MT")))
+                  :direction (c7-9 / gunfire))
+      :snt2 (c7-1 / footage
+                  :ARG1-of (c7-10 / shoot-01
+                                  :location (c7-3 / building
+                                                  :name (c7-5 / name
+                                                              :op1 "Parliament"
+                                                              :op2 "Hill")))
+                  :location (c7-0 / here)))

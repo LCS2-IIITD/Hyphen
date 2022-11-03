@@ -1,0 +1,66 @@
+# ::snt Glad they are all right.
+# ::tokens ["Glad", "they", "are", "all", "right", "."]
+# ::lemmas ["glad", "they", "be", "all", "right", "."]
+(c1-2 / glad-02
+      :ARG0 (c1-3 / all-right
+                  :domain (c1-1 / they))
+      :ARG1 (c1-0 / i))
+
+# ::snt Follow Official account
+# ::tokens ["Follow", "Official", "account"]
+# ::lemmas ["follow", "official", "account"]
+(c2-2 / follow-02
+      :ARG0 (c2-1 / you)
+      :ARG1 (c2-3 / account-01
+                  :mod (c2-0 / official))
+      :mode imperative)
+
+# ::snt Good to hear, and God bless. Could have been so much worse.
+# ::tokens ["Good", "to", "hear", ",", "and", "God", "bless", ".", "Could", "have", "been", "so", "much", "worse", "."]
+# ::lemmas ["good", "to", "hear", ",", "and", "God", "bless", ".", "could", "have", "be", "so", "much", "bad", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-12 / and
+                   :op1 (c3-9 / good-02
+                              :ARG1 (c3-0 / hear-01))
+                   :op2 (c3-4 / bless-01
+                              :ARG0 (c3-6 / person
+                                          :name (c3-5 / name
+                                                      :op1 "God"))))
+      :snt2 (c3-11 / possible-01
+                   :ARG1 (c3-1 / have-degree-91
+                               :ARG2 (c3-8 / bad-07)
+                               :ARG3 (c3-7 / more
+                                           :quant (c3-3 / much
+                                                        :degree (c3-10 / so))))))
+
+# ::snt praise God
+# ::tokens ["praise", "God"]
+# ::lemmas ["praise", "God"]
+(c5-1 / praise-01
+      :ARG1 (c5-2 / person
+                  :name (c5-0 / name
+                              :op1 "God")))
+
+# ::snt month old baby also killed by terrorists today in Jerusalem. Palestinian rammed car into a bus stop.
+# ::tokens ["month", "old", "baby", "also", "killed", "by", "terrorists", "today", "in", "Jerusalem", ".", "Palestinian", "rammed", "car", "into", "a", "bus", "stop", "."]
+# ::lemmas ["month", "old", "baby", "also", "kill", "by", "terrorist", "today", "in", "Jerusalem", ".", "Palestinian", "ram", "car", "into", "a", "bus", "stop", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-2 / kill-01
+                  :ARG0 (c6-14 / terrorist)
+                  :ARG1 (c6-1 / baby
+                              :age (c6-10 / temporal-quantity
+                                          :unit (c6-5 / month)
+                                          :quant 1))
+                  :time (c6-4 / today)
+                  :location (c6-7 / city
+                                  :name (c6-3 / name
+                                              :op1 "Jerusalem"))
+                  :mod (c6-16 / also))
+      :snt2 (c6-6 / ram-01
+                  :ARG0 (c6-8 / person
+                              :mod (c6-9 / country
+                                         :name (c6-11 / name
+                                                      :op1 "Palestine")))
+                  :ARG1 (c6-12 / car)
+                  :destination (c6-15 / stop
+                                      :mod (c6-13 / bus))))

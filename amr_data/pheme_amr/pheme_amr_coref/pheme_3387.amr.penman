@@ -1,0 +1,50 @@
+# ::snt How is that an update to the previous Tweet when it contains no new information?
+# ::tokens ["How", "is", "that", "an", "update", "to", "the", "previous", "Tweet", "when", "it", "contains", "no", "new", "information", "?"]
+# ::lemmas ["how", "be", "that", "an", "update", "to", "the", "previous", "Tweet", "when", "it", "contain", "no", "new", "information", "?"]
+(c1-0 / update-01
+      :ARG1 (c1-6 / thing
+                  :ARG1-of (c1-5 / tweet-01
+                                 :time (c1-3 / previous)))
+      :manner (c1-7 / amr-unknown)
+      :condition (c1-4 / contain-01
+                       :ARG0 c1-6
+                       :ARG1 (c1-1 / information
+                                   :ARG1-of (c1-2 / new-01)
+                                   :polarity -)))
+
+# ::snt The religion of 'pieces' strikes again.
+# ::tokens ["The", "religion", "of", "'", "pieces", "'", "strikes", "again", "."]
+# ::lemmas ["the", "religion", "of", "'", "piece", "'", "strike", "again", "."]
+(c2-0 / strike-01
+      :ARG1 (c2-2 / religion
+                  :mod (c2-1 / piece))
+      :mod (c2-3 / again))
+
+# ::snt Ugh. Stop the world. I want to get off. RT : people have been killed in shooting at Charlie Hebdo headquarters in
+# ::tokens ["Ugh", ".", "Stop", "the", "world", ".", "I", "want", "to", "get", "off", ".", "RT", ":", "people", "have", "been", "killed", "in", "shooting", "at", "Charlie", "Hebdo", "headquarters", "in"]
+# ::lemmas ["ugh", ".", "stop", "the", "world", ".", "i", "want", "to", "get", "off", ".", "RT", ":", "people", "have", "be", "kill", "in", "shooting", "at", "Charlie", "Hebdo", "headquarters", "in"]
+(c3-0 / multi-sentence
+      :snt1 (c3-3 / stop-01
+                  :ARG0 (c3-14 / you)
+                  :ARG1 (c3-10 / world)
+                  :mod (c3-11 / ugh
+                              :mode expressive)
+                  :mode imperative)
+      :snt2 (c3-1 / want-01
+                  :ARG0 (c3-12 / i)
+                  :ARG1 (c3-9 / get-05
+                              :ARG1 c3-12
+                              :direction (c3-16 / off)))
+      :snt3 (c3-2 / publication
+                  :name (c3-7 / name
+                              :op1 "RT")
+                  :ARG0-of (c3-6 / say-01
+                                 :ARG1 (c3-13 / kill-01
+                                              :ARG1 (c3-4 / person)
+                                              :ARG1-of (c3-18 / cause-01
+                                                              :ARG0 (c3-15 / shoot-02
+                                                                           :location (c3-5 / headquarters
+                                                                                           :poss (c3-8 / magazine
+                                                                                                       :name (c3-17 / name
+                                                                                                                    :op1 "Charlie"
+                                                                                                                    :op2 " Hebdo")))))))))

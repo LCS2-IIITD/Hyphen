@@ -1,0 +1,86 @@
+# ::snt are you Fucking idiots? What part of don't tweet police locations do you not Fucking understand?
+# ::tokens ["are", "you", "Fucking", "idiots", "?", "What", "part", "of", "do", "n't", "tweet", "police", "locations", "do", "you", "not", "Fucking", "understand", "?"]
+# ::lemmas ["be", "you", "fucking", "idiot", "?", "what", "part", "of", "do", "not", "tweet", "police", "location", "do", "you", "not", "Fucking", "understand", "?"]
+(c1-2 / multi-sentence
+      :snt1 (c1-6 / idiot
+                  :polarity (c1-11 / amr-unknown)
+                  :domain (c1-0 / you)
+                  :mod (c1-1 / fucking))
+      :snt2 (c1-3 / understand-01
+                  :ARG0 (c1-9 / you)
+                  :ARG1 (c1-5 / amr-unknown
+                              :part-of (c1-10 / tweet-02
+                                              :ARG0 c1-9
+                                              :ARG1 (c1-4 / location
+                                                          :mod (c1-8 / police))
+                                              :polarity -))
+                  :mod (c1-7 / fucking)
+                  :polarity -))
+
+# ::snt that gun control is working aint it?
+# ::tokens ["that", "gun", "control", "is", "working", "ai", "nt", "it", "?"]
+# ::lemmas ["that", "gun", "control", "be", "work", "be", "not", "it", "?"]
+(c2-0 / work-09
+      :ARG1 (c2-2 / control-01
+                  :ARG1 (c2-3 / gun))
+      :ARG1-of (c2-1 / request-confirmation-91)
+      :polarity -)
+
+# ::snt : MASSIVE OPERATION: "Hundreds of armed police have swarmed the area." (LIVE)
+# ::tokens [":", "MASSIVE", "OPERATION", ":", "\"", "Hundreds", "of", "armed", "police", "have", "swarmed", "the", "area", ".", "\"", "(", "LIVE", ")"]
+# ::lemmas [":", "MASSIVE", "operation", ":", "\"", "Hundreds", "of", "armed", "police", "have", "swarm", "the", "area", ".", "\"", "(", "live", ")"]
+(c3-1 / multi-sentence
+      :snt1 (c3-3 / operate-01
+                  :mod (c3-5 / massive))
+      :snt2 (c3-7 / swarm-01
+                  :ARG0 (c3-6 / police
+                              :ARG1-of (c3-8 / arm-01)
+                              :quant (c3-0 / multiple
+                                           :op1 100))
+                  :ARG1 (c3-4 / area))
+      :snt3 (c3-2 / live-01))
+
+# ::snt you jerks, ever consider they might have access to social media or someone in contact with them might?
+# ::tokens ["you", "jerks", ",", "ever", "consider", "they", "might", "have", "access", "to", "social", "media", "or", "someone", "in", "contact", "with", "them", "might", "?"]
+# ::lemmas ["you", "jerk", ",", "ever", "consider", "they", "might", "have", "access", "to", "social", "medium", "or", "someone", "in", "contact", "with", "they", "might", "?"]
+(c4-10 / consider-02
+       :polarity (c4-14 / amr-unknown)
+       :ARG0 (c4-1 / you
+                   :mod (c4-0 / jerk))
+       :ARG1 (c4-3 / or
+                   :op1 (c4-8 / possible-01
+                              :ARG1 (c4-6 / access-01
+                                          :ARG0 (c4-12 / they)
+                                          :ARG1 (c4-2 / media
+                                                      :mod (c4-11 / social))))
+                   :op2 (c4-13 / possible-01
+                               :ARG1 (c4-7 / access-01
+                                           :ARG0 (c4-4 / someone
+                                                       :ARG1-of (c4-9 / contact-01
+                                                                      :ARG0 c4-12))
+                                           :ARG1 c4-2)))
+       :time (c4-5 / ever))
+
+# ::snt Can we PLEASE take these MUSLIM(Terrorists) countries off the Map?! America needs some new beachfront property!
+# ::tokens ["Can", "we", "PLEASE", "take", "these", "MUSLIM(Terrorists", ")", "countries", "off", "the", "Map", "?", "!", "America", "needs", "some", "new", "beachfront", "property", "!"]
+# ::lemmas ["can", "we", "please", "take", "these", "muslim(terrorist", ")", "country", "off", "the", "Map", "?", "!", "America", "need", "some", "new", "beachfront", "property", "!"]
+(c5-1 / multi-sentence
+      :snt1 (c5-6 / possible-01
+                  :ARG1 (c5-15 / take-01
+                               :ARG0 (c5-0 / we)
+                               :ARG1 (c5-8 / country
+                                           :mod (c5-7 / religious-group
+                                                      :name (c5-4 / name
+                                                                  :op1 "Islam"))
+                                           :mod (c5-11 / this))
+                               :ARG2 (c5-3 / off
+                                           :op1 (c5-9 / map)))
+                  :polite +)
+      :snt2 (c5-5 / need-01
+                  :ARG0 (c5-10 / country
+                               :name (c5-12 / name
+                                            :op1 "America"))
+                  :ARG1 (c5-16 / property
+                               :ARG1-of (c5-13 / new-01)
+                               :mod (c5-2 / beachfront)
+                               :mod (c5-14 / some))))

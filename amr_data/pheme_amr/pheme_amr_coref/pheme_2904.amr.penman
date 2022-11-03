@@ -1,0 +1,37 @@
+# ::snt giddy up !!!!!
+# ::tokens ["giddy", "up", "!", "!", "!", "!", "!"]
+# ::lemmas ["giddy", "up", "!", "!", "!", "!", "!"]
+(c1-0 / giddy-up-00
+      :mode expressive)
+
+# ::snt Without question. Underwear ready to throw on stage.
+# ::tokens ["Without", "question", ".", "Underwear", "ready", "to", "throw", "on", "stage", "."]
+# ::lemmas ["without", "question", ".", "underwear", "ready", "to", "throw", "on", "stage", "."]
+(c2-0 / multi-sentence
+      :snt1 (c2-2 / question-03
+                  :polarity -)
+      :snt2 (c2-3 / ready-02
+                  :ARG1 (c2-1 / underwear)
+                  :ARG2 (c2-5 / throw-01
+                              :ARG c2-1
+                              :ARG2 (c2-4 / stage))))
+
+# ::snt Too late Bill! The show is scratched.
+# ::tokens ["Too", "late", "Bill", "!", "The", "show", "is", "scratched", "."]
+# ::lemmas ["too", "late", "Bill", "!", "the", "show", "be", "scratch", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-7 / say-01
+                  :ARG1 (c3-0 / have-degree-91
+                              :ARG2 (c3-1 / late)
+                              :ARG3 (c3-8 / too))
+                  :ARG2 (c3-6 / person
+                              :name (c3-5 / name
+                                          :op1 "Bill")))
+      :snt2 (c3-4 / scratch-02
+                  :ARG1 (c3-3 / show-04)))
+
+# ::snt will be there
+# ::tokens ["will", "be", "there"]
+# ::lemmas ["will", "be", "there"]
+(c4-1 / be-located-at-91
+      :ARG2 (c4-0 / there))

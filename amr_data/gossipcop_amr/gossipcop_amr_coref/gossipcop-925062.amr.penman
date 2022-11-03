@@ -1,0 +1,400 @@
+# ::snt There's a lot of discounts in the amazon store to get one free.
+# ::tokens ["There", "'s", "a", "lot", "of", "discounts", "in", "the", "amazon", "store", "to", "get", "one", "free", "."]
+# ::lemmas ["there", "be", "a", "lot", "of", "discount", "in", "the", "amazon", "store", "to", "get", "one", "free", "."]
+(c1-8 / discount-01
+      :quant (c1-5 / lot)
+      :location (c1-4 / store
+                      :mod (c1-6 / company
+                                 :name (c1-3 / name
+                                             :op1 "Amazon")))
+      :purpose (c1-7 / get-01
+                     :ARG0 (c1-2 / you)
+                     :ARG1 (c1-0 / one
+                                 :ARG1-of (c1-1 / free-03))))
+
+# ::snt I didnt even know she was ... congratulation
+# ::tokens ["I", "did", "nt", "even", "know", "she", "was", "...", "congratulation"]
+# ::lemmas ["i", "do", "not", "even", "know", "she", "be", "...", "congratulation"]
+(c3-2 / know-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-3 / congratulate-01
+                  :ARG0 (c3-0 / she))
+      :mod (c3-1 / even)
+      :polarity -)
+
+# ::snt The people saying they need to stop having kids make me lol.... y'all are acting like y'all are funancially responsible for that child smh Congrats to them on their baby boy!
+# ::tokens ["The", "people", "saying", "they", "need", "to", "stop", "having", "kids", "make", "me", "lol", "....", "y'", "all", "are", "acting", "like", "y'", "all", "are", "funancially", "responsible", "for", "that", "child", "smh", "Congrats", "to", "them", "on", "their", "baby", "boy", "!"]
+# ::lemmas ["the", "people", "say", "they", "need", "to", "stop", "have", "kid", "make", "i", "lol", "....", "you", "all", "be", "act", "like", "you", "all", "be", "funancially", "responsible", "for", "that", "child", "smh", "Congrats", "to", "they", "on", "their", "baby", "boy", "!"]
+(c4-14 / multi-sentence
+       :snt1 (c4-5 / make-02
+                   :ARG0 (c4-20 / person
+                                :ARG0-of (c4-0 / say-01
+                                               :ARG1 (c4-18 / need-01
+                                                            :ARG0 c4-20
+                                                            :ARG1 (c4-3 / stop-01
+                                                                        :ARG0 c4-20
+                                                                        :ARG1 (c4-6 / have-05
+                                                                                    :ARG0 c4-20
+                                                                                    :ARG1 (c4-7 / kid))))))
+                   :ARG1 (c4-21 / i)
+                   :ARG2-of (c4-2 / laugh-01
+                                  :ARG0 c4-21
+                                  :manner (c4-11 / loud)))
+       :snt2 (c4-10 / act-01
+                    :ARG0 (c4-4 / you
+                                :mod (c4-8 / all))
+                    :ARG1 (c4-19 / responsible-01
+                                 :ARG0 c4-4
+                                 :ARG1 (c4-15 / child
+                                              :mod (c4-9 / that))
+                                 :manner (c4-17 / funancially)))
+       :snt3 (c4-12 / congratulate-01
+                    :ARG1 (c4-16 / they)
+                    :ARG2 (c4-13 / boy
+                                 :mod (c4-1 / baby)
+                                 :poss c4-16)))
+
+# ::snt Already?
+# ::tokens ["Already", "?"]
+# ::lemmas ["already", "?"]
+(c5-1 / already
+      :polarity (c5-0 / amr-unknown))
+
+# ::snt Yayyyyyy
+# ::tokens ["Yayyyyyy"]
+# ::lemmas ["Yayyyyyy"]
+(c6-0 / yay
+      :mode expressive)
+
+# ::snt The princess opens her plebiscite legs pay ..You are a poor English people.
+# ::tokens ["The", "princess", "opens", "her", "plebiscite", "legs", "pay", "..", "You", "are", "a", "poor", "English", "people", "."]
+# ::lemmas ["the", "princess", "open", "her", "plebiscite", "leg", "pay", "..", "you", "be", "a", "poor", "English", "people", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-0 / open-01
+                  :ARG0 (c7-6 / princess
+                              :part (c7-5 / leg
+                                          :mod (c7-3 / plebiscite)
+                                          :ARG1-of c7-0)))
+      :snt2 (c7-9 / person
+                  :mod (c7-7 / poor)
+                  :mod (c7-8 / country
+                             :name (c7-4 / name
+                                         :op1 "England"))
+                  :domain (c7-1 / you)))
+
+# ::snt Jangan la ba marah..lama sdh kami x pernah bergunting bagai ni..rumah kami ni baby free yg ada cuma org yg mcm
+# ::tokens ["Jangan", "la", "ba", "marah", "..", "lama", "sdh", "kami", "x", "pernah", "bergunting", "bagai", "ni", "..", "rumah", "kami", "ni", "baby", "free", "yg", "ada", "cuma", "org", "yg", "mcm"]
+# ::lemmas ["Jangan", "la", "ba", "marah", "..", "lama", "sdh", "kami", "x", "pernah", "bergunting", "bagai", "ni", "..", "rumah", "kami", "ni", "baby", "free", "yg", "ada", "cuma", "org", "yg", "mcm"]
+(c8-9 / multi-sentence
+      :snt1 (c8-16 / person
+                   :name (c8-15 / name
+                                :op1 "Jangan"
+                                :op2 "la"
+                                :op3 " ba"
+                                :op4 "Mahmah"))
+      :snt2 (c8-10 / person
+                   :name (c8-11 / name
+                                :op1 "lama"
+                                :op2 "Sdh"
+                                :op3 "Kami")
+                   :ARG1-of (c8-3 / mean-01
+                                  :ARG2 (c8-2 / person
+                                              :name (c8-17 / name
+                                                           :op1 "bergunting"
+                                                           :op2 "bagai"))))
+      :snt3 (c8-0 / person
+                  :name (c8-13 / name
+                               :op1 "rumah"
+                               :op2 "Kami")
+                  :ARG1-of (c8-14 / free-04
+                                  :ARG2 (c8-8 / baby)))
+      :snt4 (c8-6 / and
+                  :op1 (c8-5 / ada
+                             :op1 (c8-12 / cuma))
+                  :op2 (c8-4 / ada
+                             :op1 (c8-7 / cuma))
+                  :op3 (c8-18 / ada
+                              :op1 (c8-1 / cuma))))
+
+# ::snt Apa kau buat dng biskut marie tu Beka? Raya lama lagiiiiii...my god puasa bulan dpn!!
+# ::tokens ["Apa", "kau", "buat", "dng", "biskut", "marie", "tu", "Beka", "?", "Raya", "lama", "lagiiiiii", "...", "my", "god", "puasa", "bulan", "dpn", "!", "!"]
+# ::lemmas ["Apa", "kau", "buat", "dng", "biskut", "marie", "tu", "Beka", "?", "raya", "lama", "lagiiiiii", "...", "my", "god", "puasa", "bulan", "dpn", "!", "!"]
+(c9-1 / multi-sentence
+      :snt1 (c9-11 / and
+                   :op1 (c9-10 / apa
+                               :mode expressive)
+                   :op2 (c9-0 / buat
+                              :mode expressive)
+                   :op3 (c9-4 / biskut
+                              :topic (c9-5 / person
+                                           :name (c9-2 / name
+                                                       :op1 "Marie"
+                                                       :op2 "Tu"
+                                                       :op3 "Beka"))
+                              :mode expressive)
+                   :op4 (c9-3 / person
+                              :name (c9-6 / name
+                                          :op1 "Raya"
+                                          :op2 "Lama"
+                                          :op3 "Lama"))
+                   :op5 (c9-13 / person
+                               :name (c9-7 / name
+                                           :op1 "God")
+                               :poss (c9-12 / i))
+                   :op6 (c9-8 / person
+                              :name (c9-9 / name
+                                          :op1 "Puasa"
+                                          :op2 " bulan"
+                                          :op3 "dpn"))))
+
+# ::snt Semua itu bergantung bajet!
+# ::tokens ["Semua", "itu", "bergantung", "bajet", "!"]
+# ::lemmas ["Semua", "itu", "bergantung", "bajet", "!"]
+(c10-0 / bajet
+       :mod (c10-1 / Semua)
+       :mode expressive)
+
+# ::snt its happening!!!!
+# ::tokens ["its", "happening", "!", "!", "!", "!"]
+# ::lemmas ["its", "happening", "!", "!", "!", "!"]
+(c11-0 / it
+       :mode expressive)
+
+# ::snt They should use some type of contraceptive. She too fertile or they love fucking a lot
+# ::tokens ["They", "should", "use", "some", "type", "of", "contraceptive", ".", "She", "too", "fertile", "or", "they", "love", "fucking", "a", "lot"]
+# ::lemmas ["they", "should", "use", "some", "type", "of", "contraceptive", ".", "she", "too", "fertile", "or", "they", "love", "fuck", "a", "lot"]
+(c12-3 / multi-sentence
+       :snt1 (c12-5 / recommend-01
+                    :ARG1 (c12-14 / use-01
+                                  :ARG0 (c12-12 / they)
+                                  :ARG1 (c12-10 / contraceptive
+                                                :mod (c12-15 / type
+                                                             :mod (c12-4 / some)))))
+       :snt2 (c12-0 / or
+                    :op1 (c12-7 / have-degree-91
+                                :ARG1 (c12-1 / she)
+                                :ARG2 (c12-2 / fertile)
+                                :ARG3 (c12-11 / too))
+                    :op2 (c12-8 / love-01
+                                :ARG0 (c12-6 / they)
+                                :ARG1 (c12-9 / fuck-01
+                                             :ARG0 c12-6)
+                                :quant (c12-13 / lot))))
+
+# ::snt Its still disrespectful. Shes a Duchess and future Queen Consort. She hasnt been Kate Middleton since
+# ::tokens ["Its", "still", "disrespectful", ".", "She", "s", "a", "Duchess", "and", "future", "Queen", "Consort", ".", "She", "has", "nt", "been", "Kate", "Middleton", "since"]
+# ::lemmas ["its", "still", "disrespectful", ".", "she", "s", "a", "Duchess", "and", "future", "Queen", "Consort", ".", "she", "have", "not", "be", "Kate", "Middleton", "since"]
+(c13-2 / multi-sentence
+       :snt1 (c13-13 / disrespect-01
+                     :ARG0 (c13-10 / it)
+                     :mod (c13-4 / still))
+       :snt2 (c13-11 / and
+                     :op1 (c13-6 / have-rel-role-91
+                                 :ARG0 (c13-0 / she)
+                                 :ARG2 (c13-8 / duchess))
+                     :op2 (c13-9 / have-rel-role-91
+                                 :ARG0 c13-0
+                                 :ARG2 (c13-7 / consort
+                                              :mod (c13-12 / queen)
+                                              :time (c13-1 / future)))
+                     :domain (c13-14 / she
+                                     :name (c13-3 / name
+                                                  :op1 "Kate"
+                                                  :op2 "Middleton")
+                                     :polarity -)
+                     :time (c13-5 / since)))
+
+# ::snt That's d unfortunate thing about being a commoner...u can still be referred to as ur old name. Only blue bloods earn their titles by birth. If Princess Di was a commoner she wld've been subjected to d same treatment; it's in d blood and I'm sure not meant as a disrespect.
+# ::tokens ["That", "'s", "d", "unfortunate", "thing", "about", "being", "a", "commoner", "...", "u", "can", "still", "be", "referred", "to", "as", "ur", "old", "name", ".", "Only", "blue", "bloods", "earn", "their", "titles", "by", "birth", ".", "If", "Princess", "Di", "was", "a", "commoner", "she", "wld've", "been", "subjected", "to", "d", "same", "treatment", ";", "it", "'s", "in", "d", "blood", "and", "I", "'m", "sure", "not", "meant", "as", "a", "disrespect", "."]
+# ::lemmas ["that", "be", "d", "unfortunate", "thing", "about", "be", "a", "commoner", "...", "u", "can", "still", "be", "refer", "to", "as", "ur", "old", "name", ".", "only", "blue", "blood", "earn", "their", "title", "by", "birth", ".", "if", "Princess", "Di", "be", "a", "commoner", "she", "wld've", "be", "subject", "to", "d", "same", "treatment", ";", "it", "be", "in", "d", "blood", "and", "i", "be", "sure", "not", "mean", "as", "a", "disrespect", "."]
+(c14-18 / multi-sentence
+        :snt1 (c14-23 / fortunate-01
+                      :ARG2 (c14-20 / commoner
+                                    :domain (c14-8 / you))
+                      :polarity -)
+        :snt2 (c14-28 / possible-01
+                      :ARG1 (c14-26 / refer-01
+                                    :ARG1 (c14-12 / you)
+                                    :ARG2 (c14-24 / name
+                                                  :poss c14-12
+                                                  :mod (c14-6 / old))
+                                    :mod (c14-0 / still)))
+        :snt3 (c14-27 / earn-01
+                      :ARG0 (c14-17 / blood
+                                    :mod (c14-2 / blue)
+                                    :mod (c14-15 / only))
+                      :ARG1 (c14-11 / title
+                                    :poss c14-17)
+                      :time (c14-5 / bear-02
+                                   :ARG1 c14-12))
+        :snt4 (c14-7 / subject-01
+                     :ARG1 (c14-4 / she)
+                     :ARG2 (c14-22 / treat-01
+                                   :ARG1 c14-4
+                                   :ARG1-of (c14-25 / same-01))
+                     :condition (c14-14 / commoner
+                                        :domain (c14-19 / person
+                                                        :name c14-24
+                                                        :op1 "Di")
+                                        :ARG0-of (c14-9 / have-org-role-91
+                                                        :ARG2 (c14-3 / princess))))
+        :snt5 (c14-13 / and
+                      :op1 (c14-16 / blood
+                                   :mod (c14-29 / d))
+                      :op2 (c14-10 / mean-02
+                                   :ARG1 c14-22
+                                   :ARG2 (c14-21 / disrespect-01)
+                                   :ARG1-of (c14-1 / sure-02)
+                                   :polarity -)))
+
+# ::snt All the best Kate.but take a break his already married need to have one every single year.
+# ::tokens ["All", "the", "best", "Kate.but", "take", "a", "break", "his", "already", "married", "need", "to", "have", "one", "every", "single", "year", "."]
+# ::lemmas ["all", "the", "good", "kate.but", "take", "a", "break", "his", "already", "married", "need", "to", "have", "one", "every", "single", "year", "."]
+(c15-0 / say-01
+       :ARG1 (c15-14 / contrast-01
+                     :ARG1 (c15-17 / person
+                                   :name (c15-15 / name
+                                                 :op1 "Kate")
+                                   :mod (c15-8 / all)
+                                   :ARG1-of (c15-5 / have-degree-91
+                                                   :ARG2 (c15-9 / good-02
+                                                                :ARG1 c15-17)
+                                                   :ARG3 (c15-12 / most)))
+                     :ARG2 (c15-11 / break-19
+                                   :ARG0 (c15-3 / you)
+                                   :ARG1 (c15-13 / need-01
+                                                 :ARG0 (c15-18 / he)
+                                                 :ARG1 (c15-4 / have-06
+                                                              :ARG0 c15-18
+                                                              :ARG1 (c15-1 / one)
+                                                              :frequency (c15-16 / rate-entity-91
+                                                                                 :ARG3 (c15-7 / temporal-quantity
+                                                                                              :unit (c15-10 / year)
+                                                                                              :ARG1-of (c15-2 / single-02)
+                                                                                              :quant 1)))
+                                                 :time (c15-6 / already))
+                                   :mode imperative))
+       :ARG2 c15-17)
+
+# ::snt Yes, she does. Its Catherine, Duchess of Cambridge. She is officially no longer known as Kate Middleton &amp; hasnt been for years.
+# ::tokens ["Yes", ",", "she", "does", ".", "Its", "Catherine", ",", "Duchess", "of", "Cambridge", ".", "She", "is", "officially", "no", "longer", "known", "as", "Kate", "Middleton", "&", "amp", ";", "has", "nt", "been", "for", "years", "."]
+# ::lemmas ["yes", ",", "she", "do", ".", "its", "Catherine", ",", "Duchess", "of", "Cambridge", ".", "she", "be", "officially", "no", "long", "know", "as", "Kate", "Middleton", "&", "amp", ";", "have", "not", "be", "for", "years", "."]
+(c16-4 / multi-sentence
+       :snt1 (c16-15 / do-02
+                     :ARG0 (c16-5 / she))
+       :snt2 (c16-7 / person
+                    :name (c16-3 / name
+                                 :op1 "Catherine"
+                                 :op2 "of"
+                                 :op3 "Cambridge")
+                    :domain (c16-13 / it))
+       :snt3 (c16-14 / and
+                     :op1 (c16-8 / know-02
+                                 :ARG1 (c16-0 / she)
+                                 :ARG2 (c16-6 / name
+                                              :op1 "Kate"
+                                              :op2 "Middleton"
+                                              :op3 "&"
+                                              :op4 "amp")
+                                 :mod (c16-1 / official)
+                                 :time (c16-9 / no-longer))
+                     :op2 (c16-10 / know-02
+                                  :ARG1 c16-0
+                                  :ARG2 c16-6
+                                  :duration (c16-11 / multiple
+                                                    :op1 (c16-12 / temporal-quantity
+                                                                 :unit (c16-2 / year)
+                                                                 :quant 1))
+                                  :polarity -)))
+
+# ::snt Is she ever not pregnant?
+# ::tokens ["Is", "she", "ever", "not", "pregnant", "?"]
+# ::lemmas ["be", "she", "ever", "not", "pregnant", "?"]
+(c17-2 / impregnate-01
+       :ARG1 (c17-3 / she)
+       :time (c17-1 / ever)
+       :polarity (c17-0 / amr-unknown)
+       :polarity -)
+
+# ::snt What? Bill can't leave the duchess punani alone for a second !?
+# ::tokens ["What", "?", "Bill", "ca", "n't", "leave", "the", "duchess", "punani", "alone", "for", "a", "second", "!", "?"]
+# ::lemmas ["what", "?", "Bill", "can", "not", "leave", "the", "duchess", "punani", "alone", "for", "a", "second", "!", "?"]
+(c18-0 / multi-sentence
+       :snt1 (c18-10 / amr-unknown)
+       :snt2 (c18-5 / possible-01
+                    :ARG1 (c18-6 / leave-14
+                                 :ARG0 (c18-1 / person
+                                              :name (c18-2 / name
+                                                           :op1 "Bill"))
+                                 :ARG1 (c18-12 / person
+                                               :name (c18-4 / name
+                                                            :op1 "Punani")
+                                               :ARG0-of (c18-7 / have-org-role-91
+                                                               :ARG2 (c18-11 / duchess)))
+                                 :mod (c18-9 / alone)
+                                 :duration (c18-8 / temporal-quantity
+                                                  :unit (c18-3 / second)
+                                                  :quant 1))
+                    :polarity -))
+
+# ::snt People have babies everyday. Boo freaking who!
+# ::tokens ["People", "have", "babies", "everyday", ".", "Boo", "freaking", "who", "!"]
+# ::lemmas ["people", "have", "baby", "everyday", ".", "Boo", "freak", "who", "!"]
+(c19-2 / multi-sentence
+       :snt1 (c19-4 / have-05
+                    :ARG0 (c19-5 / person)
+                    :ARG1 (c19-1 / baby)
+                    :frequency (c19-3 / rate-entity-91
+                                      :ARG3 (c19-7 / temporal-quantity
+                                                   :unit (c19-8 / day)
+                                                   :quant 1)))
+       :snt2 (c19-6 / boo-hoo
+                    :mod (c19-0 / freaking
+                                :mode expressive)
+                    :mode expressive))
+
+# ::snt Wait.. She is still pregnant?
+# ::tokens ["Wait", "..", "She", "is", "still", "pregnant", "?"]
+# ::lemmas ["wait", "..", "she", "be", "still", "pregnant", "?"]
+(c20-2 / multi-sentence
+       :snt1 (c20-4 / wait-01
+                    :ARG1 (c20-1 / you)
+                    :mode imperative)
+       :snt2 (c20-5 / impregnate-01
+                    :ARG1 (c20-3 / she)
+                    :mod (c20-0 / still)
+                    :polarity (c20-6 / amr-unknown)))
+
+# ::snt Great. But whos this Kate Middleton you speak of? shes the Duchess of Cambridge &amp; has not gone by the name Kate Middleton for years, but, whatever.....
+# ::tokens ["Great", ".", "But", "who", "s", "this", "Kate", "Middleton", "you", "speak", "of", "?", "she", "s", "the", "Duchess", "of", "Cambridge", "&", "amp", ";", "has", "not", "gone", "by", "the", "name", "Kate", "Middleton", "for", "years", ",", "but", ",", "whatever", "....."]
+# ::lemmas ["great", ".", "but", "who", "s", "this", "Kate", "Middleton", "you", "speak", "of", "?", "she", "s", "the", "Duchess", "of", "Cambridge", "&", "amp", ";", "have", "not", "go", "by", "the", "name", "Kate", "Middleton", "for", "years", ",", "but", ",", "whatever", "....."]
+(c21-12 / multi-sentence
+        :snt1 (c21-9 / great)
+        :snt2 (c21-14 / contrast-01
+                      :ARG2 (c21-0 / speak-01
+                                   :ARG0 (c21-3 / you)
+                                   :ARG1 (c21-8 / amr-unknown
+                                                :domain (c21-17 / person
+                                                                :name (c21-16 / name
+                                                                              :op1 "Kate"
+                                                                              :op2 "Middleton")
+                                                                :mod (c21-7 / this)
+                                                                :ARG1-of c21-0))))
+        :snt3 (c21-6 / and
+                     :op1 (c21-4 / have-org-role-91
+                                 :ARG0 (c21-2 / she)
+                                 :ARG2 (c21-20 / duchess
+                                               :mod (c21-11 / city
+                                                            :name (c21-13 / name
+                                                                          :op1 "Cambridge"))))
+                     :op2 (c21-1 / go-06
+                                 :ARG0 c21-2
+                                 :ARG1 (c21-18 / name
+                                               :op1 "Kate"
+                                               :op2 "Middleton")
+                                 :polarity -)
+                     :duration (c21-5 / multiple
+                                      :op1 (c21-15 / temporal-quantity
+                                                   :unit (c21-10 / year)
+                                                   :quant 1))
+                     :concession-of (c21-19 / whatever)))

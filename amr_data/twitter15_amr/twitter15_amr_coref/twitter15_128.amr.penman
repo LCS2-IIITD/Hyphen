@@ -1,0 +1,74 @@
+# ::snt they come in 's...or... go. Robin Williams, Joan Rivers...Betty White or Don Rickles??
+# ::tokens ["they", "come", "in", "'s", "...", "or", "...", "go", ".", "Robin", "Williams", ",", "Joan", "Rivers", "...", "Betty", "White", "or", "Don", "Rickles", "?", "?"]
+# ::lemmas ["they", "come", "in", "'s", "...", "or", "...", "go", ".", "Robin", "Williams", ",", "Joan", "Rivers", "...", "Betty", "White", "or", "Don", "Rickles", "?", "?"]
+(c1-1 / or
+      :op1 (c1-5 / come-01
+                 :ARG1 (c1-2 / they)
+                 :manner (c1-0 / person
+                               :name (c1-8 / name
+                                           :op1 "Robin"
+                                           :op2 "Williams")))
+      :op2 (c1-11 / person
+                  :name (c1-7 / name
+                              :op1 "Joan"
+                              :op2 "Rivers"))
+      :op3 (c1-10 / person
+                  :name (c1-6 / name
+                              :op1 "Betty"
+                              :op2 "White"))
+      :op4 (c1-4 / person
+                 :name (c1-9 / name
+                             :op1 "Don"
+                             :op2 "Rickles"))
+      :polarity (c1-3 / amr-unknown))
+
+# ::snt If Betty White isn't immortal, I want off this planet.
+# ::tokens ["If", "Betty", "White", "is", "n't", "immortal", ",", "I", "want", "off", "this", "planet", "."]
+# ::lemmas ["if", "Betty", "White", "be", "not", "immortal", ",", "i", "want", "off", "this", "planet", "."]
+(c2-7 / want-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-0 / be-located-at-91
+                  :ARG1 c2-1
+                  :ARG2 (c2-3 / off
+                              :op1 (c2-2 / planet
+                                         :mod (c2-4 / this))))
+      :condition (c2-6 / immortal-03
+                       :ARG1 (c2-8 / person
+                                   :name (c2-5 / name
+                                               :op1 "Betty"
+                                               :op2 "White"))
+                       :polarity -))
+
+# ::snt Can you do a themed segment of think of the possibilities! Channel your grief into creativity
+# ::tokens ["Can", "you", "do", "a", "themed", "segment", "of", "think", "of", "the", "possibilities", "!", "Channel", "your", "grief", "into", "creativity"]
+# ::lemmas ["can", "you", "do", "a", "themed", "segment", "of", "think", "of", "the", "possibility", "!", "channel", "your", "grief", "into", "creativity"]
+(c3-5 / multi-sentence
+      :snt1 (c3-2 / possible-01
+                  :ARG1 (c3-9 / do-02
+                              :ARG0 (c3-8 / you)
+                              :ARG1 (c3-0 / segment
+                                          :ARG1-of (c3-3 / theme-01
+                                                         :ARG2 (c3-4 / think-01
+                                                                     :ARG0 c3-8
+                                                                     :ARG1 c3-2)))))
+      :snt2 (c3-7 / channel-01
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-10 / grief
+                               :poss c3-1)
+                  :ARG2 (c3-6 / creativity)
+                  :mode imperative))
+
+# ::snt Betty White has been a robot since she was on Mary Tyler Moore
+# ::tokens ["Betty", "White", "has", "been", "a", "robot", "since", "she", "was", "on", "Mary", "Tyler", "Moore"]
+# ::lemmas ["Betty", "White", "have", "be", "a", "robot", "since", "she", "be", "on", "Mary", "Tyler", "Moore"]
+(c4-5 / robot
+      :domain (c4-2 / person
+                    :name (c4-3 / name
+                                :op1 "Betty"
+                                :op2 "White"))
+      :time (c4-0 / since
+                  :op1 (c4-1 / broadcast-program
+                             :name (c4-4 / name
+                                         :op1 "Mary"
+                                         :op2 "Tyler"
+                                         :op3 "Moore"))))

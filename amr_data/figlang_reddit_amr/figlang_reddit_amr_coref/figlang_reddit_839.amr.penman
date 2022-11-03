@@ -1,0 +1,50 @@
+# ::snt "I play soccer"
+# ::tokens ["\"", "I", "play", "soccer", "\""]
+# ::lemmas ["\"", "i", "play", "soccer", "\""]
+(c1-1 / play-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / soccer))
+
+# ::snt The "well, the rest of the world actually calls it *football*" starter kit.
+# ::tokens ["The", "\"", "well", ",", "the", "rest", "of", "the", "world", "actually", "calls", "it", "*", "football", "*", "\"", "starter", "kit", "."]
+# ::lemmas ["the", "\"", "well", ",", "the", "rest", "of", "the", "world", "actually", "call", "it", "*", "football", "*", "\"", "starter", "kit", "."]
+(c2-7 / kit
+      :mod (c2-0 / starter)
+      :ARG2-of (c2-3 / call-01
+                     :ARG0 (c2-5 / rest
+                                 :part-of (c2-4 / world))
+                     :ARG1 (c2-6 / it)
+                     :ARG2 (c2-2 / football)
+                     :ARG1-of (c2-1 / actual-02)))
+
+# ::snt Just because a bunch of people do something a certain way doesn't make it the right way
+# ::tokens ["Just", "because", "a", "bunch", "of", "people", "do", "something", "a", "certain", "way", "does", "n't", "make", "it", "the", "right", "way"]
+# ::lemmas ["just", "because", "a", "bunch", "of", "people", "do", "something", "a", "certain", "way", "do", "not", "make", "it", "the", "right", "way"]
+(c3-3 / cause-01
+      :ARG0 (c3-0 / do-02
+                  :ARG0 (c3-8 / person
+                              :quant (c3-6 / bunch))
+                  :ARG1 (c3-1 / something
+                              :manner (c3-2 / certain)))
+      :ARG1 (c3-9 / make-01
+                  :ARG1 (c3-4 / way
+                              :ARG1-of (c3-5 / right-02))
+                  :polarity -)
+      :mod (c3-7 / just))
+
+# ::snt But if the people who invented it are doing it that way, it does make it the right way
+# ::tokens ["But", "if", "the", "people", "who", "invented", "it", "are", "doing", "it", "that", "way", ",", "it", "does", "make", "it", "the", "right", "way"]
+# ::lemmas ["but", "if", "the", "people", "who", "invent", "it", "be", "do", "it", "that", "way", ",", "it", "do", "make", "it", "the", "right", "way"]
+(c4-1 / contrast-01
+      :ARG2 (c4-4 / have-condition-91
+                  :ARG1 (c4-9 / make-01
+                              :ARG0 (c4-0 / do-02
+                                          :ARG0 (c4-8 / person
+                                                      :ARG0-of (c4-2 / invent-01
+                                                                     :ARG1 (c4-5 / it
+                                                                                 :ARG1-of c4-0)))
+                                          :manner (c4-3 / way
+                                                        :mod (c4-6 / that)))
+                              :ARG1 (c4-10 / way
+                                           :ARG1-of (c4-7 / right-02)))
+                  :ARG2 c4-0))

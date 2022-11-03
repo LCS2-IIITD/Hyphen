@@ -1,0 +1,21 @@
+# ::snt A sad info graphic : Here's the passenger breakdown by nationality
+# ::tokens ["A", "sad", "info", "graphic", ":", "Here", "'s", "the", "passenger", "breakdown", "by", "nationality"]
+# ::lemmas ["a", "sad", "info", "graphic", ":", "here", "be", "the", "passenger", "breakdown", "by", "nationality"]
+(c2-4 / multi-sentence
+      :snt1 (c2-7 / graphic
+                  :mod (c2-1 / information)
+                  :ARG1-of (c2-0 / sad-02))
+      :snt2 (c2-2 / break-down-12
+                  :ARG0 (c2-6 / nationality)
+                  :ARG1 (c2-3 / passenger)
+                  :location (c2-5 / here)))
+
+# ::snt  Here's the passenger breakdown by nationality: fucking awful
+# ::tokens [" ", "Here", "'s", "the", "passenger", "breakdown", "by", "nationality", ":", "fucking", "awful"]
+# ::lemmas [" ", "here", "be", "the", "passenger", "breakdown", "by", "nationality", ":", "fuck", "awful"]
+(c4-0 / break-down-12
+      :ARG0 (c4-4 / nationality)
+      :ARG1 (c4-1 / passenger)
+      :location (c4-3 / here)
+      :mod (c4-2 / awful
+                 :mod (c4-5 / fucking)))

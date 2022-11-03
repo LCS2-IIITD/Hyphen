@@ -1,0 +1,79 @@
+# ::snt Whore
+# ::tokens ["Whore"]
+# ::lemmas ["whore"]
+(c1-0 / whore)
+
+# ::snt Ive always loved beyonce but cant stand by the fact that she killed a family of horses for that pony tail
+# ::tokens ["I", "ve", "always", "loved", "beyonce", "but", "ca", "nt", "stand", "by", "the", "fact", "that", "she", "killed", "a", "family", "of", "horses", "for", "that", "pony", "tail"]
+# ::lemmas ["i", "ve", "always", "love", "beyonce", "but", "can", "not", "stand", "by", "the", "fact", "that", "she", "kill", "a", "family", "of", "horse", "for", "that", "pony", "tail"]
+(c2-9 / contrast-01
+      :ARG1 (c2-6 / love-01
+                  :ARG0 (c2-11 / i)
+                  :ARG1 (c2-5 / person
+                              :name (c2-1 / name
+                                          :op1 "beyonce"))
+                  :time (c2-12 / always))
+      :ARG2 (c2-2 / possible-01
+                  :ARG1 (c2-3 / stand-11
+                              :ARG0 c2-11
+                              :ARG1 (c2-0 / fact
+                                          :topic (c2-7 / kill-01
+                                                       :ARG0 c2-5
+                                                       :ARG1 (c2-8 / family
+                                                                   :consist-of (c2-4 / horse))
+                                                       :ARG2 (c2-10 / tail
+                                                                    :mod (c2-13 / pony)
+                                                                    :mod (c2-14 / that)))))
+                  :polarity -))
+
+# ::snt She looked so hot!
+# ::tokens ["She", "looked", "so", "hot", "!"]
+# ::lemmas ["she", "look", "so", "hot", "!"]
+(c3-2 / look-02
+      :ARG0 (c3-3 / she)
+      :ARG1 (c3-1 / hot-03
+                  :ARG1 c3-3
+                  :degree (c3-0 / so)))
+
+# ::snt Pls RT. I lost my daughter to cancer weeks ago. If you can donate every little helps.Thank you
+# ::tokens ["Pls", "RT", ".", "I", "lost", "my", "daughter", "to", "cancer", "weeks", "ago", ".", "If", "you", "can", "donate", "every", "little", "helps", ".", "Thank", "you"]
+# ::lemmas ["Pls", "RT", ".", "i", "lose", "my", "daughter", "to", "cancer", "weeks", "ago", ".", "if", "you", "can", "donate", "every", "little", "help", ".", "thank", "you"]
+(c4-9 / multi-sentence
+      :snt1 (c4-18 / post-scriptum
+                   :domain (c4-5 / this))
+      :snt2 (c4-0 / lose-02
+                  :ARG0 (c4-21 / i)
+                  :ARG1 (c4-10 / person
+                               :ARG0-of (c4-3 / have-rel-role-91
+                                              :ARG1 c4-21
+                                              :ARG2 (c4-22 / daughter)))
+                  :ARG1-of (c4-13 / cause-01
+                                  :ARG0 (c4-14 / disease
+                                               :name (c4-16 / name
+                                                            :op1 "cancer")))
+                  :time (c4-8 / before
+                              :op1 (c4-11 / now)
+                              :quant (c4-4 / multiple
+                                           :op1 (c4-15 / temporal-quantity
+                                                       :unit (c4-19 / week)
+                                                       :quant 1))))
+      :snt3 (c4-20 / help-01
+                   :ARG0 (c4-2 / you)
+                   :condition (c4-1 / possible-01
+                                    :ARG1 (c4-12 / donate-01
+                                                 :ARG0 (c4-6 / you)
+                                                 :mod (c4-17 / every)
+                                                 :mod (c4-7 / little)))))
+
+# ::snt Ummm who cares this was Serenas moment
+# ::tokens ["Ummm", "who", "cares", "this", "was", "Serenas", "moment"]
+# ::lemmas ["Ummm", "who", "care", "this", "be", "Serenas", "moment"]
+(c5-3 / care-01
+      :ARG0 (c5-5 / amr-unknown)
+      :ARG1 (c5-1 / moment
+                  :mod (c5-2 / person
+                             :name (c5-0 / name
+                                         :op1 "Serenas"))
+                  :domain (c5-4 / this))
+      :mod (c5-6 / umm
+                 :mode expressive))

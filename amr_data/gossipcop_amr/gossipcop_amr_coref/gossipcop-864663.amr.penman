@@ -1,0 +1,34 @@
+# ::snt She's dating the guy from spy kids?
+# ::tokens ["She", "'s", "dating", "the", "guy", "from", "spy", "kids", "?"]
+# ::lemmas ["she", "be", "date", "the", "guy", "from", "spy", "kid", "?"]
+(c1-5 / date-02
+      :polarity (c1-3 / amr-unknown)
+      :ARG0 (c1-1 / she)
+      :ARG1 (c1-4 / guy
+                  :source (c1-2 / kid
+                                :ARG0-of (c1-0 / spy-01))))
+
+# ::snt The kid from spy kids?!?!?
+# ::tokens ["The", "kid", "from", "spy", "kids", "?", "!", "?", "!", "?"]
+# ::lemmas ["the", "kid", "from", "spy", "kid", "?", "!", "?", "!", "?"]
+(c2-2 / kid
+      :source (c2-1 / kid
+                    :ARG0-of (c2-3 / spy-01))
+      :polarity (c2-0 / amr-unknown))
+
+# ::snt I've never understood these. Why not just talk to each other?
+# ::tokens ["I", "'ve", "never", "understood", "these", ".", "Why", "not", "just", "talk", "to", "each", "other", "?"]
+# ::lemmas ["i", "'ve", "never", "understand", "these", ".", "why", "not", "just", "talk", "to", "each", "other", "?"]
+(c3-1 / multi-sentence
+      :snt1 (c3-9 / understand-01
+                  :ARG0 (c3-6 / i)
+                  :ARG1 (c3-7 / this)
+                  :time (c3-3 / ever)
+                  :polarity -)
+      :snt2 (c3-4 / cause-01
+                  :ARG0 (c3-2 / amr-unknown)
+                  :ARG1 (c3-10 / talk-01
+                               :ARG2 (c3-0 / other
+                                           :mod (c3-8 / each))
+                               :mod (c3-5 / just)
+                               :polarity -)))

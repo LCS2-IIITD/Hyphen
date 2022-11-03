@@ -1,0 +1,251 @@
+# ::snt make me!
+# ::tokens ["make", "me", "!"]
+# ::lemmas ["make", "i", "!"]
+(c1-1 / make-01
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-2 / i)
+      :mode imperative)
+
+# ::snt nope just the lone wolves of the religion of peace
+# ::tokens ["nope", "just", "the", "lone", "wolves", "of", "the", "religion", "of", "peace"]
+# ::lemmas ["nope", "just", "the", "lone", "wolf", "of", "the", "religion", "of", "peace"]
+(c2-1 / wolf
+      :mod (c2-2 / lone)
+      :poss (c2-5 / religion
+                  :mod (c2-4 / peace))
+      :mod (c2-3 / nope)
+      :mod (c2-0 / just))
+
+# ::snt pieces
+# ::tokens ["pieces"]
+# ::lemmas ["piece"]
+(c3-0 / piece)
+
+# ::snt Yawn
+# ::tokens ["Yawn"]
+# ::lemmas ["yawn"]
+(c4-0 / yawn-01)
+
+# ::snt the past?? Iraq, Afghanistan are recent
+# ::tokens ["the", "past", "?", "?", "Iraq", ",", "Afghanistan", "are", "recent"]
+# ::lemmas ["the", "past", "?", "?", "Iraq", ",", "Afghanistan", "be", "recent"]
+(c5-4 / recent
+      :polarity (c5-7 / amr-unknown)
+      :domain (c5-3 / past
+                    :poss (c5-0 / and
+                                :op1 (c5-5 / country
+                                           :name (c5-1 / name
+                                                       :op1 "Iraq"))
+                                :op2 (c5-6 / country
+                                           :name (c5-2 / name
+                                                       :op1 "Afghanistan")))))
+
+# ::snt George Bush said it was a crusade and said God asked him to attack Iraq
+# ::tokens ["George", "Bush", "said", "it", "was", "a", "crusade", "and", "said", "God", "asked", "him", "to", "attack", "Iraq"]
+# ::lemmas ["George", "Bush", "say", "it", "be", "a", "crusade", "and", "say", "God", "ask", "he", "to", "attack", "Iraq"]
+(c6-12 / and
+       :op1 (c6-10 / say-01
+                   :ARG0 (c6-5 / person
+                               :name (c6-3 / name
+                                           :op1 "George"
+                                           :op2 "Bush"))
+                   :ARG1 (c6-7 / crusade
+                               :domain (c6-2 / it)))
+       :op2 (c6-0 / say-01
+                  :ARG0 c6-5
+                  :ARG1 (c6-1 / ask-02
+                              :ARG0 (c6-11 / person
+                                           :name (c6-4 / name
+                                                       :op1 "God"))
+                              :ARG1 (c6-6 / attack-01
+                                          :ARG0 c6-5
+                                          :ARG1 (c6-8 / country
+                                                      :name (c6-9 / name
+                                                                  :op1 "Iraq")))
+                              :ARG2 c6-5)))
+
+# ::snt *Al Callome
+# ::tokens ["*", "Al", "Callome"]
+# ::lemmas ["*", "Al", "Callome"]
+(c7-1 / person
+      :name (c7-0 / name
+                  :op1 "Al"
+                  :op2 "Callome"))
+
+# ::snt shut up you!
+# ::tokens ["shut", "up", "you", "!"]
+# ::lemmas ["shut", "up", "you", "!"]
+(c8-0 / shut-up-06
+      :ARG0 (c8-1 / you
+                  :ARG1-of c8-0)
+      :mode imperative)
+
+# ::snt That's because Islam, and Islam alone, is the religion of peace. (sarcasm)
+# ::tokens ["That", "'s", "because", "Islam", ",", "and", "Islam", "alone", ",", "is", "the", "religion", "of", "peace", ".", "(", "sarcasm", ")"]
+# ::lemmas ["that", "be", "because", "Islam", ",", "and", "Islam", "alone", ",", "be", "the", "religion", "of", "peace", ".", "(", "sarcasm", ")"]
+(c9-5 / cause-01
+      :ARG0 (c9-4 / religion
+                  :mod (c9-3 / peace)
+                  :domain (c9-8 / and
+                                :op1 (c9-1 / religious-group
+                                           :name (c9-2 / name
+                                                       :op1 "Islam")
+                                           :op2-of c9-8)
+                                :mod (c9-0 / alone)))
+      :ARG1 (c9-7 / that)
+      :mod (c9-6 / sarcasm))
+
+# ::snt you saying the crusades did not happen? You claimed no other religion caused mayhem
+# ::tokens ["you", "saying", "the", "crusades", "did", "not", "happen", "?", "You", "claimed", "no", "other", "religion", "caused", "mayhem"]
+# ::lemmas ["you", "say", "the", "crusade", "do", "not", "happen", "?", "you", "claim", "no", "other", "religion", "cause", "mayhem"]
+(c10-1 / multi-sentence
+       :snt1 (c10-10 / say-01
+                     :ARG0 (c10-0 / you)
+                     :ARG1 (c10-3 / event
+                                  :name (c10-4 / name
+                                               :op1 "Crusade")
+                                  :polarity -))
+       :snt2 (c10-7 / claim-01
+                    :ARG0 (c10-9 / you)
+                    :ARG1 (c10-6 / cause-01
+                                 :ARG0 (c10-8 / religion
+                                              :mod (c10-2 / other))
+                                 :ARG1 (c10-5 / mayhem)
+                                 :polarity -)))
+
+# ::snt Theynarentoo,busy in Iraq and Syria.
+# ::tokens ["Theynarentoo", ",", "busy", "in", "Iraq", "and", "Syria", "."]
+# ::lemmas ["theynarentoo", ",", "busy", "in", "Iraq", "and", "Syria", "."]
+(c11-0 / busy
+       :location (c11-5 / and
+                        :op1 (c11-4 / country
+                                    :name (c11-1 / name
+                                                 :op1 "Iraq"))
+                        :op2 (c11-3 / country
+                                    :name (c11-2 / name
+                                                 :op1 "Syria"))))
+
+# ::snt ok.Al capone!
+# ::tokens ["ok", ".", "Al", "capone", "!"]
+# ::lemmas ["ok", ".", "Al", "capone", "!"]
+(c12-1 / multi-sentence
+       :snt1 (c12-0 / okay-04)
+       :snt2 (c12-2 / al-Capone
+                    :mode expressive))
+
+# ::snt lol gotta give you that one
+# ::tokens ["lol", "got", "ta", "give", "you", "that", "one"]
+# ::lemmas ["lol", "got", "to", "give", "you", "that", "one"]
+(c13-3 / obligate-01
+       :ARG2 (c13-5 / give-01
+                    :ARG0 (c13-4 / i)
+                    :ARG1 (c13-1 / one
+                                 :mod (c13-7 / that))
+                    :ARG2 (c13-0 / you))
+       :manner (c13-2 / laugh-01
+                      :ARG0 c13-4
+                      :manner (c13-6 / loud)
+                      :mode expressive))
+
+# ::snt mil+ ppl of those religions arent also marginalised by govt policies or demonised on a daily basis..plus ca change..
+# ::tokens ["mil+", "ppl", "of", "those", "religions", "are", "nt", "also", "marginalised", "by", "govt", "policies", "or", "demonised", "on", "a", "daily", "basis", "..", "plus", "ca", "change", ".."]
+# ::lemmas ["mil+", "ppl", "of", "those", "religion", "be", "nt", "also", "marginalise", "by", "govt", "policy", "or", "demonise", "on", "a", "daily", "basis", "..", "plus", "can", "change", ".."]
+(c14-2 / or
+       :op1 (c14-1 / marginalize-01
+                   :ARG0 (c14-6 / policy-01
+                                :ARG0 (c14-9 / government-organization
+                                             :ARG0-of (c14-7 / govern-01)))
+                   :ARG1 (c14-8 / religion
+                                :quant (c14-10 / more-than
+                                               :op1 (c14-5 / volume-quantity
+                                                           :unit (c14-4 / gallon)
+                                                           :quant 1000000)))
+                   :mod (c14-16 / also)
+                   :polarity -)
+       :op2 (c14-11 / demonize-01
+                    :ARG0 c14-6
+                    :frequency (c14-3 / rate-entity-91
+                                      :ARG3 (c14-14 / temporal-quantity
+                                                    :unit (c14-0 / day)
+                                                    :quant 1))
+                    :polarity -)
+       :op3 (c14-15 / plus
+                    :op1 (c14-12 / change-01
+                                 :ARG1 (c14-13 / cap-02))))
+
+# ::snt lol, the pair of you would struggle, let alone one
+# ::tokens ["lol", ",", "the", "pair", "of", "you", "would", "struggle", ",", "let", "alone", "one"]
+# ::lemmas ["lol", ",", "the", "pair", "of", "you", "would", "struggle", ",", "let", "alone", "one"]
+(c15-5 / struggle-02
+       :ARG0 (c15-3 / pair
+                    :mod (c15-1 / you)
+                    :quant 1)
+       :mod (c15-2 / let-alone)
+       :ARG2-of (c15-4 / laugh-01
+                       :manner (c15-0 / loud)
+                       :mode expressive))
+
+# ::snt no. May those rest in peace. I replied to ur irrelevant point abt jews and christians. Nothing more
+# ::tokens ["no", ".", "May", "those", "rest", "in", "peace", ".", "I", "replied", "to", "ur", "irrelevant", "point", "abt", "jews", "and", "christians", ".", "Nothing", "more"]
+# ::lemmas ["no", ".", "may", "those", "rest", "in", "peace", ".", "i", "reply", "to", "ur", "irrelevant", "point", "abt", "jews", "and", "christian", ".", "nothing", "more"]
+(c16-0 / multi-sentence
+       :snt1 (c16-9 / no)
+       :snt2 (c16-15 / wish-01
+                     :ARG1 (c16-11 / rest-01
+                                   :ARG1 (c16-3 / person
+                                                :mod (c16-19 / that))
+                                   :manner (c16-4 / peace)))
+       :snt3 (c16-1 / reply-01
+                    :ARG0 (c16-16 / i)
+                    :ARG1 (c16-17 / you)
+                    :ARG2 (c16-6 / point-04
+                                 :ARG0 c16-17
+                                 :ARG2 (c16-5 / and
+                                              :op1 (c16-13 / person
+                                                           :mod (c16-8 / religious-group
+                                                                       :name (c16-18 / name
+                                                                                     :op1 "Jew")))
+                                              :op2 (c16-7 / person
+                                                          :mod (c16-14 / religious-group
+                                                                       :name (c16-2 / name
+                                                                                    :op1 "Christianity"))))
+                                 :ARG1-of (c16-12 / relevant-01
+                                                  :polarity -)))
+       :snt4 (c16-10 / more
+                     :polarity -))
+
+# ::snt yeah right, look at the crusades, slavery in America, holocaust. No other religion?
+# ::tokens ["yeah", "right", ",", "look", "at", "the", "crusades", ",", "slavery", "in", "America", ",", "holocaust", ".", "No", "other", "religion", "?"]
+# ::lemmas ["yeah", "right", ",", "look", "at", "the", "crusade", ",", "slavery", "in", "America", ",", "holocaust", ".", "no", "other", "religion", "?"]
+(c18-3 / multi-sentence
+       :snt1 (c18-8 / right-06
+                    :mod (c18-1 / yeah
+                                :mode expressive))
+       :snt2 (c18-2 / look-01
+                    :ARG0 (c18-11 / you)
+                    :ARG1 (c18-13 / and
+                                  :op1 (c18-9 / crusade)
+                                  :op2 (c18-12 / slavery
+                                               :location (c18-10 / country
+                                                                 :name (c18-7 / name
+                                                                              :op1 "America")))
+                                  :op3 (c18-0 / holocaust))
+                    :mode imperative)
+       :snt3 (c18-6 / religion
+                    :mod (c18-4 / other)
+                    :polarity (c18-5 / amr-unknown)
+                    :polarity -))
+
+# ::snt is on her way! I'm too tired
+# ::tokens ["is", "on", "her", "way", "!", "I", "'m", "too", "tired"]
+# ::lemmas ["be", "on", "her", "way", "!", "i", "be", "too", "tired"]
+(c19-2 / multi-sentence
+       :snt1 (c19-3 / be-located-at-91
+                    :ARG1 (c19-6 / she)
+                    :ARG2 (c19-1 / way
+                                 :poss c19-6))
+       :snt2 (c19-7 / tire-01
+                    :ARG1 (c19-4 / i)
+                    :ARG2-of (c19-0 / have-degree-91
+                                    :ARG1 c19-4
+                                    :ARG3 (c19-5 / too))))

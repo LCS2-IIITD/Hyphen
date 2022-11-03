@@ -1,0 +1,82 @@
+# ::snt If Theresa May opts for an early election , will her campaign slogan be : ' Who governs Britain ? '
+# ::tokens ["If", "Theresa", "May", "opts", "for", "an", "early", "election", ",", "will", "her", "campaign", "slogan", "be", ":", "'", "Who", "governs", "Britain", "?", "'"]
+# ::lemmas ["if", "Theresa", "may", "opt", "for", "an", "early", "election", ",", "will", "her", "campaign", "slogan", "be", ":", "'", "who", "govern", "Britain", "?", "'"]
+(c1-0 / slogan
+      :polarity (c1-2 / amr-unknown)
+      :mod (c1-3 / campaign-01
+                 :ARG0 (c1-8 / person
+                             :name (c1-9 / name
+                                         :op1 "Theresa"
+                                         :op2 "May")))
+      :domain (c1-7 / govern-01
+                    :ARG0 (c1-10 / amr-unknown)
+                    :ARG1 (c1-1 / country
+                                :name (c1-6 / name
+                                            :op1 "Britain")))
+      :condition (c1-5 / opt-01
+                       :ARG0 c1-8
+                       :ARG1 (c1-11 / elect-01
+                                    :time (c1-4 / early))))
+
+# ::snt Is she aware that this was ' Grocer ' Heath's slogan in ' I wonder ?
+# ::tokens ["Is", "she", "aware", "that", "this", "was", "'", "Grocer", "'", "Heath", "'s", "slogan", "in", "'", "I", "wonder", "?"]
+# ::lemmas ["be", "she", "aware", "that", "this", "be", "'", "Grocer", "'", "Heath", "'s", "slogan", "in", "'", "i", "wonder", "?"]
+(c2-5 / realize-01
+      :ARG0 (c2-0 / she)
+      :ARG1 (c2-6 / slogan
+                  :poss (c2-7 / person
+                              :name (c2-8 / name
+                                          :op1 "Grocer"
+                                          :op2 "Heath"))
+                  :domain (c2-4 / this)
+                  :topic (c2-3 / wonder-01
+                               :ARG0 (c2-2 / i)))
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt And he failed not once , but twice that year . She doesn't seem to be aware of very much , probably wishes it was again .
+# ::tokens ["And", "he", "failed", "not", "once", ",", "but", "twice", "that", "year", ".", "She", "does", "n't", "seem", "to", "be", "aware", "of", "very", "much", ",", "probably", "wishes", "it", "was", "again", "."]
+# ::lemmas ["and", "he", "fail", "not", "once", ",", "but", "twice", "that", "year", ".", "she", "do", "not", "seem", "to", "be", "aware", "of", "very", "much", ",", "probably", "wish", "it", "be", "again", "."]
+(c3-13 / multi-sentence
+       :snt1 (c3-1 / and
+                   :op2 (c3-2 / fail-01
+                              :ARG1 (c3-6 / he)
+                              :time (c3-14 / year
+                                           :mod (c3-8 / that)
+                                           :quant (c3-5 / temporal-quantity
+                                                        :unit c3-14
+                                                        :quant 1)))
+                   :ARG1-of (c3-12 / instead-of-91
+                                   :ARG2 c3-2
+                                   :ARG1 c3-6
+                                   :frequency 2))
+       :snt2 c3-1
+       :op1 (c3-0 / seem-01
+                  :ARG1 (c3-9 / realize-01
+                              :ARG0 (c3-11 / she)
+                              :ARG1 (c3-3 / much
+                                          :degree (c3-7 / very)))
+                  :polarity -)
+       :op2 (c3-4 / wish-01
+                  :ARG0 c3-11
+                  :ARG1 c3-2
+                  :mod (c3-15 / again)
+                  :mod (c3-10 / probable)))
+
+# ::snt Sadly , suspect that if she is able to call an election in the Spring - a big if - she would likely win it .
+# ::tokens ["Sadly", ",", "suspect", "that", "if", "she", "is", "able", "to", "call", "an", "election", "in", "the", "Spring", "-", "a", "big", "if", "-", "she", "would", "likely", "win", "it", "."]
+# ::lemmas ["sadly", ",", "suspect", "that", "if", "she", "be", "able", "to", "call", "an", "election", "in", "the", "Spring", "-", "a", "big", "if", "-", "she", "would", "likely", "win", "it", "."]
+(c4-0 / suspect-01
+      :ARG0 (c4-10 / i)
+      :ARG1 (c4-6 / likely-01
+                  :ARG1 (c4-3 / win-01
+                              :ARG0 (c4-9 / she)
+                              :ARG2 (c4-12 / elect-01))
+                  :condition (c4-7 / possible-01
+                                   :ARG1 (c4-2 / call-03
+                                               :ARG0 c4-9
+                                               :ARG1 c4-12
+                                               :time (c4-1 / date-entity
+                                                           :season (c4-5 / spring)))
+                                   :mod (c4-8 / big
+                                              :ARG1-of (c4-4 / have-condition-91))))
+      :ARG0-of (c4-11 / sad-02))

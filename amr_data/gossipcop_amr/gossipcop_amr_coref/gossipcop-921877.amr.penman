@@ -1,0 +1,71 @@
+# ::snt Can't make this stuff up.
+# ::tokens ["Ca", "n't", "make", "this", "stuff", "up", "."]
+# ::lemmas ["can", "not", "make", "this", "stuff", "up", "."]
+(c1-2 / possible-01
+      :ARG1 (c1-0 / make-up-10
+                  :ARG1 (c1-3 / stuff
+                              :mod (c1-1 / this)))
+      :polarity -)
+
+# ::snt I was delayed todayplus wasted a swipe and had to pay a cab. I hope she wins and fixes everything,
+# ::tokens ["I", "was", "delayed", "todayplus", "wasted", "a", "swipe", "and", "had", "to", "pay", "a", "cab", ".", "I", "hope", "she", "wins", "and", "fixes", "everything", ","]
+# ::lemmas ["i", "be", "delay", "todayplus", "waste", "a", "swipe", "and", "have", "to", "pay", "a", "cab", ".", "i", "hope", "she", "win", "and", "fix", "everything", ","]
+(c2-3 / multi-sentence
+      :snt1 (c2-6 / and
+                  :op1 (c2-16 / delay-01
+                              :ARG1 (c2-13 / i)
+                              :ARG2 (c2-14 / today))
+                  :op2 (c2-11 / waste-01
+                              :ARG0 c2-13
+                              :ARG1 (c2-4 / swipe))
+                  :op3 (c2-0 / obligate-01
+                             :ARG1 c2-13
+                             :ARG2 (c2-9 / pay-01
+                                         :ARG0 c2-13
+                                         :ARG3 (c2-12 / cab))))
+      :snt2 (c2-8 / hope-01
+                  :ARG0 (c2-5 / i)
+                  :ARG1 (c2-15 / and
+                               :op1 (c2-10 / win-01
+                                           :ARG0 (c2-1 / she))
+                               :op2 (c2-2 / fix-02
+                                          :ARG0 c2-1
+                                          :ARG1 (c2-7 / everything)))))
+
+# ::snt Not irony. Statistical probability.
+# ::tokens ["Not", "irony", ".", "Statistical", "probability", "."]
+# ::lemmas ["not", "irony", ".", "statistical", "probability", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-2 / irony
+                  :polarity -)
+      :snt2 (c3-0 / probability
+                  :mod (c3-3 / statistics)))
+
+# ::snt Point proven
+# ::tokens ["Point", "proven"]
+# ::lemmas ["point", "prove"]
+(c4-0 / prove-01
+      :ARG1 (c4-1 / point-04))
+
+# ::snt That's NYC for you. Every day
+# ::tokens ["That", "'s", "NYC", "for", "you", ".", "Every", "day"]
+# ::lemmas ["that", "be", "NYC", "for", "you", ".", "every", "day"]
+(c5-2 / multi-sentence
+      :snt1 (c5-4 / city
+                  :name (c5-1 / name
+                              :op1 "NYC")
+                  :domain (c5-5 / that)
+                  :prep-for (c5-0 / you))
+      :snt2 (c5-6 / day
+                  :mod (c5-3 / every)))
+
+# ::snt Fill in! I'm done. Boring
+# ::tokens ["Fill", "in", "!", "I", "'m", "done", ".", "Boring"]
+# ::lemmas ["fill", "in", "!", "i", "be", "do", ".", "boring"]
+(c6-3 / multi-sentence
+      :snt1 (c6-0 / fill-in-02
+                  :ARG0 (c6-2 / you)
+                  :mode imperative)
+      :snt2 (c6-1 / be-done-08
+                  :ARG0 (c6-5 / i))
+      :snt3 (c6-4 / boring-02))

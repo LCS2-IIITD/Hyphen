@@ -1,0 +1,790 @@
+# ::snt Fake news No Im not a fan  Just that its not true
+# ::tokens ["Fake", "news", "No", "I", "m", "not", "a", "fan", " ", "Just", "that", "its", "not", "true"]
+# ::lemmas ["fake", "news", "no", "i", "be", "not", "a", "fan", " ", "just", "that", "its", "not", "true"]
+(c1-4 / multi-sentence
+      :snt1 (c1-5 / news
+                  :ARG1-of (c1-3 / fake-02))
+      :snt2 (c1-1 / fan
+                  :domain (c1-6 / i)
+                  :polarity -)
+      :snt3 (c1-2 / true-01
+                  :ARG1 (c1-0 / it)
+                  :mod (c1-7 / just)
+                  :polarity -))
+
+# ::snt Just like big mike
+# ::tokens ["Just", "like", "big", "mike"]
+# ::lemmas ["just", "like", "big", "mike"]
+(c2-3 / resemble-01
+      :ARG2 (c2-1 / person
+                  :name (c2-2 / name
+                              :op1 "Big"
+                              :op2 "Mike"))
+      :mod (c2-0 / just))
+
+# ::snt  8 years living in our White House was not enough HomerWhite
+# ::tokens [" ", "8", "years", "living", "in", "our", "White", "House", "was", "not", "enough", "HomerWhite"]
+# ::lemmas [" ", "8", "year", "live", "in", "our", "White", "House", "be", "not", "enough", "HomerWhite"]
+(c3-5 / say-01
+      :ARG1 (c3-7 / have-quant-91
+                  :ARG1 (c3-6 / live-01
+                              :ARG0 (c3-0 / person
+                                          :name (c3-9 / name
+                                                      :op1 "HomerWhite"))
+                              :location (c3-8 / government-organization
+                                              :name (c3-1 / name
+                                                          :op1 "White"
+                                                          :op2 "House")
+                                              :poss (c3-4 / we))
+                              :duration (c3-3 / temporal-quantity
+                                              :unit (c3-10 / year)
+                                              :quant 8))
+                  :ARG3 (c3-2 / enough
+                              :polarity -))
+      :ARG2 c3-0)
+
+# ::snt This is about as fake as it gets X 2 She was never offered a pension that was a fake story And now its being perpetuated
+# ::tokens ["This", "is", "about", "as", "fake", "as", "it", "gets", "X", "2", "She", "was", "never", "offered", "a", "pension", "that", "was", "a", "fake", "story", "And", "now", "its", "being", "perpetuated"]
+# ::lemmas ["this", "be", "about", "as", "fake", "as", "it", "get", "x", "2", "she", "be", "never", "offer", "a", "pension", "that", "be", "a", "fake", "story", "and", "now", "its", "be", "perpetuate"]
+(c4-12 / multi-sentence
+       :snt1 (c4-11 / have-degree-91
+                    :ARG1 (c4-5 / this)
+                    :ARG2 (c4-9 / fake-02
+                                :ARG1 c4-5)
+                    :ARG3 (c4-3 / equal)
+                    :ARG4 (c4-13 / get-03
+                                 :ARG1 c4-5))
+       :snt2 (c4-7 / and
+                   :op1 (c4-0 / offer-01
+                              :ARG1 (c4-4 / pension
+                                          :ARG1-of (c4-2 / fake-02
+                                                         :ARG1 (c4-10 / story)))
+                              :ARG2 (c4-6 / she)
+                              :time (c4-8 / ever)
+                              :polarity -)
+                   :op2 (c4-1 / perpetuate-01
+                              :ARG1 c4-4
+                              :time (c4-14 / now))))
+
+# ::snt lock her up with hrc Obama Nancy and chuck I am sure we can find a way
+# ::tokens ["lock", "her", "up", "with", "hrc", "Obama", "Nancy", "and", "chuck", "I", "am", "sure", "we", "can", "find", "a", "way"]
+# ::lemmas ["lock", "her", "up", "with", "hrc", "Obama", "Nancy", "and", "chuck", "i", "be", "sure", "we", "can", "find", "a", "way"]
+(c5-2 / cause-01
+      :ARG0 (c5-6 / and
+                  :op1 (c5-9 / lock-up-03
+                             :ARG0 (c5-13 / you)
+                             :ARG1 (c5-8 / she)
+                             :ARG3 (c5-3 / person
+                                         :name (c5-11 / name
+                                                      :op1 "Nancy"))
+                             :mode imperative)
+                  :op2 (c5-10 / chuck-01))
+      :ARG1 (c5-5 / sure-02
+                  :ARG0 (c5-12 / i)
+                  :ARG1 (c5-0 / possible-01
+                              :ARG1 (c5-7 / find-01
+                                          :ARG0 (c5-4 / we)
+                                          :ARG1 (c5-1 / way)))))
+
+# ::snt ALL in the family  RandyBluesman jimEastridge1
+# ::tokens ["ALL", "in", "the", "family", " ", "RandyBluesman", "jimEastridge1"]
+# ::lemmas ["all", "in", "the", "family", " ", "RandyBluesman", "jimEastridge1"]
+(c6-0 / person
+      :name (c6-5 / name
+                  :op1 "RandyBluesman"
+                  :op2 "Eastridge1")
+      :ARG0-of (c6-4 / have-rel-role-91
+                     :ARG1 (c6-2 / family)
+                     :ARG2 (c6-3 / member))
+      :mod (c6-1 / all))
+
+# ::snt 1GoldenBuckeye Its a BS story thats been around for a while now
+# ::tokens ["1GoldenBuckeye", "Its", "a", "BS", "story", "that", "s", "been", "around", "for", "a", "while", "now"]
+# ::lemmas ["1goldenbuckeye", "its", "a", "BS", "story", "that", "s", "be", "around", "for", "a", "while", "now"]
+(c7-5 / say-01
+      :ARG1 (c7-4 / story
+                  :ARG1-of (c7-7 / bullshit-01)
+                  :ARG1-of (c7-0 / circulate-01
+                                 :duration (c7-3 / while)
+                                 :time (c7-6 / now)))
+      :ARG2 (c7-1 / person
+                  :name (c7-2 / name
+                              :op1 "GoldenBuckeye")))
+
+# ::snt By what law is she entitled to 160000 in pension as a caretakerThis is a total corruption of Obama gov they badmouth othrs
+# ::tokens ["By", "what", "law", "is", "she", "entitled", "to", "160000", "in", "pension", "as", "a", "caretakerThis", "is", "a", "total", "corruption", "of", "Obama", "gov", "they", "badmouth", "othrs"]
+# ::lemmas ["by", "what", "law", "be", "she", "entitle", "to", "160000", "in", "pension", "as", "a", "caretakerthis", "be", "a", "total", "corruption", "of", "Obama", "gov", "they", "badmouth", "othrs"]
+(c8-4 / entitle-01
+      :ARG1 (c8-5 / pension
+                  :duration (c8-8 / temporal-quantity
+                                  :unit (c8-17 / year)
+                                  :quant 160000))
+      :ARG2 (c8-11 / she
+                   :ARG0-of (c8-6 / care-03))
+      :ARG1-of (c8-12 / cause-01
+                      :ARG0 (c8-13 / law
+                                   :mod (c8-9 / amr-unknown)))
+      :mod (c8-15 / this)
+      :ARG1-of (c8-1 / corrupt-01
+                     :ARG0 (c8-14 / government-organization
+                                  :ARG0-of (c8-7 / govern-01)
+                                  :mod (c8-2 / person
+                                             :name (c8-16 / name
+                                                          :op1 "Obama"))
+                                  :ARG1-of (c8-0 / badmouth-01
+                                                 :ARG0 (c8-10 / they)))
+                     :degree (c8-3 / total)))
+
+# ::snt FAKE
+# ::tokens ["FAKE"]
+# ::lemmas ["FAKE"]
+(c9-0 / fail-01)
+
+# ::snt sartoris1960 Twitter blocked this
+# ::tokens ["sartoris1960", "Twitter", "blocked", "this"]
+# ::lemmas ["sartoris1960", "Twitter", "block", "this"]
+(c10-4 / block-01
+       :ARG0 (c10-1 / publication
+                    :name (c10-3 / name
+                                 :op1 "Twitter"))
+       :ARG1 (c10-2 / this)
+       :time (c10-0 / date-entity
+                    :year 1960))
+
+# ::snt Its true she is getting a fat check from we the people
+# ::tokens ["Its", "true", "she", "is", "getting", "a", "fat", "check", "from", "we", "the", "people"]
+# ::lemmas ["its", "true", "she", "be", "get", "a", "fat", "check", "from", "we", "the", "people"]
+(c11-2 / true-01
+       :ARG1 (c11-6 / get-01
+                    :ARG0 (c11-5 / she)
+                    :ARG1 (c11-0 / check
+                                 :ARG1-of (c11-4 / fat-03))
+                    :ARG2 (c11-1 / person
+                                 :domain (c11-3 / we))))
+
+# ::snt the whole bunch of them need jail time Any one of us would have the key thrown away makes me sick
+# ::tokens ["the", "whole", "bunch", "of", "them", "need", "jail", "time", "Any", "one", "of", "us", "would", "have", "the", "key", "thrown", "away", "makes", "me", "sick"]
+# ::lemmas ["the", "whole", "bunch", "of", "them", "need", "jail", "time", "any", "one", "of", "us", "would", "have", "the", "key", "thrown", "away", "make", "me", "sick"]
+(c12-10 / need-01
+        :ARG0 (c12-12 / bunch
+                      :mod (c12-6 / whole)
+                      :ARG1-of (c12-11 / include-91
+                                       :ARG2 (c12-5 / they)))
+        :ARG1 (c12-2 / jail-01
+                     :ARG1 c12-12)
+        :ARG0-of (c12-3 / cause-01
+                        :ARG1 (c12-8 / sick-05
+                                     :ARG0 (c12-4 / throw-away-07
+                                                  :ARG1 (c12-9 / key
+                                                               :poss (c12-7 / anyone
+                                                                            :ARG1-of c12-11
+                                                                            :ARG2 (c12-1 / we)))))
+                        :ARG1 (c12-0 / i)))
+
+# ::snt If article not legit it should be We know they are paying her for Babysitting And this kind of bullshit needs to stop
+# ::tokens ["If", "article", "not", "legit", "it", "should", "be", "We", "know", "they", "are", "paying", "her", "for", "Babysitting", "And", "this", "kind", "of", "bullshit", "needs", "to", "stop"]
+# ::lemmas ["if", "article", "not", "legit", "it", "should", "be", "we", "know", "they", "be", "pay", "her", "for", "Babysitting", "and", "this", "kind", "of", "bullshit", "need", "to", "stop"]
+(c13-8 / and
+       :op1 (c13-0 / recommend-01
+                   :ARG1 (c13-10 / know-01
+                                 :ARG0 (c13-6 / we)
+                                 :ARG1 (c13-2 / pay-01
+                                              :ARG0 (c13-5 / they)
+                                              :ARG2 (c13-11 / she)
+                                              :ARG3 (c13-14 / babysit-01
+                                                            :ARG0 c13-11)))
+                   :condition (c13-12 / legit
+                                      :domain (c13-4 / article)
+                                      :polarity -))
+       :op2 (c13-13 / need-01
+                    :ARG1 (c13-7 / stop-01
+                                 :ARG1 (c13-1 / bullshit
+                                              :mod (c13-9 / kind
+                                                          :mod (c13-3 / this))))))
+
+# ::snt Wish it were true but 4 a fact shes into voodoo like Michael
+# ::tokens ["Wish", "it", "were", "true", "but", "4", "a", "fact", "she", "s", "into", "voodoo", "like", "Michael"]
+# ::lemmas ["wish", "it", "be", "true", "but", "4", "a", "fact", "she", "s", "into", "voodoo", "like", "Michael"]
+(c14-2 / contrast-01
+       :ARG1 (c14-5 / wish-01
+                    :ARG0 (c14-11 / i)
+                    :ARG1 (c14-4 / true-01
+                                 :ARG1 (c14-0 / it)))
+       :ARG2 (c14-8 / favor-01
+                    :ARG0 (c14-9 / she)
+                    :ARG1 (c14-6 / voodoo)
+                    :ARG1-of (c14-1 / resemble-01
+                                    :ARG2 (c14-3 / person
+                                                 :name (c14-10 / name
+                                                               :op1 "Michael")))
+                    :degree (c14-7 / as-a-matter-of-fact)))
+
+# ::snt Trumplican1 Well kids grandma is going to be going away for awhile
+# ::tokens ["Trumplican1", "Well", "kids", "grandma", "is", "going", "to", "be", "going", "away", "for", "awhile"]
+# ::lemmas ["trumplican1", "well", "kid", "grandma", "be", "go", "to", "be", "go", "away", "for", "awhile"]
+(c15-5 / say-01
+       :ARG0 (c15-9 / i)
+       :ARG1 (c15-8 / go-02
+                    :ARG0 (c15-0 / person
+                                 :ARG0-of (c15-6 / have-rel-role-91
+                                                 :ARG1 (c15-7 / kid)
+                                                 :ARG2 (c15-1 / grandmother)))
+                    :ARG4 (c15-4 / away)
+                    :duration (c15-2 / awhile)
+                    :mod (c15-3 / well))
+       :ARG2 c15-0
+       :name (c15-10 / name
+                     :op1 "Trumplican1"))
+
+# ::snt Found this on Snopes with your name on it  I dont get it
+# ::tokens ["Found", "this", "on", "Snopes", "with", "your", "name", "on", "it", " ", "I", "do", "nt", "get", "it"]
+# ::lemmas ["find", "this", "on", "Snopes", "with", "your", "name", "on", "it", " ", "i", "do", "not", "get", "it"]
+(c16-4 / and
+       :op1 (c16-5 / find-01
+                   :ARG0 (c16-8 / i)
+                   :ARG1 (c16-3 / this)
+                   :location (c16-0 / publication
+                                    :name (c16-7 / name
+                                                 :op1 "Snopes"))
+                   :manner (c16-9 / be-located-at-91
+                                  :ARG1 (c16-1 / thing
+                                               :ARG2-of (c16-2 / name-01
+                                                               :ARG1 (c16-10 / you)))
+                                  :ARG2 c16-0))
+       :op2 (c16-6 / get-30
+                   :ARG0 c16-8
+                   :ARG1 c16-1
+                   :polarity -))
+
+# ::snt Who in their right mind believes anything from Snopes
+# ::tokens ["Who", "in", "their", "right", "mind", "believes", "anything", "from", "Snopes"]
+# ::lemmas ["who", "in", "their", "right", "mind", "believe", "anything", "from", "Snopes"]
+(c17-6 / believe-01
+       :ARG0 (c17-3 / amr-unknown
+                    :prep-in (c17-4 / mind
+                                    :ARG1-of (c17-0 / right-03)))
+       :ARG1 (c17-2 / anything)
+       :source (c17-1 / publication
+                      :name (c17-5 / name
+                                   :op1 "Snopes")))
+
+# ::snt httpwwwsnopescommarianrobinsonpension …
+# ::tokens ["httpwwwsnopescommarianrobinsonpension", "\u2026"]
+# ::lemmas ["httpwwwsnopescommarianrobinsonpension", "\u2026"]
+(c18-0 / url-entity
+       :value "httpwwwsnopescommarianrobinsonpension")
+
+# ::snt Not sure she did anything but she did sign the papers They set her up a nice pension
+# ::tokens ["Not", "sure", "she", "did", "anything", "but", "she", "did", "sign", "the", "papers", "They", "set", "her", "up", "a", "nice", "pension"]
+# ::lemmas ["not", "sure", "she", "do", "anything", "but", "she", "do", "sign", "the", "paper", "they", "set", "her", "up", "a", "nice", "pension"]
+(c19-2 / contrast-01
+       :ARG1 (c19-8 / sure-02
+                    :ARG0 (c19-10 / i)
+                    :ARG1 (c19-1 / do-02
+                                 :ARG0 (c19-6 / she)
+                                 :ARG1 (c19-7 / anything))
+                    :polarity -)
+       :ARG2 (c19-5 / sign-01
+                    :ARG0 c19-6
+                    :ARG1 (c19-3 / paper))
+       :ARG3 (c19-11 / set-up-03
+                     :ARG0 (c19-4 / they)
+                     :ARG1 (c19-0 / pension
+                                  :ARG1-of (c19-9 / nice-01))
+                     :ARG2 c19-6))
+
+# ::snt wth What did she do
+# ::tokens ["wth", "What", "did", "she", "do"]
+# ::lemmas ["wth", "what", "do", "she", "do"]
+(c20-0 / do-02
+       :ARG0 (c20-2 / she)
+       :ARG1 (c20-1 / amr-unknown))
+
+# ::snt OMG Lol
+# ::tokens ["OMG", "Lol"]
+# ::lemmas ["OMG", "Lol"]
+(c21-1 / oh-my-god
+       :ARG2-of (c21-2 / laugh-01
+                       :manner (c21-0 / loud))
+       :mode expressive)
+
+# ::snt Is this real I pray so
+# ::tokens ["Is", "this", "real", "I", "pray", "so"]
+# ::lemmas ["be", "this", "real", "i", "pray", "so"]
+(c22-0 / pray-01
+       :ARG0 (c22-1 / i)
+       :ARG1 (c22-2 / real-04
+                    :ARG1 (c22-3 / this)))
+
+# ::snt judebax actually this isnt true Seriously people Google is a thing
+# ::tokens ["judebax", "actually", "this", "is", "nt", "true", "Seriously", "people", "Google", "is", "a", "thing"]
+# ::lemmas ["judebax", "actually", "this", "be", "not", "true", "Seriously", "people", "Google", "be", "a", "thing"]
+(c23-5 / say-01
+       :ARG0 (c23-7 / i)
+       :ARG1 (c23-1 / true-01
+                    :ARG1 (c23-8 / this)
+                    :ARG1-of (c23-3 / actual-02)
+                    :polarity -)
+       :ARG2 (c23-0 / person
+                    :ARG0-of (c23-6 / google-01
+                                    :ARG1 (c23-4 / thing)))
+       :ARG2-of (c23-2 / serious-01))
+
+# ::snt whoopsThats small potatoes now we need to know everything about Obama and Michelle open those sealed records
+# ::tokens ["whoopsThats", "small", "potatoes", "now", "we", "need", "to", "know", "everything", "about", "Obama", "and", "Michelle", "open", "those", "sealed", "records"]
+# ::lemmas ["whoopsthats", "small", "potato", "now", "we", "need", "to", "know", "everything", "about", "Obama", "and", "Michelle", "open", "those", "seal", "record"]
+(c24-15 / multi-sentence
+        :snt1 (c24-11 / whoops
+                      :mode expressive)
+        :snt2 (c24-7 / potato
+                     :mod (c24-14 / small)
+                     :domain (c24-10 / that)
+                     :time (c24-17 / now))
+        :snt3 (c24-8 / need-01
+                     :ARG0 (c24-4 / we)
+                     :ARG1 (c24-16 / know-01
+                                   :ARG0 c24-4
+                                   :ARG1 (c24-9 / everything
+                                                :topic (c24-13 / and
+                                                               :op1 (c24-2 / person
+                                                                           :name (c24-5 / name
+                                                                                        :op1 "Obama"))
+                                                               :op2 (c24-1 / person
+                                                                           :name (c24-6 / name
+                                                                                        :op1 "Michelle")))))
+                     :time (c24-0 / open-01
+                                  :ARG0 c24-4
+                                  :ARG1 (c24-3 / record
+                                               :ARG1-of (c24-12 / seal-01)
+                                               :mod c24-10))))
+
+# ::snt pal29b Eventually some of this shit is going to stick and the whole gang will be fitted for matching orange jumpsuits
+# ::tokens ["pal29b", "Eventually", "some", "of", "this", "shit", "is", "going", "to", "stick", "and", "the", "whole", "gang", "will", "be", "fitted", "for", "matching", "orange", "jumpsuits"]
+# ::lemmas ["pal29b", "eventually", "some", "of", "this", "shit", "be", "go", "to", "stick", "and", "the", "whole", "gang", "will", "be", "fit", "for", "match", "orange", "jumpsuit"]
+(c25-1 / post-scriptum
+       :domain (c25-6 / and
+                      :op1 (c25-9 / stick-01
+                                  :ARG1 (c25-5 / shit
+                                               :mod (c25-3 / this)
+                                               :quant (c25-4 / some)))
+                      :op2 (c25-8 / fit-01
+                                  :ARG1 (c25-11 / gang
+                                                :mod (c25-7 / whole))
+                                  :ARG2 (c25-12 / jumpsuit
+                                                :ARG1-of (c25-10 / match-01
+                                                                 :ARG2 (c25-0 / orange))))
+                      :time (c25-2 / eventual)))
+
+# ::snt AlaskaGuy01 Few days after Obama Bc president went 2Hawaii no family whim burn papers out on beach leftweek later granydies
+# ::tokens ["AlaskaGuy01", "Few", "days", "after", "Obama", "Bc", "president", "went", "2Hawaii", "no", "family", "whim", "burn", "papers", "out", "on", "beach", "leftweek", "later", "granydies"]
+# ::lemmas ["alaskaguy01", "Few", "days", "after", "Obama", "Bc", "president", "go", "2Hawaii", "no", "family", "whim", "burn", "paper", "out", "on", "beach", "leftweek", "later", "granydie"]
+(c26-24 / say-01
+        :ARG0 (c26-6 / i)
+        :ARG1 (c26-22 / and
+                      :op1 (c26-13 / after
+                                   :op1 (c26-5 / go-02
+                                               :ARG0 (c26-3 / person
+                                                            :name (c26-25 / name
+                                                                          :op1 "Obama")
+                                                            :ARG0-of (c26-11 / have-org-role-91
+                                                                             :ARG1 (c26-0 / organization
+                                                                                          :name (c26-10 / name
+                                                                                                        :op1 "Bc"))
+                                                                             :ARG2 (c26-9 / president)))
+                                               :quant (c26-23 / few
+                                                              :op1 (c26-14 / temporal-quantity
+                                                                           :unit (c26-21 / day)
+                                                                           :quant 1)))
+                                   :op2 (c26-18 / after
+                                                :op1 c26-5
+                                                :quant c26-23)))
+        :op2 (c26-20 / out-06
+                     :ARG1 (c26-19 / paper
+                                   :mod (c26-4 / whim
+                                               :polarity -)
+                                   :mod (c26-1 / family))
+                     :location (c26-17 / beach)
+                     :time (c26-7 / after
+                                  :op1 c26-5
+                                  :quant (c26-15 / multiple
+                                                 :op1 (c26-8 / temporal-quantity
+                                                             :unit (c26-12 / week)
+                                                             :quant 1))))
+        :ARG2 (c26-16 / person
+                      :name (c26-2 / name
+                                   :op1 "AlaskaGuy01")))
+
+# ::snt Not true  search it
+# ::tokens ["Not", "true", " ", "search", "it"]
+# ::lemmas ["not", "true", " ", "search", "it"]
+(c27-2 / multi-sentence
+       :snt1 (c27-0 / true-01
+                    :polarity -)
+       :snt2 (c27-1 / search-01
+                    :ARG0 (c27-4 / you)
+                    :ARG1 (c27-3 / it)
+                    :mode imperative))
+
+# ::snt Obamas mother in law charged with larceny fraud foe all money paid thru the fake pension160000 a year for watching grand kids
+# ::tokens ["Obamas", "mother", "in", "law", "charged", "with", "larceny", "fraud", "foe", "all", "money", "paid", "thru", "the", "fake", "pension160000", "a", "year", "for", "watching", "grand", "kids"]
+# ::lemmas ["Obamas", "mother", "in", "law", "charge", "with", "larceny", "fraud", "foe", "all", "money", "pay", "thru", "the", "fake", "pension160000", "a", "year", "for", "watch", "grand", "kid"]
+(c28-5 / charge-05
+       :ARG1 (c28-6 / person
+                    :ARG0-of (c28-13 / have-rel-role-91
+                                     :ARG1 (c28-1 / person
+                                                  :name (c28-17 / name
+                                                                :op1 "Obama"))
+                                     :ARG2 (c28-14 / mother-in-law)))
+       :ARG2 (c28-4 / defraud-01
+                    :ARG0 c28-6
+                    :ARG1 (c28-15 / larceny))
+       :ARG0-of (c28-12 / cause-01
+                        :ARG1 (c28-3 / money
+                                     :mod (c28-9 / all)
+                                     :ARG1-of (c28-0 / pay-01
+                                                     :ARG3 (c28-8 / watch-01
+                                                                  :ARG0 c28-6
+                                                                  :ARG1 (c28-16 / kid
+                                                                                :mod (c28-18 / grand)))
+                                                     :frequency (c28-2 / rate-entity-91
+                                                                       :ARG1 (c28-7 / temporal-quantity
+                                                                                    :unit (c28-19 / year)
+                                                                                    :quant 1)
+                                                                       :ARG2 (c28-10 / pension
+                                                                                     :ARG1-of (c28-11 / fake-02)))))))
+
+# ::snt She gamed the system and thought the gravy train would continue
+# ::tokens ["She", "gamed", "the", "system", "and", "thought", "the", "gravy", "train", "would", "continue"]
+# ::lemmas ["she", "game", "the", "system", "and", "think", "the", "gravy", "train", "would", "continue"]
+(c29-4 / and
+       :op1 (c29-6 / gamed-02
+                   :ARG0 (c29-5 / she)
+                   :ARG1 (c29-3 / system))
+       :op2 (c29-2 / think-01
+                   :ARG0 c29-5
+                   :ARG1 (c29-0 / continue-01
+                                :ARG1 (c29-7 / train
+                                             :mod (c29-1 / gravy)))))
+
+# ::snt hope this is true
+# ::tokens ["hope", "this", "is", "true"]
+# ::lemmas ["hope", "this", "be", "true"]
+(c30-3 / hope-01
+       :ARG0 (c30-0 / i)
+       :ARG1 (c30-2 / true-01
+                    :ARG1 (c30-1 / this)))
+
+# ::snt shit keeps hitting the fan in ObamaLaLaLand
+# ::tokens ["shit", "keeps", "hitting", "the", "fan", "in", "ObamaLaLaLand"]
+# ::lemmas ["shit", "keep", "hit", "the", "fan", "in", "ObamaLaLaLand"]
+(c31-3 / keep-02
+       :ARG1 (c31-4 / hit-01
+                    :ARG0 (c31-2 / shit)
+                    :ARG1 (c31-1 / fan)
+                    :location (c31-0 / city
+                                     :name (c31-5 / name
+                                                  :op1 "ObamaLaLaLand"))))
+
+# ::snt TrumpLaney As if she needed more money
+# ::tokens ["TrumpLaney", "As", "if", "she", "needed", "more", "money"]
+# ::lemmas ["TrumpLaney", "as", "if", "she", "need", "more", "money"]
+(c32-1 / person
+       :name (c32-4 / name
+                    :op1 "TrumpLaney")
+       :manner (c32-2 / need-01
+                      :ARG1 (c32-3 / money
+                                   :mod (c32-0 / more))
+                      :ARG0 c32-1))
+
+# ::snt that is fake news story
+# ::tokens ["that", "is", "fake", "news", "story"]
+# ::lemmas ["that", "be", "fake", "news", "story"]
+(c33-3 / story
+       :domain (c33-2 / that)
+       :topic (c33-0 / news
+                     :ARG1-of (c33-1 / fake-02)))
+
+# ::snt gynarchyrules Prison time for her if a liberal judge doesnt pardon her Probably Take her pension 165000
+# ::tokens ["gynarchyrules", "Prison", "time", "for", "her", "if", "a", "liberal", "judge", "does", "nt", "pardon", "her", "Probably", "Take", "her", "pension", "165000"]
+# ::lemmas ["gynarchyrules", "Prison", "time", "for", "her", "if", "a", "liberal", "judge", "do", "not", "pardon", "her", "probably", "take", "her", "pension", "165000"]
+(c34-5 / have-condition-91
+       :ARG1 (c34-4 / take-01
+                    :ARG0 (c34-3 / person
+                                 :name (c34-8 / name
+                                              :op1 "gynarchyrules"))
+                    :ARG1 (c34-1 / pension
+                                 :poss c34-3
+                                 :value 165000)
+                    :mod (c34-0 / probable))
+       :ARG2 (c34-7 / pardon-01
+                    :ARG0 (c34-2 / person
+                                 :ARG0-of (c34-9 / judge-01)
+                                 :ARG1-of (c34-6 / liberal-02))
+                    :ARG1 c34-3
+                    :polarity -))
+
+# ::snt Make her pay
+# ::tokens ["Make", "her", "pay"]
+# ::lemmas ["make", "her", "pay"]
+(c35-3 / make-02
+       :ARG0 (c35-0 / you)
+       :ARG1 (c35-1 / pay-01
+                    :ARG0 (c35-2 / she))
+       :mode imperative)
+
+# ::snt jamesbott007 is this true
+# ::tokens ["jamesbott007", "is", "this", "true"]
+# ::lemmas ["jamesbott007", "be", "this", "true"]
+(c36-1 / true-01
+       :ARG1 (c36-5 / this)
+       :ARG1-of (c36-2 / say-01
+                       :ARG0 (c36-4 / i)
+                       :ARG2 (c36-0 / person
+                                    :name (c36-3 / name
+                                                 :op1 "Jamesbott007"))))
+
+# ::snt Such an upstanding family
+# ::tokens ["Such", "an", "upstanding", "family"]
+# ::lemmas ["such", "an", "upstanding", "family"]
+(c37-1 / family
+       :mod (c37-0 / upstanding
+                   :degree (c37-2 / such)))
+
+# ::snt What a surprise  A black muslime thief
+# ::tokens ["What", "a", "surprise", " ", "A", "black", "muslime", "thief"]
+# ::lemmas ["what", "a", "surprise", " ", "a", "black", "muslime", "thief"]
+(c38-3 / surprise-01
+       :ARG0 (c38-0 / person
+                    :ARG0-of (c38-2 / steal-01)
+                    :mod (c38-4 / muslime)
+                    :ARG1-of (c38-5 / black-05))
+       :degree (c38-1 / so))
+
+# ::snt LOCK HER UP  and Michelle and Barry too
+# ::tokens ["LOCK", "HER", "UP", " ", "and", "Michelle", "and", "Barry", "too"]
+# ::lemmas ["lock", "her", "up", " ", "and", "Michelle", "and", "Barry", "too"]
+(c39-5 / and
+       :op1 (c39-7 / lock-up-03
+                   :ARG0 (c39-9 / you)
+                   :ARG1 (c39-6 / she)
+                   :mode imperative)
+       :op2 (c39-3 / and
+                   :op1 (c39-1 / person
+                               :name (c39-8 / name
+                                            :op1 "Michelle"))
+                   :op2 (c39-0 / person
+                               :name (c39-2 / name
+                                            :op1 "Barry"))
+                   :mod (c39-4 / too)))
+
+# ::snt POTUS lock her up Bet it never happens She probably gets to keep the money too
+# ::tokens ["POTUS", "lock", "her", "up", "Bet", "it", "never", "happens", "She", "probably", "gets", "to", "keep", "the", "money", "too"]
+# ::lemmas ["potu", "lock", "her", "up", "Bet", "it", "never", "happen", "she", "probably", "get", "to", "keep", "the", "money", "too"]
+(c40-12 / multi-sentence
+        :snt1 (c40-10 / lock-up-03
+                      :ARG0 (c40-3 / person
+                                   :ARG0-of (c40-11 / have-org-role-91
+                                                    :ARG1 (c40-4 / country
+                                                                 :name (c40-14 / name
+                                                                               :op1 "United"
+                                                                               :op2 "States"))
+                                                    :ARG2 (c40-1 / president)))
+                      :ARG1 (c40-9 / she)
+                      :ARG1-of (c40-16 / bet-01
+                                       :ARG0 (c40-15 / i)
+                                       :ARG2 (c40-5 / event
+                                                    :time (c40-8 / ever)
+                                                    :polarity -)))
+        :snt2 (c40-13 / get-22
+                      :ARG0 (c40-7 / she)
+                      :ARG1 (c40-17 / keep-01
+                                    :ARG0 c40-7
+                                    :ARG1 (c40-2 / money)
+                                    :mod (c40-6 / too))
+                      :mod (c40-0 / probable)))
+
+# ::snt needs to be deported
+# ::tokens ["needs", "to", "be", "deported"]
+# ::lemmas ["need", "to", "be", "deport"]
+(c41-1 / need-01
+       :ARG1 (c41-0 / deport-01
+                    :ARG1 (c41-2 / you)))
+
+# ::snt Havent confirmed but seems this is Fake news posted as a trap
+# ::tokens ["Have", "nt", "confirmed", "but", "seems", "this", "is", "Fake", "news", "posted", "as", "a", "trap"]
+# ::lemmas ["have", "not", "confirm", "but", "seem", "this", "be", "fake", "news", "post", "as", "a", "trap"]
+(c42-1 / contrast-01
+       :ARG1 (c42-7 / confirm-01
+                    :ARG0 (c42-2 / person
+                                 :name (c42-8 / name
+                                              :op1 "Havent")))
+       :ARG2 (c42-6 / seem-01
+                    :ARG1 (c42-3 / news
+                                 :ARG1-of (c42-5 / fake-02)
+                                 :ARG1-of (c42-0 / post-01
+                                                 :ARG2 (c42-4 / trap-01))
+                                 :domain (c42-9 / this))))
+
+# ::snt Guess no amnesty for her now just another crooked family member
+# ::tokens ["Guess", "no", "amnesty", "for", "her", "now", "just", "another", "crooked", "family", "member"]
+# ::lemmas ["guess", "no", "amnesty", "for", "her", "now", "just", "another", "crooked", "family", "member"]
+(c43-9 / guess-01
+       :ARG1 (c43-2 / amnesty
+                    :beneficiary (c43-4 / she)
+                    :time (c43-6 / now)
+                    :polarity -)
+       :ARG1-of (c43-0 / cause-01
+                       :ARG0 (c43-5 / have-org-role-91
+                                    :ARG0 c43-4
+                                    :ARG1 (c43-3 / family)
+                                    :ARG2 (c43-7 / member
+                                                 :ARG1-of (c43-8 / crooked-02))
+                                    :mod (c43-1 / another)
+                                    :mod (c43-10 / just)
+                                    :time c43-6)))
+
+# ::snt And that my Friend shows You the Moral values of the US political System we need to Drain the DC Swamp
+# ::tokens ["And", "that", "my", "Friend", "shows", "You", "the", "Moral", "values", "of", "the", "US", "political", "System", "we", "need", "to", "Drain", "the", "DC", "Swamp"]
+# ::lemmas ["and", "that", "my", "friend", "show", "you", "the", "moral", "value", "of", "the", "US", "political", "System", "we", "need", "to", "drain", "the", "DC", "swamp"]
+(c44-8 / and
+       :op2 (c44-12 / show-01
+                    :ARG0 (c44-3 / person
+                                 :ARG0-of (c44-13 / have-rel-role-91
+                                                  :ARG1 (c44-16 / i)
+                                                  :ARG2 (c44-11 / friend)))
+                    :ARG1 (c44-6 / value
+                                 :mod (c44-14 / moral)
+                                 :poss (c44-7 / system
+                                              :mod (c44-0 / politics)
+                                              :mod (c44-4 / country
+                                                          :name (c44-15 / name
+                                                                        :op1 "US")))
+                                 :ARG1-of (c44-5 / need-01
+                                                 :ARG0 (c44-9 / we)
+                                                 :ARG1 (c44-2 / drain-01
+                                                              :ARG0 c44-9
+                                                              :ARG1 (c44-10 / swamp
+                                                                            :name (c44-1 / name
+                                                                                         :op1 "DC"
+                                                                                         :op2 "Swamp")))))
+                    :ARG2 (c44-17 / you)))
+
+# ::snt TYPICAL CHICAGO WELFARE BITCHESDISGUSTING
+# ::tokens ["TYPICAL", "CHICAGO", "WELFARE", "BITCHESDISGUSTING"]
+# ::lemmas ["TYPICAL", "CHICAGO", "welfare", "bitchesdisgusting"]
+(c45-0 / dish
+       :ARG0-of (c45-6 / bust-01)
+       :mod (c45-4 / healthy)
+       :mod (c45-1 / crisis
+                   :mod (c45-3 / chemical))
+       :domain (c45-2 / person
+                      :name (c45-5 / name
+                                   :op1 "CICAGO")))
+
+# ::snt With all that is going on in our Country this is your concerncome on my friend  Oh wait this must be a distraction
+# ::tokens ["With", "all", "that", "is", "going", "on", "in", "our", "Country", "this", "is", "your", "concerncome", "on", "my", "friend", " ", "Oh", "wait", "this", "must", "be", "a", "distraction"]
+# ::lemmas ["with", "all", "that", "be", "go", "on", "in", "our", "country", "this", "be", "your", "concerncome", "on", "my", "friend", " ", "oh", "wait", "this", "must", "be", "a", "distraction"]
+(c46-14 / multi-sentence
+        :snt1 (c46-7 / concern-01
+                     :ARG0 (c46-13 / this)
+                     :ARG1 (c46-20 / you)
+                     :ARG1-of (c46-18 / cause-01
+                                      :ARG0 (c46-5 / that
+                                                   :mod (c46-16 / all)
+                                                   :location (c46-1 / country
+                                                                    :poss (c46-3 / we)))))
+        :snt2 (c46-19 / say-01
+                      :ARG0 (c46-4 / i)
+                      :ARG1 (c46-9 / come-on-25
+                                   :ARG1 (c46-2 / person
+                                                :ARG0-of (c46-10 / have-rel-role-91
+                                                                 :ARG1 c46-4
+                                                                 :ARG2 (c46-17 / friend))
+                                                :ARG2-of c46-19)
+                                   :mode imperative))
+        :snt3 (c46-12 / wait-01
+                      :ARG1 (c46-6 / you)
+                      :ARG2 (c46-11 / infer-01
+                                    :ARG1 (c46-15 / distract-01
+                                                  :ARG0 (c46-8 / this)))
+                      :mod (c46-0 / oh)
+                      :mode imperative))
+
+# ::snt cheating and thievery won’t go unpunished
+# ::tokens ["cheating", "and", "thievery", "wo", "n\u2019t", "go", "unpunished"]
+# ::lemmas ["cheating", "and", "thievery", "will", "not", "go", "unpunished"]
+(c47-1 / punish-01
+       :ARG3 (c47-0 / and
+                    :op1 (c47-2 / cheat-01)
+                    :op2 (c47-3 / thieve-01))
+       :polarity -)
+
+# ::snt  but now that there’s an honest man in the White House hiring honest people to run government departments blatant lying
+# ::tokens [" ", "but", "now", "that", "there", "\u2019s", "an", "honest", "man", "in", "the", "White", "House", "hiring", "honest", "people", "to", "run", "government", "departments", "blatant", "lying"]
+# ::lemmas [" ", "but", "now", "that", "there", "\u2019", "an", "honest", "man", "in", "the", "White", "House", "hire", "honest", "people", "to", "run", "government", "department", "blatant", "lie"]
+(c48-3 / contrast-01
+       :ARG2 (c48-10 / hire-01
+                     :ARG0 (c48-9 / man
+                                  :ARG1-of (c48-5 / honest-01)
+                                  :location (c48-12 / government-organization
+                                                    :name (c48-14 / name
+                                                                  :op1 "White"
+                                                                  :op2 "House")))
+                     :ARG1 (c48-4 / person
+                                  :ARG0-of (c48-6 / honest-01))
+                     :ARG2 (c48-0 / run-01
+                                  :ARG0 c48-4
+                                  :ARG1 (c48-2 / department
+                                               :part-of (c48-7 / government-organization
+                                                               :ARG0-of (c48-1 / govern-01))))
+                     :ARG1-of (c48-11 / lie-08
+                                      :mod (c48-13 / blatant))
+                     :time (c48-8 / now)))
+
+# ::snt That may have been all well and good had Hillary Clinton won the election which is surely what the Obamas expected to happen
+# ::tokens ["That", "may", "have", "been", "all", "well", "and", "good", "had", "Hillary", "Clinton", "won", "the", "election", "which", "is", "surely", "what", "the", "Obamas", "expected", "to", "happen"]
+# ::lemmas ["that", "may", "have", "be", "all", "well", "and", "good", "have", "Hillary", "Clinton", "win", "the", "election", "which", "be", "surely", "what", "the", "Obamas", "expect", "to", "happen"]
+(c49-3 / possible-01
+       :ARG1 (c49-8 / and
+                    :op1 (c49-7 / well-09)
+                    :op2 (c49-12 / good-02)
+                    :domain (c49-6 / that)
+                    :condition (c49-2 / win-01
+                                      :ARG0 (c49-1 / person
+                                                   :name (c49-11 / name
+                                                                 :op1 "Hillary"
+                                                                 :op2 "Clinton"))
+                                      :ARG2 (c49-4 / elect-01)
+                                      :ARG1-of (c49-9 / expect-01
+                                                      :ARG0 (c49-0 / person
+                                                                   :name (c49-5 / name
+                                                                                :op1 "Obama"))
+                                                      :ARG1-of (c49-10 / sure-02)))))
+
+# ::snt BarackObama Hey WORST PRESIDENT EVER OBAMA whats the word Im looking for oh yea SWINDLERS Pay the money back THIEF
+# ::tokens ["BarackObama", "Hey", "WORST", "PRESIDENT", "EVER", "OBAMA", "what", "s", "the", "word", "I", "m", "looking", "for", "oh", "yea", "SWINDLERS", "Pay", "the", "money", "back", "THIEF"]
+# ::lemmas ["BarackObama", "Hey", "WORST", "PRESIDENT", "EVER", "obama", "what", "s", "the", "word", "i", "be", "look", "for", "oh", "yea", "swindler", "pay", "the", "money", "back", "thief"]
+(c50-14 / multi-sentence
+        :snt1 (c50-6 / person
+                     :name (c50-17 / name
+                                   :op1 "Barack"
+                                   :op2 "Obama")
+                     :ARG0-of (c50-13 / have-org-role-91
+                                      :ARG2 (c50-1 / president
+                                                   :ARG1-of (c50-8 / have-degree-91
+                                                                   :ARG2 (c50-19 / bad-02
+                                                                                 :ARG1 c50-1)
+                                                                   :ARG3 (c50-4 / most)
+                                                                   :ARG5 (c50-0 / person
+                                                                                :time (c50-7 / ever)))))
+                     :mod (c50-9 / hey
+                                 :mode expressive))
+        :snt2 (c50-15 / look-01
+                      :ARG0 (c50-18 / i)
+                      :ARG1 (c50-10 / word
+                                    :ARG1-of (c50-12 / mean-01
+                                                     :ARG2 (c50-11 / pay-01
+                                                                   :ARG0 (c50-5 / person
+                                                                                :ARG0-of (c50-2 / rumor-01))
+                                                                   :ARG3 (c50-16 / money)
+                                                                   :mod (c50-3 / back))))))

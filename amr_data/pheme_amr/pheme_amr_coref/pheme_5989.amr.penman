@@ -1,0 +1,39 @@
+# ::snt this quote was the first thing I thought when I heard about . Dr King would be proud of us today.
+# ::tokens ["this", "quote", "was", "the", "first", "thing", "I", "thought", "when", "I", "heard", "about", ".", "Dr", "King", "would", "be", "proud", "of", "us", "today", "."]
+# ::lemmas ["this", "quote", "be", "the", "first", "thing", "i", "think", "when", "i", "hear", "about", ".", "Dr", "King", "would", "be", "proud", "of", "we", "today", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-11 / think-01
+                   :ARG0 (c1-6 / i)
+                   :ARG1 (c1-10 / thing
+                                :ord (c1-3 / ordinal-entity
+                                           :value 1)
+                                :domain (c1-4 / quote-01
+                                              :mod (c1-8 / this)))
+                   :time (c1-0 / hear-01
+                               :ARG0 c1-6
+                               :ARG1 c1-10))
+      :snt2 (c1-9 / pride-01
+                  :ARG0 (c1-12 / person
+                               :name (c1-7 / name
+                                           :op1 "Dr"
+                                           :op2 "King"))
+                  :ARG1 (c1-1 / we)
+                  :time (c1-5 / today)))
+
+# ::snt we agree. It's important to remember this today and everyday. Make a lifelong pledge!
+# ::tokens ["we", "agree", ".", "It", "'s", "important", "to", "remember", "this", "today", "and", "everyday", ".", "Make", "a", "lifelong", "pledge", "!"]
+# ::lemmas ["we", "agree", ".", "it", "be", "important", "to", "remember", "this", "today", "and", "everyday", ".", "make", "a", "lifelong", "pledge", "!"]
+(c2-3 / multi-sentence
+      :snt1 (c2-11 / agree-01
+                   :ARG0 (c2-0 / we))
+      :snt2 (c2-6 / important-01
+                  :ARG1 (c2-8 / remember-01
+                              :ARG1 (c2-10 / this)
+                              :time (c2-5 / and
+                                          :op1 (c2-9 / today)
+                                          :op2 (c2-4 / everyday))))
+      :snt3 (c2-7 / pledge-01
+                  :ARG0 (c2-1 / you)
+                  :duration (c2-2 / live-01
+                                  :ARG0 c2-1)
+                  :mode imperative))

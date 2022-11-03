@@ -1,0 +1,63 @@
+# ::snt Poor Valerie!
+# ::tokens ["Poor", "Valerie", "!"]
+# ::lemmas ["Poor", "Valerie", "!"]
+(c1-1 / person
+      :name (c1-0 / name
+                  :op1 "Valerie")
+      :mod (c1-2 / poor))
+
+# ::snt That show is a runaway train wreck.
+# ::tokens ["That", "show", "is", "a", "runaway", "train", "wreck", "."]
+# ::lemmas ["that", "show", "be", "a", "runaway", "train", "wreck", "."]
+(c2-2 / wreck-01
+      :ARG0 (c2-3 / train)
+      :ARG1 (c2-0 / show-04
+                  :mod (c2-4 / that))
+      :ARG0-of (c2-1 / runaway-01))
+
+# ::snt Qu te parece la Nueva Red Social Catlica estilo Facebook? Google Play
+# ::tokens ["Qu", "te", "parece", "la", "Nueva", "Red", "Social", "Catlica", "estilo", "Facebook", "?", "Google", "Play"]
+# ::lemmas ["Qu", "te", "parece", "la", "Nueva", "Red", "Social", "Catlica", "estilo", "Facebook", "?", "Google", "play"]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / parece-00
+                  :ARG1 (c3-9 / amr-unknown)
+                  :ARG2 (c3-2 / publication
+                              :name (c3-0 / name
+                                          :op1 "Nueva"
+                                          :op2 "Red"
+                                          :op3 "Social"
+                                          :op4 "Catlica")
+                              :ARG1-of (c3-3 / estilo-00
+                                             :ARG2 (c3-10 / publication
+                                                          :name (c3-4 / name
+                                                                      :op1 "Facebook"))))
+                  :polarity (c3-8 / amr-unknown))
+      :snt2 (c3-7 / company
+                  :name (c3-6 / name
+                              :op1 "Google"
+                              :op2 "Play")))
+
+# ::snt :Sabas que ya existe una App Gratis SpotiCatlico para Escuchar Msica Catlica? Ya est en Google Play:
+# ::tokens [":", "Sabas", "que", "ya", "existe", "una", "App", "Gratis", "SpotiCatlico", "para", "Escuchar", "Msica", "Catlica", "?", "Ya", "est", "en", "Google", "Play", ":"]
+# ::lemmas [":", "Sabas", "que", "ya", "existe", "una", "App", "Gratis", "SpotiCatlico", "para", "Escuchar", "Msica", "Catlica", "?", "ya", "est", "en", "Google", "play", ":"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / sabas-01
+                  :ARG1 (c4-4 / exist-01
+                              :ARG1 (c4-0 / you)
+                              :ARG2 (c4-10 / app
+                                           :name (c4-2 / name
+                                                       :op1 "App"
+                                                       :op2 "Gratis"
+                                                       :op3 "SpotiCatlico")
+                                           :ARG1-of (c4-5 / mean-01
+                                                          :ARG2 (c4-9 / app
+                                                                      :name (c4-6 / name
+                                                                                  :op1 "Escuchar"
+                                                                                  :op2 "Msica"
+                                                                                  :op3 "Catlica"))))))
+      :snt2 (c4-12 / est-01
+                   :ARG1 (c4-11 / you)
+                   :ARG2 (c4-8 / company
+                               :name (c4-7 / name
+                                           :op1 "Google"
+                                           :op2 "Play"))))

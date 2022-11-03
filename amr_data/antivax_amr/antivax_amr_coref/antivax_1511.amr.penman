@@ -1,0 +1,60 @@
+# ::snt This makes me so happy!!
+# ::tokens ["This", "makes", "me", "so", "happy", "!", "!"]
+# ::lemmas ["this", "make", "i", "so", "happy", "!", "!"]
+(c1-4 / make-02
+      :ARG0 (c1-2 / this)
+      :ARG1 (c1-1 / happy-01
+                  :ARG1 (c1-3 / i)
+                  :degree (c1-0 / so))
+      :mode expressive)
+
+# ::snt You shut up! All jabbed and on the way to developing immunity!
+# ::tokens ["You", "shut", "up", "!", "All", "jabbed", "and", "on", "the", "way", "to", "developing", "immunity", "!"]
+# ::lemmas ["you", "shut", "up", "!", "all", "jabbed", "and", "on", "the", "way", "to", "develop", "immunity", "!"]
+(c2-6 / multi-sentence
+      :snt1 (c2-0 / shut-up-06
+                  :ARG0 (c2-7 / you
+                              :ARG1-of c2-0)
+                  :mode imperative)
+      :snt2 (c2-2 / and
+                  :op1 (c2-4 / jab-01
+                             :ARG1 (c2-8 / you
+                                         :mod (c2-3 / all)))
+                  :op2 (c2-1 / develop-02
+                             :ARG1 (c2-5 / immune-02
+                                         :ARG1 c2-8)
+                             :ARG2 c2-8)))
+
+# ::snt Omg shut up! One step closer to normality!!!
+# ::tokens ["Omg", "shut", "up", "!", "One", "step", "closer", "to", "normality", "!", "!", "!"]
+# ::lemmas ["Omg", "shut", "up", "!", "One", "step", "close", "to", "normality", "!", "!", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-0 / shut-up-06
+                  :ARG0 (c3-8 / you
+                              :ARG1-of c3-0)
+                  :mod (c3-4 / oh-my-god
+                             :mode expressive)
+                  :mode imperative)
+      :snt2 (c3-3 / have-degree-91
+                  :ARG1 (c3-5 / step-01
+                              :quant 1)
+                  :ARG2 (c3-1 / close-10
+                              :ARG2 (c3-7 / normality))
+                  :ARG3 (c3-2 / more)))
+
+# ::snt Got mine booked in for this afternoon!
+# ::tokens ["Got", "mine", "booked", "in", "for", "this", "afternoon", "!"]
+# ::lemmas ["get", "mine", "book", "in", "for", "this", "afternoon", "!"]
+(c4-4 / book-03
+      :ARG1 (c4-3 / thing
+                  :poss (c4-5 / i))
+      :time (c4-0 / date-entity
+                  :dayperiod (c4-1 / afternoon)
+                  :mod (c4-2 / today)))
+
+# ::snt Its exciting times!
+# ::tokens ["Its", "exciting", "times", "!"]
+# ::lemmas ["its", "exciting", "time", "!"]
+(c5-1 / time
+      :ARG0-of (c5-2 / excite-01)
+      :domain (c5-0 / it))

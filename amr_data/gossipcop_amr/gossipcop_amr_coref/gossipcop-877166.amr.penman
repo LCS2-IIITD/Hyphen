@@ -1,0 +1,56 @@
+# ::snt Wow. Thanks for the spoiler right there in the tweet. Good job.
+# ::tokens ["Wow", ".", "Thanks", "for", "the", "spoiler", "right", "there", "in", "the", "tweet", ".", "Good", "job", "."]
+# ::lemmas ["wow", ".", "thank", "for", "the", "spoiler", "right", "there", "in", "the", "tweet", ".", "good", "job", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / wow-01)
+      :snt2 (c1-8 / thank-01
+                  :ARG0 (c1-7 / i)
+                  :ARG1 (c1-0 / you)
+                  :ARG2 (c1-3 / spoil-01
+                              :location (c1-10 / there
+                                               :mod (c1-4 / right))
+                              :medium (c1-9 / tweet-01)))
+      :snt3 (c1-6 / job
+                  :ARG1-of (c1-2 / good-02)))
+
+# ::snt "Mommy, Daddy? How did you guys meet?"
+# ::tokens ["\"", "Mommy", ",", "Daddy", "?", "How", "did", "you", "guys", "meet", "?", "\""]
+# ::lemmas ["\"", "Mommy", ",", "Daddy", "?", "how", "do", "you", "guy", "meet", "?", "\""]
+(c2-1 / multi-sentence
+      :snt1 (c2-8 / and
+                  :op1 (c2-4 / person
+                             :ARG0-of (c2-5 / have-rel-role-91
+                                            :ARG2 (c2-3 / mom)))
+                  :op2 (c2-2 / person
+                             :ARG0-of (c2-6 / have-rel-role-91
+                                            :ARG2 (c2-10 / dad))))
+      :snt2 (c2-11 / meet-03
+                   :ARG0 (c2-0 / you
+                               :mod (c2-9 / guy))
+                   :manner (c2-7 / amr-unknown)))
+
+# ::snt They film that show in like theee weeks. So won't last
+# ::tokens ["They", "film", "that", "show", "in", "like", "theee", "weeks", ".", "So", "wo", "n't", "last"]
+# ::lemmas ["they", "film", "that", "show", "in", "like", "theee", "weeks", ".", "so", "will", "not", "last"]
+(c3-1 / multi-sentence
+      :snt1 (c3-0 / film-01
+                  :ARG0 (c3-8 / they)
+                  :ARG1 (c3-3 / show
+                              :mod (c3-10 / that))
+                  :time (c3-4 / after
+                              :op1 (c3-2 / now)
+                              :quant (c3-6 / like
+                                           :op1 (c3-5 / multiple
+                                                      :op1 (c3-9 / temporal-quantity
+                                                                 :unit (c3-7 / week)
+                                                                 :quant 1)))))
+      :snt2 (c3-12 / last-04
+                   :ARG1 (c3-11 / it)
+                   :polarity -))
+
+# ::snt it won't last
+# ::tokens ["it", "wo", "n't", "last"]
+# ::lemmas ["it", "will", "not", "last"]
+(c4-0 / last-04
+      :ARG1 (c4-1 / it)
+      :polarity -)

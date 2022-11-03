@@ -1,0 +1,55 @@
+# ::snt You declare Mumbai riots by huge Muslim mob as fake. Police Men were beaten &amp; Police women were molested. You call it fake. That is indeed being anti-Hindu. Simple.
+# ::tokens ["You", "declare", "Mumbai", "riots", "by", "huge", "Muslim", "mob", "as", "fake", ".", "Police", "Men", "were", "beaten", "&", "amp", ";", "Police", "women", "were", "molested", ".", "You", "call", "it", "fake", ".", "That", "is", "indeed", "being", "anti", "-", "Hindu", ".", "Simple", "."]
+# ::lemmas ["you", "declare", "Mumbai", "riot", "by", "huge", "Muslim", "mob", "as", "fake", ".", "police", "Men", "be", "beat", "&", "amp", ";", "police", "woman", "be", "molest", ".", "you", "call", "it", "fake", ".", "that", "be", "indeed", "be", "anti", "-", "Hindu", ".", "simple", "."]
+(c1-12 / multi-sentence
+       :snt1 (c1-0 / declare-01
+                   :ARG0 (c1-19 / you)
+                   :ARG1 (c1-10 / riot-01
+                                :ARG0 (c1-23 / mob
+                                             :mod (c1-7 / religious-group
+                                                        :name (c1-13 / name
+                                                                     :op1 "Muslim"))
+                                             :mod (c1-24 / huge))
+                                :location (c1-5 / city
+                                                :name (c1-2 / name
+                                                            :op1 "Mumbai")))
+                   :ARG2 (c1-22 / fake-02
+                                :ARG1 c1-10))
+       :snt2 (c1-21 / and
+                    :op1 (c1-25 / beat-01
+                                :ARG1 (c1-16 / man
+                                             :ARG0-of (c1-3 / have-org-role-91
+                                                            :ARG1 (c1-26 / police))))
+                    :op2 (c1-11 / molest-01
+                                :ARG1 (c1-6 / woman
+                                            :ARG0-of c1-3
+                                            :ARG1 c1-26)))
+       :snt3 (c1-1 / call-01
+                   :ARG0 (c1-20 / you)
+                   :ARG1 (c1-4 / it)
+                   :ARG2 (c1-17 / fake-02
+                                :ARG1 c1-4))
+       :snt4 (c1-8 / counter-01
+                   :ARG0 (c1-9 / that)
+                   :ARG1 c1-7
+                   :name (c1-18 / name
+                                :op1 "Hindu"))
+       :mod (c1-15 / indeed)
+       :snt5 (c1-14 / simple-02))
+
+# ::snt Correction "killed by hindu mob"........not by muslim
+# ::tokens ["Correction", "\"", "killed", "by", "hindu", "mob\"", "........", "not", "by", "muslim"]
+# ::lemmas ["correction", "\"", "kill", "by", "hindu", "mob\"", "........", "not", "by", "muslim"]
+(c2-3 / contrast-01
+      :ARG1 (c2-2 / kill-01
+                  :ARG0 (c2-8 / mob
+                              :mod (c2-5 / religious-group
+                                         :name (c2-9 / name
+                                                     :op1 "Hindu"))))
+      :ARG2 (c2-1 / kill-01
+                  :ARG0 (c2-7 / person
+                              :mod (c2-4 / religious-group
+                                         :name (c2-6 / name
+                                                     :op1 "Islam")))
+                  :polarity -)
+      :ARG2-of (c2-0 / correct-01))

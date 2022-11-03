@@ -1,0 +1,171 @@
+# ::snt A sage list. Kudos.
+# ::tokens ["A", "sage", "list", ".", "Kudos", "."]
+# ::lemmas ["a", "sage", "list", ".", "Kudos", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-1 / list
+                  :mod (c1-0 / sage))
+      :snt2 (c1-3 / kudos))
+
+# ::snt Radio news here has been 'an attack' then 'a terrorist attack' now 'a suspected terrorist attack'.
+# ::tokens ["Radio", "news", "here", "has", "been", "'", "an", "attack", "'", "then", "'", "a", "terrorist", "attack", "'", "now", "'", "a", "suspected", "terrorist", "attack", "'", "."]
+# ::lemmas ["radio", "news", "here", "have", "be", "'", "an", "attack", "'", "then", "'", "a", "terrorist", "attack", "'", "now", "'", "a", "suspect", "terrorist", "attack", "'", "."]
+(c2-9 / and
+      :op1 (c2-1 / attack-01
+                 :mod (c2-8 / terrorist)
+                 :time (c2-7 / then))
+      :op2 (c2-3 / attack-01
+                 :mod (c2-4 / terrorist)
+                 :time (c2-2 / now))
+      :domain (c2-5 / news
+                    :medium (c2-6 / radio)
+                    :location (c2-0 / here)))
+
+# ::snt Awesome. Printing this for our digital desk students.
+# ::tokens ["Awesome", ".", "Printing", "this", "for", "our", "digital", "desk", "students", "."]
+# ::lemmas ["Awesome", ".", "print", "this", "for", "our", "digital", "desk", "student", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / awe-01)
+      :snt2 (c3-3 / print-01
+                  :ARG1 (c3-6 / this)
+                  :beneficiary (c3-7 / person
+                                     :ARG0-of (c3-5 / study-01
+                                                    :location (c3-4 / desk
+                                                                    :mod (c3-1 / digital)))
+                                     :poss (c3-0 / we))))
+
+# ::snt : Actually amazing. RT : Things to remember.
+# ::tokens [":", "Actually", "amazing", ".", "RT", ":", "Things", "to", "remember", "."]
+# ::lemmas [":", "actually", "amazing", ".", "rt", ":", "thing", "to", "remember", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-6 / amaze-01
+                  :ARG1-of (c4-1 / actual-02))
+      :snt2 (c4-3 / publication
+                  :name (c4-2 / name
+                              :op1 "RT"))
+      :snt3 (c4-5 / thing
+                  :ARG1-of (c4-4 / remember-01)))
+
+# ::snt Anonymous sources are the backbone of investigative journalism, this is only valid advice in crisis.
+# ::tokens ["Anonymous", "sources", "are", "the", "backbone", "of", "investigative", "journalism", ",", "this", "is", "only", "valid", "advice", "in", "crisis", "."]
+# ::lemmas ["anonymous", "source", "be", "the", "backbone", "of", "investigative", "journalism", ",", "this", "be", "only", "valid", "advice", "in", "crisis", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-2 / backbone
+                  :poss (c5-0 / journalism
+                              :mod (c5-5 / investigative))
+                  :domain (c5-8 / source
+                                :ARG1-of (c5-10 / anonymous-00)))
+      :snt2 (c5-4 / advise-01
+                  :ARG2 (c5-9 / this)
+                  :ARG1-of (c5-6 / valid-02)
+                  :time (c5-7 / crisis)
+                  :mod (c5-3 / only)))
+
+# ::snt yes. amazing and wise. RT : Actually amazing. RT : Things to remember.
+# ::tokens ["yes", ".", "amazing", "and", "wise", ".", "RT", ":", "Actually", "amazing", ".", "RT", ":", "Things", "to", "remember", "."]
+# ::lemmas ["yes", ".", "amazing", "and", "wise", ".", "RT", ":", "actually", "amazing", ".", "rt", ":", "thing", "to", "remember", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-1 / yes)
+      :snt2 (c6-11 / and
+                   :op1 (c6-3 / amaze-01)
+                   :op2 (c6-0 / wise))
+      :snt3 (c6-5 / amaze-01
+                  :ARG1-of (c6-9 / actual-02))
+      :snt4 (c6-8 / say-01
+                  :ARG0 (c6-6 / publication
+                              :name (c6-4 / name
+                                          :op1 "RT"))
+                  :ARG1 (c6-10 / thing
+                               :ARG1-of (c6-7 / remember-01))))
+
+# ::snt Good points, but good luck with this because everyone wants to be a news source.
+# ::tokens ["Good", "points", ",", "but", "good", "luck", "with", "this", "because", "everyone", "wants", "to", "be", "a", "news", "source", "."]
+# ::lemmas ["good", "point", ",", "but", "good", "luck", "with", "this", "because", "everyone", "want", "to", "be", "a", "news", "source", "."]
+(c7-6 / contrast-01
+      :ARG1 (c7-4 / point-04
+                  :ARG1-of (c7-7 / good-02))
+      :ARG2 (c7-1 / luck
+                  :ARG1-of (c7-5 / good-02)
+                  :purpose (c7-10 / this)
+                  :ARG1-of (c7-8 / cause-01
+                                 :ARG0 (c7-0 / want-01
+                                             :ARG0 (c7-2 / everyone)
+                                             :ARG1 (c7-9 / source-02
+                                                         :ARG0 c7-2
+                                                         :ARG1 (c7-3 / news))))))
+
+# ::snt Great thoughts!
+# ::tokens ["Great", "thoughts", "!"]
+# ::lemmas ["great", "thought", "!"]
+(c8-0 / thing
+      :ARG1-of (c8-2 / think-01)
+      :mod (c8-1 / great))
+
+# ::snt Reflexively Retweeting this: RT Actually amazing. RT : Things to remember.
+# ::tokens ["Reflexively", "Retweeting", "this", ":", "RT", "Actually", "amazing", ".", "RT", ":", "Things", "to", "remember", "."]
+# ::lemmas ["reflexively", "retweete", "this", ":", "RT", "Actually", "amazing", ".", "rt", ":", "thing", "to", "remember", "."]
+(c9-0 / multi-sentence
+      :snt1 (c9-9 / tweet-02
+                  :ARG0 (c9-5 / publication
+                              :name (c9-3 / name
+                                          :op1 "RT"))
+                  :ARG1 (c9-8 / this)
+                  :manner (c9-6 / reciprocal))
+      :snt2 (c9-11 / amaze-01
+                   :ARG0 (c9-10 / publication
+                                :name (c9-4 / name
+                                            :op1 "RT"))
+                   :ARG1-of (c9-1 / actual-02))
+      :snt3 (c9-7 / thing
+                  :ARG1-of (c9-2 / remember-01)))
+
+# ::snt Listen &amp; retweet responsibly.RT : Actually amazing. RT : Things to remember.
+# ::tokens ["Listen", "&", "amp", ";", "retweet", "responsibly", ".", "RT", ":", "Actually", "amazing", ".", "RT", ":", "Things", "to", "remember", "."]
+# ::lemmas ["Listen", "&", "amp", ";", "retweet", "responsibly", ".", "RT", ":", "actually", "amazing", ".", "rt", ":", "thing", "to", "remember", "."]
+(c10-1 / multi-sentence
+       :snt1 (c10-12 / and
+                     :op1 (c10-0 / listen-01)
+                     :op2 (c10-7 / person
+                                 :name (c10-5 / name
+                                              :op1 "amp"))
+                     :op3 (c10-8 / retweet-01)
+                     :ARG1-of (c10-4 / responsible-02)
+                     :snt2-of c10-1)
+       :op1 (c10-3 / amaze-01
+                   :ARG1-of (c10-6 / actual-02))
+       :op2 (c10-11 / publication
+                    :name (c10-9 / name
+                                 :op1 "RT"))
+       :snt3 (c10-2 / remember-01
+                    :ARG1 (c10-10 / thing)))
+
+# ::snt Should add that opinions are NOT facts about times.
+# ::tokens ["Should", "add", "that", "opinions", "are", "NOT", "facts", "about", "times", "."]
+# ::lemmas ["should", "add", "that", "opinion", "be", "not", "fact", "about", "time", "."]
+(c11-2 / recommend-01
+       :ARG1 (c11-5 / add-01
+                    :ARG1 (c11-0 / fact
+                                 :topic (c11-4 / time)
+                                 :domain (c11-3 / thing
+                                                :ARG1-of (c11-1 / opine-01))
+                                 :polarity -)))
+
+# ::snt ... printing.... digital .... Seems like an oxymoron!
+# ::tokens ["...", "printing", "....", "digital", "....", "Seems", "like", "an", "oxymoron", "!"]
+# ::lemmas ["...", "print", "....", "digital", "....", "seem", "like", "an", "oxymoron", "!"]
+(c12-4 / and
+       :op1 (c12-1 / print-01)
+       :op2 (c12-2 / digital)
+       :op3 (c12-3 / seem-01
+                   :ARG1 (c12-0 / oxymoron)))
+
+# ::snt : Actually amazing. RT : Things to remember.
+# ::tokens [":", "Actually", "amazing", ".", "RT", ":", "Things", "to", "remember", "."]
+# ::lemmas [":", "actually", "amazing", ".", "rt", ":", "thing", "to", "remember", "."]
+(c13-0 / multi-sentence
+       :snt1 (c13-6 / amaze-01
+                    :ARG1-of (c13-1 / actual-02))
+       :snt2 (c13-3 / publication
+                    :name (c13-2 / name
+                                 :op1 "RT"))
+       :snt3 (c13-5 / thing
+                    :ARG1-of (c13-4 / remember-01)))

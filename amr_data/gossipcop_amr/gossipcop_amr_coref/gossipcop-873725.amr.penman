@@ -1,0 +1,32 @@
+# ::snt Very sad.
+# ::tokens ["Very", "sad", "."]
+# ::lemmas ["very", "sad", "."]
+(c1-1 / sad-02
+      :degree (c1-0 / very))
+
+# ::snt John will be missed dearly and he was such a very talented actor
+# ::tokens ["John", "will", "be", "missed", "dearly", "and", "he", "was", "such", "a", "very", "talented", "actor"]
+# ::lemmas ["John", "will", "be", "miss", "dearly", "and", "he", "be", "such", "a", "very", "talented", "actor"]
+(c2-8 / and
+      :op1 (c2-1 / miss-01
+                 :ARG1 (c2-5 / person
+                             :name (c2-0 / name
+                                         :op1 "John"))
+                 :degree (c2-9 / dear))
+      :op2 (c2-2 / person
+                 :mod (c2-6 / talent
+                            :degree (c2-4 / very
+                                          :degree (c2-3 / such)))
+                 :ARG0-of (c2-7 / act-01)
+                 :domain c2-5))
+
+# ::snt RIP John Heard
+# ::tokens ["RIP", "John", "Heard"]
+# ::lemmas ["RIP", "John", "Heard"]
+(c3-4 / wish-01
+      :ARG1 (c3-2 / rest-01
+                  :ARG1 (c3-3 / person
+                              :name (c3-0 / name
+                                          :op1 "John"
+                                          :op2 "Heard"))
+                  :manner (c3-1 / peace)))

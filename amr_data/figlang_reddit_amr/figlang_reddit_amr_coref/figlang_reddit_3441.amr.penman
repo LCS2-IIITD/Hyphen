@@ -1,0 +1,27 @@
+# ::snt Guys who compete in physique, what is your drug cycle?
+# ::tokens ["Guys", "who", "compete", "in", "physique", ",", "what", "is", "your", "drug", "cycle", "?"]
+# ::lemmas ["guy", "who", "compete", "in", "physique", ",", "what", "be", "your", "drug", "cycle", "?"]
+(c1-2 / ask-01
+      :ARG0 (c1-6 / i)
+      :ARG1 (c1-3 / cycle-02
+                  :ARG0 (c1-5 / guy
+                              :ARG0-of (c1-0 / compete-01
+                                             :ARG3 (c1-4 / physique)))
+                  :ARG1 (c1-1 / drug)
+                  :ARG2 (c1-7 / amr-unknown))
+      :ARG2 c1-5)
+
+# ::snt Whey protein, creatine, preworkout, BCAAs, Fish Oil, Multi-vitamins
+# ::tokens ["Whey", "protein", ",", "creatine", ",", "preworkout", ",", "BCAAs", ",", "Fish", "Oil", ",", "Multi", "-", "vitamins"]
+# ::lemmas ["Whey", "protein", ",", "creatine", ",", "preworkout", ",", "bcaa", ",", "Fish", "Oil", ",", "Multi", "-", "vitamin"]
+(c2-1 / and
+      :op1 (c2-7 / protein
+                 :mod (c2-4 / Whey))
+      :op2 (c2-3 / creatine)
+      :op3 (c2-6 / preworkout)
+      :op4 (c2-0 / small-molecule
+                 :name (c2-9 / name
+                             :op1 "BCAAs"))
+      :op5 (c2-5 / oil
+                 :source (c2-2 / fish))
+      :op6 (c2-8 / multivitamin))

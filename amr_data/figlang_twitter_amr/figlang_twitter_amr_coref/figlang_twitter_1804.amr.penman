@@ -1,0 +1,90 @@
+# ::snt Correct me if I'm wrong , over would be Jim Harbaugh's biggest win with the Wolverines .
+# ::tokens ["Correct", "me", "if", "I", "'m", "wrong", ",", "over", "would", "be", "Jim", "Harbaugh", "'s", "biggest", "win", "with", "the", "Wolverines", "."]
+# ::lemmas ["correct", "i", "if", "i", "be", "wrong", ",", "over", "would", "be", "Jim", "Harbaugh", "'s", "big", "win", "with", "the", "Wolverines", "."]
+(c1-1 / correct-01
+      :ARG0 (c1-12 / you)
+      :ARG1 (c1-9 / i)
+      :condition (c1-2 / wrong-04
+                       :ARG1 c1-9)
+      :ARG1-of (c1-0 / cause-01
+                     :ARG0 (c1-13 / win-01
+                                  :ARG0 (c1-7 / person
+                                              :name (c1-11 / name
+                                                           :op1 "Jim"
+                                                           :op2 "Harbaugh"))
+                                  :ARG2 (c1-5 / team
+                                              :name (c1-6 / name
+                                                          :op1 "Michigan"))
+                                  :ARG1-of (c1-3 / have-degree-91
+                                                 :ARG2 (c1-8 / big)
+                                                 :ARG3 (c1-10 / most))
+                                  :domain (c1-4 / over)))
+      :mode imperative)
+
+# ::snt He needs to beat a good team in a GAME THAT MATTERS . Tomorrow s game means nothing
+# ::tokens ["He", "needs", "to", "beat", "a", "good", "team", "in", "a", "GAME", "THAT", "MATTERS", ".", "Tomorrow", "s", "game", "means", "nothing"]
+# ::lemmas ["he", "need", "to", "beat", "a", "good", "team", "in", "a", "game", "that", "matter", ".", "Tomorrow", "s", "game", "mean", "nothing"]
+(c2-9 / multi-sentence
+      :snt1 (c2-10 / need-01
+                   :ARG0 (c2-4 / he)
+                   :ARG1 (c2-8 / beat-03
+                               :ARG0 c2-4
+                               :ARG1 (c2-5 / team
+                                           :ARG1-of (c2-7 / good-03))
+                               :subevent-of (c2-11 / game
+                                                   :ARG0-of (c2-3 / threaten-01))))
+      :snt2 (c2-1 / mean-01
+                  :ARG1 (c2-0 / game
+                              :time (c2-2 / tomorrow))
+                  :ARG2 (c2-6 / nothing)))
+
+# ::snt Seems like the Clemson blowout in January mattered . How do we determine how the results compare to what matters ? Before or after the game ?
+# ::tokens ["Seems", "like", "the", "Clemson", "blowout", "in", "January", "mattered", ".", "How", "do", "we", "determine", "how", "the", "results", "compare", "to", "what", "matters", "?", "Before", "or", "after", "the", "game", "?"]
+# ::lemmas ["seem", "like", "the", "Clemson", "blowout", "in", "January", "matter", ".", "how", "do", "we", "determine", "how", "the", "result", "compare", "to", "what", "matter", "?", "before", "or", "after", "the", "game", "?"]
+(c3-8 / multi-sentence
+      :snt1 (c3-12 / seem-01
+                   :ARG1 (c3-17 / matter-01
+                                :ARG1 (c3-18 / blow-out-06
+                                             :ARG0 (c3-5 / team
+                                                         :name (c3-9 / name
+                                                                     :op1 "Clemson"))
+                                             :time (c3-0 / date-entity
+                                                         :month 1))))
+      :snt2 (c3-14 / determine-01
+                   :ARG0 (c3-2 / we)
+                   :ARG1 (c3-3 / thing
+                               :manner-of (c3-1 / compare-01
+                                                :ARG1 (c3-6 / result)
+                                                :ARG2 (c3-10 / thing
+                                                             :ARG1-of (c3-13 / matter-01))))
+                   :ARG2 (c3-16 / amr-unknown))
+      :snt3 (c3-4 / or
+                  :op1 (c3-15 / before
+                              :op1 (c3-7 / game))
+                  :op2 (c3-11 / after
+                              :op1 c3-7)))
+
+# ::snt Are you that dense ? Sure the National championship mattered . Today's game means nothing whether Bama wins or loses .
+# ::tokens ["Are", "you", "that", "dense", "?", "Sure", "the", "National", "championship", "mattered", ".", "Today", "'s", "game", "means", "nothing", "whether", "Bama", "wins", "or", "loses", "."]
+# ::lemmas ["be", "you", "that", "dense", "?", "sure", "the", "national", "championship", "matter", ".", "Today", "'s", "game", "mean", "nothing", "whether", "Bama", "win", "or", "lose", "."]
+(c4-9 / multi-sentence
+      :snt1 (c4-0 / dense
+                  :domain (c4-14 / you)
+                  :degree (c4-6 / that)
+                  :polarity (c4-15 / amr-unknown))
+      :snt2 (c4-11 / sure-02
+                   :ARG1 (c4-16 / matter-01
+                                :ARG1 (c4-2 / championship
+                                            :mod (c4-10 / nation))))
+      :snt3 (c4-12 / mean-01
+                   :ARG1 (c4-8 / game
+                               :time (c4-4 / today))
+                   :ARG2 (c4-1 / nothing)
+                   :ARG1-of (c4-7 / regardless-91
+                                  :ARG2 (c4-5 / or
+                                              :op1 (c4-3 / win-01
+                                                         :ARG0 (c4-18 / person
+                                                                      :name (c4-13 / name
+                                                                                   :op1 "Bama")))
+                                              :op2 (c4-17 / lose-03
+                                                          :ARG0 c4-18)))))

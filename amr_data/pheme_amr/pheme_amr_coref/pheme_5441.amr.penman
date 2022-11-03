@@ -1,0 +1,199 @@
+# ::snt we're going to need to try it out, before I comment
+# ::tokens ["we", "'re", "going", "to", "need", "to", "try", "it", "out", ",", "before", "I", "comment"]
+# ::lemmas ["we", "be", "go", "to", "need", "to", "try", "it", "out", ",", "before", "i", "comment"]
+(c1-3 / need-01
+      :ARG0 (c1-0 / we)
+      :ARG1 (c1-6 / try-out-05
+                  :ARG0 c1-0
+                  :ARG1 (c1-2 / it))
+      :time (c1-1 / before
+                  :op1 (c1-4 / comment-01
+                             :ARG0 (c1-5 / i))))
+
+# ::snt He went there. : If we shot everyone in the street for stealing, imagine the carnage on Wall St.
+# ::tokens ["He", "went", "there", ".", ":", "If", "we", "shot", "everyone", "in", "the", "street", "for", "stealing", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+# ::lemmas ["he", "go", "there", ".", ":", "if", "we", "shoot", "everyone", "in", "the", "street", "for", "steal", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+(c2-4 / multi-sentence
+      :snt1 (c2-11 / go-02
+                   :ARG0 (c2-0 / he)
+                   :ARG4 (c2-13 / there))
+      :snt2 (c2-7 / imagine-01
+                  :ARG0 (c2-1 / you)
+                  :ARG1 (c2-10 / carnage
+                               :location (c2-9 / market-sector
+                                               :name (c2-8 / name
+                                                           :op1 "Wall"
+                                                           :op2 "Street")))
+                  :condition (c2-12 / shoot-02
+                                    :ARG0 (c2-2 / we)
+                                    :ARG1 (c2-5 / everyone
+                                                :location (c2-6 / street))
+                                    :ARG2 (c2-3 / steal-01
+                                                :ARG0 c2-5))
+                  :mode imperative))
+
+# ::snt Does Missouri, St. Louis County &amp; have rules &amp; laws about cops using deadly force? What are they?
+# ::tokens ["Does", "Missouri", ",", "St.", "Louis", "County", "&", "amp", ";", "have", "rules", "&", "amp", ";", "laws", "about", "cops", "using", "deadly", "force", "?", "What", "are", "they", "?"]
+# ::lemmas ["do", "Missouri", ",", "St.", "Louis", "County", "&", "amp", ";", "have", "rule", "&", "amp", ";", "law", "about", "cop", "use", "deadly", "force", "?", "what", "be", "they", "?"]
+(c3-0 / multi-sentence
+      :snt1 (c3-4 / and
+                  :op1 (c3-5 / have-03
+                             :ARG0 (c3-12 / and
+                                          :op1 (c3-2 / state
+                                                     :name (c3-8 / name
+                                                                 :op1 "Missouri"))
+                                          :op2 (c3-15 / county
+                                                      :name (c3-14 / name
+                                                                   :op1 "St."
+                                                                   :op2 "Louis")))
+                             :ARG1 (c3-18 / thing
+                                          :ARG3-of (c3-10 / rule-01)))
+                  :op2 (c3-3 / have-03
+                             :ARG0 c3-12
+                             :ARG1 (c3-6 / law
+                                         :topic (c3-11 / use-01
+                                                       :ARG0 (c3-1 / cop)
+                                                       :ARG1 (c3-7 / force-04
+                                                                   :ARG0 c3-1
+                                                                   :ARG2 (c3-13 / kill-01
+                                                                                :ARG0 c3-1)))))
+                  :polarity (c3-9 / amr-unknown))
+      :snt2 (c3-16 / they
+                   :domain (c3-17 / amr-unknown)))
+
+# ::snt yes but cops only shoot for stealing material things. Not peoples life savings.
+# ::tokens ["yes", "but", "cops", "only", "shoot", "for", "stealing", "material", "things", ".", "Not", "peoples", "life", "savings", "."]
+# ::lemmas ["yes", "but", "cop", "only", "shoot", "for", "steal", "material", "thing", ".", "not", "people", "life", "saving", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-7 / contrast-01
+                  :ARG2 (c4-9 / shoot-02
+                              :ARG0 (c4-6 / cop)
+                              :ARG2 (c4-4 / steal-01
+                                          :ARG0 c4-6
+                                          :ARG1 (c4-10 / thing
+                                                       :mod (c4-5 / material)))
+                              :mod (c4-3 / only)))
+      :snt2 (c4-0 / save-01
+                  :ARG1 (c4-2 / life
+                              :poss (c4-8 / person))
+                  :polarity -))
+
+# ::snt oops, getting sleepy...kitty meowed out all nite!
+# ::tokens ["oops", ",", "getting", "sleepy", "...", "kitty", "meowed", "out", "all", "nite", "!"]
+# ::lemmas ["oop", ",", "get", "sleepy", "...", "kitty", "meow", "out", "all", "nite", "!"]
+(c5-9 / and
+      :op1 (c5-7 / get-03
+                 :ARG2 (c5-8 / sleepy-06
+                             :ARG1 (c5-3 / i)))
+      :op2 (c5-0 / meow-01
+                 :ARG0 (c5-6 / cat)
+                 :time (c5-5 / date-entity
+                             :dayperiod (c5-4 / night)
+                             :mod (c5-2 / all)))
+      :mod (c5-1 / oops
+                 :mode expressive))
+
+# ::snt The halls of congress would be empty too. And every union official would be waiting for a coroner pick up.
+# ::tokens ["The", "halls", "of", "congress", "would", "be", "empty", "too", ".", "And", "every", "union", "official", "would", "be", "waiting", "for", "a", "coroner", "pick", "up", "."]
+# ::lemmas ["the", "hall", "of", "congress", "would", "be", "empty", "too", ".", "and", "every", "union", "official", "would", "be", "wait", "for", "a", "coroner", "pick", "up", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-7 / empty-02
+                  :ARG1 (c6-0 / hall
+                              :part-of (c6-11 / government-organization
+                                              :name (c6-8 / name
+                                                          :op1 "Congress")))
+                  :mod (c6-12 / too))
+      :snt2 (c6-14 / and
+                   :op2 (c6-1 / wait-01
+                              :ARG1 (c6-9 / person
+                                          :ARG0-of (c6-2 / have-org-role-91
+                                                         :ARG1 (c6-4 / union)
+                                                         :ARG2 (c6-6 / official))
+                                          :mod (c6-5 / every))
+                              :ARG2 (c6-13 / pick-up-04
+                                           :ARG0 (c6-10 / coroner)))))
+
+# ::snt there'd be no one left in government
+# ::tokens ["there", "'d", "be", "no", "one", "left", "in", "government"]
+# ::lemmas ["there", "would", "be", "no", "one", "leave", "in", "government"]
+(c7-1 / leave-17
+      :ARG1 (c7-0 / no-one)
+      :ARG2 (c7-3 / government-organization
+                  :ARG0-of (c7-2 / govern-01)))
+
+# ::snt : If we shot everyone in the street for stealing, imagine the carnage on Wall St.
+# ::tokens [":", "If", "we", "shot", "everyone", "in", "the", "street", "for", "stealing", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+# ::lemmas [":", "if", "we", "shoot", "everyone", "in", "the", "street", "for", "steal", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+(c8-6 / imagine-01
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-9 / carnage
+                  :location (c8-3 / market-sector
+                                  :name (c8-7 / name
+                                              :op1 "Wall"
+                                              :op2 "Street")))
+      :condition (c8-10 / shoot-02
+                        :ARG0 (c8-1 / we)
+                        :ARG1 (c8-4 / everyone)
+                        :location (c8-5 / street)
+                        :ARG1-of (c8-8 / cause-01
+                                       :ARG0 (c8-2 / steal-01
+                                                   :ARG0 c8-4)))
+      :mode imperative)
+
+# ::snt They would need a helluva huge cannon..........
+# ::tokens ["They", "would", "need", "a", "helluva", "huge", "cannon", ".........."]
+# ::lemmas ["they", "would", "need", "a", "helluva", "huge", "cannon", ".........."]
+(c9-1 / need-01
+      :ARG0 (c9-3 / they)
+      :ARG1 (c9-2 / cannon
+                  :mod (c9-0 / huge
+                             :degree (c9-4 / hell))))
+
+# ::snt Those thefts are all well clear of the legal limit.
+# ::tokens ["Those", "thefts", "are", "all", "well", "clear", "of", "the", "legal", "limit", "."]
+# ::lemmas ["those", "theft", "be", "all", "well", "clear", "of", "the", "legal", "limit", "."]
+(c10-3 / clear-06
+       :ARG1 (c10-5 / steal-01
+                    :mod (c10-6 / that))
+       :ARG2 (c10-4 / thing
+                    :ARG2-of (c10-1 / limit-01)
+                    :ARG1-of (c10-2 / legal-02))
+       :degree (c10-0 / well)
+       :mod (c10-7 / all))
+
+# ::snt ladies and gentlemen, don't tip your waitress as it perpetuates wage slavery.
+# ::tokens ["ladies", "and", "gentlemen", ",", "do", "n't", "tip", "your", "waitress", "as", "it", "perpetuates", "wage", "slavery", "."]
+# ::lemmas ["lady", "and", "gentleman", ",", "do", "not", "tip", "your", "waitress", "as", "it", "perpetuate", "wage", "slavery", "."]
+(c11-7 / tip-01
+       :ARG0 (c11-9 / and
+                    :op1 (c11-0 / you)
+                    :op2 (c11-5 / gentleman))
+       :ARG1 (c11-3 / person
+                    :ARG0-of (c11-2 / assist-01
+                                    :ARG1 c11-0))
+       :ARG1-of (c11-4 / cause-01
+                       :ARG0 (c11-8 / perpetuate-01
+                                    :ARG0 c11-7
+                                    :ARG1 (c11-6 / slavery
+                                                 :mod (c11-1 / wage))))
+       :polarity -
+       :mode imperative)
+
+# ::snt If we shot everyone in the street for stealing, imagine the carnage on Wall St.
+# ::tokens ["If", "we", "shot", "everyone", "in", "the", "street", "for", "stealing", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+# ::lemmas ["if", "we", "shoot", "everyone", "in", "the", "street", "for", "steal", ",", "imagine", "the", "carnage", "on", "Wall", "St."]
+(c12-6 / imagine-01
+       :ARG0 (c12-0 / you)
+       :ARG1 (c12-9 / carnage
+                    :location (c12-3 / market-sector
+                                     :name (c12-7 / name
+                                                  :op1 "Wall"
+                                                  :op2 "Street")))
+       :condition (c12-10 / shoot-02
+                          :ARG0 (c12-1 / we)
+                          :ARG1 (c12-4 / everyone)
+                          :location (c12-5 / street)
+                          :ARG1-of (c12-8 / cause-01
+                                          :ARG0 (c12-2 / steal-01
+                                                       :ARG0 c12-4)))
+       :mode imperative)

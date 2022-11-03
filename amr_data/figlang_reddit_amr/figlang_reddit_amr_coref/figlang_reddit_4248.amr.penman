@@ -1,0 +1,40 @@
+# ::snt Let's have half the population work 4 days less than the other half!
+# ::tokens ["Let", "'s", "have", "half", "the", "population", "work", "4", "days", "less", "than", "the", "other", "half", "!"]
+# ::lemmas ["let", "us", "have", "half", "the", "population", "work", "4", "days", "less", "than", "the", "other", "half", "!"]
+(c1-3 / have-04
+      :ARG0 (c1-2 / we)
+      :ARG1 (c1-11 / work-01
+                   :ARG0 (c1-10 / population
+                                :ARG1-of (c1-1 / include-91
+                                               :ARG2 (c1-5 / population)
+                                               :ARG3 "1/2"))
+                   :ARG1-of (c1-9 / have-quant-91
+                                  :ARG3 (c1-7 / less
+                                              :quant (c1-6 / temporal-quantity
+                                                           :unit (c1-0 / day)
+                                                           :quant 4))
+                                  :ARG4 (c1-8 / work-01
+                                              :ARG0 c1-5
+                                              :ARG1-of (c1-4 / include-91
+                                                             :ARG2 c1-5
+                                                             :ARG3 "1/2"))))
+      :mode imperative)
+
+# ::snt If women were paid 100% of the money for (roughly) 75% of the work, companies simply would not hire women.
+# ::tokens ["If", "women", "were", "paid", "100", "%", "of", "the", "money", "for", "(", "roughly", ")", "75", "%", "of", "the", "work", ",", "companies", "simply", "would", "not", "hire", "women", "."]
+# ::lemmas ["if", "woman", "be", "pay", "100", "%", "of", "the", "money", "for", "(", "roughly", ")", "75", "%", "of", "the", "work", ",", "company", "simply", "would", "not", "hire", "woman", "."]
+(c2-5 / hire-01
+      :ARG0 (c2-1 / company)
+      :ARG1 (c2-2 / woman)
+      :ARG1-of (c2-0 / simple-02)
+      :condition (c2-7 / pay-01
+                       :ARG1 (c2-8 / money
+                                   :quant (c2-6 / percentage-entity
+                                                :value 100))
+                       :ARG2 c2-2
+                       :ARG3 (c2-9 / work-01
+                                   :ARG1-of (c2-3 / include-91
+                                                  :ARG2 c2-9)
+                                   :ARG3 (c2-4 / percentage-entity
+                                               :value 75)))
+      :polarity -)

@@ -1,0 +1,68 @@
+# ::snt She and Bill we're both hillbillies from Arkansas
+# ::tokens ["She", "and", "Bill", "we", "'re", "both", "hillbillies", "from", "Arkansas"]
+# ::lemmas ["she", "and", "Bill", "we", "be", "both", "hillbilly", "from", "Arkansas"]
+(c1-0 / hillbillie
+      :domain (c1-4 / and
+                    :op1 (c1-5 / she)
+                    :op2 (c1-3 / person
+                               :name (c1-6 / name
+                                           :op1 "Bill")))
+      :source (c1-1 / state
+                    :name (c1-2 / name
+                                :op1 "Arkansas"))
+      :mod (c1-7 / both))
+
+# ::snt She's a real peach, isn't she? My God did we dodge a bullet in November.
+# ::tokens ["She", "'s", "a", "real", "peach", ",", "is", "n't", "she", "?", "My", "God", "did", "we", "dodge", "a", "bullet", "in", "November", "."]
+# ::lemmas ["she", "be", "a", "real", "peach", ",", "be", "not", "she", "?", "my", "God", "do", "we", "dodge", "a", "bullet", "in", "November", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-6 / person
+                  :domain (c2-10 / she)
+                  :ARG1-of (c2-9 / real-04)
+                  :ARG1-of (c2-0 / request-confirmation-91))
+      :snt2 (c2-5 / dodge-01
+                  :ARG0 (c2-1 / we)
+                  :ARG1 (c2-12 / bullet)
+                  :polarity (c2-8 / amr-unknown)
+                  :time (c2-2 / date-entity
+                              :month 11)
+                  :poss (c2-4 / person
+                              :name (c2-11 / name
+                                           :op1 "God")
+                              :poss (c2-7 / i))))
+
+# ::snt Wonder if this is true? Sure would wipe out Hillary's future plans if it were. Can't qu
+# ::tokens ["Wonder", "if", "this", "is", "true", "?", "Sure", "would", "wipe", "out", "Hillary", "'s", "future", "plans", "if", "it", "were", ".", "Ca", "n't", "qu"]
+# ::lemmas ["wonder", "if", "this", "be", "true", "?", "sure", "would", "wipe", "out", "Hillary", "'s", "future", "plan", "if", "it", "be", ".", "can", "not", "qu"]
+(c3-4 / multi-sentence
+      :snt1 (c3-1 / wonder-01
+                  :ARG0 (c3-9 / i)
+                  :ARG1 (c3-5 / truth-value
+                              :polarity-of (c3-3 / true-01
+                                                 :ARG1 (c3-6 / this))))
+      :snt2 (c3-11 / wipe-out-02
+                   :ARG0 c3-6)
+      :ARG1 (c3-10 / plan-01
+                   :ARG0 (c3-8 / person
+                               :name (c3-13 / name
+                                            :op1 "Hillary"))
+                   :time (c3-7 / future))
+      :ARG1-of (c3-12 / sure-02)
+      :condition c3-3
+      :snt3 (c3-2 / possible-01
+                  :ARG1 (c3-0 / qu)
+                  :polarity -))
+
+# ::snt When I see Hillary I see evil in a pantsuit
+# ::tokens ["When", "I", "see", "Hillary", "I", "see", "evil", "in", "a", "pantsuit"]
+# ::lemmas ["when", "i", "see", "Hillary", "i", "see", "evil", "in", "a", "pantsuit"]
+(c4-5 / see-01
+      :ARG0 (c4-4 / i)
+      :ARG1 (c4-7 / evil
+                  :ARG0-of (c4-0 / wear-01
+                                 :ARG1 (c4-3 / pantsuit)))
+      :time (c4-1 / see-01
+                  :ARG0 c4-4
+                  :ARG1 (c4-2 / person
+                              :name (c4-6 / name
+                                          :op1 "Hillary"))))

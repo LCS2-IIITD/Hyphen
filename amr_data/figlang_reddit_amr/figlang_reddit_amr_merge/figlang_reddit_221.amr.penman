@@ -1,0 +1,35 @@
+# ::subgraphs [["c1-1", "c1-4", "c1-5", "c1-0", "c1-3", "c1-2"], ["c2-0", "c2-8", "c2-2", "c2-10", "c2-4", "c2-9", "c2-11", "c2-1", "c2-12", "c2-7", "c2-3", "c2-5", "c2-6"]]
+(d / dummy
+   :COMMENT (c1-1 / arrest
+                  :ARG1 (c1-4 / person
+                              :name (c1-5 / name
+                                          :op1 "Colby"
+                                          :op2 "Corino"
+                                          :SAME c1-2)
+                              :SAME c2-10
+                              :COREF c2-10)
+                  :ARG2 (c1-0 / shoplift
+                              :ARG0 c1-4)
+                  :location (c1-3 / state
+                                  :name (c1-2 / name
+                                              :op1 "Florida"))
+                  :SAME c2-2)
+   :COMMENT (c2-0 / story
+                  :ARG1-of (c2-8 / real)
+                  :domain (c2-2 / arrest
+                                :ARG1 (c2-10 / person
+                                             :ARG0-of (c2-4 / wrestle
+                                                            :SAME c2-11)
+                                             :ARG1-of (c2-9 / set
+                                                            :ARG2 (c2-11 / wrestle
+                                                                         :ARG0 c2-10
+                                                                         :ARG1 c2-10)
+                                                            :time (c2-1 / date
+                                                                        :dayperiod (c2-12 / evening)
+                                                                        :mod (c2-7 / today)))
+                                             :quant 2)
+                                :ARG2 (c2-3 / charge
+                                            :ARG1 c2-10
+                                            :ARG1-of (c2-5 / separate)))
+                  :polarity (c2-6 / amr)
+                  :polarity -))

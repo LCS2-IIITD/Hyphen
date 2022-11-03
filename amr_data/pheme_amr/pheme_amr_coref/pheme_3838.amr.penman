@@ -1,0 +1,240 @@
+# ::snt Well said
+# ::tokens ["Well", "said"]
+# ::lemmas ["well", "say"]
+(c1-0 / say-01
+      :manner (c1-1 / good-02))
+
+# ::snt I love you, Humza. I mean, more than usual.
+# ::tokens ["I", "love", "you", ",", "Humza", ".", "I", "mean", ",", "more", "than", "usual", "."]
+# ::lemmas ["i", "love", "you", ",", "Humza", ".", "i", "mean", ",", "more", "than", "usual", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-9 / say-01
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-0 / love-01
+                              :ARG0 c3-4
+                              :ARG1 (c3-6 / person
+                                          :name (c3-5 / name
+                                                      :op1 "Humza")
+                                          :ARG2-of c3-9)))
+      :snt2 (c3-7 / mean-01
+                  :ARG0 (c3-8 / i)
+                  :ARG2 (c3-2 / more-than
+                              :op1 (c3-3 / usual))))
+
+# ::snt well, cartoons can be pretty hurtful, as can speech: i'm a woman, i only need to look at some of misogynist stuff from thcent
+# ::tokens ["well", ",", "cartoons", "can", "be", "pretty", "hurtful", ",", "as", "can", "speech", ":", "i", "'m", "a", "woman", ",", "i", "only", "need", "to", "look", "at", "some", "of", "misogynist", "stuff", "from", "thcent"]
+# ::lemmas ["well", ",", "cartoon", "can", "be", "pretty", "hurtful", ",", "as", "can", "speech", ":", "i", "be", "a", "woman", ",", "i", "only", "need", "to", "look", "at", "some", "of", "misogynist", "stuff", "from", "thcent"]
+(c4-0 / multi-sentence
+      :snt1 (c4-1 / possible-01
+                  :ARG1 (c4-4 / hurt-01
+                              :ARG0 (c4-18 / cartoon)
+                              :degree (c4-3 / pretty)
+                              :ARG1-of (c4-10 / resemble-01
+                                              :ARG2 (c4-6 / possible-01
+                                                          :ARG1 (c4-2 / speak-01)))))
+      :snt2 (c4-12 / woman
+                   :domain (c4-13 / i))
+      :snt3 (c4-8 / need-01
+                  :ARG0 c4-13
+                  :ARG1 (c4-5 / look-01
+                              :ARG0 c4-13
+                              :ARG1 (c4-7 / some
+                                          :ARG1-of (c4-14 / include-91
+                                                          :ARG2 (c4-15 / stuff
+                                                                       :mod (c4-9 / misogynist)
+                                                                       :source (c4-11 / publication
+                                                                                      :name (c4-17 / name
+                                                                                                   :op1 "First"
+                                                                                                   :op2 "Cent")))))
+                              :mod (c4-16 / only))))
+
+# ::snt u can condemn the attack without supporting racist cartoons.
+# ::tokens ["u", "can", "condemn", "the", "attack", "without", "supporting", "racist", "cartoons", "."]
+# ::lemmas ["u", "can", "condemn", "the", "attack", "without", "support", "racist", "cartoon", "."]
+(c5-1 / possible-01
+      :ARG1 (c5-3 / condemn-01
+                  :ARG0 (c5-0 / you)
+                  :ARG1 (c5-6 / attack-01)
+                  :manner (c5-5 / support-01
+                                :ARG0 c5-0
+                                :ARG1 (c5-2 / cartoon
+                                            :mod (c5-4 / racist))
+                                :polarity -)))
+
+# ::snt so i sympathise with people who disagree with it: but killing for it's stupid. Need sane religion, not insane, or hurt yourself
+# ::tokens ["so", "i", "sympathise", "with", "people", "who", "disagree", "with", "it", ":", "but", "killing", "for", "it", "'s", "stupid", ".", "Need", "sane", "religion", ",", "not", "insane", ",", "or", "hurt", "yourself"]
+# ::lemmas ["so", "i", "sympathise", "with", "people", "who", "disagree", "with", "it", ":", "but", "kill", "for", "it", "be", "stupid", ".", "need", "sane", "religion", ",", "not", "insane", ",", "or", "hurt", "yourself"]
+(c7-3 / multi-sentence
+      :snt1 (c7-16 / sympathize-01
+                   :ARG0 (c7-8 / i)
+                   :ARG1 (c7-10 / person
+                                :ARG0-of (c7-11 / disagree-01
+                                                :ARG1 (c7-13 / it)))
+                   :ARG1-of (c7-12 / contrast-01
+                                   :ARG2 (c7-7 / stupid
+                                               :domain (c7-17 / kill-01
+                                                              :ARG1-of (c7-14 / cause-01
+                                                                              :ARG0 (c7-2 / it))))))
+      :snt2 (c7-5 / or
+                  :op1 (c7-9 / need-01
+                             :ARG0 (c7-1 / you)
+                             :ARG1 (c7-15 / religion
+                                          :mod (c7-4 / sane)))
+                  :op2 (c7-6 / insane
+                             :domain c7-1
+                             :polarity -)
+                  :op3 (c7-0 / hurt-01
+                             :ARG0 c7-1
+                             :ARG1 c7-1)))
+
+# ::snt What's racist about it?
+# ::tokens ["What", "'s", "racist", "about", "it", "?"]
+# ::lemmas ["what", "be", "racist", "about", "it", "?"]
+(c8-0 / racist
+      :domain (c8-2 / amr-unknown)
+      :topic (c8-1 / it))
+
+# ::snt What racist cartoon?
+# ::tokens ["What", "racist", "cartoon", "?"]
+# ::lemmas ["what", "racist", "cartoon", "?"]
+(c9-1 / cartoon
+      :mod (c9-0 / racist)
+      :mod (c9-2 / amr-unknown))
+
+# ::snt for child benefits
+# ::tokens ["for", "child", "benefits"]
+# ::lemmas ["for", "child", "benefit"]
+(c10-1 / benefit-01
+       :ARG1 (c10-0 / child))
+
+# ::snt L'Amrique se tient avec la France.
+# ::tokens ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+# ::lemmas ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+(c11-4 / tient-of
+       :ARG1 (c11-3 / city
+                    :name (c11-0 / name
+                                 :op1 "L'Amrique"))
+       :ARG3 (c11-2 / country
+                    :name (c11-1 / name
+                                 :op1 "France")))
+
+# ::snt Whilst the first might be borderline - why is the second racist?
+# ::tokens ["Whilst", "the", "first", "might", "be", "borderline", "-", "why", "is", "the", "second", "racist", "?"]
+# ::lemmas ["whilst", "the", "first", "might", "be", "borderline", "-", "why", "be", "the", "second", "racist", "?"]
+(c12-0 / have-concession-91
+       :ARG1 (c12-5 / racist
+                    :ord (c12-3 / ordinal-entity
+                                :value 2)
+                    :ARG1-of (c12-6 / cause-01
+                                    :ARG0 (c12-7 / amr-unknown)))
+       :ARG2 (c12-4 / possible-01
+                    :ARG1 (c12-2 / borderline
+                                 :domain (c12-1 / ordinal-entity
+                                                :value 1))))
+
+# ::snt +1.
+# ::tokens ["+1", "."]
+# ::lemmas ["+1", "."]
+(c13-0 / add-02
+       :ARG2 1)
+
+# ::snt you are a voice of reason and tolerance in a world that seems to have gone completely mad, thank you
+# ::tokens ["you", "are", "a", "voice", "of", "reason", "and", "tolerance", "in", "a", "world", "that", "seems", "to", "have", "gone", "completely", "mad", ",", "thank", "you"]
+# ::lemmas ["you", "be", "a", "voice", "of", "reason", "and", "tolerance", "in", "a", "world", "that", "seem", "to", "have", "go", "completely", "mad", ",", "thank", "you"]
+(c14-10 / and
+        :op1 (c14-4 / voice-01
+                    :ARG0 (c14-0 / you)
+                    :ARG1 (c14-3 / and
+                                 :op1 (c14-5 / reason-01)
+                                 :op2 (c14-9 / tolerate-01))
+                    :location (c14-1 / world
+                                     :ARG1-of (c14-2 / mad-04
+                                                     :ARG1-of (c14-6 / complete-02)
+                                                     :ARG1-of (c14-8 / seem-01))))
+        :op2 (c14-7 / thank-01
+                    :ARG1 c14-0))
+
+# ::snt Sorry Humjob...you are the ENEMY!!!
+# ::tokens ["Sorry", "Humjob", "...", "you", "are", "the", "ENEMY", "!", "!", "!"]
+# ::lemmas ["Sorry", "Humjob", "...", "you", "be", "the", "ENEMY", "!", "!", "!"]
+(c15-5 / say-01
+       :ARG0 (c15-2 / i)
+       :ARG1 (c15-6 / and
+                    :op1 (c15-0 / sorry-01
+                                :ARG1 c15-2)
+                    :op2 (c15-1 / easy-05
+                                :ARG1 (c15-4 / person
+                                             :name (c15-3 / name
+                                                          :op1 "Humjob")
+                                             :ARG2-of c15-5))))
+
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c16-2 / congratulate-01
+       :ARG1 (c16-1 / you)
+       :ARG2 (c16-0 / tweet-01
+                    :ARG0 c16-1))
+
+# ::snt Charlie was a racist bigot. You can support freedom of speech and be against murder without supporting a racist.
+# ::tokens ["Charlie", "was", "a", "racist", "bigot", ".", "You", "can", "support", "freedom", "of", "speech", "and", "be", "against", "murder", "without", "supporting", "a", "racist", "."]
+# ::lemmas ["Charlie", "be", "a", "racist", "bigot", ".", "you", "can", "support", "freedom", "of", "speech", "and", "be", "against", "murder", "without", "support", "a", "racist", "."]
+(c17-2 / multi-sentence
+       :snt1 (c17-4 / bigot
+                    :mod (c17-10 / racist)
+                    :domain (c17-9 / person
+                                   :name (c17-8 / name
+                                                :op1 "Charlie")))
+       :snt2 (c17-13 / possible-01
+                     :ARG1 (c17-14 / and
+                                   :op1 (c17-12 / support-01
+                                                :ARG0 (c17-0 / you)
+                                                :ARG1 (c17-1 / free-04
+                                                             :ARG3 (c17-6 / speak-01)))
+                                   :op2 (c17-5 / oppose-01
+                                               :ARG0 c17-0
+                                               :ARG1 (c17-11 / murder-01))
+                                   :manner (c17-3 / support-01
+                                                  :ARG0 c17-0
+                                                  :ARG1 (c17-7 / racist)
+                                                  :polarity -))))
+
+# ::snt one is a drawing of a black minister as a monkey, other is saying the kidnapped girls in Nigeria want to keep their babies(cont)
+# ::tokens ["one", "is", "a", "drawing", "of", "a", "black", "minister", "as", "a", "monkey", ",", "other", "is", "saying", "the", "kidnapped", "girls", "in", "Nigeria", "want", "to", "keep", "their", "babies(cont", ")"]
+# ::lemmas ["one", "be", "a", "drawing", "of", "a", "black", "minister", "as", "a", "monkey", ",", "other", "be", "say", "the", "kidnap", "girl", "in", "Nigeria", "want", "to", "keep", "their", "babies(cont", ")"]
+(c18-8 / contrast-01
+       :ARG1 (c18-7 / draw-01
+                    :ARG1 (c18-1 / minister
+                                 :ARG1-of (c18-2 / black-05))
+                    :prep-as (c18-6 / monkey))
+       :ARG2 (c18-12 / say-01
+                     :ARG0 (c18-3 / other)
+                     :ARG1 (c18-0 / want-01
+                                  :ARG0 (c18-9 / girl
+                                               :ARG1-of (c18-13 / kidnap-01)
+                                               :location (c18-10 / country
+                                                                 :name (c18-5 / name
+                                                                              :op1 "Nigeria")))
+                                  :ARG1 (c18-4 / keep-01
+                                               :ARG0 c18-9
+                                               :ARG1 (c18-11 / baby
+                                                             :poss c18-9)))))
+
+# ::snt its the stereotype that brown/black ppl r lazy, live off the state etc
+# ::tokens ["its", "the", "stereotype", "that", "brown", "/", "black", "ppl", "r", "lazy", ",", "live", "off", "the", "state", "etc"]
+# ::lemmas ["its", "the", "stereotype", "that", "brown", "/", "black", "ppl", "r", "lazy", ",", "live", "off", "the", "state", "etc"]
+(c19-7 / stereotype-01
+       :ARG2 (c19-8 / and
+                    :op1 (c19-0 / lazy
+                                :domain (c19-5 / person
+                                               :ARG1-of (c19-1 / black-05)))
+                    :op2 (c19-6 / live-01
+                                :ARG0 c19-5
+                                :location (c19-2 / off
+                                                 :op1 (c19-3 / state)))
+                    :op3 (c19-4 / et-cetera)))
+
+# ::snt Bravo.
+# ::tokens ["Bravo", "."]
+# ::lemmas ["Bravo", "."]
+(c20-0 / bravo)

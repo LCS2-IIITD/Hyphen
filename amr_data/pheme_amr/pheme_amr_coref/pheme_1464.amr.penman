@@ -1,0 +1,113 @@
+# ::snt , , !!!
+# ::tokens [",", ",", "!", "!", "!"]
+# ::lemmas [",", ",", "!", "!", "!"]
+(c1-0 / thing
+      :mode expressive)
+
+# ::snt Hypercacher23 Avenue de la Porte de Vincennes75020 ParisFrancia+33
+# ::tokens ["Hypercacher23", "Avenue", "de", "la", "Porte", "de", "Vincennes75020", "ParisFrancia+33"]
+# ::lemmas ["Hypercacher23", "Avenue", "de", "la", "Porte", "de", "Vincennes75020", "parisfrancia+33"]
+(c3-0 / hypercacher23
+      :ARG1 (c3-4 / road
+                  :name (c3-1 / name
+                              :op1 "Avenue"
+                              :op2 "de"
+                              :op3 "la"
+                              :op4 "Porte"
+                              :op5 "de"
+                              :op6 "Vincennes"))
+      :time (c3-6 / date-entity
+                  :day 20
+                  :month 3
+                  :year 2007)
+      :location (c3-5 / city
+                      :name (c3-2 / name
+                                  :op1 "Paris"))
+      :ARG4-of (c3-7 / add-02
+                     :ARG1 (c3-3 / phone-number-entity
+                                 :value "Francia+33")))
+
+# ::snt Any report on whether it's the two suspects?
+# ::tokens ["Any", "report", "on", "whether", "it", "'s", "the", "two", "suspects", "?"]
+# ::lemmas ["any", "report", "on", "whether", "it", "be", "the", "two", "suspect", "?"]
+(c4-2 / report-01
+      :polarity (c4-4 / amr-unknown)
+      :ARG1 (c4-1 / person
+                  :ARG2-of (c4-3 / suspect-01)
+                  :quant 2)
+      :mod (c4-0 / any))
+
+# ::snt !!!
+# ::tokens ["!", "!", "!"]
+# ::lemmas ["!", "!", "!"]
+(c5-0 / thing
+      :mode expressive)
+
+# ::snt : Update: There are standoffs happening in Paris now. Both reportedly involve hostages. Live
+# ::tokens [":", "Update", ":", "There", "are", "standoffs", "happening", "in", "Paris", "now", ".", "Both", "reportedly", "involve", "hostages", ".", "Live"]
+# ::lemmas [":", "update", ":", "there", "be", "standoff", "happen", "in", "Paris", "now", ".", "both", "reportedly", "involve", "hostage", ".", "live"]
+(c6-2 / multi-sentence
+      :snt1 (c6-3 / update-02
+                  :ARG2 (c6-10 / stand-off-06
+                               :location (c6-9 / city
+                                               :name (c6-6 / name
+                                                           :op1 "Paris"))
+                               :time (c6-7 / now)))
+      :snt2 (c6-5 / involve-01
+                  :ARG1 (c6-0 / hostage)
+                  :ARG2 (c6-4 / both)
+                  :ARG1-of (c6-8 / report-01))
+      :snt3 (c6-1 / live))
+
+# ::snt :deads at the new hostage situation confirmed by and new people identified with a warrant
+# ::tokens [":", "deads", "at", "the", "new", "hostage", "situation", "confirmed", "by", "and", "new", "people", "identified", "with", "a", "warrant"]
+# ::lemmas [":", "dead", "at", "the", "new", "hostage", "situation", "confirm", "by", "and", "new", "people", "identify", "with", "a", "warrant"]
+(c7-6 / die-01
+      :location (c7-8 / situation
+                      :mod (c7-0 / hostage)
+                      :ARG1-of (c7-3 / new-01)
+                      :ARG1-of (c7-7 / confirm-01
+                                     :ARG0 (c7-10 / and
+                                                  :op1 (c7-5 / person
+                                                             :ARG1-of (c7-2 / identify-01
+                                                                            :ARG2 (c7-1 / warrant)))
+                                                  :op2 (c7-9 / person
+                                                             :ARG1-of (c7-4 / new-01))))))
+
+# ::snt ,
+# ::tokens [","]
+# ::lemmas [","]
+(c8-0 / emoticon)
+
+# ::snt There are standoffs happening in Paris now. Both reportedly involve hostages.
+# ::tokens ["There", "are", "standoffs", "happening", "in", "Paris", "now", ".", "Both", "reportedly", "involve", "hostages", "."]
+# ::lemmas ["there", "be", "standoff", "happen", "in", "Paris", "now", ".", "both", "reportedly", "involve", "hostage", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-8 / standoff
+                    :location (c11-7 / city
+                                     :name (c11-4 / name
+                                                  :op1 "Paris"))
+                    :time (c11-5 / now))
+       :snt2 (c11-3 / involve-01
+                    :ARG1 (c11-0 / hostage)
+                    :ARG2 (c11-2 / both)
+                    :ARG1-of (c11-6 / report-01)))
+
+# ::snt Should activate the French military &amp; drive out Islamic radicals.
+# ::tokens ["Should", "activate", "the", "French", "military", "&", "amp", ";", "drive", "out", "Islamic", "radicals", "."]
+# ::lemmas ["should", "activate", "the", "French", "military", "&", "amp", ";", "drive", "out", "Islamic", "radical", "."]
+(c12-8 / recommend-01
+       :ARG1 (c12-11 / and
+                     :op1 (c12-3 / activate-01
+                                 :ARG1 (c12-0 / military
+                                              :name (c12-5 / name
+                                                           :op1 "French"
+                                                           :op2 "Military")))
+                     :op2 (c12-6 / amp)
+                     :op3 (c12-9 / drive-02
+                                 :ARG1 (c12-7 / person
+                                              :ARG1-of (c12-4 / radical-02)
+                                              :mod (c12-2 / religious-group
+                                                          :name (c12-10 / name
+                                                                        :op1 "Islam")))
+                                 :ARG2 (c12-1 / out))))

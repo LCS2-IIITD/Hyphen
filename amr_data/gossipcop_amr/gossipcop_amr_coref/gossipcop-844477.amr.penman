@@ -1,0 +1,230 @@
+# ::snt SAME
+# ::tokens ["SAME"]
+# ::lemmas ["same"]
+(c1-0 / same-01)
+
+# ::snt I'm doing this for Will and Elizabeth. My like year old self deserves this
+# ::tokens ["I", "'m", "doing", "this", "for", "Will", "and", "Elizabeth", ".", "My", "like", "year", "old", "self", "deserves", "this"]
+# ::lemmas ["i", "be", "do", "this", "for", "Will", "and", "Elizabeth", ".", "my", "like", "year", "old", "self", "deserve", "this"]
+(c2-1 / multi-sentence
+      :snt1 (c2-14 / do-02
+                   :ARG0 (c2-11 / i)
+                   :ARG1 (c2-10 / this)
+                   :ARG2 (c2-12 / and
+                                :op1 (c2-8 / person
+                                           :name (c2-2 / name
+                                                       :op1 "Will"))
+                                :op2 (c2-3 / person
+                                           :name (c2-7 / name
+                                                       :op1 "Elizabeth"))))
+      :snt2 (c2-9 / deserve-01
+                  :ARG0 (c2-4 / self
+                              :poss (c2-5 / i)
+                              :age (c2-15 / temporal-quantity
+                                          :unit (c2-0 / year)
+                                          :quant 1)
+                              :ARG1-of (c2-6 / resemble-01
+                                             :ARG2 c2-5))
+                  :ARG1 (c2-13 / this)))
+
+# ::snt that's smart!
+# ::tokens ["that", "'s", "smart", "!"]
+# ::lemmas ["that", "be", "smart", "!"]
+(c3-1 / smart-06
+      :ARG1 (c3-0 / that))
+
+# ::snt (But I really want to see it) WHY DOES HE HAVE TO BE A SCUMBAG???
+# ::tokens ["(", "But", "I", "really", "want", "to", "see", "it", ")", "WHY", "DOES", "HE", "HAVE", "TO", "BE", "A", "SCUMBAG", "?", "?", "?"]
+# ::lemmas ["(", "but", "i", "really", "want", "to", "see", "it", ")", "why", "do", "he", "have", "to", "be", "a", "SCUMBAG", "?", "?", "?"]
+(c4-2 / multi-sentence
+      :snt1 (c4-7 / contrast-01
+                  :ARG2 (c4-8 / want-01
+                              :ARG0 (c4-9 / i)
+                              :ARG1 (c4-3 / see-01
+                                          :ARG0 c4-9
+                                          :ARG1 (c4-4 / it))
+                              :degree (c4-5 / really)))
+      :snt2 (c4-0 / obligate-01
+                  :ARG1 (c4-6 / he)
+                  :ARG2 (c4-1 / scumbag
+                              :domain c4-6)
+                  :ARG1-of (c4-11 / cause-01
+                                  :ARG0 (c4-10 / amr-unknown))))
+
+# ::snt Depending on if I have time to go see it, I might wait and take it out from the library so at least I'm not giving him $$$
+# ::tokens ["Depending", "on", "if", "I", "have", "time", "to", "go", "see", "it", ",", "I", "might", "wait", "and", "take", "it", "out", "from", "the", "library", "so", "at", "least", "I", "'m", "not", "giving", "him", "$", "$", "$"]
+# ::lemmas ["depend", "on", "if", "i", "have", "time", "to", "go", "see", "it", ",", "i", "might", "wait", "and", "take", "it", "out", "from", "the", "library", "so", "at", "least", "i", "be", "not", "give", "he", "$", "$", "$"]
+(c5-4 / possible-01
+      :ARG1 (c5-2 / and
+                  :op1 (c5-6 / wait-01
+                             :ARG1 (c5-10 / i))
+                  :op2 (c5-11 / take-out-11
+                              :ARG0 c5-10
+                              :ARG1 (c5-1 / it)
+                              :source (c5-5 / library))
+                  :ARG0-of (c5-7 / cause-01
+                                 :ARG1 (c5-12 / give-01
+                                              :ARG0 c5-10
+                                              :ARG1 (c5-13 / dollar)
+                                              :ARG2 (c5-3 / he)
+                                              :mod (c5-14 / at-least)
+                                              :polarity -)))
+      :ARG0-of (c5-8 / depend-01
+                     :ARG1 (c5-9 / have-03
+                                 :ARG0 c5-10
+                                 :ARG1 (c5-16 / time
+                                              :purpose (c5-15 / go-05
+                                                              :ARG0 c5-10
+                                                              :ARG1 (c5-0 / see-01
+                                                                          :ARG0 c5-10
+                                                                          :ARG1 c5-1))))))
+
+# ::snt I feel that. Like I really don't want to support him but I love these movies a lot
+# ::tokens ["I", "feel", "that", ".", "Like", "I", "really", "do", "n't", "want", "to", "support", "him", "but", "I", "love", "these", "movies", "a", "lot"]
+# ::lemmas ["i", "feel", "that", ".", "like", "i", "really", "do", "not", "want", "to", "support", "he", "but", "i", "love", "these", "movie", "a", "lot"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / feel-02
+                  :ARG0 (c6-10 / i)
+                  :ARG1 (c6-11 / that))
+      :snt2 (c6-8 / contrast-01
+                  :ARG1 (c6-9 / want-01
+                              :ARG0 (c6-3 / i)
+                              :ARG1 (c6-2 / support-01
+                                          :ARG0 c6-3
+                                          :ARG1 (c6-5 / he))
+                              :ARG1-of (c6-4 / real-04)
+                              :polarity -)
+                  :ARG2 (c6-6 / love-01
+                              :ARG0 c6-3
+                              :ARG1 (c6-7 / movie
+                                          :mod (c6-13 / this))
+                              :degree (c6-12 / lot))))
+
+# ::snt SAME but at the same time I HATE Johnny Depp, so... (I mean, I'm still seeing it, but I hate myself for it)
+# ::tokens ["SAME", "but", "at", "the", "same", "time", "I", "HATE", "Johnny", "Depp", ",", "so", "...", "(", "I", "mean", ",", "I", "'m", "still", "seeing", "it", ",", "but", "I", "hate", "myself", "for", "it", ")"]
+# ::lemmas ["same", "but", "at", "the", "same", "time", "i", "hate", "Johnny", "Depp", ",", "so", "...", "(", "i", "mean", ",", "i", "be", "still", "see", "it", ",", "but", "i", "hate", "myself", "for", "it", ")"]
+(c7-7 / contrast-01
+      :ARG1 (c7-4 / same-01)
+      :ARG2 (c7-12 / cause-01
+                   :ARG1 (c7-5 / hate-01
+                               :ARG0 (c7-10 / i)
+                               :ARG1 (c7-6 / person
+                                           :name (c7-2 / name
+                                                       :op1 "Johnny"
+                                                       :op2 "Depp"))
+                               :time (c7-11 / time
+                                            :ARG1-of c7-4)))
+      :ARG1-of (c7-3 / mean-01
+                     :ARG0 c7-10
+                     :ARG2 (c7-8 / contrast-01
+                                 :ARG1 (c7-1 / see-01
+                                             :ARG0 c7-10
+                                             :ARG1 c7-6
+                                             :mod (c7-13 / still))
+                                 :ARG2 (c7-9 / hate-01
+                                             :ARG0 c7-10
+                                             :ARG1 c7-10
+                                             :ARG1-of (c7-0 / cause-01
+                                                            :ARG0 c7-1)))))
+
+# ::snt I AM SO HERE FOR HIM IN THE NEW MOVIE
+# ::tokens ["I", "AM", "SO", "HERE", "FOR", "HIM", "IN", "THE", "NEW", "MOVIE"]
+# ::lemmas ["i", "be", "so", "here", "for", "HIM", "in", "the", "new", "movie"]
+(c8-0 / be-located-at-91
+      :ARG1 (c8-6 / i)
+      :ARG2 (c8-4 / here)
+      :degree (c8-3 / so)
+      :beneficiary (c8-5 / he)
+      :location (c8-1 / movie
+                      :ARG1-of (c8-2 / new-01)))
+
+# ::snt GIVE ME DISHEVELED ORLANDO BLOOM ANY DAY
+# ::tokens ["GIVE", "ME", "DISHEVELED", "ORLANDO", "BLOOM", "ANY", "DAY"]
+# ::lemmas ["give", "ME", "dishevel", "ORLANDO", "BLOOM", "any", "day"]
+(c9-6 / give-01
+      :ARG0 (c9-0 / you)
+      :ARG1 (c9-4 / island
+                  :name (c9-1 / name
+                              :op1 "Orleans")
+                  :ARG2-of (c9-3 / land-01))
+      :ARG2 (c9-2 / i)
+      :time (c9-7 / day
+                  :mod (c9-5 / any))
+      :mode imperative)
+
+# ::snt % accurate
+# ::tokens ["%", "accurate"]
+# ::lemmas ["%", "accurate"]
+(c11-1 / accurate
+       :degree (c11-0 / percentage-entity
+                      :value 90))
+
+# ::snt Being dirty just makes men % hotter.
+# ::tokens ["Being", "dirty", "just", "makes", "men", "%", "hotter", "."]
+# ::lemmas ["be", "dirty", "just", "make", "man", "%", "hot", "."]
+(c12-0 / make-02
+       :ARG0 (c12-5 / dirty-02
+                    :ARG1 (c12-1 / man))
+       :ARG1 (c12-2 / hot-05
+                    :ARG1 c12-1
+                    :ARG2-of (c12-3 / have-degree-91
+                                    :ARG1 c12-1
+                                    :ARG3 (c12-6 / more)))
+       :mod (c12-4 / just))
+
+# ::snt YAAAS
+# ::tokens ["YAAAS"]
+# ::lemmas ["YAAAS"]
+(c13-1 / product
+       :name (c13-0 / name
+                    :op1 "YAAAS"))
+
+# ::snt Will/Elizabeth forever. Also, Will Turner&gt;Legolas
+# ::tokens ["Will", "/", "Elizabeth", "forever", ".", "Also", ",", "Will", "Turner&gt;Legolas"]
+# ::lemmas ["will", "/", "Elizabeth", "forever", ".", "also", ",", "will", "turner&gt;legolas"]
+(c14-2 / multi-sentence
+       :snt1 (c14-4 / slash
+                    :op1 (c14-7 / person
+                                :name (c14-1 / name
+                                             :op1 "Will"
+                                             :op2 "Turner"))
+                    :op2 (c14-3 / person
+                                :name (c14-6 / name
+                                             :op1 "Elizabeth"))
+                    :duration (c14-0 / forever))
+       :snt2 (c14-11 / person
+                     :name (c14-8 / name
+                                  :op1 "Will"
+                                  :op2 "Turner")
+                     :mod (c14-5 / also))
+       :snt3 (c14-9 / person
+                    :name (c14-10 / name
+                                  :op1 "Legolas")))
+
+# ::snt How am I supposed to tell my doctor that the reason I ruined my vocal cords is because I found out Keira Knightley is returning to POTC????
+# ::tokens ["How", "am", "I", "supposed", "to", "tell", "my", "doctor", "that", "the", "reason", "I", "ruined", "my", "vocal", "cords", "is", "because", "I", "found", "out", "Keira", "Knightley", "is", "returning", "to", "POTC", "?", "?", "?", "?"]
+# ::lemmas ["how", "be", "i", "suppose", "to", "tell", "my", "doctor", "that", "the", "reason", "i", "ruin", "my", "vocal", "cord", "be", "because", "i", "find", "out", "Keira", "Knightley", "be", "return", "to", "POTC", "?", "?", "?", "?"]
+(c15-3 / suppose-02
+       :ARG1 (c15-12 / tell-01
+                     :ARG0 (c15-11 / i
+                                   :part (c15-10 / cord
+                                                 :mod (c15-5 / vocal)))
+                     :ARG1 (c15-15 / cause-01
+                                   :ARG0 (c15-0 / find-out-03
+                                                :ARG0 c15-11
+                                                :ARG1 (c15-4 / return-01
+                                                             :ARG1 (c15-8 / person
+                                                                          :name (c15-2 / name
+                                                                                       :op1 "Keira"
+                                                                                       :op2 "Knightley"))
+                                                             :ARG4 (c15-1 / show
+                                                                          :name (c15-7 / name
+                                                                                       :op1 "POTC"))))
+                                   :ARG1 (c15-14 / ruin-01
+                                                 :ARG0 c15-11
+                                                 :ARG1 c15-10))
+                     :ARG2 c15-8
+                     :ARG0-of (c15-9 / have-rel-role-91
+                                     :ARG1 c15-11
+                                     :ARG2 (c15-13 / doctor)))
+       :manner (c15-6 / amr-unknown))

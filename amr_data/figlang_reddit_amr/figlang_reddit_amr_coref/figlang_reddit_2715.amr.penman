@@ -1,0 +1,34 @@
+# ::snt Does anyone know if I can bring my dog into the airport when picking someone up?
+# ::tokens ["Does", "anyone", "know", "if", "I", "can", "bring", "my", "dog", "into", "the", "airport", "when", "picking", "someone", "up", "?"]
+# ::lemmas ["do", "anyone", "know", "if", "i", "can", "bring", "my", "dog", "into", "the", "airport", "when", "pick", "someone", "up", "?"]
+(c1-9 / know-01
+      :ARG0 (c1-3 / anyone)
+      :ARG1 (c1-6 / truth-value
+                  :polarity-of (c1-8 / possible-01
+                                     :ARG1 (c1-7 / bring-01
+                                                 :ARG0 (c1-4 / i)
+                                                 :ARG1 (c1-0 / dog
+                                                             :poss c1-4)
+                                                 :ARG2 (c1-10 / airport)
+                                                 :time (c1-5 / pick-up-04
+                                                             :ARG0 c1-4
+                                                             :ARG1 (c1-1 / someone)))))
+      :polarity (c1-2 / amr-unknown))
+
+# ::snt Leave your dog at home, it's an airport not a dog park
+# ::tokens ["Leave", "your", "dog", "at", "home", ",", "it", "'s", "an", "airport", "not", "a", "dog", "park"]
+# ::lemmas ["leave", "your", "dog", "at", "home", ",", "it", "be", "an", "airport", "not", "a", "dog", "park"]
+(c2-1 / and
+      :op1 (c2-5 / leave-12
+                 :ARG0 (c2-8 / you)
+                 :ARG1 (c2-0 / dog
+                             :poss c2-8)
+                 :ARG2 (c2-4 / home)
+                 :mode imperative)
+      :op2 (c2-9 / airport
+                 :domain (c2-7 / it)
+                 :ARG1-of (c2-2 / contrast-01
+                                :ARG2 (c2-6 / park
+                                            :purpose (c2-3 / dog)
+                                            :domain c2-7
+                                            :polarity -))))

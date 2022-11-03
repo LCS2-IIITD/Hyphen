@@ -1,0 +1,96 @@
+# ::snt Unfortunately thats the winner
+# ::tokens ["Unfortunately", "that", "s", "the", "winner"]
+# ::lemmas ["unfortunately", "that", "s", "the", "winner"]
+(c2-1 / person
+      :ARG0-of (c2-0 / win-01)
+      :domain (c2-3 / that)
+      :ARG2-of (c2-2 / fortunate-01
+                     :polarity -))
+
+# ::snt such a sad statement for
+# ::tokens ["such", "a", "sad", "statement", "for"]
+# ::lemmas ["such", "a", "sad", "statement", "for"]
+(c3-0 / sad-02
+      :ARG1 (c3-1 / state-01)
+      :degree (c3-2 / such))
+
+# ::snt source?
+# ::tokens ["source", "?"]
+# ::lemmas ["source", "?"]
+(c4-0 / source
+      :polarity (c4-1 / amr-unknown))
+
+# ::snt This Cartoon Says It All: via via Chattanooga Times Free Press
+# ::tokens ["This", "Cartoon", "Says", "It", "All", ":", "via", "via", "Chattanooga", "Times", "Free", "Press"]
+# ::lemmas ["this", "Cartoon", "say", "it", "all", ":", "via", "via", "Chattanooga", "Times", "Free", "Press"]
+(c5-4 / say-01
+      :ARG0 (c5-3 / cartoon
+                  :mod (c5-5 / this))
+      :ARG1 (c5-0 / it
+                  :mod (c5-6 / all))
+      :medium (c5-2 / publication
+                    :name (c5-1 / name
+                                :op1 "Chattanooga"
+                                :op2 "Times"
+                                :op3 "Free"
+                                :op4 "Press")))
+
+# ::snt Truth fears nothing
+# ::tokens ["Truth", "fears", "nothing"]
+# ::lemmas ["truth", "fear", "nothing"]
+(c6-1 / fear-01
+      :ARG0 (c6-2 / truth)
+      :ARG1 (c6-0 / nothing))
+
+# ::snt This is a fake. You might not want to perpetuate this. Just sayin'...
+# ::tokens ["This", "is", "a", "fake", ".", "You", "might", "not", "want", "to", "perpetuate", "this", ".", "Just", "sayin", "'", "..."]
+# ::lemmas ["this", "be", "a", "fake", ".", "you", "might", "not", "want", "to", "perpetuate", "this", ".", "just", "sayin", "'", "..."]
+(c7-4 / multi-sentence
+      :snt1 (c7-3 / fake-02
+                  :ARG1 (c7-8 / this))
+      :snt2 (c7-5 / possible-01
+                  :ARG1 (c7-1 / want-01
+                              :ARG0 (c7-2 / you)
+                              :ARG1 (c7-9 / perpetuate-01
+                                          :ARG0 c7-2
+                                          :ARG1 (c7-6 / this))
+                              :polarity -))
+      :snt3 (c7-7 / say-01
+                  :mod (c7-0 / just)))
+
+# ::snt sad, but true
+# ::tokens ["sad", ",", "but", "true"]
+# ::lemmas ["sad", ",", "but", "true"]
+(c8-2 / contrast-01
+      :ARG1 (c8-0 / sad-02)
+      :ARG2 (c8-1 / true-01))
+
+# ::snt POWERFUL
+# ::tokens ["POWERFUL"]
+# ::lemmas ["powerful"]
+(c9-0 / powerful-02)
+
+# ::snt The upper % once again has the % at odds with each other via poverty.
+# ::tokens ["The", "upper", "%", "once", "again", "has", "the", "%", "at", "odds", "with", "each", "other", "via", "poverty", "."]
+# ::lemmas ["the", "upper", "%", "once", "again", "have", "the", "%", "at", "odd", "with", "each", "other", "via", "poverty", "."]
+(c10-3 / oppose-01
+       :ARG0 (c10-4 / percentage-entity
+                    :mod (c10-1 / upper))
+       :ARG1 (c10-6 / percentage-entity
+                    :mod (c10-0 / other))
+       :manner (c10-2 / poor)
+       :mod (c10-7 / again
+                   :mod (c10-5 / once)))
+
+# ::snt Charge que resume RT : RT via (via )
+# ::tokens ["Charge", "que", "resume", "RT", ":", "RT", "via", "(", "via", ")"]
+# ::lemmas ["charge", "que", "resume", "RT", ":", "RT", "via", "(", "via", ")"]
+(c11-4 / charge-05
+       :ARG0 (c11-0 / you)
+       :ARG1-of (c11-3 / cause-01
+                       :ARG0 (c11-2 / publication
+                                    :name (c11-1 / name
+                                                 :op1 "RT")))
+       :ARG1-of (c11-5 / say-01
+                       :medium c11-2)
+       :mode imperative)

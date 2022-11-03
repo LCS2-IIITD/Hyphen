@@ -1,0 +1,53 @@
+# ::snt Three C's nickname idea... "Crescent City Connection" This works right?
+# ::tokens ["Three", "C", "'s", "nickname", "idea", "...", "\"", "Crescent", "City", "Connection", "\"", "This", "works", "right", "?"]
+# ::lemmas ["Three", "C", "'s", "nickname", "idea", "...", "\"", "Crescent", "City", "Connection", "\"", "this", "work", "right", "?"]
+(c1-7 / multi-sentence
+      :snt1 (c1-6 / idea
+                  :topic (c1-8 / nickname
+                               :poss (c1-4 / person
+                                           :name (c1-3 / name
+                                                       :op1 "C")
+                                           :quant 3))
+                  :domain (c1-0 / string-entity
+                                :value "Crescent"
+                                :op2 "City"
+                                :op3 "Connecticut"))
+      :snt2 (c1-1 / work-09
+                  :ARG1 (c1-2 / this)
+                  :ARG1-of (c1-5 / request-confirmation-91)))
+
+# ::snt Cooks, Coleman... who's the other C?
+# ::tokens ["Cooks", ",", "Coleman", "...", "who", "'s", "the", "other", "C", "?"]
+# ::lemmas ["Cooks", ",", "Coleman", "...", "who", "be", "the", "other", "c", "?"]
+(c2-0 / and
+      :op1 (c2-7 / person
+                 :name (c2-8 / name
+                             :op1 "Cooks"))
+      :op2 (c2-4 / person
+                 :name (c2-6 / name
+                             :op1 "Coleman"))
+      :op3 (c2-1 / person
+                 :mod (c2-2 / variable
+                            :name (c2-3 / name
+                                        :op1 "C"))
+                 :mod (c2-5 / other)
+                 :domain (c2-9 / amr-unknown)))
+
+# ::snt You seriously did not just forget Colston.
+# ::tokens ["You", "seriously", "did", "not", "just", "forget", "Colston", "."]
+# ::lemmas ["you", "seriously", "do", "not", "just", "forget", "Colston", "."]
+(c3-0 / say-01
+      :ARG1 (c3-3 / serious-01
+                  :ARG1 (c3-1 / forget-01
+                              :ARG0 (c3-6 / you)
+                              :ARG1 (c3-4 / person
+                                          :name (c3-5 / name
+                                                      :op1 "Colston"))
+                              :mod (c3-2 / just)
+                              :polarity -))
+      :ARG2 c3-4)
+
+# ::snt Who?
+# ::tokens ["Who", "?"]
+# ::lemmas ["who", "?"]
+(c4-0 / amr-unknown)

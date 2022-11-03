@@ -1,0 +1,388 @@
+# ::snt you got a point
+# ::tokens ["you", "got", "a", "point"]
+# ::lemmas ["you", "get", "a", "point"]
+(c1-1 / get-a-point-09
+      :ARG0 (c1-0 / you))
+
+# ::snt when did canada turn so violent
+# ::tokens ["when", "did", "canada", "turn", "so", "violent"]
+# ::lemmas ["when", "do", "canada", "turn", "so", "violent"]
+(c2-4 / turn-02
+      :ARG1 (c2-2 / country
+                  :name (c2-0 / name
+                              :op1 "Canada"))
+      :ARG2 (c2-1 / violent
+                  :degree (c2-3 / so))
+      :time (c2-5 / amr-unknown))
+
+# ::snt shots fired INSIDE the Centre Block of Parliament. Staff and MPs are in lockdown.
+# ::tokens ["shots", "fired", "INSIDE", "the", "Centre", "Block", "of", "Parliament", ".", "Staff", "and", "MPs", "are", "in", "lockdown", "."]
+# ::lemmas ["shot", "fire", "INSIDE", "the", "Centre", "Block", "of", "Parliament", ".", "staff", "and", "mp", "be", "in", "lockdown", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-1 / fire-01
+                  :ARG1 (c3-14 / shot)
+                  :location (c3-6 / inside
+                                  :op1 (c3-4 / block
+                                             :mod (c3-11 / center)
+                                             :part-of (c3-12 / government-organization
+                                                             :name (c3-7 / name
+                                                                         :op1 "Parliament")))))
+      :snt2 (c3-3 / lock-down-05
+                  :ARG1 (c3-15 / and
+                               :op1 (c3-5 / staff)
+                               :op2 (c3-9 / person
+                                          :ARG0-of (c3-0 / have-org-role-91
+                                                         :ARG1 (c3-10 / government-organization
+                                                                      :name (c3-8 / name
+                                                                                  :op1 "Parliament"))
+                                                         :ARG2 (c3-13 / member))))))
+
+# ::snt Hey man, you gotta be consistent with your message, even if it seems asinine
+# ::tokens ["Hey", "man", ",", "you", "got", "ta", "be", "consistent", "with", "your", "message", ",", "even", "if", "it", "seems", "asinine"]
+# ::lemmas ["hey", "man", ",", "you", "got", "to", "be", "consistent", "with", "your", "message", ",", "even", "if", "it", "seem", "asinine"]
+(c4-8 / say-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-2 / obligate-01
+                  :ARG1 (c4-7 / consistent-01
+                              :ARG1 (c4-1 / man)
+                              :ARG2 (c4-6 / message-01
+                                          :ARG0 c4-1))
+                  :concession (c4-3 / even-if
+                                    :op1 (c4-4 / seem-01
+                                               :ARG1 c4-7
+                                               :mod (c4-9 / asinine))))
+      :ARG2 c4-1
+      :mod (c4-0 / hey
+                 :mode expressive))
+
+# ::snt I used to feel so safe when I lived in Ottawa! It seems no where is safe these days from terrorism. It's a sad time we live in
+# ::tokens ["I", "used", "to", "feel", "so", "safe", "when", "I", "lived", "in", "Ottawa", "!", "It", "seems", "no", "where", "is", "safe", "these", "days", "from", "terrorism", ".", "It", "'s", "a", "sad", "time", "we", "live", "in"]
+# ::lemmas ["i", "use", "to", "feel", "so", "safe", "when", "i", "live", "in", "Ottawa", "!", "it", "seem", "no", "where", "be", "safe", "these", "days", "from", "terrorism", ".", "it", "be", "a", "sad", "time", "we", "live", "in"]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / feel-01
+                  :ARG0 (c5-11 / i)
+                  :ARG1 (c5-3 / safe-01
+                              :degree (c5-7 / so))
+                  :time (c5-5 / live-01
+                              :ARG0 c5-11
+                              :location (c5-17 / city
+                                               :name (c5-8 / name
+                                                           :op1 "Ottawa")))
+                  :time (c5-10 / use-03))
+      :snt2 (c5-15 / seem-01
+                   :ARG1 (c5-6 / safe-01
+                               :ARG0 (c5-19 / terrorism)
+                               :ARG1 (c5-13 / thing
+                                            :location-of (c5-18 / live-01
+                                                                :ARG0 (c5-9 / we)))
+                               :polarity -)
+                   :time (c5-2 / day
+                               :mod (c5-12 / this)))
+      :snt3 (c5-14 / sad-02
+                   :ARG1 (c5-16 / time
+                                :time-of (c5-0 / live-01
+                                               :ARG0 c5-9))))
+
+# ::snt : Shots fired outside Canadian parliament in Ottawa, soldier is wounded, local media report WTF CANADA
+# ::tokens [":", "Shots", "fired", "outside", "Canadian", "parliament", "in", "Ottawa", ",", "soldier", "is", "wounded", ",", "local", "media", "report", "WTF", "CANADA"]
+# ::lemmas [":", "shot", "fire", "outside", "Canadian", "parliament", "in", "Ottawa", ",", "soldier", "be", "wound", ",", "local", "medium", "report", "WTF", "CANADA"]
+(c6-10 / report-01
+       :ARG0 (c6-2 / media
+                   :ARG1-of (c6-3 / local-02))
+       :ARG1 (c6-15 / and
+                    :op1 (c6-1 / fire-01
+                               :ARG1 (c6-14 / shoot-01)
+                               :location (c6-4 / outside
+                                               :op1 (c6-12 / government-organization
+                                                           :name (c6-7 / name
+                                                                       :op1 "Canadian"
+                                                                       :op2 "Parliament")
+                                                           :location (c6-11 / city
+                                                                            :name (c6-8 / name
+                                                                                        :op1 "Ottawa")))))
+                    :op2 (c6-0 / wound-01
+                               :ARG1 (c6-5 / soldier)))
+       :mod (c6-6 / fuck
+                  :mode expressive)
+       :location (c6-13 / country
+                        :name (c6-9 / name
+                                    :op1 "Canada")))
+
+# ::snt I'm guessing they ran out of beer "A"
+# ::tokens ["I", "'m", "guessing", "they", "ran", "out", "of", "beer", "\"", "A", "\""]
+# ::lemmas ["i", "be", "guess", "they", "run", "out", "of", "beer", "\"", "A", "\""]
+(c7-3 / guess-01
+      :ARG0 (c7-1 / i)
+      :ARG1 (c7-2 / run-out-05
+                  :ARG1 (c7-0 / beer
+                              :mod (c7-4 / string-entity
+                                         :value "A"))
+                  :ARG2 (c7-5 / they)))
+
+# ::snt No plz
+# ::tokens ["No", "plz"]
+# ::lemmas ["no", "plz"]
+(c8-0 / no
+      :polite +)
+
+# ::snt jkow-jk, jng me naikkan harga BBM,,konsekwen,,masyarakat tdk memerlukan ideku,,,, Jangan me naikkan BBM
+# ::tokens ["jkow", "-", "jk", ",", "jng", "me", "naikkan", "harga", "BBM,,konsekwen,,masyarakat", "tdk", "memerlukan", "ideku", ",", ",", ",", ",", "Jangan", "me", "naikkan", "BBM"]
+# ::lemmas ["jkow", "-", "jk", ",", "jng", "i", "naikkan", "harga", "BBM,,konsekwen,,masyarakat", "tdk", "memerlukan", "ideku", ",", ",", ",", ",", "Jangan", "i", "naikkan", "BBM"]
+(c9-0 / multi-sentence
+      :snt1 (c9-5 / and
+                  :op1 (c9-3 / person
+                             :name (c9-12 / name
+                                          :op1 "Jkow-jk"))
+                  :op2 (c9-15 / i)
+                  :op3 (c9-4 / person
+                             :name (c9-17 / name
+                                          :op1 "Akio"
+                                          :op2 "BBM")
+                             :mod (c9-9 / bay
+                                        :name (c9-1 / name
+                                                    :op1 "Karga"))
+                             :mod (c9-2 / naikkan))
+                  :op4 (c9-8 / person
+                             :name (c9-18 / name
+                                          :op1 "Konsekwen"))
+                  :op5 (c9-13 / person
+                              :name (c9-7 / name
+                                          :op1 "masyarakat"))
+                  :op6 (c9-10 / person
+                              :name (c9-11 / name
+                                           :op1 "Jangan")
+                              :mod (c9-14 / naikkan
+                                          :mode expressive)))
+      :snt2 (c9-6 / have-mod-91
+                  :ARG1 (c9-16 / i)
+                  :ARG2 c9-9))
+
+# ::snt I agree!
+# ::tokens ["I", "agree", "!"]
+# ::lemmas ["i", "agree", "!"]
+(c10-1 / agree-01
+       :ARG0 (c10-0 / i)
+       :mode expressive)
+
+# ::snt whats it all aboot
+# ::tokens ["what", "s", "it", "all", "aboot"]
+# ::lemmas ["what", "s", "it", "all", "aboot"]
+(c11-6 / ask-01
+       :ARG0 (c11-1 / i)
+       :ARG1 (c11-0 / amr-unknown
+                    :domain (c11-5 / it
+                                   :mod (c11-3 / all)))
+       :ARG2 (c11-4 / person
+                    :name (c11-2 / name
+                                 :op1 "Aboot")))
+
+# ::snt Canada is supposed to be a happy place -__-
+# ::tokens ["Canada", "is", "supposed", "to", "be", "a", "happy", "place", "-__-"]
+# ::lemmas ["Canada", "be", "suppose", "to", "be", "a", "happy", "place", "-__-"]
+(c12-4 / suppose-02
+       :ARG1 (c12-3 / country
+                    :name (c12-1 / name
+                                 :op1 "Canada"))
+       :ARG2 (c12-2 / place
+                    :ARG1-of (c12-0 / happy-02)))
+
+# ::snt what's going on with Canada lately, it's usually so quiet over there
+# ::tokens ["what", "'s", "going", "on", "with", "Canada", "lately", ",", "it", "'s", "usually", "so", "quiet", "over", "there"]
+# ::lemmas ["what", "be", "go", "on", "with", "Canada", "lately", ",", "it", "be", "usually", "so", "quiet", "over", "there"]
+(c13-8 / and
+       :op1 (c13-3 / event
+                   :mod (c13-6 / country
+                               :name (c13-5 / name
+                                            :op1 "Canada"))
+                   :time (c13-0 / lately))
+       :op2 (c13-4 / quiet-04
+                   :ARG1 c13-6
+                   :mod (c13-1 / usual)
+                   :degree (c13-7 / so)
+                   :location (c13-2 / over
+                                    :op1 c13-6)))
+
+# ::snt Stop your Gun-Man and I will stop Canada from clubbing the babies seals. Deal?
+# ::tokens ["Stop", "your", "Gun", "-", "Man", "and", "I", "will", "stop", "Canada", "from", "clubbing", "the", "babies", "seals", ".", "Deal", "?"]
+# ::lemmas ["stop", "your", "Gun", "-", "Man", "and", "i", "will", "stop", "Canada", "from", "club", "the", "baby", "seal", ".", "deal", "?"]
+(c14-1 / multi-sentence
+       :snt1 (c14-13 / and
+                     :op1 (c14-12 / stop-03
+                                  :ARG0 (c14-0 / you)
+                                  :ARG1 (c14-7 / man
+                                               :mod (c14-10 / gun)
+                                               :poss c14-0)
+                                  :mode imperative)
+                     :op2 (c14-3 / stop-03
+                                 :ARG0 (c14-5 / i)
+                                 :ARG1 (c14-9 / country
+                                              :name (c14-6 / name
+                                                           :op1 "Canada"))
+                                 :ARG2 (c14-8 / club-01
+                                              :ARG0 c14-9
+                                              :ARG1 (c14-2 / baby))
+                                 :mode imperative))
+       :snt2 (c14-11 / deal-01
+                     :polarity (c14-4 / amr-unknown)))
+
+# ::snt and morn you should! My comment was not meant to disrespect a fallen solider.
+# ::tokens ["and", "morn", "you", "should", "!", "My", "comment", "was", "not", "meant", "to", "disrespect", "a", "fallen", "solider", "."]
+# ::lemmas ["and", "morn", "you", "should", "!", "my", "comment", "be", "not", "mean", "to", "disrespect", "a", "fallen", "solider", "."]
+(c15-3 / multi-sentence
+       :snt1 (c15-11 / and
+                     :op2 (c15-6 / recommend-01
+                                 :ARG2 (c15-1 / you)))
+       :snt2 (c15-5 / mean-02
+                    :ARG0 (c15-7 / comment-01
+                                 :ARG0 (c15-4 / i))
+                    :ARG1 (c15-8 / disrespect-01
+                                 :ARG0 c15-7
+                                 :ARG1 (c15-9 / person
+                                              :ARG0-of (c15-0 / have-org-role-91
+                                                              :ARG2 (c15-10 / soldier))
+                                              :ARG1-of (c15-2 / fall-05)))
+                    :polarity -))
+
+# ::snt Reports are that Sidney Crosby is being blamed
+# ::tokens ["Reports", "are", "that", "Sidney", "Crosby", "is", "being", "blamed"]
+# ::lemmas ["report", "be", "that", "Sidney", "Crosby", "be", "be", "blame"]
+(c16-2 / report-01
+       :ARG1 (c16-3 / blame-01
+                    :ARG1 (c16-1 / person
+                                 :name (c16-0 / name
+                                              :op1 "Sidney"
+                                              :op2 "Crosby"))))
+
+# ::snt This was 's first tweet when the story broke; tragically, Cpl died of his injuries.
+# ::tokens ["This", "was", "'s", "first", "tweet", "when", "the", "story", "broke", ";", "tragically", ",", "Cpl", "died", "of", "his", "injuries", "."]
+# ::lemmas ["this", "be", "'s", "first", "tweet", "when", "the", "story", "break", ";", "tragically", ",", "Cpl", "die", "of", "his", "injury", "."]
+(c17-0 / multi-sentence
+       :snt1 (c17-11 / tweet-01
+                     :ARG0 (c17-9 / this)
+                     :ord (c17-2 / ordinal-entity
+                                 :value 1)
+                     :time (c17-1 / break-13
+                                  :ARG1 (c17-10 / story)))
+       :snt2 (c17-7 / die-01
+                    :ARG1 (c17-6 / person
+                                 :name (c17-4 / name
+                                              :op1 "Cpl"))
+                    :ARG1-of (c17-8 / cause-01
+                                    :ARG0 (c17-3 / injure-01
+                                                 :ARG1 c17-6))
+                    :mod (c17-5 / tragic)))
+
+# ::snt : Shots are fired outside Canadian parliament in Ottawa and a soldier is wounded, local media report
+# ::tokens [":", "Shots", "are", "fired", "outside", "Canadian", "parliament", "in", "Ottawa", "and", "a", "soldier", "is", "wounded", ",", "local", "media", "report"]
+# ::lemmas [":", "shot", "be", "fire", "outside", "Canadian", "parliament", "in", "Ottawa", "and", "a", "soldier", "be", "wound", ",", "local", "medium", "report"]
+(c18-9 / report-01
+       :ARG0 (c18-2 / media
+                    :ARG1-of (c18-3 / local-02))
+       :ARG1 (c18-12 / and
+                     :op1 (c18-1 / fire-01
+                                 :ARG1 (c18-11 / shoot-01)
+                                 :location (c18-5 / outside
+                                                  :op1 (c18-4 / building
+                                                              :name (c18-7 / name
+                                                                           :op1 "Canadian"
+                                                                           :op2 "Parliament")
+                                                              :location (c18-10 / city
+                                                                                :name (c18-8 / name
+                                                                                             :op1 "Ottawa")))))
+                     :op2 (c18-0 / wound-01
+                                 :ARG1 (c18-6 / soldier))))
+
+# ::snt it's "eh"... some of us are sober in . A -year-old father &amp; soldier died today. Our nation will morn him.
+# ::tokens ["it", "'s", "\"", "eh", "\"", "...", "some", "of", "us", "are", "sober", "in", ".", "A", "-year", "-", "old", "father", "&", "amp", ";", "soldier", "died", "today", ".", "Our", "nation", "will", "morn", "him", "."]
+# ::lemmas ["it", "be", "\"", "eh", "\"", "...", "some", "of", "we", "be", "sober", "in", ".", "a", "-year", "-", "old", "father", "&", "amp", ";", "soldier", "die", "today", ".", "our", "nation", "will", "morn", "he", "."]
+(c19-0 / multi-sentence
+       :snt1 (c19-15 / it
+                     :mod (c19-10 / eh
+                                  :mode expressive))
+       :snt2 (c19-3 / sober-02
+                    :ARG1 (c19-1 / person
+                                 :quant (c19-11 / some)
+                                 :ARG1-of (c19-16 / include-91
+                                                  :ARG2 (c19-14 / we))))
+       :snt3 (c19-2 / die-01
+                    :ARG1 (c19-5 / and
+                                 :op1 (c19-4 / person
+                                             :ARG0-of (c19-7 / have-rel-role-91
+                                                             :ARG2 (c19-8 / father)))
+                                 :op2 (c19-9 / person
+                                             :name (c19-12 / name
+                                                           :op1 "amp"))
+                                 :age (c19-20 / temporal-quantity
+                                              :unit (c19-17 / year)
+                                              :quant 1))
+                    :time (c19-19 / today))
+       :snt4 (c19-13 / morn-01
+                     :ARG0 (c19-18 / nation
+                                   :poss c19-14))
+       :ARG1 (c19-6 / he))
+
+# ::snt in Canada? That's amazing !!
+# ::tokens ["in", "Canada", "?", "That", "'s", "amazing", "!", "!"]
+# ::lemmas ["in", "Canada", "?", "that", "be", "amazing", "!", "!"]
+(c20-0 / multi-sentence
+       :snt1 (c20-5 / amr-unknown
+                    :location (c20-3 / country
+                                     :name (c20-2 / name
+                                                  :op1 "Canada")))
+       :snt2 (c20-1 / amaze-01
+                    :ARG0 (c20-4 / that)
+                    :mode expressive))
+
+# ::snt stop killing baby seals please Canada they belong to the world!
+# ::tokens ["stop", "killing", "baby", "seals", "please", "Canada", "they", "belong", "to", "the", "world", "!"]
+# ::lemmas ["stop", "kill", "baby", "seal", "please", "Canada", "they", "belong", "to", "the", "world", "!"]
+(c21-1 / multi-sentence
+       :snt1 (c21-7 / stop-01
+                    :ARG0 (c21-5 / country
+                                 :name (c21-4 / name
+                                              :op1 "Canada"))
+                    :ARG1 (c21-9 / kill-01
+                                 :ARG0 c21-5
+                                 :ARG1 (c21-3 / seal
+                                              :mod (c21-2 / baby)))
+                    :mode imperative)
+       :snt2 (c21-6 / belong-01
+                    :ARG0 (c21-8 / they)
+                    :ARG1 (c21-0 / world)))
+
+# ::snt that's a worry shots on outside , are not the communists in side shooting there best call
+# ::tokens ["that", "'s", "a", "worry", "shots", "on", "outside", ",", "are", "not", "the", "communists", "in", "side", "shooting", "there", "best", "call"]
+# ::lemmas ["that", "be", "a", "worry", "shot", "on", "outside", ",", "be", "not", "the", "communist", "in", "side", "shoot", "there", "good", "call"]
+(c22-12 / and
+        :op1 (c22-1 / worry-01
+                    :ARG0 (c22-10 / shoot-02
+                                  :location (c22-4 / outside)))
+        :op2 (c22-5 / shoot-02
+                    :ARG0 (c22-7 / person
+                                 :mod (c22-11 / political-movement
+                                              :name (c22-6 / name
+                                                           :op1 "communism")))
+                    :manner (c22-2 / side-01)
+                    :ARG1-of (c22-8 / call-10
+                                    :ARG0 c22-7
+                                    :ARG1-of (c22-0 / have-degree-91
+                                                    :ARG2 (c22-9 / good-02
+                                                                 :ARG1 c22-8)
+                                                    :ARG3 (c22-3 / most)))
+                    :polarity -))
+
+# ::snt : Shots outside Cndn parliament in and a soldier is wounded, local media report
+# ::tokens [":", "Shots", "outside", "Cndn", "parliament", "in", "and", "a", "soldier", "is", "wounded", ",", "local", "media", "report"]
+# ::lemmas [":", "shot", "outside", "Cndn", "parliament", "in", "and", "a", "soldier", "be", "wound", ",", "local", "medium", "report"]
+(c23-6 / report-01
+       :ARG0 (c23-2 / media
+                    :ARG1-of (c23-1 / local-02))
+       :ARG1 (c23-9 / and
+                    :op1 (c23-8 / shoot-02
+                                :location (c23-3 / outside
+                                                 :op1 (c23-7 / government-organization
+                                                             :name (c23-5 / name
+                                                                          :op1 "Cndn"
+                                                                          :op2 "Parliament"))))
+                    :op2 (c23-0 / wound-01
+                                :ARG1 (c23-4 / soldier))))

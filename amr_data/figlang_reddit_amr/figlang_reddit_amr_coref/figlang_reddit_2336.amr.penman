@@ -1,0 +1,64 @@
+# ::snt "muh pro genji"
+# ::tokens ["\"", "muh", "pro", "genji", "\""]
+# ::lemmas ["\"", "muh", "pro", "genji", "\""]
+(c1-2 / favor-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-0 / genji))
+
+# ::snt As a genji main I will say junkrat should be deleted from this game
+# ::tokens ["As", "a", "genji", "main", "I", "will", "say", "junkrat", "should", "be", "deleted", "from", "this", "game"]
+# ::lemmas ["as", "a", "genji", "main", "i", "will", "say", "junkrat", "should", "be", "delete", "from", "this", "game"]
+(c2-0 / say-01
+      :ARG0 (c2-6 / i
+                  :mod (c2-7 / main)
+                  :mod (c2-5 / genji))
+      :ARG1 (c2-3 / recommend-01
+                  :ARG1 (c2-1 / delete-01
+                              :ARG1 (c2-4 / product
+                                          :name (c2-8 / name
+                                                      :op1 " junkrat"))
+                              :ARG2 (c2-9 / game
+                                          :mod (c2-2 / this)))))
+
+# ::snt as someone who plays all heros; genji should be deleted
+# ::tokens ["as", "someone", "who", "plays", "all", "heros", ";", "genji", "should", "be", "deleted"]
+# ::lemmas ["as", "someone", "who", "you", "all", "hero", ";", "genji", "should", "be", "delete"]
+(c3-6 / recommend-01
+      :ARG1 (c3-0 / delete-01
+                  :ARG1 (c3-7 / person
+                              :name (c3-8 / name
+                                          :op1 "Genji"))
+                  :manner (c3-4 / resemble-01
+                                :ARG2 (c3-1 / someone
+                                            :ARG0-of (c3-5 / play-02
+                                                           :ARG1 (c3-3 / hero
+                                                                       :mod (c3-2 / all)))))))
+
+# ::snt As someone who also plays all heroes: **No** hero should be deleted.
+# ::tokens ["As", "someone", "who", "also", "plays", "all", "heroes", ":", "*", "*", "No", "*", "*", "hero", "should", "be", "deleted", "."]
+# ::lemmas ["as", "someone", "who", "also", "you", "all", "hero", ":", "*", "*", "no", "*", "*", "hero", "should", "be", "delete", "."]
+(c4-5 / recommend-01
+      :ARG1 (c4-0 / delete-01
+                  :ARG1 (c4-4 / hero
+                              :mod (c4-8 / no)))
+      :ARG1-of (c4-3 / cause-01
+                     :ARG0 (c4-1 / someone
+                                 :ARG0-of (c4-7 / play-02
+                                                :ARG1 (c4-6 / hero
+                                                            :mod (c4-2 / all))
+                                                :mod (c4-9 / also)))))
+
+# ::snt You know this game would be 100% better without Mei.
+# ::tokens ["You", "know", "this", "game", "would", "be", "100", "%", "better", "without", "Mei", "."]
+# ::lemmas ["you", "know", "this", "game", "would", "be", "100", "%", "well", "without", "Mei", "."]
+(c5-6 / know-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-4 / good-02
+                  :ARG1 (c5-7 / game
+                              :mod (c5-2 / this))
+                  :mod (c5-5 / percentage-entity
+                             :value 100)
+                  :condition (c5-0 / person
+                                   :name (c5-3 / name
+                                               :op1 "Mei")
+                                   :polarity -)))

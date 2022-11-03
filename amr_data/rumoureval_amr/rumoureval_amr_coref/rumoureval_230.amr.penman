@@ -1,0 +1,164 @@
+# ::snt :50am??
+# ::tokens [":", "50am", "?", "?"]
+# ::lemmas [":", "50am", "?", "?"]
+(c1-1 / date-entity
+      :polarity (c1-0 / amr-unknown)
+      :time ":50")
+
+# ::snt Probably meant PM, in the afternoon &gt;.&lt;
+# ::tokens ["Probably", "meant", "PM", ",", "in", "the", "afternoon", "&", "gt;.&lt", ";"]
+# ::lemmas ["probably", "mean", "PM", ",", "in", "the", "afternoon", "&", "gt;.&lt", ";"]
+(c2-3 / probable
+      :domain (c2-0 / mean-01
+                    :ARG2 (c2-2 / date-entity
+                                :dayperiod (c2-1 / afternoon)
+                                :time "PM")))
+
+# ::snt . yes, certainly a typo.
+# ::tokens [".", "yes", ",", "certainly", "a", "typo", "."]
+# ::lemmas [".", "yes", ",", "certainly", "a", "typo", "."]
+(c3-1 / typo
+      :mod (c3-0 / certain))
+
+# ::snt Thank you for up date --- great job --Thank you ------pnp---canada
+# ::tokens ["Thank", "you", "for", "up", "date", "---", "great", "job", "--Thank", "you", "------pnp", "---", "canada"]
+# ::lemmas ["thank", "you", "for", "up", "date", "---", "great", "job", "--thank", "you", "------pnp", "---", "canada"]
+(c4-1 / thank-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-0 / you)
+      :ARG2 (c4-5 / up-to
+                  :op1 (c4-2 / job
+                             :mod (c4-6 / great)))
+      :ARG1-of (c4-7 / say-01
+                     :ARG0 c4-3
+                     :ARG2 (c4-4 / person
+                                 :name (c4-8 / name
+                                             :op1 "pnp---canada"))))
+
+# ::snt Okay, so what's been happening in Canada?
+# ::tokens ["Okay", ",", "so", "what", "'s", "been", "happening", "in", "Canada", "?"]
+# ::lemmas ["okay", ",", "so", "what", "be", "be", "happen", "in", "Canada", "?"]
+(c5-2 / infer-01
+      :ARG1 (c5-0 / event
+                  :mod (c5-3 / amr-unknown)
+                  :location (c5-1 / country
+                                  :name (c5-5 / name
+                                              :op1 "Canada")))
+      :ARG1-of (c5-4 / okay-04))
+
+# ::snt Okay did quick search. Seems these are low level wannabe terrorists retaliating for Canada's stand against ISIS.
+# ::tokens ["Okay", "did", "quick", "search", ".", "Seems", "these", "are", "low", "level", "wannabe", "terrorists", "retaliating", "for", "Canada", "'s", "stand", "against", "ISIS", "."]
+# ::lemmas ["okay", "do", "quick", "search", ".", "seem", "these", "be", "low", "level", "wannabe", "terrorist", "retaliate", "for", "Canada", "'s", "stand", "against", "ISIS", "."]
+(c6-5 / multi-sentence
+      :snt1 (c6-14 / search-01
+                   :ARG1-of (c6-0 / quick-02)
+                   :ARG1-of (c6-13 / okay-04))
+      :snt2 (c6-3 / seem-01
+                  :ARG1 (c6-4 / terrorist
+                              :mod (c6-2 / wannabe)
+                              :mod (c6-10 / level
+                                          :ARG1-of (c6-15 / low-04))
+                              :domain (c6-6 / this)
+                              :ARG0-of (c6-12 / retaliate-01
+                                              :ARG1 (c6-1 / stand-11
+                                                          :ARG0 (c6-9 / country
+                                                                      :name (c6-16 / name
+                                                                                   :op1 "Canada"))
+                                                          :ARG1 (c6-11 / against
+                                                                       :op1 (c6-7 / criminal-organization
+                                                                                  :name (c6-8 / name
+                                                                                              :op1 "Islamic"
+                                                                                              :op2 "organization"))))))))
+
+# ::snt The terrorists bit has not been confirmed as far as I'm aware. Last guy who shot up Parliament yrs ago was a nutcase.
+# ::tokens ["The", "terrorists", "bit", "has", "not", "been", "confirmed", "as", "far", "as", "I", "'m", "aware", ".", "Last", "guy", "who", "shot", "up", "Parliament", "yrs", "ago", "was", "a", "nutcase", "."]
+# ::lemmas ["the", "terrorist", "bit", "have", "not", "be", "confirm", "as", "far", "as", "i", "be", "aware", ".", "last", "guy", "who", "shoot", "up", "Parliament", "yr", "ago", "be", "a", "nutcase", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-6 / confirm-01
+                  :ARG1 (c7-16 / bit
+                               :mod (c7-2 / terrorist))
+                  :concession (c7-8 / as-far-as
+                                    :op1 (c7-11 / realize-01
+                                                :ARG0 (c7-7 / i)
+                                                :ARG1 (c7-15 / nutcase
+                                                             :domain (c7-9 / guy
+                                                                           :ARG0-of (c7-14 / shoot-up-05
+                                                                                           :ARG1 (c7-1 / government-organization
+                                                                                                       :name (c7-5 / name
+                                                                                                                   :op1 "Parliament"))
+                                                                                           :time (c7-10 / before
+                                                                                                        :op1 (c7-12 / now)
+                                                                                                        :quant (c7-4 / temporal-quantity
+                                                                                                                     :unit (c7-0 / year)
+                                                                                                                     :quant 1)))
+                                                                           :mod (c7-13 / last))
+                                                             :snt2-of c7-3)))
+                  :polarity -))
+
+# ::snt True. But I hear there was a similar incident this past Monday. Is that correct? That makes me think its low level terrorism
+# ::tokens ["True", ".", "But", "I", "hear", "there", "was", "a", "similar", "incident", "this", "past", "Monday", ".", "Is", "that", "correct", "?", "That", "makes", "me", "think", "its", "low", "level", "terrorism"]
+# ::lemmas ["true", ".", "but", "i", "hear", "there", "be", "a", "similar", "incident", "this", "past", "Monday", ".", "be", "that", "correct", "?", "that", "make", "i", "think", "its", "low", "level", "terrorism"]
+(c8-19 / multi-sentence
+       :snt1 (c8-8 / true-01)
+       :snt2 (c8-11 / contrast-01
+                    :ARG2 (c8-0 / hear-01
+                                :ARG0 (c8-15 / i)
+                                :ARG1 (c8-7 / incident
+                                            :ARG1-of (c8-4 / resemble-01)
+                                            :time (c8-14 / date-entity
+                                                         :weekday (c8-20 / monday)
+                                                         :mod (c8-16 / past)
+                                                         :mod (c8-18 / this)))))
+       :snt3 (c8-6 / correct-02
+                   :ARG1 (c8-9 / that)
+                   :polarity (c8-17 / amr-unknown))
+       :snt4 (c8-5 / make-02
+                   :ARG0 c8-9)
+       :ARG1 (c8-12 / think-01
+                    :ARG0 (c8-1 / i)
+                    :ARG1 (c8-2 / terrorism
+                                :mod (c8-3 / level
+                                           :ARG1-of (c8-13 / low-04))
+                                :domain (c8-10 / it))))
+
+# ::snt A soldier was intentionally hit by a car driven by a radicalized person, also not really confirmed yet.
+# ::tokens ["A", "soldier", "was", "intentionally", "hit", "by", "a", "car", "driven", "by", "a", "radicalized", "person", ",", "also", "not", "really", "confirmed", "yet", "."]
+# ::lemmas ["a", "soldier", "be", "intentionally", "hit", "by", "a", "car", "drive", "by", "a", "radicalize", "person", ",", "also", "not", "really", "confirm", "yet", "."]
+(c9-2 / hit-01
+      :ARG0 (c9-5 / car
+                  :ARG1-of (c9-3 / drive-01
+                                 :ARG0 (c9-4 / person
+                                             :ARG1-of (c9-8 / radicalize-01))))
+      :ARG1 (c9-10 / soldier)
+      :ARG1-of (c9-6 / intend-01)
+      :ARG1-of (c9-9 / confirm-01
+                     :time (c9-0 / yet)
+                     :mod (c9-7 / also)
+                     :ARG1-of (c9-1 / real-04)
+                     :polarity -))
+
+# ::snt Everything needs to be confirmed of course. It would make sense though if true though.
+# ::tokens ["Everything", "needs", "to", "be", "confirmed", "of", "course", ".", "It", "would", "make", "sense", "though", "if", "true", "though", "."]
+# ::lemmas ["everything", "need", "to", "be", "confirm", "of", "course", ".", "it", "would", "make", "sense", "though", "if", "true", "though", "."]
+(c10-1 / multi-sentence
+       :snt1 (c10-5 / obligate-01
+                    :ARG2 (c10-3 / confirm-01
+                                 :ARG1 (c10-7 / everything)
+                                 :mod (c10-2 / of-course)))
+       :snt2 (c10-6 / sense-02
+                    :ARG1 (c10-4 / it)
+                    :concession (c10-0 / true-01
+                                       :ARG1 c10-4)))
+
+# ::snt this is s dry run for what that have planned for us in USA.
+# ::tokens ["this", "is", "s", "dry", "run", "for", "what", "that", "have", "planned", "for", "us", "in", "USA", "."]
+# ::lemmas ["this", "be", "s", "dry", "run", "for", "what", "that", "have", "plan", "for", "we", "in", "USA", "."]
+(c11-6 / run-13
+       :ARG1 (c11-2 / this)
+       :ARG1-of (c11-3 / dry-08)
+       :beneficiary (c11-1 / thing
+                           :ARG1-of (c11-4 / plan-01
+                                           :ARG0 (c11-0 / we
+                                                        :location (c11-5 / country
+                                                                         :name (c11-7 / name
+                                                                                      :op1 "USA"))))))

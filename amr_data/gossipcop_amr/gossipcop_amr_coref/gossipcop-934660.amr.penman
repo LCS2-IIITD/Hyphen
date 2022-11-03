@@ -1,0 +1,260 @@
+# ::snt blessed b da fruit
+# ::tokens ["blessed", "b", "da", "fruit"]
+# ::lemmas ["bless", "b", "da", "fruit"]
+(c1-1 / bless-01
+      :ARG1 (c1-0 / fruit)
+      :mode expressive)
+
+# ::snt Dear Its bear a child.
+# ::tokens ["Dear", "Its", "bear", "a", "child", "."]
+# ::lemmas ["dear", "its", "bear", "a", "child", "."]
+(c2-2 / bear-02
+      :ARG0 (c2-3 / it)
+      :ARG1 (c2-1 / child)
+      :mod (c2-0 / dear))
+
+# ::snt GIVE THAT BABY TO JUNE! Just kidding, CONGRATULATIONS!
+# ::tokens ["GIVE", "THAT", "BABY", "TO", "JUNE", "!", "Just", "kidding", ",", "CONGRATULATIONS", "!"]
+# ::lemmas ["give", "that", "baby", "to", "JUNE", "!", "just", "kid", ",", "CONGRATULATIONS", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / give-01
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-0 / baby)
+                  :time (c3-7 / date-entity
+                              :month 6)
+                  :mode imperative)
+      :snt2 (c3-3 / kid-01
+                  :ARG0 (c3-8 / you)
+                  :mod (c3-5 / just)
+                  :mode expressive)
+      :snt3 (c3-4 / congratulate-01
+                  :mode expressive))
+
+# ::snt Congratulations! Happy! Mother's! Day!
+# ::tokens ["Congratulations", "!", "Happy", "!", "Mother", "'s", "!", "Day", "!"]
+# ::lemmas ["congratulation", "!", "happy", "!", "Mother", "'s", "!", "day", "!"]
+(c4-0 / multi-sentence
+      :snt1 (c4-4 / congratulate-01)
+      :snt2 (c4-3 / happy-01
+                  :ARG1 (c4-2 / event
+                              :name (c4-1 / name
+                                          :op1 "Mother's"
+                                          :op2 "Day"))))
+
+# ::snt Congrats to this happy couple on this wonderful baby news.
+# ::tokens ["Congrats", "to", "this", "happy", "couple", "on", "this", "wonderful", "baby", "news", "."]
+# ::lemmas ["congrat", "to", "this", "happy", "couple", "on", "this", "wonderful", "baby", "news", "."]
+(c5-3 / congratulate-01
+      :ARG1 (c5-7 / couple
+                  :ARG1-of (c5-2 / happy-01)
+                  :mod (c5-5 / this))
+      :ARG2 (c5-1 / news
+                  :mod (c5-0 / baby)
+                  :ARG1-of (c5-4 / wonderful-03)
+                  :mod (c5-6 / this)))
+
+# ::snt praise be
+# ::tokens ["praise", "be"]
+# ::lemmas ["praise", "be"]
+(c6-0 / praise-01)
+
+# ::snt Is it bad that I dont like her? Lol I know!
+# ::tokens ["Is", "it", "bad", "that", "I", "do", "nt", "like", "her", "?", "Lol", "I", "know", "!"]
+# ::lemmas ["be", "it", "bad", "that", "i", "do", "not", "like", "she", "?", "Lol", "i", "know", "!"]
+(c7-1 / multi-sentence
+      :snt1 (c7-0 / bad-07
+                  :polarity (c7-7 / amr-unknown)
+                  :ARG1 (c7-8 / dislike-01
+                              :ARG0 (c7-6 / i)
+                              :ARG1 (c7-2 / she)))
+      :snt2 (c7-4 / know-01
+                  :ARG0 (c7-3 / i)
+                  :manner (c7-5 / laugh-01
+                                :ARG0 c7-3
+                                :manner (c7-9 / loud))
+                  :mode expressive))
+
+# ::snt I guess you dont need June anymore ... ha ha but really congratulations
+# ::tokens ["I", "guess", "you", "do", "nt", "need", "June", "anymore", "...", "ha", "ha", "but", "really", "congratulations"]
+# ::lemmas ["i", "guess", "you", "do", "not", "need", "June", "anymore", "...", "ha", "ha", "but", "really", "congratulation"]
+(c8-3 / contrast-01
+      :ARG1 (c8-6 / guess-01
+                  :ARG0 (c8-4 / i)
+                  :ARG1 (c8-1 / need-01
+                              :ARG0 (c8-0 / you)
+                              :ARG1 (c8-7 / date-entity
+                                          :month 6)
+                              :time (c8-5 / anymore)
+                              :polarity -))
+      :ARG2 (c8-8 / congratulate-01
+                  :ARG0 c8-4
+                  :ARG1 c8-0
+                  :degree (c8-2 / really)))
+
+# ::snt Blessed be the fruit
+# ::tokens ["Blessed", "be", "the", "fruit"]
+# ::lemmas ["blessed", "be", "the", "fruit"]
+(c9-1 / bless-01
+      :ARG0 (c9-0 / fruit))
+
+# ::snt Congratulations! Shes a dynamite actress!
+# ::tokens ["Congratulations", "!", "She", "s", "a", "dynamite", "actress", "!"]
+# ::lemmas ["congratulation", "!", "she", "s", "a", "dynamite", "actress", "!"]
+(c10-0 / multi-sentence
+       :snt1 (c10-2 / congratulate-01
+                    :mode expressive)
+       :snt2 (c10-1 / she
+                    :ARG0-of (c10-3 / act-01
+                                    :mod (c10-4 / dynamite))
+                    :mode expressive))
+
+# ::snt Congrats Sarah from Chuck
+# ::tokens ["Congrats", "Sarah", "from", "Chuck"]
+# ::lemmas ["Congrats", "Sarah", "from", "Chuck"]
+(c11-4 / congratulate-01
+       :ARG0 (c11-3 / person
+                    :name (c11-0 / name
+                                 :op1 "Chuck"))
+       :ARG1 (c11-1 / person
+                    :name (c11-2 / name
+                                 :op1 "Sarah")))
+
+# ::snt lol, blessed be the fruit.
+# ::tokens ["lol", ",", "blessed", "be", "the", "fruit", "."]
+# ::lemmas ["lol", ",", "bless", "be", "the", "fruit", "."]
+(c12-2 / multi-sentence
+       :snt1 (c12-3 / laugh-01
+                    :manner (c12-4 / loud)
+                    :mode expressive)
+       :snt2 (c12-0 / fruit
+                    :ARG1-of (c12-1 / bless-01)))
+
+# ::snt Ironic! Congrats!
+# ::tokens ["Ironic", "!", "Congrats", "!"]
+# ::lemmas ["ironic", "!", "Congrats", "!"]
+(c13-1 / multi-sentence
+       :snt1 (c13-2 / irony
+                    :mode expressive)
+       :snt2 (c13-0 / congratulate-01
+                    :mode expressive))
+
+# ::snt Oh my Sarah from Chuck... Praise be!
+# ::tokens ["Oh", "my", "Sarah", "from", "Chuck", "...", "Praise", "be", "!"]
+# ::lemmas ["oh", "my", "Sarah", "from", "Chuck", "...", "praise", "be", "!"]
+(c14-3 / say-01
+       :ARG1 (c14-5 / praise-01
+                    :ARG0 (c14-2 / person
+                                 :name (c14-1 / name
+                                              :op1 "Sarah")
+                                 :source (c14-6 / person
+                                                :name (c14-4 / name
+                                                             :op1 "Chuck"))
+                                 :mod (c14-0 / oh
+                                             :mode expressive)
+                                 :ARG2-of c14-3)
+                    :mode imperative))
+
+# ::snt Haha Blessed be the fruit.
+# ::tokens ["Haha", "Blessed", "be", "the", "fruit", "."]
+# ::lemmas ["Haha", "Blessed", "be", "the", "fruit", "."]
+(c16-1 / bless-01
+       :ARG1 (c16-0 / fruit)
+       :mod (c16-2 / haha
+                   :mode expressive))
+
+# ::snt She will always be Sarah from Chuck to me
+# ::tokens ["She", "will", "always", "be", "Sarah", "from", "Chuck", "to", "me"]
+# ::lemmas ["she", "will", "always", "be", "Sarah", "from", "Chuck", "to", "i"]
+(c17-4 / person
+       :name (c17-0 / name
+                    :op1 "Sarah")
+       :domain (c17-2 / she)
+       :time (c17-6 / always)
+       :source (c17-1 / person
+                      :name (c17-3 / name
+                                   :op1 "Chuck"))
+       :prep-to (c17-5 / i))
+
+# ::snt Gratulacje
+# ::tokens ["Gratulacje"]
+# ::lemmas ["Gratulacje"]
+(c18-1 / person
+       :name (c18-0 / name
+                    :op1 "Gratulacje"))
+
+# ::snt Praise be. Please release offred now
+# ::tokens ["Praise", "be", ".", "Please", "release", "offred", "now"]
+# ::lemmas ["praise", "be", ".", "please", "release", "offre", "now"]
+(c19-2 / multi-sentence
+       :snt1 (c19-5 / praise-01
+                    :ARG0 (c19-1 / you)
+                    :mode imperative)
+       :snt2 (c19-4 / release-01
+                    :ARG0 (c19-6 / you
+                                 :ARG1-of c19-4)
+                    :ARG2 (c19-0 / off)
+                    :time (c19-3 / now)
+                    :mode imperative
+                    :polite +))
+
+# ::snt Blessed be
+# ::tokens ["Blessed", "be"]
+# ::lemmas ["blessed", "be"]
+(c20-1 / bless-01
+       :ARG1 (c20-2 / person
+                    :name (c20-0 / name
+                                 :op1 "be")))
+
+# ::snt does this mean Offred can be free
+# ::tokens ["does", "this", "mean", "Offred", "can", "be", "free"]
+# ::lemmas ["do", "this", "mean", "Offred", "can", "be", "free"]
+(c21-2 / mean-01
+       :polarity (c21-4 / amr-unknown)
+       :ARG1 (c21-6 / this)
+       :ARG2 (c21-5 / possible-01
+                    :ARG1 (c21-0 / free-04
+                                 :ARG1 (c21-3 / person
+                                              :ARG1-of (c21-1 / offend-03)))))
+
+# ::snt Blessed be the fruit
+# ::tokens ["Blessed", "be", "the", "fruit"]
+# ::lemmas ["blessed", "be", "the", "fruit"]
+(c22-1 / bless-01
+       :ARG0 (c22-0 / fruit))
+
+# ::snt Serena, now you can stop beating June and all the help in your house.
+# ::tokens ["Serena", ",", "now", "you", "can", "stop", "beating", "June", "and", "all", "the", "help", "in", "your", "house", "."]
+# ::lemmas ["Serena", ",", "now", "you", "can", "stop", "beat", "June", "and", "all", "the", "help", "in", "your", "house", "."]
+(c24-4 / say-01
+       :ARG1 (c24-6 / possible-01
+                    :ARG1 (c24-0 / stop-01
+                                 :ARG0 (c24-3 / person
+                                              :name (c24-2 / name
+                                                           :op1 "Serena"))
+                                 :ARG1 (c24-1 / beat-01
+                                              :ARG0 c24-3
+                                              :ARG1 (c24-11 / and
+                                                            :op1 (c24-12 / person
+                                                                         :name (c24-5 / name
+                                                                                      :op1 "June"))
+                                                            :op2 (c24-7 / help-01
+                                                                        :location (c24-9 / house
+                                                                                         :poss c24-3)
+                                                                        :mod (c24-10 / all))))
+                                 :time (c24-8 / now)))
+       :ARG2 c24-3)
+
+# ::snt Praise be!
+# ::tokens ["Praise", "be", "!"]
+# ::lemmas ["praise", "be", "!"]
+(c25-0 / praise-01
+       :mode expressive)
+
+# ::snt The irony lmao
+# ::tokens ["The", "irony", "lmao"]
+# ::lemmas ["the", "irony", "lmao"]
+(c26-3 / irony
+       :mod (c26-2 / laugh-01
+                   :ARG0 (c26-0 / i)
+                   :manner (c26-1 / loud)
+                   :mode expressive))

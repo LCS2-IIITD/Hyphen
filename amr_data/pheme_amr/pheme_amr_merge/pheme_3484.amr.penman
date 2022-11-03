@@ -1,0 +1,54 @@
+# ::subgraphs [["c1-2", "c1-3", "c1-1", "c1-0"], ["c2-3", "c2-2", "c2-4", "c2-6", "c2-0", "c2-1", "c2-8", "c2-7", "c2-5"], ["c3-4", "c3-3", "c3-8", "c3-6", "c3-13", "c3-10", "c3-9", "c3-5", "c3-14", "c3-1", "c3-12", "c3-0", "c3-11", "c3-15", "c3-2", "c3-7"], ["c4-0", "c4-1", "c4-3", "c4-2"]]
+(d / dummy
+   :COMMENT (c1-2 / mean
+                  :ARG0 (c1-3 / i
+                              :SAME c3-8
+                              :SAME c2-4
+                              :COREF c3-8
+                              :COREF c2-4)
+                  :ARG2 (c1-1 / above
+                              :op1 (c1-0 / water))
+                  :polarity -)
+   :COMMENT (c2-3 / multi
+                  :snt1 (c2-2 / laugh
+                              :ARG0 (c2-4 / i)
+                              :manner (c2-6 / loud)
+                              :mode expressive)
+                  :snt2 (c2-0 / hope
+                              :ARG0 (c2-1 / we)
+                              :ARG1 (c2-8 / achieve
+                                          :ARG0 c2-1
+                                          :ARG1 (c2-7 / temperature
+                                                      :mod (c2-5 / room)))
+                              :mode imperative)
+                  :SAME c3-4)
+   :COMMENT (c3-4 / multi
+                  :snt1 (c3-3 / like
+                              :ARG0 (c3-8 / i)
+                              :ARG1 (c3-6 / believe
+                                          :ARG0 c3-8
+                                          :ARG1 (c3-13 / swim
+                                                       :ARG0 (c3-10 / person
+                                                                    :name (c3-9 / name
+                                                                                :op1 "Putin"
+                                                                                :SAME c4-3)
+                                                                    :SAME c4-1)
+                                                       :ARG2 (c3-5 / fish)
+                                                       :SAME c4-0)))
+                  :snt2 (c3-14 / think
+                               :ARG1 c3-13
+                               :ARG2 (c3-1 / world)
+                               :ARG1-of (c3-12 / good
+                                               :ARG2-of (c3-0 / have-degree
+                                                              :ARG1 c3-14
+                                                              :ARG3 (c3-11 / most))))
+                  :snt3 (c3-15 / agree
+                               :ARG0 (c3-2 / you)
+                               :polarity (c3-7 / amr)
+                               :polarity -))
+   :COMMENT (c4-0 / swim
+                  :ARG0 (c4-1 / person
+                              :name (c4-3 / name
+                                          :op1 "Putin"))
+                  :accompanier (c4-2 / fish
+                                     :SAME-of c3-5)))

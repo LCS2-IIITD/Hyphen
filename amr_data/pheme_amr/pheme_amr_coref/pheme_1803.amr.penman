@@ -1,0 +1,103 @@
+# ::snt was Mike Brown wearing shoes or flip-flops when shot?
+# ::tokens ["was", "Mike", "Brown", "wearing", "shoes", "or", "flip", "-", "flops", "when", "shot", "?"]
+# ::lemmas ["be", "Mike", "Brown", "wear", "shoe", "or", "flip", "-", "flop", "when", "shoot", "?"]
+(c1-0 / wear-01
+      :ARG0 (c1-5 / person
+                  :name (c1-4 / name
+                              :op1 "Mike"
+                              :op2 "Brown"))
+      :ARG1 (c1-2 / or
+                  :op1 (c1-6 / shoe)
+                  :op2 (c1-1 / flipflop))
+      :polarity (c1-7 / amr-unknown)
+      :time (c1-3 / shoot-02
+                  :ARG1 c1-5))
+
+# ::snt Are you able to ask questions?
+# ::tokens ["Are", "you", "able", "to", "ask", "questions", "?"]
+# ::lemmas ["be", "you", "able", "to", "ask", "question", "?"]
+(c2-3 / possible-01
+      :polarity (c2-4 / amr-unknown)
+      :ARG1 (c2-2 / ask-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-1 / question-01)))
+
+# ::snt more crime?
+# ::tokens ["more", "crime", "?"]
+# ::lemmas ["more", "crime", "?"]
+(c3-1 / crime-02
+      :polarity (c3-2 / amr-unknown)
+      :quant (c3-0 / more))
+
+# ::snt amen. lets make sure the timedate stamp on still pics look like the correct month, and that the man in vid has sandals on
+# ::tokens ["amen", ".", "lets", "make", "sure", "the", "timedate", "stamp", "on", "still", "pics", "look", "like", "the", "correct", "month", ",", "and", "that", "the", "man", "in", "vid", "has", "sandals", "on"]
+# ::lemmas ["amen", ".", "let", "make", "sure", "the", "timedate", "stamp", "on", "still", "pic", "look", "like", "the", "correct", "month", ",", "and", "that", "the", "man", "in", "vid", "have", "sandal", "on"]
+(c4-3 / multi-sentence
+      :snt1 (c4-15 / amen)
+      :snt2 (c4-6 / ensure-01
+                  :ARG0 (c4-1 / we)
+                  :ARG1 (c4-8 / and
+                              :op1 (c4-2 / look-02
+                                         :ARG0 (c4-13 / stamp
+                                                      :mod (c4-14 / timedate)
+                                                      :topic (c4-10 / pic
+                                                                    :mod (c4-7 / still)))
+                                         :ARG1 (c4-11 / month
+                                                      :ARG1-of (c4-12 / correct-02)))
+                              :op2 (c4-0 / have-03
+                                         :ARG0 (c4-4 / man
+                                                     :location (c4-9 / video))
+                                         :ARG1 (c4-5 / sandal)))
+                  :mode imperative))
+
+# ::snt rumors indicate Westboro Baptist Church is on their way. Only twitter rumors, but preparation may be necessary
+# ::tokens ["rumors", "indicate", "Westboro", "Baptist", "Church", "is", "on", "their", "way", ".", "Only", "twitter", "rumors", ",", "but", "preparation", "may", "be", "necessary"]
+# ::lemmas ["rumor", "indicate", "Westboro", "Baptist", "Church", "be", "on", "their", "way", ".", "only", "twitter", "rumor", ",", "but", "preparation", "may", "be", "necessary"]
+(c5-3 / multi-sentence
+      :snt1 (c5-6 / indicate-01
+                  :ARG0 (c5-11 / rumor-01)
+                  :ARG1 (c5-1 / way
+                              :poss (c5-5 / organization
+                                          :name (c5-8 / name
+                                                      :op1 "Westboro"
+                                                      :op2 "Baptist"
+                                                      :op3 "Church"))))
+      :snt2 (c5-0 / have-concession-91
+                  :ARG1 (c5-10 / possible-01
+                               :ARG1 (c5-9 / need-01
+                                           :ARG1 (c5-13 / prepare-01)))
+                  :ARG2 (c5-7 / rumor-01
+                              :medium (c5-4 / publication
+                                            :name (c5-12 / name
+                                                         :op1 "Twitter"))
+                              :mod (c5-2 / only))))
+
+# ::snt Captain Johnson: "What happened last night is what's going to happen here forward."
+# ::tokens ["Captain", "Johnson", ":", "\"", "What", "happened", "last", "night", "is", "what", "'s", "going", "to", "happen", "here", "forward", ".", "\""]
+# ::lemmas ["Captain", "Johnson", ":", "\"", "what", "happen", "last", "night", "be", "what", "be", "go", "to", "happen", "here", "forward", ".", "\""]
+(c6-9 / say-01
+      :ARG0 (c6-7 / person
+                  :name (c6-5 / name
+                              :op1 "Captain"
+                              :op2 "Johnson"))
+      :ARG1 (c6-4 / event
+                  :domain (c6-3 / event
+                                :time (c6-8 / date-entity
+                                            :dayperiod (c6-6 / night)
+                                            :mod (c6-1 / yesterday)))
+                  :location (c6-0 / here
+                                  :direction (c6-2 / forward))))
+
+# ::snt have they made any arrest. Please ask that
+# ::tokens ["have", "they", "made", "any", "arrest", ".", "Please", "ask", "that"]
+# ::lemmas ["have", "they", "make", "any", "arrest", ".", "please", "ask", "that"]
+(c7-1 / multi-sentence
+      :snt1 (c7-7 / arrest-01
+                  :polarity (c7-2 / amr-unknown)
+                  :ARG0 (c7-6 / they)
+                  :mod (c7-3 / any))
+      :snt2 (c7-5 / ask-01
+                  :ARG0 (c7-0 / you)
+                  :ARG1 (c7-4 / that)
+                  :polite +
+                  :mode imperative))

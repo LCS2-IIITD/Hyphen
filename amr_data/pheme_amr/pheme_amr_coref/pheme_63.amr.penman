@@ -1,0 +1,381 @@
+# ::snt omg
+# ::tokens ["omg"]
+# ::lemmas ["omg"]
+(c1-0 / oh-my-god
+      :mode expressive)
+
+# ::snt wow. That's ... I don't ... wtf...
+# ::tokens ["wow", ".", "That", "'s", "...", "I", "do", "n't", "...", "wtf", "..."]
+# ::lemmas ["wow", ".", "that", "be", "...", "i", "do", "not", "...", "wtf", "..."]
+(c2-2 / multi-sentence
+      :snt1 (c2-0 / wow
+                  :mode expressive)
+      :snt2 (c2-4 / do-02
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-5 / that)
+                  :polarity -)
+      :snt3 (c2-1 / fuck
+                  :mode expressive))
+
+# ::snt But the officer didn't have a bad record. Oh, it says they weren't really keeping records...
+# ::tokens ["But", "the", "officer", "did", "n't", "have", "a", "bad", "record", ".", "Oh", ",", "it", "says", "they", "were", "n't", "really", "keeping", "records", "..."]
+# ::lemmas ["but", "the", "officer", "do", "not", "have", "a", "bad", "record", ".", "oh", ",", "it", "say", "they", "be", "not", "really", "keep", "record", "..."]
+(c3-2 / multi-sentence
+      :snt1 (c3-9 / contrast-01
+                  :ARG2 (c3-0 / have-03
+                              :ARG0 (c3-4 / officer)
+                              :ARG1 (c3-8 / record
+                                          :ARG1-of (c3-3 / bad-07))
+                              :polarity -))
+      :snt2 (c3-10 / say-01
+                   :ARG0 (c3-6 / it)
+                   :ARG1 (c3-12 / keep-01
+                                :ARG0 (c3-11 / they)
+                                :ARG1 (c3-7 / record)
+                                :ARG1-of (c3-5 / real-04)
+                                :polarity -)
+                   :mod (c3-1 / oh
+                              :mode expressive)))
+
+# ::snt PROPERTY damage...u kidding me?? for ...BLEEDING??? no way!! what is WRONG with people???
+# ::tokens ["PROPERTY", "damage", "...", "u", "kidding", "me", "?", "?", "for", "...", "BLEEDING", "?", "?", "?", "no", "way", "!", "!", "what", "is", "WRONG", "with", "people", "?", "?", "?"]
+# ::lemmas ["property", "damage", "...", "u", "kid", "i", "?", "?", "for", "...", "bleed", "?", "?", "?", "no", "way", "!", "!", "what", "be", "wrong", "with", "people", "?", "?", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-7 / damage-01
+                  :mod (c4-6 / proper)
+                  :ARG0-of (c4-10 / kid-01
+                                  :polarity (c4-12 / amr-unknown)
+                                  :ARG1 (c4-4 / i)
+                                  :ARG1-of (c4-8 / cause-01
+                                                 :ARG0 (c4-2 / bleed-01
+                                                             :ARG1 c4-4
+                                                             :ARG1-of (c4-9 / request-confirmation-91)))))
+      :snt2 (c4-0 / wrong-02
+                  :ARG1 (c4-3 / amr-unknown)
+                  :ARG2 (c4-11 / person)
+                  :polarity (c4-5 / amr-unknown)))
+
+# ::snt I direct you, sir, to a list of fallacies.
+# ::tokens ["I", "direct", "you", ",", "sir", ",", "to", "a", "list", "of", "fallacies", "."]
+# ::lemmas ["i", "direct", "you", ",", "sir", ",", "to", "a", "list", "of", "fallacy", "."]
+(c5-4 / direct-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-0 / you
+                  :mod (c5-5 / sir))
+      :ARG2 (c5-1 / list
+                  :consist-of (c5-2 / fallacy)))
+
+# ::snt Hmm: "Windows Defender blocked this site because it might contain threats to your PC or your privacy." Possibly due to adverts?
+# ::tokens ["Hmm", ":", "\"", "Windows", "Defender", "blocked", "this", "site", "because", "it", "might", "contain", "threats", "to", "your", "PC", "or", "your", "privacy", ".", "\"", "Possibly", "due", "to", "adverts", "?"]
+# ::lemmas ["hmm", ":", "\"", "Windows", "Defender", "block", "this", "site", "because", "it", "might", "contain", "threat", "to", "your", "pc", "or", "your", "privacy", ".", "\"", "possibly", "due", "to", "advert", "?"]
+(c6-0 / multi-sentence
+      :snt1 (c6-16 / cause-01
+                   :ARG0 (c6-1 / possible-01
+                               :ARG1 (c6-2 / contain-01
+                                           :ARG0 (c6-3 / site
+                                                       :mod (c6-18 / this))
+                                           :ARG1 (c6-17 / threaten-01
+                                                        :ARG2 (c6-15 / or
+                                                                     :op1 (c6-4 / PC
+                                                                                :poss (c6-14 / you))
+                                                                     :op2 (c6-7 / privacy
+                                                                                :poss c6-14)))))
+                   :ARG1 (c6-8 / block-01
+                               :ARG0 (c6-11 / product
+                                            :name (c6-10 / name
+                                                         :op1 "Windows"
+                                                         :op2 "Defection"))
+                               :ARG1 c6-3)
+                   :mod (c6-6 / hmm
+                              :mode expressive))
+      :snt2 (c6-9 / possible-01
+                  :ARG1 (c6-13 / cause-01
+                               :ARG0 (c6-5 / advertise-01)
+                               :ARG1 c6-8
+                               :polarity (c6-12 / amr-unknown))))
+
+# ::snt Whatever happened to being "servants of the public"? Or "protect and serve"?
+# ::tokens ["Whatever", "happened", "to", "being", "\"", "servants", "of", "the", "public", "\"", "?", "Or", "\"", "protect", "and", "serve", "\"", "?"]
+# ::lemmas ["whatever", "happen", "to", "be", "\"", "servant", "of", "the", "public", "\"", "?", "or", "\"", "protect", "and", "serve", "\"", "?"]
+(c7-6 / amr-choice
+      :op1 (c7-4 / serve-01
+                 :ARG2 (c7-3 / public))
+      :op2 (c7-2 / and
+                 :op1 (c7-5 / protect-01
+                            :ARG2 c7-3)
+                 :op2 (c7-1 / serve-01
+                            :ARG2 c7-3))
+      :mod (c7-0 / whatever))
+
+# ::snt : cops beat man, chg him w/prop dmg, then lie in court Did YOU WITNESS the incident first hand?
+# ::tokens [":", "cops", "beat", "man", ",", "chg", "him", "w", "/", "prop", "dmg", ",", "then", "lie", "in", "court", "Did", "YOU", "WITNESS", "the", "incident", "first", "hand", "?"]
+# ::lemmas [":", "cop", "beat", "man", ",", "chg", "he", "w", "/", "prop", "dmg", ",", "then", "lie", "in", "court", "do", "you", "witness", "the", "incident", "first", "hand", "?"]
+(c8-1 / witness-01
+      :polarity (c8-15 / amr-unknown)
+      :ARG0 (c8-2 / you)
+      :ARG1 (c8-8 / incident)
+      :mod (c8-3 / first-hand)
+      :ARG1-of (c8-11 / cause-01
+                      :ARG0 (c8-7 / and
+                                  :op1 (c8-6 / beat-01
+                                             :ARG0 (c8-10 / cop)
+                                             :ARG1 (c8-4 / man))
+                                  :op2 (c8-0 / hug-01
+                                             :ARG0 c8-10
+                                             :ARG1 c8-4
+                                             :manner (c8-12 / damage-01
+                                                            :ARG0 c8-10
+                                                            :ARG1 c8-4
+                                                            :mod (c8-9 / propaganda)))
+                                  :op3 (c8-5 / lie-07
+                                             :ARG1 c8-10
+                                             :location (c8-13 / court)
+                                             :time (c8-14 / then)))))
+
+# ::snt Oh, dear. Getting a shirt dirty is a crime, now? "Assault on an Officer's apparel," I guess. Lives are last?
+# ::tokens ["Oh", ",", "dear", ".", "Getting", "a", "shirt", "dirty", "is", "a", "crime", ",", "now", "?", "\"", "Assault", "on", "an", "Officer", "'s", "apparel", ",", "\"", "I", "guess", ".", "Lives", "are", "last", "?"]
+# ::lemmas ["oh", ",", "dear", ".", "get", "a", "shirt", "dirty", "be", "a", "crime", ",", "now", "?", "\"", "assault", "on", "an", "officer", "'s", "apparel", ",", "\"", "i", "guess", ".", "life", "be", "last", "?"]
+(c9-3 / multi-sentence
+      :snt1 (c9-7 / dear
+                  :domain (c9-0 / you))
+      :snt2 (c9-8 / crime-02
+                  :polarity (c9-13 / amr-unknown)
+                  :ARG1 (c9-9 / get-04
+                              :ARG1 (c9-1 / dirty-01
+                                          :ARG1 (c9-12 / shirt)))
+                  :time (c9-6 / now)
+                  :ARG1-of (c9-10 / guess-01
+                                  :ARG0 (c9-5 / i)))
+      :snt3 (c9-2 / last
+                  :domain (c9-11 / life)
+                  :polarity (c9-4 / amr-unknown)))
+
+# ::snt That was just a logo on some police cars, has never been the law.
+# ::tokens ["That", "was", "just", "a", "logo", "on", "some", "police", "cars", ",", "has", "never", "been", "the", "law", "."]
+# ::lemmas ["that", "be", "just", "a", "logo", "on", "some", "police", "car", ",", "have", "never", "be", "the", "law", "."]
+(c10-1 / logo
+       :domain (c10-8 / that)
+       :location (c10-5 / car
+                        :mod (c10-4 / police)
+                        :quant (c10-7 / some))
+       :mod (c10-0 / just)
+       :ARG1-of (c10-2 / mean-01
+                       :ARG2 (c10-6 / law
+                                    :time (c10-3 / ever)
+                                    :polarity -)))
+
+# ::snt that story is crazy and yet completely unsurprising. The cops live as if they are above the law. That's gotta change.
+# ::tokens ["that", "story", "is", "crazy", "and", "yet", "completely", "unsurprising", ".", "The", "cops", "live", "as", "if", "they", "are", "above", "the", "law", ".", "That", "'s", "got", "ta", "change", "."]
+# ::lemmas ["that", "story", "be", "crazy", "and", "yet", "completely", "unsurprising", ".", "the", "cop", "live", "as", "if", "they", "be", "above", "the", "law", ".", "that", "be", "got", "to", "change", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-5 / crazy-03
+                    :ARG1 (c11-9 / story
+                                 :mod (c11-11 / that))
+                    :concession (c11-3 / surprise-01
+                                       :ARG0 c11-9
+                                       :ARG1-of (c11-4 / complete-02)
+                                       :polarity -))
+       :snt2 (c11-0 / live-01
+                    :ARG0 (c11-8 / cop)
+                    :manner (c11-6 / resemble-01
+                                   :ARG1 c11-8
+                                   :ARG2 (c11-12 / above
+                                                 :op1 (c11-7 / law))))
+       :snt3 (c11-2 / obligate-01
+                    :ARG2 (c11-13 / change-01
+                                  :ARG1 (c11-10 / that))))
+
+# ::snt I would like to visit all the us states before I die. Sooo. Guess mo will need to be next decade
+# ::tokens ["I", "would", "like", "to", "visit", "all", "the", "us", "states", "before", "I", "die", ".", "Sooo", ".", "Guess", "mo", "will", "need", "to", "be", "next", "decade"]
+# ::lemmas ["i", "would", "like", "to", "visit", "all", "the", "us", "state", "before", "i", "die", ".", "sooo", ".", "guess", "mo", "will", "need", "to", "be", "next", "decade"]
+(c12-2 / multi-sentence
+       :snt1 (c12-1 / like-02
+                    :ARG0 (c12-5 / i)
+                    :ARG1 (c12-7 / visit-01
+                                 :ARG0 c12-5
+                                 :ARG1 (c12-14 / state
+                                               :mod (c12-17 / all)
+                                               :location (c12-10 / country
+                                                                 :name (c12-6 / name
+                                                                              :op1 "United"
+                                                                              :op2 "States")))
+                                 :time (c12-3 / before
+                                              :op1 (c12-9 / die-01
+                                                          :ARG1 c12-5))))
+       :snt2 (c12-4 / sooo
+                    :mode expressive)
+       :snt3 (c12-11 / guess-01
+                     :ARG0 (c12-12 / i)
+                     :ARG1 (c12-8 / need-01
+                                  :ARG0 (c12-13 / mo)
+                                  :ARG1 (c12-15 / be-temporally-at-91
+                                                :ARG1 c12-12
+                                                :ARG2 (c12-0 / decade
+                                                             :mod (c12-16 / next))))))
+
+# ::snt Here's the screenshot - I assume that they're running Javascript from another website.
+# ::tokens ["Here", "'s", "the", "screenshot", "-", "I", "assume", "that", "they", "'re", "running", "Javascript", "from", "another", "website", "."]
+# ::lemmas ["here", "be", "the", "screenshot", "-", "i", "assume", "that", "they", "be", "run", "Javascript", "from", "another", "website", "."]
+(c13-3 / multi-sentence
+       :snt1 (c13-4 / be-located-at-91
+                    :ARG1 (c13-8 / screenshot)
+                    :ARG2 (c13-0 / here))
+       :snt2 (c13-10 / assume-02
+                     :ARG0 (c13-6 / i)
+                     :ARG1 (c13-7 / run-01
+                                  :ARG0 (c13-9 / they)
+                                  :ARG1 (c13-1 / Javascript)
+                                  :source (c13-2 / website
+                                                 :mod (c13-5 / another)))))
+
+# ::snt Id expect some civil suits, but in he said, she said cases, police tend to walk.
+# ::tokens ["I", "d", "expect", "some", "civil", "suits", ",", "but", "in", "he", "said", ",", "she", "said", "cases", ",", "police", "tend", "to", "walk", "."]
+# ::lemmas ["i", "d", "expect", "some", "civil", "suit", ",", "but", "in", "he", "say", ",", "she", "say", "case", ",", "police", "tend", "to", "walk", "."]
+(c14-10 / contrast-01
+        :ARG1 (c14-5 / expect-01
+                     :ARG0 (c14-7 / i)
+                     :ARG1 (c14-12 / sue-02
+                                   :mod (c14-9 / civil)
+                                   :quant (c14-6 / some)))
+        :ARG2 (c14-3 / say-01
+                     :ARG0 (c14-0 / he)
+                     :ARG1 (c14-13 / tend-02
+                                   :ARG1 (c14-8 / police)
+                                   :ARG2 (c14-1 / walk-01
+                                                :ARG0 c14-8)
+                                   :location (c14-11 / case-04
+                                                     :ARG1-of (c14-4 / say-01
+                                                                     :ARG0 (c14-2 / she))))))
+
+# ::snt Thanks, that worked. As for the story, it's grim reading.
+# ::tokens ["Thanks", ",", "that", "worked", ".", "As", "for", "the", "story", ",", "it", "'s", "grim", "reading", "."]
+# ::lemmas ["thank", ",", "that", "work", ".", "as", "for", "the", "story", ",", "it", "be", "grim", "reading", "."]
+(c15-2 / multi-sentence
+       :snt1 (c15-8 / thank-01
+                    :ARG0 (c15-3 / i)
+                    :ARG1 (c15-0 / you)
+                    :ARG2 (c15-1 / work-09
+                                 :ARG1 (c15-6 / that)))
+       :snt2 (c15-4 / read-01
+                    :ARG1 (c15-7 / story)
+                    :mod (c15-5 / grim)))
+
+# ::snt Or in cases where one person is white and the other black and dead. It's Trayvon Martin all over again.
+# ::tokens ["Or", "in", "cases", "where", "one", "person", "is", "white", "and", "the", "other", "black", "and", "dead", ".", "It", "'s", "Trayvon", "Martin", "all", "over", "again", "."]
+# ::lemmas ["or", "in", "case", "where", "one", "person", "be", "white", "and", "the", "other", "black", "and", "dead", ".", "it", "be", "Trayvon", "Martin", "all", "over", "again", "."]
+(c16-4 / or
+       :op2 (c16-9 / case-03
+                   :ARG1 (c16-13 / and
+                                 :op1 (c16-0 / white-02
+                                             :ARG1 (c16-7 / person
+                                                          :mod (c16-1 / one)))
+                                 :op2 (c16-5 / and
+                                             :op1 (c16-12 / person
+                                                          :ARG1-of (c16-3 / black-05))
+                                             :op2 (c16-2 / person
+                                                         :mod (c16-10 / other)
+                                                         :ARG1-of (c16-8 / die-01))))
+                   :mod (c16-6 / again
+                               :mod (c16-11 / all-over))))
+
+# ::snt Im not shocked, originally from Detroit cops do what ever they want there.The rest of the world acts like this is new
+# ::tokens ["I", "m", "not", "shocked", ",", "originally", "from", "Detroit", "cops", "do", "what", "ever", "they", "want", "there", ".", "The", "rest", "of", "the", "world", "acts", "like", "this", "is", "new"]
+# ::lemmas ["i", "m", "not", "shocked", ",", "originally", "from", "Detroit", "cop", "do", "what", "ever", "they", "want", "there", ".", "the", "rest", "of", "the", "world", "act", "like", "this", "be", "new"]
+(c17-1 / multi-sentence
+       :snt1 (c17-13 / shock-01
+                     :ARG0 (c17-8 / do-02
+                                  :ARG0 (c17-9 / cop
+                                               :source (c17-10 / city
+                                                               :name (c17-6 / name
+                                                                            :op1 "Detroit"))
+                                               :mod (c17-3 / original))
+                                  :ARG1 (c17-0 / whatever
+                                               :ARG1-of (c17-5 / want-01
+                                                               :ARG0 c17-9))
+                                  :location (c17-14 / there))
+                     :ARG1 (c17-4 / i)
+                     :polarity -)
+       :snt2 (c17-15 / act-01
+                     :ARG0 (c17-11 / rest
+                                   :part-of (c17-2 / world))
+                     :ARG1 (c17-12 / this)
+                     :ARG1-of (c17-7 / new-01)))
+
+# ::snt cops beat man, charged him w/"property damage" for bleeding on their uniforms. Then they lied in court.
+# ::tokens ["cops", "beat", "man", ",", "charged", "him", "w/\"property", "damage", "\"", "for", "bleeding", "on", "their", "uniforms", ".", "Then", "they", "lied", "in", "court", "."]
+# ::lemmas ["cop", "beat", "man", ",", "charge", "he", "w/\"property", "damage", "\"", "for", "bleed", "on", "their", "uniform", ".", "then", "they", "lie", "in", "court", "."]
+(c18-1 / multi-sentence
+       :snt1 (c18-13 / and
+                     :op1 (c18-3 / beat-01
+                                 :ARG0 (c18-6 / cop)
+                                 :ARG1 (c18-4 / man))
+                     :op2 (c18-5 / charge-05
+                                 :ARG0 c18-6
+                                 :ARG1 c18-4
+                                 :ARG2 (c18-7 / damage-01
+                                              :ARG1 (c18-8 / property))
+                                 :ARG3 (c18-9 / bleed-01
+                                              :ARG1 c18-6
+                                              :location (c18-2 / uniform
+                                                               :poss c18-6))))
+       :snt2 (c18-0 / lie-08
+                    :ARG0 (c18-12 / they)
+                    :location (c18-10 / court)
+                    :time (c18-11 / then)))
+
+# ::snt Odd. Its a Daily Beast article. Should be fine.
+# ::tokens ["Odd", ".", "Its", "a", "Daily", "Beast", "article", ".", "Should", "be", "fine", "."]
+# ::lemmas ["odd", ".", "its", "a", "Daily", "Beast", "article", ".", "should", "be", "fine", "."]
+(c19-1 / multi-sentence
+       :snt1 (c19-2 / odd)
+       :snt2 (c19-7 / article
+                    :domain (c19-3 / it)
+                    :source (c19-5 / publication
+                                   :name (c19-4 / name
+                                                :op1 "Daily"
+                                                :op2 "Beast")))
+       :snt3 (c19-6 / recommend-01
+                    :ARG1 (c19-0 / fine-04
+                                 :ARG1 c19-0)))
+
+# ::snt Does this work any better -
+# ::tokens ["Does", "this", "work", "any", "better", "-"]
+# ::lemmas ["do", "this", "work", "any", "well", "-"]
+(c20-1 / work-09
+       :polarity (c20-6 / amr-unknown)
+       :ARG1 (c20-5 / this)
+       :manner (c20-4 / good-02
+                      :mod (c20-3 / any)
+                      :ARG2-of (c20-0 / have-degree-91
+                                      :ARG1 c20-1
+                                      :ARG3 (c20-2 / more))))
+
+# ::snt I wonder if the people of Ferguson have grounds for a ckass action lawsuit against the PD.
+# ::tokens ["I", "wonder", "if", "the", "people", "of", "Ferguson", "have", "grounds", "for", "a", "ckass", "action", "lawsuit", "against", "the", "PD", "."]
+# ::lemmas ["i", "wonder", "if", "the", "people", "of", "Ferguson", "have", "ground", "for", "a", "ckass", "action", "lawsuit", "against", "the", "PD", "."]
+(c21-1 / wonder-01
+       :ARG0 (c21-2 / i)
+       :ARG1 (c21-11 / truth-value
+                     :polarity-of (c21-0 / have-03
+                                         :ARG0 (c21-5 / person
+                                                      :mod (c21-7 / city
+                                                                  :name (c21-3 / name
+                                                                               :op1 "Ferguson")))
+                                         :ARG1 (c21-8 / ground-02
+                                                      :ARG1 c21-5
+                                                      :ARG2 (c21-10 / sue-02
+                                                                    :ARG0 c21-5
+                                                                    :ARG1 (c21-6 / government-organization
+                                                                                 :name (c21-4 / name
+                                                                                              :op1 "PD"))
+                                                                    :mod (c21-12 / act-02
+                                                                                 :mod (c21-9 / cunt)))))))
+
+# ::snt yes. The while thing is scary.
+# ::tokens ["yes", ".", "The", "while", "thing", "is", "scary", "."]
+# ::lemmas ["yes", ".", "the", "while", "thing", "be", "scary", "."]
+(c22-2 / multi-sentence
+       :snt1 (c22-0 / yes)
+       :snt2 (c22-3 / scary-03
+                    :ARG0 (c22-4 / thing)
+                    :time (c22-1 / while)))

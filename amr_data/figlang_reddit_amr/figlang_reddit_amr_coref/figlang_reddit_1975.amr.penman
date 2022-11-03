@@ -1,0 +1,50 @@
+# ::snt Annual Wages of Firefighters in the United States
+# ::tokens ["Annual", "Wages", "of", "Firefighters", "in", "the", "United", "States"]
+# ::lemmas ["Annual", "Wages", "of", "Firefighters", "in", "the", "United", "States"]
+(c1-2 / wage
+      :frequency (c1-5 / rate-entity-91
+                       :ARG3 (c1-4 / temporal-quantity
+                                   :unit (c1-8 / year)
+                                   :quant 1))
+      :beneficiary (c1-6 / person
+                         :ARG0-of (c1-0 / fight-01
+                                        :ARG1 (c1-3 / fire)))
+      :location (c1-1 / country
+                      :name (c1-7 / name
+                                  :op1 "United"
+                                  :op2 "States")))
+
+# ::snt I'd like to see something like this adjusted for cost of living
+# ::tokens ["I", "'d", "like", "to", "see", "something", "like", "this", "adjusted", "for", "cost", "of", "living"]
+# ::lemmas ["i", "would", "like", "to", "see", "something", "like", "this", "adjust", "for", "cost", "of", "living"]
+(c2-5 / like-02
+      :ARG0 (c2-8 / i)
+      :ARG1 (c2-0 / see-01
+                  :ARG0 c2-8
+                  :ARG1 (c2-1 / adjust-01
+                              :ARG1 (c2-7 / something
+                                          :ARG1-of (c2-4 / resemble-01
+                                                         :ARG2 (c2-3 / this)))
+                              :ARG2 (c2-2 / cost-01
+                                          :ARG1 (c2-6 / live-01)))))
+
+# ::snt And how does NYC skew the numbers against the rest of New York state
+# ::tokens ["And", "how", "does", "NYC", "skew", "the", "numbers", "against", "the", "rest", "of", "New", "York", "state"]
+# ::lemmas ["and", "how", "do", "NYC", "skew", "the", "number", "against", "the", "rest", "of", "New", "York", "state"]
+(c3-1 / and
+      :op2 (c3-0 / skew-01
+                 :ARG0 (c3-2 / city
+                             :name (c3-7 / name
+                                         :op1 "NYC"))
+                 :ARG1 (c3-4 / number)
+                 :manner (c3-8 / amr-unknown)
+                 :prep-against (c3-5 / rest
+                                     :part-of (c3-6 / state
+                                                    :name (c3-3 / name
+                                                                :op1 "New"
+                                                                :op2 "York")))))
+
+# ::snt Unions!
+# ::tokens ["Unions", "!"]
+# ::lemmas ["union", "!"]
+(c4-0 / union)

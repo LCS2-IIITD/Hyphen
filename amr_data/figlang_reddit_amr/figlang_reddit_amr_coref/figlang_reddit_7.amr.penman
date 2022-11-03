@@ -1,0 +1,42 @@
+# ::snt Ronaldo kicks Schmelzer after a collision in the box
+# ::tokens ["Ronaldo", "kicks", "Schmelzer", "after", "a", "collision", "in", "the", "box"]
+# ::lemmas ["Ronaldo", "kick", "Schmelzer", "after", "a", "collision", "in", "the", "box"]
+(c1-7 / kick-01
+      :ARG0 (c1-6 / person
+                  :name (c1-4 / name
+                              :op1 "Ronaldo"))
+      :ARG1 (c1-2 / person
+                  :name (c1-3 / name
+                              :op1 "Schmelzer"))
+      :time (c1-0 / after
+                  :op1 (c1-1 / collide-01
+                             :ARG0 c1-6
+                             :location (c1-5 / box))))
+
+# ::snt Imagine the outrage if it was someone like Costa or Suarez or Pepe.
+# ::tokens ["Imagine", "the", "outrage", "if", "it", "was", "someone", "like", "Costa", "or", "Suarez", "or", "Pepe", "."]
+# ::lemmas ["imagine", "the", "outrage", "if", "it", "be", "someone", "like", "Costa", "or", "Suarez", "or", "Pepe", "."]
+(c2-8 / imagine-01
+      :ARG0 (c2-10 / you)
+      :ARG1 (c2-3 / outrage-01
+                  :condition (c2-0 / someone
+                                   :example (c2-2 / or
+                                                  :op1 (c2-7 / person
+                                                             :name (c2-9 / name
+                                                                         :op1 "Costa"))
+                                                  :op2 (c2-4 / person
+                                                             :name (c2-6 / name
+                                                                         :op1 "Suarez"))
+                                                  :op3 (c2-1 / person
+                                                             :name (c2-5 / name
+                                                                         :op1 "Pepe")))))
+      :mode imperative)
+
+# ::snt at this point, this is rare pepe
+# ::tokens ["at", "this", "point", ",", "this", "is", "rare", "pepe"]
+# ::lemmas ["at", "this", "point", ",", "this", "be", "rare", "pepe"]
+(c3-4 / pepe
+      :ARG1-of (c3-3 / rare-02)
+      :domain (c3-2 / this)
+      :time (c3-1 / point
+                  :mod (c3-0 / this)))

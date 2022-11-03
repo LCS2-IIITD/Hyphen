@@ -1,0 +1,24 @@
+# ::subgraphs [["c1-1", "c1-2", "c1-0", "c1-3"], ["c2-1", "c2-0"], ["c3-3", "c3-1", "c3-2", "c3-6", "c3-0", "c3-4", "c3-5"]]
+(d / dummy
+   :COMMENT (c1-1 / person
+                  :name (c1-2 / name
+                              :op1 "Raf"
+                              :op2 "Simons")
+                  :ARG0-of (c1-0 / wear
+                                 :ARG1 (c1-3 / thing
+                                             :name c1-2
+                                             :op1 "FW16"
+                                             :SAME c2-1))
+                  :COREF c3-4)
+   :COMMENT (c2-1 / thing
+                  :ARG1-of (c2-0 / vet
+                                 :SAME c3-0)
+                  :mod 2.0)
+   :COMMENT (c3-3 / guess
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-2 / location
+                              :location-of (c3-6 / get
+                                                 :ARG0 (c3-0 / vet)
+                                                 :ARG1 (c3-4 / it)
+                                                 :ARG2 (c3-5 / mate)))
+                  :mode imperative))

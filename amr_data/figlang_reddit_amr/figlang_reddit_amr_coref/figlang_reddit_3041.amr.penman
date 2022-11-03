@@ -1,0 +1,73 @@
+# ::snt Help, there's a Call of Duty in my PlanetSide
+# ::tokens ["Help", ",", "there", "'s", "a", "Call", "of", "Duty", "in", "my", "PlanetSide"]
+# ::lemmas ["help", ",", "there", "be", "a", "call", "of", "Duty", "in", "my", "PlanetSide"]
+(c1-1 / help-01
+      :ARG0 (c1-4 / i)
+      :ARG1 (c1-3 / be-located-at-91
+                  :ARG1 (c1-0 / broadcast-program
+                              :name (c1-5 / name
+                                          :op1 "Call"
+                                          :op2 "Of"
+                                          :op3 "Duty"))
+                  :ARG2 (c1-2 / planetSide
+                              :poss c1-4)))
+
+# ::snt So if NC gets Wrel's bandana and TR gets CoD Ghost's bandana, does VS get a purple bandana tied 2Pac style?
+# ::tokens ["So", "if", "NC", "gets", "Wrel", "'s", "bandana", "and", "TR", "gets", "CoD", "Ghost", "'s", "bandana", ",", "does", "VS", "get", "a", "purple", "bandana", "tied", "2Pac", "style", "?"]
+# ::lemmas ["so", "if", "NC", "get", "Wrel", "'s", "bandana", "and", "TR", "get", "CoD", "Ghost", "'s", "bandana", ",", "do", "VS", "get", "a", "purple", "bandana", "tie", "2Pac", "style", "?"]
+(c2-6 / get-01
+      :ARG0 (c2-20 / person
+                   :name (c2-7 / name
+                               :op1 "Violet"
+                               :op2 "Violet"))
+      :ARG1 (c2-18 / bandana
+                   :ARG1-of (c2-4 / tie-01
+                                  :ARG2 (c2-9 / style
+                                              :mod (c2-17 / person
+                                                          :name (c2-2 / name
+                                                                      :op1 "2Pac"))))
+                   :ARG1-of (c2-12 / purple-02))
+      :polarity (c2-16 / amr-unknown)
+      :condition (c2-8 / and
+                       :op1 (c2-14 / get-01
+                                   :ARG0 (c2-19 / state
+                                                :name (c2-13 / name
+                                                             :op1 "NC"))
+                                   :ARG1 (c2-15 / bandana
+                                                :poss (c2-10 / person
+                                                             :name (c2-3 / name
+                                                                         :op1 "Wrel"))))
+                       :op2 (c2-0 / get-01
+                                  :ARG0 c2-19
+                                  :ARG1 (c2-11 / bandana
+                                               :poss (c2-1 / person
+                                                           :name (c2-5 / name
+                                                                       :op1 "CoD"
+                                                                       :op2 "Ghost"))))))
+
+# ::snt It actually looks like all factions get the skull face.
+# ::tokens ["It", "actually", "looks", "like", "all", "factions", "get", "the", "skull", "face", "."]
+# ::lemmas ["it", "actually", "look", "like", "all", "faction", "get", "the", "skull", "face", "."]
+(c3-4 / look-02
+      :ARG0 (c3-6 / it)
+      :ARG1 (c3-5 / get-01
+                  :ARG0 (c3-2 / faction
+                              :mod (c3-1 / all))
+                  :ARG1 (c3-3 / face
+                              :part-of (c3-0 / skull)))
+      :ARG1-of (c3-7 / actual-02))
+
+# ::snt We can't have the TR having something unique can we?
+# ::tokens ["We", "ca", "n't", "have", "the", "TR", "having", "something", "unique", "can", "we", "?"]
+# ::lemmas ["we", "can", "not", "have", "the", "TR", "have", "something", "unique", "can", "we", "?"]
+(c4-7 / possible-01
+      :ARG1 (c4-2 / capable-01
+                  :ARG1 (c4-3 / we)
+                  :ARG2 (c4-0 / capable-01
+                              :ARG1 c4-3
+                              :ARG2 (c4-4 / have-03
+                                          :ARG0 c4-3
+                                          :ARG1 (c4-1 / something
+                                                      :ARG1-of (c4-5 / unique-01)))))
+      :ARG1-of (c4-6 / request-confirmation-91)
+      :polarity -)

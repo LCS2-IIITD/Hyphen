@@ -1,0 +1,96 @@
+# ::snt Cant quite see the resemblance.
+# ::tokens ["Ca", "nt", "quite", "see", "the", "resemblance", "."]
+# ::lemmas ["can", "nt", "quite", "see", "the", "resemblance", "."]
+(c2-2 / possible-01
+      :ARG1 (c2-0 / see-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-1 / resemble-01)
+                  :degree (c2-3 / quite)))
+
+# ::snt , this you? Did you smuggle that TMobile phone into your cell?
+# ::tokens [",", "this", "you", "?", "Did", "you", "smuggle", "that", "TMobile", "phone", "into", "your", "cell", "?"]
+# ::lemmas [",", "this", "you", "?", "do", "you", "smuggle", "that", "TMobile", "phone", "into", "your", "cell", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-0 / you
+                  :domain (c4-6 / this)
+                  :polarity (c4-8 / amr-unknown))
+      :snt2 (c4-3 / smuggle-01
+                  :ARG0 (c4-9 / you)
+                  :ARG1 (c4-4 / phone
+                              :mod (c4-5 / company
+                                         :name (c4-2 / name
+                                                     :op1 "TMobile"))
+                              :mod (c4-11 / that))
+                  :ARG3 (c4-10 / cell
+                               :poss c4-9)
+                  :polarity (c4-7 / amr-unknown)))
+
+# ::snt Not me, each to their own
+# ::tokens ["Not", "me", ",", "each", "to", "their", "own"]
+# ::lemmas ["not", "i", ",", "each", "to", "their", "own"]
+(c5-2 / contrast-01
+      :ARG1 (c5-3 / i
+                  :polarity -)
+      :ARG2 (c5-1 / event
+                  :mod (c5-4 / each)
+                  :mod (c5-0 / own)))
+
+# ::snt Those women were lead by pure greedy. I'm not getting this. Each to their own.
+# ::tokens ["Those", "women", "were", "lead", "by", "pure", "greedy", ".", "I", "'m", "not", "getting", "this", ".", "Each", "to", "their", "own", "."]
+# ::lemmas ["those", "woman", "be", "lead", "by", "pure", "greedy", ".", "i", "be", "not", "get", "this", ".", "each", "to", "their", "own", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-4 / lead-02
+                  :ARG0 (c6-8 / greedy
+                              :ARG1-of (c6-3 / pure-02))
+                  :ARG1 (c6-5 / woman
+                              :mod (c6-7 / that)))
+      :snt2 (c6-6 / get-01
+                  :ARG0 (c6-9 / i)
+                  :ARG1 (c6-10 / this)
+                  :polarity -)
+      :snt3 (c6-2 / each
+                  :prep-by (c6-0 / own-01
+                                 :ARG0 c6-2)))
+
+# ::snt I think I'm going to pass on blaming the victims for this.
+# ::tokens ["I", "think", "I", "'m", "going", "to", "pass", "on", "blaming", "the", "victims", "for", "this", "."]
+# ::lemmas ["i", "think", "i", "be", "go", "to", "pass", "on", "blame", "the", "victim", "for", "this", "."]
+(c7-5 / think-01
+      :ARG0 (c7-4 / i)
+      :ARG1 (c7-3 / pass-on-14
+                  :ARG0 c7-4
+                  :ARG1 (c7-0 / blame-01
+                              :ARG0 c7-4
+                              :ARG1 (c7-1 / person
+                                          :ARG1-of (c7-2 / victimize-01))
+                              :ARG2 (c7-6 / this))))
+
+# ::snt I guess being stupid for fame &amp; money didn't have any part in their decision?
+# ::tokens ["I", "guess", "being", "stupid", "for", "fame", "&", "amp", ";", "money", "did", "n't", "have", "any", "part", "in", "their", "decision", "?"]
+# ::lemmas ["i", "guess", "be", "stupid", "for", "fame", "&", "amp", ";", "money", "do", "not", "have", "any", "part", "in", "their", "decision", "?"]
+(c8-1 / multi-sentence
+      :snt1 (c8-10 / guess-01
+                   :ARG0 (c8-8 / i)
+                   :ARG1 (c8-2 / stupid
+                               :domain c8-8
+                               :purpose (c8-9 / and
+                                              :op1 (c8-0 / fame-01
+                                                         :ARG1 c8-8)
+                                              :op2 (c8-11 / amp))))
+      :snt2 (c8-4 / have-part-91
+                  :ARG1 (c8-3 / decide-01
+                              :ARG0 (c8-7 / they))
+                  :ARG2 (c8-5 / money)
+                  :polarity (c8-6 / amr-unknown)
+                  :polarity -))
+
+# ::snt I had no idea that was illegal.
+# ::tokens ["I", "had", "no", "idea", "that", "was", "illegal", "."]
+# ::lemmas ["i", "have", "no", "idea", "that", "be", "illegal", "."]
+(c9-1 / have-03
+      :ARG0 (c9-3 / i)
+      :ARG1 (c9-0 / idea
+                  :topic (c9-2 / legal-02
+                               :ARG1 (c9-4 / that)
+                               :polarity -))
+      :polarity -)

@@ -1,0 +1,121 @@
+# ::snt BREAKING: passengers were on board Airbus A320 which has crashed in the southern French Alps -
+# ::tokens ["BREAKING", ":", "passengers", "were", "on", "board", "Airbus", "A320", "which", "has", "crashed", "in", "the", "southern", "French", "Alps", "-"]
+# ::lemmas ["breaking", ":", "passenger", "be", "on", "board", "Airbus", "A320", "which", "have", "crash", "in", "the", "southern", "French", "Alps", "-"]
+(c1-10 / break-01
+       :ARG1 (c1-2 / passenger
+                   :location (c1-5 / board-01
+                                   :ARG1 (c1-4 / aircraft-type
+                                               :name (c1-9 / name
+                                                           :op1 "Airbus"
+                                                           :op2 "A320")
+                                               :ARG1-of (c1-3 / crash-01
+                                                              :location (c1-0 / mountain
+                                                                              :name (c1-1 / name
+                                                                                          :op1 "Alps")
+                                                                              :location (c1-8 / south
+                                                                                              :part-of (c1-7 / country
+                                                                                                             :name (c1-6 / name
+                                                                                                                         :op1 "France")))))))))
+
+# ::snt : BREAKING: passengers were on board Airbus A320, crashed in the southern French Alps -
+# ::tokens [":", "BREAKING", ":", "passengers", "were", "on", "board", "Airbus", "A320", ",", "crashed", "in", "the", "southern", "French", "Alps", "-"]
+# ::lemmas [":", "breaking", ":", "passenger", "be", "on", "board", "Airbus", "A320", ",", "crash", "in", "the", "southern", "French", "Alps", "-"]
+(c2-10 / break-01
+       :ARG1 (c2-3 / crash-01
+                   :ARG1 (c2-2 / passenger
+                               :location (c2-5 / board-01
+                                               :ARG1 (c2-4 / aircraft-type
+                                                           :name (c2-9 / name
+                                                                       :op1 "Airbus"
+                                                                       :op2 "A320"))))
+                   :location (c2-8 / south
+                                   :part-of (c2-0 / mountain
+                                                  :name (c2-1 / name
+                                                              :op1 "Alps")
+                                                  :part-of (c2-7 / country
+                                                                 :name (c2-6 / name
+                                                                             :op1 "France"))))))
+
+# ::snt UPDATE: Plane crash in south of France had passengers, pilots and crew.
+# ::tokens ["UPDATE", ":", "Plane", "crash", "in", "south", "of", "France", "had", "passengers", ",", "pilots", "and", "crew", "."]
+# ::lemmas ["update", ":", "Plane", "crash", "in", "south", "of", "France", "have", "passenger", ",", "pilot", "and", "crew", "."]
+(c3-7 / update-02
+      :ARG2 (c3-1 / have-03
+                  :ARG0 (c3-5 / crash-01
+                              :ARG1 (c3-4 / plane)
+                              :location (c3-11 / south
+                                               :part-of (c3-10 / country
+                                                               :name (c3-12 / name
+                                                                            :op1 "France"))))
+                  :ARG1 (c3-8 / and
+                              :op1 (c3-2 / passenger)
+                              :op2 (c3-0 / person
+                                         :ARG0-of (c3-9 / pilot-01))
+                              :op3 (c3-3 / person
+                                         :ARG0-of (c3-6 / crew-01)))))
+
+# ::snt what happened
+# ::tokens ["what", "happened"]
+# ::lemmas ["what", "happen"]
+(c4-0 / event)
+
+# ::snt Prayers going up. How sad.
+# ::tokens ["Prayers", "going", "up", ".", "How", "sad", "."]
+# ::lemmas ["prayer", "go", "up", ".", "how", "sad", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-2 / pray-01
+                  :ARG1 (c5-3 / up))
+      :snt2 (c5-4 / sad-02
+                  :degree (c5-0 / so)))
+
+# ::snt No crew???? Those passengers were all on their own? Wtf!
+# ::tokens ["No", "crew", "?", "?", "?", "?", "Those", "passengers", "were", "all", "on", "their", "own", "?", "Wtf", "!"]
+# ::lemmas ["no", "crew", "?", "?", "?", "?", "those", "passenger", "be", "all", "on", "their", "own", "?", "Wtf", "!"]
+(c6-1 / multi-sentence
+      :snt1 (c6-3 / crew
+                  :polarity (c6-4 / amr-unknown)
+                  :polarity -)
+      :snt2 (c6-7 / by-oneself
+                  :domain (c6-2 / passenger
+                                :mod (c6-0 / that)
+                                :mod (c6-5 / all))
+                  :polarity (c6-6 / amr-unknown)))
+
+# ::snt souls on board they say now. RIP to all of them
+# ::tokens ["souls", "on", "board", "they", "say", "now", ".", "RIP", "to", "all", "of", "them"]
+# ::lemmas ["soul", "on", "board", "they", "say", "now", ".", "rip", "to", "all", "of", "they"]
+(c7-3 / multi-sentence
+      :snt1 (c7-8 / say-01
+                  :ARG0 (c7-2 / they)
+                  :ARG1 (c7-1 / soul
+                              :location (c7-10 / board-01))
+                  :time (c7-9 / now))
+      :snt2 (c7-0 / wish-01
+                  :ARG1 (c7-7 / rest-01
+                              :ARG1 (c7-4 / they
+                                          :mod (c7-6 / all))
+                              :manner (c7-5 / peace))))
+
+# ::snt Terrible!
+# ::tokens ["Terrible", "!"]
+# ::lemmas ["terrible", "!"]
+(c8-0 / horrible
+      :mode expressive)
+
+# ::snt : passengers were on board Airbus A320 which has crashed in the southern French Alps
+# ::tokens [":", "passengers", "were", "on", "board", "Airbus", "A320", "which", "has", "crashed", "in", "the", "southern", "French", "Alps"]
+# ::lemmas [":", "passenger", "be", "on", "board", "Airbus", "A320", "which", "have", "crash", "in", "the", "southern", "French", "Alps"]
+(c9-3 / passenger
+      :location (c9-9 / board-01
+                      :ARG1 (c9-4 / aircraft-type
+                                  :name (c9-8 / name
+                                              :op1 "Airbus"
+                                              :op2 "A320")
+                                  :ARG1-of (c9-2 / crash-01
+                                                 :location (c9-0 / mountain
+                                                                 :name (c9-1 / name
+                                                                             :op1 "Alps")
+                                                                 :location (c9-7 / south
+                                                                                 :part-of (c9-6 / country
+                                                                                                :name (c9-5 / name
+                                                                                                            :op1 "France"))))))))

@@ -1,0 +1,45 @@
+# ::snt mmmm kinda reminds me of plot to Peter movie Being There
+# ::tokens ["mmmm", "kinda", "reminds", "me", "of", "plot", "to", "Peter", "movie", "Being", "There"]
+# ::lemmas ["mmmm", "kinda", "remind", "i", "of", "plot", "to", "Peter", "movie", "be", "there"]
+(c1-4 / remind-01
+      :ARG1 (c1-6 / plot-01
+                  :ARG2 (c1-7 / movie
+                              :name (c1-8 / name
+                                          :op1 "Being"
+                                          :op2 "There")
+                              :mod (c1-3 / person
+                                         :name (c1-5 / name
+                                                     :op1 "Peter"))))
+      :ARG2 (c1-1 / i)
+      :degree (c1-0 / kind-of)
+      :mod (c1-2 / hmm
+                 :mode expressive))
+
+# ::snt Have you read Stephen King's ' The Dead Zone ' ? TELL me Trump isn't Greg Stillson .
+# ::tokens ["Have", "you", "read", "Stephen", "King", "'s", "'", "The", "Dead", "Zone", "'", "?", "TELL", "me", "Trump", "is", "n't", "Greg", "Stillson", "."]
+# ::lemmas ["have", "you", "read", "Stephen", "King", "'s", "'", "the", "Dead", "Zone", "'", "?", "tell", "i", "Trump", "be", "not", "Greg", "Stillson", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-7 / read-01
+                   :ARG0 (c2-13 / you)
+                   :ARG1 (c2-9 / book
+                               :name (c2-12 / name
+                                            :op1 "The"
+                                            :op2 "Dead"
+                                            :op3 "Zone")
+                               :source (c2-10 / person
+                                              :name (c2-8 / name
+                                                          :op1 "Stephen"
+                                                          :op2 "King")))
+                   :polarity (c2-0 / amr-unknown))
+       :snt2 (c2-6 / tell-01
+                   :ARG0 c2-13
+                   :mode imperative)
+       :ARG1 (c2-5 / person
+                   :name (c2-4 / name
+                               :op1 "Greg"
+                               :op2 "Stillson")
+                   :domain (c2-3 / person
+                                 :name (c2-1 / name
+                                             :op1 "Trump"))
+                   :polarity -)
+       :ARG2 (c2-2 / i))

@@ -1,0 +1,57 @@
+# ::snt Woo hoo
+# ::tokens ["Woo", "hoo"]
+# ::lemmas ["Woo", "hoo"]
+(c1-0 / woo-hoo
+      :mode expressive)
+
+# ::snt Its not official until you post it, right?
+# ::tokens ["Its", "not", "official", "until", "you", "post", "it", ",", "right", "?"]
+# ::lemmas ["its", "not", "official", "until", "you", "post", "it", ",", "right", "?"]
+(c3-2 / official
+      :domain (c3-0 / it)
+      :time (c3-1 / until
+                  :op1 (c3-4 / post-01
+                             :ARG0 (c3-5 / you)
+                             :ARG1 c3-0))
+      :ARG1-of (c3-3 / request-confirmation-91)
+      :polarity -)
+
+# ::snt I have been fully vaccinated since January and no issues what so ever. Grateful for sure.
+# ::tokens ["I", "have", "been", "fully", "vaccinated", "since", "January", "and", "no", "issues", "what", "so", "ever", ".", "Grateful", "for", "sure", "."]
+# ::lemmas ["i", "have", "be", "fully", "vaccinate", "since", "January", "and", "no", "issue", "what", "so", "ever", ".", "grateful", "for", "sure", "."]
+(c4-10 / multi-sentence
+       :snt1 (c4-2 / and
+                   :op1 (c4-6 / vaccinate-01
+                              :ARG1 (c4-9 / i)
+                              :degree (c4-3 / full)
+                              :time (c4-0 / since
+                                          :op1 (c4-1 / date-entity
+                                                     :month 1)))
+                   :op2 (c4-4 / issue-02
+                              :mod (c4-8 / so-ever)
+                              :polarity -))
+       :snt2 (c4-7 / Grateful
+                   :ARG1-of (c4-5 / sure-02)))
+
+# ::snt I get mine this afternoon!!
+# ::tokens ["I", "get", "mine", "this", "afternoon", "!", "!"]
+# ::lemmas ["i", "get", "mine", "this", "afternoon", "!", "!"]
+(c5-4 / get-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-3 / thing
+                  :poss c5-5)
+      :time (c5-0 / date-entity
+                  :dayperiod (c5-1 / afternoon)
+                  :mod (c5-2 / today))
+      :mode expressive)
+
+# ::snt I'm scheduled for the first poke on Friday!
+# ::tokens ["I", "'m", "scheduled", "for", "the", "first", "poke", "on", "Friday", "!"]
+# ::lemmas ["i", "be", "schedule", "for", "the", "first", "poke", "on", "Friday", "!"]
+(c6-0 / schedule-01
+      :ARG1 (c6-5 / poke-01
+                  :ARG0 (c6-3 / i)
+                  :ord (c6-4 / ordinal-entity
+                             :value 1))
+      :ARG3 (c6-1 / date-entity
+                  :weekday (c6-2 / friday)))

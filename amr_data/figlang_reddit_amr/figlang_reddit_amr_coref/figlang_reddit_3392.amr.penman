@@ -1,0 +1,47 @@
+# ::snt Rock recently found in outback Australia is older than the Earth.
+# ::tokens ["Rock", "recently", "found", "in", "outback", "Australia", "is", "older", "than", "the", "Earth", "."]
+# ::lemmas ["Rock", "recently", "find", "in", "outback", "Australia", "be", "old", "than", "the", "Earth", "."]
+(c1-2 / have-degree-91
+      :ARG1 (c1-6 / rock
+                  :ARG1-of (c1-0 / find-01
+                                 :time (c1-4 / recent)
+                                 :location (c1-5 / outback
+                                                 :part-of (c1-1 / country
+                                                                :name (c1-10 / name
+                                                                             :op1 "Australia")))))
+      :ARG2 (c1-3 / old)
+      :ARG3 (c1-9 / more)
+      :ARG4 (c1-8 / planet
+                  :name (c1-7 / name
+                              :op1 "Earth")))
+
+# ::snt How do they know that the rock is around 4.5 billion years old?
+# ::tokens ["How", "do", "they", "know", "that", "the", "rock", "is", "around", "4.5", "billion", "years", "old", "?"]
+# ::lemmas ["how", "do", "they", "know", "that", "the", "rock", "be", "around", "4.5", "billion", "years", "old", "?"]
+(c2-5 / know-01
+      :ARG0 (c2-3 / they)
+      :ARG1 (c2-1 / age-01
+                  :ARG1 (c2-4 / rock)
+                  :ARG2 (c2-7 / around
+                              :op1 (c2-2 / temporal-quantity
+                                         :unit (c2-6 / year)
+                                         :quant 4500000)))
+      :manner (c2-0 / amr-unknown))
+
+# ::snt they actually don't know how old the rock is, and they are just making educated guesses based on faulty assumptions.
+# ::tokens ["they", "actually", "do", "n't", "know", "how", "old", "the", "rock", "is", ",", "and", "they", "are", "just", "making", "educated", "guesses", "based", "on", "faulty", "assumptions", "."]
+# ::lemmas ["they", "actually", "do", "not", "know", "how", "old", "the", "rock", "be", ",", "and", "they", "be", "just", "make", "educated", "guess", "base", "on", "faulty", "assumption", "."]
+(c3-1 / and
+      :op1 (c3-9 / know-01
+                 :ARG0 (c3-5 / they)
+                 :ARG1 (c3-3 / temporal-quantity
+                             :age-of (c3-6 / rock))
+                 :ARG1-of (c3-10 / actual-02)
+                 :polarity -)
+      :op2 (c3-7 / guess-01
+                 :ARG0 c3-5
+                 :mod (c3-8 / just)
+                 :ARG1-of (c3-11 / educate-01)
+                 :ARG1-of (c3-4 / base-02
+                                :ARG2 (c3-0 / assume-01
+                                            :ARG1-of (c3-2 / fault-02)))))

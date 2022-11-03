@@ -1,0 +1,43 @@
+# ::snt Someone in my building is having a hard time grasping this whole parking concept
+# ::tokens ["Someone", "in", "my", "building", "is", "having", "a", "hard", "time", "grasping", "this", "whole", "parking", "concept"]
+# ::lemmas ["someone", "in", "my", "building", "be", "have", "a", "hard", "time", "grasp", "this", "whole", "parking", "concept"]
+(c1-3 / hard-02
+      :ARG1 (c1-6 / grasp-01
+                  :ARG0 (c1-0 / someone
+                              :location (c1-8 / building
+                                              :poss (c1-7 / i)))
+                  :ARG1 (c1-1 / concept
+                              :topic (c1-5 / park-01)
+                              :mod (c1-2 / whole)
+                              :mod (c1-4 / this))))
+
+# ::snt Those are different cars
+# ::tokens ["Those", "are", "different", "cars"]
+# ::lemmas ["those", "be", "different", "car"]
+(c2-2 / car
+      :ARG1-of (c2-0 / differ-02)
+      :domain (c2-1 / that))
+
+# ::snt They look the same...what makes them different ?
+# ::tokens ["They", "look", "the", "same", "...", "what", "makes", "them", "different", "?"]
+# ::lemmas ["they", "look", "the", "same", "...", "what", "make", "they", "different", "?"]
+(c3-2 / and
+      :op1 (c3-4 / look-02
+                 :ARG0 (c3-3 / they)
+                 :ARG1 (c3-0 / same-01
+                             :ARG1 c3-3))
+      :op2 (c3-5 / make-02
+                 :ARG0 (c3-6 / amr-unknown)
+                 :ARG1 (c3-1 / differ-02
+                             :ARG1 c3-3)))
+
+# ::snt Top pic is a black prius, bottom is blue
+# ::tokens ["Top", "pic", "is", "a", "black", "prius", ",", "bottom", "is", "blue"]
+# ::lemmas ["top", "pic", "be", "a", "black", "prius", ",", "bottom", "be", "blue"]
+(c4-1 / contrast-01
+      :ARG1 (c4-5 / prius
+                  :ARG1-of (c4-4 / black-04)
+                  :domain (c4-2 / pic
+                                :mod (c4-3 / top)))
+      :ARG2 (c4-0 / blue
+                  :domain c4-2))

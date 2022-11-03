@@ -1,0 +1,587 @@
+# ::snt This is why you have to follow me!
+# ::tokens ["This", "is", "why", "you", "have", "to", "follow", "me", "!"]
+# ::lemmas ["this", "be", "why", "you", "have", "to", "follow", "i", "!"]
+(c1-3 / cause-01
+      :ARG0 (c1-5 / this)
+      :ARG1 (c1-1 / obligate-01
+                  :ARG1 (c1-2 / you)
+                  :ARG2 (c1-0 / follow-02
+                              :ARG0 c1-2
+                              :ARG1 (c1-4 / i))))
+
+# ::snt You got a pic! You didnt tell me! Thats awesome
+# ::tokens ["You", "got", "a", "pic", "!", "You", "did", "nt", "tell", "me", "!", "That", "s", "awesome"]
+# ::lemmas ["you", "get", "a", "pic", "!", "you", "do", "not", "tell", "i", "!", "that", "s", "awesome"]
+(c2-1 / multi-sentence
+      :snt1 (c2-6 / get-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-3 / pic))
+      :snt2 (c2-5 / tell-01
+                  :ARG0 (c2-7 / you)
+                  :ARG2 (c2-4 / i)
+                  :polarity -)
+      :snt3 (c2-2 / awesome-02
+                  :ARG1 (c2-8 / that)))
+
+# ::snt this the funniest thing Ive seen today..
+# ::tokens ["this", "the", "funniest", "thing", "I", "ve", "seen", "today", ".."]
+# ::lemmas ["this", "the", "funniest", "thing", "i", "ve", "see", "today", ".."]
+(c4-3 / have-degree-91
+      :ARG1 (c4-4 / thing
+                  :mod (c4-6 / this)
+                  :ARG1-of (c4-2 / see-01
+                                 :ARG0 (c4-5 / i)
+                                 :time (c4-7 / today)))
+      :ARG2 (c4-0 / funny-02
+                  :ARG1 c4-4)
+      :ARG3 (c4-1 / most))
+
+# ::snt You think she's an egomaniac now just wait til she beats Rousey for the women's title at Mania &amp; then releases her book
+# ::tokens ["You", "think", "she", "'s", "an", "egomaniac", "now", "just", "wait", "til", "she", "beats", "Rousey", "for", "the", "women", "'s", "title", "at", "Mania", "&", "amp", ";", "then", "releases", "her", "book"]
+# ::lemmas ["you", "think", "she", "be", "an", "egomaniac", "now", "just", "wait", "til", "she", "beat", "Rousey", "for", "the", "woman", "'s", "title", "at", "Mania", "&", "amp", ";", "then", "release", "her", "book"]
+(c6-9 / multi-sentence
+      :snt1 (c6-6 / think-01
+                  :ARG0 (c6-4 / you)
+                  :ARG1 (c6-15 / egomaniac
+                               :domain (c6-0 / she))
+                  :time (c6-13 / now))
+      :snt2 (c6-18 / wait-01
+                   :ARG1 c6-4
+                   :ARG2 (c6-8 / beat-03
+                               :ARG0 (c6-3 / she)
+                               :ARG1 (c6-16 / person
+                                            :name (c6-10 / name
+                                                         :op1 "Rousey"))
+                               :ARG2 (c6-11 / title
+                                            :mod (c6-2 / woman))
+                               :location (c6-7 / event
+                                               :name (c6-17 / name
+                                                            :op1 "Macy"
+                                                            :op2 "&"
+                                                            :op3 "amp")))
+                   :mod (c6-5 / just)
+                   :time (c6-12 / until
+                                :op1 (c6-14 / release-01
+                                            :ARG0 c6-3
+                                            :ARG1 (c6-1 / book
+                                                        :poss c6-3)
+                                            :time (c6-19 / then)))
+                   :mode imperative))
+
+# ::snt I hate to say it, but CM Punk was actually spot on when he said I like to think itll be better once Vince McMahon is dead, but itll just be taken over by his idiotic daughter and doofus son-in-law
+# ::tokens ["I", "hate", "to", "say", "it", ",", "but", "CM", "Punk", "was", "actually", "spot", "on", "when", "he", "said", "I", "like", "to", "think", "it", "ll", "be", "better", "once", "Vince", "McMahon", "is", "dead", ",", "but", "it", "ll", "just", "be", "taken", "over", "by", "his", "idiotic", "daughter", "and", "doofus", "son", "-", "in", "-", "law"]
+# ::lemmas ["i", "hate", "to", "say", "it", ",", "but", "CM", "Punk", "be", "actually", "spot", "on", "when", "he", "say", "i", "like", "to", "think", "it", "ll", "be", "well", "once", "Vince", "McMahon", "be", "dead", ",", "but", "it", "ll", "just", "be", "take", "over", "by", "his", "idiotic", "daughter", "and", "doofus", "son", "-", "in", "-", "law"]
+(c7-20 / contrast-01
+       :ARG1 (c7-8 / hate-01
+                   :ARG0 (c7-27 / i)
+                   :ARG1 (c7-0 / say-01
+                               :ARG0 c7-27
+                               :ARG1 (c7-6 / it)))
+       :ARG2 (c7-5 / spot-on
+                   :domain (c7-25 / person
+                                  :name (c7-24 / name
+                                               :op1 "CM"
+                                               :op2 "Punk"))
+                   :time (c7-4 / say-01
+                               :ARG0 c7-25
+                               :ARG1 (c7-15 / contrast-01
+                                            :ARG1 (c7-1 / like-02
+                                                        :ARG0 c7-27
+                                                        :ARG1 (c7-11 / think-01
+                                                                     :ARG0 c7-27
+                                                                     :ARG1 (c7-12 / good-02
+                                                                                  :ARG1 c7-6)
+                                                                     :time (c7-28 / die-01
+                                                                                  :ARG1 (c7-17 / person
+                                                                                               :name (c7-18 / name
+                                                                                                            :op1 "Vince"
+                                                                                                            :op2 "McMahon")))
+                                                                     :ARG2-of (c7-26 / have-degree-91
+                                                                                     :ARG1 c7-6
+                                                                                     :ARG3 (c7-16 / more)))))
+                               :ARG2 (c7-22 / take-over-12
+                                            :ARG0 (c7-13 / and
+                                                         :op1 (c7-3 / person
+                                                                    :ARG0-of (c7-7 / have-rel-role-91
+                                                                                   :ARG1 c7-25
+                                                                                   :ARG2 (c7-21 / daughter
+                                                                                                :mod (c7-14 / idiotic))))
+                                                         :op2 (c7-2 / person
+                                                                    :ARG0-of (c7-23 / have-rel-role-91
+                                                                                    :ARG1 c7-25
+                                                                                    :ARG2 (c7-19 / doofus))))
+                                            :ARG1 c7-6
+                                            :mod (c7-9 / just)))
+                   :ARG1-of (c7-10 / actual-02)))
+
+# ::snt And to think theres people who think WWE will get better when Vince either steps down or dies. Itll get worse the moment Caitlyn Jenner becomes in charge.
+# ::tokens ["And", "to", "think", "there", "s", "people", "who", "think", "WWE", "will", "get", "better", "when", "Vince", "either", "steps", "down", "or", "dies", ".", "It", "ll", "get", "worse", "the", "moment", "Caitlyn", "Jenner", "becomes", "in", "charge", "."]
+# ::lemmas ["and", "to", "think", "there", "s", "people", "who", "think", "WWE", "will", "get", "well", "when", "Vince", "either", "step", "down", "or", "die", ".", "it", "ll", "get", "bad", "the", "moment", "Caitlyn", "Jenner", "become", "in", "charge", "."]
+(c8-11 / multi-sentence
+       :snt1 (c8-6 / and
+                   :op2 (c8-7 / think-01
+                              :ARG1 (c8-18 / person
+                                           :ARG0-of (c8-15 / think-01
+                                                           :ARG1 (c8-8 / get-03
+                                                                       :ARG1 (c8-14 / company
+                                                                                    :name (c8-17 / name
+                                                                                                 :op1 "WWE"))
+                                                                       :ARG2 (c8-1 / good-02
+                                                                                   :ARG1 c8-14
+                                                                                   :ARG2-of (c8-4 / have-degree-91
+                                                                                                  :ARG1 c8-14
+                                                                                                  :ARG3 (c8-5 / more)))
+                                                                       :time (c8-3 / or
+                                                                                   :op1 (c8-0 / step-down-04
+                                                                                              :ARG0 (c8-12 / person
+                                                                                                           :name (c8-13 / name
+                                                                                                                        :op1 "Vince")))
+                                                                                   :op2 (c8-22 / die-01
+                                                                                               :ARG1 c8-12)))))))
+       :snt2 (c8-20 / worsen-01
+                    :ARG1 (c8-21 / it)
+                    :time (c8-16 / moment
+                                 :time-of (c8-10 / become-01
+                                                 :ARG1 (c8-2 / person
+                                                             :name (c8-19 / name
+                                                                          :op1 "Caitlyn"
+                                                                          :op2 "Jenner"))
+                                                 :ARG2 (c8-9 / charge-05
+                                                             :ARG1 c8-2)))))
+
+# ::snt Isn't this that same idiot that asked about the bachelor in the press conference with Steve Smith a while back?
+# ::tokens ["Is", "n't", "this", "that", "same", "idiot", "that", "asked", "about", "the", "bachelor", "in", "the", "press", "conference", "with", "Steve", "Smith", "a", "while", "back", "?"]
+# ::lemmas ["be", "not", "this", "that", "same", "idiot", "that", "ask", "about", "the", "bachelor", "in", "the", "press", "conference", "with", "Steve", "Smith", "a", "while", "back", "?"]
+(c9-10 / idiot
+       :mod (c9-9 / that)
+       :ARG1-of (c9-3 / same-01)
+       :ARG0-of (c9-11 / ask-01
+                       :ARG1 (c9-0 / bachelor)
+                       :location (c9-7 / conference
+                                       :mod (c9-6 / press)
+                                       :accompanier (c9-2 / person
+                                                          :name (c9-1 / name
+                                                                      :op1 "Steve"
+                                                                      :op2 "Smith")))
+                       :time (c9-5 / before
+                                   :quant (c9-8 / while)))
+       :domain (c9-12 / this)
+       :ARG1-of (c9-4 / request-confirmation-91))
+
+# ::snt Sergio Ramos
+# ::tokens ["Sergio", "Ramos"]
+# ::lemmas ["Sergio", "Ramos"]
+(c10-1 / person
+       :name (c10-0 / name
+                    :op1 "Sergio"
+                    :op2 "Ramos"))
+
+# ::snt on god i needa go to sleep
+# ::tokens ["on", "god", "i", "needa", "go", "to", "sleep"]
+# ::lemmas ["on", "god", "i", "needa", "go", "to", "sleep"]
+(c11-2 / say-01
+       :ARG0 (c11-5 / i)
+       :ARG1 (c11-1 / need-01
+                    :ARG0 c11-5
+                    :ARG1 (c11-0 / sleep-01
+                                 :ARG0 c11-5))
+       :ARG2 (c11-4 / person
+                    :name (c11-3 / name
+                                 :op1 "God")))
+
+# ::snt go to sleep LMFAO
+# ::tokens ["go", "to", "sleep", "LMFAO"]
+# ::lemmas ["go", "to", "sleep", "lmfao"]
+(c12-2 / say-01
+       :ARG0 (c12-4 / i)
+       :ARG1 (c12-5 / go-05
+                    :ARG0 (c12-3 / person
+                                 :name (c12-1 / name
+                                              :op1 "LMFAO"))
+                    :ARG1 (c12-0 / sleep-01
+                                 :ARG0 c12-3)
+                    :mode imperative)
+       :ARG2 c12-3)
+
+# ::snt Chief
+# ::tokens ["Chief"]
+# ::lemmas ["chief"]
+(c15-0 / chief)
+
+# ::snt Man-hating. There is no known cure.Financially supporting the family for years counts for nothing?
+# ::tokens ["Man", "-", "hating", ".", "There", "is", "no", "known", "cure", ".", "Financially", "supporting", "the", "family", "for", "years", "counts", "for", "nothing", "?"]
+# ::lemmas ["man", "-", "hating", ".", "there", "be", "no", "know", "cure", ".", "financially", "support", "the", "family", "for", "years", "count", "for", "nothing", "?"]
+(c16-2 / multi-sentence
+       :snt1 (c16-7 / hate-01
+                    :ARG1 (c16-6 / man))
+       :snt2 (c16-10 / cure-01
+                     :ARG1-of (c16-8 / know-01)
+                     :polarity -)
+       :snt3 (c16-13 / count-03
+                     :ARG1 (c16-4 / support-01
+                                  :ARG1 (c16-0 / family)
+                                  :duration (c16-12 / multiple
+                                                    :op1 (c16-11 / temporal-quantity
+                                                                 :unit (c16-1 / year)
+                                                                 :quant 1))
+                                  :manner (c16-9 / finance))
+                     :ARG2 (c16-3 / nothing)
+                     :polarity (c16-5 / amr-unknown)))
+
+# ::snt It would seem apparent that while the whole family seem to suffer from deep psychological issues they have successfully managed to market their misfortune (with a sprinkling of Sex) into big bucks. A case study in Marketing for MBA students
+# ::tokens ["It", "would", "seem", "apparent", "that", "while", "the", "whole", "family", "seem", "to", "suffer", "from", "deep", "psychological", "issues", "they", "have", "successfully", "managed", "to", "market", "their", "misfortune", "(", "with", "a", "sprinkling", "of", "Sex", ")", "into", "big", "bucks", ".", "A", "case", "study", "in", "Marketing", "for", "MBA", "students"]
+# ::lemmas ["it", "would", "seem", "apparent", "that", "while", "the", "whole", "family", "seem", "to", "suffer", "from", "deep", "psychological", "issue", "they", "have", "successfully", "manage", "to", "market", "their", "misfortune", "(", "with", "a", "sprinkling", "of", "sex", ")", "into", "big", "buck", ".", "a", "case", "study", "in", "Marketing", "for", "MBA", "student"]
+(c17-8 / multi-sentence
+       :snt1 (c17-0 / seem-01
+                    :ARG1 (c17-6 / appear-01
+                                 :ARG1 (c17-3 / seem-01
+                                              :ARG1 (c17-2 / suffer-01
+                                                           :ARG0 (c17-15 / family
+                                                                         :mod (c17-19 / whole))
+                                                           :ARG1 (c17-20 / issue-02
+                                                                         :ARG0 (c17-18 / psychological)
+                                                                         :ARG1 c17-15
+                                                                         :ARG1-of (c17-21 / deep-02))))))
+       :snt2 (c17-4 / manage-02
+                    :ARG0 (c17-5 / they)
+                    :ARG1 (c17-13 / market-01
+                                  :ARG0 c17-5
+                                  :ARG1 (c17-10 / misfortune
+                                                :poss c17-5)
+                                  :ARG2 (c17-12 / money
+                                                :mod (c17-7 / big))
+                                  :manner (c17-17 / success))
+                    :snt3 (c17-1 / study-01
+                                 :ARG1 (c17-11 / case)
+                                 :topic c17-13)
+                    :beneficiary (c17-9 / person
+                                        :ARG0-of c17-1
+                                        :location (c17-14 / university
+                                                          :name (c17-16 / name
+                                                                        :op1 "MBA")))))
+
+# ::snt I don't really care, do you?
+# ::tokens ["I", "do", "n't", "really", "care", ",", "do", "you", "?"]
+# ::lemmas ["i", "do", "not", "really", "care", ",", "do", "you", "?"]
+(c18-0 / care-01
+       :ARG0 (c18-2 / i)
+       :ARG1-of (c18-3 / real-04)
+       :ARG1-of (c18-1 / request-confirmation-91)
+       :polarity -)
+
+# ::snt It just looks like his back now that her penis is gone.
+# ::tokens ["It", "just", "looks", "like", "his", "back", "now", "that", "her", "penis", "is", "gone", "."]
+# ::lemmas ["it", "just", "look", "like", "his", "back", "now", "that", "her", "penis", "be", "go", "."]
+(c19-3 / look-02
+       :ARG0 (c19-6 / it)
+       :ARG1 (c19-0 / back
+                    :part-of (c19-2 / he))
+       :ARG2 (c19-7 / go-01
+                    :ARG1 (c19-4 / penis
+                                 :part-of (c19-1 / she)))
+       :mod (c19-5 / just))
+
+# ::snt Did Mother approve of his hanging out with a woman schtping a married man?
+# ::tokens ["Did", "Mother", "approve", "of", "his", "hanging", "out", "with", "a", "woman", "schtping", "a", "married", "man", "?"]
+# ::lemmas ["do", "Mother", "approve", "of", "his", "hang", "out", "with", "a", "woman", "schtpe", "a", "married", "man", "?"]
+(c20-9 / approve-01
+       :ARG0 (c20-4 / person
+                    :ARG0-of (c20-3 / have-rel-role-91
+                                    :ARG2 (c20-0 / mother)))
+       :ARG1 (c20-7 / hang-out-06
+                    :ARG1 (c20-2 / he)
+                    :ARG2 (c20-6 / woman
+                                 :ARG0-of (c20-1 / schtp-00
+                                                 :ARG1 (c20-5 / man
+                                                              :ARG1-of (c20-10 / marry-01)))))
+       :polarity (c20-8 / amr-unknown))
+
+# ::snt that's cause he's the biggest asshole.
+# ::tokens ["that", "'s", "cause", "he", "'s", "the", "biggest", "asshole", "."]
+# ::lemmas ["that", "be", "cause", "he", "be", "the", "big", "asshole", "."]
+(c21-3 / cause-01
+       :ARG0 (c21-6 / asshole
+                    :domain (c21-2 / he)
+                    :ARG1-of (c21-4 / have-degree-91
+                                    :ARG2 (c21-0 / big)
+                                    :ARG3 (c21-1 / most)))
+       :ARG1 (c21-5 / that))
+
+# ::snt Whos butt plug do you think is bigger?
+# ::tokens ["Who", "s", "butt", "plug", "do", "you", "think", "is", "bigger", "?"]
+# ::lemmas ["who", "s", "butt", "plug", "do", "you", "think", "be", "big", "?"]
+(c23-7 / think-01
+       :ARG0 (c23-1 / you)
+       :ARG1 (c23-4 / have-degree-91
+                    :ARG1 (c23-5 / plug
+                                 :mod (c23-0 / butt)
+                                 :poss (c23-3 / amr-unknown))
+                    :ARG2 (c23-6 / big)
+                    :ARG3 (c23-2 / more)))
+
+# ::snt You got that right!
+# ::tokens ["You", "got", "that", "right", "!"]
+# ::lemmas ["you", "get", "that", "right", "!"]
+(c24-0 / get-02
+       :ARG0 (c24-2 / you)
+       :ARG1 (c24-3 / that)
+       :ARG1-of (c24-1 / right-02))
+
+# ::snt Whos that next to him?
+# ::tokens ["Who", "s", "that", "next", "to", "him", "?"]
+# ::lemmas ["who", "s", "that", "next", "to", "he", "?"]
+(c25-3 / that
+       :location (c25-2 / next-to
+                        :op1 (c25-1 / he))
+       :mod (c25-0 / amr-unknown))
+
+# ::snt Hilarious family sitcom at this point
+# ::tokens ["Hilarious", "family", "sitcom", "at", "this", "point"]
+# ::lemmas ["Hilarious", "family", "sitcom", "at", "this", "point"]
+(c26-1 / sitcom
+       :mod (c26-0 / family)
+       :mod (c26-2 / hilarious)
+       :time (c26-3 / point
+                    :mod (c26-4 / this)))
+
+# ::snt No money in the world is worth not having your dad in your life.
+# ::tokens ["No", "money", "in", "the", "world", "is", "worth", "not", "having", "your", "dad", "in", "your", "life", "."]
+# ::lemmas ["no", "money", "in", "the", "world", "be", "worth", "not", "have", "your", "dad", "in", "your", "life", "."]
+(c27-6 / worth-02
+       :ARG1 (c27-1 / money
+                    :location (c27-5 / world)
+                    :polarity -)
+       :ARG2 (c27-2 / have-03
+                    :ARG0 (c27-0 / you)
+                    :ARG1 (c27-3 / person
+                                 :ARG0-of (c27-7 / have-rel-role-91
+                                                 :ARG1 c27-0
+                                                 :ARG2 (c27-8 / dad)))
+                    :location (c27-4 / life
+                                     :poss c27-0)
+                    :polarity -))
+
+# ::snt I cant blame her...
+# ::tokens ["I", "ca", "nt", "blame", "her", "..."]
+# ::lemmas ["i", "can", "not", "blame", "she", "..."]
+(c28-1 / possible-01
+       :ARG1 (c28-0 / blame-01
+                    :ARG0 (c28-2 / i)
+                    :ARG1 (c28-3 / she))
+       :polarity -)
+
+# ::snt Seems like that was who Caitlyn is trying to look like.
+# ::tokens ["Seems", "like", "that", "was", "who", "Caitlyn", "is", "trying", "to", "look", "like", "."]
+# ::lemmas ["seem", "like", "that", "be", "who", "Caitlyn", "be", "try", "to", "look", "like", "."]
+(c29-1 / seem-01
+       :ARG1 (c29-2 / resemble-01
+                    :ARG1 (c29-3 / person
+                                 :name (c29-0 / name
+                                              :op1 "Caitlyn"))
+                    :ARG2 (c29-4 / that)
+                    :ARG1-of (c29-5 / try-01
+                                    :ARG0 c29-3)))
+
+# ::snt ...
+# ::tokens ["..."]
+# ::lemmas ["..."]
+(c30-0 / amr-empty)
+
+# ::snt Hahahahahahaha
+# ::tokens ["Hahahahahahaha"]
+# ::lemmas ["Hahahahahahaha"]
+(c32-0 / haha
+       :mode expressive)
+
+# ::snt Well rescue,
+# ::tokens ["Well", "rescue", ","]
+# ::lemmas ["well", "rescue", ","]
+(c33-0 / rescue-01
+       :mod (c33-1 / well))
+
+# ::snt my brother and I him
+# ::tokens ["my", "brother", "and", "I", "him"]
+# ::lemmas ["my", "brother", "and", "i", "he"]
+(c35-5 / and
+       :op1 (c35-2 / person
+                   :ARG0-of (c35-1 / have-rel-role-91
+                                   :ARG1 (c35-4 / i)
+                                   :ARG2 (c35-0 / brother)))
+       :op2 c35-4
+       :op3 (c35-3 / he))
+
+# ::snt The image you have displayed in my mind is against the law. Have fun in prison buckaroo
+# ::tokens ["The", "image", "you", "have", "displayed", "in", "my", "mind", "is", "against", "the", "law", ".", "Have", "fun", "in", "prison", "buckaroo"]
+# ::lemmas ["the", "image", "you", "have", "display", "in", "my", "mind", "be", "against", "the", "law", ".", "have", "fun", "in", "prison", "buckaroo"]
+(c38-2 / multi-sentence
+       :snt1 (c38-10 / against
+                     :op1 (c38-6 / law)
+                     :domain (c38-9 / image
+                                    :ARG1-of (c38-11 / display-01
+                                                     :ARG0 (c38-4 / i)
+                                                     :ARG2 (c38-5 / mind
+                                                                  :poss c38-4))))
+       :snt2 (c38-3 / say-01
+                    :ARG1 (c38-7 / have-06
+                                 :ARG0 (c38-1 / buckaroo)
+                                 :ARG1 (c38-0 / fun-01
+                                              :location (c38-8 / prison)))
+                    :ARG2 c38-1))
+
+# ::snt 's account is temporarily unavailable because it violates the Twitter Media Policy. Learn more.
+# ::tokens ["'s", "account", "is", "temporarily", "unavailable", "because", "it", "violates", "the", "Twitter", "Media", "Policy", ".", "Learn", "more", "."]
+# ::lemmas ["'s", "account", "be", "temporarily", "unavailable", "because", "it", "violate", "the", "Twitter", "Media", "Policy", ".", "learn", "more", "."]
+(c39-1 / multi-sentence
+       :snt1 (c39-8 / cause-01
+                    :ARG0 (c39-4 / violate-01
+                                 :ARG0 (c39-11 / account
+                                               :poss (c39-6 / publication
+                                                            :name (c39-2 / name
+                                                                         :op1 "Twitter")))
+                                 :ARG1 (c39-3 / policy-01
+                                              :ARG1 (c39-5 / media)))
+                    :ARG1 (c39-10 / available-02
+                                  :ARG2 c39-11
+                                  :duration (c39-9 / temporary)
+                                  :polarity -))
+       :snt2 (c39-7 / learn-01
+                    :ARG0 (c39-0 / you)
+                    :ARG1 (c39-12 / more)
+                    :mode imperative))
+
+# ::snt I knew a "crazy" who insisted she was Indian bc she had "shovel-teeth", a "broken" nose, and something about her chestbone (concave?) She finally was fired &amp; moved back to NY
+# ::tokens ["I", "knew", "a", "\"", "crazy", "\"", "who", "insisted", "she", "was", "Indian", "bc", "she", "had", "\"", "shovel", "-", "teeth", "\"", ",", "a", "\"", "broken", "\"", "nose", ",", "and", "something", "about", "her", "chestbone", "(", "concave", "?", ")", "She", "finally", "was", "fired", "&", "amp", ";", "moved", "back", "to", "NY"]
+# ::lemmas ["i", "know", "a", "\"", "crazy", "\"", "who", "insist", "she", "be", "Indian", "bc", "she", "have", "\"", "shovel", "-", "tooth", "\"", ",", "a", "\"", "broken", "\"", "nose", ",", "and", "something", "about", "her", "chestbone", "(", "concave", "?", ")", "she", "finally", "be", "fire", "&", "amp", ";", "move", "back", "to", "NY"]
+(c40-7 / know-02
+       :ARG0 (c40-22 / i)
+       :ARG1 (c40-20 / person
+                     :ARG1-of (c40-16 / crazy-03)
+                     :ARG0-of (c40-5 / insist-01
+                                     :ARG1 (c40-6 / have-mod-91
+                                                  :ARG1 c40-20
+                                                  :ARG2 (c40-12 / country
+                                                                :name (c40-19 / name
+                                                                              :op1 "India"))
+                                                  :ARG1-of (c40-2 / cause-01
+                                                                  :ARG0 (c40-10 / and
+                                                                                :op1 (c40-21 / have-03
+                                                                                             :ARG0 c40-20
+                                                                                             :ARG1 (c40-11 / tooth
+                                                                                                           :ARG1-of (c40-13 / break-01)))
+                                                                                :op2 (c40-0 / something
+                                                                                            :topic (c40-17 / chestbone
+                                                                                                           :ARG1-of (c40-4 / concrete-02
+                                                                                                                           :polarity (c40-9 / amr-unknown)))))))))
+       :ARG0-of c40-21
+       :ARG1 c40-10
+       :op1 (c40-18 / fire-02
+                    :ARG1 c40-20)
+       :op2 (c40-8 / amp)
+       :ARG0-of (c40-14 / move-01
+                        :ARG2 (c40-3 / state
+                                     :name (c40-15 / name
+                                                   :op1 "NY"))
+                        :direction (c40-1 / back)))
+
+# ::snt You think he's a Cyborg instead?
+# ::tokens ["You", "think", "he", "'s", "a", "Cyborg", "instead", "?"]
+# ::lemmas ["you", "think", "he", "be", "a", "Cyborg", "instead", "?"]
+(c41-3 / think-01
+       :polarity (c41-5 / amr-unknown)
+       :ARG0 (c41-0 / you)
+       :ARG1 (c41-2 / cyborg
+                    :domain (c41-1 / he))
+       :ARG1-of (c41-4 / instead-of-91))
+
+# ::snt This explains why liberals are so confused.
+# ::tokens ["This", "explains", "why", "liberals", "are", "so", "confused", "."]
+# ::lemmas ["this", "explain", "why", "liberal", "be", "so", "confused", "."]
+(c42-1 / explain-01
+       :ARG0 (c42-5 / this)
+       :ARG1 (c42-6 / thing
+                    :ARG0-of (c42-4 / cause-01
+                                    :ARG1 (c42-7 / confuse-01
+                                                 :ARG1 (c42-2 / person
+                                                              :ARG1-of (c42-3 / liberal-02))
+                                                 :degree (c42-0 / so)))))
+
+# ::snt 's account is temporarily unavailable because it violates the Twitter Media Policy. Learn more.
+# ::tokens ["'s", "account", "is", "temporarily", "unavailable", "because", "it", "violates", "the", "Twitter", "Media", "Policy", ".", "Learn", "more", "."]
+# ::lemmas ["'s", "account", "be", "temporarily", "unavailable", "because", "it", "violate", "the", "Twitter", "Media", "Policy", ".", "learn", "more", "."]
+(c43-1 / multi-sentence
+       :snt1 (c43-8 / cause-01
+                    :ARG0 (c43-4 / violate-01
+                                 :ARG0 (c43-11 / account
+                                               :poss (c43-6 / publication
+                                                            :name (c43-2 / name
+                                                                         :op1 "Twitter")))
+                                 :ARG1 (c43-3 / policy-01
+                                              :ARG1 (c43-5 / media)))
+                    :ARG1 (c43-10 / available-02
+                                  :ARG2 c43-11
+                                  :duration (c43-9 / temporary)
+                                  :polarity -))
+       :snt2 (c43-7 / learn-01
+                    :ARG0 (c43-0 / you)
+                    :ARG1 (c43-12 / more)
+                    :mode imperative))
+
+# ::snt Normal hardworking Trump voter: "I am a human being. My life has value!" Who do you think, according to liberals, has it wrong?
+# ::tokens ["Normal", "hardworking", "Trump", "voter", ":", "\"", "I", "am", "a", "human", "being", ".", "My", "life", "has", "value", "!", "\"", "Who", "do", "you", "think", ",", "according", "to", "liberals", ",", "has", "it", "wrong", "?"]
+# ::lemmas ["normal", "hardworke", "trump", "voter", ":", "\"", "i", "be", "a", "human", "being", ".", "my", "life", "have", "value", "!", "\"", "who", "do", "you", "think", ",", "accord", "to", "liberal", ",", "have", "it", "wrong", "?"]
+(c44-12 / multi-sentence
+        :snt1 (c44-0 / say-01
+                     :ARG0 (c44-16 / person
+                                   :ARG0-of (c44-5 / vote-01
+                                                   :ARG1 (c44-13 / person
+                                                                 :name (c44-15 / name
+                                                                               :op1 "Trump")))
+                                   :ARG1-of (c44-14 / normal-02)
+                                   :ARG0-of (c44-17 / work-01
+                                                    :ARG1-of (c44-6 / hard-02)))
+                     :ARG1 (c44-9 / and
+                                  :op1 (c44-11 / being
+                                               :mod (c44-18 / human)
+                                               :domain c44-13)
+                                  :op2 (c44-3 / value-01
+                                              :ARG1 (c44-1 / life
+                                                           :poss c44-13))))
+        :snt2 (c44-8 / think-01
+                     :ARG0 (c44-4 / person
+                                  :ARG1-of (c44-10 / liberal-02))
+                     :ARG1 (c44-2 / wrong-02
+                                  :ARG1 (c44-7 / amr-unknown))))
+
+# ::snt lol
+# ::tokens ["lol"]
+# ::lemmas ["lol"]
+(c45-1 / laugh-01
+       :manner (c45-0 / loud)
+       :mode expressive)
+
+# ::snt Rian Johnson - "I make movies that divide my audience"
+# ::tokens ["Rian", "Johnson", "-", "\"", "I", "make", "movies", "that", "divide", "my", "audience", "\""]
+# ::lemmas ["Rian", "Johnson", "-", "\"", "i", "make", "movie", "that", "divide", "my", "audience", "\""]
+(c46-2 / say-01
+       :ARG0 (c46-4 / person
+                    :name (c46-1 / name
+                                 :op1 "Rian"
+                                 :op2 "Johnson"))
+       :ARG1 (c46-0 / make-01
+                    :ARG0 c46-4
+                    :ARG1 (c46-3 / movie
+                                 :ARG0-of (c46-6 / divide-02
+                                                 :ARG1 (c46-5 / audience
+                                                              :poss c46-4)))))
+
+# ::snt = I am a hate symbol
+# ::tokens ["=", "I", "am", "a", "hate", "symbol"]
+# ::lemmas ["=", "i", "be", "a", "hate", "symbol"]
+(c47-2 / symbolize-01
+       :ARG1 (c47-0 / hate-01)
+       :ARG2 (c47-1 / i))
+
+# ::snt Blocked
+# ::tokens ["Blocked"]
+# ::lemmas ["block"]
+(c48-0 / blocked-01)

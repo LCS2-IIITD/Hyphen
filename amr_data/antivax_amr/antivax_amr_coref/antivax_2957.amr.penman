@@ -1,0 +1,75 @@
+# ::snt I got it on sale at the forever mens section
+# ::tokens ["I", "got", "it", "on", "sale", "at", "the", "forever", "mens", "section"]
+# ::lemmas ["i", "get", "it", "on", "sale", "at", "the", "forever", "men", "section"]
+(c1-3 / get-01
+      :ARG0 (c1-5 / i)
+      :ARG1 (c1-0 / sell-01
+                  :ARG1 (c1-2 / it)
+                  :location (c1-4 / section
+                                  :mod (c1-6 / middle
+                                             :mod (c1-1 / forever)))))
+
+# ::snt This shirt is so so cute!
+# ::tokens ["This", "shirt", "is", "so", "so", "cute", "!"]
+# ::lemmas ["this", "shirt", "be", "so", "so", "cute", "!"]
+(c2-3 / cute
+      :domain (c2-0 / shirt
+                    :mod (c2-2 / this))
+      :degree (c2-1 / so)
+      :mode expressive)
+
+# ::snt YouTube channel!! We should start a YouTube channel!!
+# ::tokens ["YouTube", "channel", "!", "!", "We", "should", "start", "a", "YouTube", "channel", "!", "!"]
+# ::lemmas ["YouTube", "channel", "!", "!", "we", "should", "start", "a", "YouTube", "channel", "!", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-2 / channel
+                  :medium (c3-5 / publication
+                                :name (c3-7 / name
+                                            :op1 "YouTube")))
+      :snt2 (c3-4 / recommend-01
+                  :ARG1 (c3-0 / start-01
+                              :ARG0 (c3-3 / we)
+                              :ARG1 (c3-1 / channel
+                                          :medium c3-5))))
+
+# ::snt I CANT WAIT TO GET SUSHI TOGETHER AND EAT ALL THE THINGS!
+# ::tokens ["I", "CANT", "WAIT", "TO", "GET", "SUSHI", "TOGETHER", "AND", "EAT", "ALL", "THE", "THINGS", "!"]
+# ::lemmas ["i", "cant", "wait", "to", "get", "SUSHI", "together", "and", "EAT", "all", "the", "thing", "!"]
+(c4-7 / possible-01
+      :ARG1 (c4-2 / WAIT-01
+                  :ARG0 (c4-1 / i)
+                  :ARG1 (c4-0 / and
+                              :op1 (c4-6 / get-01
+                                         :ARG0 c4-1
+                                         :ARG1 (c4-3 / country
+                                                     :name (c4-8 / name
+                                                                 :op1 "Japan"))
+                                         :manner (c4-4 / by-oneself))
+                              :op2 (c4-10 / eat-01
+                                          :ARG0 c4-1
+                                          :ARG1 (c4-5 / thing
+                                                      :mod (c4-9 / all)))))
+      :polarity -)
+
+# ::snt Theres little sushis on my shirt! Cant wait to go get some with friends safely!
+# ::tokens ["There", "s", "little", "sushis", "on", "my", "shirt", "!", "Ca", "nt", "wait", "to", "go", "get", "some", "with", "friends", "safely", "!"]
+# ::lemmas ["there", "s", "little", "sushis", "on", "my", "shirt", "!", "can", "nt", "wait", "to", "go", "get", "some", "with", "friend", "safely", "!"]
+(c5-12 / multi-sentence
+       :snt1 (c5-9 / be-located-at-91
+                   :ARG1 (c5-0 / sushis
+                               :mod (c5-7 / little))
+                   :ARG2 (c5-10 / shirt
+                                :poss (c5-11 / i)))
+       :snt2 (c5-8 / possible-01
+                   :ARG1 (c5-2 / wait-01
+                               :ARG1 c5-11
+                               :ARG2 (c5-13 / get-01
+                                            :ARG0 c5-11
+                                            :ARG1 (c5-4 / sushis
+                                                        :quant (c5-6 / some))
+                                            :accompanier (c5-5 / person
+                                                               :ARG0-of (c5-3 / have-rel-role-91
+                                                                              :ARG1 c5-11
+                                                                              :ARG2 (c5-1 / friend)))
+                                            :ARG0-of (c5-14 / safe-01)))
+                   :polarity -))

@@ -1,0 +1,45 @@
+# ::snt Build that wall
+# ::tokens ["Build", "that", "wall"]
+# ::lemmas ["build", "that", "wall"]
+(c1-0 / build-01
+      :ARG0 (c1-3 / you)
+      :ARG1 (c1-1 / wall
+                  :mod (c1-2 / that))
+      :mode imperative)
+
+# ::snt I think a 2000 mile, 30ft high mozzarella stick wall is something we could all support.
+# ::tokens ["I", "think", "a", "2000", "mile", ",", "30", "ft", "high", "mozzarella", "stick", "wall", "is", "something", "we", "could", "all", "support", "."]
+# ::lemmas ["i", "think", "a", "2000", "mile", ",", "30", "ft", "high", "mozzarella", "stick", "wall", "be", "something", "we", "could", "all", "support", "."]
+(c2-8 / think-01
+      :ARG0 (c2-11 / i)
+      :ARG1 (c2-9 / possible-01
+                  :ARG1 (c2-0 / support-01
+                              :ARG0 (c2-5 / we
+                                          :mod (c2-2 / all))
+                              :ARG1 (c2-13 / wall
+                                           :consist-of (c2-10 / stick
+                                                              :consist-of (c2-12 / mozzarella)
+                                                              :ARG1-of (c2-7 / high-02
+                                                                             :extent (c2-1 / distance-quantity
+                                                                                           :unit (c2-4 / mile)
+                                                                                           :quant 2000)
+                                                                             :ARG1 c2-10)
+                                                              :extent (c2-6 / distance-quantity
+                                                                            :unit (c2-3 / foot)
+                                                                            :quant 30))))))
+
+# ::snt We'll have the Wisconsinites making cheese for decades.
+# ::tokens ["We", "'ll", "have", "the", "Wisconsinites", "making", "cheese", "for", "decades", "."]
+# ::lemmas ["we", "'ll", "have", "the", "Wisconsinites", "make", "cheese", "for", "decades", "."]
+(c3-5 / have-03
+      :ARG0 (c3-3 / we)
+      :ARG1 (c3-8 / make-01
+                  :ARG0 (c3-7 / person
+                              :mod (c3-0 / state
+                                         :name (c3-9 / name
+                                                     :op1 "Wisconsin")))
+                  :ARG1 (c3-2 / cheese))
+      :duration (c3-4 / multiple
+                      :op1 (c3-6 / temporal-quantity
+                                 :unit (c3-1 / decade)
+                                 :quant 1)))

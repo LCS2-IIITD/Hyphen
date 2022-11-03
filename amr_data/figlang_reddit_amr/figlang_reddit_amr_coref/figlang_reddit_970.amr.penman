@@ -1,0 +1,42 @@
+# ::snt Need a Gold Sink?
+# ::tokens ["Need", "a", "Gold", "Sink", "?"]
+# ::lemmas ["need", "a", "Gold", "Sink", "?"]
+(c1-3 / need-01
+      :polarity (c1-1 / amr-unknown)
+      :ARG0 (c1-4 / you)
+      :ARG1 (c1-0 / sink-01
+                  :ARG2 (c1-2 / gold)))
+
+# ::snt I'd pay 10 bucks to get that diablo as a skin
+# ::tokens ["I", "'d", "pay", "10", "bucks", "to", "get", "that", "diablo", "as", "a", "skin"]
+# ::lemmas ["i", "would", "pay", "10", "bucks", "to", "get", "that", "diablo", "as", "a", "skin"]
+(c2-6 / pay-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-7 / monetary-quantity
+                  :unit (c2-0 / dollar)
+                  :quant 10)
+      :ARG3 (c2-5 / get-01
+                  :ARG0 c2-2
+                  :ARG1 (c2-3 / diablo
+                              :mod (c2-4 / that)
+                              :prep-as (c2-1 / skin))))
+
+# ::snt It used to be in the game and then they turned him into the middle aged fatty diablo we have now.
+# ::tokens ["It", "used", "to", "be", "in", "the", "game", "and", "then", "they", "turned", "him", "into", "the", "middle", "aged", "fatty", "diablo", "we", "have", "now", "."]
+# ::lemmas ["it", "use", "to", "be", "in", "the", "game", "and", "then", "they", "turn", "he", "into", "the", "middle", "aged", "fatty", "diablo", "we", "have", "now", "."]
+(c3-1 / and
+      :op1 (c3-9 / be-located-at-91
+                 :ARG1 (c3-11 / it)
+                 :ARG2 (c3-8 / game)
+                 :time (c3-6 / use-03))
+      :op2 (c3-7 / turn-02
+                 :ARG0 (c3-4 / they)
+                 :ARG1 (c3-5 / he)
+                 :ARG2 (c3-0 / diablo
+                             :mod (c3-2 / fat)
+                             :mod (c3-15 / age-01
+                                         :ARG2 (c3-12 / middle))
+                             :ARG1-of (c3-10 / have-03
+                                             :ARG0 (c3-3 / we)
+                                             :time (c3-13 / now)))
+                 :time (c3-14 / then)))

@@ -1,0 +1,30 @@
+# ::snt That's not funny!!
+# ::tokens ["That", "'s", "not", "funny", "!", "!"]
+# ::lemmas ["that", "be", "not", "funny", "!", "!"]
+(c1-1 / funny
+      :domain (c1-0 / that)
+      :polarity -)
+
+# ::snt It's like a risky booster shot. It hopes to make your symptoms more mild. Without proof or evidence.
+# ::tokens ["It", "'s", "like", "a", "risky", "booster", "shot", ".", "It", "hopes", "to", "make", "your", "symptoms", "more", "mild", ".", "Without", "proof", "or", "evidence", "."]
+# ::lemmas ["it", "be", "like", "a", "risky", "booster", "shot", ".", "it", "hope", "to", "make", "your", "symptom", "more", "mild", ".", "without", "proof", "or", "evidence", "."]
+(c2-14 / multi-sentence
+       :snt1 (c2-9 / resemble-01
+                   :ARG1 (c2-13 / it)
+                   :ARG2 (c2-0 / shot
+                               :ARG0-of (c2-11 / boost-01)
+                               :ARG1-of (c2-6 / risky-02)))
+       :snt2 (c2-3 / hope-01
+                   :ARG0 (c2-4 / it)
+                   :ARG1 (c2-2 / make-02
+                               :ARG0 c2-4
+                               :ARG1 (c2-12 / have-degree-91
+                                            :ARG1 (c2-1 / symptom
+                                                        :poss (c2-15 / you))
+                                            :ARG2 (c2-7 / mild)
+                                            :ARG3 (c2-5 / more))))
+       :snt3 (c2-8 / or
+                   :op1 (c2-10 / prove-01
+                               :polarity -)
+                   :op2 (c2-16 / evidence-01
+                               :polarity -)))

@@ -1,0 +1,112 @@
+# ::snt I got mine on Tuesday
+# ::tokens ["I", "got", "mine", "on", "Tuesday"]
+# ::lemmas ["i", "get", "mine", "on", "Tuesday"]
+(c1-3 / get-01
+      :ARG0 (c1-4 / i)
+      :ARG1 (c1-2 / thing
+                  :poss c1-4)
+      :time (c1-0 / date-entity
+                  :weekday (c1-1 / tuesday)))
+
+# ::snt That is so awesome
+# ::tokens ["That", "is", "so", "awesome"]
+# ::lemmas ["that", "be", "so", "awesome"]
+(c3-1 / awesome-02
+      :ARG0 (c3-2 / that)
+      :degree (c3-0 / so))
+
+# ::snt Good luck..
+# ::tokens ["Good", "luck", ".."]
+# ::lemmas ["good", "luck", ".."]
+(c5-1 / luck
+      :ARG1-of (c5-0 / good-02))
+
+# ::snt still do take care of yourself !
+# ::tokens ["still", "do", "take", "care", "of", "yourself", "!"]
+# ::lemmas ["still", "do", "take", "care", "of", "yourself", "!"]
+(c6-2 / care-03
+      :ARG0 (c6-1 / you
+                  :ARG1-of c6-2)
+      :mod (c6-0 / still)
+      :mode imperative)
+
+# ::snt Hopefully nothing you need falls off
+# ::tokens ["Hopefully", "nothing", "you", "need", "falls", "off"]
+# ::lemmas ["hopefully", "nothing", "you", "need", "fall", "off"]
+(c7-1 / hope-01
+      :ARG1 (c7-0 / fall-01
+                  :ARG1 (c7-4 / nothing
+                              :ARG1-of (c7-3 / need-01
+                                             :ARG0 (c7-5 / you)))
+                  :ARG4 (c7-2 / off)))
+
+# ::snt Woo hoo!
+# ::tokens ["Woo", "hoo", "!"]
+# ::lemmas ["Woo", "hoo", "!"]
+(c8-0 / woo-hoo
+      :mode expressive)
+
+# ::snt Hope you have a great night beautiful and be careful out there
+# ::tokens ["Hope", "you", "have", "a", "great", "night", "beautiful", "and", "be", "careful", "out", "there"]
+# ::lemmas ["hope", "you", "have", "a", "great", "night", "beautiful", "and", "be", "careful", "out", "there"]
+(c10-0 / and
+       :op1 (c10-2 / hope-01
+                   :ARG0 (c10-7 / i)
+                   :ARG1 (c10-6 / have-03
+                                :ARG0 (c10-9 / you)
+                                :ARG1 (c10-8 / night
+                                             :mod (c10-5 / great)
+                                             :ARG1-of (c10-3 / beautiful-02))))
+       :op2 (c10-1 / care-04
+                   :ARG0 c10-9
+                   :location (c10-4 / out-there)
+                   :mode imperative))
+
+# ::snt Which vaccine? I got the Pfizer.
+# ::tokens ["Which", "vaccine", "?", "I", "got", "the", "Pfizer", "."]
+# ::lemmas ["which", "vaccine", "?", "i", "get", "the", "Pfizer", "."]
+(c11-5 / multi-sentence
+       :snt1 (c11-1 / vaccine
+                    :mod (c11-0 / amr-unknown))
+       :snt2 (c11-3 / get-01
+                    :ARG0 (c11-4 / i)
+                    :ARG1 (c11-2 / product
+                                 :name (c11-6 / name
+                                              :op1 "Pfizer"))))
+
+# ::snt Let me know if you develop super powers!
+# ::tokens ["Let", "me", "know", "if", "you", "develop", "super", "powers", "!"]
+# ::lemmas ["let", "i", "know", "if", "you", "develop", "super", "power", "!"]
+(c12-3 / let-know-07
+       :ARG0 (c12-5 / you)
+       :ARG1 (c12-4 / i)
+       :ARG2 (c12-2 / truth-value
+                    :polarity-of (c12-0 / develop-02
+                                        :ARG0 c12-5
+                                        :ARG1 (c12-1 / superpower)))
+       :mode imperative)
+
+# ::snt Where can I get your video?
+# ::tokens ["Where", "can", "I", "get", "your", "video", "?"]
+# ::lemmas ["where", "can", "i", "get", "your", "video", "?"]
+(c13-4 / possible-01
+       :ARG1 (c13-3 / get-01
+                    :ARG0 (c13-1 / i)
+                    :ARG1 (c13-2 / video
+                                 :poss (c13-5 / you))
+                    :location (c13-0 / amr-unknown)))
+
+# ::snt Yay! I get round in a couple weeks!
+# ::tokens ["Yay", "!", "I", "get", "round", "in", "a", "couple", "weeks", "!"]
+# ::lemmas ["Yay", "!", "i", "get", "round", "in", "a", "couple", "weeks", "!"]
+(c14-6 / multi-sentence
+       :snt1 (c14-8 / yay)
+       :snt2 (c14-4 / round-out-01
+                    :ARG0 (c14-5 / i)
+                    :time (c14-0 / after
+                                 :op1 (c14-7 / now)
+                                 :quant (c14-1 / couple
+                                               :op1 (c14-3 / temporal-quantity
+                                                           :unit (c14-2 / week)
+                                                           :quant 1)))
+                    :mode expressive))

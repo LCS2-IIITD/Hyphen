@@ -1,0 +1,372 @@
+# ::snt Duty hours are very easy to check.
+# ::tokens ["Duty", "hours", "are", "very", "easy", "to", "check", "."]
+# ::lemmas ["duty", "hours", "be", "very", "easy", "to", "check", "."]
+(c1-1 / easy-05
+      :ARG1 (c1-4 / check-01
+                  :ARG1 (c1-0 / hour
+                              :mod (c1-3 / deputy)))
+      :degree (c1-2 / very))
+
+# ::snt too much info! Do u realli think people need to know that
+# ::tokens ["too", "much", "info", "!", "Do", "u", "realli", "think", "people", "need", "to", "know", "that"]
+# ::lemmas ["too", "much", "info", "!", "do", "u", "realli", "think", "people", "need", "to", "know", "that"]
+(c2-2 / multi-sentence
+      :snt1 (c2-3 / information
+                  :ARG1-of (c2-0 / have-quant-91
+                                 :ARG2 (c2-7 / much)
+                                 :ARG3 (c2-10 / too)))
+      :snt2 (c2-9 / think-01
+                  :ARG0 (c2-1 / you)
+                  :ARG1 (c2-5 / need-01
+                              :ARG0 (c2-8 / person)
+                              :ARG1 (c2-4 / know-01
+                                          :ARG0 c2-8
+                                          :ARG1 (c2-6 / that)))
+                  :polarity (c2-11 / amr-unknown)))
+
+# ::snt and maintaining speed of more than knots. Horrific.
+# ::tokens ["and", "maintaining", "speed", "of", "more", "than", "knots", ".", "Horrific", "."]
+# ::lemmas ["and", "maintain", "speed", "of", "more", "than", "knot", ".", "Horrific", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / and
+                  :op2 (c3-3 / maintain-01
+                             :ARG1 (c3-4 / speed
+                                         :quant (c3-1 / more-than
+                                                      :op1 (c3-5 / knot)))))
+      :snt2 (c3-0 / Horrific))
+
+# ::snt Also a acre debris field is relatively small w disintegration upon impact.
+# ::tokens ["Also", "a", "acre", "debris", "field", "is", "relatively", "small", "w", "disintegration", "upon", "impact", "."]
+# ::lemmas ["also", "a", "acre", "debris", "field", "be", "relatively", "small", "w", "disintegration", "upon", "impact", "."]
+(c4-8 / small
+      :domain (c4-1 / field
+                    :consist-of (c4-5 / debris)
+                    :quant (c4-10 / area-quantity
+                                  :unit (c4-2 / acre)
+                                  :quant 1))
+      :ARG2-of (c4-6 / relative-05)
+      :mod (c4-4 / also)
+      :ARG1-of (c4-7 / cause-01
+                     :ARG0 (c4-0 / disintegrate-01
+                                 :ARG1 c4-1
+                                 :time (c4-9 / after
+                                             :op1 (c4-3 / impact-02
+                                                        :ARG1 c4-1)))))
+
+# ::snt ;}
+# ::tokens [";", "}"]
+# ::lemmas [";", "}"]
+(c5-0 / amr-empty)
+
+# ::snt that's ft per minute hardly "plunging"
+# ::tokens ["that", "'s", "ft", "per", "minute", "hardly", "\"", "plunging", "\""]
+# ::lemmas ["that", "be", "ft", "per", "minute", "hardly", "\"", "plunge", "\""]
+(c6-5 / string-entity
+      :domain (c6-6 / that)
+      :frequency (c6-3 / rate-entity-91
+                       :ARG2 (c6-4 / temporal-quantity
+                                   :unit (c6-1 / minute)
+                                   :quant 1)
+                       :ARG1 1)
+      :ARG0-of (c6-2 / sting-01
+                     :degree (c6-0 / hardly))
+      :value "ft")
+
+# ::snt flight number is is the type of airplane (airbus)
+# ::tokens ["flight", "number", "is", "is", "the", "type", "of", "airplane", "(", "airbus", ")"]
+# ::lemmas ["flight", "number", "be", "be", "the", "type", "of", "airplane", "(", "airbus", ")"]
+(c7-2 / type
+      :domain (c7-0 / number
+                    :quant-of (c7-1 / fly-01))
+      :poss (c7-3 / airplane))
+
+# ::snt : Germanwings flight A320 plunged feet in just ten minutes" that's roughly ft per minute. Hardly a plunge..
+# ::tokens [":", "Germanwings", "flight", "A320", "plunged", "feet", "in", "just", "ten", "minutes", "\"", "that", "'s", "roughly", "ft", "per", "minute", ".", "Hardly", "a", "plunge", ".."]
+# ::lemmas [":", "germanwing", "flight", "a320", "plunge", "foot", "in", "just", "ten", "minutes", "\"", "that", "be", "roughly", "ft", "per", "minute", ".", "hardly", "a", "plunge", ".."]
+(c8-2 / multi-sentence
+      :snt1 (c8-4 / plunge-01
+                  :ARG1 (c8-7 / aircraft-type
+                              :name (c8-11 / name
+                                           :op1 "A320")
+                              :poss (c8-17 / company
+                                           :name (c8-16 / name
+                                                        :op1 "Germanwings")))
+                  :extent (c8-5 / distance-quantity
+                                :unit (c8-9 / foot)
+                                :quant 10)
+                  :duration (c8-19 / temporal-quantity
+                                   :unit (c8-12 / minute)
+                                   :mod (c8-0 / just)
+                                   :quant 10)
+                  :ARG1-of (c8-10 / mean-01
+                                  :ARG2 (c8-13 / rate-entity-91
+                                               :ARG1 (c8-3 / roughly
+                                                           :op1 (c8-1 / distance-quantity
+                                                                      :unit (c8-15 / foot)
+                                                                      :quant 1))
+                                               :ARG2 (c8-18 / temporal-quantity
+                                                            :unit (c8-14 / minute)
+                                                            :quant 1))))
+      :snt2 (c8-6 / plunge-01
+                  :degree (c8-8 / hardly)))
+
+# ::snt That's a funny definition of 'plunge'.
+# ::tokens ["That", "'s", "a", "funny", "definition", "of", "'", "plunge", "'", "."]
+# ::lemmas ["that", "be", "a", "funny", "definition", "of", "'", "plunge", "'", "."]
+(c9-1 / define-01
+      :ARG1 (c9-3 / lunge-01)
+      :ARG2 (c9-2 / that)
+      :mod (c9-0 / funny))
+
+# ::snt minutes...let that soak in.
+# ::tokens ["minutes", "...", "let", "that", "soak", "in", "."]
+# ::lemmas ["minutes", "...", "let", "that", "soak", "in", "."]
+(c10-1 / let-01
+       :ARG0 (c10-0 / you)
+       :ARG1 (c10-5 / soak-in-02
+                    :ARG0 c10-0
+                    :ARG1 (c10-6 / that))
+       :duration (c10-2 / multiple
+                        :op1 (c10-4 / temporal-quantity
+                                    :unit (c10-3 / minute)
+                                    :quant 1))
+       :mode imperative)
+
+# ::snt minutes is a long time.
+# ::tokens ["minutes", "is", "a", "long", "time", "."]
+# ::lemmas ["minute", "be", "a", "long", "time", "."]
+(c11-2 / time
+       :ARG1-of (c11-1 / long-03)
+       :domain (c11-3 / temporal-quantity
+                      :unit (c11-0 / minute)
+                      :quant 1))
+
+# ::snt any good pilot would tell you that aint "plunging". Such sad news RIP
+# ::tokens ["any", "good", "pilot", "would", "tell", "you", "that", "ai", "nt", "\"", "plunging", "\"", ".", "Such", "sad", "news", "RIP"]
+# ::lemmas ["any", "good", "pilot", "would", "tell", "you", "that", "be", "not", "\"", "plunge", "\"", ".", "such", "sad", "news", "RIP"]
+(c12-1 / multi-sentence
+       :snt1 (c12-9 / tell-01
+                    :ARG0 (c12-5 / person
+                                 :ARG0-of (c12-10 / pilot-01)
+                                 :ARG1-of (c12-7 / good-03)
+                                 :mod (c12-11 / any))
+                    :ARG1 (c12-2 / press-01
+                                 :polarity -)
+                    :ARG2 (c12-0 / you))
+       :snt2 (c12-4 / news
+                    :ARG1-of (c12-8 / sad-02
+                                    :degree (c12-3 / such))
+                    :ARG1-of (c12-6 / rest-01)))
+
+# ::snt starting to sound like they fell asleep?
+# ::tokens ["starting", "to", "sound", "like", "they", "fell", "asleep", "?"]
+# ::lemmas ["start", "to", "sound", "like", "they", "fall", "asleep", "?"]
+(c13-3 / start-01
+       :polarity (c13-5 / amr-unknown)
+       :ARG1 (c13-2 / sound-01
+                    :ARG2 (c13-0 / fall-07
+                                 :ARG1 (c13-4 / they)
+                                 :ARG2 (c13-1 / sleep-01
+                                              :ARG0 c13-4))))
+
+# ::snt Ok so you know you are over the Alps...
+# ::tokens ["Ok", "so", "you", "know", "you", "are", "over", "the", "Alps", "..."]
+# ::lemmas ["ok", "so", "you", "know", "you", "be", "over", "the", "Alps", "..."]
+(c14-6 / know-01
+       :ARG0 (c14-0 / you)
+       :ARG1 (c14-3 / be-located-at-91
+                    :ARG1 c14-0
+                    :ARG2 (c14-4 / over
+                                 :op1 (c14-2 / mountain
+                                             :name (c14-5 / name
+                                                          :op1 "Alps"))))
+       :ARG1-of (c14-1 / okay-04))
+
+# ::snt that's ft per minute hardly "plunging"
+# ::tokens ["that", "'s", "ft", "per", "minute", "hardly", "\"", "plunging", "\""]
+# ::lemmas ["that", "be", "ft", "per", "minute", "hardly", "\"", "plunge", "\""]
+(c15-5 / string-entity
+       :domain (c15-6 / that)
+       :frequency (c15-3 / rate-entity-91
+                         :ARG2 (c15-4 / temporal-quantity
+                                      :unit (c15-1 / minute)
+                                      :quant 1)
+                         :ARG1 1)
+       :ARG0-of (c15-2 / sting-01
+                       :degree (c15-0 / hardly))
+       :value "ft")
+
+# ::snt whoah!:- ./!\. ..
+# ::tokens ["whoah!:-", "./!\\.", ".."]
+# ::lemmas ["whoah!:-", "./!\\.", ".."]
+(c16-2 / multi-sentence
+       :snt1 (c16-0 / whoah
+                    :mode expressive)
+       :snt2 (c16-1 / emoticon
+                    :value ":"
+                    :value ":"))
+
+# ::snt Plunged or descended? feet in minutes is just about a normal rate of descent.
+# ::tokens ["Plunged", "or", "descended", "?", "feet", "in", "minutes", "is", "just", "about", "a", "normal", "rate", "of", "descent", "."]
+# ::lemmas ["plunge", "or", "descend", "?", "foot", "in", "minute", "be", "just", "about", "a", "normal", "rate", "of", "descent", "."]
+(c18-7 / rate-01
+       :ARG1 (c18-6 / descend-01)
+       :ARG2 (c18-9 / about
+                    :op1 (c18-0 / distance-quantity
+                                :unit (c18-1 / foot)
+                                :quant 1))
+       :ARG1-of (c18-4 / normal-02)
+       :domain (c18-10 / descend-01)
+       :polarity (c18-3 / amr-unknown)
+       :duration (c18-2 / multiple
+                        :op1 (c18-8 / temporal-quantity
+                                    :unit (c18-5 / minute)
+                                    :quant 1)))
+
+# ::snt Praying for God's peace for the families if those aboard
+# ::tokens ["Praying", "for", "God", "'s", "peace", "for", "the", "families", "if", "those", "aboard"]
+# ::lemmas ["pray", "for", "God", "'s", "peace", "for", "the", "family", "if", "those", "aboard"]
+(c19-3 / pray-01
+       :purpose (c19-6 / peace
+                       :poss (c19-1 / person
+                                    :name (c19-2 / name
+                                                 :op1 "God"))
+                       :beneficiary (c19-0 / family))
+       :condition (c19-5 / person
+                         :mod (c19-4 / that)
+                         :location (c19-7 / aboard)))
+
+# ::snt Bomb aboard?
+# ::tokens ["Bomb", "aboard", "?"]
+# ::lemmas ["bomb", "aboard", "?"]
+(c20-2 / bomb
+       :polarity (c20-1 / amr-unknown)
+       :location (c20-0 / aboard))
+
+# ::snt minutes of rapid unexpected descent w pilots fighting computer for control.
+# ::tokens ["minutes", "of", "rapid", "unexpected", "descent", "w", "pilots", "fighting", "computer", "for", "control", "."]
+# ::lemmas ["minutes", "of", "rapid", "unexpected", "descent", "w", "pilot", "fight", "computer", "for", "control", "."]
+(c21-10 / and
+        :op1 (c21-5 / descend-01
+                    :manner (c21-4 / rapid)
+                    :ARG1-of (c21-2 / expect-01
+                                    :polarity -))
+        :op2 (c21-0 / fight-01
+                    :ARG0 (c21-3 / person
+                                 :ARG0-of (c21-9 / pilot-01))
+                    :ARG2 (c21-6 / computer
+                                 :instrument-of (c21-7 / control-01)))
+        :duration (c21-8 / temporal-quantity
+                         :unit (c21-1 / minute)
+                         :quant 1))
+
+# ::snt ft a min.thats not a plunge normal descent is ft If I flew an aircraft as badly as you report I would be out of a job
+# ::tokens ["ft", "a", "min.thats", "not", "a", "plunge", "normal", "descent", "is", "ft", "If", "I", "flew", "an", "aircraft", "as", "badly", "as", "you", "report", "I", "would", "be", "out", "of", "a", "job"]
+# ::lemmas ["ft", "a", "min.thats", "not", "a", "plunge", "normal", "descent", "be", "ft", "if", "i", "fly", "an", "aircraft", "as", "badly", "as", "you", "report", "i", "would", "be", "out", "of", "a", "job"]
+(c22-0 / have-condition-91
+       :ARG1 (c22-7 / out-06
+                    :ARG1 (c22-9 / i)
+                    :ARG2 (c22-1 / job))
+       :ARG2 (c22-3 / fly-01
+                    :ARG0 c22-9
+                    :ARG2 (c22-14 / aircraft)
+                    :manner (c22-6 / bad-05
+                                   :ARG2-of (c22-4 / have-degree-91
+                                                   :ARG1 c22-3
+                                                   :ARG3 (c22-8 / equal)
+                                                   :ARG4 (c22-12 / report-01
+                                                                 :ARG0 (c22-2 / you)))))
+       :condition (c22-11 / plunge-01
+                          :ARG4 (c22-13 / distance-quantity
+                                        :unit (c22-5 / mile)
+                                        :quant 1)
+                          :ARG1-of (c22-10 / normal-02)
+                          :polarity -))
+
+# ::snt no distress call either. They were either unconscious or immediate catastrophic failure
+# ::tokens ["no", "distress", "call", "either", ".", "They", "were", "either", "unconscious", "or", "immediate", "catastrophic", "failure"]
+# ::lemmas ["no", "distress", "call", "either", ".", "they", "be", "either", "unconscious", "or", "immediate", "catastrophic", "failure"]
+(c23-1 / multi-sentence
+       :snt1 (c23-6 / call-02
+                    :ARG1 (c23-5 / distress-01)
+                    :mod (c23-3 / either)
+                    :polarity -)
+       :snt2 (c23-2 / or
+                    :op1 (c23-7 / conscious
+                                :domain (c23-9 / they)
+                                :polarity -)
+                    :op2 (c23-0 / fail-01
+                                :ARG1 c23-9
+                                :mod (c23-8 / catastrophic)
+                                :time (c23-4 / immediate))))
+
+# ::snt oxygen on, establish communications, start decent, inform ATC...in that order, so something not right
+# ::tokens ["oxygen", "on", ",", "establish", "communications", ",", "start", "decent", ",", "inform", "ATC", "...", "in", "that", "order", ",", "so", "something", "not", "right"]
+# ::lemmas ["oxygen", "on", ",", "establish", "communication", ",", "start", "decent", ",", "inform", "ATC", "...", "in", "that", "order", ",", "so", "something", "not", "right"]
+(c24-14 / and
+        :op1 (c24-2 / on-01
+                    :ARG1 (c24-0 / oxygen))
+        :op2 (c24-3 / establish-01
+                    :ARG1 (c24-8 / communicate-01))
+        :op3 (c24-12 / start-01
+                     :ARG1 (c24-7 / decent))
+        :op4 (c24-5 / inform-01
+                    :ARG1 (c24-9 / company
+                                 :name (c24-6 / name
+                                              :op1 "ATC")))
+        :manner (c24-1 / order
+                       :mod (c24-13 / that))
+        :ARG0-of (c24-11 / cause-01
+                         :ARG1 (c24-10 / right-06
+                                       :ARG1 (c24-4 / something)
+                                       :polarity -)))
+
+# ::snt I hear you, but it is up now to fps and eye witnesses said it was flying below the summits on final
+# ::tokens ["I", "hear", "you", ",", "but", "it", "is", "up", "now", "to", "fps", "and", "eye", "witnesses", "said", "it", "was", "flying", "below", "the", "summits", "on", "final"]
+# ::lemmas ["i", "hear", "you", ",", "but", "it", "be", "up", "now", "to", "fps", "and", "eye", "witness", "say", "it", "be", "fly", "below", "the", "summit", "on", "final"]
+(c25-13 / contrast-01
+        :ARG1 (c25-0 / hear-01
+                     :ARG0 (c25-9 / i)
+                     :ARG2 (c25-1 / you))
+        :ARG2 (c25-17 / and
+                      :op1 (c25-4 / up-02
+                                  :ARG1 (c25-14 / it)
+                                  :ARG2 (c25-12 / percentage-entity
+                                                :value (c25-3 / fps)
+                                                :time (c25-11 / now))
+                                  :op2 (c25-15 / say-01
+                                               :ARG0 (c25-16 / person
+                                                             :ARG0-of (c25-2 / witness-01
+                                                                             :manner (c25-7 / eye)))
+                                               :ARG1 (c25-10 / fly-01
+                                                             :ARG1 c25-14
+                                                             :path (c25-5 / below
+                                                                          :op1 (c25-8 / summit))
+                                                             :time (c25-6 / final))))))
+
+# ::snt How awful. But what is going wrong with planes at the moment? : Germanwings flight A320 plunged feet in just ten minutes"
+# ::tokens ["How", "awful", ".", "But", "what", "is", "going", "wrong", "with", "planes", "at", "the", "moment", "?", ":", "Germanwings", "flight", "A320", "plunged", "feet", "in", "just", "ten", "minutes", "\""]
+# ::lemmas ["how", "awful", ".", "but", "what", "be", "go", "wrong", "with", "plane", "at", "the", "moment", "?", ":", "germanwing", "flight", "a320", "plunge", "foot", "in", "just", "ten", "minutes", "\""]
+(c26-1 / multi-sentence
+       :snt1 (c26-6 / awful
+                    :degree (c26-4 / so))
+       :snt2 (c26-17 / contrast-01
+                     :ARG2 (c26-12 / go-08
+                                   :ARG1 (c26-14 / amr-unknown)
+                                   :ARG2 (c26-13 / wrong-02
+                                                 :ARG1 c26-14
+                                                 :ARG2 (c26-2 / plane))
+                                   :time (c26-11 / moment)))
+       :snt3 (c26-5 / plunge-01
+                    :ARG1 (c26-7 / fly-01
+                                 :ARG0 (c26-3 / company
+                                              :name (c26-9 / name
+                                                           :op1 "Germanwings"))
+                                 :mod (c26-10 / aircraft-type
+                                              :name (c26-16 / name
+                                                            :op1 "A320")))
+                    :ARG4 (c26-15 / foot)
+                    :duration (c26-18 / temporal-quantity
+                                      :unit (c26-8 / minute)
+                                      :mod (c26-0 / just)
+                                      :quant 10)))

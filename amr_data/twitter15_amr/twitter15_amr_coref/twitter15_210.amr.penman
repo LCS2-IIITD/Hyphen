@@ -1,0 +1,110 @@
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c1-2 / congratulate-01
+      :ARG1 (c1-1 / you)
+      :ARG2 (c1-0 / tweet-01
+                  :ARG0 c1-1))
+
+# ::snt : He's trying to infiltrate them with gays and take them down for the inside?
+# ::tokens [":", "He", "'s", "trying", "to", "infiltrate", "them", "with", "gays", "and", "take", "them", "down", "for", "the", "inside", "?"]
+# ::lemmas [":", "he", "be", "try", "to", "infiltrate", "they", "with", "gay", "and", "take", "they", "down", "for", "the", "inside", "?"]
+(c2-3 / try-01
+      :polarity (c2-8 / amr-unknown)
+      :ARG0 (c2-6 / he)
+      :ARG1 (c2-5 / and
+                  :op1 (c2-0 / infiltrate-01
+                             :ARG0 c2-6
+                             :ARG1 (c2-4 / they
+                                         :accompanier (c2-1 / person
+                                                            :ARG1-of (c2-9 / gay-01))))
+                  :op2 (c2-2 / take-down-22
+                             :ARG0 c2-6
+                             :ARG1 c2-4
+                             :purpose (c2-7 / inside))))
+
+# ::snt looks like about pacific someone posted a fake Macklemore screencap that went viral?
+# ::tokens ["looks", "like", "about", "pacific", "someone", "posted", "a", "fake", "Macklemore", "screencap", "that", "went", "viral", "?"]
+# ::lemmas ["look", "like", "about", "pacific", "someone", "post", "a", "fake", "Macklemore", "screencap", "that", "go", "viral", "?"]
+(c3-3 / look-02
+      :ARG1 (c3-2 / post-01
+                  :ARG0 (c3-0 / someone)
+                  :ARG1 (c3-1 / screencap
+                              :ARG1-of (c3-11 / fake-02)
+                              :mod (c3-10 / product
+                                          :name (c3-8 / name
+                                                      :op1 "Macklemore"))
+                              :ARG1-of (c3-6 / go-08
+                                             :ARG2 (c3-9 / viral))))
+      :ARG2 (c3-5 / country
+                  :name (c3-7 / name
+                              :op1 "Pakistan"))
+      :polarity (c3-4 / amr-unknown))
+
+# ::snt WAT
+# ::tokens ["WAT"]
+# ::lemmas ["WAT"]
+(c4-0 / water)
+
+# ::snt that bastard
+# ::tokens ["that", "bastard"]
+# ::lemmas ["that", "bastard"]
+(c5-1 / bastard
+      :mod (c5-0 / that))
+
+# ::snt that's a cold-ass honkie
+# ::tokens ["that", "'s", "a", "cold", "-", "ass", "honkie"]
+# ::lemmas ["that", "be", "a", "cold", "-", "ass", "honkie"]
+(c6-1 / honkie
+      :ARG1-of (c6-2 / cold-ass-00)
+      :domain (c6-0 / that))
+
+# ::snt I was going to claim that I had joined ISIS last night as a gag but I reconsidered.
+# ::tokens ["I", "was", "going", "to", "claim", "that", "I", "had", "joined", "ISIS", "last", "night", "as", "a", "gag", "but", "I", "reconsidered", "."]
+# ::lemmas ["i", "be", "go", "to", "claim", "that", "i", "have", "join", "ISIS", "last", "night", "as", "a", "gag", "but", "i", "reconsider", "."]
+(c7-3 / contrast-01
+      :ARG1 (c7-0 / intend-01
+                  :ARG0 (c7-7 / i)
+                  :ARG1 (c7-2 / claim-01
+                              :ARG0 c7-7
+                              :ARG1 (c7-5 / join-04
+                                          :ARG0 c7-7
+                                          :ARG1 (c7-4 / criminal-organization
+                                                      :name (c7-9 / name
+                                                                  :op1 "ISIS"))
+                                          :time (c7-10 / date-entity
+                                                       :dayperiod (c7-8 / night)
+                                                       :mod (c7-6 / yesterday))
+                                          :manner (c7-11 / gag))))
+      :ARG2 (c7-1 / reconsidered-01
+                  :ARG0 c7-7))
+
+# ::snt Fucked up if true
+# ::tokens ["Fucked", "up", "if", "true"]
+# ::lemmas ["fuck", "up", "if", "true"]
+(c8-1 / fuck-up-02
+      :condition (c8-0 / true-01))
+
+# ::snt Jon buddy, friend to all, please say this isn't true
+# ::tokens ["Jon", "buddy", ",", "friend", "to", "all", ",", "please", "say", "this", "is", "n't", "true"]
+# ::lemmas ["Jon", "buddy", ",", "friend", "to", "all", ",", "please", "say", "this", "be", "not", "true"]
+(c9-0 / say-01
+      :ARG0 (c9-8 / you
+                  :ARG0-of (c9-9 / have-rel-role-91
+                                 :ARG1 (c9-3 / person
+                                             :name (c9-10 / name
+                                                          :op1 "Jon"))
+                                 :ARG2 (c9-1 / buddy))
+                  :ARG0-of (c9-2 / have-rel-role-91
+                                 :ARG1 (c9-12 / person
+                                              :mod (c9-6 / all))
+                                 :ARG2 (c9-11 / friend)))
+      :ARG1 (c9-4 / say-01
+                  :ARG0 c9-8
+                  :ARG1 (c9-5 / true-01
+                              :ARG1 (c9-7 / this)
+                              :polarity -)
+                  :mode imperative)
+      :ARG2 c9-12
+      :polite +
+      :mode imperative)

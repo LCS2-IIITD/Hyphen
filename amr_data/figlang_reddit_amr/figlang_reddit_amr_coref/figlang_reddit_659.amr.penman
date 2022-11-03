@@ -1,0 +1,48 @@
+# ::snt The Daily Beast celebrates that Disney is FINALLY making a movie starring a woman of color; forgets that they've been doing this since 1992.
+# ::tokens ["The", "Daily", "Beast", "celebrates", "that", "Disney", "is", "FINALLY", "making", "a", "movie", "starring", "a", "woman", "of", "color", ";", "forgets", "that", "they", "'ve", "been", "doing", "this", "since", "1992", "."]
+# ::lemmas ["The", "Daily", "Beast", "celebrate", "that", "Disney", "be", "finally", "make", "a", "movie", "star", "a", "woman", "of", "color", ";", "forget", "that", "they", "'ve", "be", "do", "this", "since", "1992", "."]
+(c1-3 / and
+      :op1 (c1-5 / celebrate-01
+                 :ARG0 (c1-13 / publication
+                              :name (c1-15 / name
+                                           :op1 "The"
+                                           :op2 "Daily"
+                                           :op3 "Beast"))
+                 :ARG1 (c1-14 / make-01
+                              :ARG0 (c1-0 / company
+                                          :name (c1-11 / name
+                                                       :op1 "Disney"))
+                              :ARG1 (c1-6 / movie
+                                          :ARG2-of (c1-1 / star-01
+                                                         :ARG1 (c1-7 / woman
+                                                                     :ARG1-of (c1-9 / color-01))))
+                              :mod (c1-4 / final)))
+      :op2 (c1-10 / forget-01
+                  :ARG0 c1-13
+                  :ARG1 (c1-2 / do-02
+                              :ARG0 c1-0
+                              :ARG1 c1-14
+                              :time (c1-12 / since
+                                           :op1 (c1-8 / date-entity
+                                                      :year 1992)))))
+
+# ::snt Everyone forgets Esmeralda
+# ::tokens ["Everyone", "forgets", "Esmeralda"]
+# ::lemmas ["everyone", "forget", "Esmeralda"]
+(c2-2 / forget-01
+      :ARG0 (c2-3 / everyone)
+      :ARG1 (c2-0 / person
+                  :name (c2-1 / name
+                              :op1 "Esmeralda")))
+
+# ::snt Do Romani count as POCs?
+# ::tokens ["Do", "Romani", "count", "as", "POCs", "?"]
+# ::lemmas ["do", "Romani", "count", "as", "poc", "?"]
+(c3-2 / count-02
+      :ARG1 (c3-4 / person
+                  :name (c3-5 / name
+                              :op1 "Romani")
+                  :ARG2-of c3-2)
+      :ARG0-of (c3-3 / operate-01
+                     :mod (c3-0 / covert))
+      :polarity (c3-1 / amr-unknown))

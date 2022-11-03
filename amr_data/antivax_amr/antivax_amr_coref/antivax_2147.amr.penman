@@ -1,0 +1,115 @@
+# ::snt I am expextation.
+# ::tokens ["I", "am", "expextation", "."]
+# ::lemmas ["i", "be", "expextation", "."]
+(c1-1 / expexate-01
+      :ARG1 (c1-0 / i))
+
+# ::snt And then what? Sit on it for several months like they're doing with the Pfizer vaccine?
+# ::tokens ["And", "then", "what", "?", "Sit", "on", "it", "for", "several", "months", "like", "they", "'re", "doing", "with", "the", "Pfizer", "vaccine", "?"]
+# ::lemmas ["and", "then", "what", "?", "sit", "on", "it", "for", "several", "months", "like", "they", "be", "do", "with", "the", "Pfizer", "vaccine", "?"]
+(c2-12 / multi-sentence
+       :snt1 (c2-2 / and
+                   :op2 (c2-15 / amr-unknown
+                               :time (c2-8 / then)))
+       :snt2 (c2-0 / sit-01
+                   :ARG0 (c2-14 / you)
+                   :ARG2 (c2-11 / it)
+                   :duration (c2-10 / several
+                                    :op1 (c2-5 / temporal-quantity
+                                               :unit (c2-3 / month)
+                                               :quant 1))
+                   :ARG1-of (c2-9 / resemble-01
+                                  :ARG2 (c2-6 / sit-01
+                                              :ARG0 c2-14
+                                              :ARG2 (c2-7 / vaccine
+                                                          :mod (c2-4 / company
+                                                                     :name (c2-13 / name
+                                                                                  :op1 "Pfizer")))
+                                              :duration c2-10
+                                              :mode imperative))
+                   :mode imperative)
+       :polarity (c2-1 / amr-unknown))
+
+# ::snt You do not get to use as soon as when reporting on Japan and vaccines.
+# ::tokens ["You", "do", "not", "get", "to", "use", "as", "soon", "as", "when", "reporting", "on", "Japan", "and", "vaccines", "."]
+# ::lemmas ["you", "do", "not", "get", "to", "use", "as", "soon", "as", "when", "report", "on", "Japan", "and", "vaccine", "."]
+(c3-4 / use-01
+      :ARG0 (c3-9 / you)
+      :time (c3-0 / soon
+                  :ARG2-of (c3-3 / have-degree-91
+                                 :ARG1 c3-4
+                                 :ARG3 (c3-10 / equal)
+                                 :ARG4 (c3-6 / time
+                                             :time-of (c3-7 / report-01
+                                                            :ARG0 c3-9
+                                                            :ARG1 (c3-1 / and
+                                                                        :op1 (c3-2 / country
+                                                                                   :name (c3-8 / name
+                                                                                               :op1 "Japan"))
+                                                                        :op2 (c3-5 / vaccine))))))
+      :polarity -)
+
+# ::snt Fixed it:Japan approval of Moderna vaccine not until May
+# ::tokens ["Fixed", "it", ":", "Japan", "approval", "of", "Moderna", "vaccine", "not", "until", "May"]
+# ::lemmas ["fix", "it", ":", "Japan", "approval", "of", "Moderna", "vaccine", "not", "until", "May"]
+(c4-3 / fix-02
+      :ARG1 (c4-8 / it)
+      :ARG1-of (c4-4 / cause-01
+                     :ARG0 (c4-2 / approve-01
+                                 :ARG0 (c4-0 / country
+                                             :name (c4-9 / name
+                                                         :op1 "Japan"))
+                                 :ARG1 (c4-6 / vaccine
+                                             :name (c4-7 / name
+                                                         :op1 "Moderna"))
+                                 :time (c4-5 / until
+                                             :op1 (c4-1 / date-entity
+                                                        :month 5))
+                                 :polarity -)))
+
+# ::snt Finally!
+# ::tokens ["Finally", "!"]
+# ::lemmas ["finally", "!"]
+(c5-0 / final
+      :mode expressive)
+
+# ::snt It's going to take days to sign off on something the rest of the world is already using. Great
+# ::tokens ["It", "'s", "going", "to", "take", "days", "to", "sign", "off", "on", "something", "the", "rest", "of", "the", "world", "is", "already", "using", ".", "Great"]
+# ::lemmas ["it", "be", "go", "to", "take", "days", "to", "sign", "off", "on", "something", "the", "rest", "of", "the", "world", "be", "already", "use", ".", "great"]
+(c6-11 / multi-sentence
+       :snt1 (c6-7 / take-10
+                   :ARG0 (c6-0 / sign-off-07
+                               :ARG1 (c6-10 / something
+                                            :ARG1-of (c6-6 / use-01
+                                                           :ARG0 (c6-8 / rest
+                                                                       :part-of (c6-4 / world))
+                                                           :time (c6-2 / already))))
+                   :ARG1 (c6-3 / multiple
+                               :op1 (c6-5 / temporal-quantity
+                                          :unit (c6-1 / day)
+                                          :quant 1)))
+       :snt2 (c6-9 / great))
+
+# ::snt Thank god Japan will finally will get vaccinated until the vaccine arrives
+# ::tokens ["Thank", "god", "Japan", "will", "finally", "will", "get", "vaccinated", "until", "the", "vaccine", "arrives"]
+# ::lemmas ["thank", "god", "Japan", "will", "finally", "will", "get", "vaccinate", "until", "the", "vaccine", "arrive"]
+(c7-6 / thank-01
+      :ARG0 (c7-8 / i)
+      :ARG1 (c7-7 / god)
+      :ARG2 (c7-5 / vaccinate-01
+                  :ARG1 (c7-2 / country
+                              :name (c7-9 / name
+                                          :op1 "Japan"))
+                  :time (c7-4 / until
+                              :op1 (c7-0 / arrive-01
+                                         :ARG1 (c7-1 / vaccine)))
+                  :mod (c7-3 / final)))
+
+# ::snt ...as LATE as May ...
+# ::tokens ["...", "as", "LATE", "as", "May", "..."]
+# ::lemmas ["...", "as", "late", "as", "May", "..."]
+(c8-1 / have-degree-91
+      :ARG2 (c8-3 / cruel)
+      :ARG3 (c8-2 / equal)
+      :ARG4 (c8-0 / date-entity
+                  :month 5))

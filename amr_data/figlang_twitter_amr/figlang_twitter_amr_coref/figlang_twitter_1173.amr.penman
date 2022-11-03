@@ -1,0 +1,90 @@
+# ::snt Any problem with the fact that every Republican state is more murderous than Sweden ?
+# ::tokens ["Any", "problem", "with", "the", "fact", "that", "every", "Republican", "state", "is", "more", "murderous", "than", "Sweden", "?"]
+# ::lemmas ["any", "problem", "with", "the", "fact", "that", "every", "Republican", "state", "be", "more", "murderous", "than", "Sweden", "?"]
+(c1-7 / problem
+      :topic (c1-8 / murder-01
+                   :ARG0 (c1-0 / state
+                               :mod (c1-11 / every)
+                               :mod (c1-5 / political-party
+                                          :name (c1-9 / name
+                                                      :op1 "Republican")))
+                   :ARG2-of (c1-4 / have-degree-91
+                                  :ARG1 c1-0
+                                  :ARG3 (c1-2 / more)
+                                  :ARG4 (c1-3 / country
+                                              :name (c1-6 / name
+                                                          :op1 "Sweden"))))
+      :mod (c1-1 / any)
+      :polarity (c1-10 / amr-unknown))
+
+# ::snt Do attend Darmouth College ? Look your statistics up relative to Republican counties .
+# ::tokens ["Do", "attend", "Darmouth", "College", "?", "Look", "your", "statistics", "up", "relative", "to", "Republican", "counties", "."]
+# ::lemmas ["do", "attend", "Darmouth", "College", "?", "look", "your", "statistic", "up", "relative", "to", "Republican", "county", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-1 / attend-01
+                  :ARG0 (c2-10 / you)
+                  :ARG1 (c2-0 / school
+                              :name (c2-9 / name
+                                          :op1 "Darmouth"
+                                          :op2 "College")))
+      :snt2 (c2-4 / look-up-05
+                  :ARG0 (c2-11 / you)
+                  :ARG1 (c2-6 / statistic
+                              :poss c2-11
+                              :ARG1-of (c2-3 / relative-05
+                                             :ARG2 (c2-2 / county
+                                                         :mod (c2-7 / political-party
+                                                                    :name (c2-5 / name
+                                                                                :op1 "Republican")))))))
+
+# ::snt I said states , not counties . Also , you can't even speak English properly . Go away .
+# ::tokens ["I", "said", "states", ",", "not", "counties", ".", "Also", ",", "you", "ca", "n't", "even", "speak", "English", "properly", ".", "Go", "away", "."]
+# ::lemmas ["i", "say", "state", ",", "not", "county", ".", "also", ",", "you", "can", "not", "even", "speak", "English", "properly", ".", "go", "away", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-0 / say-01
+                   :ARG0 (c3-10 / i)
+                   :ARG2 (c3-2 / and
+                               :op1 (c3-9 / state)
+                               :op2 (c3-3 / county
+                                          :polarity -)))
+       :snt2 (c3-6 / possible-01
+                   :ARG1 (c3-4 / speak-01
+                               :ARG0 (c3-13 / you)
+                               :ARG3 (c3-7 / language
+                                           :name (c3-12 / name
+                                                        :op1 "English"))
+                               :mod (c3-5 / proper)
+                               :mod (c3-15 / even))
+                   :mod (c3-14 / also)
+                   :polarity -)
+       :snt3 (c3-8 / go-02
+                   :ARG0 c3-13
+                   :ARG4 (c3-1 / away)
+                   :mode imperative))
+
+# ::snt <URL> Ha , hah , ha ! Bcuz demographics of major cities changed btwn /2016
+# ::tokens ["<", "URL", ">", "Ha", ",", "hah", ",", "ha", "!", "Bcuz", "demographics", "of", "major", "cities", "changed", "btwn", "/2016"]
+# ::lemmas ["<", "URL", ">", "ha", ",", "hah", ",", "ha", "!", "bcuz", "demographic", "of", "major", "city", "change", "btwn", "/2016"]
+(c4-2 / cause-01
+      :ARG0 (c4-0 / change-01
+                  :ARG1 (c4-1 / demographics
+                              :poss (c4-4 / city
+                                          :ARG1-of (c4-6 / major-02)))
+                  :time (c4-5 / date-entity
+                              :year 2016))
+      :ARG1 (c4-3 / ha
+                  :mode expressive))
+
+# ::snt You posted a link to <URL> that said that your claim was false . We ar <URL>
+# ::tokens ["You", "posted", "a", "link", "to", "<", "URL", ">", "that", "said", "that", "your", "claim", "was", "false", ".", "We", "ar", "<", "URL", ">"]
+# ::lemmas ["you", "post", "a", "link", "to", "<", "URL", ">", "that", "say", "that", "your", "claim", "be", "false", ".", "we", "ar", "<", "URL", ">"]
+(c5-6 / multi-sentence
+      :snt1 (c5-5 / post-01
+                  :ARG0 (c5-7 / you)
+                  :ARG1 (c5-4 / link
+                              :ARG0-of (c5-0 / say-01
+                                             :ARG1 (c5-1 / false
+                                                         :domain (c5-2 / claim-01
+                                                                       :ARG0 c5-7)))))
+      :snt2 (c5-3 / we
+                  :domain (c5-8 / you)))

@@ -1,0 +1,79 @@
+# ::snt this can't be true. The police is closed to b/c there is crime in the area
+# ::tokens ["this", "ca", "n't", "be", "true", ".", "The", "police", "is", "closed", "to", "b", "/", "c", "there", "is", "crime", "in", "the", "area"]
+# ::lemmas ["this", "can", "not", "be", "true", ".", "the", "police", "be", "close", "to", "b", "/", "c", "there", "be", "crime", "in", "the", "area"]
+(c1-0 / multi-sentence
+      :snt1 (c1-1 / possible-01
+                  :ARG1 (c1-6 / true-01
+                              :ARG1 (c1-4 / this))
+                  :polarity -)
+      :snt2 (c1-3 / close-01
+                  :ARG1 (c1-7 / police)
+                  :ARG1-of (c1-2 / cause-01
+                                 :ARG0 (c1-5 / crime
+                                             :location (c1-8 / area)))))
+
+# ::snt : Ottawa Police: Police stations closed due to ongoing shooting situation: "No public services available until further notice"
+# ::tokens [":", "Ottawa", "Police", ":", "Police", "stations", "closed", "due", "to", "ongoing", "shooting", "situation", ":", "\"", "No", "public", "services", "available", "until", "further", "notice", "\""]
+# ::lemmas [":", "Ottawa", "Police", ":", "Police", "station", "close", "due", "to", "ongoing", "shooting", "situation", ":", "\"", "no", "public", "service", "available", "until", "further", "notice", "\""]
+(c2-2 / multi-sentence
+      :snt1 (c2-15 / say-01
+                   :ARG0 (c2-10 / police
+                                :location (c2-12 / city
+                                                 :name (c2-8 / name
+                                                             :op1 "Ottawa")))
+                   :ARG1 (c2-11 / close-01
+                                :ARG1 (c2-7 / station
+                                            :mod (c2-16 / police))
+                                :ARG1-of (c2-14 / cause-01
+                                                :ARG0 (c2-1 / situation
+                                                            :mod (c2-6 / shoot-02)
+                                                            :ARG1-of (c2-13 / go-on-15)))))
+      :snt2 (c2-17 / available-02
+                   :ARG2 (c2-0 / service
+                               :ARG1-of (c2-4 / public-02))
+                   :time (c2-3 / until
+                               :op1 (c2-9 / notice-03
+                                          :degree (c2-5 / further)))
+                   :polarity -))
+
+# ::snt every maggot out there just grinned from ear2ear. Not smart at all.
+# ::tokens ["every", "maggot", "out", "there", "just", "grinned", "from", "ear2ear", ".", "Not", "smart", "at", "all", "."]
+# ::lemmas ["every", "maggot", "out", "there", "just", "grin", "from", "ear2ear", ".", "not", "smart", "at", "all", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-6 / grin-01
+                  :ARG0 (c3-5 / maggot
+                              :mod (c3-4 / every)
+                              :location (c3-3 / out-there))
+                  :time (c3-0 / just)
+                  :source (c3-2 / ear2ear))
+      :snt2 (c3-7 / smart-06
+                  :degree (c3-8 / at-all)
+                  :polarity -))
+
+# ::snt Wait, what? No help
+# ::tokens ["Wait", ",", "what", "?", "No", "help"]
+# ::lemmas ["wait", ",", "what", "?", "no", "help"]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / wait-01
+                  :ARG1 (c4-3 / you)
+                  :mode imperative)
+      :snt2 (c4-0 / help-01
+                  :polarity -))
+
+# ::snt stations closed due to ongoing shooting situation
+# ::tokens ["stations", "closed", "due", "to", "ongoing", "shooting", "situation"]
+# ::lemmas ["station", "close", "due", "to", "ongoing", "shoot", "situation"]
+(c5-3 / close-01
+      :ARG1 (c5-5 / station)
+      :ARG1-of (c5-2 / cause-01
+                     :ARG0 (c5-1 / situation
+                                 :mod (c5-0 / shoot-02)
+                                 :ARG1-of (c5-4 / go-on-15))))
+
+# ::snt ottawa police ...
+# ::tokens ["ottawa", "police", "..."]
+# ::lemmas ["ottawa", "police", "..."]
+(c6-1 / police
+      :mod (c6-2 / city
+                 :name (c6-0 / name
+                             :op1 "ottawa")))

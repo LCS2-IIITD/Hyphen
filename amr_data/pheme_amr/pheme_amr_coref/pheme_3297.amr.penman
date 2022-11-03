@@ -1,0 +1,84 @@
+# ::snt Many prayers are being answered! I don't want to see anyone else get killed.
+# ::tokens ["Many", "prayers", "are", "being", "answered", "!", "I", "do", "n't", "want", "to", "see", "anyone", "else", "get", "killed", "."]
+# ::lemmas ["many", "prayer", "be", "be", "answer", "!", "i", "do", "not", "want", "to", "see", "anyone", "else", "get", "kill", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-10 / answer-01
+                   :ARG1 (c1-9 / thing
+                               :ARG1-of (c1-6 / pray-01)
+                               :quant (c1-7 / many)))
+      :snt2 (c1-0 / want-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-8 / see-01
+                              :ARG0 c1-4
+                              :ARG1 (c1-5 / kill-01
+                                          :ARG1 (c1-3 / anyone
+                                                      :mod (c1-2 / else))))
+                  :polarity -))
+
+# ::snt Thank You Very Much.
+# ::tokens ["Thank", "You", "Very", "Much", "."]
+# ::lemmas ["thank", "you", "very", "much", "."]
+(c2-4 / thank-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-0 / you)
+      :mod (c2-1 / much
+                 :degree (c2-3 / very)))
+
+# ::snt I couldn't suffer anymore.
+# ::tokens ["I", "could", "n't", "suffer", "anymore", "."]
+# ::lemmas ["i", "could", "not", "suffer", "anymore", "."]
+(c3-1 / possible-01
+      :ARG1 (c3-0 / suffer-01
+                  :ARG0 (c3-3 / i)
+                  :time (c3-2 / anymore))
+      :polarity -)
+
+# ::snt Crowd peacefully dispersing at the QT tonight.
+# ::tokens ["Crowd", "peacefully", "dispersing", "at", "the", "QT", "tonight", "."]
+# ::lemmas ["crowd", "peacefully", "disperse", "at", "the", "QT", "tonight", "."]
+(c4-5 / disperse-01
+      :ARG1 (c4-6 / crowd)
+      :manner (c4-4 / peaceful)
+      :location (c4-1 / facility
+                      :name (c4-2 / name
+                                  :op1 "QT"))
+      :time (c4-0 / date-entity
+                  :dayperiod (c4-3 / night)
+                  :mod (c4-7 / today)))
+
+# ::snt thank God
+# ::tokens ["thank", "God"]
+# ::lemmas ["thank", "God"]
+(c5-2 / thank-01
+      :ARG1 (c5-1 / person
+                  :name (c5-0 / name
+                              :op1 "God")))
+
+# ::snt What crowd were u looking at?
+# ::tokens ["What", "crowd", "were", "u", "looking", "at", "?"]
+# ::lemmas ["what", "crowd", "be", "u", "look", "at", "?"]
+(c6-1 / look-01
+      :ARG0 (c6-0 / you)
+      :ARG1 (c6-2 / crowd
+                  :mod (c6-3 / amr-unknown)))
+
+# ::snt Police have thrown something at the crowd. Not sure what tho. Protester says "they have enough bullets
+# ::tokens ["Police", "have", "thrown", "something", "at", "the", "crowd", ".", "Not", "sure", "what", "tho", ".", "Protester", "says", "\"", "they", "have", "enough", "bullets"]
+# ::lemmas ["police", "have", "throw", "something", "at", "the", "crowd", ".", "not", "sure", "what", "tho", ".", "Protester", "say", "\"", "they", "have", "enough", "bullet"]
+(c7-2 / multi-sentence
+      :snt1 (c7-13 / throw-01
+                   :ARG0 (c7-8 / police)
+                   :ARG1 (c7-12 / something)
+                   :ARG2 (c7-10 / crowd))
+      :snt2 (c7-0 / have-concession-91
+                  :ARG1 (c7-5 / sure-02
+                              :ARG1 (c7-11 / thing)
+                              :polarity -))
+      :snt3 (c7-1 / say-01
+                  :ARG0 (c7-14 / person
+                               :ARG0-of (c7-3 / protest-01))
+                  :ARG1 (c7-15 / have-03
+                               :ARG0 (c7-7 / they)
+                               :ARG1 (c7-4 / bullet
+                                           :ARG1-of (c7-9 / have-quant-91
+                                                          :ARG3 (c7-6 / enough))))))

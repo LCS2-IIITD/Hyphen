@@ -1,0 +1,61 @@
+# ::snt Please do not use that racist slur when posting.
+# ::tokens ["Please", "do", "not", "use", "that", "racist", "slur", "when", "posting", "."]
+# ::lemmas ["please", "do", "not", "use", "that", "racist", "slur", "when", "post", "."]
+(c2-1 / use-01
+      :ARG0 (c2-5 / you)
+      :ARG1 (c2-0 / slur
+                  :mod (c2-3 / racist)
+                  :mod (c2-2 / that))
+      :time (c2-4 / post-01
+                  :ARG0 c2-5)
+      :mode imperative
+      :polite +)
+
+# ::snt The term you have used is offensive to people of color, not just the royal family that you are referring to. You need to use better words.
+# ::tokens ["The", "term", "you", "have", "used", "is", "offensive", "to", "people", "of", "color", ",", "not", "just", "the", "royal", "family", "that", "you", "are", "referring", "to", ".", "You", "need", "to", "use", "better", "words", "."]
+# ::lemmas ["the", "term", "you", "have", "use", "be", "offensive", "to", "people", "of", "color", ",", "not", "just", "the", "royal", "family", "that", "you", "be", "refer", "to", ".", "you", "need", "to", "use", "well", "word", "."]
+(c3-9 / multi-sentence
+      :snt1 (c3-2 / contrast-01
+                  :ARG1 (c3-5 / offend-01
+                              :ARG0 (c3-6 / term
+                                          :ARG1-of (c3-17 / use-01
+                                                          :ARG0 (c3-11 / you)))
+                              :ARG1 (c3-19 / person
+                                           :mod (c3-0 / color)))
+                  :ARG2 (c3-16 / offend-01
+                               :ARG0 c3-6
+                               :ARG1 (c3-13 / family
+                                            :mod (c3-7 / royal)
+                                            :ARG1-of (c3-4 / refer-01
+                                                           :ARG0 c3-11)
+                                            :mod (c3-18 / just))
+                               :polarity -))
+      :snt2 (c3-10 / need-01
+                   :ARG0 (c3-12 / you)
+                   :ARG1 (c3-1 / use-01
+                               :ARG0 c3-12
+                               :ARG1 (c3-3 / word
+                                           :ARG1-of (c3-15 / have-degree-91
+                                                           :ARG2 (c3-8 / good-02
+                                                                       :ARG1 c3-3)
+                                                           :ARG3 (c3-14 / more))))))
+
+# ::snt Use of the n-word is unacceptable in discourse as it demeans and insults blacks.
+# ::tokens ["Use", "of", "the", "n", "-", "word", "is", "unacceptable", "in", "discourse", "as", "it", "demeans", "and", "insults", "blacks", "."]
+# ::lemmas ["use", "of", "the", "n", "-", "word", "be", "unacceptable", "in", "discourse", "as", "it", "demean", "and", "insult", "black", "."]
+(c4-9 / possible-01
+      :ARG1 (c4-1 / accept-01
+                  :ARG1 (c4-6 / use-01
+                              :ARG1 (c4-3 / word
+                                          :mod (c4-10 / n-word)))
+                  :medium (c4-0 / discourse-01))
+      :ARG1-of (c4-2 / cause-01
+                     :ARG0 (c4-11 / and
+                                  :op1 (c4-4 / demean-01
+                                             :ARG0 c4-6
+                                             :ARG1 (c4-7 / person
+                                                         :ARG1-of (c4-8 / black-05)))
+                                  :op2 (c4-5 / insult-01
+                                             :ARG0 c4-6
+                                             :ARG1 c4-7)))
+      :polarity -)

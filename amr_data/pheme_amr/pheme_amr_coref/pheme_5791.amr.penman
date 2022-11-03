@@ -1,0 +1,100 @@
+# ::snt A Germanwings Airbus A320 plane carrying at least people crashed in mountainous southeastern France...
+# ::tokens ["A", "Germanwings", "Airbus", "A320", "plane", "carrying", "at", "least", "people", "crashed", "in", "mountainous", "southeastern", "France", "..."]
+# ::lemmas ["a", "Germanwings", "Airbus", "A320", "plane", "carry", "at", "least", "people", "crash", "in", "mountainous", "southeastern", "France", "..."]
+(c1-5 / crash-01
+      :ARG1 (c1-3 / plane
+                  :name (c1-1 / name
+                              :op1 "Airbus"
+                              :op2 "A320")
+                  :poss (c1-4 / company
+                              :name (c1-2 / name
+                                          :op1 "Germanywings"))
+                  :ARG0-of (c1-8 / carry-01
+                                 :ARG1 (c1-9 / person
+                                             :quant (c1-10 / at-least
+                                                           :op1 1))))
+      :location (c1-7 / southeast
+                      :part-of (c1-11 / country
+                                      :name (c1-6 / name
+                                                  :op1 "France")
+                                      :mod (c1-0 / mountain))))
+
+# ::snt + = . Why just ?
+# ::tokens ["+", "=", ".", "Why", "just", "?"]
+# ::lemmas ["+", "=", ".", "why", "just", "?"]
+(c2-1 / equal-01
+      :ARG2 (c2-2 / cause-01
+                  :ARG0 (c2-3 / amr-unknown)
+                  :mod (c2-0 / just)))
+
+# ::snt R I P sad news
+# ::tokens ["R", "I", "P", "sad", "news"]
+# ::lemmas ["r", "i", "p", "sad", "news"]
+(c3-0 / news
+      :ARG0-of (c3-1 / sad-02))
+
+# ::snt G-d speed. Very sad news
+# ::tokens ["G", "-", "d", "speed", ".", "Very", "sad", "news"]
+# ::lemmas ["g", "-", "d", "speed", ".", "very", "sad", "news"]
+(c4-0 / multi-sentence
+      :snt1 (c4-5 / speed
+                  :mod (c4-4 / g-d))
+      :snt2 (c4-2 / news
+                  :ARG0-of (c4-1 / sad-02
+                                 :degree (c4-3 / very))))
+
+# ::snt get your numbers right for goodness sake!
+# ::tokens ["get", "your", "numbers", "right", "for", "goodness", "sake", "!"]
+# ::lemmas ["get", "your", "number", "right", "for", "goodness", "sake", "!"]
+(c5-4 / get-04
+      :ARG0 (c5-0 / you)
+      :ARG1 (c5-1 / number
+                  :poss c5-0)
+      :ARG2 (c5-2 / right-06
+                  :ARG1 c5-1)
+      :mod (c5-5 / sake
+                 :mod (c5-3 / goodness))
+      :mode imperative)
+
+# ::snt It's not uncommon for planes to fly into their s.
+# ::tokens ["It", "'s", "not", "uncommon", "for", "planes", "to", "fly", "into", "their", "s."]
+# ::lemmas ["it", "be", "not", "uncommon", "for", "plane", "to", "fly", "into", "their", "s."]
+(c7-3 / common
+      :domain (c7-0 / fly-01
+                    :ARG2 (c7-2 / plane)
+                    :destination (c7-4 / spaceship
+                                       :name (c7-1 / name
+                                                   :op1 "S")
+                                       :poss c7-2))
+      :polarity -)
+
+# ::snt fack bad buzz, will you DM the tunes soon pls?
+# ::tokens ["fack", "bad", "buzz", ",", "will", "you", "DM", "the", "tunes", "soon", "pls", "?"]
+# ::lemmas ["fack", "bad", "buzz", ",", "will", "you", "dm", "the", "tune", "soon", "pls", "?"]
+(c8-8 / and
+      :op1 (c8-2 / buzz
+                 :ARG1-of (c8-5 / bad-07)
+                 :mod (c8-1 / fucking
+                            :mode expressive))
+      :op2 (c8-4 / DM-01
+                 :ARG0 (c8-0 / you)
+                 :ARG1 (c8-7 / tune)
+                 :time (c8-6 / soon)
+                 :polarity (c8-3 / amr-unknown)
+                 :mode imperative))
+
+# ::snt reminds me of Lufhansa A321 Auto pilot descends plane rapidly
+# ::tokens ["reminds", "me", "of", "Lufhansa", "A321", "Auto", "pilot", "descends", "plane", "rapidly"]
+# ::lemmas ["remind", "i", "of", "Lufhansa", "A321", "Auto", "pilot", "descend", "plane", "rapidly"]
+(c9-7 / remind-01
+      :ARG1 (c9-6 / descend-01
+                  :ARG0 (c9-5 / person
+                              :ARG0-of (c9-8 / pilot-01
+                                             :ARG1 (c9-9 / aircraft-type
+                                                         :name (c9-4 / name
+                                                                     :op1 "Lufhansa"
+                                                                     :op2 "A321")))
+                              :mod (c9-1 / auto))
+                  :ARG1 (c9-0 / plane)
+                  :manner (c9-3 / rapid))
+      :ARG2 (c9-2 / i))

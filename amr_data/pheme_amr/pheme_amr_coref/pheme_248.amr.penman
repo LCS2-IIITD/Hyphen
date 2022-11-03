@@ -1,0 +1,175 @@
+# ::snt woops!!
+# ::tokens ["woops", "!", "!"]
+# ::lemmas ["woop", "!", "!"]
+(c1-0 / oops
+      :mode expressive)
+
+# ::snt True. But still not a reason to murder... (at least in my opinion)
+# ::tokens ["True", ".", "But", "still", "not", "a", "reason", "to", "murder", "...", "(", "at", "least", "in", "my", "opinion", ")"]
+# ::lemmas ["true", ".", "but", "still", "not", "a", "reason", "to", "murder", "...", "(", "at", "least", "in", "my", "opinion", ")"]
+(c2-0 / multi-sentence
+      :snt1 (c2-7 / true-01)
+      :snt2 (c2-5 / contrast-01
+                  :ARG2 (c2-4 / reason
+                              :mod (c2-6 / still)
+                              :purpose (c2-3 / murder-01)
+                              :ARG1-of (c2-1 / opine-01
+                                             :ARG0 (c2-2 / i)
+                                             :mod (c2-8 / at-least))
+                              :polarity -)))
+
+# ::snt Agree with the sentiment, but I rather be "killed with a pen".
+# ::tokens ["Agree", "with", "the", "sentiment", ",", "but", "I", "rather", "be", "\"", "killed", "with", "a", "pen", "\"", "."]
+# ::lemmas ["agree", "with", "the", "sentiment", ",", "but", "i", "rather", "be", "\"", "kill", "with", "a", "pen", "\"", "."]
+(c3-6 / agree-01
+      :ARG0 (c3-0 / i)
+      :ARG1 (c3-3 / sentiment)
+      :ARG1-of (c3-2 / contrast-01
+                     :ARG2 (c3-1 / prefer-01
+                                 :ARG0 c3-0
+                                 :ARG1 (c3-4 / kill-01
+                                             :ARG1 c3-0
+                                             :instrument (c3-5 / pen)))))
+
+# ::snt Yes ": Orwell: If liberty means anything at all, it means the right to tell people what they do not want to hear."
+# ::tokens ["Yes", "\"", ":", "Orwell", ":", "If", "liberty", "means", "anything", "at", "all", ",", "it", "means", "the", "right", "to", "tell", "people", "what", "they", "do", "not", "want", "to", "hear", ".", "\""]
+# ::lemmas ["yes", "\"", ":", "orwell", ":", "if", "liberty", "mean", "anything", "at", "all", ",", "it", "mean", "the", "right", "to", "tell", "people", "what", "they", "do", "not", "want", "to", "hear", ".", "\""]
+(c4-10 / say-01
+       :ARG0 (c4-6 / person
+                   :name (c4-5 / name
+                               :op1 "Orwell"))
+       :ARG1 (c4-3 / mean-01
+                   :ARG1 (c4-2 / liberty)
+                   :ARG2 (c4-7 / right-05
+                               :ARG2 (c4-11 / tell-01
+                                            :ARG1 (c4-9 / thing
+                                                        :ARG1-of (c4-0 / hear-01
+                                                                       :ARG0 (c4-12 / person)
+                                                                       :ARG1-of (c4-1 / want-01
+                                                                                      :ARG0 c4-12
+                                                                                      :polarity -)))
+                                            :ARG2 c4-12))
+                   :condition (c4-8 / mean-01
+                                    :ARG1 c4-2
+                                    :ARG2 (c4-13 / anything
+                                                 :mod (c4-4 / at-all)))))
+
+# ::snt The problem is, they refuse to listen anyway.
+# ::tokens ["The", "problem", "is", ",", "they", "refuse", "to", "listen", "anyway", "."]
+# ::lemmas ["the", "problem", "be", ",", "they", "refuse", "to", "listen", "anyway", "."]
+(c5-1 / problem
+      :domain (c5-2 / refuse-01
+                    :ARG0 (c5-3 / they)
+                    :ARG1 (c5-0 / listen-01
+                                :ARG0 c5-3)
+                    :mod (c5-4 / anyway)))
+
+# ::snt Well, he is wrong. Free speech is something &amp; "offensive" speech is something else.
+# ::tokens ["Well", ",", "he", "is", "wrong", ".", "Free", "speech", "is", "something", "&", "amp", ";", "\"", "offensive", "\"", "speech", "is", "something", "else", "."]
+# ::lemmas ["well", ",", "he", "be", "wrong", ".", "free", "speech", "be", "something", "&", "amp", ";", "\"", "offensive", "\"", "speech", "be", "something", "else", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-1 / wrong-04
+                  :ARG1 (c6-0 / he)
+                  :mod (c6-9 / well))
+      :snt2 (c6-11 / and
+                   :op1 (c6-10 / something
+                               :domain (c6-7 / speak-01
+                                             :ARG3-of (c6-2 / free-04)))
+                   :op2 (c6-4 / something
+                              :mod (c6-8 / else)
+                              :domain (c6-6 / speak-01
+                                            :ARG1-of (c6-5 / offend-01)))))
+
+# ::snt I'd rather die old in my bed in a peaceful world where everyone loves each other
+# ::tokens ["I", "'d", "rather", "die", "old", "in", "my", "bed", "in", "a", "peaceful", "world", "where", "everyone", "loves", "each", "other"]
+# ::lemmas ["i", "would", "rather", "die", "old", "in", "my", "bed", "in", "a", "peaceful", "world", "where", "everyone", "love", "each", "other"]
+(c7-8 / prefer-01
+      :ARG0 (c7-7 / i)
+      :ARG1 (c7-9 / die-01
+                  :ARG1 c7-7
+                  :mod (c7-4 / old)
+                  :location (c7-3 / bed
+                                  :poss c7-7)
+                  :location (c7-0 / world
+                                  :mod (c7-10 / peaceful)
+                                  :location-of (c7-1 / love-01
+                                                     :ARG0 (c7-6 / everyone)
+                                                     :ARG1 (c7-2 / other
+                                                                 :mod (c7-5 / each))))))
+
+# ::snt Nope, nope at all. But the pen can be as vile as a gun. Emotional pain can be as bad as physical pain.
+# ::tokens ["Nope", ",", "nope", "at", "all", ".", "But", "the", "pen", "can", "be", "as", "vile", "as", "a", "gun", ".", "Emotional", "pain", "can", "be", "as", "bad", "as", "physical", "pain", "."]
+# ::lemmas ["nope", ",", "nope", "at", "all", ".", "but", "the", "pen", "can", "be", "as", "vile", "as", "a", "gun", ".", "emotional", "pain", "can", "be", "as", "bad", "as", "physical", "pain", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-9 / nope
+                  :mod (c8-17 / at-all))
+      :snt2 (c8-12 / contrast-01
+                   :ARG2 (c8-11 / possible-01
+                                :ARG1 (c8-10 / vile-02
+                                             :ARG1 (c8-16 / pen)
+                                             :ARG2-of (c8-0 / have-degree-91
+                                                            :ARG1 c8-16
+                                                            :ARG3 (c8-8 / equal)
+                                                            :ARG4 (c8-13 / gun)))))
+      :snt3 (c8-4 / possible-01
+                  :ARG1 (c8-15 / pain-01
+                               :mod (c8-5 / emotion)
+                               :ARG1-of (c8-2 / have-degree-91
+                                              :ARG2 (c8-6 / bad-07
+                                                          :ARG1 c8-15)
+                                              :ARG3 (c8-1 / equal)
+                                              :ARG4 (c8-7 / pain-01
+                                                          :mod (c8-14 / physical))))))
+
+# ::snt Free speech is often the excuse to be offensive &amp; disrespectful. Sadly.
+# ::tokens ["Free", "speech", "is", "often", "the", "excuse", "to", "be", "offensive", "&", "amp", ";", "disrespectful", ".", "Sadly", "."]
+# ::lemmas ["free", "speech", "be", "often", "the", "excuse", "to", "be", "offensive", "&", "amp", ";", "disrespectful", ".", "sadly", "."]
+(c9-1 / multi-sentence
+      :snt1 (c9-4 / excuse-02
+                  :ARG1 (c9-8 / and
+                              :op1 (c9-3 / offend-01
+                                         :op2-of c9-8))
+                  :op3 (c9-6 / disrespect-01))
+      :ARG2 (c9-7 / speak-01
+                  :ARG3-of (c9-0 / free-04))
+      :frequency (c9-2 / often)
+      :snt2 (c9-5 / sad-02))
+
+# ::snt and do you think the followers of Muhammed wielding AK47s like to read Orwell? High time to call out their humbuggery!!
+# ::tokens ["and", "do", "you", "think", "the", "followers", "of", "Muhammed", "wielding", "AK47s", "like", "to", "read", "Orwell", "?", "High", "time", "to", "call", "out", "their", "humbuggery", "!", "!"]
+# ::lemmas ["and", "do", "you", "think", "the", "follower", "of", "Muhammed", "wield", "ak47s", "like", "to", "read", "Orwell", "?", "high", "time", "to", "call", "out", "their", "humbuggery", "!", "!"]
+(c10-0 / multi-sentence
+       :snt1 (c10-4 / and
+                    :op2 (c10-20 / think-01
+                                 :ARG0 (c10-16 / you)
+                                 :ARG1 (c10-7 / like-01
+                                              :ARG0 (c10-2 / person
+                                                           :ARG0-of (c10-8 / follow-02
+                                                                           :ARG1 (c10-3 / person
+                                                                                        :name (c10-11 / name
+                                                                                                      :op1 "Muhammed")
+                                                                                        :ARG0-of (c10-13 / wield-01
+                                                                                                         :ARG1 (c10-9 / product
+                                                                                                                      :name (c10-17 / name
+                                                                                                                                    :op1 "AK47"))))))
+                                              :ARG1 (c10-12 / read-01
+                                                            :ARG0 c10-2
+                                                            :ARG1 (c10-10 / book
+                                                                          :name (c10-1 / name
+                                                                                       :op1 "Orwell")))
+                                              :polarity (c10-14 / amr-unknown)))
+                    :snt2 (c10-19 / time
+                                  :ARG1-of (c10-6 / high-02)
+                                  :time-of (c10-18 / call-out-15
+                                                   :ARG1 (c10-5 / humbug
+                                                                :poss (c10-15 / they))))))
+
+# ::snt Hats off to you sir. Great word.
+# ::tokens ["Hats", "off", "to", "you", "sir", ".", "Great", "word", "."]
+# ::lemmas ["hat", "off", "to", "you", "sir", ".", "great", "word", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-3 / off
+                    :domain (c11-0 / you
+                                   :mod (c11-5 / sir)))
+       :snt2 (c11-1 / word
+                    :mod (c11-4 / great)))

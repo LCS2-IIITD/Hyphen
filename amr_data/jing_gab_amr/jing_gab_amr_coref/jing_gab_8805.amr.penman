@@ -1,0 +1,92 @@
+# ::snt Tar Baby from "Song of the South"
+# ::tokens ["Tar", "Baby", "from", "\"", "Song", "of", "the", "South", "\""]
+# ::lemmas ["Tar", "Baby", "from", "\"", "Song", "of", "the", "South", "\""]
+(c2-1 / person
+      :name (c2-2 / name
+                  :op1 "Tar"
+                  :op2 "Baby")
+      :source (c2-0 / song
+                    :name (c2-3 / name
+                                :op1 "Song"
+                                :op2 "of"
+                                :op3 "the"
+                                :op4 "South")))
+
+# ::snt You win a thousand internets good sir, great answer.
+# ::tokens ["You", "win", "a", "thousand", "internets", "good", "sir", ",", "great", "answer", "."]
+# ::lemmas ["you", "win", "a", "thousand", "internet", "good", "sir", ",", "great", "answer", "."]
+(c3-7 / multi-sentence
+      :snt1 (c3-0 / say-01
+                  :ARG0 (c3-6 / i)
+                  :ARG1 (c3-2 / win-01
+                              :ARG0 (c3-5 / sir
+                                          :ARG1-of (c3-4 / good-02))
+                              :ARG2 (c3-3 / internet
+                                          :quant 1000))
+                  :ARG2 c3-5)
+      :snt2 (c3-1 / answer-01
+                  :mod (c3-8 / great)))
+
+# ::snt Whoa there, Racist views are hurtful and derogatory. Please be considerate of others when posting. Thank you
+# ::tokens ["Whoa", "there", ",", "Racist", "views", "are", "hurtful", "and", "derogatory", ".", "Please", "be", "considerate", "of", "others", "when", "posting", ".", "Thank", "you"]
+# ::lemmas ["whoa", "there", ",", "racist", "view", "be", "hurtful", "and", "derogatory", ".", "please", "be", "considerate", "of", "other", "when", "post", ".", "thank", "you"]
+(c4-13 / multi-sentence
+       :snt1 (c4-3 / whoa
+                   :location (c4-10 / there)
+                   :mode expressive)
+       :snt2 (c4-1 / and
+                   :op1 (c4-6 / hurt-01
+                              :ARG0 (c4-7 / view-02
+                                          :ARG0 (c4-11 / racist)))
+                   :op2 (c4-0 / derogatory
+                              :domain c4-7))
+       :snt3 (c4-2 / considerate-01
+                   :ARG0 (c4-14 / you)
+                   :ARG1 (c4-12 / person
+                                :mod (c4-8 / other))
+                   :time (c4-9 / post-01
+                               :ARG0 c4-14)
+                   :mode imperative
+                   :polite +)
+       :snt4 (c4-4 / thank-01
+                   :ARG0 (c4-5 / i)
+                   :ARG1 (c4-15 / you)))
+
+# ::snt I hope this was in good gest, but it doesn't seem like the case. We can use more civil words for such jokes!
+# ::tokens ["I", "hope", "this", "was", "in", "good", "gest", ",", "but", "it", "does", "n't", "seem", "like", "the", "case", ".", "We", "can", "use", "more", "civil", "words", "for", "such", "jokes", "!"]
+# ::lemmas ["i", "hope", "this", "be", "in", "good", "gest", ",", "but", "it", "do", "not", "seem", "like", "the", "case", ".", "we", "can", "use", "more", "civil", "word", "for", "such", "joke", "!"]
+(c5-15 / multi-sentence
+       :snt1 (c5-3 / contrast-01
+                   :ARG1 (c5-6 / hope-01
+                               :ARG0 (c5-14 / i)
+                               :ARG1 (c5-12 / gestate-01
+                                            :ARG1-of (c5-16 / good-02)
+                                            :domain (c5-9 / this)))
+                   :ARG2 (c5-0 / seem-01
+                               :ARG1 (c5-1 / case-04
+                                           :ARG1 c5-12)
+                               :polarity -))
+       :snt2 (c5-11 / possible-01
+                    :ARG1 (c5-7 / use-01
+                                :ARG0 (c5-4 / we)
+                                :ARG1 (c5-17 / word
+                                             :ARG1-of (c5-13 / have-degree-91
+                                                             :ARG2 (c5-8 / civil)
+                                                             :ARG3 (c5-5 / more)))
+                                :ARG2 (c5-10 / joke-01
+                                             :mod (c5-2 / such)))))
+
+# ::snt No real reason for you to reference the tar soap by bashing a race.
+# ::tokens ["No", "real", "reason", "for", "you", "to", "reference", "the", "tar", "soap", "by", "bashing", "a", "race", "."]
+# ::lemmas ["no", "real", "reason", "for", "you", "to", "reference", "the", "tar", "soap", "by", "bash", "a", "race", "."]
+(c6-5 / reason
+      :ARG1-of (c6-2 / real-04)
+      :ARG0-of (c6-1 / cause-01
+                     :ARG1 (c6-7 / reference-04
+                                 :ARG0 (c6-8 / you)
+                                 :ARG1 (c6-0 / soap
+                                             :mod (c6-4 / tar))
+                                 :manner (c6-6 / bash-01
+                                               :ARG0 c6-8
+                                               :ARG1 (c6-3 / race))))
+      :polarity -)

@@ -1,0 +1,282 @@
+# ::snt accidental
+# ::tokens ["accidental"]
+# ::lemmas ["accidental"]
+(c1-0 / accident)
+
+# ::snt praise Allah.
+# ::tokens ["praise", "Allah", "."]
+# ::lemmas ["praise", "Allah", "."]
+(c2-2 / praise-01
+      :ARG0 (c2-1 / you)
+      :ARG1 (c2-3 / person
+                  :name (c2-0 / name
+                              :op1 "Allah"))
+      :mode imperative)
+
+# ::snt YES
+# ::tokens ["YES"]
+# ::lemmas ["yes"]
+(c3-0 / yes)
+
+# ::snt Reinforcing your view
+# ::tokens ["Reinforcing", "your", "view"]
+# ::lemmas ["reinforce", "your", "view"]
+(c4-1 / reinforce-01
+      :ARG1 (c4-0 / view-02
+                  :ARG0 (c4-2 / you)))
+
+# ::snt 'Stralia!
+# ::tokens ["'", "Stralia", "!"]
+# ::lemmas ["'", "Stralia", "!"]
+(c5-1 / country
+      :name (c5-0 / name
+                  :op1 "Stralia"))
+
+# ::snt hopefully a double tap between his eyes. Or maybe his balls and knees
+# ::tokens ["hopefully", "a", "double", "tap", "between", "his", "eyes", ".", "Or", "maybe", "his", "balls", "and", "knees"]
+# ::lemmas ["hopefully", "a", "double", "tap", "between", "his", "eye", ".", "or", "maybe", "his", "ball", "and", "knee"]
+(c6-1 / multi-sentence
+      :snt1 (c6-11 / tap-01
+                   :ARG1 (c6-2 / between
+                               :op1 (c6-4 / eye
+                                          :part-of (c6-0 / he)))
+                   :ARG1-of (c6-8 / double-01)
+                   :ARG1-of (c6-12 / hope-01))
+      :snt2 (c6-3 / or
+                  :op2 (c6-7 / possible-01
+                             :ARG1 (c6-10 / and
+                                          :op1 (c6-9 / ball
+                                                     :part-of (c6-6 / he))
+                                          :op2 (c6-5 / knee
+                                                     :part-of c6-6)))))
+
+# ::snt NOOOOOOOO
+# ::tokens ["NOOOOOOOO"]
+# ::lemmas ["NOOOOOOOO"]
+(c7-0 / no)
+
+# ::snt Finally! Victory for Australia!
+# ::tokens ["Finally", "!", "Victory", "for", "Australia", "!"]
+# ::lemmas ["finally", "!", "victory", "for", "Australia", "!"]
+(c8-1 / win-01
+      :ARG0 (c8-3 / country
+                  :name (c8-0 / name
+                              :op1 "Australia"))
+      :time (c8-2 / final)
+      :mode expressive)
+
+# ::snt Not in any lifetime.
+# ::tokens ["Not", "in", "any", "lifetime", "."]
+# ::lemmas ["not", "in", "any", "lifetime", "."]
+(c9-0 / event
+      :time (c9-1 / lifetime
+                  :mod (c9-2 / any))
+      :polarity -)
+
+# ::snt 'murica!
+# ::tokens ["'", "murica", "!"]
+# ::lemmas ["'", "murica", "!"]
+(c10-0 / amurica
+       :mode expressive)
+
+# ::snt dead or alive????
+# ::tokens ["dead", "or", "alive", "?", "?", "?", "?"]
+# ::lemmas ["dead", "or", "alive", "?", "?", "?", "?"]
+(c11-2 / amr-choice
+       :op1 (c11-0 / die-01)
+       :op2 (c11-1 / live-01))
+
+# ::snt Hopefully he's dead. Hope all the hostages are alive.
+# ::tokens ["Hopefully", "he", "'s", "dead", ".", "Hope", "all", "the", "hostages", "are", "alive", "."]
+# ::lemmas ["hopefully", "he", "be", "dead", ".", "hope", "all", "the", "hostage", "be", "alive", "."]
+(c12-2 / multi-sentence
+       :snt1 (c12-0 / hope-01
+                    :ARG1 (c12-4 / die-01
+                                 :ARG1 (c12-6 / he))
+                    :snt2-of c12-2)
+       :ARG1 (c12-1 / live-01
+                    :ARG0 (c12-3 / hostage
+                                 :mod (c12-5 / all))))
+
+# ::snt : BREAKING NEWS: SYDNEY SIEGE GUNMAN DOWN.Clever. What do they think he's doing now?? Having a cuppa with the police
+# ::tokens [":", "BREAKING", "NEWS", ":", "SYDNEY", "SIEGE", "GUNMAN", "DOWN.Clever", ".", "What", "do", "they", "think", "he", "'s", "doing", "now", "?", "?", "Having", "a", "cuppa", "with", "the", "police"]
+# ::lemmas [":", "break", "news", ":", "sydney", "siege", "GUNMAN", "DOWN.Clever", ".", "what", "do", "they", "think", "he", "be", "do", "now", "?", "?", "have", "a", "cuppa", "with", "the", "police"]
+(c13-3 / multi-sentence
+       :snt1 (c13-5 / news
+                    :ARG1-of (c13-4 / break-13)
+                    :topic (c13-8 / down-01
+                                  :ARG1 (c13-10 / gun-02
+                                                :ARG0 (c13-7 / person
+                                                             :name (c13-6 / name
+                                                                          :op1 "SyDNEY"
+                                                                          :op2 " SIEGE")))))
+       :snt2 (c13-13 / smart-06)
+       :snt3 (c13-14 / think-01
+                     :ARG0 (c13-12 / they)
+                     :ARG1 (c13-1 / do-02
+                                  :ARG0 (c13-0 / he)
+                                  :ARG1 (c13-16 / amr-unknown)
+                                  :time (c13-9 / now)))
+       :snt4 (c13-2 / have-06
+                    :ARG0 c13-0
+                    :ARG1 (c13-11 / cuppa
+                                  :accompanier (c13-15 / police))))
+
+# ::snt : BREAKING NEWS: SYDNEY SIEGE GUNMAN DOWN.
+# ::tokens [":", "BREAKING", "NEWS", ":", "SYDNEY", "SIEGE", "GUNMAN", "DOWN", "."]
+# ::lemmas [":", "break", "news", ":", "sydney", "siege", "gunman", "down", "."]
+(c14-6 / and
+       :op1 (c14-1 / news
+                   :ARG1-of (c14-0 / break-13))
+       :op2 (c14-3 / down-01
+                   :ARG1 (c14-5 / gun-02
+                                :ARG0 (c14-4 / city
+                                             :name (c14-2 / name
+                                                          :op1 "Sydney")))))
+
+# ::snt boooooooooooooo
+# ::tokens ["boooooooooooooo"]
+# ::lemmas ["boooooooooooooo"]
+(c15-0 / booooooooo
+       :mode expressive)
+
+# ::snt : BREAKING NEWS: SYDNEY SIEGE GUNMAN DOWN.
+# ::tokens [":", "BREAKING", "NEWS", ":", "SYDNEY", "SIEGE", "GUNMAN", "DOWN", "."]
+# ::lemmas [":", "break", "news", ":", "sydney", "siege", "gunman", "down", "."]
+(c16-6 / and
+       :op1 (c16-1 / news
+                   :ARG1-of (c16-0 / break-13))
+       :op2 (c16-3 / down-01
+                   :ARG1 (c16-5 / gun-02
+                                :ARG0 (c16-4 / city
+                                             :name (c16-2 / name
+                                                          :op1 "Sydney")))))
+
+# ::snt BTW, it's good talking to a fellow conservative. You use logic and conviction.Not the
+# ::tokens ["BTW", ",", "it", "'s", "good", "talking", "to", "a", "fellow", "conservative", ".", "You", "use", "logic", "and", "conviction", ".", "Not", "the"]
+# ::lemmas ["btw", ",", "it", "be", "good", "talk", "to", "a", "fellow", "conservative", ".", "you", "use", "logic", "and", "conviction", ".", "not", "the"]
+(c17-2 / multi-sentence
+       :snt1 (c17-9 / good-02
+                    :ARG1 (c17-11 / talk-01
+                                  :ARG0 (c17-0 / you)
+                                  :ARG2 (c17-6 / person
+                                               :mod (c17-8 / conservative)
+                                               :mod (c17-1 / fellow)))
+                    :mod (c17-5 / by-the-way))
+       :snt2 (c17-3 / use-01
+                    :ARG0 (c17-10 / you)
+                    :ARG1 (c17-12 / and
+                                  :op1 (c17-4 / logic)
+                                  :op2 (c17-7 / conviction-02))
+                    :polarity -))
+
+# ::snt nice quote rt??
+# ::tokens ["nice", "quote", "rt", "?", "?"]
+# ::lemmas ["nice", "quote", "rt", "?", "?"]
+(c18-2 / quote-01
+       :ARG1-of (c18-0 / nice-01)
+       :ARG1-of (c18-1 / request-confirmation-91))
+
+# ::snt Good news on that.
+# ::tokens ["Good", "news", "on", "that", "."]
+# ::lemmas ["good", "news", "on", "that", "."]
+(c19-0 / news
+       :ARG1-of (c19-2 / good-02)
+       :topic (c19-1 / that))
+
+# ::snt Why would you say no?
+# ::tokens ["Why", "would", "you", "say", "no", "?"]
+# ::lemmas ["why", "would", "you", "say", "no", "?"]
+(c20-2 / cause-01
+       :ARG0 (c20-4 / amr-unknown)
+       :ARG1 (c20-3 / say-01
+                    :ARG0 (c20-0 / you)
+                    :ARG1 (c20-1 / no)))
+
+# ::snt : BREAKING NEWS: SYDNEY SIEGE GUNMAN DOWN. finally.
+# ::tokens [":", "BREAKING", "NEWS", ":", "SYDNEY", "SIEGE", "GUNMAN", "DOWN", ".", "finally", "."]
+# ::lemmas [":", "break", "news", ":", "sydney", "siege", "gunman", "down", ".", "finally", "."]
+(c21-1 / multi-sentence
+       :snt1 (c21-3 / news
+                    :ARG1-of (c21-2 / break-13))
+       :snt2 (c21-5 / down-01
+                    :ARG1 (c21-7 / gunman
+                                 :location (c21-6 / city
+                                                  :name (c21-4 / name
+                                                               :op1 "Sydney")))
+                    :time (c21-0 / final)))
+
+# ::snt Good RT: BREAKING NEWS: SYDNEY SIEGE GUNMAN DOWN.
+# ::tokens ["Good", "RT", ":", "BREAKING", "NEWS", ":", "SYDNEY", "SIEGE", "GUNMAN", "DOWN", "."]
+# ::lemmas ["good", "RT", ":", "BREAKING", "news", ":", "sydney", "siege", "gunman", "down", "."]
+(c22-7 / and
+       :op1 (c22-2 / publication
+                   :name (c22-0 / name
+                                :op1 "RT")
+                   :ARG1-of (c22-5 / good-02))
+       :op2 (c22-3 / down-01
+                   :ARG1 (c22-4 / gunman
+                                :location (c22-6 / city
+                                                 :name (c22-1 / name
+                                                              :op1 "Sydney")))))
+
+# ::snt So it's wrong to pour water on their face to save lives but it's okay to split their face open to save lives
+# ::tokens ["So", "it", "'s", "wrong", "to", "pour", "water", "on", "their", "face", "to", "save", "lives", "but", "it", "'s", "okay", "to", "split", "their", "face", "open", "to", "save", "lives"]
+# ::lemmas ["so", "it", "be", "wrong", "to", "pour", "water", "on", "their", "face", "to", "save", "life", "but", "it", "be", "okay", "to", "split", "their", "face", "open", "to", "save", "life"]
+(c23-9 / contrast-01
+       :ARG1 (c23-0 / wrong-02
+                    :ARG1 (c23-8 / pour-01
+                                 :ARG1 (c23-7 / water)
+                                 :ARG2 (c23-1 / face
+                                              :part-of (c23-11 / they))
+                                 :purpose (c23-10 / save-02
+                                                  :ARG0 c23-11
+                                                  :ARG1 (c23-2 / life))))
+       :ARG2 (c23-5 / okay-04
+                    :ARG1 (c23-6 / split-01
+                                 :ARG1 c23-1
+                                 :ARG4 (c23-3 / open)
+                                 :purpose (c23-4 / save-02
+                                                 :ARG1 c23-2))))
+
+# ::snt sarcasm
+# ::tokens ["sarcasm"]
+# ::lemmas ["sarcasm"]
+(c24-0 / sarcasm)
+
+# ::snt I said before. If they are evil. Shoot them in the head. But we don't torture.
+# ::tokens ["I", "said", "before", ".", "If", "they", "are", "evil", ".", "Shoot", "them", "in", "the", "head", ".", "But", "we", "do", "n't", "torture", "."]
+# ::lemmas ["i", "say", "before", ".", "if", "they", "be", "evil", ".", "shoot", "they", "in", "the", "head", ".", "but", "we", "do", "not", "torture", "."]
+(c25-3 / multi-sentence
+       :snt1 (c25-11 / say-01
+                     :ARG0 (c25-7 / i)
+                     :time (c25-4 / before))
+       :snt2 (c25-0 / have-condition-91
+                    :ARG1 (c25-5 / shoot-02
+                                 :ARG0 (c25-1 / you)
+                                 :ARG1 (c25-12 / they)
+                                 :ARG2 (c25-13 / head)
+                                 :mode imperative)
+                    :ARG2 (c25-6 / evil
+                                 :domain (c25-10 / they)))
+       :snt3 (c25-9 / contrast-01
+                    :ARG2 (c25-8 / torture-01
+                                 :ARG0 (c25-2 / we)
+                                 :polarity -)))
+
+# ::snt I know a man who was lynched &amp; burnedLike racism, torture has many definitionsBeing scared isn't torture
+# ::tokens ["I", "know", "a", "man", "who", "was", "lynched", "&", "amp", ";", "burnedLike", "racism", ",", "torture", "has", "many", "definitionsBeing", "scared", "is", "n't", "torture"]
+# ::lemmas ["i", "know", "a", "man", "who", "be", "lynch", "&", "amp", ";", "burnedlike", "racism", ",", "torture", "have", "many", "definitionsbeing", "scared", "be", "not", "torture"]
+(c26-11 / know-02
+        :ARG0 (c26-4 / i)
+        :ARG1 (c26-1 / man
+                     :ARG1-of (c26-0 / lynch-01)
+                     :ARG1-of (c26-3 / burn-01)
+                     :ARG1-of (c26-7 / define-01
+                                     :quant (c26-6 / many)
+                                     :ARG1-of (c26-8 / resemble-01
+                                                     :ARG2 (c26-5 / racism)))
+                     :ARG1-of (c26-10 / torture-01
+                                      :ARG1-of (c26-2 / mean-01
+                                                      :ARG2 (c26-9 / torture-01)
+                                                      :polarity -))))

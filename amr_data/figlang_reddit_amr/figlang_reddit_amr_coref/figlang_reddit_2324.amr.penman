@@ -1,0 +1,36 @@
+# ::snt JFK speaking in Appalachia in 1960
+# ::tokens ["JFK", "speaking", "in", "Appalachia", "in", "1960"]
+# ::lemmas ["JFK", "speak", "in", "Appalachia", "in", "1960"]
+(c1-0 / speak-01
+      :ARG0 (c1-4 / person
+                  :name (c1-5 / name
+                              :op1 "JFK"))
+      :location (c1-2 / world-region
+                      :name (c1-3 / name
+                                  :op1 "Appalachia"))
+      :time (c1-1 / date-entity
+                  :year 1960))
+
+# ::snt A young man with a gun to his mouth
+# ::tokens ["A", "young", "man", "with", "a", "gun", "to", "his", "mouth"]
+# ::lemmas ["a", "young", "man", "with", "a", "gun", "to", "his", "mouth"]
+(c2-3 / man
+      :mod (c2-4 / young)
+      :part (c2-0 / mouth)
+      :ARG0-of (c2-1 / have-03
+                     :ARG1 (c2-2 / gun
+                                 :location c2-0)))
+
+# ::snt I think that's a cap gun, not sure tho
+# ::tokens ["I", "think", "that", "'s", "a", "cap", "gun", ",", "not", "sure", "tho"]
+# ::lemmas ["i", "think", "that", "be", "a", "cap", "gun", ",", "not", "sure", "tho"]
+(c3-2 / contrast-01
+      :ARG1 (c3-4 / think-01
+                  :ARG0 (c3-6 / i)
+                  :ARG1 (c3-5 / gun
+                              :mod (c3-0 / cap)
+                              :domain (c3-3 / that)))
+      :ARG2 (c3-1 / sure-02
+                  :ARG0 c3-6
+                  :ARG1 c3-5
+                  :polarity -))

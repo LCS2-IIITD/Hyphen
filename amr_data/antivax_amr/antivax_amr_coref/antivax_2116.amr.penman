@@ -1,0 +1,27 @@
+# ::snt yay!! i get my second dose feb
+# ::tokens ["yay", "!", "!", "i", "get", "my", "second", "dose", "feb"]
+# ::lemmas ["yay", "!", "!", "i", "get", "my", "second", "dose", "feb"]
+(c1-5 / multi-sentence
+      :snt1 (c1-7 / yay)
+      :snt2 (c1-3 / get-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-0 / dose
+                              :ord (c1-2 / ordinal-entity
+                                         :value 2)
+                              :poss c1-4)
+                  :time (c1-1 / festival
+                              :name (c1-6 / name
+                                          :op1 "FEb"))))
+
+# ::snt I go for my second dose next Monday
+# ::tokens ["I", "go", "for", "my", "second", "dose", "next", "Monday"]
+# ::lemmas ["i", "go", "for", "my", "second", "dose", "next", "Monday"]
+(c2-3 / go-03
+      :ARG0 (c2-4 / i)
+      :ARG1 (c2-0 / dose-01
+                  :ARG1 c2-4
+                  :ord (c2-2 / ordinal-entity
+                             :value 2))
+      :time (c2-1 / date-entity
+                  :weekday (c2-5 / monday)
+                  :mod (c2-6 / next)))

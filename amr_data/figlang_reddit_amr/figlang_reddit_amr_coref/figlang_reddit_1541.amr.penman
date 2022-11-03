@@ -1,0 +1,44 @@
+# ::snt If the car in front of you suddenly swerves, you might want to do the same.
+# ::tokens ["If", "the", "car", "in", "front", "of", "you", "suddenly", "swerves", ",", "you", "might", "want", "to", "do", "the", "same", "."]
+# ::lemmas ["if", "the", "car", "in", "front", "of", "you", "suddenly", "swerve", ",", "you", "might", "want", "to", "do", "the", "same", "."]
+(c1-8 / possible-01
+      :ARG1 (c1-3 / want-01
+                  :ARG0 (c1-9 / you)
+                  :ARG1 (c1-0 / do-02
+                              :ARG0 c1-9
+                              :ARG1 (c1-6 / thing
+                                          :ARG1-of (c1-1 / same-01))))
+      :condition (c1-7 / swerve-01
+                       :ARG0 (c1-2 / car
+                                   :location (c1-4 / in-front-of
+                                                   :op1 c1-9))
+                       :manner (c1-5 / sudden)))
+
+# ::snt Terrible advice
+# ::tokens ["Terrible", "advice"]
+# ::lemmas ["terrible", "advice"]
+(c2-0 / advice
+      :mod (c2-1 / horrible))
+
+# ::snt More like, 'why you shouldn't follow 30 yards behind a car doing 80mph on the highway.'
+# ::tokens ["More", "like", ",", "'", "why", "you", "should", "n't", "follow", "30", "yards", "behind", "a", "car", "doing", "80", "mph", "on", "the", "highway", ".", "'"]
+# ::lemmas ["more", "like", ",", "'", "why", "you", "should", "not", "follow", "30", "yards", "behind", "a", "car", "do", "80", "mph", "on", "the", "highway", ".", "'"]
+(c3-9 / resemble-01
+      :ARG2 (c3-8 / thing
+                  :ARG0-of (c3-4 / cause-01
+                                 :ARG1 (c3-7 / recommend-01
+                                             :ARG1 (c3-3 / follow-02
+                                                         :ARG0 (c3-13 / you)
+                                                         :ARG1 (c3-0 / car
+                                                                     :ARG0-of (c3-1 / do-02
+                                                                                    :ARG1 (c3-2 / speed-quantity
+                                                                                                :unit (c3-12 / mile-per-hour)
+                                                                                                :quant 80)))
+                                                         :ARG2 (c3-10 / behind
+                                                                      :op1 c3-0
+                                                                      :quant (c3-11 / distance-quantity
+                                                                                    :unit (c3-14 / yard)
+                                                                                    :quant 30))
+                                                         :location (c3-6 / highway))
+                                             :polarity -)))
+      :mod (c3-5 / more))

@@ -1,0 +1,48 @@
+# ::snt My apologies. Carry on . . . .
+# ::tokens ["My", "apologies", ".", "Carry", "on", ".", ".", ".", "."]
+# ::lemmas ["my", "apology", ".", "carry", "on", ".", ".", ".", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-4 / apologize-01
+                  :ARG0 (c1-2 / i))
+      :snt2 (c1-3 / carry-on-02
+                  :ARG0 (c1-0 / you)
+                  :mode imperative))
+
+# ::snt It's for ~
+# ::tokens ["It", "'s", "for", "~"]
+# ::lemmas ["it", "be", "for", "~"]
+(c2-1 / benefit-01
+      :ARG0 (c2-0 / it))
+
+# ::snt It's purple, not pink . . . . is that the colour of the campaign?
+# ::tokens ["It", "'s", "purple", ",", "not", "pink", ".", ".", ".", ".", "is", "that", "the", "colour", "of", "the", "campaign", "?"]
+# ::lemmas ["it", "be", "purple", ",", "not", "pink", ".", ".", ".", ".", "be", "that", "the", "colour", "of", "the", "campaign", "?"]
+(c3-3 / contrast-01
+      :ARG1 (c3-1 / purple-02
+                  :ARG1 (c3-0 / it))
+      :ARG2 (c3-5 / pink-04
+                  :ARG1 c3-0
+                  :polarity -)
+      :domain (c3-2 / color
+                    :poss (c3-4 / campaign-01))
+      :polarity (c3-6 / amr-unknown))
+
+# ::snt Yes, it is.
+# ::tokens ["Yes", ",", "it", "is", "."]
+# ::lemmas ["yes", ",", "it", "be", "."]
+(c4-0 / it)
+
+# ::snt At least have the right colour of the C on your profile!
+# ::tokens ["At", "least", "have", "the", "right", "colour", "of", "the", "C", "on", "your", "profile", "!"]
+# ::lemmas ["at", "least", "have", "the", "right", "colour", "of", "the", "c", "on", "your", "profile", "!"]
+(c5-0 / have-03
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-6 / color-01
+                  :ARG1 (c5-3 / variable
+                              :name (c5-2 / name
+                                          :op1 "C"))
+                  :ARG2 (c5-4 / profile
+                              :poss c5-1)
+                  :ARG1-of (c5-5 / right-02))
+      :mod (c5-7 / at-least)
+      :mode imperative)

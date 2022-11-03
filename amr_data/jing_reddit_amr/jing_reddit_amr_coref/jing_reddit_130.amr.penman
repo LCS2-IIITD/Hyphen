@@ -1,0 +1,69 @@
+# ::snt Is this Brickleberry? &;
+# ::tokens ["Is", "this", "Brickleberry", "?", "&", ";"]
+# ::lemmas ["be", "this", "Brickleberry", "?", "&", ";"]
+(c1-0 / person
+      :polarity (c1-1 / amr-unknown)
+      :name (c1-2 / name
+                  :op1 "Brickleberry")
+      :domain (c1-3 / this))
+
+# ::snt Paradise PD. It's from the same people though
+# ::tokens ["Paradise", "PD", ".", "It", "'s", "from", "the", "same", "people", "though"]
+# ::lemmas ["Paradise", "PD", ".", "it", "be", "from", "the", "same", "people", "though"]
+(c2-6 / multi-sentence
+      :snt1 (c2-4 / government-organization
+                  :name (c2-5 / name
+                              :op1 "Paradise"
+                              :op2 "PD"))
+      :snt2 (c2-2 / have-concession-91
+                  :ARG1 (c2-7 / be-from-91
+                              :ARG1 (c2-1 / it)
+                              :ARG2 (c2-3 / person
+                                          :ARG1-of (c2-0 / same-01)))))
+
+# ::snt Steve? Or the hillbilly?
+# ::tokens ["Steve", "?", "Or", "the", "hillbilly", "?"]
+# ::lemmas ["Steve", "?", "or", "the", "hillbilly", "?"]
+(c3-1 / amr-choice
+      :op1 (c3-0 / person
+                 :name (c3-2 / name
+                             :op1 "Steve"))
+      :op2 (c3-3 / hillbilly))
+
+# ::snt Steve
+# ::tokens ["Steve"]
+# ::lemmas ["Steve"]
+(c4-0 / person
+      :name (c4-1 / name
+                  :op1 "Steve"))
+
+# ::snt Just because he watched the show does not make him a retard or a hillbilly
+# ::tokens ["Just", "because", "he", "watched", "the", "show", "does", "not", "make", "him", "a", "retard", "or", "a", "hillbilly"]
+# ::lemmas ["just", "because", "he", "watch", "the", "show", "do", "not", "make", "he", "a", "retard", "or", "a", "hillbilly"]
+(c5-7 / make-02
+      :ARG0 (c5-1 / watch-01
+                  :ARG0 (c5-2 / he)
+                  :ARG1 (c5-0 / show)
+                  :mod (c5-6 / just))
+      :ARG1 (c5-4 / or
+                  :op1 (c5-5 / retard-01
+                             :ARG1 c5-2)
+                  :op2 (c5-3 / hillbilly
+                             :domain c5-2))
+      :polarity -)
+
+# ::snt Using the word 'retarded'  is offensive to the mentally disabled. its a direct attack to their disability.
+# ::tokens ["Using", "the", "word", "'", "retarded", "'", " ", "is", "offensive", "to", "the", "mentally", "disabled", ".", "its", "a", "direct", "attack", "to", "their", "disability", "."]
+# ::lemmas ["use", "the", "word", "'", "retarded", "'", " ", "be", "offensive", "to", "the", "mentally", "disabled", ".", "its", "a", "direct", "attack", "to", "their", "disability", "."]
+(c6-11 / multi-sentence
+       :snt1 (c6-7 / offend-01
+                   :ARG0 (c6-6 / use-01
+                               :ARG1 (c6-3 / word
+                                           :mod (c6-9 / retard-01)))
+                   :ARG1 (c6-10 / person
+                                :ARG1-of (c6-0 / disable-01
+                                               :mod (c6-2 / mental))))
+       :snt2 (c6-1 / attack-01
+                   :ARG1 (c6-4 / disability
+                               :poss (c6-8 / they))
+                   :ARG1-of (c6-5 / direct-02)))

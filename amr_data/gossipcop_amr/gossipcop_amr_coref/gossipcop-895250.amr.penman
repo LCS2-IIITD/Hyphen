@@ -1,0 +1,99 @@
+# ::snt Nice
+# ::tokens ["Nice"]
+# ::lemmas ["nice"]
+(c1-0 / nice-01)
+
+# ::snt It is % diet % exercise Cardio is not the answer for women or men over . Resistance training for muscle building will help your resting metabolism so you burn more calories.
+# ::tokens ["It", "is", "%", "diet", "%", "exercise", "Cardio", "is", "not", "the", "answer", "for", "women", "or", "men", "over", ".", "Resistance", "training", "for", "muscle", "building", "will", "help", "your", "resting", "metabolism", "so", "you", "burn", "more", "calories", "."]
+# ::lemmas ["it", "be", "%", "diet", "%", "exercise", "Cardio", "be", "not", "the", "answer", "for", "woman", "or", "man", "over", ".", "resistance", "training", "for", "muscle", "building", "will", "help", "your", "resting", "metabolism", "so", "you", "burn", "more", "calorie", "."]
+(c2-12 / multi-sentence
+       :snt1 (c2-8 / answer-01
+                   :ARG1 (c2-2 / or
+                               :op1 (c2-20 / woman)
+                               :op2 (c2-4 / man)
+                               :mod (c2-10 / over))
+                   :ARG2 (c2-6 / and
+                               :op1 (c2-21 / diet)
+                               :op2 (c2-19 / exercise-02))
+                   :polarity -)
+       :snt2 (c2-5 / help-01
+                   :ARG0 (c2-7 / train-01
+                               :ARG1 (c2-18 / resist-01)
+                               :purpose (c2-11 / build-01
+                                               :ARG1 (c2-16 / muscle)))
+                   :ARG1 (c2-13 / maintain-01
+                                :ARG0 (c2-3 / you)
+                                :ARG1 (c2-15 / metabolism
+                                             :mod (c2-1 / rest-01
+                                                        :ARG1 c2-3)))
+                   :ARG2 c2-3
+                   :ARG0-of (c2-14 / cause-01
+                                   :ARG1 (c2-0 / burn-01
+                                               :ARG0 c2-3
+                                               :ARG1 (c2-9 / calorie
+                                                           :quant (c2-17 / more))))))
+
+# ::snt Janet looks better than ever. I'm in my s and cardio overwhelms me. Ill be following you for tips!
+# ::tokens ["Janet", "looks", "better", "than", "ever", ".", "I", "'m", "in", "my", "s", "and", "cardio", "overwhelms", "me", ".", "Ill", "be", "following", "you", "for", "tips", "!"]
+# ::lemmas ["Janet", "look", "well", "than", "ever", ".", "i", "be", "in", "my", "s", "and", "cardio", "overwhelm", "i", ".", "Ill", "be", "follow", "you", "for", "tip", "!"]
+(c3-5 / multi-sentence
+      :snt1 (c3-11 / look-02
+                   :ARG0 (c3-10 / person
+                                :name (c3-4 / name
+                                            :op1 "Janet"))
+                   :ARG1 (c3-17 / good-02
+                                :ARG2-of (c3-9 / have-degree-91
+                                               :ARG1 c3-10
+                                               :ARG3 (c3-12 / more)
+                                               :ARG4 (c3-8 / ever))))
+      :snt2 (c3-16 / and
+                   :op1 (c3-2 / be-located-at-91
+                              :ARG1 (c3-15 / i)
+                              :ARG2 (c3-6 / s))
+                   :op2 (c3-0 / overwhelm-01
+                              :ARG0 (c3-13 / cardio)
+                              :ARG1 c3-15))
+      :snt3 (c3-1 / follow-02
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-3 / you)
+                  :ARG2 (c3-14 / tip-05)))
+
+# ::snt I have really enjoyed and hope she sticks with Janet for a long long time.. Because I mean she will need to look and feel her best to get back in the studio and launch another tour soon! (like as in VERY soon)!
+# ::tokens ["I", "have", "really", "enjoyed", "and", "hope", "she", "sticks", "with", "Janet", "for", "a", "long", "long", "time", "..", "Because", "I", "mean", "she", "will", "need", "to", "look", "and", "feel", "her", "best", "to", "get", "back", "in", "the", "studio", "and", "launch", "another", "tour", "soon", "!", "(", "like", "as", "in", "VERY", "soon", ")", "!"]
+# ::lemmas ["i", "have", "really", "enjoy", "and", "hope", "she", "stick", "with", "Janet", "for", "a", "long", "long", "time", "..", "because", "i", "mean", "she", "will", "need", "to", "look", "and", "feel", "she", "good", "to", "get", "back", "in", "the", "studio", "and", "launch", "another", "tour", "soon", "!", "(", "like", "as", "in", "very", "soon", ")", "!"]
+(c4-18 / multi-sentence
+       :snt1 (c4-14 / and
+                    :op1 (c4-25 / enjoy-01
+                                :ARG0 (c4-27 / i)
+                                :ARG1 (c4-0 / stick-01
+                                            :ARG1 (c4-5 / she)
+                                            :ARG2 (c4-26 / person
+                                                         :name (c4-22 / name
+                                                                      :op1 "Janet"))
+                                            :duration (c4-13 / time
+                                                             :ARG1-of (c4-2 / long-03)))
+                                :ARG1-of (c4-24 / real-04))
+                    :op2 (c4-8 / hope-01
+                               :ARG0 c4-27
+                               :ARG1 c4-0))
+       :snt2 (c4-9 / mean-01
+                   :ARG0 (c4-6 / i)
+                   :ARG2 (c4-19 / need-01
+                                :ARG0 (c4-4 / she)
+                                :ARG1 (c4-12 / and
+                                             :op1 (c4-16 / look-01
+                                                         :ARG0 c4-4)
+                                             :op2 (c4-21 / feel-01
+                                                         :ARG0 c4-4)
+                                             :purpose (c4-11 / and
+                                                             :op1 (c4-15 / get-back-10
+                                                                         :ARG1 c4-4
+                                                                         :ARG2 (c4-23 / studio))
+                                                             :op2 (c4-10 / launch-01
+                                                                         :ARG0 c4-4
+                                                                         :ARG1 (c4-20 / tour-01
+                                                                                      :mod (c4-28 / another))
+                                                                         :time (c4-1 / soon
+                                                                                     :ARG1-of (c4-3 / resemble-01
+                                                                                                    :ARG2 (c4-17 / soon
+                                                                                                                 :degree (c4-7 / very))))))))))

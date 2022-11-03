@@ -1,0 +1,102 @@
+# ::snt VOLTAIRE NEVER SAY THAT ! This quote was invented by E.B. Hall in .
+# ::tokens ["VOLTAIRE", "NEVER", "SAY", "THAT", "!", "This", "quote", "was", "invented", "by", "E.B.", "Hall", "in", "."]
+# ::lemmas ["VOLTAIRE", "never", "say", "that", "!", "this", "quote", "be", "invent", "by", "E.B.", "Hall", "in", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-9 / say-01
+                  :ARG0 (c1-0 / you)
+                  :ARG1 (c1-10 / that)
+                  :time (c1-2 / ever)
+                  :polarity -
+                  :mode imperative)
+      :snt2 (c1-4 / invent-01
+                  :ARG0 (c1-6 / person
+                              :name (c1-5 / name
+                                          :op1 "E."
+                                          :op2 "B."
+                                          :op3 "Hall"))
+                  :ARG1 (c1-3 / quote-01
+                              :mod (c1-8 / this))
+                  :location (c1-7 / city
+                                  :name c1-5
+                                  :op1 "London")))
+
+# ::snt i don't agree with religion but i will defend the right to guck it in the ass
+# ::tokens ["i", "do", "n't", "agree", "with", "religion", "but", "i", "will", "defend", "the", "right", "to", "guck", "it", "in", "the", "ass"]
+# ::lemmas ["i", "do", "not", "agree", "with", "religion", "but", "i", "will", "defend", "the", "right", "to", "guck", "it", "in", "the", "ass"]
+(c2-6 / contrast-01
+      :ARG1 (c2-7 / agree-01
+                  :ARG0 (c2-2 / i)
+                  :ARG1 (c2-5 / religion)
+                  :polarity -)
+      :ARG2 (c2-4 / defend-01
+                  :ARG0 c2-2
+                  :ARG1 (c2-3 / right-05
+                              :ARG2 (c2-0 / fuck-01
+                                          :ARG1 (c2-1 / ass)))))
+
+# ::snt Except Voltaire never said that....
+# ::tokens ["Except", "Voltaire", "never", "said", "that", "...."]
+# ::lemmas ["except", "Voltaire", "never", "say", "that", "...."]
+(c3-1 / except-01
+      :ARG1 (c3-4 / say-01
+                  :ARG0 (c3-3 / person
+                              :name (c3-2 / name
+                                          :op1 "Voltaire"))
+                  :ARG1 (c3-5 / that)
+                  :time (c3-0 / ever)
+                  :polarity -))
+
+# ::snt Read "Candide" - it's great.
+# ::tokens ["Read", "\"", "Candide", "\"", "-", "it", "'s", "great", "."]
+# ::lemmas ["read", "\"", "Candide", "\"", "-", "it", "be", "great", "."]
+(c4-3 / read-01
+      :ARG0 (c4-0 / you)
+      :ARG1 (c4-1 / book
+                  :name (c4-2 / name
+                              :op1 "Candide")
+                  :mod (c4-4 / great))
+      :mode imperative)
+
+# ::snt : On the darkest of days, like this, the French philosopher Voltaire perhaps say it best
+# ::tokens [":", "On", "the", "darkest", "of", "days", ",", "like", "this", ",", "the", "French", "philosopher", "Voltaire", "perhaps", "say", "it", "best"]
+# ::lemmas [":", "on", "the", "darkest", "of", "days", ",", "like", "this", ",", "the", "French", "philosopher", "Voltaire", "perhaps", "say", "it", "well"]
+(c5-7 / possible-01
+      :ARG1 (c5-13 / say-01
+                   :ARG0 (c5-15 / person
+                                :name (c5-5 / name
+                                            :op1 "Voltaire")
+                                :mod (c5-3 / philosopher)
+                                :mod (c5-9 / country
+                                           :name (c5-6 / name
+                                                       :op1 "France")))
+                   :ARG1 (c5-4 / it)
+                   :time (c5-8 / day
+                               :ARG1-of (c5-0 / have-degree-91
+                                              :ARG2 (c5-1 / dark-02
+                                                          :ARG1 c5-8)
+                                              :ARG3 (c5-2 / most))
+                               :ARG1-of (c5-10 / resemble-01
+                                               :ARG2 (c5-17 / day
+                                                            :mod (c5-14 / this)))
+                               :ARG1-of (c5-16 / have-degree-91
+                                               :ARG2 (c5-11 / good-02
+                                                            :ARG1 c5-13)
+                                               :ARG3 (c5-12 / most)))))
+
+# ::snt :this was actually penned by someone who wrote a biography on Voltaire... not Voltaire himself
+# ::tokens [":", "this", "was", "actually", "penned", "by", "someone", "who", "wrote", "a", "biography", "on", "Voltaire", "...", "not", "Voltaire", "himself"]
+# ::lemmas [":", "this", "be", "actually", "pen", "by", "someone", "who", "write", "a", "biography", "on", "Voltaire", "...", "not", "voltaire", "himself"]
+(c6-0 / write-01
+      :ARG0 (c6-7 / someone
+                  :ARG0-of (c6-3 / write-01
+                                 :ARG1 (c6-1 / biography
+                                             :topic (c6-5 / person
+                                                          :name (c6-4 / name
+                                                                      :op1 "Voltaire")))
+                                 :ARG1-of (c6-6 / contrast-01
+                                                :ARG2 (c6-2 / write-01
+                                                            :ARG0 c6-5
+                                                            :ARG1 c6-1
+                                                            :polarity -))))
+      :ARG1 (c6-8 / this)
+      :ARG1-of (c6-9 / actual-02))

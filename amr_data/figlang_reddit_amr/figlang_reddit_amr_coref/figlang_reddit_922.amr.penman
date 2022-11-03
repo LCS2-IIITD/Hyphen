@@ -1,0 +1,39 @@
+# ::snt I'm 15 and just drank my first beer
+# ::tokens ["I", "'m", "15", "and", "just", "drank", "my", "first", "beer"]
+# ::lemmas ["i", "be", "15", "and", "just", "drink", "my", "first", "beer"]
+(c1-1 / and
+      :op1 (c1-8 / age-01
+                 :ARG1 (c1-6 / i)
+                 :ARG2 (c1-3 / temporal-quantity
+                             :unit (c1-7 / year)
+                             :quant 15))
+      :op2 (c1-0 / drink-01
+                 :ARG0 c1-6
+                 :ARG1 (c1-4 / beer
+                             :ord (c1-2 / ordinal-entity
+                                        :value 1)
+                             :poss c1-6)
+                 :mod (c1-5 / just)))
+
+# ::snt These people that act like beer is some magical elixir are usually either alcoholics or have never touched it and want to sound cool.
+# ::tokens ["These", "people", "that", "act", "like", "beer", "is", "some", "magical", "elixir", "are", "usually", "either", "alcoholics", "or", "have", "never", "touched", "it", "and", "want", "to", "sound", "cool", "."]
+# ::lemmas ["these", "people", "that", "act", "like", "beer", "be", "some", "magical", "elixir", "be", "usually", "either", "alcoholic", "or", "have", "never", "touch", "it", "and", "want", "to", "sound", "cool", "."]
+(c2-6 / or
+      :op1 (c2-1 / alcoholic
+                 :mod (c2-5 / usual))
+      :op2 (c2-7 / touch-01
+                 :ARG0 (c2-10 / person
+                              :mod (c2-4 / this)
+                              :ARG0-of (c2-12 / act-01
+                                              :ARG1 (c2-13 / elixir
+                                                           :mod (c2-11 / magic)
+                                                           :mod (c2-0 / some)
+                                                           :domain (c2-8 / beer
+                                                                         :ARG1-of c2-7))))
+                 :polarity -)
+      :op3 (c2-3 / want-01
+                 :ARG0 c2-10
+                 :ARG1 (c2-9 / sound-01
+                             :ARG1 c2-10
+                             :ARG2 (c2-2 / cool-04
+                                         :ARG1 c2-10))))

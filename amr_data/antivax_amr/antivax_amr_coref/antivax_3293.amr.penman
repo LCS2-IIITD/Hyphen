@@ -1,0 +1,81 @@
+# ::snt I love that so much!!!
+# ::tokens ["I", "love", "that", "so", "much", "!", "!", "!"]
+# ::lemmas ["i", "love", "that", "so", "much", "!", "!", "!"]
+(c1-2 / love-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-1 / that)
+      :degree (c1-4 / much
+                    :degree (c1-0 / so)))
+
+# ::snt Thank you I feel very grateful and also happy that I could help out. You sign up for shifts but its so worth it because everyone is so excited!
+# ::tokens ["Thank", "you", "I", "feel", "very", "grateful", "and", "also", "happy", "that", "I", "could", "help", "out", ".", "You", "sign", "up", "for", "shifts", "but", "its", "so", "worth", "it", "because", "everyone", "is", "so", "excited", "!"]
+# ::lemmas ["thank", "you", "i", "feel", "very", "grateful", "and", "also", "happy", "that", "i", "could", "help", "out", ".", "you", "sign", "up", "for", "shift", "but", "its", "so", "worth", "it", "because", "everyone", "be", "so", "excited", "!"]
+(c2-8 / multi-sentence
+      :snt1 (c2-7 / thank-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-15 / you))
+      :snt2 (c2-18 / feel-01
+                   :ARG0 (c2-12 / i)
+                   :ARG1 (c2-17 / and
+                                :op1 (c2-9 / appreciate-02
+                                           :ARG0 c2-12
+                                           :degree (c2-6 / very))
+                                :op2 (c2-19 / happy-01
+                                            :ARG0 (c2-22 / possible-01
+                                                         :ARG1 (c2-2 / help-out-03
+                                                                     :ARG0 c2-12))
+                                            :ARG1 c2-12
+                                            :mod (c2-1 / also))))
+      :snt3 (c2-4 / contrast-01
+                  :ARG1 (c2-11 / sign-up-03
+                               :ARG0 (c2-16 / you)
+                               :ARG3 (c2-21 / shift))
+                  :ARG2 (c2-5 / worth-02
+                              :ARG1 c2-11
+                              :ARG2 (c2-13 / it)
+                              :ARG1-of (c2-0 / cause-01
+                                             :ARG0 (c2-10 / excite-01
+                                                          :ARG0 (c2-20 / everyone)
+                                                          :degree (c2-14 / so))))))
+
+# ::snt Bummer, but Im SO happy for you!! Yay!!!!!
+# ::tokens ["Bummer", ",", "but", "I", "m", "SO", "happy", "for", "you", "!", "!", "Yay", "!", "!", "!", "!", "!"]
+# ::lemmas ["Bummer", ",", "but", "i", "m", "so", "happy", "for", "you", "!", "!", "Yay", "!", "!", "!", "!", "!"]
+(c3-5 / multi-sentence
+      :snt1 (c3-1 / contrast-01
+                  :ARG2 (c3-3 / bummer))
+      :snt2 (c3-2 / happy-01
+                  :ARG0 (c3-6 / you)
+                  :ARG1 (c3-4 / i)
+                  :degree (c3-0 / so))
+      :snt3 (c3-7 / yay
+                  :mode expressive))
+
+# ::snt I volunteered through Sharp! But I think all the spots are filled as of right now :/
+# ::tokens ["I", "volunteered", "through", "Sharp", "!", "But", "I", "think", "all", "the", "spots", "are", "filled", "as", "of", "right", "now", ":/"]
+# ::lemmas ["i", "volunteer", "through", "Sharp", "!", "but", "i", "think", "all", "the", "spot", "be", "fill", "as", "of", "right", "now", ":/"]
+(c4-10 / multi-sentence
+       :snt1 (c4-5 / volunteer-01
+                   :ARG0 (c4-9 / i)
+                   :instrument (c4-4 / company
+                                     :name (c4-11 / name
+                                                  :op1 "Sharp")))
+       :snt2 (c4-0 / contrast-01
+                   :ARG2 (c4-6 / think-01
+                               :ARG0 c4-9
+                               :ARG1 (c4-3 / fill-01
+                                           :ARG1 (c4-1 / spot
+                                                       :mod (c4-2 / all))
+                                           :time (c4-12 / as-of
+                                                        :op1 (c4-7 / now
+                                                                   :mod (c4-8 / right)))))))
+
+# ::snt Teach me your wayyyyyysss
+# ::tokens ["Teach", "me", "your", "wayyyyyysss"]
+# ::lemmas ["teach", "i", "your", "wayyyyyysss"]
+(c5-1 / teach-01
+      :ARG0 (c5-3 / you)
+      :ARG1 (c5-0 / way
+                  :quant-of (c5-4 / ysss))
+      :ARG2 (c5-2 / i)
+      :mode imperative)

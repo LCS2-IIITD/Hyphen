@@ -1,0 +1,33 @@
+# ::snt -40 Celsius weather with boiling water shot out of a water gun
+# ::tokens ["-40", "Celsius", "weather", "with", "boiling", "water", "shot", "out", "of", "a", "water", "gun"]
+# ::lemmas ["-40", "celsius", "weather", "with", "boiling", "water", "shoot", "out", "of", "a", "water", "gun"]
+(c1-2 / weather
+      :mod (c1-3 / temperature-quantity
+                 :scale (c1-1 / celsius)
+                 :quant 40)
+      :time-of (c1-0 / shoot-01
+                     :ARG2 (c1-7 / water
+                                 :ARG1-of (c1-5 / boil-01))
+                     :source (c1-4 / gun
+                                   :mod (c1-6 / water))))
+
+# ::snt If it's -40 in South Porcupine, I can't imagine how cold it must be in North Porcupine.
+# ::tokens ["If", "it", "'s", "-40", "in", "South", "Porcupine", ",", "I", "ca", "n't", "imagine", "how", "cold", "it", "must", "be", "in", "North", "Porcupine", "."]
+# ::lemmas ["if", "it", "be", "-40", "in", "South", "Porcupine", ",", "i", "can", "not", "imagine", "how", "cold", "it", "must", "be", "in", "North", "Porcupine", "."]
+(c2-9 / possible-01
+      :ARG1 (c2-1 / imagine-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-5 / thing
+                              :degree-of (c2-0 / cold-01
+                                               :ARG1 (c2-7 / local-region
+                                                           :name (c2-10 / name
+                                                                        :op1 "North"
+                                                                        :op2 "Porcupine"))
+                                               :ARG1-of (c2-4 / infer-01))))
+      :condition (c2-2 / temperature-quantity
+                       :location (c2-8 / local-region
+                                       :name (c2-6 / name
+                                                   :op1 "South"
+                                                   :op2 "Porcupine"))
+                       :quant -40)
+      :polarity -)

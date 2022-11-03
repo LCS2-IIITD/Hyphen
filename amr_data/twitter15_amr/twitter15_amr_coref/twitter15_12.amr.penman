@@ -1,0 +1,78 @@
+# ::snt here's a down right lie
+# ::tokens ["here", "'s", "a", "down", "right", "lie"]
+# ::lemmas ["here", "be", "a", "down", "right", "lie"]
+(c1-0 / lie-08
+      :location (c1-3 / here)
+      :mod (c1-2 / down)
+      :ARG1-of (c1-1 / right-06))
+
+# ::snt Without supernatural themes, Catholic is like communism
+# ::tokens ["Without", "supernatural", "themes", ",", "Catholic", "is", "like", "communism"]
+# ::lemmas ["without", "supernatural", "theme", ",", "Catholic", "be", "like", "communism"]
+(c2-6 / resemble-01
+      :ARG1 (c2-2 / religious-group
+                  :name (c2-4 / name
+                              :op1 "Catholic"))
+      :ARG2 (c2-1 / political-movement
+                  :name (c2-5 / name
+                              :op1 "communism"))
+      :manner (c2-3 / theme
+                    :mod (c2-0 / supernatural)
+                    :polarity -))
+
+# ::snt One off Big Bang (theory?) propositions are ridiculous
+# ::tokens ["One", "off", "Big", "Bang", "(", "theory", "?", ")", "propositions", "are", "ridiculous"]
+# ::lemmas ["One", "off", "Big", "Bang", "(", "theory", "?", ")", "proposition", "be", "ridiculous"]
+(c3-6 / ridiculous-02
+      :ARG1 (c3-1 / one-off
+                  :mod (c3-3 / thing
+                             :name (c3-5 / name
+                                         :op1 "Big"
+                                         :op2 "Bang")
+                             :mod (c3-2 / theory
+                                        :polarity (c3-4 / amr-unknown))
+                             :ARG1-of (c3-0 / propose-01))))
+
+# ::snt He has to, here in Italy evolution and the big bang theory are accepted as facts by the vast majority of people
+# ::tokens ["He", "has", "to", ",", "here", "in", "Italy", "evolution", "and", "the", "big", "bang", "theory", "are", "accepted", "as", "facts", "by", "the", "vast", "majority", "of", "people"]
+# ::lemmas ["he", "have", "to", ",", "here", "in", "Italy", "evolution", "and", "the", "big", "bang", "theory", "be", "accept", "as", "fact", "by", "the", "vast", "majority", "of", "people"]
+(c4-2 / obligate-01
+      :ARG1 (c4-8 / he)
+      :ARG2 (c4-10 / accept-01
+                   :ARG0 (c4-1 / person
+                               :quant (c4-4 / majority
+                                            :mod (c4-11 / vast)))
+                   :ARG1 (c4-5 / and
+                               :op1 (c4-12 / evolve-01)
+                               :op2 (c4-3 / theory
+                                          :name (c4-6 / name
+                                                      :op1 "Big"
+                                                      :op2 "Bang")))
+                   :ARG3 (c4-13 / fact)
+                   :location (c4-0 / here
+                                   :location (c4-7 / country
+                                                   :name (c4-9 / name
+                                                               :op1 "Italy")))))
+
+# ::snt the bigbang doesn't demand god. And evolution doesn't begin with living creatures, but before, with inert things
+# ::tokens ["the", "bigbang", "does", "n't", "demand", "god", ".", "And", "evolution", "does", "n't", "begin", "with", "living", "creatures", ",", "but", "before", ",", "with", "inert", "things"]
+# ::lemmas ["the", "bigbang", "do", "not", "demand", "god", ".", "and", "evolution", "do", "not", "begin", "with", "living", "creature", ",", "but", "before", ",", "with", "inert", "thing"]
+(c5-8 / multi-sentence
+      :snt1 (c5-13 / demand-01
+                   :ARG0 (c5-1 / bigbang)
+                   :ARG1 (c5-3 / person
+                               :name (c5-12 / name
+                                            :op1 "God"))
+                   :polarity -)
+      :snt2 (c5-7 / and
+                  :op2 (c5-10 / contrast-01
+                              :ARG1 (c5-11 / begin-01
+                                           :ARG1 (c5-14 / evolve-01)
+                                           :ARG2 (c5-9 / creature
+                                                       :ARG0-of (c5-5 / live-01))
+                                           :polarity -)
+                              :ARG2 (c5-4 / begin-01
+                                          :ARG1 c5-14
+                                          :ARG2 (c5-6 / thing
+                                                      :ARG1-of (c5-2 / inert-02))
+                                          :time (c5-0 / before)))))

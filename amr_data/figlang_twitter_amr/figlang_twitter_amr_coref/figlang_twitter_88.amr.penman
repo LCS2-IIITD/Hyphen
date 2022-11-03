@@ -1,0 +1,45 @@
+# ::snt I'm glad Puzder will withdraw . Given his relationship to his employees he wasn't fit to lead a department responsib <URL>
+# ::tokens ["I", "'m", "glad", "Puzder", "will", "withdraw", ".", "Given", "his", "relationship", "to", "his", "employees", "he", "was", "n't", "fit", "to", "lead", "a", "department", "responsib", "<", "URL", ">"]
+# ::lemmas ["i", "be", "glad", "Puzder", "will", "withdraw", ".", "give", "his", "relationship", "to", "his", "employee", "he", "be", "not", "fit", "to", "lead", "a", "department", "responsib", "<", "URL", ">"]
+(c1-12 / multi-sentence
+       :snt1 (c1-10 / glad-02
+                    :ARG0 (c1-3 / withdraw-01
+                                :ARG0 (c1-11 / person
+                                             :name (c1-13 / name
+                                                          :op1 "Puzder")))
+                    :ARG1 (c1-2 / i))
+       :snt2 (c1-1 / fit-03
+                   :ARG1 (c1-5 / he)
+                   :ARG2 (c1-9 / lead-02
+                               :ARG0 c1-5
+                               :ARG1 (c1-0 / department
+                                           :ARG2-of (c1-8 / responsib)))
+                   :ARG1-of (c1-4 / cause-01
+                                  :ARG0 (c1-6 / relation-03
+                                              :ARG0 c1-5
+                                              :ARG2 (c1-7 / person
+                                                          :ARG1-of (c1-14 / employ-01
+                                                                          :ARG0 c1-5))))
+                   :polarity -))
+
+# ::snt We don t need a labor secretary who makes millions while his workers are paid starvation wages .
+# ::tokens ["We", "don", "t", "need", "a", "labor", "secretary", "who", "makes", "millions", "while", "his", "workers", "are", "paid", "starvation", "wages", "."]
+# ::lemmas ["we", "don", "t", "need", "a", "labor", "secretary", "who", "make", "millions", "while", "his", "worker", "be", "pay", "starvation", "wage", "."]
+(c2-13 / need-01
+       :ARG0 (c2-3 / we)
+       :ARG1 (c2-11 / person
+                    :ARG0-of (c2-5 / have-org-role-91
+                                   :ARG2 (c2-0 / secretary
+                                               :topic (c2-8 / labor)))
+                    :ARG0-of (c2-12 / make-05
+                                    :ARG1 (c2-2 / multiple
+                                                :op1 (c2-6 / monetary-quantity
+                                                           :unit (c2-1 / dollar)
+                                                           :quant 1000000))
+                                    :time (c2-7 / pay-01
+                                                :ARG1 (c2-14 / wage
+                                                             :mod (c2-10 / starve-01))
+                                                :ARG2 (c2-4 / person
+                                                            :ARG0-of (c2-9 / work-01)
+                                                            :poss c2-11))))
+       :polarity -)

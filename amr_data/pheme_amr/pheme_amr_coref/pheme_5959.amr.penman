@@ -1,0 +1,228 @@
+# ::snt truth
+# ::tokens ["truth"]
+# ::lemmas ["truth"]
+(c1-0 / truth)
+
+# ::snt any word on what happened??
+# ::tokens ["any", "word", "on", "what", "happened", "?", "?"]
+# ::lemmas ["any", "word", "on", "what", "happen", "?", "?"]
+(c2-0 / word
+      :polarity (c2-3 / amr-unknown)
+      :mod (c2-2 / any)
+      :topic (c2-1 / event))
+
+# ::snt This just doesn't happen in Canada.....awful.
+# ::tokens ["This", "just", "does", "n't", "happen", "in", "Canada", ".....", "awful", "."]
+# ::lemmas ["this", "just", "do", "not", "happen", "in", "Canada", ".....", "awful", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-2 / event
+                  :mod (c3-5 / this)
+                  :location (c3-4 / country
+                                  :name (c3-3 / name
+                                              :op1 "Canada"))
+                  :mod (c3-0 / just)
+                  :polarity -)
+      :snt2 (c3-6 / awe-01))
+
+# ::snt tks man! It's crazy! I'm minutes away, helicopters, sons school is shutdown! Emerg service everywhere!
+# ::tokens ["tks", "man", "!", "It", "'s", "crazy", "!", "I", "'m", "minutes", "away", ",", "helicopters", ",", "sons", "school", "is", "shutdown", "!", "Emerg", "service", "everywhere", "!"]
+# ::lemmas ["tks", "man", "!", "it", "be", "crazy", "!", "i", "be", "minute", "away", ",", "helicopter", ",", "son", "school", "be", "shutdown", "!", "Emerg", "service", "everywhere", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / say-01
+                  :ARG0 (c4-17 / i)
+                  :ARG1 (c4-21 / crazy-03
+                               :ARG1 (c4-18 / it))
+                  :ARG2 (c4-2 / person
+                              :name (c4-14 / name
+                                           :op1 "tks"
+                                           :op2 "man")))
+      :snt2 (c4-6 / and
+                  :op1 (c4-9 / be-located-at-91
+                             :ARG1 (c4-0 / i)
+                             :ARG2 (c4-16 / away
+                                          :op1 (c4-15 / multiple
+                                                      :op1 (c4-22 / temporal-quantity
+                                                                  :unit (c4-8 / minute)
+                                                                  :quant 1))))
+                  :op2 (c4-12 / shut-down-05
+                              :ARG1 (c4-7 / helicopter))
+                  :op3 (c4-20 / school
+                              :poss (c4-4 / person
+                                          :ARG0-of (c4-5 / have-rel-role-91
+                                                         :ARG1 c4-0
+                                                         :ARG2 (c4-11 / son))))
+                  :op4 (c4-19 / service
+                              :mod (c4-13 / emergency)
+                              :location (c4-10 / everywhere))))
+
+# ::snt it was probably cyrus playin with his stupid gun
+# ::tokens ["it", "was", "probably", "cyrus", "playin", "with", "his", "stupid", "gun"]
+# ::lemmas ["it", "be", "probably", "cyrus", "playin", "with", "his", "stupid", "gun"]
+(c5-2 / probable
+      :domain (c5-5 / play-01
+                    :ARG0 (c5-0 / person
+                                :name (c5-1 / name
+                                            :op1 "Cyrus"))
+                    :ARG2 (c5-3 / gun
+                                :poss c5-0
+                                :mod (c5-4 / stupid))))
+
+# ::snt thankfully he didn't live long enough to experience our wonderful &amp; humane justice system.
+# ::tokens ["thankfully", "he", "did", "n't", "live", "long", "enough", "to", "experience", "our", "wonderful", "&", "amp", ";", "humane", "justice", "system", "."]
+# ::lemmas ["thankfully", "he", "do", "not", "live", "long", "enough", "to", "experience", "our", "wonderful", "&", "amp", ";", "humane", "justice", "system", "."]
+(c6-3 / fortunate-01
+      :ARG2 (c6-4 / live-01
+                  :ARG0 (c6-0 / he)
+                  :ARG1-of (c6-11 / have-degree-91
+                                  :ARG2 (c6-9 / long-03
+                                              :ARG1 c6-4)
+                                  :ARG3 (c6-6 / enough)
+                                  :ARG6 (c6-5 / experience-01
+                                              :ARG0 c6-0
+                                              :ARG1 (c6-10 / system
+                                                           :mod (c6-1 / justice)
+                                                           :ARG1-of (c6-2 / wonderful-03)
+                                                           :mod (c6-8 / humane)
+                                                           :poss (c6-7 / we))))
+                  :polarity -))
+
+# ::snt we are Canadian, we are strong!
+# ::tokens ["we", "are", "Canadian", ",", "we", "are", "strong", "!"]
+# ::lemmas ["we", "be", "Canadian", ",", "we", "be", "strong", "!"]
+(c7-5 / and
+      :op1 (c7-2 / person
+                 :mod (c7-3 / country
+                            :name (c7-1 / name
+                                        :op1 "Canada"))
+                 :domain (c7-0 / we))
+      :op2 (c7-4 / strong-02
+                 :ARG1 c7-0))
+
+# ::snt Thanks Bubs
+# ::tokens ["Thanks", "Bubs"]
+# ::lemmas ["thank", "Bubs"]
+(c8-3 / say-01
+      :ARG1 (c8-4 / thank-01
+                  :ARG0 (c8-0 / i)
+                  :ARG1 (c8-2 / person
+                              :name (c8-1 / name
+                                          :op1 "Bubs")
+                              :ARG2-of c8-3)))
+
+# ::snt Am just blocks from Parliament Hill, but am safe in my cubicle!
+# ::tokens ["Am", "just", "blocks", "from", "Parliament", "Hill", ",", "but", "am", "safe", "in", "my", "cubicle", "!"]
+# ::lemmas ["be", "just", "block", "from", "Parliament", "Hill", ",", "but", "be", "safe", "in", "my", "cubicle", "!"]
+(c9-6 / contrast-01
+      :ARG1 (c9-1 / be-located-at-91
+                  :ARG1 (c9-2 / i)
+                  :ARG2 (c9-4 / relative-position
+                              :op1 (c9-5 / building
+                                         :name (c9-3 / name
+                                                     :op1 "Parliament"
+                                                     :op2 "Hill"))
+                              :quant (c9-9 / block
+                                           :mod (c9-0 / just))))
+      :ARG2 (c9-8 / safe-01
+                  :ARG1 c9-2
+                  :location (c9-7 / cubicle
+                                  :poss c9-2)))
+
+# ::snt what happened in Ottawa bubs
+# ::tokens ["what", "happened", "in", "Ottawa", "bubs"]
+# ::lemmas ["what", "happen", "in", "Ottawa", "bub"]
+(c10-4 / say-01
+       :ARG1 (c10-1 / event
+                    :location (c10-3 / city
+                                     :name (c10-2 / name
+                                                  :op1 "Ottawa")))
+       :ARG2 (c10-0 / bub))
+
+# ::snt Thanks!
+# ::tokens ["Thanks", "!"]
+# ::lemmas ["thank", "!"]
+(c11-1 / thank-01
+       :ARG1 (c11-0 / you)
+       :mode expressive)
+
+# ::snt I've been watching it on the BBC. It's fuckin crazy
+# ::tokens ["I", "'ve", "been", "watching", "it", "on", "the", "BBC", ".", "It", "'s", "fuckin", "crazy"]
+# ::lemmas ["i", "'ve", "be", "watch", "it", "on", "the", "BBC", ".", "it", "be", "fuckin", "crazy"]
+(c12-2 / multi-sentence
+       :snt1 (c12-0 / watch-01
+                    :ARG0 (c12-4 / i)
+                    :ARG1 (c12-8 / it)
+                    :medium (c12-6 / publication
+                                   :name (c12-5 / name
+                                                :op1 "BBC")))
+       :snt2 (c12-7 / crazy-03
+                    :ARG1 (c12-1 / it)
+                    :mod (c12-3 / fucking)))
+
+# ::snt Be safe, Canadian friends!!
+# ::tokens ["Be", "safe", ",", "Canadian", "friends", "!", "!"]
+# ::lemmas ["be", "safe", ",", "Canadian", "friend", "!", "!"]
+(c13-5 / say-01
+       :ARG0 (c13-2 / i)
+       :ARG1 (c13-1 / safe-01
+                    :ARG1 (c13-0 / friend
+                                 :mod (c13-4 / country
+                                             :name (c13-3 / name
+                                                          :op1 "Canada"))
+                                 :ARG2-of c13-5)
+                    :mode imperative))
+
+# ::snt me too.
+# ::tokens ["me", "too", "."]
+# ::lemmas ["i", "too", "."]
+(c14-1 / i
+       :mod (c14-0 / too))
+
+# ::snt We are all good bro
+# ::tokens ["We", "are", "all", "good", "bro"]
+# ::lemmas ["we", "be", "all", "good", "bro"]
+(c15-5 / say-01
+       :ARG1 (c15-4 / good-02
+                    :ARG1 (c15-1 / we
+                                 :mod (c15-6 / all)))
+       :ARG2 (c15-3 / person
+                    :ARG0-of (c15-0 / have-rel-role-91
+                                    :ARG2 (c15-2 / bro))))
+
+# ::snt : Hoping everyone in Ottawa is safe...
+# ::tokens [":", "Hoping", "everyone", "in", "Ottawa", "is", "safe", "..."]
+# ::lemmas [":", "hope", "everyone", "in", "Ottawa", "be", "safe", "..."]
+(c16-0 / hope-01
+       :ARG1 (c16-4 / safe-01
+                    :ARG1 (c16-1 / everyone
+                                 :location (c16-3 / city
+                                                  :name (c16-2 / name
+                                                               :op1 "Ottawa")))))
+
+# ::snt amen brother.
+# ::tokens ["amen", "brother", "."]
+# ::lemmas ["amen", "brother", "."]
+(c17-3 / say-01
+       :ARG1 (c17-4 / amen)
+       :ARG2 (c17-2 / person
+                    :ARG0-of (c17-0 / have-rel-role-91
+                                    :ARG2 (c17-1 / brother))))
+
+# ::snt Thanks Bubbles!
+# ::tokens ["Thanks", "Bubbles", "!"]
+# ::lemmas ["thank", "Bubbles", "!"]
+(c18-3 / say-01
+       :ARG1 (c18-4 / thank-01
+                    :ARG0 (c18-0 / i)
+                    :ARG1 (c18-2 / person
+                                 :name (c18-1 / name
+                                              :op1 "Bubbles")
+                                 :ARG2-of c18-3)))
+
+# ::snt it's crazy here bubbs
+# ::tokens ["it", "'s", "crazy", "here", "bubbs"]
+# ::lemmas ["it", "be", "crazy", "here", "bubbs"]
+(c19-4 / say-01
+       :ARG1 (c19-3 / crazy-03
+                    :ARG1 (c19-2 / it)
+                    :location (c19-0 / here))
+       :ARG2 (c19-1 / bubbs))

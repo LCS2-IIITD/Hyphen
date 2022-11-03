@@ -1,0 +1,32 @@
+# ::snt Giggles.
+# ::tokens ["Giggles", "."]
+# ::lemmas ["giggle", "."]
+(c1-0 / giggles)
+
+# ::snt Wow. Why?
+# ::tokens ["Wow", ".", "Why", "?"]
+# ::lemmas ["wow", ".", "why", "?"]
+(c2-2 / multi-sentence
+      :snt1 (c2-0 / wow-01)
+      :snt2 (c2-1 / cause-01
+                  :ARG0 (c2-3 / amr-unknown)))
+
+# ::snt Years ago I found their wedding registry and sent them hand towels.
+# ::tokens ["Years", "ago", "I", "found", "their", "wedding", "registry", "and", "sent", "them", "hand", "towels", "."]
+# ::lemmas ["Years", "ago", "i", "find", "their", "wedding", "registry", "and", "send", "they", "hand", "towel", "."]
+(c3-11 / and
+       :op1 (c3-0 / find-01
+                  :ARG0 (c3-10 / i)
+                  :ARG1 (c3-6 / registry
+                              :mod (c3-8 / wed-01
+                                         :ARG1 (c3-9 / they)))
+                  :time (c3-1 / before
+                              :op1 (c3-3 / now)
+                              :quant (c3-4 / multiple
+                                           :op1 (c3-12 / temporal-quantity
+                                                       :unit (c3-2 / year)
+                                                       :quant 1))))
+       :op2 (c3-5 / send-01
+                  :ARG0 c3-10
+                  :ARG1 (c3-7 / hand-)
+                  :ARG2 c3-9))

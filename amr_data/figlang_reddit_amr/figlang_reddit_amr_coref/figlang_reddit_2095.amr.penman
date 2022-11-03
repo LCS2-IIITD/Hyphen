@@ -1,0 +1,35 @@
+# ::snt Gilvasunner strikes again
+# ::tokens ["Gilvasunner", "strikes", "again"]
+# ::lemmas ["Gilvasunner", "strike", "again"]
+(c1-0 / strike-01
+      :ARG0 (c1-1 / person
+                  :name (c1-3 / name
+                              :op1 "Gilvasunner"))
+      :mod (c1-2 / again))
+
+# ::snt I'm not sure what to feel.
+# ::tokens ["I", "'m", "not", "sure", "what", "to", "feel", "."]
+# ::lemmas ["i", "be", "not", "sure", "what", "to", "feel", "."]
+(c2-0 / sure-02
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-2 / thing
+                  :ARG1-of (c2-3 / feel-01
+                                 :ARG0 c2-1))
+      :polarity -)
+
+# ::snt until you win a major show your elders some respect
+# ::tokens ["until", "you", "win", "a", "major", "show", "your", "elders", "some", "respect"]
+# ::lemmas ["until", "you", "win", "a", "major", "show", "your", "elder", "some", "respect"]
+(c3-0 / show-01
+      :ARG0 (c3-6 / you)
+      :ARG1 (c3-3 / respect-01
+                  :ARG0 (c3-7 / elder
+                              :poss c3-6)
+                  :ARG1 c3-6
+                  :quant (c3-4 / some))
+      :ARG2 c3-7
+      :time (c3-2 / until
+                  :op1 (c3-1 / win-01
+                             :ARG0 c3-6
+                             :ARG1 (c3-5 / major-02)))
+      :mode imperative)

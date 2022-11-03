@@ -1,0 +1,56 @@
+# ::snt My favorite strange ship: An Iowa class Battleship converted to a carrier while retaining the rear gun
+# ::tokens ["My", "favorite", "strange", "ship", ":", "An", "Iowa", "class", "Battleship", "converted", "to", "a", "carrier", "while", "retaining", "the", "rear", "gun"]
+# ::lemmas ["my", "favorite", "strange", "ship", ":", "an", "Iowa", "class", "Battleship", "convert", "to", "a", "carrier", "while", "retain", "the", "rear", "gun"]
+(c1-2 / favor-01
+      :ARG0 (c1-10 / i)
+      :ARG1 (c1-0 / ship
+                  :mod (c1-9 / strange)
+                  :domain (c1-8 / battleship
+                                :part-of (c1-3 / class
+                                               :name (c1-11 / name
+                                                            :op1 "Iowa"))
+                                :ARG1-of (c1-1 / convert-01
+                                               :ARG2 (c1-4 / carrier)
+                                               :time (c1-6 / retain-01
+                                                           :ARG0 c1-8
+                                                           :ARG1 (c1-7 / gun
+                                                                       :mod (c1-5 / rear)))))))
+
+# ::snt was this ever built?
+# ::tokens ["was", "this", "ever", "built", "?"]
+# ::lemmas ["be", "this", "ever", "build", "?"]
+(c2-0 / build-01
+      :ARG1 (c2-2 / this)
+      :time (c2-3 / ever)
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt No, all Iowas retained their configuration but during the gulf war refit of some of them, they receive tomahawk and harpoon missile launchers
+# ::tokens ["No", ",", "all", "Iowas", "retained", "their", "configuration", "but", "during", "the", "gulf", "war", "refit", "of", "some", "of", "them", ",", "they", "receive", "tomahawk", "and", "harpoon", "missile", "launchers"]
+# ::lemmas ["no", ",", "all", "Iowas", "retain", "their", "configuration", "but", "during", "the", "gulf", "war", "refit", "of", "some", "of", "they", ",", "they", "receive", "tomahawk", "and", "harpoon", "missile", "launcher"]
+(c3-4 / contrast-01
+      :ARG1 (c3-7 / retain-01
+                  :ARG0 (c3-9 / military
+                              :name (c3-10 / name
+                                           :op1 "Iowan")
+                              :mod (c3-14 / all))
+                  :ARG1 (c3-0 / configuration
+                              :poss c3-9))
+      :ARG2 (c3-5 / receive-01
+                  :ARG0 c3-9
+                  :ARG1 (c3-11 / and
+                               :op1 (c3-19 / product
+                                           :ARG0-of (c3-18 / launch-01
+                                                           :ARG1 (c3-15 / missile
+                                                                        :mod (c3-6 / tomahawk))))
+                               :op2 (c3-17 / product
+                                           :ARG0-of (c3-2 / launch-01
+                                                          :ARG1 (c3-13 / missile
+                                                                       :mod (c3-16 / harpoon)))))
+                  :time (c3-8 / refit-01
+                              :ARG1 c3-9
+                              :name (c3-1 / name
+                                          :op1 "Gulf"
+                                          :op2 "War")
+                              :ARG1-of (c3-3 / include-91
+                                             :ARG2 c3-9
+                                             :ARG3 (c3-12 / some)))))

@@ -1,0 +1,101 @@
+# ::snt yup. cornholio is not pleased.
+# ::tokens ["yup", ".", "cornholio", "is", "not", "pleased", "."]
+# ::lemmas ["yup", ".", "cornholio", "be", "not", "pleased", "."]
+(c1-0 / please-01
+      :ARG1 (c1-1 / product
+                  :name (c1-2 / name
+                              :op1 "Cornholio"))
+      :mod (c1-3 / yup)
+      :polarity -)
+
+# ::snt And has been suppressing the research into this for years!
+# ::tokens ["And", "has", "been", "suppressing", "the", "research", "into", "this", "for", "years", "!"]
+# ::lemmas ["and", "have", "be", "suppress", "the", "research", "into", "this", "for", "years", "!"]
+(c2-1 / and
+      :op2 (c2-0 / suppress-01
+                 :ARG1 (c2-4 / research-01
+                             :ARG1 (c2-3 / this))
+                 :duration (c2-5 / multiple
+                                 :op1 (c2-2 / temporal-quantity
+                                            :unit (c2-6 / year)
+                                            :quant 1))))
+
+# ::snt i am not a doctor or scientist but still believe the long-term health effects from hfcs and other crap in processed food are and will be more significant than anything caused by the vaccines
+# ::tokens ["i", "am", "not", "a", "doctor", "or", "scientist", "but", "still", "believe", "the", "long", "-", "term", "health", "effects", "from", "hfcs", "and", "other", "crap", "in", "processed", "food", "are", "and", "will", "be", "more", "significant", "than", "anything", "caused", "by", "the", "vaccines"]
+# ::lemmas ["i", "be", "not", "a", "doctor", "or", "scientist", "but", "still", "believe", "the", "long", "-", "term", "health", "effect", "from", "hfcs", "and", "other", "crap", "in", "process", "food", "be", "and", "will", "be", "more", "significant", "than", "anything", "cause", "by", "the", "vaccine"]
+(c3-6 / contrast-01
+      :ARG1 (c3-9 / or
+                  :op1 (c3-0 / doctor)
+                  :op2 (c3-13 / scientist)
+                  :domain (c3-4 / i)
+                  :polarity -)
+      :ARG2 (c3-20 / believe-01
+                   :ARG0 c3-4
+                   :ARG1 (c3-15 / and
+                                :op1 (c3-21 / significant-02
+                                            :ARG1 (c3-12 / effect-03
+                                                         :ARG0 (c3-11 / and
+                                                                      :op1 (c3-16 / food
+                                                                                  :ARG1-of (c3-22 / process-01))
+                                                                      :op2 (c3-1 / crap
+                                                                                 :mod (c3-18 / other)))
+                                                         :ARG1 (c3-17 / health)
+                                                         :ARG1-of (c3-19 / long-03)))
+                                :op2 (c3-14 / significant-02
+                                            :ARG1 c3-12
+                                            :ARG2-of (c3-3 / have-degree-91
+                                                           :ARG1 c3-12
+                                                           :ARG3 (c3-10 / more)
+                                                           :ARG4 (c3-2 / anything
+                                                                       :ARG1-of (c3-7 / cause-01
+                                                                                      :ARG0 (c3-8 / vaccine))))))
+                   :mod (c3-5 / still)))
+
+# ::snt Puh-leeze, I avoid chemicals entirely
+# ::tokens ["Puh", "-", "leeze", ",", "I", "avoid", "chemicals", "entirely"]
+# ::lemmas ["puh", "-", "leeze", ",", "i", "avoid", "chemical", "entirely"]
+(c4-0 / avoid-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-1 / chemical)
+      :degree (c4-4 / entire)
+      :mod (c4-2 / please
+                 :mode expressive))
+
+# ::snt as it should be for us all!
+# ::tokens ["as", "it", "should", "be", "for", "us", "all", "!"]
+# ::lemmas ["as", "it", "should", "be", "for", "we", "all", "!"]
+(c5-3 / cause-01
+      :ARG1 (c5-2 / recommend-01
+                  :ARG2 (c5-0 / we
+                              :mod (c5-1 / all)))
+      :mode expressive)
+
+# ::snt I had Baja Fresh for lunch. Whats in the vaccine is the least of my worries.
+# ::tokens ["I", "had", "Baja", "Fresh", "for", "lunch", ".", "What", "s", "in", "the", "vaccine", "is", "the", "least", "of", "my", "worries", "."]
+# ::lemmas ["i", "have", "Baja", "Fresh", "for", "lunch", ".", "what", "s", "in", "the", "vaccine", "be", "the", "least", "of", "my", "worry", "."]
+(c6-9 / multi-sentence
+      :snt1 (c6-2 / have-03
+                  :ARG0 (c6-8 / i)
+                  :ARG1 (c6-5 / product
+                              :name (c6-10 / name
+                                           :op1 "Baja"
+                                           :op2 "Fresh"))
+                  :time (c6-6 / lunch))
+      :snt2 (c6-1 / worry-01
+                  :ARG0 (c6-4 / vaccine)
+                  :ARG1 (c6-3 / i)
+                  :ARG2-of (c6-7 / have-degree-91
+                                 :ARG1 c6-4
+                                 :ARG3 (c6-0 / least))))
+
+# ::snt no i needed a hfcs booster shot
+# ::tokens ["no", "i", "needed", "a", "hfcs", "booster", "shot"]
+# ::lemmas ["no", "i", "need", "a", "hfcs", "booster", "shoot"]
+(c7-5 / need-01
+      :ARG0 (c7-4 / i)
+      :ARG1 (c7-0 / shot
+                  :ARG0-of (c7-3 / boost-01
+                                 :ARG1 (c7-2 / product
+                                             :name (c7-1 / name
+                                                         :op1 "HP"))))
+      :polarity -)

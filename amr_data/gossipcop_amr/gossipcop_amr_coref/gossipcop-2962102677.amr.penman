@@ -1,0 +1,69 @@
+# ::snt Anyhow, let me know if you want to buy the rights!
+# ::tokens ["Anyhow", ",", "let", "me", "know", "if", "you", "want", "to", "buy", "the", "rights", "!"]
+# ::lemmas ["anyhow", ",", "let", "i", "know", "if", "you", "want", "to", "buy", "the", "right", "!"]
+(c1-4 / let-know-07
+      :ARG0 (c1-1 / you)
+      :ARG1 (c1-6 / i)
+      :ARG2 (c1-7 / truth-value
+                  :polarity-of (c1-5 / want-01
+                                     :ARG0 c1-1
+                                     :ARG1 (c1-0 / buy-01
+                                                 :ARG0 c1-1
+                                                 :ARG1 (c1-2 / right-05))))
+      :mod (c1-3 / anyhow)
+      :mode imperative)
+
+# ::snt That's funny
+# ::tokens ["That", "'s", "funny"]
+# ::lemmas ["that", "be", "funny"]
+(c2-0 / funny
+      :domain (c2-1 / that))
+
+# ::snt Did she lose a bet or is she doing a make a wish for Pierre
+# ::tokens ["Did", "she", "lose", "a", "bet", "or", "is", "she", "doing", "a", "make", "a", "wish", "for", "Pierre"]
+# ::lemmas ["do", "she", "lose", "a", "bet", "or", "be", "she", "do", "a", "make", "a", "wish", "for", "Pierre"]
+(c3-6 / amr-choice
+      :op1 (c3-3 / lose-03
+                 :ARG0 (c3-2 / she)
+                 :ARG1 (c3-0 / bet-01
+                             :ARG0 c3-2))
+      :op2 (c3-7 / do-02
+                 :ARG0 c3-2
+                 :ARG1 (c3-5 / wish-01
+                             :ARG0 c3-2
+                             :ARG2 (c3-4 / person
+                                         :name (c3-1 / name
+                                                     :op1 "Pierre")))))
+
+# ::snt I'm glad someone else is seeing Susan Sarandon on this game I thought I was hallucinating
+# ::tokens ["I", "'m", "glad", "someone", "else", "is", "seeing", "Susan", "Sarandon", "on", "this", "game", "I", "thought", "I", "was", "hallucinating"]
+# ::lemmas ["i", "be", "glad", "someone", "else", "be", "see", "Susan", "Sarandon", "on", "this", "game", "i", "think", "i", "be", "hallucinate"]
+(c4-9 / glad-02
+      :ARG0 (c4-2 / see-01
+                  :ARG0 (c4-0 / someone
+                              :mod (c4-3 / else))
+                  :ARG1 (c4-5 / person
+                              :name (c4-1 / name
+                                          :op1 "Susan"
+                                          :op2 "Sarandon"))
+                  :location (c4-7 / game
+                                  :mod (c4-8 / this)))
+      :ARG1 (c4-10 / i)
+      :ARG1-of (c4-6 / cause-01
+                     :ARG0 (c4-11 / think-01
+                                  :ARG0 c4-10
+                                  :ARG1 (c4-4 / hallucinate-01
+                                              :ARG0 c4-10))))
+
+# ::snt She was a terrible person in that movie. Until the end of course
+# ::tokens ["She", "was", "a", "terrible", "person", "in", "that", "movie", ".", "Until", "the", "end", "of", "course"]
+# ::lemmas ["she", "be", "a", "terrible", "person", "in", "that", "movie", ".", "until", "the", "end", "of", "course"]
+(c5-1 / multi-sentence
+      :snt1 (c5-5 / person
+                  :ARG1-of (c5-6 / terrible-01)
+                  :domain (c5-2 / she)
+                  :location (c5-4 / movie
+                                  :mod (c5-8 / that)))
+      :snt2 (c5-7 / until
+                  :op1 (c5-3 / end-01
+                             :mod (c5-0 / of-course))))

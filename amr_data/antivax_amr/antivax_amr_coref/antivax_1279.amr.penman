@@ -1,0 +1,56 @@
+# ::snt Stay Safe
+# ::tokens ["Stay", "Safe"]
+# ::lemmas ["stay", "safe"]
+(c1-0 / stay-01
+      :ARG1 (c1-2 / you)
+      :ARG3 (c1-1 / safe-01
+                  :ARG1 c1-2))
+
+# ::snt Also if you're years old or more, send your CNIC number to and register yourselves and your Parents and get vaccinated.Wear Mask and Follow the SOPs.TAKE CARE. /2
+# ::tokens ["Also", "if", "you", "'re", "years", "old", "or", "more", ",", "send", "your", "CNIC", "number", "to", "and", "register", "yourselves", "and", "your", "Parents", "and", "get", "vaccinated", ".", "Wear", "Mask", "and", "Follow", "the", "SOPs", ".", "TAKE", "CARE", ".", "/2"]
+# ::lemmas ["also", "if", "you", "be", "year", "old", "or", "more", ",", "send", "your", "CNIC", "number", "to", "and", "register", "yourself", "and", "your", "parent", "and", "get", "vaccinate", ".", "Wear", "Mask", "and", "follow", "the", "sop", ".", "TAKE", "CARE", ".", "/2"]
+(c2-12 / multi-sentence
+       :snt1 (c2-21 / and
+                    :op1 (c2-15 / send-01
+                                :ARG0 (c2-19 / you)
+                                :ARG1 (c2-13 / number
+                                             :mod (c2-11 / government-organization
+                                                         :name (c2-4 / name
+                                                                     :op1 "CNIC"))
+                                             :poss c2-19))
+                    :op2 (c2-10 / register-02
+                                :ARG0 c2-19
+                                :ARG1 c2-19
+                                :op3-of c2-21)
+                    :ARG0 c2-19
+                    :ARG1 (c2-14 / and
+                                 :op1 c2-19
+                                 :op2 (c2-27 / person
+                                             :ARG0-of (c2-24 / have-rel-role-91
+                                                             :ARG1 c2-19
+                                                             :ARG2 (c2-25 / parent)))))
+       :op4 (c2-7 / vaccinate-01
+                  :ARG1 c2-19)
+       :condition (c2-1 / age-01
+                        :ARG1 c2-19
+                        :ARG2 (c2-28 / at-least
+                                     :op1 (c2-9 / temporal-quantity
+                                                :unit (c2-20 / year)
+                                                :quant 1)))
+       :mod (c2-3 / also)
+       :snt2 (c2-18 / and
+                    :op1 (c2-6 / wear-01
+                               :ARG0 (c2-2 / you)
+                               :ARG1 (c2-23 / mask)
+                               :mode imperative)
+                    :op2 (c2-22 / follow-02
+                                :ARG0 c2-2
+                                :ARG1 (c2-17 / plan-01
+                                             :ARG1 (c2-8 / operate-01)
+                                             :ARG1-of (c2-26 / single-02))
+                                :mode imperative))
+       :snt3 (c2-5 / care-03
+                   :ARG0 (c2-16 / you)
+                   :time (c2-0 / date-entity
+                               :day 2)
+                   :mode imperative))

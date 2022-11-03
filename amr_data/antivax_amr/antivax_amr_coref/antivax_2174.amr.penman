@@ -1,0 +1,647 @@
+# ::snt Yes
+# ::tokens ["Yes"]
+# ::lemmas ["yes"]
+(c1-0 / yes)
+
+# ::snt hours later nausea and something like painless stomach cramps
+# ::tokens ["hours", "later", "nausea", "and", "something", "like", "painless", "stomach", "cramps"]
+# ::lemmas ["hour", "later", "nausea", "and", "something", "like", "painless", "stomach", "cramp"]
+(c2-1 / and
+      :op1 (c2-9 / nausea)
+      :op2 (c2-0 / something
+                 :ARG1-of (c2-5 / resemble-01
+                                :ARG2 (c2-2 / cramp-01
+                                            :ARG1 (c2-6 / stomach)
+                                            :ARG0-of (c2-7 / pain-01
+                                                           :polarity -))))
+      :time (c2-10 / after
+                   :quant (c2-8 / multiple
+                                :op1 (c2-4 / temporal-quantity
+                                           :unit (c2-3 / hour)
+                                           :quant 1))))
+
+# ::snt I wish I would have thought to do this! Itll be a wild memory years from now.
+# ::tokens ["I", "wish", "I", "would", "have", "thought", "to", "do", "this", "!", "It", "ll", "be", "a", "wild", "memory", "years", "from", "now", "."]
+# ::lemmas ["i", "wish", "i", "would", "have", "think", "to", "do", "this", "!", "it", "ll", "be", "a", "wild", "memory", "year", "from", "now", "."]
+(c3-9 / multi-sentence
+      :snt1 (c3-3 / wish-01
+                  :ARG0 (c3-8 / i)
+                  :ARG1 (c3-6 / think-01
+                              :ARG0 c3-8
+                              :ARG1 (c3-0 / do-02
+                                          :ARG0 c3-8
+                                          :ARG1 (c3-4 / this))))
+      :snt2 (c3-2 / memory
+                  :mod (c3-12 / wild)
+                  :time (c3-1 / after
+                              :op1 (c3-10 / now)
+                              :quant (c3-5 / multiple
+                                           :op1 (c3-11 / temporal-quantity
+                                                       :unit (c3-7 / year)
+                                                       :quant 1)))))
+
+# ::snt I took a selfie when she gave it so I could see later lol
+# ::tokens ["I", "took", "a", "selfie", "when", "she", "gave", "it", "so", "I", "could", "see", "later", "lol"]
+# ::lemmas ["i", "take", "a", "selfie", "when", "she", "give", "it", "so", "i", "could", "see", "later", "lol"]
+(c4-5 / take-01
+      :ARG0 (c4-10 / i)
+      :ARG1 (c4-0 / selfie)
+      :time (c4-8 / give-01
+                  :ARG0 (c4-9 / she)
+                  :ARG1 (c4-3 / it))
+      :purpose (c4-6 / possible-01
+                     :ARG1 (c4-4 / see-01
+                                 :ARG0 c4-10
+                                 :time (c4-2 / after
+                                             :op1 c4-5))
+                     :ARG2-of (c4-7 / laugh-01
+                                    :ARG0 c4-10
+                                    :manner (c4-1 / loud))))
+
+# ::snt I had it with no side effects. Slightly tired the day after. I barely felt the injection.
+# ::tokens ["I", "had", "it", "with", "no", "side", "effects", ".", "Slightly", "tired", "the", "day", "after", ".", "I", "barely", "felt", "the", "injection", "."]
+# ::lemmas ["i", "have", "it", "with", "no", "side", "effect", ".", "slightly", "tired", "the", "day", "after", ".", "i", "barely", "feel", "the", "injection", "."]
+(c5-14 / multi-sentence
+       :snt1 (c5-6 / have-03
+                   :ARG0 (c5-13 / i)
+                   :ARG1 (c5-15 / effect-03
+                                :ARG1 (c5-7 / it)
+                                :mod (c5-0 / side)
+                                :polarity -))
+       :snt2 (c5-10 / tire-01
+                    :ARG1 (c5-8 / i)
+                    :degree (c5-12 / slight)
+                    :time (c5-2 / after
+                                :quant (c5-5 / temporal-quantity
+                                             :unit (c5-1 / day)
+                                             :quant 1)))
+       :snt3 (c5-3 / feel-01
+                   :ARG0 (c5-9 / i)
+                   :ARG1 (c5-4 / inject-01)
+                   :degree (c5-11 / barely)))
+
+# ::snt I didn't really feel the first shot. But I didn't make it home before I had full-body itchiness, a very red face, and was hot.
+# ::tokens ["I", "did", "n't", "really", "feel", "the", "first", "shot", ".", "But", "I", "did", "n't", "make", "it", "home", "before", "I", "had", "full", "-", "body", "itchiness", ",", "a", "very", "red", "face", ",", "and", "was", "hot", "."]
+# ::lemmas ["i", "do", "not", "really", "feel", "the", "first", "shot", ".", "but", "i", "do", "not", "make", "it", "home", "before", "i", "have", "full", "-", "body", "itchiness", ",", "a", "very", "red", "face", ",", "and", "be", "hot", "."]
+(c6-7 / multi-sentence
+      :snt1 (c6-15 / feel-01
+                   :ARG0 (c6-1 / i)
+                   :ARG1 (c6-8 / shoot-02
+                               :ord (c6-5 / ordinal-entity
+                                          :value 1))
+                   :ARG1-of (c6-6 / real-04)
+                   :polarity -)
+      :snt2 (c6-2 / contrast-01
+                  :ARG2 (c6-16 / make-it-14
+                               :ARG0 (c6-9 / i)
+                               :ARG1 (c6-17 / home)
+                               :time (c6-18 / before
+                                            :op1 (c6-14 / and
+                                                        :op1 (c6-10 / itch-01
+                                                                    :ARG0 c6-9
+                                                                    :ARG1 (c6-13 / body
+                                                                                 :ARG1-of (c6-11 / full-09)))
+                                                        :op2 (c6-12 / face
+                                                                    :ARG1-of (c6-3 / red-02
+                                                                                   :degree (c6-4 / very)))
+                                                        :op3 (c6-0 / hot-05
+                                                                   :ARG1 c6-9)))
+                               :polarity -)))
+
+# ::snt Interesting!
+# ::tokens ["Interesting", "!"]
+# ::lemmas ["interesting", "!"]
+(c7-1 / thing
+      :ARG2-of (c7-0 / interest-01))
+
+# ::snt Ok! So it is more common than I thought lol.
+# ::tokens ["Ok", "!", "So", "it", "is", "more", "common", "than", "I", "thought", "lol", "."]
+# ::lemmas ["ok", "!", "so", "it", "be", "more", "common", "than", "i", "think", "lol", "."]
+(c8-9 / multi-sentence
+      :snt1 (c8-4 / okay-01)
+      :snt2 (c8-0 / common
+                  :ARG2-of (c8-2 / have-degree-91
+                                 :ARG1 (c8-8 / it)
+                                 :ARG3 (c8-1 / more)
+                                 :ARG4 (c8-5 / think-01
+                                             :ARG0 (c8-3 / i)))
+                  :ARG2-of (c8-6 / laugh-01
+                                 :ARG0 c8-3
+                                 :manner (c8-7 / loud))))
+
+# ::snt Honestly if I hadn't looked I wouldn't have noticed anything either! I felt the momentary poke and looked after the needle went out but if I hadn't I wouldn't think I had anything at all, honestly the lack of side effects has been surprising but good
+# ::tokens ["Honestly", "if", "I", "had", "n't", "looked", "I", "would", "n't", "have", "noticed", "anything", "either", "!", "I", "felt", "the", "momentary", "poke", "and", "looked", "after", "the", "needle", "went", "out", "but", "if", "I", "had", "n't", "I", "would", "n't", "think", "I", "had", "anything", "at", "all", ",", "honestly", "the", "lack", "of", "side", "effects", "has", "been", "surprising", "but", "good"]
+# ::lemmas ["honestly", "if", "i", "have", "not", "look", "i", "would", "not", "have", "notice", "anything", "either", "!", "i", "feel", "the", "momentary", "poke", "and", "look", "after", "the", "needle", "go", "out", "but", "if", "i", "have", "not", "i", "would", "not", "think", "i", "have", "anything", "at", "all", ",", "honestly", "the", "lack", "of", "side", "effect", "have", "be", "surprising", "but", "good"]
+(c9-11 / multi-sentence
+       :snt1 (c9-12 / notice-01
+                    :ARG0 (c9-6 / i)
+                    :ARG1 (c9-18 / anything)
+                    :condition (c9-23 / look-01
+                                      :ARG0 c9-6
+                                      :mod (c9-14 / either)
+                                      :polarity -)
+                    :ARG1-of (c9-21 / honest-01)
+                    :polarity -)
+       :snt2 (c9-8 / contrast-01
+                   :ARG1 (c9-13 / and
+                                :op1 (c9-19 / feel-01
+                                            :ARG0 (c9-16 / i)
+                                            :ARG1 (c9-25 / poke-01
+                                                         :mod (c9-20 / momentary)))
+                                :op2 (c9-4 / look-after-07
+                                           :ARG0 c9-16
+                                           :ARG1 (c9-10 / go-out-17
+                                                        :ARG1 (c9-3 / needle))))
+                   :ARG2 (c9-9 / think-01
+                               :ARG0 c9-16
+                               :ARG1 (c9-5 / have-03
+                                           :ARG0 c9-16
+                                           :ARG1 (c9-0 / anything)
+                                           :degree (c9-26 / at-all))
+                               :condition (c9-1 / look-01
+                                                :ARG0 c9-16
+                                                :polarity -)
+                               :polarity -))
+       :snt3 (c9-15 / surprise-01
+                    :ARG0 (c9-2 / lack-01
+                                :ARG1 (c9-22 / effect-03
+                                             :mod (c9-24 / side)))
+                    :ARG1-of (c9-7 / honest-01)
+                    :ARG1-of c9-8
+                    :ARG2 (c9-17 / good-02
+                                 :ARG1 c9-2)))
+
+# ::snt Didnt feel the vaccine at all. I wonder e Id they missed at first lollll. Just felt really cold the second day.
+# ::tokens ["Did", "nt", "feel", "the", "vaccine", "at", "all", ".", "I", "wonder", "e", "I", "d", "they", "missed", "at", "first", "lollll", ".", "Just", "felt", "really", "cold", "the", "second", "day", "."]
+# ::lemmas ["do", "nt", "feel", "the", "vaccine", "at", "all", ".", "i", "wonder", "e", "i", "d", "they", "miss", "at", "first", "lollll", ".", "just", "feel", "really", "cold", "the", "second", "day", "."]
+(c10-15 / multi-sentence
+        :snt1 (c10-2 / feel-01
+                     :ARG0 (c10-14 / i)
+                     :ARG1 (c10-9 / vaccine)
+                     :degree (c10-1 / at-all)
+                     :polarity -)
+        :snt2 (c10-4 / wonder-01
+                     :ARG0 (c10-6 / i)
+                     :ARG1 (c10-3 / miss-02
+                                  :ARG0 (c10-11 / they)
+                                  :ARG1 c10-9
+                                  :time (c10-16 / at-first)))
+        :snt3 (c10-8 / feel-01
+                     :ARG0 (c10-7 / i)
+                     :ARG1 (c10-5 / cold-01
+                                  :degree (c10-12 / really))
+                     :time (c10-0 / day
+                                  :ord (c10-10 / ordinal-entity
+                                               :value 2))
+                     :mod (c10-13 / just)))
+
+# ::snt And shes one of the rare people who never really felt side effects both times. Its true everyone reacts differently.
+# ::tokens ["And", "she", "s", "one", "of", "the", "rare", "people", "who", "never", "really", "felt", "side", "effects", "both", "times", ".", "Its", "true", "everyone", "reacts", "differently", "."]
+# ::lemmas ["and", "she", "s", "one", "of", "the", "rare", "people", "who", "never", "really", "feel", "side", "effect", "both", "time", ".", "its", "true", "everyone", "react", "differently", "."]
+(c11-15 / multi-sentence
+        :snt1 (c11-2 / and
+                     :op2 (c11-0 / she
+                                 :ARG1-of (c11-5 / include-91
+                                                 :ARG2 (c11-14 / person
+                                                               :ARG1-of (c11-11 / rare-02)
+                                                               :ARG0-of (c11-4 / feel-01
+                                                                               :ARG1 (c11-16 / effect
+                                                                                             :mod (c11-13 / side))
+                                                                               :time (c11-7 / ever)
+                                                                               :ARG1-of (c11-9 / real-04)
+                                                                               :frequency (c11-10 / time
+                                                                                                  :mod (c11-12 / both))
+                                                                               :polarity -)))))
+        :snt2 (c11-6 / true-01
+                     :ARG1 (c11-3 / react-01
+                                  :ARG0 (c11-8 / everyone)
+                                  :manner (c11-1 / differ-02))))
+
+# ::snt Oh thats lucky!
+# ::tokens ["Oh", "that", "s", "lucky", "!"]
+# ::lemmas ["oh", "that", "s", "lucky", "!"]
+(c12-2 / lucky
+       :domain (c12-1 / that)
+       :mod (c12-0 / oh
+                   :mode expressive))
+
+# ::snt My coworker is deathly afraid of needles yet she swears she felt nothing both times. So I guess thats good.
+# ::tokens ["My", "coworker", "is", "deathly", "afraid", "of", "needles", "yet", "she", "swears", "she", "felt", "nothing", "both", "times", ".", "So", "I", "guess", "that", "s", "good", "."]
+# ::lemmas ["my", "coworker", "be", "deathly", "afraid", "of", "needle", "yet", "she", "swear", "she", "feel", "nothing", "both", "time", ".", "so", "i", "guess", "that", "s", "good", "."]
+(c13-15 / multi-sentence
+        :snt1 (c13-6 / have-concession-91
+                     :ARG1 (c13-2 / fear-01
+                                  :ARG0 (c13-14 / person
+                                                :ARG0-of (c13-13 / have-rel-role-91
+                                                                 :ARG1 (c13-3 / i)
+                                                                 :ARG2 (c13-4 / coworker)))
+                                  :ARG1 (c13-16 / needle)
+                                  :degree (c13-0 / die-01))
+                     :ARG2 (c13-1 / swears-01
+                                  :ARG0 c13-14
+                                  :ARG1 (c13-8 / feel-01
+                                               :ARG0 c13-14
+                                               :ARG1 (c13-10 / nothing)
+                                               :frequency (c13-9 / time
+                                                                 :mod (c13-12 / both)))))
+        :snt2 (c13-11 / guess-01
+                      :ARG0 (c13-7 / i)
+                      :ARG1 (c13-17 / good-02
+                                    :ARG1 (c13-5 / that))))
+
+# ::snt Mine actually did bleed and every now and again it would ache but only for a moment or two.
+# ::tokens ["Mine", "actually", "did", "bleed", "and", "every", "now", "and", "again", "it", "would", "ache", "but", "only", "for", "a", "moment", "or", "two", "."]
+# ::lemmas ["Mine", "actually", "do", "bleed", "and", "every", "now", "and", "again", "it", "would", "ache", "but", "only", "for", "a", "moment", "or", "two", "."]
+(c14-1 / and
+       :op1 (c14-7 / bleed-01
+                   :ARG1 (c14-8 / i)
+                   :ARG1-of (c14-11 / actual-02))
+       :op2 (c14-0 / ache-01
+                   :ARG0 c14-7
+                   :frequency (c14-10 / now-and-again)
+                   :ARG1-of (c14-2 / contrast-01
+                                   :ARG2 (c14-6 / last-01
+                                                :ARG1 c14-7
+                                                :ARG2 (c14-5 / or
+                                                             :op1 (c14-9 / moment
+                                                                         :quant 1)
+                                                             :op2 (c14-3 / moment
+                                                                         :quant 2))
+                                                :mod (c14-4 / only)))))
+
+# ::snt Meanwhile the second shot I *really* felt, and I had hardly any side effects our bodies are weird lol
+# ::tokens ["Meanwhile", "the", "second", "shot", "I", "*", "really", "*", "felt", ",", "and", "I", "had", "hardly", "any", "side", "effects", "our", "bodies", "are", "weird", "lol"]
+# ::lemmas ["meanwhile", "the", "second", "shot", "i", "*", "really", "*", "feel", ",", "and", "i", "have", "hardly", "any", "side", "effect", "our", "body", "be", "weird", "lol"]
+(c15-1 / and
+       :op1 (c15-2 / feel-01
+                   :ARG0 (c15-13 / i)
+                   :ARG1 (c15-0 / shot
+                                :ord (c15-7 / ordinal-entity
+                                            :value 2))
+                   :ARG1-of (c15-8 / real-04)
+                   :time (c15-14 / meanwhile))
+       :op2 (c15-16 / effect-03
+                    :ARG0 c15-0
+                    :ARG1 c15-13
+                    :ARG2 (c15-6 / event
+                                 :mod (c15-12 / side)
+                                 :mod (c15-15 / any
+                                              :degree (c15-5 / hardly))))
+       :op3 (c15-3 / weird
+                   :domain (c15-11 / body
+                                   :poss (c15-4 / we))
+                   :ARG2-of (c15-9 / laugh-01
+                                   :ARG0 c15-13
+                                   :manner (c15-10 / loud)
+                                   :mode expressive)))
+
+# ::snt Thats why Im asking about side effects too lol
+# ::tokens ["That", "s", "why", "I", "m", "asking", "about", "side", "effects", "too", "lol"]
+# ::lemmas ["that", "s", "why", "i", "m", "ask", "about", "side", "effect", "too", "lol"]
+(c16-2 / cause-01
+       :ARG0 (c16-4 / that)
+       :ARG1 (c16-1 / ask-01
+                    :ARG0 (c16-7 / i)
+                    :ARG1 (c16-8 / effect-03
+                                 :mod (c16-0 / side))
+                    :mod (c16-3 / too)
+                    :ARG2-of (c16-5 / laugh-01
+                                    :ARG0 c16-7
+                                    :manner (c16-6 / loud)
+                                    :mode expressive)))
+
+# ::snt Haha yea it was great! And after my arm hurt for days so I know I got the vaccine
+# ::tokens ["Haha", "yea", "it", "was", "great", "!", "And", "after", "my", "arm", "hurt", "for", "days", "so", "I", "know", "I", "got", "the", "vaccine"]
+# ::lemmas ["Haha", "yea", "it", "be", "great", "!", "and", "after", "my", "arm", "hurt", "for", "days", "so", "i", "know", "i", "get", "the", "vaccine"]
+(c17-11 / multi-sentence
+        :snt1 (c17-8 / great
+                     :domain (c17-10 / it)
+                     :mod (c17-4 / haha
+                                 :mode expressive))
+        :snt2 (c17-2 / and
+                     :op2 (c17-9 / hurt-01
+                                 :ARG1 (c17-14 / arm
+                                               :part-of (c17-5 / i))
+                                 :duration (c17-3 / multiple
+                                                  :op1 (c17-7 / temporal-quantity
+                                                              :unit (c17-0 / day)
+                                                              :quant 1))
+                                 :time (c17-1 / after
+                                              :op1 (c17-12 / know-01
+                                                           :ARG0 c17-5
+                                                           :ARG1 (c17-13 / get-01
+                                                                         :ARG0 c17-5
+                                                                         :ARG1 (c17-6 / vaccine)))))))
+
+# ::snt Did you feel the actual vaccine? And did you have any side effects?
+# ::tokens ["Did", "you", "feel", "the", "actual", "vaccine", "?", "And", "did", "you", "have", "any", "side", "effects", "?"]
+# ::lemmas ["do", "you", "feel", "the", "actual", "vaccine", "?", "and", "do", "you", "have", "any", "side", "effect", "?"]
+(c18-9 / multi-sentence
+       :snt1 (c18-4 / feel-01
+                    :ARG0 (c18-10 / you)
+                    :ARG1 (c18-7 / vaccine
+                                 :ARG1-of (c18-2 / actual-02))
+                    :polarity (c18-11 / amr-unknown))
+       :snt2 (c18-1 / and
+                    :op2 (c18-12 / effect-03
+                                 :ARG0 (c18-3 / you)
+                                 :ARG1 (c18-6 / event
+                                              :mod (c18-0 / side)
+                                              :mod (c18-8 / any))
+                                 :polarity (c18-5 / amr-unknown))))
+
+# ::snt Thats so weird! I just cant even imagine not feeling a thing!
+# ::tokens ["That", "s", "so", "weird", "!", "I", "just", "ca", "nt", "even", "imagine", "not", "feeling", "a", "thing", "!"]
+# ::lemmas ["that", "s", "so", "weird", "!", "i", "just", "can", "not", "even", "imagine", "not", "feel", "a", "thing", "!"]
+(c19-9 / multi-sentence
+       :snt1 (c19-3 / weird
+                    :domain (c19-6 / that)
+                    :degree (c19-0 / so))
+       :snt2 (c19-8 / possible-01
+                    :ARG1 (c19-2 / imagine-01
+                                 :ARG0 (c19-5 / i)
+                                 :ARG1 (c19-1 / feel-01
+                                              :ARG0 c19-5
+                                              :ARG1 (c19-4 / thing)
+                                              :polarity -)
+                                 :mod (c19-10 / even))
+                    :mod (c19-7 / just)
+                    :polarity -))
+
+# ::snt I felt an initial ow, but then nothing. To me, it was like getting a flu shot. My sister didnt feel anything at all. A coworker of mine swears she felt absolutely nothing when she got moderna.
+# ::tokens ["I", "felt", "an", "initial", "ow", ",", "but", "then", "nothing", ".", "To", "me", ",", "it", "was", "like", "getting", "a", "flu", "shot", ".", "My", "sister", "did", "nt", "feel", "anything", "at", "all", ".", "A", "coworker", "of", "mine", "swears", "she", "felt", "absolutely", "nothing", "when", "she", "got", "moderna", "."]
+# ::lemmas ["i", "feel", "an", "initial", "ow", ",", "but", "then", "nothing", ".", "to", "i", ",", "it", "be", "like", "get", "a", "flu", "shot", ".", "my", "sister", "do", "not", "feel", "anything", "at", "all", ".", "a", "coworker", "of", "mine", "swear", "she", "feel", "absolutely", "nothing", "when", "she", "get", "moderna", "."]
+(c20-12 / multi-sentence
+        :snt1 (c20-6 / contrast-01
+                     :ARG1 (c20-23 / feel-01
+                                   :ARG0 (c20-5 / i)
+                                   :ARG1 (c20-8 / ow)
+                                   :time (c20-16 / initial))
+                     :ARG2 (c20-13 / nothing
+                                   :time (c20-9 / then)))
+        :snt2 (c20-10 / resemble-01
+                      :ARG1 (c20-17 / it)
+                      :ARG2 (c20-11 / get-01
+                                    :ARG0 (c20-26 / i)
+                                    :ARG1 (c20-15 / shoot-01
+                                                  :ARG2 (c20-0 / disease
+                                                               :name (c20-3 / name
+                                                                            :op1 "influenza"))))
+                      :ARG3 c20-26)
+        :snt3 (c20-19 / feel-01
+                      :ARG0 (c20-29 / person
+                                    :ARG0-of (c20-25 / have-rel-role-91
+                                                     :ARG1 (c20-7 / i)
+                                                     :ARG2 (c20-28 / sister)))
+                      :ARG1 (c20-22 / anything)
+                      :degree (c20-14 / at-all)
+                      :polarity -)
+        :snt4 (c20-18 / swear-01
+                      :ARG0 (c20-27 / person
+                                    :ARG0-of (c20-4 / have-rel-role-91
+                                                    :ARG1 c20-7
+                                                    :ARG2 (c20-1 / coworker)))
+                      :ARG1 (c20-21 / feel-01
+                                    :ARG0 c20-27
+                                    :ARG1 (c20-20 / nothing
+                                                  :degree (c20-2 / absolute))
+                                    :time c20-11
+                                    :ARG1 c20-27
+                                    :ARG2 (c20-24 / moderna))))
+
+# ::snt I got moderna but I didnt feel the first shot at all. I just think that means the person administering it is really good
+# ::tokens ["I", "got", "moderna", "but", "I", "did", "nt", "feel", "the", "first", "shot", "at", "all", ".", "I", "just", "think", "that", "means", "the", "person", "administering", "it", "is", "really", "good"]
+# ::lemmas ["i", "get", "moderna", "but", "i", "do", "not", "feel", "the", "first", "shot", "at", "all", ".", "i", "just", "think", "that", "mean", "the", "person", "administer", "it", "be", "really", "good"]
+(c21-7 / multi-sentence
+       :snt1 (c21-1 / contrast-01
+                    :ARG1 (c21-6 / get-01
+                                 :ARG0 (c21-0 / i)
+                                 :ARG1 (c21-18 / product
+                                               :name (c21-8 / name
+                                                            :op1 "Moderna")))
+                    :ARG2 (c21-14 / feel-01
+                                  :ARG0 c21-0
+                                  :ARG1 (c21-10 / shoot-01
+                                                :ord (c21-3 / ordinal-entity
+                                                            :value 1))
+                                  :mod (c21-13 / at-all)
+                                  :polarity -))
+       :snt2 (c21-4 / think-01
+                    :ARG0 (c21-11 / i)
+                    :ARG1 (c21-15 / mean-01
+                                  :ARG1 (c21-2 / that)
+                                  :ARG2 (c21-12 / good-02
+                                                :ARG1 (c21-16 / person
+                                                              :ARG0-of (c21-9 / administer-01
+                                                                              :ARG1 c21-18))
+                                                :degree (c21-5 / really)))
+                    :mod (c21-17 / just)))
+
+# ::snt Ok. Cause my husband didnt watch himself get the shot and is low key wondering if they even gave it to him because he felt nothing. We dont know if that means anything or not.
+# ::tokens ["Ok", ".", "Cause", "my", "husband", "did", "nt", "watch", "himself", "get", "the", "shot", "and", "is", "low", "key", "wondering", "if", "they", "even", "gave", "it", "to", "him", "because", "he", "felt", "nothing", ".", "We", "do", "nt", "know", "if", "that", "means", "anything", "or", "not", "."]
+# ::lemmas ["ok", ".", "cause", "my", "husband", "do", "not", "watch", "himself", "get", "the", "shot", "and", "be", "low", "key", "wondering", "if", "they", "even", "give", "it", "to", "he", "because", "he", "feel", "nothing", ".", "we", "do", "not", "know", "if", "that", "mean", "anything", "or", "not", "."]
+(c22-10 / multi-sentence
+        :snt1 (c22-7 / okay-01)
+        :snt2 (c22-4 / cause-01
+                     :ARG0 (c22-19 / and
+                                   :op1 (c22-5 / watch-01
+                                               :ARG0 (c22-24 / person
+                                                             :ARG0-of (c22-22 / have-rel-role-91
+                                                                              :ARG1 (c22-2 / i)
+                                                                              :ARG2 (c22-1 / husband)))
+                                               :ARG1 (c22-9 / get-01
+                                                            :ARG0 c22-24
+                                                            :ARG1 (c22-15 / shoot-02))
+                                               :polarity -)
+                                   :op2 (c22-13 / wonder-01
+                                                :ARG0 c22-24
+                                                :ARG1 (c22-8 / truth-value
+                                                             :polarity-of (c22-18 / give-01
+                                                                                  :ARG0 (c22-6 / they)
+                                                                                  :ARG1 c22-15
+                                                                                  :ARG2 c22-24
+                                                                                  :mod (c22-14 / even)
+                                                                                  :ARG1-of (c22-0 / cause-01
+                                                                                                  :ARG0 (c22-20 / feel-01
+                                                                                                                :ARG0 c22-24
+                                                                                                                :ARG1 (c22-11 / nothing))))))))
+        :snt3 (c22-25 / know-01
+                      :ARG0 (c22-3 / we)
+                      :ARG1 (c22-23 / or
+                                    :op1 (c22-21 / mean-01
+                                                 :ARG1 (c22-12 / that)
+                                                 :ARG2 (c22-16 / anything))
+                                    :op2 (c22-17 / mean-01
+                                                 :ARG1 c22-12
+                                                 :ARG2 c22-16
+                                                 :polarity -))
+                      :polarity -))
+
+# ::snt Not really! I had some minor headaches and achy-ness and every now and again I feel a little *extra* tired but absolutely nothing bad. This was before the pause and I would still recommend it, especially over no vaccine.
+# ::tokens ["Not", "really", "!", "I", "had", "some", "minor", "headaches", "and", "achy", "-", "ness", "and", "every", "now", "and", "again", "I", "feel", "a", "little", "*", "extra", "*", "tired", "but", "absolutely", "nothing", "bad", ".", "This", "was", "before", "the", "pause", "and", "I", "would", "still", "recommend", "it", ",", "especially", "over", "no", "vaccine", "."]
+# ::lemmas ["not", "really", "!", "i", "have", "some", "minor", "headache", "and", "achy", "-", "ness", "and", "every", "now", "and", "again", "i", "feel", "a", "little", "*", "extra", "*", "tired", "but", "absolutely", "nothing", "bad", ".", "this", "be", "before", "the", "pause", "and", "i", "would", "still", "recommend", "it", ",", "especially", "over", "no", "vaccine", "."]
+(c23-12 / multi-sentence
+        :snt1 (c23-11 / real-04
+                      :polarity -
+                      :mode expressive)
+        :snt2 (c23-20 / and
+                      :op1 (c23-23 / have-03
+                                   :ARG0 (c23-5 / i)
+                                   :ARG1 (c23-14 / and
+                                                 :op1 (c23-4 / headache
+                                                             :ARG1-of (c23-22 / minor-01)
+                                                             :quant (c23-16 / some))
+                                                 :op2 (c23-1 / achy-00
+                                                             :ARG1 c23-5
+                                                             :quant c23-16)))
+                      :op2 (c23-21 / feel-01
+                                   :ARG0 c23-5
+                                   :ARG1 (c23-6 / contrast-01
+                                                :ARG1 (c23-10 / tire-01
+                                                              :ARG1 c23-5
+                                                              :mod (c23-15 / extra)
+                                                              :degree (c23-25 / little))
+                                                :ARG2 (c23-13 / nothing
+                                                              :ARG1-of (c23-26 / bad-07)
+                                                              :mod (c23-29 / absolute)))
+                                   :frequency (c23-3 / now-and-again)))
+        :snt3 (c23-2 / and
+                     :op1 (c23-19 / be-temporally-at-91
+                                  :ARG1 (c23-7 / this)
+                                  :ARG2 (c23-17 / before
+                                                :op1 (c23-28 / pause-01)))
+                     :op2 (c23-8 / recommend-01
+                                 :ARG0 (c23-18 / i)
+                                 :ARG1 c23-7
+                                 :mod (c23-27 / still)
+                                 :ARG1-of (c23-0 / cause-01
+                                                 :ARG0 (c23-9 / vaccine
+                                                              :polarity -)
+                                                 :mod (c23-24 / especially)))))
+
+# ::snt Ok. Cause my husband didnt watch himself get the shot and is wondering if they even gave it to him because he felt nothing. We dont know if that means anything or not.
+# ::tokens ["Ok", ".", "Cause", "my", "husband", "did", "nt", "watch", "himself", "get", "the", "shot", "and", "is", "wondering", "if", "they", "even", "gave", "it", "to", "him", "because", "he", "felt", "nothing", ".", "We", "do", "nt", "know", "if", "that", "means", "anything", "or", "not", "."]
+# ::lemmas ["ok", ".", "cause", "my", "husband", "do", "not", "watch", "himself", "get", "the", "shot", "and", "be", "wonder", "if", "they", "even", "give", "it", "to", "he", "because", "he", "feel", "nothing", ".", "we", "do", "not", "know", "if", "that", "mean", "anything", "or", "not", "."]
+(c24-9 / multi-sentence
+       :snt1 (c24-6 / okay-01)
+       :snt2 (c24-3 / cause-01
+                    :ARG0 (c24-17 / and
+                                  :op1 (c24-4 / watch-01
+                                              :ARG0 (c24-22 / person
+                                                            :ARG0-of (c24-20 / have-rel-role-91
+                                                                             :ARG1 (c24-1 / i)
+                                                                             :ARG2 (c24-0 / husband)))
+                                              :ARG1 (c24-8 / get-01
+                                                           :ARG0 c24-22
+                                                           :ARG1 (c24-14 / shoot-02))
+                                              :polarity -)
+                                  :op2 (c24-12 / wonder-01
+                                               :ARG0 c24-22
+                                               :ARG1 (c24-7 / truth-value
+                                                            :polarity-of (c24-16 / give-01
+                                                                                 :ARG0 (c24-5 / they)
+                                                                                 :ARG1 c24-14
+                                                                                 :ARG2 c24-22
+                                                                                 :ARG1-of c24-3
+                                                                                 :ARG0 (c24-18 / feel-01
+                                                                                               :ARG0 c24-22
+                                                                                               :ARG1 (c24-10 / nothing)))))))
+       :snt3 (c24-23 / know-01
+                     :ARG0 (c24-2 / we)
+                     :ARG1 (c24-21 / or
+                                   :op1 (c24-19 / mean-01
+                                                :ARG1 (c24-11 / that)
+                                                :ARG2 (c24-13 / anything))
+                                   :op2 (c24-15 / mean-01
+                                                :ARG1 c24-11
+                                                :ARG2 c24-13
+                                                :polarity -))
+                     :polarity -))
+
+# ::snt Me!
+# ::tokens ["Me", "!"]
+# ::lemmas ["i", "!"]
+(c25-0 / i)
+
+# ::snt I didnt feel it. My side effects were mild. Just some lethargy, mild body aches, and a low grade fever. I had a headache, but that couldve been caused by a number of things. I went to bed early and felt fine the next day.
+# ::tokens ["I", "did", "nt", "feel", "it", ".", "My", "side", "effects", "were", "mild", ".", "Just", "some", "lethargy", ",", "mild", "body", "aches", ",", "and", "a", "low", "grade", "fever", ".", "I", "had", "a", "headache", ",", "but", "that", "could", "ve", "been", "caused", "by", "a", "number", "of", "things", ".", "I", "went", "to", "bed", "early", "and", "felt", "fine", "the", "next", "day", "."]
+# ::lemmas ["i", "do", "not", "feel", "it", ".", "my", "side", "effect", "be", "mild", ".", "just", "some", "lethargy", ",", "mild", "body", "ache", ",", "and", "a", "low", "grade", "fever", ".", "i", "have", "a", "headache", ",", "but", "that", "could", "ve", "be", "cause", "by", "a", "number", "of", "thing", ".", "i", "go", "to", "bed", "early", "and", "feel", "fine", "the", "next", "day", "."]
+(c26-10 / multi-sentence
+        :snt1 (c26-24 / feel-01
+                      :ARG0 (c26-5 / i)
+                      :ARG1 (c26-15 / it)
+                      :polarity -)
+        :snt2 (c26-25 / mild
+                      :domain (c26-13 / effect-03
+                                      :ARG0 (c26-14 / side)
+                                      :ARG1 (c26-16 / i)))
+        :snt3 (c26-23 / and
+                      :op1 (c26-29 / lethargy
+                                   :mod (c26-21 / some))
+                      :op2 (c26-12 / ache-01
+                                   :ARG0 (c26-30 / body)
+                                   :mod (c26-17 / mild))
+                      :op3 (c26-18 / fever
+                                   :mod (c26-9 / grade
+                                               :ARG1-of (c26-3 / low-04)))
+                      :mod (c26-31 / just))
+        :snt4 (c26-26 / have-concession-91
+                      :ARG1 (c26-4 / headache
+                                   :domain (c26-28 / i))
+                      :ARG2 (c26-32 / possible-01
+                                    :ARG1 (c26-6 / cause-01
+                                                 :ARG0 (c26-8 / thing
+                                                              :quant (c26-11 / number))
+                                                 :ARG1 c26-4)))
+        :snt5 c26-23
+        :op1 (c26-20 / go-02
+                     :ARG0 (c26-7 / i)
+                     :ARG4 (c26-22 / bed-01
+                                   :ARG1 c26-7
+                                   :time (c26-27 / early)))
+        :op2 (c26-19 / feel-01
+                     :ARG0 c26-7
+                     :ARG1 (c26-0 / fine-04)
+                     :time (c26-1 / day
+                                  :mod (c26-2 / next))))
+
+# ::snt Did you feel the actual vaccine? And did you have any side effects?
+# ::tokens ["Did", "you", "feel", "the", "actual", "vaccine", "?", "And", "did", "you", "have", "any", "side", "effects", "?"]
+# ::lemmas ["do", "you", "feel", "the", "actual", "vaccine", "?", "and", "do", "you", "have", "any", "side", "effect", "?"]
+(c27-9 / multi-sentence
+       :snt1 (c27-4 / feel-01
+                    :ARG0 (c27-10 / you)
+                    :ARG1 (c27-7 / vaccine
+                                 :ARG1-of (c27-2 / actual-02))
+                    :polarity (c27-11 / amr-unknown))
+       :snt2 (c27-1 / and
+                    :op2 (c27-12 / effect-03
+                                 :ARG0 (c27-3 / you)
+                                 :ARG1 (c27-6 / event
+                                              :mod (c27-0 / side)
+                                              :mod (c27-8 / any))
+                                 :polarity (c27-5 / amr-unknown))))
+
+# ::snt Did you feel the actual vaccine? And did you have any side effects?
+# ::tokens ["Did", "you", "feel", "the", "actual", "vaccine", "?", "And", "did", "you", "have", "any", "side", "effects", "?"]
+# ::lemmas ["do", "you", "feel", "the", "actual", "vaccine", "?", "and", "do", "you", "have", "any", "side", "effect", "?"]
+(c28-9 / multi-sentence
+       :snt1 (c28-4 / feel-01
+                    :ARG0 (c28-10 / you)
+                    :ARG1 (c28-7 / vaccine
+                                 :ARG1-of (c28-2 / actual-02))
+                    :polarity (c28-11 / amr-unknown))
+       :snt2 (c28-1 / and
+                    :op2 (c28-12 / effect-03
+                                 :ARG0 (c28-3 / you)
+                                 :ARG1 (c28-6 / event
+                                              :mod (c28-0 / side)
+                                              :mod (c28-8 / any))
+                                 :polarity (c28-5 / amr-unknown))))
+
+# ::snt I have!
+# ::tokens ["I", "have", "!"]
+# ::lemmas ["i", "have", "!"]
+(c30-1 / have-03
+       :ARG0 (c30-0 / i)
+       :mode expressive)

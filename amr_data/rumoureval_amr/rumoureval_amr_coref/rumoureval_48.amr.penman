@@ -1,0 +1,191 @@
+# ::snt Hopefully they turned him into swiss cheese.
+# ::tokens ["Hopefully", "they", "turned", "him", "into", "swiss", "cheese", "."]
+# ::lemmas ["hopefully", "they", "turn", "he", "into", "swiss", "cheese", "."]
+(c1-2 / turn-02
+      :ARG0 (c1-1 / they)
+      :ARG1 (c1-0 / he)
+      :ARG2 (c1-4 / cheese
+                  :mod (c1-5 / swiss))
+      :ARG1-of (c1-3 / hopeful-03))
+
+# ::snt : Hostages fleeing cafe held by Iranian gunman as explosions, gunshots are heard
+# ::tokens [":", "Hostages", "fleeing", "cafe", "held", "by", "Iranian", "gunman", "as", "explosions", ",", "gunshots", "are", "heard"]
+# ::lemmas [":", "Hostages", "flee", "cafe", "hold", "by", "Iranian", "gunman", "as", "explosion", ",", "gunshot", "be", "hear"]
+(c2-7 / and
+      :op1 (c2-0 / hostage
+                 :ARG0-of (c2-3 / flee-05
+                                :ARG1 (c2-5 / cafe
+                                            :ARG1-of (c2-4 / hold-01
+                                                           :ARG0 (c2-8 / gunman
+                                                                       :mod (c2-9 / country
+                                                                                  :name (c2-11 / name
+                                                                                               :op1 "Iran"))))))
+                 :time (c2-1 / explode-01))
+      :op2 (c2-10 / hear-01
+                  :ARG1 (c2-6 / shoot-02
+                              :ARG2 (c2-2 / gun))))
+
+# ::snt :is it safe anywhere?
+# ::tokens [":", "is", "it", "safe", "anywhere", "?"]
+# ::lemmas [":", "be", "it", "safe", "anywhere", "?"]
+(c3-2 / safe-01
+      :polarity (c3-1 / amr-unknown)
+      :ARG1 (c3-3 / it)
+      :location (c3-0 / anywhere))
+
+# ::snt doesn't seem like it. But people are resilient &amp; again will get through this.
+# ::tokens ["does", "n't", "seem", "like", "it", ".", "But", "people", "are", "resilient", "&", "amp", ";", "again", "will", "get", "through", "this", "."]
+# ::lemmas ["do", "not", "seem", "like", "it", ".", "but", "people", "be", "resilient", "&", "amp", ";", "again", "will", "get", "through", "this", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-10 / seem-01
+                   :ARG1 (c4-2 / it)
+                   :polarity -)
+      :snt2 (c4-3 / contrast-01
+                  :ARG2 (c4-5 / and
+                              :op1 (c4-7 / resilience
+                                         :domain (c4-4 / person))
+                              :op2 (c4-8 / amp
+                                         :domain c4-4)
+                              :op3 (c4-6 / get-through-13
+                                         :ARG0 c4-4
+                                         :ARG1 (c4-0 / this)
+                                         :mod (c4-9 / again)))))
+
+# ::snt Looks like it's over.
+# ::tokens ["Looks", "like", "it", "'s", "over", "."]
+# ::lemmas ["look", "like", "it", "be", "over", "."]
+(c5-0 / look-02
+      :ARG1 (c5-2 / over-01
+                  :ARG1 (c5-1 / it)))
+
+# ::snt I hope the customers get free chocolate for life because of this spineless thugs actions.
+# ::tokens ["I", "hope", "the", "customers", "get", "free", "chocolate", "for", "life", "because", "of", "this", "spineless", "thugs", "actions", "."]
+# ::lemmas ["i", "hope", "the", "customer", "get", "free", "chocolate", "for", "life", "because", "of", "this", "spineless", "thug", "action", "."]
+(c6-0 / hope-01
+      :ARG0 (c6-5 / i)
+      :ARG1 (c6-8 / get-01
+                  :ARG0 (c6-4 / customer)
+                  :ARG1 (c6-11 / chocolate
+                               :ARG1-of (c6-2 / free-03))
+                  :duration (c6-9 / life)
+                  :ARG1-of (c6-6 / cause-01
+                                 :ARG0 (c6-10 / act-02
+                                              :ARG0 (c6-1 / thug
+                                                          :mod (c6-7 / spineless))
+                                              :mod (c6-3 / this)))))
+
+# ::snt - Just think if they allowed their people to carry guns. He would have been dead minutes after taking hostages.
+# ::tokens ["-", "Just", "think", "if", "they", "allowed", "their", "people", "to", "carry", "guns", ".", "He", "would", "have", "been", "dead", "minutes", "after", "taking", "hostages", "."]
+# ::lemmas ["-", "just", "think", "if", "they", "allow", "their", "people", "to", "carry", "gun", ".", "he", "would", "have", "be", "dead", "minutes", "after", "take", "hostage", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-2 / think-01
+                  :ARG0 (c7-0 / you)
+                  :mod (c7-4 / just)
+                  :condition (c7-12 / allow-01
+                                    :ARG0 (c7-5 / they)
+                                    :ARG1 (c7-9 / carry-01
+                                                :ARG0 (c7-10 / person
+                                                             :poss c7-5)
+                                                :ARG1 (c7-13 / gun)))
+                  :mode imperative)
+      :snt2 (c7-8 / die-01
+                  :ARG1 (c7-1 / he)
+                  :time (c7-15 / after
+                               :op1 (c7-6 / take-01
+                                          :ARG0 c7-1
+                                          :ARG1 (c7-7 / hostage))
+                               :quant (c7-11 / multiple
+                                             :op1 (c7-16 / temporal-quantity
+                                                         :unit (c7-14 / minute)
+                                                         :quant 1)))))
+
+# ::snt Let's Go ! Send that dude to
+# ::tokens ["Let", "'s", "Go", "!", "Send", "that", "dude", "to"]
+# ::lemmas ["let", "us", "go", "!", "send", "that", "dude", "to"]
+(c8-3 / multi-sentence
+      :snt1 (c8-6 / let-01
+                  :ARG0 (c8-1 / we)
+                  :ARG1 (c8-5 / go-02
+                              :ARG0 c8-1)
+                  :mode imperative)
+      :snt2 (c8-8 / send-01
+                  :ARG0 (c8-7 / we)
+                  :ARG1 (c8-4 / dude
+                              :mod (c8-2 / that))
+                  :ARG2 (c8-0 / you)
+                  :mode imperative))
+
+# ::snt any update on PA shooting?
+# ::tokens ["any", "update", "on", "PA", "shooting", "?"]
+# ::lemmas ["any", "update", "on", "PA", "shooting", "?"]
+(c9-1 / update-02
+      :ARG2 (c9-4 / shoot-02
+                  :location (c9-0 / state
+                                  :name (c9-5 / name
+                                              :op1 "Pennsylvania")))
+      :polarity (c9-2 / amr-unknown)
+      :mod (c9-3 / any))
+
+# ::snt Was he saying "hands up don't shoot"? Police overreaction? People are glad the police are there when they are in trouble.
+# ::tokens ["Was", "he", "saying", "\"", "hands", "up", "do", "n't", "shoot", "\"", "?", "Police", "overreaction", "?", "People", "are", "glad", "the", "police", "are", "there", "when", "they", "are", "in", "trouble", "."]
+# ::lemmas ["be", "he", "say", "\"", "hand", "up", "do", "not", "shoot", "\"", "?", "police", "overreaction", "?", "people", "be", "glad", "the", "police", "be", "there", "when", "they", "be", "in", "trouble", "."]
+(c10-5 / multi-sentence
+       :snt1 (c10-13 / say-01
+                     :polarity (c10-10 / amr-unknown)
+                     :ARG0 (c10-3 / he)
+                     :ARG1 (c10-2 / shoot-02
+                                  :ARG0 (c10-0 / you)
+                                  :polarity -
+                                  :mode imperative))
+       :snt2 (c10-12 / overreact-01
+                     :ARG0 (c10-8 / police))
+       :snt3 (c10-11 / glad-02
+                     :ARG0 (c10-7 / police
+                                  :location (c10-4 / there)
+                                  :time (c10-9 / in-trouble-03
+                                               :ARG1 (c10-6 / they)))
+                     :ARG1 (c10-1 / person)))
+
+# ::snt I hope they kill him
+# ::tokens ["I", "hope", "they", "kill", "him"]
+# ::lemmas ["i", "hope", "they", "kill", "he"]
+(c11-1 / hope-01
+       :ARG0 (c11-4 / i)
+       :ARG1 (c11-0 / kill-01
+                    :ARG0 (c11-2 / they)
+                    :ARG1 (c11-3 / he)))
+
+# ::snt If only we could have got a sniper rifle aimed on his head idiots just don't know how to make things much better.
+# ::tokens ["If", "only", "we", "could", "have", "got", "a", "sniper", "rifle", "aimed", "on", "his", "head", "idiots", "just", "do", "n't", "know", "how", "to", "make", "things", "much", "better", "."]
+# ::lemmas ["if", "only", "we", "could", "have", "get", "a", "sniper", "rifle", "aim", "on", "his", "head", "idiot", "just", "do", "not", "know", "how", "to", "make", "thing", "much", "well", "."]
+(c12-8 / idiot
+       :ARG0-of (c12-0 / know-01
+                       :ARG1 (c12-4 / thing
+                                    :manner-of (c12-14 / better-01
+                                                       :ARG0 c12-8
+                                                       :ARG1 (c12-3 / thing)
+                                                       :quant (c12-5 / much)))
+                       :mod (c12-6 / just)
+                       :polarity -)
+       :condition (c12-9 / possible-01
+                         :ARG1 (c12-10 / aim-02
+                                       :ARG0 (c12-1 / we)
+                                       :ARG1 (c12-11 / rifle
+                                                     :mod (c12-13 / sniper))
+                                       :ARG2 (c12-2 / head
+                                                    :part-of (c12-7 / he)))
+                         :mod (c12-12 / only)))
+
+# ::snt religion of peace.
+# ::tokens ["religion", "of", "peace", "."]
+# ::lemmas ["religion", "of", "peace", "."]
+(c13-0 / religion
+       :mod (c13-1 / peace))
+
+# ::snt More work place violence!
+# ::tokens ["More", "work", "place", "violence", "!"]
+# ::lemmas ["more", "work", "place", "violence", "!"]
+(c14-0 / violence
+       :location (c14-2 / place
+                        :ARG0-of (c14-1 / work-01))
+       :mod (c14-3 / more))

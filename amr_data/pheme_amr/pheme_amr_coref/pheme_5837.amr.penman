@@ -1,0 +1,66 @@
+# ::snt It was losing altitude long before, it seems!
+# ::tokens ["It", "was", "losing", "altitude", "long", "before", ",", "it", "seems", "!"]
+# ::lemmas ["it", "be", "lose", "altitude", "long", "before", ",", "it", "seem", "!"]
+(c1-3 / seem-01
+      :ARG1 (c1-0 / lose-02
+                  :ARG1 (c1-4 / altitude)
+                  :time (c1-1 / before
+                              :ARG1-of (c1-2 / long-03))))
+
+# ::snt Somebody trying to put a spanner in the works between Merkel and Hollande, that's for sure
+# ::tokens ["Somebody", "trying", "to", "put", "a", "spanner", "in", "the", "works", "between", "Merkel", "and", "Hollande", ",", "that", "'s", "for", "sure"]
+# ::lemmas ["somebody", "try", "to", "put", "a", "spanner", "in", "the", "work", "between", "Merkel", "and", "Hollande", ",", "that", "be", "for", "sure"]
+(c2-8 / sure-02
+      :ARG1 (c2-9 / try-01
+                  :ARG0 (c2-4 / somebody)
+                  :ARG1 (c2-7 / put-03
+                              :ARG0 c2-4
+                              :ARG1 (c2-1 / spanner)
+                              :ARG2 (c2-0 / work-09
+                                          :ARG1 c2-1
+                                          :ARG2 (c2-3 / between
+                                                      :op1 (c2-10 / person
+                                                                  :name (c2-5 / name
+                                                                              :op1 "Merkel"))
+                                                      :op2 (c2-2 / person
+                                                                 :name (c2-6 / name
+                                                                             :op1 "Hollande")))))))
+
+# ::snt AirbusA320 Barcelona to Dsseldorf lost from Flightradar24 at ft at UTC via sad news
+# ::tokens ["AirbusA320", "Barcelona", "to", "Dsseldorf", "lost", "from", "Flightradar24", "at", "ft", "at", "UTC", "via", "sad", "news"]
+# ::lemmas ["AirbusA320", "Barcelona", "to", "Dsseldorf", "lose", "from", "Flightradar24", "at", "ft", "at", "UTC", "via", "sad", "news"]
+(c3-1 / lose-02
+      :ARG0 (c3-12 / aircraft-type
+                   :name (c3-3 / name
+                               :op1 "AirbusA320")
+                   :destination (c3-7 / city
+                                      :name (c3-4 / name
+                                                  :op1 "Barcelona"))
+                   :destination (c3-6 / city
+                                      :name (c3-5 / name
+                                                  :op1 "Dsseldorf")))
+      :ARG2 (c3-2 / aircraft-type
+                  :name (c3-8 / name
+                              :op1 "Flightradar24"))
+      :source (c3-10 / company
+                     :name (c3-13 / name
+                                  :op1 "Airbus"))
+      :time (c3-9 / date-entity
+                  :day 24
+                  :month 1
+                  :time "UTC")
+      :manner (c3-0 / news
+                    :ARG0-of (c3-11 / sad-02)))
+
+# ::snt Schempp-Hirth Duo Discus glider currently hovering over the crash area
+# ::tokens ["Schempp", "-", "Hirth", "Duo", "Discus", "glider", "currently", "hovering", "over", "the", "crash", "area"]
+# ::lemmas ["Schempp", "-", "Hirth", "Duo", "Discus", "glider", "currently", "hover", "over", "the", "crash", "area"]
+(c4-0 / hover-01
+      :ARG1 (c4-4 / glider
+                  :name (c4-1 / name
+                              :op1 "Schempp-Hirth"
+                              :op2 "Duo"
+                              :op3 "Discus"))
+      :ARG2 (c4-5 / area
+                  :location-of (c4-3 / crash-01))
+      :time (c4-2 / current))

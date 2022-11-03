@@ -1,0 +1,50 @@
+# ::snt This is exactly what a zombie would say
+# ::tokens ["This", "is", "exactly", "what", "a", "zombie", "would", "say"]
+# ::lemmas ["this", "be", "exactly", "what", "a", "zombie", "would", "say"]
+(c2-0 / say-01
+      :ARG0 (c2-1 / zombie)
+      :ARG1 (c2-2 / this
+                  :mod (c2-3 / exact)))
+
+# ::snt RIP my DNA
+# ::tokens ["RIP", "my", "DNA"]
+# ::lemmas ["rip", "my", "dna"]
+(c3-0 / rest-01
+      :ARG1 (c3-3 / i)
+      :manner (c3-1 / peace)
+      :manner (c3-2 / gene
+                    :name (c3-4 / name
+                                :op1 "DNA")
+                    :poss c3-3))
+
+# ::snt Thats just what Bill gates programmed you to say...
+# ::tokens ["That", "s", "just", "what", "Bill", "gates", "programmed", "you", "to", "say", "..."]
+# ::lemmas ["that", "s", "just", "what", "Bill", "gate", "program", "you", "to", "say", "..."]
+(c4-4 / program-01
+      :ARG0 (c4-1 / person
+                  :name (c4-5 / name
+                              :op1 "Bill"
+                              :op2 "Gates"))
+      :ARG1 (c4-6 / you)
+      :ARG2 (c4-0 / say-01
+                  :ARG0 c4-6
+                  :ARG1 (c4-2 / that))
+      :mod (c4-3 / just))
+
+# ::snt Oh, and Im not a zombie....yet. Maybe that happens with the second dose?
+# ::tokens ["Oh", ",", "and", "I", "m", "not", "a", "zombie", "....", "yet", ".", "Maybe", "that", "happens", "with", "the", "second", "dose", "?"]
+# ::lemmas ["oh", ",", "and", "i", "m", "not", "a", "zombie", "....", "yet", ".", "maybe", "that", "happen", "with", "the", "second", "dose", "?"]
+(c5-8 / multi-sentence
+      :snt1 (c5-1 / and
+                  :op2 (c5-3 / zombie
+                             :domain (c5-7 / i)
+                             :time (c5-9 / yet)
+                             :polarity -)
+                  :mod (c5-4 / oh
+                             :mode expressive))
+      :snt2 (c5-6 / possible-01
+                  :ARG1 (c5-5 / that
+                              :time (c5-0 / dose
+                                          :ord (c5-2 / ordinal-entity
+                                                     :value 2)))
+                  :polarity (c5-10 / amr-unknown)))

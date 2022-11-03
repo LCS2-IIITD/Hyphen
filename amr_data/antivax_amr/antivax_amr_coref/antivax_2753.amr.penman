@@ -1,0 +1,25 @@
+# ::snt hungry
+# ::tokens ["hungry"]
+# ::lemmas ["hungry"]
+(c1-0 / hunger-01)
+
+# ::snt Nice! How are you feeling dude?
+# ::tokens ["Nice", "!", "How", "are", "you", "feeling", "dude", "?"]
+# ::lemmas ["nice", "!", "how", "be", "you", "feel", "dude", "?"]
+(c2-3 / multi-sentence
+      :snt1 (c2-4 / nice-01)
+      :snt2 (c2-2 / feel-01
+                  :ARG0 (c2-0 / dude)
+                  :ARG1 (c2-1 / amr-unknown)))
+
+# ::snt Awesome!
+# ::tokens ["Awesome", "!"]
+# ::lemmas ["Awesome", "!"]
+(c3-0 / awe-01
+      :mode expressive)
+
+# ::snt Thats good
+# ::tokens ["That", "s", "good"]
+# ::lemmas ["that", "s", "good"]
+(c4-0 / good-02
+      :ARG1 (c4-1 / that))

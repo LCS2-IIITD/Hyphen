@@ -1,0 +1,50 @@
+# ::snt That doesn't even make sense, let's keep the racial slurs out of here
+# ::tokens ["That", "does", "n't", "even", "make", "sense", ",", "let", "'s", "keep", "the", "racial", "slurs", "out", "of", "here"]
+# ::lemmas ["that", "do", "not", "even", "make", "sense", ",", "let", "us", "keep", "the", "racial", "slur", "out", "of", "here"]
+(c2-1 / and
+      :op1 (c2-0 / sense-02
+                 :ARG1 (c2-5 / that)
+                 :mod (c2-10 / even)
+                 :polarity -)
+      :op2 (c2-7 / let-01
+                 :ARG0 (c2-2 / we)
+                 :ARG1 (c2-9 / keep-04
+                             :ARG0 c2-2
+                             :ARG1 (c2-8 / slur
+                                         :mod (c2-6 / race))
+                             :ARG2 (c2-4 / out-06
+                                         :ARG1 c2-8
+                                         :ARG2 (c2-3 / here)))))
+
+# ::snt The N word is highly offensive.   All ethnicities and social groups deserve tolerance.
+# ::tokens ["The", "N", "word", "is", "highly", "offensive", ".", "  ", "All", "ethnicities", "and", "social", "groups", "deserve", "tolerance", "."]
+# ::lemmas ["the", "N", "word", "be", "highly", "offensive", ".", "  ", "all", "ethnicity", "and", "social", "group", "deserve", "tolerance", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-6 / offend-01
+                   :ARG0 (c3-4 / word
+                               :mod (c3-0 / string-entity
+                                          :value "N"))
+                   :degree (c3-5 / high-02))
+       :snt2 (c3-1 / deserve-01
+                   :ARG0 (c3-3 / and
+                               :op1 (c3-12 / ethnic-group
+                                           :mod (c3-11 / all))
+                               :op2 (c3-8 / group
+                                          :mod (c3-9 / society)
+                                          :mod (c3-2 / all)))
+                   :ARG1 (c3-7 / tolerate-01)))
+
+# ::snt Also a choice: not using that word here and avoiding the ban hammer.
+# ::tokens ["Also", "a", "choice", ":", "not", "using", "that", "word", "here", "and", "avoiding", "the", "ban", "hammer", "."]
+# ::lemmas ["also", "a", "choice", ":", "not", "use", "that", "word", "here", "and", "avoid", "the", "ban", "hammer", "."]
+(c4-2 / choose-01
+      :ARG1 (c4-1 / and
+                  :op1 (c4-5 / use-01
+                             :ARG1 (c4-3 / word
+                                         :mod (c4-6 / that))
+                             :location (c4-4 / here)
+                             :polarity -)
+                  :op2 (c4-9 / avoid-01
+                             :ARG1 (c4-8 / hammer
+                                         :mod (c4-7 / ban-01))))
+      :mod (c4-0 / also))

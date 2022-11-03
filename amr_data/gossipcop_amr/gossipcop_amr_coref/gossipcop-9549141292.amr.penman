@@ -1,0 +1,48 @@
+# ::snt hey...hayes
+# ::tokens ["hey", "...", "hayes"]
+# ::lemmas ["hey", "...", "hayes"]
+(c1-0 / hey
+      :mode expressive)
+
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c2-0 / congratulate-01
+      :mode expressive)
+
+# ::snt Beautiful
+# ::tokens ["Beautiful"]
+# ::lemmas ["beautiful"]
+(c3-0 / beautiful-02)
+
+# ::snt Beautiful baby! Congrats!
+# ::tokens ["Beautiful", "baby", "!", "Congrats", "!"]
+# ::lemmas ["beautiful", "baby", "!", "Congrats", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-0 / beautiful-02
+                  :ARG1 (c4-3 / baby))
+      :snt2 (c4-4 / congratulate-01
+                  :ARG1 (c4-1 / you)
+                  :mode expressive))
+
+# ::snt Congratulations to her &amp; hubby
+# ::tokens ["Congratulations", "to", "her", "&", "amp", ";", "hubby"]
+# ::lemmas ["congratulation", "to", "she", "&", "amp", ";", "hubby"]
+(c5-6 / congratulate-01
+      :ARG1 (c5-8 / and
+                  :op1 (c5-2 / she)
+                  :op2 (c5-5 / person
+                             :ARG0-of (c5-4 / have-rel-role-91
+                                            :ARG1 c5-2
+                                            :ARG2 (c5-0 / mom)))
+                  :op3 (c5-1 / person
+                             :ARG0-of (c5-7 / have-rel-role-91
+                                            :ARG1 c5-2
+                                            :ARG2 (c5-3 / hubby)))))
+
+# ::snt Congratulation to you both
+# ::tokens ["Congratulation", "to", "you", "both"]
+# ::lemmas ["congratulation", "to", "you", "both"]
+(c6-0 / congratulate-01
+      :ARG1 (c6-2 / you
+                  :mod (c6-1 / both)))

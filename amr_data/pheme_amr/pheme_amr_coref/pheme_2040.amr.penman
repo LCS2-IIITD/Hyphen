@@ -1,0 +1,320 @@
+# ::snt I have no words. My chest is heavy.
+# ::tokens ["I", "have", "no", "words", ".", "My", "chest", "is", "heavy", "."]
+# ::lemmas ["i", "have", "no", "word", ".", "my", "chest", "be", "heavy", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / have-03
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-1 / word)
+                  :polarity -)
+      :snt2 (c1-6 / heavy
+                  :domain (c1-4 / chest
+                                :part-of (c1-5 / i))))
+
+# ::snt he cried. "Please no, please don't shoot me"
+# ::tokens ["he", "cried", ".", "\"", "Please", "no", ",", "please", "do", "n't", "shoot", "me", "\""]
+# ::lemmas ["he", "cry", ".", "\"", "please", "no", ",", "please", "do", "not", "shoot", "i", "\""]
+(c2-2 / multi-sentence
+      :snt1 (c2-5 / cry-02
+                  :ARG0 (c2-0 / he))
+      :snt2 (c2-6 / say-01
+                  :ARG0 (c2-7 / he)
+                  :ARG1 (c2-3 / shoot-01
+                              :ARG0 (c2-1 / you)
+                              :ARG1 (c2-4 / i)
+                              :polarity -
+                              :mode imperative
+                              :polite +)))
+
+# ::snt Witness: "He threw his hands up &amp; they shot him. The boy fell &amp; they shot him some more"
+# ::tokens ["Witness", ":", "\"", "He", "threw", "his", "hands", "up", "&", "amp", ";", "they", "shot", "him", ".", "The", "boy", "fell", "&", "amp", ";", "they", "shot", "him", "some", "more", "\""]
+# ::lemmas ["witness", ":", "\"", "he", "throw", "his", "hand", "up", "&", "amp", ";", "they", "shoot", "he", ".", "the", "boy", "fall", "&", "amp", ";", "they", "shoot", "he", "some", "more", "\""]
+(c3-13 / say-01
+       :ARG0 (c3-11 / person
+                    :ARG0-of (c3-1 / witness-01))
+       :ARG1 (c3-15 / and
+                    :op1 (c3-14 / throw-01
+                                :ARG0 (c3-0 / he
+                                            :part (c3-2 / hand
+                                                        :ARG1-of c3-14))
+                                :direction (c3-4 / up))
+                    :op2 (c3-9 / shoot-02
+                               :ARG0 (c3-12 / they)
+                               :ARG1 c3-0)
+                    :op3 (c3-3 / fall-01
+                               :ARG1 (c3-6 / boy))
+                    :op4 (c3-5 / shoot-02
+                               :ARG0 (c3-10 / they)
+                               :ARG1 c3-6
+                               :quant (c3-7 / more
+                                            :quant (c3-8 / some)))))
+
+# ::snt ~ This how my day ends, knowing a child was senselessly killed today. Those cops will probably sleep better than I will.
+# ::tokens ["~", "This", "how", "my", "day", "ends", ",", "knowing", "a", "child", "was", "senselessly", "killed", "today", ".", "Those", "cops", "will", "probably", "sleep", "better", "than", "I", "will", "."]
+# ::lemmas ["~", "this", "how", "my", "day", "end", ",", "know", "a", "child", "be", "senselessly", "kill", "today", ".", "those", "cop", "will", "probably", "sleep", "well", "than", "i", "will", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-17 / this
+                   :manner-of (c4-3 / end-01
+                                    :ARG1 (c4-10 / day
+                                                 :poss (c4-6 / i))
+                                    :manner (c4-7 / know-01
+                                                  :ARG0 c4-6
+                                                  :ARG1 (c4-4 / kill-01
+                                                              :ARG1 (c4-11 / child)
+                                                              :manner (c4-15 / senseless)
+                                                              :time (c4-14 / today)))))
+      :snt2 (c4-9 / probable
+                  :domain (c4-5 / sleep-01
+                                :ARG0 (c4-12 / cop
+                                             :mod (c4-8 / that))
+                                :ARG1-of (c4-0 / have-degree-91
+                                               :ARG2 (c4-13 / good-02
+                                                            :ARG1 c4-5)
+                                               :ARG3 (c4-16 / more)
+                                               :ARG4 (c4-1 / sleep-01
+                                                           :ARG0 c4-6)))))
+
+# ::snt Yep. That's exactly what they're using this time for.
+# ::tokens ["Yep", ".", "That", "'s", "exactly", "what", "they", "'re", "using", "this", "time", "for", "."]
+# ::lemmas ["yep", ".", "that", "be", "exactly", "what", "they", "be", "use", "this", "time", "for", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-0 / yep)
+      :snt2 (c5-2 / use-01
+                  :ARG0 (c5-7 / they)
+                  :ARG1 (c5-6 / that)
+                  :ARG2 (c5-5 / time
+                              :mod (c5-4 / this))
+                  :mod (c5-3 / exact)))
+
+# ::snt It'll be amazing how they justify this tomorrow
+# ::tokens ["It", "'ll", "be", "amazing", "how", "they", "justify", "this", "tomorrow"]
+# ::lemmas ["it", "'ll", "be", "amazing", "how", "they", "justify", "this", "tomorrow"]
+(c6-5 / amaze-01
+      :ARG0 (c6-4 / thing
+                  :manner-of (c6-0 / justify-01
+                                   :ARG0 (c6-3 / they)
+                                   :ARG1 (c6-2 / this)
+                                   :time (c6-1 / tomorrow))))
+
+# ::snt cold world.
+# ::tokens ["cold", "world", "."]
+# ::lemmas ["cold", "world", "."]
+(c7-0 / world
+      :ARG1-of (c7-1 / cold-01))
+
+# ::snt Actually can't wait to hear the crap they'll use to justify that. Awful.
+# ::tokens ["Actually", "ca", "n't", "wait", "to", "hear", "the", "crap", "they", "'ll", "use", "to", "justify", "that", ".", "Awful", "."]
+# ::lemmas ["actually", "can", "not", "wait", "to", "hear", "the", "crap", "they", "'ll", "use", "to", "justify", "that", ".", "awful", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-1 / wait-01
+                  :ARG1 (c8-6 / i)
+                  :ARG2 (c8-0 / hear-01
+                              :ARG0 c8-6
+                              :ARG1 (c8-7 / crap
+                                          :ARG1-of (c8-4 / use-01
+                                                         :ARG0 (c8-9 / they)
+                                                         :ARG2 (c8-2 / justify-01
+                                                                     :ARG0 c8-9
+                                                                     :ARG1 (c8-8 / that)))))
+                  :ARG1-of (c8-10 / actual-02))
+      :snt2 (c8-5 / awful))
+
+# ::snt the media is already saying "he possibly reached in his pocket for a cell phone when they shot again"
+# ::tokens ["the", "media", "is", "already", "saying", "\"", "he", "possibly", "reached", "in", "his", "pocket", "for", "a", "cell", "phone", "when", "they", "shot", "again", "\""]
+# ::lemmas ["the", "medium", "be", "already", "say", "\"", "he", "possibly", "reach", "in", "his", "pocket", "for", "a", "cell", "phone", "when", "they", "shoot", "again", "\""]
+(c9-8 / say-01
+      :ARG0 (c9-1 / media)
+      :ARG1 (c9-5 / possible-01
+                  :ARG1 (c9-6 / reach-03
+                              :ARG0 (c9-0 / he)
+                              :ARG1 (c9-10 / phone
+                                           :mod (c9-7 / cell))
+                              :ARG2 (c9-2 / pocket
+                                          :poss c9-0)
+                              :time (c9-3 / shoot-02
+                                          :ARG0 (c9-9 / they)
+                                          :mod (c9-11 / again))))
+      :time (c9-4 / already))
+
+# ::snt Pure colour of skin hatred,the one who shot must be ass faced but pink?
+# ::tokens ["Pure", "colour", "of", "skin", "hatred", ",", "the", "one", "who", "shot", "must", "be", "ass", "faced", "but", "pink", "?"]
+# ::lemmas ["pure", "colour", "of", "skin", "hatred", ",", "the", "one", "who", "shoot", "must", "be", "ass", "faced", "but", "pink", "?"]
+(c10-8 / cause-01
+       :ARG0 (c10-7 / color-01
+                    :ARG1 (c10-0 / hate-01
+                                 :ARG1 (c10-10 / skin))
+                    :ARG1-of (c10-6 / pure-02))
+       :ARG1 (c10-3 / obligate-01
+                    :ARG2 (c10-1 / face
+                                 :mod (c10-12 / ass)
+                                 :ARG1-of (c10-9 / contrast-01
+                                                 :ARG2 (c10-11 / pink-04))
+                                 :domain (c10-2 / one
+                                                :ARG0-of (c10-4 / shoot-02)))
+                    :polarity (c10-5 / amr-unknown)))
+
+# ::snt oh &amp; BET they'll be coming w/ ALL kinds of "evidence" of HIS criminal pathology...
+# ::tokens ["oh", "&", "amp", ";", "BET", "they", "'ll", "be", "coming", "w/", "ALL", "kinds", "of", "\"", "evidence", "\"", "of", "HIS", "criminal", "pathology", "..."]
+# ::lemmas ["oh", "&", "amp", ";", "BET", "they", "'ll", "be", "come", "w/", "all", "kind", "of", "\"", "evidence", "\"", "of", "his", "criminal", "pathology", "..."]
+(c11-12 / and
+        :op1 (c11-3 / oh
+                    :mode expressive)
+        :op2 (c11-0 / have-degree-91
+                    :ARG1 (c11-9 / come-01
+                                 :ARG1 (c11-11 / they)
+                                 :manner (c11-4 / evidence-01
+                                                :ARG1 (c11-7 / pathology
+                                                             :ARG0-of (c11-8 / criminal-03)
+                                                             :poss (c11-1 / he))
+                                                :mod (c11-6 / kind
+                                                            :mod (c11-5 / all))))
+                    :ARG2 (c11-10 / good-02
+                                  :ARG1 c11-9)
+                    :ARG3 (c11-2 / more)))
+
+# ::snt is on the web now.
+# ::tokens ["is", "on", "the", "web", "now", "."]
+# ::lemmas ["be", "on", "the", "web", "now", "."]
+(c12-2 / it
+       :medium (c12-1 / web)
+       :time (c12-0 / now))
+
+# ::snt this is heartbreaking. It's not Justice!!
+# ::tokens ["this", "is", "heartbreaking", ".", "It", "'s", "not", "Justice", "!", "!"]
+# ::lemmas ["this", "be", "heartbreaking", ".", "it", "be", "not", "Justice", "!", "!"]
+(c13-2 / multi-sentence
+       :snt1 (c13-3 / break-heart-31
+                    :ARG0 (c13-0 / this))
+       :snt2 (c13-1 / justice
+                    :polarity -))
+
+# ::snt Do they ever justify the wrong ones?
+# ::tokens ["Do", "they", "ever", "justify", "the", "wrong", "ones", "?"]
+# ::lemmas ["do", "they", "ever", "justify", "the", "wrong", "one", "?"]
+(c14-0 / justify-01
+       :polarity (c14-5 / amr-unknown)
+       :ARG0 (c14-4 / they)
+       :ARG1 (c14-2 / one
+                    :ARG1-of (c14-1 / wrong-04))
+       :time (c14-3 / ever))
+
+# ::snt he's just a kid. Just about to start college. God, my heart hurts.
+# ::tokens ["he", "'s", "just", "a", "kid", ".", "Just", "about", "to", "start", "college", ".", "God", ",", "my", "heart", "hurts", "."]
+# ::lemmas ["he", "be", "just", "a", "kid", ".", "just", "about", "to", "start", "college", ".", "God", ",", "my", "heart", "hurt", "."]
+(c15-3 / multi-sentence
+       :snt1 (c15-10 / kid
+                     :domain (c15-0 / he)
+                     :mod (c15-1 / just))
+       :snt2 (c15-9 / start-01
+                    :ARG1 (c15-8 / college)
+                    :time (c15-11 / about-to))
+       :snt3 (c15-2 / hurt-02
+                    :ARG1 (c15-6 / heart
+                                 :part-of (c15-4 / i))
+                    :mod (c15-7 / person
+                                :name (c15-5 / name
+                                             :op1 "God")
+                                :mode expressive)))
+
+# ::snt I'm sadden by what happen to Brown in STL. gun violence needs to end even if it is perpetuated by law enforcement
+# ::tokens ["I", "'m", "sadden", "by", "what", "happen", "to", "Brown", "in", "STL", ".", "gun", "violence", "needs", "to", "end", "even", "if", "it", "is", "perpetuated", "by", "law", "enforcement"]
+# ::lemmas ["i", "be", "sadden", "by", "what", "happen", "to", "Brown", "in", "STL", ".", "gun", "violence", "need", "to", "end", "even", "if", "it", "be", "perpetuate", "by", "law", "enforcement"]
+(c16-2 / multi-sentence
+       :snt1 (c16-14 / sadden-01
+                     :ARG0 (c16-4 / event
+                                  :mod (c16-9 / person
+                                              :name (c16-7 / name
+                                                           :op1 "Brown"))
+                                  :location (c16-11 / city
+                                                    :name (c16-8 / name
+                                                                 :op1 "STL")))
+                     :ARG1 (c16-6 / i))
+       :snt2 (c16-10 / need-01
+                     :ARG1 (c16-3 / end-01
+                                  :ARG1 (c16-12 / violence
+                                                :mod (c16-13 / gun)))
+                     :concession (c16-0 / even-if
+                                        :op1 (c16-15 / perpetuate-01
+                                                     :ARG0 (c16-5 / enforce-01
+                                                                  :ARG1 (c16-1 / law))
+                                                     :ARG1 c16-12))))
+
+# ::snt Let me guess they bring out some fake ass religious leader to appeal for calm. You will get pie when you die.
+# ::tokens ["Let", "me", "guess", "they", "bring", "out", "some", "fake", "ass", "religious", "leader", "to", "appeal", "for", "calm", ".", "You", "will", "get", "pie", "when", "you", "die", "."]
+# ::lemmas ["let", "i", "guess", "they", "bring", "out", "some", "fake", "ass", "religious", "leader", "to", "appeal", "for", "calm", ".", "you", "will", "get", "pie", "when", "you", "die", "."]
+(c17-0 / multi-sentence
+       :snt1 (c17-7 / let-01
+                    :ARG0 (c17-15 / you)
+                    :ARG1 (c17-11 / guess-01
+                                  :ARG0 (c17-13 / i)
+                                  :ARG1 (c17-9 / bring-01
+                                               :ARG0 (c17-19 / they)
+                                               :ARG1 (c17-1 / person
+                                                            :ARG0-of (c17-18 / lead-02
+                                                                             :ARG1 (c17-10 / religion))
+                                                            :ARG1-of (c17-8 / fake-02)
+                                                            :mod (c17-6 / ass
+                                                                        :mod (c17-4 / some)))
+                                               :ARG2 (c17-16 / out)
+                                               :purpose (c17-12 / appeal-02
+                                                                :ARG0 c17-1
+                                                                :ARG2 (c17-17 / calm-03))))
+                    :snt2 (c17-2 / get-01
+                                 :ARG0 (c17-14 / you)
+                                 :ARG1 (c17-5 / pie)
+                                 :time (c17-3 / die-01
+                                              :ARG1 c17-14))
+                    :mode imperative))
+
+# ::snt Not again
+# ::tokens ["Not", "again"]
+# ::lemmas ["not", "again"]
+(c18-0 / again
+       :polarity -)
+
+# ::snt Witness: "He threw his hands up and they shot him. The boy fell and they shot him some more."
+# ::tokens ["Witness", ":", "\"", "He", "threw", "his", "hands", "up", "and", "they", "shot", "him", ".", "The", "boy", "fell", "and", "they", "shot", "him", "some", "more", ".", "\""]
+# ::lemmas ["witness", ":", "\"", "he", "throw", "his", "hand", "up", "and", "they", "shoot", "he", ".", "the", "boy", "fall", "and", "they", "shoot", "he", "some", "more", ".", "\""]
+(c19-0 / multi-sentence
+       :snt1 (c19-2 / say-01
+                    :ARG0 (c19-1 / person
+                                 :ARG0-of (c19-11 / witness-01))
+                    :ARG1 (c19-4 / and
+                                 :op1 (c19-18 / throw-01
+                                              :ARG0 (c19-5 / he
+                                                           :part (c19-3 / hand
+                                                                        :ARG1-of c19-18))
+                                              :direction (c19-12 / up))
+                                 :op2 (c19-9 / shoot-02
+                                             :ARG0 (c19-17 / they)
+                                             :ARG1 c19-5)))
+       :snt2 (c19-13 / and
+                     :op1 (c19-6 / fall-01
+                                 :ARG1 (c19-7 / boy))
+                     :op2 (c19-16 / shoot-02
+                                  :ARG0 (c19-14 / they)
+                                  :ARG1 (c19-15 / boy
+                                                :quant (c19-8 / some
+                                                              :quant (c19-10 / more))))))
+
+# ::snt : Witness: "He threw his hands up &amp; they shot him. The boy fell &amp; they shot him some more"
+# ::tokens [":", "Witness", ":", "\"", "He", "threw", "his", "hands", "up", "&", "amp", ";", "they", "shot", "him", ".", "The", "boy", "fell", "&", "amp", ";", "they", "shot", "him", "some", "more", "\""]
+# ::lemmas [":", "witness", ":", "\"", "he", "throw", "his", "hand", "up", "&", "amp", ";", "they", "shoot", "he", ".", "the", "boy", "fall", "&", "amp", ";", "they", "shoot", "he", "some", "more", "\""]
+(c20-13 / say-01
+        :ARG0 (c20-11 / person
+                      :ARG0-of (c20-1 / witness-01))
+        :ARG1 (c20-15 / and
+                      :op1 (c20-14 / throw-01
+                                   :ARG0 (c20-0 / he
+                                                :part (c20-2 / hand
+                                                             :ARG1-of c20-14))
+                                   :direction (c20-4 / up))
+                      :op2 (c20-9 / shoot-02
+                                  :ARG0 (c20-12 / they)
+                                  :ARG1 c20-0)
+                      :op3 (c20-3 / fall-01
+                                  :ARG1 (c20-6 / boy))
+                      :op4 (c20-5 / shoot-02
+                                  :ARG0 (c20-10 / they)
+                                  :ARG1 c20-6
+                                  :quant (c20-7 / more
+                                                :quant (c20-8 / some)))))

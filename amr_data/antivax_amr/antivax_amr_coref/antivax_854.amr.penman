@@ -1,0 +1,121 @@
+# ::snt thank you. Its a relief
+# ::tokens ["thank", "you", ".", "Its", "a", "relief"]
+# ::lemmas ["thank", "you", ".", "its", "a", "relief"]
+(c1-3 / multi-sentence
+      :snt1 (c1-0 / thank-01
+                  :ARG1 (c1-4 / you))
+      :snt2 (c1-1 / relieve-01
+                  :ARG0 (c1-2 / it)))
+
+# ::snt Thank goodness, so glad for them!
+# ::tokens ["Thank", "goodness", ",", "so", "glad", "for", "them", "!"]
+# ::lemmas ["thank", "goodness", ",", "so", "glad", "for", "they", "!"]
+(c2-1 / and
+      :op1 (c2-3 / thank-01
+                 :ARG1 (c2-4 / goodness))
+      :op2 (c2-5 / glad-02
+                 :ARG0 (c2-2 / they)
+                 :degree (c2-0 / so)))
+
+# ::snt Good good good.
+# ::tokens ["Good", "good", "good", "."]
+# ::lemmas ["good", "good", "good", "."]
+(c4-0 / good-02
+      :ARG1 c4-0)
+
+# ::snt Oh yeah, he got his in the first week. His hospital has treated him well in all this.
+# ::tokens ["Oh", "yeah", ",", "he", "got", "his", "in", "the", "first", "week", ".", "His", "hospital", "has", "treated", "him", "well", "in", "all", "this", "."]
+# ::lemmas ["oh", "yeah", ",", "he", "get", "his", "in", "the", "first", "week", ".", "his", "hospital", "have", "treat", "he", "well", "in", "all", "this", "."]
+(c5-10 / multi-sentence
+       :snt1 (c5-8 / get-01
+                   :ARG0 (c5-4 / he)
+                   :ARG1 (c5-7 / thing
+                               :poss c5-4)
+                   :time (c5-2 / week
+                               :ord (c5-6 / ordinal-entity
+                                          :value 1))
+                   :mod (c5-5 / oh-yeah
+                              :mode expressive))
+       :snt2 (c5-3 / treat-01
+                   :ARG0 (c5-9 / hospital
+                               :poss (c5-0 / he
+                                           :ARG1-of c5-3))
+                   :ARG2 (c5-12 / well-09)
+                   :subevent-of (c5-11 / this
+                                       :mod (c5-1 / all))))
+
+# ::snt yes! That's great news!
+# ::tokens ["yes", "!", "That", "'s", "great", "news", "!"]
+# ::lemmas ["yes", "!", "that", "be", "great", "news", "!"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / yes)
+      :snt2 (c6-3 / news
+                  :domain (c6-0 / that)
+                  :mod (c6-1 / great)))
+
+# ::snt Bro yet? (J got hers /30)
+# ::tokens ["Bro", "yet", "?", "(", "J", "got", "hers", "/30", ")"]
+# ::lemmas ["Bro", "yet", "?", "(", "J", "get", "hers", "/30", ")"]
+(c7-7 / multi-sentence
+      :snt1 (c7-5 / break-19
+                  :polarity (c7-1 / amr-unknown)
+                  :time (c7-9 / yet))
+      :snt2 (c7-4 / get-01
+                  :ARG0 (c7-6 / person
+                              :name (c7-8 / name
+                                          :op1 "J"))
+                  :ARG1 (c7-0 / slash
+                              :op1 (c7-3 / thing
+                                         :quant 30)
+                              :op2 (c7-2 / thing
+                                         :quant 30)
+                              :poss c7-6)))
+
+# ::snt in related news: my in-laws' neighbors in Virginia just told them that masks cause infections and no more people died in than ;a dear family friend in upstate New York is dying on a ventilator.
+# ::tokens ["in", "related", "news", ":", "my", "in", "-", "laws", "'", "neighbors", "in", "Virginia", "just", "told", "them", "that", "masks", "cause", "infections", "and", "no", "more", "people", "died", "in", "than", ";", "a", "dear", "family", "friend", "in", "upstate", "New", "York", "is", "dying", "on", "a", "ventilator", "."]
+# ::lemmas ["in", "related", "news", ":", "my", "in", "-", "law", "'", "neighbor", "in", "Virginia", "just", "tell", "they", "that", "mask", "cause", "infection", "and", "no", "more", "people", "die", "in", "than", ";", "a", "dear", "family", "friend", "in", "upstate", "New", "York", "be", "die", "on", "a", "ventilator", "."]
+(c8-23 / and
+       :op1 (c8-9 / tell-01
+                  :ARG0 (c8-31 / person
+                               :ARG1-of (c8-12 / neighbor-01
+                                               :ARG2 (c8-28 / person
+                                                            :ARG0-of (c8-26 / have-rel-role-91
+                                                                            :ARG1 (c8-3 / i)
+                                                                            :ARG2 (c8-18 / in-law)))
+                                               :location (c8-14 / state
+                                                                :name (c8-1 / name
+                                                                            :op1 "Virginia"))))
+                  :ARG1 (c8-13 / and
+                               :op1 (c8-6 / cause-01
+                                          :ARG0 (c8-11 / mask)
+                                          :ARG1 (c8-19 / infect-01))
+                               :op2 (c8-0 / die-01
+                                          :ARG1 (c8-17 / person
+                                                       :ARG1-of (c8-2 / have-quant-91
+                                                                      :ARG3 (c8-25 / more)
+                                                                      :ARG4 (c8-22 / die-01
+                                                                                   :ARG1 (c8-15 / person
+                                                                                                :ARG0-of (c8-4 / have-rel-role-91
+                                                                                                               :ARG1 (c8-24 / family)
+                                                                                                               :ARG2 (c8-20 / friend
+                                                                                                                            :mod (c8-16 / dear)))
+                                                                                                :location (c8-30 / state
+                                                                                                                 :name (c8-21 / name
+                                                                                                                              :op1 "New"
+                                                                                                                              :op2 "York")
+                                                                                                                 :location (c8-27 / upstate)))
+                                                                                   :manner (c8-7 / ventilator))
+                                                                      :polarity -)))
+                               :ARG2 c8-15
+                               :time (c8-29 / just))
+                  :op2 (c8-8 / die-01
+                             :ARG1 c8-15
+                             :manner c8-7)
+                  :topic (c8-5 / news
+                               :ARG1-of (c8-10 / relate-01))))
+
+# ::snt Good!!
+# ::tokens ["Good", "!", "!"]
+# ::lemmas ["good", "!", "!"]
+(c9-0 / good-02
+      :mode expressive)

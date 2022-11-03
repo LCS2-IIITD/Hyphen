@@ -1,0 +1,57 @@
+# ::subgraphs [["c1-0", "c1-2", "c1-1"], ["c2-2", "c2-3", "c2-1", "c2-0"], ["c3-3", "c3-2", "c3-4", "c3-0", "c3-1"], ["c4-3", "c4-2", "c4-4", "c4-0", "c4-1"], ["c5-6", "c5-4", "c5-3", "c5-1", "c5-7", "c5-0", "c5-8", "c5-5", "c5-2"], ["c6-3", "c6-9", "c6-5", "c6-10", "c6-1", "c6-2", "c6-6", "c6-8", "c6-0", "c6-7", "c6-4"]]
+(d / dummy
+   :COMMENT (c1-0 / terrible
+                  :ARG1 (c1-2 / that)
+                  :degree (c1-1 / absolute))
+   :COMMENT (c2-2 / cause
+                  :ARG0 (c2-3 / amr)
+                  :ARG1 (c2-1 / protest
+                              :ARG0 (c2-0 / they)
+                              :SAME c4-4
+                              :SAME c3-4))
+   :COMMENT (c3-3 / cross
+                  :ARG0 (c3-2 / person
+                              :ARG0-of (c3-4 / protest)
+                              :SAME c6-5
+                              :SAME c4-2
+                              :COREF c4-2)
+                  :ARG1 (c3-0 / line
+                              :mod (c3-1 / police
+                                         :SAME c5-4
+                                         :SAME c4-1
+                                         :COREF c5-4
+                                         :COREF c4-1)
+                              :SAME c4-0
+                              :COREF c4-0)
+                  :SAME c4-3)
+   :COMMENT (c4-3 / cross
+                  :ARG0 (c4-2 / person
+                              :ARG0-of (c4-4 / protest))
+                  :ARG1 (c4-0 / line
+                              :mod (c4-1 / police)))
+   :COMMENT (c5-6 / shoot
+                  :ARG0 (c5-4 / police)
+                  :ARG1 (c5-3 / kid
+                              :ARG1-of (c5-1 / black)
+                              :age (c5-7 / temporal
+                                         :unit (c5-0 / year)
+                                         :quant 1)
+                              :ARG1-of (c5-8 / arm
+                                             :polarity -))
+                  :time (c5-5 / do
+                              :ARG0 c5-3
+                              :ARG1 (c5-2 / anything)
+                              :polarity -))
+   :COMMENT (c6-3 / multi
+                  :snt1 (c6-9 / sound
+                              :ARG1 (c6-5 / person))
+                  :snt2 (c6-10 / thank
+                               :ARG1 (c6-1 / you)
+                               :ARG2 (c6-2 / work
+                                           :ARG0 c6-1
+                                           :ARG1 (c6-6 / report
+                                                       :ARG0 c6-1
+                                                       :ARG1 (c6-8 / this)))
+                               :ARG1-of (c6-0 / have-quant
+                                              :ARG2 (c6-7 / much)
+                                              :ARG3 (c6-4 / so)))))

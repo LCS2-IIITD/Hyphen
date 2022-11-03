@@ -1,0 +1,52 @@
+# ::snt In December , Spicer said barring media access is what a " dictatorship " does . Yesterday , he barred media access . <URL>
+# ::tokens ["In", "December", ",", "Spicer", "said", "barring", "media", "access", "is", "what", "a", "\"", "dictatorship", "\"", "does", ".", "Yesterday", ",", "he", "barred", "media", "access", ".", "<", "URL", ">"]
+# ::lemmas ["in", "December", ",", "Spicer", "say", "bar", "medium", "access", "be", "what", "a", "\"", "dictatorship", "\"", "do", ".", "Yesterday", ",", "he", "bar", "medium", "access", ".", "<", "URL", ">"]
+(c1-11 / multi-sentence
+       :snt1 (c1-0 / say-01
+                   :ARG0 (c1-10 / person
+                                :name (c1-12 / name
+                                             :op1 "Spicer"))
+                   :ARG1 (c1-1 / do-02
+                               :ARG0 (c1-6 / dictatorship)
+                               :ARG1 (c1-9 / bar-01
+                                           :ARG1 (c1-3 / access-01
+                                                       :ARG1 (c1-4 / media))))
+                   :time (c1-5 / date-entity
+                               :month 12))
+       :snt2 (c1-2 / bar-01
+                   :ARG0 (c1-7 / he)
+                   :ARG1 (c1-14 / access-01
+                                :ARG1 (c1-8 / media))
+                   :time (c1-13 / yesterday)))
+
+# ::snt Media access is a privilege , not a right . Suck it up , buttercup .
+# ::tokens ["Media", "access", "is", "a", "privilege", ",", "not", "a", "right", ".", "Suck", "it", "up", ",", "buttercup", "."]
+# ::lemmas ["medium", "access", "be", "a", "privilege", ",", "not", "a", "right", ".", "suck", "it", "up", ",", "buttercup", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-3 / contrast-01
+                  :ARG1 (c2-8 / privilege-01
+                              :ARG2 (c2-1 / access-01
+                                          :ARG1 (c2-2 / media)))
+                  :ARG2 (c2-5 / right-05
+                              :ARG2 c2-1
+                              :polarity -))
+      :snt2 (c2-0 / say-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-7 / suck-up-04
+                              :ARG0 (c2-6 / buttercup)
+                              :ARG1 c2-1
+                              :mode imperative)
+                  :ARG2 c2-6))
+
+# ::snt In a dictatorship media access is a privilege . In a democracy , media access is a right !
+# ::tokens ["In", "a", "dictatorship", "media", "access", "is", "a", "privilege", ".", "In", "a", "democracy", ",", "media", "access", "is", "a", "right", "!"]
+# ::lemmas ["in", "a", "dictatorship", "medium", "access", "be", "a", "privilege", ".", "in", "a", "democracy", ",", "medium", "access", "be", "a", "right", "!"]
+(c3-7 / multi-sentence
+      :snt1 (c3-6 / privilege-01
+                  :ARG2 (c3-1 / access-01
+                              :ARG1 (c3-2 / media))
+                  :condition (c3-0 / dictatorship))
+      :snt2 (c3-5 / right-05
+                  :ARG2 (c3-8 / access-01
+                              :ARG1 (c3-4 / media))
+                  :condition (c3-3 / democracy)))

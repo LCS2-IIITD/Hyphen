@@ -1,0 +1,116 @@
+# ::snt Well you know what they say about football ........
+# ::tokens ["Well", "you", "know", "what", "they", "say", "about", "football", "........"]
+# ::lemmas ["well", "you", "know", "what", "they", "say", "about", "football", "........"]
+(c2-3 / know-01
+      :ARG0 (c2-1 / you)
+      :ARG1 (c2-5 / thing
+                  :ARG1-of (c2-2 / say-01
+                                 :ARG0 (c2-6 / they)
+                                 :ARG3 (c2-0 / football)))
+      :mod (c2-4 / well))
+
+# ::snt It was my ex first. Then Rachel. Then Emma! All in one month. Urgh!
+# ::tokens ["It", "was", "my", "ex", "first", ".", "Then", "Rachel", ".", "Then", "Emma", "!", "All", "in", "one", "month", ".", "Urgh", "!"]
+# ::lemmas ["it", "be", "my", "ex", "first", ".", "then", "Rachel", ".", "then", "Emma", "!", "all", "in", "one", "month", ".", "Urgh", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-9 / person
+                  :ord (c3-0 / ordinal-entity
+                             :value 1)
+                  :domain (c3-11 / it)
+                  :poss (c3-5 / i)
+                  :time (c3-7 / ex))
+      :snt2 (c3-3 / person
+                  :name (c3-4 / name
+                              :op1 "Rachel")
+                  :time (c3-12 / then))
+      :snt3 (c3-13 / person
+                   :name (c3-8 / name
+                               :op1 "Emma")
+                   :time c3-12)
+      :snt4 (c3-6 / all
+                  :duration (c3-14 / temporal-quantity
+                                   :unit (c3-10 / month)
+                                   :quant 1))
+      :snt5 (c3-1 / urgh
+                  :mode expressive))
+
+# ::snt Sounds like the kind of name you give when you're trying to escape the Nazgul by booking yourself into a hotel while also being three feet tall
+# ::tokens ["Sounds", "like", "the", "kind", "of", "name", "you", "give", "when", "you", "'re", "trying", "to", "escape", "the", "Nazgul", "by", "booking", "yourself", "into", "a", "hotel", "while", "also", "being", "three", "feet", "tall"]
+# ::lemmas ["sound", "like", "the", "kind", "of", "name", "you", "give", "when", "you", "be", "try", "to", "escape", "the", "Nazgul", "by", "book", "yourself", "into", "a", "hotel", "while", "also", "be", "three", "feet", "tall"]
+(c5-5 / sound-01
+      :ARG1 (c5-9 / kind
+                  :mod (c5-4 / name
+                             :ARG1-of (c5-12 / give-01
+                                             :ARG0 (c5-3 / you)
+                                             :time (c5-11 / try-01
+                                                          :ARG0 c5-3
+                                                          :ARG1 (c5-7 / escape-01
+                                                                      :ARG0 c5-3
+                                                                      :ARG1 (c5-0 / organization
+                                                                                  :name (c5-8 / name
+                                                                                              :op1 "Nazgul"))
+                                                                      :manner (c5-2 / book-03
+                                                                                    :ARG0 c5-3
+                                                                                    :ARG1 c5-3
+                                                                                    :ARG3 (c5-10 / hotel)
+                                                                                    :time (c5-14 / tall
+                                                                                                 :domain c5-3
+                                                                                                 :quant (c5-13 / distance-quantity
+                                                                                                               :unit (c5-1 / foot)
+                                                                                                               :quant 3)
+                                                                                                 :mod (c5-6 / also)))))))))
+
+# ::snt The kind that gets to kiss Emma Watson
+# ::tokens ["The", "kind", "that", "gets", "to", "kiss", "Emma", "Watson"]
+# ::lemmas ["the", "kind", "that", "get", "to", "kiss", "Emma", "Watson"]
+(c6-2 / kind
+      :ARG0-of (c6-0 / kiss-01
+                     :ARG1 (c6-3 / person
+                                 :name (c6-1 / name
+                                             :op1 "Emma"
+                                             :op2 "Watson"))))
+
+# ::snt What type of name is "chord overstreet"? =/
+# ::tokens ["What", "type", "of", "name", "is", "\"", "chord", "overstreet", "\"", "?", "=/"]
+# ::lemmas ["what", "type", "of", "name", "be", "\"", "chord", "overstreet", "\"", "?", "=/"]
+(c7-0 / name-01
+      :ARG1 (c7-1 / street
+                  :name (c7-2 / name
+                              :op1 "chord"
+                              :op2 "overstreet"))
+      :ARG2 (c7-4 / amr-unknown
+                  :mod (c7-3 / type)))
+
+# ::snt First it was Rachel and now Hermione. Oh Sabith! :/
+# ::tokens ["First", "it", "was", "Rachel", "and", "now", "Hermione", ".", "Oh", "Sabith", "!", ":/"]
+# ::lemmas ["First", "it", "be", "Rachel", "and", "now", "Hermione", ".", "oh", "Sabith", "!", ":/"]
+(c8-3 / multi-sentence
+      :snt1 (c8-9 / and
+                  :op1 (c8-6 / person
+                             :name (c8-2 / name
+                                         :op1 "Rachel")
+                             :ord (c8-0 / ordinal-entity
+                                        :value 1))
+                  :op2 (c8-4 / person
+                             :name (c8-5 / name
+                                         :op1 "Hermione")
+                             :time (c8-7 / now)))
+      :snt2 (c8-10 / person
+                   :name (c8-8 / name
+                               :op1 "Sabith")
+                   :mod (c8-1 / oh)
+                   :mode expressive))
+
+# ::snt Told you'll that June has been a shitty month yeah!
+# ::tokens ["Told", "you", "'ll", "that", "June", "has", "been", "a", "shitty", "month", "yeah", "!"]
+# ::lemmas ["tell", "you", "'ll", "that", "June", "have", "be", "a", "shitty", "month", "yeah", "!"]
+(c9-3 / and
+      :op1 (c9-5 / tell-01
+                 :ARG1 (c9-4 / have-mod-91
+                             :ARG1 (c9-7 / date-entity
+                                         :month 6)
+                             :ARG2 (c9-1 / month
+                                         :mod (c9-2 / shitty)))
+                 :ARG2 (c9-0 / you))
+      :op2 (c9-6 / yeah
+                 :mode expressive))

@@ -1,0 +1,212 @@
+# ::snt cartonist...
+# ::tokens ["cartonist", "..."]
+# ::lemmas ["cartonist", "..."]
+(c1-0 / person
+      :mod (c1-1 / cartonist))
+
+# ::snt "A newspaper is not a weapon of war." YES IT IS
+# ::tokens ["\"", "A", "newspaper", "is", "not", "a", "weapon", "of", "war", ".", "\"", "YES", "IT", "IS"]
+# ::lemmas ["\"", "a", "newspaper", "be", "not", "a", "weapon", "of", "war", ".", "\"", "yes", "it", "be"]
+(c2-2 / multi-sentence
+      :snt1 (c2-0 / weapon
+                  :mod (c2-3 / war-01)
+                  :domain (c2-4 / newspaper)
+                  :polarity -)
+      :snt2 (c2-1 / yes))
+
+# ::snt Don't like it? Get yourself a shovel and dig yourself out.
+# ::tokens ["Do", "n't", "like", "it", "?", "Get", "yourself", "a", "shovel", "and", "dig", "yourself", "out", "."]
+# ::lemmas ["do", "not", "like", "it", "?", "get", "yourself", "a", "shovel", "and", "dig", "yourself", "out", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-4 / dislike-01
+                  :ARG1 (c3-3 / it))
+      :snt2 (c3-7 / and
+                  :op1 (c3-5 / get-01
+                             :ARG0 (c3-0 / you)
+                             :ARG1 (c3-6 / shovel)
+                             :mode imperative)
+                  :op2 (c3-1 / dig-out-03
+                             :ARG0 c3-0
+                             :mode imperative)))
+
+# ::snt if you can show such gruesome pictures of death, why aren't you showing the cartoons that caused it? Unbelievable
+# ::tokens ["if", "you", "can", "show", "such", "gruesome", "pictures", "of", "death", ",", "why", "are", "n't", "you", "showing", "the", "cartoons", "that", "caused", "it", "?", "Unbelievable"]
+# ::lemmas ["if", "you", "can", "show", "such", "gruesome", "picture", "of", "death", ",", "why", "be", "not", "you", "show", "the", "cartoon", "that", "cause", "it", "?", "unbelievable"]
+(c4-2 / multi-sentence
+      :snt1 (c4-13 / show-01
+                   :ARG0 (c4-0 / you)
+                   :ARG1 (c4-9 / cartoon
+                               :ARG0-of (c4-8 / cause-01
+                                              :ARG1 (c4-7 / picture-01
+                                                          :ARG1 (c4-10 / die-01)
+                                                          :mod (c4-11 / gruesome
+                                                                      :degree (c4-5 / such)))))
+                   :ARG1-of (c4-12 / cause-01
+                                   :ARG0 (c4-16 / amr-unknown))
+                   :condition (c4-15 / possible-01
+                                     :ARG1 (c4-1 / show-01
+                                                 :ARG0 c4-0
+                                                 :ARG1 c4-7))
+                   :polarity -)
+      :snt2 (c4-3 / possible-01
+                  :ARG1 (c4-4 / believe-01
+                              :ARG0 (c4-6 / i)
+                              :ARG1-of (c4-14 / possible-01)
+                              :polarity -)))
+
+# ::snt ..Ha ha..but you know that is copyright ?.
+# ::tokens ["..", "Ha", "ha", "..", "but", "you", "know", "that", "is", "copyright", "?", "."]
+# ::lemmas ["..", "ha", "ha", "..", "but", "you", "know", "that", "be", "copyright", "?", "."]
+(c5-3 / contrast-01
+      :ARG2 (c5-4 / know-01
+                  :polarity (c5-5 / amr-unknown)
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-2 / copyright-01))
+      :mod (c5-0 / ha
+                 :mode expressive))
+
+# ::snt Paradoxically, hope UKIP does well at election. Or else rise for real far right nutters.
+# ::tokens ["Paradoxically", ",", "hope", "UKIP", "does", "well", "at", "election", ".", "Or", "else", "rise", "for", "real", "far", "right", "nutters", "."]
+# ::lemmas ["paradoxically", ",", "hope", "UKIP", "do", "well", "at", "election", ".", "or", "else", "rise", "for", "real", "far", "right", "nutter", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-0 / hope-01
+                  :ARG1 (c6-1 / well-09
+                              :ARG1 (c6-11 / political-party
+                                           :name (c6-9 / name
+                                                       :op1 "UKIP"))
+                              :time (c6-6 / elect-01))
+                  :mod (c6-13 / humanitarian))
+      :snt2 (c6-5 / or
+                  :op2 (c6-12 / rise-01
+                              :ARG1 (c6-10 / nutter
+                                           :ARG1-of (c6-8 / right-08
+                                                          :degree (c6-2 / far))
+                                           :ARG1-of (c6-7 / real-04))
+                              :mod (c6-4 / else))))
+
+# ::snt ..You fool...have you any grey matter or are you one of them.
+# ::tokens ["..", "You", "fool", "...", "have", "you", "any", "grey", "matter", "or", "are", "you", "one", "of", "them", "."]
+# ::lemmas ["..", "you", "fool", "...", "have", "you", "any", "grey", "matter", "or", "be", "you", "one", "of", "they", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-2 / fool
+                  :domain (c7-1 / you))
+      :snt2 (c7-5 / or
+                  :op1 (c7-0 / have-03
+                             :ARG0 (c7-10 / you)
+                             :ARG1 (c7-8 / matter
+                                         :ARG1-of (c7-9 / gray-02)
+                                         :mod (c7-11 / any)))
+                  :op2 (c7-7 / include-91
+                             :ARG1 (c7-4 / you)
+                             :ARG2 c7-8)
+                  :polarity (c7-6 / amr-unknown)))
+
+# ::snt ..We cannot allow murdering scum to control us like this. If G.ments wont respond then people will. (Germany)
+# ::tokens ["..", "We", "can", "not", "allow", "murdering", "scum", "to", "control", "us", "like", "this", ".", "If", "G.ments", "wo", "nt", "respond", "then", "people", "will", ".", "(", "Germany", ")"]
+# ::lemmas ["..", "we", "can", "not", "allow", "murder", "scum", "to", "control", "we", "like", "this", ".", "if", "g.ment", "will", "not", "respond", "then", "people", "will", ".", "(", "Germany", ")"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / possible-01
+                  :ARG1 (c9-16 / allow-01
+                               :ARG0 (c9-1 / we)
+                               :ARG1 (c9-9 / control-01
+                                           :ARG0 (c9-13 / scum
+                                                        :ARG0-of (c9-8 / murder-01))
+                                           :ARG1 c9-1
+                                           :ARG1-of (c9-10 / resemble-01
+                                                           :ARG2 (c9-15 / this))))
+                  :polarity -)
+      :snt2 (c9-0 / have-condition-91
+                  :ARG1 (c9-5 / respond-01
+                              :ARG0 (c9-11 / government-organization
+                                           :ARG0-of (c9-12 / govern-01))
+                              :polarity -)
+                  :ARG2 (c9-4 / respond-01
+                              :ARG0 c9-11)
+                  :ARG1-of (c9-3 / say-01
+                                 :ARG0 (c9-14 / country
+                                              :name (c9-6 / name
+                                                          :op1 "Germany")))))
+
+# ::snt Horrific news. Deepest sympathy from the UK. Islamic savages have no humanity.They are Godless creatures, worse than animals
+# ::tokens ["Horrific", "news", ".", "Deepest", "sympathy", "from", "the", "UK", ".", "Islamic", "savages", "have", "no", "humanity", ".", "They", "are", "Godless", "creatures", ",", "worse", "than", "animals"]
+# ::lemmas ["Horrific", "news", ".", "deep", "sympathy", "from", "the", "UK", ".", "Islamic", "savage", "have", "no", "humanity", ".", "they", "be", "godless", "creature", ",", "bad", "than", "animal"]
+(c11-0 / multi-sentence
+       :snt1 (c11-12 / news
+                     :mod (c11-8 / horror))
+       :snt2 (c11-5 / sympathy
+                    :source (c11-18 / country
+                                    :name (c11-17 / name
+                                                  :op1 "UK"))
+                    :ARG1-of (c11-6 / have-degree-91
+                                    :ARG2 (c11-3 / deep-02
+                                                 :ARG1 c11-5)
+                                    :ARG3 (c11-13 / most)))
+       :snt3 (c11-2 / have-03
+                    :ARG0 (c11-11 / savage
+                                  :mod (c11-14 / religious-group
+                                               :name (c11-1 / name
+                                                            :op1 "Islam")))
+                    :ARG1 (c11-16 / humanity)
+                    :polarity -)
+       :snt4 (c11-4 / creature
+                    :mod (c11-15 / godless)
+                    :domain (c11-19 / they)
+                    :ARG1-of c11-6
+                    :ARG2 (c11-10 / bad-07
+                                  :ARG1 c11-4)
+                    :ARG3 (c11-9 / more)
+                    :ARG4 (c11-7 / animal)))
+
+# ::snt I read satire, and no deluded raghead scares me.
+# ::tokens ["I", "read", "satire", ",", "and", "no", "deluded", "raghead", "scares", "me", "."]
+# ::lemmas ["i", "read", "satire", ",", "and", "no", "delude", "raghead", "scare", "i", "."]
+(c12-6 / and
+       :op1 (c12-3 / read-01
+                   :ARG0 (c12-1 / i)
+                   :ARG1 (c12-5 / satire))
+       :op2 (c12-0 / scare-01
+                   :ARG0 (c12-2 / raghead
+                                :ARG1-of (c12-4 / delude-01)
+                                :polarity -)
+                   :ARG1 c12-1))
+
+# ::snt Neguemos a los radicales islamistas y populistas el acceso a los medios de comunicacin por
+# ::tokens ["Neguemos", "a", "los", "radicales", "islamistas", "y", "populistas", "el", "acceso", "a", "los", "medios", "de", "comunicacin", "por"]
+# ::lemmas ["Neguemos", "a", "los", "radicale", "islamista", "y", "populistas", "el", "acceso", "a", "los", "medios", "de", "comunicacin", "por"]
+(c13-5 / neguemos
+       :beneficiary (c13-13 / and
+                            :op1 (c13-7 / person
+                                        :ARG0-of (c13-0 / have-org-role-91
+                                                        :ARG1 (c13-12 / political-party
+                                                                      :name (c13-6 / name
+                                                                                   :op1 "National"
+                                                                                   :op2 "Liberation"
+                                                                                   :op3 "Front"))
+                                                        :ARG2 (c13-1 / member)))
+                            :op2 (c13-2 / person
+                                        :mod (c13-11 / populist))
+                            :ARG1-of (c13-8 / radical-02))
+       :ARG0-of (c13-4 / acceso-00
+                       :ARG1 (c13-9 / medios
+                                    :mod (c13-10 / comunicacin))
+                       :mod (c13-3 / por)))
+
+# ::snt Ghandi said an eye for an eye will make us all blind, so right he was, when will it all end!
+# ::tokens ["Ghandi", "said", "an", "eye", "for", "an", "eye", "will", "make", "us", "all", "blind", ",", "so", "right", "he", "was", ",", "when", "will", "it", "all", "end", "!"]
+# ::lemmas ["Ghandi", "say", "an", "eye", "for", "an", "eye", "will", "make", "we", "all", "blind", ",", "so", "right", "he", "be", ",", "when", "will", "it", "all", "end", "!"]
+(c14-11 / cause-01
+        :ARG0 (c14-12 / say-01
+                      :ARG0 (c14-9 / person
+                                   :name (c14-8 / name
+                                                :op1 "Ghandi"))
+                      :ARG1 (c14-2 / make-02
+                                   :ARG0 (c14-5 / eye
+                                                :purpose (c14-3 / eye))
+                                   :ARG1 (c14-4 / blind-02
+                                                :ARG1 (c14-0 / we
+                                                             :mod (c14-13 / all)))))
+        :ARG1 (c14-10 / right-06
+                      :ARG1 c14-9
+                      :ARG2 (c14-1 / end-01
+                                   :ARG1 (c14-7 / it)
+                                   :time (c14-6 / amr-unknown))))

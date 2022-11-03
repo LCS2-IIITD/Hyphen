@@ -1,0 +1,161 @@
+# ::snt That girl is ???????
+# ::tokens ["That", "girl", "is", "?", "?", "?", "?", "?", "?", "?"]
+# ::lemmas ["that", "girl", "be", "?", "?", "?", "?", "?", "?", "?"]
+(c1-0 / girl
+      :domain (c1-2 / amr-unknown)
+      :mod (c1-1 / that))
+
+# ::snt That poor kid.
+# ::tokens ["That", "poor", "kid", "."]
+# ::lemmas ["that", "poor", "kid", "."]
+(c2-1 / kid
+      :mod (c2-0 / poor)
+      :mod (c2-2 / that))
+
+# ::snt Caitlin is a dude isnt he/she ?
+# ::tokens ["Caitlin", "is", "a", "dude", "is", "nt", "he", "/", "she", "?"]
+# ::lemmas ["Caitlin", "be", "a", "dude", "be", "not", "he", "/", "she", "?"]
+(c3-0 / dude
+      :domain (c3-2 / person
+                    :name (c3-1 / name
+                                :op1 "Caitlin"))
+      :ARG1-of (c3-3 / request-confirmation-91))
+
+# ::snt Yep. Examples: Kendall Jenner, Brody Jenner
+# ::tokens ["Yep", ".", "Examples", ":", "Kendall", "Jenner", ",", "Brody", "Jenner"]
+# ::lemmas ["yep", ".", "example", ":", "Kendall", "Jenner", ",", "Brody", "Jenner"]
+(c4-2 / exemplify-01
+      :ARG0 (c4-5 / and
+                  :op1 (c4-4 / person
+                             :name (c4-0 / name
+                                         :op1 "Kendall"
+                                         :op2 "Jenner"))
+                  :op2 (c4-1 / person
+                             :name (c4-3 / name
+                                         :op1 "Brody"
+                                         :op2 "Jenner"))))
+
+# ::snt Sad
+# ::tokens ["Sad"]
+# ::lemmas ["sad"]
+(c6-0 / sad-02)
+
+# ::snt Already has of the most beautiful kids on the planet, half of whom are models.
+# ::tokens ["Already", "has", "of", "the", "most", "beautiful", "kids", "on", "the", "planet", ",", "half", "of", "whom", "are", "models", "."]
+# ::lemmas ["already", "have", "of", "the", "most", "beautiful", "kid", "on", "the", "planet", ",", "half", "of", "whom", "be", "model", "."]
+(c7-3 / have-03
+      :ARG1 (c7-4 / kid
+                  :ARG1-of (c7-8 / include-91
+                                 :ARG2 (c7-10 / kid
+                                              :ARG1-of (c7-1 / model-01))
+                                 :ARG3 (c7-7 / half))
+                  :ARG1-of (c7-2 / have-degree-91
+                                 :ARG2 (c7-0 / beautiful-02
+                                             :ARG1 c7-4)
+                                 :ARG3 (c7-5 / most)
+                                 :ARG5 (c7-11 / kid
+                                              :location (c7-6 / planet))))
+      :time (c7-9 / already))
+
+# ::snt Ew gross that's disgusting!
+# ::tokens ["Ew", "gross", "that", "'s", "disgusting", "!"]
+# ::lemmas ["ew", "gross", "that", "be", "disgusting", "!"]
+(c8-0 / disgust-01
+      :ARG0 (c8-2 / that)
+      :mod (c8-1 / ew
+                 :mode expressive))
+
+# ::snt A -year-old man wants to have a child with a -year-old man. What's strange about it? LOL!Go away!
+# ::tokens ["A", "-year", "-", "old", "man", "wants", "to", "have", "a", "child", "with", "a", "-year", "-", "old", "man", ".", "What", "'s", "strange", "about", "it", "?", "LOL!Go", "away", "!"]
+# ::lemmas ["a", "-year", "-", "old", "man", "want", "to", "have", "a", "child", "with", "a", "-year", "-", "old", "man", ".", "what", "be", "strange", "about", "it", "?", "LOL!Go", "away", "!"]
+(c9-1 / multi-sentence
+      :snt1 (c9-10 / want-01
+                   :ARG0 (c9-6 / man
+                               :age (c9-14 / temporal-quantity
+                                           :unit (c9-0 / year)
+                                           :quant 18))
+                   :ARG1 (c9-7 / have-05
+                               :ARG0 c9-6
+                               :ARG1 (c9-8 / person
+                                           :ARG0-of (c9-12 / have-rel-role-91
+                                                           :ARG1 c9-6
+                                                           :ARG2 (c9-11 / child)))))
+      :snt2 (c9-2 / strange
+                  :domain (c9-4 / amr-unknown)
+                  :topic (c9-13 / it))
+      :snt3 (c9-9 / laugh-01
+                  :ARG0 (c9-3 / i)
+                  :manner (c9-17 / loud)
+                  :mode expressive)
+      :snt4 (c9-15 / go-02
+                   :ARG0 (c9-5 / you)
+                   :ARG4 (c9-16 / away)
+                   :mode imperative))
+
+# ::snt Unfollowed
+# ::tokens ["Unfollowed"]
+# ::lemmas ["unfollowed"]
+(c10-0 / follow-02
+       :polarity -)
+
+# ::snt Kill me now
+# ::tokens ["Kill", "me", "now"]
+# ::lemmas ["kill", "i", "now"]
+(c11-2 / kill-01
+       :ARG0 (c11-1 / you)
+       :ARG1 (c11-3 / i)
+       :time (c11-0 / now)
+       :mode imperative)
+
+# ::snt Annnnnd unfollowed
+# ::tokens ["Annnnnd", "unfollowed"]
+# ::lemmas ["Annnnnd", "unfollowe"]
+(c12-0 / ollow-01
+       :ARG0 (c12-2 / person
+                    :name (c12-1 / name
+                                 :op1 "Annnnnd")))
+
+# ::snt This isnt abt baby animals
+# ::tokens ["This", "is", "nt", "abt", "baby", "animals"]
+# ::lemmas ["this", "be", "not", "abt", "baby", "animal"]
+(c13-2 / animal
+       :mod (c13-0 / baby)
+       :domain (c13-1 / this)
+       :polarity -)
+
+# ::snt Wtf? Why is this absolute crap coming from your account? Or has it been hijacked? This is not baby animals....
+# ::tokens ["Wtf", "?", "Why", "is", "this", "absolute", "crap", "coming", "from", "your", "account", "?", "Or", "has", "it", "been", "hijacked", "?", "This", "is", "not", "baby", "animals", "...."]
+# ::lemmas ["Wtf", "?", "why", "be", "this", "absolute", "crap", "come", "from", "your", "account", "?", "or", "have", "it", "be", "hijack", "?", "this", "be", "not", "baby", "animal", "...."]
+(c14-4 / multi-sentence
+       :snt1 (c14-13 / amr-unknown
+                     :mod (c14-0 / fuck
+                                 :mode expressive))
+       :snt2 (c14-7 / cause-01
+                    :ARG0 (c14-12 / amr-unknown)
+                    :ARG1 (c14-17 / come-01
+                                  :ARG1 (c14-11 / thing
+                                                :mod (c14-8 / absolute)
+                                                :ARG1-of (c14-10 / crap-01)
+                                                :mod (c14-15 / this))
+                                  :ARG3 (c14-5 / account
+                                               :poss (c14-3 / you))))
+       :snt3 (c14-1 / or
+                    :op2 (c14-6 / hijack-01
+                                :ARG1 (c14-14 / it)))
+       :snt4 (c14-9 / animal
+                    :mod (c14-2 / baby)
+                    :domain (c14-16 / this)
+                    :polarity -))
+
+# ::snt Who tf cares
+# ::tokens ["Who", "tf", "cares"]
+# ::lemmas ["who", "tf", "care"]
+(c15-0 / care-01
+       :ARG0 (c15-2 / amr-unknown)
+       :mod (c15-1 / fuck
+                   :mode expressive))
+
+# ::snt No
+# ::tokens ["No"]
+# ::lemmas ["no"]
+(c16-0 / no)

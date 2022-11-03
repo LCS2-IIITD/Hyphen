@@ -1,0 +1,57 @@
+# ::snt That is good.
+# ::tokens ["That", "is", "good", "."]
+# ::lemmas ["that", "be", "good", "."]
+(c1-1 / good-02
+      :ARG1 (c1-0 / that))
+
+# ::snt blesss librs : All patients injured in released from hospital: Hospital spokesperson.
+# ::tokens ["blesss", "librs", ":", "All", "patients", "injured", "in", "released", "from", "hospital", ":", "Hospital", "spokesperson", "."]
+# ::lemmas ["blesss", "librs", ":", "all", "patient", "injure", "in", "release", "from", "hospital", ":", "hospital", "spokesperson", "."]
+(c2-7 / say-01
+      :ARG0 (c2-5 / person
+                  :name (c2-4 / name
+                              :op1 "Blesss"
+                              :op2 "Librs"))
+      :ARG1 (c2-6 / release-01
+                  :ARG1 (c2-8 / patient
+                              :mod (c2-9 / all)
+                              :ARG1-of (c2-3 / injure-01))
+                  :ARG2 (c2-0 / hospital)
+                  :ARG1-of (c2-2 / say-01
+                                 :ARG0 (c2-1 / spokesperson
+                                             :mod c2-0))))
+
+# ::snt Patients injured in this morning's released from hospital Source
+# ::tokens ["Patients", "injured", "in", "this", "morning", "'s", "released", "from", "hospital", "Source"]
+# ::lemmas ["patient", "injure", "in", "this", "morning", "'s", "release", "from", "hospital", "source"]
+(c3-4 / release-01
+      :ARG1 (c3-3 / person
+                  :ARG1-of (c3-2 / injure-01
+                                 :ARG0 c3-2
+                                 :ARG0 (c3-1 / morning
+                                             :mod (c3-6 / this))))
+      :ARG0-of (c3-0 / have-org-role-91
+                     :ARG1 (c3-7 / hospital))
+      :ARG2 (c3-5 / source))
+
+# ::snt :Investigators: This was an false flag, full of crisis actors and for the benefit of the police state, victim id'd soon
+# ::tokens [":", "Investigators", ":", "This", "was", "an", "false", "flag", ",", "full", "of", "crisis", "actors", "and", "for", "the", "benefit", "of", "the", "police", "state", ",", "victim", "id'd", "soon"]
+# ::lemmas [":", "investigator", ":", "this", "be", "an", "false", "flag", ",", "full", "of", "crisis", "actor", "and", "for", "the", "benefit", "of", "the", "police", "state", ",", "victim", "id'd", "soon"]
+(c4-14 / say-01
+       :ARG0 (c4-10 / person
+                    :ARG0-of (c4-7 / investigate-01))
+       :ARG1 (c4-1 / flag
+                   :mod (c4-8 / false)
+                   :domain (c4-15 / this)
+                   :ARG1-of (c4-5 / full-09
+                                  :ARG2 (c4-16 / person
+                                               :ARG0-of (c4-17 / act-01
+                                                               :mod (c4-12 / crisis))))
+                   :ARG0-of (c4-4 / benefit-01
+                                  :ARG1 (c4-6 / state
+                                              :mod (c4-3 / police)))
+                   :ARG0-of (c4-11 / cause-01
+                                   :ARG1 (c4-9 / victim
+                                               :ARG1-of (c4-0 / have-degree-91
+                                                              :ARG2 (c4-2 / soon)
+                                                              :ARG3 (c4-13 / too))))))

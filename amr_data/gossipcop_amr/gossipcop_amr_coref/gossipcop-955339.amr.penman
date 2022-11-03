@@ -1,0 +1,58 @@
+# ::snt So what's
+# ::tokens ["So", "what", "'s"]
+# ::lemmas ["so", "what", "be"]
+(c1-0 / infer-01
+      :ARG1 (c1-1 / amr-unknown))
+
+# ::snt bc justin is engaged and taylor needs someone elses pain to write about
+# ::tokens ["bc", "justin", "is", "engaged", "and", "taylor", "needs", "someone", "elses", "pain", "to", "write", "about"]
+# ::lemmas ["bc", "justin", "be", "engage", "and", "taylor", "need", "someone", "else", "pain", "to", "write", "about"]
+(c2-8 / and
+      :op1 (c2-3 / engagement-02
+                 :ARG1 (c2-5 / person
+                             :name (c2-0 / name
+                                         :op1 "Justin")))
+      :op2 (c2-4 / need-01
+                 :ARG0 (c2-1 / person
+                             :name (c2-6 / name
+                                         :op1 "Taylor"))
+                 :ARG1 (c2-10 / pain-01
+                              :ARG1 (c2-2 / someone
+                                          :mod (c2-9 / else))
+                              :ARG1-of (c2-7 / write-01
+                                             :ARG0 c2-2))))
+
+# ::snt No they never had any big fall outs
+# ::tokens ["No", "they", "never", "had", "any", "big", "fall", "outs"]
+# ::lemmas ["no", "they", "never", "have", "any", "big", "fall", "out"]
+(c3-3 / have-06
+      :ARG0 (c3-4 / they)
+      :ARG1 (c3-0 / fall-out-03
+                  :mod (c3-1 / big)
+                  :mod (c3-5 / any))
+      :time (c3-2 / ever)
+      :polarity -)
+
+# ::snt read her profile tho.. stay positive ...
+# ::tokens ["read", "her", "profile", "tho", "..", "stay", "positive", "..."]
+# ::lemmas ["read", "her", "profile", "tho", "..", "stay", "positive", "..."]
+(c5-2 / multi-sentence
+      :snt1 (c5-6 / have-concession-91
+                  :ARG1 (c5-5 / read-01
+                              :ARG0 (c5-1 / you)
+                              :ARG1 (c5-7 / profile
+                                          :poss (c5-4 / she))
+                              :mode imperative))
+      :snt2 (c5-0 / stay-01
+                  :ARG1 c5-1
+                  :ARG3 (c5-3 / positive)
+                  :mode imperative))
+
+# ::snt Women supporting women we like to see this
+# ::tokens ["Women", "supporting", "women", "we", "like", "to", "see", "this"]
+# ::lemmas ["woman", "support", "woman", "we", "like", "to", "see", "this"]
+(c7-2 / like-02
+      :ARG0 (c7-0 / we)
+      :ARG1 (c7-3 / see-01
+                  :ARG0 c7-0
+                  :ARG1 (c7-1 / this)))

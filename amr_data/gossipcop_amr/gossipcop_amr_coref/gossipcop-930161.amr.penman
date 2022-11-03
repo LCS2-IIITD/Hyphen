@@ -1,0 +1,76 @@
+# ::snt Sad
+# ::tokens ["Sad"]
+# ::lemmas ["sad"]
+(c1-0 / sad-02)
+
+# ::snt I knew they would say that.
+# ::tokens ["I", "knew", "they", "would", "say", "that", "."]
+# ::lemmas ["i", "know", "they", "would", "say", "that", "."]
+(c2-1 / know-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-0 / say-01
+                  :ARG0 (c2-2 / they)
+                  :ARG1 (c2-4 / that)))
+
+# ::snt Indeed
+# ::tokens ["Indeed"]
+# ::lemmas ["indeed"]
+(c3-0 / indeed)
+
+# ::snt He was, and yea, I think it was a small Middle Eastern country. Rough.
+# ::tokens ["He", "was", ",", "and", "yea", ",", "I", "think", "it", "was", "a", "small", "Middle", "Eastern", "country", ".", "Rough", "."]
+# ::lemmas ["he", "be", ",", "and", "yea", ",", "i", "think", "it", "be", "a", "small", "Middle", "Eastern", "country", ".", "rough", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-9 / and
+                  :op1 (c4-4 / he
+                             :mod (c4-5 / country
+                                        :mod (c4-2 / small)
+                                        :location (c4-6 / world-region
+                                                        :name (c4-1 / name
+                                                                    :op1 "Middle"
+                                                                    :op2 "East"))))
+                  :op2 (c4-7 / think-01
+                             :ARG0 (c4-8 / i)
+                             :ARG1 c4-5))
+      :snt2 (c4-3 / rough-03))
+
+# ::snt Isnt he Swedish? I think he was in one of those smaller, lesser known countries.
+# ::tokens ["Is", "nt", "he", "Swedish", "?", "I", "think", "he", "was", "in", "one", "of", "those", "smaller", ",", "lesser", "known", "countries", "."]
+# ::lemmas ["be", "not", "he", "Swedish", "?", "i", "think", "he", "be", "in", "one", "of", "those", "small", ",", "less", "know", "country", "."]
+(c5-12 / multi-sentence
+       :snt1 (c5-13 / country
+                    :polarity (c5-9 / amr-unknown)
+                    :name (c5-16 / name
+                                 :op1 "Sweden")
+                    :domain (c5-5 / he))
+       :snt2 (c5-8 / think-01
+                   :ARG0 (c5-18 / i)
+                   :ARG1 (c5-11 / be-located-at-91
+                                :ARG1 (c5-17 / he)
+                                :ARG2 (c5-10 / country
+                                             :ARG1-of (c5-3 / include-91
+                                                            :ARG2 (c5-2 / country
+                                                                        :ARG1-of (c5-4 / have-degree-91
+                                                                                       :ARG2 (c5-0 / small)
+                                                                                       :ARG3 (c5-6 / more))
+                                                                        :ARG1-of (c5-7 / know-01
+                                                                                       :ARG1-of (c5-15 / have-degree-91
+                                                                                                       :ARG2 (c5-1 / less))))
+                                                            :mod (c5-14 / that))
+                                             :quant 1))))
+
+# ::snt Damn indeed. That sucks dude. And he was in a foreign country, no less
+# ::tokens ["Damn", "indeed", ".", "That", "sucks", "dude", ".", "And", "he", "was", "in", "a", "foreign", "country", ",", "no", "less"]
+# ::lemmas ["damn", "indeed", ".", "that", "suck", "dude", ".", "and", "he", "be", "in", "a", "foreign", "country", ",", "no", "less"]
+(c6-2 / multi-sentence
+      :snt1 (c6-3 / suck-03
+                  :ARG0 (c6-9 / that)
+                  :ARG1 (c6-10 / dude)
+                  :mod (c6-8 / indeed))
+      :snt2 (c6-4 / and
+                  :op2 (c6-1 / be-located-at-91
+                             :ARG1 (c6-5 / he)
+                             :ARG2 (c6-7 / country
+                                         :mod (c6-0 / foreign))
+                             :mod (c6-6 / less
+                                        :polarity -))))

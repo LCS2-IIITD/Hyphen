@@ -1,0 +1,33 @@
+# ::snt You go girl! Make sure you take it easy today and tomorrow!
+# ::tokens ["You", "go", "girl", "!", "Make", "sure", "you", "take", "it", "easy", "today", "and", "tomorrow", "!"]
+# ::lemmas ["you", "go", "girl", "!", "make", "sure", "you", "take", "it", "easy", "today", "and", "tomorrow", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-6 / go-02
+                  :ARG0 (c1-1 / girl)
+                  :mode imperative)
+      :snt2 (c1-11 / ensure-01
+                   :ARG0 (c1-9 / you)
+                   :ARG1 (c1-5 / take-01
+                               :ARG0 (c1-10 / you)
+                               :ARG1 (c1-7 / it)
+                               :ARG1-of (c1-4 / easy-05)
+                               :time (c1-0 / and
+                                           :op1 (c1-3 / today)
+                                           :op2 (c1-2 / tomorrow)))
+                   :mode imperative))
+
+# ::snt Woohoo!
+# ::tokens ["Woohoo", "!"]
+# ::lemmas ["Woohoo", "!"]
+(c2-0 / Woohoo
+      :mode expressive)
+
+# ::snt Yay!!! Im so excited for you!!!
+# ::tokens ["Yay", "!", "!", "!", "I", "m", "so", "excited", "for", "you", "!", "!", "!"]
+# ::lemmas ["Yay", "!", "!", "!", "i", "m", "so", "excited", "for", "you", "!", "!", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-3 / yay)
+      :snt2 (c3-5 / excite-01
+                  :ARG0 (c3-4 / you)
+                  :ARG1 (c3-1 / i)
+                  :degree (c3-0 / so)))

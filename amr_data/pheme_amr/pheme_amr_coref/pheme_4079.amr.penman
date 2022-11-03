@@ -1,0 +1,254 @@
+# ::snt sad
+# ::tokens ["sad"]
+# ::lemmas ["sad"]
+(c1-0 / sad-02)
+
+# ::snt "We don't know the reasons for the crash."Stay tuned for updates on crashed flight
+# ::tokens ["\"", "We", "do", "n't", "know", "the", "reasons", "for", "the", "crash", ".", "\"Stay", "tuned", "for", "updates", "on", "crashed", "flight"]
+# ::lemmas ["\"", "we", "do", "not", "know", "the", "reason", "for", "the", "crash", ".", "\"stay", "tune", "for", "update", "on", "crash", "flight"]
+(c2-3 / multi-sentence
+      :snt1 (c2-11 / know-01
+                   :ARG0 (c2-0 / we)
+                   :ARG1 (c2-5 / reason
+                               :ARG0-of (c2-6 / cause-01
+                                              :ARG1 (c2-7 / crash-01)))
+                   :polarity -)
+      :snt2 (c2-9 / stay-01
+                  :ARG1 (c2-1 / you)
+                  :ARG3 (c2-10 / tune-01
+                               :ARG2 (c2-4 / update-02
+                                           :ARG2 (c2-2 / fly-01
+                                                       :ARG1-of (c2-8 / crash-01))))))
+
+# ::snt :Follow the live blog within the page for up-to-the-minute updates on crashed flight
+# ::tokens [":", "Follow", "the", "live", "blog", "within", "the", "page", "for", "up", "-", "to", "-", "the", "-", "minute", "updates", "on", "crashed", "flight"]
+# ::lemmas [":", "follow", "the", "live", "blog", "within", "the", "page", "for", "up", "-", "to", "-", "the", "-", "minute", "update", "on", "crash", "flight"]
+(c3-1 / follow-02
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-5 / blog
+                  :location (c3-7 / page)
+                  :mod (c3-2 / live))
+      :purpose (c3-3 / update-02
+                     :ARG2 (c3-6 / fly-01
+                                 :ARG1-of (c3-8 / crash-01))
+                     :duration (c3-9 / up-to
+                                     :op1 (c3-10 / temporal-quantity
+                                                 :unit (c3-4 / minute)
+                                                 :quant 1)))
+      :mode imperative)
+
+# ::snt :on board and all are feared dead.BREAKING NEWS: Germanwings flight GWI18G crashes in French Alps
+# ::tokens [":", "on", "board", "and", "all", "are", "feared", "dead", ".", "BREAKING", "NEWS", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas [":", "on", "board", "and", "all", "be", "fear", "dead", ".", "break", "news", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c4-1 / multi-sentence
+      :snt1 (c4-17 / and
+                   :op1 (c4-2 / be-located-at-91
+                              :ARG2 (c4-9 / board-01))
+                   :op2 (c4-0 / fear-01
+                              :ARG1 (c4-8 / die-01
+                                          :ARG1 (c4-3 / all))))
+      :snt2 (c4-10 / crash-01
+                   :ARG1 (c4-4 / fly-01
+                               :ARG0 (c4-11 / company
+                                            :name (c4-5 / name
+                                                        :op1 "Germanwings"))
+                               :ARG1 (c4-6 / aircraft-type
+                                           :name (c4-7 / name
+                                                       :op1 "GWI18G")))
+                   :location (c4-12 / mountain
+                                    :name (c4-13 / name
+                                                 :op1 "Alps")
+                                    :location (c4-14 / country
+                                                     :name (c4-15 / name
+                                                                  :op1 "France")))
+                   :ARG1-of (c4-16 / report-01)))
+
+# ::snt :Its actually flight U9525 because the GWI18G is a plane registration no.
+# ::tokens [":", "Its", "actually", "flight", "U9525", "because", "the", "GWI18", "G", "is", "a", "plane", "registration", "no", "."]
+# ::lemmas [":", "its", "actually", "flight", "u9525", "because", "the", "GWI18", "G", "be", "a", "plane", "registration", "no", "."]
+(c5-6 / cause-01
+      :ARG0 (c5-5 / register-02
+                  :ARG1 (c5-8 / aircraft-type
+                              :name (c5-2 / name
+                                          :op1 "GWI18G"))
+                  :ARG3 (c5-4 / plane)
+                  :polarity -)
+      :ARG1 (c5-0 / fly-01
+                  :ARG2 (c5-1 / aircraft-type
+                              :name (c5-3 / name
+                                          :op1 "U9525"))
+                  :ARG1-of (c5-7 / actual-02)))
+
+# ::snt "There are not thought to be any survivors."UPDATED: Germanwings flight GWI18G crashes in French Alps
+# ::tokens ["\"", "There", "are", "not", "thought", "to", "be", "any", "survivors", ".", "\"UPDATED", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas ["\"", "there", "be", "not", "think", "to", "be", "any", "survivor", ".", "\"update", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c6-13 / think-01
+       :ARG1 (c6-6 / person
+                   :ARG0-of (c6-12 / survive-01
+                                   :polarity -)
+                   :mod (c6-14 / any))
+       :ARG1-of (c6-2 / update-01
+                      :ARG2 (c6-8 / crash-01
+                                  :ARG1 (c6-0 / fly-01
+                                              :ARG2 (c6-3 / aircraft-type
+                                                          :name (c6-4 / name
+                                                                      :op1 "GWI18G")
+                                                          :poss (c6-7 / company
+                                                                      :name (c6-5 / name
+                                                                                  :op1 "Germanwings"))))
+                                  :location (c6-1 / mountain
+                                                  :name (c6-9 / name
+                                                              :op1 "Alps")
+                                                  :location (c6-11 / country
+                                                                   :name (c6-10 / name
+                                                                                :op1 "France"))))))
+
+# ::snt Oh my : BREAKING NEWS: Germanwings flight GWI18G crashes in French Alps
+# ::tokens ["Oh", "my", ":", "BREAKING", "NEWS", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas ["oh", "my", ":", "break", "news", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c7-5 / news
+      :ARG1-of (c7-2 / break-13)
+      :topic (c7-9 / crash-01
+                   :ARG1 (c7-0 / fly-01
+                               :ARG2 (c7-12 / aircraft-type
+                                            :name (c7-6 / name
+                                                        :op1 "GWI18G")
+                                            :poss (c7-8 / company
+                                                        :name (c7-7 / name
+                                                                    :op1 "Germanywings"))))
+                   :location (c7-1 / mountain
+                                   :name (c7-10 / name
+                                                :op1 "Alps")
+                                   :location (c7-11 / country
+                                                    :name (c7-13 / name
+                                                                 :op1 "France"))))
+      :mod (c7-3 / oh
+                 :poss (c7-4 / i)
+                 :mode expressive))
+
+# ::snt :Whaaaat is happening : Germanwings flight GWI18G crashes in French Alps
+# ::tokens [":", "Whaaaat", "is", "happening", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas [":", "Whaaaat", "be", "happen", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c9-2 / multi-sentence
+      :snt1 (c9-0 / whaaat
+                  :mode expressive)
+      :snt2 (c9-8 / crash-01
+                  :ARG1 (c9-1 / fly-01
+                              :ARG0 (c9-11 / aircraft-type
+                                           :name (c9-4 / name
+                                                       :op1 "Germanwings"))
+                              :subevent-of (c9-3 / event
+                                                 :name (c9-5 / name
+                                                             :op1 "GWI18G")))
+                  :location (c9-6 / mountain
+                                  :name (c9-7 / name
+                                              :op1 "Alps")
+                                  :location (c9-9 / country
+                                                  :name (c9-10 / name
+                                                               :op1 "France")))))
+
+# ::snt :Omg another plane? ": BREAKING NEWS: Germanwings flight GWI18G crashes in French Alps
+# ::tokens [":", "Omg", "another", "plane", "?", "\"", ":", "BREAKING", "NEWS", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas [":", "Omg", "another", "plane", "?", "\"", ":", "break", "news", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c10-7 / plane
+       :polarity (c10-14 / amr-unknown)
+       :mod (c10-4 / another)
+       :mod (c10-3 / oh-my-god
+                   :mode expressive)
+       :domain (c10-9 / crash-01
+                      :ARG1 (c10-0 / fly-01
+                                   :ARG2 (c10-6 / aircraft-type
+                                                :name (c10-5 / name
+                                                             :op1 "GWI18G")
+                                                :poss (c10-8 / company
+                                                             :name (c10-10 / name
+                                                                           :op1 "Germanywings"))))
+                      :location (c10-1 / mountain
+                                       :name (c10-11 / name
+                                                     :op1 "Alps")
+                                       :location (c10-13 / country
+                                                         :name (c10-12 / name
+                                                                       :op1 "France")))
+                      :ARG1-of (c10-2 / break-13)))
+
+# ::snt :sad news. My prayers for them
+# ::tokens [":", "sad", "news", ".", "My", "prayers", "for", "them"]
+# ::lemmas [":", "sad", "news", ".", "my", "prayer", "for", "they"]
+(c11-0 / multi-sentence
+       :snt1 (c11-4 / sad-02
+                    :ARG0 (c11-2 / news))
+       :snt2 (c11-3 / pray-01
+                    :ARG0 (c11-1 / i)
+                    :beneficiary (c11-5 / they)))
+
+# ::snt Hi Ryan! You're correct. The GWI was the earlier given number as the story developed, but we'll correct it. Thank you!
+# ::tokens ["Hi", "Ryan", "!", "You", "'re", "correct", ".", "The", "GWI", "was", "the", "earlier", "given", "number", "as", "the", "story", "developed", ",", "but", "we", "'ll", "correct", "it", ".", "Thank", "you", "!"]
+# ::lemmas ["hi", "Ryan", "!", "you", "be", "correct", ".", "the", "GWI", "be", "the", "early", "give", "number", "as", "the", "story", "develop", ",", "but", "we", "'ll", "correct", "it", ".", "thank", "you", "!"]
+(c12-0 / multi-sentence
+       :snt1 (c12-6 / say-01
+                    :ARG1 (c12-7 / hi)
+                    :ARG2 (c12-2 / person
+                                 :name (c12-10 / name
+                                               :op1 "Ryan")))
+       :snt2 (c12-17 / correct-02
+                     :ARG1 (c12-15 / you))
+       :snt3 (c12-3 / contrast-01
+                    :ARG1 (c12-16 / number
+                                  :ARG1-of (c12-11 / give-01)
+                                  :time (c12-4 / develop-02
+                                               :ARG2 (c12-9 / story))
+                                  :domain (c12-12 / warm-01
+                                                  :ARG1 (c12-5 / globe))
+                                  :time (c12-8 / before))
+                    :ARG2 (c12-14 / correct-02
+                                  :ARG0 (c12-1 / we)
+                                  :ARG1 c12-16))
+       :snt4 (c12-19 / thank-01
+                     :ARG0 (c12-13 / i)
+                     :ARG1 (c12-18 / you)
+                     :mode expressive))
+
+# ::snt Plane debris had already been foundJUST IN: Germanwings flight GWI18G crashes in French Alps
+# ::tokens ["Plane", "debris", "had", "already", "been", "foundJUST", "IN", ":", "Germanwings", "flight", "GWI18", "G", "crashes", "in", "French", "Alps"]
+# ::lemmas ["Plane", "debris", "have", "already", "be", "foundjust", "in", ":", "germanwing", "flight", "gwi18", "G", "crash", "in", "French", "Alps"]
+(c13-1 / find-01
+       :ARG1 (c13-8 / debris
+                    :mod (c13-7 / plane))
+       :time (c13-14 / already)
+       :location (c13-0 / just-in)
+       :ARG1-of (c13-9 / cause-01
+                       :ARG0 (c13-10 / crash-01
+                                     :ARG1 (c13-4 / fly-01
+                                                  :ARG2 (c13-3 / aircraft-type
+                                                               :name (c13-5 / name
+                                                                            :op1 "GWI18G")
+                                                               :poss (c13-13 / company
+                                                                             :name (c13-6 / name
+                                                                                          :op1 "Germanywings"))))
+                                     :location (c13-2 / mountain
+                                                      :name (c13-11 / name
+                                                                    :op1 "Alps")
+                                                      :location (c13-15 / country
+                                                                        :name (c13-12 / name
+                                                                                      :op1 "France"))))))
+
+# ::snt wow, thanks for replying
+# ::tokens ["wow", ",", "thanks", "for", "replying"]
+# ::lemmas ["wow", ",", "thank", "for", "reply"]
+(c14-3 / thank-01
+       :ARG1 (c14-1 / you)
+       :ARG2 (c14-2 / reply-01
+                    :ARG0 c14-1)
+       :mod (c14-0 / wow
+                   :mode expressive))
+
+# ::snt Here we go again. My prayers.
+# ::tokens ["Here", "we", "go", "again", ".", "My", "prayers", "."]
+# ::lemmas ["here", "we", "go", "again", ".", "my", "prayer", "."]
+(c15-2 / multi-sentence
+       :snt1 (c15-5 / go-01
+                    :ARG1 (c15-1 / we)
+                    :ARG4 (c15-0 / here)
+                    :mod (c15-6 / again))
+       :snt2 (c15-4 / pray-01
+                    :ARG0 (c15-3 / i)))

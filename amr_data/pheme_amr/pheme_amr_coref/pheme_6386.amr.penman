@@ -1,0 +1,18 @@
+# ::snt people from Spain.
+# ::tokens ["people", "from", "Spain", "."]
+# ::lemmas ["people", "from", "Spain", "."]
+(c1-1 / people
+      :source (c1-2 / country
+                    :name (c1-0 / name
+                                :op1 "Spain")))
+
+# ::snt Incredible crash ! how contact CAN be lost ?
+# ::tokens ["Incredible", "crash", "!", "how", "contact", "CAN", "be", "lost", "?"]
+# ::lemmas ["incredible", "crash", "!", "how", "contact", "can", "be", "lose", "?"]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / crash-01
+                  :mod (c2-2 / incredible))
+      :snt2 (c2-3 / possible-01
+                  :ARG1 (c2-0 / lose-02
+                              :ARG1 (c2-4 / contact-01))
+                  :manner (c2-6 / amr-unknown)))

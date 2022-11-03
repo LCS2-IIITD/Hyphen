@@ -1,0 +1,60 @@
+# ::snt And they're not stealing electronics.
+# ::tokens ["And", "they", "'re", "not", "stealing", "electronics", "."]
+# ::lemmas ["and", "they", "be", "not", "steal", "electronic", "."]
+(c1-3 / and
+      :op2 (c1-0 / steal-01
+                 :ARG0 (c1-2 / they)
+                 :ARG1 (c1-1 / electronics)
+                 :polarity -))
+
+# ::snt or burning down stores owned by their own neighbors. Or defecating in the parks.
+# ::tokens ["or", "burning", "down", "stores", "owned", "by", "their", "own", "neighbors", ".", "Or", "defecating", "in", "the", "parks", "."]
+# ::lemmas ["or", "burn", "down", "store", "own", "by", "their", "own", "neighbor", ".", "or", "defecate", "in", "the", "park", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / or
+                  :op2 (c2-3 / burn-01
+                             :ARG1 (c2-8 / store
+                                         :ARG1-of (c2-1 / own-01
+                                                        :ARG0 (c2-5 / neighbor
+                                                                    :poss (c2-9 / they))))
+                             :direction (c2-7 / down)))
+      :snt2 (c2-0 / defecate-01
+                  :location (c2-6 / park)))
+
+# ::snt apparently not the same shit who advocated for killing .These ppl actually have jobs and a conscience
+# ::tokens ["apparently", "not", "the", "same", "shit", "who", "advocated", "for", "killing", ".These", "ppl", "actually", "have", "jobs", "and", "a", "conscience"]
+# ::lemmas ["apparently", "not", "the", "same", "shit", "who", "advocate", "for", "kill", ".these", "ppl", "actually", "have", "job", "and", "a", "conscience"]
+(c3-2 / multi-sentence
+      :snt1 (c3-12 / appear-02
+                   :ARG1 (c3-8 / shit
+                               :ARG1-of (c3-3 / same-01
+                                              :polarity -)
+                               :ARG0-of (c3-4 / advocate-01
+                                              :ARG1 (c3-11 / kill-01))))
+      :snt2 (c3-0 / have-03
+                  :ARG0 (c3-6 / ppl
+                              :mod (c3-10 / this))
+                  :ARG1 (c3-5 / and
+                              :op1 (c3-1 / job)
+                              :op2 (c3-7 / conscience))
+                  :ARG1-of (c3-9 / actual-02)))
+
+# ::snt Way to cold : Huge crowd gathered in Union Square to show solidarity with France.
+# ::tokens ["Way", "to", "cold", ":", "Huge", "crowd", "gathered", "in", "Union", "Square", "to", "show", "solidarity", "with", "France", "."]
+# ::lemmas ["way", "to", "cold", ":", "huge", "crowd", "gather", "in", "Union", "Square", "to", "show", "solidarity", "with", "France", "."]
+(c4-7 / cause-01
+      :ARG0 (c4-8 / gather-03
+                  :ARG0 (c4-6 / crowd
+                              :mod (c4-0 / huge))
+                  :location (c4-10 / square
+                                   :name (c4-4 / name
+                                               :op1 "Union"
+                                               :op2 "Square"))
+                  :purpose (c4-3 / show-01
+                                 :ARG0 c4-6
+                                 :ARG1 (c4-2 / solidarity
+                                             :prep-with (c4-9 / country
+                                                              :name (c4-5 / name
+                                                                          :op1 "France")))))
+      :ARG1 (c4-11 / cold-01
+                   :degree (c4-1 / way)))

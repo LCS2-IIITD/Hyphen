@@ -1,0 +1,28 @@
+# ::snt A Petition to Impeach Trump has reached Over 400k Signatures
+# ::tokens ["A", "Petition", "to", "Impeach", "Trump", "has", "reached", "Over", "400k", "Signatures"]
+# ::lemmas ["a", "petition", "to", "Impeach", "Trump", "have", "reach", "over", "400k", "Signatures"]
+(c1-4 / reach-01
+      :ARG0 (c1-5 / petition-01
+                  :ARG1 (c1-1 / impeach-01
+                              :ARG1 (c1-3 / person
+                                          :name (c1-6 / name
+                                                      :op1 "Trump"))))
+      :ARG1 (c1-0 / sign
+                  :quant (c1-2 / over
+                               :op1 400000)))
+
+# ::snt These do nothing but put your name and email on a spam list.
+# ::tokens ["These", "do", "nothing", "but", "put", "your", "name", "and", "email", "on", "a", "spam", "list", "."]
+# ::lemmas ["these", "do", "nothing", "but", "put", "your", "name", "and", "email", "on", "a", "spam", "list", "."]
+(c2-7 / put-01
+      :ARG0 (c2-4 / this)
+      :ARG1 (c2-1 / and
+                  :op1 (c2-3 / thing
+                             :ARG2-of (c2-8 / name-01
+                                            :ARG1 (c2-9 / you)))
+                  :op2 (c2-2 / thing
+                             :ARG1-of (c2-10 / email-01
+                                             :ARG0 c2-9)))
+      :ARG2 (c2-6 / list-01
+                  :ARG2 (c2-0 / spam))
+      :mod (c2-5 / nothing-but))

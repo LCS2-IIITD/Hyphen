@@ -1,0 +1,24 @@
+# ::snt good!!!
+# ::tokens ["good", "!", "!", "!"]
+# ::lemmas ["good", "!", "!", "!"]
+(c2-0 / good-02
+      :mode expressive)
+
+# ::snt live news just reported cops yelling at people to run. Must be a third shooter!
+# ::tokens ["live", "news", "just", "reported", "cops", "yelling", "at", "people", "to", "run", ".", "Must", "be", "a", "third", "shooter", "!"]
+# ::lemmas ["live", "news", "just", "report", "cop", "yell", "at", "people", "to", "run", ".", "must", "be", "a", "third", "shooter", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / report-01
+                  :ARG0 (c3-11 / news
+                               :medium (c3-7 / live))
+                  :ARG1 (c3-0 / yell-01
+                              :ARG0 (c3-4 / cop)
+                              :ARG1 (c3-1 / run-02
+                                          :ARG0 (c3-5 / person
+                                                      :ARG2-of c3-0)))
+                  :time (c3-3 / just))
+      :snt2 (c3-6 / infer-01
+                  :ARG1 c3-5
+                  :ord (c3-9 / ordinal-entity
+                             :value 3)
+                  :ARG0-of (c3-10 / shoot-02)))

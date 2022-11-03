@@ -1,0 +1,62 @@
+# ::snt Parsing 10TB of Metadata, 26M Domain Names and 1.4M SSL Certs for $10 on AWS
+# ::tokens ["Parsing", "10", "TB", "of", "Metadata", ",", "26", "M", "Domain", "Names", "and", "1.4", "M", "SSL", "Certs", "for", "$", "10", "on", "AWS"]
+# ::lemmas ["parse", "10", "TB", "of", "Metadata", ",", "26", "m", "domain", "Names", "and", "1.4", "M", "SSL", "Certs", "for", "$", "10", "on", "AWS"]
+(c1-13 / power-01
+       :ARG1 (c1-1 / and
+                   :op1 (c1-10 / product
+                               :name (c1-15 / name
+                                            :op1 "Metadata")
+                               :quant (c1-3 / information-quantity
+                                            :unit (c1-11 / terabyte)
+                                            :quant 10))
+                   :op2 (c1-6 / product
+                              :name (c1-12 / name
+                                           :op1 "Domain"
+                                           :op2 "Names")
+                              :quant 26000000)
+                   :op3 (c1-4 / product
+                              :name (c1-9 / name
+                                          :op1 "SSL"
+                                          :op2 "Certs")
+                              :quant (c1-14 / monetary-quantity
+                                            :unit (c1-0 / dollar)
+                                            :quant 1.4)))
+       :prep-on (c1-5 / company
+                      :name (c1-2 / name
+                                  :op1 "AWS"))
+       :prep-for (c1-7 / monetary-quantity
+                       :unit (c1-8 / dollar)
+                       :quant 10))
+
+# ::snt Well proggit, I am waiting for someone here to show that you can do this using only three lines of bash on a cheap laptop.
+# ::tokens ["Well", "proggit", ",", "I", "am", "waiting", "for", "someone", "here", "to", "show", "that", "you", "can", "do", "this", "using", "only", "three", "lines", "of", "bash", "on", "a", "cheap", "laptop", "."]
+# ::lemmas ["well", "proggit", ",", "i", "be", "wait", "for", "someone", "here", "to", "show", "that", "you", "can", "do", "this", "use", "only", "three", "line", "of", "bash", "on", "a", "cheap", "laptop", "."]
+(c2-4 / wait-01
+      :ARG1 (c2-13 / i)
+      :ARG2 (c2-0 / show-01
+                  :ARG0 (c2-12 / someone
+                               :location (c2-5 / here))
+                  :ARG1 (c2-9 / possible-01
+                              :ARG1 (c2-1 / do-02
+                                          :ARG0 (c2-14 / you)
+                                          :ARG1 (c2-8 / this)
+                                          :manner (c2-6 / use-01
+                                                        :ARG0 c2-14
+                                                        :ARG1 (c2-10 / line
+                                                                     :ARG2-of (c2-11 / bash-01)
+                                                                     :mod (c2-7 / only)
+                                                                     :quant 3)
+                                                        :location (c2-2 / laptop
+                                                                        :ARG1-of (c2-3 / cheap-02))))))
+      :mod (c2-15 / well
+                  :mode expressive))
+
+# ::snt Hard mode: pipes count as a new line.
+# ::tokens ["Hard", "mode", ":", "pipes", "count", "as", "a", "new", "line", "."]
+# ::lemmas ["hard", "mode", ":", "pipe", "count", "as", "a", "new", "line", "."]
+(c3-0 / count-04
+      :ARG1 (c3-3 / pipe)
+      :prep-as (c3-2 / line
+                     :ARG1-of (c3-5 / new-01))
+      :mod (c3-4 / mode
+                 :ARG1-of (c3-1 / hard-04)))

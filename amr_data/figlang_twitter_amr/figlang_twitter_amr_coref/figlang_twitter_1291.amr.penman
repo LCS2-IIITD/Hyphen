@@ -1,0 +1,50 @@
+# ::snt The same classy bunch that slammed a paraplegic for not standing up . <URL>
+# ::tokens ["The", "same", "classy", "bunch", "that", "slammed", "a", "paraplegic", "for", "not", "standing", "up", ".", "<", "URL", ">"]
+# ::lemmas ["the", "same", "classy", "bunch", "that", "slam", "a", "paraplegic", "for", "not", "stand", "up", ".", "<", "URL", ">"]
+(c1-3 / bunch
+      :ARG1-of (c1-0 / same-01)
+      :ARG1-of (c1-1 / classy-02)
+      :ARG0-of (c1-4 / slam-02
+                     :ARG1 (c1-5 / paraplegic)
+                     :ARG2 (c1-2 / stand-up-07
+                                 :ARG1 c1-5
+                                 :polarity -)))
+
+# ::snt " Who are you going to believe ? Me , or your lying eyes ? "
+# ::tokens ["\"", "Who", "are", "you", "going", "to", "believe", "?", "Me", ",", "or", "your", "lying", "eyes", "?", "\""]
+# ::lemmas ["\"", "who", "be", "you", "go", "to", "believe", "?", "i", ",", "or", "your", "lie", "eye", "?", "\""]
+(c2-2 / believe-01
+      :ARG0 (c2-4 / you
+                  :part (c2-5 / eye
+                              :ARG0-of (c2-1 / lie-08)))
+      :ARG1 (c2-0 / amr-choice
+                  :op1 (c2-3 / i)
+                  :op2 c2-5))
+
+# ::snt Unfortunately , video evidence cannot be disputed . Trump mocked Cruz and Bankers in the same fashion before reporter .
+# ::tokens ["Unfortunately", ",", "video", "evidence", "can", "not", "be", "disputed", ".", "Trump", "mocked", "Cruz", "and", "Bankers", "in", "the", "same", "fashion", "before", "reporter", "."]
+# ::lemmas ["unfortunately", ",", "video", "evidence", "can", "not", "be", "dispute", ".", "Trump", "mock", "Cruz", "and", "Bankers", "in", "the", "same", "fashion", "before", "reporter", "."]
+(c3-5 / multi-sentence
+      :snt1 (c3-18 / possible-01
+                   :ARG1 (c3-0 / dispute-01
+                               :ARG2 (c3-7 / evidence-01
+                                           :ARG1 (c3-3 / video)))
+                   :ARG2-of (c3-14 / fortunate-01
+                                   :polarity -)
+                   :polarity -)
+      :snt2 (c3-15 / mock-01
+                   :ARG0 (c3-16 / person
+                                :name (c3-6 / name
+                                            :op1 "Trump"))
+                   :ARG1 (c3-13 / and
+                                :op1 (c3-10 / person
+                                            :name (c3-1 / name
+                                                        :op1 "Cruz"))
+                                :op2 (c3-2 / company
+                                           :name (c3-12 / name
+                                                        :op1 "Bankers")))
+                   :manner (c3-11 / fashion
+                                  :ARG1-of (c3-8 / same-01))
+                   :time (c3-17 / before
+                                :op1 (c3-9 / person
+                                           :ARG0-of (c3-4 / report-01)))))

@@ -1,0 +1,62 @@
+# ::snt Steels Experience At i54 UK
+# ::tokens ["Steels", "Experience", "At", "i54", "UK"]
+# ::lemmas ["Steels", "Experience", "at", "i54", "UK"]
+(c1-4 / experience-01
+      :ARG0 (c1-0 / company
+                  :name (c1-3 / name
+                              :op1 "Steels"
+                              :op2 "Experience"))
+      :location (c1-2 / location
+                      :name (c1-1 / name
+                                  :op1 "i54"
+                                  :op2 "UK")))
+
+# ::snt Can't believe how much he's talking when he's dead.
+# ::tokens ["Ca", "n't", "believe", "how", "much", "he", "'s", "talking", "when", "he", "'s", "dead", "."]
+# ::lemmas ["can", "not", "believe", "how", "much", "he", "be", "talk", "when", "he", "be", "dead", "."]
+(c2-6 / possible-01
+      :ARG1 (c2-5 / believe-01
+                  :ARG0 (c2-1 / i)
+                  :ARG1 (c2-4 / thing
+                              :quant-of (c2-2 / talk-01
+                                              :ARG0 (c2-3 / he)
+                                              :time (c2-0 / die-01
+                                                          :ARG1 c2-3))))
+      :polarity -)
+
+# ::snt He's the IGL and was also playing with 4 under average players.
+# ::tokens ["He", "'s", "the", "IGL", "and", "was", "also", "playing", "with", "4", "under", "average", "players", "."]
+# ::lemmas ["he", "be", "the", "IGL", "and", "be", "also", "play", "with", "4", "under", "average", "player", "."]
+(c3-1 / and
+      :op1 (c3-3 / he
+                 :mod (c3-6 / league
+                            :name (c3-8 / name
+                                        :op1 "IGL")))
+      :op2 (c3-7 / play-01
+                 :ARG0 c3-3
+                 :accompanier (c3-5 / person
+                                    :ARG1-of (c3-2 / play-01)
+                                    :ARG1-of (c3-9 / average-03
+                                                   :degree (c3-4 / under))
+                                    :quant 4)
+                 :mod (c3-0 / also)))
+
+# ::snt Under average compared to the pro scene but they're still better than most players
+# ::tokens ["Under", "average", "compared", "to", "the", "pro", "scene", "but", "they", "'re", "still", "better", "than", "most", "players"]
+# ::lemmas ["under", "average", "compare", "to", "the", "pro", "scene", "but", "they", "be", "still", "well", "than", "most", "player"]
+(c4-5 / have-concession-91
+      :ARG1 (c4-1 / average-04
+                  :ARG1 (c4-9 / they)
+                  :degree (c4-7 / under)
+                  :ARG1-of (c4-2 / compare-01
+                                 :ARG2 (c4-0 / scene
+                                             :mod (c4-12 / pro))))
+      :ARG2 (c4-10 / good-02
+                   :ARG1 c4-9
+                   :mod (c4-11 / still)
+                   :ARG2-of (c4-6 / have-degree-91
+                                  :ARG1 c4-9
+                                  :ARG3 (c4-13 / more)
+                                  :ARG4 (c4-8 / person
+                                              :mod (c4-3 / most)
+                                              :ARG0-of (c4-4 / play-01)))))

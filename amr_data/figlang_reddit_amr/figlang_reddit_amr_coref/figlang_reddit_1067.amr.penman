@@ -1,0 +1,51 @@
+# ::snt TIL that monosodium glutamate (MSG) has no extraordinary negative effect on the human body, contrary to common perception
+# ::tokens ["TIL", "that", "monosodium", "glutamate", "(", "MSG", ")", "has", "no", "extraordinary", "negative", "effect", "on", "the", "human", "body", ",", "contrary", "to", "common", "perception"]
+# ::lemmas ["TIL", "that", "monosodium", "glutamate", "(", "MSG", ")", "have", "no", "extraordinary", "negative", "effect", "on", "the", "human", "body", ",", "contrary", "to", "common", "perception"]
+(c1-2 / affect-01
+      :ARG0 (c1-0 / small-molecule
+                  :name (c1-10 / name
+                               :op1 "Monosodium"
+                               :op2 "G glutamate"))
+      :ARG1 (c1-8 / body
+                  :mod (c1-4 / human))
+      :ARG2 (c1-6 / negative-02)
+      :mod (c1-11 / extraordinary)
+      :ARG1-of (c1-3 / contrary-01
+                     :ARG2 (c1-5 / thing
+                                 :ARG1-of (c1-9 / perceive-01)
+                                 :mod (c1-1 / common)))
+      :source (c1-7 / research-institute
+                    :name c1-10
+                    :op1 "TIL")
+      :polarity -)
+
+# ::snt Unless you have migraines, then MSG can be a trigger food and send you spiraling into hours of pain and regret.
+# ::tokens ["Unless", "you", "have", "migraines", ",", "then", "MSG", "can", "be", "a", "trigger", "food", "and", "send", "you", "spiraling", "into", "hours", "of", "pain", "and", "regret", "."]
+# ::lemmas ["unless", "you", "have", "migraine", ",", "then", "MSG", "can", "be", "a", "trigger", "food", "and", "send", "you", "spiral", "into", "hours", "of", "pain", "and", "regret", "."]
+(c2-12 / possible-01
+       :ARG1 (c2-2 / and
+                   :op1 (c2-3 / food
+                              :ARG0-of (c2-9 / trigger-01)
+                              :domain (c2-8 / product
+                                            :name (c2-14 / name
+                                                         :op1 "MSG")))
+                   :op2 (c2-0 / send-03
+                              :ARG0 c2-8
+                              :ARG1 (c2-15 / you)
+                              :ARG4 (c2-11 / spiral-01
+                                           :ARG1 c2-15
+                                           :ARG2 (c2-13 / multiple
+                                                        :op1 (c2-4 / temporal-quantity
+                                                                   :unit (c2-6 / hour)
+                                                                   :quant 1)
+                                                        :duration-of (c2-16 / and
+                                                                            :op1 (c2-5 / pain-01
+                                                                                       :ARG1 c2-15)
+                                                                            :op2 (c2-10 / regret-01
+                                                                                        :ARG0 c2-15))))))
+       :condition (c2-7 / have-03
+                        :ARG0 c2-15
+                        :ARG1 (c2-1 / disease
+                                    :name c2-14
+                                    :op1 "Migraines")
+                        :polarity -))

@@ -1,0 +1,116 @@
+# ::snt that article looks like bs
+# ::tokens ["that", "article", "looks", "like", "bs"]
+# ::lemmas ["that", "article", "look", "like", "bs"]
+(c1-0 / look-02
+      :ARG0 (c1-4 / article
+                  :mod (c1-3 / that))
+      :ARG1 (c1-2 / person
+                  :name (c1-1 / name
+                              :op1 "BS")))
+
+# ::snt this has got to STOP.
+# ::tokens ["this", "has", "got", "to", "STOP", "."]
+# ::lemmas ["this", "have", "get", "to", "stop", "."]
+(c2-2 / get-03
+      :ARG1 (c2-0 / stop-01
+                  :ARG1 (c2-1 / this)))
+
+# ::snt &amp; has announced
+# ::tokens ["&", "amp", ";", "has", "announced"]
+# ::lemmas ["&", "amp", ";", "have", "announce"]
+(c3-2 / announce-01
+      :ARG0 (c3-1 / company
+                  :name (c3-0 / name
+                              :op1 "&amp")))
+
+# ::snt &amp; was she kneeling down with her hands in the air too?
+# ::tokens ["&", "amp", ";", "was", "she", "kneeling", "down", "with", "her", "hands", "in", "the", "air", "too", "?"]
+# ::lemmas ["&", "amp", ";", "be", "she", "kneel", "down", "with", "her", "hand", "in", "the", "air", "too", "?"]
+(c4-6 / and
+      :op2 (c4-5 / kneel-01
+                 :ARG0 (c4-3 / she
+                             :part (c4-0 / hand))
+                 :location (c4-1 / air)
+                 :mod (c4-4 / too)
+                 :polarity (c4-2 / amr-unknown)))
+
+# ::snt . Why are you referring to the protesters as suspects??
+# ::tokens [".", "Why", "are", "you", "referring", "to", "the", "protesters", "as", "suspects", "?", "?"]
+# ::lemmas [".", "why", "be", "you", "refer", "to", "the", "protester", "as", "suspect", "?", "?"]
+(c5-2 / refer-01
+      :ARG0 (c5-0 / you)
+      :ARG1 (c5-1 / person
+                  :ARG0-of (c5-5 / protest-01)
+                  :ARG2-of c5-2)
+      :ARG2-of (c5-4 / suspect-01)
+      :ARG1-of (c5-3 / cause-01
+                     :ARG0 (c5-6 / amr-unknown)))
+
+# ::snt Police in St. Louis County say an officer shot and critically wounded a suspect early this morning near
+# ::tokens ["Police", "in", "St.", "Louis", "County", "say", "an", "officer", "shot", "and", "critically", "wounded", "a", "suspect", "early", "this", "morning", "near"]
+# ::lemmas ["police", "in", "St.", "Louis", "County", "say", "an", "officer", "shoot", "and", "critically", "wound", "a", "suspect", "early", "this", "morning", "near"]
+(c6-12 / say-01
+       :ARG0 (c6-8 / police
+                   :location (c6-10 / county
+                                    :name (c6-6 / name
+                                                :op1 "St."
+                                                :op2 "Louis"
+                                                :op3 "County")))
+       :ARG1 (c6-15 / and
+                    :op1 (c6-4 / shoot-02
+                               :ARG0 (c6-3 / officer)
+                               :ARG1 (c6-14 / person
+                                            :ARG2-of (c6-1 / suspect-01)))
+                    :op2 (c6-0 / wound-01
+                               :ARG0 c6-3
+                               :ARG1 c6-14
+                               :mod (c6-9 / critical))
+                    :time (c6-5 / early
+                                :op1 (c6-11 / date-entity
+                                            :dayperiod (c6-2 / morning)
+                                            :mod (c6-13 / today)))
+                    :ARG1-of (c6-7 / near-02)))
+
+# ::snt I have yet to see that confirmed by tweeps. Get your info from them, not because...
+# ::tokens ["I", "have", "yet", "to", "see", "that", "confirmed", "by", "tweeps", ".", "Get", "your", "info", "from", "them", ",", "not", "because", "..."]
+# ::lemmas ["i", "have", "yet", "to", "see", "that", "confirm", "by", "tweep", ".", "get", "your", "info", "from", "they", ",", "not", "because", "..."]
+(c7-2 / multi-sentence
+      :snt1 (c7-0 / have-11
+                  :ARG0 (c7-3 / i)
+                  :ARG1 (c7-1 / yet)
+                  :ARG2 (c7-10 / see-01
+                               :ARG0 c7-3
+                               :ARG1 (c7-6 / confirm-01
+                                           :ARG0 (c7-11 / tweep)
+                                           :ARG1 (c7-9 / that)))
+                  :polarity -)
+      :snt2 (c7-7 / get-01
+                  :ARG0 (c7-12 / you)
+                  :ARG1 (c7-8 / information
+                              :poss c7-12)
+                  :ARG2 (c7-4 / they)
+                  :ARG1-of (c7-5 / cause-01
+                                 :polarity -)))
+
+# ::snt strange... it didnt take hrs to release a statement acknowledging the incident
+# ::tokens ["strange", "...", "it", "did", "nt", "take", "hrs", "to", "release", "a", "statement", "acknowledging", "the", "incident"]
+# ::lemmas ["strange", "...", "it", "do", "not", "take", "hrs", "to", "release", "a", "statement", "acknowledge", "the", "incident"]
+(c8-6 / strange
+      :domain (c8-7 / take-10
+                    :ARG0 (c8-4 / release-01
+                                :ARG1 (c8-2 / state-01
+                                            :ARG0-of (c8-8 / acknowledge-01
+                                                           :ARG1 (c8-3 / incident))))
+                    :ARG1 (c8-1 / multiple
+                                :op1 (c8-5 / temporal-quantity
+                                           :unit (c8-0 / hour)
+                                           :quant 1))
+                    :polarity -))
+
+# ::snt good fuck the police
+# ::tokens ["good", "fuck", "the", "police"]
+# ::lemmas ["good", "fuck", "the", "police"]
+(c9-1 / fuck-01
+      :ARG1 (c9-0 / police)
+      :ARG1-of (c9-2 / good-02)
+      :mode expressive)

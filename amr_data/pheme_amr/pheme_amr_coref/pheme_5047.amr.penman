@@ -1,0 +1,200 @@
+# ::snt Someone ought to tell Joe
+# ::tokens ["Someone", "ought", "to", "tell", "Joe"]
+# ::lemmas ["someone", "ought", "to", "tell", "Joe"]
+(c1-2 / recommend-01
+      :ARG1 (c1-4 / tell-01
+                  :ARG0 (c1-3 / someone)
+                  :ARG2 (c1-1 / person
+                              :name (c1-0 / name
+                                          :op1 "Joe"))))
+
+# ::snt : One man has been arrested and people are being evacuated from the building v.
+# ::tokens [":", "One", "man", "has", "been", "arrested", "and", "people", "are", "being", "evacuated", "from", "the", "building", "v."]
+# ::lemmas [":", "One", "man", "have", "be", "arrest", "and", "people", "be", "be", "evacuate", "from", "the", "building", "v."]
+(c2-5 / and
+      :op1 (c2-3 / arrest-01
+                 :ARG1 (c2-0 / man
+                             :quant 1))
+      :op2 (c2-2 / evacuate-01
+                 :ARG1 (c2-1 / building)
+                 :ARG2 (c2-4 / person)))
+
+# ::snt : : One man has been arrested and people are being evacuated frthe building
+# ::tokens [":", ":", "One", "man", "has", "been", "arrested", "and", "people", "are", "being", "evacuated", "frthe", "building"]
+# ::lemmas [":", ":", "One", "man", "have", "be", "arrest", "and", "people", "be", "be", "evacuate", "frthe", "building"]
+(c3-5 / and
+      :op1 (c3-3 / arrest-01
+                 :ARG1 (c3-0 / man
+                             :quant 1))
+      :op2 (c3-2 / evacuate-01
+                 :ARG1 (c3-1 / building)
+                 :ARG2 (c3-4 / person)))
+
+# ::snt ...I hope this is true.
+# ::tokens ["...", "I", "hope", "this", "is", "true", "."]
+# ::lemmas ["...", "i", "hope", "this", "be", "true", "."]
+(c4-0 / hope-01
+      :ARG0 (c4-2 / i)
+      :ARG1 (c4-1 / true-01
+                  :ARG1 (c4-3 / this)))
+
+# ::snt Unrelated incident.
+# ::tokens ["Unrelated", "incident", "."]
+# ::lemmas ["unrelated", "incident", "."]
+(c5-1 / incident
+      :ARG1-of (c5-0 / relate-01
+                     :polarity -))
+
+# ::snt IS IT TRUE THO
+# ::tokens ["IS", "IT", "TRUE", "THO"]
+# ::lemmas ["be", "it", "true", "THO"]
+(c6-1 / true-01
+      :ARG1 (c6-2 / it)
+      :ARG1-of (c6-0 / request-confirmation-91))
+
+# ::snt not related? Your TV and twitter feeds seem to be sending out contradictory info!
+# ::tokens ["not", "related", "?", "Your", "TV", "and", "twitter", "feeds", "seem", "to", "be", "sending", "out", "contradictory", "info", "!"]
+# ::lemmas ["not", "relate", "?", "your", "tv", "and", "twitter", "feed", "seem", "to", "be", "send", "out", "contradictory", "info", "!"]
+(c7-2 / multi-sentence
+      :snt1 (c7-8 / relate-01
+                  :polarity -)
+      :snt2 (c7-10 / seem-01
+                   :ARG1 (c7-3 / send-01
+                               :ARG0 (c7-12 / and
+                                            :op1 (c7-1 / feed
+                                                       :medium (c7-11 / television
+                                                                      :poss (c7-0 / you)))
+                                            :op2 (c7-5 / feed
+                                                       :medium (c7-7 / publication
+                                                                     :name (c7-6 / name
+                                                                                 :op1 "Twitter"))
+                                                       :poss c7-0))
+                               :ARG1 (c7-4 / information
+                                           :ARG1-of (c7-9 / contradict-01))
+                               :ARG2 c7-12)))
+
+# ::snt is that the Terrorist?
+# ::tokens ["is", "that", "the", "Terrorist", "?"]
+# ::lemmas ["be", "that", "the", "Terrorist", "?"]
+(c8-0 / terrorist
+      :domain (c8-2 / that)
+      :polarity (c8-1 / amr-unknown))
+
+# ::snt one man has been arrested near the scene, not related. people are being evacuated from nearby buildings.
+# ::tokens ["one", "man", "has", "been", "arrested", "near", "the", "scene", ",", "not", "related", ".", "people", "are", "being", "evacuated", "from", "nearby", "buildings", "."]
+# ::lemmas ["one", "man", "have", "be", "arrest", "near", "the", "scene", ",", "not", "relate", ".", "people", "be", "be", "evacuate", "from", "nearby", "building", "."]
+(c9-0 / multi-sentence
+      :snt1 (c9-9 / arrest-01
+                  :ARG1 (c9-5 / man
+                              :ARG1-of (c9-6 / relate-01
+                                             :polarity -)
+                              :quant 1)
+                  :location (c9-3 / near-02
+                                  :ARG2 (c9-8 / scene)))
+      :snt2 (c9-2 / evacuate-01
+                  :ARG1 (c9-1 / building
+                              :location (c9-4 / nearby))
+                  :ARG2 (c9-7 / person)))
+
+# ::snt I'd re tweet a different account, these guys don't have a clue!
+# ::tokens ["I", "'d", "re", "tweet", "a", "different", "account", ",", "these", "guys", "do", "n't", "have", "a", "clue", "!"]
+# ::lemmas ["i", "would", "re", "tweet", "a", "different", "account", ",", "these", "guy", "do", "not", "have", "a", "clue", "!"]
+(c10-8 / tweet-02
+       :ARG0 (c10-2 / i)
+       :ARG1 (c10-9 / account
+                    :ARG1-of (c10-3 / differ-02))
+       :ARG1-of (c10-4 / cause-01
+                       :ARG0 (c10-0 / have-03
+                                    :ARG0 (c10-5 / guy
+                                                 :mod (c10-7 / this))
+                                    :ARG1 (c10-6 / clue)
+                                    :polarity -))
+       :mod (c10-1 / again))
+
+# ::snt according to posted article &amp; tweet from NSW PD arrest unrelated to police operation. Check above link. I wish it were true tho.
+# ::tokens ["according", "to", "posted", "article", "&", "amp", ";", "tweet", "from", "NSW", "PD", "arrest", "unrelated", "to", "police", "operation", ".", "Check", "above", "link", ".", "I", "wish", "it", "were", "true", "tho", "."]
+# ::lemmas ["accord", "to", "post", "article", "&", "amp", ";", "tweet", "from", "NSW", "PD", "arrest", "unrelated", "to", "police", "operation", ".", "check", "above", "link", ".", "i", "wish", "it", "be", "true", "tho", "."]
+(c11-0 / multi-sentence
+       :snt1 (c11-2 / say-01
+                    :ARG0 (c11-4 / and
+                                 :op1 (c11-13 / article)
+                                 :op2 (c11-1 / person
+                                             :name (c11-8 / name
+                                                          :op1 "amp"))
+                                 :ARG1-of (c11-3 / post-01))
+                    :ARG1 (c11-9 / arrest-01
+                                 :ARG0 (c11-11 / government-organization
+                                               :name (c11-18 / name
+                                                             :op1 "New"
+                                                             :op2 "South"
+                                                             :op3 "Wales"
+                                                             :op4 "PD"))
+                                 :ARG1-of (c11-10 / relate-01
+                                                  :ARG2 (c11-17 / operate-01
+                                                                :ARG0 (c11-7 / police))
+                                                  :polarity -)))
+       :snt2 (c11-19 / check-01
+                     :ARG0 (c11-16 / you)
+                     :ARG1 (c11-6 / link
+                                  :location (c11-20 / above))
+                     :mode imperative)
+       :snt3 (c11-12 / wish-01
+                     :ARG0 (c11-14 / i)
+                     :ARG1 (c11-21 / true-01
+                                   :ARG1 (c11-15 / it))
+                     :ARG1-of (c11-5 / have-concession-91)))
+
+# ::snt : : One man has been arrested and people are being evacuated from the building
+# ::tokens [":", ":", "One", "man", "has", "been", "arrested", "and", "people", "are", "being", "evacuated", "from", "the", "building"]
+# ::lemmas [":", ":", "One", "man", "have", "be", "arrest", "and", "people", "be", "be", "evacuate", "from", "the", "building"]
+(c12-5 / and
+       :op1 (c12-3 / arrest-01
+                   :ARG1 (c12-0 / man
+                                :quant 1))
+       :op2 (c12-2 / evacuate-01
+                   :ARG1 (c12-1 / building)
+                   :ARG2 (c12-4 / person)))
+
+# ::snt was this the guy with an orange shirt/singlet?
+# ::tokens ["was", "this", "the", "guy", "with", "an", "orange", "shirt", "/", "singlet", "?"]
+# ::lemmas ["be", "this", "the", "guy", "with", "an", "orange", "shirt", "/", "singlet", "?"]
+(c13-4 / guy
+       :polarity (c13-7 / amr-unknown)
+       :domain (c13-6 / this)
+       :ARG0-of (c13-0 / have-03
+                       :ARG1 (c13-5 / slash
+                                    :op1 (c13-3 / shirt
+                                                :mod (c13-2 / orange))
+                                    :op2 (c13-1 / singlet))))
+
+# ::snt Thank you John Howard &amp; George Bush for bringing terrorism to our own country!
+# ::tokens ["Thank", "you", "John", "Howard", "&", "amp", ";", "George", "Bush", "for", "bringing", "terrorism", "to", "our", "own", "country", "!"]
+# ::lemmas ["thank", "you", "John", "Howard", "&", "amp", ";", "George", "Bush", "for", "bring", "terrorism", "to", "our", "own", "country", "!"]
+(c14-9 / thank-01
+       :ARG0 (c14-0 / we)
+       :ARG1 (c14-11 / and
+                     :op1 (c14-5 / person
+                                 :name (c14-3 / name
+                                              :op1 "John"
+                                              :op2 "Howard"))
+                     :op2 (c14-10 / person
+                                  :name (c14-4 / name
+                                               :op1 "amp")))
+       :ARG2 (c14-2 / bring-01
+                    :ARG0 (c14-1 / person
+                                 :name (c14-6 / name
+                                              :op1 "George"
+                                              :op2 "Bush"))
+                    :ARG1 (c14-8 / terrorism)
+                    :ARG2 (c14-7 / country
+                                 :poss c14-0)))
+
+# ::snt this is an appalling display of lack of professional journalism.
+# ::tokens ["this", "is", "an", "appalling", "display", "of", "lack", "of", "professional", "journalism", "."]
+# ::lemmas ["this", "be", "an", "appalling", "display", "of", "lack", "of", "professional", "journalism", "."]
+(c15-3 / display-01
+       :ARG1 (c15-1 / lack-01
+                    :ARG1 (c15-0 / journalism
+                                 :mod (c15-2 / professional)))
+       :ARG0-of (c15-5 / appall-01)
+       :domain (c15-4 / this))

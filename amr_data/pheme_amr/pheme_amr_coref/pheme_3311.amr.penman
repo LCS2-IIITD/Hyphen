@@ -1,0 +1,156 @@
+# ::snt do they need a reason ? Just sick.
+# ::tokens ["do", "they", "need", "a", "reason", "?", "Just", "sick", "."]
+# ::lemmas ["do", "they", "need", "a", "reason", "?", "just", "sick", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / need-01
+                  :polarity (c2-7 / amr-unknown)
+                  :ARG0 (c2-6 / they)
+                  :ARG1 (c2-3 / reason))
+      :snt2 (c2-5 / sick-05
+                  :ARG1 (c2-4 / they)
+                  :mod (c2-0 / just)))
+
+# ::snt : Why magazine was targeted for the attack
+# ::tokens [":", "Why", "magazine", "was", "targeted", "for", "the", "attack"]
+# ::lemmas [":", "why", "magazine", "be", "target", "for", "the", "attack"]
+(c3-1 / target-01
+      :ARG1 (c3-0 / magazine)
+      :ARG2 (c3-3 / attack-01)
+      :purpose (c3-2 / amr-unknown))
+
+# ::snt :Maybe because they stand alone in claiming the rights to express openly the freedom of criticising what they believe to be wrong
+# ::tokens [":", "Maybe", "because", "they", "stand", "alone", "in", "claiming", "the", "rights", "to", "express", "openly", "the", "freedom", "of", "criticising", "what", "they", "believe", "to", "be", "wrong"]
+# ::lemmas [":", "maybe", "because", "they", "stand", "alone", "in", "claim", "the", "right", "to", "express", "openly", "the", "freedom", "of", "criticise", "what", "they", "believe", "to", "be", "wrong"]
+(c4-5 / possible-01
+      :ARG1 (c4-7 / cause-01
+                  :ARG0 (c4-10 / stand-11
+                               :ARG1 (c4-12 / they)
+                               :ARG2 (c4-13 / alone)
+                               :manner (c4-6 / claim-01
+                                             :ARG0 c4-12
+                                             :ARG1 (c4-8 / right-05
+                                                         :ARG1 c4-12
+                                                         :ARG2 (c4-4 / express-01
+                                                                     :ARG0 c4-12
+                                                                     :ARG1 (c4-1 / free-04
+                                                                                 :ARG1 c4-12
+                                                                                 :ARG3 (c4-9 / criticize-01
+                                                                                             :ARG0 c4-12
+                                                                                             :ARG1 (c4-11 / thing
+                                                                                                          :ARG1-of (c4-0 / wrong-04
+                                                                                                                         :ARG1-of (c4-2 / believe-01
+                                                                                                                                        :ARG0 c4-12)))))
+                                                                     :ARG1-of (c4-3 / open-04)))))))
+
+# ::snt Charlie Hebdo must not succeed; it it vital that they are caught quickly to face the full force of law.
+# ::tokens ["Charlie", "Hebdo", "must", "not", "succeed", ";", "it", "it", "vital", "that", "they", "are", "caught", "quickly", "to", "face", "the", "full", "force", "of", "law", "."]
+# ::lemmas ["Charlie", "Hebdo", "must", "not", "succeed", ";", "it", "it", "vital", "that", "they", "be", "catch", "quickly", "to", "face", "the", "full", "force", "of", "law", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-3 / obligate-01
+                  :ARG1 (c5-11 / succeed-01
+                               :ARG0 (c5-9 / publication
+                                           :name (c5-7 / name
+                                                       :op1 "Charlie"
+                                                       :op2 " Hebdo"))
+                               :polarity -))
+      :snt2 (c5-8 / vital
+                  :domain (c5-10 / catch-02
+                                 :ARG1 (c5-12 / they)
+                                 :ARG1-of (c5-5 / quick-02)
+                                 :purpose (c5-0 / face-01
+                                                :ARG0 c5-12
+                                                :ARG1 (c5-6 / force-04
+                                                            :ARG0 (c5-2 / law)
+                                                            :ARG1-of (c5-4 / full-09))))))
+
+# ::snt Because they satirised Islam and Judaism on a weekly basis. Minority groups in France
+# ::tokens ["Because", "they", "satirised", "Islam", "and", "Judaism", "on", "a", "weekly", "basis", ".", "Minority", "groups", "in", "France"]
+# ::lemmas ["because", "they", "satirise", "Islam", "and", "Judaism", "on", "a", "weekly", "basis", ".", "minority", "group", "in", "France"]
+(c6-1 / multi-sentence
+      :snt1 (c6-8 / cause-01
+                  :ARG0 (c6-12 / satirize-01
+                               :ARG0 (c6-14 / they)
+                               :ARG1 (c6-15 / and
+                                            :op1 (c6-7 / religious-group
+                                                       :name (c6-4 / name
+                                                                   :op1 "Islam"))
+                                            :op2 (c6-3 / religious-group
+                                                       :name (c6-5 / name
+                                                                   :op1 "Judaism")))
+                               :frequency (c6-2 / rate-entity-91
+                                                :ARG3 (c6-11 / temporal-quantity
+                                                             :unit (c6-0 / week)
+                                                             :quant 1))))
+      :snt2 (c6-9 / group
+                  :mod (c6-6 / minority)
+                  :location (c6-10 / country
+                                   :name (c6-13 / name
+                                                :op1 "France"))))
+
+# ::snt if you believe in you will publish the cartoons in solidarity with
+# ::tokens ["if", "you", "believe", "in", "you", "will", "publish", "the", "cartoons", "in", "solidarity", "with"]
+# ::lemmas ["if", "you", "believe", "in", "you", "will", "publish", "the", "cartoon", "in", "solidarity", "with"]
+(c7-2 / publish-01
+      :ARG0 (c7-0 / you)
+      :ARG1 (c7-3 / cartoon)
+      :condition (c7-1 / believe-01
+                       :ARG0 c7-0)
+      :manner (c7-4 / solidarity))
+
+# ::snt . Because some unhinged peoples faith in their prophet is so shaky they had to defend it with bullets?
+# ::tokens [".", "Because", "some", "unhinged", "peoples", "faith", "in", "their", "prophet", "is", "so", "shaky", "they", "had", "to", "defend", "it", "with", "bullets", "?"]
+# ::lemmas [".", "because", "some", "unhinged", "people", "faith", "in", "their", "prophet", "be", "so", "shaky", "they", "have", "to", "defend", "it", "with", "bullet", "?"]
+(c8-11 / cause-01
+       :polarity (c8-14 / amr-unknown)
+       :ARG0 (c8-12 / shaky
+                    :domain (c8-1 / faith
+                                  :poss (c8-9 / person
+                                              :ARG1-of (c8-3 / unhing-01)
+                                              :mod (c8-8 / some))
+                                  :topic (c8-13 / person
+                                                :ARG0-of (c8-0 / have-rel-role-91
+                                                               :ARG1 c8-9
+                                                               :ARG2 (c8-4 / prophet))))
+                    :ARG2-of (c8-2 / have-degree-91
+                                   :ARG1 c8-1
+                                   :ARG3 (c8-5 / so)
+                                   :ARG6 (c8-6 / obligate-01
+                                               :ARG1 c8-9
+                                               :ARG2 (c8-10 / defend-01
+                                                            :ARG0 c8-9
+                                                            :ARG1 c8-1
+                                                            :instrument (c8-7 / bullet))))))
+
+# ::snt I don't know why anyone thinks CH satirised everything? It was only ever Islam, Judaism and Conservatives. French minority groups
+# ::tokens ["I", "do", "n't", "know", "why", "anyone", "thinks", "CH", "satirised", "everything", "?", "It", "was", "only", "ever", "Islam", ",", "Judaism", "and", "Conservatives", ".", "French", "minority", "groups"]
+# ::lemmas ["i", "do", "not", "know", "why", "anyone", "think", "CH", "satirise", "everything", "?", "it", "be", "only", "ever", "Islam", ",", "Judaism", "and", "Conservatives", ".", "French", "minority", "group"]
+(c9-0 / multi-sentence
+      :snt1 (c9-19 / know-01
+                   :ARG0 (c9-17 / i)
+                   :ARG1 (c9-24 / thing
+                                :ARG0-of (c9-22 / cause-01
+                                                :ARG1 (c9-23 / think-01
+                                                             :ARG0 (c9-8 / anyone)
+                                                             :ARG1 (c9-6 / satirize-01
+                                                                         :ARG0 (c9-4 / person
+                                                                                     :name (c9-11 / name
+                                                                                                  :op1 "CH"))
+                                                                         :ARG1 (c9-10 / everything)))))
+                   :polarity -)
+      :snt2 (c9-16 / and
+                   :op1 (c9-12 / and
+                               :op1 (c9-14 / religious-group
+                                           :name (c9-21 / name
+                                                        :op1 "Islam"))
+                               :op2 (c9-1 / religious-group
+                                          :name (c9-2 / name
+                                                      :op1 "Judaism"))
+                               :op3 (c9-7 / person
+                                          :mod (c9-5 / conservative))
+                               :time (c9-9 / ever)
+                               :mod (c9-20 / only))
+                   :snt3 (c9-15 / group
+                                :mod (c9-13 / minority)
+                                :mod (c9-18 / country
+                                            :name (c9-3 / name
+                                                        :op1 "France")))))

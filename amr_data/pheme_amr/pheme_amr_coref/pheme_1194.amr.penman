@@ -1,0 +1,313 @@
+# ::snt What is wrong with you ?
+# ::tokens ["What", "is", "wrong", "with", "you", "?"]
+# ::lemmas ["what", "be", "wrong", "with", "you", "?"]
+(c1-0 / wrong-02
+      :ARG1 (c1-2 / amr-unknown)
+      :ARG2 (c1-1 / you))
+
+# ::snt You are a danger to the rest of society. Stop posting pics without any verification &amp; creating panic.
+# ::tokens ["You", "are", "a", "danger", "to", "the", "rest", "of", "society", ".", "Stop", "posting", "pics", "without", "any", "verification", "&", "amp", ";", "creating", "panic", "."]
+# ::lemmas ["you", "be", "a", "danger", "to", "the", "rest", "of", "society", ".", "stop", "post", "pic", "without", "any", "verification", "&", "amp", ";", "create", "panic", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / endanger-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-8 / rest
+                              :part-of (c2-11 / society)))
+      :snt2 (c2-4 / stop-01
+                  :ARG0 (c2-10 / you)
+                  :ARG1 (c2-7 / post-01
+                              :ARG0 c2-10
+                              :ARG1 (c2-12 / pic)
+                              :manner (c2-13 / and
+                                             :op1 (c2-6 / verify-01
+                                                        :ARG0 c2-10
+                                                        :polarity -)
+                                             :op2 (c2-5 / amp))
+                              :ARG0-of (c2-9 / create-01
+                                             :ARG1 (c2-2 / panic-01)))
+                  :mode imperative))
+
+# ::snt FFS, have you got a clue? There are people's lives at stake.
+# ::tokens ["FFS", ",", "have", "you", "got", "a", "clue", "?", "There", "are", "people", "'s", "lives", "at", "stake", "."]
+# ::lemmas ["FFS", ",", "have", "you", "get", "a", "clue", "?", "there", "be", "people", "'s", "life", "at", "stake", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / get-01
+                  :ARG0 (c3-3 / person
+                              :name (c3-2 / name
+                                          :op1 "FFS"))
+                  :ARG1 (c3-4 / clue)
+                  :polarity (c3-8 / amr-unknown))
+      :snt2 (c3-6 / stake-01
+                  :ARG2 (c3-0 / life
+                              :poss (c3-7 / person))))
+
+# ::snt if you can have a photo of this bloke then just snipe him in the head.
+# ::tokens ["if", "you", "can", "have", "a", "photo", "of", "this", "bloke", "then", "just", "snipe", "him", "in", "the", "head", "."]
+# ::lemmas ["if", "you", "can", "have", "a", "photo", "of", "this", "bloke", "then", "just", "snipe", "he", "in", "the", "head", "."]
+(c4-5 / snipe-02
+      :ARG0 (c4-1 / you)
+      :ARG1 (c4-3 / bloke
+                  :part (c4-0 / head))
+      :mod (c4-2 / just)
+      :condition (c4-4 / possible-01
+                       :ARG1 (c4-7 / have-03
+                                   :ARG0 c4-1
+                                   :ARG1 (c4-6 / photograph-01
+                                               :ARG1 c4-3)))
+      :location c4-0
+      :mode imperative)
+
+# ::snt Sure hope it's not just some dude and that you've not just pulled a Fairfax. Beginning to see why you were sent back to uni.
+# ::tokens ["Sure", "hope", "it", "'s", "not", "just", "some", "dude", "and", "that", "you", "'ve", "not", "just", "pulled", "a", "Fairfax", ".", "Beginning", "to", "see", "why", "you", "were", "sent", "back", "to", "uni", "."]
+# ::lemmas ["sure", "hope", "it", "be", "not", "just", "some", "dude", "and", "that", "you", "'ve", "not", "just", "pull", "a", "Fairfax", ".", "begin", "to", "see", "why", "you", "be", "send", "back", "to", "uni", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-7 / hope-01
+                  :ARG1 (c5-6 / and
+                              :op1 (c5-3 / dude
+                                         :mod (c5-0 / just)
+                                         :domain (c5-13 / you)
+                                         :polarity -)
+                              :op2 (c5-2 / pull-01
+                                         :ARG0 c5-13
+                                         :ARG1 (c5-10 / newspaper
+                                                      :name (c5-15 / name
+                                                                   :op1 "Fairfax"))
+                                         :mod (c5-5 / just)
+                                         :polarity -))
+                  :ARG1-of (c5-4 / sure-02))
+      :snt2 (c5-8 / begin-01
+                  :ARG1 (c5-9 / see-01
+                              :ARG1 (c5-18 / thing
+                                           :ARG0-of (c5-16 / cause-01
+                                                           :ARG1 (c5-14 / send-03
+                                                                        :ARG1 (c5-17 / you)
+                                                                        :ARG2 (c5-11 / university)
+                                                                        :direction (c5-12 / back)))))))
+
+# ::snt It's called Dunning-Kruger effect.
+# ::tokens ["It", "'s", "called", "Dunning", "-", "Kruger", "effect", "."]
+# ::lemmas ["it", "be", "call", "Dunning", "-", "Kruger", "effect", "."]
+(c6-2 / call-01
+      :ARG1 (c6-3 / it)
+      :ARG2 (c6-1 / effect
+                  :name (c6-0 / name
+                              :op1 "Dunning-Kruger")))
+
+# ::snt She is SOOOOO Stupid that she is completely incapable of realising it.
+# ::tokens ["She", "is", "SOOOOO", "Stupid", "that", "she", "is", "completely", "incapable", "of", "realising", "it", "."]
+# ::lemmas ["she", "be", "sooooo", "Stupid", "that", "she", "be", "completely", "incapable", "of", "realise", "it", "."]
+(c7-7 / stupid
+      :degree (c7-1 / so)
+      :domain (c7-0 / she)
+      :ARG0-of (c7-4 / cause-01
+                     :ARG1 (c7-3 / capable-01
+                                 :ARG1 c7-0
+                                 :ARG2 (c7-5 / realize-01
+                                             :ARG0 c7-0
+                                             :ARG1 (c7-2 / it))
+                                 :ARG1-of (c7-6 / complete-02)
+                                 :polarity -)))
+
+# ::snt looks like a bikie
+# ::tokens ["looks", "like", "a", "bikie"]
+# ::lemmas ["look", "like", "a", "bikie"]
+(c8-0 / look-02
+      :ARG1 (c8-1 / bikie))
+
+# ::snt . Your stupidity is beyond belief. Just stop if you are capable of that.
+# ::tokens [".", "Your", "stupidity", "is", "beyond", "belief", ".", "Just", "stop", "if", "you", "are", "capable", "of", "that", "."]
+# ::lemmas [".", "your", "stupidity", "be", "beyond", "belief", ".", "just", "stop", "if", "you", "be", "capable", "of", "that", "."]
+(c9-2 / multi-sentence
+      :snt1 (c9-3 / beyond
+                  :op1 (c9-5 / believe-01)
+                  :domain (c9-8 / stupidity
+                                :poss (c9-1 / you)))
+      :snt2 (c9-4 / stop-01
+                  :ARG0 (c9-7 / you)
+                  :mod (c9-0 / just)
+                  :condition (c9-6 / capable-01
+                                   :ARG1 c9-7
+                                   :ARG2 (c9-9 / that))
+                  :mode imperative))
+
+# ::snt dad?
+# ::tokens ["dad", "?"]
+# ::lemmas ["dad", "?"]
+(c10-1 / person
+       :polarity (c10-3 / amr-unknown)
+       :ARG0-of (c10-0 / have-rel-role-91
+                       :ARG2 (c10-2 / dad)))
+
+# ::snt there is stupid and there is Markson's stupidity which is on another planet altogether
+# ::tokens ["there", "is", "stupid", "and", "there", "is", "Markson", "'s", "stupidity", "which", "is", "on", "another", "planet", "altogether"]
+# ::lemmas ["there", "be", "stupid", "and", "there", "be", "Markson", "'s", "stupidity", "which", "be", "on", "another", "planet", "altogether"]
+(c11-7 / and
+       :op1 (c11-5 / stupid)
+       :op2 (c11-0 / stupid
+                   :domain (c11-4 / person
+                                  :name (c11-2 / name
+                                               :op1 "Markson"))
+                   :location (c11-6 / planet
+                                    :mod (c11-1 / another)
+                                    :mod (c11-3 / altogether))))
+
+# ::snt I'm not watching it, but it sounds as if it is being treated as sport.
+# ::tokens ["I", "'m", "not", "watching", "it", ",", "but", "it", "sounds", "as", "if", "it", "is", "being", "treated", "as", "sport", "."]
+# ::lemmas ["i", "be", "not", "watch", "it", ",", "but", "it", "sound", "as", "if", "it", "be", "be", "treat", "as", "sport", "."]
+(c12-3 / contrast-01
+       :ARG1 (c12-0 / watch-01
+                    :ARG0 (c12-2 / i)
+                    :ARG1 (c12-4 / it)
+                    :polarity -)
+       :ARG2 (c12-5 / sound-01
+                    :ARG1 c12-4
+                    :ARG2 (c12-6 / treat-01
+                                 :ARG1 c12-4
+                                 :ARG2 (c12-1 / sport))))
+
+# ::snt Bugger IDing him, get a sniper to shoot him.
+# ::tokens ["Bugger", "IDing", "him", ",", "get", "a", "sniper", "to", "shoot", "him", "."]
+# ::lemmas ["Bugger", "IDing", "he", ",", "get", "a", "sniper", "to", "shoot", "he", "."]
+(c13-7 / and
+       :op1 (c13-2 / bug-01
+                   :ARG1 (c13-1 / you)
+                   :ARG2 (c13-4 / ID-01
+                                :ARG1 (c13-0 / he)))
+       :op2 (c13-5 / get-04
+                   :ARG0 c13-1
+                   :ARG1 (c13-6 / sniper)
+                   :purpose (c13-3 / shoot-01
+                                   :ARG0 c13-6
+                                   :ARG2 c13-0)
+                   :mode imperative))
+
+# ::snt who do you think youre informing?
+# ::tokens ["who", "do", "you", "think", "you", "re", "informing", "?"]
+# ::lemmas ["who", "do", "you", "think", "you", "re", "inform", "?"]
+(c14-3 / inform-01
+       :ARG0 (c14-0 / you)
+       :ARG2 (c14-1 / amr-unknown)
+       :ARG1-of (c14-2 / think-01
+                       :ARG0 c14-0))
+
+# ::snt put a bullet in the wankers head
+# ::tokens ["put", "a", "bullet", "in", "the", "wankers", "head"]
+# ::lemmas ["put", "a", "bullet", "in", "the", "wanker", "head"]
+(c15-4 / put-01
+       :ARG0 (c15-1 / you)
+       :ARG1 (c15-3 / bullet)
+       :ARG2 (c15-0 / head
+                    :part-of (c15-2 / wanker))
+       :mode imperative)
+
+# ::snt looks like a little green man!
+# ::tokens ["looks", "like", "a", "little", "green", "man", "!"]
+# ::lemmas ["look", "like", "a", "little", "green", "man", "!"]
+(c16-0 / look-02
+       :ARG1 (c16-1 / man
+                    :mod (c16-3 / little)
+                    :mod (c16-2 / green)))
+
+# ::snt Yeah, Murdoch witch, shut up and watch the blinking lights. You're not a journo, so don't journalise.
+# ::tokens ["Yeah", ",", "Murdoch", "witch", ",", "shut", "up", "and", "watch", "the", "blinking", "lights", ".", "You", "'re", "not", "a", "journo", ",", "so", "do", "n't", "journalise", "."]
+# ::lemmas ["yeah", ",", "Murdoch", "witch", ",", "shut", "up", "and", "watch", "the", "blink", "light", ".", "you", "be", "not", "a", "journo", ",", "so", "do", "not", "journalise", "."]
+(c17-4 / multi-sentence
+       :snt1 (c17-11 / and
+                     :op1 (c17-9 / shut-up-06
+                                 :ARG0 (c17-1 / you
+                                              :ARG1-of c17-9)
+                                 :mode imperative)
+                     :op2 (c17-2 / watch-01
+                                 :ARG0 c17-1
+                                 :ARG1 (c17-3 / light
+                                              :ARG1-of (c17-5 / blink-01))
+                                 :mode imperative)
+                     :mod (c17-8 / yeah
+                                 :mode expressive))
+       :snt2 (c17-0 / journalist
+                    :domain (c17-6 / you)
+                    :ARG0-of (c17-7 / cause-01
+                                    :ARG1 (c17-10 / journalize-01
+                                                  :ARG0 c17-6
+                                                  :mode imperative
+                                                  :polarity -))
+                    :polarity -))
+
+# ::snt : According to Seven, this is a picture of the gunman - no idea how true this is but fascinating
+# ::tokens [":", "According", "to", "Seven", ",", "this", "is", "a", "picture", "of", "the", "gunman", "-", "no", "idea", "how", "true", "this", "is", "but", "fascinating"]
+# ::lemmas [":", "accord", "to", "Seven", ",", "this", "be", "a", "picture", "of", "the", "gunman", "-", "no", "idea", "how", "true", "this", "be", "but", "fascinating"]
+(c18-2 / multi-sentence
+       :snt1 (c18-13 / say-01
+                     :ARG0 (c18-3 / broadcast-program
+                                  :name (c18-6 / name
+                                               :op1 "Seven"))
+                     :ARG1 (c18-8 / picture-01
+                                  :ARG1 (c18-10 / gunman)
+                                  :mod (c18-14 / this)))
+       :snt2 (c18-9 / contrast-01
+                    :ARG1 (c18-0 / have-03
+                                 :ARG0 (c18-5 / i)
+                                 :ARG1 (c18-11 / idea
+                                               :topic (c18-12 / thing
+                                                              :degree-of (c18-7 / true-01
+                                                                                :ARG1 (c18-4 / this))))
+                                 :polarity -)
+                    :ARG2 (c18-1 / fascinate-01
+                                 :ARG0 c18-4)))
+
+# ::snt Stupid. Media learnt nothing from Boston.
+# ::tokens ["Stupid", ".", "Media", "learnt", "nothing", "from", "Boston", "."]
+# ::lemmas ["stupid", ".", "medium", "learn", "nothing", "from", "Boston", "."]
+(c20-1 / multi-sentence
+       :snt1 (c20-6 / stupid)
+       :snt2 (c20-0 / learn-01
+                    :ARG0 (c20-4 / media)
+                    :ARG1 (c20-2 / nothing)
+                    :ARG2 (c20-5 / city
+                                 :name (c20-3 / name
+                                              :op1 "Boston"))))
+
+# ::snt exactly what i was thinking
+# ::tokens ["exactly", "what", "i", "was", "thinking"]
+# ::lemmas ["exactly", "what", "i", "be", "think"]
+(c21-1 / thing
+       :ARG1-of (c21-3 / think-01
+                       :ARG0 (c21-2 / i))
+       :mod (c21-0 / exact))
+
+# ::snt there's of them though
+# ::tokens ["there", "'s", "of", "them", "though"]
+# ::lemmas ["there", "be", "of", "they", "though"]
+(c22-0 / have-concession-91
+       :ARG1 (c22-2 / they
+                    :quant (c22-1 / many)))
+
+# ::snt We learnt a lot from Boston nothing happened.
+# ::tokens ["We", "learnt", "a", "lot", "from", "Boston", "nothing", "happened", "."]
+# ::lemmas ["we", "learn", "a", "lot", "from", "Boston", "nothing", "happen", "."]
+(c23-1 / learn-01
+       :ARG0 (c23-0 / we)
+       :ARG1 (c23-6 / thing
+                    :quant (c23-5 / lot))
+       :ARG2 (c23-4 / city
+                    :name (c23-3 / name
+                                 :op1 "Boston"))
+       :mod (c23-2 / event
+                   :polarity -))
+
+# ::snt . Police have asked all on social media to desist publishing anything FHS
+# ::tokens [".", "Police", "have", "asked", "all", "on", "social", "media", "to", "desist", "publishing", "anything", "FHS"]
+# ::lemmas [".", "police", "have", "ask", "all", "on", "social", "medium", "to", "desist", "publish", "anything", "FHS"]
+(c24-9 / ask-02
+       :ARG0 (c24-5 / police)
+       :ARG1 (c24-6 / desist-01
+                    :ARG0 (c24-2 / all)
+                    :ARG1 (c24-8 / publish-01
+                                 :ARG0 c24-2
+                                 :ARG1 (c24-4 / anything
+                                              :mod (c24-1 / publication
+                                                          :name (c24-3 / name
+                                                                       :op1 "FHS")))))
+       :ARG2 c24-2
+       :medium (c24-0 / media
+                      :mod (c24-7 / social)))

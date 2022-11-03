@@ -1,0 +1,40 @@
+# ::snt Good evening morning Wednesday morning again weeks are flying by <URL>
+# ::tokens ["Good", "evening", "morning", "Wednesday", "morning", "again", "weeks", "are", "flying", "by", "<", "URL", ">"]
+# ::lemmas ["good", "evening", "morning", "Wednesday", "morning", "again", "weeks", "be", "fly", "by", "<", "URL", ">"]
+(c1-2 / fly-01
+      :ARG1 (c1-3 / week)
+      :time (c1-0 / date-entity
+                  :dayperiod (c1-5 / morning)
+                  :ARG1-of (c1-4 / good-02)
+                  :weekday (c1-6 / wednesday)
+                  :dayperiod c1-5)
+      :mod (c1-1 / again))
+
+# ::snt If you want to fly give up everything that weighs you down . <URL>
+# ::tokens ["If", "you", "want", "to", "fly", "give", "up", "everything", "that", "weighs", "you", "down", ".", "<", "URL", ">"]
+# ::lemmas ["if", "you", "want", "to", "fly", "give", "up", "everything", "that", "weigh", "you", "down", ".", "<", "URL", ">"]
+(c2-2 / give-up-07
+      :ARG0 (c2-3 / you)
+      :ARG1 (c2-5 / everything
+                  :ARG0-of (c2-1 / weigh-down-03
+                                 :ARG1 c2-3))
+      :condition (c2-4 / want-01
+                       :ARG0 c2-3
+                       :ARG1 (c2-0 / fly-01
+                                   :ARG1 c2-3))
+      :mode imperative)
+
+# ::snt " Still , like air , I rise . " Dr . Maya Angelou <URL>
+# ::tokens ["\"", "Still", ",", "like", "air", ",", "I", "rise", ".", "\"", "Dr", ".", "Maya", "Angelou", "<", "URL", ">"]
+# ::lemmas ["\"", "still", ",", "like", "air", ",", "i", "rise", ".", "\"", "Dr", ".", "Maya", "Angelou", "<", "URL", ">"]
+(c3-3 / rise-01
+      :ARG1 (c3-6 / i)
+      :mod (c3-0 / still)
+      :ARG1-of (c3-2 / resemble-01
+                     :ARG2 (c3-1 / air))
+      :ARG1-of (c3-5 / say-01
+                     :ARG0 (c3-4 / person
+                                 :name (c3-7 / name
+                                             :op1 "Dr."
+                                             :op2 "Maya"
+                                             :op3 "Angelou"))))

@@ -1,0 +1,31 @@
+# ::snt A German writer is banned from the US for criticizing the NSA
+# ::tokens ["A", "German", "writer", "is", "banned", "from", "the", "US", "for", "criticizing", "the", "NSA"]
+# ::lemmas ["a", "German", "writer", "be", "ban", "from", "the", "US", "for", "criticize", "the", "NSA"]
+(c1-8 / ban-01
+      :ARG1 (c1-2 / country
+                  :name (c1-9 / name
+                              :op1 "Germany")
+                  :ARG0-of (c1-3 / write-01))
+      :ARG2 (c1-0 / country
+                  :name (c1-6 / name
+                              :op1 "US"))
+      :ARG1-of (c1-4 / cause-01
+                     :ARG0 (c1-1 / criticize-01
+                                 :ARG0 c1-2
+                                 :ARG1 (c1-7 / government-organization
+                                             :name (c1-5 / name
+                                                         :op1 "NSA")))))
+
+# ::snt Funny how I have never heard of this in US media.
+# ::tokens ["Funny", "how", "I", "have", "never", "heard", "of", "this", "in", "US", "media", "."]
+# ::lemmas ["funny", "how", "i", "have", "never", "hear", "of", "this", "in", "US", "medium", "."]
+(c2-0 / funny
+      :domain (c2-2 / hear-01
+                    :ARG0 (c2-4 / i)
+                    :ARG1 (c2-3 / this)
+                    :ARG2 (c2-5 / media
+                                :mod (c2-1 / country
+                                           :name (c2-6 / name
+                                                       :op1 "US")))
+                    :time (c2-7 / ever)
+                    :polarity -))

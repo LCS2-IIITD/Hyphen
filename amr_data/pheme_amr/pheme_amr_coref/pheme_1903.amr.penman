@@ -1,0 +1,106 @@
+# ::snt impressive sight
+# ::tokens ["impressive", "sight"]
+# ::lemmas ["impressive", "sight"]
+(c1-0 / sight
+      :ARG0-of (c1-1 / impress-01))
+
+# ::snt in our prayers
+# ::tokens ["in", "our", "prayers"]
+# ::lemmas ["in", "our", "prayer"]
+(c2-0 / have-manner-91
+      :ARG2 (c2-2 / pray-01
+                  :ARG0 (c2-1 / we)))
+
+# ::snt Sheik parrot is not wrong. Islam is the wrong.
+# ::tokens ["Sheik", "parrot", "is", "not", "wrong", ".", "Islam", "is", "the", "wrong", "."]
+# ::lemmas ["Sheik", "parrot", "be", "not", "wrong", ".", "Islam", "be", "the", "wrong", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-0 / wrong-04
+                  :ARG1 (c3-5 / parrot-01
+                              :ARG0 (c3-8 / person
+                                          :mod (c3-6 / religious-group
+                                                     :name (c3-3 / name
+                                                                 :op1 "Sheik"))))
+                  :polarity -)
+      :snt2 (c3-2 / wrong-04
+                  :ARG1 (c3-4 / religious-group
+                              :name (c3-7 / name
+                                          :op1 "Islam"))))
+
+# ::snt stay strong
+# ::tokens ["stay", "strong"]
+# ::lemmas ["stay", "strong"]
+(c4-0 / stay-01
+      :ARG1 (c4-1 / you)
+      :ARG3 (c4-2 / strong-02
+                  :ARG1 c4-1)
+      :mode imperative)
+
+# ::snt The law of do not say the truth.
+# ::tokens ["The", "law", "of", "do", "not", "say", "the", "truth", "."]
+# ::lemmas ["the", "law", "of", "do", "not", "say", "the", "truth", "."]
+(c5-2 / law
+      :topic (c5-0 / say-01
+                   :ARG0 (c5-1 / you)
+                   :ARG1 (c5-3 / truth)
+                   :polarity -))
+
+# ::snt THIS IS CALLED HUMANITY! I WAS THERE!
+# ::tokens ["THIS", "IS", "CALLED", "HUMANITY", "!", "I", "WAS", "THERE", "!"]
+# ::lemmas ["this", "be", "call", "HUMANITY", "!", "i", "be", "there", "!"]
+(c6-1 / multi-sentence
+      :snt1 (c6-4 / call-01
+                  :ARG1 (c6-6 / this)
+                  :ARG2 (c6-0 / humane))
+      :snt2 (c6-2 / be-located-at-91
+                  :ARG1 (c6-3 / i)
+                  :ARG2 (c6-5 / there)))
+
+# ::snt How to face Islam and terrorism ???
+# ::tokens ["How", "to", "face", "Islam", "and", "terrorism", "?", "?", "?"]
+# ::lemmas ["how", "to", "face", "Islam", "and", "terrorism", "?", "?", "?"]
+(c7-5 / thing
+      :manner-of (c7-0 / face-01
+                       :ARG1 (c7-6 / and
+                                   :op1 (c7-3 / religious-group
+                                              :name (c7-2 / name
+                                                          :op1 "Islam"))
+                                   :op2 (c7-4 / terrorism)))
+      :polarity (c7-1 / amr-unknown))
+
+# ::snt A desolate and very emotional scene. Prayers for Paris.
+# ::tokens ["A", "desolate", "and", "very", "emotional", "scene", ".", "Prayers", "for", "Paris", "."]
+# ::lemmas ["a", "desolate", "and", "very", "emotional", "scene", ".", "prayer", "for", "Paris", "."]
+(c8-0 / multi-sentence
+      :snt1 (c8-7 / scene
+                  :mod (c8-5 / desolate)
+                  :ARG0-of (c8-1 / emotional-02
+                                 :degree (c8-3 / very)))
+      :snt2 (c8-4 / pray-01
+                  :beneficiary (c8-6 / city
+                                     :name (c8-2 / name
+                                                 :op1 "Paris"))))
+
+# ::snt Prayers for them all.
+# ::tokens ["Prayers", "for", "them", "all", "."]
+# ::lemmas ["prayer", "for", "they", "all", "."]
+(c9-0 / pray-01
+      :beneficiary (c9-1 / they
+                         :mod (c9-2 / all)))
+
+# ::snt : Eiffel Tower went dark last night in tribute to the victims of the attack.
+# ::tokens [":", "Eiffel", "Tower", "went", "dark", "last", "night", "in", "tribute", "to", "the", "victims", "of", "the", "attack", "."]
+# ::lemmas [":", "Eiffel", "Tower", "go", "dark", "last", "night", "in", "tribute", "to", "the", "victim", "of", "the", "attack", "."]
+(c12-6 / go-08
+       :ARG1 (c12-8 / tower
+                    :name (c12-2 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ARG2 (c12-5 / dark-02
+                    :ARG1 c12-8)
+       :time (c12-1 / date-entity
+                    :dayperiod (c12-3 / night)
+                    :mod (c12-0 / yesterday))
+       :purpose (c12-7 / tribute
+                       :beneficiary (c12-4 / victim
+                                           :ARG1-of (c12-9 / attack-01))))

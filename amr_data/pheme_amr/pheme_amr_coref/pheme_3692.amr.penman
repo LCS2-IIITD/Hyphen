@@ -1,0 +1,49 @@
+# ::snt L'union fait la force!
+# ::tokens ["L'union", "fait", "la", "force", "!"]
+# ::lemmas ["L'union", "fait", "la", "force", "!"]
+(c1-0 / fait-la-force
+      :domain (c1-1 / union-02)
+      :mode expressive)
+
+# ::snt Islam is a religion of peace
+# ::tokens ["Islam", "is", "a", "religion", "of", "peace"]
+# ::lemmas ["Islam", "be", "a", "religion", "of", "peace"]
+(c2-2 / religion
+      :mod (c2-1 / peace)
+      :domain (c2-3 / religious-group
+                    :name (c2-0 / name
+                                :op1 "Islam")))
+
+# ::snt and we are freezing
+# ::tokens ["and", "we", "are", "freezing"]
+# ::lemmas ["and", "we", "be", "freeze"]
+(c3-2 / and
+      :op2 (c3-1 / freeze-01
+                 :ARG1 (c3-0 / we)))
+
+# ::snt Thank you NYC
+# ::tokens ["Thank", "you", "NYC"]
+# ::lemmas ["thank", "you", "NYC"]
+(c4-3 / say-01
+      :ARG1 (c4-4 / thank-01
+                  :ARG0 (c4-0 / i)
+                  :ARG1 (c4-2 / city
+                              :name (c4-1 / name
+                                          :op1 "NYC")
+                              :ARG2-of c4-3)))
+
+# ::snt Mindless morons, they can't think for themselves. Operate like clockwork.
+# ::tokens ["Mindless", "morons", ",", "they", "ca", "n't", "think", "for", "themselves", ".", "Operate", "like", "clockwork", "."]
+# ::lemmas ["mindless", "moron", ",", "they", "can", "not", "think", "for", "themselves", ".", "operate", "like", "clockwork", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / possible-01
+                  :ARG1 (c5-9 / think-01
+                              :ARG0 (c5-5 / moron
+                                          :ARG0-of (c5-0 / mind-05
+                                                         :polarity -))
+                              :mod (c5-2 / by-oneself))
+                  :polarity -)
+      :snt2 (c5-3 / operate-01
+                  :ARG0 (c5-8 / they)
+                  :manner (c5-6 / resemble-01
+                                :ARG2 (c5-7 / clockwork))))

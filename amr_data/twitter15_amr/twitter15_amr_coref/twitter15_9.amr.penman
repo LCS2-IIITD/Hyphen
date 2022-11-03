@@ -1,0 +1,208 @@
+# ::snt Stop! Don't want to see it
+# ::tokens ["Stop", "!", "Do", "n't", "want", "to", "see", "it"]
+# ::lemmas ["stop", "!", "do", "not", "want", "to", "see", "it"]
+(c1-4 / multi-sentence
+      :snt1 (c1-0 / stop-01
+                  :ARG0 (c1-5 / you)
+                  :mode imperative)
+      :snt2 (c1-6 / want-01
+                  :ARG0 (c1-1 / you)
+                  :ARG1 (c1-2 / see-01
+                              :ARG0 c1-1
+                              :ARG1 (c1-3 / it))
+                  :polarity -))
+
+# ::snt : Puppy-sized spider surprises scientist in rainforest
+# ::tokens [":", "Puppy", "-", "sized", "spider", "surprises", "scientist", "in", "rainforest"]
+# ::lemmas [":", "Puppy", "-", "sized", "spider", "surprise", "scientist", "in", "rainfor"]
+(c2-0 / surprise-01
+      :ARG0 (c2-1 / spider
+                  :ARG1-of (c2-3 / size-01
+                                 :ARG2 (c2-2 / puppy)))
+      :ARG1 (c2-5 / scientist)
+      :location (c2-4 / rainforest))
+
+# ::snt : Puppy-sized spider surprises scientist in rainforest | I would die
+# ::tokens [":", "Puppy", "-", "sized", "spider", "surprises", "scientist", "in", "rainforest", "|", "I", "would", "die"]
+# ::lemmas [":", "Puppy", "-", "sized", "spider", "surprise", "scientist", "in", "rainfor", "|", "i", "would", "die"]
+(c3-4 / multi-sentence
+      :snt1 (c3-0 / surprise-01
+                  :ARG0 (c3-1 / spider
+                              :ARG1-of (c3-5 / size-01
+                                             :ARG2 (c3-3 / puppy)))
+                  :ARG1 (c3-8 / scientist)
+                  :location (c3-6 / rainforest))
+      :snt2 (c3-7 / die-01
+                  :ARG1 (c3-2 / i)))
+
+# ::snt haven't had much from the Harry Potter Bots
+# ::tokens ["have", "n't", "had", "much", "from", "the", "Harry", "Potter", "Bots"]
+# ::lemmas ["have", "not", "have", "much", "from", "the", "Harry", "Potter", "Bots"]
+(c4-3 / have-03
+      :ARG0 (c4-0 / i)
+      :ARG1 (c4-2 / much)
+      :source (c4-1 / publication
+                    :name (c4-4 / name
+                                :op1 "Harry"
+                                :op2 "Potter"
+                                :op3 "Bots"))
+      :polarity -)
+
+# ::snt I get those and Harry Potter and Love bots. And Shakespeare and Marilyn Monroe
+# ::tokens ["I", "get", "those", "and", "Harry", "Potter", "and", "Love", "bots", ".", "And", "Shakespeare", "and", "Marilyn", "Monroe"]
+# ::lemmas ["i", "get", "those", "and", "Harry", "Potter", "and", "Love", "bot", ".", "and", "Shakespeare", "and", "Marilyn", "Monroe"]
+(c5-5 / multi-sentence
+      :snt1 (c5-14 / get-01
+                   :ARG0 (c5-0 / i)
+                   :ARG1 (c5-11 / and
+                                :op1 (c5-3 / that)
+                                :op2 (c5-6 / and
+                                           :op1 (c5-1 / book
+                                                      :name (c5-7 / name
+                                                                  :op1 "Harry"
+                                                                  :op2 "Potter"))
+                                           :op2 (c5-9 / book
+                                                      :name (c5-10 / name
+                                                                   :op1 "Love"
+                                                                   :op2 "Bot")))))
+      :snt2 (c5-4 / and
+                  :op1 (c5-2 / person
+                             :name (c5-8 / name
+                                         :op1 "Shakespeare"))
+                  :op2 (c5-13 / person
+                              :name (c5-12 / name
+                                           :op1 "Marilyn"
+                                           :op2 "Monroe"))))
+
+# ::snt at the ready!
+# ::tokens ["at", "the", "ready", "!"]
+# ::lemmas ["at", "the", "ready", "!"]
+(c6-0 / ready-02
+      :ARG2 (c6-1 / event))
+
+# ::snt : Puppy-sized spider surprises scientist in rainforest | day ruined.
+# ::tokens [":", "Puppy", "-", "sized", "spider", "surprises", "scientist", "in", "rainforest", "|", "day", "ruined", "."]
+# ::lemmas [":", "Puppy", "-", "sized", "spider", "surprise", "scientist", "in", "rainfor", "|", "day", "ruin", "."]
+(c8-4 / multi-sentence
+      :snt1 (c8-0 / surprise-01
+                  :ARG0 (c8-1 / spider
+                              :ARG1-of (c8-5 / size-01
+                                             :ARG2 (c8-2 / puppy)))
+                  :ARG1 (c8-8 / scientist)
+                  :location (c8-6 / rainforest))
+      :snt2 (c8-3 / ruin-01
+                  :ARG1 (c8-7 / day)))
+
+# ::snt Saw this article! Not good for humanity! Somehow these creatures will be used for judgment during the tribulation.
+# ::tokens ["Saw", "this", "article", "!", "Not", "good", "for", "humanity", "!", "Somehow", "these", "creatures", "will", "be", "used", "for", "judgment", "during", "the", "tribulation", "."]
+# ::lemmas ["saw", "this", "article", "!", "not", "good", "for", "humanity", "!", "somehow", "these", "creature", "will", "be", "use", "for", "judgment", "during", "the", "tribulation", "."]
+(c9-5 / multi-sentence
+      :snt1 (c9-0 / see-01
+                  :ARG0 (c9-8 / you)
+                  :ARG1 (c9-11 / article
+                               :mod (c9-3 / this))
+                  :mode imperative)
+      :snt2 (c9-12 / good-04
+                   :ARG2 (c9-9 / humanity)
+                   :polarity -)
+      :snt3 (c9-7 / use-01
+                  :ARG1 (c9-6 / creature
+                              :mod (c9-4 / this))
+                  :ARG2 (c9-10 / judge-01)
+                  :time (c9-2 / tribulate-00)
+                  :manner (c9-1 / somehow)))
+
+# ::snt : Puppy-sized spider surprises scientist in rainforest | nooooo
+# ::tokens [":", "Puppy", "-", "sized", "spider", "surprises", "scientist", "in", "rainforest", "|", "nooooo"]
+# ::lemmas [":", "Puppy", "-", "sized", "spider", "surprise", "scientist", "in", "rainfor", "|", "nooooo"]
+(c10-0 / surprise-01
+       :ARG0 (c10-1 / spider
+                    :ARG1-of (c10-3 / size-01
+                                    :ARG2 (c10-2 / puppy)))
+       :ARG1 (c10-6 / scientist)
+       :location (c10-5 / rainforest)
+       :mod (c10-4 / no))
+
+# ::snt OMG NIGHTMARES
+# ::tokens ["OMG", "NIGHTMARES"]
+# ::lemmas ["OMG", "NIGHTMARES"]
+(c11-0 / nightmarine
+       :mod (c11-1 / oh-my-god
+                   :mode expressive))
+
+# ::snt the stuff nightmares are made of
+# ::tokens ["the", "stuff", "nightmares", "are", "made", "of"]
+# ::lemmas ["the", "stuff", "nightmare", "be", "make", "of"]
+(c12-2 / make-01
+       :ARG1 (c12-1 / stuff)
+       :ARG2 (c12-0 / nightmare))
+
+# ::snt Jeopardy question: Why isn't John Skae a scientist?
+# ::tokens ["Jeopardy", "question", ":", "Why", "is", "n't", "John", "Skae", "a", "scientist", "?"]
+# ::lemmas ["Jeopardy", "question", ":", "why", "be", "not", "John", "Skae", "a", "scientist", "?"]
+(c13-7 / question-01
+       :ARG0 (c13-0 / show
+                    :name (c13-6 / name
+                                 :op1 "Jeopardy"))
+       :ARG1 (c13-4 / cause-01
+                    :ARG0 (c13-3 / amr-unknown)
+                    :ARG1 (c13-1 / scientist
+                                 :domain (c13-2 / person
+                                                :name (c13-5 / name
+                                                             :op1 "John"
+                                                             :op2 "Skae"))
+                                 :polarity -)))
+
+# ::snt This spider looks like one of the Harry Potter spider babies. Awesome.
+# ::tokens ["This", "spider", "looks", "like", "one", "of", "the", "Harry", "Potter", "spider", "babies", ".", "Awesome", "."]
+# ::lemmas ["this", "spider", "look", "like", "one", "of", "the", "Harry", "Potter", "spider", "baby", ".", "Awesome", "."]
+(c14-6 / multi-sentence
+       :snt1 (c14-3 / look-02
+                    :ARG0 (c14-10 / web
+                                  :mod (c14-4 / this))
+                    :ARG1 (c14-0 / baby
+                                 :ARG1-of (c14-1 / include-91
+                                                 :ARG2 (c14-9 / baby
+                                                              :mod (c14-2 / book
+                                                                          :name (c14-7 / name
+                                                                                       :op1 "Harry"
+                                                                                       :op2 "Potter"))
+                                                              :mod (c14-8 / web)))))
+       :snt2 (c14-5 / awe-01
+                    :mode expressive))
+
+# ::snt : Puppy-sized spider surprises scientist I want the hand of god to come and strike me down
+# ::tokens [":", "Puppy", "-", "sized", "spider", "surprises", "scientist", "I", "want", "the", "hand", "of", "god", "to", "come", "and", "strike", "me", "down"]
+# ::lemmas [":", "Puppy", "-", "sized", "spider", "surprise", "scientist", "i", "want", "the", "hand", "of", "god", "to", "come", "and", "strike", "i", "down"]
+(c15-6 / multi-sentence
+       :snt1 (c15-0 / surprise-01
+                    :ARG0 (c15-1 / spider
+                                 :ARG1-of (c15-7 / size-01
+                                                 :ARG2 (c15-3 / puppy)))
+                    :ARG1 (c15-14 / scientist))
+       :snt2 (c15-11 / want-01
+                     :ARG0 (c15-2 / i)
+                     :ARG1 (c15-4 / and
+                                  :op1 (c15-8 / come-01
+                                              :ARG1 (c15-10 / hand
+                                                            :part-of (c15-13 / person
+                                                                             :name (c15-9 / name
+                                                                                          :op1 "God"))))
+                                  :op2 (c15-5 / strike-01
+                                              :ARG0 c15-10
+                                              :ARG1 c15-2
+                                              :direction (c15-12 / down)))))
+
+# ::snt Everyone should have One! Think of the scare factors.
+# ::tokens ["Everyone", "should", "have", "One", "!", "Think", "of", "the", "scare", "factors", "."]
+# ::lemmas ["everyone", "should", "have", "One", "!", "think", "of", "the", "scare", "factor", "."]
+(c16-3 / multi-sentence
+       :snt1 (c16-6 / recommend-01
+                    :ARG1 (c16-4 / have-03
+                                 :ARG0 (c16-7 / everyone)
+                                 :ARG1 (c16-1 / one)))
+       :snt2 (c16-2 / think-01
+                    :ARG0 (c16-5 / you)
+                    :ARG1 (c16-8 / factor
+                                 :ARG0-of (c16-0 / scare-01))
+                    :mode imperative))

@@ -1,0 +1,242 @@
+# ::snt nic
+# ::tokens ["nic"]
+# ::lemmas ["nic"]
+(c1-1 / person
+      :name (c1-0 / name
+                  :op1 "nic"))
+
+# ::snt yes love, affection and harmony and peaceful coexistence of all no to violence terrorism
+# ::tokens ["yes", "love", ",", "affection", "and", "harmony", "and", "peaceful", "coexistence", "of", "all", "no", "to", "violence", "terrorism"]
+# ::lemmas ["yes", "love", ",", "affection", "and", "harmony", "and", "peaceful", "coexistence", "of", "all", "no", "to", "violence", "terrorism"]
+(c2-7 / and
+      :op1 (c2-1 / love-01)
+      :op2 (c2-2 / affection)
+      :op3 (c2-0 / harmony)
+      :op4 (c2-5 / coexist-01
+                 :ARG1 (c2-6 / terrorism
+                             :mod (c2-3 / all))
+                 :manner (c2-4 / peaceful)))
+
+# ::snt The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens ["The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas ["The", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c3-6 / go-08
+      :ARG1 (c3-8 / tower
+                  :name (c3-3 / name
+                              :op1 "Eiffel"
+                              :op2 "Tower"))
+      :ARG2 (c3-5 / dark)
+      :time (c3-1 / date-entity
+                  :weekday (c3-7 / thursday)
+                  :dayperiod (c3-2 / evening))
+      :purpose (c3-0 / honor-01
+                     :ARG0 c3-8
+                     :ARG1 (c3-4 / victim
+                                 :ARG1-of (c3-9 / attack-01))))
+
+# ::snt :What is main purpose and reason kill innocent people. What they got when they kill people they are killed one day
+# ::tokens [":", "What", "is", "main", "purpose", "and", "reason", "kill", "innocent", "people", ".", "What", "they", "got", "when", "they", "kill", "people", "they", "are", "killed", "one", "day"]
+# ::lemmas [":", "what", "be", "main", "purpose", "and", "reason", "kill", "innocent", "people", ".", "what", "they", "get", "when", "they", "kill", "people", "they", "be", "kill", "one", "day"]
+(c4-1 / multi-sentence
+      :snt1 (c4-13 / kill-01
+                   :ARG1 (c4-6 / person
+                               :ARG1-of (c4-5 / innocent-01))
+                   :purpose (c4-15 / and
+                                   :op1 (c4-14 / purpose
+                                               :mod (c4-7 / main))
+                                   :op2 (c4-8 / reason
+                                              :mod (c4-0 / main))))
+      :snt2 (c4-12 / thing
+                   :ARG1-of (c4-9 / get-01
+                                  :ARG0 (c4-11 / they)
+                                  :time (c4-4 / kill-01
+                                              :ARG0 c4-11
+                                              :ARG1 (c4-2 / person)
+                                              :time (c4-10 / day
+                                                           :mod (c4-3 / one))))))
+
+# ::snt : The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens [":", "The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas [":", "The", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c7-6 / go-08
+      :ARG1 (c7-8 / tower
+                  :name (c7-3 / name
+                              :op1 "Eiffel"
+                              :op2 "Tower"))
+      :ARG2 (c7-5 / dark-02
+                  :ARG1 c7-8)
+      :time (c7-1 / date-entity
+                  :weekday (c7-7 / thursday)
+                  :dayperiod (c7-2 / evening))
+      :purpose (c7-0 / honor-01
+                     :ARG0 c7-8
+                     :ARG1 (c7-4 / victim
+                                 :ARG1-of (c7-9 / attack-01))))
+
+# ::snt :Vive la France! Stand together for free speech
+# ::tokens [":", "Vive", "la", "France", "!", "Stand", "together", "for", "free", "speech"]
+# ::lemmas [":", "Vive", "la", "France", "!", "stand", "together", "for", "free", "speech"]
+(c8-2 / multi-sentence
+      :snt1 (c8-4 / vive-la-France
+                  :mode expressive)
+      :snt2 (c8-5 / stand-11
+                  :ARG0 (c8-0 / you)
+                  :ARG1 (c8-6 / together)
+                  :purpose (c8-3 / speak-01
+                                 :ARG3-of (c8-1 / free-04))
+                  :mode imperative))
+
+# ::snt  The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens [" ", "The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas [" ", "the", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c10-6 / go-08
+       :ARG1 (c10-8 / tower
+                    :name (c10-3 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ARG2 (c10-5 / dark)
+       :time (c10-1 / date-entity
+                    :weekday (c10-7 / thursday)
+                    :dayperiod (c10-2 / evening))
+       :purpose (c10-0 / honor-01
+                       :ARG0 c10-8
+                       :ARG1 (c10-4 / victim
+                                    :ARG1-of (c10-9 / attack-01))))
+
+# ::snt :Baby photo contest are involved, you voted offline publications Tweet thank you
+# ::tokens [":", "Baby", "photo", "contest", "are", "involved", ",", "you", "voted", "offline", "publications", "Tweet", "thank", "you"]
+# ::lemmas [":", "baby", "photo", "contest", "be", "involve", ",", "you", "vote", "offline", "publication", "Tweet", "thank", "you"]
+(c11-1 / multi-sentence
+       :snt1 (c11-4 / involve-01
+                    :ARG1 (c11-7 / contest-02
+                                 :ARG2 (c11-6 / photograph-01
+                                              :ARG1 (c11-2 / baby))))
+       :snt2 (c11-5 / vote-01
+                    :ARG0 (c11-0 / you)
+                    :ARG1 (c11-10 / publication
+                                  :location (c11-3 / online)))
+       :snt3 (c11-11 / and
+                     :op1 (c11-9 / thank-01
+                                 :ARG1 (c11-8 / you)
+                                 :op2-of c11-11)
+                     :ARG1 c11-8))
+
+# ::snt The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens ["The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas ["The", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c12-6 / go-08
+       :ARG1 (c12-8 / tower
+                    :name (c12-3 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ARG2 (c12-5 / dark)
+       :time (c12-1 / date-entity
+                    :weekday (c12-7 / thursday)
+                    :dayperiod (c12-2 / evening))
+       :purpose (c12-0 / honor-01
+                       :ARG0 c12-8
+                       :ARG1 (c12-4 / victim
+                                    :ARG1-of (c12-9 / attack-01))))
+
+# ::snt :came to please people and not formisery of people together for interfaith and
+# ::tokens [":", "came", "to", "please", "people", "and", "not", "formisery", "of", "people", "together", "for", "interfaith", "and"]
+# ::lemmas [":", "come", "to", "please", "people", "and", "not", "formisery", "of", "people", "together", "for", "interfaith", "and"]
+(c13-5 / cause-01
+       :ARG1 (c13-4 / contrast-01
+                    :ARG1 (c13-3 / possible-01
+                                 :ARG1 (c13-9 / please-01
+                                              :ARG1 (c13-0 / person)))
+                    :ARG2 (c13-8 / possible-01
+                                 :ARG1 (c13-1 / present-02
+                                              :ARG1 (c13-7 / person)
+                                              :purpose (c13-10 / and
+                                                               :op1 (c13-2 / interfaith)
+                                                               :op2 (c13-6 / together)))
+                                 :polarity -)))
+
+# ::snt : The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens [":", "The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas [":", "The", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c14-6 / go-08
+       :ARG1 (c14-8 / tower
+                    :name (c14-3 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ARG2 (c14-5 / dark-02
+                    :ARG1 c14-8)
+       :time (c14-1 / date-entity
+                    :weekday (c14-7 / thursday)
+                    :dayperiod (c14-2 / evening))
+       :purpose (c14-0 / honor-01
+                       :ARG0 c14-8
+                       :ARG1 (c14-4 / victim
+                                    :ARG1-of (c14-9 / attack-01))))
+
+# ::snt  The Eiffel Tower went dark Thursday evening to honor victims of attack
+# ::tokens [" ", "The", "Eiffel", "Tower", "went", "dark", "Thursday", "evening", "to", "honor", "victims", "of", "attack"]
+# ::lemmas [" ", "the", "Eiffel", "Tower", "go", "dark", "Thursday", "evening", "to", "honor", "victim", "of", "attack"]
+(c16-6 / go-08
+       :ARG1 (c16-8 / tower
+                    :name (c16-3 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ARG2 (c16-5 / dark)
+       :time (c16-1 / date-entity
+                    :weekday (c16-7 / thursday)
+                    :dayperiod (c16-2 / evening))
+       :purpose (c16-0 / honor-01
+                       :ARG0 c16-8
+                       :ARG1 (c16-4 / victim
+                                    :ARG1-of (c16-9 / attack-01))))
+
+# ::snt  This World Will End Soon .
+# ::tokens [" ", "This", "World", "Will", "End", "Soon", "."]
+# ::lemmas [" ", "This", "World", "Will", "End", "Soon", "."]
+(c19-2 / end-01
+       :ARG1 (c19-1 / world
+                    :mod (c19-3 / this))
+       :time (c19-0 / soon))
+
+# ::snt Should not use the term Islamic state regulation because they ruin Islam
+# ::tokens ["Should", "not", "use", "the", "term", "Islamic", "state", "regulation", "because", "they", "ruin", "Islam"]
+# ::lemmas ["should", "not", "use", "the", "term", "Islamic", "state", "regulation", "because", "they", "ruin", "Islam"]
+(c21-5 / recommend-01
+       :ARG1 (c21-1 / use-01
+                    :ARG1 (c21-8 / term-01
+                                 :ARG1 (c21-3 / regulate-01
+                                              :ARG0 (c21-7 / state
+                                                           :mod (c21-2 / religious-group
+                                                                       :name (c21-4 / name
+                                                                                    :op1 "Islam"))))))
+       :ARG1-of (c21-6 / cause-01
+                       :ARG0 (c21-0 / ruin-01
+                                    :ARG0 c21-3
+                                    :ARG1 c21-2))
+       :polarity -)
+
+# ::snt tout sur les recherches
+# ::tokens ["tout", "sur", "les", "recherches"]
+# ::lemmas ["tout", "sur", "les", "recherche"]
+(c22-0 / sur
+       :op1 (c22-1 / person
+                   :name (c22-3 / name
+                                :op1 "Les"
+                                :op2 "Recherches"))
+       :degree (c22-2 / quite))
+
+# ::snt Baby photo contest are involved, you voted offline publications Tweetthank you.....
+# ::tokens ["Baby", "photo", "contest", "are", "involved", ",", "you", "voted", "offline", "publications", "Tweetthank", "you", "....."]
+# ::lemmas ["baby", "photo", "contest", "be", "involve", ",", "you", "vote", "offline", "publication", "Tweetthank", "you", "....."]
+(c24-1 / multi-sentence
+       :snt1 (c24-4 / involve-01
+                    :ARG1 (c24-7 / contest-02
+                                 :ARG2 (c24-6 / photograph-01
+                                              :ARG1 (c24-2 / baby))))
+       :snt2 (c24-5 / vote-01
+                    :ARG0 (c24-0 / you)
+                    :ARG1 (c24-11 / publication
+                                  :ARG1-of (c24-3 / offline-00)))
+       :snt3 (c24-9 / say-01
+                    :ARG1 (c24-10 / thank-01
+                                  :ARG1 (c24-8 / you
+                                               :ARG2-of c24-9))))

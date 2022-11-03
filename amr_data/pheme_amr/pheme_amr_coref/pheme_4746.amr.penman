@@ -1,0 +1,273 @@
+# ::snt ,, .
+# ::tokens [",", ",", "."]
+# ::lemmas [",", ",", "."]
+(c1-0 / ,,)
+
+# ::snt French jews have been fleeing France bc French have allowed this situation to get out of hand.
+# ::tokens ["French", "jews", "have", "been", "fleeing", "France", "bc", "French", "have", "allowed", "this", "situation", "to", "get", "out", "of", "hand", "."]
+# ::lemmas ["French", "jews", "have", "be", "flee", "France", "bc", "French", "have", "allow", "this", "situation", "to", "get", "out", "of", "hand", "."]
+(c2-0 / flee-05
+      :ARG0 (c2-4 / person
+                  :mod (c2-5 / religious-group
+                             :name (c2-2 / name
+                                         :op1 "Jew"))
+                  :mod (c2-6 / country
+                             :name (c2-3 / name
+                                         :op1 "France")
+                             :ARG1-of c2-0))
+      :ARG1-of (c2-7 / cause-01
+                     :ARG0 (c2-11 / allow-01
+                                  :ARG0 c2-6
+                                  :ARG1 (c2-8 / get-03
+                                              :ARG1 (c2-9 / situation
+                                                          :mod (c2-10 / this))
+                                              :ARG2 (c2-1 / out-of-hand-10
+                                                          :ARG1 c2-9)))))
+
+# ::snt Believed to be related? It's called Islamic Terrorism.
+# ::tokens ["Believed", "to", "be", "related", "?", "It", "'s", "called", "Islamic", "Terrorism", "."]
+# ::lemmas ["believe", "to", "be", "relate", "?", "it", "be", "call", "Islamic", "Terrorism", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-1 / believe-01
+                  :ARG1 (c3-5 / relate-01
+                              :ARG2 (c3-2 / it))
+                  :polarity (c3-9 / amr-unknown))
+      :snt2 (c3-6 / call-01
+                  :ARG1 (c3-7 / it)
+                  :ARG2 (c3-8 / terrorism
+                              :mod (c3-3 / religious-group
+                                         :name (c3-4 / name
+                                                     :op1 "Islamic")))))
+
+# ::snt Yes why don't you identify them MUSLIM TERRORIST KILL THEM
+# ::tokens ["Yes", "why", "do", "n't", "you", "identify", "them", "MUSLIM", "TERRORIST", "KILL", "THEM"]
+# ::lemmas ["yes", "why", "do", "not", "you", "identify", "they", "MUSLIM", "terrorist", "KILL", "they"]
+(c4-5 / cause-01
+      :ARG0 (c4-9 / amr-unknown)
+      :ARG1 (c4-1 / identify-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-8 / they)
+                  :polarity -)
+      :mod (c4-6 / yes)
+      :condition (c4-2 / kill-01
+                       :ARG0 (c4-7 / terrorist
+                                   :mod (c4-4 / religious-group
+                                              :name (c4-3 / name
+                                                          :op1 "Muslim")))
+                       :ARG1 c4-8))
+
+# ::snt -
+# ::tokens ["-"]
+# ::lemmas ["-"]
+(c6-0 / amr-empty)
+
+# ::snt This is more warning to the rest of the world. If anyone is still in doubt what these scumbags are capable of doing, watch it
+# ::tokens ["This", "is", "more", "warning", "to", "the", "rest", "of", "the", "world", ".", "If", "anyone", "is", "still", "in", "doubt", "what", "these", "scumbags", "are", "capable", "of", "doing", ",", "watch", "it"]
+# ::lemmas ["this", "be", "more", "warning", "to", "the", "rest", "of", "the", "world", ".", "if", "anyone", "be", "still", "in", "doubt", "what", "these", "scumbag", "be", "capable", "of", "do", ",", "watch", "it"]
+(c7-3 / multi-sentence
+      :snt1 (c7-1 / warn-01
+                  :ARG0 (c7-14 / this)
+                  :ARG2 (c7-9 / rest
+                              :part-of (c7-6 / world))
+                  :ARG1-of (c7-0 / have-quant-91
+                                 :ARG3 (c7-8 / more)))
+      :snt2 (c7-4 / watch-01
+                  :ARG0 (c7-15 / anyone)
+                  :ARG1 (c7-12 / thing
+                               :ARG1-of (c7-10 / do-02
+                                               :ARG0 (c7-13 / scumbag
+                                                            :mod (c7-7 / this))
+                                               :ARG2-of (c7-11 / capable-01
+                                                               :ARG1 c7-13)))
+                  :condition (c7-2 / doubt-01
+                                   :ARG0 c7-15
+                                   :ARG1 c7-12
+                                   :mod (c7-5 / still))
+                  :mode imperative))
+
+# ::snt let them be arrested
+# ::tokens ["let", "them", "be", "arrested"]
+# ::lemmas ["let", "they", "be", "arrest"]
+(c8-1 / let-01
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-3 / arrest-01
+                  :ARG1 (c8-2 / they))
+      :mode imperative)
+
+# ::snt : Police: Two hostage situations Paris . Watch
+# ::tokens [":", "Police", ":", "Two", "hostage", "situations", "Paris", ".", "Watch"]
+# ::lemmas [":", "police", ":", "Two", "hostage", "situation", "Paris", ".", "watch"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / and
+                  :op1 (c9-4 / police)
+                  :op2 (c9-6 / situation
+                             :mod (c9-0 / hostage)
+                             :location (c9-5 / city
+                                             :name (c9-3 / name
+                                                         :op1 "Paris"))
+                             :quant 2))
+      :snt2 (c9-1 / watch-01))
+
+# ::snt  Police: Two hostage situations near Paris believed to be related to the attack at . Watch
+# ::tokens [" ", "Police", ":", "Two", "hostage", "situations", "near", "Paris", "believed", "to", "be", "related", "to", "the", "attack", "at", ".", "Watch"]
+# ::lemmas [" ", "police", ":", "Two", "hostage", "situation", "near", "Paris", "believe", "to", "be", "relate", "to", "the", "attack", "at", ".", "watch"]
+(c11-2 / multi-sentence
+       :snt1 (c11-7 / police
+                    :ARG0-of (c11-10 / say-01
+                                     :ARG1 (c11-8 / relate-01
+                                                  :ARG1 (c11-4 / situation
+                                                               :mod (c11-0 / hostage)
+                                                               :ARG1-of (c11-5 / near-02
+                                                                               :ARG2 (c11-9 / city
+                                                                                            :name (c11-6 / name
+                                                                                                         :op1 "Paris")))
+                                                               :quant 2)
+                                                  :ARG2 (c11-11 / attack-01)
+                                                  :ARG1-of (c11-3 / believe-01))))
+       :snt2 (c11-1 / watch-01))
+
+# ::snt :.
+# ::tokens [":", "."]
+# ::lemmas [":", "."]
+(c12-0 / emoticon)
+
+# ::snt Not again!
+# ::tokens ["Not", "again", "!"]
+# ::lemmas ["not", "again", "!"]
+(c13-0 / again
+       :polarity -)
+
+# ::snt do not criticise any faith...And have faith in all faith of the world...Thus reduce violence around the world...Divine thoughts.
+# ::tokens ["do", "not", "criticise", "any", "faith", "...", "And", "have", "faith", "in", "all", "faith", "of", "the", "world", "...", "Thus", "reduce", "violence", "around", "the", "world", "...", "Divine", "thoughts", "."]
+# ::lemmas ["do", "not", "criticise", "any", "faith", "...", "and", "have", "faith", "in", "all", "faith", "of", "the", "world", "...", "thus", "reduce", "violence", "around", "the", "world", "...", "divine", "thought", "."]
+(c15-0 / multi-sentence
+       :snt1 (c15-5 / and
+                    :op1 (c15-15 / criticize-01
+                                 :ARG0 (c15-13 / you)
+                                 :ARG1 (c15-7 / faith
+                                              :mod (c15-11 / any))
+                                 :polarity -
+                                 :mode imperative)
+                    :op2 (c15-6 / have-03
+                                :ARG0 c15-13
+                                :ARG1 (c15-14 / faith
+                                              :mod (c15-8 / all)
+                                              :poss (c15-10 / world))
+                                :mode imperative))
+       :snt2 (c15-9 / reduce-01
+                    :ARG0 (c15-16 / you)
+                    :ARG1 (c15-2 / violence
+                                 :location (c15-17 / around
+                                                   :op1 (c15-1 / world)))
+                    :ARG1-of (c15-3 / cause-01
+                                    :ARG0 (c15-18 / thing
+                                                  :ARG1-of (c15-12 / think-01)
+                                                  :mod (c15-4 / divide-02)))
+                    :mode imperative))
+
+# ::snt It is all fault of the French govt. for opening their borders to muslims,africans,arabs for decades.No room to complain now!
+# ::tokens ["It", "is", "all", "fault", "of", "the", "French", "govt", ".", "for", "opening", "their", "borders", "to", "muslims", ",", "africans", ",", "arabs", "for", "decades", ".", "No", "room", "to", "complain", "now", "!"]
+# ::lemmas ["it", "be", "all", "fault", "of", "the", "French", "govt", ".", "for", "open", "their", "border", "to", "muslims", ",", "africans", ",", "arabs", "for", "decades", ".", "no", "room", "to", "complain", "now", "!"]
+(c16-0 / multi-sentence
+       :snt1 (c16-10 / fault-01
+                     :ARG1 (c16-18 / government-organization
+                                   :ARG0-of (c16-5 / govern-01
+                                                   :ARG1 (c16-22 / country
+                                                                 :name (c16-15 / name
+                                                                               :op1 "France"))))
+                     :ARG2 (c16-20 / open-01
+                                   :ARG0 c16-18
+                                   :ARG1 (c16-12 / border
+                                                 :poss c16-18)
+                                   :ARG3 (c16-9 / and
+                                                :op1 (c16-4 / person
+                                                            :mod (c16-17 / religious-group
+                                                                         :name (c16-21 / name
+                                                                                       :op1 "Islam")))
+                                                :op2 (c16-8 / person
+                                                            :mod (c16-1 / religious-group
+                                                                        :name (c16-2 / name
+                                                                                     :op1 "Africans")))
+                                                :op3 (c16-11 / person
+                                                             :mod (c16-13 / ethnic-group
+                                                                          :name (c16-3 / name
+                                                                                       :op1 "Arab"))))
+                                   :duration (c16-16 / multiple
+                                                     :op1 (c16-23 / temporal-quantity
+                                                                  :unit (c16-6 / decade)
+                                                                  :quant 1)))
+                     :mod (c16-19 / all))
+       :snt2 (c16-14 / room
+                     :purpose (c16-7 / complain-01
+                                     :time (c16-24 / now))
+                     :polarity -))
+
+# ::snt : Police: Two hostage situations near Paris believed to be related to the attack at . Watch
+# ::tokens [":", "Police", ":", "Two", "hostage", "situations", "near", "Paris", "believed", "to", "be", "related", "to", "the", "attack", "at", ".", "Watch"]
+# ::lemmas [":", "police", ":", "Two", "hostage", "situation", "near", "Paris", "believe", "to", "be", "relate", "to", "the", "attack", "at", ".", "watch"]
+(c17-2 / multi-sentence
+       :snt1 (c17-10 / say-01
+                     :ARG0 (c17-7 / police)
+                     :ARG1 (c17-8 / relate-01
+                                  :ARG1 (c17-4 / situation
+                                               :mod (c17-0 / hostage)
+                                               :ARG1-of (c17-5 / near-02
+                                                               :ARG2 (c17-9 / city
+                                                                            :name (c17-6 / name
+                                                                                         :op1 "Paris")))
+                                               :quant 2)
+                                  :ARG2 (c17-11 / attack-01)
+                                  :ARG1-of (c17-3 / believe-01)))
+       :snt2 (c17-1 / watch-01))
+
+# ::snt :hey CNN why dont you call them by their names? CNN should be shut down as low standard, biased Cowards kNowing Nothing
+# ::tokens [":", "hey", "CNN", "why", "do", "nt", "you", "call", "them", "by", "their", "names", "?", "CNN", "should", "be", "shut", "down", "as", "low", "standard", ",", "biased", "Cowards", "kNowing", "Nothing"]
+# ::lemmas [":", "hey", "CNN", "why", "do", "not", "you", "call", "they", "by", "their", "name", "?", "CNN", "should", "be", "shut", "down", "as", "low", "standard", ",", "bias", "Cowards", "kNowing", "Nothing"]
+(c18-0 / multi-sentence
+       :snt1 (c18-18 / call-01
+                     :ARG0 (c18-16 / you)
+                     :ARG1 (c18-19 / they)
+                     :ARG2 (c18-12 / name-01
+                                   :ARG1 c18-19)
+                     :ARG1-of (c18-4 / cause-01
+                                     :ARG0 (c18-7 / amr-unknown))
+                     :mod (c18-8 / hey
+                                 :mode expressive)
+                     :polarity -)
+       :snt2 (c18-13 / recommend-01
+                     :ARG1 (c18-5 / shut-down-05
+                                  :ARG1 (c18-3 / publication
+                                               :name (c18-17 / name
+                                                             :op1 "CNN"))
+                                  :ARG1-of c18-4
+                                  :ARG0 (c18-6 / person
+                                               :mod (c18-14 / coward
+                                                            :ARG1-of (c18-10 / bias-01))
+                                               :ARG0-of (c18-15 / crap-01)
+                                               :ARG1-of (c18-11 / standard-02
+                                                                :ARG1-of (c18-9 / low-04)))))
+       :snt3 (c18-1 / nothing
+                    :mod (c18-2 / now)))
+
+# ::snt Jesus help us!
+# ::tokens ["Jesus", "help", "us", "!"]
+# ::lemmas ["Jesus", "help", "we", "!"]
+(c19-0 / help-01
+       :ARG0 (c19-2 / person
+                    :name (c19-3 / name
+                                 :op1 "Jesus"))
+       :ARG2 (c19-1 / we)
+       :mode imperative)
+
+# ::snt Will fight extremists now? STOP ALL
+# ::tokens ["Will", "fight", "extremists", "now", "?", "STOP", "ALL"]
+# ::lemmas ["will", "fight", "extremist", "now", "?", "stop", "all"]
+(c20-2 / multi-sentence
+       :snt1 (c20-1 / fight-01
+                    :polarity (c20-7 / amr-unknown)
+                    :ARG1 (c20-3 / extremist)
+                    :time (c20-5 / now))
+       :snt2 (c20-6 / stop-01
+                    :ARG0 (c20-0 / you)
+                    :ARG1 (c20-4 / all)
+                    :mode imperative))

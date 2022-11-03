@@ -1,0 +1,433 @@
+# ::snt Congrats
+# ::tokens ["Congrats"]
+# ::lemmas ["Congrats"]
+(c1-0 / congratulate-01)
+
+# ::snt Really ..... you believe anything she says?
+# ::tokens ["Really", ".....", "you", "believe", "anything", "she", "says", "?"]
+# ::lemmas ["really", ".....", "you", "believe", "anything", "she", "say", "?"]
+(c2-1 / believe-01
+      :polarity (c2-6 / amr-unknown)
+      :ARG0 (c2-2 / you)
+      :ARG1 (c2-5 / anything
+                  :ARG1-of (c2-3 / say-01
+                                 :ARG0 (c2-0 / she)))
+      :ARG1-of (c2-4 / real-04))
+
+# ::snt Cant stand Kenya!!!
+# ::tokens ["Ca", "nt", "stand", "Kenya", "!", "!", "!"]
+# ::lemmas ["can", "not", "stand", "Kenya", "!", "!", "!"]
+(c3-3 / possible-01
+      :ARG1 (c3-2 / stand-11
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-4 / country
+                              :name (c3-1 / name
+                                          :op1 "Kenya")))
+      :mode imperative)
+
+# ::snt Congrats to them!
+# ::tokens ["Congrats", "to", "them", "!"]
+# ::lemmas ["congrat", "to", "they", "!"]
+(c4-0 / congratulate-01
+      :ARG1 (c4-1 / they))
+
+# ::snt good one
+# ::tokens ["good", "one"]
+# ::lemmas ["good", "one"]
+(c5-0 / good-02
+      :ARG1 (c5-1 / one))
+
+# ::snt Hope that wasn't a body shame. Good luck to her.
+# ::tokens ["Hope", "that", "was", "n't", "a", "body", "shame", ".", "Good", "luck", "to", "her", "."]
+# ::lemmas ["hope", "that", "be", "not", "a", "body", "shame", ".", "good", "luck", "to", "she", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-4 / hope-01
+                  :ARG1 (c7-3 / shame
+                              :mod (c7-1 / body)
+                              :domain (c7-6 / that)
+                              :polarity -))
+      :snt2 (c7-5 / luck
+                  :ARG1-of (c7-7 / good-02)
+                  :beneficiary (c7-0 / she)))
+
+# ::snt YAY KENYA....Good Luck and God Bless.
+# ::tokens ["YAY", "KENYA", "....", "Good", "Luck", "and", "God", "Bless", "."]
+# ::lemmas ["YAY", "KENYA", "....", "Good", "Luck", "and", "God", "Bless", "."]
+(c8-3 / say-01
+      :ARG1 (c8-7 / and
+                  :op1 (c8-5 / luck
+                             :ARG1-of (c8-8 / good-02))
+                  :op2 (c8-0 / bless-01
+                             :ARG0 (c8-6 / person
+                                         :name (c8-1 / name
+                                                     :op1 "God"))))
+      :ARG2 (c8-2 / person
+                  :name (c8-4 / name
+                              :op1 "KENYA"))
+      :time (c8-9 / date-entity
+                  :month 5))
+
+# ::snt LAAAAWD
+# ::tokens ["LAAAAWD"]
+# ::lemmas ["LAAAAWD"]
+(c9-1 / laugh-01
+      :ARG0 (c9-2 / i)
+      :direction (c9-0 / off)
+      :mode expressive)
+
+# ::snt We found out on the reunion haha. I mean, congrats to her, but she's and her wedding is kinda shady
+# ::tokens ["We", "found", "out", "on", "the", "reunion", "haha", ".", "I", "mean", ",", "congrats", "to", "her", ",", "but", "she", "'s", "and", "her", "wedding", "is", "kinda", "shady"]
+# ::lemmas ["we", "find", "out", "on", "the", "reunion", "haha", ".", "i", "mean", ",", "congrat", "to", "she", ",", "but", "she", "be", "and", "her", "wedding", "be", "kinda", "shady"]
+(c10-2 / multi-sentence
+       :snt1 (c10-0 / find-out-03
+                    :ARG0 (c10-9 / we)
+                    :ARG1 (c10-4 / reunite-01)
+                    :mod (c10-5 / haha
+                                :mode expressive))
+       :snt2 (c10-6 / mean-02
+                    :ARG0 (c10-11 / i)
+                    :ARG2 (c10-10 / contrast-01
+                                  :ARG1 (c10-12 / congratulate-01
+                                                :ARG0 c10-11
+                                                :ARG1 (c10-3 / she))
+                                  :ARG2 (c10-1 / shady
+                                               :domain (c10-8 / wed-01
+                                                              :ARG1 c10-3)
+                                               :degree (c10-7 / kind-of)))))
+
+# ::snt I wish them well and praying all goes well with the birth. Blessings to her new family.
+# ::tokens ["I", "wish", "them", "well", "and", "praying", "all", "goes", "well", "with", "the", "birth", ".", "Blessings", "to", "her", "new", "family", "."]
+# ::lemmas ["i", "wish", "they", "well", "and", "you", "all", "go", "well", "with", "the", "birth", ".", "blessing", "to", "her", "new", "family", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-11 / and
+                     :op1 (c11-8 / wish-01
+                                 :ARG0 (c11-10 / i)
+                                 :ARG1 (c11-7 / well-09
+                                              :ARG1 (c11-9 / they
+                                                           :ARG2-of c11-8)))
+                     :op2 (c11-6 / pray-01
+                                 :ARG0 c11-10
+                                 :ARG1 (c11-12 / go-on-15
+                                               :ARG1 (c11-1 / bear-02)
+                                               :ARG1-of (c11-13 / well-09))))
+       :snt2 (c11-5 / bless-01
+                    :ARG1 (c11-0 / family
+                                 :ARG1-of (c11-3 / new-01)
+                                 :poss (c11-4 / she))))
+
+# ::snt WOW! im so happy for her
+# ::tokens ["WOW", "!", "i", "m", "so", "happy", "for", "her"]
+# ::lemmas ["WOW", "!", "i", "m", "so", "happy", "for", "she"]
+(c12-1 / multi-sentence
+       :snt1 (c12-4 / wow
+                    :mode expressive)
+       :snt2 (c12-3 / happy-01
+                    :ARG0 (c12-2 / she)
+                    :ARG1 (c12-5 / i)
+                    :degree (c12-0 / so)))
+
+# ::snt She did not say she's pregnant.
+# ::tokens ["She", "did", "not", "say", "she", "'s", "pregnant", "."]
+# ::lemmas ["she", "do", "not", "say", "she", "be", "pregnant", "."]
+(c13-2 / say-01
+       :ARG0 (c13-0 / she)
+       :ARG1 (c13-1 / impregnate-01
+                    :ARG1 c13-0)
+       :polarity -)
+
+# ::snt Congrats to you Both... Wow girl... One of the best experiences as a woman wishing you all the best
+# ::tokens ["Congrats", "to", "you", "Both", "...", "Wow", "girl", "...", "One", "of", "the", "best", "experiences", "as", "a", "woman", "wishing", "you", "all", "the", "best"]
+# ::lemmas ["congrat", "to", "you", "both", "...", "wow", "girl", "...", "One", "of", "the", "good", "experience", "as", "a", "woman", "wish", "you", "all", "the", "good"]
+(c14-2 / multi-sentence
+       :snt1 (c14-7 / congratulate-01
+                    :ARG1 (c14-1 / you
+                                 :mod (c14-0 / both)))
+       :snt2 (c14-13 / girl
+                     :mod (c14-8 / wow
+                                 :mode expressive))
+       :snt3 (c14-11 / include-91
+                     :ARG1 (c14-3 / experience-01
+                                  :ARG0 (c14-14 / you)
+                                  :ARG1-of (c14-4 / have-degree-91
+                                                  :ARG2 (c14-12 / good-02
+                                                                :ARG1 c14-3)
+                                                  :ARG3 (c14-5 / most)))
+                     :ARG2 (c14-6 / wish-01
+                                  :ARG0 (c14-17 / woman)
+                                  :ARG1 (c14-10 / thing
+                                                :ARG1-of (c14-9 / have-degree-91
+                                                                :ARG2 (c14-16 / good-02
+                                                                              :ARG1 c14-10)
+                                                                :ARG3 (c14-15 / most)))
+                                  :ARG2 c14-14)))
+
+# ::snt Im happy for her. If its true
+# ::tokens ["I", "m", "happy", "for", "her", ".", "If", "its", "true"]
+# ::lemmas ["i", "m", "happy", "for", "she", ".", "if", "its", "true"]
+(c15-0 / multi-sentence
+       :snt1 (c15-3 / happy-01
+                    :ARG0 (c15-1 / she)
+                    :ARG1 (c15-5 / i))
+       :snt2 (c15-4 / have-condition-91
+                    :ARG2 (c15-6 / true-01
+                                 :ARG1 (c15-2 / it))))
+
+# ::snt hope so. Her public track record notwithstanding
+# ::tokens ["hope", "so", ".", "Her", "public", "track", "record", "notwithstanding"]
+# ::lemmas ["hope", "so", ".", "her", "public", "track", "record", "notwithstanding"]
+(c16-2 / multi-sentence
+       :snt1 (c16-5 / hope-01
+                    :ARG0 (c16-7 / i)
+                    :ARG1 (c16-3 / so))
+       :snt2 (c16-1 / nay-01
+                    :ARG1 (c16-4 / record
+                                 :mod (c16-8 / track)
+                                 :ARG1-of (c16-6 / public-02)
+                                 :poss (c16-0 / she))))
+
+# ::snt Happy for Kenya
+# ::tokens ["Happy", "for", "Kenya"]
+# ::lemmas ["happy", "for", "Kenya"]
+(c17-1 / happy-01
+       :ARG1 (c17-0 / country
+                    :name (c17-2 / name
+                                 :op1 "Kenya")))
+
+# ::snt Aaaaaaaah, she is so deserving of some love and happiness too finally..
+# ::tokens ["Aaaaaaaah", ",", "she", "is", "so", "deserving", "of", "some", "love", "and", "happiness", "too", "finally", ".."]
+# ::lemmas ["Aaaaaaaah", ",", "she", "be", "so", "deserving", "of", "some", "love", "and", "happiness", "too", "finally", ".."]
+(c18-8 / deserve-01
+       :ARG0 (c18-2 / she)
+       :ARG1 (c18-7 / and
+                    :op1 (c18-4 / love-01
+                                :ARG1 c18-2)
+                    :op2 (c18-3 / happy-01
+                                :ARG1 c18-2)
+                    :quant (c18-0 / some))
+       :mod (c18-5 / too)
+       :degree (c18-9 / so)
+       :time (c18-1 / final)
+       :mod (c18-6 / aha
+                   :mode expressive))
+
+# ::snt Wow... Hateful
+# ::tokens ["Wow", "...", "Hateful"]
+# ::lemmas ["wow", "...", "hateful"]
+(c19-1 / hate-01
+       :mod (c19-0 / wow
+                   :mode expressive))
+
+# ::snt Yes she will
+# ::tokens ["Yes", "she", "will"]
+# ::lemmas ["yes", "she", "will"]
+(c20-0 / do-02
+       :ARG0 (c20-1 / she))
+
+# ::snt That kid will be loved... Kenya will give that baby the kind of love her mom didn't...
+# ::tokens ["That", "kid", "will", "be", "loved", "...", "Kenya", "will", "give", "that", "baby", "the", "kind", "of", "love", "her", "mom", "did", "n't", "..."]
+# ::lemmas ["that", "kid", "will", "be", "love", "...", "Kenya", "will", "give", "that", "baby", "the", "kind", "of", "love", "her", "mom", "do", "not", "..."]
+(c21-1 / multi-sentence
+       :snt1 (c21-4 / love-01
+                    :ARG1 (c21-5 / kid
+                                 :mod (c21-9 / that)))
+       :snt2 (c21-10 / give-01
+                     :ARG0 (c21-8 / country
+                                  :name (c21-2 / name
+                                               :op1 "Kenya"))
+                     :ARG1 (c21-11 / kind
+                                   :mod (c21-12 / love-01
+                                                :ARG0 (c21-6 / person
+                                                             :ARG0-of (c21-3 / have-rel-role-91
+                                                                             :ARG1 (c21-0 / baby
+                                                                                          :mod (c21-13 / that))
+                                                                             :ARG2 (c21-7 / mom)))
+                                                :ARG1 c21-0
+                                                :polarity -))
+                     :ARG2 c21-0))
+
+# ::snt So happy for her
+# ::tokens ["So", "happy", "for", "her"]
+# ::lemmas ["so", "happy", "for", "she"]
+(c22-1 / happy-01
+       :ARG1 (c22-2 / she)
+       :degree (c22-0 / so))
+
+# ::snt CONGRATULATIONS. Happy for you.
+# ::tokens ["CONGRATULATIONS", ".", "Happy", "for", "you", "."]
+# ::lemmas ["CONGRATULATIONS", ".", "happy", "for", "you", "."]
+(c23-1 / multi-sentence
+       :snt1 (c23-3 / congratulate-01
+                    :ARG1 (c23-0 / you))
+       :snt2 (c23-2 / happy-01
+                    :ARG1 (c23-4 / you)))
+
+# ::snt The way she said it is so vague. May be adopting or surrogacy.
+# ::tokens ["The", "way", "she", "said", "it", "is", "so", "vague", ".", "May", "be", "adopting", "or", "surrogacy", "."]
+# ::lemmas ["the", "way", "she", "say", "it", "be", "so", "vague", ".", "may", "be", "adopt", "or", "surrogacy", "."]
+(c24-2 / multi-sentence
+       :snt1 (c24-6 / have-manner-91
+                    :ARG1 (c24-3 / say-01
+                                 :ARG0 (c24-0 / she)
+                                 :ARG1 (c24-5 / vague
+                                              :domain (c24-8 / it)
+                                              :degree (c24-10 / so))))
+       :snt2 (c24-7 / possible-01
+                    :ARG1 (c24-1 / or
+                                 :op1 (c24-9 / adopt-01)
+                                 :op2 (c24-4 / surrogacy))))
+
+# ::snt Happy for them!! Kenya will be a great mom!!
+# ::tokens ["Happy", "for", "them", "!", "!", "Kenya", "will", "be", "a", "great", "mom", "!", "!"]
+# ::lemmas ["happy", "for", "they", "!", "!", "Kenya", "will", "be", "a", "great", "mom", "!", "!"]
+(c25-0 / multi-sentence
+       :snt1 (c25-2 / happy-01
+                    :ARG1 (c25-6 / they))
+       :snt2 (c25-5 / have-rel-role-91
+                    :ARG0 (c25-4 / country
+                                 :name (c25-1 / name
+                                              :op1 "Kenya"))
+                    :ARG2 (c25-3 / mom
+                                 :mod (c25-7 / great))))
+
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c26-0 / congratulate-01)
+
+# ::snt THATS NOT NOTHING TO BE PROUD OF MONTHS GIVING UP THE A$$ WHAT HAPPEN TO RESPECTING YOURSELF YOUR BODY THEN AGAIN SHE DID IT IN THE CAR WHAT THE HELL LOL SAD
+# ::tokens ["THATS", "NOT", "NOTHING", "TO", "BE", "PROUD", "OF", "MONTHS", "GIVING", "UP", "THE", "A$", "$", "WHAT", "HAPPEN", "TO", "RESPECTING", "YOURSELF", "YOUR", "BODY", "THEN", "AGAIN", "SHE", "DID", "IT", "IN", "THE", "CAR", "WHAT", "THE", "HELL", "LOL", "SAD"]
+# ::lemmas ["THATS", "not", "nothing", "to", "be", "proud", "of", "MONTHS", "give", "up", "the", "a$", "$", "what", "happen", "to", "respect", "yourself", "your", "body", "then", "again", "SHE", "do", "it", "in", "the", "car", "what", "the", "HELL", "lol", "SAD"]
+(c27-17 / nothing
+        :domain (c27-10 / that)
+        :ARG0-of (c27-13 / cause-01
+                         :ARG1 (c27-0 / spend-02
+                                      :ARG0 (c27-5 / you)
+                                      :ARG1 (c27-12 / multiple
+                                                    :op1 (c27-15 / temporal-quantity
+                                                                 :unit (c27-7 / month)
+                                                                 :quant 1))
+                                      :ARG2 (c27-21 / dollar)
+                                      :ARG3 (c27-19 / thing
+                                                    :ARG0-of (c27-11 / cause-01
+                                                                     :ARG1 (c27-18 / respect-01
+                                                                                   :ARG0 c27-5
+                                                                                   :ARG1 c27-5)))
+                                      :time (c27-1 / then
+                                                   :op1 (c27-14 / do-02
+                                                                :ARG0 (c27-4 / she)
+                                                                :ARG1 (c27-20 / it)
+                                                                :location (c27-2 / car)
+                                                                :mod (c27-9 / again)))
+                                      :ARG0-of (c27-16 / cause-01
+                                                       :ARG1 (c27-3 / sad-02
+                                                                    :ARG1 (c27-6 / i)
+                                                                    :mod (c27-8 / hell
+                                                                                :mode expressive))))))
+
+# ::snt Happy for her she deserves a baby, I think she would be a great mother. Congratulation Kenya!
+# ::tokens ["Happy", "for", "her", "she", "deserves", "a", "baby", ",", "I", "think", "she", "would", "be", "a", "great", "mother", ".", "Congratulation", "Kenya", "!"]
+# ::lemmas ["happy", "for", "she", "she", "deserve", "a", "baby", ",", "i", "think", "she", "would", "be", "a", "great", "mother", ".", "Congratulation", "Kenya", "!"]
+(c28-2 / multi-sentence
+       :snt1 (c28-12 / and
+                     :op1 (c28-6 / happy-01
+                                 :ARG0 (c28-4 / she)
+                                 :ARG1 (c28-11 / i))
+                     :op2 (c28-14 / deserve-01
+                                  :ARG0 c28-4
+                                  :ARG1 (c28-1 / baby))
+                     :op3 (c28-10 / think-01
+                                  :ARG0 (c28-5 / i)
+                                  :ARG1 (c28-9 / have-rel-role-91
+                                               :ARG0 (c28-0 / she)
+                                               :ARG2 (c28-7 / mother
+                                                            :mod (c28-13 / great)))))
+       :snt2 (c28-8 / congratulate-01
+                    :ARG1 (c28-15 / country
+                                  :name (c28-3 / name
+                                               :op1 "Kenya"))))
+
+# ::snt Love her!!
+# ::tokens ["Love", "her", "!", "!"]
+# ::lemmas ["love", "she", "!", "!"]
+(c30-0 / love-01
+       :ARG1 (c30-1 / she))
+
+# ::snt I'm so happy for her!
+# ::tokens ["I", "'m", "so", "happy", "for", "her", "!"]
+# ::lemmas ["i", "be", "so", "happy", "for", "she", "!"]
+(c31-1 / happy-01
+       :ARG0 (c31-3 / she)
+       :ARG1 (c31-2 / i)
+       :degree (c31-0 / so))
+
+# ::snt that poor kid having to grow up under a narcissist like
+# ::tokens ["that", "poor", "kid", "having", "to", "grow", "up", "under", "a", "narcissist", "like"]
+# ::lemmas ["that", "poor", "kid", "have", "to", "grow", "up", "under", "a", "narcissist", "like"]
+(c32-0 / obligate-01
+       :ARG2 (c32-7 / grow-up-04
+                    :ARG1 (c32-4 / kid
+                                 :mod (c32-5 / poor)
+                                 :mod (c32-6 / that))
+                    :prep-under (c32-2 / person
+                                       :mod (c32-1 / narcissist)
+                                       :ARG1-of (c32-3 / resemble-01))))
+
+# ::snt "RT : Kenya Moore Is Expecting First Child With Marc Daly season or nah?
+# ::tokens ["\"", "RT", ":", "Kenya", "Moore", "Is", "Expecting", "First", "Child", "With", "Marc", "Daly", "season", "or", "nah", "?"]
+# ::lemmas ["\"", "RT", ":", "Kenya", "Moore", "be", "expect", "First", "Child", "with", "Marc", "Daly", "season", "or", "nah", "?"]
+(c33-0 / or
+       :op1 (c33-8 / publication
+                   :name (c33-2 / name
+                                :op1 "RT"))
+       :op2 (c33-6 / expect-01
+                   :ARG0 (c33-3 / person
+                                :name (c33-7 / name
+                                             :op1 "Kenya"
+                                             :op2 "Moore"))
+                   :ARG1 (c33-15 / person
+                                 :ord (c33-1 / ordinal-entity
+                                             :value 1)
+                                 :ARG0-of (c33-9 / have-rel-role-91
+                                                 :ARG1 (c33-11 / person
+                                                               :name (c33-10 / name
+                                                                             :op1 "Marc"
+                                                                             :op2 "Daly"))
+                                                 :ARG2 (c33-12 / child)))
+                   :polarity (c33-5 / amr-unknown)
+                   :time (c33-4 / season))
+       :op3 (c33-13 / nah
+                    :polarity (c33-14 / amr-unknown)))
+
+# ::snt you must be her OB/GYN . BYE she said that to save her job. She is liar.
+# ::tokens ["you", "must", "be", "her", "OB", "/", "GYN", ".", "BYE", "she", "said", "that", "to", "save", "her", "job", ".", "She", "is", "liar", "."]
+# ::lemmas ["you", "must", "be", "her", "OB", "/", "GYN", ".", "BYE", "she", "say", "that", "to", "save", "her", "job", ".", "she", "be", "liar", "."]
+(c34-4 / multi-sentence
+       :snt1 (c34-0 / obligate-01
+                    :ARG1 (c34-3 / you)
+                    :ARG2 (c34-9 / have-rel-role-91
+                                 :ARG0 c34-3
+                                 :ARG1 (c34-6 / she)
+                                 :ARG2 (c34-1 / OB-GYN)))
+       :snt2 (c34-2 / say-01
+                    :ARG0 (c34-13 / she)
+                    :ARG1 (c34-12 / that)
+                    :purpose (c34-7 / save-02
+                                    :ARG0 c34-13
+                                    :ARG1 (c34-11 / job
+                                                  :poss c34-13))
+                    :mod (c34-5 / by-the-way))
+       :snt3 (c34-10 / lie-08
+                     :ARG0 (c34-8 / she)))
+
+# ::snt lies. We will believe it when we see the birth live.
+# ::tokens ["lies", ".", "We", "will", "believe", "it", "when", "we", "see", "the", "birth", "live", "."]
+# ::lemmas ["lie", ".", "we", "will", "believe", "it", "when", "we", "see", "the", "birth", "live", "."]
+(c35-1 / multi-sentence
+       :snt1 (c35-4 / lie-08)
+       :snt2 (c35-0 / believe-01
+                    :ARG0 (c35-5 / we)
+                    :ARG1 (c35-6 / it)
+                    :time (c35-2 / see-01
+                                 :ARG0 c35-5
+                                 :ARG1 (c35-3 / bear-02)
+                                 :manner (c35-7 / live))))

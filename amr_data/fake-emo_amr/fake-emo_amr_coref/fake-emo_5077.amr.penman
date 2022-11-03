@@ -1,0 +1,52 @@
+# ::snt @21WIRE Well it works
+# ::tokens ["@21WIRE", "Well", "it", "works"]
+# ::lemmas ["@21WIRE", "well", "it", "work"]
+(c1-5 / say-01
+      :ARG0 (c1-6 / i)
+      :ARG1 (c1-4 / work-09
+                  :ARG1 (c1-3 / it)
+                  :mod (c1-0 / well))
+      :ARG2 (c1-1 / person
+                  :name (c1-2 / name
+                              :op1 "21WIRE")))
+
+# ::snt @21WIRE https://t.co/D5W8xwSurK
+# ::tokens ["@21WIRE", "https://t.co/D5W8xwSurK"]
+# ::lemmas ["@21WIRE", "https://t.co/d5w8xwsurk"]
+(c2-0 / say-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-1 / url-entity
+                  :value "https://t.co/D5W8xwSurK"))
+
+# ::snt @21WIRE Really?? https://t.co/5DJ5lQ7Gmc
+# ::tokens ["@21WIRE", "Really", "?", "?", "https://t.co/5DJ5lQ7Gmc"]
+# ::lemmas ["@21WIRE", "Really", "?", "?", "https://t.co/5dj5lq7gmc"]
+(c3-1 / multi-sentence
+      :snt1 (c3-4 / say-01
+                  :ARG0 (c3-6 / i)
+                  :ARG2 (c3-0 / person
+                              :name (c3-2 / name
+                                          :op1 "21WIRE"))
+                  :ARG1-of (c3-3 / real-04))
+      :snt2 (c3-5 / url-entity
+                  :value "https://t.co/5DJ5lQ7Gmc"))
+
+# ::snt @arbetarbroder @DanielSpauldin3 "a serious bomb".... "A REALLY SERIOUS BOMB!" https://t.co/FX4D0hp1eS
+# ::tokens ["@arbetarbroder", "@DanielSpauldin3", "\"", "a", "serious", "bomb", "\"", "....", "\"", "A", "REALLY", "SERIOUS", "BOMB", "!", "\"", "https://t.co/FX4D0hp1eS"]
+# ::lemmas ["@arbetarbroder", "@danielspauldin3", "\"", "a", "serious", "bomb", "\"", "....", "\"", "a", "REALLY", "SERIOUS", "BOMB", "!", "\"", "https://t.co/fx4d0hp1e"]
+(c4-6 / multi-sentence
+      :snt1 (c4-10 / say-01
+                   :ARG0 (c4-5 / person
+                               :name (c4-7 / name
+                                           :op1 "arbetarbroder"))
+                   :ARG1 (c4-1 / bomb
+                               :ARG1-of (c4-3 / serious-02))
+                   :ARG2 (c4-4 / person
+                               :name (c4-2 / name
+                                           :op1 "DanielSpauldin3")))
+      :snt2 (c4-9 / say-01
+                  :ARG0 (c4-11 / i)
+                  :ARG1 c4-1
+                  :ARG1-of c4-3)
+      :ARG2 (c4-0 / bad-07
+                  :degree (c4-8 / really)))

@@ -1,0 +1,83 @@
+# ::snt Airbus A320 with attractive tailfin design crashes in Alps: live updates
+# ::tokens ["Airbus", "A320", "with", "attractive", "tailfin", "design", "crashes", "in", "Alps", ":", "live", "updates"]
+# ::lemmas ["Airbus", "A320", "with", "attractive", "tailfin", "design", "crash", "in", "Alps", ":", "live", "update"]
+(c1-7 / crash-01
+      :ARG1 (c1-9 / aircraft-type
+                  :name (c1-4 / name
+                              :op1 "Airbus"
+                              :op2 "A320")
+                  :ARG1-of (c1-6 / design-01
+                                 :ARG3 (c1-8 / tailfin
+                                             :ARG0-of (c1-3 / attract-01))))
+      :location (c1-1 / mountain
+                      :name (c1-5 / name
+                                  :op1 "Alps"))
+      :ARG1-of (c1-2 / update-02
+                     :manner (c1-0 / live)))
+
+# ::snt good point. I must ponder this now.
+# ::tokens ["good", "point", ".", "I", "must", "ponder", "this", "now", "."]
+# ::lemmas ["good", "point", ".", "i", "must", "ponder", "this", "now", "."]
+(c2-0 / multi-sentence
+      :snt1 (c2-4 / point-04
+                  :ARG1-of (c2-5 / good-02))
+      :snt2 (c2-1 / obligate-01
+                  :ARG2 (c2-7 / ponder-01
+                              :ARG0 (c2-2 / i)
+                              :ARG1 (c2-6 / this)
+                              :time (c2-3 / now))))
+
+# ::snt If we were meant to fly, evolution would have gave us wings.
+# ::tokens ["If", "we", "were", "meant", "to", "fly", ",", "evolution", "would", "have", "gave", "us", "wings", "."]
+# ::lemmas ["if", "we", "be", "mean", "to", "fly", ",", "evolution", "would", "have", "give", "we", "wing", "."]
+(c3-5 / give-01
+      :ARG0 (c3-3 / evolve-02)
+      :ARG1 (c3-0 / wing)
+      :ARG2 (c3-4 / we)
+      :condition (c3-2 / mean-02
+                       :ARG1 (c3-1 / fly-01
+                                   :ARG1 c3-4)))
+
+# ::snt ": If we were meant to fly, evolution would have gave us wings. " And if meant to tweet it would give us Twitter??
+# ::tokens ["\"", ":", "If", "we", "were", "meant", "to", "fly", ",", "evolution", "would", "have", "gave", "us", "wings", ".", "\"", "And", "if", "meant", "to", "tweet", "it", "would", "give", "us", "Twitter", "?", "?"]
+# ::lemmas ["\"", ":", "if", "we", "be", "mean", "to", "fly", ",", "evolution", "would", "have", "give", "we", "wing", ".", "\"", "and", "if", "mean", "to", "tweet", "it", "would", "give", "we", "Twitter", "?", "?"]
+(c4-2 / multi-sentence
+      :snt1 (c4-13 / give-01
+                   :ARG0 (c4-5 / evolve-02)
+                   :ARG1 (c4-0 / wing)
+                   :ARG2 (c4-8 / we)
+                   :condition (c4-10 / mean-02
+                                     :ARG1 c4-8
+                                     :ARG2 (c4-1 / fly-01
+                                                 :ARG1 c4-8)))
+      :snt2 (c4-15 / and
+                   :op2 (c4-11 / give-01
+                               :ARG0 (c4-7 / it)
+                               :ARG1 (c4-12 / publication
+                                            :name (c4-9 / name
+                                                        :op1 "Twitter"))
+                               :ARG2 (c4-4 / we)
+                               :polarity (c4-6 / amr-unknown)
+                               :condition (c4-3 / mean-02
+                                                :ARG1 (c4-14 / tweet-02
+                                                             :ARG0 c4-4)))))
+
+# ::snt A320 Germanwingstopography of the Crash trough the ski slope of la Foux d'Allos / Evchs
+# ::tokens ["A320", "Germanwingstopography", "of", "the", "Crash", "trough", "the", "ski", "slope", "of", "la", "Foux", "d'Allos", "/", "Evchs"]
+# ::lemmas ["A320", "Germanwingstopography", "of", "the", "Crash", "trough", "the", "ski", "slope", "of", "la", "Foux", "d'Allos", "/", "Evchs"]
+(c5-9 / see-01
+      :ARG0 (c5-10 / aircraft-type
+                   :name (c5-4 / name
+                               :op1 "A320"))
+      :ARG1 (c5-8 / crash-01)
+      :path (c5-3 / slope
+                  :mod (c5-0 / ski-01)
+                  :location (c5-2 / slash
+                                  :op1 (c5-1 / mountain
+                                             :name (c5-5 / name
+                                                         :op1 "la"
+                                                         :op2 "Foux"
+                                                         :op3 "d'Allos"))
+                                  :op2 (c5-6 / mountain
+                                             :name (c5-7 / name
+                                                         :op1 "Evchs")))))

@@ -1,0 +1,36 @@
+# ::snt Boxers are the best. (I'm on my th)
+# ::tokens ["Boxers", "are", "the", "best", ".", "(", "I", "'m", "on", "my", "th", ")"]
+# ::lemmas ["boxer", "be", "the", "good", ".", "(", "i", "be", "on", "my", "th", ")"]
+(c1-8 / multi-sentence
+      :snt1 (c1-3 / have-degree-91
+                  :ARG1 (c1-7 / person
+                              :ARG0-of (c1-5 / box-03))
+                  :ARG2 (c1-4 / good-03
+                              :ARG1 c1-7)
+                  :ARG3 (c1-1 / most))
+      :snt2 (c1-6 / have-03
+                  :ARG0 (c1-2 / i)
+                  :ARG1 (c1-0 / box-03)))
+
+# ::snt It shall mix with the beer I spit out!
+# ::tokens ["It", "shall", "mix", "with", "the", "beer", "I", "spit", "out", "!"]
+# ::lemmas ["it", "shall", "mix", "with", "the", "beer", "i", "spit", "out", "!"]
+(c2-2 / obligate-01
+      :ARG2 (c2-5 / mix-01
+                  :ARG1 (c2-4 / it)
+                  :ARG2 (c2-3 / beer
+                              :ARG1-of (c2-0 / spit-out-02
+                                             :ARG0 (c2-1 / i)))))
+
+# ::snt Holy sh!t! I just spit my wine!!
+# ::tokens ["Holy", "sh!t", "!", "I", "just", "spit", "my", "wine", "!", "!"]
+# ::lemmas ["Holy", "sh!t", "!", "i", "just", "spit", "my", "wine", "!", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-0 / shit
+                  :mod (c3-2 / holy)
+                  :mode expressive)
+      :snt2 (c3-4 / spit-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-1 / wine
+                              :poss c3-5)
+                  :mod (c3-3 / just)))

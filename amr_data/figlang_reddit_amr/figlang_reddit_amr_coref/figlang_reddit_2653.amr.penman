@@ -1,0 +1,34 @@
+# ::snt James Harden alone had more free throw attempts than 10 TEAMS tonight.
+# ::tokens ["James", "Harden", "alone", "had", "more", "free", "throw", "attempts", "than", "10", "TEAMS", "tonight", "."]
+# ::lemmas ["James", "Harden", "alone", "have", "more", "free", "throw", "attempt", "than", "10", "teams", "tonight", "."]
+(c1-2 / attempt-01
+      :ARG0 (c1-8 / person
+                  :name (c1-10 / name
+                               :op1 "James"
+                               :op2 "Harden")
+                  :mod (c1-11 / alone))
+      :ARG1 (c1-3 / free-03
+                  :ARG1 c1-8)
+      :time (c1-0 / date-entity
+                  :dayperiod (c1-7 / night)
+                  :mod (c1-6 / today))
+      :ARG1-of (c1-5 / have-quant-91
+                     :ARG3 (c1-9 / more)
+                     :ARG4 (c1-1 / attempt-01
+                                 :ARG0 (c1-4 / team)
+                                 :ARG1 c1-3
+                                 :quant 10)))
+
+# ::snt Maybe they shouldn't have fouled Harden so much
+# ::tokens ["Maybe", "they", "should", "n't", "have", "fouled", "Harden", "so", "much"]
+# ::lemmas ["maybe", "they", "should", "not", "have", "foul", "Harden", "so", "much"]
+(c2-5 / possible-01
+      :ARG1 (c2-4 / recommend-01
+                  :ARG1 (c2-1 / foul-01
+                              :ARG0 (c2-3 / they)
+                              :ARG1 (c2-2 / person
+                                          :name (c2-7 / name
+                                                      :op1 "Harden"))
+                              :degree (c2-6 / much
+                                            :degree (c2-0 / so))
+                              :polarity -)))

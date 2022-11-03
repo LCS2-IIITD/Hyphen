@@ -1,0 +1,57 @@
+# ::snt well when there are no trash cans in sight , what do you expect ?
+# ::tokens ["well", "when", "there", "are", "no", "trash", "cans", "in", "sight", ",", "what", "do", "you", "expect", "?"]
+# ::lemmas ["well", "when", "there", "be", "no", "trash", "can", "in", "sight", ",", "what", "do", "you", "expect", "?"]
+(c1-6 / expect-01
+      :ARG0 (c1-5 / you)
+      :ARG1 (c1-1 / amr-unknown)
+      :time (c1-0 / see-01
+                  :ARG1 (c1-2 / can
+                              :purpose (c1-4 / trash))
+                  :polarity -)
+      :mod (c1-3 / well))
+
+# ::snt I'd expect responsible people to carry their garbage out , the same way they so easily carried it in .
+# ::tokens ["I", "'d", "expect", "responsible", "people", "to", "carry", "their", "garbage", "out", ",", "the", "same", "way", "they", "so", "easily", "carried", "it", "in", "."]
+# ::lemmas ["i", "would", "expect", "responsible", "people", "to", "carry", "their", "garbage", "out", ",", "the", "same", "way", "they", "so", "easily", "carry", "it", "in", "."]
+(c2-11 / expect-01
+       :ARG0 (c2-10 / i)
+       :ARG1 (c2-2 / carry-01
+                   :ARG0 (c2-7 / person
+                               :ARG1-of (c2-6 / responsible-03))
+                   :ARG1 (c2-8 / garbage
+                               :poss c2-7)
+                   :direction (c2-5 / out)
+                   :manner (c2-3 / way
+                                 :ARG1-of (c2-0 / same-01
+                                                :manner-of (c2-1 / carry-01
+                                                                 :ARG0 c2-7
+                                                                 :ARG1 c2-8
+                                                                 :ARG1-of (c2-4 / easy-05
+                                                                                :degree (c2-9 / so)))
+                                                :ARG2 c2-3))))
+
+# ::snt Exactly . I hold onto my empty containers or put them in my backpack or purse until a trash can is found . No excuse .
+# ::tokens ["Exactly", ".", "I", "hold", "onto", "my", "empty", "containers", "or", "put", "them", "in", "my", "backpack", "or", "purse", "until", "a", "trash", "can", "is", "found", ".", "No", "excuse", "."]
+# ::lemmas ["exactly", ".", "i", "hold", "onto", "my", "empty", "container", "or", "put", "they", "in", "my", "backpack", "or", "purse", "until", "a", "trash", "can", "be", "find", ".", "no", "excuse", "."]
+(c3-14 / multi-sentence
+       :snt1 (c3-15 / exact)
+       :snt2 (c3-8 / or
+                   :op1 (c3-3 / hold-on-05
+                              :ARG0 (c3-13 / i)
+                              :ARG1 (c3-2 / container
+                                          :ARG1-of (c3-4 / empty-02)
+                                          :poss c3-13))
+                   :op2 (c3-11 / put-01
+                               :ARG0 c3-13
+                               :ARG1 c3-2
+                               :ARG2 (c3-5 / or
+                                           :op1 (c3-12 / backpack
+                                                       :poss c3-13)
+                                           :op2 (c3-9 / purse
+                                                      :poss c3-13))
+                               :time (c3-7 / until
+                                           :op1 (c3-1 / find-01
+                                                      :ARG1 (c3-0 / can
+                                                                  :mod (c3-10 / trash))))))
+       :snt3 (c3-6 / excuse-02
+                   :polarity -))

@@ -1,0 +1,47 @@
+# ::snt I feel great about this.
+# ::tokens ["I", "feel", "great", "about", "this", "."]
+# ::lemmas ["i", "feel", "great", "about", "this", "."]
+(c1-3 / feel-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-0 / great)
+      :ARG2 (c1-2 / this))
+
+# ::snt PROTIP: In some jurisdictions you can be jailed for entering the ladies room public facility if you are male.
+# ::tokens ["PROTIP", ":", "In", "some", "jurisdictions", "you", "can", "be", "jailed", "for", "entering", "the", "ladies", "room", "public", "facility", "if", "you", "are", "male", "."]
+# ::lemmas ["protip", ":", "in", "some", "jurisdiction", "you", "can", "be", "jail", "for", "enter", "the", "lady", "room", "public", "facility", "if", "you", "be", "male", "."]
+(c2-3 / tip-06
+      :ARG1 (c2-8 / possible-01
+                  :ARG1 (c2-7 / jail-01
+                              :ARG1 (c2-10 / you)
+                              :ARG2 (c2-11 / enter-01
+                                           :ARG0 c2-10
+                                           :ARG1 (c2-1 / facility
+                                                       :mod (c2-4 / room
+                                                                  :mod (c2-5 / lady))
+                                                       :ARG1-of (c2-2 / public-02)))
+                              :condition (c2-9 / male
+                                               :domain c2-10))
+                  :location (c2-6 / jurisdiction
+                                  :quant (c2-0 / some))))
+
+# ::snt Is there a law about us ladies who use the mens washroom from time to time... less traffic in there.. and men tend to not linger.
+# ::tokens ["Is", "there", "a", "law", "about", "us", "ladies", "who", "use", "the", "mens", "washroom", "from", "time", "to", "time", "...", "less", "traffic", "in", "there", "..", "and", "men", "tend", "to", "not", "linger", "."]
+# ::lemmas ["be", "there", "a", "law", "about", "we", "lady", "who", "use", "the", "men", "washroom", "from", "time", "to", "time", "...", "less", "traffic", "in", "there", "..", "and", "man", "tend", "to", "not", "linger", "."]
+(c3-10 / law
+       :polarity (c3-1 / amr-unknown)
+       :topic (c3-11 / lady
+                     :domain (c3-3 / we)
+                     :ARG0-of (c3-6 / use-01
+                                    :ARG1 (c3-14 / washroom
+                                                 :mod (c3-12 / maid))
+                                    :frequency (c3-9 / time-to-time)
+                                    :ARG1-of (c3-2 / cause-01
+                                                   :ARG0 (c3-7 / and
+                                                               :op1 (c3-4 / traffic
+                                                                          :location c3-14
+                                                                          :quant (c3-0 / less))
+                                                               :op2 (c3-13 / tend-02
+                                                                           :ARG1 (c3-5 / man)
+                                                                           :ARG2 (c3-8 / linger-01
+                                                                                       :ARG0 c3-5
+                                                                                       :polarity -)))))))

@@ -1,0 +1,74 @@
+# ::snt st - ever booking on & they're hrs late ! Dunno if I should look forward to the flight or flying again !
+# ::tokens ["st", "-", "ever", "booking", "on", "&", "they", "'re", "hrs", "late", "!", "Dunno", "if", "I", "should", "look", "forward", "to", "the", "flight", "or", "flying", "again", "!"]
+# ::lemmas ["st", "-", "ever", "booking", "on", "&", "they", "be", "hrs", "late", "!", "Dunno", "if", "i", "should", "look", "forward", "to", "the", "flight", "or", "fly", "again", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-13 / and
+                   :op1 (c1-5 / on-01
+                              :ARG1 (c1-19 / book-03
+                                           :time (c1-11 / ever)))
+                   :op2 (c1-18 / late-02
+                               :ARG1 (c1-6 / they)
+                               :ARG2 (c1-15 / multiple
+                                            :op1 (c1-4 / temporal-quantity
+                                                       :unit (c1-16 / hour)
+                                                       :quant 1))))
+      :snt2 (c1-1 / have-concession-91
+                  :ARG1 (c1-3 / have-polarity-91
+                              :ARG1 (c1-7 / recommend-01
+                                          :ARG1 (c1-0 / look-forward-03
+                                                      :ARG0 (c1-2 / i)
+                                                      :ARG1 (c1-17 / or
+                                                                   :op1 (c1-14 / fly-01
+                                                                               :ARG1 c1-2)
+                                                                   :op2 (c1-12 / fly-01
+                                                                               :ARG1 c1-2
+                                                                               :mod (c1-10 / again)))))
+                              :ARG2 -)
+                  :ARG2 (c1-9 / no)))
+
+# ::snt Please share your flight details so that we may check and advise .
+# ::tokens ["Please", "share", "your", "flight", "details", "so", "that", "we", "may", "check", "and", "advise", "."]
+# ::lemmas ["please", "share", "your", "flight", "detail", "so", "that", "we", "may", "check", "and", "advise", "."]
+(c2-0 / share-01
+      :ARG0 (c2-7 / you)
+      :ARG1 (c2-1 / detail
+                  :topic (c2-3 / fly-01
+                               :ARG1 c2-7))
+      :purpose (c2-6 / possible-01
+                     :ARG1 (c2-2 / and
+                                 :op1 (c2-4 / check-01
+                                            :ARG0 (c2-5 / we))
+                                 :op2 (c2-8 / advise-01
+                                            :ARG0 c2-5)))
+      :mode imperative
+      :polite +)
+
+# ::snt . No message from you , only confusing ones from - but at least they alerted us .
+# ::tokens [".", "No", "message", "from", "you", ",", "only", "confusing", "ones", "from", "-", "but", "at", "least", "they", "alerted", "us", "."]
+# ::lemmas [".", "no", "message", "from", "you", ",", "only", "confusing", "one", "from", "-", "but", "at", "least", "they", "alert", "we", "."]
+(c3-5 / have-concession-91
+      :ARG1 (c3-1 / alert-01
+                  :ARG0 (c3-7 / they)
+                  :ARG1 (c3-3 / we)
+                  :ARG2 (c3-8 / message-01
+                              :ARG0 (c3-9 / you)
+                              :polarity -)
+                  :mod (c3-10 / at-least))
+      :ARG2 (c3-0 / and
+                  :op1 (c3-2 / message-01
+                             :ARG0 c3-7
+                             :ARG2 c3-9)
+                  :op2 (c3-4 / confuse-01
+                             :ARG0 c3-7
+                             :ARG1 c3-3)
+                  :mod (c3-6 / only)))
+
+# ::snt our apologies , the delay is due to operational reasons
+# ::tokens ["our", "apologies", ",", "the", "delay", "is", "due", "to", "operational", "reasons"]
+# ::lemmas ["our", "apology", ",", "the", "delay", "be", "due", "to", "operational", "reason"]
+(c4-1 / apologize-01
+      :ARG0 (c4-3 / we)
+      :ARG1 (c4-2 / cause-01
+                  :ARG0 (c4-5 / reason
+                              :mod (c4-4 / operate-01))
+                  :ARG1 (c4-0 / delay-01)))

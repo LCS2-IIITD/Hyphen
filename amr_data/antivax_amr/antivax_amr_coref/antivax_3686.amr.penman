@@ -1,0 +1,234 @@
+# ::snt Tell him THANK YOU for me!
+# ::tokens ["Tell", "him", "THANK", "YOU", "for", "me", "!"]
+# ::lemmas ["tell", "he", "thank", "you", "for", "i", "!"]
+(c1-2 / tell-01
+      :ARG0 (c1-4 / you)
+      :ARG1 (c1-0 / thank-01
+                  :ARG0 c1-4
+                  :ARG1 (c1-1 / he)
+                  :ARG2 (c1-3 / i))
+      :ARG2 c1-1
+      :mode imperative)
+
+# ::snt Just crazy to me. And they always taught me dont believe everything you see on TV.
+# ::tokens ["Just", "crazy", "to", "me", ".", "And", "they", "always", "taught", "me", "do", "nt", "believe", "everything", "you", "see", "on", "TV", "."]
+# ::lemmas ["just", "crazy", "to", "i", ".", "and", "they", "always", "teach", "i", "do", "not", "believe", "everything", "you", "see", "on", "tv", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-2 / crazy-03
+                   :ARG1 (c2-9 / i)
+                   :mod (c2-8 / just))
+       :snt2 (c2-1 / and
+                   :op2 (c2-6 / teach-01
+                              :ARG0 (c2-4 / they)
+                              :ARG1 (c2-7 / believe-01
+                                          :ARG0 (c2-5 / i)
+                                          :ARG1 (c2-13 / everything
+                                                       :ARG1-of (c2-0 / see-01
+                                                                      :ARG0 (c2-11 / you)
+                                                                      :medium (c2-3 / television)))
+                                          :polarity -)
+                              :ARG2 c2-5
+                              :time (c2-12 / always))))
+
+# ::snt Shes never been anti-vaccine until now. Im sure its the Fox News effect.
+# ::tokens ["She", "s", "never", "been", "anti", "-", "vaccine", "until", "now", ".", "I", "m", "sure", "its", "the", "Fox", "News", "effect", "."]
+# ::lemmas ["she", "s", "never", "be", "anti", "-", "vaccine", "until", "now", ".", "i", "m", "sure", "its", "the", "Fox", "News", "effect", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-6 / oppose-01
+                   :ARG0 (c3-1 / he)
+                   :ARG1 (c3-5 / vaccinate-01)
+                   :time (c3-12 / ever)
+                   :time (c3-4 / until
+                               :op1 (c3-11 / now))
+                   :polarity -)
+       :snt2 (c3-0 / sure-02
+                   :ARG0 (c3-9 / i)
+                   :ARG1 (c3-2 / effect-03
+                               :ARG0 (c3-8 / broadcast-program
+                                           :name (c3-7 / name
+                                                       :op1 "Fox"
+                                                       :op2 "News"))
+                               :ARG1 (c3-3 / it))))
+
+# ::snt Curious, was your Mom always an anti-vaxxer? My parents (74 and ) and of my sisters have become increasingly so. And this was never the case growing up. We all got all our vaccines on time without mention. Im assuming its a Fox/Facebook effect? How about for your parents?
+# ::tokens ["Curious", ",", "was", "your", "Mom", "always", "an", "anti", "-", "vaxxer", "?", "My", "parents", "(", "74", "and", ")", "and", "of", "my", "sisters", "have", "become", "increasingly", "so", ".", "And", "this", "was", "never", "the", "case", "growing", "up", ".", "We", "all", "got", "all", "our", "vaccines", "on", "time", "without", "mention", ".", "I", "m", "assuming", "its", "a", "Fox", "/", "Facebook", "effect", "?", "How", "about", "for", "your", "parents", "?"]
+# ::lemmas ["curious", ",", "be", "your", "Mom", "always", "an", "anti", "-", "vaxxer", "?", "my", "parent", "(", "74", "and", ")", "and", "of", "my", "sister", "have", "become", "increasingly", "so", ".", "and", "this", "be", "never", "the", "case", "grow", "up", ".", "we", "all", "get", "all", "our", "vaccine", "on", "time", "without", "mention", ".", "i", "m", "assume", "its", "a", "Fox", "/", "Facebook", "effect", "?", "how", "about", "for", "your", "parent", "?"]
+(c4-19 / multi-sentence
+       :snt1 (c4-9 / curious-01
+                   :ARG0 (c4-15 / oppose-01
+                                :ARG0 (c4-46 / person
+                                             :ARG0-of (c4-41 / have-rel-role-91
+                                                             :ARG1 (c4-34 / you)
+                                                             :ARG2 (c4-40 / mom)))
+                                :ARG1 (c4-14 / vaxxer)
+                                :time (c4-38 / always))
+                   :ARG1 c4-34)
+       :snt2 (c4-44 / become-01
+                    :ARG1 (c4-22 / and
+                                 :op1 (c4-43 / person
+                                             :ARG0-of (c4-6 / have-rel-role-91
+                                                            :ARG1 (c4-7 / i)
+                                                            :ARG2 (c4-27 / parent))
+                                             :age (c4-1 / and
+                                                        :op1 (c4-17 / temporal-quantity
+                                                                    :unit (c4-35 / year)
+                                                                    :quant 74)
+                                                        :op2 (c4-11 / temporal-quantity
+                                                                    :unit (c4-2 / year)
+                                                                    :quant 74)))
+                                 :op2 (c4-26 / person
+                                             :ARG0-of (c4-8 / have-rel-role-91
+                                                            :ARG1 c4-7
+                                                            :ARG2 (c4-24 / sister))))
+                    :ARG2 (c4-45 / so
+                                 :ARG1-of (c4-28 / increase-01)))
+       :snt3 (c4-48 / and
+                    :op1 (c4-0 / case-04
+                               :ARG1 (c4-21 / this)
+                               :time (c4-23 / ever)
+                               :time (c4-18 / grow-up-04
+                                            :ARG1 (c4-10 / we
+                                                         :mod (c4-4 / all)))
+                               :polarity -)
+                    :op2 (c4-36 / get-01
+                                :ARG0 c4-10
+                                :ARG1 (c4-39 / vaccine
+                                             :mod c4-4)
+                                :poss c4-10)
+                    :mod (c4-42 / on-time)
+                    :manner (c4-31 / mention-01
+                                   :ARG0 (c4-29 / i)
+                                   :polarity -))
+       :snt4 (c4-33 / assume-02
+                    :ARG0 c4-29
+                    :ARG1 (c4-13 / affect-01
+                                 :ARG0 (c4-30 / slash
+                                              :op1 (c4-37 / broadcast-program
+                                                          :name (c4-20 / name
+                                                                       :op1 "Fox"))
+                                              :op2 (c4-3 / publication
+                                                         :name (c4-5 / name
+                                                                     :op1 "Facebook"))))
+                    :snt5 (c4-12 / amr-unknown
+                                 :topic (c4-32 / person
+                                               :ARG0-of (c4-16 / have-rel-role-91
+                                                               :ARG1 (c4-25 / you)
+                                                               :ARG2 (c4-47 / parent))))))
+
+# ::snt Thank you.
+# ::tokens ["Thank", "you", "."]
+# ::lemmas ["thank", "you", "."]
+(c5-1 / thank-01
+      :ARG0 (c5-0 / i)
+      :ARG1 (c5-2 / you))
+
+# ::snt Gotta keep your sanity. Wishing her the best.
+# ::tokens ["Got", "ta", "keep", "your", "sanity", ".", "Wishing", "her", "the", "best", "."]
+# ::lemmas ["got", "to", "keep", "your", "sanity", ".", "wish", "she", "the", "good", "."]
+(c6-9 / multi-sentence
+      :snt1 (c6-4 / obligate-01
+                  :ARG2 (c6-10 / keep-02
+                               :ARG0 (c6-11 / you)
+                               :ARG1 (c6-0 / sanity
+                                           :poss c6-11)))
+      :snt2 (c6-2 / wish-01
+                  :ARG0 (c6-8 / i)
+                  :ARG1 (c6-5 / thing
+                              :ARG1-of (c6-3 / have-degree-91
+                                             :ARG2 (c6-6 / good-02
+                                                         :ARG1 c6-5)
+                                             :ARG3 (c6-1 / most)))
+                  :ARG2 (c6-7 / she)))
+
+# ::snt Ive given up trying to understand.
+# ::tokens ["I", "ve", "given", "up", "trying", "to", "understand", "."]
+# ::lemmas ["i", "ve", "give", "up", "try", "to", "understand", "."]
+(c7-0 / give-up-07
+      :ARG0 (c7-1 / i)
+      :ARG1 (c7-2 / try-01
+                  :ARG0 c7-1
+                  :ARG1 (c7-3 / understand-01
+                              :ARG0 c7-1)))
+
+# ::snt Ill just never understand
+# ::tokens ["Ill", "just", "never", "understand"]
+# ::lemmas ["Ill", "just", "never", "understand"]
+(c8-3 / understand-01
+      :ARG0 (c8-1 / i)
+      :time (c8-2 / ever)
+      :mod (c8-0 / just)
+      :polarity -)
+
+# ::snt Yeah. Her cousins husband died from COVID last year. Doesnt matter.
+# ::tokens ["Yeah", ".", "Her", "cousins", "husband", "died", "from", "COVID", "last", "year", ".", "Does", "nt", "matter", "."]
+# ::lemmas ["yeah", ".", "her", "cousin", "husband", "die", "from", "COVID", "last", "year", ".", "do", "not", "matter", "."]
+(c9-9 / multi-sentence
+      :snt1 (c9-11 / yeah
+                   :mode expressive)
+      :snt2 (c9-0 / die-01
+                  :ARG1 (c9-8 / person
+                              :ARG0-of (c9-6 / have-rel-role-91
+                                             :ARG1 (c9-1 / she)
+                                             :ARG2 (c9-3 / cousin)))
+                  :ARG1-of (c9-2 / cause-01
+                                 :ARG0 (c9-5 / disease
+                                             :name (c9-10 / name
+                                                          :op1 "COVID")))
+                  :time (c9-12 / year
+                               :mod (c9-7 / last)))
+      :snt3 (c9-4 / matter-01
+                  :polarity -))
+
+# ::snt Oh boy
+# ::tokens ["Oh", "boy"]
+# ::lemmas ["oh", "boy"]
+(c10-0 / boy
+       :mod (c10-1 / oh
+                   :mode expressive))
+
+# ::snt She says she has a strong immune system and shes not worried about it.
+# ::tokens ["She", "says", "she", "has", "a", "strong", "immune", "system", "and", "she", "s", "not", "worried", "about", "it", "."]
+# ::lemmas ["she", "say", "she", "have", "a", "strong", "immune", "system", "and", "she", "s", "not", "worried", "about", "it", "."]
+(c11-0 / say-01
+       :ARG0 (c11-5 / she)
+       :ARG1 (c11-1 / and
+                    :op1 (c11-3 / have-03
+                                :ARG0 c11-5
+                                :ARG1 (c11-4 / system
+                                             :ARG1-of (c11-6 / immune-02)
+                                             :ARG1-of (c11-7 / strong-02)))
+                    :op2 (c11-2 / worry-01
+                                :ARG0 c11-4
+                                :ARG1 c11-5
+                                :polarity -)))
+
+# ::snt What would her reasons be?
+# ::tokens ["What", "would", "her", "reasons", "be", "?"]
+# ::lemmas ["what", "would", "her", "reason", "be", "?"]
+(c12-2 / reason
+       :poss (c12-0 / she)
+       :domain (c12-1 / amr-unknown))
+
+# ::snt Big time. Sadly, my mom (82) is an anti-vaxxer.
+# ::tokens ["Big", "time", ".", "Sadly", ",", "my", "mom", "(", "82", ")", "is", "an", "anti", "-", "vaxxer", "."]
+# ::lemmas ["big", "time", ".", "sadly", ",", "my", "mom", "(", "82", ")", "be", "an", "anti", "-", "vaxxer", "."]
+(c13-10 / multi-sentence
+        :snt1 (c13-7 / time
+                     :mod (c13-8 / big))
+        :snt2 (c13-6 / oppose-01
+                     :ARG0 (c13-9 / person
+                                  :ARG0-of (c13-4 / have-rel-role-91
+                                                  :ARG1 (c13-1 / i)
+                                                  :ARG2 (c13-2 / mom))
+                                  :age (c13-3 / temporal-quantity
+                                              :unit (c13-11 / year)
+                                              :quant 82))
+                     :ARG1 (c13-5 / vaxxer)
+                     :ARG2-of (c13-0 / fortunate-01
+                                     :polarity -)))
+
+# ::snt its a blessing.
+# ::tokens ["its", "a", "blessing", "."]
+# ::lemmas ["its", "a", "blessing", "."]
+(c14-1 / thing
+       :ARG2-of (c14-0 / bless-01))

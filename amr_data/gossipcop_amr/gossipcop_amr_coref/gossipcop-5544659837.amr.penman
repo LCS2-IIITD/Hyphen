@@ -1,0 +1,101 @@
+# ::snt Jelena
+# ::tokens ["Jelena"]
+# ::lemmas ["Jelena"]
+(c1-1 / person
+      :name (c1-0 / name
+                  :op1 "Jelena"))
+
+# ::snt Yes....we knew already
+# ::tokens ["Yes", "....", "we", "knew", "already"]
+# ::lemmas ["yes", "....", "we", "know", "already"]
+(c2-1 / know-01
+      :ARG0 (c2-0 / we)
+      :time (c2-2 / already))
+
+# ::snt Dedicated to Justin Bieber and Selena Gomez
+# ::tokens ["Dedicated", "to", "Justin", "Bieber", "and", "Selena", "Gomez"]
+# ::lemmas ["dedicated", "to", "Justin", "Bieber", "and", "Selena", "Gomez"]
+(c3-5 / dedicate-01
+      :ARG2 (c3-4 / and
+                  :op1 (c3-3 / person
+                             :name (c3-0 / name
+                                         :op1 "Justin"
+                                         :op2 "Bieber"))
+                  :op2 (c3-1 / person
+                             :name (c3-2 / name
+                                         :op1 "Selena"
+                                         :op2 "Gomez"))))
+
+# ::snt That would be a dream come true
+# ::tokens ["That", "would", "be", "a", "dream", "come", "true"]
+# ::lemmas ["that", "would", "be", "a", "dream", "come", "true"]
+(c4-0 / dream-01
+      :ARG1 (c4-3 / that)
+      :ARG1-of (c4-1 / come-04
+                     :ARG2 (c4-2 / true-01
+                                 :ARG1 c4-3)))
+
+# ::snt Last night Justin going to church leaving abd going to celebrate with Bronte and her sister
+# ::tokens ["Last", "night", "Justin", "going", "to", "church", "leaving", "abd", "going", "to", "celebrate", "with", "Bronte", "and", "her", "sister"]
+# ::lemmas ["last", "night", "Justin", "go", "to", "church", "leave", "abd", "go", "to", "celebrate", "with", "Bronte", "and", "her", "sister"]
+(c5-11 / and
+       :op1 (c5-12 / go-02
+                   :ARG0 (c5-5 / person
+                               :name (c5-1 / name
+                                           :op1 "Justin"))
+                   :ARG4 (c5-9 / church)
+                   :time (c5-13 / date-entity
+                                :dayperiod (c5-4 / night)
+                                :mod (c5-0 / yesterday)))
+       :op2 (c5-6 / leave-11
+                  :ARG0 c5-5
+                  :ARG1 c5-9
+                  :purpose (c5-15 / celebrate-02
+                                  :ARG0 c5-5
+                                  :accompanier (c5-10 / and
+                                                      :op1 (c5-2 / person
+                                                                 :name (c5-7 / name
+                                                                             :op1 "Bronte"))
+                                                      :op2 (c5-14 / person
+                                                                  :ARG0-of (c5-8 / have-rel-role-91
+                                                                                 :ARG1 c5-2
+                                                                                 :ARG2 (c5-3 / sister)))))))
+
+# ::snt I think Justin and Selena just friends or friends with benefits or not official dating again
+# ::tokens ["I", "think", "Justin", "and", "Selena", "just", "friends", "or", "friends", "with", "benefits", "or", "not", "official", "dating", "again"]
+# ::lemmas ["i", "think", "Justin", "and", "Selena", "just", "friend", "or", "friend", "with", "benefit", "or", "not", "official", "date", "again"]
+(c6-7 / think-01
+      :ARG0 (c6-17 / i)
+      :ARG1 (c6-2 / or
+                  :op1 (c6-8 / or
+                             :op1 (c6-14 / person
+                                         :ARG0-of (c6-3 / have-rel-role-91
+                                                        :ARG1 (c6-6 / and
+                                                                    :op1 (c6-10 / person
+                                                                                :name (c6-13 / name
+                                                                                             :op1 "Justin"))
+                                                                    :op2 (c6-1 / person
+                                                                               :name (c6-11 / name
+                                                                                            :op1 "Selena")))
+                                                        :ARG2 (c6-12 / friend)
+                                                        :mod (c6-4 / just))
+                                         :op2 (c6-0 / person
+                                                    :ARG0-of (c6-16 / have-rel-role-91
+                                                                    :ARG1 c6-6
+                                                                    :ARG2 (c6-15 / friend))
+                                                    :ARG0-of (c6-9 / benefit-01)))
+                             :op2 (c6-18 / date-02
+                                         :ARG0 c6-6
+                                         :mod (c6-19 / official)
+                                         :mod (c6-5 / again)
+                                         :polarity -))))
+
+# ::snt what? so they are not dating?
+# ::tokens ["what", "?", "so", "they", "are", "not", "dating", "?"]
+# ::lemmas ["what", "?", "so", "they", "be", "not", "date", "?"]
+(c7-0 / multi-sentence
+      :snt1 (c7-1 / amr-unknown)
+      :snt2 (c7-2 / cause-01
+                  :ARG1 (c7-4 / date-02
+                              :ARG0 (c7-3 / they)
+                              :polarity -)))

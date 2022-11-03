@@ -1,0 +1,152 @@
+# ::snt , dead injured
+# ::tokens [",", "dead", "injured"]
+# ::lemmas [",", "dead", "injure"]
+(c1-2 / injure-01
+      :ARG1 (c1-0 / person
+                  :ARG1-of (c1-1 / die-01)))
+
+# ::snt The car is grey... No???
+# ::tokens ["The", "car", "is", "grey", "...", "No", "?", "?", "?"]
+# ::lemmas ["the", "car", "be", "grey", "...", "no", "?", "?", "?"]
+(c2-2 / gray-02
+      :ARG1 (c2-1 / car)
+      :ARG1-of (c2-0 / request-confirmation-91))
+
+# ::snt ipan Hemo, Trkiyede ID terristlerini eiten ok sayda kamp var!
+# ::tokens ["ipan", "Hemo", ",", "Trkiyede", "ID", "terristlerini", "eiten", "ok", "sayda", "kamp", "var", "!"]
+# ::lemmas ["ipan", "Hemo", ",", "Trkiyede", "ID", "terristlerini", "eiten", "ok", "sayda", "kamp", "var", "!"]
+(c3-6 / say-01
+      :ARG0 (c3-9 / and
+                  :op1 (c3-4 / person
+                             :name (c3-2 / name
+                                         :op1 "ipan"
+                                         :op2 "Hemo"))
+                  :op2 (c3-8 / person
+                             :name (c3-3 / name
+                                         :op1 "Tkiyede"
+                                         :op2 "ID"))
+                  :op3 (c3-0 / person
+                             :name (c3-5 / name
+                                         :op1 "Terristlerini")))
+      :ARG1 (c3-1 / okay-04
+                  :ARG0 c3-9
+                  :ARG1 (c3-7 / kamp)
+                  :ARG1 c3-6)
+      :ARG2 c3-9)
+
+# ::snt " Latest on the manhunt for Charlie Hebdo attackers: " At least it's a French car
+# ::tokens ["\"", "Latest", "on", "the", "manhunt", "for", "Charlie", "Hebdo", "attackers", ":", "\"", "At", "least", "it", "'s", "a", "French", "car"]
+# ::lemmas ["\"", "late", "on", "the", "manhunt", "for", "Charlie", "Hebdo", "attacker", ":", "\"", "at", "least", "it", "be", "a", "French", "car"]
+(c4-11 / say-01
+       :ARG0 (c4-3 / i)
+       :ARG1 (c4-8 / car
+                   :mod (c4-7 / country
+                              :name (c4-4 / name
+                                          :op1 "France"))
+                   :mod (c4-12 / at-least)
+                   :domain (c4-9 / it))
+       :time (c4-0 / last
+                   :op1 (c4-1 / manhunt-01
+                              :ARG1 (c4-6 / person
+                                          :ARG0-of (c4-2 / attack-01
+                                                         :ARG1 (c4-10 / magazine
+                                                                      :name (c4-5 / name
+                                                                                  :op1 "Charlie"
+                                                                                  :op2 "Ch Hebdo")))))))
+
+# ::snt IN UKRAINE HAVE GIVEN THE NAZI COUP, SUPPORTED BY NATO AND MEDIA COMMUNICATION,AS SEE PHOTO.
+# ::tokens ["IN", "UKRAINE", "HAVE", "GIVEN", "THE", "NAZI", "COUP", ",", "SUPPORTED", "BY", "NATO", "AND", "MEDIA", "COMMUNICATION", ",", "AS", "SEE", "PHOTO", "."]
+# ::lemmas ["in", "UKRAINE", "have", "give", "the", "NAZI", "COUP", ",", "support", "by", "NATO", "and", "MEDIA", "COMMUNICATION", ",", "as", "SEE", "PHOTO", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-9 / give-01
+                  :ARG0 (c5-8 / country
+                              :name (c5-4 / name
+                                          :op1 "UKRAINE"))
+                  :ARG1 (c5-7 / coup-01
+                              :mod (c5-6 / political-movement
+                                         :name (c5-5 / name
+                                                     :op1 "Nazi"))
+                              :ARG1-of (c5-12 / support-01
+                                              :ARG0 (c5-15 / and
+                                                           :op1 (c5-10 / military
+                                                                       :name (c5-11 / name
+                                                                                    :op1 "NATO"))
+                                                           :op2 (c5-13 / community
+                                                                       :mod (c5-1 / media))))))
+      :snt2 (c5-3 / see-01
+                  :ARG0 (c5-0 / you)
+                  :ARG1 (c5-14 / photograph)
+                  :mode imperative))
+
+# ::snt I hope for the World and for French.Jeanny
+# ::tokens ["I", "hope", "for", "the", "World", "and", "for", "French", ".", "Jeanny"]
+# ::lemmas ["i", "hope", "for", "the", "World", "and", "for", "French", ".", "Jeanny"]
+(c6-0 / hope-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-6 / and
+                  :op1 (c6-1 / world)
+                  :op2 (c6-4 / person
+                             :mod (c6-5 / country
+                                        :name (c6-3 / name
+                                                    :op1 "France")))))
+
+# ::snt as a muslim i want you to catch them ALIVE... so we can learn if thats another false flag operation by the intelegence services
+# ::tokens ["as", "a", "muslim", "i", "want", "you", "to", "catch", "them", "ALIVE", "...", "so", "we", "can", "learn", "if", "that", "s", "another", "false", "flag", "operation", "by", "the", "intelegence", "services"]
+# ::lemmas ["as", "a", "muslim", "i", "want", "you", "to", "catch", "they", "alive", "...", "so", "we", "can", "learn", "if", "that", "s", "another", "false", "flag", "operation", "by", "the", "intelegence", "service"]
+(c7-10 / want-01
+       :ARG0 (c7-11 / i)
+       :ARG1 (c7-17 / catch-02
+                    :ARG0 (c7-13 / you
+                                 :mod (c7-9 / religious-group
+                                            :name (c7-8 / name
+                                                        :op1 "Muslim")))
+                    :ARG1 (c7-19 / they)
+                    :time (c7-7 / before
+                                :op1 (c7-16 / now)))
+       :purpose (c7-1 / possible-01
+                      :ARG1 (c7-5 / learn-01
+                                  :ARG0 (c7-0 / we)
+                                  :ARG1 (c7-14 / operate-01
+                                               :ARG0 (c7-3 / service
+                                                           :mod (c7-12 / intelligence))
+                                               :ARG1 (c7-6 / flag
+                                                           :mod (c7-15 / false))
+                                               :mod (c7-4 / another)
+                                               :domain (c7-18 / that))))
+       :ARG1-of (c7-2 / cause-01
+                      :ARG0 c7-9))
+
+# ::snt Merci ! Vive les USA !
+# ::tokens ["Merci", "!", "Vive", "les", "USA", "!"]
+# ::lemmas ["merci", "!", "Vive", "les", "USA", "!"]
+(c8-0 / multi-sentence
+      :snt1 (c8-3 / merci
+                  :mode expressive)
+      :snt2 (c8-2 / vive-01
+                  :ARG1 (c8-4 / country
+                              :name (c8-1 / name
+                                          :op1 "USA"))
+                  :mode expressive))
+
+# ::snt Hope,French Government do the right thing by not just catching the morons,set a example to the extremists
+# ::tokens ["Hope", ",", "French", "Government", "do", "the", "right", "thing", "by", "not", "just", "catching", "the", "morons", ",", "set", "a", "example", "to", "the", "extremists"]
+# ::lemmas ["hope", ",", "French", "Government", "do", "the", "right", "thing", "by", "not", "just", "catch", "the", "moron", ",", "set", "a", "example", "to", "the", "extremist"]
+(c9-0 / hope-01
+      :ARG1 (c9-6 / do-02
+                  :ARG0 (c9-9 / government-organization
+                              :ARG0-of (c9-8 / govern-01
+                                             :ARG1 (c9-7 / country
+                                                         :name (c9-5 / name
+                                                                     :op1 "France"))))
+                  :ARG1 (c9-12 / thing
+                               :ARG1-of (c9-10 / right-02))
+                  :manner (c9-14 / and
+                                 :op1 (c9-11 / catch-03
+                                             :ARG0 c9-9
+                                             :ARG1 (c9-2 / moron)
+                                             :mod (c9-1 / just)
+                                             :polarity -)
+                                 :op2 (c9-13 / set-out-07
+                                             :ARG0 c9-9
+                                             :ARG1 (c9-4 / example)
+                                             :beneficiary (c9-3 / extremist)))))

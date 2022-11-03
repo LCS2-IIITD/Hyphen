@@ -1,0 +1,62 @@
+# ::snt It get out of the hole and he diging deper
+# ::tokens ["It", "get", "out", "of", "the", "hole", "and", "he", "diging", "deper"]
+# ::lemmas ["it", "get", "out", "of", "the", "hole", "and", "he", "dig", "deper"]
+(c1-5 / and
+      :op1 (c1-6 / get-05
+                 :ARG1 (c1-4 / it)
+                 :ARG2 (c1-0 / out-06
+                             :ARG1 c1-4
+                             :ARG2 (c1-1 / hole)))
+      :op2 (c1-7 / dig-01
+                 :ARG0 (c1-3 / he)
+                 :ARG1 (c1-2 / deper)))
+
+# ::snt Soooooo addicted to The Walking Dead. Shameful!
+# ::tokens ["Soooooo", "addicted", "to", "The", "Walking", "Dead", ".", "Shameful", "!"]
+# ::lemmas ["Soooooo", "addict", "to", "The", "Walking", "Dead", ".", "shameful", "!"]
+(c2-3 / multi-sentence
+      :snt1 (c2-6 / addict-01
+                  :ARG1 (c2-5 / i)
+                  :ARG2 (c2-1 / book
+                              :name (c2-2 / name
+                                          :op1 "The"
+                                          :op2 "Walking"
+                                          :op3 "Dead"))
+                  :degree (c2-4 / so))
+      :snt2 (c2-0 / shame-02
+                  :mode expressive))
+
+# ::snt "renewed for season FOUR" (January , ; :12 PST)
+# ::tokens ["\"", "renewed", "for", "season", "FOUR", "\"", "(", "January", ",", ";", ":", "12", "PST", ")"]
+# ::lemmas ["\"", "renew", "for", "season", "FOUR", "\"", "(", "January", ",", ";", ":", "12", "PST", ")"]
+(c3-0 / renew-01
+      :ARG1 (c3-3 / season
+                  :ord (c3-1 / ordinal-entity
+                             :value 4))
+      :time (c3-2 / date-entity
+                  :month 1
+                  :time ":12"
+                  :timezone "PST"))
+
+# ::snt Update: CELEBRITY INSIDER (January , ; :12 PST)
+# ::tokens ["Update", ":", "CELEBRITY", "INSIDER", "(", "January", ",", ";", ":", "12", "PST", ")"]
+# ::lemmas ["update", ":", "celebrity", "INSIDER", "(", "January", ",", ";", ":", "12", "PST", ")"]
+(c4-1 / update-02
+      :ARG2 (c4-2 / publication
+                  :name (c4-0 / name
+                              :op1 "CELEBRITY"
+                              :op2 " INSIDER")
+                  :time (c4-3 / date-entity
+                              :month 1
+                              :time "15:12"
+                              :timezone "PST")))
+
+# ::snt I love that show!! xoxo
+# ::tokens ["I", "love", "that", "show", "!", "!", "xoxo"]
+# ::lemmas ["i", "love", "that", "show", "!", "!", "xoxo"]
+(c5-2 / love-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-0 / show-04
+                  :mod (c5-4 / that))
+      :mod (c5-1 / emoticon
+                 :value "xoxo"))

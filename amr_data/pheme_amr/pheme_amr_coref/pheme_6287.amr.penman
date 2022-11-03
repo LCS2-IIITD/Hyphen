@@ -1,0 +1,145 @@
+# ::snt Show the cartoon.
+# ::tokens ["Show", "the", "cartoon", "."]
+# ::lemmas ["show", "the", "cartoon", "."]
+(c1-0 / show-01
+      :ARG0 (c1-1 / you)
+      :ARG1 (c1-2 / cartoon)
+      :mode imperative)
+
+# ::snt they are pussies.
+# ::tokens ["they", "are", "pussies", "."]
+# ::lemmas ["they", "be", "pussy", "."]
+(c2-0 / pussy
+      :domain (c2-1 / they))
+
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c3-0 / amr-empty)
+
+# ::snt Stand up for your rights or one day you wont be.
+# ::tokens ["Stand", "up", "for", "your", "rights", "or", "one", "day", "you", "wo", "nt", "be", "."]
+# ::lemmas ["stand", "up", "for", "your", "right", "or", "one", "day", "you", "will", "not", "be", "."]
+(c4-2 / or
+      :op1 (c4-6 / stand-up-07
+                 :ARG1 (c4-0 / you)
+                 :purpose (c4-4 / right-05
+                                :ARG1 c4-0)
+                 :mode imperative)
+      :op2 (c4-3 / stand-up-07
+                 :ARG1 c4-0
+                 :time (c4-5 / day
+                             :mod (c4-1 / one))
+                 :polarity -
+                 :mode imperative))
+
+# ::snt Cartoonist...
+# ::tokens ["Cartoonist", "..."]
+# ::lemmas ["cartoonist", "..."]
+(c5-0 / person
+      :mod (c5-1 / cartoonist))
+
+# ::snt Every major newspaper and magazine in the free world should reprint the cartoons that the found so offensive.
+# ::tokens ["Every", "major", "newspaper", "and", "magazine", "in", "the", "free", "world", "should", "reprint", "the", "cartoons", "that", "the", "found", "so", "offensive", "."]
+# ::lemmas ["every", "major", "newspaper", "and", "magazine", "in", "the", "free", "world", "should", "reprint", "the", "cartoon", "that", "the", "find", "so", "offensive", "."]
+(c6-9 / recommend-01
+      :ARG1 (c6-5 / reprint-01
+                  :ARG0 (c6-13 / and
+                               :op1 (c6-6 / newspaper)
+                               :op2 (c6-2 / magazine)
+                               :ARG1-of (c6-8 / major-02)
+                               :mod (c6-4 / every)
+                               :location (c6-0 / world
+                                               :ARG1-of (c6-1 / free-04)))
+                  :ARG1 (c6-10 / cartoon
+                               :ARG0-of (c6-3 / offend-01
+                                              :degree (c6-12 / so)
+                                              :ARG1-of (c6-7 / find-02
+                                                             :ARG0 (c6-11 / person))))))
+
+# ::snt sad day when freedom of expression/speech are met w murder.Every worldwide publication should stand together reprint the cartoon.
+# ::tokens ["sad", "day", "when", "freedom", "of", "expression", "/", "speech", "are", "met", "w", "murder", ".", "Every", "worldwide", "publication", "should", "stand", "together", "reprint", "the", "cartoon", "."]
+# ::lemmas ["sad", "day", "when", "freedom", "of", "expression", "/", "speech", "be", "meet", "w", "murder", ".", "every", "worldwide", "publication", "should", "stand", "together", "reprint", "the", "cartoon", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-10 / day
+                   :time-of (c7-9 / meet-02
+                                  :ARG0 (c7-1 / free-04
+                                              :ARG3 (c7-16 / and
+                                                           :op1 (c7-6 / express-01)
+                                                           :op2 (c7-14 / speak-01)))
+                                  :ARG1 (c7-3 / murder-01))
+                   :ARG1-of (c7-7 / sad-02))
+      :snt2 (c7-11 / recommend-01
+                   :ARG1 (c7-4 / stand-11
+                               :ARG1 (c7-12 / publication
+                                            :mod (c7-5 / every)
+                                            :location (c7-0 / worldwide))
+                               :ARG2 (c7-8 / reprint-01
+                                           :ARG0 c7-12
+                                           :ARG1 (c7-13 / cartoon))
+                               :manner (c7-15 / together))))
+
+# ::snt Bravely cropping the picture.
+# ::tokens ["Bravely", "cropping", "the", "picture", "."]
+# ::lemmas ["bravely", "crop", "the", "picture", "."]
+(c9-1 / croop-01
+      :ARG1 (c9-0 / picture))
+
+# ::snt MT .: Editor Stephane Charbonnier, cartoonists killed in attack
+# ::tokens ["MT", ".", ":", "Editor", "Stephane", "Charbonnier", ",", "cartoonists", "killed", "in", "attack"]
+# ::lemmas ["MT", ".", ":", "Editor", "Stephane", "Charbonnier", ",", "cartoonist", "kill", "in", "attack"]
+(c10-9 / and
+       :op1 (c10-5 / publication
+                   :name (c10-3 / name
+                                :op1 "MT"))
+       :op2 (c10-8 / person
+                   :name (c10-4 / name
+                                :op1 "Stephane"
+                                :op2 "Charbonnier")
+                   :ARG0-of (c10-0 / have-org-role-91
+                                   :ARG2 (c10-1 / editor))
+                   :ARG1-of (c10-7 / kill-01
+                                   :ARG0 (c10-2 / attack-01))
+                   :ARG0-of (c10-6 / cartoon-01)))
+
+# ::snt  Editor Stephane Charbonnier, cartoonists reported killed in. AP photo)
+# ::tokens [" ", "Editor", "Stephane", "Charbonnier", ",", "cartoonists", "reported", "killed", "in", ".", "AP", "photo", ")"]
+# ::lemmas [" ", "Editor", "Stephane", "Charbonnier", ",", "cartoonist", "report", "kill", "in", ".", "AP", "photo", ")"]
+(c13-1 / multi-sentence
+       :snt1 (c13-6 / person
+                    :name (c13-4 / name
+                                 :op1 "Stephane"
+                                 :op2 "Charbonnier")
+                    :ARG0-of (c13-0 / have-org-role-91
+                                    :ARG2 (c13-3 / editor))
+                    :ARG0-of (c13-11 / have-03
+                                     :ARG1 (c13-8 / cartoonist
+                                                  :ARG1-of (c13-9 / kill-01
+                                                                  :ARG1-of (c13-7 / report-01)))))
+       :snt2 (c13-10 / photo
+                     :mod (c13-2 / publication
+                                 :name (c13-5 / name
+                                              :op1 "AP"))))
+
+# ::snt  cartoonists reported killed in attack
+# ::tokens [" ", "cartoonists", "reported", "killed", "in", "attack"]
+# ::lemmas [" ", "cartoonist", "report", "kill", "in", "attack"]
+(c15-1 / report-01
+       :ARG1 (c15-2 / kill-01
+                    :ARG1 (c15-0 / cartoonist)
+                    :time (c15-3 / attack-01)))
+
+# ::snt :, spotted your photo
+# ::tokens [":", ",", "spotted", "your", "photo"]
+# ::lemmas [":", ",", "spot", "your", "photo"]
+(c16-0 / spot-01
+       :ARG0 (c16-3 / i)
+       :ARG1 (c16-2 / photo
+                    :poss (c16-1 / you)))
+
+# ::snt are you?
+# ::tokens ["are", "you", "?"]
+# ::lemmas ["be", "you", "?"]
+(c17-1 / event
+       :polarity (c17-2 / amr-unknown)
+       :mod (c17-0 / you))

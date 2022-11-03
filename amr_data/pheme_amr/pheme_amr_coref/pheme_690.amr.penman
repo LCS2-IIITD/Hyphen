@@ -1,0 +1,187 @@
+# ::snt The British military should question Dave
+# ::tokens ["The", "British", "military", "should", "question", "Dave"]
+# ::lemmas ["the", "British", "military", "should", "question", "Dave"]
+(c1-5 / recommend-01
+      :ARG1 (c1-1 / question-03
+                  :ARG0 (c1-0 / military
+                              :mod (c1-6 / country
+                                         :name (c1-2 / name
+                                                     :op1 "Great"
+                                                     :op2 "Britain")))
+                  :ARG1 (c1-4 / person
+                              :name (c1-3 / name
+                                          :op1 "Dave"))))
+
+# ::snt :thank you!
+# ::tokens [":", "thank", "you", "!"]
+# ::lemmas [":", "thank", "you", "!"]
+(c2-1 / thank-01
+      :ARG1 (c2-0 / you))
+
+# ::snt "Love is stronger than hate" - a fitting, if tragic, epitaph
+# ::tokens ["\"", "Love", "is", "stronger", "than", "hate", "\"", "-", "a", "fitting", ",", "if", "tragic", ",", "epitaph"]
+# ::lemmas ["\"", "Love", "be", "strong", "than", "hate", "\"", "-", "a", "fitting", ",", "if", "tragic", ",", "epitaph"]
+(c3-0 / have-degree-91
+      :ARG1 (c3-1 / love)
+      :ARG2 (c3-6 / strong-02
+                  :ARG1 c3-1)
+      :ARG3 (c3-2 / more)
+      :ARG4 (c3-8 / hate)
+      :ARG1-of (c3-5 / mean-01
+                     :ARG2 (c3-4 / epitaph
+                                 :ARG2-of (c3-3 / fitting-02
+                                                :concession (c3-7 / tragic)))))
+
+# ::snt de rien
+# ::tokens ["de", "rien"]
+# ::lemmas ["de", "rien"]
+(c4-0 / string-entity
+      :value "de rien")
+
+# ::snt Angry demonstrations on the strength of those cartoons maybe, but murder?
+# ::tokens ["Angry", "demonstrations", "on", "the", "strength", "of", "those", "cartoons", "maybe", ",", "but", "murder", "?"]
+# ::lemmas ["angry", "demonstration", "on", "the", "strength", "of", "those", "cartoon", "maybe", ",", "but", "murder", "?"]
+(c5-5 / contrast-01
+      :ARG1 (c5-2 / possible-01
+                  :ARG1 (c5-4 / demonstrate-01
+                              :ARG0-of (c5-9 / anger-01)
+                              :ARG1-of (c5-3 / cause-01
+                                             :ARG0 (c5-7 / strong-02
+                                                         :ARG1 (c5-6 / cartoon
+                                                                     :mod (c5-8 / that))))))
+      :ARG2 (c5-0 / murder-01
+                  :polarity (c5-1 / amr-unknown)))
+
+# ::snt How these guys can just drive out of Paris will shame France if they are not apprehended, pronto
+# ::tokens ["How", "these", "guys", "can", "just", "drive", "out", "of", "Paris", "will", "shame", "France", "if", "they", "are", "not", "apprehended", ",", "pronto"]
+# ::lemmas ["how", "these", "guy", "can", "just", "drive", "out", "of", "Paris", "will", "shame", "France", "if", "they", "be", "not", "apprehend", ",", "pronto"]
+(c6-10 / shame-01
+       :ARG0 (c6-11 / thing
+                    :manner-of (c6-5 / drive-01
+                                     :ARG0 (c6-7 / guy
+                                                 :mod (c6-9 / this))
+                                     :ARG1 (c6-1 / out-06
+                                                 :ARG2 (c6-6 / city
+                                                             :name (c6-2 / name
+                                                                         :op1 "Paris")))
+                                     :ARG1-of (c6-4 / possible-01)
+                                     :mod (c6-0 / just)))
+       :ARG1 (c6-8 / country
+                   :name (c6-3 / name
+                               :op1 "France"))
+       :condition (c6-13 / apprehend-01
+                         :ARG1 c6-7
+                         :polarity -)
+       :mod (c6-12 / pronto))
+
+# ::snt Fortunately they won't. the French equivalent of SAS are hardcore.
+# ::tokens ["Fortunately", "they", "wo", "n't", ".", "the", "French", "equivalent", "of", "SAS", "are", "hardcore", "."]
+# ::lemmas ["fortunately", "they", "will", "not", ".", "the", "French", "equivalent", "of", "SAS", "be", "hardcore", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-1 / fortunate-01
+                  :ARG2 (c7-7 / do-02
+                              :ARG0 (c7-10 / they)
+                              :polarity -))
+      :snt2 (c7-0 / hardcore
+                  :domain (c7-6 / product
+                                :name (c7-4 / name
+                                            :op1 "SAS")
+                                :ARG1-of (c7-3 / equal-01
+                                               :ARG2 (c7-9 / thing
+                                                           :mod (c7-8 / country
+                                                                      :name (c7-5 / name
+                                                                                  :op1 "France")))))))
+
+# ::snt Today's P-PreventA-AnyR-Rise ofI -IslamicS- Sanctimony
+# ::tokens ["Today", "'s", "P", "-", "PreventA", "-", "AnyR", "-", "Rise", "ofI", "-IslamicS-", "Sanctimony"]
+# ::lemmas ["Today", "'s", "P", "-", "PreventA", "-", "AnyR", "-", "Rise", "ofi", "-islamics-", "Sanctimony"]
+(c8-0 / sanctimony
+      :time (c8-3 / today)
+      :mod (c8-2 / law
+                 :name (c8-1 / name
+                             :op1 "P-PreventA-AnyR-Rise"
+                             :op2 "ofI-IslamicS")))
+
+# ::snt lashes, if you are not dead by laughter. Love is stronger than hate.
+# ::tokens ["lashes", ",", "if", "you", "are", "not", "dead", "by", "laughter", ".", "Love", "is", "stronger", "than", "hate", "."]
+# ::lemmas ["lash", ",", "if", "you", "be", "not", "dead", "by", "laughter", ".", "Love", "be", "strong", "than", "hate", "."]
+(c9-4 / multi-sentence
+      :snt1 (c9-0 / have-condition-91
+                  :ARG1 (c9-3 / laugh-01
+                              :ARG0 (c9-1 / you)
+                              :mode imperative)
+                  :ARG2 (c9-7 / die-01
+                              :ARG1 c9-1
+                              :ARG1-of (c9-8 / cause-01
+                                             :ARG0 (c9-9 / laugh-01
+                                                         :ARG0 c9-1))
+                              :polarity -))
+      :snt2 (c9-10 / strong-02
+                   :ARG1 (c9-2 / love-01)
+                   :ARG2-of (c9-11 / have-degree-91
+                                   :ARG1 c9-2
+                                   :ARG3 (c9-6 / more)
+                                   :ARG4 (c9-5 / hate-01))))
+
+# ::snt They are quite fierce-interestingly French military have recently savaged Hollande-not like UK pussy Generals
+# ::tokens ["They", "are", "quite", "fierce", "-", "interestingly", "French", "military", "have", "recently", "savaged", "Hollande", "-", "not", "like", "UK", "pussy", "Generals"]
+# ::lemmas ["they", "be", "quite", "fierce", "-", "interestingly", "French", "military", "have", "recently", "savage", "Hollande", "-", "not", "like", "UK", "pussy", "Generals"]
+(c10-15 / savage-01
+        :ARG0 (c10-2 / military
+                     :mod (c10-11 / country
+                                  :name (c10-7 / name
+                                               :op1 "France"))
+                     :ARG0-of (c10-5 / interest-01
+                                     :ARG2 (c10-1 / fierce
+                                                  :degree (c10-4 / quite))))
+        :ARG1 (c10-9 / person
+                     :name (c10-8 / name
+                                  :op1 "Hollande"))
+        :time (c10-10 / recent)
+        :ARG1-of (c10-6 / resemble-01
+                        :ARG2 (c10-16 / person
+                                      :ARG0-of (c10-0 / have-org-role-91
+                                                      :ARG1 (c10-12 / country
+                                                                    :name (c10-13 / name
+                                                                                  :op1 "UK"))
+                                                      :ARG2 (c10-14 / general
+                                                                    :mod (c10-3 / pussy))))
+                        :polarity -))
+
+# ::snt Today's P-PreventA-AnyR-Rise ofI -IslamicS- Sanctimony
+# ::tokens ["Today", "'s", "P", "-", "PreventA", "-", "AnyR", "-", "Rise", "ofI", "-IslamicS-", "Sanctimony"]
+# ::lemmas ["Today", "'s", "P", "-", "PreventA", "-", "AnyR", "-", "Rise", "ofi", "-islamics-", "Sanctimony"]
+(c11-0 / sanctimony
+       :time (c11-3 / today)
+       :mod (c11-2 / law
+                   :name (c11-1 / name
+                                :op1 "P-PreventA-AnyR-Rise"
+                                :op2 "ofI-IslamicS")))
+
+# ::snt what is the English translation?
+# ::tokens ["what", "is", "the", "English", "translation", "?"]
+# ::lemmas ["what", "be", "the", "English", "translation", "?"]
+(c12-2 / translate-01
+       :ARG3 (c12-1 / language
+                    :name (c12-0 / name
+                                 :op1 "English"))
+       :ARG4 (c12-3 / amr-unknown))
+
+# ::snt isn't it shocking, SHOCKING? And Hollande has reacted w all the enthusiasm of like a limp wet rag.
+# ::tokens ["is", "n't", "it", "shocking", ",", "SHOCKING", "?", "And", "Hollande", "has", "reacted", "w", "all", "the", "enthusiasm", "of", "like", "a", "limp", "wet", "rag", "."]
+# ::lemmas ["be", "not", "it", "shocking", ",", "shocking", "?", "and", "Hollande", "have", "react", "w", "all", "the", "enthusiasm", "of", "like", "a", "limp", "wet", "rag", "."]
+(c13-3 / multi-sentence
+       :snt1 (c13-12 / shock-01
+                     :ARG0 (c13-7 / it)
+                     :ARG1-of (c13-11 / request-confirmation-91))
+       :snt2 (c13-13 / and
+                     :op2 (c13-8 / react-01
+                                 :ARG0 (c13-10 / person
+                                               :name (c13-9 / name
+                                                            :op1 "Hollande"))
+                                 :ARG2 (c13-4 / enthusiasm
+                                              :mod (c13-6 / all))
+                                 :ARG1-of (c13-5 / resemble-01
+                                                 :ARG2 (c13-0 / rag
+                                                              :ARG1-of (c13-1 / wet-01)
+                                                              :mod (c13-2 / limp))))))

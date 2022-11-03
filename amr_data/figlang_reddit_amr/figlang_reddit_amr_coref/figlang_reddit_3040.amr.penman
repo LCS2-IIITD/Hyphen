@@ -1,0 +1,28 @@
+# ::snt Angel has landed
+# ::tokens ["Angel", "has", "landed"]
+# ::lemmas ["Angel", "have", "land"]
+(c1-2 / land-01
+      :ARG1 (c1-0 / person
+                  :name (c1-1 / name
+                              :op1 "Angel")))
+
+# ::snt He changed quickly!
+# ::tokens ["He", "changed", "quickly", "!"]
+# ::lemmas ["he", "change", "quickly", "!"]
+(c2-2 / change-01
+      :ARG1 (c2-1 / he)
+      :ARG1-of (c2-0 / quick-02))
+
+# ::snt This is the first real picture, all the others were old :)
+# ::tokens ["This", "is", "the", "first", "real", "picture", ",", "all", "the", "others", "were", "old", ":)"]
+# ::lemmas ["this", "be", "the", "first", "real", "picture", ",", "all", "the", "other", "be", "old", ":)"]
+(c3-1 / and
+      :op1 (c3-7 / picture
+                 :ord (c3-3 / ordinal-entity
+                            :value 1)
+                 :ARG1-of (c3-6 / real-04)
+                 :domain (c3-5 / this))
+      :op2 (c3-2 / old
+                 :domain (c3-4 / picture
+                               :mod (c3-0 / other
+                                          :mod (c3-8 / all)))))

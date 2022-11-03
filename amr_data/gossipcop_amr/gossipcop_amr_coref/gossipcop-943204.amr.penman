@@ -1,0 +1,58 @@
+# ::snt TRUE...!!!
+# ::tokens ["TRUE", "...", "!", "!", "!"]
+# ::lemmas ["true", "...", "!", "!", "!"]
+(c1-0 / sue-02)
+
+# ::snt billion compared to a few movies.... dont get me wrong, I love Elizabeth... but the twins a way above her.
+# ::tokens ["billion", "compared", "to", "a", "few", "movies", "....", "do", "nt", "get", "me", "wrong", ",", "I", "love", "Elizabeth", "...", "but", "the", "twins", "a", "way", "above", "her", "."]
+# ::lemmas ["billion", "compare", "to", "a", "few", "movie", "....", "do", "not", "get", "i", "wrong", ",", "i", "love", "Elizabeth", "...", "but", "the", "twin", "a", "way", "above", "she", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-12 / compare-01
+                    :ARG1 (c2-3 / monetary-quantity
+                                :unit (c2-19 / dollar)
+                                :quant 1000000000)
+                    :ARG2 (c2-13 / movie
+                                 :quant (c2-14 / few)))
+       :snt2 (c2-7 / get-04
+                   :ARG0 (c2-2 / you)
+                   :ARG1 (c2-17 / wrong-04
+                                :ARG1 (c2-18 / i)
+                                :ARG2 (c2-8 / contrast-01
+                                            :ARG1 (c2-0 / love-01
+                                                        :ARG0 c2-18
+                                                        :ARG1 (c2-16 / person
+                                                                     :name (c2-15 / name
+                                                                                  :op1 "Elizabeth")))
+                                            :ARG2 (c2-9 / be-located-at-91
+                                                        :ARG1 (c2-11 / person
+                                                                     :ARG0-of (c2-4 / have-rel-role-91
+                                                                                    :ARG2 (c2-6 / twin)))
+                                                        :ARG2 (c2-5 / above
+                                                                    :op1 c2-16
+                                                                    :extent (c2-1 / way)))))
+                   :polarity -
+                   :mode imperative))
+
+# ::snt Looking for Web Developer? Contact me or
+# ::tokens ["Looking", "for", "Web", "Developer", "?", "Contact", "me", "or"]
+# ::lemmas ["look", "for", "web", "Developer", "?", "contact", "i", "or"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / look-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-2 / person
+                              :ARG0-of (c4-8 / develop-02
+                                             :ARG1 (c4-4 / web)))
+                  :polarity (c4-7 / amr-unknown))
+      :snt2 (c4-5 / contact-01
+                  :ARG0 c4-0)
+      :ARG1 (c4-6 / i))
+
+# ::snt Its all about Elizabeth now
+# ::tokens ["Its", "all", "about", "Elizabeth", "now"]
+# ::lemmas ["its", "all", "about", "Elizabeth", "now"]
+(c5-3 / concern-02
+      :ARG1 (c5-2 / person
+                  :name (c5-0 / name
+                              :op1 "Elizabeth"))
+      :degree (c5-4 / all)
+      :time (c5-1 / now))

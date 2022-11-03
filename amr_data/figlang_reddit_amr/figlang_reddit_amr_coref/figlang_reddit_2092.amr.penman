@@ -1,0 +1,29 @@
+# ::snt Rob Gronkowski reaction when he catches a fireball thrown from a fan
+# ::tokens ["Rob", "Gronkowski", "reaction", "when", "he", "catches", "a", "fireball", "thrown", "from", "a", "fan"]
+# ::lemmas ["Rob", "Gronkowski", "reaction", "when", "he", "catch", "a", "fireball", "throw", "from", "a", "fan"]
+(c1-4 / react-01
+      :ARG0 (c1-5 / person
+                  :name (c1-6 / name
+                              :op1 "Rob"
+                              :op2 "Gronkowski"))
+      :time (c1-1 / catch-01
+                  :ARG0 c1-5
+                  :ARG1 (c1-3 / throw-01
+                              :ARG1 (c1-0 / fireball)
+                              :ARG2 (c1-2 / fan))))
+
+# ::snt Whats a fireball ?
+# ::tokens ["What", "s", "a", "fireball", "?"]
+# ::lemmas ["what", "s", "a", "fireball", "?"]
+(c2-1 / fireball
+      :domain (c2-0 / amr-unknown))
+
+# ::snt Its a very delicious cinnamon tasting whiskey
+# ::tokens ["Its", "a", "very", "delicious", "cinnamon", "tasting", "whiskey"]
+# ::lemmas ["its", "a", "very", "delicious", "cinnamon", "tasting", "whiskey"]
+(c3-2 / whiskey
+      :ARG1-of (c3-4 / taste-02
+                     :ARG2 (c3-1 / cinnamon))
+      :domain (c3-5 / it)
+      :ARG1-of (c3-0 / delicious-02
+                     :degree (c3-3 / very)))

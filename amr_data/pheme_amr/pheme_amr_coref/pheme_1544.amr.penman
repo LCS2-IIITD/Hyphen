@@ -1,0 +1,92 @@
+# ::snt at least this is something.
+# ::tokens ["at", "least", "this", "is", "something", "."]
+# ::lemmas ["at", "least", "this", "be", "something", "."]
+(c1-0 / something
+      :domain (c1-1 / this)
+      :mod (c1-2 / at-least))
+
+# ::snt They will give a good description of the scene inside, which will help the police.
+# ::tokens ["They", "will", "give", "a", "good", "description", "of", "the", "scene", "inside", ",", "which", "will", "help", "the", "police", "."]
+# ::lemmas ["they", "will", "give", "a", "good", "description", "of", "the", "scene", "inside", ",", "which", "will", "help", "the", "police", "."]
+(c2-5 / give-01
+      :ARG0 (c2-7 / they)
+      :ARG1 (c2-3 / describe-01
+                  :ARG0 c2-7
+                  :ARG1 (c2-6 / scene
+                              :location (c2-1 / inside))
+                  :ARG1-of (c2-4 / good-02))
+      :ARG0-of (c2-0 / help-01
+                     :ARG2 (c2-2 / police)))
+
+# ::snt so you post this then retweet the other accounts link on this.
+# ::tokens ["so", "you", "post", "this", "then", "retweet", "the", "other", "accounts", "link", "on", "this", "."]
+# ::lemmas ["so", "you", "post", "this", "then", "retweet", "the", "other", "account", "link", "on", "this", "."]
+(c4-6 / cause-01
+      :ARG1 (c4-9 / and
+                  :op1 (c4-4 / post-01
+                             :ARG0 (c4-0 / you)
+                             :ARG1 (c4-8 / this))
+                  :op2 (c4-5 / retweet-01
+                             :ARG0 c4-0
+                             :ARG1 (c4-1 / link
+                                         :mod (c4-3 / account
+                                                    :mod (c4-2 / other))
+                                         :topic c4-8)
+                             :time (c4-7 / then))))
+
+# ::snt Oh ya! Martin Short is back! Is he doing a Benny Hill skit or Clifford? Look at the funny face he makes! LOL!
+# ::tokens ["Oh", "ya", "!", "Martin", "Short", "is", "back", "!", "Is", "he", "doing", "a", "Benny", "Hill", "skit", "or", "Clifford", "?", "Look", "at", "the", "funny", "face", "he", "makes", "!", "LOL", "!"]
+# ::lemmas ["oh", "ya", "!", "Martin", "Short", "be", "back", "!", "be", "he", "do", "a", "Benny", "Hill", "skit", "or", "Clifford", "?", "look", "at", "the", "funny", "face", "he", "make", "!", "lol", "!"]
+(c5-1 / multi-sentence
+      :snt1 (c5-5 / say-01
+                  :ARG0 (c5-17 / i)
+                  :ARG1 (c5-13 / back
+                               :domain (c5-3 / person
+                                             :name (c5-15 / name
+                                                          :op1 "Martin"
+                                                          :op2 "Short")))
+                  :ARG2 (c5-19 / you)
+                  :mod (c5-21 / oh
+                              :mode expressive))
+      :snt2 (c5-4 / do-02
+                  :ARG0 (c5-9 / he)
+                  :ARG1 (c5-20 / or
+                               :op1 (c5-14 / skit
+                                           :mod (c5-6 / person
+                                                      :name (c5-23 / name
+                                                                   :op1 "Benny"
+                                                                   :op2 "Hill")))
+                               :op2 (c5-12 / person
+                                           :name (c5-2 / name
+                                                       :op1 "Clifford")))
+                  :polarity (c5-7 / amr-unknown))
+      :snt3 (c5-10 / look-01
+                   :ARG0 c5-19
+                   :mode imperative)
+      :ARG1 (c5-11 / face
+                   :ARG1-of (c5-22 / funny-02)
+                   :ARG1-of (c5-16 / make-01
+                                   :ARG0 (c5-8 / he)))
+      :snt4 (c5-24 / laugh-01
+                   :ARG0 (c5-18 / i)
+                   :manner (c5-0 / loud)
+                   :mode expressive))
+
+# ::snt aussi botched up this "operation" from start to finish OVER HOURS ? WITH CASUALTIES SHAME ON AUSSI
+# ::tokens ["aussi", "botched", "up", "this", "\"", "operation", "\"", "from", "start", "to", "finish", "OVER", "HOURS", "?", "WITH", "CASUALTIES", "SHAME", "ON", "AUSSI"]
+# ::lemmas ["aussi", "botch", "up", "this", "\"", "operation", "\"", "from", "start", "to", "finish", "over", "HOURS", "?", "with", "casualty", "SHAME", "ON", "AUSSI"]
+(c6-2 / botch-01
+      :ARG0 (c6-6 / country
+                  :name (c6-4 / name
+                              :op1 "Australia"))
+      :ARG1 (c6-5 / cooperate-01
+                  :mod (c6-9 / this))
+      :polarity (c6-10 / amr-unknown)
+      :duration (c6-3 / over
+                      :op1 (c6-1 / multiple
+                                 :op1 (c6-7 / temporal-quantity
+                                            :unit (c6-0 / hour)
+                                            :quant 1)))
+      :manner (c6-8 / same-01
+                    :ARG2 c6-6)
+      :ARG1-of c6-8)

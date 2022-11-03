@@ -1,0 +1,125 @@
+# ::snt Someone in Parliament possessing a gun?
+# ::tokens ["Someone", "in", "Parliament", "possessing", "a", "gun", "?"]
+# ::lemmas ["someone", "in", "Parliament", "possess", "a", "gun", "?"]
+(c1-1 / possess-01
+      :polarity (c1-5 / amr-unknown)
+      :ARG0 (c1-4 / someone
+                  :location (c1-3 / government-organization
+                                  :name (c1-0 / name
+                                              :op1 "Parliament")))
+      :ARG1 (c1-2 / gun))
+
+# ::snt . a thousand times the man O Hussein will ever be
+# ::tokens [".", "a", "thousand", "times", "the", "man", "O", "Hussein", "will", "ever", "be"]
+# ::lemmas [".", "a", "thousand", "time", "the", "man", "O", "Hussein", "will", "ever", "be"]
+(c2-1 / equal-01
+      :ARG1 (c2-2 / man
+                  :name (c2-0 / name
+                              :op1 "O"
+                              :op2 "Hussein"))
+      :time (c2-3 / ever)
+      :ARG2 1000)
+
+# ::snt They most likely have a hidden one for emergencies like this
+# ::tokens ["They", "most", "likely", "have", "a", "hidden", "one", "for", "emergencies", "like", "this"]
+# ::lemmas ["they", "most", "likely", "have", "a", "hide", "one", "for", "emergency", "like", "this"]
+(c3-1 / likely-01
+      :ARG1 (c3-0 / have-03
+                  :ARG0 (c3-7 / they)
+                  :ARG1 (c3-3 / one
+                              :ARG1-of (c3-8 / hide-01)
+                              :purpose (c3-4 / emergency
+                                             :ARG1-of (c3-5 / resemble-01
+                                                            :ARG2 (c3-6 / this)))))
+      :mod (c3-2 / most))
+
+# ::snt : Meet Kevin Vickers, the hero who shot down the Parliament Hill gunman
+# ::tokens [":", "Meet", "Kevin", "Vickers", ",", "the", "hero", "who", "shot", "down", "the", "Parliament", "Hill", "gunman"]
+# ::lemmas [":", "meet", "Kevin", "Vickers", ",", "the", "hero", "who", "shoot", "down", "the", "Parliament", "Hill", "gunman"]
+(c4-1 / meet-02
+      :ARG1 (c4-4 / person
+                  :name (c4-2 / name
+                              :op1 "Kevin"
+                              :op2 "Vickers")
+                  :mod (c4-0 / hero
+                             :ARG0-of (c4-7 / shoot-down-05
+                                            :ARG1 (c4-6 / gunman
+                                                        :mod (c4-5 / government-organization
+                                                                   :name (c4-3 / name
+                                                                               :op1 "Parliament"
+                                                                               :op2 "Hill"))))))
+      :mode expressive)
+
+# ::snt Not members of parliament.
+# ::tokens ["Not", "members", "of", "parliament", "."]
+# ::lemmas ["not", "member", "of", "parliament", "."]
+(c5-2 / member
+      :ARG2-of (c5-0 / have-org-role-91
+                     :ARG1 (c5-3 / government-organization
+                                 :name (c5-1 / name
+                                             :op1 "Parliament")))
+      :polarity -)
+
+# ::snt Room on his jacket for another medal, I think.
+# ::tokens ["Room", "on", "his", "jacket", "for", "another", "medal", ",", "I", "think", "."]
+# ::lemmas ["room", "on", "his", "jacket", "for", "another", "medal", ",", "i", "think", "."]
+(c6-5 / think-01
+      :ARG0 (c6-3 / i)
+      :ARG1 (c6-4 / room
+                  :location (c6-0 / jacket
+                                  :poss (c6-1 / he))
+                  :purpose (c6-2 / medal
+                                 :mod (c6-6 / another))))
+
+# ::snt Well now I know Kevin Vickers was former RCMP Inspector. So obviously he'd have that capability to carry a weapon.
+# ::tokens ["Well", "now", "I", "know", "Kevin", "Vickers", "was", "former", "RCMP", "Inspector", ".", "So", "obviously", "he", "'d", "have", "that", "capability", "to", "carry", "a", "weapon", "."]
+# ::lemmas ["well", "now", "i", "know", "Kevin", "Vickers", "be", "former", "RCMP", "Inspector", ".", "so", "obviously", "he", "would", "have", "that", "capability", "to", "carry", "a", "weapon", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-15 / know-01
+                   :ARG0 (c7-6 / i)
+                   :ARG1 (c7-10 / person
+                                :name (c7-8 / name
+                                            :op1 "Kevin"
+                                            :op2 "Vickers")
+                                :ARG0-of (c7-0 / have-org-role-91
+                                               :ARG1 (c7-5 / organization
+                                                           :name (c7-9 / name
+                                                                       :op1 "RCRC"))
+                                               :ARG2 (c7-16 / person
+                                                            :ARG0-of (c7-13 / inspect-01))
+                                               :time (c7-2 / former)))
+                   :time (c7-11 / now)
+                   :mod (c7-1 / well))
+      :snt2 (c7-12 / capable-01
+                   :ARG1 (c7-17 / he)
+                   :ARG2 (c7-14 / carry-01
+                                :ARG0 c7-17
+                                :ARG1 (c7-7 / weapon))
+                   :ARG1-of (c7-4 / obvious-01)))
+
+# ::snt Do you really think they wouldn't have guns inside? Are you mental??
+# ::tokens ["Do", "you", "really", "think", "they", "would", "n't", "have", "guns", "inside", "?", "Are", "you", "mental", "?", "?"]
+# ::lemmas ["do", "you", "really", "think", "they", "would", "not", "have", "gun", "inside", "?", "be", "you", "mental", "?", "?"]
+(c8-2 / multi-sentence
+      :snt1 (c8-8 / think-01
+                  :polarity (c8-9 / amr-unknown)
+                  :ARG0 (c8-1 / you)
+                  :ARG1 (c8-0 / have-03
+                              :ARG0 (c8-7 / they)
+                              :ARG1 (c8-6 / gun)
+                              :location (c8-3 / inside)
+                              :polarity -)
+                  :ARG1-of (c8-5 / real-04))
+      :snt2 (c8-4 / mental
+                  :polarity c8-9)
+      :domain (c8-10 / you))
+
+# ::snt don't mess with old school
+# ::tokens ["do", "n't", "mess", "with", "old", "school"]
+# ::lemmas ["do", "not", "mess", "with", "old", "school"]
+(c9-2 / mess-01
+      :ARG0 (c9-1 / you)
+      :ARG1 (c9-0 / school
+                  :mod (c9-3 / old))
+      :polarity -
+      :mode imperative)

@@ -1,0 +1,76 @@
+# ::snt Wait, what?
+# ::tokens ["Wait", ",", "what", "?"]
+# ::lemmas ["wait", ",", "what", "?"]
+(c1-1 / and
+      :op1 (c1-0 / wait-01
+                 :ARG1 (c1-2 / you)
+                 :mode imperative)
+      :op2 (c1-3 / amr-unknown))
+
+# ::snt It seems that you fellas are confused. it's the student who wants to do away with the courts because he is afraid of being accused.
+# ::tokens ["It", "seems", "that", "you", "fellas", "are", "confused", ".", "it", "'s", "the", "student", "who", "wants", "to", "do", "away", "with", "the", "courts", "because", "he", "is", "afraid", "of", "being", "accused", "."]
+# ::lemmas ["it", "seem", "that", "you", "fella", "be", "confused", ".", "it", "be", "the", "student", "who", "want", "to", "do", "away", "with", "the", "court", "because", "he", "be", "afraid", "of", "be", "accuse", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-0 / seem-01
+                   :ARG1 (c2-5 / confuse-01
+                               :ARG1 (c2-12 / you
+                                            :mod (c2-4 / fella))))
+       :snt2 (c2-6 / want-01
+                   :ARG0 (c2-10 / person
+                                :ARG0-of (c2-9 / study-01))
+                   :ARG1 (c2-1 / do-02
+                               :ARG0 c2-10
+                               :ARG1 (c2-3 / away)
+                               :ARG2 (c2-2 / court))
+                   :ARG1-of (c2-7 / cause-01
+                                  :ARG0 (c2-8 / fear-01
+                                              :ARG0 c2-10
+                                              :ARG1 (c2-13 / accuse-01
+                                                           :ARG1 c2-10)))))
+
+# ::snt Use of the slur here is unacceptable in discourse as it demeans and insults gays.
+# ::tokens ["Use", "of", "the", "slur", "here", "is", "unacceptable", "in", "discourse", "as", "it", "demeans", "and", "insults", "gays", "."]
+# ::lemmas ["use", "of", "the", "slur", "here", "be", "unacceptable", "in", "discourse", "as", "it", "demean", "and", "insult", "gay", "."]
+(c3-10 / possible-01
+       :ARG1 (c3-2 / accept-01
+                   :ARG1 (c3-7 / use-01
+                               :ARG1 (c3-0 / slur)
+                               :location (c3-6 / here))
+                   :prep-in (c3-1 / discourse-01))
+       :ARG1-of (c3-3 / cause-01
+                      :ARG0 (c3-11 / and
+                                   :op1 (c3-5 / demean-01
+                                              :ARG0 c3-0
+                                              :ARG1 (c3-8 / person
+                                                          :ARG1-of (c3-9 / gay-01)))
+                                   :op2 (c3-4 / insult-01
+                                              :ARG0 c3-0
+                                              :ARG1 c3-8)))
+       :polarity -)
+
+# ::snt Kids today have no respect for elders. I think they should have to right to free speech but let this man speak for himself first.
+# ::tokens ["Kids", "today", "have", "no", "respect", "for", "elders", ".", "I", "think", "they", "should", "have", "to", "right", "to", "free", "speech", "but", "let", "this", "man", "speak", "for", "himself", "first", "."]
+# ::lemmas ["kid", "today", "have", "no", "respect", "for", "elder", ".", "i", "think", "they", "should", "have", "to", "right", "to", "free", "speech", "but", "let", "this", "man", "speak", "for", "himself", "first", "."]
+(c4-8 / multi-sentence
+      :snt1 (c4-6 / respect-01
+                  :ARG0 (c4-18 / kid)
+                  :ARG1 (c4-10 / elder)
+                  :time (c4-5 / today)
+                  :polarity -)
+      :snt2 (c4-2 / think-01
+                  :ARG0 (c4-0 / i)
+                  :ARG1 (c4-1 / contrast-01
+                              :ARG1 (c4-3 / recommend-01
+                                          :ARG1 (c4-7 / right-05
+                                                      :ARG1 (c4-9 / they)
+                                                      :ARG2 (c4-11 / speak-01
+                                                                   :ARG0 c4-9
+                                                                   :ARG3-of (c4-13 / free-04))))
+                              :ARG2 (c4-15 / let-01
+                                           :ARG0 c4-9
+                                           :ARG1 (c4-17 / speak-01
+                                                        :ARG0 (c4-14 / man
+                                                                     :mod (c4-12 / this))
+                                                        :mod (c4-16 / by-oneself)
+                                                        :ord (c4-4 / ordinal-entity
+                                                                   :value 1))))))

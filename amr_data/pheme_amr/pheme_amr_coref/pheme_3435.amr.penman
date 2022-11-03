@@ -1,0 +1,331 @@
+# ::snt First Facebook Conversion ever?
+# ::tokens ["First", "Facebook", "Conversion", "ever", "?"]
+# ::lemmas ["First", "Facebook", "Conversion", "ever", "?"]
+(c1-4 / convert-01
+      :ARG1 (c1-3 / publication
+                  :name (c1-2 / name
+                              :op1 "Facebook"))
+      :ord (c1-0 / ordinal-entity
+                 :value 1)
+      :time (c1-1 / ever)
+      :polarity (c1-5 / amr-unknown))
+
+# ::snt You don't even know if it's true.
+# ::tokens ["You", "do", "n't", "even", "know", "if", "it", "'s", "true", "."]
+# ::lemmas ["you", "do", "not", "even", "know", "if", "it", "be", "true", "."]
+(c2-3 / know-01
+      :ARG0 (c2-0 / you)
+      :ARG1 (c2-5 / truth-value
+                  :polarity-of (c2-4 / true-01
+                                     :ARG1 (c2-2 / it)))
+      :mod (c2-1 / even)
+      :polarity -)
+
+# ::snt :IMHO we all thought this.
+# ::tokens [":", "IMHO", "we", "all", "thought", "this", "."]
+# ::lemmas [":", "IMHO", "we", "all", "think", "this", "."]
+(c3-5 / think-01
+      :ARG0 (c3-1 / we
+                  :mod (c3-6 / all))
+      :ARG1 (c3-4 / this)
+      :ARG1-of (c3-2 / opine-01
+                     :ARG0 (c3-3 / i)
+                     :ARG1-of (c3-0 / humble-01)))
+
+# ::snt bingo! didn't I say this!
+# ::tokens ["bingo", "!", "did", "n't", "I", "say", "this", "!"]
+# ::lemmas ["bingo", "!", "do", "not", "i", "say", "this", "!"]
+(c4-0 / bingo
+      :ARG1-of (c4-2 / cause-01
+                     :ARG0 (c4-3 / say-01
+                                 :ARG0 (c4-1 / i)
+                                 :ARG1 (c4-4 / this)
+                                 :polarity -))
+      :mode expressive)
+
+# ::snt No reputable sources are reporting this. Plenty of Islamic terrorists already without inventing more.
+# ::tokens ["No", "reputable", "sources", "are", "reporting", "this", ".", "Plenty", "of", "Islamic", "terrorists", "already", "without", "inventing", "more", "."]
+# ::lemmas ["no", "reputable", "source", "be", "report", "this", ".", "plenty", "of", "Islamic", "terrorist", "already", "without", "invent", "more", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-6 / report-01
+                  :ARG0 (c5-9 / source
+                              :ARG1-of (c5-3 / repute-01))
+                  :ARG1 (c5-10 / this)
+                  :polarity -)
+      :snt2 (c5-8 / terrorist
+                  :mod (c5-1 / religious-group
+                             :name (c5-4 / name
+                                         :op1 "Islam"))
+                  :quant (c5-5 / plenty)
+                  :time (c5-11 / already)
+                  :manner (c5-2 / invent-01
+                                :ARG0 c5-8
+                                :ARG1 (c5-7 / more)
+                                :polarity -)))
+
+# ::snt : Apparently from the comments at German PI Andreas Lubitz was Muslim convert from his Facebook page
+# ::tokens [":", "Apparently", "from", "the", "comments", "at", "German", "PI", "Andreas", "Lubitz", "was", "Muslim", "convert", "from", "his", "Facebook", "page"]
+# ::lemmas [":", "apparently", "from", "the", "comment", "at", "German", "PI", "Andreas", "Lubitz", "be", "Muslim", "convert", "from", "his", "Facebook", "page"]
+(c6-12 / appear-02
+       :ARG1 (c6-6 / convert-01
+                   :ARG1 (c6-4 / person
+                               :name (c6-2 / name
+                                           :op1 "Andreas"
+                                           :op2 "Lubitz")
+                               :ARG0-of (c6-0 / have-org-role-91
+                                              :ARG2 (c6-11 / PI))
+                               :mod (c6-5 / country
+                                          :name (c6-3 / name
+                                                      :op1 "Germany")))
+                   :ARG2 (c6-7 / religious-group
+                               :name (c6-8 / name
+                                           :op1 "Muslim"))
+                   :source (c6-1 / page
+                                 :mod (c6-10 / publication
+                                             :name (c6-9 / name
+                                                         :op1 "Facebook"))
+                                 :poss c6-4)))
+
+# ::snt Which came first Insanity or Joining Muslims I do Wonder
+# ::tokens ["Which", "came", "first", "Insanity", "or", "Joining", "Muslims", "I", "do", "Wonder"]
+# ::lemmas ["which", "come", "first", "Insanity", "or", "joining", "Muslims", "i", "do", "wonder"]
+(c7-1 / wonder-01
+      :ARG0 (c7-4 / i)
+      :ARG1 (c7-8 / come-04
+                  :ARG1 (c7-3 / or
+                              :op1 (c7-9 / Insanity)
+                              :op2 (c7-0 / join-in-05
+                                         :ARG1 (c7-6 / person
+                                                     :mod (c7-7 / religious-group
+                                                                :name (c7-5 / name
+                                                                            :op1 "Muslim")))))
+                  :ord (c7-2 / ordinal-entity
+                             :value 1)))
+
+# ::snt So we're pretending that unsubstantiated comments in foreign newspapers about what was on someone's FB page is evidence now? Cool.
+# ::tokens ["So", "we", "'re", "pretending", "that", "unsubstantiated", "comments", "in", "foreign", "newspapers", "about", "what", "was", "on", "someone", "'s", "FB", "page", "is", "evidence", "now", "?", "Cool", "."]
+# ::lemmas ["so", "we", "be", "pretend", "that", "unsubstantiated", "comment", "in", "foreign", "newspaper", "about", "what", "be", "on", "someone", "'s", "FB", "page", "be", "evidence", "now", "?", "cool", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-8 / pretend-01
+                  :ARG0 (c8-0 / we)
+                  :ARG1 (c8-4 / evidence-01
+                              :ARG0 (c8-10 / comment-01
+                                           :ARG3 (c8-13 / thing
+                                                        :location (c8-14 / page
+                                                                         :mod (c8-3 / publication
+                                                                                    :name (c8-6 / name
+                                                                                                :op1 "Facebook"))
+                                                                         :poss (c8-12 / someone)))
+                                           :ARG1-of (c8-5 / substantiate-01
+                                                          :polarity -)
+                                           :medium (c8-7 / newspaper
+                                                         :mod (c8-1 / foreign)))
+                              :time (c8-9 / now))
+                  :polarity (c8-15 / amr-unknown))
+      :snt2 (c8-11 / cool-04))
+
+# ::snt OMG : Apparently from the comments at German PI Andreas Lubitz was Muslim convert from his Facebook page
+# ::tokens ["OMG", ":", "Apparently", "from", "the", "comments", "at", "German", "PI", "Andreas", "Lubitz", "was", "Muslim", "convert", "from", "his", "Facebook", "page"]
+# ::lemmas ["OMG", ":", "apparently", "from", "the", "comment", "at", "German", "PI", "Andreas", "Lubitz", "be", "Muslim", "convert", "from", "his", "Facebook", "page"]
+(c9-14 / and
+       :op1 (c9-2 / oh-my-god
+                  :mode expressive)
+       :op2 (c9-3 / appear-02
+                  :ARG1 (c9-8 / convert-01
+                              :ARG1 (c9-6 / person
+                                          :name (c9-4 / name
+                                                      :op1 "Andreas"
+                                                      :op2 "Lubitz")
+                                          :ARG0-of (c9-0 / have-org-role-91
+                                                         :ARG2 (c9-13 / PI))
+                                          :mod (c9-7 / country
+                                                     :name (c9-5 / name
+                                                                 :op1 "Germany")))
+                              :ARG2 (c9-9 / religious-group
+                                          :name (c9-10 / name
+                                                       :op1 "Muslim"))
+                              :source (c9-1 / page
+                                            :mod (c9-12 / publication
+                                                        :name (c9-11 / name
+                                                                     :op1 "Facebook"))
+                                            :poss c9-6))))
+
+# ::snt IMHO)
+# ::tokens ["IMHO", ")"]
+# ::lemmas ["IMHO", ")"]
+(c10-0 / opine-01
+       :ARG0 (c10-2 / i)
+       :manner (c10-1 / humble))
+
+# ::snt More unsubstantiated rumor presented as fact. Pretty reprehensible.
+# ::tokens ["More", "unsubstantiated", "rumor", "presented", "as", "fact", ".", "Pretty", "reprehensible", "."]
+# ::lemmas ["more", "unsubstantiated", "rumor", "present", "as", "fact", ".", "pretty", "reprehensible", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-4 / present-01
+                    :ARG1 (c11-5 / rumor-01
+                                 :ARG1-of (c11-7 / substantiate-01
+                                                 :ARG2-of (c11-0 / have-degree-91
+                                                                 :ARG1 c11-5
+                                                                 :ARG3 (c11-6 / more))
+                                                 :polarity -))
+                    :ARG3 (c11-1 / fact))
+       :snt2 (c11-3 / reprehensible
+                    :degree (c11-8 / pretty)))
+
+# ::snt So, it's Andreas Muhammad Al Lubitz.
+# ::tokens ["So", ",", "it", "'s", "Andreas", "Muhammad", "Al", "Lubitz", "."]
+# ::lemmas ["so", ",", "it", "be", "Andreas", "Muhammad", "Al", "Lubitz", "."]
+(c12-1 / person
+       :name (c12-0 / name
+                    :op1 "Andreas"
+                    :op2 "Muhammad"
+                    :op3 "Al"
+                    :op4 "Lubitz"))
+
+# ::snt May I sit first next time before processing such a surprise?
+# ::tokens ["May", "I", "sit", "first", "next", "time", "before", "processing", "such", "a", "surprise", "?"]
+# ::lemmas ["may", "i", "sit", "first", "next", "time", "before", "process", "such", "a", "surprise", "?"]
+(c13-6 / permit-01
+       :polarity (c13-10 / amr-unknown)
+       :ARG1 (c13-7 / sit-01
+                    :ARG1 (c13-4 / i)
+                    :ord (c13-2 / ordinal-entity
+                                :value 1)
+                    :time (c13-8 / time
+                                 :mod (c13-5 / next))
+                    :time (c13-1 / before
+                                 :op1 (c13-9 / process-01
+                                             :ARG0 c13-4
+                                             :ARG1 (c13-3 / surprise-01
+                                                          :mod (c13-0 / such))))))
+
+# ::snt if he wanted to die, I could of took care of it a lor easier!
+# ::tokens ["if", "he", "wanted", "to", "die", ",", "I", "could", "of", "took", "care", "of", "it", "a", "lor", "easier", "!"]
+# ::lemmas ["if", "he", "want", "to", "die", ",", "i", "could", "of", "take", "care", "of", "it", "a", "lor", "easy", "!"]
+(c14-5 / possible-01
+       :ARG1 (c14-0 / have-degree-91
+                    :ARG1 (c14-7 / care-03
+                                 :ARG0 (c14-4 / i)
+                                 :ARG1 (c14-8 / it))
+                    :ARG2 (c14-3 / easy-05
+                                 :ARG1 c14-7)
+                    :ARG3 (c14-2 / more))
+       :condition (c14-1 / want-01
+                         :ARG0 (c14-9 / he)
+                         :ARG1 (c14-6 / die-01
+                                      :ARG1 c14-9)))
+
+# ::snt *his* facebook page? or a fan page devoted to him, created after his death claiming he's muslim?
+# ::tokens ["*", "his", "*", "facebook", "page", "?", "or", "a", "fan", "page", "devoted", "to", "him", ",", "created", "after", "his", "death", "claiming", "he", "'s", "muslim", "?"]
+# ::lemmas ["*", "his", "*", "facebook", "page", "?", "or", "a", "fan", "page", "devote", "to", "he", ",", "create", "after", "his", "death", "claim", "he", "be", "muslim", "?"]
+(c15-13 / amr-choice
+        :op1 (c15-7 / page
+                    :mod (c15-12 / publication
+                                 :name (c15-5 / name
+                                              :op1 "Facebook"))
+                    :poss (c15-0 / he))
+        :op2 (c15-3 / page
+                    :mod (c15-2 / fan)
+                    :ARG1-of (c15-8 / devote-01
+                                    :ARG2 c15-0)
+                    :ARG1-of (c15-9 / create-01
+                                    :time (c15-4 / after
+                                                 :op1 (c15-1 / die-01
+                                                             :ARG1 c15-0))
+                                    :ARG0-of (c15-10 / claim-01
+                                                     :ARG1 (c15-11 / religious-group
+                                                                   :name (c15-6 / name
+                                                                                :op1 "Muslim")
+                                                                   :domain c15-0)))))
+
+# ::snt -assisted suicides
+# ::tokens ["-assisted", "suicides"]
+# ::lemmas ["-assisted", "suicide"]
+(c16-0 / suicide
+       :ARG1-of (c16-1 / assist-01))
+
+# ::snt pretty thin from the looks of it.
+# ::tokens ["pretty", "thin", "from", "the", "looks", "of", "it", "."]
+# ::lemmas ["pretty", "thin", "from", "the", "look", "of", "it", "."]
+(c17-4 / thin-03
+       :degree (c17-2 / pretty)
+       :ARG1-of (c17-3 / cause-01
+                       :ARG0 (c17-0 / look-02
+                                    :ARG0 (c17-1 / it))))
+
+# ::snt I'm not sure on these sources. I do want to know what is in those boxes they hauled off.
+# ::tokens ["I", "'m", "not", "sure", "on", "these", "sources", ".", "I", "do", "want", "to", "know", "what", "is", "in", "those", "boxes", "they", "hauled", "off", "."]
+# ::lemmas ["i", "be", "not", "sure", "on", "these", "source", ".", "i", "do", "want", "to", "know", "what", "be", "in", "those", "box", "they", "haul", "off", "."]
+(c18-2 / multi-sentence
+       :snt1 (c18-11 / sure-02
+                     :ARG0 (c18-6 / i)
+                     :ARG1 (c18-4 / source
+                                  :mod (c18-12 / this))
+                     :polarity -)
+       :snt2 (c18-1 / want-01
+                    :ARG0 (c18-9 / i)
+                    :ARG1 (c18-7 / know-01
+                                 :ARG0 c18-9
+                                 :ARG1 (c18-10 / thing
+                                               :location (c18-3 / box
+                                                                :mod (c18-8 / that)
+                                                                :ARG1-of (c18-0 / haul-01
+                                                                                :ARG0 (c18-5 / they)))))))
+
+# ::snt well what to you know a convert to religion of peace, I lost my pool I bet he killed people on behalf of mormonism
+# ::tokens ["well", "what", "to", "you", "know", "a", "convert", "to", "religion", "of", "peace", ",", "I", "lost", "my", "pool", "I", "bet", "he", "killed", "people", "on", "behalf", "of", "mormonism"]
+# ::lemmas ["well", "what", "to", "you", "know", "a", "convert", "to", "religion", "of", "peace", ",", "i", "lose", "my", "pool", "i", "bet", "he", "kill", "people", "on", "behalf", "of", "mormonism"]
+(c19-9 / know-01
+       :ARG0 (c19-1 / you)
+       :ARG1 (c19-11 / and
+                     :op1 (c19-2 / lose-02
+                                 :ARG0 (c19-5 / i)
+                                 :ARG1 (c19-7 / pool
+                                              :poss c19-5))
+                     :op2 (c19-3 / bet-01
+                                 :ARG0 c19-5
+                                 :ARG1 (c19-4 / kill-01
+                                              :ARG0 (c19-0 / he)
+                                              :ARG1 (c19-10 / person)
+                                              :prep-on-behalf-of (c19-8 / religious-group
+                                                                        :name (c19-6 / name
+                                                                                     :op1 "Mormonism"))))))
+
+# ::snt Nonsense ,the Facebook page is fake, his Facebook has been disabled, German PI is hobby blog not a news page.
+# ::tokens ["Nonsense", ",", "the", "Facebook", "page", "is", "fake", ",", "his", "Facebook", "has", "been", "disabled", ",", "German", "PI", "is", "hobby", "blog", "not", "a", "news", "page", "."]
+# ::lemmas ["Nonsense", ",", "the", "Facebook", "page", "be", "fake", ",", "his", "Facebook", "have", "be", "disable", ",", "German", "PI", "be", "hobby", "blog", "not", "a", "news", "page", "."]
+(c20-15 / and
+        :op1 (c20-1 / fake-02
+                    :ARG1 (c20-8 / page
+                                 :mod (c20-14 / publication
+                                              :name (c20-6 / name
+                                                           :op1 "Facebook"))))
+        :op2 (c20-9 / disable-01
+                    :ARG1 (c20-3 / publication
+                                 :name (c20-7 / name
+                                              :op1 "Facebook")
+                                 :poss (c20-0 / he)))
+        :op3 (c20-4 / blog
+                    :mod (c20-2 / hobby)
+                    :domain (c20-13 / publication
+                                    :name (c20-10 / name
+                                                  :op1 "German"
+                                                  :op2 "Post"))
+                    :ARG1-of (c20-11 / contrast-01
+                                     :ARG2 (c20-5 / page
+                                                  :mod (c20-12 / news)
+                                                  :domain c20-13
+                                                  :polarity -)))
+        :mod (c20-16 / nonsense))
+
+# ::snt If this is true, how did he get through intense surveillance.
+# ::tokens ["If", "this", "is", "true", ",", "how", "did", "he", "get", "through", "intense", "surveillance", "."]
+# ::lemmas ["if", "this", "be", "true", ",", "how", "do", "he", "get", "through", "intense", "surveillance", "."]
+(c21-2 / get-through-13
+       :ARG0 (c21-0 / he)
+       :ARG1 (c21-4 / surveil-01
+                    :ARG1 c21-0
+                    :ARG1-of (c21-1 / intense-02))
+       :manner (c21-6 / amr-unknown)
+       :condition (c21-5 / true-01
+                         :ARG1 (c21-3 / this)))

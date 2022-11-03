@@ -1,0 +1,388 @@
+# ::snt The pattern is to complex for lefties. Lol
+# ::tokens ["The", "pattern", "is", "to", "complex", "for", "lefties", ".", "Lol"]
+# ::lemmas ["the", "pattern", "be", "to", "complex", "for", "lefty", ".", "Lol"]
+(c1-2 / multi-sentence
+      :snt1 (c1-4 / complex
+                  :domain (c1-3 / pattern)
+                  :prep-for (c1-6 / person
+                                  :ARG1-of (c1-1 / left-19)))
+      :snt2 (c1-5 / laugh-01
+                  :manner (c1-0 / loud)
+                  :mode expressive))
+
+# ::snt More "isolated incidents" --&gt; RT : Ft Hood and Boston make the list as well
+# ::tokens ["More", "\"", "isolated", "incidents", "\"", "--&gt", ";", "RT", ":", "Ft", "Hood", "and", "Boston", "make", "the", "list", "as", "well"]
+# ::lemmas ["more", "\"", "isolated", "incident", "\"", "--&gt", ";", "RT", ":", "Ft", "Hood", "and", "Boston", "make", "the", "list", "as", "well"]
+(c2-12 / and
+       :op1 (c2-4 / incident
+                  :ARG1-of (c2-10 / isolate-01)
+                  :mod (c2-1 / more))
+       :op2 (c2-3 / and
+                  :op1 (c2-7 / publication
+                             :name (c2-5 / name
+                                         :op1 "RT"))
+                  :op2 (c2-11 / publication
+                              :name (c2-6 / name
+                                          :op1 "Ft"
+                                          :op2 "Hood"))
+                  :op3 (c2-2 / publication
+                             :name (c2-8 / name
+                                         :op1 "Boston"))
+                  :ARG2-of (c2-0 / list-01)
+                  :mod (c2-9 / as-well)))
+
+# ::snt . You forgot workplace violence.
+# ::tokens [".", "You", "forgot", "workplace", "violence", "."]
+# ::lemmas [".", "you", "forgot", "workplace", "violence", "."]
+(c3-2 / forget-01
+      :ARG0 (c3-1 / you)
+      :ARG1 (c3-3 / violence
+                  :location (c3-0 / workplace)))
+
+# ::snt Ft Hood and Boston make the list as well
+# ::tokens ["Ft", "Hood", "and", "Boston", "make", "the", "list", "as", "well"]
+# ::lemmas ["Ft", "Hood", "and", "Boston", "make", "the", "list", "as", "well"]
+(c4-0 / list-01
+      :ARG1 (c4-6 / and
+                  :op1 (c4-4 / person
+                             :name (c4-2 / name
+                                         :op1 "Ft"
+                                         :op2 "Hood"))
+                  :op2 (c4-5 / city
+                             :name (c4-3 / name
+                                         :op1 "Boston")))
+      :mod (c4-1 / as-well))
+
+# ::snt Let's not forget the Beslan school massacre. And the beltway snipers. And the Arkansas recruiter shooting.
+# ::tokens ["Let", "'s", "not", "forget", "the", "Beslan", "school", "massacre", ".", "And", "the", "beltway", "snipers", ".", "And", "the", "Arkansas", "recruiter", "shooting", "."]
+# ::lemmas ["let", "us", "not", "forget", "the", "Beslan", "school", "massacre", ".", "and", "the", "beltway", "sniper", ".", "and", "the", "Arkansas", "recruiter", "shooting", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-1 / forget-01
+                  :ARG0 (c5-0 / we)
+                  :ARG1 (c5-9 / massacre-01
+                              :ARG1 (c5-13 / school
+                                           :location (c5-11 / city
+                                                            :name (c5-7 / name
+                                                                        :op1 "Beslan"))))
+                  :polarity -
+                  :mode imperative)
+      :snt2 (c5-6 / sniper
+                  :location (c5-4 / beltway))
+      :snt3 (c5-3 / shoot-02
+                  :ARG2 (c5-10 / person
+                               :ARG0-of (c5-12 / recruit-01)
+                               :location (c5-5 / state
+                                               :name (c5-8 / name
+                                                           :op1 "Arkansas")))))
+
+# ::snt it would be a pattern if recognizing patterns wasn't so raaaaaacist...
+# ::tokens ["it", "would", "be", "a", "pattern", "if", "recognizing", "patterns", "was", "n't", "so", "raaaaaacist", "..."]
+# ::lemmas ["it", "would", "be", "a", "pattern", "if", "recognize", "pattern", "be", "not", "so", "raaaaaacist", "..."]
+(c6-2 / pattern-01
+      :domain (c6-0 / it)
+      :condition (c6-3 / recognize-02
+                       :ARG1 (c6-5 / pattern-01)
+                       :mod (c6-1 / racist
+                                  :degree (c6-4 / so)
+                                  :polarity -)))
+
+# ::snt And literally thousand or so other Islam-related terrorist attacks since /11/01.
+# ::tokens ["And", "literally", "thousand", "or", "so", "other", "Islam", "-", "related", "terrorist", "attacks", "since", "/11/01", "."]
+# ::lemmas ["and", "literally", "thousand", "or", "so", "other", "Islam", "-", "relate", "terrorist", "attack", "since", "/11/01", "."]
+(c7-11 / and
+       :op2 (c7-4 / attack-01
+                  :ARG0 (c7-10 / terrorist)
+                  :ARG1-of (c7-7 / relate-01
+                                 :ARG2 (c7-5 / religious-group
+                                             :name (c7-6 / name
+                                                         :op1 "Islam")))
+                  :quant (c7-2 / or
+                               :op2 (c7-9 / so)
+                               :mod (c7-0 / literal)
+                               :op1 1000)
+                  :mod (c7-1 / other)
+                  :time (c7-3 / since
+                              :op1 (c7-8 / date-entity
+                                         :month 11
+                                         :day 1))))
+
+# ::snt if only there were a common thread between all these incidents...
+# ::tokens ["if", "only", "there", "were", "a", "common", "thread", "between", "all", "these", "incidents", "..."]
+# ::lemmas ["if", "only", "there", "be", "a", "common", "thread", "between", "all", "these", "incident", "..."]
+(c8-0 / have-condition-91
+      :ARG2 (c8-5 / thread-01
+                  :ARG1 (c8-2 / incident
+                              :mod (c8-4 / this)
+                              :mod (c8-6 / all))
+                  :ARG3 (c8-3 / common)
+                  :mod (c8-1 / only)))
+
+# ::snt These workplace violence incidents are getting out of hand.
+# ::tokens ["These", "workplace", "violence", "incidents", "are", "getting", "out", "of", "hand", "."]
+# ::lemmas ["these", "workplace", "violence", "incident", "be", "get", "out", "of", "hand", "."]
+(c9-4 / get-03
+      :ARG1 (c9-2 / incident
+                  :mod (c9-3 / violence
+                             :location (c9-0 / workplace))
+                  :mod (c9-5 / this))
+      :ARG2 (c9-1 / out-of-hand-10
+                  :ARG1 c9-2))
+
+# ::snt don't forget women raped in England and not a peep.
+# ::tokens ["do", "n't", "forget", "women", "raped", "in", "England", "and", "not", "a", "peep", "."]
+# ::lemmas ["do", "not", "forget", "woman", "rape", "in", "England", "and", "not", "a", "peep", "."]
+(c10-2 / forget-01
+       :ARG0 (c10-1 / you)
+       :ARG1 (c10-7 / and
+                    :op1 (c10-5 / rape-01
+                                :ARG1 (c10-0 / woman)
+                                :location (c10-6 / country
+                                                 :name (c10-3 / name
+                                                              :op1 "England")))
+                    :op2 (c10-4 / peep
+                                :domain c10-0
+                                :polarity -))
+       :polarity -
+       :mode imperative)
+
+# ::snt Don't forget Oklaho....oh crud, sorry, that was was workplace violence.
+# ::tokens ["Do", "n't", "forget", "Oklaho", "....", "oh", "crud", ",", "sorry", ",", "that", "was", "was", "workplace", "violence", "."]
+# ::lemmas ["do", "not", "forget", "Oklaho", "....", "oh", "crud", ",", "sorry", ",", "that", "be", "be", "workplace", "violence", "."]
+(c11-3 / multi-sentence
+       :snt1 (c11-2 / forget-01
+                    :ARG0 (c11-0 / you)
+                    :ARG1 (c11-8 / city
+                                 :name (c11-6 / name
+                                              :op1 "Oklahoma"))
+                    :polarity -
+                    :mode imperative)
+       :snt2 (c11-9 / sorry-01
+                    :ARG1 (c11-5 / i)
+                    :ARG2 (c11-7 / violence
+                                 :mod (c11-1 / workplace)
+                                 :domain (c11-10 / that))
+                    :mod (c11-4 / oh
+                                :mode expressive)))
+
+# ::snt Colleen Hufford ": Let us not forget Moore, OK.
+# ::tokens ["Colleen", "Hufford", "\"", ":", "Let", "us", "not", "forget", "Moore", ",", "OK", "."]
+# ::lemmas ["Colleen", "Hufford", "\"", ":", "let", "we", "not", "forget", "Moore", ",", "ok", "."]
+(c12-7 / say-01
+       :ARG0 (c12-6 / person
+                    :name (c12-4 / name
+                                 :op1 "Colleen"
+                                 :op2 "Hufford"))
+       :ARG1 (c12-1 / let-01
+                    :ARG0 (c12-0 / we)
+                    :ARG1 (c12-2 / forget-01
+                                 :ARG0 c12-0
+                                 :ARG1 (c12-8 / person
+                                              :name (c12-5 / name
+                                                           :op1 "Moore"))
+                                 :polarity -)
+                    :ARG1-of (c12-3 / okay-01)
+                    :mode imperative))
+
+# ::snt Let us not forget Moore, OK.
+# ::tokens ["Let", "us", "not", "forget", "Moore", ",", "OK", "."]
+# ::lemmas ["let", "we", "not", "forget", "Moore", ",", "ok", "."]
+(c13-1 / let-01
+       :ARG0 (c13-0 / we)
+       :ARG1 (c13-2 / forget-01
+                    :ARG0 c13-0
+                    :ARG1 (c13-5 / person
+                                 :name (c13-4 / name
+                                              :op1 "Moore"))
+                    :polarity -)
+       :mod (c13-3 / okay)
+       :mode imperative)
+
+# ::snt "Workplace violence."
+# ::tokens ["\"", "Workplace", "violence", ".", "\""]
+# ::lemmas ["\"", "workplace", "violence", ".", "\""]
+(c15-1 / violence
+       :mod (c15-0 / work-01))
+
+# ::snt It's almost as if there's a pattern...
+# ::tokens ["It", "'s", "almost", "as", "if", "there", "'s", "a", "pattern", "..."]
+# ::lemmas ["it", "be", "almost", "as", "if", "there", "be", "a", "pattern", "..."]
+(c16-2 / resemble-01
+       :ARG1 (c16-3 / it)
+       :ARG2 (c16-1 / pattern)
+       :mod (c16-0 / almost))
+
+# ::snt Don't forget Beslan too. One of the most horrific "isolated incidents" Islamic terrorists have ever done.
+# ::tokens ["Do", "n't", "forget", "Beslan", "too", ".", "One", "of", "the", "most", "horrific", "\"", "isolated", "incidents", "\"", "Islamic", "terrorists", "have", "ever", "done", "."]
+# ::lemmas ["do", "not", "forget", "Beslan", "too", ".", "One", "of", "the", "most", "horrific", "\"", "isolated", "incident", "\"", "Islamic", "terrorist", "have", "ever", "do", "."]
+(c17-3 / multi-sentence
+       :snt1 (c17-2 / forget-01
+                    :ARG0 (c17-1 / you)
+                    :ARG1 (c17-7 / incident
+                                 :name (c17-9 / name
+                                              :op1 "Beslan"))
+                    :mod (c17-16 / too)
+                    :polarity -
+                    :mode imperative)
+       :snt2 (c17-12 / do-02
+                     :ARG0 (c17-15 / terrorist
+                                   :mod (c17-13 / religious-group
+                                                :name (c17-10 / name
+                                                              :op1 "Islam")))
+                     :ARG1 (c17-14 / incident
+                                   :ARG1-of (c17-4 / include-91
+                                                   :ARG2 (c17-5 / incident
+                                                                :ARG1-of (c17-8 / isolate-01)
+                                                                :ARG1-of (c17-0 / have-degree-91
+                                                                                :ARG2 (c17-17 / horrific)
+                                                                                :ARG3 (c17-11 / most)))))
+                     :time (c17-6 / ever)))
+
+# ::snt And I'm guessing by the crack of dawn Team Obama will have themselves a new squirrel for everyone play with.
+# ::tokens ["And", "I", "'m", "guessing", "by", "the", "crack", "of", "dawn", "Team", "Obama", "will", "have", "themselves", "a", "new", "squirrel", "for", "everyone", "play", "with", "."]
+# ::lemmas ["and", "i", "be", "guess", "by", "the", "crack", "of", "dawn", "Team", "Obama", "will", "have", "themselves", "a", "new", "squirrel", "for", "everyone", "play", "with", "."]
+(c18-12 / and
+        :op2 (c18-9 / guess-01
+                    :ARG0 (c18-3 / i)
+                    :ARG1 (c18-0 / have-03
+                                 :ARG0 (c18-11 / team
+                                               :name (c18-4 / name
+                                                            :op1 "Team"
+                                                            :op2 "Obama"))
+                                 :ARG1 (c18-10 / squirrel
+                                               :ARG1-of (c18-5 / new-01))
+                                 :purpose (c18-6 / play-01
+                                                 :ARG0 (c18-2 / everyone)
+                                                 :ARG2 c18-10)
+                                 :time (c18-1 / by
+                                              :op1 (c18-8 / crack-02
+                                                          :ARG1 (c18-7 / dawn))))))
+
+# ::snt Indeed. So many isolated incidents. : Let us not forget Moore, OK.
+# ::tokens ["Indeed", ".", "So", "many", "isolated", "incidents", ".", ":", "Let", "us", "not", "forget", "Moore", ",", "OK", "."]
+# ::lemmas ["indeed", ".", "so", "many", "isolated", "incident", ".", ":", "let", "we", "not", "forget", "Moore", ",", "ok", "."]
+(c19-3 / multi-sentence
+       :snt1 (c19-7 / indeed)
+       :snt2 (c19-11 / incident
+                     :ARG1-of (c19-2 / isolate-01)
+                     :ARG1-of (c19-0 / have-quant-91
+                                     :ARG2 (c19-9 / many)
+                                     :ARG3 (c19-12 / so)))
+       :snt3 (c19-4 / let-01
+                    :ARG0 (c19-1 / we)
+                    :ARG1 (c19-5 / forget-01
+                                 :ARG0 c19-1
+                                 :ARG1 (c19-10 / person
+                                               :name (c19-8 / name
+                                                            :op1 "Moore"))
+                                 :polarity -)
+                    :ARG1-of (c19-6 / okay-01)
+                    :mode imperative))
+
+# ::snt Can't link these acts to Islam, because that makes us intolerant. OK, fine. I'm intolerant of these murderous acts
+# ::tokens ["Ca", "n't", "link", "these", "acts", "to", "Islam", ",", "because", "that", "makes", "us", "intolerant", ".", "OK", ",", "fine", ".", "I", "'m", "intolerant", "of", "these", "murderous", "acts"]
+# ::lemmas ["can", "not", "link", "these", "act", "to", "Islam", ",", "because", "that", "make", "we", "intolerant", ".", "ok", ",", "fine", ".", "i", "be", "intolerant", "of", "these", "murderous", "act"]
+(c20-2 / multi-sentence
+       :snt1 (c20-11 / possible-01
+                     :ARG1 (c20-1 / link-01
+                                  :ARG1 (c20-17 / act-02
+                                                :mod (c20-16 / this))
+                                  :ARG2 (c20-12 / religious-group
+                                                :name (c20-9 / name
+                                                             :op1 "Islam")))
+                     :ARG1-of (c20-13 / cause-01
+                                      :ARG0 (c20-14 / make-02
+                                                    :ARG0 (c20-15 / tolerate-01
+                                                                  :ARG0 (c20-0 / we)
+                                                                  :ARG1 c20-17
+                                                                  :polarity -)))
+                     :polarity -)
+       :snt2 (c20-5 / okay-01
+                    :ARG1 (c20-3 / fine-04
+                                 :ARG1 (c20-10 / tolerate-01
+                                               :ARG0 (c20-8 / i)
+                                               :ARG1 (c20-7 / act-02
+                                                            :mod (c20-6 / this)
+                                                            :ARG0-of (c20-4 / murder-01))
+                                               :polarity -))))
+
+# ::snt Ft Hood TX RT : Indeed. So many isolated incidents. : Let us not forget Moore, OK.
+# ::tokens ["Ft", "Hood", "TX", "RT", ":", "Indeed", ".", "So", "many", "isolated", "incidents", ".", ":", "Let", "us", "not", "forget", "Moore", ",", "OK", "."]
+# ::lemmas ["Ft", "Hood", "TX", "RT", ":", "indeed", ".", "so", "many", "isolated", "incident", ".", ":", "let", "we", "not", "forget", "Moore", ",", "ok", "."]
+(c21-3 / multi-sentence
+       :snt1 (c21-10 / person
+                     :name (c21-8 / name
+                                  :op1 "Ft"
+                                  :op2 "Hood")
+                     :location (c21-15 / state
+                                       :name (c21-9 / name
+                                                    :op1 "Texas"))
+                     :ARG0-of (c21-16 / tell-01
+                                      :ARG1 (c21-14 / truth-value
+                                                    :polarity-of (c21-7 / incident
+                                                                        :ARG1-of (c21-13 / isolate-01)
+                                                                        :ARG1-of (c21-0 / have-quant-91
+                                                                                        :ARG2 (c21-11 / many)
+                                                                                        :ARG3 (c21-6 / so))))))
+       :snt2 (c21-2 / let-01
+                    :ARG0 (c21-1 / we)
+                    :ARG1 (c21-4 / forget-01
+                                 :ARG0 c21-1
+                                 :ARG1 (c21-17 / person
+                                               :name (c21-12 / name
+                                                             :op1 "Moore"))
+                                 :polarity -)
+                    :ARG1-of (c21-5 / okay-01)
+                    :mode imperative))
+
+# ::snt Only because of Islamophobia.
+# ::tokens ["Only", "because", "of", "Islamophobia", "."]
+# ::lemmas ["only", "because", "of", "Islamophobia", "."]
+(c22-4 / cause-01
+       :ARG0 (c22-1 / ophobia
+                    :mod (c22-3 / religious-group
+                                :name (c22-2 / name
+                                             :op1 "Islam")))
+       :mod (c22-0 / only))
+
+# ::snt + died in isolated incidents last month.
+# ::tokens ["+", "died", "in", "isolated", "incidents", "last", "month", "."]
+# ::lemmas ["+", "die", "in", "isolated", "incident", "last", "month", "."]
+(c23-3 / die-01
+       :ARG1-of (c23-4 / cause-01
+                       :ARG0 (c23-2 / incident
+                                    :ARG1-of (c23-5 / isolate-01)))
+       :time (c23-1 / month
+                    :mod (c23-0 / last)))
+
+# ::snt I'm fairly certain your pattern would be profiling... Use of common sense is frowned upon.
+# ::tokens ["I", "'m", "fairly", "certain", "your", "pattern", "would", "be", "profiling", "...", "Use", "of", "common", "sense", "is", "frowned", "upon", "."]
+# ::lemmas ["i", "be", "fairly", "certain", "your", "pattern", "would", "be", "profile", "...", "use", "of", "common", "sense", "be", "frown", "upon", "."]
+(c24-2 / multi-sentence
+       :snt1 (c24-9 / know-01
+                    :ARG0 (c24-4 / i)
+                    :ARG1 (c24-6 / pattern-01
+                                 :ARG0 (c24-0 / you)
+                                 :ARG2 (c24-10 / profile-01))
+                    :ARG1-of (c24-1 / fair-04))
+       :snt2 (c24-5 / frown-02
+                    :ARG1 (c24-3 / use-01
+                                 :ARG1 (c24-8 / sense-02
+                                              :mod (c24-7 / common)))))
+
+# ::snt Boy, that 'Islam' must be easier to misunderstand than we think.
+# ::tokens ["Boy", ",", "that", "'", "Islam", "'", "must", "be", "easier", "to", "misunderstand", "than", "we", "think", "."]
+# ::lemmas ["boy", ",", "that", "'", "Islam", "'", "must", "be", "easy", "to", "misunderstand", "than", "we", "think", "."]
+(c25-5 / infer-01
+       :ARG1 (c25-0 / have-degree-91
+                    :ARG1 (c25-8 / religious-group
+                                 :name (c25-6 / name
+                                              :op1 "Islam")
+                                 :mod (c25-10 / that))
+                    :ARG2 (c25-4 / easy-05
+                                 :ARG1 (c25-2 / misunderstand-01
+                                              :ARG1 c25-8))
+                    :ARG3 (c25-7 / more)
+                    :ARG4 (c25-9 / think-01
+                                 :ARG0 (c25-1 / we)))
+       :mod (c25-3 / boy
+                   :mode expressive))

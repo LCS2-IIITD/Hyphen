@@ -1,0 +1,130 @@
+# ::snt ???&gt;"&lt; ???? ?? ?? ? ? ?
+# ::tokens ["?", "?", "?", "&", "gt;\"&lt", ";", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+# ::lemmas ["?", "?", "?", "&", "gt;\"&lt", ";", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+(c1-3 / and
+      :op1 (c1-0 / string-entity
+                 :value "&gt;")
+      :op2 (c1-1 / string-entity
+                 :value "&lt")
+      :polarity (c1-2 / amr-unknown))
+
+# ::snt took day off n all.
+# ::tokens ["took", "day", "off", "n", "all", "."]
+# ::lemmas ["take", "day", "off", "n", "all", "."]
+(c2-5 / and
+      :op1 (c2-3 / day
+                 :mod (c2-0 / off)
+                 :ARG1-of (c2-4 / take-10
+                                :ARG0 (c2-2 / i)))
+      :op2 (c2-1 / all))
+
+# ::snt it's my Birthday ohhhh I would love to see my all time fav please get me in!
+# ::tokens ["it", "'s", "my", "Birthday", "ohhhh", "I", "would", "love", "to", "see", "my", "all", "time", "fav", "please", "get", "me", "in", "!"]
+# ::lemmas ["it", "be", "my", "Birthday", "ohhhh", "i", "would", "love", "to", "see", "you", "all", "time", "fav", "please", "get", "i", "in", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-5 / birthday
+                  :poss (c3-6 / i)
+                  :domain (c3-8 / it))
+      :snt2 (c3-1 / love-02
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-10 / see-01
+                               :ARG0 c3-3
+                               :ARG1 (c3-7 / person
+                                           :ARG0-of (c3-4 / favor-01
+                                                          :ARG1 c3-3)
+                                           :time (c3-11 / time
+                                                        :mod (c3-12 / all))))
+                  :mode expressive)
+      :snt3 (c3-9 / get-05
+                  :ARG0 (c3-0 / you)
+                  :ARG1 c3-3
+                  :mode imperative
+                  :polite +))
+
+# ::snt it's my Birthday ohhhh I would love to see my all time fav please get me in!
+# ::tokens ["it", "'s", "my", "Birthday", "ohhhh", "I", "would", "love", "to", "see", "my", "all", "time", "fav", "please", "get", "me", "in", "!"]
+# ::lemmas ["it", "be", "my", "Birthday", "ohhhh", "i", "would", "love", "to", "see", "you", "all", "time", "fav", "please", "get", "i", "in", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / birthday
+                  :poss (c4-6 / i)
+                  :domain (c4-8 / it))
+      :snt2 (c4-1 / love-02
+                  :ARG0 (c4-3 / i)
+                  :ARG1 (c4-10 / see-01
+                               :ARG0 c4-3
+                               :ARG1 (c4-7 / person
+                                           :ARG0-of (c4-4 / favor-01
+                                                          :ARG1 c4-3)
+                                           :time (c4-11 / time
+                                                        :mod (c4-12 / all))))
+                  :mode expressive)
+      :snt3 (c4-9 / get-05
+                  :ARG0 (c4-0 / you)
+                  :ARG1 c4-3
+                  :mode imperative
+                  :polite +))
+
+# ::snt : Are you in line for Prince's rumoured show in Toronto? is
+# ::tokens [":", "Are", "you", "in", "line", "for", "Prince", "'s", "rumoured", "show", "in", "Toronto", "?", "is"]
+# ::lemmas [":", "be", "you", "in", "line", "for", "Prince", "'s", "rumour", "show", "in", "Toronto", "?", "be"]
+(c5-1 / line-up-02
+      :ARG1 (c5-0 / you)
+      :ARG2 (c5-7 / show-04
+                  :ARG0 (c5-4 / person
+                              :name (c5-2 / name
+                                          :op1 "Prince"))
+                  :ARG1-of (c5-5 / rumor-01)
+                  :location (c5-6 / city
+                                  :name (c5-3 / name
+                                              :op1 "Toronto")))
+      :polarity (c5-8 / amr-unknown))
+
+# ::snt : Are you in line for Prince's rumoured show in Toronto? So much yes
+# ::tokens [":", "Are", "you", "in", "line", "for", "Prince", "'s", "rumoured", "show", "in", "Toronto", "?", "So", "much", "yes"]
+# ::lemmas [":", "be", "you", "in", "line", "for", "Prince", "'s", "rumour", "show", "in", "Toronto", "?", "so", "much", "yes"]
+(c6-2 / multi-sentence
+      :snt1 (c6-1 / line-up-02
+                  :ARG1 (c6-0 / you)
+                  :ARG2 (c6-11 / show
+                               :poss (c6-6 / person
+                                           :name (c6-4 / name
+                                                       :op1 "Prince"))
+                               :ARG1-of (c6-7 / rumor-01)
+                               :location (c6-8 / city
+                                               :name (c6-5 / name
+                                                           :op1 "Toronto")))
+                  :polarity (c6-12 / amr-unknown))
+      :snt2 (c6-10 / yes
+                   :degree (c6-9 / much
+                                 :degree (c6-3 / so))))
+
+# ::snt The amazing is in line.The staff/security at the venue have yet to confirm anything to the over ppl in line
+# ::tokens ["The", "amazing", "is", "in", "line", ".", "The", "staff", "/", "security", "at", "the", "venue", "have", "yet", "to", "confirm", "anything", "to", "the", "over", "ppl", "in", "line"]
+# ::lemmas ["the", "amazing", "be", "in", "line", ".", "the", "staff", "/", "security", "at", "the", "venue", "have", "yet", "to", "confirm", "anything", "to", "the", "over", "ppl", "in", "line"]
+(c7-2 / multi-sentence
+      :snt1 (c7-8 / in-line-04
+                  :ARG1 (c7-13 / amaze-01))
+      :snt2 (c7-5 / obligate-01
+                  :ARG1 (c7-12 / slash
+                               :op1 (c7-6 / staff)
+                               :op2 (c7-1 / security)
+                               :location (c7-9 / venue))
+                  :ARG2 (c7-11 / confirm-01
+                               :ARG0 c7-12
+                               :ARG1 (c7-7 / anything)
+                               :ARG2 (c7-10 / person
+                                            :mod (c7-3 / over)
+                                            :ARG1-of (c7-4 / line-04)))
+                  :time (c7-0 / yet)))
+
+# ::snt I am in line. Unreal. This is going to be epic
+# ::tokens ["I", "am", "in", "line", ".", "Unreal", ".", "This", "is", "going", "to", "be", "epic"]
+# ::lemmas ["i", "be", "in", "line", ".", "unreal", ".", "this", "be", "go", "to", "be", "epic"]
+(c8-0 / multi-sentence
+      :snt1 (c8-2 / in-line-04
+                  :ARG1 (c8-4 / i))
+      :snt2 (c8-3 / real-04
+                  :ARG1 (c8-5 / this)
+                  :polarity -)
+      :snt3 (c8-1 / epic
+                  :domain c8-5))

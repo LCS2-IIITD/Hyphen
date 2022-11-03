@@ -1,0 +1,129 @@
+# ::snt Sorry. Don't care.
+# ::tokens ["Sorry", ".", "Do", "n't", "care", "."]
+# ::lemmas ["sorry", ".", "do", "not", "care", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-3 / sorry-01)
+      :snt2 (c1-0 / care-01
+                  :ARG0 (c1-2 / i)
+                  :polarity -))
+
+# ::snt You a fool boa his ass getting way out of character
+# ::tokens ["You", "a", "fool", "boa", "his", "ass", "getting", "way", "out", "of", "character"]
+# ::lemmas ["you", "a", "fool", "boa", "his", "ass", "get", "way", "out", "of", "character"]
+(c2-2 / boa-00
+      :ARG0 (c2-0 / fool
+                  :domain (c2-3 / you)
+                  :part (c2-5 / ass))
+      :ARG1 (c2-6 / get-03
+                  :ARG1 c2-5
+                  :ARG2 (c2-1 / out-06
+                              :ARG1 c2-5
+                              :ARG2 (c2-4 / character))))
+
+# ::snt This is the perfect explanation of his tweets.
+# ::tokens ["This", "is", "the", "perfect", "explanation", "of", "his", "tweets", "."]
+# ::lemmas ["this", "be", "the", "perfect", "explanation", "of", "his", "tweet", "."]
+(c3-0 / explain-01
+      :ARG0 (c3-1 / he)
+      :ARG1 (c3-3 / tweet-01
+                  :ARG0 c3-1)
+      :ARG1-of (c3-2 / perfect-02)
+      :domain (c3-4 / this))
+
+# ::snt Real talk.Had to unfollow his "get off my lawn" old ass.
+# ::tokens ["Real", "talk", ".", "Had", "to", "unfollow", "his", "\"", "get", "off", "my", "lawn", "\"", "old", "ass", "."]
+# ::lemmas ["real", "talk", ".", "have", "to", "unfollow", "his", "\"", "get", "off", "my", "lawn", "\"", "old", "ass", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-9 / talk-01
+                  :ARG1-of (c4-4 / real-04))
+      :snt2 (c4-0 / obligate-01
+                  :ARG2 (c4-11 / unfollow-01
+                               :ARG0 (c4-2 / you
+                                           :mod (c4-5 / ass
+                                                      :mod (c4-1 / old)))
+                               :ARG1 (c4-6 / he)
+                               :topic (c4-10 / get-05
+                                             :ARG1 c4-6
+                                             :ARG2 (c4-12 / off
+                                                          :op1 (c4-7 / lawn
+                                                                     :poss (c4-8 / i)))))))
+
+# ::snt my life is extra lol
+# ::tokens ["my", "life", "is", "extra", "lol"]
+# ::lemmas ["my", "life", "be", "extra", "lol"]
+(c5-0 / extra
+      :domain (c5-2 / life
+                    :poss (c5-3 / i))
+      :ARG2-of (c5-4 / laugh-01
+                     :ARG0 c5-3
+                     :manner (c5-1 / loud)))
+
+# ::snt whatever it is it looks extra
+# ::tokens ["whatever", "it", "is", "it", "looks", "extra"]
+# ::lemmas ["whatever", "it", "be", "it", "look", "extra"]
+(c6-1 / look-02
+      :ARG0 (c6-2 / it)
+      :ARG1 (c6-0 / extra)
+      :condition (c6-3 / thing
+                       :domain c6-2))
+
+# ::snt u look at what's going on or u just reading my shit?
+# ::tokens ["u", "look", "at", "what", "'s", "going", "on", "or", "u", "just", "reading", "my", "shit", "?"]
+# ::lemmas ["u", "look", "at", "what", "be", "go", "on", "or", "u", "just", "read", "my", "shit", "?"]
+(c7-7 / amr-choice
+      :op1 (c7-4 / look-01
+                 :ARG0 (c7-0 / you)
+                 :ARG1 (c7-3 / event))
+      :op2 (c7-2 / read-01
+                 :ARG0 c7-0
+                 :ARG1 (c7-1 / shit
+                             :poss (c7-6 / i))
+                 :mod (c7-5 / just)))
+
+# ::snt u being mad disrespectful on the tl right now
+# ::tokens ["u", "being", "mad", "disrespectful", "on", "the", "tl", "right", "now"]
+# ::lemmas ["u", "be", "mad", "disrespectful", "on", "the", "tl", "right", "now"]
+(c8-2 / mad-04
+      :ARG1 (c8-0 / you)
+      :ARG2 (c8-6 / disrespect-01
+                  :ARG0 c8-0
+                  :ARG1 (c8-5 / publication
+                              :name (c8-1 / name
+                                          :op1 "TSL")))
+      :time (c8-4 / now
+                  :mod (c8-3 / right)))
+
+# ::snt dude has been bitching on twitter for + years now smh wat happened to this man
+# ::tokens ["dude", "has", "been", "bitching", "on", "twitter", "for", "+", "years", "now", "smh", "wat", "happened", "to", "this", "man"]
+# ::lemmas ["dude", "have", "be", "bitch", "on", "twitter", "for", "+", "years", "now", "smh", "wat", "happen", "to", "this", "man"]
+(c9-0 / bitch-01
+      :ARG0 (c9-10 / dude)
+      :medium (c9-6 / publication
+                    :name (c9-2 / name
+                                :op1 "Twitter"))
+      :time (c9-5 / before
+                  :op1 (c9-7 / now)
+                  :duration (c9-3 / more-than
+                                  :op1 (c9-9 / temporal-quantity
+                                             :unit (c9-1 / year)
+                                             :quant 1)))
+      :topic (c9-4 / event
+                   :mod (c9-8 / man
+                              :mod (c9-11 / this))))
+
+# ::snt She's doing the best. Leave her to be fantabulous
+# ::tokens ["She", "'s", "doing", "the", "best", ".", "Leave", "her", "to", "be", "fantabulous"]
+# ::lemmas ["she", "be", "do", "the", "good", ".", "leave", "she", "to", "be", "fantabulous"]
+(c10-3 / multi-sentence
+       :snt1 (c10-10 / do-02
+                     :ARG0 (c10-4 / she)
+                     :ARG1 (c10-8 / thing
+                                  :ARG1-of (c10-5 / have-degree-91
+                                                  :ARG2 (c10-9 / good-02
+                                                               :ARG1 c10-8)
+                                                  :ARG3 (c10-6 / most))))
+       :snt2 (c10-7 / leave-14
+                    :ARG0 (c10-2 / you)
+                    :ARG1 (c10-0 / she)
+                    :ARG2 (c10-1 / fabulous)
+                    :mode imperative))

@@ -1,0 +1,54 @@
+# ::snt Estou arrepiada RT Airbus A320 crash: Flight tracking data here
+# ::tokens ["Estou", "arrepiada", "RT", "Airbus", "A320", "crash", ":", "Flight", "tracking", "data", "here"]
+# ::lemmas ["Estou", "arrepiada", "RT", "Airbus", "A320", "crash", ":", "flight", "tracking", "datum", "here"]
+(c1-3 / be-located-at-91
+      :ARG1 (c1-7 / data
+                  :topic (c1-9 / track-01
+                               :ARG1 (c1-2 / fly-01)))
+      :ARG2 (c1-0 / here)
+      :ARG1-of (c1-1 / describe-01
+                     :ARG0 (c1-6 / publication
+                                 :name (c1-4 / name
+                                             :op1 "Estou"
+                                             :op2 "Arrepiada")
+                                 :mod c1-6
+                                 :name (c1-5 / name
+                                             :op1 "Airbus"
+                                             :op2 "A320"))
+                     :ARG1-of (c1-8 / crash-01)))
+
+# ::snt :graph based on tracking data. Stall, decompression &amp; commanded descent or loss of structural integrity?
+# ::tokens [":", "graph", "based", "on", "tracking", "data", ".", "Stall", ",", "decompression", "&", "amp", ";", "commanded", "descent", "or", "loss", "of", "structural", "integrity", "?"]
+# ::lemmas [":", "graph", "base", "on", "track", "datum", ".", "Stall", ",", "decompression", "&", "amp", ";", "command", "descent", "or", "loss", "of", "structural", "integrity", "?"]
+(c2-2 / multi-sentence
+      :snt1 (c2-12 / graph
+                   :ARG1-of (c2-3 / base-02
+                                  :ARG2 (c2-14 / track-01
+                                               :ARG1 (c2-10 / data))))
+      :snt2 (c2-15 / and
+                   :op1 (c2-9 / person
+                              :name (c2-7 / name
+                                          :op1 "Stall"))
+                   :op2 (c2-0 / decompress-01)
+                   :op3 (c2-5 / amp))
+      :snt3 (c2-4 / or
+                  :op1 (c2-11 / command-02
+                              :ARG1 (c2-16 / descend-01))
+                  :op2 (c2-1 / lose-02
+                             :ARG1 (c2-6 / integrity
+                                         :mod (c2-13 / structure)))
+                  :polarity (c2-8 / amr-unknown)))
+
+# ::snt : Airbus A320 crash: Flight tracking data here:
+# ::tokens [":", "Airbus", "A320", "crash", ":", "Flight", "tracking", "data", "here", ":"]
+# ::lemmas [":", "Airbus", "A320", "crash", ":", "flight", "tracking", "datum", "here", ":"]
+(c3-2 / multi-sentence
+      :snt1 (c3-5 / crash-01
+                  :ARG1 (c3-7 / aircraft-type
+                              :name (c3-3 / name
+                                          :op1 "Airbus"
+                                          :op2 "A320")))
+      :snt2 (c3-4 / data
+                  :topic (c3-6 / track-01
+                               :ARG1 (c3-1 / fly-01))
+                  :location (c3-0 / here)))

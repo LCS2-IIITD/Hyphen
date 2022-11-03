@@ -1,0 +1,34 @@
+# ::snt If Donald Trump repels Obamacare without replacement, how many people likely will die because of it?
+# ::tokens ["If", "Donald", "Trump", "repels", "Obamacare", "without", "replacement", ",", "how", "many", "people", "likely", "will", "die", "because", "of", "it", "?"]
+# ::lemmas ["if", "Donald", "Trump", "repel", "obamacare", "without", "replacement", ",", "how", "many", "people", "likely", "will", "die", "because", "of", "it", "?"]
+(c1-6 / likely-01
+      :ARG1 (c1-0 / die-01
+                  :ARG1 (c1-9 / person
+                              :quant (c1-1 / amr-unknown))
+                  :ARG1-of (c1-2 / cause-01
+                                 :ARG0 (c1-7 / law
+                                             :name (c1-10 / name
+                                                          :op1 "Obamacare"))))
+      :condition (c1-5 / repel-01
+                       :ARG0 (c1-4 / person
+                                   :name (c1-8 / name
+                                               :op1 "Donald"
+                                               :op2 "Trump"))
+                       :ARG1 c1-7
+                       :manner (c1-3 / replace-01
+                                     :ARG1 c1-7
+                                     :polarity -)))
+
+# ::snt None because it didn't do shit for those who really needed it.
+# ::tokens ["None", "because", "it", "did", "n't", "do", "shit", "for", "those", "who", "really", "needed", "it", "."]
+# ::lemmas ["none", "because", "it", "do", "not", "do", "shit", "for", "those", "who", "really", "need", "it", "."]
+(c2-2 / cause-01
+      :ARG0 (c2-0 / do-02
+                  :ARG0 (c2-6 / it)
+                  :ARG1 (c2-1 / shit)
+                  :ARG2 (c2-4 / person
+                              :ARG0-of (c2-7 / need-01
+                                             :ARG1 c2-6
+                                             :degree (c2-3 / really)))
+                  :polarity -)
+      :ARG1 (c2-5 / none))

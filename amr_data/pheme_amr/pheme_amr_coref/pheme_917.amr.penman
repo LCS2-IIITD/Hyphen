@@ -1,0 +1,34 @@
+# ::snt Weren't they in a warehouse like an hour ago? What happened to that?
+# ::tokens ["Were", "n't", "they", "in", "a", "warehouse", "like", "an", "hour", "ago", "?", "What", "happened", "to", "that", "?"]
+# ::lemmas ["be", "not", "they", "in", "a", "warehouse", "like", "an", "hour", "ago", "?", "what", "happen", "to", "that", "?"]
+(c1-2 / multi-sentence
+      :snt1 (c1-3 / be-located-at-91
+                  :polarity (c1-11 / amr-unknown)
+                  :ARG1 (c1-10 / they)
+                  :ARG2 (c1-1 / warehouse)
+                  :time (c1-8 / before
+                              :op1 (c1-6 / now)
+                              :quant (c1-9 / temporal-quantity
+                                           :unit (c1-0 / hour)
+                                           :quant 1)))
+      :snt2 (c1-4 / event
+                  :mod (c1-5 / amr-unknown)
+                  :domain (c1-7 / that)))
+
+# ::snt . The two suspects have now taken hostages and holed themselves up at three different places simulatenously.
+# ::tokens [".", "The", "two", "suspects", "have", "now", "taken", "hostages", "and", "holed", "themselves", "up", "at", "three", "different", "places", "simulatenously", "."]
+# ::lemmas [".", "the", "two", "suspect", "have", "now", "take", "hostage", "and", "hole", "themselves", "up", "at", "three", "different", "place", "simulatenously", "."]
+(c2-9 / and
+      :op1 (c2-7 / take-01
+                 :ARG0 (c2-4 / person
+                             :ARG2-of (c2-6 / suspect-01)
+                             :quant 2)
+                 :ARG1 (c2-0 / hostage))
+      :op2 (c2-1 / hole-up-01
+                 :ARG0 c2-4
+                 :ARG1 c2-4
+                 :location (c2-8 / place
+                                 :ARG1-of (c2-5 / differ-02)
+                                 :quant 3)
+                 :manner (c2-2 / simultaneous))
+      :time (c2-3 / now))

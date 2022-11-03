@@ -1,0 +1,259 @@
+# ::snt Bane is not supposed to be a cyborg. This is a dumb design.
+# ::tokens ["Bane", "is", "not", "supposed", "to", "be", "a", "cyborg", ".", "This", "is", "a", "dumb", "design", "."]
+# ::lemmas ["Bane", "be", "not", "suppose", "to", "be", "a", "cyborg", ".", "this", "be", "a", "dumb", "design", "."]
+(c1-6 / multi-sentence
+      :snt1 (c1-0 / suppose-02
+                  :ARG1 (c1-5 / person
+                              :name (c1-7 / name
+                                          :op1 "Bane"))
+                  :ARG2 (c1-2 / cyborg)
+                  :polarity -)
+      :snt2 (c1-1 / design-01
+                  :ARG1 (c1-4 / this)
+                  :mod (c1-3 / dumb)))
+
+# ::snt If you leave the mask on you can just hire a voice actor. Problem solved.
+# ::tokens ["If", "you", "leave", "the", "mask", "on", "you", "can", "just", "hire", "a", "voice", "actor", ".", "Problem", "solved", "."]
+# ::lemmas ["if", "you", "leave", "the", "mask", "on", "you", "can", "just", "hire", "a", "voice", "actor", ".", "Problem", "solve", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-10 / possible-01
+                    :ARG1 (c2-4 / hire-01
+                                :ARG0 (c2-12 / you)
+                                :ARG1 (c2-7 / person
+                                            :ARG0-of (c2-1 / act-01
+                                                           :ARG2 (c2-5 / voice)))
+                                :mod (c2-9 / just)
+                                :condition (c2-8 / leave-14
+                                                 :ARG0 c2-12
+                                                 :ARG1 (c2-2 / mask)
+                                                 :ARG2 (c2-6 / on))))
+       :snt2 (c2-0 / solve-01
+                   :ARG1 (c2-3 / problem)))
+
+# ::snt If you leave the mask on, you can get James Earl Jones. Worked for Lucas!
+# ::tokens ["If", "you", "leave", "the", "mask", "on", ",", "you", "can", "get", "James", "Earl", "Jones", ".", "Worked", "for", "Lucas", "!"]
+# ::lemmas ["if", "you", "leave", "the", "mask", "on", ",", "you", "can", "get", "James", "Earl", "Jones", ".", "work", "for", "Lucas", "!"]
+(c3-8 / multi-sentence
+      :snt1 (c3-7 / possible-01
+                  :ARG1 (c3-6 / get-01
+                              :ARG0 (c3-10 / you)
+                              :ARG1 (c3-3 / person
+                                          :name (c3-9 / name
+                                                      :op1 "James"
+                                                      :op2 "Earl"
+                                                      :op3 "Jones"))
+                              :condition (c3-5 / leave-14
+                                               :ARG0 c3-10
+                                               :ARG1 (c3-0 / mask))))
+      :snt2 (c3-1 / work-01
+                  :ARG2 (c3-2 / person
+                              :name (c3-4 / name
+                                          :op1 "Lucas"))))
+
+# ::snt Or even better Danny Trejo. He's already been the voice of Bane!
+# ::tokens ["Or", "even", "better", "Danny", "Trejo", ".", "He", "'s", "already", "been", "the", "voice", "of", "Bane", "!"]
+# ::lemmas ["or", "even", "well", "Danny", "Trejo", ".", "he", "be", "already", "be", "the", "voice", "of", "Bane", "!"]
+(c4-10 / multi-sentence
+       :snt1 (c4-4 / or
+                   :op2 (c4-2 / have-degree-91
+                              :ARG1 (c4-9 / person
+                                          :name (c4-11 / name
+                                                       :op1 "Danny"
+                                                       :op2 "Trejo"))
+                              :ARG2 (c4-7 / good-02
+                                          :ARG1 c4-9)
+                              :ARG3 (c4-1 / more
+                                          :mod (c4-12 / even))))
+       :snt2 (c4-3 / voice-01
+                   :ARG0 (c4-8 / he)
+                   :ARG1 (c4-5 / person
+                               :name (c4-6 / name
+                                           :op1 "Bane"))
+                   :time (c4-0 / already)))
+
+# ::snt "He's mentally reciting *ftbol* scores in espaol!" Man, Drop Zone was such a fun, brutal episode of Young Justice. Trejo is probably the best voice for Bane, I agree.
+# ::tokens ["\"", "He", "'s", "mentally", "reciting", "*", "ftbol", "*", "scores", "in", "espaol", "!", "\"", "Man", ",", "Drop", "Zone", "was", "such", "a", "fun", ",", "brutal", "episode", "of", "Young", "Justice", ".", "Trejo", "is", "probably", "the", "best", "voice", "for", "Bane", ",", "I", "agree", "."]
+# ::lemmas ["\"", "he", "be", "mentally", "recite", "*", "ftbol", "*", "score", "in", "espaol", "!", "\"", "man", ",", "Drop", "Zone", "be", "such", "a", "fun", ",", "brutal", "episode", "of", "Young", "Justice", ".", "Trejo", "be", "probably", "the", "good", "voice", "for", "Bane", ",", "i", "agree", "."]
+(c5-7 / multi-sentence
+      :snt1 (c5-5 / recite-01
+                  :ARG0 (c5-19 / he)
+                  :ARG1 (c5-10 / score
+                               :mod (c5-17 / football))
+                  :manner (c5-18 / mental)
+                  :mod (c5-9 / espaol))
+      :snt2 (c5-20 / episode
+                   :name (c5-8 / name
+                               :op1 "Man"
+                               :op2 ","
+                               :op3 "Drop"
+                               :op4 "Zone")
+                   :ARG1-of (c5-13 / fun-01)
+                   :mod (c5-22 / brutal)
+                   :part-of (c5-15 / broadcast-program
+                                   :name (c5-0 / name
+                                               :op1 "Young"
+                                               :op2 "Justice"))
+                   :mod (c5-23 / such))
+      :snt3 (c5-16 / agree-01
+                   :ARG0 (c5-2 / i)
+                   :ARG1 (c5-1 / have-degree-91
+                               :ARG1 (c5-4 / voice-01
+                                           :ARG0 (c5-24 / person
+                                                        :name (c5-14 / name
+                                                                     :op1 "Trevjo"))
+                                           :ARG1 (c5-21 / person
+                                                        :name (c5-3 / name
+                                                                    :op1 "Bane")))
+                               :ARG2 (c5-6 / good-02
+                                           :ARG1 c5-4)
+                               :ARG3 (c5-12 / most)
+                               :mod (c5-11 / probable))))
+
+# ::snt If they ever make a live action Batman Beyond, Trejo would be my choice for Bane. CGI him to look feeble, then let him go beast mode when he gets Venom... Bonus points if they can get Michael Keaton as Old Man Wayne.
+# ::tokens ["If", "they", "ever", "make", "a", "live", "action", "Batman", "Beyond", ",", "Trejo", "would", "be", "my", "choice", "for", "Bane", ".", "CGI", "him", "to", "look", "feeble", ",", "then", "let", "him", "go", "beast", "mode", "when", "he", "gets", "Venom", "...", "Bonus", "points", "if", "they", "can", "get", "Michael", "Keaton", "as", "Old", "Man", "Wayne", "."]
+# ::lemmas ["if", "they", "ever", "make", "a", "live", "action", "Batman", "Beyond", ",", "Trejo", "would", "be", "my", "choice", "for", "Bane", ".", "cgi", "he", "to", "look", "feeble", ",", "then", "let", "he", "go", "beast", "mode", "when", "he", "get", "Venom", "...", "Bonus", "point", "if", "they", "can", "get", "Michael", "Keaton", "as", "Old", "Man", "Wayne", "."]
+(c6-11 / multi-sentence
+       :snt1 (c6-7 / choose-01
+                   :ARG0 (c6-5 / i)
+                   :ARG1 (c6-32 / person
+                                :name (c6-12 / name
+                                             :op1 "Trevjo"))
+                   :ARG3 (c6-29 / person
+                                :name (c6-3 / name
+                                            :op1 "Bane"))
+                   :condition (c6-26 / make-01
+                                     :ARG0 (c6-8 / they)
+                                     :ARG1 (c6-31 / broadcast-program
+                                                  :name (c6-20 / name
+                                                               :op1 "Batman"
+                                                               :op2 "Beyond")
+                                                  :mod (c6-24 / action
+                                                              :ARG1-of (c6-30 / live-01)))
+                                     :time (c6-14 / ever)))
+       :snt2 (c6-13 / and
+                    :op1 (c6-0 / CGI-00
+                               :ARG0 (c6-21 / you)
+                               :ARG1 (c6-4 / look-02
+                                           :ARG0 c6-29
+                                           :ARG1 (c6-25 / feeble))
+                               :mode imperative)
+                    :op2 (c6-1 / let-01
+                               :ARG0 c6-21
+                               :ARG1 (c6-10 / go-01
+                                            :ARG1 c6-29
+                                            :ARG4 (c6-18 / mode
+                                                         :mod (c6-23 / beast))
+                                            :time (c6-22 / get-01
+                                                         :ARG0 c6-29
+                                                         :ARG1 (c6-17 / product
+                                                                      :name (c6-6 / name
+                                                                                  :op1 "Venom"))))
+                               :mode imperative)
+                    :snt3 (c6-27 / have-condition-91
+                                 :ARG1 (c6-15 / point
+                                              :ARG1-of (c6-16 / bonus-01))
+                                 :ARG2 (c6-2 / possible-01
+                                             :ARG1 c6-22
+                                             :ARG0 c6-8
+                                             :ARG1 (c6-19 / person
+                                                          :name (c6-9 / name
+                                                                      :op1 "Michael"
+                                                                      :op2 "Keaton")
+                                                          :manner (c6-33 / person
+                                                                         :name (c6-28 / name
+                                                                                      :op1 "Old"
+                                                                                      :op2 "Man"
+                                                                                      :op3 "Wayne")))))))
+
+# ::snt Dont even have to teach him to speak. He wears a mask(either in movie bane or lutador bane). Overdub him a la Vader. Edit: others pointed out the same thing. My bad.
+# ::tokens ["Do", "nt", "even", "have", "to", "teach", "him", "to", "speak", ".", "He", "wears", "a", "mask(either", "in", "movie", "bane", "or", "lutador", "bane", ")", ".", "Overdub", "him", "a", "la", "Vader", ".", "Edit", ":", "others", "pointed", "out", "the", "same", "thing", ".", "My", "bad", "."]
+# ::lemmas ["do", "nt", "even", "have", "to", "teach", "he", "to", "speak", ".", "he", "wear", "a", "mask(either", "in", "movie", "bane", "or", "lutador", "bane", ")", ".", "Overdub", "he", "a", "la", "Vader", ".", "edit", ":", "other", "point", "out", "the", "same", "thing", ".", "my", "bad", "."]
+(c7-11 / multi-sentence
+       :snt1 (c7-7 / obligate-01
+                   :ARG1 (c7-2 / i)
+                   :ARG2 (c7-8 / teach-01
+                               :ARG0 c7-2
+                               :ARG1 (c7-15 / speak-01
+                                            :ARG0 (c7-21 / he
+                                                         :ARG2-of c7-8)))
+                   :mod (c7-14 / even)
+                   :polarity -)
+       :snt2 (c7-5 / wear-01
+                   :ARG0 (c7-1 / he)
+                   :ARG1 (c7-20 / mask
+                                :ARG1-of (c7-17 / mean-01
+                                                :ARG2 (c7-22 / or
+                                                             :op1 (c7-10 / movie
+                                                                         :name (c7-12 / name
+                                                                                      :op1 "Bane"))
+                                                             :op2 (c7-13 / movie
+                                                                         :name (c7-0 / name
+                                                                                     :op1 "Lutador"
+                                                                                     :op2 "Bane"))))))
+       :snt3 (c7-4 / overdub-00
+                   :ARG1 (c7-3 / he)
+                   :ARG1-of (c7-9 / resemble-01
+                                  :ARG2 (c7-27 / person
+                                               :name (c7-18 / name
+                                                            :op1 "Vader"))))
+       :snt4 (c7-23 / edit-01
+                    :ARG1-of c7-17
+                    :ARG2 (c7-24 / point-out-02
+                                 :ARG0 (c7-19 / other)
+                                 :ARG1 (c7-6 / thing
+                                             :ARG1-of (c7-26 / same-01)
+                                             :snt5-of c7-11)))
+       :ARG1-of (c7-25 / bad-07
+                       :ARG0 (c7-16 / i)))
+
+# ::snt Whether a mask looks bad or not is subjective. The use of slurs, however, is not dubious, morally or otherwise. It's unethical. Stop.
+# ::tokens ["Whether", "a", "mask", "looks", "bad", "or", "not", "is", "subjective", ".", "The", "use", "of", "slurs", ",", "however", ",", "is", "not", "dubious", ",", "morally", "or", "otherwise", ".", "It", "'s", "unethical", ".", "Stop", "."]
+# ::lemmas ["whether", "a", "mask", "look", "bad", "or", "not", "be", "subjective", ".", "the", "use", "of", "slur", ",", "however", ",", "be", "not", "dubious", ",", "morally", "or", "otherwise", ".", "it", "be", "unethical", ".", "stop", "."]
+(c8-13 / multi-sentence
+       :snt1 (c8-0 / subjective-03
+                   :ARG1 (c8-8 / or
+                               :op1 (c8-9 / look-02
+                                          :ARG0 (c8-3 / mask)
+                                          :ARG1 (c8-11 / bad-07))
+                               :op2 (c8-10 / look-02
+                                           :ARG0 c8-3
+                                           :ARG1 (c8-1 / bad-07)
+                                           :polarity -)))
+       :snt2 (c8-2 / dubious-02
+                   :ARG1 (c8-6 / use-01
+                               :ARG1 (c8-12 / slur))
+                   :concession (c8-4 / or
+                                     :op1 (c8-7 / moral-02
+                                                :op2-of c8-4)
+                                     :polarity -)
+                   :polarity -)
+       :snt3 (c8-15 / ethics
+                    :polarity -)
+       :snt4 (c8-5 / stop-01
+                   :ARG0 (c8-14 / you)
+                   :mode imperative))
+
+# ::snt Please don't use ableist insults in your comments.  It does nothing to enhance your argument or the conversation of the sub.
+# ::tokens ["Please", "do", "n't", "use", "ableist", "insults", "in", "your", "comments", ".", " ", "It", "does", "nothing", "to", "enhance", "your", "argument", "or", "the", "conversation", "of", "the", "sub", "."]
+# ::lemmas ["please", "do", "not", "use", "ableist", "insult", "in", "your", "comment", ".", " ", "it", "do", "nothing", "to", "enhance", "your", "argument", "or", "the", "conversation", "of", "the", "sub", "."]
+(c9-10 / multi-sentence
+       :snt1 (c9-7 / use-01
+                   :ARG0 (c9-12 / you)
+                   :ARG1 (c9-9 / insult-01
+                               :ARG0 c9-12
+                               :mod (c9-3 / ableist))
+                   :ARG2 (c9-5 / comment-01
+                               :ARG0 c9-12)
+                   :mode imperative
+                   :polite +)
+       :snt2 (c9-0 / do-02
+                   :ARG0 (c9-6 / it)
+                   :ARG1 (c9-11 / nothing)
+                   :ARG2 (c9-14 / enhance-01
+                                :ARG0 c9-6
+                                :ARG1 (c9-8 / or
+                                            :op1 (c9-13 / argue-01
+                                                        :ARG0 (c9-4 / you))
+                                            :op2 (c9-1 / converse-01
+                                                       :ARG0 (c9-2 / sub))))
+                   :polarity -))

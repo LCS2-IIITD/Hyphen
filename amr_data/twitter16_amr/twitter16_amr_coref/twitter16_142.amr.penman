@@ -1,0 +1,79 @@
+# ::snt -3 means are controlling the whole police haha
+# ::tokens ["-3", "means", "are", "controlling", "the", "whole", "police", "haha"]
+# ::lemmas ["-3", "mean", "be", "control", "the", "whole", "police", "haha"]
+(c2-4 / control-01
+      :ARG0 (c2-0 / mean
+                  :quant 3)
+      :ARG1 (c2-1 / police
+                  :mod (c2-2 / whole))
+      :mod (c2-3 / haha
+                 :mode expressive))
+
+# ::snt : Watch video showing gunfire inside Canada's parliament in Ottawa
+# ::tokens [":", "Watch", "video", "showing", "gunfire", "inside", "Canada", "'s", "parliament", "in", "Ottawa"]
+# ::lemmas [":", "watch", "video", "show", "gunfire", "inside", "Canada", "'s", "parliament", "in", "Ottawa"]
+(c3-7 / video
+      :ARG0-of (c3-5 / show-01
+                     :ARG1 (c3-2 / gunfire
+                                 :location (c3-4 / inside
+                                                 :op1 (c3-0 / building
+                                                            :name (c3-6 / name
+                                                                        :op1 "Parliament")
+                                                            :poss (c3-9 / country
+                                                                        :name (c3-1 / name
+                                                                                    :op1 "Canada"))
+                                                            :location (c3-3 / city
+                                                                            :name (c3-8 / name
+                                                                                        :op1 "Ottawa")))))))
+
+# ::snt sad
+# ::tokens ["sad"]
+# ::lemmas ["sad"]
+(c4-0 / sad-02)
+
+# ::snt how did he get in with gun?
+# ::tokens ["how", "did", "he", "get", "in", "with", "gun", "?"]
+# ::lemmas ["how", "do", "he", "get", "in", "with", "gun", "?"]
+(c5-2 / get-05
+      :ARG1 (c5-3 / he)
+      :ARG2 (c5-1 / gun)
+      :manner (c5-0 / amr-unknown))
+
+# ::snt It was eminent for Canada being safe haven &amp; a sanctuary for these jihadis &amp; terrorists
+# ::tokens ["It", "was", "eminent", "for", "Canada", "being", "safe", "haven", "&", "amp", ";", "a", "sanctuary", "for", "these", "jihadis", "&", "amp", ";", "terrorists"]
+# ::lemmas ["it", "be", "eminent", "for", "Canada", "be", "safe", "haven", "&", "amp", ";", "a", "sanctuary", "for", "these", "jihadis", "&", "amp", ";", "terrorist"]
+(c6-3 / eminent
+      :domain (c6-6 / it)
+      :beneficiary (c6-0 / and
+                         :op1 (c6-10 / haven
+                                     :ARG1-of (c6-7 / safe-01)
+                                     :domain (c6-11 / country
+                                                    :name (c6-8 / name
+                                                                :op1 "Canada")))
+                         :op2 (c6-1 / sanctuary
+                                    :beneficiary (c6-9 / and
+                                                       :op1 (c6-4 / jihadi
+                                                                  :mod (c6-2 / this))
+                                                       :op2 (c6-5 / terrorist
+                                                                  :mod c6-2)))))
+
+# ::snt : Watch video showing gunfire inside Canada's parliament in Ottawa . Awful.
+# ::tokens [":", "Watch", "video", "showing", "gunfire", "inside", "Canada", "'s", "parliament", "in", "Ottawa", ".", "Awful", "."]
+# ::lemmas [":", "watch", "video", "show", "gunfire", "inside", "Canada", "'s", "parliament", "in", "Ottawa", ".", "awful", "."]
+(c7-4 / multi-sentence
+      :snt1 (c7-10 / video
+                   :ARG0-of (c7-8 / show-01
+                                  :ARG1 (c7-5 / gunfire)
+                                  :location (c7-7 / inside
+                                                  :op1 (c7-2 / building
+                                                             :name (c7-9 / name
+                                                                         :op1 "Parliament")
+                                                             :mod (c7-12 / country
+                                                                         :name (c7-3 / name
+                                                                                     :op1 "Canada"))
+                                                             :location (c7-6 / city
+                                                                             :name (c7-11 / name
+                                                                                          :op1 "Ottawa")))))
+                   :mod (c7-0 / awful))
+      :snt2 (c7-1 / thing
+                  :mode expressive))

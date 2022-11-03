@@ -1,0 +1,73 @@
+# ::snt Did that say Malcolm X Park ?
+# ::tokens ["Did", "that", "say", "Malcolm", "X", "Park", "?"]
+# ::lemmas ["do", "that", "say", "Malcolm", "X", "Park", "?"]
+(c1-2 / say-01
+      :ARG0 (c1-3 / that)
+      :ARG1 (c1-1 / person
+                  :name (c1-0 / name
+                              :op1 "Malcolm"
+                              :op2 "X"
+                              :op3 "Park"))
+      :polarity (c1-4 / amr-unknown))
+
+# ::snt fuck the police. Support the cause.
+# ::tokens ["fuck", "the", "police", ".", "Support", "the", "cause", "."]
+# ::lemmas ["fuck", "the", "police", ".", "support", "the", "cause", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-1 / fuck-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-3 / police)
+                  :mode imperative)
+      :snt2 (c2-6 / support-01
+                  :ARG0 (c2-5 / you)
+                  :ARG1 (c2-4 / cause)
+                  :mode imperative))
+
+# ::snt She's trynna get noticed for her rhymes. I see you there But all support!
+# ::tokens ["She", "'s", "trynna", "get", "noticed", "for", "her", "rhymes", ".", "I", "see", "you", "there", "But", "all", "support", "!"]
+# ::lemmas ["she", "be", "trynna", "get", "notice", "for", "her", "rhyme", ".", "i", "see", "you", "there", "but", "all", "support", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-11 / try-01
+                   :ARG0 (c3-10 / she)
+                   :ARG1 (c3-5 / notice-01
+                               :ARG1 c3-10
+                               :ARG1-of (c3-7 / cause-01
+                                              :ARG0 (c3-6 / rhyme-01
+                                                          :ARG0 c3-10))))
+      :snt2 (c3-8 / contrast-01
+                  :ARG1 (c3-3 / see-01
+                              :ARG0 (c3-4 / i)
+                              :ARG1 (c3-0 / you)
+                              :location (c3-9 / there))
+                  :ARG2 (c3-1 / support-01
+                              :ARG0 (c3-12 / all))))
+
+# ::snt Got that Pac quote on that sign.
+# ::tokens ["Got", "that", "Pac", "quote", "on", "that", "sign", "."]
+# ::lemmas ["got", "that", "Pac", "quote", "on", "that", "sign", "."]
+(c4-3 / get-01
+      :ARG1 (c4-0 / quote-01
+                  :ARG2 (c4-2 / person
+                              :name (c4-1 / name
+                                          :op1 "Pac"))
+                  :location (c4-4 / sign
+                                  :mod (c4-5 / that))))
+
+# ::snt Please sign and share! Time to end the militarization of our police force!
+# ::tokens ["Please", "sign", "and", "share", "!", "Time", "to", "end", "the", "militarization", "of", "our", "police", "force", "!"]
+# ::lemmas ["please", "sign", "and", "share", "!", "time", "to", "end", "the", "militarization", "of", "our", "police", "force", "!"]
+(c5-3 / multi-sentence
+      :snt1 (c5-10 / and
+                   :op1 (c5-8 / sign-01
+                              :ARG0 (c5-0 / you)
+                              :mode imperative)
+                   :op2 (c5-4 / share-01
+                              :ARG0 c5-0
+                              :mode imperative)
+                   :polite +)
+      :snt2 (c5-9 / time
+                  :time-of (c5-5 / end-01
+                                 :ARG1 (c5-6 / militarize-01
+                                             :ARG1 (c5-2 / force
+                                                         :mod (c5-7 / police)
+                                                         :poss (c5-1 / we))))))

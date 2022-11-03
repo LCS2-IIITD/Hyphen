@@ -1,0 +1,90 @@
+# ::snt Can i suspend living for couple of years ?
+# ::tokens ["Can", "i", "suspend", "living", "for", "couple", "of", "years", "?"]
+# ::lemmas ["can", "i", "suspend", "live", "for", "couple", "of", "years", "?"]
+(c1-6 / possible-01
+      :polarity (c1-1 / amr-unknown)
+      :ARG1 (c1-0 / suspend-01
+                  :ARG0 (c1-2 / i)
+                  :ARG1 (c1-5 / live-01
+                              :ARG0 c1-2)
+                  :duration (c1-3 / couple
+                                  :op1 (c1-4 / temporal-quantity
+                                             :unit (c1-7 / year)
+                                             :quant 1))))
+
+# ::snt I hope no one reads my tweets ever
+# ::tokens ["I", "hope", "no", "one", "reads", "my", "tweets", "ever"]
+# ::lemmas ["i", "hope", "no", "one", "read", "my", "tweet", "ever"]
+(c2-0 / hope-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-2 / read-01
+                  :ARG0 (c2-4 / no-one)
+                  :ARG1 (c2-1 / tweet-01
+                              :ARG0 c2-3)
+                  :time (c2-5 / ever)))
+
+# ::snt Monologue builds me up amd tears me down
+# ::tokens ["Monologue", "builds", "me", "up", "amd", "tears", "me", "down"]
+# ::lemmas ["Monologue", "build", "i", "up", "amd", "tear", "i", "down"]
+(c3-0 / and
+      :op1 (c3-3 / build-up-05
+                 :ARG0 (c3-1 / ologue)
+                 :ARG1 (c3-4 / i))
+      :op2 (c3-2 / tear-down-05
+                 :ARG0ologue c3-4))
+
+# ::snt Is it ok to become an alcoholic and consume alcohol in moderation everyday if it helps you sleep peacefully ?
+# ::tokens ["Is", "it", "ok", "to", "become", "an", "alcoholic", "and", "consume", "alcohol", "in", "moderation", "everyday", "if", "it", "helps", "you", "sleep", "peacefully", "?"]
+# ::lemmas ["be", "it", "ok", "to", "become", "an", "alcoholic", "and", "consume", "alcohol", "in", "moderation", "everyday", "if", "it", "help", "you", "sleep", "peacefully", "?"]
+(c4-6 / okay-04
+      :ARG1 (c4-3 / and
+                  :op1 (c4-10 / become-01
+                              :ARG1 (c4-13 / you)
+                              :ARG2 (c4-14 / alcoholic))
+                  :op2 (c4-4 / consume-01
+                             :ARG0 c4-13
+                             :ARG1 (c4-1 / alcohol)
+                             :manner (c4-12 / moderate-03)
+                             :frequency (c4-9 / rate-entity-91
+                                              :ARG3 (c4-8 / temporal-quantity
+                                                          :unit (c4-0 / day)
+                                                          :quant 1))))
+      :polarity (c4-7 / amr-unknown)
+      :condition (c4-5 / help-01
+                       :ARG0 c4-4
+                       :ARG1 (c4-2 / sleep-01
+                                   :ARG0 c4-13
+                                   :manner (c4-11 / peaceful))
+                       :ARG2 c4-13))
+
+# ::snt Shab e furkat ka jaaga hoon Farishton ab toh soney do
+# ::tokens ["Shab", "e", "furkat", "ka", "jaaga", "hoon", "Farishton", "ab", "toh", "soney", "do"]
+# ::lemmas ["Shab", "e", "furkat", "ka", "jaaga", "hoon", "Farishton", "ab", "toh", "soney", "do"]
+(c5-7 / multi-sentence
+      :snt1 (c5-1 / and
+                  :op1 (c5-0 / shab
+                             :mode expressive)
+                  :op2 (c5-2 / furkat
+                             :mode expressive)
+                  :op3 (c5-3 / hajaga
+                             :mode expressive)
+                  :snt2-of c5-7)
+      :op1 (c5-4 / go-02
+                 :ARG0 (c5-6 / person
+                             :name (c5-8 / name
+                                         :op1 "Farishton"))
+                 :ARG1 (c5-10 / ab))
+      :op2 (c5-9 / go-02
+                 :ARG0 c5-6
+                 :ARG1 (c5-5 / soney)))
+
+# ::snt What good is meditation if you dont practice it !
+# ::tokens ["What", "good", "is", "meditation", "if", "you", "do", "nt", "practice", "it", "!"]
+# ::lemmas ["what", "good", "be", "meditation", "if", "you", "do", "not", "practice", "it", "!"]
+(c6-1 / good-02
+      :ARG1 (c6-3 / meditate-01)
+      :condition (c6-2 / practice-01
+                       :ARG0 (c6-4 / you)
+                       :ARG1 c6-3
+                       :polarity -)
+      :degree (c6-0 / amr-unknown))

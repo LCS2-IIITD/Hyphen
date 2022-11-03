@@ -1,0 +1,294 @@
+# ::snt Good! No loss whatsoever!
+# ::tokens ["Good", "!", "No", "loss", "whatsoever", "!"]
+# ::lemmas ["good", "!", "no", "loss", "whatsoever", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-3 / good-02)
+      :snt2 (c1-1 / lose-02
+                  :degree (c1-0 / whatsoever)
+                  :polarity -))
+
+# ::snt just those types
+# ::tokens ["just", "those", "types"]
+# ::lemmas ["just", "those", "type"]
+(c2-1 / type
+      :mod (c2-2 / that)
+      :mod (c2-0 / just))
+
+# ::snt Kill of them
+# ::tokens ["Kill", "of", "them"]
+# ::lemmas ["kill", "of", "they"]
+(c3-1 / kill-01
+      :ARG1 (c3-0 / they))
+
+# ::snt where are their parents? what do they have to say in this? Good riddance to these lowlives.
+# ::tokens ["where", "are", "their", "parents", "?", "what", "do", "they", "have", "to", "say", "in", "this", "?", "Good", "riddance", "to", "these", "lowlives", "."]
+# ::lemmas ["where", "be", "their", "parent", "?", "what", "do", "they", "have", "to", "say", "in", "this", "?", "good", "riddance", "to", "these", "lowlive", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-3 / be-located-at-91
+                  :ARG1 (c4-8 / person
+                              :ARG0-of (c4-0 / have-rel-role-91
+                                             :ARG1 (c4-13 / they)
+                                             :ARG2 (c4-14 / parent)))
+                  :ARG2 (c4-15 / amr-unknown))
+      :snt2 (c4-4 / obligate-01
+                  :ARG1 (c4-11 / they)
+                  :ARG2 (c4-12 / say-01
+                               :ARG0 c4-11
+                               :ARG1 (c4-6 / amr-unknown)
+                               :topic (c4-7 / this)))
+      :snt3 (c4-9 / riddance
+                  :ARG1-of (c4-10 / good-02)
+                  :beneficiary c4-8
+                  :ARG1-of (c4-1 / low-04)
+                  :mod (c4-5 / this)))
+
+# ::snt The scapegoats are dead, what about the terrorists?RTJe suis Charlie
+# ::tokens ["The", "scapegoats", "are", "dead", ",", "what", "about", "the", "terrorists?RTJe", "suis", "Charlie"]
+# ::lemmas ["the", "scapegoat", "be", "dead", ",", "what", "about", "the", "terrorists?RTJe", "suis", "Charlie"]
+(c5-9 / and
+      :op1 (c5-5 / die-01
+                 :ARG1 (c5-4 / person
+                             :ARG1-of (c5-6 / scapegoat-01)))
+      :op2 (c5-7 / terrorist
+                 :domain (c5-1 / amr-unknown))
+      :ARG1-of (c5-0 / say-01
+                     :ARG0 (c5-8 / publication
+                                 :name (c5-2 / name
+                                             :op1 "RT"))
+                     :ARG2 c5-4
+                     :name (c5-3 / name
+                                 :op1 "Je suis"
+                                 :op2 "Charlie")))
+
+# ::snt Local mayor tells suspects, the , both killed.
+# ::tokens ["Local", "mayor", "tells", "suspects", ",", "the", ",", "both", "killed", "."]
+# ::lemmas ["local", "mayor", "tell", "suspect", ",", "the", ",", "both", "kill", "."]
+(c6-7 / tell-01
+      :ARG0 (c6-5 / person
+                  :ARG0-of (c6-0 / have-org-role-91
+                                 :ARG2 (c6-2 / mayor))
+                  :ARG1-of (c6-1 / local-02))
+      :ARG1 (c6-4 / kill-01
+                  :ARG1 (c6-8 / person
+                              :ARG2-of (c6-6 / suspect-01)
+                              :mod (c6-3 / both))))
+
+# ::snt good riddance of the Muslim bastards
+# ::tokens ["good", "riddance", "of", "the", "Muslim", "bastards"]
+# ::lemmas ["good", "riddance", "of", "the", "Muslim", "bastard"]
+(c7-3 / riddance
+      :ARG1-of (c7-4 / good-02)
+      :poss (c7-0 / bastard
+                  :mod (c7-1 / religious-group
+                             :name (c7-2 / name
+                                         :op1 "Muslim"))))
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c8-10 / tell-01
+       :ARG0 (c8-7 / person
+                   :ARG0-of (c8-0 / have-org-role-91
+                                  :ARG2 (c8-2 / mayor))
+                   :ARG1-of (c8-1 / local-02))
+       :ARG1 (c8-5 / kill-01
+                   :ARG1 (c8-12 / and
+                                :op1 (c8-11 / person
+                                            :ARG2-of (c8-8 / suspect-01))
+                                :op2 (c8-3 / person
+                                           :mod (c8-4 / both))))
+       :ARG2 (c8-9 / publication
+                   :name (c8-6 / name
+                               :op1 "CNN")))
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c10-10 / tell-01
+        :ARG0 (c10-7 / person
+                     :ARG0-of (c10-0 / have-org-role-91
+                                     :ARG2 (c10-2 / mayor))
+                     :ARG1-of (c10-1 / local-02))
+        :ARG1 (c10-5 / kill-01
+                     :ARG1 (c10-12 / and
+                                   :op1 (c10-11 / person
+                                                :ARG2-of (c10-8 / suspect-01))
+                                   :op2 (c10-3 / person
+                                               :mod (c10-4 / both))))
+        :ARG2 (c10-9 / publication
+                     :name (c10-6 / name
+                                  :op1 "CNN")))
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c11-10 / tell-01
+        :ARG0 (c11-7 / person
+                     :ARG0-of (c11-0 / have-org-role-91
+                                     :ARG2 (c11-2 / mayor))
+                     :ARG1-of (c11-1 / local-02))
+        :ARG1 (c11-5 / kill-01
+                     :ARG1 (c11-12 / and
+                                   :op1 (c11-11 / person
+                                                :ARG2-of (c11-8 / suspect-01))
+                                   :op2 (c11-3 / person
+                                               :mod (c11-4 / both))))
+        :ARG2 (c11-9 / publication
+                     :name (c11-6 / name
+                                  :op1 "CNN")))
+
+# ::snt hallelujah
+# ::tokens ["hallelujah"]
+# ::lemmas ["hallelujah"]
+(c12-0 / hallelujah
+       :mode expressive)
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c13-10 / tell-01
+        :ARG0 (c13-7 / person
+                     :ARG0-of (c13-0 / have-org-role-91
+                                     :ARG2 (c13-2 / mayor))
+                     :ARG1-of (c13-1 / local-02))
+        :ARG1 (c13-5 / kill-01
+                     :ARG1 (c13-12 / and
+                                   :op1 (c13-11 / person
+                                                :ARG2-of (c13-8 / suspect-01))
+                                   :op2 (c13-3 / person
+                                               :mod (c13-4 / both))))
+        :ARG2 (c13-9 / publication
+                     :name (c13-6 / name
+                                  :op1 "CNN")))
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c14-10 / tell-01
+        :ARG0 (c14-7 / person
+                     :ARG0-of (c14-0 / have-org-role-91
+                                     :ARG2 (c14-2 / mayor))
+                     :ARG1-of (c14-1 / local-02))
+        :ARG1 (c14-5 / kill-01
+                     :ARG1 (c14-12 / and
+                                   :op1 (c14-11 / person
+                                                :ARG2-of (c14-8 / suspect-01))
+                                   :op2 (c14-3 / person
+                                               :mod (c14-4 / both))))
+        :ARG2 (c14-9 / publication
+                     :name (c14-6 / name
+                                  :op1 "CNN")))
+
+# ::snt If you want to understand the evils of religion, any religion, this story is the perfect example.
+# ::tokens ["If", "you", "want", "to", "understand", "the", "evils", "of", "religion", ",", "any", "religion", ",", "this", "story", "is", "the", "perfect", "example", "."]
+# ::lemmas ["if", "you", "want", "to", "understand", "the", "evil", "of", "religion", ",", "any", "religion", ",", "this", "story", "be", "the", "perfect", "example", "."]
+(c15-4 / exemplify-01
+       :ARG0 (c15-9 / story
+                    :mod (c15-10 / this))
+       :ARG1-of (c15-7 / perfect-02)
+       :condition (c15-0 / want-01
+                         :ARG0 (c15-1 / you)
+                         :ARG1 (c15-2 / understand-01
+                                      :ARG0 c15-1
+                                      :ARG1 (c15-11 / and
+                                                    :op1 (c15-3 / evil
+                                                                :domain (c15-8 / religion))
+                                                    :op2 (c15-6 / religion
+                                                                :mod (c15-5 / any))))))
+
+# ::snt olha a fua desses filhos da puta
+# ::tokens ["olha", "a", "fua", "desses", "filhos", "da", "puta"]
+# ::lemmas ["olha", "a", "fua", "desse", "filhos", "da", "puta"]
+(c16-0 / fua
+       :mod (c16-3 / person
+                   :name (c16-2 / name
+                                :op1 "Jesus"))
+       :mod (c16-1 / filhos
+                   :mod (c16-4 / da))
+       :mode expressive)
+
+# ::snt Terrorists dead. : suspects the , both killed local mayor
+# ::tokens ["Terrorists", "dead", ".", ":", "suspects", "the", ",", "both", "killed", "local", "mayor"]
+# ::lemmas ["terrorist", "dead", ".", ":", "suspect", "the", ",", "both", "kill", "local", "mayor"]
+(c17-2 / multi-sentence
+       :snt1 (c17-6 / die-01
+                    :ARG1 (c17-9 / terrorist))
+       :snt2 (c17-8 / suspect-01
+                    :ARG1 (c17-4 / kill-01
+                                 :ARG0 (c17-3 / both)
+                                 :ARG1 (c17-5 / person
+                                              :ARG0-of (c17-0 / have-org-role-91
+                                                              :ARG2 (c17-7 / mayor))
+                                              :ARG1-of (c17-1 / local-02)))))
+
+# ::snt good riddance muslim trash fuck you and mohammed.
+# ::tokens ["good", "riddance", "muslim", "trash", "fuck", "you", "and", "mohammed", "."]
+# ::lemmas ["good", "riddance", "muslim", "trash", "fuck", "you", "and", "mohamme", "."]
+(c18-9 / say-01
+       :ARG0 (c18-2 / i)
+       :ARG1 (c18-11 / and
+                     :op1 (c18-1 / fuck-01
+                                 :ARG0 (c18-10 / trash
+                                               :mod (c18-7 / religious-group
+                                                           :name (c18-4 / name
+                                                                        :op1 "Islam")))
+                                 :ARG1 (c18-0 / you)
+                                 :mode expressive)
+                     :op2 (c18-6 / person
+                                 :name (c18-5 / name
+                                              :op1 "Mohammed"))
+                     :mod (c18-3 / riddance
+                                 :ARG1-of (c18-8 / good-02)))
+       :ARG2 c18-6)
+
+# ::snt Good riddance!
+# ::tokens ["Good", "riddance", "!"]
+# ::lemmas ["good", "riddance", "!"]
+(c19-0 / riddance
+       :ARG1-of (c19-1 / good-02)
+       :mode expressive)
+
+# ::snt lol just hate Muslims Huh ?
+# ::tokens ["lol", "just", "hate", "Muslims", "Huh", "?"]
+# ::lemmas ["lol", "just", "hate", "Muslims", "Huh", "?"]
+(c20-0 / hate-01
+       :ARG1 (c20-6 / person
+                    :mod (c20-7 / religious-group
+                                :name (c20-5 / name
+                                             :op1 "Islam")))
+       :mod (c20-1 / just)
+       :ARG1-of (c20-4 / request-confirmation-91)
+       :ARG2-of (c20-2 / laugh-01
+                       :ARG0 (c20-3 / i)
+                       :manner (c20-8 / loud)
+                       :mode expressive))
+
+# ::snt convenient
+# ::tokens ["convenient"]
+# ::lemmas ["convenient"]
+(c21-0 / convenient)
+
+# ::snt : suspects, the , both killed, local mayor tells CNN.
+# ::tokens [":", "suspects", ",", "the", ",", "both", "killed", ",", "local", "mayor", "tells", "CNN", "."]
+# ::lemmas [":", "suspect", ",", "the", ",", "both", "kill", ",", "local", "mayor", "tell", "CNN", "."]
+(c22-10 / tell-01
+        :ARG0 (c22-7 / person
+                     :ARG0-of (c22-0 / have-org-role-91
+                                     :ARG2 (c22-2 / mayor))
+                     :ARG1-of (c22-1 / local-02))
+        :ARG1 (c22-5 / kill-01
+                     :ARG1 (c22-12 / and
+                                   :op1 (c22-11 / person
+                                                :ARG2-of (c22-8 / suspect-01))
+                                   :op2 (c22-3 / person
+                                               :mod (c22-4 / both))))
+        :ARG2 (c22-9 / publication
+                     :name (c22-6 / name
+                                  :op1 "CNN")))
+
+# ::snt WHOO HOO
+# ::tokens ["WHOO", "HOO"]
+# ::lemmas ["WHOO", "HOO"]
+(c23-1 / whoo
+       :mod (c23-0 / only)
+       :mode expressive)

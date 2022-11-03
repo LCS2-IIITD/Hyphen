@@ -1,0 +1,85 @@
+# ::snt Love it
+# ::tokens ["Love", "it"]
+# ::lemmas ["Love", "it"]
+(c1-0 / love-01
+      :ARG1 (c1-1 / it))
+
+# ::snt I cant find their comments
+# ::tokens ["I", "ca", "nt", "find", "their", "comments"]
+# ::lemmas ["i", "can", "not", "find", "their", "comment"]
+(c2-1 / possible-01
+      :ARG1 (c2-0 / find-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-2 / comment-01
+                              :ARG0 (c2-4 / they)))
+      :polarity -)
+
+# ::snt I like Gwen ...she's fun ...but also Blake too...Libra and Gemini combo ...perfect
+# ::tokens ["I", "like", "Gwen", "...", "she", "'s", "fun", "...", "but", "also", "Blake", "too", "...", "Libra", "and", "Gemini", "combo", "...", "perfect"]
+# ::lemmas ["i", "like", "Gwen", "...", "she", "be", "fun", "...", "but", "also", "Blake", "too", "...", "Libra", "and", "Gemini", "combo", "...", "perfect"]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / like-01
+                  :ARG0 (c3-11 / i)
+                  :ARG1 (c3-5 / person
+                              :name (c3-1 / name
+                                          :op1 "Gwen"))
+                  :ARG1-of (c3-8 / cause-01
+                                 :ARG0 (c3-0 / fun-01
+                                             :ARG1 c3-5)))
+      :snt2 (c3-16 / contrast-01
+                   :ARG1 c3-0
+                   :ARG1 (c3-3 / person
+                               :name (c3-4 / name
+                                           :op1 "Blake")
+                               :mod (c3-12 / also)))
+      :ARG2 (c3-15 / perfect-02
+                   :ARG1 (c3-13 / and
+                                :op1 (c3-9 / product
+                                           :name (c3-7 / name
+                                                       :op1 "Libra"))
+                                :op2 (c3-14 / product
+                                            :name (c3-10 / name
+                                                         :op1 "Gemini")))))
+
+# ::snt They are adorable
+# ::tokens ["They", "are", "adorable"]
+# ::lemmas ["they", "be", "adorable"]
+(c4-0 / cute
+      :domain (c4-1 / they))
+
+# ::snt Rotshild-SSoros-Devils-RRRepublika-SSatanic Devils-3 World war-Scull&amp;Bones-Secret Societies-Bush-Obama-Clinton.Rokfeler-Morgan-SHiff-Varburg
+# ::tokens ["Rotshild", "-", "SSoros", "-", "Devils", "-", "RRRepublika", "-", "SSatanic", "Devils-3", "World", "war", "-", "Scull&amp;Bones", "-", "Secret", "Societies", "-", "Bush", "-", "Obama", "-", "Clinton", ".", "Rokfeler", "-", "Morgan", "-", "SHiff", "-", "Varburg"]
+# ::lemmas ["Rotshild", "-", "SSoros", "-", "Devils", "-", "RRRepublika", "-", "SSatanic", "Devils-3", "World", "war", "-", "scull&amp;bone", "-", "Secret", "Societies", "-", "Bush", "-", "Obama", "-", "Clinton", ".", "Rokfeler", "-", "Morgan", "-", "SHiff", "-", "Varburg"]
+(c5-9 / multi-sentence
+      :snt1 (c5-7 / and
+                  :op1 (c5-16 / person
+                              :name (c5-14 / name
+                                           :op1 "Rotshild"))
+                  :op2 (c5-10 / person
+                              :name (c5-11 / name
+                                           :op1 "SSoros-Devils-RRRepublika"))
+                  :op3 (c5-4 / person
+                             :name (c5-17 / name
+                                          :op1 "SSatanic"
+                                          :op2 "Devils"))
+                  :op4 (c5-18 / war
+                              :name (c5-12 / name
+                                           :op1 "World"
+                                           :op2 "War")
+                              :quant 3)
+                  :snt2-of c5-9)
+      :op1 (c5-8 / group)
+      :op2 (c5-0 / society
+                 :mod (c5-5 / secret))
+      :op3 (c5-3 / person
+                 :name (c5-19 / name
+                              :op1 "Bush"))
+      :op4 (c5-6 / person
+                 :name (c5-15 / name
+                              :op1 "Obama"))
+      :op5 (c5-20 / person
+                  :name (c5-2 / name
+                              :op1 "Clinton"))
+      :snt3 (c5-13 / person
+                   :name (c5-1 / name
+                               :op1 "Rokfeler-Morgan-SHiff-Varburg")))

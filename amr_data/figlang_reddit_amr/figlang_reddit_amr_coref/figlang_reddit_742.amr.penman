@@ -1,0 +1,36 @@
+# ::snt The US just confiscated a $180 million boat shipment of cocaine from Colombian drug traffickers
+# ::tokens ["The", "US", "just", "confiscated", "a", "$", "180", "million", "boat", "shipment", "of", "cocaine", "from", "Colombian", "drug", "traffickers"]
+# ::lemmas ["the", "US", "just", "confiscate", "a", "$", "180", "million", "boat", "shipment", "of", "cocaine", "from", "Colombian", "drug", "trafficker"]
+(c1-4 / confiscate-01
+      :ARG0 (c1-0 / country
+                  :name (c1-13 / name
+                               :op1 "US"))
+      :ARG1 (c1-1 / shipment
+                  :consist-of (c1-6 / cocaine)
+                  :mod (c1-9 / boat)
+                  :quant (c1-12 / monetary-quantity
+                                :unit (c1-2 / dollar)
+                                :quant 180000000))
+      :ARG2 (c1-11 / person
+                   :ARG0-of (c1-7 / traffic-01
+                                  :ARG1 (c1-5 / drug))
+                   :mod (c1-3 / country
+                              :name (c1-8 / name
+                                          :op1 "Colombia")))
+      :time (c1-10 / just))
+
+# ::snt ITT: People think 5 tonnes is not a lot of cocaine
+# ::tokens ["ITT", ":", "People", "think", "5", "tonnes", "is", "not", "a", "lot", "of", "cocaine"]
+# ::lemmas ["ITT", ":", "people", "think", "5", "tonnes", "be", "not", "a", "lot", "of", "cocaine"]
+(c2-0 / say-01
+      :ARG1 (c2-3 / think-01
+                  :ARG0 (c2-5 / person)
+                  :ARG1 (c2-1 / cocaine
+                              :quant (c2-4 / lot
+                                           :polarity -)
+                              :domain (c2-6 / mass-quantity
+                                            :unit (c2-2 / ton)
+                                            :quant 5)))
+      :ARG2 c2-5
+      :name (c2-7 / name
+                  :op1 "ITT"))

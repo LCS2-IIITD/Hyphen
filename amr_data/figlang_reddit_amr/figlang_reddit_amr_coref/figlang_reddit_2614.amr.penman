@@ -1,0 +1,54 @@
+# ::snt I'm willing to spend countless hours perfecting my MMO character but i halfass my way through real life.
+# ::tokens ["I", "'m", "willing", "to", "spend", "countless", "hours", "perfecting", "my", "MMO", "character", "but", "i", "halfass", "my", "way", "through", "real", "life", "."]
+# ::lemmas ["i", "be", "willing", "to", "spend", "countless", "hour", "perfect", "my", "MMO", "character", "but", "i", "halfass", "my", "way", "through", "real", "life", "."]
+(c1-3 / will-02
+      :ARG0 (c1-11 / i)
+      :ARG1 (c1-0 / spend-02
+                  :ARG0 c1-11
+                  :ARG1 (c1-2 / countless
+                              :op1 (c1-5 / temporal-quantity
+                                         :unit (c1-4 / hour)
+                                         :quant 1))
+                  :ARG2 (c1-7 / perfect-01
+                              :ARG0 c1-11
+                              :ARG1 (c1-1 / character
+                                          :mod (c1-9 / game
+                                                     :name (c1-12 / name
+                                                                  :op1 "M MMO"))
+                                          :poss c1-11)))
+      :concession-of (c1-10 / halfass-00
+                            :ARG0 c1-11
+                            :ARG1 (c1-13 / way
+                                         :poss c1-11
+                                         :path (c1-8 / live-01
+                                                     :ARG1-of (c1-6 / real-04)))))
+
+# ::snt Well if only life was third person I might actually care about what I look like.
+# ::tokens ["Well", "if", "only", "life", "was", "third", "person", "I", "might", "actually", "care", "about", "what", "I", "look", "like", "."]
+# ::lemmas ["well", "if", "only", "life", "be", "third", "person", "i", "might", "actually", "care", "about", "what", "i", "look", "like", "."]
+(c2-10 / possible-01
+       :ARG1 (c2-2 / care-01
+                   :ARG0 (c2-1 / i)
+                   :ARG1 (c2-7 / thing
+                               :ARG1-of (c2-8 / look-02
+                                              :ARG0 c2-1))
+                   :ARG1-of (c2-0 / actual-02))
+       :condition (c2-6 / person
+                        :ord (c2-5 / ordinal-entity
+                                   :value 3)
+                        :domain (c2-9 / life)
+                        :mod (c2-4 / only))
+       :mod (c2-3 / well))
+
+# ::snt Actually, your life is third person for everyone except yourself
+# ::tokens ["Actually", ",", "your", "life", "is", "third", "person", "for", "everyone", "except", "yourself"]
+# ::lemmas ["actually", ",", "your", "life", "be", "third", "person", "for", "everyone", "except", "yourself"]
+(c3-4 / person
+      :ord (c3-2 / ordinal-entity
+                 :value 3)
+      :domain (c3-3 / life
+                    :poss (c3-5 / you))
+      :beneficiary (c3-6 / everyone
+                         :ARG2-of (c3-1 / except-01
+                                        :ARG1 c3-5))
+      :ARG1-of (c3-0 / actual-02))

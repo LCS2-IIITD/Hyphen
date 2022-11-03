@@ -1,0 +1,52 @@
+# ::snt You go HILARY ! ! ! GOD BLESS YOU & GOD BLES US ALL ! ! !
+# ::tokens ["You", "go", "HILARY", "!", "!", "!", "GOD", "BLESS", "YOU", "&", "GOD", "BLES", "US", "ALL", "!", "!", "!"]
+# ::lemmas ["you", "go", "HILARY", "!", "!", "!", "GOD", "bless", "you", "&", "GOD", "BLES", "US", "all", "!", "!", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-6 / go-01
+                  :ARG1 (c1-10 / you)
+                  :manner (c1-4 / lucky)
+                  :mode imperative)
+      :snt2 (c1-1 / and
+                  :op1 (c1-9 / bless-01
+                             :ARG0 (c1-7 / person
+                                         :name (c1-5 / name
+                                                     :op1 "God"))
+                             :ARG1 (c1-11 / you)
+                             :mode expressive)
+                  :op2 (c1-0 / bless-01
+                             :ARG0 c1-7
+                             :ARG1 (c1-2 / we
+                                         :mod (c1-3 / all))
+                             :mode expressive)))
+
+# ::snt God does not bless Baby Killers who slaughter children in Partial Birth Abortions
+# ::tokens ["God", "does", "not", "bless", "Baby", "Killers", "who", "slaughter", "children", "in", "Partial", "Birth", "Abortions"]
+# ::lemmas ["God", "do", "not", "bless", "Baby", "Killers", "who", "slaughter", "child", "in", "Partial", "Birth", "Abortions"]
+(c2-7 / bless-01
+      :ARG0 (c2-8 / person
+                  :name (c2-9 / name
+                              :op1 "God"))
+      :ARG1 (c2-6 / person
+                  :ARG0-of (c2-3 / kill-01
+                                 :ARG1 (c2-1 / baby))
+                  :ARG0-of (c2-0 / slaughter-01
+                                 :ARG1 (c2-4 / child)
+                                 :manner (c2-2 / abort-01
+                                               :ARG0 c2-6
+                                               :ARG1 c2-4
+                                               :degree (c2-5 / part))))
+      :polarity -)
+
+# ::snt oh really if you kill a pregnant woman you get charged with murders
+# ::tokens ["oh", "really", "if", "you", "kill", "a", "pregnant", "woman", "you", "get", "charged", "with", "murders"]
+# ::lemmas ["oh", "really", "if", "you", "kill", "a", "pregnant", "woman", "you", "get", "charge", "with", "murder"]
+(c3-0 / charge-05
+      :ARG1 (c3-7 / you)
+      :ARG2 (c3-5 / murder-01
+                  :ARG0 c3-7)
+      :condition (c3-6 / kill-01
+                       :ARG0 c3-7
+                       :ARG1 (c3-1 / woman
+                                   :ARG1-of (c3-4 / impregnate-01)))
+      :ARG1-of (c3-3 / real-04
+                     :mod (c3-2 / oh)))

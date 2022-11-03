@@ -1,0 +1,244 @@
+# ::snt The 'Torygraph' has won the 'Newspaper WIMPS of the year' prize in perpetuity
+# ::tokens ["The", "'", "Torygraph", "'", "has", "won", "the", "'", "Newspaper", "WIMPS", "of", "the", "year", "'", "prize", "in", "perpetuity"]
+# ::lemmas ["the", "'", "Torygraph", "'", "have", "win", "the", "'", "Newspaper", "wimps", "of", "the", "year", "'", "prize", "in", "perpetuity"]
+(c1-0 / win-01
+      :ARG0 (c1-3 / publication
+                  :name (c1-2 / name
+                              :op1 "Tory"
+                              :op2 "graph"))
+      :ARG1 (c1-4 / prize
+                  :name c1-2
+                  :op1 "Newspaper"
+                  :op2 "Wimps"
+                  :op3 "of"
+                  :op4 "the"
+                  :op5 "Year")
+      :ARG4 c1-3
+      :duration (c1-1 / perpetuity))
+
+# ::snt correct.
+# ::tokens ["correct", "."]
+# ::lemmas ["correct", "."]
+(c2-0 / correct-02)
+
+# ::snt Shame on The Telegraph! Cowards!
+# ::tokens ["Shame", "on", "The", "Telegraph", "!", "Cowards", "!"]
+# ::lemmas ["shame", "on", "the", "Telegraph", "!", "coward", "!"]
+(c3-0 / multi-sentence
+      :snt1 (c3-4 / shame-01
+                  :ARG1 (c3-1 / newspaper
+                              :name (c3-2 / name
+                                          :op1 "The"
+                                          :op2 "Telegraph")))
+      :snt2 (c3-3 / coward))
+
+# ::snt if it was on that page it seems like they have removed it ...
+# ::tokens ["if", "it", "was", "on", "that", "page", "it", "seems", "like", "they", "have", "removed", "it", "..."]
+# ::lemmas ["if", "it", "be", "on", "that", "page", "it", "seem", "like", "they", "have", "remove", "it", "..."]
+(c4-5 / seem-01
+      :ARG1 (c4-3 / remove-01
+                  :ARG0 (c4-6 / they)
+                  :ARG1 (c4-1 / it))
+      :condition (c4-0 / be-located-at-91
+                       :ARG1 c4-1
+                       :ARG2 (c4-2 / page
+                                   :mod (c4-4 / that))))
+
+# ::snt Shame on you, fucking cowards. You don't deserve to be considered a Western newspaper.
+# ::tokens ["Shame", "on", "you", ",", "fucking", "cowards", ".", "You", "do", "n't", "deserve", "to", "be", "considered", "a", "Western", "newspaper", "."]
+# ::lemmas ["shame", "on", "you", ",", "fucking", "coward", ".", "you", "do", "not", "deserve", "to", "be", "consider", "a", "Western", "newspaper", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-10 / shame-01
+                   :ARG1 (c5-0 / you
+                               :mod (c5-7 / coward
+                                          :mod (c5-2 / fucking
+                                                     :mode expressive))))
+      :snt2 (c5-6 / deserve-01
+                  :ARG0 (c5-9 / you)
+                  :ARG1 (c5-8 / consider-02
+                              :ARG1 (c5-4 / newspaper
+                                          :mod (c5-1 / world-region
+                                                     :name (c5-5 / name
+                                                                 :op1 "West")))
+                              :ARG2 c5-9)
+                  :polarity -))
+
+# ::snt WHAT. THE. FUCK.These cartoons now need to be reprinted by any self-respecting publication.
+# ::tokens ["WHAT", ".", "THE", ".", "FUCK.These", "cartoons", "now", "need", "to", "be", "reprinted", "by", "any", "self", "-", "respecting", "publication", "."]
+# ::lemmas ["what", ".", "the", ".", "FUCK.These", "cartoon", "now", "need", "to", "be", "reprint", "by", "any", "self", "-", "respect", "publication", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-11 / amr-unknown
+                   :mod (c6-0 / fuck
+                              :mode expressive))
+      :snt2 (c6-2 / obligate-01
+                  :ARG2 (c6-7 / reprint-01
+                              :ARG0 (c6-6 / publication
+                                          :ARG0-of (c6-4 / respect-01
+                                                         :ARG1 (c6-9 / self))
+                                          :mod (c6-3 / any))
+                              :ARG1 (c6-8 / cartoon
+                                          :mod (c6-10 / this)))
+                  :time (c6-5 / now)))
+
+# ::snt The spirit of crusading journalism left the Telegraph long ago.
+# ::tokens ["The", "spirit", "of", "crusading", "journalism", "left", "the", "Telegraph", "long", "ago", "."]
+# ::lemmas ["the", "spirit", "of", "crusading", "journalism", "leave", "the", "Telegraph", "long", "ago", "."]
+(c7-1 / leave-15
+      :ARG0 (c7-8 / spirit
+                  :mod (c7-0 / journalism
+                             :ARG0-of (c7-6 / crusade-01)))
+      :ARG1 (c7-3 / newspaper
+                  :name (c7-4 / name
+                              :op1 "Telegraph"))
+      :time (c7-2 / before
+                  :op1 (c7-5 / now)
+                  :quant (c7-7 / long)))
+
+# ::snt OK I just got a full screendump from another source. Fuck.
+# ::tokens ["OK", "I", "just", "got", "a", "full", "screendump", "from", "another", "source", ".", "Fuck", "."]
+# ::lemmas ["ok", "i", "just", "get", "a", "full", "screendump", "from", "another", "source", ".", "fuck", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-3 / okay-01
+                  :ARG1 (c8-7 / get-01
+                              :ARG0 (c8-5 / i)
+                              :ARG1 (c8-8 / screendump
+                                          :mod (c8-1 / full))
+                              :ARG2 (c8-4 / source
+                                          :mod (c8-9 / another))
+                              :time (c8-0 / just)))
+      :snt2 (c8-6 / fuck-01))
+
+# ::snt Cowards.
+# ::tokens ["Cowards", "."]
+# ::lemmas ["coward", "."]
+(c10-0 / coward)
+
+# ::snt how come?
+# ::tokens ["how", "come", "?"]
+# ::lemmas ["how", "come", "?"]
+(c11-1 / amr-unknown
+       :ARG0-of (c11-0 / cause-01))
+
+# ::snt zoruna gitmi galiba asfdahsd
+# ::tokens ["zoruna", "gitmi", "galiba", "asfdahsd"]
+# ::lemmas ["zoruna", "gitmi", "galiba", "asfdahsd"]
+(c12-0 / string-entity
+       :value "zoruna gitmi galiba")
+
+# ::snt Courageux mais pas tmraire
+# ::tokens ["Courageux", "mais", "pas", "tmraire"]
+# ::lemmas ["Courageux", "mais", "pas", "tmraire"]
+(c13-5 / say-01
+       :ARG0 (c13-0 / i)
+       :ARG1 (c13-1 / nigh
+                    :domain (c13-3 / person
+                                   :name (c13-2 / name
+                                                :op1 "Courageux")))
+       :ARG2 (c13-6 / person
+                    :name (c13-4 / name
+                                 :op1 "Tmraire")))
+
+# ::snt pixelating the cover in their picture.
+# ::tokens ["pixelating", "the", "cover", "in", "their", "picture", "."]
+# ::lemmas ["pixelate", "the", "cover", "in", "their", "picture", "."]
+(c14-1 / pixelate-01
+       :ARG1 (c14-2 / cover)
+       :location (c14-3 / picture
+                        :poss (c14-0 / they)))
+
+# ::snt team telegraph wt happened freedom of speech. Only reserved to Hindus. Nations wants know.
+# ::tokens ["team", "telegraph", "wt", "happened", "freedom", "of", "speech", ".", "Only", "reserved", "to", "Hindus", ".", "Nations", "wants", "know", "."]
+# ::lemmas ["team", "telegraph", "wt", "happen", "freedom", "of", "speech", ".", "only", "reserve", "to", "Hindus", ".", "nation", "wants", "know", "."]
+(c15-2 / multi-sentence
+       :snt1 (c15-12 / telegraph-01
+                     :ARG0 (c15-10 / team)
+                     :ARG1 (c15-1 / free-04
+                                  :ARG3 (c15-11 / speak-01)))
+       :snt2 (c15-8 / reserve-01
+                    :ARG2 (c15-7 / person
+                                 :mod (c15-4 / religious-group
+                                             :name (c15-5 / name
+                                                          :op1 "Hindu")))
+                    :mod (c15-3 / only))
+       :snt3 (c15-0 / want-01
+                    :ARG0 (c15-6 / nation)
+                    :ARG1 (c15-9 / know-01
+                                 :ARG0 c15-6)))
+
+# ::snt link/full screendump, please? despicable, if this is genuine
+# ::tokens ["link", "/", "full", "screendump", ",", "please", "?", "despicable", ",", "if", "this", "is", "genuine"]
+# ::lemmas ["link", "/", "full", "screendump", ",", "please", "?", "despicable", ",", "if", "this", "be", "genuine"]
+(c16-2 / multi-sentence
+       :snt1 (c16-8 / slash
+                    :op1 (c16-1 / link-01
+                                :ARG0 (c16-0 / you)
+                                :mode imperative
+                                :polite +)
+                    :op2 (c16-4 / screed-01
+                                :ARG0 c16-0
+                                :degree (c16-3 / full)
+                                :mode imperative
+                                :polite +))
+       :snt2 (c16-5 / despicable
+                    :domain (c16-7 / you)
+                    :condition (c16-6 / genuine
+                                      :domain (c16-9 / this))))
+
+# ::snt and just like that, they gave the terrorists exactly what they wanted.
+# ::tokens ["and", "just", "like", "that", ",", "they", "gave", "the", "terrorists", "exactly", "what", "they", "wanted", "."]
+# ::lemmas ["and", "just", "like", "that", ",", "they", "give", "the", "terrorist", "exactly", "what", "they", "want", "."]
+(c17-9 / and
+       :op2 (c17-6 / give-01
+                   :ARG0 (c17-8 / they)
+                   :ARG1 (c17-7 / thing
+                                :ARG1-of (c17-1 / want-01
+                                                :ARG0 (c17-4 / terrorist))
+                                :mod (c17-2 / exact))
+                   :ARG2 c17-4
+                   :ARG1-of (c17-5 / resemble-01
+                                   :ARG2 (c17-3 / that)
+                                   :mod (c17-0 / just))))
+
+# ::snt LOST AGAINST TERROR!
+# ::tokens ["LOST", "AGAINST", "TERROR", "!"]
+# ::lemmas ["LOST", "AGAINST", "TERROR", "!"]
+(c18-1 / lose-02
+       :ARG1 (c18-2 / thing
+                    :ARG0-of (c18-0 / oppose-01
+                                    :ARG1 (c18-3 / terrorist))))
+
+# ::snt : blurs out the French mag's cover cartoon of Mohammed &lt;&lt; Islamophobia
+# ::tokens [":", "blurs", "out", "the", "French", "mag", "'s", "cover", "cartoon", "of", "Mohammed", "&", "lt;&lt", ";", "Islamophobia"]
+# ::lemmas [":", "blur", "out", "the", "French", "mag", "'s", "cover", "cartoon", "of", "Mohammed", "&", "lt;&lt", ";", "Islamophobia"]
+(c19-1 / blur-01
+       :ARG1 (c19-6 / cartoon
+                    :ARG1-of (c19-5 / cover-03)
+                    :poss (c19-0 / magazine
+                                 :name (c19-2 / name
+                                              :op1 "French"
+                                              :op2 "Mag"))
+                    :topic (c19-9 / and
+                                  :op1 (c19-4 / person
+                                              :name (c19-3 / name
+                                                           :op1 "Mohammed"))
+                                  :op2 (c19-7 / religious-group
+                                              :name (c19-8 / name
+                                                           :op1 "Islamophobia")))))
+
+# ::snt . COWARDS&gt;&gt;&gt; &lt;&lt;&lt;COWARDS.
+# ::tokens [".", "COWARDS&gt;&gt;&gt", ";", "&", "lt;&lt;&lt;COWARDS", "."]
+# ::lemmas [".", "COWARDS&gt;&gt;&gt", ";", "&", "lt;&lt;&lt;COWARDS", "."]
+(c20-2 / and
+       :op1 (c20-1 / flag)
+       :op2 (c20-0 / string-entity
+                   :value "COWARDS"))
+
+# ::snt there are too many idiots in this country :|
+# ::tokens ["there", "are", "too", "many", "idiots", "in", "this", "country", ":|"]
+# ::lemmas ["there", "be", "too", "many", "idiot", "in", "this", "country", ":|"]
+(c21-2 / idiot
+       :location (c21-3 / country
+                        :mod (c21-5 / this))
+       :ARG1-of (c21-0 / have-quant-91
+                       :ARG2 (c21-1 / many)
+                       :ARG3 (c21-4 / too)))

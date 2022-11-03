@@ -1,0 +1,24 @@
+# ::snt I think
+# ::tokens ["I", "think"]
+# ::lemmas ["i", "think"]
+(c1-1 / think-01
+      :ARG0 (c1-0 / i))
+
+# ::snt Dont worry, the FDA hasnt actually approved any vaccines from this facility
+# ::tokens ["Do", "nt", "worry", ",", "the", "FDA", "has", "nt", "actually", "approved", "any", "vaccines", "from", "this", "facility"]
+# ::lemmas ["do", "not", "worry", ",", "the", "FDA", "have", "not", "actually", "approve", "any", "vaccine", "from", "this", "facility"]
+(c2-4 / worry-02
+      :ARG0 (c2-9 / you)
+      :ARG1-of (c2-3 / cause-01
+                     :ARG0 (c2-1 / approve-01
+                                 :ARG0 (c2-7 / government-organization
+                                             :name (c2-8 / name
+                                                         :op1 "FDA"))
+                                 :ARG1 (c2-5 / vaccine
+                                             :source (c2-2 / facility
+                                                           :mod (c2-6 / this))
+                                             :mod (c2-10 / any))
+                                 :ARG1-of (c2-0 / actual-02)
+                                 :polarity -))
+      :polarity -
+      :mode imperative)

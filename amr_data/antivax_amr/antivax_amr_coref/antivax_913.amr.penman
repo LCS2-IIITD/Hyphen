@@ -1,0 +1,62 @@
+# ::snt God damnit probably allergies and stuff I guess!
+# ::tokens ["God", "damnit", "probably", "allergies", "and", "stuff", "I", "guess", "!"]
+# ::lemmas ["God", "damnit", "probably", "allergy", "and", "stuff", "i", "guess", "!"]
+(c1-4 / guess-01
+      :ARG0 (c1-5 / i)
+      :ARG1 (c1-3 / probable
+                  :domain (c1-2 / and
+                                :op1 (c1-6 / allergy)
+                                :op2 (c1-0 / stuff)))
+      :mod (c1-1 / damn
+                 :mode expressive))
+
+# ::snt They will ask you a few questions I'm afraid! But it's to help you
+# ::tokens ["They", "will", "ask", "you", "a", "few", "questions", "I", "'m", "afraid", "!", "But", "it", "'s", "to", "help", "you"]
+# ::lemmas ["they", "will", "ask", "you", "a", "few", "question", "i", "be", "afraid", "!", "but", "it", "be", "to", "help", "you"]
+(c2-9 / multi-sentence
+      :snt1 (c2-1 / fear-01
+                  :ARG0 (c2-8 / i)
+                  :ARG1 (c2-0 / ask-01
+                              :ARG0 (c2-7 / they)
+                              :ARG1 (c2-3 / question
+                                          :quant (c2-6 / few))
+                              :ARG2 (c2-10 / you)))
+      :snt2 (c2-2 / contrast-01
+                  :ARG2 (c2-4 / help-01
+                              :ARG0 (c2-5 / it)
+                              :ARG2 (c2-11 / you))))
+
+# ::snt I hope my ones are nice, hopefully they dont talk to me either because I hate talking to people
+# ::tokens ["I", "hope", "my", "ones", "are", "nice", ",", "hopefully", "they", "do", "nt", "talk", "to", "me", "either", "because", "I", "hate", "talking", "to", "people"]
+# ::lemmas ["i", "hope", "my", "one", "be", "nice", ",", "hopefully", "they", "do", "not", "talk", "to", "i", "either", "because", "i", "hate", "talk", "to", "people"]
+(c3-1 / and
+      :op1 (c3-4 / hope-01
+                 :ARG0 (c3-9 / i)
+                 :ARG1 (c3-10 / nice-01
+                              :ARG1 (c3-5 / one
+                                          :poss c3-9)))
+      :op2 (c3-8 / hope-01
+                 :ARG0 c3-9
+                 :ARG1 (c3-6 / talk-01
+                             :ARG0 c3-5
+                             :ARG2 c3-9
+                             :mod (c3-11 / either)
+                             :ARG1-of (c3-2 / cause-01
+                                            :ARG0 (c3-0 / hate-01
+                                                        :ARG0 c3-9
+                                                        :ARG1 (c3-3 / talk-01
+                                                                    :ARG0 c3-9
+                                                                    :ARG2 (c3-7 / person))))
+                             :polarity -)))
+
+# ::snt Good luck, everyone at my vaccination centre was lovely
+# ::tokens ["Good", "luck", ",", "everyone", "at", "my", "vaccination", "centre", "was", "lovely"]
+# ::lemmas ["good", "luck", ",", "everyone", "at", "my", "vaccination", "centre", "be", "lovely"]
+(c4-6 / multi-sentence
+      :snt1 (c4-2 / luck
+                  :ARG1-of (c4-4 / good-02))
+      :snt2 (c4-3 / lovely
+                  :domain (c4-7 / everyone
+                                :location (c4-0 / center
+                                                :purpose (c4-1 / vaccinate-01
+                                                               :ARG1 (c4-5 / i))))))

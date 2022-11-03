@@ -1,0 +1,79 @@
+# ::snt Can't Wait
+# ::tokens ["Ca", "n't", "Wait"]
+# ::lemmas ["can", "not", "wait"]
+(c1-2 / possible-01
+      :ARG1 (c1-0 / wait-01
+                  :ARG1 (c1-1 / you))
+      :polarity -)
+
+# ::snt Y?
+# ::tokens ["Y", "?"]
+# ::lemmas ["Y", "?"]
+(c2-0 / yep
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt Sis relax youve gotten people that agree with you. Were still watching
+# ::tokens ["Sis", "relax", "you", "ve", "gotten", "people", "that", "agree", "with", "you", ".", "Were", "still", "watching"]
+# ::lemmas ["Sis", "relax", "you", "ve", "get", "people", "that", "agree", "with", "you", ".", "be", "still", "watch"]
+(c4-2 / multi-sentence
+      :snt1 (c4-7 / and
+                  :op1 (c4-3 / sit-01
+                             :ARG1 (c4-1 / you)
+                             :mode imperative)
+                  :op2 (c4-8 / get-02
+                             :ARG0 c4-1
+                             :ARG1 (c4-4 / person
+                                         :ARG0-of (c4-6 / agree-01
+                                                        :ARG2 c4-1))))
+      :snt2 (c4-5 / watch-01
+                  :ARG0 (c4-9 / i)
+                  :mod (c4-0 / still)))
+
+# ::snt Lol
+# ::tokens ["Lol"]
+# ::lemmas ["Lol"]
+(c5-1 / laugh-01
+      :manner (c5-0 / loud)
+      :mode expressive)
+
+# ::snt No we wont
+# ::tokens ["No", "we", "wo", "nt"]
+# ::lemmas ["no", "we", "will", "not"]
+(c6-0 / do-02
+      :ARG0 (c6-1 / we)
+      :polarity -)
+
+# ::snt Yup we will lol!
+# ::tokens ["Yup", "we", "will", "lol", "!"]
+# ::lemmas ["yup", "we", "will", "lol", "!"]
+(c7-4 / do-02
+      :ARG0 (c7-2 / we)
+      :mod (c7-0 / yup)
+      :ARG2-of (c7-1 / laugh-01
+                     :ARG0 (c7-3 / i)
+                     :manner (c7-5 / loud)
+                     :mode expressive))
+
+# ::snt Yawn
+# ::tokens ["Yawn"]
+# ::lemmas ["yawn"]
+(c8-0 / yawn-01)
+
+# ::snt Yes we will.
+# ::tokens ["Yes", "we", "will", "."]
+# ::lemmas ["yes", "we", "will", "."]
+(c9-0 / do-02
+      :ARG0 (c9-1 / we))
+
+# ::snt Not until and responds to what said people will not be watching
+# ::tokens ["Not", "until", "and", "responds", "to", "what", "said", "people", "will", "not", "be", "watching"]
+# ::lemmas ["not", "until", "and", "respond", "to", "what", "say", "people", "will", "not", "be", "watch"]
+(c10-2 / and
+       :op1 (c10-6 / until
+                   :polarity -)
+       :op2 (c10-1 / respond-01
+                   :ARG1 (c10-5 / thing
+                                :ARG1-of (c10-4 / watch-01
+                                                :ARG0 (c10-3 / person
+                                                             :ARG1-of (c10-0 / say-01))
+                                                :polarity -))))

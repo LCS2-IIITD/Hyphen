@@ -1,0 +1,36 @@
+# ::snt It's getting cold, I'm afraid for my power bill, what can I do?
+# ::tokens ["It", "'s", "getting", "cold", ",", "I", "'m", "afraid", "for", "my", "power", "bill", ",", "what", "can", "I", "do", "?"]
+# ::lemmas ["it", "be", "get", "cold", ",", "i", "be", "afraid", "for", "my", "power", "bill", ",", "what", "can", "i", "do", "?"]
+(c1-1 / and
+      :op1 (c1-7 / get-03
+                 :ARG1 (c1-8 / it)
+                 :ARG2 (c1-3 / cold-01))
+      :op2 (c1-2 / fear-01
+                 :ARG0 (c1-4 / i)
+                 :ARG1 (c1-9 / bill-01
+                             :ARG2 c1-4
+                             :ARG3 (c1-6 / power)))
+      :op3 (c1-5 / possible-01
+                 :ARG1 (c1-0 / do-02
+                             :ARG0 c1-4
+                             :ARG1 (c1-10 / amr-unknown))))
+
+# ::snt Electric blankets are a happy medium.
+# ::tokens ["Electric", "blankets", "are", "a", "happy", "medium", "."]
+# ::lemmas ["electric", "blanket", "be", "a", "happy", "medium", "."]
+(c2-1 / medium
+      :ARG2-of (c2-2 / happy-01)
+      :domain (c2-0 / blanket
+                    :mod (c2-3 / electric)))
+
+# ::snt beware ones made in China
+# ::tokens ["beware", "ones", "made", "in", "China"]
+# ::lemmas ["beware", "one", "make", "in", "China"]
+(c3-2 / beware-01
+      :ARG0 (c3-5 / you)
+      :ARG1 (c3-1 / one
+                  :ARG1-of (c3-3 / make-01
+                                 :location (c3-0 / country
+                                                 :name (c3-4 / name
+                                                             :op1 "China"))))
+      :mode imperative)

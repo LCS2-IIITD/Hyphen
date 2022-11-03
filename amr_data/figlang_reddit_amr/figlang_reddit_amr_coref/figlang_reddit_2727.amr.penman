@@ -1,0 +1,46 @@
+# ::snt Ballet Lessons
+# ::tokens ["Ballet", "Lessons"]
+# ::lemmas ["Ballet", "Lessons"]
+(c1-1 / lesson
+      :topic (c1-0 / ballet))
+
+# ::snt wheres freddy He should be stumbling with one leg in the air
+# ::tokens ["where", "s", "freddy", "He", "should", "be", "stumbling", "with", "one", "leg", "in", "the", "air"]
+# ::lemmas ["where", "s", "freddy", "he", "should", "be", "stumble", "with", "one", "leg", "in", "the", "air"]
+(c2-7 / multi-sentence
+      :snt1 (c2-2 / wheres-freddy)
+      :snt2 (c2-4 / recommend-01
+                  :ARG1 (c2-0 / stumble-01
+                              :ARG0 (c2-3 / he
+                                          :part (c2-5 / leg
+                                                      :quant 1))
+                              :manner (c2-6 / be-located-at-91
+                                            :ARG1 c2-5
+                                            :ARG2 (c2-1 / air)))))
+
+# ::snt I think this is for ladies only, so Funtime Freddy wasn't invited.
+# ::tokens ["I", "think", "this", "is", "for", "ladies", "only", ",", "so", "Funtime", "Freddy", "was", "n't", "invited", "."]
+# ::lemmas ["i", "think", "this", "be", "for", "lady", "only", ",", "so", "Funtime", "Freddy", "be", "not", "invite", "."]
+(c3-5 / think-01
+      :ARG0 (c3-8 / i)
+      :ARG1 (c3-2 / invite-01
+                  :ARG1 (c3-6 / person
+                              :name (c3-9 / name
+                                          :op1 "Funtime"
+                                          :op2 "Freddy"))
+                  :ARG1-of (c3-0 / cause-01
+                                 :ARG0 (c3-3 / have-purpose-91
+                                             :ARG1 (c3-1 / this)
+                                             :ARG2 (c3-7 / lady
+                                                         :mod (c3-4 / only))))
+                  :polarity -))
+
+# ::snt did you just assume his gender
+# ::tokens ["did", "you", "just", "assume", "his", "gender"]
+# ::lemmas ["do", "you", "just", "assume", "his", "gender"]
+(c4-0 / assume-02
+      :polarity (c4-5 / amr-unknown)
+      :ARG0 (c4-4 / you)
+      :ARG1 (c4-2 / gender
+                  :poss (c4-1 / he))
+      :mod (c4-3 / just))

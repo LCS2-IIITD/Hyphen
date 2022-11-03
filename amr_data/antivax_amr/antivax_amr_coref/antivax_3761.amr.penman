@@ -1,0 +1,37 @@
+# ::snt second. so far so good.
+# ::tokens ["second", ".", "so", "far", "so", "good", "."]
+# ::lemmas ["second", ".", "so", "far", "so", "good", "."]
+(c1-0 / good-02
+      :mod (c1-1 / so-far)
+      :li 2)
+
+# ::snt First or second?
+# ::tokens ["First", "or", "second", "?"]
+# ::lemmas ["First", "or", "second", "?"]
+(c2-1 / amr-choice
+      :op1 (c2-0 / ordinal-entity
+                 :value 1)
+      :op2 (c2-2 / ordinal-entity
+                 :value 2))
+
+# ::snt Thanks for being brave and saying such. We have people who are afraid and they need to know it's going to be all right with the vaccine.
+# ::tokens ["Thanks", "for", "being", "brave", "and", "saying", "such", ".", "We", "have", "people", "who", "are", "afraid", "and", "they", "need", "to", "know", "it", "'s", "going", "to", "be", "all", "right", "with", "the", "vaccine", "."]
+# ::lemmas ["thank", "for", "be", "brave", "and", "say", "such", ".", "we", "have", "people", "who", "be", "afraid", "and", "they", "need", "to", "know", "it", "be", "go", "to", "be", "all", "right", "with", "the", "vaccine", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-7 / thank-01
+                   :ARG1 (c3-13 / you)
+                   :ARG2 (c3-1 / and
+                               :op1 (c3-8 / brave-02
+                                          :ARG0 c3-13)
+                               :op2 (c3-0 / say-01
+                                          :ARG0 c3-13
+                                          :ARG1 (c3-9 / such))))
+       :snt2 (c3-5 / have-03
+                   :ARG0 (c3-4 / we)
+                   :ARG1 (c3-10 / person
+                                :ARG0-of (c3-3 / fear-01)
+                                :ARG0-of (c3-12 / need-01
+                                                :ARG1 (c3-2 / know-01
+                                                            :ARG0 c3-10
+                                                            :ARG1 (c3-14 / all-right
+                                                                         :domain (c3-6 / vaccine)))))))

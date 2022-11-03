@@ -1,0 +1,30 @@
+# ::snt Yes!
+# ::tokens ["Yes", "!"]
+# ::lemmas ["yes", "!"]
+(c1-0 / yes)
+
+# ::snt Celebratory sushi?
+# ::tokens ["Celebratory", "sushi", "?"]
+# ::lemmas ["Celebratory", "sushi", "?"]
+(c2-0 / sushi
+      :polarity (c2-1 / amr-unknown)
+      :mod (c2-2 / celebrity))
+
+# ::snt Let's give it -3 weeks and go get lunch together!
+# ::tokens ["Let", "'s", "give", "it", "-3", "weeks", "and", "go", "get", "lunch", "together", "!"]
+# ::lemmas ["let", "us", "give", "it", "-3", "weeks", "and", "go", "get", "lunch", "together", "!"]
+(c3-1 / and
+      :op1 (c3-5 / give-01
+                 :ARG0 (c3-2 / we)
+                 :ARG1 (c3-6 / it)
+                 :ARG2 c3-2
+                 :duration (c3-3 / temporal-quantity
+                                 :unit (c3-8 / week)
+                                 :quant 3)
+                 :mode imperative)
+      :op2 (c3-7 / go-05
+                 :ARG0 c3-2
+                 :ARG1 (c3-0 / get-together-14
+                             :ARG0 c3-2
+                             :ARG1 (c3-4 / lunch))
+                 :mode imperative))

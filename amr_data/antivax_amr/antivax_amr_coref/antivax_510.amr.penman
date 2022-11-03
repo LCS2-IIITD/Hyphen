@@ -1,0 +1,61 @@
+# ::snt Nice one
+# ::tokens ["Nice", "one"]
+# ::lemmas ["nice", "one"]
+(c1-1 / nice-01
+      :ARG1 (c1-0 / one))
+
+# ::snt Check back in a few months
+# ::tokens ["Check", "back", "in", "a", "few", "months"]
+# ::lemmas ["check", "back", "in", "a", "few", "months"]
+(c2-2 / check-01
+      :ARG0 (c2-7 / you)
+      :direction (c2-4 / back)
+      :time (c2-0 / after
+                  :op1 (c2-6 / now)
+                  :quant (c2-1 / few
+                               :op1 (c2-3 / temporal-quantity
+                                          :unit (c2-5 / month)
+                                          :quant 1)))
+      :mode imperative)
+
+# ::snt I feel thousands of people have had their consent violated by the chief medical officer now advising to give the Pfizer vaccine out with manufacturers instructions
+# ::tokens ["I", "feel", "thousands", "of", "people", "have", "had", "their", "consent", "violated", "by", "the", "chief", "medical", "officer", "now", "advising", "to", "give", "the", "Pfizer", "vaccine", "out", "with", "manufacturers", "instructions"]
+# ::lemmas ["i", "feel", "thousands", "of", "people", "have", "have", "their", "consent", "violate", "by", "the", "chief", "medical", "officer", "now", "advise", "to", "give", "the", "Pfizer", "vaccine", "out", "with", "manufacturer", "instruction"]
+(c5-3 / feel-02
+      :ARG0 (c5-15 / i)
+      :ARG1 (c5-10 / violate-01
+                   :ARG0 (c5-13 / person
+                                :ARG0-of (c5-1 / advise-01
+                                               :ARG2 (c5-14 / give-out-06
+                                                            :ARG0 c5-13
+                                                            :ARG1 (c5-4 / vaccine
+                                                                        :poss (c5-5 / company
+                                                                                    :name (c5-17 / name
+                                                                                                 :op1 "Pfizer")))
+                                                            :instrument (c5-7 / instruct-01
+                                                                              :ARG0 (c5-0 / company
+                                                                                          :ARG0-of (c5-16 / manufacture-01))
+                                                                              :ARG1 c5-4))
+                                               :time (c5-12 / now))
+                                :ARG0-of (c5-8 / have-org-role-91
+                                               :ARG2 (c5-11 / officer
+                                                            :mod (c5-6 / medicine)
+                                                            :mod (c5-9 / chief))))
+                   :ARG1 (c5-2 / consent-01
+                               :ARG0 c5-13)))
+
+# ::snt Yup Ive had part one .... but prob have my nd postponed
+# ::tokens ["Yup", "I", "ve", "had", "part", "one", "....", "but", "prob", "have", "my", "nd", "postponed"]
+# ::lemmas ["yup", "i", "ve", "have", "part", "one", "....", "but", "prob", "have", "my", "nd", "postpone"]
+(c6-0 / contrast-01
+      :ARG1 (c6-1 / have-06
+                  :ARG0 (c6-6 / i)
+                  :ARG1 (c6-5 / part
+                              :ord (c6-3 / ordinal-entity
+                                         :value 1))
+                  :mod (c6-8 / yup))
+      :ARG2 (c6-2 / obligate-01
+                  :ARG1 c6-6
+                  :ARG2 (c6-4 / postpone-01
+                              :ARG1 (c6-7 / nd
+                                          :poss c6-6))))

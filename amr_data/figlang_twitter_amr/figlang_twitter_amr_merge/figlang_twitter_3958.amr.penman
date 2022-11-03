@@ -1,0 +1,69 @@
+# ::subgraphs [["c1-9", "c1-21", "c1-17", "c1-14", "c1-11", "c1-18", "c1-20", "c1-3", "c1-10", "c1-15", "c1-6", "c1-13", "c1-12", "c1-0", "c1-19", "c1-7", "c1-8", "c1-4", "c1-1", "c1-16", "c1-5", "c1-2"], ["c2-4", "c2-5", "c2-1", "c2-7", "c2-2", "c2-8", "c2-6", "c2-3", "c2-0"], ["c3-7", "c3-2", "c3-8", "c3-6", "c3-3", "c3-9", "c3-5", "c3-4", "c3-0", "c3-1"]]
+(d / dummy
+   :COMMENT (c1-9 / multi
+                  :snt1 (c1-21 / person
+                               :polarity (c1-17 / amr)
+                               :domain (c1-14 / you
+                                              :SAME c3-9
+                                              :SAME c3-8
+                                              :SAME c2-8
+                                              :SAME c1-1)
+                               :ARG0-of (c1-11 / study
+                                               :SAME c1-4
+                                               :SAME c1-20)
+                               :SAME c1-12
+                               :SAME c1-18)
+                  :snt2 (c1-18 / person
+                               :ARG0-of (c1-20 / study)
+                               :domain (c1-3 / i
+                                             :SAME c3-4
+                                             :SAME c2-3
+                                             :COREF c3-4
+                                             :COREF c2-3)
+                               :ARG1-of (c1-10 / actual)
+                               :mod (c1-15 / yeah
+                                           :mod (c1-6 / well)
+                                           :mode expressive))
+                  :snt3 (c1-13 / say
+                               :ARG0 (c1-12 / person
+                                            :ARG0-of (c1-0 / drive
+                                                           :ARG1 (c1-19 / bus))
+                                            :mod (c1-7 / this))
+                               :ARG1 (c1-8 / recommend
+                                           :ARG1 (c1-4 / study
+                                                       :ARG0 (c1-1 / you
+                                                                   :COREF c3-9
+                                                                   :COREF c3-8
+                                                                   :COREF c2-8
+                                                                   :COREF c1-14))
+                                           :condition (c1-16 / be-located-at
+                                                             :ARG1 c1-1
+                                                             :ARG2 (c1-5 / s))
+                                           :polarity -)
+                               :ARG1-of (c1-2 / appear))
+                  :SAME c3-7)
+   :COMMENT (c2-4 / okay
+                  :ARG1 (c2-5 / it
+                              :SAME c3-6
+                              :COREF c3-6)
+                  :ARG1-of (c2-1 / cause
+                                 :ARG0 (c2-7 / young
+                                             :ARG2-of (c2-2 / have-degree
+                                                            :ARG1 (c2-8 / you)
+                                                            :ARG3 (c2-6 / more)
+                                                            :ARG4 (c2-3 / i))
+                                             :time (c2-0 / date
+                                                         :month 6))))
+   :COMMENT (c3-7 / multi
+                  :snt1 (c3-2 / wind-in
+                              :ARG0 (c3-8 / you)
+                              :ARG1 (c3-6 / it)
+                              :mode imperative)
+                  :snt2 (c3-3 / have
+                              :ARG0 (c3-9 / you)
+                              :ARG1 (c3-5 / pint
+                                          :accompanier (c3-4 / i)
+                                          :quant 1)
+                              :mod (c3-0 / still)
+                              :ARG0-of (c3-1 / cause
+                                             :SAME-of c2-1))))

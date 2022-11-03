@@ -1,0 +1,116 @@
+# ::snt press freedom
+# ::tokens ["press", "freedom"]
+# ::lemmas ["press", "freedom"]
+(c1-0 / press-01
+      :ARG1 (c1-1 / free-04))
+
+# ::snt I will be observing the minutes silence at am
+# ::tokens ["I", "will", "be", "observing", "the", "minutes", "silence", "at", "am"]
+# ::lemmas ["i", "will", "be", "observe", "the", "minute", "silence", "at", "be"]
+(c2-1 / observe-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-4 / silence-01
+                  :ARG1 (c2-0 / minute)
+                  :time (c2-3 / date-entity
+                              :time "18:00")))
+
+# ::snt just featured you on my
+# ::tokens ["just", "featured", "you", "on", "my"]
+# ::lemmas ["just", "feature", "you", "on", "my"]
+(c3-2 / feature-01
+      :ARG0 (c3-3 / i)
+      :ARG1 (c3-1 / you)
+      :location c3-3
+      :time (c3-0 / just))
+
+# ::snt . je suis charlie? print their cartoons then.
+# ::tokens [".", "je", "suis", "charlie", "?", "print", "their", "cartoons", "then", "."]
+# ::lemmas [".", "je", "suis", "charlie", "?", "print", "their", "cartoon", "then", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-4 / request-confirmation-91
+                  :ARG1 (c4-5 / country
+                              :name (c4-2 / name
+                                          :op1 "France")))
+      :snt2 (c4-3 / print-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-6 / cartoon
+                              :poss (c4-8 / they))
+                  :time (c4-7 / then)
+                  :mode imperative))
+
+# ::snt sorry i missed that , when have the press ever been free?
+# ::tokens ["sorry", "i", "missed", "that", ",", "when", "have", "the", "press", "ever", "been", "free", "?"]
+# ::lemmas ["sorry", "i", "miss", "that", ",", "when", "have", "the", "press", "ever", "be", "free", "?"]
+(c5-1 / multi-sentence
+      :snt1 (c5-6 / sorry-01
+                  :ARG1 (c5-3 / i)
+                  :ARG2 (c5-4 / miss-02
+                              :ARG0 c5-3
+                              :ARG1 (c5-7 / that)))
+      :snt2 (c5-0 / free-04
+                  :ARG1 (c5-5 / press)
+                  :time (c5-2 / ever)
+                  :time (c5-8 / amr-unknown)))
+
+# ::snt it could have been any one of us
+# ::tokens ["it", "could", "have", "been", "any", "one", "of", "us"]
+# ::lemmas ["it", "could", "have", "be", "any", "one", "of", "we"]
+(c6-1 / possible-01
+      :ARG1 (c6-3 / anyone
+                  :ARG1-of (c6-2 / include-91
+                                 :ARG2 (c6-0 / we))))
+
+# ::snt Je suis Charlie
+# ::tokens ["Je", "suis", "Charlie"]
+# ::lemmas ["Je", "suis", "Charlie"]
+(c7-0 / Je
+      :name (c7-1 / name
+                  :op1 "Charlie"))
+
+# ::snt This is a tribute honoring the Charlie Hebdo magazine staff
+# ::tokens ["This", "is", "a", "tribute", "honoring", "the", "Charlie", "Hebdo", "magazine", "staff"]
+# ::lemmas ["this", "be", "a", "tribute", "honor", "the", "Charlie", "Hebdo", "magazine", "staff"]
+(c9-6 / tribute
+      :ARG0-of (c9-0 / honor-01
+                     :ARG1 (c9-3 / person
+                                 :ARG2-of (c9-5 / staff-01
+                                                :ARG1 (c9-1 / magazine
+                                                            :name (c9-2 / name
+                                                                        :op1 "Charlie"
+                                                                        :op2 " Hebdo")))))
+      :domain (c9-4 / this))
+
+# ::snt L'Amrique se tient avec la France.
+# ::tokens ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+# ::lemmas ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+(c10-4 / tient-of
+       :ARG1 (c10-3 / city
+                    :name (c10-0 / name
+                                 :op1 "L'Amrique"))
+       :ARG3 (c10-2 / country
+                    :name (c10-1 / name
+                                 :op1 "France")))
+
+# ::snt Some may not see this on time. Make a site where we can add our twitter id's in support.
+# ::tokens ["Some", "may", "not", "see", "this", "on", "time", ".", "Make", "a", "site", "where", "we", "can", "add", "our", "twitter", "i", "d", "'s", "in", "support", "."]
+# ::lemmas ["some", "may", "not", "see", "this", "on", "time", ".", "make", "a", "site", "where", "we", "can", "add", "our", "twitter", "i", "d", "be", "in", "support", "."]
+(c11-3 / multi-sentence
+       :snt1 (c11-10 / possible-01
+                     :ARG1 (c11-12 / see-01
+                                   :ARG0 (c11-7 / some)
+                                   :ARG1 (c11-13 / this)
+                                   :mod (c11-5 / on-time)
+                                   :polarity -))
+       :snt2 (c11-11 / make-01
+                     :ARG0 (c11-0 / you)
+                     :ARG1 (c11-2 / site
+                                  :location-of (c11-14 / possible-01
+                                                       :ARG1 (c11-15 / add-02
+                                                                     :ARG0 (c11-1 / we)
+                                                                     :ARG1 (c11-8 / id
+                                                                                  :mod (c11-4 / publication
+                                                                                              :name (c11-9 / name
+                                                                                                           :op1 "Twitter"))
+                                                                                  :ARG0-of (c11-6 / support-01)
+                                                                                  :poss c11-1))))
+                     :mode imperative))

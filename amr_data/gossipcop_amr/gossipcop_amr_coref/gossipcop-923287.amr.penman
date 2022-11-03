@@ -1,0 +1,36 @@
+# ::snt In the name of Jesus you are healed.
+# ::tokens ["In", "the", "name", "of", "Jesus", "you", "are", "healed", "."]
+# ::lemmas ["in", "the", "name", "of", "Jesus", "you", "be", "heal", "."]
+(c1-1 / heal-01
+      :ARG1 (c1-3 / you)
+      :purpose (c1-2 / person
+                     :name (c1-0 / name
+                                 :op1 "Jesus")))
+
+# ::snt Thank you.God Bless you. : )
+# ::tokens ["Thank", "you", ".", "God", "Bless", "you", ".", ":", ")"]
+# ::lemmas ["thank", "you", ".", "God", "bless", "you", ".", ":", ")"]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / thank-01
+                  :ARG0 (c2-6 / i)
+                  :ARG1 (c2-1 / you))
+      :snt2 (c2-0 / bless-01
+                  :ARG0 (c2-5 / person
+                              :name (c2-3 / name
+                                          :op1 "God"))
+                  :ARG1 (c2-8 / you)
+                  :mod (c2-4 / emoticon
+                             :value ":)")))
+
+# ::snt AMEN!
+# ::tokens ["AMEN", "!"]
+# ::lemmas ["AMEN", "!"]
+(c3-0 / amen
+      :mode expressive)
+
+# ::snt Prayers sent
+# ::tokens ["Prayers", "sent"]
+# ::lemmas ["prayer", "send"]
+(c4-2 / thing
+      :ARG1-of (c4-1 / pray-01)
+      :ARG1-of (c4-0 / send-01))

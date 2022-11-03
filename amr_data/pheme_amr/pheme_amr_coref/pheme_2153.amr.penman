@@ -1,0 +1,140 @@
+# ::snt . Should have sent those police to
+# ::tokens [".", "Should", "have", "sent", "those", "police", "to"]
+# ::lemmas [".", "should", "have", "send", "those", "police", "to"]
+(c1-2 / recommend-01
+      :ARG1 (c1-3 / send-01
+                  :ARG1 (c1-1 / police
+                              :mod (c1-4 / that))
+                  :ARG2 (c1-0 / location)))
+
+# ::snt it looks like they shoot everywhere !
+# ::tokens ["it", "looks", "like", "they", "shoot", "everywhere", "!"]
+# ::lemmas ["it", "look", "like", "they", "shoot", "everywhere", "!"]
+(c2-0 / look-02
+      :ARG0 (c2-2 / it)
+      :ARG1 (c2-3 / shoot-01
+                  :ARG0 (c2-4 / they)
+                  :ARG2 (c2-1 / everywhere)))
+
+# ::snt . ^^
+# ::tokens [".", "^^"]
+# ::lemmas [".", "^^"]
+(c3-0 / ^^)
+
+# ::snt "Siege is over: police" .
+# ::tokens ["\"", "Siege", "is", "over", ":", "police", "\"", "."]
+# ::lemmas ["\"", "siege", "be", "over", ":", "police", "\"", "."]
+(c4-1 / police
+      :ARG0-of (c4-2 / mean-01
+                     :ARG1 (c4-0 / over-01
+                                 :ARG1 (c4-3 / iege-01))))
+
+# ::snt don't understand how the police could endanger the hostages by storming in there. Hope nobody died
+# ::tokens ["do", "n't", "understand", "how", "the", "police", "could", "endanger", "the", "hostages", "by", "storming", "in", "there", ".", "Hope", "nobody", "died"]
+# ::lemmas ["do", "not", "understand", "how", "the", "police", "could", "endanger", "the", "hostage", "by", "storm", "in", "there", ".", "hope", "nobody", "die"]
+(c6-1 / multi-sentence
+      :snt1 (c6-2 / understand-01
+                  :ARG0 (c6-4 / i)
+                  :ARG1 (c6-6 / possible-01
+                              :ARG1 (c6-3 / endanger-01
+                                          :ARG0 (c6-11 / police)
+                                          :ARG1 (c6-0 / hostage)
+                                          :ARG2 (c6-9 / storm-01
+                                                      :ARG0 c6-11
+                                                      :ARG1 (c6-10 / there))))
+                  :polarity -)
+      :snt2 (c6-12 / hope-01
+                   :ARG0 (c6-8 / i)
+                   :ARG1 (c6-7 / die-01
+                               :ARG1 (c6-5 / nobody))))
+
+# ::snt appear? it's over... injured have been removed...the gunman has been taken out
+# ::tokens ["appear", "?", "it", "'s", "over", "...", "injured", "have", "been", "removed", "...", "the", "gunman", "has", "been", "taken", "out"]
+# ::lemmas ["appear", "?", "it", "be", "over", "...", "injure", "have", "be", "remove", "...", "the", "gunman", "have", "be", "take", "out"]
+(c7-10 / appear-02
+       :polarity (c7-1 / amr-unknown)
+       :ARG1 (c7-0 / over-01
+                   :ARG1 (c7-2 / it))
+       :ARG1-of (c7-6 / cause-01
+                      :ARG0 (c7-3 / and
+                                  :op1 (c7-5 / remove-01
+                                             :ARG1 (c7-4 / person
+                                                         :ARG1-of (c7-7 / injure-01)))
+                                  :op2 (c7-9 / take-out-11
+                                             :ARG1 (c7-8 / gunman)))))
+
+# ::snt I hope the terrorist is enjoying his empathy
+# ::tokens ["I", "hope", "the", "terrorist", "is", "enjoying", "his", "empathy"]
+# ::lemmas ["i", "hope", "the", "terrorist", "be", "enjoy", "his", "empathy"]
+(c8-0 / hope-01
+      :ARG0 (c8-3 / i)
+      :ARG1 (c8-2 / enjoy-01
+                  :ARG0 (c8-4 / terrorist)
+                  :ARG1 (c8-1 / empathy
+                              :poss c8-4)))
+
+# ::snt : DEVELOPING: Police appear to storm cafe in Sydney where hostages have been held Live
+# ::tokens [":", "DEVELOPING", ":", "Police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostages", "have", "been", "held", "Live"]
+# ::lemmas [":", "developing", ":", "police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostage", "have", "be", "hold", "live"]
+(c10-5 / develop-01
+       :ARG1 (c10-9 / appear-02
+                    :ARG1 (c10-8 / storm-02
+                                 :ARG0 (c10-4 / police)
+                                 :ARG1 (c10-6 / cafe
+                                              :location (c10-7 / city
+                                                               :name (c10-3 / name
+                                                                            :op1 "Sydney"))
+                                              :location-of (c10-0 / hold-01
+                                                                  :ARG1 (c10-1 / hostage)
+                                                                  :medium (c10-2 / live))))))
+
+# ::snt :! !
+# ::tokens [":", "!", "!"]
+# ::lemmas [":", "!", "!"]
+(c11-0 / thing
+       :mode expressive)
+
+# ::snt ...
+# ::tokens ["..."]
+# ::lemmas ["..."]
+(c13-0 / amr-empty)
+
+# ::snt MT : Police appear to storm cafe in Sydney where hostages have been held Live
+# ::tokens ["MT", ":", "Police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostages", "have", "been", "held", "Live"]
+# ::lemmas ["MT", ":", "police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostage", "have", "be", "hold", "live"]
+(c14-9 / say-01
+       :ARG0 (c14-6 / person
+                    :name (c14-4 / name
+                                 :op1 "MT"))
+       :ARG1 (c14-11 / appear-02
+                     :ARG1 (c14-3 / storm-02
+                                  :ARG0 (c14-10 / police)
+                                  :ARG1 (c14-8 / cafe
+                                               :location (c14-7 / city
+                                                                :name (c14-5 / name
+                                                                             :op1 "Sydney"))
+                                               :location-of (c14-0 / hold-01
+                                                                   :ARG1 (c14-1 / hostage)
+                                                                   :manner (c14-2 / live))))))
+
+# ::snt :cnn ..
+# ::tokens [":", "cnn", ".."]
+# ::lemmas [":", "cnn", ".."]
+(c15-1 / publication
+       :name (c15-0 / name
+                    :op1 "Cnn"))
+
+# ::snt : DEVELOPING: Police appear to storm cafe in Sydney where hostages have been held Live:
+# ::tokens [":", "DEVELOPING", ":", "Police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostages", "have", "been", "held", "Live", ":"]
+# ::lemmas [":", "developing", ":", "police", "appear", "to", "storm", "cafe", "in", "Sydney", "where", "hostage", "have", "be", "hold", "live", ":"]
+(c16-5 / develop-01
+       :ARG1 (c16-9 / appear-02
+                    :ARG1 (c16-8 / storm-02
+                                 :ARG0 (c16-4 / police)
+                                 :ARG1 (c16-6 / cafe
+                                              :location (c16-7 / city
+                                                               :name (c16-3 / name
+                                                                            :op1 "Sydney"))
+                                              :location-of (c16-0 / hold-01
+                                                                  :ARG1 (c16-1 / hostage)
+                                                                  :medium (c16-2 / live))))))

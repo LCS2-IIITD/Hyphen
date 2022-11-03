@@ -1,0 +1,30 @@
+# ::snt Omg that's good news!!
+# ::tokens ["Omg", "that", "'s", "good", "news", "!", "!"]
+# ::lemmas ["Omg", "that", "be", "good", "news", "!", "!"]
+(c1-2 / news
+      :ARG1-of (c1-0 / good-02)
+      :domain (c1-3 / that)
+      :mod (c1-1 / oh-my-god
+                 :mode expressive))
+
+# ::snt I hope it helps quick and you are safe. Here it will take more months to wait for the vaccine.
+# ::tokens ["I", "hope", "it", "helps", "quick", "and", "you", "are", "safe", ".", "Here", "it", "will", "take", "more", "months", "to", "wait", "for", "the", "vaccine", "."]
+# ::lemmas ["i", "hope", "it", "help", "quick", "and", "you", "be", "safe", ".", "here", "it", "will", "take", "more", "months", "to", "wait", "for", "the", "vaccine", "."]
+(c3-15 / multi-sentence
+       :snt1 (c3-7 / hope-01
+                   :ARG0 (c3-14 / i)
+                   :ARG1 (c3-2 / and
+                               :op1 (c3-13 / help-01
+                                           :ARG0 (c3-8 / it)
+                                           :ARG1-of (c3-4 / quick-02))
+                               :op2 (c3-0 / safe-01
+                                          :ARG1 (c3-16 / you))))
+       :snt2 (c3-12 / take-10
+                    :ARG0 (c3-5 / wait-01
+                                :ARG2 (c3-11 / vaccine))
+                    :ARG1 (c3-3 / multiple
+                                :op1 (c3-6 / temporal-quantity
+                                           :unit (c3-10 / month)
+                                           :quant 1)
+                                :mod (c3-9 / more))
+                    :location (c3-1 / here)))

@@ -1,0 +1,49 @@
+# ::snt Electrician loses it after seeing a DIY job.
+# ::tokens ["Electrician", "loses", "it", "after", "seeing", "a", "DIY", "job", "."]
+# ::lemmas ["Electrician", "lose", "it", "after", "see", "a", "DIY", "job", "."]
+(c1-3 / lose-02
+      :ARG0 (c1-6 / electrician)
+      :ARG1 (c1-5 / it)
+      :time (c1-2 / after
+                  :op1 (c1-0 / see-01
+                             :ARG0 c1-6
+                             :ARG1 (c1-4 / job
+                                         :mod (c1-1 / DIY)))))
+
+# ::snt I've never seen a Canadian so pissed in my life.
+# ::tokens ["I", "'ve", "never", "seen", "a", "Canadian", "so", "pissed", "in", "my", "life", "."]
+# ::lemmas ["i", "'ve", "never", "see", "a", "Canadian", "so", "piss", "in", "my", "life", "."]
+(c2-0 / see-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-3 / piss-03
+                  :ARG1 (c2-2 / person
+                              :mod (c2-1 / country
+                                         :name (c2-7 / name
+                                                     :op1 "Canada")))
+                  :degree (c2-5 / so))
+      :time (c2-8 / ever)
+      :time (c2-4 / live-01
+                  :ARG0 c2-6)
+      :polarity -)
+
+# ::snt IDK have you ever seen a Canadian after the US beats Canada in hockey?
+# ::tokens ["IDK", "have", "you", "ever", "seen", "a", "Canadian", "after", "the", "US", "beats", "Canada", "in", "hockey", "?"]
+# ::lemmas ["IDK", "have", "you", "ever", "see", "a", "Canadian", "after", "the", "US", "beat", "Canada", "in", "hockey", "?"]
+(c3-3 / ask-01
+      :ARG0 (c3-9 / i)
+      :ARG1 (c3-0 / see-01
+                  :ARG0 (c3-11 / you)
+                  :ARG1 (c3-7 / person
+                              :mod (c3-4 / country
+                                         :name (c3-10 / name
+                                                      :op1 "Canada")))
+                  :time (c3-13 / ever)
+                  :time (c3-12 / after
+                               :op1 (c3-8 / beat-03
+                                          :ARG0 (c3-1 / country
+                                                      :name (c3-6 / name
+                                                                  :op1 "US"))
+                                          :ARG1 c3-4
+                                          :ARG2 (c3-5 / hockey)))
+                  :polarity (c3-2 / amr-unknown))
+      :ARG2 c3-7)

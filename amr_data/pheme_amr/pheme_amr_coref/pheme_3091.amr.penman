@@ -1,0 +1,53 @@
+# ::snt love this! Thank you!
+# ::tokens ["love", "this", "!", "Thank", "you", "!"]
+# ::lemmas ["love", "this", "!", "thank", "you", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-1 / love-01
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-5 / this))
+      :snt2 (c1-4 / thank-01
+                  :ARG0 c1-3
+                  :ARG1 (c1-0 / you)))
+
+# ::snt classy
+# ::tokens ["classy"]
+# ::lemmas ["classy"]
+(c2-0 / classy)
+
+# ::snt : Penguins announce they'll play the Canadian national anthem before tonight's game vs Philadelphia.
+# ::tokens [":", "Penguins", "announce", "they", "'ll", "play", "the", "Canadian", "national", "anthem", "before", "tonight", "'s", "game", "vs", "Philadelphia", "."]
+# ::lemmas [":", "penguin", "announce", "they", "'ll", "play", "the", "Canadian", "national", "anthem", "before", "tonight", "'s", "game", "vs", "Philadelphia", "."]
+(c3-13 / announce-01
+       :ARG0 (c3-12 / team
+                    :name (c3-2 / name
+                                :op1 "Pittsburgh"))
+       :ARG1 (c3-4 / play-11
+                   :ARG0 c3-12
+                   :ARG1 (c3-1 / anthem
+                               :mod (c3-6 / country
+                                          :name (c3-3 / name
+                                                      :op1 "Canada"))
+                               :mod (c3-5 / nation))
+                   :time (c3-0 / before
+                               :op1 (c3-7 / game
+                                          :time (c3-8 / date-entity
+                                                      :dayperiod (c3-9 / night)
+                                                      :mod (c3-11 / today))
+                                          :mod (c3-10 / team
+                                                      :name (c3-14 / name
+                                                                   :op1 "Philadelphia"))))))
+
+# ::snt love this
+# ::tokens ["love", "this"]
+# ::lemmas ["love", "this"]
+(c4-0 / love-01
+      :ARG0 (c4-2 / i)
+      :ARG1 (c4-1 / this))
+
+# ::snt as a I applaud you for this.
+# ::tokens ["as", "a", "I", "applaud", "you", "for", "this", "."]
+# ::lemmas ["as", "a", "i", "applaud", "you", "for", "this", "."]
+(c5-3 / applaud-01
+      :ARG0 (c5-2 / i)
+      :ARG1 (c5-0 / you)
+      :ARG2 (c5-1 / this))

@@ -1,0 +1,104 @@
+# ::snt Damned this southeast weather. It's summer for months, fall for & winter for . We're supposed to get some fall weather next week, yaaay. I'm going out tomorrow - here's how I feel about it.
+# ::tokens ["Damned", "this", "southeast", "weather", ".", "It", "'s", "summer", "for", "months", ",", "fall", "for", "&", "winter", "for", ".", "We", "'re", "supposed", "to", "get", "some", "fall", "weather", "next", "week", ",", "yaaay", ".", "I", "'m", "going", "out", "tomorrow", "-", "here", "'s", "how", "I", "feel", "about", "it", "."]
+# ::lemmas ["damn", "this", "southeast", "weather", ".", "it", "be", "summer", "for", "months", ",", "fall", "for", "&", "winter", "for", ".", "we", "be", "suppose", "to", "get", "some", "fall", "weather", "next", "week", ",", "yaaay", ".", "i", "be", "go", "out", "tomorrow", "-", "here", "be", "how", "i", "feel", "about", "it", "."]
+(c1-9 / multi-sentence
+      :snt1 (c1-5 / weather
+                  :mod (c1-13 / southeast)
+                  :mod (c1-7 / this)
+                  :ARG1-of (c1-0 / damage-01))
+      :snt2 (c1-24 / and
+                   :op1 (c1-20 / date-entity
+                               :season (c1-28 / summer)
+                               :duration (c1-26 / multiple
+                                                :op1 (c1-6 / temporal-quantity
+                                                           :unit (c1-17 / month)
+                                                           :quant 1)))
+                   :op2 (c1-14 / date-entity
+                               :season (c1-25 / fall)
+                               :duration (c1-12 / winter)))
+      :snt3 (c1-16 / suppose-02
+                   :ARG1 (c1-2 / we)
+                   :ARG2 (c1-8 / get-01
+                               :ARG0 c1-2
+                               :ARG1 (c1-1 / weather
+                                           :mod (c1-18 / fall)
+                                           :mod (c1-3 / some))
+                               :time (c1-21 / week
+                                            :mod (c1-10 / next))
+                               :mod (c1-22 / yaaay
+                                           :mode expressive)))
+      :snt4 (c1-23 / go-out-17
+                   :ARG0 (c1-4 / i)
+                   :time (c1-11 / tomorrow)
+                   :ARG1-of (c1-19 / feel-01
+                                   :ARG0 c1-4
+                                   :ARG2 (c1-15 / it)
+                                   :location (c1-27 / here))))
+
+# ::snt Thats the whole point of living in the tropics... im still looking for months of summer... close to it where i live.
+# ::tokens ["That", "s", "the", "whole", "point", "of", "living", "in", "the", "tropics", "...", "i", "m", "still", "looking", "for", "months", "of", "summer", "...", "close", "to", "it", "where", "i", "live", "."]
+# ::lemmas ["that", "s", "the", "whole", "point", "of", "live", "in", "the", "tropic", "...", "i", "m", "still", "look", "for", "months", "of", "summer", "...", "close", "to", "it", "where", "i", "live", "."]
+(c2-10 / point-03
+       :ARG1 (c2-8 / live-01
+                   :location (c2-3 / world-region
+                                   :name (c2-12 / name
+                                                :op1 "Tropics")))
+       :ARG2 (c2-9 / look-01
+                   :ARG0 (c2-2 / i)
+                   :ARG1 (c2-4 / close-10
+                               :ARG1 c2-2
+                               :ARG2 (c2-6 / it
+                                           :location-of (c2-1 / live-01
+                                                              :ARG0 c2-2)))
+                   :mod (c2-0 / still)
+                   :duration (c2-11 / multiple
+                                    :op1 (c2-7 / temporal-quantity
+                                               :unit (c2-5 / month)
+                                               :quant 1)))
+       :mod (c2-13 / whole))
+
+# ::snt Your post uses speech that denigrates disability in violation of our Community Guidelines and Terms of Services Agreement.
+# ::tokens ["Your", "post", "uses", "speech", "that", "denigrates", "disability", "in", "violation", "of", "our", "Community", "Guidelines", "and", "Terms", "of", "Services", "Agreement", "."]
+# ::lemmas ["your", "post", "use", "speech", "that", "denigrate", "disability", "in", "violation", "of", "our", "Community", "Guidelines", "and", "term", "of", "Services", "Agreement", "."]
+(c3-6 / use-01
+      :ARG0 (c3-11 / post-01
+                   :ARG0 (c3-12 / you))
+      :ARG1 (c3-0 / speak-01
+                  :ARG0-of (c3-1 / denigrate-01
+                                 :ARG1 (c3-5 / disability)))
+      :ARG2 (c3-7 / violate-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-2 / and
+                              :op1 (c3-9 / guideline
+                                         :mod (c3-3 / community)
+                                         :poss (c3-4 / we))
+                              :op2 (c3-8 / term
+                                         :mod (c3-10 / service)
+                                         :poss c3-4))))
+
+# ::snt That word is offensive to disabled people and shouldn't be used.
+# ::tokens ["That", "word", "is", "offensive", "to", "disabled", "people", "and", "should", "n't", "be", "used", "."]
+# ::lemmas ["that", "word", "be", "offensive", "to", "disabled", "people", "and", "should", "not", "be", "use", "."]
+(c4-1 / and
+      :op1 (c4-4 / offend-01
+                 :ARG0 (c4-2 / word
+                             :mod (c4-5 / that))
+                 :ARG1 (c4-7 / person
+                             :ARG1-of (c4-0 / disable-01)))
+      :op2 (c4-6 / recommend-01
+                 :ARG1 (c4-3 / use-01
+                             :ARG1 c4-2)
+                 :polarity -))
+
+# ::snt It's hard to have this conversation with you when you use those slurs.
+# ::tokens ["It", "'s", "hard", "to", "have", "this", "conversation", "with", "you", "when", "you", "use", "those", "slurs", "."]
+# ::lemmas ["it", "be", "hard", "to", "have", "this", "conversation", "with", "you", "when", "you", "use", "those", "slur", "."]
+(c5-3 / hard-02
+      :ARG1 (c5-1 / converse-01
+                  :ARG0 (c5-6 / i)
+                  :ARG2 (c5-7 / you)
+                  :mod (c5-5 / this))
+      :time (c5-4 / use-01
+                  :ARG0 c5-7
+                  :ARG1 (c5-0 / slur
+                              :mod (c5-2 / that))))

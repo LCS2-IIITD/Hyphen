@@ -1,0 +1,101 @@
+# ::snt brilliant.
+# ::tokens ["brilliant", "."]
+# ::lemmas ["brilliant", "."]
+(c1-0 / brilliant-01)
+
+# ::snt the unspoken code from one terrorist to another is extended courtesy
+# ::tokens ["the", "unspoken", "code", "from", "one", "terrorist", "to", "another", "is", "extended", "courtesy"]
+# ::lemmas ["the", "unspoken", "code", "from", "one", "terrorist", "to", "another", "be", "extend", "courtesy"]
+(c3-2 / courtesy
+      :ARG1-of (c3-0 / extend-01)
+      :domain (c3-1 / code
+                    :source (c3-5 / terrorist)
+                    :destination (c3-3 / terrorist
+                                       :mod (c3-6 / another))
+                    :ARG1-of (c3-4 / speak-01
+                                   :polarity -)))
+
+# ::snt At least the terrorists waited until after Alan Jones finished his shift
+# ::tokens ["At", "least", "the", "terrorists", "waited", "until", "after", "Alan", "Jones", "finished", "his", "shift"]
+# ::lemmas ["at", "least", "the", "terrorist", "wait", "until", "after", "Alan", "Jones", "finish", "his", "shift"]
+(c4-0 / wait-01
+      :ARG1 (c4-7 / terrorist)
+      :mod (c4-8 / at-least)
+      :time (c4-2 / until
+                  :op1 (c4-3 / after
+                             :op1 (c4-1 / finish-01
+                                        :ARG0 (c4-5 / person
+                                                    :name (c4-4 / name
+                                                                :op1 "Alan"
+                                                                :op2 "Jones"))
+                                        :ARG1 (c4-6 / shift
+                                                    :poss c4-5)))))
+
+# ::snt Ray Hadley is just an idiot. The most dangerous kind.
+# ::tokens ["Ray", "Hadley", "is", "just", "an", "idiot", ".", "The", "most", "dangerous", "kind", "."]
+# ::lemmas ["Ray", "Hadley", "be", "just", "an", "idiot", ".", "the", "most", "dangerous", "kind", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-4 / idiot
+                  :mod (c5-0 / just)
+                  :domain (c5-6 / person
+                                :name (c5-5 / name
+                                            :op1 "Ray"
+                                            :op2 "Hadley")))
+      :snt2 (c5-8 / kind
+                  :ARG1-of (c5-1 / have-degree-91
+                                 :ARG2 (c5-3 / endanger-01)
+                                 :ARG3 (c5-7 / most))))
+
+# ::snt is a goose. His reputation was shot when he backflipped on the super league war in late90s.
+# ::tokens ["is", "a", "goose", ".", "His", "reputation", "was", "shot", "when", "he", "backflipped", "on", "the", "super", "league", "war", "in", "late90s", "."]
+# ::lemmas ["be", "a", "goose", ".", "his", "reputation", "be", "shoot", "when", "he", "backflippe", "on", "the", "super", "league", "war", "in", "late90s", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-8 / goose
+                  :domain (c6-0 / he))
+      :snt2 (c6-10 / shoot-02
+                   :ARG1 (c6-6 / reputation
+                               :poss (c6-11 / he))
+                   :time (c6-4 / backflip-01
+                               :ARG0 c6-11
+                               :ARG1 (c6-1 / war
+                                           :mod (c6-2 / league
+                                                      :mod (c6-5 / super)))
+                               :time (c6-9 / late
+                                           :op1 (c6-7 / date-entity
+                                                      :decade 1990)))))
+
+# ::snt 'ray hadley' nuf said
+# ::tokens ["'", "ray", "hadley", "'", "nuf", "said"]
+# ::lemmas ["'", "ray", "hadley", "'", "nuf", "say"]
+(c7-0 / say-01
+      :ARG0 (c7-1 / you)
+      :ARG1 (c7-3 / thing
+                  :name (c7-2 / name
+                              :op1 "Hadley")))
+
+# ::snt Ray Hadley spouting crap as per usual
+# ::tokens ["Ray", "Hadley", "spouting", "crap", "as", "per", "usual"]
+# ::lemmas ["Ray", "Hadley", "spout", "crap", "as", "per", "usual"]
+(c8-3 / spout-01
+      :ARG0 (c8-1 / person
+                  :name (c8-0 / name
+                              :op1 "Ray"
+                              :op2 "Hadley"))
+      :ARG1 (c8-2 / crap)
+      :mod (c8-4 / as-usual))
+
+# ::snt Ray Hadley behaving like racist tool? Who'd have thunk it?!?
+# ::tokens ["Ray", "Hadley", "behaving", "like", "racist", "tool", "?", "Who", "'d", "have", "thunk", "it", "?", "!", "?"]
+# ::lemmas ["Ray", "Hadley", "behave", "like", "racist", "tool", "?", "who", "would", "have", "thunk", "it", "?", "!", "?"]
+(c9-1 / multi-sentence
+      :snt1 (c9-2 / behave-01
+                  :ARG0 (c9-4 / person
+                              :name (c9-3 / name
+                                          :op1 "Ray"
+                                          :op2 "Hadley"))
+                  :ARG1 (c9-7 / tool
+                              :mod (c9-5 / racist)))
+      :snt2 (c9-0 / have-03
+                  :ARG0 (c9-8 / amr-unknown)
+                  :ARG1 (c9-6 / thunk-01
+                              :ARG1 c9-2)))

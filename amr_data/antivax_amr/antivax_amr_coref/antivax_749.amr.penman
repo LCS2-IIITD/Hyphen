@@ -1,0 +1,60 @@
+# ::snt This is a lie. Sorry you have such trust issues.
+# ::tokens ["This", "is", "a", "lie", ".", "Sorry", "you", "have", "such", "trust", "issues", "."]
+# ::lemmas ["this", "be", "a", "lie", ".", "sorry", "you", "have", "such", "trust", "issue", "."]
+(c1-8 / multi-sentence
+      :snt1 (c1-5 / lie-08
+                  :ARG1 (c1-4 / this))
+      :snt2 (c1-0 / sorry-01
+                  :ARG1 (c1-7 / i)
+                  :ARG2 (c1-2 / have-03
+                              :ARG0 (c1-9 / you)
+                              :ARG1 (c1-3 / issue-02
+                                          :ARG0 (c1-1 / trust)
+                                          :ARG1 c1-9
+                                          :mod (c1-6 / such)))))
+
+# ::snt Confirmed fact?
+# ::tokens ["Confirmed", "fact", "?"]
+# ::lemmas ["confirm", "fact", "?"]
+(c2-1 / fact
+      :polarity (c2-0 / amr-unknown)
+      :ARG1-of (c2-2 / confirm-01))
+
+# ::snt India is in the position they are in because of the vaccine. The ones dying are the vaccinated ones. They want depopulation and they are getting it though the use of the vaccine.
+# ::tokens ["India", "is", "in", "the", "position", "they", "are", "in", "because", "of", "the", "vaccine", ".", "The", "ones", "dying", "are", "the", "vaccinated", "ones", ".", "They", "want", "depopulation", "and", "they", "are", "getting", "it", "though", "the", "use", "of", "the", "vaccine", "."]
+# ::lemmas ["India", "be", "in", "the", "position", "they", "be", "in", "because", "of", "the", "vaccine", ".", "the", "one", "die", "be", "the", "vaccinated", "one", ".", "they", "want", "depopulation", "and", "they", "be", "get", "it", "though", "the", "use", "of", "the", "vaccine", "."]
+(c3-16 / multi-sentence
+       :snt1 (c3-15 / position
+                    :domain (c3-4 / country
+                                  :name (c3-17 / name
+                                               :op1 "India"))
+                    :ARG1-of (c3-0 / cause-01
+                                   :ARG0 (c3-11 / vaccine)))
+       :snt2 (c3-3 / vaccinate-01
+                   :ARG1 (c3-12 / person
+                                :ARG1-of (c3-1 / die-01)))
+       :snt3 (c3-2 / and
+                   :op1 (c3-5 / want-01
+                              :ARG0 (c3-13 / they)
+                              :ARG1 (c3-6 / depopulate-01))
+                   :op2 (c3-14 / get-01
+                               :ARG0 (c3-7 / they)
+                               :ARG1 (c3-8 / it)
+                               :concession (c3-10 / use-01
+                                                  :ARG0 c3-7
+                                                  :ARG1 (c3-9 / vaccine)))))
+
+# ::snt To save our country from the devastation India is currently under
+# ::tokens ["To", "save", "our", "country", "from", "the", "devastation", "India", "is", "currently", "under"]
+# ::lemmas ["to", "save", "our", "country", "from", "the", "devastation", "India", "be", "currently", "under"]
+(c4-5 / have-purpose-91
+      :ARG2 (c4-0 / save-02
+                  :ARG1 (c4-3 / country
+                              :poss (c4-4 / we))
+                  :ARG2 (c4-1 / devastate-01
+                              :ARG1 (c4-2 / country
+                                          :name (c4-8 / name
+                                                      :op1 "India")
+                                          :ARG1-of (c4-7 / have-03
+                                                         :time (c4-6 / current)
+                                                         :ARG0 c4-2)))))

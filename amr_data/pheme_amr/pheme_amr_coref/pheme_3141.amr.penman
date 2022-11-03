@@ -1,0 +1,263 @@
+# ::snt . Its a Lindt chocolate shop, not a cafe, no alien involvement
+# ::tokens [".", "Its", "a", "Lindt", "chocolate", "shop", ",", "not", "a", "cafe", ",", "no", "alien", "involvement"]
+# ::lemmas [".", "its", "a", "Lindt", "chocolate", "shop", ",", "not", "a", "cafe", ",", "no", "alien", "involvement"]
+(c1-8 / and
+      :op1 (c1-7 / shop
+                 :mod (c1-4 / chocolate)
+                 :mod (c1-3 / company
+                            :name (c1-2 / name
+                                        :op1 "Lindt"))
+                 :domain (c1-1 / it))
+      :op2 (c1-6 / cafe
+                 :domain c1-1
+                 :polarity -)
+      :op3 (c1-5 / involve-01
+                 :ARG1 (c1-0 / alien)
+                 :polarity -))
+
+# ::snt I love CNNKaty &amp; Bieber embrace Islam: Bible &amp; NASA embrace Islam: .
+# ::tokens ["I", "love", "CNNKaty", "&", "amp", ";", "Bieber", "embrace", "Islam", ":", "Bible", "&", "amp", ";", "NASA", "embrace", "Islam", ":", "."]
+# ::lemmas ["i", "love", "CNNKaty", "&", "amp", ";", "Bieber", "embrace", "Islam", ":", "Bible", "&", "amp", ";", "NASA", "embrace", "Islam", ":", "."]
+(c2-13 / and
+       :op1 (c2-1 / love-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-8 / publication
+                              :name (c2-6 / name
+                                          :op1 "CNNKaty"
+                                          :op2 "&amp")))
+       :op2 (c2-3 / embrace-01
+                  :ARG0 (c2-12 / person
+                               :name (c2-7 / name
+                                           :op1 "Bieber"))
+                  :ARG1 (c2-9 / religious-group
+                              :name (c2-10 / name
+                                           :op1 "Islam")))
+       :op3 (c2-2 / embrace-01
+                  :ARG0 (c2-5 / research-institute
+                              :name (c2-11 / name
+                                           :op1 "NASA"))
+                  :ARG1 c2-9)
+       :op4 (c2-0 / embrace-01
+                  :ARG0 c2-5
+                  :ARG1 c2-9))
+
+# ::snt Aussie!!! Aussie!!! Aussie!!!!!
+# ::tokens ["Aussie", "!", "!", "!", "Aussie", "!", "!", "!", "Aussie", "!", "!", "!", "!", "!"]
+# ::lemmas ["Aussie", "!", "!", "!", "Aussie", "!", "!", "!", "Aussie", "!", "!", "!", "!", "!"]
+(c3-5 / and
+      :op1 (c3-2 / person
+                 :mod (c3-3 / country
+                            :name (c3-1 / name
+                                        :op1 "Australia")))
+      :op2 (c3-4 / person
+                 :mod c3-3)
+      :op3 (c3-0 / person
+                 :mod c3-3))
+
+# ::snt Not Austrailian, but I love that chant!
+# ::tokens ["Not", "Austrailian", ",", "but", "I", "love", "that", "chant", "!"]
+# ::lemmas ["not", "austrailian", ",", "but", "i", "love", "that", "chant", "!"]
+(c4-5 / contrast-01
+      :ARG1 (c4-3 / person
+                  :mod (c4-4 / country
+                             :name (c4-2 / name
+                                         :op1 "Austria"))
+                  :polarity -)
+      :ARG2 (c4-0 / love-01
+                  :ARG0 (c4-1 / i)
+                  :ARG1 (c4-6 / chant-01
+                              :mod (c4-7 / that))))
+
+# ::snt in Australia we have combined lindt stores and cafs. They indeed serve coffees/pastries/cakes as a cafe
+# ::tokens ["in", "Australia", "we", "have", "combined", "lindt", "stores", "and", "cafs", ".", "They", "indeed", "serve", "coffees", "/", "pastries", "/", "cakes", "as", "a", "cafe"]
+# ::lemmas ["in", "Australia", "we", "have", "combine", "lindt", "store", "and", "cafs", ".", "they", "indeed", "serve", "coffee", "/", "pastry", "/", "cake", "as", "a", "cafe"]
+(c5-2 / multi-sentence
+      :snt1 (c5-11 / combine-01
+                   :ARG0 (c5-0 / we)
+                   :ARG1 (c5-13 / store
+                                :mod (c5-10 / company
+                                            :name (c5-7 / name
+                                                        :op1 "Lindt")))
+                   :ARG2 (c5-12 / coffee)
+                   :location (c5-15 / country
+                                    :name (c5-8 / name
+                                                :op1 "Australia")))
+      :snt2 (c5-5 / serve-02
+                  :ARG0 (c5-14 / they)
+                  :ARG1 (c5-1 / slash
+                              :op1 c5-12)
+                  :op2 (c5-9 / pastry)
+                  :op3 (c5-3 / cup))
+      :ARG2 (c5-4 / cafe)
+      :mod (c5-6 / indeed))
+
+# ::snt : I see the creator in the protesters. Simply put, love thou neighbor.
+# ::tokens [":", "I", "see", "the", "creator", "in", "the", "protesters", ".", "Simply", "put", ",", "love", "thou", "neighbor", "."]
+# ::lemmas [":", "i", "see", "the", "creator", "in", "the", "protester", ".", "simply", "put", ",", "love", "thou", "neighbor", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-10 / see-01
+                   :ARG0 (c6-6 / i)
+                   :ARG1 (c6-8 / person
+                               :ARG0-of (c6-9 / create-01)
+                               :location (c6-12 / person
+                                                :ARG0-of (c6-3 / protest-01))))
+      :snt2 (c6-11 / put-02
+                   :ARG1 (c6-1 / love-01
+                               :ARG0 (c6-0 / you)
+                               :ARG1 (c6-4 / person
+                                           :ARG1-of (c6-7 / neighbor-01
+                                                          :ARG2 c6-0)))
+                   :manner (c6-5 / simple)))
+
+# ::snt a bullet needs to contact his head!
+# ::tokens ["a", "bullet", "needs", "to", "contact", "his", "head", "!"]
+# ::lemmas ["a", "bullet", "need", "to", "contact", "his", "head", "!"]
+(c7-2 / need-01
+      :ARG0 (c7-1 / bullet)
+      :ARG1 (c7-3 / contact-01
+                  :ARG0 c7-1
+                  :ARG1 (c7-0 / head
+                              :part-of (c7-4 / he)))
+      :mode expressive)
+
+# ::snt OY! OY! OY!
+# ::tokens ["OY", "!", "OY", "!", "OY", "!"]
+# ::lemmas ["OY", "!", "OY", "!", "OY", "!"]
+(c8-2 / and
+      :op1 (c8-1 / yoy)
+      :op2 (c8-3 / yoy)
+      :op3 (c8-0 / oy))
+
+# ::snt Not even close to being humorous. Get a life.
+# ::tokens ["Not", "even", "close", "to", "being", "humorous", ".", "Get", "a", "life", "."]
+# ::lemmas ["not", "even", "close", "to", "be", "humorous", ".", "get", "a", "life", "."]
+(c9-3 / multi-sentence
+      :snt1 (c9-5 / close-10
+                  :ARG2 (c9-0 / humor-01)
+                  :mod (c9-4 / even)
+                  :polarity -)
+      :snt2 (c9-6 / get-06
+                  :ARG0 (c9-1 / you)
+                  :ARG1 (c9-2 / life)
+                  :mode imperative))
+
+# ::snt No worries--Obama has just been briefed--should be over at any time now--whew!!!!
+# ::tokens ["No", "worries", "--", "Obama", "has", "just", "been", "briefed", "--", "should", "be", "over", "at", "any", "time", "now", "--", "whew", "!", "!", "!", "!"]
+# ::lemmas ["no", "worry", "--", "Obama", "have", "just", "be", "brief", "--", "should", "be", "over", "at", "any", "time", "now", "--", "whew", "!", "!", "!", "!"]
+(c10-1 / multi-sentence
+       :snt1 (c10-0 / worry-02
+                    :polarity -)
+       :snt2 (c10-7 / recommend-01
+                    :ARG1 (c10-2 / over-01
+                                 :ARG1 (c10-6 / person
+                                              :name (c10-4 / name
+                                                           :op1 "Obama"))
+                                 :time (c10-8 / any)
+                                 :time (c10-5 / now)))
+       :snt3 (c10-3 / whew
+                    :mode expressive))
+
+# ::snt , -
+# ::tokens [",", "-"]
+# ::lemmas [",", "-"]
+(c11-0 / emoticon)
+
+# ::snt my mistake, apologies to
+# ::tokens ["my", "mistake", ",", "apologies", "to"]
+# ::lemmas ["my", "mistake", ",", "apology", "to"]
+(c12-3 / and
+       :op1 (c12-1 / mistake-01
+                   :ARG0 (c12-2 / i))
+       :op2 (c12-0 / apologize-01
+                   :ARG0 c12-2))
+
+# ::snt Me neither! I love it too!!
+# ::tokens ["Me", "neither", "!", "I", "love", "it", "too", "!", "!"]
+# ::lemmas ["i", "neither", "!", "i", "love", "it", "too", "!", "!"]
+(c13-2 / multi-sentence
+       :snt1 (c13-3 / i
+                    :polarity -)
+       :snt2 (c13-1 / love-01
+                    :ARG0 (c13-4 / i)
+                    :ARG1 (c13-0 / it)
+                    :mod (c13-5 / too)))
+
+# ::snt : Authorities have not yet had direct contact with the hostage taker at a Sydney caf, official says.
+# ::tokens [":", "Authorities", "have", "not", "yet", "had", "direct", "contact", "with", "the", "hostage", "taker", "at", "a", "Sydney", "caf", ",", "official", "says", "."]
+# ::lemmas [":", "authority", "have", "not", "yet", "have", "direct", "contact", "with", "the", "hostage", "taker", "at", "a", "Sydney", "caf", ",", "official", "say", "."]
+(c14-10 / say-01
+        :ARG0 (c14-5 / person
+                     :ARG0-of (c14-0 / have-org-role-91
+                                     :ARG2 (c14-3 / official)))
+        :ARG1 (c14-7 / contact-01
+                     :ARG0 (c14-13 / authority)
+                     :ARG1 (c14-12 / person
+                                   :ARG0-of (c14-11 / taker-01
+                                                    :ARG1 (c14-2 / hostage)))
+                     :time (c14-1 / yet)
+                     :location (c14-6 / cafe
+                                      :mod (c14-9 / city
+                                                  :name (c14-4 / name
+                                                               :op1 "Sydney")))
+                     :ARG1-of (c14-8 / direct-02)
+                     :polarity -))
+
+# ::snt "Authorities have not yet had direct contact with the hostage taker at a Sydney caf, official says. "
+# ::tokens ["\"", "Authorities", "have", "not", "yet", "had", "direct", "contact", "with", "the", "hostage", "taker", "at", "a", "Sydney", "caf", ",", "official", "says", ".", "\""]
+# ::lemmas ["\"", "authority", "have", "not", "yet", "have", "direct", "contact", "with", "the", "hostage", "taker", "at", "a", "Sydney", "caf", ",", "official", "say", ".", "\""]
+(c15-10 / say-01
+        :ARG0 (c15-5 / person
+                     :ARG0-of (c15-0 / have-org-role-91
+                                     :ARG2 (c15-3 / official)))
+        :ARG1 (c15-7 / contact-01
+                     :ARG0 (c15-13 / authority)
+                     :ARG1 (c15-12 / person
+                                   :ARG0-of (c15-11 / taker-01
+                                                    :ARG1 (c15-2 / hostage)))
+                     :time (c15-1 / yet)
+                     :location (c15-6 / cafe
+                                      :mod (c15-9 / city
+                                                  :name (c15-4 / name
+                                                               :op1 "Sydney")))
+                     :ARG1-of (c15-8 / direct-02)
+                     :polarity -))
+
+# ::snt he just wanted some Tim tams
+# ::tokens ["he", "just", "wanted", "some", "Tim", "tams"]
+# ::lemmas ["he", "just", "want", "some", "Tim", "tam"]
+(c16-1 / want-01
+       :ARG0 (c16-0 / he)
+       :ARG1 (c16-6 / tam
+                    :mod (c16-4 / company
+                                :name (c16-3 / name
+                                             :op1 "Tim"))
+                    :quant (c16-5 / some))
+       :mod (c16-2 / just))
+
+# ::snt where the heck is cnn covering this..you are showing a dinasor documentary...wtf
+# ::tokens ["where", "the", "heck", "is", "cnn", "covering", "this", "..", "you", "are", "showing", "a", "dinasor", "documentary", "...", "wtf"]
+# ::lemmas ["where", "the", "heck", "be", "cnn", "cover", "this", "..", "you", "be", "show", "a", "dinasor", "documentary", "...", "wtf"]
+(c17-4 / multi-sentence
+       :snt1 (c17-8 / cover-03
+                    :ARG0 (c17-6 / publication
+                                 :name (c17-5 / name
+                                              :op1 "CNN"))
+                    :ARG1 (c17-10 / this)
+                    :mod (c17-0 / heck
+                                :mode expressive))
+       :snt2 (c17-9 / show-01
+                    :ARG0 (c17-1 / you)
+                    :ARG1 (c17-7 / documentary
+                                 :mod (c17-2 / dinasor)))
+       :snt3 (c17-11 / amr-unknown
+                     :mod (c17-3 / fuck
+                                 :mode expressive)))
+
+# ::snt Jerk. This isn't funny.
+# ::tokens ["Jerk", ".", "This", "is", "n't", "funny", "."]
+# ::lemmas ["Jerk", ".", "this", "be", "not", "funny", "."]
+(c18-3 / multi-sentence
+       :snt1 (c18-0 / jerk)
+       :snt2 (c18-2 / funny
+                    :domain (c18-1 / this)
+                    :polarity -))

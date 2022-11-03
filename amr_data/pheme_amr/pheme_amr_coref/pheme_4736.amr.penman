@@ -1,0 +1,37 @@
+# ::snt omg!!!!
+# ::tokens ["omg", "!", "!", "!", "!"]
+# ::lemmas ["omg", "!", "!", "!", "!"]
+(c1-0 / oh-my-god
+      :mode expressive)
+
+# ::snt : : A police officer has sustained a gunshot wound to the head.4 others injured.
+# ::tokens [":", ":", "A", "police", "officer", "has", "sustained", "a", "gunshot", "wound", "to", "the", "head.4", "others", "injured", "."]
+# ::lemmas [":", ":", "a", "police", "officer", "have", "sustain", "a", "gunshot", "wound", "to", "the", "head.4", "other", "injure", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-8 / sustain-01
+                  :ARG0 (c2-4 / officer
+                              :mod (c2-6 / police)
+                              :part (c2-0 / head))
+                  :ARG1 (c2-1 / wound-01
+                              :ARG1 c2-4
+                              :ARG2 (c2-7 / gunshot)
+                              :location c2-0))
+      :snt2 (c2-5 / injure-01
+                  :ARG1 (c2-2 / other
+                              :quant 4)))
+
+# ::snt : : A police officer has sustained a gunshot wound to the head.4 others injured.
+# ::tokens [":", ":", "A", "police", "officer", "has", "sustained", "a", "gunshot", "wound", "to", "the", "head.4", "others", "injured", "."]
+# ::lemmas [":", ":", "a", "police", "officer", "have", "sustain", "a", "gunshot", "wound", "to", "the", "head.4", "other", "injure", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-8 / sustain-01
+                  :ARG0 (c3-4 / officer
+                              :mod (c3-6 / police)
+                              :part (c3-0 / head))
+                  :ARG1 (c3-1 / wound-01
+                              :ARG1 c3-4
+                              :ARG2 (c3-7 / gunshot)
+                              :location c3-0))
+      :snt2 (c3-5 / injure-01
+                  :ARG1 (c3-2 / other
+                              :quant 4)))

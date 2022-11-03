@@ -1,0 +1,377 @@
+# ::snt The first commandment warns to not to create false gods in your head , which is very common .
+# ::tokens ["The", "first", "commandment", "warns", "to", "not", "to", "create", "false", "gods", "in", "your", "head", ",", "which", "is", "very", "common", "."]
+# ::lemmas ["the", "first", "commandment", "warn", "to", "not", "to", "create", "false", "god", "in", "your", "head", ",", "which", "be", "very", "common", "."]
+(c1-3 / warn-01
+      :ARG0 (c1-2 / commandment
+                  :ord (c1-7 / ordinal-entity
+                             :value 1))
+      :ARG1 (c1-0 / create-01
+                  :ARG0 (c1-9 / you
+                              :part (c1-4 / head))
+                  :ARG1 (c1-8 / god
+                              :mod (c1-1 / false))
+                  :location c1-4
+                  :mod (c1-5 / common
+                             :degree (c1-6 / very))
+                  :polarity -))
+
+# ::snt In the Bible a capitol G in God is the true God . A small g in god is an idol to be turned away from . gods = false idols .
+# ::tokens ["In", "the", "Bible", "a", "capitol", "G", "in", "God", "is", "the", "true", "God", ".", "A", "small", "g", "in", "god", "is", "an", "idol", "to", "be", "turned", "away", "from", ".", "gods", "=", "false", "idols", "."]
+# ::lemmas ["in", "the", "Bible", "a", "capitol", "G", "in", "God", "be", "the", "true", "God", ".", "a", "small", "g", "in", "god", "be", "an", "idol", "to", "be", "turn", "away", "from", ".", "god", "=", "false", "idol", "."]
+(c2-7 / multi-sentence
+      :snt1 (c2-18 / person
+                   :name (c2-8 / name
+                               :op1 "God")
+                   :domain (c2-6 / government-organization
+                                 :name (c2-0 / name
+                                             :op1 "Capitol"
+                                             :op2 "G")
+                                 :location (c2-16 / person
+                                                  :name (c2-13 / name
+                                                               :op1 "God"))
+                                 :ARG1-of (c2-4 / true-01))
+                   :location (c2-17 / book
+                                    :name (c2-2 / name
+                                                :op1 "Bible")))
+      :snt2 (c2-1 / idol
+                  :domain (c2-11 / person
+                                 :name (c2-5 / name
+                                             :op1 "God")
+                                 :mod (c2-10 / small))
+                  :ARG2-of (c2-3 / turn-away-04
+                                 :ARG1 c2-11))
+      :snt3 (c2-9 / equal-01
+                  :ARG1 (c2-14 / god)
+                  :ARG2 (c2-12 / idol
+                               :mod (c2-15 / false))))
+
+# ::snt It says gods . It does not say false gods .
+# ::tokens ["It", "says", "gods", ".", "It", "does", "not", "say", "false", "gods", "."]
+# ::lemmas ["it", "say", "god", ".", "it", "do", "not", "say", "false", "god", "."]
+(c3-6 / multi-sentence
+      :snt1 (c3-0 / say-01
+                  :ARG0 (c3-5 / it)
+                  :ARG1 (c3-3 / god))
+      :snt2 (c3-4 / say-01
+                  :ARG0 (c3-2 / it)
+                  :ARG1 (c3-7 / god
+                              :mod (c3-1 / false))
+                  :polarity -))
+
+# ::snt A small " g " in the Bible means false gods . A capitol " G " in the Bible means the true God .
+# ::tokens ["A", "small", "\"", "g", "\"", "in", "the", "Bible", "means", "false", "gods", ".", "A", "capitol", "\"", "G", "\"", "in", "the", "Bible", "means", "the", "true", "God", "."]
+# ::lemmas ["a", "small", "\"", "g", "\"", "in", "the", "Bible", "mean", "false", "god", ".", "a", "capitol", "\"", "g", "\"", "in", "the", "Bible", "mean", "the", "true", "God", "."]
+(c4-11 / multi-sentence
+       :snt1 (c4-2 / mean-01
+                   :ARG1 (c4-0 / string-entity
+                               :mod (c4-9 / small)
+                               :location (c4-8 / book
+                                               :name (c4-12 / name
+                                                            :op1 "Bible"))
+                               :value "g")
+                   :ARG2 (c4-7 / god
+                               :mod (c4-1 / false)))
+       :snt2 (c4-4 / mean-01
+                   :ARG1 (c4-3 / string-entity
+                               :location c4-8
+                               :value "G")
+                   :ARG2 (c4-10 / person
+                                :name (c4-6 / name
+                                            :op1 "God")
+                                :ARG1-of (c4-5 / true-01))))
+
+# ::snt Can you point me to where it says a small g means false gods ?
+# ::tokens ["Can", "you", "point", "me", "to", "where", "it", "says", "a", "small", "g", "means", "false", "gods", "?"]
+# ::lemmas ["can", "you", "point", "i", "to", "where", "it", "say", "a", "small", "g", "mean", "false", "god", "?"]
+(c5-10 / possible-01
+       :polarity (c5-1 / amr-unknown)
+       :ARG1 (c5-6 / point-01
+                   :ARG0 (c5-12 / you)
+                   :ARG1 (c5-3 / i)
+                   :ARG2 (c5-7 / thing
+                               :location-of (c5-0 / say-01
+                                                  :ARG0 (c5-4 / it)
+                                                  :ARG1 (c5-11 / mean-01
+                                                               :ARG1 (c5-9 / string-entity
+                                                                           :mod (c5-5 / small)
+                                                                           :value "G")
+                                                               :ARG2 (c5-8 / god
+                                                                           :mod (c5-2 / false)))))))
+
+# ::snt If you don't understand a very basic point of the Bible you should obviously refrain from any further comment on it .
+# ::tokens ["If", "you", "do", "n't", "understand", "a", "very", "basic", "point", "of", "the", "Bible", "you", "should", "obviously", "refrain", "from", "any", "further", "comment", "on", "it", "."]
+# ::lemmas ["if", "you", "do", "not", "understand", "a", "very", "basic", "point", "of", "the", "Bible", "you", "should", "obviously", "refrain", "from", "any", "further", "comment", "on", "it", "."]
+(c6-8 / recommend-01
+      :ARG1 (c6-4 / refrain-01
+                  :ARG0 (c6-12 / you)
+                  :ARG1 (c6-3 / comment-01
+                              :ARG0 c6-12
+                              :ARG3 (c6-9 / book
+                                          :name (c6-11 / name
+                                                       :op1 "Bible"))
+                              :mod (c6-2 / further)
+                              :mod (c6-1 / any))
+                  :ARG1-of (c6-7 / obvious-01))
+      :ARG2 c6-12
+      :condition (c6-5 / understand-01
+                       :ARG0 c6-12
+                       :ARG1 (c6-10 / point-04
+                                    :ARG0 c6-9
+                                    :mod (c6-0 / basic
+                                               :degree (c6-6 / very)))
+                       :polarity -))
+
+# ::snt We relate to the same text . You make up something that's not there . I don't .
+# ::tokens ["We", "relate", "to", "the", "same", "text", ".", "You", "make", "up", "something", "that", "'s", "not", "there", ".", "I", "do", "n't", "."]
+# ::lemmas ["we", "relate", "to", "the", "same", "text", ".", "you", "make", "up", "something", "that", "be", "not", "there", ".", "i", "do", "not", "."]
+(c7-9 / multi-sentence
+      :snt1 (c7-6 / relate-01
+                  :ARG1 (c7-2 / we)
+                  :ARG2 (c7-5 / text
+                              :ARG1-of (c7-0 / same-01)))
+      :snt2 (c7-1 / make-up-10
+                  :ARG0 (c7-10 / you)
+                  :ARG1 (c7-7 / something
+                              :location (c7-3 / there
+                                              :polarity -)))
+      :snt3 (c7-4 / make-up-10
+                  :ARG0 (c7-8 / i)
+                  :ARG1 c7-7
+                  :polarity -))
+
+# ::snt You can deny truth all you want . You have been doing that for years . Now it is clearly exposed .
+# ::tokens ["You", "can", "deny", "truth", "all", "you", "want", ".", "You", "have", "been", "doing", "that", "for", "years", ".", "Now", "it", "is", "clearly", "exposed", "."]
+# ::lemmas ["you", "can", "deny", "truth", "all", "you", "want", ".", "you", "have", "be", "do", "that", "for", "years", ".", "now", "it", "be", "clearly", "expose", "."]
+(c8-11 / multi-sentence
+       :snt1 (c8-10 / possible-01
+                    :ARG1 (c8-0 / deny-01
+                                :ARG0 (c8-13 / you)
+                                :ARG1 (c8-9 / truth)
+                                :ARG1-of (c8-4 / want-01
+                                               :ARG0 c8-13
+                                               :degree (c8-2 / all))))
+       :snt2 (c8-5 / do-02
+                   :ARG0 (c8-14 / you)
+                   :ARG1 c8-0
+                   :duration (c8-3 / multiple
+                                   :op1 (c8-6 / temporal-quantity
+                                              :unit (c8-1 / year)
+                                              :quant 1)))
+       :snt3 (c8-15 / expose-01
+                    :ARG1 (c8-7 / it)
+                    :ARG1-of (c8-8 / clear-06)
+                    :time (c8-12 / now)))
+
+# ::snt Shall we ask an expert ? I'm sure can elaborate on the first commandment .
+# ::tokens ["Shall", "we", "ask", "an", "expert", "?", "I", "'m", "sure", "can", "elaborate", "on", "the", "first", "commandment", "."]
+# ::lemmas ["shall", "we", "ask", "an", "expert", "?", "i", "be", "sure", "can", "elaborate", "on", "the", "first", "commandment", "."]
+(c9-10 / multi-sentence
+       :snt1 (c9-8 / truth-value
+                   :polarity-of (c9-1 / ask-01
+                                      :ARG0 (c9-3 / we)
+                                      :ARG2 (c9-9 / person
+                                                  :ARG1-of (c9-11 / expert-01))))
+       :snt2 (c9-0 / sure-02
+                   :ARG0 (c9-2 / i)
+                   :ARG1 (c9-7 / possible-01
+                               :ARG1 (c9-5 / elaborate-01
+                                           :ARG0 c9-9)
+                               :ARG1 (c9-4 / commandment
+                                           :ord (c9-6 / ordinal-entity
+                                                      :value 1)))))
+
+# ::snt There have been thousands of years worth of experts that understand this simple truth .
+# ::tokens ["There", "have", "been", "thousands", "of", "years", "worth", "of", "experts", "that", "understand", "this", "simple", "truth", "."]
+# ::lemmas ["there", "have", "be", "thousands", "of", "years", "worth", "of", "expert", "that", "understand", "this", "simple", "truth", "."]
+(c10-4 / understand-01
+       :ARG0 (c10-6 / person
+                    :ARG1-of (c10-9 / expert-01)
+                    :ARG1-of (c10-2 / worth-01
+                                    :ARG2 (c10-7 / multiple
+                                                 :op1 (c10-5 / temporal-quantity
+                                                             :unit (c10-8 / year)
+                                                             :quant 1000))))
+       :ARG1 (c10-3 / truth
+                    :mod (c10-1 / this)
+                    :ARG1-of (c10-0 / simple-02)))
+
+# ::snt And how did they conclude the bible says something else than what it says ?
+# ::tokens ["And", "how", "did", "they", "conclude", "the", "bible", "says", "something", "else", "than", "what", "it", "says", "?"]
+# ::lemmas ["and", "how", "do", "they", "conclude", "the", "bible", "say", "something", "else", "than", "what", "it", "say", "?"]
+(c11-1 / and
+       :op2 (c11-2 / conclude-01
+                   :ARG0 (c11-5 / they)
+                   :ARG1 (c11-0 / say-01
+                                :ARG0 (c11-6 / book
+                                             :name (c11-8 / name
+                                                          :op1 "Bible"))
+                                :ARG1 (c11-7 / something
+                                             :mod (c11-10 / else)
+                                             :ARG2-of (c11-3 / except-01
+                                                             :ARG1 (c11-4 / say-01
+                                                                          :ARG0 c11-6))))
+                   :manner (c11-9 / amr-unknown)))
+
+# ::snt We now know that many of the Canaanite Gods are also in the OT and that those myths are the foundation of OT
+# ::tokens ["We", "now", "know", "that", "many", "of", "the", "Canaanite", "Gods", "are", "also", "in", "the", "OT", "and", "that", "those", "myths", "are", "the", "foundation", "of", "OT"]
+# ::lemmas ["we", "now", "know", "that", "many", "of", "the", "Canaanite", "Gods", "be", "also", "in", "the", "OT", "and", "that", "those", "myth", "be", "the", "foundation", "of", "OT"]
+(c12-14 / know-01
+        :ARG0 (c12-4 / we)
+        :ARG1 (c12-1 / and
+                     :op1 (c12-11 / be-located-at-91
+                                  :ARG1 (c12-12 / person
+                                                :quant (c12-13 / many)
+                                                :ARG1-of (c12-3 / include-91
+                                                                :ARG2 (c12-7 / person
+                                                                             :name (c12-10 / name
+                                                                                           :op1 "Canaite"
+                                                                                           :op2 "God"))))
+                                  :ARG2 (c12-0 / book
+                                               :name (c12-9 / name
+                                                            :op1 "OT"))
+                                  :mod (c12-15 / also))
+                     :op2 (c12-2 / found-01
+                                 :ARG0 (c12-5 / myth
+                                              :mod (c12-8 / that))
+                                 :ARG1 c12-0))
+        :time (c12-6 / now))
+
+# ::snt False gods abound in the old testament and were condemned by God every time .
+# ::tokens ["False", "gods", "abound", "in", "the", "old", "testament", "and", "were", "condemned", "by", "God", "every", "time", "."]
+# ::lemmas ["false", "god", "abound", "in", "the", "old", "testament", "and", "be", "condemn", "by", "God", "every", "time", "."]
+(c13-0 / and
+       :op1 (c13-9 / abound-01
+                   :ARG1 (c13-6 / god
+                                :mod (c13-1 / false))
+                   :location (c13-5 / testament
+                                    :mod (c13-4 / old)))
+       :op2 (c13-2 / condemn-01
+                   :ARG0 (c13-7 / person
+                                :name (c13-8 / name
+                                             :op1 "God"))
+                   :ARG1 c13-6
+                   :frequency (c13-3 / time
+                                     :mod (c13-10 / every))))
+
+# ::snt Again , they were never called false . And YHVH was an Eloha of the Elohim Read Job a <URL>
+# ::tokens ["Again", ",", "they", "were", "never", "called", "false", ".", "And", "YHVH", "was", "an", "Eloha", "of", "the", "Elohim", "Read", "Job", "a", "<", "URL", ">"]
+# ::lemmas ["again", ",", "they", "be", "never", "call", "false", ".", "and", "YHVH", "be", "an", "Eloha", "of", "the", "Elohim", "Read", "Job", "a", "<", "url", ">"]
+(c14-10 / multi-sentence
+        :snt1 (c14-2 / call-01
+                     :ARG1 (c14-5 / they)
+                     :ARG2 (c14-1 / false)
+                     :time (c14-13 / ever)
+                     :mod (c14-0 / again)
+                     :polarity -)
+        :snt2 (c14-12 / and
+                      :op2 (c14-3 / eloha
+                                  :domain (c14-9 / person
+                                                 :name (c14-11 / name
+                                                               :op1 "YHVH"))
+                                  :poss (c14-6 / religious-group
+                                               :name (c14-7 / name
+                                                            :op1 "Elohim"))
+                                  :mod (c14-4 / read-01
+                                              :ARG1 (c14-8 / job)))))
+
+# ::snt Again , you are literally creating a god in your imagination and then fighting against him .
+# ::tokens ["Again", ",", "you", "are", "literally", "creating", "a", "god", "in", "your", "imagination", "and", "then", "fighting", "against", "him", "."]
+# ::lemmas ["again", ",", "you", "be", "literally", "create", "a", "god", "in", "your", "imagination", "and", "then", "fight", "against", "he", "."]
+(c15-0 / and
+       :op1 (c15-2 / create-01
+                   :ARG0 (c15-7 / you)
+                   :ARG1 (c15-5 / god)
+                   :location (c15-6 / imagine-01
+                                    :ARG0 c15-7)
+                   :manner (c15-4 / literal))
+       :op2 (c15-1 / fight-01
+                   :ARG0 c15-7
+                   :ARG1 c15-5
+                   :time (c15-3 / then))
+       :mod (c15-8 / again))
+
+# ::snt Please note , I * LOVE * the OT and continue to study it In it's original tongue And I lecture here on it .
+# ::tokens ["Please", "note", ",", "I", "*", "LOVE", "*", "the", "OT", "and", "continue", "to", "study", "it", "In", "it", "'s", "original", "tongue", "And", "I", "lecture", "here", "on", "it", "."]
+# ::lemmas ["please", "note", ",", "i", "*", "love", "*", "the", "OT", "and", "continue", "to", "study", "it", "in", "it", "be", "original", "tongue", "and", "i", "lecture", "here", "on", "it", "."]
+(c16-1 / and
+       :op1 (c16-11 / note-01
+                    :ARG0 (c16-12 / you)
+                    :ARG1 (c16-13 / and
+                                  :op1 (c16-7 / love-01
+                                              :ARG0 (c16-10 / i)
+                                              :ARG1 (c16-9 / book
+                                                           :name (c16-6 / name
+                                                                        :op1 "OT")))
+                                  :op2 (c16-2 / continue-01
+                                              :ARG0 c16-10
+                                              :ARG1 (c16-0 / study-01
+                                                           :ARG0 c16-10
+                                                           :ARG1 c16-9
+                                                           :location (c16-5 / tongue
+                                                                            :mod (c16-4 / original)
+                                                                            :poss c16-9))))
+                    :mode imperative
+                    :polite +)
+       :op2 (c16-8 / lecture-01
+                   :ARG0 c16-10
+                   :ARG2 c16-9
+                   :location (c16-3 / here)))
+
+# ::snt If you don't understand that the gods ( small " g " ) of the OT are an abomination to God then stop lecturing .
+# ::tokens ["If", "you", "do", "n't", "understand", "that", "the", "gods", "(", "small", "\"", "g", "\"", ")", "of", "the", "OT", "are", "an", "abomination", "to", "God", "then", "stop", "lecturing", "."]
+# ::lemmas ["if", "you", "do", "not", "understand", "that", "the", "god", "(", "small", "\"", "g", "\"", ")", "of", "the", "OT", "be", "an", "abomination", "to", "God", "then", "stop", "lecture", "."]
+(c17-0 / stop-01
+       :ARG0 (c17-9 / you)
+       :ARG1 (c17-4 / lecture-01
+                    :ARG0 c17-9)
+       :condition (c17-3 / understand-01
+                         :ARG0 c17-9
+                         :ARG1 (c17-1 / abominable-02
+                                      :ARG0 (c17-6 / book
+                                                   :name (c17-8 / name
+                                                                :op1 "OT")
+                                                   :mod (c17-7 / small)
+                                                   :mod (c17-2 / string-entity
+                                                               :value "g"))
+                                      :ARG1 (c17-5 / god))
+                         :polarity -)
+       :mode imperative)
+
+# ::snt They were only an abomination concerning the Jews YHVH had no issues with gentiles doing that
+# ::tokens ["They", "were", "only", "an", "abomination", "concerning", "the", "Jews", "YHVH", "had", "no", "issues", "with", "gentiles", "doing", "that"]
+# ::lemmas ["they", "be", "only", "an", "abomination", "concern", "the", "Jews", "YHVH", "have", "no", "issue", "with", "gentile", "do", "that"]
+(c18-11 / multi-sentence
+        :snt1 (c18-1 / abominable-02
+                     :ARG1 (c18-5 / they)
+                     :mod (c18-3 / only)
+                     :topic (c18-6 / religious-group
+                                   :name (c18-12 / name
+                                                 :op1 "Jew")))
+        :snt2 (c18-10 / issue-02
+                      :ARG0 (c18-7 / person
+                                   :mod (c18-13 / ethnic-group
+                                                :name (c18-8 / name
+                                                             :op1 "Hindu")))
+                      :ARG1 (c18-4 / person
+                                   :mod (c18-9 / gentile)
+                                   :ARG0-of (c18-0 / do-02
+                                                   :ARG1 (c18-2 / that)))
+                      :polarity -))
+
+# ::snt God is insulted by all idol worship . These are basic truths , how can you miss this ?
+# ::tokens ["God", "is", "insulted", "by", "all", "idol", "worship", ".", "These", "are", "basic", "truths", ",", "how", "can", "you", "miss", "this", "?"]
+# ::lemmas ["God", "be", "insult", "you", "all", "idol", "worship", ".", "these", "be", "basic", "truth", ",", "how", "can", "you", "miss", "this", "?"]
+(c19-9 / multi-sentence
+       :snt1 (c19-8 / insult-01
+                    :ARG0 (c19-1 / worship-01
+                                 :ARG1 (c19-3 / idol)
+                                 :mod (c19-0 / all))
+                    :ARG1 (c19-6 / person
+                                 :name (c19-10 / name
+                                               :op1 "God")))
+       :snt2 (c19-5 / true-01
+                    :ARG1 (c19-2 / this)
+                    :mod (c19-7 / basic)
+                    :ARG1-of (c19-4 / possible-01
+                                    :manner (c19-11 / amr-unknown)
+                                    :polarity -)))

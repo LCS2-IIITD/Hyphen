@@ -1,0 +1,168 @@
+# ::snt They might be. I don't know what to believe.
+# ::tokens ["They", "might", "be", ".", "I", "do", "n't", "know", "what", "to", "believe", "."]
+# ::lemmas ["they", "might", "be", ".", "i", "do", "not", "know", "what", "to", "believe", "."]
+(c1-5 / multi-sentence
+      :snt1 (c1-4 / possible-01
+                  :ARG1 (c1-2 / they))
+      :snt2 (c1-6 / know-01
+                  :ARG0 (c1-0 / i)
+                  :ARG1 (c1-1 / thing
+                              :ARG1-of (c1-3 / believe-01
+                                             :ARG0 c1-0))
+                  :polarity -))
+
+# ::snt Haha my doctor thinks the antibodies tests are bogus
+# ::tokens ["Haha", "my", "doctor", "thinks", "the", "antibodies", "tests", "are", "bogus"]
+# ::lemmas ["haha", "my", "doctor", "think", "the", "antibody", "test", "be", "bogus"]
+(c2-4 / think-01
+      :ARG0 (c2-0 / doctor
+                  :poss (c2-6 / i))
+      :ARG1 (c2-5 / bogus
+                  :domain (c2-2 / test-01
+                                :ARG1 (c2-1 / antibody)))
+      :mod (c2-3 / haha
+                 :mode expressive))
+
+# ::snt I'm not entirely sure. Everyone else in the house got it, but somehow I tested negative multiple times despite being in close proximity and taking no precautions. My antibody test also came back negative. Apparently I'm a cyborg.
+# ::tokens ["I", "'m", "not", "entirely", "sure", ".", "Everyone", "else", "in", "the", "house", "got", "it", ",", "but", "somehow", "I", "tested", "negative", "multiple", "times", "despite", "being", "in", "close", "proximity", "and", "taking", "no", "precautions", ".", "My", "antibody", "test", "also", "came", "back", "negative", ".", "Apparently", "I", "'m", "a", "cyborg", "."]
+# ::lemmas ["i", "be", "not", "entirely", "sure", ".", "everyone", "else", "in", "the", "house", "get", "it", ",", "but", "somehow", "i", "test", "negative", "multiple", "time", "despite", "be", "in", "close", "proximity", "and", "take", "no", "precaution", ".", "my", "antibody", "test", "also", "come", "back", "negative", ".", "apparently", "i", "be", "a", "cyborg", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-15 / sure-02
+                    :ARG0 (c3-4 / i)
+                    :degree (c3-14 / entire)
+                    :polarity -)
+       :snt2 (c3-5 / contrast-01
+                   :ARG1 (c3-10 / get-01
+                                :ARG0 (c3-21 / everyone
+                                             :mod (c3-2 / else)
+                                             :location (c3-20 / house))
+                                :ARG1 (c3-16 / it))
+                   :ARG2 (c3-9 / test-01
+                               :ARG0 (c3-17 / i)
+                               :ARG1-of (c3-12 / negative-03)
+                               :manner (c3-24 / somehow)
+                               :concession (c3-19 / and
+                                                  :op1 (c3-0 / close-10
+                                                             :ARG1 c3-17
+                                                             :ARG2 (c3-25 / proximity
+                                                                          :ARG1-of c3-0)))
+                               :op2 (c3-23 / precaution-02
+                                           :ARG0 c3-17
+                                           :polarity -)))
+       :snt3 (c3-8 / come-01
+                   :ARG1 (c3-7 / test-01
+                               :ARG0 (c3-22 / i)
+                               :ARG2 (c3-13 / antibody))
+                   :ARG4 (c3-3 / negative-03)
+                   :mod (c3-1 / also))
+       :snt4 (c3-18 / cyborg
+                    :domain (c3-6 / i)
+                    :ARG1-of (c3-26 / appear-02)))
+
+# ::snt Youve had Covid havent ya Ryan?
+# ::tokens ["You", "ve", "had", "Covid", "have", "nt", "ya", "Ryan", "?"]
+# ::lemmas ["you", "ve", "have", "Covid", "have", "not", "ya", "Ryan", "?"]
+(c4-1 / have-03
+      :ARG0 (c4-4 / person
+                  :name (c4-5 / name
+                              :op1 "Ryan"))
+      :ARG1 (c4-0 / facility
+                  :name (c4-2 / name
+                              :op1 "Covid"))
+      :ARG1-of (c4-3 / request-confirmation-91
+                     :ARG2 c4-4))
+
+# ::snt I had my first one weeks ago and I will get nd on Saturday. My arm hurt a little for a day. I'm expecting to maybe feel a little more on the second. But still it feels like a get out of jail free card.
+# ::tokens ["I", "had", "my", "first", "one", "weeks", "ago", "and", "I", "will", "get", "nd", "on", "Saturday", ".", "My", "arm", "hurt", "a", "little", "for", "a", "day", ".", "I", "'m", "expecting", "to", "maybe", "feel", "a", "little", "more", "on", "the", "second", ".", "But", "still", "it", "feels", "like", "a", "get", "out", "of", "jail", "free", "card", "."]
+# ::lemmas ["i", "have", "my", "first", "one", "weeks", "ago", "and", "i", "will", "get", "nd", "on", "Saturday", ".", "my", "arm", "hurt", "a", "little", "for", "a", "day", ".", "i", "be", "expect", "to", "maybe", "feel", "a", "little", "more", "on", "the", "second", ".", "but", "still", "it", "feel", "like", "a", "get", "out", "of", "jail", "free", "card", "."]
+(c5-13 / multi-sentence
+       :snt1 (c5-27 / and
+                    :op1 (c5-31 / have-03
+                                :ARG0 (c5-4 / i)
+                                :ARG1 (c5-11 / thing
+                                             :ord (c5-10 / ordinal-entity
+                                                         :value 1)
+                                             :poss c5-4)
+                                :time (c5-35 / before
+                                             :op1 (c5-14 / now)
+                                             :quant (c5-9 / temporal-quantity
+                                                          :unit (c5-8 / week)
+                                                          :quant 1)))
+                    :op2 (c5-12 / get-01
+                                :ARG0 c5-4
+                                :ARG1 (c5-15 / thing
+                                             :name (c5-2 / name
+                                                         :op1 "ND"))
+                                :time (c5-0 / date-entity
+                                            :weekday (c5-18 / saturday))))
+       :snt2 (c5-3 / hurt-01
+                   :ARG1 (c5-16 / arm
+                                :part-of (c5-19 / i))
+                   :duration c5-9
+                   :unit (c5-24 / day)
+                   :quant 1)
+       :snt3 (c5-17 / expect-01
+                    :ARG0 (c5-20 / i)
+                    :ARG1 (c5-37 / possible-01
+                                 :ARG1 (c5-29 / feel-01
+                                              :ARG0 c5-20
+                                              :ARG1 (c5-21 / thing
+                                                           :ARG1-of (c5-5 / have-quant-91
+                                                                          :ARG3 (c5-30 / more
+                                                                                       :quant (c5-34 / little))))
+                                              :time (c5-28 / thing
+                                                           :ord (c5-32 / ordinal-entity
+                                                                       :value 2)))))
+       :snt4 (c5-7 / contrast-01
+                   :ARG2 (c5-22 / feel-01
+                                :ARG0 (c5-33 / it)
+                                :ARG1 (c5-1 / card
+                                            :ARG1-of (c5-23 / free-03)
+                                            :purpose (c5-25 / get-05
+                                                            :ARG2 (c5-6 / out-06
+                                                                        :ARG2 (c5-36 / jail))))
+                                :mod (c5-26 / still))))
+
+# ::snt That seems to be pretty common
+# ::tokens ["That", "seems", "to", "be", "pretty", "common"]
+# ::lemmas ["that", "seem", "to", "be", "pretty", "common"]
+(c6-0 / seem-01
+      :ARG1 (c6-3 / common
+                  :domain (c6-2 / that)
+                  :degree (c6-1 / pretty)))
+
+# ::snt Cool. Any side effects? My Mom is in healthcare and she got hers a while ago. She just had some mild body aches for a day or so.
+# ::tokens ["Cool", ".", "Any", "side", "effects", "?", "My", "Mom", "is", "in", "healthcare", "and", "she", "got", "hers", "a", "while", "ago", ".", "She", "just", "had", "some", "mild", "body", "aches", "for", "a", "day", "or", "so", "."]
+# ::lemmas ["cool", ".", "any", "side", "effect", "?", "my", "mom", "be", "in", "healthcare", "and", "she", "get", "hers", "a", "while", "ago", ".", "she", "just", "have", "some", "mild", "body", "ache", "for", "a", "day", "or", "so", "."]
+(c7-12 / multi-sentence
+       :snt1 (c7-6 / cool-04)
+       :snt2 (c7-15 / event
+                    :mod (c7-16 / side)
+                    :quant (c7-21 / any)
+                    :polarity (c7-14 / amr-unknown))
+       :snt3 (c7-1 / and
+                   :op1 (c7-25 / be-located-at-91
+                               :ARG1 (c7-27 / person
+                                            :ARG0-of (c7-23 / have-rel-role-91
+                                                            :ARG1 (c7-3 / i)
+                                                            :ARG2 (c7-22 / mom)))
+                               :ARG2 (c7-2 / healthcare))
+                   :op2 (c7-11 / get-01
+                               :ARG0 c7-27
+                               :ARG1 (c7-10 / thing
+                                            :poss c7-27)
+                               :time (c7-20 / before
+                                            :op1 (c7-13 / now)
+                                            :quant (c7-7 / while))))
+       :snt4 (c7-5 / have-03
+                   :ARG0 (c7-26 / she)
+                   :ARG1 (c7-28 / ache-01
+                                :ARG0 (c7-17 / body)
+                                :degree (c7-19 / mild)
+                                :quant (c7-18 / some))
+                   :mod (c7-24 / just)
+                   :duration (c7-9 / or
+                                   :op1 (c7-8 / temporal-quantity
+                                              :unit (c7-0 / day)
+                                              :quant 1)
+                                   :op2 (c7-4 / so))))

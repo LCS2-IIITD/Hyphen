@@ -1,0 +1,45 @@
+# ::snt That was, really great casting.
+# ::tokens ["That", "was", ",", "really", "great", "casting", "."]
+# ::lemmas ["that", "be", ",", "really", "great", "casting", "."]
+(c1-3 / cast-02
+      :mod (c1-0 / great
+                 :degree (c1-2 / really))
+      :domain (c1-1 / that))
+
+# ::snt But shouldn't it be a combination of Han and Leia?
+# ::tokens ["But", "should", "n't", "it", "be", "a", "combination", "of", "Han", "and", "Leia", "?"]
+# ::lemmas ["but", "should", "not", "it", "be", "a", "combination", "of", "Han", "and", "Leia", "?"]
+(c2-2 / contrast-01
+      :ARG2 (c2-4 / recommend-01
+                  :ARG1 (c2-0 / combine-01
+                              :ARG1 (c2-6 / person
+                                          :name (c2-7 / name
+                                                      :op1 "Han"))
+                              :ARG2 (c2-3 / person
+                                          :name (c2-5 / name
+                                                      :op1 "Leia")))
+                  :polarity (c2-1 / amr-unknown)
+                  :polarity -))
+
+# ::snt nah, sometimes genetics just favors one parent.
+# ::tokens ["nah", ",", "sometimes", "genetics", "just", "favors", "one", "parent", "."]
+# ::lemmas ["nah", ",", "sometimes", "genetic", "just", "favor", "one", "parent", "."]
+(c3-1 / favor-01
+      :ARG0 (c3-4 / genetics)
+      :ARG1 (c3-6 / person
+                  :ARG0-of (c3-2 / have-rel-role-91
+                                 :ARG2 (c3-3 / parent))
+                  :quant 1)
+      :frequency (c3-0 / sometimes)
+      :mod (c3-5 / just)
+      :mod (c3-7 / nah
+                 :mode expressive))
+
+# ::snt And adds a random big nose.
+# ::tokens ["And", "adds", "a", "random", "big", "nose", "."]
+# ::lemmas ["and", "add", "a", "random", "big", "nose", "."]
+(c4-0 / and
+      :op2 (c4-4 / add-02
+                 :ARG1 (c4-3 / nose
+                             :mod (c4-2 / big)
+                             :mod (c4-1 / random))))

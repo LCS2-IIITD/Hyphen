@@ -1,0 +1,56 @@
+# ::snt No, you will be asked COVID screening questions once you arrive to the Vaccine clinic!
+# ::tokens ["No", ",", "you", "will", "be", "asked", "COVID", "screening", "questions", "once", "you", "arrive", "to", "the", "Vaccine", "clinic", "!"]
+# ::lemmas ["no", ",", "you", "will", "be", "ask", "covid", "screen", "question", "once", "you", "arrive", "to", "the", "Vaccine", "clinic", "!"]
+(c1-7 / multi-sentence
+      :snt1 (c1-8 / no)
+      :snt2 (c1-2 / ask-01
+                  :ARG1 (c1-4 / question-01
+                              :ARG1 (c1-0 / screen-01
+                                          :ARG3 (c1-1 / disease
+                                                      :name (c1-6 / name
+                                                                  :op1 "COVine"))))
+                  :ARG2 (c1-9 / you)
+                  :time (c1-10 / arrive-01
+                               :ARG1 c1-9
+                               :ARG4 (c1-3 / clinic
+                                           :mod (c1-5 / vaccine-01)))))
+
+# ::snt Hi Rosemary just wanted to check do we need to fill a screening questionnaire for covid before hand and get it along or do we fill it there. As the email does not state anything
+# ::tokens ["Hi", "Rosemary", "just", "wanted", "to", "check", "do", "we", "need", "to", "fill", "a", "screening", "questionnaire", "for", "covid", "before", "hand", "and", "get", "it", "along", "or", "do", "we", "fill", "it", "there", ".", "As", "the", "email", "does", "not", "state", "anything"]
+# ::lemmas ["hi", "Rosemary", "just", "want", "to", "check", "do", "we", "need", "to", "fill", "a", "screening", "questionnaire", "for", "covid", "before", "hand", "and", "get", "it", "along", "or", "do", "we", "fill", "it", "there", ".", "as", "the", "email", "do", "not", "state", "anything"]
+(c2-10 / multi-sentence
+       :snt1 (c2-14 / say-01
+                    :ARG1 (c2-20 / hi)
+                    :ARG2 (c2-25 / person
+                                 :name (c2-11 / name
+                                              :op1 "Rosemary")))
+       :snt2 (c2-5 / want-01
+                   :ARG0 c2-25
+                   :ARG1 (c2-4 / check-01
+                               :ARG0 c2-25
+                               :ARG1 (c2-8 / truth-value
+                                           :polarity-of (c2-7 / or
+                                                              :op1 (c2-2 / need-01
+                                                                         :ARG0 (c2-12 / we)
+                                                                         :ARG1 (c2-19 / fill-01
+                                                                                      :ARG0 c2-12
+                                                                                      :ARG1 (c2-1 / questionnaire
+                                                                                                  :mod (c2-24 / screen-01
+                                                                                                              :ARG1 (c2-21 / product
+                                                                                                                           :name (c2-17 / name
+                                                                                                                                        :op1 "Covid"))))
+                                                                                      :time (c2-23 / before
+                                                                                                   :op1 (c2-3 / hand))))
+                                                              :op2 (c2-9 / get-through-12
+                                                                         :ARG0 c2-12
+                                                                         :ARG1 c2-19)
+                                                              :op3 (c2-16 / fill-01
+                                                                          :ARG0 c2-12
+                                                                          :ARG1 c2-21
+                                                                          :location (c2-6 / there)))))
+                   :mod (c2-22 / just))
+       :snt3 (c2-0 / cause-01
+                   :ARG0 (c2-15 / state-01
+                                :ARG0 (c2-13 / email)
+                                :ARG1 (c2-18 / anything)
+                                :polarity -)))

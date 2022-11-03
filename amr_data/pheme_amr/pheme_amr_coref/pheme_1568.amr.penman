@@ -1,0 +1,102 @@
+# ::snt assault done in Paris too
+# ::tokens ["assault", "done", "in", "Paris", "too"]
+# ::lemmas ["assault", "do", "in", "Paris", "too"]
+(c1-3 / assault-01
+      :location (c1-2 / city
+                      :name (c1-0 / name
+                                  :op1 "Paris"))
+      :mod (c1-1 / too))
+
+# ::snt screams ... 'they got him' ... wounded policemen
+# ::tokens ["screams", "...", "'", "they", "got", "him", "'", "...", "wounded", "policemen"]
+# ::lemmas ["scream", "...", "'", "they", "get", "he", "'", "...", "wound", "policeman"]
+(c2-6 / and
+      :op1 (c2-4 / scream-01)
+      :op2 (c2-3 / get-01
+                 :ARG0 (c2-5 / they)
+                 :ARG1 (c2-0 / he))
+      :op3 (c2-2 / policeman
+                 :ARG1-of (c2-1 / wound-01)))
+
+# ::snt ?now
+# ::tokens ["?", "now"]
+# ::lemmas ["?", "now"]
+(c3-0 / now
+      :polarity (c3-1 / amr-unknown))
+
+# ::snt explosions in Paris and continuous shots .. personnes escaped .... till fighting
+# ::tokens ["explosions", "in", "Paris", "and", "continuous", "shots", "..", "personnes", "escaped", "....", "till", "fighting"]
+# ::lemmas ["explosion", "in", "Paris", "and", "continuous", "shot", "..", "personne", "escape", "....", "till", "fight"]
+(c4-1 / multi-sentence
+      :snt1 (c4-10 / and
+                   :op1 (c4-3 / explode-01
+                              :location (c4-7 / city
+                                              :name (c4-4 / name
+                                                          :op1 "Paris")))
+                   :op2 (c4-8 / shoot-01
+                              :ARG1-of (c4-6 / continue-01)))
+      :snt2 (c4-2 / escape-01
+                  :ARG0 (c4-5 / person)
+                  :time (c4-9 / till
+                              :op1 (c4-0 / fight-01
+                                         :ARG0 c4-5))))
+
+# ::snt assault finished .. But no more info
+# ::tokens ["assault", "finished", "..", "But", "no", "more", "info"]
+# ::lemmas ["assault", "finish", "..", "but", "no", "more", "info"]
+(c5-1 / multi-sentence
+      :snt1 (c5-0 / finish-01
+                  :ARG1 (c5-5 / assault-01))
+      :snt2 (c5-4 / contrast-01
+                  :ARG2 (c5-2 / information
+                              :quant (c5-3 / more)
+                              :polarity -)))
+
+# ::snt I would Appreciate a Briefing by Authorities rather than Media Analysis playbyplay some MisInformation
+# ::tokens ["I", "would", "Appreciate", "a", "Briefing", "by", "Authorities", "rather", "than", "Media", "Analysis", "playbyplay", "some", "MisInformation"]
+# ::lemmas ["i", "would", "appreciate", "a", "briefing", "by", "authority", "rather", "than", "Media", "Analysis", "playbyplay", "some", "MisInformation"]
+(c6-9 / appreciate-02
+      :ARG0 (c6-3 / i)
+      :ARG1 (c6-1 / brief-01
+                  :ARG0 (c6-2 / authority)
+                  :ARG1-of (c6-7 / instead-of-91
+                                 :ARG2 (c6-5 / playbyplay-00
+                                             :ARG0 c6-2
+                                             :ARG1 (c6-0 / misInformation
+                                                         :quant (c6-8 / some))
+                                             :mod (c6-4 / analyze-01
+                                                        :ARG1 (c6-6 / media))))))
+
+# ::snt Its over.
+# ::tokens ["Its", "over", "."]
+# ::lemmas ["its", "over", "."]
+(c7-0 / over-01
+      :ARG1 (c7-1 / it))
+
+# ::snt second Raid group enters
+# ::tokens ["second", "Raid", "group", "enters"]
+# ::lemmas ["second", "Raid", "group", "enter"]
+(c8-1 / enter-01
+      :ARG0 (c8-2 / group
+                  :name (c8-0 / name
+                              :op1 "Rifle")
+                  :ord (c8-3 / ordinal-entity
+                             :value 2)))
+
+# ::snt seems to be finished ... :'( Raid Policemen down
+# ::tokens ["seems", "to", "be", "finished", "...", ":'(", "Raid", "Policemen", "down"]
+# ::lemmas ["seem", "to", "be", "finish", "...", ":'(", "Raid", "Policemen", "down"]
+(c9-0 / seem-01
+      :ARG1 (c9-1 / finish-01))
+
+# ::snt : Explosions, smoke at industrial area where suspects are holed up:
+# ::tokens [":", "Explosions", ",", "smoke", "at", "industrial", "area", "where", "suspects", "are", "holed", "up", ":"]
+# ::lemmas [":", "explosion", ",", "smoke", "at", "industrial", "area", "where", "suspect", "be", "hole", "up", ":"]
+(c11-7 / and
+       :op1 (c11-1 / explosive)
+       :op2 (c11-6 / smoke)
+       :location (c11-3 / area
+                        :mod (c11-4 / industry)
+                        :location-of (c11-0 / hole-up-01
+                                            :ARG1 (c11-5 / person
+                                                         :ARG2-of (c11-2 / suspect-01)))))

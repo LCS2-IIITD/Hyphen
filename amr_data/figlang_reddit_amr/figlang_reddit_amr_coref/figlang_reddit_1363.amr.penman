@@ -1,0 +1,43 @@
+# ::snt The Muslim Brotherhood in Egypt faking dramatic pictures
+# ::tokens ["The", "Muslim", "Brotherhood", "in", "Egypt", "faking", "dramatic", "pictures"]
+# ::lemmas ["The", "Muslim", "Brotherhood", "in", "Egypt", "fake", "dramatic", "picture"]
+(c1-1 / fake-01
+      :ARG0 (c1-3 / organization
+                  :name (c1-6 / name
+                              :op1 "Muslim"
+                              :op2 "Brotherhood")
+                  :location (c1-2 / country
+                                  :name (c1-4 / name
+                                              :op1 "Egypt")))
+      :ARG1 (c1-5 / picture
+                  :mod (c1-0 / dramatic)))
+
+# ::snt This happened a couple of weeks ago, way before the actual massacre.
+# ::tokens ["This", "happened", "a", "couple", "of", "weeks", "ago", ",", "way", "before", "the", "actual", "massacre", "."]
+# ::lemmas ["this", "happen", "a", "couple", "of", "weeks", "ago", ",", "way", "before", "the", "actual", "massacre", "."]
+(c2-6 / be-temporally-at-91
+      :ARG1 (c2-5 / this)
+      :ARG2 (c2-0 / before
+                  :op1 (c2-7 / massacre-01
+                             :ARG1-of (c2-1 / actual-02))
+                  :quant (c2-3 / way)
+                  :time-of c2-6)
+      :op1 (c2-8 / now)
+      :quant (c2-2 / couple
+                   :op1 (c2-4 / temporal-quantity
+                              :unit (c2-9 / week)
+                              :quant 1)))
+
+# ::snt Doesn't change the fact that they are trying to manipulate the perception of whats going on over there.
+# ::tokens ["Does", "n't", "change", "the", "fact", "that", "they", "are", "trying", "to", "manipulate", "the", "perception", "of", "what", "s", "going", "on", "over", "there", "."]
+# ::lemmas ["do", "not", "change", "the", "fact", "that", "they", "be", "try", "to", "manipulate", "the", "perception", "of", "what", "s", "go", "on", "over", "there", "."]
+(c3-0 / change-01
+      :ARG1 (c3-3 / try-01
+                  :ARG0 (c3-1 / they)
+                  :ARG1 (c3-6 / manipulate-02
+                              :ARG0 c3-1
+                              :ARG1 (c3-5 / perceive-01
+                                          :ARG1 (c3-7 / thing
+                                                      :ARG1-of (c3-4 / go-on-15
+                                                                     :location (c3-2 / there))))))
+      :polarity -)

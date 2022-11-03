@@ -1,0 +1,51 @@
+# ::snt it's both
+# ::tokens ["it", "'s", "both"]
+# ::lemmas ["it", "be", "both"]
+(c1-0 / both)
+
+# ::snt is it really a White House if it's rainbow?
+# ::tokens ["is", "it", "really", "a", "White", "House", "if", "it", "'s", "rainbow", "?"]
+# ::lemmas ["be", "it", "really", "a", "White", "House", "if", "it", "be", "rainbow", "?"]
+(c2-2 / government-organization
+      :name (c2-4 / name
+                  :op1 "White"
+                  :op2 "House")
+      :polarity (c2-0 / amr-unknown)
+      :ARG1-of (c2-1 / real-04)
+      :condition (c2-3 / rainbow))
+
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c3-2 / congratulate-01
+      :ARG1 (c3-0 / you)
+      :ARG2 (c3-1 / tweet-01
+                  :ARG0 c3-0))
+
+# ::snt : bro there's either a black president in a rainbow whitehouse or i'm having the best trip ever
+# ::tokens [":", "bro", "there", "'s", "either", "a", "black", "president", "in", "a", "rainbow", "whitehouse", "or", "i", "'m", "having", "the", "best", "trip", "ever"]
+# ::lemmas [":", "bro", "there", "be", "either", "a", "black", "president", "in", "a", "rainbow", "whitehouse", "or", "i", "be", "have", "the", "good", "trip", "ever"]
+(c4-13 / or
+       :op1 (c4-4 / be-located-at-91
+                  :ARG1 (c4-12 / person
+                               :ARG0-of (c4-15 / have-org-role-91
+                                               :ARG2 (c4-6 / president))
+                               :ARG1-of (c4-5 / black-05))
+                  :ARG2 (c4-14 / whitehouse
+                               :mod (c4-2 / rainbow)))
+       :op2 (c4-9 / have-03
+                  :ARG0 (c4-10 / i)
+                  :ARG1 (c4-1 / trip-03
+                              :ARG0 c4-10
+                              :time (c4-3 / ever)
+                              :ARG1-of (c4-11 / have-degree-91
+                                              :ARG2 (c4-7 / good-02
+                                                          :ARG1 c4-1)
+                                              :ARG3 (c4-8 / most))))
+       :mod (c4-0 / bro))
+
+# ::snt Both?
+# ::tokens ["Both", "?"]
+# ::lemmas ["both", "?"]
+(c5-0 / both
+      :polarity (c5-1 / amr-unknown))

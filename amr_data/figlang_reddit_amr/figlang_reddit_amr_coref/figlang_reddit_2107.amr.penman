@@ -1,0 +1,50 @@
+# ::snt My wife said we need to find another place to buy floor tiles because Home Depot only sells it by the square foot and our room is rectangular
+# ::tokens ["My", "wife", "said", "we", "need", "to", "find", "another", "place", "to", "buy", "floor", "tiles", "because", "Home", "Depot", "only", "sells", "it", "by", "the", "square", "foot", "and", "our", "room", "is", "rectangular"]
+# ::lemmas ["my", "wife", "say", "we", "need", "to", "find", "another", "place", "to", "buy", "floor", "tile", "because", "Home", "Depot", "only", "sell", "it", "by", "the", "square", "foot", "and", "our", "room", "be", "rectangular"]
+(c1-12 / say-01
+       :ARG0 (c1-21 / person
+                    :ARG0-of (c1-17 / have-rel-role-91
+                                    :ARG1 (c1-2 / i)
+                                    :ARG2 (c1-5 / wife)))
+       :ARG1 (c1-9 / need-01
+                   :ARG0 (c1-11 / we)
+                   :ARG1 (c1-16 / find-01
+                                :ARG0 c1-11
+                                :ARG1 (c1-18 / place
+                                             :mod (c1-15 / another)
+                                             :location-of (c1-19 / buy-01
+                                                                 :ARG0 c1-11
+                                                                 :ARG1 (c1-7 / tile
+                                                                             :mod (c1-14 / floor)))))
+                   :ARG1-of (c1-4 / cause-01
+                                  :ARG0 (c1-10 / and
+                                               :op1 (c1-20 / sell-01
+                                                           :ARG0 (c1-0 / company
+                                                                       :name (c1-1 / name
+                                                                                   :op1 "Home"
+                                                                                   :op2 "Depot"))
+                                                           :ARG1 c1-7
+                                                           :manner (c1-13 / square-foot)
+                                                           :mod (c1-6 / only))
+                                               :op2 (c1-3 / square-foot
+                                                          :domain (c1-8 / room
+                                                                        :poss c1-11))))))
+
+# ::snt Ask her how far she would travel in one hour if she was driving 70mph.
+# ::tokens ["Ask", "her", "how", "far", "she", "would", "travel", "in", "one", "hour", "if", "she", "was", "driving", "70", "mph", "."]
+# ::lemmas ["ask", "she", "how", "far", "she", "would", "travel", "in", "one", "hour", "if", "she", "be", "drive", "70", "mph", "."]
+(c2-2 / ask-01
+      :ARG0 (c2-9 / you)
+      :ARG1 (c2-6 / thing
+                  :extent-of (c2-4 / travel-01
+                                   :ARG0 (c2-0 / she)
+                                   :duration (c2-3 / temporal-quantity
+                                                   :unit (c2-5 / hour)
+                                                   :quant 1)
+                                   :condition (c2-1 / drive-01
+                                                    :ARG0 c2-0
+                                                    :ARG1 (c2-7 / speed-quantity
+                                                                :unit (c2-8 / mile-per-hour)
+                                                                :quant 70))))
+      :ARG2 c2-0
+      :mode imperative)

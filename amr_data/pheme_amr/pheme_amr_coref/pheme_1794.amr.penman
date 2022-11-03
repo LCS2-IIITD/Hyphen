@@ -1,0 +1,52 @@
+# ::snt Germanwings A320's crash?
+# ::tokens ["Germanwings", "A320", "'s", "crash", "?"]
+# ::lemmas ["Germanwings", "A320", "'s", "crash", "?"]
+(c1-1 / crash-01
+      :ARG1 (c1-3 / aircraft-type
+                  :name (c1-0 / name
+                              :op1 "Germanwings"
+                              :op2 "A320"))
+      :polarity (c1-2 / amr-unknown))
+
+# ::snt spot on. lots of people helping.
+# ::tokens ["spot", "on", ".", "lots", "of", "people", "helping", "."]
+# ::lemmas ["spot", "on", ".", "lot", "of", "people", "help", "."]
+(c2-5 / and
+      :op1 (c2-4 / spot-on-02
+                 :ARG0 (c2-1 / you)
+                 :mode imperative)
+      :op2 (c2-0 / help-01
+                 :ARG0 (c2-3 / person
+                             :quant (c2-2 / lot))))
+
+# ::snt . My mind has been replaying his desperate horror since I first read the news.
+# ::tokens [".", "My", "mind", "has", "been", "replaying", "his", "desperate", "horror", "since", "I", "first", "read", "the", "news", "."]
+# ::lemmas [".", "my", "mind", "have", "be", "replay", "his", "desperate", "horror", "since", "i", "first", "read", "the", "news", "."]
+(c3-6 / replay-01
+      :ARG0 (c3-1 / mind
+                  :part-of (c3-3 / i))
+      :ARG1 (c3-0 / horror
+                  :ARG1-of (c3-7 / desperate-02)
+                  :poss (c3-9 / he))
+      :time (c3-8 / since
+                  :op1 (c3-4 / read-01
+                             :ARG0 c3-3
+                             :ARG1 (c3-5 / news)
+                             :ord (c3-2 / ordinal-entity
+                                        :value 1))))
+
+# ::snt we also need to think of all the rescue workers who are risking their own lives .
+# ::tokens ["we", "also", "need", "to", "think", "of", "all", "the", "rescue", "workers", "who", "are", "risking", "their", "own", "lives", "."]
+# ::lemmas ["we", "also", "need", "to", "think", "of", "all", "the", "rescue", "worker", "who", "be", "risk", "their", "own", "life", "."]
+(c4-4 / need-01
+      :ARG0 (c4-0 / we)
+      :ARG1 (c4-8 / think-01
+                  :ARG0 c4-0
+                  :ARG1 (c4-6 / person
+                              :ARG0-of (c4-3 / work-01
+                                             :ARG1 (c4-7 / rescue-01))
+                              :mod (c4-9 / all)
+                              :ARG0-of (c4-5 / risk-01
+                                             :ARG2 (c4-1 / life
+                                                         :poss c4-6))))
+      :mod (c4-2 / also))

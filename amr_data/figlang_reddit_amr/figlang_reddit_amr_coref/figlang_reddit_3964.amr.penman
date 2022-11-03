@@ -1,0 +1,49 @@
+# ::snt A new billboard just went up in my town
+# ::tokens ["A", "new", "billboard", "just", "went", "up", "in", "my", "town"]
+# ::lemmas ["a", "new", "billboard", "just", "go", "up", "in", "my", "town"]
+(c1-3 / go-01
+      :ARG1 (c1-0 / billboard
+                  :ARG1-of (c1-6 / new-01))
+      :ARG4 (c1-1 / up)
+      :time (c1-4 / just)
+      :location (c1-2 / town
+                      :poss (c1-5 / i)))
+
+# ::snt What makes you think we want you?
+# ::tokens ["What", "makes", "you", "think", "we", "want", "you", "?"]
+# ::lemmas ["what", "make", "you", "think", "we", "want", "you", "?"]
+(c2-3 / make-02
+      :ARG0 (c2-0 / amr-unknown)
+      :ARG1 (c2-2 / think-01
+                  :ARG0 (c2-4 / you)
+                  :ARG1 (c2-1 / want-01
+                              :ARG0 (c2-5 / we)
+                              :ARG1 c2-4)))
+
+# ::snt Canadians say they don't want Americans and it's cool, Americans say we don't want Mexicans and we are racist.
+# ::tokens ["Canadians", "say", "they", "do", "n't", "want", "Americans", "and", "it", "'s", "cool", ",", "Americans", "say", "we", "do", "n't", "want", "Mexicans", "and", "we", "are", "racist", "."]
+# ::lemmas ["canadian", "say", "they", "do", "not", "want", "Americans", "and", "it", "be", "cool", ",", "Americans", "say", "we", "do", "not", "want", "Mexicans", "and", "we", "be", "racist", "."]
+(c3-2 / and
+      :op1 (c3-0 / say-01
+                 :ARG0 (c3-13 / person
+                              :mod (c3-3 / country
+                                         :name (c3-14 / name
+                                                      :op1 "Canada")))
+                 :ARG1 (c3-4 / want-01
+                             :ARG0 c3-13
+                             :ARG1 (c3-8 / person
+                                         :mod (c3-1 / country
+                                                    :name (c3-9 / name
+                                                                :op1 "America")))
+                             :polarity -))
+      :op2 (c3-7 / cool-04
+                 :ARG1 (c3-12 / say-01
+                              :ARG0 c3-8
+                              :ARG1 (c3-15 / and
+                                           :op1 (c3-5 / want-01
+                                                      :ARG0 (c3-11 / we)
+                                                      :ARG1 (c3-6 / person
+                                                                  :mod c3-1)
+                                                      :polarity -)
+                                           :op2 (c3-10 / racist
+                                                       :domain c3-11)))))

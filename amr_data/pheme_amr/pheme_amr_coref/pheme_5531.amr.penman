@@ -1,0 +1,419 @@
+# ::snt black box says you're a liar.
+# ::tokens ["black", "box", "says", "you", "'re", "a", "liar", "."]
+# ::lemmas ["black", "box", "say", "you", "be", "a", "liar", "."]
+(c1-4 / say-01
+      :ARG0 (c1-2 / box
+                  :ARG1-of (c1-3 / black-04))
+      :ARG1 (c1-1 / lie-08
+                  :ARG0 (c1-0 / you)))
+
+# ::snt Whatever the truth, Putin has secured his southern flank. Will he now move on the Baltics, NATO allies, to secure the north?
+# ::tokens ["Whatever", "the", "truth", ",", "Putin", "has", "secured", "his", "southern", "flank", ".", "Will", "he", "now", "move", "on", "the", "Baltics", ",", "NATO", "allies", ",", "to", "secure", "the", "north", "?"]
+# ::lemmas ["whatever", "the", "truth", ",", "Putin", "have", "secure", "his", "southern", "flank", ".", "will", "he", "now", "move", "on", "the", "Baltics", ",", "NATO", "ally", ",", "to", "secure", "the", "north", "?"]
+(c2-3 / multi-sentence
+      :snt1 (c2-15 / secure-02
+                   :ARG0 (c2-10 / person
+                                :name (c2-8 / name
+                                            :op1 "Putin"))
+                   :ARG1 (c2-2 / flank
+                               :location (c2-6 / south)
+                               :poss c2-10)
+                   :ARG1-of (c2-11 / regardless-91))
+      :snt2 (c2-12 / move-01
+                   :ARG0 (c2-0 / he)
+                   :ARG2 (c2-1 / world-region
+                               :name (c2-9 / name
+                                           :op1 "Baltics")
+                               :ARG1-of (c2-16 / ally-01
+                                               :ARG2 (c2-4 / military
+                                                           :name (c2-13 / name
+                                                                        :op1 "NATO"))))
+                   :polarity (c2-7 / amr-unknown)
+                   :time (c2-14 / now)
+                   :purpose (c2-5 / secure-02
+                                  :ARG0 c2-0
+                                  :ARG1 (c2-17 / north))))
+
+# ::snt . Isn't paranoia the first sign of dementia?
+# ::tokens [".", "Is", "n't", "paranoia", "the", "first", "sign", "of", "dementia", "?"]
+# ::lemmas [".", "be", "not", "paranoia", "the", "first", "sign", "of", "dementia", "?"]
+(c3-4 / signal-07
+      :ARG0 (c3-2 / paranoia)
+      :ARG1 (c3-3 / disease
+                  :name (c3-1 / name
+                              :op1 "Dementia"))
+      :ord (c3-0 / ordinal-entity
+                 :value 1)
+      :polarity (c3-5 / amr-unknown)
+      :polarity -)
+
+# ::snt LOL
+# ::tokens ["LOL"]
+# ::lemmas ["LOL"]
+(c4-0 / laugh-01
+      :ARG0 (c4-1 / i)
+      :manner (c4-2 / loud))
+
+# ::snt How come you haven't posted anything about Putin's prolonged absence? RT = Rarely Trusted specialized Kremlin propaganda
+# ::tokens ["How", "come", "you", "have", "n't", "posted", "anything", "about", "Putin", "'s", "prolonged", "absence", "?", "RT", "=", "Rarely", "Trusted", "specialized", "Kremlin", "propaganda"]
+# ::lemmas ["how", "come", "you", "have", "not", "post", "anything", "about", "Putin", "'s", "prolonged", "absence", "?", "RT", "=", "rarely", "trust", "specialized", "Kremlin", "propaganda"]
+(c5-1 / multi-sentence
+      :snt1 (c5-10 / cause-01
+                   :ARG0 (c5-17 / amr-unknown)
+                   :ARG1 (c5-8 / post-01
+                               :ARG0 (c5-0 / you)
+                               :ARG1 (c5-5 / anything
+                                           :topic (c5-7 / absent-01
+                                                        :ARG1 (c5-16 / person
+                                                                     :name (c5-6 / name
+                                                                                 :op1 "Putin"))
+                                                        :ARG1-of (c5-2 / prolong-01)))
+                               :polarity -))
+      :snt2 (c5-4 / equal-01
+                  :ARG1 (c5-15 / publication
+                               :name (c5-9 / name
+                                           :op1 "RT"))
+                  :ARG2 (c5-3 / propaganda
+                              :ARG1-of (c5-14 / specialize-01)
+                              :ARG1-of (c5-11 / rare-02)
+                              :poss (c5-12 / government-organization
+                                           :name (c5-13 / name
+                                                        :op1 "Kremlin")))))
+
+# ::snt yep ... Poroshenko is a shill and Hunter Biden !! Sheesh can you be more obvious
+# ::tokens ["yep", "...", "Poroshenko", "is", "a", "shill", "and", "Hunter", "Biden", "!", "!", "Sheesh", "can", "you", "be", "more", "obvious"]
+# ::lemmas ["yep", "...", "poroshenko", "be", "a", "shill", "and", "Hunter", "Biden", "!", "!", "sheesh", "can", "you", "be", "more", "obvious"]
+(c8-3 / multi-sentence
+      :snt1 (c8-14 / and
+                   :op1 (c8-12 / shill
+                               :domain (c8-9 / person
+                                             :name (c8-7 / name
+                                                         :op1 "Poroshenko")))
+                   :op2 (c8-13 / person
+                               :name (c8-8 / name
+                                           :op1 "Biden")
+                               :ARG0-of (c8-0 / hunt-01))
+                   :mod (c8-1 / yep
+                              :mode expressive))
+      :snt2 (c8-4 / possible-01
+                  :ARG1 (c8-5 / obvious-01
+                              :ARG1 (c8-11 / you)
+                              :ARG2-of (c8-2 / have-degree-91
+                                             :ARG1 c8-11
+                                             :ARG3 (c8-10 / more)))
+                  :mod (c8-6 / sheesh
+                             :mode expressive)))
+
+# ::snt putin &amp; obama are variable... this is the shit that might kill all of us: it's a campaign
+# ::tokens ["putin", "&", "amp", ";", "obama", "are", "variable", "...", "this", "is", "the", "shit", "that", "might", "kill", "all", "of", "us", ":", "it", "'s", "a", "campaign"]
+# ::lemmas ["putin", "&", "amp", ";", "obama", "be", "variable", "...", "this", "be", "the", "shit", "that", "might", "kill", "all", "of", "we", ":", "it", "be", "a", "campaign"]
+(c9-1 / multi-sentence
+      :snt1 (c9-6 / variable
+                  :domain (c9-14 / and
+                                 :op1 (c9-7 / person
+                                            :name (c9-5 / name
+                                                        :op1 "in"
+                                                        :op2 "and"
+                                                        :op3 "amp"))
+                                 :op2 (c9-13 / person
+                                             :name (c9-8 / name
+                                                         :op1 "Obama"))))
+      :snt2 (c9-10 / shit
+                   :ARG0-of (c9-12 / kill-01
+                                   :ARG1 (c9-0 / we
+                                               :mod (c9-3 / all))
+                                   :ARG1-of (c9-2 / possible-01))
+                   :domain (c9-11 / this))
+      :snt3 (c9-9 / campaign-01
+                  :domain (c9-4 / it)))
+
+# ::snt empire ghost
+# ::tokens ["empire", "ghost"]
+# ::lemmas ["empire", "ghost"]
+(c10-1 / ghost
+       :mod (c10-0 / pire-01))
+
+# ::snt blow it out your ass Putin. Yeah I'm sure gay hating anti-liberal russia is just playing protectorate. Fuck you dude
+# ::tokens ["blow", "it", "out", "your", "ass", "Putin", ".", "Yeah", "I", "'m", "sure", "gay", "hating", "anti", "-", "liberal", "russia", "is", "just", "playing", "protectorate", ".", "Fuck", "you", "dude"]
+# ::lemmas ["blow", "it", "out", "your", "ass", "Putin", ".", "yeah", "i", "be", "sure", "gay", "hate", "anti", "-", "liberal", "russia", "be", "just", "play", "protectorate", ".", "fuck", "you", "dude"]
+(c11-1 / multi-sentence
+       :snt1 (c11-11 / blow-out-06
+                     :ARG0 (c11-2 / person
+                                  :name (c11-12 / name
+                                                :op1 "Putin")
+                                  :part (c11-6 / ass))
+                     :ARG1 (c11-14 / it)
+                     :source c11-6
+                     :mode imperative)
+       :snt2 (c11-4 / sure-02
+                    :ARG0 (c11-15 / i)
+                    :ARG1 (c11-5 / play-01
+                                 :ARG0 (c11-19 / country
+                                               :name (c11-18 / name
+                                                             :op1 "Russia")
+                                               :ARG0-of (c11-7 / hate-01
+                                                               :ARG1 (c11-13 / gay-01))
+                                               :ARG0-of (c11-17 / oppose-01
+                                                                :ARG1 (c11-8 / liberal-02)))
+                                 :ARG1 (c11-10 / protectorate)
+                                 :mod (c11-0 / just))
+                    :mod (c11-16 / yeah))
+       :snt3 (c11-9 / fuck-01
+                    :ARG1 (c11-3 / dude)
+                    :mode expressive))
+
+# ::snt Another Confirmation my readers Next
+# ::tokens ["Another", "Confirmation", "my", "readers", "Next"]
+# ::lemmas ["another", "Confirmation", "my", "reader", "Next"]
+(c12-4 / confirm-01
+       :ARG0 (c12-2 / person
+                    :ARG0-of (c12-3 / read-01
+                                    :ARG1 (c12-0 / i)))
+       :mod (c12-5 / another)
+       :time (c12-1 / next))
+
+# ::snt You cannot tell that EddySnow, BiBi, Putin are not doing a dance w/ KOCH...wanted2damage POTUS internationally, but too well liked
+# ::tokens ["You", "can", "not", "tell", "that", "EddySnow", ",", "BiBi", ",", "Putin", "are", "not", "doing", "a", "dance", "w/", "KOCH", "...", "wanted2damage", "POTUS", "internationally", ",", "but", "too", "well", "liked"]
+# ::lemmas ["you", "can", "not", "tell", "that", "EddySnow", ",", "BiBi", ",", "Putin", "be", "not", "do", "a", "dance", "w/", "KOCH", "...", "wanted2damage", "POTUS", "internationally", ",", "but", "too", "well", "like"]
+(c13-1 / multi-sentence
+       :snt1 (c13-5 / possible-01
+                    :ARG1 (c13-25 / tell-02
+                                  :ARG0 (c13-21 / you)
+                                  :ARG1 (c13-6 / dance-01
+                                               :ARG0 (c13-9 / and
+                                                            :op1 (c13-8 / person
+                                                                        :name (c13-15 / name
+                                                                                      :op1 "EddySnow"))
+                                                            :op2 (c13-13 / person
+                                                                         :name (c13-22 / name
+                                                                                       :op1 "BiBi"))
+                                                            :op3 (c13-18 / person
+                                                                         :name (c13-3 / name
+                                                                                      :op1 "Putin")))
+                                               :ARG2 c13-6
+                                               :ARG0 c13-9
+                                               :ARG2 (c13-14 / person
+                                                             :name (c13-4 / name
+                                                                          :op1 "KOCH"))
+                                               :polarity -))
+                    :polarity -)
+       :snt2 (c13-19 / want-01
+                     :ARG0 (c13-7 / person)
+                     :ARG1 (c13-0 / damage-01
+                                  :ARG0 c13-7
+                                  :ARG1 (c13-16 / person
+                                                :ARG0-of (c13-10 / have-org-role-91
+                                                                 :ARG1 (c13-23 / country
+                                                                               :name (c13-26 / name
+                                                                                             :op1 "United"
+                                                                                             :op2 "States"))
+                                                                 :ARG2 (c13-17 / president)))
+                                  :location (c13-20 / international))
+                     :concession-of (c13-12 / like-01
+                                            :ARG1 c13-16
+                                            :ARG1-of (c13-11 / have-degree-91
+                                                             :ARG2 (c13-2 / well-09)
+                                                             :ARG3 (c13-24 / too)))))
+
+# ::snt Everything Putin said about what happened in Crimea is totally correct! US gov't &amp; mainstream media's version is lying propaganda!
+# ::tokens ["Everything", "Putin", "said", "about", "what", "happened", "in", "Crimea", "is", "totally", "correct", "!", "US", "gov't", "&", "amp", ";", "mainstream", "media", "'s", "version", "is", "lying", "propaganda", "!"]
+# ::lemmas ["Everything", "Putin", "say", "about", "what", "happen", "in", "Crimea", "be", "totally", "correct", "!", "US", "gov't", "&", "amp", ";", "mainstream", "medium", "'s", "version", "be", "lie", "propaganda", "!"]
+(c14-0 / multi-sentence
+       :snt1 (c14-18 / correct-02
+                     :ARG1 (c14-13 / everything
+                                   :ARG1-of (c14-6 / say-01
+                                                   :ARG0 (c14-3 / person
+                                                                :name (c14-14 / name
+                                                                              :op1 "Putin"))
+                                                   :ARG3 (c14-12 / event
+                                                                 :location (c14-7 / peninsula
+                                                                                  :name (c14-17 / name
+                                                                                                :op1 "Crimea")))))
+                     :degree (c14-19 / total))
+       :snt2 (c14-8 / and
+                    :op1 (c14-16 / government-organization
+                                 :ARG0-of (c14-4 / govern-01
+                                                 :ARG1 (c14-5 / country
+                                                              :name (c14-1 / name
+                                                                           :op1 "US"))))
+                    :op2 (c14-15 / media
+                                 :ARG1-of (c14-9 / mainstream-02)))
+       :snt3 (c14-11 / propaganda
+                     :ARG0-of (c14-10 / lie-08)
+                     :domain (c14-2 / version
+                                    :poss c14-15)))
+
+# ::snt obama can fuck off too, always spying on people and giving russia ammunition with his dirty laundry. But really putins a dipshit
+# ::tokens ["obama", "can", "fuck", "off", "too", ",", "always", "spying", "on", "people", "and", "giving", "russia", "ammunition", "with", "his", "dirty", "laundry", ".", "But", "really", "putins", "a", "dipshit"]
+# ::lemmas ["obama", "can", "fuck", "off", "too", ",", "always", "spy", "on", "people", "and", "give", "russia", "ammunition", "with", "his", "dirty", "laundry", ".", "but", "really", "putin", "a", "dipshit"]
+(c15-1 / multi-sentence
+       :snt1 (c15-2 / possible-01
+                    :ARG1 (c15-8 / fuck-off-03
+                                 :ARG0 (c15-6 / person
+                                              :name (c15-11 / name
+                                                            :op1 "Obama"))
+                                 :mod (c15-20 / too)
+                                 :ARG1-of (c15-13 / mean-01
+                                                  :ARG2 (c15-7 / and
+                                                               :op1 (c15-5 / spy-01
+                                                                           :ARG0 c15-6
+                                                                           :ARG1 (c15-10 / person))
+                                                               :op2 (c15-15 / give-01
+                                                                            :ARG0 c15-6
+                                                                            :ARG1 (c15-17 / ammunition)
+                                                                            :ARG2 (c15-19 / country
+                                                                                          :name (c15-18 / name
+                                                                                                        :op1 "Russia"))
+                                                                            :instrument (c15-9 / laundry
+                                                                                               :ARG1-of (c15-3 / dirty-02)
+                                                                                               :poss c15-6))
+                                                               :time (c15-12 / always)))))
+       :snt2 (c15-4 / contrast-01
+                    :ARG2 (c15-16 / put-in-05
+                                  :ARG0 (c15-0 / dipshit)
+                                  :ARG1-of (c15-14 / real-04))))
+
+# ::snt They were and he's telling the truth.
+# ::tokens ["They", "were", "and", "he", "'s", "telling", "the", "truth", "."]
+# ::lemmas ["they", "be", "and", "he", "be", "tell", "the", "truth", "."]
+(c16-4 / and
+       :op1 (c16-3 / they)
+       :op2 (c16-2 / tell-01
+                   :ARG0 (c16-0 / he)
+                   :ARG1 (c16-1 / truth)))
+
+# ::snt go suck Obama's dick you stupid sheep
+# ::tokens ["go", "suck", "Obama", "'s", "dick", "you", "stupid", "sheep"]
+# ::lemmas ["go", "suck", "Obama", "'s", "dick", "you", "stupid", "sheep"]
+(c17-9 / say-01
+       :ARG0 (c17-4 / i)
+       :ARG1 (c17-8 / go-05
+                    :ARG0 (c17-0 / you
+                                 :mod (c17-3 / sheep
+                                             :mod (c17-1 / stupid)))
+                    :ARG1 (c17-2 / suck-01
+                                 :ARG0 c17-0
+                                 :ARG1 (c17-7 / dick
+                                              :part-of (c17-6 / person
+                                                              :name (c17-5 / name
+                                                                           :op1 "Obama"))))
+                    :mode imperative)
+       :ARG2 c17-0)
+
+# ::snt That phone call says it all.
+# ::tokens ["That", "phone", "call", "says", "it", "all", "."]
+# ::lemmas ["that", "phone", "call", "say", "it", "all", "."]
+(c18-3 / say-01
+       :ARG0 (c18-2 / call-02
+                    :instrument (c18-1 / phone)
+                    :mod (c18-4 / that))
+       :ARG1 (c18-0 / it
+                    :mod (c18-5 / all)))
+
+# ::snt Potus voted most admired for th year in a row! Must be hard all you guys talking only to each other to get answers you want!
+# ::tokens ["Potus", "voted", "most", "admired", "for", "th", "year", "in", "a", "row", "!", "Must", "be", "hard", "all", "you", "guys", "talking", "only", "to", "each", "other", "to", "get", "answers", "you", "want", "!"]
+# ::lemmas ["Potus", "vote", "most", "admire", "for", "th", "year", "in", "a", "row", "!", "must", "be", "hard", "all", "you", "guy", "talk", "only", "to", "each", "other", "to", "get", "answer", "you", "want", "!"]
+(c19-0 / multi-sentence
+       :snt1 (c19-1 / vote-01
+                    :ARG1 (c19-2 / person
+                                 :name (c19-7 / name
+                                              :op1 "Potus"))
+                    :ARG2 (c19-4 / admire-01
+                                 :ARG1 c19-2
+                                 :ARG2-of (c19-5 / have-degree-91
+                                                 :ARG1 c19-2
+                                                 :ARG3 (c19-9 / most)))
+                    :frequency (c19-16 / year
+                                       :mod (c19-13 / in-a-row)))
+       :snt2 (c19-14 / infer-01
+                     :ARG1 (c19-3 / hard-02
+                                  :ARG1 (c19-20 / talk-01
+                                                :ARG0 (c19-19 / you
+                                                              :mod (c19-12 / all))
+                                                :ARG2 (c19-18 / other
+                                                              :mod (c19-6 / each))
+                                                :mod (c19-17 / only)
+                                                :purpose (c19-10 / get-01
+                                                                 :ARG0 c19-19
+                                                                 :ARG1 (c19-15 / thing
+                                                                               :ARG2-of (c19-8 / answer-01)
+                                                                               :ARG1-of (c19-11 / want-01
+                                                                                                :ARG0 c19-19)))))))
+
+# ::snt did they find him?
+# ::tokens ["did", "they", "find", "him", "?"]
+# ::lemmas ["do", "they", "find", "he", "?"]
+(c20-1 / find-01
+       :polarity (c20-3 / amr-unknown)
+       :ARG0 (c20-2 / they)
+       :ARG1 (c20-0 / he))
+
+# ::snt Putin has class! He's a true statesman. He calls corrupt US politicians "American friends" out of politeness, but they are traitors.
+# ::tokens ["Putin", "has", "class", "!", "He", "'s", "a", "true", "statesman", ".", "He", "calls", "corrupt", "US", "politicians", "\"", "American", "friends", "\"", "out", "of", "politeness", ",", "but", "they", "are", "traitors", "."]
+# ::lemmas ["Putin", "have", "class", "!", "he", "be", "a", "true", "statesman", ".", "he", "call", "corrupt", "US", "politician", "\"", "American", "friend", "\"", "out", "of", "politeness", ",", "but", "they", "be", "traitor", "."]
+(c21-1 / multi-sentence
+       :snt1 (c21-8 / have-03
+                    :ARG0 (c21-3 / person
+                                 :name (c21-12 / name
+                                               :op1 "Putin"))
+                    :ARG1 (c21-18 / class))
+       :snt2 (c21-5 / statesman
+                    :ARG1-of (c21-19 / true-01)
+                    :domain c21-3)
+       :snt3 (c21-4 / contrast-01
+                    :ARG1 (c21-15 / call-01
+                                  :ARG0 (c21-7 / he)
+                                  :ARG1 (c21-6 / politician
+                                               :mod (c21-16 / country
+                                                            :name (c21-17 / name
+                                                                          :op1 "US"))
+                                               :ARG1-of (c21-0 / corrupt-01))
+                                  :ARG2 (c21-9 / friend
+                                               :mod (c21-13 / country
+                                                            :name (c21-2 / name
+                                                                         :op1 "America")))
+                                  :ARG1-of (c21-14 / cause-01
+                                                   :ARG0 (c21-10 / politeness)))
+                    :ARG2 (c21-11 / betray-01
+                                  :ARG0 c21-6)))
+
+# ::snt Putin has % approval, I think Obama is struggling to get less than half of that. Enough said, you're a strong &amp; respectable man.
+# ::tokens ["Putin", "has", "%", "approval", ",", "I", "think", "Obama", "is", "struggling", "to", "get", "less", "than", "half", "of", "that", ".", "Enough", "said", ",", "you", "'re", "a", "strong", "&", "amp", ";", "respectable", "man", "."]
+# ::lemmas ["Putin", "have", "%", "approval", ",", "i", "think", "Obama", "be", "struggle", "to", "get", "less", "than", "half", "of", "that", ".", "Enough", "say", ",", "you", "be", "a", "strong", "&", "amp", ";", "respectable", "man", "."]
+(c22-0 / multi-sentence
+       :snt1 (c22-6 / have-03
+                    :ARG0 (c22-1 / person
+                                 :name (c22-12 / name
+                                               :op1 "Putin"))
+                    :ARG1 (c22-4 / approve-01
+                                 :ARG1 c22-1
+                                 :degree (c22-3 / percentage-entity
+                                                :value 40)))
+       :snt2 (c22-22 / think-01
+                     :ARG0 (c22-18 / i)
+                     :ARG1 (c22-2 / struggle-02
+                                  :ARG0 (c22-8 / person
+                                               :name (c22-21 / name
+                                                             :op1 "Obama"))
+                                  :ARG1 (c22-15 / get-01
+                                                :ARG0 c22-8
+                                                :ARG1 (c22-7 / less-than
+                                                             :op1 (c22-16 / percentage-entity
+                                                                          :value "1/2")))))
+       :snt3 (c22-10 / say-01
+                     :ARG1 (c22-13 / man
+                                   :domain (c22-19 / you)
+                                   :ARG1-of (c22-20 / strong-02)
+                                   :mod (c22-17 / amp)
+                                   :ARG1-of (c22-14 / respect-01
+                                                    :ARG1-of (c22-9 / possible-01)))
+                     :ARG1-of (c22-5 / have-quant-91
+                                     :ARG3 (c22-11 / enough))))
+
+# ::snt Off Course Flying In ; More
+# ::tokens ["Off", "Course", "Flying", "In", ";", "More"]
+# ::lemmas ["off", "course", "fly", "in", ";", "more"]
+(c23-3 / and
+       :op1 (c23-1 / fly-01
+                   :manner (c23-0 / off-course))
+       :op2 (c23-2 / more))

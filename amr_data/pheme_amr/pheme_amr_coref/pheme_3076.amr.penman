@@ -1,0 +1,70 @@
+# ::snt "blasphemy"~ you've just betrayed yourself as a narrow minded zealot.
+# ::tokens ["\"", "blasphemy\"~", "you", "'ve", "just", "betrayed", "yourself", "as", "a", "narrow", "minded", "zealot", "."]
+# ::lemmas ["\"", "blasphemy\"~", "you", "'ve", "just", "betray", "yourself", "as", "a", "narrow", "minded", "zealot", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-4 / blasphemy)
+      :snt2 (c1-7 / betray-01
+                  :ARG0 (c1-1 / you
+                              :ARG1-of c1-7)
+                  :prep-as (c1-2 / zealot
+                                 :ARG0-of (c1-5 / narrow-02
+                                                :ARG1 (c1-6 / mind)))
+                  :time (c1-0 / just)))
+
+# ::snt : These cartoons are poignant tributes to victims of the Charlie Hebdo attack
+# ::tokens [":", "These", "cartoons", "are", "poignant", "tributes", "to", "victims", "of", "the", "Charlie", "Hebdo", "attack"]
+# ::lemmas [":", "these", "cartoon", "be", "poignant", "tribute", "to", "victim", "of", "the", "Charlie", "Hebdo", "attack"]
+(c2-5 / tribute
+      :beneficiary (c2-1 / victim
+                         :ARG1-of (c2-7 / attack-01
+                                        :ARG0 (c2-2 / publication
+                                                    :name (c2-0 / name
+                                                                :op1 "Charlie"
+                                                                :op2 "Ch Hebdo"))))
+      :mod (c2-6 / poignant)
+      :domain (c2-3 / cartoon
+                    :mod (c2-4 / this)))
+
+# ::snt Artists should work for peace and love not hatred and blasphemy..
+# ::tokens ["Artists", "should", "work", "for", "peace", "and", "love", "not", "hatred", "and", "blasphemy", ".."]
+# ::lemmas ["artist", "should", "work", "for", "peace", "and", "love", "not", "hatred", "and", "blasphemy", ".."]
+(c3-7 / recommend-01
+      :ARG1 (c3-1 / work-01
+                  :ARG0 (c3-9 / artist)
+                  :ARG1 (c3-4 / and
+                              :op1 (c3-6 / peace)
+                              :op2 (c3-2 / love-01))
+                  :ARG1-of (c3-8 / contrast-01
+                                 :ARG2 (c3-5 / and
+                                             :op1 (c3-0 / hatred)
+                                             :op2 (c3-3 / blasphemy)
+                                             :polarity -))))
+
+# ::snt Genau so!
+# ::tokens ["Genau", "so", "!"]
+# ::lemmas ["Genau", "so", "!"]
+(c4-1 / Genau
+      :mod (c4-0 / so)
+      :mode expressive)
+
+# ::snt they are deeply moving
+# ::tokens ["they", "are", "deeply", "moving"]
+# ::lemmas ["they", "be", "deeply", "move"]
+(c5-2 / move-02
+      :ARG1 (c5-0 / they)
+      :ARG1-of (c5-1 / deep-02))
+
+# ::snt Everyone should just reprint the cartoons rather than these ineffectual insults
+# ::tokens ["Everyone", "should", "just", "reprint", "the", "cartoons", "rather", "than", "these", "ineffectual", "insults"]
+# ::lemmas ["everyone", "should", "just", "reprint", "the", "cartoon", "rather", "than", "these", "ineffectual", "insult"]
+(c6-6 / recommend-01
+      :ARG1 (c6-5 / reprint-01
+                  :ARG0 (c6-2 / everyone)
+                  :ARG1 (c6-7 / cartoon)
+                  :mod (c6-0 / just)
+                  :ARG1-of (c6-4 / instead-of-91
+                                 :ARG2 (c6-3 / reprint-01
+                                             :ARG1 (c6-8 / insult-01
+                                                         :ARG0-of (c6-1 / effective-04
+                                                                        :polarity -)
+                                                         :mod (c6-9 / this))))))

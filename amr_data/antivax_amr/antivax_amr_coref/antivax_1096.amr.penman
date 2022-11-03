@@ -1,0 +1,42 @@
+# ::snt I got Pfizer.
+# ::tokens ["I", "got", "Pfizer", "."]
+# ::lemmas ["i", "get", "Pfizer", "."]
+(c1-0 / get-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-3 / company
+                  :name (c1-2 / name
+                              :op1 "Pfizer")))
+
+# ::snt That is good to know that you got taken care of. Which one did you get if you are open to sharing that information?
+# ::tokens ["That", "is", "good", "to", "know", "that", "you", "got", "taken", "care", "of", ".", "Which", "one", "did", "you", "get", "if", "you", "are", "open", "to", "sharing", "that", "information", "?"]
+# ::lemmas ["that", "be", "good", "to", "know", "that", "you", "got", "take", "care", "of", ".", "which", "one", "do", "you", "get", "if", "you", "be", "open", "to", "share", "that", "information", "?"]
+(c2-8 / multi-sentence
+      :snt1 (c2-6 / good-02
+                  :ARG1 (c2-9 / know-01
+                              :ARG1 (c2-3 / care-03
+                                          :ARG1 (c2-10 / you))))
+      :snt2 (c2-2 / get-01
+                  :ARG0 (c2-11 / you)
+                  :ARG1 (c2-1 / amr-unknown)
+                  :condition (c2-4 / open-05
+                                   :ARG1 c2-11
+                                   :ARG2 (c2-0 / share-01
+                                               :ARG0 c2-11
+                                               :ARG1 (c2-7 / information
+                                                           :mod (c2-5 / that))))))
+
+# ::snt As an overweight pre-diabetic with hypertension, I was relieved when I got mine.
+# ::tokens ["As", "an", "overweight", "pre", "-", "diabetic", "with", "hypertension", ",", "I", "was", "relieved", "when", "I", "got", "mine", "."]
+# ::lemmas ["as", "an", "overweight", "pre", "-", "diabetic", "with", "hypertension", ",", "i", "be", "relieve", "when", "i", "get", "mine", "."]
+(c3-4 / relieve-01
+      :ARG0 (c3-8 / i
+                  :mod (c3-2 / overweight)
+                  :ARG0-of (c3-1 / have-03
+                                 :ARG1 (c3-7 / hypertension)
+                                 :time (c3-6 / before
+                                             :op1 (c3-0 / diabetes)))
+                  :ARG1-of c3-4)
+      :time (c3-5 / get-01
+                  :ARG0 c3-8
+                  :ARG1 (c3-3 / thing
+                              :poss c3-8)))

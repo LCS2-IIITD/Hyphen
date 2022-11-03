@@ -1,0 +1,85 @@
+# ::snt Congrats! That's great!
+# ::tokens ["Congrats", "!", "That", "'s", "great", "!"]
+# ::lemmas ["Congrats", "!", "that", "be", "great", "!"]
+(c1-3 / multi-sentence
+      :snt1 (c1-0 / congratulate-01
+                  :ARG1 (c1-4 / you)
+                  :mode expressive)
+      :snt2 (c1-2 / great
+                  :domain (c1-1 / that)))
+
+# ::snt Thanks!
+# ::tokens ["Thanks", "!"]
+# ::lemmas ["thank", "!"]
+(c2-0 / thank-01
+      :ARG1 (c2-1 / you)
+      :mode expressive)
+
+# ::snt Drink plenty of water.
+# ::tokens ["Drink", "plenty", "of", "water", "."]
+# ::lemmas ["drink", "plenty", "of", "water", "."]
+(c3-0 / drink-01
+      :ARG0 (c3-2 / you)
+      :ARG1 (c3-1 / water
+                  :quant (c3-3 / plenty))
+      :mode imperative)
+
+# ::snt I felt something. More like dizziness which has morphed into general muscle/body aches.
+# ::tokens ["I", "felt", "something", ".", "More", "like", "dizziness", "which", "has", "morphed", "into", "general", "muscle", "/", "body", "aches", "."]
+# ::lemmas ["i", "feel", "something", ".", "more", "like", "dizziness", "which", "have", "morph", "into", "general", "muscle", "/", "body", "ache", "."]
+(c4-13 / multi-sentence
+       :snt1 (c4-3 / feel-01
+                   :ARG0 (c4-12 / i)
+                   :ARG1 (c4-0 / something))
+       :snt2 (c4-8 / resemble-01
+                   :ARG1 (c4-5 / it)
+                   :ARG2 (c4-1 / dizzy-02
+                               :ARG1-of (c4-4 / morph-01
+                                              :ARG2 (c4-2 / ache-01
+                                                          :ARG0 (c4-11 / slash
+                                                                       :op1 (c4-7 / muscle)
+                                                                       :op2 (c4-10 / body))
+                                                          :ARG1-of (c4-9 / general-02))))
+                   :mod (c4-6 / more)))
+
+# ::snt You feel it yet?
+# ::tokens ["You", "feel", "it", "yet", "?"]
+# ::lemmas ["you", "feel", "it", "yet", "?"]
+(c5-1 / feel-01
+      :polarity (c5-0 / amr-unknown)
+      :ARG0 (c5-3 / you)
+      :ARG1 (c5-2 / it)
+      :time (c5-4 / yet))
+
+# ::snt Nice I'm scheduled for Saturday myself
+# ::tokens ["Nice", "I", "'m", "scheduled", "for", "Saturday", "myself"]
+# ::lemmas ["nice", "i", "be", "schedule", "for", "Saturday", "myself"]
+(c6-4 / nice-01
+      :ARG1 (c6-0 / schedule-01
+                  :ARG1 (c6-3 / i)
+                  :ARG3 (c6-1 / date-entity
+                              :weekday (c6-2 / saturday))))
+
+# ::snt The vaccine did not like him too well. A few minor side-effects and all that. Time to employ nurse Nargs.
+# ::tokens ["The", "vaccine", "did", "not", "like", "him", "too", "well", ".", "A", "few", "minor", "side", "-", "effects", "and", "all", "that", ".", "Time", "to", "employ", "nurse", "Nargs", "."]
+# ::lemmas ["the", "vaccine", "do", "not", "like", "he", "too", "well", ".", "a", "few", "minor", "side", "-", "effect", "and", "all", "that", ".", "time", "to", "employ", "nurse", "Nargs", "."]
+(c7-13 / multi-sentence
+       :snt1 (c7-0 / dislike-01
+                   :ARG0 (c7-9 / vaccine)
+                   :ARG1 (c7-7 / he)
+                   :ARG1-of (c7-5 / well-09
+                                  :ARG2-of (c7-12 / have-degree-91
+                                                  :ARG1 c7-9
+                                                  :ARG3 (c7-10 / too))))
+       :snt2 (c7-2 / and
+                   :op1 (c7-17 / effect-03
+                               :mod (c7-1 / side)
+                               :quant (c7-3 / few)
+                               :ARG1-of (c7-4 / minor-01))
+                   :op2 (c7-6 / that
+                              :mod (c7-16 / all)))
+       :snt3 (c7-15 / time
+                    :time-of (c7-8 / employ-01
+                                   :ARG1 (c7-14 / nurse
+                                                :name (c7-11 / name
+                                                             :op1 "Nargs")))))

@@ -1,0 +1,203 @@
+# ::snt some people are so fucked up
+# ::tokens ["some", "people", "are", "so", "fucked", "up"]
+# ::lemmas ["some", "people", "be", "so", "fuck", "up"]
+(c1-2 / fuck-up-02
+      :ARG1 (c1-1 / person
+                  :mod (c1-0 / some))
+      :degree (c1-3 / so))
+
+# ::snt thanks alex
+# ::tokens ["thanks", "alex"]
+# ::lemmas ["thank", "alex"]
+(c2-2 / thank-01
+      :ARG1 (c2-1 / person
+                  :name (c2-0 / name
+                              :op1 "alex")))
+
+# ::snt scary situation hopefully things get solved
+# ::tokens ["scary", "situation", "hopefully", "things", "get", "solved"]
+# ::lemmas ["scary", "situation", "hopefully", "thing", "get", "solve"]
+(c3-0 / solve-01
+      :ARG1 (c3-1 / situation
+                  :ARG0-of (c3-2 / scary-03))
+      :ARG1-of (c3-3 / hope-01))
+
+# ::snt thank u love
+# ::tokens ["thank", "u", "love"]
+# ::lemmas ["thank", "u", "love"]
+(c4-2 / thank-01
+      :ARG1 (c4-0 / you)
+      :ARG2 (c4-1 / love))
+
+# ::snt ily
+# ::tokens ["ily"]
+# ::lemmas ["ily"]
+(c5-1 / person
+      :name (c5-0 / name
+                  :op1 "ily"))
+
+# ::snt thankyou alex. Its hit close to home. I only live a few hours from sydney
+# ::tokens ["thankyou", "alex", ".", "Its", "hit", "close", "to", "home", ".", "I", "only", "live", "a", "few", "hours", "from", "sydney"]
+# ::lemmas ["thankyou", "alex", ".", "its", "hit", "close", "to", "home", ".", "i", "only", "live", "a", "few", "hours", "from", "sydney"]
+(c7-2 / multi-sentence
+      :snt1 (c7-16 / thank-01
+                   :ARG0 (c7-6 / i)
+                   :ARG1 (c7-9 / person
+                               :name (c7-7 / name
+                                           :op1 "alex")))
+      :snt2 (c7-0 / hit-01
+                  :ARG1 (c7-12 / it)
+                  :ARG1-of (c7-11 / close-10
+                                  :ARG2 (c7-17 / home)))
+      :snt3 (c7-1 / live-01
+                  :ARG0 (c7-3 / i)
+                  :location (c7-10 / relative-position
+                                   :op1 (c7-13 / city
+                                               :name (c7-8 / name
+                                                           :op1 "Sydney"))
+                                   :quant (c7-4 / few
+                                                :op1 (c7-14 / temporal-quantity
+                                                            :unit (c7-15 / hour)
+                                                            :quant 1))
+                                   :mod (c7-5 / only))))
+
+# ::snt you're so nice
+# ::tokens ["you", "'re", "so", "nice"]
+# ::lemmas ["you", "be", "so", "nice"]
+(c8-0 / nice-01
+      :ARG1 (c8-1 / you)
+      :degree (c8-2 / so))
+
+# ::snt love you
+# ::tokens ["love", "you"]
+# ::lemmas ["love", "you"]
+(c9-1 / love-01
+      :ARG0 (c9-2 / i)
+      :ARG1 (c9-0 / you))
+
+# ::snt yeah we all are!
+# ::tokens ["yeah", "we", "all", "are", "!"]
+# ::lemmas ["yeah", "we", "all", "be", "!"]
+(c10-0 / we
+       :mod (c10-2 / all)
+       :mod (c10-1 / yeah
+                   :mode expressive))
+
+# ::snt love you
+# ::tokens ["love", "you"]
+# ::lemmas ["love", "you"]
+(c12-1 / love-01
+       :ARG0 (c12-2 / i)
+       :ARG1 (c12-0 / you))
+
+# ::snt thank you x
+# ::tokens ["thank", "you", "x"]
+# ::lemmas ["thank", "you", "x"]
+(c13-1 / thank-01
+       :ARG0 (c13-2 / i)
+       :ARG1 (c13-0 / you))
+
+# ::snt Whats going on in Sydney?
+# ::tokens ["What", "s", "going", "on", "in", "Sydney", "?"]
+# ::lemmas ["what", "s", "go", "on", "in", "Sydney", "?"]
+(c14-1 / event
+       :mod (c14-3 / amr-unknown)
+       :location (c14-2 / city
+                        :name (c14-0 / name
+                                     :op1 "Sydney")))
+
+# ::snt Alex I love you
+# ::tokens ["Alex", "I", "love", "you"]
+# ::lemmas ["Alex", "i", "love", "you"]
+(c15-4 / say-01
+       :ARG0 (c15-1 / i)
+       :ARG1 (c15-0 / love-01
+                    :ARG0 c15-1
+                    :ARG1 (c15-3 / person
+                                 :name (c15-2 / name
+                                              :op1 "Alex")
+                                 :ARG2-of c15-4)))
+
+# ::snt luv u
+# ::tokens ["luv", "u"]
+# ::lemmas ["luv", "u"]
+(c16-1 / person
+       :name (c16-0 / name
+                    :op1 "luv"
+                    :op2 "U"))
+
+# ::snt Thats good. Im glad it was all taken care of
+# ::tokens ["That", "s", "good", ".", "I", "m", "glad", "it", "was", "all", "taken", "care", "of"]
+# ::lemmas ["that", "s", "good", ".", "i", "m", "glad", "it", "be", "all", "take", "care", "of"]
+(c17-0 / multi-sentence
+       :snt1 (c17-4 / good-02
+                    :ARG1 (c17-6 / that))
+       :snt2 (c17-2 / glad-02
+                    :ARG0 (c17-3 / care-03
+                                 :ARG1 (c17-1 / it
+                                              :mod (c17-7 / all)))
+                    :ARG1 (c17-5 / i)))
+
+# ::snt yeah. Its all over now which is good
+# ::tokens ["yeah", ".", "Its", "all", "over", "now", "which", "is", "good"]
+# ::lemmas ["yeah", ".", "its", "all", "over", "now", "which", "be", "good"]
+(c18-1 / multi-sentence
+       :snt1 (c18-0 / yeah)
+       :snt2 (c18-5 / all-over
+                    :domain (c18-2 / it)
+                    :time (c18-3 / now)
+                    :ARG1-of (c18-4 / good-02)))
+
+# ::snt Oh shit
+# ::tokens ["Oh", "shit"]
+# ::lemmas ["oh", "shit"]
+(c19-0 / shit
+       :mod (c19-1 / oh)
+       :mode expressive)
+
+# ::snt Wait whats going on in Sydney?
+# ::tokens ["Wait", "what", "s", "going", "on", "in", "Sydney", "?"]
+# ::lemmas ["wait", "what", "s", "go", "on", "in", "Sydney", "?"]
+(c20-0 / wait-01
+       :ARG1 (c20-1 / you)
+       :ARG2 (c20-2 / event
+                    :location (c20-4 / city
+                                     :name (c20-3 / name
+                                                  :op1 "Sydney"))
+                    :mod (c20-5 / amr-unknown))
+       :mode imperative)
+
+# ::snt thank you alex
+# ::tokens ["thank", "you", "alex"]
+# ::lemmas ["thank", "you", "alex"]
+(c21-2 / thank-01
+       :ARG0 (c21-3 / i)
+       :ARG1 (c21-1 / person
+                    :name (c21-0 / name
+                                 :op1 "alex")))
+
+# ::snt love you
+# ::tokens ["love", "you"]
+# ::lemmas ["love", "you"]
+(c22-1 / love-01
+       :ARG0 (c22-2 / i)
+       :ARG1 (c22-0 / you))
+
+# ::snt there was a an islamic man that took a cafe hostage.
+# ::tokens ["there", "was", "a", "an", "islamic", "man", "that", "took", "a", "cafe", "hostage", "."]
+# ::lemmas ["there", "be", "a", "an", "islamic", "man", "that", "take", "a", "cafe", "hostage", "."]
+(c23-1 / man
+       :mod (c23-3 / religious-group
+                   :name (c23-2 / name
+                                :op1 "Islam"))
+       :ARG0-of (c23-5 / take-01
+                       :ARG1 (c23-4 / cafe)
+                       :ARG2 (c23-0 / hostage)))
+
+# ::snt ALEX OHMDID
+# ::tokens ["ALEX", "OHMDID"]
+# ::lemmas ["alex", "OHMDID"]
+(c24-1 / person
+       :name (c24-0 / name
+                    :op1 "AlEX"
+                    :op2 "OhMDID"))

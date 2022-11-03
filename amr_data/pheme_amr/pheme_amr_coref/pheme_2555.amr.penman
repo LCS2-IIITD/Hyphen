@@ -1,0 +1,363 @@
+# ::snt that's good news
+# ::tokens ["that", "'s", "good", "news"]
+# ::lemmas ["that", "be", "good", "news"]
+(c1-0 / news
+      :ARG1-of (c1-2 / good-02)
+      :domain (c1-1 / that))
+
+# ::snt Thanks for the heads up
+# ::tokens ["Thanks", "for", "the", "heads", "up"]
+# ::lemmas ["thank", "for", "the", "head", "up"]
+(c2-2 / thank-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-1 / you)
+      :ARG2 (c2-0 / heads-up))
+
+# ::snt No more press to terrorism. Only the information without picture, or videos.
+# ::tokens ["No", "more", "press", "to", "terrorism", ".", "Only", "the", "information", "without", "picture", ",", "or", "videos", "."]
+# ::lemmas ["no", "more", "press", "to", "terrorism", ".", "only", "the", "information", "without", "picture", ",", "or", "video", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / press
+                  :prep-to (c3-7 / terrorism)
+                  :mod (c3-6 / more)
+                  :polarity -)
+      :snt2 (c3-3 / information
+                  :mod (c3-2 / only)
+                  :prep-without (c3-0 / or
+                                      :op1 (c3-8 / picture)
+                                      :op2 (c3-4 / video))))
+
+# ::snt UPDATE: Police say is over rt
+# ::tokens ["UPDATE", ":", "Police", "say", "is", "over", "rt"]
+# ::lemmas ["update", ":", "police", "say", "be", "over", "rt"]
+(c4-2 / update-02
+      :ARG2 (c4-0 / say-01
+                  :ARG0 (c4-1 / police)
+                  :ARG1 (c4-3 / over-01
+                              :ARG1 c4-1)))
+
+# ::snt kill the dude and everyone like him. Time to take out the garbage
+# ::tokens ["kill", "the", "dude", "and", "everyone", "like", "him", ".", "Time", "to", "take", "out", "the", "garbage"]
+# ::lemmas ["kill", "the", "dude", "and", "everyone", "like", "he", ".", "time", "to", "take", "out", "the", "garbage"]
+(c5-1 / multi-sentence
+      :snt1 (c5-8 / kill-01
+                  :ARG0 (c5-0 / you)
+                  :ARG1 (c5-9 / and
+                              :op1 (c5-3 / dude)
+                              :op2 (c5-2 / everyone
+                                         :ARG1-of (c5-4 / resemble-01
+                                                        :ARG2 c5-3)))
+                  :mode imperative)
+      :snt2 (c5-7 / time
+                  :time-of (c5-6 / take-out-11
+                                 :ARG0 (c5-10 / you)
+                                 :ARG1 (c5-5 / garbage))))
+
+# ::snt I'm going to go out on a limb that most of the ones from abroad are less geared towards extremist tendencies than domstc
+# ::tokens ["I", "'m", "going", "to", "go", "out", "on", "a", "limb", "that", "most", "of", "the", "ones", "from", "abroad", "are", "less", "geared", "towards", "extremist", "tendencies", "than", "domstc"]
+# ::lemmas ["i", "be", "go", "to", "go", "out", "on", "a", "limb", "that", "most", "of", "the", "one", "from", "abroad", "be", "less", "geared", "towards", "extremist", "tendency", "than", "domstc"]
+(c6-9 / go-out-17
+      :ARG0 (c6-6 / i)
+      :ARG1 (c6-1 / limb
+                  :domain (c6-7 / gear-01
+                                :ARG1 (c6-4 / one
+                                            :ARG1-of (c6-10 / include-91
+                                                            :ARG2 (c6-2 / one
+                                                                        :source (c6-13 / abroad))
+                                                            :ARG3 (c6-3 / most)))
+                                :ARG2 (c6-12 / tend-02
+                                             :ARG1 c6-4
+                                             :ARG2 (c6-5 / extremism))
+                                :ARG2-of (c6-0 / have-degree-91
+                                               :ARG1 c6-4
+                                               :ARG3 (c6-11 / less)
+                                               :ARG4 (c6-8 / domstc)))))
+
+# ::snt Is this creep dead or alive?
+# ::tokens ["Is", "this", "creep", "dead", "or", "alive", "?"]
+# ::lemmas ["be", "this", "creep", "dead", "or", "alive", "?"]
+(c7-4 / amr-choice
+      :op1 (c7-1 / die-01
+                 :ARG1 (c7-2 / creep
+                             :mod (c7-3 / this)))
+      :op2 (c7-0 / live-01
+                 :ARG0 c7-2))
+
+# ::snt : UPDATE: Police say is over
+# ::tokens [":", "UPDATE", ":", "Police", "say", "is", "over"]
+# ::lemmas [":", "update", ":", "police", "say", "be", "over"]
+(c8-2 / update-02
+      :ARG2 (c8-0 / say-01
+                  :ARG0 (c8-1 / police)
+                  :ARG1 (c8-3 / over-01
+                              :ARG1 c8-1)))
+
+# ::snt This man is dead?
+# ::tokens ["This", "man", "is", "dead", "?"]
+# ::lemmas ["this", "man", "be", "dead", "?"]
+(c9-1 / die-01
+      :polarity (c9-3 / amr-unknown)
+      :ARG1 (c9-2 / man
+                  :mod (c9-0 / this)))
+
+# ::snt amazing u wont cover Cops being Shot/killed but u cover a different country's news. U shouldbe ashamed
+# ::tokens ["amazing", "u", "wo", "nt", "cover", "Cops", "being", "Shot", "/", "killed", "but", "u", "cover", "a", "different", "country", "'s", "news", ".", "U", "shouldbe", "ashamed"]
+# ::lemmas ["amazing", "u", "will", "not", "cover", "cop", "be", "Shot", "/", "kill", "but", "u", "cover", "a", "different", "country", "'s", "news", ".", "U", "shouldbe", "ashame"]
+(c10-2 / multi-sentence
+       :snt1 (c10-12 / amaze-01
+                     :ARG0 (c10-7 / contrast-01
+                                  :ARG1 (c10-6 / cover-03
+                                               :ARG0 (c10-0 / you)
+                                               :ARG1 (c10-11 / shoot-02
+                                                             :ARG1 (c10-10 / cop))
+                                               :polarity -)
+                                  :ARG2 (c10-13 / cover-03
+                                                :ARG0 c10-0
+                                                :ARG1 (c10-5 / news
+                                                             :poss (c10-1 / country
+                                                                          :ARG1-of (c10-8 / differ-02))))))
+       :snt2 (c10-9 / recommend-01
+                    :ARG1 (c10-3 / shame-02
+                                 :ARG1 (c10-4 / you
+                                              :ARG2-of c10-9))))
+
+# ::snt These people need to be sent back to their countries of origin. ..the citizens should have more rights than these idiots!
+# ::tokens ["These", "people", "need", "to", "be", "sent", "back", "to", "their", "countries", "of", "origin", ".", "..", "the", "citizens", "should", "have", "more", "rights", "than", "these", "idiots", "!"]
+# ::lemmas ["these", "people", "need", "to", "be", "send", "back", "to", "their", "country", "of", "origin", ".", "..", "the", "citizen", "should", "have", "more", "right", "than", "these", "idiot", "!"]
+(c11-1 / multi-sentence
+       :snt1 (c11-6 / need-01
+                    :ARG0 (c11-7 / person
+                                 :mod (c11-14 / this))
+                    :ARG1 (c11-13 / send-01
+                                  :ARG1 c11-7
+                                  :ARG2 (c11-9 / country
+                                               :ARG2-of (c11-3 / originate-01
+                                                               :ARG1 c11-7))
+                                  :direction (c11-2 / back)))
+       :snt2 (c11-8 / recommend-01
+                    :ARG1 (c11-0 / have-03
+                                 :ARG0 (c11-10 / citizen)
+                                 :ARG1 (c11-5 / right-05
+                                              :ARG1 c11-10
+                                              :ARG1-of (c11-15 / have-quant-91
+                                                               :ARG3 (c11-11 / more)
+                                                               :ARG4 (c11-4 / idiot
+                                                                            :mod (c11-12 / this)))))))
+
+# ::snt I hope they killed the idiot This is what Terrorists understand. Force. Nothing else works with them. so stop wasting your time.
+# ::tokens ["I", "hope", "they", "killed", "the", "idiot", "This", "is", "what", "Terrorists", "understand", ".", "Force", ".", "Nothing", "else", "works", "with", "them", ".", "so", "stop", "wasting", "your", "time", "."]
+# ::lemmas ["i", "hope", "they", "kill", "the", "idiot", "this", "be", "what", "Terrorists", "understand", ".", "force", ".", "nothing", "else", "work", "with", "they", ".", "so", "stop", "waste", "your", "time", "."]
+(c12-4 / multi-sentence
+       :snt1 (c12-0 / hope-01
+                    :ARG0 (c12-8 / i)
+                    :ARG1 (c12-9 / kill-01
+                                 :ARG0 (c12-17 / they)
+                                 :ARG1 (c12-14 / idiot)))
+       :snt2 (c12-5 / understand-01
+                    :ARG0 (c12-15 / terrorist)
+                    :ARG1 (c12-11 / this))
+       :snt3 (c12-3 / force-01)
+       :snt4 (c12-1 / work-09
+                    :ARG1 (c12-10 / nothing
+                                  :mod (c12-6 / else))
+                    :ARG3 (c12-7 / they))
+       :snt5 (c12-16 / stop-01
+                     :ARG0 (c12-2 / you)
+                     :ARG1 (c12-12 / waste-01
+                                   :ARG0 c12-2
+                                   :ARG1 (c12-13 / time
+                                                 :poss c12-2))
+                     :mode imperative))
+
+# ::snt off with his head!!!!
+# ::tokens ["off", "with", "his", "head", "!", "!", "!", "!"]
+# ::lemmas ["off", "with", "his", "head", "!", "!", "!", "!"]
+(c13-3 / be-located-at-91
+       :ARG2 (c13-0 / head
+                    :part-of (c13-2 / he))
+       :direction (c13-1 / off))
+
+# ::snt Praying for the families of the hostages : UPDATE: Police say is over
+# ::tokens ["Praying", "for", "the", "families", "of", "the", "hostages", ":", "UPDATE", ":", "Police", "say", "is", "over"]
+# ::lemmas ["pray", "for", "the", "family", "of", "the", "hostage", ":", "update", ":", "police", "say", "be", "over"]
+(c14-2 / multi-sentence
+       :snt1 (c14-5 / pray-01
+                    :beneficiary (c14-1 / family
+                                        :ARG1-of (c14-0 / have-org-role-91
+                                                        :ARG0 (c14-9 / hostage)
+                                                        :ARG2 (c14-6 / member))))
+       :snt2 (c14-3 / update-02
+                    :ARG2 (c14-7 / say-01
+                                 :ARG0 (c14-8 / police)
+                                 :ARG1 (c14-4 / over-01
+                                              :ARG1 c14-8))))
+
+# ::snt Yes they are a problem but lets eliminate the obvious . They need to be returned !
+# ::tokens ["Yes", "they", "are", "a", "problem", "but", "lets", "eliminate", "the", "obvious", ".", "They", "need", "to", "be", "returned", "!"]
+# ::lemmas ["yes", "they", "be", "a", "problem", "but", "let", "eliminate", "the", "obvious", ".", "they", "need", "to", "be", "return", "!"]
+(c15-2 / multi-sentence
+       :snt1 (c15-8 / contrast-01
+                    :ARG1 (c15-6 / problem
+                                 :domain (c15-10 / they))
+                    :ARG2 (c15-1 / let-01
+                                 :ARG0 (c15-0 / we)
+                                 :ARG1 (c15-5 / eliminate-01
+                                              :ARG0 c15-0
+                                              :ARG1 (c15-11 / person
+                                                            :ARG1-of (c15-4 / obvious-01)))
+                                 :mode imperative))
+       :snt2 (c15-3 / obligate-01
+                    :ARG2 (c15-7 / return-02
+                                 :ARG1 (c15-9 / they))))
+
+# ::snt : UPDATE: Police say is over
+# ::tokens [":", "UPDATE", ":", "Police", "say", "is", "over"]
+# ::lemmas [":", "update", ":", "police", "say", "be", "over"]
+(c16-2 / update-02
+       :ARG2 (c16-0 / say-01
+                    :ARG0 (c16-1 / police)
+                    :ARG1 (c16-3 / over-01
+                                 :ARG1 c16-1)))
+
+# ::snt : UPDATE: Police say is over
+# ::tokens [":", "UPDATE", ":", "Police", "say", "is", "over"]
+# ::lemmas [":", "update", ":", "police", "say", "be", "over"]
+(c17-2 / update-02
+       :ARG2 (c17-0 / say-01
+                    :ARG0 (c17-1 / police)
+                    :ARG1 (c17-3 / over-01
+                                 :ARG1 c17-1)))
+
+# ::snt up Australia for sending that Scum bag to Hell
+# ::tokens ["up", "Australia", "for", "sending", "that", "Scum", "bag", "to", "Hell"]
+# ::lemmas ["up", "Australia", "for", "send", "that", "Scum", "bag", "to", "Hell"]
+(c18-1 / up-01
+       :ARG1 (c18-5 / country
+                    :name (c18-3 / name
+                                 :op1 "Australia"))
+       :ARG2 (c18-6 / send-01
+                    :ARG0 c18-5
+                    :ARG1 (c18-2 / bag
+                                 :name (c18-4 / name
+                                              :op1 "Scum")
+                                 :mod (c18-7 / that))
+                    :ARG2 (c18-0 / hell)))
+
+# ::snt Sydney coward, Hope the jerk is now face to face with the flames of hell!
+# ::tokens ["Sydney", "coward", ",", "Hope", "the", "jerk", "is", "now", "face", "to", "face", "with", "the", "flames", "of", "hell", "!"]
+# ::lemmas ["Sydney", "coward", ",", "hope", "the", "jerk", "be", "now", "face", "to", "face", "with", "the", "flame", "of", "hell", "!"]
+(c19-8 / say-01
+       :ARG1 (c19-1 / hope-01
+                    :ARG1 (c19-2 / face-to-face
+                                 :domain (c19-0 / jerk)
+                                 :accompanier (c19-3 / flame
+                                                     :mod (c19-9 / hell))
+                                 :time (c19-4 / now)))
+       :ARG2 (c19-7 / coward
+                    :mod (c19-6 / city
+                                :name (c19-5 / name
+                                             :op1 "Sydney")))
+       :mode expressive)
+
+# ::snt is he Iranian? Thought he might be Australian.
+# ::tokens ["is", "he", "Iranian", "?", "Thought", "he", "might", "be", "Australian", "."]
+# ::lemmas ["be", "he", "Iranian", "?", "thought", "he", "might", "be", "Australian", "."]
+(c20-2 / multi-sentence
+       :snt1 (c20-0 / he
+                    :mod (c20-7 / country
+                                :name (c20-3 / name
+                                             :op1 "Iran"))
+                    :polarity (c20-10 / amr-unknown))
+       :snt2 (c20-8 / think-01
+                    :ARG1 (c20-5 / possible-01
+                                 :ARG1 (c20-9 / person
+                                              :mod (c20-6 / country
+                                                          :name (c20-4 / name
+                                                                       :op1 "Australia"))
+                                              :domain (c20-1 / he)))))
+
+# ::snt What about home grown radicals,this myth that all of them are disgruntled foreigners is untrue
+# ::tokens ["What", "about", "home", "grown", "radicals", ",", "this", "myth", "that", "all", "of", "them", "are", "disgruntled", "foreigners", "is", "untrue"]
+# ::lemmas ["what", "about", "home", "grow", "radical", ",", "this", "myth", "that", "all", "of", "they", "be", "disgruntle", "foreigner", "be", "untrue"]
+(c21-13 / and
+        :op1 (c21-3 / amr-unknown
+                    :topic (c21-5 / person
+                                  :ARG1-of (c21-6 / radical-02)
+                                  :ARG1-of (c21-8 / grow-03
+                                                  :location (c21-0 / home))))
+        :op2 (c21-11 / true-01
+                     :ARG1 (c21-2 / myth
+                                  :topic (c21-12 / person
+                                                 :mod (c21-1 / foreign)
+                                                 :ARG1-of (c21-7 / disgruntle-01)
+                                                 :domain (c21-10 / they
+                                                                 :mod (c21-4 / all)))
+                                  :mod (c21-9 / this))
+                     :polarity -))
+
+# ::snt Tell that to the families of those held in the coffee shop in Australia
+# ::tokens ["Tell", "that", "to", "the", "families", "of", "those", "held", "in", "the", "coffee", "shop", "in", "Australia"]
+# ::lemmas ["tell", "that", "to", "the", "family", "of", "those", "hold", "in", "the", "coffee", "shop", "in", "Australia"]
+(c22-8 / tell-01
+       :ARG0 (c22-1 / you)
+       :ARG1 (c22-6 / that)
+       :ARG2 (c22-2 / family
+                    :ARG1-of (c22-0 / hold-01
+                                    :location (c22-7 / shop
+                                                     :purpose (c22-5 / coffee)
+                                                     :location (c22-4 / country
+                                                                      :name (c22-3 / name
+                                                                                   :op1 "Australia")))))
+       :mode imperative)
+
+# ::snt : UPDATE: Police say is over
+# ::tokens [":", "UPDATE", ":", "Police", "say", "is", "over"]
+# ::lemmas [":", "update", ":", "police", "say", "be", "over"]
+(c23-2 / update-02
+       :ARG2 (c23-0 / say-01
+                    :ARG0 (c23-1 / police)
+                    :ARG1 (c23-3 / over-01
+                                 :ARG1 c23-1)))
+
+# ::snt reports don't mention status of crazed person.Seems acted alone-no matter, alone or as group, violence not the solution
+# ::tokens ["reports", "do", "n't", "mention", "status", "of", "crazed", "person", ".", "Seems", "acted", "alone", "-", "no", "matter", ",", "alone", "or", "as", "group", ",", "violence", "not", "the", "solution"]
+# ::lemmas ["report", "do", "not", "mention", "status", "of", "craze", "person", ".", "Seems", "act", "alone", "-", "no", "matter", ",", "alone", "or", "as", "group", ",", "violence", "not", "the", "solution"]
+(c24-1 / multi-sentence
+       :snt1 (c24-7 / mention-01
+                    :ARG0 (c24-14 / thing
+                                  :ARG1-of (c24-8 / report-01))
+                    :ARG1 (c24-13 / status
+                                  :poss (c24-9 / person
+                                               :ARG1-of (c24-10 / crazy-03)))
+                    :polarity -)
+       :snt2 (c24-3 / seem-01
+                    :ARG1 (c24-15 / act-01
+                                  :manner (c24-4 / alone)
+                                  :ARG1-of (c24-5 / regardless-91
+                                                  :ARG2 (c24-2 / or
+                                                               :op1 (c24-6 / alone
+                                                                           :domain c24-9)
+                                                               :op2 (c24-11 / group
+                                                                            :domain c24-9)))
+                                  :ARG0-of (c24-0 / solve-01
+                                                  :ARG2 (c24-12 / violence)
+                                                  :polarity -))))
+
+# ::snt does this mean Rev Al is going to organize protests for excessive for by the police in AUS?
+# ::tokens ["does", "this", "mean", "Rev", "Al", "is", "going", "to", "organize", "protests", "for", "excessive", "for", "by", "the", "police", "in", "AUS", "?"]
+# ::lemmas ["do", "this", "mean", "Rev", "Al", "be", "go", "to", "organize", "protest", "for", "excessive", "for", "by", "the", "police", "in", "AUS", "?"]
+(c25-1 / mean-01
+       :ARG1 (c25-10 / this)
+       :ARG2 (c25-3 / organize-01
+                    :ARG0 (c25-7 / person
+                                 :name (c25-5 / name
+                                              :op1 "Al")
+                                 :ARG0-of (c25-0 / have-org-role-91
+                                                 :ARG2 (c25-8 / reverend)))
+                    :ARG1 (c25-11 / protest-01
+                                  :ARG0 (c25-2 / police
+                                               :location (c25-9 / country
+                                                                :name (c25-6 / name
+                                                                             :op1 "America")))
+                                  :ARG1-of (c25-4 / excessive-02)))
+       :polarity (c25-12 / amr-unknown))

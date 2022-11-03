@@ -1,0 +1,34 @@
+# ::snt What happened this time
+# ::tokens ["What", "happened", "this", "time"]
+# ::lemmas ["what", "happen", "this", "time"]
+(c1-2 / event
+      :time (c1-1 / time
+                  :mod (c1-0 / this)))
+
+# ::snt I hope you realize that the term you are using is offensive not only to women, but some men as well.
+# ::tokens ["I", "hope", "you", "realize", "that", "the", "term", "you", "are", "using", "is", "offensive", "not", "only", "to", "women", ",", "but", "some", "men", "as", "well", "."]
+# ::lemmas ["i", "hope", "you", "realize", "that", "the", "term", "you", "be", "use", "be", "offensive", "not", "only", "to", "woman", ",", "but", "some", "man", "as", "well", "."]
+(c2-3 / hope-01
+      :ARG0 (c2-8 / i)
+      :ARG1 (c2-7 / realize-01
+                  :ARG0 (c2-10 / you)
+                  :ARG1 (c2-5 / offend-01
+                              :ARG0 (c2-6 / term
+                                          :ARG1-of (c2-4 / use-01
+                                                         :ARG0 c2-10))
+                              :ARG1 (c2-1 / and
+                                          :op1 (c2-2 / woman)
+                                          :op2 (c2-9 / man
+                                                     :quant (c2-0 / some)
+                                                     :mod (c2-11 / as-well))))))
+
+# ::snt Please do not use derogatory language for women.
+# ::tokens ["Please", "do", "not", "use", "derogatory", "language", "for", "women", "."]
+# ::lemmas ["please", "do", "not", "use", "derogatory", "language", "for", "woman", "."]
+(c3-2 / use-01
+      :ARG0 (c3-4 / you)
+      :ARG1 (c3-3 / language
+                  :mod (c3-0 / derogatory))
+      :ARG2 (c3-1 / woman)
+      :mode imperative
+      :polite +)

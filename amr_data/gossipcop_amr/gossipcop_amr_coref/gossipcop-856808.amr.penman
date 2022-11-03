@@ -1,0 +1,42 @@
+# ::snt Ney!! Hahaha Katrina Kaif haha
+# ::tokens ["Ney", "!", "!", "Hahaha", "Katrina", "Kaif", "haha"]
+# ::lemmas ["Ney", "!", "!", "Hahaha", "Katrina", "Kaif", "haha"]
+(c1-1 / multi-sentence
+      :snt1 (c1-0 / ney)
+      :snt2 (c1-2 / haha
+                  :snt3 (c1-5 / haha
+                              :snt4 (c1-3 / person
+                                          :name (c1-4 / name
+                                                      :op1 "Katrina"
+                                                      :op2 "Kaif"))
+                              :mode expressive)
+                  :mode expressive))
+
+# ::snt No he deserves someone of class and upbringing
+# ::tokens ["No", "he", "deserves", "someone", "of", "class", "and", "upbringing"]
+# ::lemmas ["no", "he", "deserve", "someone", "of", "class", "and", "upbringe"]
+(c2-7 / deserve-01
+      :ARG0 (c2-3 / he)
+      :ARG1 (c2-2 / someone
+                  :ARG0-of (c2-5 / have-03
+                                 :ARG1 (c2-6 / and
+                                             :op1 (c2-4 / class)
+                                             :op2 (c2-0 / bring-up-08))))
+      :mod (c2-1 / no))
+
+# ::snt Meanwhile, Prince Harry can root for me and Priyanka Chopra.
+# ::tokens ["Meanwhile", ",", "Prince", "Harry", "can", "root", "for", "me", "and", "Priyanka", "Chopra", "."]
+# ::lemmas ["meanwhile", ",", "Prince", "Harry", "can", "root", "for", "i", "and", "Priyanka", "Chopra", "."]
+(c3-5 / possible-01
+      :ARG1 (c3-3 / root-03
+                  :ARG0 (c3-1 / person
+                              :name (c3-0 / name
+                                          :op1 "Prince"
+                                          :op2 "Harry"))
+                  :ARG1 (c3-7 / and
+                              :op1 (c3-6 / i)
+                              :op2 (c3-8 / person
+                                         :name (c3-4 / name
+                                                     :op1 "Priyanka"
+                                                     :op2 "Chopra"))))
+      :time (c3-2 / meanwhile))

@@ -1,0 +1,322 @@
+# ::snt ok i should sleep, but i guess clicking that link already meant i should sleep
+# ::tokens ["ok", "i", "should", "sleep", ",", "but", "i", "guess", "clicking", "that", "link", "already", "meant", "i", "should", "sleep"]
+# ::lemmas ["ok", "i", "should", "sleep", ",", "but", "i", "guess", "click", "that", "link", "already", "mean", "i", "should", "sleep"]
+(c1-7 / contrast-01
+      :ARG1 (c1-4 / recommend-01
+                  :ARG1 (c1-3 / sleep-01
+                              :ARG0 (c1-8 / i))
+                  :ARG1-of (c1-0 / okay-04))
+      :ARG2 (c1-10 / guess-01
+                   :ARG0 c1-8
+                   :ARG1 (c1-2 / mean-01
+                               :ARG1 (c1-12 / click-01
+                                            :ARG0 c1-8
+                                            :ARG1 (c1-6 / link
+                                                        :mod (c1-9 / that)))
+                               :ARG2 (c1-11 / recommend-01
+                                            :ARG1 (c1-1 / sleep-01
+                                                        :ARG0 c1-8))
+                               :time (c1-5 / already))))
+
+# ::snt That's a different sentence
+# ::tokens ["That", "'s", "a", "different", "sentence"]
+# ::lemmas ["that", "be", "a", "different", "sentence"]
+(c2-2 / sentence
+      :ARG1-of (c2-0 / differ-02)
+      :domain (c2-1 / that))
+
+# ::snt whats -2011?
+# ::tokens ["what", "s", "-2011", "?"]
+# ::lemmas ["what", "s", "-2011", "?"]
+(c3-0 / date-entity
+      :ARG1 (c3-1 / amr-unknown)
+      :year 2011
+      :month 11
+      :day 11)
+
+# ::snt Pathetic, WP! How does it benefit any of us!
+# ::tokens ["Pathetic", ",", "WP", "!", "How", "does", "it", "benefit", "any", "of", "us", "!"]
+# ::lemmas ["Pathetic", ",", "WP", "!", "how", "do", "it", "benefit", "any", "of", "we", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-4 / pathetic
+                  :domain (c4-3 / person
+                                :name (c4-1 / name
+                                            :op1 "WP")))
+      :snt2 (c4-0 / benefit-01
+                  :ARG0 (c4-6 / it)
+                  :ARG1 (c4-5 / we
+                              :mod (c4-7 / any))
+                  :manner (c4-8 / amr-unknown)))
+
+# ::snt How can he respect her when her family is going through hell the actrious
+# ::tokens ["How", "can", "he", "respect", "her", "when", "her", "family", "is", "going", "through", "hell", "the", "actrious"]
+# ::lemmas ["how", "can", "he", "respect", "she", "when", "her", "family", "be", "go", "through", "hell", "the", "actrious"]
+(c5-4 / say-01
+      :ARG0 (c5-10 / i)
+      :ARG1 (c5-8 / possible-01
+                  :ARG1 (c5-5 / respect-01
+                              :ARG0 (c5-7 / he)
+                              :ARG1 (c5-0 / she)
+                              :manner (c5-11 / amr-unknown)
+                              :time (c5-12 / go-through-20
+                                           :ARG0 (c5-1 / family
+                                                       :ARG1-of (c5-9 / have-org-role-91
+                                                                      :ARG0 c5-0
+                                                                      :ARG2 (c5-2 / member)))
+                                           :ARG1 (c5-6 / hell))))
+      :ARG2 (c5-3 / person
+                  :ARG0-of (c5-13 / act-01)))
+
+# ::snt There hasnt been this much drama regarding an American getting married in England since Ross said Rachel instead of Emily
+# ::tokens ["There", "has", "nt", "been", "this", "much", "drama", "regarding", "an", "American", "getting", "married", "in", "England", "since", "Ross", "said", "Rachel", "instead", "of", "Emily"]
+# ::lemmas ["there", "have", "not", "be", "this", "much", "drama", "regard", "an", "American", "getting", "marry", "in", "England", "since", "Ross", "say", "Rachel", "instead", "of", "Emily"]
+(c6-18 / drama
+       :topic (c6-8 / marry-01
+                    :ARG1 (c6-14 / person
+                                 :mod (c6-11 / country
+                                             :name (c6-13 / name
+                                                          :op1 "America")))
+                    :location (c6-7 / country
+                                    :name (c6-10 / name
+                                                 :op1 "England")))
+       :quant (c6-5 / much)
+       :mod (c6-6 / this)
+       :time (c6-0 / since
+                   :op1 (c6-4 / say-01
+                              :ARG0 (c6-9 / person
+                                          :name (c6-15 / name
+                                                       :op1 "Ross"))
+                              :ARG1 (c6-2 / person
+                                          :name (c6-12 / name
+                                                       :op1 "Rachel"))
+                              :ARG1-of (c6-17 / instead-of-91
+                                              :ARG2 (c6-3 / say-01
+                                                          :ARG0 c6-9
+                                                          :ARG1 (c6-1 / person
+                                                                      :name (c6-16 / name
+                                                                                   :op1 "Emily"))))))
+       :polarity -)
+
+# ::snt suck it up lol
+# ::tokens ["suck", "it", "up", "lol"]
+# ::lemmas ["suck", "it", "up", "lol"]
+(c7-1 / suck-up-04
+      :ARG0 (c7-0 / you)
+      :ARG1 (c7-4 / it)
+      :ARG2-of (c7-3 / laugh-01
+                     :ARG0 (c7-2 / i)
+                     :manner (c7-5 / loud))
+      :mode expressive)
+
+# ::snt Another Gold Digger! Who crossed line of the mighty Buckingham Palace! It is indeed hurtful . Disgraceful Prince Harry must be renounced his title! All his hostility against Queens Elizabeth that shows the his revenge. He blames her about Dianas tragedy
+# ::tokens ["Another", "Gold", "Digger", "!", "Who", "crossed", "line", "of", "the", "mighty", "Buckingham", "Palace", "!", "It", "is", "indeed", "hurtful", ".", "Disgraceful", "Prince", "Harry", "must", "be", "renounced", "his", "title", "!", "All", "his", "hostility", "against", "Queens", "Elizabeth", "that", "shows", "the", "his", "revenge", ".", "He", "blames", "her", "about", "Dianas", "tragedy"]
+# ::lemmas ["another", "Gold", "Digger", "!", "who", "cross", "line", "of", "the", "mighty", "Buckingham", "Palace", "!", "it", "be", "indeed", "hurtful", ".", "disgraceful", "Prince", "Harry", "must", "be", "renounce", "his", "title", "!", "all", "his", "hostility", "against", "Queens", "Elizabeth", "that", "show", "the", "his", "revenge", ".", "he", "blame", "she", "about", "Dianas", "tragedy"]
+(c8-17 / multi-sentence
+       :snt1 (c8-26 / person
+                    :ARG0-of (c8-30 / dig-01
+                                    :ARG1-of (c8-14 / gold-01))
+                    :mod (c8-13 / another)
+                    :mode expressive)
+       :snt2 (c8-18 / person
+                    :ARG0-of (c8-20 / cross-02
+                                    :ARG1 (c8-1 / line
+                                                :poss (c8-3 / palace
+                                                            :name (c8-24 / name
+                                                                         :op1 "Buckingham"
+                                                                         :op2 "Palace")
+                                                            :mod (c8-9 / mighty)))))
+       :snt3 (c8-10 / hurt-01
+                    :ARG0 (c8-29 / it)
+                    :mod (c8-7 / indeed))
+       :snt4 (c8-5 / obligate-01
+                   :ARG2 (c8-25 / renounce-01
+                                :ARG0 (c8-2 / person
+                                            :name (c8-19 / name
+                                                         :op1 "Prince"
+                                                         :op2 "Harry"))
+                                :ARG1 (c8-12 / title
+                                             :poss c8-2))
+                   :ARG0-of (c8-21 / disgust-01))
+       :snt5 (c8-28 / hostility
+                    :poss c8-2
+                    :mod (c8-11 / all)
+                    :topic (c8-15 / person
+                                  :name (c8-27 / name
+                                               :op1 "Queens"
+                                               :op2 "Elizabeth"))
+                    :ARG0-of (c8-0 / show-01
+                                   :ARG1 (c8-4 / revenge
+                                               :poss c8-2)))
+       :snt6 (c8-16 / blame-01
+                    :ARG0 (c8-8 / he)
+                    :ARG1 (c8-6 / she)
+                    :topic (c8-23 / tragedy
+                                  :name (c8-22 / name
+                                               :op1 "Dianas"))))
+
+# ::snt With none of the calories.
+# ::tokens ["With", "none", "of", "the", "calories", "."]
+# ::lemmas ["with", "none", "of", "the", "calorie", "."]
+(c9-0 / calorie
+      :quant (c9-1 / none))
+
+# ::snt Not really...
+# ::tokens ["Not", "really", "..."]
+# ::lemmas ["not", "really", "..."]
+(c10-0 / real-04
+       :polarity -)
+
+# ::snt Not interested
+# ::tokens ["Not", "interested"]
+# ::lemmas ["not", "interested"]
+(c11-0 / interest-01
+       :polarity -)
+
+# ::snt All? Then delete this &amp; all related posts.
+# ::tokens ["All", "?", "Then", "delete", "this", "&", "amp", ";", "all", "related", "posts", "."]
+# ::lemmas ["all", "?", "then", "delete", "this", "&", "amp", ";", "all", "relate", "post", "."]
+(c12-1 / multi-sentence
+       :snt1 (c12-8 / all
+                    :polarity (c12-7 / amr-unknown))
+       :snt2 (c12-10 / delete-01
+                     :ARG0 (c12-0 / you)
+                     :ARG1 (c12-5 / and
+                                  :op1 (c12-6 / this)
+                                  :op2 (c12-11 / thing
+                                               :ARG1-of (c12-4 / post-01)
+                                               :ARG1-of (c12-3 / relate-01
+                                                               :ARG2 (c12-2 / all))))
+                     :time (c12-9 / then)
+                     :mode imperative))
+
+# ::snt Leave these beautiful people alone. Let them be! Wish them the best
+# ::tokens ["Leave", "these", "beautiful", "people", "alone", ".", "Let", "them", "be", "!", "Wish", "them", "the", "best"]
+# ::lemmas ["leave", "these", "beautiful", "people", "alone", ".", "let", "they", "be", "!", "wish", "they", "the", "good"]
+(c13-3 / multi-sentence
+       :snt1 (c13-8 / leave-14
+                    :ARG0 (c13-2 / you)
+                    :ARG1 (c13-13 / alone
+                                  :domain (c13-7 / person
+                                                 :ARG1-of (c13-1 / beautiful-02)
+                                                 :mod (c13-11 / this)))
+                    :mode imperative)
+       :snt2 (c13-15 / let-01
+                     :ARG0 (c13-14 / you)
+                     :ARG1 (c13-16 / they)
+                     :mode imperative)
+       :snt3 (c13-10 / wish-01
+                     :ARG0 (c13-0 / you)
+                     :ARG1 (c13-12 / thing
+                                   :ARG1-of (c13-6 / have-degree-91
+                                                   :ARG2 (c13-4 / good-02
+                                                                :ARG1 c13-12)
+                                                   :ARG3 (c13-9 / most)))
+                     :ARG2 (c13-5 / they)
+                     :mode imperative))
+
+# ::snt 's account is temporarily unavailable because it violates the Twitter Media Policy. Learn more.
+# ::tokens ["'s", "account", "is", "temporarily", "unavailable", "because", "it", "violates", "the", "Twitter", "Media", "Policy", ".", "Learn", "more", "."]
+# ::lemmas ["'s", "account", "be", "temporarily", "unavailable", "because", "it", "violate", "the", "Twitter", "Media", "Policy", ".", "learn", "more", "."]
+(c14-1 / multi-sentence
+       :snt1 (c14-8 / cause-01
+                    :ARG0 (c14-4 / violate-01
+                                 :ARG0 (c14-11 / account
+                                               :poss (c14-6 / publication
+                                                            :name (c14-2 / name
+                                                                         :op1 "Twitter")))
+                                 :ARG1 (c14-3 / policy-01
+                                              :ARG1 (c14-5 / media)))
+                    :ARG1 (c14-10 / available-02
+                                  :ARG2 c14-11
+                                  :duration (c14-9 / temporary)
+                                  :polarity -))
+       :snt2 (c14-7 / learn-01
+                    :ARG0 (c14-0 / you)
+                    :ARG1 (c14-12 / more)
+                    :mode imperative))
+
+# ::snt Is there any way to block news about this shit?
+# ::tokens ["Is", "there", "any", "way", "to", "block", "news", "about", "this", "shit", "?"]
+# ::lemmas ["be", "there", "any", "way", "to", "block", "news", "about", "this", "shit", "?"]
+(c15-3 / way
+       :polarity (c15-6 / amr-unknown)
+       :mod (c15-5 / any)
+       :manner-of (c15-0 / block-01
+                         :ARG1 (c15-1 / news
+                                      :topic (c15-2 / shit
+                                                    :mod (c15-4 / this)))))
+
+# ::snt If this headline were true, it would link to an empty page.
+# ::tokens ["If", "this", "headline", "were", "true", ",", "it", "would", "link", "to", "an", "empty", "page", "."]
+# ::lemmas ["if", "this", "headline", "be", "true", ",", "it", "would", "link", "to", "an", "empty", "page", "."]
+(c16-3 / link-01
+       :ARG2 (c16-2 / page
+                    :ARG1-of (c16-0 / empty-02))
+       :condition (c16-4 / true-01
+                         :ARG1 (c16-6 / thing
+                                      :ARG2-of (c16-1 / headline-01)
+                                      :mod (c16-5 / this))))
+
+# ::snt Who cares!! Please be real. There are more important problems and issues in the world to care about this so trivia and frivolous issue
+# ::tokens ["Who", "cares", "!", "!", "Please", "be", "real", ".", "There", "are", "more", "important", "problems", "and", "issues", "in", "the", "world", "to", "care", "about", "this", "so", "trivia", "and", "frivolous", "issue"]
+# ::lemmas ["who", "care", "!", "!", "please", "be", "real", ".", "there", "be", "more", "important", "problem", "and", "issue", "in", "the", "world", "to", "care", "about", "this", "so", "trivia", "and", "frivolous", "issue"]
+(c17-11 / multi-sentence
+        :snt1 (c17-12 / care-01
+                      :ARG0 (c17-8 / amr-unknown)
+                      :mode imperative
+                      :polite +)
+        :snt2 (c17-15 / real-04
+                      :ARG1 (c17-1 / you)
+                      :mode imperative)
+        :snt3 (c17-3 / have-degree-91
+                     :ARG1 (c17-6 / and
+                                  :op1 (c17-16 / problem)
+                                  :op2 (c17-18 / issue))
+                     :ARG2 (c17-2 / important-01
+                                  :ARG1 c17-6)
+                     :ARG3 (c17-4 / more)
+                     :ARG4 (c17-10 / care-01
+                                   :ARG0 (c17-17 / world)
+                                   :ARG1 (c17-7 / this))
+                     :ARG1-of (c17-0 / cause-01
+                                     :ARG0 (c17-5 / and
+                                                  :op1 (c17-13 / trivia)
+                                                  :op2 (c17-9 / issue
+                                                              :mod (c17-14 / frivolous))))))
+
+# ::snt Im good
+# ::tokens ["I", "m", "good"]
+# ::lemmas ["i", "m", "good"]
+(c18-0 / good-02
+       :ARG1 (c18-1 / i))
+
+# ::snt I really dont want to know
+# ::tokens ["I", "really", "do", "nt", "want", "to", "know"]
+# ::lemmas ["i", "really", "do", "not", "want", "to", "know"]
+(c19-0 / want-01
+       :ARG0 (c19-2 / i)
+       :ARG1 (c19-1 / know-01
+                    :ARG0 c19-2)
+       :ARG1-of (c19-3 / real-04)
+       :polarity -)
+
+# ::snt No Gossip Please
+# ::tokens ["No", "Gossip", "Please"]
+# ::lemmas ["no", "Gossip", "please"]
+(c21-0 / gossip
+       :polarity -
+       :polite +)
+
+# ::snt So...there's no gossip?
+# ::tokens ["So", "...", "there", "'s", "no", "gossip", "?"]
+# ::lemmas ["so", "...", "there", "be", "no", "gossip", "?"]
+(c22-1 / infer-01
+       :polarity (c22-2 / amr-unknown)
+       :ARG1 (c22-0 / gossip-01
+                    :polarity -))
+
+# ::snt no thx
+# ::tokens ["no", "thx"]
+# ::lemmas ["no", "thx"]
+(c23-0 / have-polarity-91
+       :ARG2 -)

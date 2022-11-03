@@ -1,0 +1,64 @@
+# ::snt South &amp; east
+# ::tokens ["South", "&", "amp", ";", "east"]
+# ::lemmas ["South", "&", "amp", ";", "east"]
+(c1-2 / and
+      :op1 (c1-0 / south)
+      :op2 (c1-1 / east))
+
+# ::snt What stupid article is this? My God, I fear they can get even worse can't they?
+# ::tokens ["What", "stupid", "article", "is", "this", "?", "My", "God", ",", "I", "fear", "they", "can", "get", "even", "worse", "ca", "n't", "they", "?"]
+# ::lemmas ["what", "stupid", "article", "be", "this", "?", "my", "God", ",", "i", "fear", "they", "can", "get", "even", "bad", "can", "not", "they", "?"]
+(c2-3 / multi-sentence
+      :snt1 (c2-7 / article
+                  :mod (c2-5 / stupid)
+                  :domain (c2-14 / this)
+                  :mod (c2-13 / amr-unknown))
+      :snt2 (c2-0 / fear-01
+                  :ARG0 (c2-15 / i)
+                  :ARG1 (c2-11 / possible-01
+                               :ARG1 (c2-4 / get-03
+                                           :ARG1 (c2-17 / they)
+                                           :ARG2 (c2-10 / have-degree-91
+                                                        :ARG1 c2-17
+                                                        :ARG2 (c2-2 / bad-07
+                                                                    :ARG1 c2-17
+                                                                    :mod (c2-9 / even))
+                                                        :ARG3 (c2-12 / more))
+                                           :ARG1-of (c2-6 / possible-01
+                                                          :ARG1-of (c2-8 / request-confirmation-91)
+                                                          :polarity -)))
+                  :mod (c2-16 / person
+                              :name (c2-1 / name
+                                          :op1 "God")
+                              :poss c2-15
+                              :mode expressive)))
+
+# ::snt Im thinking her name will be Blessing or Miracle
+# ::tokens ["I", "m", "thinking", "her", "name", "will", "be", "Blessing", "or", "Miracle"]
+# ::lemmas ["i", "m", "think", "her", "name", "will", "be", "Blessing", "or", "miracle"]
+(c3-8 / think-01
+      :ARG0 (c3-7 / i)
+      :ARG1 (c3-1 / name-01
+                  :ARG1 (c3-3 / she)
+                  :ARG2 (c3-0 / or
+                              :op1 (c3-5 / person
+                                         :name (c3-4 / name
+                                                     :op1 "Blessing"))
+                              :op2 (c3-2 / person
+                                         :name (c3-6 / name
+                                                     :op1 "Miracle")))))
+
+# ::snt Apparently you care hunnehhhh
+# ::tokens ["Apparently", "you", "care", "hunnehhhh"]
+# ::lemmas ["apparently", "you", "care", "hunnehhhh"]
+(c4-1 / say-01
+      :ARG1 (c4-3 / care-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1-of (c4-4 / appear-02))
+      :ARG2 (c4-2 / hunne))
+
+# ::snt No one cares.
+# ::tokens ["No", "one", "cares", "."]
+# ::lemmas ["no", "one", "care", "."]
+(c5-0 / care-01
+      :ARG0 (c5-1 / no-one))

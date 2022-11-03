@@ -1,0 +1,208 @@
+# ::snt What is racist about the empty box?
+# ::tokens ["What", "is", "racist", "about", "the", "empty", "box", "?"]
+# ::lemmas ["what", "be", "racist", "about", "the", "empty", "box", "?"]
+(c1-1 / racist
+      :domain (c1-2 / amr-unknown)
+      :topic (c1-3 / box
+                   :ARG1-of (c1-0 / empty-02)))
+
+# ::snt Its racist against all not-so-perfect empty boxes.
+# ::tokens ["Its", "racist", "against", "all", "not", "-", "so", "-", "perfect", "empty", "boxes", "."]
+# ::lemmas ["its", "racist", "against", "all", "not", "-", "so", "-", "perfect", "empty", "box", "."]
+(c2-4 / racism
+      :domain (c2-2 / it)
+      :prep-against (c2-0 / box
+                          :ARG1-of (c2-1 / empty-02)
+                          :ARG1-of (c2-3 / perfect-02
+                                         :degree (c2-5 / so)
+                                         :polarity -)
+                          :mod (c2-6 / all)))
+
+# ::snt I was trying to make a joke, Daniel
+# ::tokens ["I", "was", "trying", "to", "make", "a", "joke", ",", "Daniel"]
+# ::lemmas ["i", "be", "try", "to", "make", "a", "joke", ",", "Daniel"]
+(c3-4 / say-01
+      :ARG0 (c3-1 / i)
+      :ARG1 (c3-5 / try-01
+                  :ARG0 c3-1
+                  :ARG1 (c3-0 / joke-01
+                              :ARG0 c3-1))
+      :ARG2 (c3-3 / person
+                  :name (c3-2 / name
+                              :op1 "Daniel")))
+
+# ::snt If box races existed (and they were human of course), this would relate to xenophobia. Otherwise not.
+# ::tokens ["If", "box", "races", "existed", "(", "and", "they", "were", "human", "of", "course", ")", ",", "this", "would", "relate", "to", "xenophobia", ".", "Otherwise", "not", "."]
+# ::lemmas ["if", "box", "race", "exist", "(", "and", "they", "be", "human", "of", "course", ")", ",", "this", "would", "relate", "to", "xenophobia", ".", "otherwise", "not", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-9 / relate-01
+                  :ARG1 (c4-10 / this)
+                  :ARG2 (c4-6 / xenophobia)
+                  :condition (c4-11 / and
+                                    :op1 (c4-5 / exist-01
+                                               :ARG1 (c4-8 / race
+                                                           :mod (c4-3 / box)))
+                                    :op2 (c4-0 / human
+                                               :domain c4-8
+                                               :mod (c4-4 / of-course))))
+      :snt2 (c4-7 / relate-01
+                  :ARG1 c4-10
+                  :ARG2 c4-6
+                  :condition (c4-1 / have-polarity-91
+                                   :ARG2 -)
+                  :polarity -))
+
+# ::snt it's our fault we let religion free.we must cure it.inject it with logic
+# ::tokens ["it", "'s", "our", "fault", "we", "let", "religion", "free.we", "must", "cure", "it.inject", "it", "with", "logic"]
+# ::lemmas ["it", "be", "our", "fault", "we", "let", "religion", "free.we", "must", "cure", "it.inject", "it", "with", "logic"]
+(c5-3 / multi-sentence
+      :snt1 (c5-2 / fault-01
+                  :ARG1 (c5-0 / we)
+                  :ARG2 (c5-4 / let-01
+                              :ARG0 c5-0
+                              :ARG1 (c5-7 / free-04
+                                          :ARG1 (c5-9 / religion))))
+      :snt2 (c5-5 / obligate-01
+                  :ARG1 (c5-8 / we)
+                  :ARG2 (c5-10 / cure-01
+                               :ARG0 c5-8
+                               :ARG2 c5-9))
+      :snt3 (c5-6 / inject-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 c5-9
+                  :instrument (c5-11 / logic)
+                  :mode imperative))
+
+# ::snt Apologies to any nihilists: New Yorker cartoon. Seems particularly relevant after attack.
+# ::tokens ["Apologies", "to", "any", "nihilists", ":", "New", "Yorker", "cartoon", ".", "Seems", "particularly", "relevant", "after", "attack", "."]
+# ::lemmas ["apology", "to", "any", "nihilist", ":", "New", "Yorker", "cartoon", ".", "seem", "particularly", "relevant", "after", "attack", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-12 / apologize-01
+                   :ARG1 (c6-4 / person
+                               :mod (c6-1 / any)
+                               :ARG0-of (c6-2 / nihilize-01))
+                   :ARG2 (c6-6 / cartoon
+                               :mod (c6-5 / magazine
+                                          :name (c6-3 / name
+                                                      :op1 "New"
+                                                      :op2 "Yorker"))))
+      :snt2 (c6-9 / seem-01
+                  :ARG1 (c6-7 / relevant-01
+                              :time (c6-8 / after
+                                          :op1 (c6-10 / attack-01))
+                              :degree (c6-11 / particular))))
+
+# ::snt That's a politically acceptable way to attack the concept of political correctness. It's all politics.
+# ::tokens ["That", "'s", "a", "politically", "acceptable", "way", "to", "attack", "the", "concept", "of", "political", "correctness", ".", "It", "'s", "all", "politics", "."]
+# ::lemmas ["that", "be", "a", "politically", "acceptable", "way", "to", "attack", "the", "concept", "of", "political", "correctness", ".", "it", "be", "all", "politic", "."]
+(c7-1 / multi-sentence
+      :snt1 (c7-0 / way
+                  :manner-of (c7-11 / attack-01
+                                    :ARG1 (c7-7 / concept
+                                                :topic (c7-6 / correct-02
+                                                             :mod (c7-5 / politics))))
+                  :ARG1-of (c7-3 / accept-01
+                                 :ARG1-of (c7-10 / possible-01)
+                                 :mod (c7-2 / politics))
+                  :domain (c7-9 / that))
+      :snt2 (c7-8 / politics
+                  :mod (c7-4 / all)))
+
+# ::snt Actually, I feel that it's a bit racist. Where's the black in that panel?
+# ::tokens ["Actually", ",", "I", "feel", "that", "it", "'s", "a", "bit", "racist", ".", "Where", "'s", "the", "black", "in", "that", "panel", "?"]
+# ::lemmas ["actually", ",", "i", "feel", "that", "it", "be", "a", "bit", "racist", ".", "where", "be", "the", "black", "in", "that", "panel", "?"]
+(c8-1 / multi-sentence
+      :snt1 (c8-0 / feel-02
+                  :ARG0 (c8-4 / i)
+                  :ARG1 (c8-6 / racist
+                              :domain (c8-8 / it)
+                              :degree (c8-2 / bit))
+                  :ARG1-of (c8-12 / actual-02))
+      :snt2 (c8-7 / be-located-at-91
+                  :ARG1 (c8-5 / person
+                              :ARG1-of (c8-9 / black-05))
+                  :ARG2 (c8-11 / panel
+                               :mod (c8-10 / that))
+                  :location (c8-3 / amr-unknown)))
+
+# ::snt Discriminates against non-rectangles
+# ::tokens ["Discriminates", "against", "non", "-", "rectangles"]
+# ::lemmas ["discriminate", "against", "non", "-", "rectangle"]
+(c9-1 / discriminate-02
+      :ARG1 (c9-0 / rectangle
+                  :polarity -))
+
+# ::snt "I'm a nihilist and I'm offended..." Ha!!
+# ::tokens ["\"", "I", "'m", "a", "nihilist", "and", "I", "'m", "offended", "...", "\"", "Ha", "!", "!"]
+# ::lemmas ["\"", "i", "be", "a", "nihilist", "and", "i", "be", "offend", "...", "\"", "ha", "!", "!"]
+(c10-4 / and
+       :op1 (c10-3 / nihilist
+                   :domain (c10-2 / i))
+       :op2 (c10-1 / offend-01
+                   :ARG1 c10-2)
+       :mod (c10-0 / ha
+                   :mode expressive))
+
+# ::snt Kinda racist, dont you think?
+# ::tokens ["Kinda", "racist", ",", "do", "nt", "you", "think", "?"]
+# ::lemmas ["Kinda", "racist", ",", "do", "not", "you", "think", "?"]
+(c11-4 / think-01
+       :ARG0 (c11-0 / you)
+       :ARG1 (c11-3 / racist
+                    :degree (c11-2 / kind-of))
+       :ARG1-of (c11-1 / request-confirmation-91)
+       :polarity -)
+
+# ::snt well said!!!!
+# ::tokens ["well", "said", "!", "!", "!", "!"]
+# ::lemmas ["well", "say", "!", "!", "!", "!"]
+(c12-0 / say-01
+       :ARG1-of (c12-1 / well-09)
+       :mode expressive)
+
+# ::snt bloody typical, had to be white, what no black boxes?? I'm totally offended.. Or am I??
+# ::tokens ["bloody", "typical", ",", "had", "to", "be", "white", ",", "what", "no", "black", "boxes", "?", "?", "I", "'m", "totally", "offended", "..", "Or", "am", "I", "?", "?"]
+# ::lemmas ["bloody", "typical", ",", "have", "to", "be", "white", ",", "what", "no", "black", "box", "?", "?", "i", "be", "totally", "offended", "..", "or", "be", "i", "?", "?"]
+(c13-2 / multi-sentence
+       :snt1 (c13-12 / typical-02
+                     :ARG2 (c13-13 / and
+                                   :op1 (c13-3 / bloody)
+                                   :op2 (c13-4 / obligate-01
+                                               :ARG2 (c13-0 / white-02))
+                                   :op3 (c13-7 / box
+                                               :ARG1-of (c13-11 / black-04)
+                                               :mod (c13-5 / amr-unknown)
+                                               :polarity -)))
+       :snt2 (c13-1 / offend-01
+                    :ARG1 (c13-6 / i)
+                    :degree (c13-9 / total))
+       :snt3 (c13-10 / offend-01
+                     :ARG1 (c13-8 / i)
+                     :polarity c13-5))
+
+# ::snt TY
+# ::tokens ["TY"]
+# ::lemmas ["ty"]
+(c14-1 / person
+       :name (c14-0 / name
+                    :op1 "TY"))
+
+# ::snt that's white so it's racist. Jk (just in case someone thought i'm crazy)
+# ::tokens ["that", "'s", "white", "so", "it", "'s", "racist", ".", "Jk", "(", "just", "in", "case", "someone", "thought", "i", "'m", "crazy", ")"]
+# ::lemmas ["that", "be", "white", "so", "it", "be", "racist", ".", "Jk", "(", "just", "in", "case", "someone", "think", "i", "be", "crazy", ")"]
+(c15-2 / multi-sentence
+       :snt1 (c15-1 / white-02
+                    :ARG1 (c15-13 / that)
+                    :ARG0-of (c15-8 / cause-01
+                                    :ARG1 (c15-7 / racist
+                                                 :domain (c15-4 / it))))
+       :snt2 (c15-12 / say-01
+                     :ARG0 (c15-9 / i)
+                     :ARG2 (c15-6 / person
+                                  :name (c15-5 / name
+                                               :op1 "Jk"))
+                     :condition (c15-11 / think-01
+                                        :ARG0 (c15-3 / someone)
+                                        :ARG1 (c15-10 / crazy-03
+                                                      :ARG1 c15-9))
+                     :mod (c15-0 / just)))

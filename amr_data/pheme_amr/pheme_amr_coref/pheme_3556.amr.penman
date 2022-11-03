@@ -1,0 +1,35 @@
+# ::snt thank you
+# ::tokens ["thank", "you"]
+# ::lemmas ["thank", "you"]
+(c1-1 / thank-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / you))
+
+# ::snt At least THOSE police know there will be a consequence killing someone. Many places, seem face no consequence..
+# ::tokens ["At", "least", "THOSE", "police", "know", "there", "will", "be", "a", "consequence", "killing", "someone", ".", "Many", "places", ",", "seem", "face", "no", "consequence", ".."]
+# ::lemmas ["at", "least", "those", "police", "know", "there", "will", "be", "a", "consequence", "kill", "someone", ".", "many", "place", ",", "seem", "face", "no", "consequence", ".."]
+(c2-1 / multi-sentence
+      :snt1 (c2-4 / know-01
+                  :ARG0 (c2-5 / police
+                              :mod (c2-9 / that))
+                  :ARG1 (c2-7 / consequence-03
+                              :ARG2 (c2-2 / kill-01
+                                          :ARG1 (c2-8 / someone)))
+                  :mod (c2-11 / at-least))
+      :snt2 (c2-3 / seem-01
+                  :ARG1 (c2-0 / face-01
+                              :ARG0 (c2-10 / place
+                                           :quant (c2-6 / many))
+                              :ARG1 c2-7
+                              :polarity -)))
+
+# ::snt what are they looking for more kids to shoot?
+# ::tokens ["what", "are", "they", "looking", "for", "more", "kids", "to", "shoot", "?"]
+# ::lemmas ["what", "be", "they", "look", "for", "more", "kid", "to", "shoot", "?"]
+(c3-0 / look-04
+      :ARG0 (c3-4 / they)
+      :ARG1 (c3-5 / amr-unknown)
+      :ARG2 (c3-2 / kid
+                  :quant (c3-1 / more)
+                  :ARG1-of (c3-3 / shoot-02
+                                 :ARG0 c3-4)))

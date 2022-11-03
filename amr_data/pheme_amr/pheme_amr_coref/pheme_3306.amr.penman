@@ -1,0 +1,363 @@
+# ::snt High five
+# ::tokens ["High", "five"]
+# ::lemmas ["high", "five"]
+(c1-0 / high-five)
+
+# ::snt je vois des commentaires en bas en mode "FOLLOW MEEEEE" et nous on a rien demand
+# ::tokens ["je", "vois", "des", "commentaires", "en", "bas", "en", "mode", "\"", "FOLLOW", "MEEEEE", "\"", "et", "nous", "on", "a", "rien", "demand"]
+# ::lemmas ["je", "vois", "des", "commentaire", "en", "bas", "en", "mode", "\"", "FOLLOW", "meeeee", "\"", "et", "nous", "on", "a", "rien", "demand"]
+(c2-11 / and
+       :op1 (c2-5 / vois
+                  :op1 (c2-8 / commentaire
+                             :mod (c2-2 / et-cetera)
+                             :location (c2-7 / city
+                                             :name (c2-4 / name
+                                                         :op1 "Bas"
+                                                         :op2 "En"
+                                                         :op3 "Mode"))))
+       :op2 (c2-1 / follow-02
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-3 / amr-unknown)
+                  :mode imperative)
+       :op3 (c2-6 / nous
+                  :prep-on (c2-9 / demand-01
+                                 :mod (c2-10 / rien))))
+
+# ::snt c'est qui le premier ?
+# ::tokens ["c'est", "qui", "le", "premier", "?"]
+# ::lemmas ["c'est", "qui", "le", "premier", "?"]
+(c3-3 / amr-unknown
+      :domain (c3-1 / person
+                    :ARG0-of (c3-0 / have-org-role-91
+                                   :ARG2 (c3-2 / premier))))
+
+# ::snt idoles a marcherait tu penses ?
+# ::tokens ["idoles", "a", "marcherait", "tu", "penses", "?"]
+# ::lemmas ["idole", "a", "marcherait", "tu", "pense", "?"]
+(c4-3 / idiot
+      :polarity (c4-2 / amr-unknown)
+      :domain (c4-1 / person
+                    :ARG0-of (c4-0 / defend-01)))
+
+# ::snt pleas I answered
+# ::tokens ["pleas", "I", "answered"]
+# ::lemmas ["plea", "i", "answer"]
+(c5-0 / pleas-01
+      :ARG1 (c5-2 / answer-01
+                  :ARG0 (c5-1 / i)))
+
+# ::snt - et la il m'a unfollow ce btard
+# ::tokens ["-", "et", "la", "il", "m'a", "unfollow", "ce", "btard"]
+# ::lemmas ["-", "et", "la", "il", "m'a", "unfollow", "ce", "btard"]
+(c6-5 / and
+      :op1 (c6-1 / et-cetera)
+      :op2 (c6-3 / possible-01
+                 :ARG1 (c6-0 / follow-02
+                             :ARG0 (c6-4 / person
+                                         :name (c6-2 / name
+                                                     :op1 " ce"
+                                                     :op2 "btard")))
+                 :polarity -))
+
+# ::snt well... idk what to tell you. you asked what was going on in Paris and now you don't believe me.
+# ::tokens ["well", "...", "idk", "what", "to", "tell", "you", ".", "you", "asked", "what", "was", "going", "on", "in", "Paris", "and", "now", "you", "do", "n't", "believe", "me", "."]
+# ::lemmas ["well", "...", "idk", "what", "to", "tell", "you", ".", "you", "ask", "what", "be", "go", "on", "in", "Paris", "and", "now", "you", "do", "not", "believe", "i", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-6 / know-01
+                  :ARG0 (c7-5 / i)
+                  :ARG1 (c7-14 / thing
+                               :ARG1-of (c7-13 / tell-01
+                                               :ARG0 c7-5
+                                               :ARG2 (c7-0 / you)))
+                  :mod (c7-1 / well))
+      :snt2 (c7-15 / and
+                   :op1 (c7-4 / ask-01
+                              :ARG0 (c7-16 / you)
+                              :ARG1 (c7-8 / thing
+                                          :ARG1-of (c7-11 / go-on-15
+                                                          :location (c7-10 / city
+                                                                           :name (c7-7 / name
+                                                                                       :op1 "Paris")))))
+                   :op2 (c7-3 / believe-01
+                              :ARG0 c7-16
+                              :ARG1 (c7-12 / i)
+                              :time (c7-9 / now)
+                              :polarity -)))
+
+# ::snt what's happening?
+# ::tokens ["what", "'s", "happening", "?"]
+# ::lemmas ["what", "be", "happen", "?"]
+(c8-0 / event
+      :mod (c8-1 / amr-unknown))
+
+# ::snt mdrr same lui aussi il m'a follow hier
+# ::tokens ["mdrr", "same", "lui", "aussi", "il", "m'a", "follow", "hier"]
+# ::lemmas ["mdrr", "same", "lui", "aussi", "il", "m'a", "follow", "hi"]
+(c9-6 / say-01
+      :ARG0 (c9-3 / i)
+      :ARG1 (c9-7 / and
+                  :op1 (c9-2 / same-01)
+                  :op2 (c9-1 / follow-02
+                             :ARG0 (c9-0 / we)
+                             :ARG1 (c9-5 / person
+                                         :name (c9-4 / name
+                                                     :op1 "Hem")
+                                         :ARG2-of c9-6)))
+      :name c9-4
+      :op1 "Lui"
+      :op2 "Aussi")
+
+# ::snt mdrrr le pire c'est qu'ils nous follow alors que nous non,on devrait peut-tre unfollow nos -
+# ::tokens ["mdrrr", "le", "pire", "c'est", "qu'ils", "nous", "follow", "alors", "que", "nous", "non", ",", "on", "devrait", "peut", "-", "tre", "unfollow", "nos", "-"]
+# ::lemmas ["mdrrr", "le", "pire", "c'est", "qu'ils", "nous", "follow", "alor", "que", "nous", "non", ",", "on", "devrait", "peut", "-", "tre", "unfollow", "nos", "-"]
+(c10-12 / and
+        :op1 (c10-0 / have-polarity-91
+                    :ARG1 (c10-2 / follow-02
+                                 :ARG0 (c10-1 / you))
+                    :ARG2 -)
+        :op2 (c10-5 / follow-02
+                    :ARG0 c10-1
+                    :ARG1 (c10-4 / alors
+                                 :ARG0-of (c10-10 / cause-01
+                                                  :ARG1 c10-12
+                                                  :op1 (c10-9 / devrait-01
+                                                              :ARG0 c10-1
+                                                              :ARG1 (c10-8 / peut-tre))
+                                                  :op2 (c10-3 / follow-02
+                                                              :ARG0 c10-1
+                                                              :ARG1 (c10-11 / person
+                                                                            :name (c10-6 / name
+                                                                                         :op1 "No"))
+                                                              :polarity -)))
+                    :polarity -)
+        :mod (c10-7 / amr-unintelligible
+                    :value "mdrrr"))
+
+# ::snt oh my god
+# ::tokens ["oh", "my", "god"]
+# ::lemmas ["oh", "my", "god"]
+(c11-1 / person
+       :name (c11-0 / name
+                    :op1 "God")
+       :mod (c11-2 / oh
+                   :mode expressive)
+       :poss (c11-3 / i))
+
+# ::snt Ouaaai lui il m'a follow y'a longtemps !! Aprs je l'ai retrouv et il tait hyper drle -
+# ::tokens ["Ouaaai", "lui", "il", "m'a", "follow", "y'a", "longtemps", "!", "!", "Aprs", "je", "l'ai", "retrouv", "et", "il", "tait", "hyper", "drle", "-"]
+# ::lemmas ["Ouaaai", "lui", "il", "m'a", "follow", "y'a", "longtemp", "!", "!", "Aprs", "je", "l'ai", "retrouv", "et", "il", "tait", "hyper", "drle", "-"]
+(c12-4 / multi-sentence
+       :snt1 (c12-11 / cause-01
+                     :ARG0 (c12-3 / follow-02
+                                  :ARG0 (c12-1 / you)
+                                  :ARG1 (c12-9 / person
+                                               :ARG0-of (c12-0 / have-rel-role-91
+                                                               :ARG1 c12-1
+                                                               :ARG2 (c12-5 / long-03))))
+                     :ARG1 (c12-13 / possible-01
+                                   :ARG1 c12-3
+                                   :polarity -))
+       :snt2 (c12-14 / and
+                     :op1 (c12-8 / et-cetera
+                                 :op1 (c12-10 / retrouv)
+                                 :op2 (c12-7 / et-cetera
+                                             :op1 (c12-2 / et-cetera)))
+                     :snt3 (c12-6 / hyper
+                                  :op1 (c12-12 / drle))))
+
+# ::snt MDRRR C'EST QUOI LE DLIRE ?! XD
+# ::tokens ["MDRRR", "C'EST", "QUOI", "LE", "DLIRE", "?", "!", "XD"]
+# ::lemmas ["mdrrr", "C'EST", "QUOI", "LE", "DLIRE", "?", "!", "XD"]
+(c13-1 / wish-01
+       :ARG0 (c13-4 / i)
+       :ARG1 (c13-8 / truth-value
+                    :polarity-of (c13-2 / lie-08
+                                        :ARG0 (c13-6 / person
+                                                     :name (c13-5 / name
+                                                                  :op1 "QuoI"
+                                                                  :op2 "Le"
+                                                                  :op3 "Delhi"))
+                                        :mod (c13-3 / most)))
+       :mod (c13-7 / laugh-01
+                   :ARG0 c13-4
+                   :manner (c13-0 / loud)
+                   :mode expressive))
+
+# ::snt yes .. Im so sad for my country... I'm afraid
+# ::tokens ["yes", "..", "I", "m", "so", "sad", "for", "my", "country", "...", "I", "'m", "afraid"]
+# ::lemmas ["yes", "..", "i", "m", "so", "sad", "for", "my", "country", "...", "i", "be", "afraid"]
+(c14-4 / sad-02
+       :ARG0 (c14-3 / country
+                    :poss (c14-2 / i
+                                 :ARG1-of c14-4))
+       :degree (c14-1 / so)
+       :ARG1-of (c14-0 / fear-01
+                       :ARG0 c14-2))
+
+# ::snt yes
+# ::tokens ["yes"]
+# ::lemmas ["yes"]
+(c15-0 / yes)
+
+# ::snt Al Queda? What is that?
+# ::tokens ["Al", "Queda", "?", "What", "is", "that", "?"]
+# ::lemmas ["Al", "Queda", "?", "what", "be", "that", "?"]
+(c16-0 / multi-sentence
+       :snt1 (c16-2 / criminal-organization
+                    :name (c16-1 / name
+                                 :op1 "Al"
+                                 :op2 "Qaeda"))
+       :snt2 (c16-4 / amr-unknown
+                    :domain (c16-3 / that)))
+
+# ::snt on est fab
+# ::tokens ["on", "est", "fab"]
+# ::lemmas ["on", "est", "fab"]
+(c17-2 / be-located-at-91
+       :ARG2 (c17-1 / location
+                    :name (c17-0 / name
+                                 :op1 "Fab")))
+
+# ::snt oh my god. That's so scary. Sending my prayers to Everyone there. That is awful
+# ::tokens ["oh", "my", "god", ".", "That", "'s", "so", "scary", ".", "Sending", "my", "prayers", "to", "Everyone", "there", ".", "That", "is", "awful"]
+# ::lemmas ["oh", "my", "god", ".", "that", "be", "so", "scary", ".", "send", "my", "prayer", "to", "everyone", "there", ".", "that", "be", "awful"]
+(c18-1 / multi-sentence
+       :snt1 (c18-2 / oh-my-god
+                    :mode expressive)
+       :snt2 (c18-10 / scary-03
+                     :ARG0 (c18-11 / that)
+                     :degree (c18-3 / so))
+       :snt3 (c18-0 / send-01
+                    :ARG1 (c18-9 / thing
+                                 :ARG1-of (c18-8 / pray-01
+                                                 :ARG0 (c18-6 / i)))
+                    :ARG2 (c18-4 / everyone
+                                 :location (c18-7 / there)))
+       :snt4 (c18-12 / awful
+                     :domain (c18-5 / that)))
+
+# ::snt graaaave omg
+# ::tokens ["graaaave", "omg"]
+# ::lemmas ["graaaave", "omg"]
+(c19-0 / oh-my-god
+       :mode expressive)
+
+# ::snt et je sais pas qui c'est non plus mdr
+# ::tokens ["et", "je", "sais", "pas", "qui", "c'est", "non", "plus", "mdr"]
+# ::lemmas ["et", "je", "sais", "pas", "qui", "c'est", "non", "plus", "mdr"]
+(c20-8 / and
+       :op1 (c20-4 / et-cetera)
+       :op2 (c20-3 / et-cetera)
+       :op3 (c20-0 / have-quant-91
+                   :ARG1 (c20-5 / amr-unknown)
+                   :ARG3 (c20-1 / enough)
+                   :ARG6 (c20-2 / laugh-01
+                                :ARG0 (c20-6 / i)
+                                :manner (c20-7 / loud)
+                                :mode expressive)))
+
+# ::snt Paris got invaded by a bunch of hotdogs now everyone in Paris can't breathe because hotdogs are clogged down their throat
+# ::tokens ["Paris", "got", "invaded", "by", "a", "bunch", "of", "hotdogs", "now", "everyone", "in", "Paris", "ca", "n't", "breathe", "because", "hotdogs", "are", "clogged", "down", "their", "throat"]
+# ::lemmas ["Paris", "got", "invade", "by", "a", "bunch", "of", "hotdog", "now", "everyone", "in", "Paris", "can", "not", "breathe", "because", "hotdog", "be", "clog", "down", "their", "throat"]
+(c21-3 / invade-01
+       :ARG0 (c21-0 / hotdog
+                    :quant (c21-1 / bunch))
+       :ARG1 (c21-8 / city
+                    :name (c21-4 / name
+                                 :op1 "Paris"))
+       :time (c21-5 / now)
+       :ARG0-of (c21-7 / cause-01
+                       :ARG1 (c21-6 / possible-01
+                                    :ARG1 (c21-9 / breathe-01
+                                                 :ARG0 (c21-2 / everyone
+                                                              :location c21-8
+                                                              :part (c21-11 / throat))
+                                                 :ARG1-of (c21-10 / cause-01
+                                                                  :ARG0 (c21-13 / clog-02
+                                                                                :ARG1 (c21-12 / hotdog
+                                                                                              :location c21-11))))
+                                    :polarity -)))
+
+# ::snt omgg
+# ::tokens ["omgg"]
+# ::lemmas ["omgg"]
+(c22-0 / bugger
+       :mode expressive)
+
+# ::snt : Its horrible that Paris has to deal with all these violent attacks. What a way to start .C'est le certifi qui me follow
+# ::tokens [":", "Its", "horrible", "that", "Paris", "has", "to", "deal", "with", "all", "these", "violent", "attacks", ".", "What", "a", "way", "to", "start", ".C'est", "le", "certifi", "qui", "me", "follow"]
+# ::lemmas [":", "its", "horrible", "that", "Paris", "have", "to", "deal", "with", "all", "these", "violent", "attack", ".", "what", "a", "way", "to", "start", ".c'est", "le", "certifi", "qui", "i", "follow"]
+(c23-3 / multi-sentence
+       :snt1 (c23-0 / horrible
+                    :domain (c23-4 / obligate-01
+                                   :ARG1 (c23-12 / city
+                                                 :name (c23-8 / name
+                                                              :op1 "Paris"))
+                                   :ARG2 (c23-11 / deal-01
+                                                 :ARG0 c23-12
+                                                 :ARG2 (c23-16 / attack-01
+                                                               :mod (c23-9 / violent)
+                                                               :mod (c23-15 / this)
+                                                               :mod (c23-6 / all)))))
+       :snt2 (c23-1 / way
+                    :manner-of (c23-14 / start-01)
+                    :degree (c23-10 / amr-unknown))
+       :snt3 (c23-5 / et-cetera
+                    :op1 (c23-13 / c'est-le-
+                                 :mode expressive)
+                    :op2 (c23-2 / follow-02
+                                :ARG0 (c23-7 / i)
+                                :mode expressive)))
+
+# ::snt what are they doing about it ?
+# ::tokens ["what", "are", "they", "doing", "about", "it", "?"]
+# ::lemmas ["what", "be", "they", "do", "about", "it", "?"]
+(c24-0 / do-02
+       :ARG0 (c24-1 / they)
+       :ARG1 (c24-3 / amr-unknown)
+       :ARG2 (c24-2 / it))
+
+# ::snt : Its horrible that Paris has to deal with all these violent attacks. What a way to start . yes
+# ::tokens [":", "Its", "horrible", "that", "Paris", "has", "to", "deal", "with", "all", "these", "violent", "attacks", ".", "What", "a", "way", "to", "start", ".", "yes"]
+# ::lemmas [":", "its", "horrible", "that", "Paris", "have", "to", "deal", "with", "all", "these", "violent", "attack", ".", "what", "a", "way", "to", "start", ".", "yes"]
+(c26-2 / multi-sentence
+       :snt1 (c26-0 / horrible
+                    :domain (c26-3 / obligate-01
+                                   :ARG1 (c26-9 / city
+                                                :name (c26-6 / name
+                                                             :op1 "Paris"))
+                                   :ARG2 (c26-8 / deal-01
+                                                :ARG0 c26-9
+                                                :ARG2 (c26-12 / attack-01
+                                                              :mod (c26-7 / violent)
+                                                              :mod (c26-11 / this)
+                                                              :mod (c26-5 / all)))))
+       :snt2 (c26-1 / way
+                    :manner-of (c26-10 / start-01)
+                    :degree (c26-4 / so)))
+
+# ::snt not even
+# ::tokens ["not", "even"]
+# ::lemmas ["not", "even"]
+(c27-0 / have-polarity-91
+       :mod (c27-1 / even)
+       :ARG2 -)
+
+# ::snt et lui aussi y'a un mois PTDRR
+# ::tokens ["et", "lui", "aussi", "y'a", "un", "mois", "PTDRR"]
+# ::lemmas ["et", "lui", "aussi", "y'a", "un", "mois", "PTDRR"]
+(c28-1 / mois
+       :domain (c28-0 / you)
+       :ARG1-of (c28-4 / say-01
+                       :ARG0 (c28-3 / publication
+                                    :name (c28-2 / name
+                                                 :op1 "PTDRR")))
+       :polarity -)
+
+# ::snt mdrr grave
+# ::tokens ["mdrr", "grave"]
+# ::lemmas ["mdrr", "grave"]
+(c29-3 / grave
+       :ARG2-of (c29-0 / have-org-role-91
+                       :ARG3 (c29-2 / minister
+                                    :mod (c29-1 / chief))))

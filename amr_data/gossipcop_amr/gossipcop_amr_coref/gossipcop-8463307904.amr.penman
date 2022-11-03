@@ -1,0 +1,661 @@
+# ::snt (**)
+# ::tokens ["(", "*", "*", ")"]
+# ::lemmas ["(", "*", "*", ")"]
+(c1-0 / amr-empty)
+
+# ::snt CG()(*)
+# ::tokens ["CG", "(", ")", "(", "*", ")"]
+# ::lemmas ["CG", "(", ")", "(", "*", ")"]
+(c2-0 / string-entity
+      :value "CG()")
+
+# ::snt Promise This is such a banger omg
+# ::tokens ["Promise", "This", "is", "such", "a", "banger", "omg"]
+# ::lemmas ["promise", "this", "be", "such", "a", "banger", "omg"]
+(c3-4 / promise-01
+      :ARG0 (c3-5 / i)
+      :ARG1 (c3-2 / you)
+      :ARG2 (c3-1 / banger
+                  :domain (c3-6 / this)
+                  :degree (c3-3 / such))
+      :mod (c3-0 / omg
+                 :mode expressive)
+      :mode expressive)
+
+# ::snt I forgot the reason why. Haha
+# ::tokens ["I", "forgot", "the", "reason", "why", ".", "Haha"]
+# ::lemmas ["i", "forget", "the", "reason", "why", ".", "haha"]
+(c5-1 / multi-sentence
+      :snt1 (c5-0 / forget-01
+                  :ARG0 (c5-5 / i)
+                  :ARG1 (c5-2 / reason
+                              :ARG0-of (c5-4 / cause-01)))
+      :snt2 (c5-3 / haha
+                  :mode expressive))
+
+# ::snt Nope, spotify deducted mil+ streams on ty, n.
+# ::tokens ["Nope", ",", "spotify", "deducted", "mil+", "streams", "on", "ty", ",", "n."]
+# ::lemmas ["nope", ",", "spotify", "deduct", "mil+", "stream", "on", "ty", ",", "n."]
+(c6-8 / and
+      :op1 (c6-3 / nope)
+      :op2 (c6-5 / spotify-01
+                 :ARG0 (c6-2 / you)
+                 :ARG1 (c6-0 / stream-03
+                             :quant (c6-1 / over
+                                          :op1 (c6-6 / volume-quantity
+                                                     :unit (c6-4 / mil)
+                                                     :quant 1000000)))
+                 :prep-on (c6-7 / ty)
+                 :mode imperative))
+
+# ::snt I dont think thats true.
+# ::tokens ["I", "do", "nt", "think", "that", "s", "true", "."]
+# ::lemmas ["i", "do", "not", "think", "that", "s", "true", "."]
+(c8-3 / think-01
+      :ARG0 (c8-2 / i)
+      :ARG1 (c8-0 / true-01
+                  :ARG1 (c8-1 / that))
+      :polarity -)
+
+# ::snt Mas mudou amore, acho que desde que por votao. Foi por isso que a Camila venceu.
+# ::tokens ["Mas", "mudou", "amore", ",", "acho", "que", "desde", "que", "por", "votao", ".", "Foi", "por", "isso", "que", "a", "Camila", "venceu", "."]
+# ::lemmas ["mas", "mudou", "amore", ",", "acho", "que", "desde", "que", "por", "votao", ".", "Foi", "por", "isso", "que", "a", "Camila", "venceu", "."]
+(c9-1 / multi-sentence
+      :snt1 (c9-15 / amore
+                   :mod (c9-6 / mudou
+                              :mode expressive)
+                   :mod (c9-14 / acho
+                               :mode expressive)
+                   :ARG0-of (c9-11 / cause-01
+                                   :ARG1 (c9-16 / desde-
+                                                :ARG1-of (c9-17 / cause-01
+                                                                :ARG0 (c9-5 / vote-01
+                                                                            :ARG0 (c9-7 / person
+                                                                                        :name (c9-2 / name
+                                                                                                    :op1 "Vila")))))))
+      :snt2 (c9-8 / have-concession-91
+                  :ARG1 (c9-0 / foi
+                              :mod (c9-3 / so)
+                              :ARG0-of (c9-13 / cause-01
+                                              :ARG1 (c9-12 / venceu
+                                                           :poss (c9-4 / person
+                                                                       :name (c9-9 / name
+                                                                                   :op1 "Camila")))))
+                  :ARG2 (c9-10 / no)))
+
+# ::snt No kkkkkkkkkkkkkkkk eu vi que foi por votao, tem s algumas categorias que soa tecnicas que quem escolhe os crticos.
+# ::tokens ["No", "kkkkkkkkkkkkkkkk", "eu", "vi", "que", "foi", "por", "votao", ",", "tem", "s", "algumas", "categorias", "que", "soa", "tecnicas", "que", "quem", "escolhe", "os", "crticos", "."]
+# ::lemmas ["no", "kkkkkkkkkkkkkkkk", "eu", "vi", "que", "foi", "por", "votao", ",", "tem", "s", "algumas", "categorias", "que", "soa", "tecnicas", "que", "quem", "escolhe", "os", "crticos", "."]
+(c10-10 / multi-sentence
+        :snt1 (c10-16 / no
+                      :mode expressive)
+        :snt2 (c10-18 / possible-01
+                      :ARG1 (c10-15 / foi-01
+                                    :ARG0 (c10-11 / person)
+                                    :ARG1 (c10-2 / person
+                                                 :name (c10-12 / name
+                                                               :op1 "Vila")))
+                      :polarity -)
+        :snt3 (c10-4 / have-concession-91
+                     :ARG1 (c10-8 / tem-01
+                                  :ARG1 (c10-13 / categorias
+                                                :mod (c10-7 / algum)
+                                                :ARG1-of (c10-5 / mean-01
+                                                                :ARG2 (c10-0 / person
+                                                                             :ARG0-of (c10-19 / have-rel-role-91
+                                                                                              :ARG2 (c10-14 / tecnic))
+                                                                             :ARG0-of (c10-9 / cause-01
+                                                                                             :ARG1 (c10-17 / escolhe-01
+                                                                                                           :ARG0 c10-0
+                                                                                                           :ARG1 (c10-6 / person
+                                                                                                                        :ARG0-of (c10-3 / have-org-role-91
+                                                                                                                                        :ARG2 (c10-1 / crtico)))))))))))
+
+# ::snt preservo a unidade de cada uma de vcs
+# ::tokens ["preservo", "a", "unidade", "de", "cada", "uma", "de", "vcs"]
+# ::lemmas ["preservo", "a", "unidade", "de", "cada", "uma", "de", "vcs"]
+(c11-3 / preservo-00
+       :ARG1 (c11-1 / possible-01
+                    :ARG1 (c11-7 / deny-01
+                                 :ARG1 (c11-4 / cada))
+                    :ARG1-of (c11-2 / say-01
+                                    :ARG0 (c11-5 / i)
+                                    :ARG2 (c11-6 / person
+                                                 :name (c11-0 / name
+                                                              :op1 "cs")))
+                    :polarity -))
+
+# ::snt que bonitinha vc ainda tem meu nome de solteira rssss
+# ::tokens ["que", "bonitinha", "vc", "ainda", "tem", "meu", "nome", "de", "solteira", "rssss"]
+# ::lemmas ["que", "bonitinha", "vc", "ainda", "tem", "meu", "nome", "de", "solteira", "rssss"]
+(c12-1 / multi-sentence
+       :snt1 (c12-10 / cause-01
+                     :ARG0 (c12-12 / amr-unknown)
+                     :ARG1 (c12-6 / vouch-01
+                                  :ARG0 (c12-0 / bonitinha)
+                                  :degree (c12-11 / inda)))
+       :snt2 (c12-3 / say-01
+                    :ARG0 (c12-4 / i)
+                    :ARG1 (c12-2 / nome
+                                 :mod (c12-9 / problem)
+                                 :ARG1-of (c12-5 / request-confirmation-91))
+                    :ARG2 (c12-7 / person
+                                 :name (c12-8 / name
+                                              :op1 "Rssss"))))
+
+# ::snt as vezes nao gostamo mas aceitamo (laricity)
+# ::tokens ["as", "vezes", "nao", "gostamo", "mas", "aceitamo", "(", "laricity", ")"]
+# ::lemmas ["as", "veze", "nao", "gostamo", "mas", "aceitamo", "(", "laricity", ")"]
+(c13-0 / multi-sentence
+       :snt1 (c13-6 / as-zirconia
+                    :snt2 (c13-5 / as-zirconia))
+       :snt3 (c13-4 / as-zirconia
+                    :snt4 (c13-8 / as-zirconia
+                                 :snt1 (c13-1 / laugh-01
+                                              :ARG0 (c13-7 / i)
+                                              :manner (c13-9 / loud)
+                                              :mode expressive)))
+       :snt2 (c13-3 / as-zirconia
+                    :snt3 (c13-2 / laricity)))
+
+# ::snt JSKSKSKS
+# ::tokens ["JSKSKSKS"]
+# ::lemmas ["jsksksks"]
+(c14-1 / person
+       :name (c14-0 / name
+                    :op1 "JSKSKS"))
+
+# ::snt *sips gongcha*
+# ::tokens ["*", "sips", "gongcha", "*"]
+# ::lemmas ["*", "sip", "gongcha", "*"]
+(c15-1 / laugh-01
+       :ARG0 (c15-2 / i)
+       :manner (c15-0 / loud)
+       :mode expressive)
+
+# ::snt balik sana sila ulit ate
+# ::tokens ["balik", "sana", "sila", "ulit", "ate"]
+# ::lemmas ["balik", "sana", "sila", "ulit", "eat"]
+(c16-2 / eat-01
+       :ARG0 (c16-3 / person
+                    :name (c16-0 / name
+                                 :op1 "balik"))
+       :manner (c16-1 / sana
+                      :mod (c16-4 / ulit)))
+
+# ::snt *nagulat*
+# ::tokens ["*", "nagulat", "*"]
+# ::lemmas ["*", "nagulat", "*"]
+(c17-0 / nagulat)
+
+# ::snt Haaaaay ganyan natin sila kamahaaal
+# ::tokens ["Haaaaay", "ganyan", "natin", "sila", "kamahaaal"]
+# ::lemmas ["Haaaaay", "ganyan", "natin", "sila", "kamahaaal"]
+(c18-4 / and
+       :op1 (c18-1 / hey
+                   :mode expressive)
+       :op2 (c18-3 / hey
+                   :mode expressive)
+       :op3 (c18-0 / hey
+                   :mode expressive)
+       :op4 (c18-5 / hey
+                   :mode expressive)
+       :op5 (c18-2 / hey
+                   :mode expressive))
+
+# ::snt gayuma ata ate eh kasi kahit na ang sakit sakit ng mangyayari pero ayun continue pa rin tayo najdksnd hayz hahaha emo time
+# ::tokens ["gayuma", "ata", "ate", "eh", "kasi", "kahit", "na", "ang", "sakit", "sakit", "ng", "mangyayari", "pero", "ayun", "continue", "pa", "rin", "tayo", "najdksnd", "hayz", "hahaha", "emo", "time"]
+# ::lemmas ["gayuma", "ata", "ate", "eh", "kasi", "kahit", "na", "ang", "sakit", "sakit", "ng", "mangyayari", "pero", "ayun", "continue", "pa", "rin", "tayo", "najdksnd", "hayz", "hahaha", "emo", "time"]
+(c19-11 / multi-sentence
+        :snt1 (c19-18 / eat-01
+                      :ARG0 (c19-19 / person
+                                    :ARG1-of (c19-9 / gay-01)))
+        :snt2 (c19-14 / cause-01
+                      :ARG0 c19-18
+                      :ARG0 c19-19)
+        :ARG1 (c19-6 / kahit
+                     :ARG1-of (c19-10 / cause-01
+                                      :ARG0 (c19-0 / sakit
+                                                   :ARG1-of (c19-2 / sakit-2)
+                                                   :topic (c19-12 / person
+                                                                  :name (c19-16 / name
+                                                                                :op1 "Mangyayari")))))
+        :snt3 (c19-1 / cause-01
+                     :ARG0 (c19-15 / continue-01
+                                   :ARG0 (c19-4 / you)
+                                   :ARG1 (c19-17 / rin-01
+                                                 :ARG0 c19-4
+                                                 :ARG1 (c19-13 / najdksnd
+                                                               :ARG1-of (c19-5 / mean-01
+                                                                               :ARG2 (c19-7 / hayz
+                                                                                            :mode expressive))))
+                                   :ARG1-of (c19-3 / cause-01
+                                                   :ARG0 (c19-8 / time
+                                                                :poss c19-4)))
+                     :ARG1 c19-15
+                     :ARG0 c19-4
+                     :polarity -))
+
+# ::snt Matagal na oops
+# ::tokens ["Matagal", "na", "oops"]
+# ::lemmas ["matagal", "na", "oop"]
+(c20-1 / matagal
+       :mod (c20-0 / oops
+                   :mode expressive))
+
+# ::snt AYAN NA SI ATE RIE whipped ka na rin aamin na yAN
+# ::tokens ["AYAN", "NA", "SI", "ATE", "RIE", "whipped", "ka", "na", "rin", "aamin", "na", "yAN"]
+# ::lemmas ["AYAN", "NA", "SI", "ATE", "RIE", "whip", "ka", "na", "rin", "aamin", "na", "yan"]
+(c21-0 / whip-01
+       :ARG0 (c21-2 / person
+                    :name (c21-1 / name
+                                 :op1 "Ayan"
+                                 :op2 "Si"
+                                 :op3 "Ate"
+                                 :op4 "RIE")
+                    :ARG1-of c21-0)
+       :mod (c21-3 / ka
+                   :mode expressive))
+
+# ::snt anong klaseng pangkukulam ginawa nila hhhhhhng
+# ::tokens ["anong", "klaseng", "pangkukulam", "ginawa", "nila", "hhhhhhng"]
+# ::lemmas ["anong", "klaseng", "pangkukulam", "ginawa", "nila", "hhhhhhng"]
+(c22-2 / say-01
+       :ARG0 (c22-5 / i)
+       :ARG1 (c22-1 / nila
+                    :mode expressive)
+       :ARG2 (c22-4 / person
+                    :name (c22-3 / name
+                                 :op1 "anong"
+                                 :op2 "klaseng"
+                                 :op3 "pangkukulam"))
+       :ARG3 (c22-0 / string-entity
+                    :value " ginawa"))
+
+# ::snt truth... hays ano ba ginawa niyo samin HAHAHA
+# ::tokens ["truth", "...", "hays", "ano", "ba", "ginawa", "niyo", "samin", "HAHAHA"]
+# ::lemmas ["truth", "...", "hays", "ano", "ba", "ginawa", "niyo", "samin", "HAHAHA"]
+(c23-2 / and
+       :op1 (c23-7 / true-01)
+       :op2 (c23-1 / say-01
+                   :ARG1 (c23-0 / no)
+                   :ARG2 (c23-4 / person
+                                :name (c23-3 / name
+                                             :op1 "Ano"
+                                             :op2 "Ba"
+                                             :op3 "Ginawa")))
+       :op3 (c23-5 / laugh-01
+                   :ARG0 (c23-6 / i)
+                   :manner (c23-8 / loud)
+                   :mode expressive))
+
+# ::snt Hahahaha things we do HAHAHAHA
+# ::tokens ["Hahahaha", "things", "we", "do", "HAHAHAHA"]
+# ::lemmas ["Hahahaha", "thing", "we", "do", "HAHAHAHA"]
+(c24-3 / thing
+       :ARG1-of (c24-0 / do-02
+                       :ARG0 (c24-2 / we))
+       :mod (c24-1 / haha
+                   :mode expressive))
+
+# ::snt my fave kasi is chatime!! chatime talaga kesa sa lahat ng natikman ko pero sige i'll try gongcha para kay ong :&gt; hahaha
+# ::tokens ["my", "fave", "kasi", "is", "chatime", "!", "!", "chatime", "talaga", "kesa", "sa", "lahat", "ng", "natikman", "ko", "pero", "sige", "i", "'ll", "try", "gongcha", "para", "kay", "ong", ":", "&", "gt", ";", "hahaha"]
+# ::lemmas ["my", "fave", "kasi", "be", "chatime", "!", "!", "chatime", "talaga", "kesa", "sa", "lahat", "ng", "natikman", "ko", "pero", "sige", "i", "'ll", "try", "gongcha", "para", "kay", "ong", ":", "&", "gt", ";", "hahaha"]
+(c25-10 / multi-sentence
+        :snt1 (c25-11 / cause-01
+                      :ARG0 (c25-9 / chat-01
+                                   :ARG0 (c25-18 / i)
+                                   :mode expressive)
+                      :ARG1 (c25-14 / fave
+                                    :domain (c25-4 / kasi))
+                      :snt2-of c25-10)
+        :ARG0 (c25-1 / chat-01
+                     :ARG0 (c25-2 / you)
+                     :ARG1 (c25-6 / talaga
+                                  :manner-of (c25-16 / esa-00
+                                                     :ARG0 c25-2
+                                                     :ARG1 (c25-0 / lahat-01
+                                                                  :ARG0 c25-2
+                                                                  :ARG1 (c25-17 / person
+                                                                                :name (c25-15 / name
+                                                                                              :op1 "Natikman")))))
+                     :ARG1 (c25-12 / try-01
+                                   :ARG0 (c25-3 / i)
+                                   :ARG1 (c25-7 / gong-00
+                                                :ARG0 c25-3
+                                                :ARG1 (c25-13 / kay-ong)))
+                     :mode imperative)
+        :ARG1 (c25-8 / laugh-01
+                     :ARG0 c25-3
+                     :manner (c25-5 / loud)
+                     :mode expressive))
+
+# ::snt I am not sure kung same for all branches pero yung akin HAHAHAHA sa powerplant ako bumili eh HAHAHA Honestly masarap milk tea sa gongcha, mas mahal lang siya ng konti kaysa coco and other milk tea place
+# ::tokens ["I", "am", "not", "sure", "kung", "same", "for", "all", "branches", "pero", "yung", "akin", "HAHAHAHA", "sa", "powerplant", "ako", "bumili", "eh", "HAHAHA", "Honestly", "masarap", "milk", "tea", "sa", "gongcha", ",", "mas", "mahal", "lang", "siya", "ng", "konti", "kaysa", "coco", "and", "other", "milk", "tea", "place"]
+# ::lemmas ["i", "be", "not", "sure", "kung", "same", "for", "all", "branch", "pero", "yung", "akin", "HAHAHAHA", "sa", "powerplant", "ako", "bumili", "eh", "HAHAHA", "Honestly", "masarap", "milk", "tea", "sa", "gongcha", ",", "mas", "mahal", "lang", "siya", "ng", "konti", "kaysa", "coco", "and", "other", "milk", "tea", "place"]
+(c26-0 / sure-02
+       :ARG0 (c26-20 / i)
+       :ARG1 (c26-2 / same-01
+                    :ARG1 (c26-12 / branch
+                                  :mod (c26-10 / all)))
+       :ARG1-of (c26-15 / cause-01
+                        :ARG0 (c26-8 / and
+                                     :op1 (c26-18 / resemble-01
+                                                  :ARG1 c26-12
+                                                  :ARG2 (c26-19 / powerplant
+                                                                :mod (c26-1 / bumili))
+                                                  :mod (c26-4 / haha
+                                                              :mode expressive))
+                                     :op2 (c26-7 / and
+                                                 :op1 (c26-13 / masarap
+                                                              :op2 (c26-9 / tea
+                                                                          :mod (c26-5 / milk)
+                                                                          :mod (c26-17 / mahal
+                                                                                       :mode expressive))
+                                                              :op3 (c26-16 / tea
+                                                                           :mod c26-5
+                                                                           :mod (c26-6 / konti
+                                                                                       :mode expressive)
+                                                                           :mod (c26-11 / coco))
+                                                              :op4 (c26-14 / place
+                                                                           :mod (c26-3 / other)
+                                                                           :mod c26-5)))))
+       :polarity -)
+
+# ::snt usually % lang ako lagi sa lahat eh hahaha but ittry ko yan!! magkano ate? di pa ako nakakatry ng gongcha eh
+# ::tokens ["usually", "%", "lang", "ako", "lagi", "sa", "lahat", "eh", "hahaha", "but", "ittry", "ko", "yan", "!", "!", "magkano", "ate", "?", "di", "pa", "ako", "nakakatry", "ng", "gongcha", "eh"]
+# ::lemmas ["usually", "%", "lang", "ako", "lagi", "sa", "lahat", "eh", "hahaha", "but", "ittry", "ko", "yan", "!", "!", "magkano", "eat", "?", "di", "pa", "ako", "nakakatry", "ng", "gongcha", "eh"]
+(c27-1 / multi-sentence
+       :snt1 (c27-9 / contrast-01
+                    :ARG1 (c27-7 / laugh-01
+                                 :ARG0 (c27-10 / i)
+                                 :manner (c27-13 / usual)
+                                 :degree (c27-8 / percentage-entity
+                                                :value 0)
+                                 :mode expressive)
+                    :ARG2 (c27-4 / ittry-01
+                                 :ARG0 c27-10
+                                 :ARG1 (c27-0 / yan)
+                                 :mode expressive))
+       :snt2 (c27-5 / eat-01
+                    :ARG0 (c27-2 / person
+                                 :name (c27-3 / name
+                                              :op1 "Magkano"))
+                    :polarity (c27-11 / amr-unknown))
+       :snt3 (c27-6 / nakakatry
+                    :op1 (c27-12 / gongcha)
+                    :polarity c27-11
+                    :polarity -))
+
+# ::snt Hahah matamis siya Mamsh HAHAHAHAHA But Ive liked taro before so nothing new, pero % sugar magkakadiabetes ako HAHAHAHAHA
+# ::tokens ["Hahah", "matamis", "siya", "Mamsh", "HAHAHAHAHA", "But", "I", "ve", "liked", "taro", "before", "so", "nothing", "new", ",", "pero", "%", "sugar", "magkakadiabetes", "ako", "HAHAHAHAHA"]
+# ::lemmas ["Hahah", "matamis", "siya", "Mamsh", "HAHAHAHAHA", "but", "i", "ve", "like", "taro", "before", "so", "nothing", "new", ",", "pero", "%", "sugar", "magkakadiabete", "ako", "HAHAHAHAHA"]
+(c28-2 / multi-sentence
+       :snt1 (c28-7 / ha
+                    :mode expressive)
+       :snt2 (c28-4 / say-01
+                    :ARG0 (c28-14 / i)
+                    :ARG1 (c28-13 / have-concession-91
+                                  :ARG1 (c28-8 / like-01
+                                               :ARG0 c28-14
+                                               :ARG1 (c28-9 / product
+                                                            :name (c28-3 / name
+                                                                         :op1 "Taro"))
+                                               :time (c28-1 / before)
+                                               :ARG0-of (c28-12 / cause-01
+                                                                :ARG1 (c28-10 / new-01
+                                                                              :ARG1 c28-9
+                                                                              :ARG1-of c28-12
+                                                                              :ARG0 (c28-5 / percentage-entity
+                                                                                           :ARG3-of (c28-6 / include-91
+                                                                                                           :ARG2 (c28-0 / sugar
+                                                                                                                        :mod (c28-11 / magkakadiabetes)))
+                                                                                           :value 25)
+                                                                              :polarity -))))
+                    :ARG2 c28-7
+                    :mode expressive))
+
+# ::snt HOW IS IT ATE!!! hahahaha shet
+# ::tokens ["HOW", "IS", "IT", "ATE", "!", "!", "!", "hahahaha", "shet"]
+# ::lemmas ["how", "be", "it", "eat", "!", "!", "!", "hahahaha", "shet"]
+(c29-2 / have-manner-91
+       :ARG1 (c29-3 / it)
+       :ARG2 (c29-1 / exact)
+       :mod (c29-0 / haha
+                   :mode expressive)
+       :mode expressive)
+
+# ::snt LO???? PUTO???? FLIPO????
+# ::tokens ["LO", "?", "?", "?", "?", "PUTO", "?", "?", "?", "?", "FLIPO", "?", "?", "?", "?"]
+# ::lemmas ["LO", "?", "?", "?", "?", "puto", "?", "?", "?", "?", "FLIPO", "?", "?", "?", "?"]
+(c30-3 / and
+       :op1 (c30-1 / laugh-01
+                   :ARG0 (c30-2 / i)
+                   :manner (c30-5 / loud)
+                   :mode expressive)
+       :op2 (c30-0 / poo-01
+                   :mode expressive)
+       :op3 c30-1
+       :manner c30-5
+       :polarity (c30-4 / amr-unknown)
+       :mode expressive)
+
+# ::snt YEY!!! QUE BUENO!!!
+# ::tokens ["YEY", "!", "!", "!", "QUE", "BUENO", "!", "!", "!"]
+# ::lemmas ["yey", "!", "!", "!", "QUE", "BUENO", "!", "!", "!"]
+(c31-2 / and
+       :op1 (c31-1 / yey
+                   :mode expressive)
+       :op2 (c31-0 / bueno
+                   :mode expressive))
+
+# ::snt No creo que lo sepa pero me ha dicho que va a hacer algo en otoo
+# ::tokens ["No", "creo", "que", "lo", "sepa", "pero", "me", "ha", "dicho", "que", "va", "a", "hacer", "algo", "en", "otoo"]
+# ::lemmas ["no", "creo", "que", "lo", "sepa", "pero", "i", "ha", "dicho", "que", "va", "a", "hacer", "algo", "en", "otoo"]
+(c32-6 / cause-01
+       :ARG0 (c32-9 / and
+                    :op1 (c32-12 / creo-mode
+                                 :ARG0 (c32-0 / you)
+                                 :ARG1 (c32-5 / lo)
+                                 :polarity -)
+                    :op2 (c32-4 / have-concession-91
+                                :ARG1 (c32-7 / ha
+                                             :ARG0-of (c32-1 / mean-01
+                                                             :ARG1 (c32-8 / i))
+                                             :mode expressive)
+                                :ARG2 (c32-2 / va-02
+                                             :ARG0 c32-0
+                                             :ARG1 (c32-3 / hacer-01
+                                                          :ARG0 c32-0
+                                                          :ARG1 (c32-10 / algo)))))
+       :ARG1 (c32-11 / have-polarity-91
+                     :ARG2 -))
+
+# ::snt PREGNTALE POR EL SIGUIENTE SINGLE
+# ::tokens ["PREGNTALE", "POR", "EL", "SIGUIENTE", "SINGLE"]
+# ::lemmas ["PREGNTALE", "POR", "EL", "SIGUIENTE", "SINGLE"]
+(c33-0 / regional-group
+       :name (c33-1 / name
+                    :op1 "Prennaale"
+                    :op2 "POR"
+                    :op3 "EL"
+                    :op4 "Single"))
+
+# ::snt Despite the fact that the Most swifties hate Bad blood and the gp hates LWYMMD, both still made it to top
+# ::tokens ["Despite", "the", "fact", "that", "the", "Most", "swifties", "hate", "Bad", "blood", "and", "the", "gp", "hates", "LWYMMD", ",", "both", "still", "made", "it", "to", "top"]
+# ::lemmas ["despite", "the", "fact", "that", "the", "most", "swiftie", "hate", "bad", "blood", "and", "the", "gp", "hate", "LWYMMD", ",", "both", "still", "make", "it", "to", "top"]
+(c37-6 / have-concession-91
+       :ARG1 (c37-14 / make-it-14
+                     :ARG0 (c37-11 / and
+                                   :op1 (c37-18 / person
+                                                :ARG1-of (c37-19 / have-degree-91
+                                                                 :ARG2 (c37-0 / swift)
+                                                                 :ARG3 (c37-7 / most)))
+                                   :op2 (c37-15 / person
+                                                :ARG0-of (c37-5 / have-org-role-91
+                                                                :ARG2 (c37-3 / practitioner
+                                                                             :mod (c37-12 / general)))))
+                     :ARG1 (c37-10 / top)
+                     :mod (c37-4 / still))
+       :ARG2 c37-11
+       :op1 (c37-16 / hate-01
+                    :ARG0 (c37-2 / person
+                                 :ARG1-of c37-19
+                                 :ARG2 c37-0)
+                    :ARG3 c37-7)
+       :ARG1 (c37-13 / blood
+                     :ARG1-of (c37-1 / bad-07))
+       :op2 (c37-8 / hate-01
+                   :ARG0 c37-2
+                   :ARG1 (c37-9 / person
+                                :name (c37-17 / name
+                                              :op1 "LWYMMD"))))
+
+# ::snt Hi could you please tell me when did you buy it and how many days it shipped? I've bought it, but I haven't received it yet. Thanks
+# ::tokens ["Hi", "could", "you", "please", "tell", "me", "when", "did", "you", "buy", "it", "and", "how", "many", "days", "it", "shipped", "?", "I", "'ve", "bought", "it", ",", "but", "I", "have", "n't", "received", "it", "yet", ".", "Thanks"]
+# ::lemmas ["hi", "could", "you", "please", "tell", "i", "when", "do", "you", "buy", "it", "and", "how", "many", "day", "it", "ship", "?", "i", "'ve", "buy", "it", ",", "but", "i", "have", "not", "receive", "it", "yet", ".", "thank"]
+(c38-14 / multi-sentence
+        :snt1 (c38-9 / and
+                     :op1 (c38-7 / hi
+                                 :mode expressive)
+                     :op2 (c38-19 / possible-01
+                                  :ARG1 (c38-10 / tell-01
+                                                :ARG0 (c38-5 / you)
+                                                :ARG1 (c38-8 / and
+                                                             :op1 (c38-16 / time
+                                                                          :time-of (c38-13 / buy-01
+                                                                                           :ARG0 c38-5
+                                                                                           :ARG1 (c38-20 / it)))
+                                                             :op2 (c38-21 / temporal-quantity
+                                                                          :quant-of (c38-22 / day
+                                                                                            :time-of (c38-1 / ship-01
+                                                                                                            :ARG1 (c38-6 / it)))))
+                                                :ARG2 (c38-12 / i))
+                                  :polite +))
+        :snt2 (c38-15 / contrast-01
+                      :ARG1 (c38-3 / buy-01
+                                   :ARG0 (c38-0 / i)
+                                   :ARG1 (c38-17 / it))
+                      :ARG2 (c38-18 / receive-01
+                                    :ARG0 c38-0
+                                    :ARG1 c38-17
+                                    :time (c38-11 / yet)
+                                    :polarity -))
+        :snt3 (c38-2 / thank-01
+                     :ARG0 (c38-4 / i)
+                     :ARG1 c38-5))
+
+# ::snt May as well use the "Sorry, the old Taylor can't come to the phone right now" bit.
+# ::tokens ["May", "as", "well", "use", "the", "\"", "Sorry", ",", "the", "old", "Taylor", "ca", "n't", "come", "to", "the", "phone", "right", "now", "\"", "bit", "."]
+# ::lemmas ["May", "as", "well", "use", "the", "\"", "sorry", ",", "the", "old", "Taylor", "can", "not", "come", "to", "the", "phone", "right", "now", "\"", "bit", "."]
+(c39-8 / possible-01
+       :ARG1 (c39-11 / use-01
+                     :ARG1 (c39-1 / bit
+                                  :mod (c39-4 / sorry-01)
+                                  :topic c39-8
+                                  :ARG1 (c39-9 / come-01
+                                               :ARG1 (c39-3 / person
+                                                            :name (c39-2 / name
+                                                                         :op1 "Taylor")
+                                                            :mod (c39-0 / old))
+                                               :ARG4 (c39-10 / phone)
+                                               :time (c39-7 / now
+                                                            :mod (c39-5 / right)))))
+       :mod (c39-6 / as-well)
+       :polarity -)
+
+# ::snt Blocked
+# ::tokens ["Blocked"]
+# ::lemmas ["block"]
+(c40-0 / blocked-01)
+
+# ::snt End Game exist
+# ::tokens ["End", "Game", "exist"]
+# ::lemmas ["End", "Game", "exist"]
+(c41-2 / exist-01
+       :ARG1 (c41-0 / game
+                    :ARG1-of (c41-1 / end-01)))
+
+# ::snt No sis
+# ::tokens ["No", "sis"]
+# ::lemmas ["no", "sis"]
+(c42-0 / sis
+       :polarity -)
+
+# ::snt Ah t, no sabia. Eu achei as duas uma merda quando ouvi pela primeira vez. L pela centsima vez escutando consegui me acostumar
+# ::tokens ["Ah", "t", ",", "no", "sabia", ".", "Eu", "achei", "as", "duas", "uma", "merda", "quando", "ouvi", "pela", "primeira", "vez", ".", "L", "pela", "centsima", "vez", "escutando", "consegui", "me", "acostumar"]
+# ::lemmas ["ah", "t", ",", "no", "sabia", ".", "Eu", "achei", "as", "duas", "uma", "merda", "quando", "ouvi", "pela", "primeira", "vez", ".", "L", "pela", "centsima", "vez", "escutando", "consegui", "i", "acostumar"]
+(c43-13 / multi-sentence
+        :snt1 (c43-10 / ah
+                      :mode expressive)
+        :snt2 (c43-0 / sabia
+                     :polarity -)
+        :snt3 (c43-16 / cause-01
+                      :ARG0 (c43-6 / have-mod-91
+                                   :ARG1 (c43-4 / you)
+                                   :ARG2 (c43-9 / as-much-as
+                                                :op1 (c43-22 / duas)))
+                      :ARG1 (c43-8 / and
+                                   :op1 (c43-7 / merda
+                                               :mod (c43-11 / quando))
+                                   :op2 (c43-18 / uma
+                                                :mod (c43-17 / quando)
+                                                :mod (c43-5 / vi
+                                                            :mod (c43-20 / pela)
+                                                            :mod (c43-14 / primeira
+                                                                         :mod (c43-1 / vez)))))
+                      :snt4 (c43-21 / have-condition-91
+                                    :ARG2 c43-8
+                                    :op1 (c43-3 / pela
+                                                :mod (c43-12 / cents))
+                                    :op2 (c43-19 / escutando
+                                                 :mod (c43-2 / consegui)
+                                                 :ARG0-of c43-16
+                                                 :ARG1 (c43-15 / acostumar)))))
+
+# ::snt End Game is a bop
+# ::tokens ["End", "Game", "is", "a", "bop"]
+# ::lemmas ["End", "Game", "be", "a", "bop"]
+(c44-1 / bop
+       :domain (c44-0 / game
+                      :name (c44-2 / name
+                                   :op1 "End"
+                                   :op2 "Game")))
+
+# ::snt Well
+# ::tokens ["Well"]
+# ::lemmas ["well"]
+(c45-0 / well)
+
+# ::snt Cause Gorgeous is just the worst honey
+# ::tokens ["Cause", "Gorgeous", "is", "just", "the", "worst", "honey"]
+# ::lemmas ["cause", "Gorgeous", "be", "just", "the", "bad", "honey"]
+(c48-5 / cause-01
+       :ARG0 (c48-3 / have-degree-91
+                    :ARG1 (c48-4 / person
+                                 :name (c48-1 / name
+                                              :op1 "Gorgeous"))
+                    :ARG2 (c48-0 / bad-07
+                                 :ARG1 c48-4)
+                    :ARG3 (c48-2 / most)
+                    :mod (c48-7 / just))
+       :ARG1 (c48-6 / honey))
+
+# ::snt Nunca ouvi esse termo antes kkkkkk significa bomba??
+# ::tokens ["Nunca", "ouvi", "esse", "termo", "antes", "kkkkkk", "significa", "bomba", "?", "?"]
+# ::lemmas ["Nunca", "ouvi", "esse", "termo", "ante", "kkkkkk", "significa", "bomba", "?", "?"]
+(c49-2 / mean-01
+       :polarity (c49-3 / amr-unknown)
+       :ARG1 (c49-4 / have-03
+                    :ARG0 (c49-1 / you)
+                    :ARG1 (c49-5 / term))
+       :ARG2 (c49-0 / bomb))
+
+# ::snt Farofa? Kkkk
+# ::tokens ["Farofa", "?", "Kkkk"]
+# ::lemmas ["Farofa", "?", "Kkkk"]
+(c50-2 / multi-sentence
+       :snt1 (c50-1 / farofa
+                    :polarity (c50-3 / amr-unknown))
+       :snt2 (c50-0 / kkkk
+                    :mode expressive))

@@ -1,0 +1,27 @@
+# ::snt Je Suis Charlie.
+# ::tokens ["Je", "Suis", "Charlie", "."]
+# ::lemmas ["Je", "Suis", "Charlie", "."]
+(c1-0 / Je)
+
+# ::snt Winter, Paris, France ... Kiev! Do not kill the Donbass !!!!!!
+# ::tokens ["Winter", ",", "Paris", ",", "France", "...", "Kiev", "!", "Do", "not", "kill", "the", "Donbass", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["Winter", ",", "Paris", ",", "France", "...", "Kiev", "!", "do", "not", "kill", "the", "Donbass", "!", "!", "!", "!", "!", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / city
+                  :name (c2-3 / name
+                              :op1 "Paris")
+                  :location (c2-6 / country
+                                  :name (c2-4 / name
+                                              :op1 "France"))
+                  :snt2 (c2-10 / city
+                               :name (c2-5 / name
+                                           :op1 "Kiev"))
+                  :snt3 (c2-11 / kill-01
+                               :ARG0 (c2-0 / you)
+                               :ARG1 (c2-12 / country-region
+                                            :name (c2-8 / name
+                                                        :op1 "Donbass"))
+                               :mode imperative
+                               :polarity -)
+                  :snt4 (c2-9 / date-entity
+                              :season (c2-1 / winter))))

@@ -1,0 +1,70 @@
+# ::snt You see violence I see facts
+# ::tokens ["You", "see", "violence", "I", "see", "facts"]
+# ::lemmas ["you", "see", "violence", "i", "see", "fact"]
+(c3-1 / and
+      :op1 (c3-0 / see-01
+                 :ARG0 (c3-6 / you)
+                 :ARG1 (c3-3 / violence))
+      :op2 (c3-4 / see-01
+                 :ARG0 (c3-5 / i)
+                 :ARG1 (c3-2 / fact)))
+
+# ::snt So you woke up today and decided to choose violence?
+# ::tokens ["So", "you", "woke", "up", "today", "and", "decided", "to", "choose", "violence", "?"]
+# ::lemmas ["so", "you", "wake", "up", "today", "and", "decide", "to", "choose", "violence", "?"]
+(c4-1 / and
+      :polarity (c4-7 / amr-unknown)
+      :op1 (c4-3 / wake-up-02
+                 :ARG1 (c4-6 / you)
+                 :time (c4-5 / today))
+      :op2 (c4-0 / decide-01
+                 :ARG0 c4-6
+                 :ARG1 (c4-2 / choose-01
+                             :ARG0 c4-6
+                             :ARG1 (c4-4 / violence))))
+
+# ::snt Injalo
+# ::tokens ["Injalo"]
+# ::lemmas ["Injalo"]
+(c5-0 / person
+      :name (c5-1 / name
+                  :op1 "Injalo"))
+
+# ::snt Haibo buthi. The slander
+# ::tokens ["Haibo", "buthi", ".", "The", "slander"]
+# ::lemmas ["haibo", "buthi", ".", "the", "slander"]
+(c6-5 / multi-sentence
+      :snt1 (c6-0 / say-01
+                  :ARG0 (c6-4 / i)
+                  :ARG1 (c6-1 / hai
+                              :mode expressive)
+                  :ARG2 (c6-2 / person
+                              :name (c6-6 / name
+                                          :op1 "buthi")))
+      :snt2 (c6-3 / slander-01))
+
+# ::snt bc its true?
+# ::tokens ["bc", "its", "true", "?"]
+# ::lemmas ["bc", "its", "true", "?"]
+(c7-2 / true-01
+      :ARG1 (c7-0 / it)
+      :polarity (c7-1 / amr-unknown))
+
+# ::snt Truth hurts neh ?
+# ::tokens ["Truth", "hurts", "neh", "?"]
+# ::lemmas ["truth", "hurt", "neh", "?"]
+(c8-1 / hurt-01
+      :ARG0 (c8-2 / truth)
+      :polarity (c8-0 / amr-unknown))
+
+# ::snt Ahhh
+# ::tokens ["Ahhh"]
+# ::lemmas ["ahhh"]
+(c9-0 / ah
+      :mode expressive)
+
+# ::snt /10 tweet !
+# ::tokens ["/10", "tweet", "!"]
+# ::lemmas ["/10", "tweet", "!"]
+(c11-0 / tweet-02
+       :quant 10)

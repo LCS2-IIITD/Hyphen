@@ -1,0 +1,238 @@
+# ::snt WHAT IS HAPPENING
+# ::tokens ["WHAT", "IS", "HAPPENING"]
+# ::lemmas ["what", "be", "happen"]
+(c1-0 / event
+      :mod (c1-1 / amr-unknown))
+
+# ::snt thanks!
+# ::tokens ["thanks", "!"]
+# ::lemmas ["thank", "!"]
+(c2-1 / thank-01
+      :ARG1 (c2-0 / you)
+      :mode expressive)
+
+# ::snt get
+# ::tokens ["get"]
+# ::lemmas ["get"]
+(c3-0 / get-02)
+
+# ::snt Did they say there was a black flag with arab writing? ISIS supporter? or soldier?
+# ::tokens ["Did", "they", "say", "there", "was", "a", "black", "flag", "with", "arab", "writing", "?", "ISIS", "supporter", "?", "or", "soldier", "?"]
+# ::lemmas ["do", "they", "say", "there", "be", "a", "black", "flag", "with", "arab", "writing", "?", "ISIS", "supporter", "?", "or", "soldier", "?"]
+(c4-3 / multi-sentence
+      :snt1 (c4-13 / say-01
+                   :ARG0 (c4-14 / they)
+                   :ARG1 (c4-2 / flag
+                               :ARG1-of (c4-5 / black-04)
+                               :ARG0-of (c4-1 / write-01
+                                              :ARG1 (c4-6 / ethnic-group
+                                                          :name (c4-9 / name
+                                                                      :op1 "Arab"))))
+                   :polarity (c4-16 / amr-unknown))
+      :snt2 (c4-8 / amr-choice
+                  :op1 (c4-11 / person
+                              :ARG0-of (c4-7 / support-01
+                                             :ARG1 (c4-12 / criminal-organization
+                                                          :name (c4-10 / name
+                                                                       :op1 "Islamic"
+                                                                       :op2 "Resistance"))))
+                  :op2 (c4-15 / person
+                              :ARG0-of (c4-0 / have-org-role-91
+                                             :ARG2 (c4-4 / soldier)))))
+
+# ::snt I should! You're not the first to recommend it.
+# ::tokens ["I", "should", "!", "You", "'re", "not", "the", "first", "to", "recommend", "it", "."]
+# ::lemmas ["i", "should", "!", "you", "be", "not", "the", "first", "to", "recommend", "it", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-6 / recommend-01
+                  :ARG0 (c5-4 / i)
+                  :ARG2 (c5-0 / you)
+                  :ARG1-of (c5-5 / recommend-01
+                                 :ARG0 c5-4
+                                 :ord (c5-2 / ordinal-entity
+                                            :value 1)
+                                 :polarity -))
+      :snt2 (c5-3 / recommend-01
+                  :ARG0 (c5-8 / you)
+                  :ARG2 (c5-7 / it)))
+
+# ::snt : BREAKING NEWS: UP TO PEOPLE BEING HELD HOSTAGE IN SYDNEY. NEWS50 now?
+# ::tokens [":", "BREAKING", "NEWS", ":", "UP", "TO", "PEOPLE", "BEING", "HELD", "HOSTAGE", "IN", "SYDNEY", ".", "NEWS50", "now", "?"]
+# ::lemmas [":", "break", "news", ":", "up", "to", "people", "be", "held", "HOSTAGE", "in", "SYDNEY", ".", "news50", "now", "?"]
+(c6-1 / multi-sentence
+      :snt1 (c6-4 / news
+                  :ARG1-of (c6-3 / break-13)
+                  :topic (c6-2 / up-to
+                               :op1 (c6-6 / person
+                                          :ARG1-of (c6-0 / hold-01
+                                                         :ARG2 c6-0
+                                                         :ARG1 (c6-11 / hostage))
+                                          :location (c6-8 / city
+                                                          :name (c6-5 / name
+                                                                      :op1 "Sydney")))))
+      :snt2 (c6-7 / news
+                  :polarity (c6-10 / amr-unknown)
+                  :time (c6-9 / now)
+                  :mod 50))
+
+# ::snt isis took over a cafe
+# ::tokens ["isis", "took", "over", "a", "cafe"]
+# ::lemmas ["isis", "take", "over", "a", "cafe"]
+(c7-3 / take-over-12
+      :ARG0 (c7-1 / person
+                  :name (c7-0 / name
+                              :op1 "isis"))
+      :ARG1 (c7-2 / cafe))
+
+# ::snt : BREAKING NEWS: UP TO PEOPLE BEING HELD HOSTAGE IN SYDNEY. NEWS
+# ::tokens [":", "BREAKING", "NEWS", ":", "UP", "TO", "PEOPLE", "BEING", "HELD", "HOSTAGE", "IN", "SYDNEY", ".", "NEWS"]
+# ::lemmas [":", "break", "news", ":", "up", "to", "people", "be", "held", "HOSTAGE", "in", "SYDNEY", ".", "news"]
+(c8-1 / multi-sentence
+      :snt1 (c8-4 / news
+                  :ARG1-of (c8-3 / break-13))
+      :snt2 (c8-2 / up-to
+                  :op1 (c8-6 / person
+                             :ARG1-of (c8-0 / hold-01
+                                            :ARG2 c8-0
+                                            :ARG1 (c8-8 / hostage)
+                                            :location (c8-7 / city
+                                                            :name (c8-5 / name
+                                                                        :op1 "Sydney"))))))
+
+# ::snt From , to , and now . What's with the changes?
+# ::tokens ["From", ",", "to", ",", "and", "now", ".", "What", "'s", "with", "the", "changes", "?"]
+# ::lemmas ["from", ",", "to", ",", "and", "now", ".", "what", "be", "with", "the", "change", "?"]
+(c9-1 / multi-sentence
+      :snt1 (c9-6 / and
+                  :op1 (c9-0 / from)
+                  :op2 (c9-5 / to)
+                  :op3 (c9-3 / now))
+      :snt2 (c9-2 / amr-unknown
+                  :accompanier (c9-4 / change-01)))
+
+# ::snt old news
+# ::tokens ["old", "news"]
+# ::lemmas ["old", "news"]
+(c10-0 / news
+       :mod (c10-1 / old))
+
+# ::snt The number keeps growing ???
+# ::tokens ["The", "number", "keeps", "growing", "?", "?", "?"]
+# ::lemmas ["the", "number", "keep", "grow", "?", "?", "?"]
+(c11-1 / keep-02
+       :polarity (c11-3 / amr-unknown)
+       :ARG1 (c11-2 / grow-01
+                    :ARG1 (c11-0 / number)))
+
+# ::snt old news? You have more timely info?
+# ::tokens ["old", "news", "?", "You", "have", "more", "timely", "info", "?"]
+# ::lemmas ["old", "news", "?", "you", "have", "more", "timely", "info", "?"]
+(c12-2 / multi-sentence
+       :snt1 (c12-5 / news
+                    :mod (c12-3 / old))
+       :snt2 (c12-0 / have-03
+                    :ARG0 (c12-1 / you)
+                    :ARG1 (c12-4 / information
+                                 :ARG1-of (c12-9 / have-degree-91
+                                                 :ARG2 (c12-8 / timely-03
+                                                              :ARG1 c12-4)
+                                                 :ARG3 (c12-6 / more)))
+                    :polarity (c12-7 / amr-unknown)))
+
+# ::snt : old news? You have more timely info? Twitter search
+# ::tokens [":", "old", "news", "?", "You", "have", "more", "timely", "info", "?", "Twitter", "search"]
+# ::lemmas [":", "old", "news", "?", "you", "have", "more", "timely", "info", "?", "twitter", "search"]
+(c13-3 / multi-sentence
+       :snt1 (c13-7 / news
+                    :mod (c13-4 / old)
+                    :polarity (c13-13 / amr-unknown))
+       :snt2 (c13-0 / have-03
+                    :ARG0 (c13-1 / you)
+                    :ARG1 (c13-6 / information
+                                 :ARG1-of (c13-2 / have-degree-91
+                                                 :ARG2 (c13-12 / timely-03
+                                                               :ARG1 c13-6)
+                                                 :ARG3 (c13-9 / more)))
+                    :polarity (c13-5 / amr-unknown))
+       :snt3 (c13-11 / search-01
+                     :medium (c13-10 / publication
+                                     :name (c13-8 / name
+                                                  :op1 "Twitter"))))
+
+# ::snt : BREAKING NEWS: UP TO PEOPLE BEING HELD HOSTAGE IN SYDNEY. NEWS well let them go
+# ::tokens [":", "BREAKING", "NEWS", ":", "UP", "TO", "PEOPLE", "BEING", "HELD", "HOSTAGE", "IN", "SYDNEY", ".", "NEWS", "well", "let", "them", "go"]
+# ::lemmas [":", "break", "news", ":", "up", "to", "people", "be", "held", "HOSTAGE", "in", "SYDNEY", ".", "news", "well", "let", "they", "go"]
+(c14-3 / multi-sentence
+       :snt1 (c14-5 / news
+                    :ARG1-of (c14-4 / break-13)
+                    :topic (c14-0 / hold-01
+                                  :ARG1 (c14-7 / person)
+                                  :ARG2 c14-0
+                                  :ARG1 (c14-12 / hostage)
+                                  :location (c14-9 / city
+                                                   :name (c14-6 / name
+                                                                :op1 "Sydney"))))
+       :snt2 (c14-2 / let-01
+                    :ARG0 (c14-8 / news)
+                    :ARG1 (c14-10 / go-01
+                                  :ARG1 (c14-11 / they))
+                    :mod (c14-1 / well)
+                    :mode imperative))
+
+# ::snt : BREAKING NEWS: UP TO PEOPLE BEING HELD HOSTAGE IN SYDNEY. NEWS wtf?
+# ::tokens [":", "BREAKING", "NEWS", ":", "UP", "TO", "PEOPLE", "BEING", "HELD", "HOSTAGE", "IN", "SYDNEY", ".", "NEWS", "wtf", "?"]
+# ::lemmas [":", "break", "news", ":", "up", "to", "people", "be", "held", "HOSTAGE", "in", "SYDNEY", ".", "NEWS", "wtf", "?"]
+(c15-2 / multi-sentence
+       :snt1 (c15-4 / news
+                    :ARG1-of (c15-3 / break-13)
+                    :topic (c15-0 / hold-01
+                                  :ARG1 (c15-6 / person)
+                                  :ARG2 c15-0
+                                  :ARG1 (c15-10 / hostage)
+                                  :location (c15-8 / city
+                                                   :name (c15-5 / name
+                                                                :op1 "Sydney"))))
+       :snt2 (c15-7 / news
+                    :mod (c15-1 / fuck
+                                :mode expressive)
+                    :polarity (c15-9 / amr-unknown)))
+
+# ::snt : BREAKING NEWS: UP TO PEOPLE BEING HELD HOSTAGE IN SYDNEY. NEWS
+# ::tokens [":", "BREAKING", "NEWS", ":", "UP", "TO", "PEOPLE", "BEING", "HELD", "HOSTAGE", "IN", "SYDNEY", ".", "NEWS"]
+# ::lemmas [":", "break", "news", ":", "up", "to", "people", "be", "held", "HOSTAGE", "in", "SYDNEY", ".", "news"]
+(c16-1 / multi-sentence
+       :snt1 (c16-4 / news
+                    :ARG1-of (c16-3 / break-13))
+       :snt2 (c16-2 / up-to
+                    :op1 (c16-6 / person
+                                :ARG1-of (c16-0 / hold-01
+                                                :ARG2 c16-0
+                                                :ARG1 (c16-8 / hostage)
+                                                :location (c16-7 / city
+                                                                 :name (c16-5 / name
+                                                                              :op1 "Sydney"))))))
+
+# ::snt ik that but only ppl what about these other ones
+# ::tokens ["ik", "that", "but", "only", "ppl", "what", "about", "these", "other", "ones"]
+# ::lemmas ["ik", "that", "but", "only", "ppl", "what", "about", "these", "other", "one"]
+(c17-5 / contrast-01
+       :ARG1 (c17-8 / that)
+       :ARG2 (c17-9 / ask-01
+                    :ARG0 (c17-3 / i)
+                    :ARG1 (c17-2 / amr-unknown
+                                 :topic (c17-1 / one
+                                               :mod (c17-0 / other)
+                                               :mod (c17-6 / this))
+                                 :mod (c17-7 / only))
+                    :ARG2 (c17-4 / person)))
+
+# ::snt they don't have a clue. to is a big difference
+# ::tokens ["they", "do", "n't", "have", "a", "clue", ".", "to", "is", "a", "big", "difference"]
+# ::lemmas ["they", "do", "not", "have", "a", "clue", ".", "to", "be", "a", "big", "difference"]
+(c18-2 / differ-02
+       :degree (c18-1 / big)
+       :domain (c18-4 / they)
+       :concession (c18-0 / have-03
+                          :ARG0 c18-4
+                          :ARG1 (c18-3 / clue)
+                          :polarity -))

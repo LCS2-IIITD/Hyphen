@@ -1,0 +1,47 @@
+# ::snt Love it
+# ::tokens ["Love", "it"]
+# ::lemmas ["Love", "it"]
+(c1-0 / love-01
+      :ARG1 (c1-1 / it))
+
+# ::snt Underwhelmed...
+# ::tokens ["Underwhelmed", "..."]
+# ::lemmas ["underwhelme", "..."]
+(c2-0 / underwhelm-00)
+
+# ::snt *yawn*
+# ::tokens ["*", "yawn", "*"]
+# ::lemmas ["*", "yawn", "*"]
+(c3-0 / yawn-01)
+
+# ::snt You two, just go away
+# ::tokens ["You", "two", ",", "just", "go", "away"]
+# ::lemmas ["you", "two", ",", "just", "go", "away"]
+(c4-0 / go-02
+      :ARG0 (c4-1 / you
+                  :quant 2)
+      :ARG4 (c4-3 / away)
+      :mod (c4-2 / just)
+      :mode imperative)
+
+# ::snt Vote this meme and get the chance to win $ !
+# ::tokens ["Vote", "this", "meme", "and", "get", "the", "chance", "to", "win", "$", "!"]
+# ::lemmas ["vote", "this", "meme", "and", "get", "the", "chance", "to", "win", "$", "!"]
+(c5-2 / and
+      :op1 (c5-3 / vote-01
+                 :ARG0 (c5-0 / you)
+                 :ARG1 (c5-1 / meme
+                             :mod (c5-7 / this))
+                 :mode imperative)
+      :op2 (c5-5 / chance-02
+                 :ARG0 c5-0
+                 :ARG1 (c5-6 / win-01
+                             :ARG0 c5-0
+                             :ARG1 (c5-4 / money))
+                 :mode imperative))
+
+# ::snt Hah-Hahaha
+# ::tokens ["Hah", "-", "Hahaha"]
+# ::lemmas ["Hah", "-", "Hahaha"]
+(c6-0 / haha
+      :mode expressive)

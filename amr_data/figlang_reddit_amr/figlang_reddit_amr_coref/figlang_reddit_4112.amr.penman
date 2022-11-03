@@ -1,0 +1,66 @@
+# ::snt 9 out of 10 doctors reccommend for children to drink water instead of soda that 1 doctor lives in flint michigan
+# ::tokens ["9", "out", "of", "10", "doctors", "reccommend", "for", "children", "to", "drink", "water", "instead", "of", "soda", "that", "1", "doctor", "lives", "in", "flint", "michigan"]
+# ::lemmas ["9", "out", "of", "10", "doctor", "reccommend", "for", "child", "to", "drink", "water", "instead", "of", "soda", "that", "1", "doctor", "live", "in", "flint", "michigan"]
+(c1-8 / recommend-01
+      :ARG0 (c1-0 / doctor
+                  :ARG1-of (c1-3 / include-91
+                                 :ARG2 (c1-10 / doctor
+                                              :quant 10))
+                  :quant 9)
+      :ARG1 (c1-4 / drink-01
+                  :ARG0 (c1-5 / child)
+                  :ARG1 (c1-6 / water
+                              :ARG1-of (c1-7 / instead-of-91
+                                             :ARG2 (c1-1 / soda))))
+      :ARG2 c1-5
+      :ARG0-of (c1-9 / live-01
+                     :location (c1-2 / city-district
+                                     :name (c1-11 / name
+                                                  :op1 "Flint"
+                                                  :op2 "Michigan"))))
+
+# ::snt Oh man, yesterday at walmart I saw a women purchase a coke from the vending machine and use it to fill her baby's bottle.
+# ::tokens ["Oh", "man", ",", "yesterday", "at", "walmart", "I", "saw", "a", "women", "purchase", "a", "coke", "from", "the", "vending", "machine", "and", "use", "it", "to", "fill", "her", "baby", "'s", "bottle", "."]
+# ::lemmas ["oh", "man", ",", "yesterday", "at", "walmart", "i", "see", "a", "woman", "purchase", "a", "coke", "from", "the", "vend", "machine", "and", "use", "it", "to", "fill", "her", "baby", "'s", "bottle", "."]
+(c2-0 / see-01
+      :ARG0 (c2-14 / i)
+      :ARG1 (c2-3 / and
+                  :op1 (c2-12 / purchase-01
+                              :ARG0 (c2-6 / woman)
+                              :ARG1 (c2-5 / coke)
+                              :ARG2 (c2-15 / machine
+                                           :ARG0-of (c2-9 / vending-04)))
+                  :op2 (c2-8 / use-01
+                             :ARG0 c2-6
+                             :ARG1 c2-5
+                             :ARG2 (c2-4 / fill-01
+                                         :ARG0 c2-6
+                                         :ARG1 (c2-13 / bottle
+                                                      :poss (c2-11 / person
+                                                                   :ARG0-of (c2-7 / have-rel-role-91
+                                                                                  :ARG1 c2-6
+                                                                                  :ARG2 (c2-1 / baby))))
+                                         :ARG2 c2-5)))
+      :time (c2-17 / yesterday)
+      :location (c2-2 / company
+                      :name (c2-16 / name
+                                   :op1 "Walmart"))
+      :mod (c2-10 / oh
+                  :mode expressive))
+
+# ::snt Well at least it wasn't pepsi
+# ::tokens ["Well", "at", "least", "it", "was", "n't", "pepsi"]
+# ::lemmas ["well", "at", "least", "it", "be", "not", "pepsi"]
+(c3-0 / pepsi
+      :mod (c3-1 / at-least)
+      :domain (c3-2 / it)
+      :polarity -)
+
+# ::snt I happen to like Pepsi
+# ::tokens ["I", "happen", "to", "like", "Pepsi"]
+# ::lemmas ["i", "happen", "to", "like", "Pepsi"]
+(c4-2 / like-01
+      :ARG0 (c4-0 / i)
+      :ARG1 (c4-3 / company
+                  :name (c4-1 / name
+                              :op1 "Pepsi")))

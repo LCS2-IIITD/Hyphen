@@ -1,0 +1,85 @@
+# ::snt smh
+# ::tokens ["smh"]
+# ::lemmas ["smh"]
+(c1-0 / smh
+      :mode expressive)
+
+# ::snt : DEVELOPING: Police: Shooting near Canadian Parliament; soldier wounded; active situationThere is guns in Canada?
+# ::tokens [":", "DEVELOPING", ":", "Police", ":", "Shooting", "near", "Canadian", "Parliament", ";", "soldier", "wounded", ";", "active", "situationThere", "is", "guns", "in", "Canada", "?"]
+# ::lemmas [":", "developing", ":", "police", ":", "shoot", "near", "Canadian", "Parliament", ";", "soldier", "wound", ";", "active", "situationthere", "be", "gun", "in", "Canada", "?"]
+(c2-8 / develop-01
+      :ARG1 (c2-13 / and
+                   :op1 (c2-12 / shoot-02
+                               :ARG0 (c2-7 / police)
+                               :ARG1-of (c2-5 / near-02
+                                              :ARG2 (c2-2 / building
+                                                          :name (c2-6 / name
+                                                                      :op1 "Canadian"
+                                                                      :op2 "Parliament"))))
+                   :op2 (c2-0 / wound-01
+                              :ARG1 (c2-3 / soldier))
+                   :op3 (c2-1 / situation
+                              :ARG1-of (c2-4 / activity-06)))
+      :polarity (c2-9 / amr-unknown)
+      :location (c2-10 / country
+                       :name (c2-11 / name
+                                    :op1 "Canada")))
+
+# ::snt DEVELOPING: Police: Shooting near Canadian Parliament; soldier wounded; active situation
+# ::tokens ["DEVELOPING", ":", "Police", ":", "Shooting", "near", "Canadian", "Parliament", ";", "soldier", "wounded", ";", "active", "situation"]
+# ::lemmas ["developing", ":", "police", ":", "shoot", "near", "Canadian", "Parliament", ";", "soldier", "wound", ";", "active", "situation"]
+(c3-10 / and
+       :op1 (c3-8 / develop-01)
+       :op2 (c3-7 / police
+                  :ARG0-of (c3-9 / shoot-02
+                                 :ARG1-of (c3-5 / near-02
+                                                :ARG2 (c3-2 / building
+                                                            :name (c3-6 / name
+                                                                        :op1 "Canadian"
+                                                                        :op2 "Parliament")))))
+       :op3 (c3-0 / wound-01
+                  :ARG1 (c3-3 / soldier))
+       :op4 (c3-1 / situation
+                  :ARG0-of (c3-4 / activity-06)))
+
+# ::snt :no it was Americans
+# ::tokens [":", "no", "it", "was", "Americans"]
+# ::lemmas [":", "no", "it", "be", "Americans"]
+(c4-1 / person
+      :mod (c4-2 / country
+                 :name (c4-0 / name
+                             :op1 "America"))
+      :mod (c4-3 / no))
+
+# ::snt Check out my SF Giants anthem "Im a San Francisco Giant"RT let's get this heard around the city!
+# ::tokens ["Check", "out", "my", "SF", "Giants", "anthem", "\"", "I", "m", "a", "San", "Francisco", "Giant\"RT", "let", "'s", "get", "this", "heard", "around", "the", "city", "!"]
+# ::lemmas ["check", "out", "my", "SF", "Giants", "anthem", "\"", "i", "m", "a", "San", "Francisco", "Giant\"RT", "let", "us", "get", "this", "hear", "around", "the", "city", "!"]
+(c5-13 / and
+       :op1 (c5-9 / check-out-05
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-3 / anthem
+                              :poss (c5-4 / i)
+                              :mod (c5-12 / team
+                                          :name (c5-5 / name
+                                                      :op1 "SF"
+                                                      :op2 "Giants"))
+                              :topic (c5-7 / person
+                                           :name (c5-6 / name
+                                                       :op1 "Im"
+                                                       :op2 "San"
+                                                       :op3 "Francisco"
+                                                       :op4 "Giant")))
+                  :mode imperative)
+       :op2 (c5-10 / get-04
+                   :ARG0 (c5-2 / we)
+                   :ARG1 (c5-0 / hear-01
+                               :ARG1 c5-3)
+                   :location (c5-8 / around
+                                   :op1 (c5-11 / city))
+                   :mode imperative))
+
+# ::snt r u dead
+# ::tokens ["r", "u", "dead"]
+# ::lemmas ["r", "u", "dead"]
+(c6-1 / die-01
+      :ARG1 (c6-0 / you))

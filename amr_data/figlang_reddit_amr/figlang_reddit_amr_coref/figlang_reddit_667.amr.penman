@@ -1,0 +1,58 @@
+# ::snt What is an unspoken rule that everyone should follow?
+# ::tokens ["What", "is", "an", "unspoken", "rule", "that", "everyone", "should", "follow", "?"]
+# ::lemmas ["what", "be", "an", "unspoken", "rule", "that", "everyone", "should", "follow", "?"]
+(c1-4 / recommend-01
+      :ARG1 (c1-2 / follow-02
+                  :ARG0 (c1-5 / everyone)
+                  :ARG1 (c1-3 / rule-01
+                              :ARG1 (c1-1 / amr-unknown)
+                              :ARG1-of (c1-0 / speak-01
+                                             :polarity -))))
+
+# ::snt Please maintain appropriate social distance, don't touch people without permission, allow people to end a conversation with you the first time (don't keep talking to them and follow them as they are walking away from you).
+# ::tokens ["Please", "maintain", "appropriate", "social", "distance", ",", "do", "n't", "touch", "people", "without", "permission", ",", "allow", "people", "to", "end", "a", "conversation", "with", "you", "the", "first", "time", "(", "do", "n't", "keep", "talking", "to", "them", "and", "follow", "them", "as", "they", "are", "walking", "away", "from", "you", ")", "."]
+# ::lemmas ["please", "maintain", "appropriate", "social", "distance", ",", "do", "not", "touch", "people", "without", "permission", ",", "allow", "people", "to", "end", "a", "conversation", "with", "you", "the", "first", "time", "(", "do", "not", "keep", "talk", "to", "they", "and", "follow", "they", "as", "they", "be", "walk", "away", "from", "you", ")", "."]
+(c2-7 / multi-sentence
+      :snt1 (c2-16 / maintain-01
+                   :ARG0 (c2-12 / you)
+                   :ARG1 (c2-0 / distance-01
+                               :ARG1 c2-12
+                               :ARG2 (c2-10 / social)
+                               :ARG1-of (c2-14 / appropriate-02))
+                   :mode imperative
+                   :polite +)
+      :snt2 (c2-6 / touch-01
+                  :ARG0 c2-12
+                  :ARG1 (c2-18 / person)
+                  :ARG1-of (c2-17 / permit-01
+                                  :ARG0 c2-12
+                                  :polarity -)
+                  :polarity -
+                  :mode imperative)
+      :snt3 (c2-8 / allow-01
+                  :ARG0 c2-12
+                  :ARG1 (c2-9 / end-01
+                              :ARG0 (c2-11 / person)
+                              :ARG1 (c2-2 / converse-01
+                                          :ARG0 c2-11
+                                          :ARG2 c2-12
+                                          :ord (c2-5 / ordinal-entity
+                                                     :value 1)))
+                  :mode imperative
+                  :polite +)
+      :snt4 (c2-1 / and
+                  :op1 (c2-19 / keep-02
+                              :ARG0 (c2-13 / you)
+                              :ARG1 (c2-4 / talk-01
+                                          :ARG0 c2-13
+                                          :ARG2 c2-18)
+                              :mode imperative
+                              :polarity -)
+                  :op2 (c2-15 / follow-01
+                              :ARG0 c2-13
+                              :ARG1 c2-11
+                              :time (c2-3 / walk-01
+                                          :ARG0 c2-11
+                                          :ARG2 (c2-20 / away
+                                                       :op1 c2-13))
+                              :mode imperative)))

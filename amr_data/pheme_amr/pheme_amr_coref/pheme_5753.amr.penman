@@ -1,0 +1,52 @@
+# ::snt I did not know that, thanks!
+# ::tokens ["I", "did", "not", "know", "that", ",", "thanks", "!"]
+# ::lemmas ["i", "do", "not", "know", "that", ",", "thank", "!"]
+(c1-1 / multi-sentence
+      :snt1 (c1-3 / know-01
+                  :ARG0 (c1-2 / i)
+                  :ARG1 (c1-5 / that)
+                  :polarity -)
+      :snt2 (c1-4 / thank-01
+                  :ARG0 c1-2
+                  :mode expressive)
+      :ARG1 (c1-0 / you))
+
+# ::snt thank you for the support!
+# ::tokens ["thank", "you", "for", "the", "support", "!"]
+# ::lemmas ["thank", "you", "for", "the", "support", "!"]
+(c2-2 / thank-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-1 / you)
+      :ARG2 (c2-0 / support-01))
+
+# ::snt bye
+# ::tokens ["bye"]
+# ::lemmas ["bye"]
+(c3-0 / goodbye)
+
+# ::snt . ,
+# ::tokens [".", ","]
+# ::lemmas [".", ","]
+(c4-0 / amr-empty)
+
+# ::snt of their cartoons, each of them drew by one of the cartoonists killed yesterday.
+# ::tokens ["of", "their", "cartoons", ",", "each", "of", "them", "drew", "by", "one", "of", "the", "cartoonists", "killed", "yesterday", "."]
+# ::lemmas ["of", "their", "cartoon", ",", "each", "of", "they", "draw", "by", "one", "of", "the", "cartoonist", "kill", "yesterday", "."]
+(c6-4 / draw-01
+      :ARG0 (c6-5 / cartoon
+                  :ARG1-of (c6-2 / include-91
+                                 :ARG2 (c6-3 / cartoon))
+                  :mod (c6-1 / each))
+      :ARG2 (c6-7 / cartoon
+                  :ARG1-of (c6-6 / include-91
+                                 :ARG2 c6-3)
+                  :ARG1-of (c6-8 / kill-01
+                                 :time (c6-0 / yesterday))
+                  :quant 1))
+
+# ::snt And we too........
+# ::tokens ["And", "we", "too", "........"]
+# ::lemmas ["and", "we", "too", "........"]
+(c7-2 / and
+      :op2 (c7-0 / we
+                 :mod (c7-1 / too)))

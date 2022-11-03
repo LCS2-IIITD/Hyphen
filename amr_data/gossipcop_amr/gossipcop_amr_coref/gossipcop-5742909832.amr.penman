@@ -1,0 +1,808 @@
+# ::snt Variety.
+# ::tokens ["Variety", "."]
+# ::lemmas ["variety", "."]
+(c1-0 / Variety)
+
+# ::snt so in other words she will run
+# ::tokens ["so", "in", "other", "words", "she", "will", "run"]
+# ::lemmas ["so", "in", "other", "word", "she", "will", "run"]
+(c2-0 / run-02
+      :ARG0 (c2-3 / she)
+      :ARG1-of (c2-2 / word-01
+                     :mod (c2-1 / other)))
+
+# ::snt grammar!
+# ::tokens ["grammar", "!"]
+# ::lemmas ["grammar", "!"]
+(c3-0 / grammar
+      :mode expressive)
+
+# ::snt Justin Follow me please I love you so much
+# ::tokens ["Justin", "Follow", "me", "please", "I", "love", "you", "so", "much"]
+# ::lemmas ["Justin", "Follow", "i", "please", "i", "love", "you", "so", "much"]
+(c4-0 / follow-02
+      :ARG0 (c4-4 / person
+                  :name (c4-1 / name
+                              :op1 "Justin"))
+      :ARG1 (c4-7 / i)
+      :ARG1-of (c4-6 / cause-01
+                     :ARG0 (c4-5 / love-01
+                                 :ARG0 c4-7
+                                 :ARG1 c4-4
+                                 :degree (c4-2 / much
+                                               :degree (c4-3 / so))))
+      :mode imperative
+      :polite +)
+
+# ::snt Ok. Donald Trump was also joking. Look at where we are now.
+# ::tokens ["Ok", ".", "Donald", "Trump", "was", "also", "joking", ".", "Look", "at", "where", "we", "are", "now", "."]
+# ::lemmas ["ok", ".", "Donald", "Trump", "be", "also", "joke", ".", "look", "at", "where", "we", "be", "now", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-8 / joke-01
+                  :ARG0 (c5-5 / person
+                              :name (c5-3 / name
+                                          :op1 "Donald"
+                                          :op2 "Trump"))
+                  :mod (c5-10 / also)
+                  :ARG1-of (c5-0 / okay-04))
+      :snt2 (c5-6 / look-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-9 / thing
+                              :location-of (c5-7 / we)
+                              :time (c5-4 / now))
+                  :mode imperative))
+
+# ::snt 'That aint never happening'So, it's happening?Or does this person does not even know how to speak English properly?
+# ::tokens ["'", "That", "ai", "nt", "never", "happening'So", ",", "it", "'s", "happening?Or", "does", "this", "person", "does", "not", "even", "know", "how", "to", "speak", "English", "properly", "?"]
+# ::lemmas ["'", "that", "be", "not", "never", "happening'so", ",", "it", "be", "happening?or", "do", "this", "person", "do", "not", "even", "know", "how", "to", "speak", "English", "properly", "?"]
+(c6-9 / infer-01
+      :polarity (c6-10 / amr-unknown)
+      :ARG1 (c6-3 / event
+                  :time (c6-11 / ever)
+                  :polarity -)
+      :ARG2 (c6-4 / know-03
+                  :ARG0 (c6-5 / person
+                              :mod (c6-8 / this))
+                  :ARG1 (c6-2 / speak-01
+                              :ARG0 c6-5
+                              :ARG3 (c6-6 / language
+                                          :name (c6-0 / name
+                                                      :op1 "English"))
+                              :manner (c6-1 / proper))
+                  :mod (c6-7 / even)
+                  :polarity -))
+
+# ::snt Better watch the CBS Morning News tomorrow for the scoop!
+# ::tokens ["Better", "watch", "the", "CBS", "Morning", "News", "tomorrow", "for", "the", "scoop", "!"]
+# ::lemmas ["well", "watch", "the", "CBS", "Morning", "News", "tomorrow", "for", "the", "scoop", "!"]
+(c7-6 / watch-01
+      :ARG0 (c7-1 / you)
+      :ARG1 (c7-0 / broadcast-program
+                  :name (c7-2 / name
+                              :op1 "CBS"
+                              :op2 "Morning"
+                              :op3 "News"))
+      :time (c7-7 / tomorrow)
+      :purpose (c7-4 / scoop-01)
+      :ARG1-of (c7-5 / have-degree-91
+                     :ARG2 (c7-8 / good-02
+                                 :ARG1 c7-6)
+                     :ARG3 (c7-3 / more))
+      :mode imperative)
+
+# ::snt Gayle. Please Convince Oprah to Consider Running the DNC! WE Need Her Media Expertise!
+# ::tokens ["Gayle", ".", "Please", "Convince", "Oprah", "to", "Consider", "Running", "the", "DNC", "!", "WE", "Need", "Her", "Media", "Expertise", "!"]
+# ::lemmas ["gayle", ".", "please", "convince", "Oprah", "to", "consider", "run", "the", "DNC", "!", "we", "need", "her", "medium", "expertise", "!"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / person
+                  :name (c9-1 / name
+                              :op1 "Gayle"))
+      :snt2 (c9-10 / cause-01
+                   :ARG0 (c9-6 / need-01
+                               :ARG0 (c9-11 / we)
+                               :ARG1 (c9-5 / Expertise
+                                           :topic (c9-8 / media)
+                                           :poss (c9-3 / person
+                                                       :name (c9-9 / name
+                                                                   :op1 "Oprah"))))
+                   :ARG1 (c9-15 / convince-01
+                                :ARG0 (c9-14 / person)
+                                :ARG1 c9-3
+                                :ARG2 (c9-13 / consider-02
+                                             :ARG0 c9-3
+                                             :ARG1 (c9-4 / run-01
+                                                         :ARG0 c9-3
+                                                         :ARG1 (c9-0 / organization
+                                                                     :name (c9-12 / name
+                                                                                  :op1 "DNC"))))
+                                :mode imperative
+                                :polite +)))
+
+# ::snt Sucking on Harvey Weinstein's ear with do that to a campaign. Also, pimping out celebrity hopefuls, but we don't have photo proof of that though there is testimony
+# ::tokens ["Sucking", "on", "Harvey", "Weinstein", "'s", "ear", "with", "do", "that", "to", "a", "campaign", ".", "Also", ",", "pimping", "out", "celebrity", "hopefuls", ",", "but", "we", "do", "n't", "have", "photo", "proof", "of", "that", "though", "there", "is", "testimony"]
+# ::lemmas ["suck", "on", "Harvey", "Weinstein", "'s", "ear", "with", "do", "that", "to", "a", "campaign", ".", "also", ",", "pimp", "out", "celebrity", "hopeful", ",", "but", "we", "do", "not", "have", "photo", "proof", "of", "that", "though", "there", "be", "testimony"]
+(c11-9 / multi-sentence
+       :snt1 (c11-18 / do-02
+                     :ARG1 (c11-7 / that)
+                     :ARG2 (c11-11 / campaign)
+                     :instrument (c11-0 / suck-01
+                                        :ARG1 (c11-14 / ear
+                                                      :part-of (c11-15 / person
+                                                                       :name (c11-13 / name
+                                                                                     :op1 "Harvey"
+                                                                                     :op2 "Weinstein"))
+                                                      :ARG2-of c11-0)))
+       :snt2 (c11-8 / contrast-01
+                    :ARG1 (c11-10 / pimp-out-01
+                                  :ARG1 (c11-3 / person
+                                               :ARG0-of (c11-4 / hop-03)
+                                               :mod (c11-2 / celebrity))
+                                  :mod (c11-6 / also))
+                    :ARG2 (c11-17 / have-03
+                                  :ARG0 (c11-16 / we)
+                                  :ARG1 (c11-1 / prove-01
+                                               :ARG0 (c11-5 / photo)
+                                               :ARG1 c11-10)
+                                  :concession (c11-12 / testify-01)
+                                  :polarity -)))
+
+# ::snt With thus our there how vacant u blame her
+# ::tokens ["With", "thus", "our", "there", "how", "vacant", "u", "blame", "her"]
+# ::lemmas ["with", "thus", "our", "there", "how", "vacant", "u", "blame", "she"]
+(c12-5 / cause-01
+       :ARG0 (c12-4 / vacant
+                    :degree (c12-3 / so)
+                    :domain (c12-0 / she))
+       :ARG1 (c12-1 / blame-01
+                    :ARG0 (c12-2 / you
+                                 :ARG1-of c12-1)))
+
+# ::snt Change her mind
+# ::tokens ["Change", "her", "mind"]
+# ::lemmas ["change", "her", "mind"]
+(c13-0 / change-01
+       :ARG0 (c13-1 / you)
+       :ARG1 (c13-2 / mind-05
+                    :ARG0 (c13-3 / she))
+       :mode imperative)
+
+# ::snt One can only hope we have intrigued enough to take it seriously ... you have to hit rock bottom before u get back to the top
+# ::tokens ["One", "can", "only", "hope", "we", "have", "intrigued", "enough", "to", "take", "it", "seriously", "...", "you", "have", "to", "hit", "rock", "bottom", "before", "u", "get", "back", "to", "the", "top"]
+# ::lemmas ["one", "can", "only", "hope", "we", "have", "intrigue", "enough", "to", "take", "it", "seriously", "...", "you", "have", "to", "hit", "rock", "bottom", "before", "u", "get", "back", "to", "the", "top"]
+(c14-8 / and
+       :op1 (c14-15 / possible-01
+                    :ARG1 (c14-6 / hope-01
+                                 :ARG0 (c14-2 / one)
+                                 :ARG1 (c14-18 / intrigue-01
+                                               :ARG0 (c14-7 / take-04
+                                                            :ARG0 (c14-16 / we)
+                                                            :ARG1 (c14-4 / it)
+                                                            :ARG2 (c14-0 / serious-01))
+                                               :ARG1 c14-16
+                                               :ARG2-of (c14-17 / have-degree-91
+                                                                :ARG1 c14-16
+                                                                :ARG3 (c14-14 / enough)))
+                                 :mod (c14-10 / only)))
+       :op2 (c14-19 / obligate-01
+                    :ARG1 (c14-3 / you)
+                    :ARG2 (c14-5 / hit-02
+                                 :ARG0 c14-3
+                                 :ARG1 (c14-11 / bottom
+                                               :mod (c14-13 / rock))
+                                 :time (c14-1 / before
+                                              :op1 (c14-9 / get-back-10
+                                                          :ARG1 c14-3
+                                                          :ARG2 (c14-12 / top))))))
+
+# ::snt Yeah her and her friend Harvey Weinstein
+# ::tokens ["Yeah", "her", "and", "her", "friend", "Harvey", "Weinstein"]
+# ::lemmas ["yeah", "she", "and", "her", "friend", "Harvey", "Weinstein"]
+(c15-6 / and
+       :op1 (c15-3 / she)
+       :op2 (c15-5 / person
+                   :name (c15-2 / name
+                                :op1 "Harvey"
+                                :op2 "Weinstein")
+                   :ARG0-of (c15-4 / have-rel-role-91
+                                   :ARG1 c15-3
+                                   :ARG2 (c15-0 / friend)))
+       :mod (c15-1 / yeah
+                   :mode expressive))
+
+# ::snt Just leave it at that.
+# ::tokens ["Just", "leave", "it", "at", "that", "."]
+# ::lemmas ["just", "leave", "it", "at", "that", "."]
+(c16-2 / leave-14
+       :ARG0 (c16-1 / you)
+       :ARG1 (c16-3 / it)
+       :mod (c16-0 / just)
+       :mode imperative)
+
+# ::snt I support it cause she is dimension that can under stand people of low class and I think she experienced life of being poor and tosure
+# ::tokens ["I", "support", "it", "cause", "she", "is", "dimension", "that", "can", "under", "stand", "people", "of", "low", "class", "and", "I", "think", "she", "experienced", "life", "of", "being", "poor", "and", "tosure"]
+# ::lemmas ["i", "support", "it", "cause", "she", "be", "dimension", "that", "can", "under", "stand", "people", "of", "low", "class", "and", "i", "think", "she", "experience", "life", "of", "be", "poor", "and", "tosure"]
+(c18-2 / support-01
+       :ARG0 (c18-10 / i)
+       :ARG1 (c18-3 / it)
+       :ARG1-of (c18-8 / cause-01
+                       :ARG0 (c18-11 / and
+                                     :op1 (c18-12 / dimension
+                                                  :ARG1-of (c18-0 / stand-11
+                                                                  :ARG2 (c18-5 / person
+                                                                               :mod (c18-15 / class
+                                                                                            :ARG1-of (c18-6 / low-04)))
+                                                                  :ARG1-of (c18-1 / possible-01))
+                                                  :domain (c18-16 / she))
+                                     :op2 (c18-9 / think-01
+                                                 :ARG0 c18-10
+                                                 :ARG1 (c18-4 / experience-01
+                                                              :ARG0 c18-16
+                                                              :ARG1 (c18-13 / life
+                                                                            :poss c18-16
+                                                                            :mod (c18-14 / poor)
+                                                                            :mod (c18-7 / tosure)))))))
+
+# ::snt Hey oprah all that money and u still have bags under ur eyes u bitch........ Ugly scumsucker...... U should marry that other piece of shit trump...... Oprah Trump......
+# ::tokens ["Hey", "oprah", "all", "that", "money", "and", "u", "still", "have", "bags", "under", "ur", "eyes", "u", "bitch", "........", "Ugly", "scumsucker", "......", "U", "should", "marry", "that", "other", "piece", "of", "shit", "trump", "......", "Oprah", "Trump", "......"]
+# ::lemmas ["hey", "oprah", "all", "that", "money", "and", "u", "still", "have", "bag", "under", "ur", "eye", "u", "bitch", "........", "ugly", "scumsucker", "......", "u", "should", "marry", "that", "other", "piece", "of", "shit", "trump", "......", "Oprah", "Trump", "......"]
+(c19-13 / multi-sentence
+        :snt1 (c19-0 / say-01
+                     :ARG0 (c19-25 / i)
+                     :ARG1 (c19-10 / and
+                                   :op1 (c19-6 / money
+                                               :mod (c19-8 / all)
+                                               :mod (c19-9 / that)
+                                               :mod (c19-7 / hey
+                                                           :mode expressive))
+                                   :op2 (c19-24 / have-03
+                                                :ARG0 (c19-5 / you
+                                                             :mod (c19-12 / bitch)
+                                                             :part (c19-22 / eye))
+                                                :ARG1 (c19-1 / bag
+                                                             :location (c19-18 / under
+                                                                               :op1 c19-22))
+                                                :mod (c19-3 / still)))
+                     :ARG2 c19-5)
+        :snt2 (c19-2 / scumbag
+                     :mod (c19-15 / ugly))
+        :snt3 (c19-21 / recommend-01
+                      :ARG1 (c19-17 / marry-01
+                                    :ARG1 (c19-11 / you)
+                                    :ARG2 (c19-23 / piece
+                                                  :consist-of (c19-20 / shit)
+                                                  :mod (c19-4 / other)
+                                                  :mod (c19-16 / that)))
+                      :ARG2 (c19-14 / person
+                                    :name (c19-19 / name
+                                                  :op1 "Oprah"
+                                                  :op2 "Trump"))))
+
+# ::snt Stop it!!!
+# ::tokens ["Stop", "it", "!", "!", "!"]
+# ::lemmas ["stop", "it", "!", "!", "!"]
+(c20-2 / stop-01
+       :ARG0 (c20-0 / you)
+       :ARG1 (c20-1 / it)
+       :mode imperative)
+
+# ::snt I think shed do well... shes always been a champion for fairness and opportunity.
+# ::tokens ["I", "think", "shed", "do", "well", "...", "she", "s", "always", "been", "a", "champion", "for", "fairness", "and", "opportunity", "."]
+# ::lemmas ["i", "think", "shed", "do", "well", "...", "she", "s", "always", "be", "a", "champion", "for", "fairness", "and", "opportunity", "."]
+(c21-3 / multi-sentence
+       :snt1 (c21-9 / think-01
+                    :ARG0 (c21-8 / i)
+                    :ARG1 (c21-6 / well-09
+                                 :ARG1 (c21-11 / do-02
+                                               :ARG0 (c21-4 / shed))))
+       :snt2 (c21-7 / champion
+                    :domain (c21-0 / she)
+                    :topic (c21-5 / and
+                                  :op1 (c21-1 / fairness)
+                                  :op2 (c21-2 / opportunity))
+                    :time (c21-10 / always)))
+
+# ::snt Yes so am l
+# ::tokens ["Yes", "so", "am", "l"]
+# ::lemmas ["yes", "so", "be", "l"]
+(c22-3 / and
+       :op1 (c22-0 / yes)
+       :op2 (c22-2 / amr-unknown
+                   :domain (c22-1 / l)))
+
+# ::snt Gayle also said "And doubts Oprah would run for President" !!
+# ::tokens ["Gayle", "also", "said", "\"", "And", "doubts", "Oprah", "would", "run", "for", "President", "\"", "!", "!"]
+# ::lemmas ["gayle", "also", "say", "\"", "and", "doubt", "Oprah", "would", "run", "for", "President", "\"", "!", "!"]
+(c23-2 / say-01
+       :ARG0 (c23-5 / person
+                    :name (c23-0 / name
+                                 :op1 "Gayle"))
+       :ARG1 (c23-7 / and
+                    :op1 (c23-8 / doubt-01
+                                :ARG0 c23-5
+                                :ARG1 (c23-3 / run-02
+                                             :ARG0 (c23-1 / person
+                                                          :name (c23-4 / name
+                                                                       :op1 "Oprah"))
+                                             :ARG1 (c23-9 / president))))
+       :mod (c23-6 / also))
+
+# ::snt What a joke! If she runs and loses her Hollywood buddies would lose their shit even more.
+# ::tokens ["What", "a", "joke", "!", "If", "she", "runs", "and", "loses", "her", "Hollywood", "buddies", "would", "lose", "their", "shit", "even", "more", "."]
+# ::lemmas ["what", "a", "joke", "!", "if", "she", "run", "and", "lose", "her", "Hollywood", "buddy", "would", "lose", "their", "shit", "even", "more", "."]
+(c25-2 / multi-sentence
+       :snt1 (c25-12 / joke-01
+                     :degree (c25-4 / so)
+                     :mode expressive)
+       :snt2 (c25-9 / lose-02
+                    :ARG0 (c25-8 / person
+                                 :ARG0-of (c25-7 / have-rel-role-91
+                                                 :ARG1 (c25-0 / she)
+                                                 :ARG2 (c25-1 / buddy))
+                                 :mod (c25-10 / market-sector
+                                              :name (c25-3 / name
+                                                           :op1 "Hollywood")))
+                    :ARG1 (c25-16 / shit
+                                  :poss c25-8)
+                    :condition (c25-13 / and
+                                       :op1 (c25-5 / run-02
+                                                   :ARG0 c25-0)
+                                       :op2 (c25-14 / lose-02
+                                                    :ARG0 c25-0
+                                                    :ARG1 c25-16))
+                    :ARG1-of (c25-11 / have-quant-91
+                                     :ARG3 (c25-15 / more
+                                                   :mod (c25-6 / even)))))
+
+# ::snt Think Tom cruise will " no for deep down souls
+# ::tokens ["Think", "Tom", "cruise", "will", "\"", "no", "for", "deep", "down", "souls"]
+# ::lemmas ["think", "Tom", "cruise", "will", "\"", "no", "for", "deep", "down", "soul"]
+(c26-7 / think-01
+       :ARG0 (c26-6 / i)
+       :ARG1 (c26-5 / cruise-01
+                    :mod (c26-4 / person
+                                :name (c26-1 / name
+                                             :op1 "Tom"))
+                    :ARG0-of (c26-2 / say-01
+                                    :ARG1 (c26-3 / no
+                                                 :beneficiary (c26-0 / soul
+                                                                     :ARG1-of (c26-8 / deep-down-10))))))
+
+# ::snt Heeerree we go lol,dejavu all over again.
+# ::tokens ["Heeerree", "we", "go", "lol", ",", "dejavu", "all", "over", "again", "."]
+# ::lemmas ["Heeerree", "we", "go", "lol", ",", "dejavu", "all", "over", "again", "."]
+(c27-0 / multi-sentence
+       :snt1 (c27-9 / go-02
+                    :ARG0 (c27-6 / we)
+                    :ARG1-of (c27-4 / laugh-01
+                                    :ARG0 (c27-7 / i)
+                                    :manner (c27-11 / loud)
+                                    :mode expressive))
+       :snt2 (c27-2 / say-01
+                    :ARG0 (c27-3 / i)
+                    :ARG1 (c27-8 / again
+                                 :mod (c27-10 / all-over))
+                    :ARG2 (c27-5 / person
+                                 :name (c27-1 / name
+                                              :op1 "dejavu"))))
+
+# ::snt NOOOOOO. NEVER EVER
+# ::tokens ["NOOOOOO", ".", "NEVER", "EVER"]
+# ::lemmas ["NOOOOOO", ".", "NEVER", "ever"]
+(c28-2 / multi-sentence
+       :snt1 (c28-0 / no)
+       :snt2 (c28-1 / be-temporally-at-91
+                    :ARG2 (c28-3 / ever)
+                    :polarity -))
+
+# ::snt True, but that doesnt make Oprah a good candidate for POTUS. Those things may make her a better person than Trump and a more successful capitalist than Trump, but being compared to Trump is not a qualification for the of of POTUS.
+# ::tokens ["True", ",", "but", "that", "does", "nt", "make", "Oprah", "a", "good", "candidate", "for", "POTUS", ".", "Those", "things", "may", "make", "her", "a", "better", "person", "than", "Trump", "and", "a", "more", "successful", "capitalist", "than", "Trump", ",", "but", "being", "compared", "to", "Trump", "is", "not", "a", "qualification", "for", "the", "of", "of", "POTUS", "."]
+# ::lemmas ["true", ",", "but", "that", "do", "not", "make", "Oprah", "a", "good", "candidate", "for", "POTUS", ".", "those", "thing", "may", "make", "she", "a", "well", "person", "than", "Trump", "and", "a", "more", "successful", "capitalist", "than", "Trump", ",", "but", "be", "compare", "to", "Trump", "be", "not", "a", "qualification", "for", "the", "of", "of", "POTUS", "."]
+(c29-14 / multi-sentence
+        :snt1 (c29-18 / contrast-01
+                      :ARG1 (c29-10 / true-01)
+                      :ARG2 (c29-6 / make-02
+                                   :ARG0 c29-10
+                                   :ARG1 (c29-13 / candidate
+                                                 :ARG1-of (c29-11 / good-02
+                                                                  :ARG2 (c29-7 / have-org-role-91
+                                                                               :ARG0 (c29-26 / person
+                                                                                             :name (c29-25 / name
+                                                                                                           :op1 "Oprah"))
+                                                                               :ARG1 (c29-1 / country
+                                                                                            :name (c29-16 / name
+                                                                                                          :op1 "United"
+                                                                                                          :op2 "States"))))
+                                                 :domain c29-26)
+                                   :polarity -))
+        :snt2 (c29-24 / contrast-01
+                      :ARG1 (c29-15 / possible-01
+                                    :ARG1 (c29-22 / make-02
+                                                  :ARG0 (c29-20 / thing
+                                                                :mod (c29-29 / that))
+                                                  :ARG1 (c29-9 / and
+                                                               :op1 (c29-3 / person
+                                                                           :ARG1-of (c29-28 / have-degree-91
+                                                                                            :ARG2 (c29-2 / good-02
+                                                                                                         :ARG1 c29-3)
+                                                                                            :ARG3 (c29-17 / more)
+                                                                                            :ARG4 (c29-0 / person
+                                                                                                         :name (c29-27 / name
+                                                                                                                       :op1 "Trump"))))
+                                                               :op2 (c29-4 / capitalist
+                                                                           :ARG2-of (c29-5 / have-degree-91
+                                                                                           :ARG1 c29-0
+                                                                                           :ARG3 (c29-21 / more)
+                                                                                           :ARG4 c29-0)))))
+                      :ARG2 (c29-8 / qualify-02
+                                   :ARG1 (c29-19 / compare-01
+                                                 :ARG1 c29-3
+                                                 :ARG2 c29-0)
+                                   :ARG2 (c29-23 / have-org-role-91
+                                                 :ARG0 c29-0
+                                                 :ARG1 c29-1
+                                                 :ARG2 (c29-12 / president))
+                                   :polarity -)))
+
+# ::snt You are not wrong.
+# ::tokens ["You", "are", "not", "wrong", "."]
+# ::lemmas ["you", "be", "not", "wrong", "."]
+(c30-0 / wrong-04
+       :ARG1 (c30-1 / you)
+       :polarity -)
+
+# ::snt like Oprah but no more celebs in the oval it's why America is in this shitshow of fuckery right now in the first. President shit bag is only president because of celebrity worship.
+# ::tokens ["like", "Oprah", "but", "no", "more", "celebs", "in", "the", "oval", "it", "'s", "why", "America", "is", "in", "this", "shitshow", "of", "fuckery", "right", "now", "in", "the", "first", ".", "President", "shit", "bag", "is", "only", "president", "because", "of", "celebrity", "worship", "."]
+# ::lemmas ["like", "Oprah", "but", "no", "more", "celebs", "in", "the", "oval", "it", "be", "why", "America", "be", "in", "this", "shitshow", "of", "fuckery", "right", "now", "in", "the", "first", ".", "President", "shit", "bag", "be", "only", "president", "because", "of", "celebrity", "worship", "."]
+(c31-17 / multi-sentence
+        :snt1 (c31-24 / resemble-01
+                      :ARG1 (c31-25 / person
+                                    :name (c31-23 / name
+                                                  :op1 "Oprah"))
+                      :ARG2 (c31-20 / celebrity
+                                    :location (c31-6 / oval)
+                                    :quant (c31-10 / more
+                                                   :polarity -))
+                      :ARG0-of (c31-14 / cause-01
+                                       :ARG1 (c31-16 / be-located-at-91
+                                                     :ARG1 (c31-3 / country
+                                                                  :name (c31-19 / name
+                                                                                :op1 "America"))
+                                                     :ARG2 (c31-0 / shithow
+                                                                  :mod (c31-22 / fuckery)
+                                                                  :mod (c31-13 / this))
+                                                     :time (c31-26 / now
+                                                                   :mod (c31-5 / right))
+                                                     :ARG1-of (c31-21 / cause-01
+                                                                      :ARG0 (c31-27 / worship-01
+                                                                                    :ARG0 (c31-18 / person
+                                                                                                  :ARG0-of (c31-11 / have-org-role-91
+                                                                                                                   :ARG2 (c31-4 / president))
+                                                                                                  :ARG1-of c31-27))))))
+        :snt2 (c31-7 / cause-01
+                     :ARG0 (c31-1 / bag
+                                  :consist-of (c31-8 / shit
+                                                     :mod (c31-2 / person
+                                                                 :ARG0-of (c31-28 / have-org-role-91
+                                                                                  :ARG2 (c31-12 / president))))
+                                  :mod (c31-15 / only))
+                     :ARG1 (c31-9 / have-org-role-91
+                                  :ARG0 c31-2
+                                  :ARG2 (c31-29 / president))))
+
+# ::snt We all know best friends saying stuff to the media doesn't mean shit!
+# ::tokens ["We", "all", "know", "best", "friends", "saying", "stuff", "to", "the", "media", "does", "n't", "mean", "shit", "!"]
+# ::lemmas ["we", "all", "know", "good", "friend", "say", "stuff", "to", "the", "medium", "do", "not", "mean", "shit", "!"]
+(c32-5 / know-02
+       :ARG0 (c32-7 / we
+                    :mod (c32-8 / all))
+       :ARG1 (c32-2 / mean-01
+                    :ARG1 (c32-3 / say-01
+                                 :ARG0 (c32-0 / friend
+                                              :ARG1-of (c32-4 / have-degree-91
+                                                              :ARG2 (c32-9 / good-02
+                                                                           :ARG1 c32-0)
+                                                              :ARG3 (c32-6 / most)))
+                                 :ARG1 (c32-1 / stuff)
+                                 :ARG2 (c32-10 / media))
+                    :ARG2 (c32-11 / shit)
+                    :polarity -))
+
+# ::snt Oprah was born into poverty, suffered sexual abuse, made herself into a billionaire due to sheer talent &amp; hard work, can talk to, listen to, &amp; empathize with, people of all races, creeds, colors, &amp; classes, &amp; possesses a soul. Trump is none of the above.
+# ::tokens ["Oprah", "was", "born", "into", "poverty", ",", "suffered", "sexual", "abuse", ",", "made", "herself", "into", "a", "billionaire", "due", "to", "sheer", "talent", "&", "amp", ";", "hard", "work", ",", "can", "talk", "to", ",", "listen", "to", ",", "&", "amp", ";", "empathize", "with", ",", "people", "of", "all", "races", ",", "creeds", ",", "colors", ",", "&", "amp", ";", "classes", ",", "&", "amp", ";", "possesses", "a", "soul", ".", "Trump", "is", "none", "of", "the", "above", "."]
+# ::lemmas ["Oprah", "be", "bear", "into", "poverty", ",", "suffer", "sexual", "abuse", ",", "make", "herself", "into", "a", "billionaire", "due", "to", "sheer", "talent", "&", "amp", ";", "hard", "work", ",", "can", "talk", "to", ",", "listen", "to", ",", "&", "amp", ";", "empathize", "with", ",", "people", "of", "all", "race", ",", "creed", ",", "color", ",", "&", "amp", ";", "class", ",", "&", "amp", ";", "possess", "a", "soul", ".", "Trump", "be", "none", "of", "the", "above", "."]
+(c33-17 / multi-sentence
+        :snt1 (c33-12 / and
+                      :op1 (c33-16 / bear-02
+                                   :ARG1 (c33-29 / person
+                                                 :name (c33-25 / name
+                                                               :op1 "Oprah"))
+                                   :destination (c33-18 / poor))
+                      :op2 (c33-0 / suffer-01
+                                  :ARG0 c33-29
+                                  :ARG1 (c33-10 / abuse-01
+                                                :ARG1 c33-29
+                                                :manner (c33-6 / sex)))
+                      :op3 (c33-7 / make-02
+                                  :ARG0 c33-29
+                                  :ARG1 (c33-1 / billionaire)
+                                  :ARG1-of (c33-21 / cause-01
+                                                   :ARG0 (c33-9 / and
+                                                                :op1 (c33-11 / talent
+                                                                             :mod (c33-5 / sheer))
+                                                                :op2 (c33-30 / work-01
+                                                                             :ARG1-of (c33-8 / hard-02)))))
+                      :op4 (c33-4 / possible-01
+                                  :ARG1 (c33-22 / talk-01
+                                                :ARG0 c33-29
+                                                :ARG2 (c33-33 / and
+                                                              :op1 (c33-2 / person
+                                                                          :mod (c33-27 / race
+                                                                                       :mod (c33-31 / all)))
+                                                              :op2 (c33-15 / creep)
+                                                              :op3 (c33-3 / color)
+                                                              :op4 (c33-28 / et-cetera)
+                                                              :op5 (c33-13 / et-cetera))))
+                      :op5 (c33-20 / empathize-01
+                                   :ARG0 c33-29
+                                   :ARG1 (c33-14 / person
+                                                 :mod c33-31)))
+        :op6 (c33-34 / possess-01
+                     :ARG0 c33-29
+                     :ARG1 (c33-26 / soul))
+        :snt2 (c33-32 / include-91
+                      :ARG1 (c33-24 / person
+                                    :name (c33-19 / name
+                                                  :op1 "Trump"))
+                      :ARG2 (c33-23 / above)
+                      :polarity -))
+
+# ::snt Yes she can.
+# ::tokens ["Yes", "she", "can", "."]
+# ::lemmas ["yes", "she", "can", "."]
+(c34-0 / possible-01)
+
+# ::snt So is Harvey.
+# ::tokens ["So", "is", "Harvey", "."]
+# ::lemmas ["so", "be", "Harvey", "."]
+(c35-0 / event
+       :name (c35-1 / name
+                    :op1 "Harvey"))
+
+# ::snt I hope not
+# ::tokens ["I", "hope", "not"]
+# ::lemmas ["i", "hope", "not"]
+(c36-1 / hope-01
+       :ARG0 (c36-2 / i)
+       :ARG1 (c36-0 / event
+                    :polarity -))
+
+# ::snt Stop
+# ::tokens ["Stop"]
+# ::lemmas ["stop"]
+(c37-1 / stop-01
+       :ARG0 (c37-0 / you)
+       :mode imperative)
+
+# ::snt H bah cest pas prt de sarranger de lautre ct de lAtlantique. Enfin a ne peut tre que mieux certes. Mais quand mme....
+# ::tokens ["H", "bah", "cest", "pas", "prt", "de", "sarranger", "de", "lautre", "ct", "de", "lAtlantique", ".", "Enfin", "a", "ne", "peut", "tre", "que", "mieux", "certes", ".", "Mais", "quand", "mme", "...."]
+# ::lemmas ["h", "bah", "c", "pas", "prt", "de", "sarranger", "de", "lautre", "ct", "de", "lAtlantique", ".", "Enfin", "a", "ne", "peut", "tre", "que", "mieux", "certe", ".", "Mais", "quand", "mme", "...."]
+(c38-12 / multi-sentence
+        :snt1 (c38-5 / have-polarity-91
+                     :ARG1 (c38-0 / sense-02
+                                  :ARG1 (c38-9 / amr-unknown))
+                     :mod (c38-4 / most)
+                     :ARG1-of (c38-14 / cause-01
+                                      :ARG0 (c38-23 / have-part-91
+                                                    :ARG1 (c38-11 / city
+                                                                  :name (c38-20 / name
+                                                                                :op1 "Lautre"))
+                                                    :ARG2 (c38-2 / city
+                                                                 :name (c38-13 / name
+                                                                               :op1 "Atlantique"))))
+                     :ARG2 -)
+        :snt2 (c38-8 / and
+                     :op1 (c38-3 / have-part-91
+                                 :ARG1 (c38-19 / company
+                                               :name (c38-22 / name
+                                                             :op1 "Enfin"))
+                                 :ARG2 (c38-10 / thing
+                                               :name (c38-15 / name
+                                                             :op1 "Trent"
+                                                             :op2 "de"
+                                                             :op3 "Sarranger")))
+                     :op2 (c38-17 / have-part-91
+                                  :ARG1 c38-19
+                                  :ARG2 (c38-16 / thing
+                                                :name (c38-24 / name
+                                                              :op1 "Trent"
+                                                              :op2 "de"
+                                                              :op3 "Lautre")))
+                     :op3 (c38-6 / have-part-91
+                                 :ARG1 c38-19
+                                 :ARG2 (c38-25 / thing
+                                               :name (c38-21 / name
+                                                             :op1 "Mieux"
+                                                             :op2 "Certes")))
+                     :snt3-of c38-12)
+        :op1 (c38-18 / Mais
+                     :mode expressive)
+        :op2 (c38-7 / have-part-91
+                    :ARG1 (c38-26 / i)
+                    :ARG2 (c38-1 / thing)))
+
+# ::snt Oh boy. Steadman will vice president
+# ::tokens ["Oh", "boy", ".", "Steadman", "will", "vice", "president"]
+# ::lemmas ["oh", "boy", ".", "Steadman", "will", "vice", "president"]
+(c39-2 / multi-sentence
+       :snt1 (c39-1 / boy
+                    :mod (c39-0 / oh))
+       :snt2 (c39-6 / have-org-role-91
+                    :ARG0 (c39-7 / person
+                                 :name (c39-3 / name
+                                              :op1 "Steadman"))
+                    :ARG2 (c39-4 / president
+                                 :mod (c39-5 / vice))))
+
+# ::snt This is all I can picture
+# ::tokens ["This", "is", "all", "I", "can", "picture"]
+# ::lemmas ["this", "be", "all", "i", "can", "picture"]
+(c40-1 / all
+       :ARG1-of (c40-2 / picture-01
+                       :ARG0 (c40-3 / i)
+                       :ARG1-of (c40-0 / possible-01))
+       :domain (c40-4 / this))
+
+# ::snt Obama
+# ::tokens ["Obama"]
+# ::lemmas ["Obama"]
+(c41-1 / person
+       :name (c41-0 / name
+                    :op1 "Obama"))
+
+# ::snt Noooo. Please. Let talk show hosts do what thery do best. Which is not leading the free world.
+# ::tokens ["Noooo", ".", "Please", ".", "Let", "talk", "show", "hosts", "do", "what", "thery", "do", "best", ".", "Which", "is", "not", "leading", "the", "free", "world", "."]
+# ::lemmas ["Noooo", ".", "please", ".", "let", "talk", "show", "host", "do", "what", "thery", "do", "well", ".", "which", "be", "not", "lead", "the", "free", "world", "."]
+(c42-3 / multi-sentence
+       :snt1 (c42-2 / no)
+       :snt2 (c42-5 / let-01
+                    :ARG0 (c42-1 / you)
+                    :ARG1 (c42-14 / do-02
+                                  :ARG0 (c42-6 / person
+                                               :ARG0-of (c42-4 / host-01
+                                                               :ARG1 (c42-12 / talk-show)))
+                                  :ARG1 (c42-16 / thing
+                                                :ARG1-of (c42-9 / do-02
+                                                                :ARG0 (c42-11 / thery)
+                                                                :ARG1-of (c42-10 / have-degree-91
+                                                                                 :ARG2 (c42-13 / good-02
+                                                                                               :ARG1 c42-16)
+                                                                                 :ARG3 (c42-7 / most)))))
+                    :mode imperative
+                    :polite +)
+       :snt3 (c42-15 / lead-02
+                     :ARG0 (c42-8 / world
+                                  :ARG1-of (c42-0 / free-04))
+                     :polarity -))
+
+# ::snt Do you need any personal or commercial website ? Contact &amp; get
+# ::tokens ["Do", "you", "need", "any", "personal", "or", "commercial", "website", "?", "Contact", "&", "amp", ";", "get"]
+# ::lemmas ["do", "you", "need", "any", "personal", "or", "commercial", "website", "?", "Contact", "&", "amp", ";", "get"]
+(c43-2 / multi-sentence
+       :snt1 (c43-1 / need-01
+                    :polarity (c43-11 / amr-unknown)
+                    :ARG0 (c43-0 / you)
+                    :ARG1 (c43-6 / website
+                                 :mod (c43-10 / any)
+                                 :ARG1-of (c43-5 / personal-02)
+                                 :mod (c43-7 / commerce)))
+       :snt2 (c43-8 / and
+                    :op1 (c43-13 / contact-01
+                                 :ARG0 (c43-12 / you)
+                                 :ARG1 (c43-9 / company
+                                              :name (c43-4 / name
+                                                           :op1 "&amp")))
+                    :op2 (c43-3 / get-01
+                                :ARG0 c43-12)))
+
+# ::snt Oprah is "intrigued" by the idea of running for president, best friend Gayle King says
+# ::tokens ["Oprah", "is", "\"", "intrigued", "\"", "by", "the", "idea", "of", "running", "for", "president", ",", "best", "friend", "Gayle", "King", "says"]
+# ::lemmas ["Oprah", "be", "\"", "intrigue", "\"", "by", "the", "idea", "of", "run", "for", "president", ",", "good", "friend", "Gayle", "King", "say"]
+(c44-3 / say-01
+       :ARG0 (c44-8 / person
+                    :name (c44-1 / name
+                                 :op1 "Gayle"
+                                 :op2 "King")
+                    :ARG0-of (c44-7 / have-rel-role-91
+                                    :ARG1 (c44-2 / person
+                                                 :name (c44-9 / name
+                                                              :op1 "Oprah"))
+                                    :ARG2 (c44-0 / friend
+                                                 :ARG1-of (c44-10 / have-degree-91
+                                                                  :ARG2 (c44-13 / good-02
+                                                                                :ARG1 c44-0)
+                                                                  :ARG3 (c44-4 / most)))))
+       :ARG1 (c44-11 / intrigue-01
+                     :ARG0 (c44-5 / idea
+                                  :topic (c44-6 / run-02
+                                                :ARG0 c44-2
+                                                :ARG1 (c44-12 / president)))
+                     :ARG1 c44-2))
+
+# ::snt Of course!
+# ::tokens ["Of", "course", "!"]
+# ::lemmas ["of", "course", "!"]
+(c45-0 / of-course
+       :mode expressive)
+
+# ::snt Oprah is Illuminati-centred , she would be the worst choice, In my opinion
+# ::tokens ["Oprah", "is", "Illuminati", "-", "centred", ",", "she", "would", "be", "the", "worst", "choice", ",", "In", "my", "opinion"]
+# ::lemmas ["Oprah", "be", "Illuminati", "-", "centre", ",", "she", "would", "be", "the", "bad", "choice", ",", "in", "my", "opinion"]
+(c46-1 / opine-01
+       :ARG0 (c46-9 / i)
+       :ARG1 (c46-10 / and
+                     :op1 (c46-8 / center-01
+                                 :ARG1 (c46-0 / organization
+                                              :name (c46-3 / name
+                                                           :op1 "Illuminati"))
+                                 :ARG2 (c46-6 / person
+                                              :name (c46-5 / name
+                                                           :op1 "Oprah")))
+                     :op2 (c46-7 / have-degree-91
+                                 :ARG1 (c46-11 / choose-01
+                                               :ARG1 c46-6)
+                                 :ARG2 (c46-2 / bad-07
+                                              :ARG1 c46-11)
+                                 :ARG3 (c46-4 / most))))
+
+# ::snt Hell NO
+# ::tokens ["Hell", "NO"]
+# ::lemmas ["Hell", "no"]
+(c47-1 / no
+       :mod (c47-0 / hell))
+
+# ::snt Yes, Dr. Maya Angelou told Oprah on TV, "you don't know what your legacy will be."
+# ::tokens ["Yes", ",", "Dr.", "Maya", "Angelou", "told", "Oprah", "on", "TV", ",", "\"", "you", "do", "n't", "know", "what", "your", "legacy", "will", "be", ".", "\""]
+# ::lemmas ["yes", ",", "Dr.", "Maya", "Angelou", "tell", "Oprah", "on", "TV", ",", "\"", "you", "do", "not", "know", "what", "your", "legacy", "will", "be", ".", "\""]
+(c48-6 / tell-01
+       :ARG0 (c48-7 / doctor
+                    :name (c48-0 / name
+                                 :op1 "Maya"
+                                 :op2 "Angelou"))
+       :ARG1 (c48-2 / know-01
+                    :ARG0 (c48-3 / person
+                                 :name (c48-1 / name
+                                              :op1 "Oprah"))
+                    :ARG1 (c48-8 / thing
+                                 :ARG1-of (c48-4 / legacy-00
+                                                 :ARG0 c48-3))
+                    :polarity -)
+       :ARG2 c48-3
+       :medium (c48-5 / television))
+
+# ::snt OPRAH IS WHITE HATING RACIST AND SAYS Oprah Winfrey says that "WHITE PEOPLE HAVE TO ALL DIE"!!!
+# ::tokens ["OPRAH", "IS", "WHITE", "HATING", "RACIST", "AND", "SAYS", "Oprah", "Winfrey", "says", "that", "\"", "WHITE", "PEOPLE", "HAVE", "TO", "ALL", "DIE", "\"", "!", "!", "!"]
+# ::lemmas ["OPRAH", "be", "WHITE", "hate", "racist", "and", "say", "Oprah", "Winfrey", "say", "that", "\"", "white", "people", "have", "to", "all", "DIE", "\"", "!", "!", "!"]
+(c49-10 / and
+        :op1 (c49-5 / racist
+                    :domain (c49-7 / person
+                                   :name (c49-2 / name
+                                                :op1 "Obama"))
+                    :ARG0-of (c49-6 / hate-01))
+        :op2 (c49-4 / say-01
+                    :ARG0 c49-7
+                    :ARG1 (c49-0 / say-01
+                                 :ARG0 (c49-3 / person
+                                              :name (c49-8 / name
+                                                           :op1 "Oprah"
+                                                           :op2 "Winfrey"))
+                                 :ARG1 (c49-1 / obligate-01
+                                              :ARG1 (c49-12 / person
+                                                            :mod (c49-9 / all))
+                                              :ARG2 (c49-11 / die-01
+                                                            :ARG1 c49-12)))))
+
+# ::snt NO
+# ::tokens ["NO"]
+# ::lemmas ["no"]
+(c50-0 / no
+       :mode expressive)

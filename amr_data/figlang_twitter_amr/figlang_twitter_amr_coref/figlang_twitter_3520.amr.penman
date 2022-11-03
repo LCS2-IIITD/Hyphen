@@ -1,0 +1,34 @@
+# ::snt Alexa , who is the President of the United States ? <URL>
+# ::tokens ["Alexa", ",", "who", "is", "the", "President", "of", "the", "United", "States", "?", "<", "URL", ">"]
+# ::lemmas ["Alexa", ",", "who", "be", "the", "President", "of", "the", "United", "States", "?", "<", "URL", ">"]
+(c1-5 / person
+      :name (c1-6 / name
+                  :op1 "Alexa")
+      :ARG0-of (c1-2 / have-org-role-91
+                     :ARG1 (c1-1 / country
+                                 :name (c1-4 / name
+                                             :op1 "United"
+                                             :op2 "States"))
+                     :ARG2 (c1-3 / president))
+      :mod (c1-0 / amr-unknown))
+
+# ::snt Alexa is the only action these dudes ever get . Notice how there aren't any actual women there .
+# ::tokens ["Alexa", "is", "the", "only", "action", "these", "dudes", "ever", "get", ".", "Notice", "how", "there", "are", "n't", "any", "actual", "women", "there", "."]
+# ::lemmas ["Alexa", "be", "the", "only", "action", "these", "dude", "ever", "get", ".", "notice", "how", "there", "be", "not", "any", "actual", "woman", "there", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-1 / act-02
+                  :ARG1 (c2-8 / person
+                              :name (c2-10 / name
+                                           :op1 "Alexa"))
+                  :mod (c2-4 / only)
+                  :ARG1-of (c2-7 / get-01
+                                 :ARG0 (c2-0 / dude
+                                             :mod (c2-5 / this))
+                                 :time (c2-13 / ever)))
+      :snt2 (c2-6 / notice-01
+                  :ARG0 (c2-11 / you)
+                  :ARG1 (c2-2 / woman
+                              :ARG1-of (c2-12 / actual-02)
+                              :location (c2-3 / there)
+                              :polarity -)
+                  :mode imperative))

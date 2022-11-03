@@ -1,0 +1,42 @@
+# ::snt pasha is the second most famous eSports player
+# ::tokens ["pasha", "is", "the", "second", "most", "famous", "eSports", "player"]
+# ::lemmas ["pasha", "be", "the", "second", "most", "famous", "eSports", "player"]
+(c1-1 / have-degree-91
+      :ARG1 (c1-5 / person
+                  :name (c1-7 / name
+                              :op1 "Pasha")
+                  :ARG0-of (c1-3 / play-01
+                                 :ARG1 (c1-4 / game
+                                             :name c1-7
+                                             :op1 " eSports")))
+      :ARG2 (c1-0 / fame-01
+                  :ARG1 c1-5)
+      :ARG3 (c1-6 / most
+                  :ord (c1-2 / ordinal-entity
+                             :value 2)))
+
+# ::snt faker is probably the most famous one but, he doesnt stream on twitch and no twitter.
+# ::tokens ["faker", "is", "probably", "the", "most", "famous", "one", "but", ",", "he", "does", "nt", "stream", "on", "twitch", "and", "no", "twitter", "."]
+# ::lemmas ["faker", "be", "probably", "the", "most", "famous", "one", "but", ",", "he", "do", "not", "stream", "on", "twitch", "and", "no", "twitter", "."]
+(c2-3 / contrast-01
+      :ARG1 (c2-11 / probable
+                   :domain (c2-2 / fame-01
+                                 :ARG1 (c2-8 / person
+                                             :name (c2-13 / name
+                                                          :op1 "Faker"))
+                                 :ARG2-of (c2-6 / have-degree-91
+                                                :ARG1 c2-8
+                                                :ARG3 (c2-12 / most))))
+      :ARG2 (c2-1 / and
+                  :op1 (c2-0 / stream-03
+                             :ARG0 c2-8
+                             :medium (c2-5 / publication
+                                           :name (c2-9 / name
+                                                       :op1 " twitch"))
+                             :polarity -)
+                  :op2 (c2-10 / stream-03
+                              :ARG0 c2-8
+                              :medium (c2-4 / publication
+                                            :name (c2-7 / name
+                                                        :op1 "Twitter"))
+                              :polarity -)))

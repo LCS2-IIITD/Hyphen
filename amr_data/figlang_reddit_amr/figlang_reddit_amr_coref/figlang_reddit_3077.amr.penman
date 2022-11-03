@@ -1,0 +1,40 @@
+# ::snt Swimming cap trick
+# ::tokens ["Swimming", "cap", "trick"]
+# ::lemmas ["swimming", "cap", "trick"]
+(c1-1 / trick-01
+      :ARG2 (c1-0 / swim-01
+                  :ARG1 (c1-2 / cap)))
+
+# ::snt This method is good and all but what are you supposed to do when there's not a large amount of water nearby?
+# ::tokens ["This", "method", "is", "good", "and", "all", "but", "what", "are", "you", "supposed", "to", "do", "when", "there", "'s", "not", "a", "large", "amount", "of", "water", "nearby", "?"]
+# ::lemmas ["this", "method", "be", "good", "and", "all", "but", "what", "be", "you", "suppose", "to", "do", "when", "there", "be", "not", "a", "large", "amount", "of", "water", "nearby", "?"]
+(c2-4 / contrast-01
+      :ARG1 (c2-3 / and
+                  :op1 (c2-9 / good-02
+                             :ARG1 (c2-10 / method
+                                          :mod (c2-7 / this)))
+                  :op2 (c2-13 / all))
+      :ARG2 (c2-0 / suppose-02
+                  :ARG1 (c2-12 / you)
+                  :ARG2 (c2-1 / do-02
+                              :ARG0 c2-12
+                              :ARG1 (c2-2 / amr-unknown)
+                              :condition (c2-5 / water
+                                               :quant (c2-6 / amount
+                                                            :mod (c2-8 / large)
+                                                            :polarity -)
+                                               :location (c2-11 / nearby)))))
+
+# ::snt and what would you be doing with a swimming cap not near a body of water..?
+# ::tokens ["and", "what", "would", "you", "be", "doing", "with", "a", "swimming", "cap", "not", "near", "a", "body", "of", "water", "..", "?"]
+# ::lemmas ["and", "what", "would", "you", "be", "do", "with", "a", "swimming", "cap", "not", "near", "a", "body", "of", "water", "..", "?"]
+(c3-2 / and
+      :op2 (c3-0 / do-02
+                 :ARG0 (c3-7 / you)
+                 :ARG1 (c3-8 / amr-unknown)
+                 :ARG2 (c3-3 / cap
+                             :purpose (c3-1 / swim-01)
+                             :ARG1-of (c3-6 / near-02
+                                            :ARG2 (c3-5 / body
+                                                        :consist-of (c3-4 / water))
+                                            :polarity -))))

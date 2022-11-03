@@ -1,0 +1,75 @@
+# ::snt Nah .. it's an old statement i don't buy it.
+# ::tokens ["Nah", "..", "it", "'s", "an", "old", "statement", "i", "do", "n't", "buy", "it", "."]
+# ::lemmas ["Nah", "..", "it", "be", "an", "old", "statement", "i", "do", "not", "buy", "it", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-2 / nah)
+      :snt2 (c1-4 / state-01
+                  :mod (c1-0 / old)
+                  :domain (c1-6 / it))
+      :snt3 (c1-1 / buy-01
+                  :ARG0 (c1-5 / i)
+                  :ARG1 (c1-7 / it)
+                  :polarity -))
+
+# ::snt Old statement. Not too stupid not to realize it. Better try again.
+# ::tokens ["Old", "statement", ".", "Not", "too", "stupid", "not", "to", "realize", "it", ".", "Better", "try", "again", "."]
+# ::lemmas ["old", "statement", ".", "not", "too", "stupid", "not", "to", "realize", "it", ".", "well", "try", "again", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-4 / state-01
+                  :mod (c2-0 / old))
+      :snt2 (c2-7 / have-degree-91
+                  :ARG2 (c2-1 / stupid)
+                  :ARG3 (c2-9 / too)
+                  :ARG6 (c2-5 / realize-01
+                              :ARG0 (c2-2 / you)
+                              :ARG1 (c2-8 / it)
+                              :polarity -)
+                  :polarity -)
+      :snt3 (c2-10 / recommend-01
+                   :ARG1 (c2-11 / try-01
+                                :ARG0 c2-2
+                                :mod (c2-6 / again))))
+
+# ::snt Or you know they are really good friends and are not a thing
+# ::tokens ["Or", "you", "know", "they", "are", "really", "good", "friends", "and", "are", "not", "a", "thing"]
+# ::lemmas ["or", "you", "know", "they", "be", "really", "good", "friend", "and", "be", "not", "a", "thing"]
+(c3-0 / or
+      :op2 (c3-5 / know-01
+                 :ARG0 (c3-2 / you)
+                 :ARG1 (c3-8 / and
+                             :op1 (c3-4 / have-rel-role-91
+                                        :ARG0 (c3-7 / they)
+                                        :ARG1 (c3-6 / person)
+                                        :ARG2 (c3-1 / friend
+                                                    :ARG1-of (c3-9 / good-02
+                                                                   :degree (c3-3 / really))))
+                             :op2 (c3-10 / thing
+                                         :domain c3-7
+                                         :polarity -))))
+
+# ::snt Then we find out they are engaged. Boyfriend = datingFianc = soon to be husband
+# ::tokens ["Then", "we", "find", "out", "they", "are", "engaged", ".", "Boyfriend", "=", "datingFianc", "=", "soon", "to", "be", "husband"]
+# ::lemmas ["then", "we", "find", "out", "they", "be", "engage", ".", "boyfriend", "=", "datingfianc", "=", "soon", "to", "be", "husband"]
+(c4-10 / multi-sentence
+       :snt1 (c4-15 / find-out-03
+                    :ARG0 (c4-19 / we)
+                    :ARG1 (c4-16 / engagement-02
+                                 :ARG1 (c4-8 / they))
+                    :time (c4-12 / then))
+       :snt2 (c4-5 / mean-01
+                   :ARG1 (c4-17 / person
+                                :ARG0-of (c4-6 / have-rel-role-91
+                                               :ARG2 (c4-9 / boyfriend)))
+                   :ARG2 (c4-11 / person
+                                :ARG0-of (c4-20 / have-rel-role-91
+                                                :ARG2 (c4-18 / fiancee))
+                                :ARG0-of (c4-21 / date-02)))
+       :snt3 (c4-14 / mean-01
+                    :ARG1 (c4-3 / person
+                                :ARG0-of (c4-4 / have-rel-role-91
+                                               :ARG2 (c4-13 / husband))
+                                :ARG1-of (c4-1 / be-temporally-at-91
+                                               :ARG2 (c4-0 / soon)))
+                    :ARG2 (c4-2 / person
+                                :ARG0-of (c4-7 / have-rel-role-91
+                                               :ARG2 c4-13))))

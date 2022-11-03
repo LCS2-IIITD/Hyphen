@@ -1,0 +1,32 @@
+# ::snt and buffalo wings
+# ::tokens ["and", "buffalo", "wings"]
+# ::lemmas ["and", "buffalo", "wing"]
+(c1-2 / and
+      :op2 (c1-0 / wing
+                 :mod (c1-1 / buffalo)))
+
+# ::snt They are a cute family of !
+# ::tokens ["They", "are", "a", "cute", "family", "of", "!"]
+# ::lemmas ["they", "be", "a", "cute", "family", "of", "!"]
+(c2-0 / family
+      :mod (c2-1 / cute)
+      :domain (c2-2 / they))
+
+# ::snt I bet she knows what Tuna being the chicken of the sea means!!! Hahaha lmao
+# ::tokens ["I", "bet", "she", "knows", "what", "Tuna", "being", "the", "chicken", "of", "the", "sea", "means", "!", "!", "!", "Hahaha", "lmao"]
+# ::lemmas ["i", "bet", "she", "know", "what", "Tuna", "be", "the", "chicken", "of", "the", "sea", "mean", "!", "!", "!", "Hahaha", "lmao"]
+(c3-2 / multi-sentence
+      :snt1 (c3-1 / bet-01
+                  :ARG0 (c3-11 / i)
+                  :ARG2 (c3-6 / know-01
+                              :ARG0 (c3-4 / she)
+                              :ARG1 (c3-12 / thing
+                                           :ARG2-of (c3-5 / mean-01
+                                                          :ARG1 (c3-10 / chicken
+                                                                       :domain (c3-7 / person
+                                                                                     :name (c3-3 / name
+                                                                                                 :op1 "Tuna"))
+                                                                       :location (c3-0 / sea))))))
+      :snt2 (c3-8 / haha
+                  :mod (c3-9 / loud)
+                  :mode expressive))

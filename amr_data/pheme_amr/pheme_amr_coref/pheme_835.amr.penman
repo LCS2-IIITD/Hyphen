@@ -1,0 +1,215 @@
+# ::snt AGREE
+# ::tokens ["AGREE"]
+# ::lemmas ["AGREE"]
+(c1-0 / agree-01)
+
+# ::snt MUSTWATCH
+# ::tokens ["MUSTWATCH"]
+# ::lemmas ["MUSTWATCH"]
+(c2-0 / watch-01)
+
+# ::snt Maybe it's time to automate the controls from satellite, and ground control in case of scenarios like this.
+# ::tokens ["Maybe", "it", "'s", "time", "to", "automate", "the", "controls", "from", "satellite", ",", "and", "ground", "control", "in", "case", "of", "scenarios", "like", "this", "."]
+# ::lemmas ["maybe", "it", "be", "time", "to", "automate", "the", "control", "from", "satellite", ",", "and", "ground", "control", "in", "case", "of", "scenario", "like", "this", "."]
+(c3-2 / possible-01
+      :ARG1 (c3-9 / time
+                  :time-of (c3-10 / automate-01
+                                  :ARG1 (c3-4 / control-01
+                                              :source (c3-1 / and
+                                                            :op1 (c3-8 / satellite)
+                                                            :op2 (c3-3 / control-01
+                                                                       :location (c3-5 / ground))))
+                                  :condition (c3-0 / scenario
+                                                   :ARG1-of (c3-6 / resemble-01
+                                                                  :ARG2 (c3-7 / this))))))
+
+# ::snt its too convenient for the co-pilot to have an emergency just after the pilot leaves..
+# ::tokens ["its", "too", "convenient", "for", "the", "co", "-", "pilot", "to", "have", "an", "emergency", "just", "after", "the", "pilot", "leaves", ".."]
+# ::lemmas ["its", "too", "convenient", "for", "the", "co", "-", "pilot", "to", "have", "an", "emergency", "just", "after", "the", "pilot", "leave", ".."]
+(c4-0 / have-degree-91
+      :ARG1 (c4-4 / it)
+      :ARG2 (c4-6 / convenient
+                  :domain (c4-10 / have-06
+                                 :ARG0 (c4-5 / person
+                                             :ARG0-of (c4-9 / pilot-01))
+                                 :ARG1 (c4-3 / emergency)
+                                 :time (c4-7 / after
+                                             :op1 (c4-2 / leave-11
+                                                        :ARG0 c4-5)
+                                             :mod (c4-1 / just))))
+      :ARG3 (c4-8 / too))
+
+# ::snt maybe its time to install cameras in cockpits of planes like ones in public transportation
+# ::tokens ["maybe", "its", "time", "to", "install", "cameras", "in", "cockpits", "of", "planes", "like", "ones", "in", "public", "transportation"]
+# ::lemmas ["maybe", "its", "time", "to", "install", "camera", "in", "cockpit", "of", "plane", "like", "one", "in", "public", "transportation"]
+(c5-2 / possible-01
+      :ARG1 (c5-9 / time
+                  :time-of (c5-1 / install-01
+                                 :ARG1 (c5-4 / camera)
+                                 :ARG2 (c5-3 / cockpit
+                                             :part-of (c5-10 / plane)
+                                             :ARG1-of (c5-5 / resemble-01
+                                                            :ARG2 (c5-7 / cockpit
+                                                                        :part-of (c5-0 / plane
+                                                                                       :ARG1-of (c5-6 / transport-01
+                                                                                                      :ARG1-of (c5-8 / public-02)))))))))
+
+# ::snt Uma tragedia...
+# ::tokens ["Uma", "tragedia", "..."]
+# ::lemmas ["Uma", "tragedia", "..."]
+(c6-0 / tragedia
+      :mod (c6-1 / uma))
+
+# ::snt MUST WATCH
+# ::tokens ["MUST", "WATCH"]
+# ::lemmas ["must", "watch"]
+(c7-0 / watch-01
+      :mod (c7-1 / UST))
+
+# ::snt WHY didn't the pilot enter the emergency door code to override the door locking mechanism? Should have been trained in this.
+# ::tokens ["WHY", "did", "n't", "the", "pilot", "enter", "the", "emergency", "door", "code", "to", "override", "the", "door", "locking", "mechanism", "?", "Should", "have", "been", "trained", "in", "this", "."]
+# ::lemmas ["why", "do", "not", "the", "pilot", "enter", "the", "emergency", "door", "code", "to", "override", "the", "door", "locking", "mechanism", "?", "should", "have", "be", "train", "in", "this", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-6 / enter-01
+                  :ARG0 (c8-7 / person
+                              :ARG0-of (c8-15 / pilot-01))
+                  :ARG1 (c8-9 / code
+                              :mod (c8-8 / door)
+                              :mod (c8-4 / emergency))
+                  :purpose (c8-5 / override-01
+                                 :ARG0 c8-15
+                                 :ARG1 (c8-10 / mechanism
+                                              :instrument-of (c8-2 / lock-01
+                                                                   :ARG1 (c8-1 / door))))
+                  :ARG1-of (c8-11 / cause-01
+                                  :ARG0 (c8-16 / amr-unknown))
+                  :polarity -)
+      :snt2 (c8-12 / recommend-01
+                   :ARG1 (c8-14 / train-01
+                                :ARG1 (c8-13 / this)
+                                :ARG2 (c8-0 / you))))
+
+# ::snt would be difficult to get reception in mountains...most likely happen fast
+# ::tokens ["would", "be", "difficult", "to", "get", "reception", "in", "mountains", "...", "most", "likely", "happen", "fast"]
+# ::lemmas ["would", "be", "difficult", "to", "get", "reception", "in", "mountain", "...", "most", "likely", "happen", "fast"]
+(c9-7 / contrast-01
+      :ARG1 (c9-6 / difficult
+                  :domain (c9-8 / get-01
+                                :ARG1 (c9-5 / reception)
+                                :location (c9-2 / mountain)))
+      :ARG2 (c9-1 / likely-01
+                  :ARG1 c9-8
+                  :ARG1-of (c9-0 / have-degree-91
+                                 :ARG2 (c9-3 / fast-02
+                                             :ARG1 c9-8)
+                                 :ARG3 (c9-4 / most))))
+
+# ::snt . what were pilots' names?
+# ::tokens [".", "what", "were", "pilots", "'", "names", "?"]
+# ::lemmas [".", "what", "be", "pilot", "'", "name", "?"]
+(c10-1 / name
+       :polarity (c10-4 / amr-unknown)
+       :poss (c10-2 / person
+                    :ARG0-of (c10-3 / pilot-01))
+       :domain (c10-0 / amr-unknown))
+
+# ::snt no time for passenger texts or calls on cell phones to alert?
+# ::tokens ["no", "time", "for", "passenger", "texts", "or", "calls", "on", "cell", "phones", "to", "alert", "?"]
+# ::lemmas ["no", "time", "for", "passenger", "text", "or", "call", "on", "cell", "phone", "to", "alert", "?"]
+(c11-6 / time
+       :purpose (c11-8 / alert-01
+                       :ARG1 (c11-2 / passenger)
+                       :ARG2 (c11-0 / or
+                                    :op1 (c11-5 / text-01
+                                                :ARG0 c11-2)
+                                    :op2 (c11-4 / call-02
+                                                :ARG0 c11-2)
+                                    :medium (c11-7 / phone
+                                                   :mod (c11-3 / cell))))
+       :polarity (c11-1 / amr-unknown)
+       :polarity -)
+
+# ::snt Why wouldn't pilot who was locked out of cabin try to call ground from a passenger's cell phone? makes no sense
+# ::tokens ["Why", "would", "n't", "pilot", "who", "was", "locked", "out", "of", "cabin", "try", "to", "call", "ground", "from", "a", "passenger", "'s", "cell", "phone", "?", "makes", "no", "sense"]
+# ::lemmas ["why", "would", "not", "pilot", "who", "be", "lock", "out", "of", "cabin", "try", "to", "call", "ground", "from", "a", "passenger", "'s", "cell", "phone", "?", "make", "no", "sense"]
+(c12-8 / sense-02
+       :ARG1 (c12-10 / try-01
+                     :ARG0 (c12-3 / person
+                                  :ARG0-of (c12-11 / pilot-01)
+                                  :ARG1-of (c12-0 / lock-01
+                                                  :ARG2 (c12-5 / cabin)))
+                     :ARG1 (c12-4 / call-02
+                                  :ARG0 c12-3
+                                  :ARG1 (c12-6 / ground)
+                                  :instrument (c12-1 / phone
+                                                     :mod (c12-7 / cell)
+                                                     :poss (c12-9 / person
+                                                                  :ARG0-of (c12-2 / passenger-01))))
+                     :polarity -)
+       :ARG1-of (c12-13 / cause-01
+                        :ARG0 (c12-12 / amr-unknown))
+       :polarity -)
+
+# ::snt weird!
+# ::tokens ["weird", "!"]
+# ::lemmas ["weird", "!"]
+(c13-0 / weird)
+
+# ::snt I guess that is why authorities kept silent about co-pilot.
+# ::tokens ["I", "guess", "that", "is", "why", "authorities", "kept", "silent", "about", "co", "-", "pilot", "."]
+# ::lemmas ["i", "guess", "that", "be", "why", "authority", "keep", "silent", "about", "co", "-", "pilot", "."]
+(c14-5 / guess-01
+       :ARG0 (c14-1 / i)
+       :ARG1 (c14-4 / cause-01
+                    :ARG0 (c14-7 / that)
+                    :ARG1 (c14-2 / keep-02
+                                 :ARG0 (c14-8 / authority)
+                                 :ARG1 (c14-6 / silent
+                                              :topic (c14-0 / aircraft
+                                                            :ARG0-of (c14-3 / pilot-01))))))
+
+# ::snt Why weren't passengers calling loved ones when they saw pilot was locked out of cockpit &amp; knew they were doomed?
+# ::tokens ["Why", "were", "n't", "passengers", "calling", "loved", "ones", "when", "they", "saw", "pilot", "was", "locked", "out", "of", "cockpit", "&", "amp", ";", "knew", "they", "were", "doomed", "?"]
+# ::lemmas ["why", "be", "not", "passenger", "call", "love", "one", "when", "they", "see", "pilot", "be", "lock", "out", "of", "cockpit", "&", "amp", ";", "know", "they", "be", "doom", "?"]
+(c15-1 / multi-sentence
+       :snt1 (c15-10 / call-02
+                     :ARG0 (c15-8 / passenger)
+                     :ARG1 (c15-4 / one
+                                  :ARG1-of (c15-0 / love-01))
+                     :ARG1-of (c15-9 / cause-01
+                                     :ARG0 (c15-17 / amr-unknown))
+                     :time (c15-13 / see-01
+                                   :ARG0 c15-8
+                                   :ARG1 (c15-12 / lock-01
+                                                 :ARG1 (c15-16 / person
+                                                               :ARG0-of (c15-3 / pilot-01))
+                                                 :ARG2 (c15-2 / out-06
+                                                              :ARG1 c15-16
+                                                              :ARG2 (c15-14 / cockpit
+                                                                            :part-of (c15-6 / and
+                                                                                            :op1 (c15-5 / engine)
+                                                                                            :op2 (c15-7 / air))))))
+                     :polarity -)
+       :snt2 (c15-15 / know-01
+                     :ARG0 c15-8
+                     :ARG1 (c15-11 / doom-01
+                                   :ARG1 c15-8)))
+
+# ::snt why not use the passcode to unlock the door from the outside?
+# ::tokens ["why", "not", "use", "the", "passcode", "to", "unlock", "the", "door", "from", "the", "outside", "?"]
+# ::lemmas ["why", "not", "use", "the", "passcode", "to", "unlock", "the", "door", "from", "the", "outside", "?"]
+(c16-0 / use-01
+       :ARG1 (c16-2 / passcode)
+       :ARG2 (c16-5 / unlock-01
+                    :ARG1 (c16-3 / door)
+                    :source (c16-1 / outside))
+       :ARG1-of (c16-4 / cause-01
+                       :ARG0 (c16-6 / amr-unknown))
+       :polarity -)
+
+# ::snt pilot terrorist?
+# ::tokens ["pilot", "terrorist", "?"]
+# ::lemmas ["pilot", "terrorist", "?"]
+(c17-1 / terrorist
+       :polarity (c17-2 / amr-unknown)
+       :mod (c17-0 / pilot))

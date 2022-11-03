@@ -1,0 +1,37 @@
+# ::snt Police are unwilling to confirm multiple suspects.
+# ::tokens ["Police", "are", "unwilling", "to", "confirm", "multiple", "suspects", "."]
+# ::lemmas ["police", "be", "unwilling", "to", "confirm", "multiple", "suspect", "."]
+(c1-0 / will-02
+      :ARG0 (c1-2 / police)
+      :ARG1 (c1-3 / confirm-01
+                  :ARG0 c1-2
+                  :ARG1 (c1-5 / person
+                              :ARG2-of (c1-4 / suspect-01)
+                              :quant (c1-1 / multiple)))
+      :polarity -)
+
+# ::snt go after the suspect til the end
+# ::tokens ["go", "after", "the", "suspect", "til", "the", "end"]
+# ::lemmas ["go", "after", "the", "suspect", "til", "the", "end"]
+(c2-4 / go-03
+      :ARG0 (c2-0 / you)
+      :ARG1 (c2-3 / person
+                  :ARG2-of (c2-5 / suspect-01))
+      :time (c2-1 / until
+                  :op1 (c2-2 / end-01))
+      :mode imperative)
+
+# ::snt Probably Buddhists or Hassidic Jews.
+# ::tokens ["Probably", "Buddhists", "or", "Hassidic", "Jews", "."]
+# ::lemmas ["probably", "Buddhists", "or", "Hassidic", "Jews", "."]
+(c3-5 / probable
+      :domain (c3-1 / or
+                    :op1 (c3-7 / person
+                               :mod (c3-6 / religious-group
+                                          :name (c3-3 / name
+                                                      :op1 "Buddhist")))
+                    :op2 (c3-0 / person
+                               :mod (c3-2 / religious-group
+                                          :name (c3-4 / name
+                                                      :op1 "Hassidic"
+                                                      :op2 "Jew")))))

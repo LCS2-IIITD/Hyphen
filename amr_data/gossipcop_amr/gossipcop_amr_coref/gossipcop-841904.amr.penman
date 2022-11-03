@@ -1,0 +1,64 @@
+# ::snt he is so jacked yikes!
+# ::tokens ["he", "is", "so", "jacked", "yikes", "!"]
+# ::lemmas ["he", "be", "so", "jacked", "yike", "!"]
+(c1-0 / yikes
+      :domain (c1-1 / he)
+      :degree (c1-2 / so)
+      :mode expressive)
+
+# ::snt These people just crave the spotlight
+# ::tokens ["These", "people", "just", "crave", "the", "spotlight"]
+# ::lemmas ["these", "people", "just", "crave", "the", "spotlight"]
+(c2-2 / crave-01
+      :ARG0 (c2-1 / person
+                  :mod (c2-4 / this))
+      :ARG1 (c2-0 / spotlight-01
+                  :ARG1 c2-1)
+      :mod (c2-3 / just))
+
+# ::snt But let's face it , this was the only offer she got (don't dislike her but let's be real life ain't easy for fading reality stars)
+# ::tokens ["But", "let", "'s", "face", "it", ",", "this", "was", "the", "only", "offer", "she", "got", "(", "do", "n't", "dislike", "her", "but", "let", "'s", "be", "real", "life", "ai", "n't", "easy", "for", "fading", "reality", "stars", ")"]
+# ::lemmas ["but", "let", "us", "face", "it", ",", "this", "be", "the", "only", "offer", "she", "get", "(", "do", "not", "dislike", "she", "but", "let", "us", "be", "real", "life", "be", "not", "easy", "for", "fade", "reality", "star", ")"]
+(c3-11 / multi-sentence
+       :snt1 (c3-12 / contrast-01
+                    :ARG2 (c3-13 / face-01
+                                 :ARG0 (c3-17 / we)
+                                 :ARG1 (c3-5 / offer-01
+                                             :ARG1 (c3-7 / this)
+                                             :mod (c3-10 / only)
+                                             :ARG1-of (c3-8 / get-01
+                                                            :ARG0 (c3-0 / she)))
+                                 :mode imperative))
+       :snt2 (c3-9 / contrast-01
+                   :ARG1 (c3-18 / dislike-01
+                                :ARG0 (c3-2 / we)
+                                :ARG1 (c3-6 / she)
+                                :polarity -)
+                   :ARG2 (c3-15 / easy-05
+                                :ARG1 (c3-1 / life
+                                            :ARG1-of (c3-14 / real-04)
+                                            :beneficiary (c3-4 / star
+                                                               :mod (c3-3 / reality)
+                                                               :ARG1-of (c3-16 / fade-01)))
+                                :polarity -)))
+
+# ::snt You only have one mom, get y'alls shit together and heal!
+# ::tokens ["You", "only", "have", "one", "mom", ",", "get", "y'alls", "shit", "together", "and", "heal", "!"]
+# ::lemmas ["you", "only", "have", "one", "mom", ",", "get", "y'alls", "shit", "together", "and", "heal", "!"]
+(c4-10 / and
+       :op1 (c4-5 / have-03
+                  :ARG0 (c4-1 / you)
+                  :ARG1 (c4-6 / person
+                              :ARG0-of (c4-7 / have-rel-role-91
+                                             :ARG1 c4-1
+                                             :ARG2 (c4-2 / mom))
+                              :quant 1)
+                  :mod (c4-0 / only))
+       :op2 (c4-9 / and
+                  :op1 (c4-11 / get-04
+                              :ARG0 c4-1
+                              :ARG1 (c4-8 / together
+                                          :domain (c4-3 / shit
+                                                        :poss c4-1)))
+                  :op2 (c4-4 / heal-01
+                             :ARG1 c4-1)))

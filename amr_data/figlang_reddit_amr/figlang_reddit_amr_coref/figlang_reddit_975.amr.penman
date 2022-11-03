@@ -1,0 +1,47 @@
+# ::snt Donald Trump and Theresa May holding hands walking to the press conference
+# ::tokens ["Donald", "Trump", "and", "Theresa", "May", "holding", "hands", "walking", "to", "the", "press", "conference"]
+# ::lemmas ["Donald", "Trump", "and", "Theresa", "May", "hold", "hand", "walk", "to", "the", "press", "conference"]
+(c1-4 / hold-01
+      :ARG0 (c1-0 / and
+                  :op1 (c1-8 / person
+                             :name (c1-9 / name
+                                         :op1 "Donald"
+                                         :op2 "Trump"))
+                  :op2 (c1-5 / person
+                             :name (c1-6 / name
+                                         :op1 "Theresa"
+                                         :op2 "May")))
+      :ARG1 (c1-7 / hand)
+      :purpose (c1-2 / walk-01
+                     :ARG0 c1-0
+                     :ARG2 (c1-1 / conference
+                                 :mod (c1-3 / press))))
+
+# ::snt No they weren't holding hands like schoolchidren, Trump was just helping her down the step (she's wearing heels)
+# ::tokens ["No", "they", "were", "n't", "holding", "hands", "like", "schoolchidren", ",", "Trump", "was", "just", "helping", "her", "down", "the", "step", "(", "she", "'s", "wearing", "heels", ")"]
+# ::lemmas ["no", "they", "be", "not", "hold", "hand", "like", "schoolchidren", ",", "Trump", "be", "just", "help", "she", "down", "the", "step", "(", "she", "be", "wear", "heel", ")"]
+(c2-4 / contrast-01
+      :ARG1 (c2-6 / hold-01
+                  :ARG0 (c2-9 / they)
+                  :ARG1 (c2-13 / hand)
+                  :ARG1-of (c2-10 / resemble-01
+                                  :ARG2 (c2-1 / hold-01
+                                              :ARG0 c2-9
+                                              :ARG1 (c2-8 / hand
+                                                          :part-of (c2-14 / person
+                                                                          :name (c2-15 / name
+                                                                                       :op1 "Schoolchidren")))))
+                  :polarity -)
+      :ARG2 (c2-7 / help-01
+                  :ARG0 c2-14
+                  :name c2-15
+                  :op1 "Trump")
+      :ARG1 (c2-0 / down-01
+                  :ARG1 c2-14
+                  :path (c2-2 / step))
+      :ARG2 c2-14
+      :mod (c2-11 / just)
+      :ARG1-of (c2-3 / cause-01
+                     :ARG0 (c2-5 / wear-01
+                                 :ARG0 c2-14
+                                 :ARG1 (c2-12 / heel))))

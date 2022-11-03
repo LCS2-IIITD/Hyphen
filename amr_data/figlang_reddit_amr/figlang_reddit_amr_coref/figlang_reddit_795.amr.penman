@@ -1,0 +1,36 @@
+# ::snt There are two types of men in the world.
+# ::tokens ["There", "are", "two", "types", "of", "men", "in", "the", "world", "."]
+# ::lemmas ["there", "be", "two", "type", "of", "man", "in", "the", "world", "."]
+(c1-1 / man
+      :mod (c1-2 / type
+                 :quant 2)
+      :location (c1-0 / world))
+
+# ::snt Ones about to save America and one is about to save his golf handicap
+# ::tokens ["Ones", "about", "to", "save", "America", "and", "one", "is", "about", "to", "save", "his", "golf", "handicap"]
+# ::lemmas ["one", "about", "to", "save", "America", "and", "one", "be", "about", "to", "save", "his", "golf", "handicap"]
+(c2-2 / and
+      :op1 (c2-0 / save-02
+                 :ARG0 (c2-9 / person
+                             :name (c2-10 / name
+                                          :op1 "Ones"))
+                 :ARG1 (c2-3 / country
+                             :name (c2-6 / name
+                                         :op1 "America"))
+                 :time (c2-11 / about-to))
+      :op2 (c2-8 / save-02
+                 :ARG0 (c2-5 / person
+                             :quant 1)
+                 :ARG1 (c2-4 / handicap-01
+                             :ARG1 c2-9
+                             :ARG2 (c2-7 / golf-01))
+                 :time (c2-1 / about-to)))
+
+# ::snt Save America from what?
+# ::tokens ["Save", "America", "from", "what", "?"]
+# ::lemmas ["Save", "America", "from", "what", "?"]
+(c3-0 / save-01
+      :ARG1 (c3-3 / country
+                  :name (c3-2 / name
+                              :op1 "America"))
+      :ARG2 (c3-1 / amr-unknown))

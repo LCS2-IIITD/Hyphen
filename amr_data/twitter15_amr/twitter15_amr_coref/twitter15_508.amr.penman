@@ -1,0 +1,61 @@
+# ::snt are they that confused?
+# ::tokens ["are", "they", "that", "confused", "?"]
+# ::lemmas ["be", "they", "that", "confuse", "?"]
+(c1-3 / confuse-01
+      :polarity (c1-0 / amr-unknown)
+      :ARG1 (c1-1 / they)
+      :degree (c1-2 / that))
+
+# ::snt Got another one for you. See if you can spot when electricity was deregulated
+# ::tokens ["Got", "another", "one", "for", "you", ".", "See", "if", "you", "can", "spot", "when", "electricity", "was", "deregulated"]
+# ::lemmas ["get", "another", "one", "for", "you", ".", "see", "if", "you", "can", "spot", "when", "electricity", "be", "deregulate"]
+(c2-8 / multi-sentence
+      :snt1 (c2-12 / get-01
+                   :ARG0 (c2-2 / i)
+                   :ARG1 (c2-5 / one
+                               :mod (c2-10 / another))
+                   :ARG2 (c2-9 / you))
+      :snt2 (c2-0 / see-01
+                  :ARG0 (c2-1 / you)
+                  :ARG1 (c2-6 / truth-value
+                              :polarity-of (c2-4 / possible-01
+                                                 :ARG1 (c2-3 / spot-01
+                                                             :ARG0 c2-1
+                                                             :ARG1 (c2-7 / regulate-01
+                                                                         :ARG1 (c2-11 / electricity)))))
+                  :mode imperative))
+
+# ::snt :Here's an example
+# ::tokens [":", "Here", "'s", "an", "example"]
+# ::lemmas [":", "here", "be", "an", "example"]
+(c3-1 / example
+      :location (c3-0 / here))
+
+# ::snt :And this guy was in on it too
+# ::tokens [":", "And", "this", "guy", "was", "in", "on", "it", "too"]
+# ::lemmas [":", "and", "this", "guy", "be", "in", "on", "it", "too"]
+(c4-4 / and
+      :op2 (c4-1 / participate-01
+                 :ARG0 (c4-5 / guy
+                             :mod (c4-2 / this))
+                 :ARG1 (c4-0 / it)
+                 :mod (c4-3 / too)))
+
+# ::snt :sich regulation isn't unprecedented. See if you can spot when oil prices were deregulated:
+# ::tokens [":", "sich", "regulation", "is", "n't", "unprecedented", ".", "See", "if", "you", "can", "spot", "when", "oil", "prices", "were", "deregulated", ":"]
+# ::lemmas [":", "sich", "regulation", "be", "not", "unprecedented", ".", "see", "if", "you", "can", "spot", "when", "oil", "price", "be", "deregulate", ":"]
+(c5-7 / multi-sentence
+      :snt1 (c5-2 / precedent
+                  :domain (c5-9 / regulate-01
+                                :mod (c5-4 / this))
+                  :polarity -)
+      :snt2 (c5-0 / see-01
+                  :ARG0 (c5-8 / you)
+                  :ARG1 (c5-5 / truth-value
+                              :polarity-of (c5-11 / possible-01
+                                                  :ARG1 (c5-1 / spot-01
+                                                              :ARG0 c5-8
+                                                              :ARG1 (c5-3 / regulate-01
+                                                                          :ARG1 (c5-10 / price-01
+                                                                                       :ARG1 (c5-6 / oil))))))
+                  :mode imperative))

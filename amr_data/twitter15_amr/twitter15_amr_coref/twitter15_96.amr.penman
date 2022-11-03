@@ -1,0 +1,57 @@
+# ::snt WHAT??
+# ::tokens ["WHAT", "?", "?"]
+# ::lemmas ["what", "?", "?"]
+(c1-0 / amr-unknown)
+
+# ::snt way to Brazil, way to my house, I understand ...
+# ::tokens ["way", "to", "Brazil", ",", "way", "to", "my", "house", ",", "I", "understand", "..."]
+# ::lemmas ["way", "to", "Brazil", ",", "way", "to", "my", "house", ",", "i", "understand", "..."]
+(c2-5 / understand-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-7 / and
+                  :op1 (c2-0 / way
+                             :direction (c2-2 / country
+                                              :name (c2-3 / name
+                                                          :op1 "Brazil")))
+                  :op2 (c2-4 / way
+                             :direction (c2-6 / house
+                                              :poss c2-1))))
+
+# ::snt Follow me plisI love you so much
+# ::tokens ["Follow", "me", "plisI", "love", "you", "so", "much"]
+# ::lemmas ["follow", "i", "plisi", "love", "you", "so", "much"]
+(c3-6 / follow-02
+      :ARG0 (c3-5 / you)
+      :ARG1 (c3-1 / i)
+      :ARG1-of (c3-4 / cause-01
+                     :ARG0 (c3-2 / love-01
+                                 :ARG0 c3-1
+                                 :ARG1 c3-5
+                                 :degree (c3-3 / much
+                                               :degree (c3-0 / so))))
+      :mode imperative)
+
+# ::snt Fredo ven a Uruguay!!
+# ::tokens ["Fredo", "ven", "a", "Uruguay", "!", "!"]
+# ::lemmas ["Fredo", "ven", "a", "Uruguay", "!", "!"]
+(c6-0 / amr-unintelligible
+      :value "Fredo ven a Uruguay")
+
+# ::snt Uruguay love you.Uruguay te ama!
+# ::tokens ["Uruguay", "love", "you", ".", "Uruguay", "te", "ama", "!"]
+# ::lemmas ["Uruguay", "love", "you", ".", "Uruguay", "te", "ama", "!"]
+(c7-2 / multi-sentence
+      :snt1 (c7-0 / love-01
+                  :ARG0 (c7-3 / country
+                              :name (c7-5 / name
+                                          :op1 "Uruguay"))
+                  :ARG1 (c7-4 / you))
+      :snt2 (c7-1 / te-amaha
+                  :mod c7-3
+                  :mode expressive))
+
+# ::snt hi love
+# ::tokens ["hi", "love"]
+# ::lemmas ["hi", "love"]
+(c8-0 / love-01
+      :mod (c8-1 / hi))

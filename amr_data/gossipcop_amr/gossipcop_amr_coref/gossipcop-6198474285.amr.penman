@@ -1,0 +1,700 @@
+# ::snt He is so insensitive
+# ::tokens ["He", "is", "so", "insensitive"]
+# ::lemmas ["he", "be", "so", "insensitive"]
+(c1-2 / sensitive-03
+      :ARG0 (c1-1 / he)
+      :degree (c1-0 / so)
+      :polarity -)
+
+# ::snt Keep going
+# ::tokens ["Keep", "going"]
+# ::lemmas ["keep", "go"]
+(c2-2 / keep-02
+      :ARG0 (c2-1 / you)
+      :ARG1 (c2-0 / go-02
+                  :ARG0 c2-1)
+      :mode imperative)
+
+# ::snt Trump is not Hispanic friendly!
+# ::tokens ["Trump", "is", "not", "Hispanic", "friendly", "!"]
+# ::lemmas ["Trump", "be", "not", "Hispanic", "friendly", "!"]
+(c3-0 / friendly-01
+      :ARG1 (c3-4 / person
+                  :name (c3-1 / name
+                              :op1 "Trump"))
+      :ARG2 (c3-2 / ethnic-group
+                  :name (c3-3 / name
+                              :op1 "Hispanic"))
+      :polarity -)
+
+# ::snt Trump is such a prick
+# ::tokens ["Trump", "is", "such", "a", "prick"]
+# ::lemmas ["Trump", "be", "such", "a", "prick"]
+(c4-1 / prick
+      :domain (c4-2 / person
+                    :name (c4-0 / name
+                                :op1 "Trump"))
+      :degree (c4-3 / such))
+
+# ::snt ... not just celebrities, People. The whole world is looking on in complete disgust as he tweets from his golf vacation while people die
+# ::tokens ["...", "not", "just", "celebrities", ",", "People", ".", "The", "whole", "world", "is", "looking", "on", "in", "complete", "disgust", "as", "he", "tweets", "from", "his", "golf", "vacation", "while", "people", "die"]
+# ::lemmas ["...", "not", "just", "celebrity", ",", "people", ".", "the", "whole", "world", "be", "look", "on", "in", "complete", "disgust", "as", "he", "tweet", "from", "his", "golf", "vacation", "while", "people", "die"]
+(c5-0 / multi-sentence
+      :snt1 (c5-7 / contrast-01
+                  :ARG1 (c5-15 / celebrity
+                               :mod (c5-11 / just
+                                           :polarity -))
+                  :ARG2 (c5-4 / person))
+      :snt2 (c5-5 / look-01
+                  :ARG0 (c5-8 / world
+                              :mod (c5-6 / whole))
+                  :ARG1 (c5-14 / disgust-01
+                               :ARG0 (c5-12 / tweet-02
+                                            :ARG0 (c5-3 / he)
+                                            :ARG1 (c5-2 / vacation-01
+                                                        :ARG0 c5-3
+                                                        :ARG1 (c5-13 / golf-01))
+                                            :time (c5-9 / die-01
+                                                        :ARG1 (c5-1 / person)))
+                               :ARG1 c5-8
+                               :ARG1-of (c5-10 / complete-02))))
+
+# ::snt civilians criticize him too, incapable of empathy in some people's darkest hour, sick narcissist.
+# ::tokens ["civilians", "criticize", "him", "too", ",", "incapable", "of", "empathy", "in", "some", "people", "'s", "darkest", "hour", ",", "sick", "narcissist", "."]
+# ::lemmas ["civilian", "criticize", "he", "too", ",", "incapable", "of", "empathy", "in", "some", "people", "'s", "darkest", "hour", ",", "sick", "narcissist", "."]
+(c6-7 / criticize-01
+      :ARG0 (c6-12 / civilist)
+      :ARG1 (c6-1 / narcissist
+                  :ARG1-of (c6-3 / sick-05)
+                  :ARG1-of (c6-8 / capable-01
+                                 :ARG2 (c6-4 / empathize-01
+                                             :ARG0 c6-1
+                                             :time (c6-5 / hour
+                                                         :poss (c6-6 / person
+                                                                     :mod (c6-0 / some))
+                                                         :ARG1-of (c6-9 / have-degree-91
+                                                                        :ARG2 (c6-11 / dark-02
+                                                                                     :ARG1 c6-5)
+                                                                        :ARG3 (c6-2 / most))))
+                                 :polarity -))
+      :mod (c6-10 / too))
+
+# ::snt Once a bully, always a bully
+# ::tokens ["Once", "a", "bully", ",", "always", "a", "bully"]
+# ::lemmas ["once", "a", "bully", ",", "always", "a", "bully"]
+(c7-4 / person
+      :ARG0-of (c7-1 / bully-01
+                     :time (c7-5 / always))
+      :domain (c7-2 / person
+                    :ARG0-of (c7-3 / bully-01)
+                    :time (c7-0 / once)))
+
+# ::snt Dude! Why are u Even on social network to protests when you literally know nothing about what celebrities actually doing atmnd donating??
+# ::tokens ["Dude", "!", "Why", "are", "u", "Even", "on", "social", "network", "to", "protests", "when", "you", "literally", "know", "nothing", "about", "what", "celebrities", "actually", "doing", "atmnd", "donating", "?", "?"]
+# ::lemmas ["dude", "!", "why", "be", "u", "even", "on", "social", "network", "to", "protest", "when", "you", "literally", "know", "nothing", "about", "what", "celebrity", "actually", "do", "atmnd", "donate", "?", "?"]
+(c8-2 / multi-sentence
+      :snt1 (c8-15 / dude
+                   :mode expressive)
+      :snt2 (c8-10 / cause-01
+                   :ARG0 (c8-14 / amr-unknown)
+                   :ARG1 (c8-0 / be-located-at-91
+                               :ARG1 (c8-1 / you)
+                               :ARG2 (c8-3 / network
+                                           :mod (c8-4 / social))
+                               :mod (c8-5 / even)
+                               :purpose (c8-7 / protest-01)
+                               :condition (c8-8 / know-01
+                                                :ARG0 c8-1
+                                                :ARG1 (c8-6 / nothing
+                                                            :topic (c8-12 / thing
+                                                                          :ARG1-of (c8-11 / donate-01
+                                                                                          :ARG0 (c8-16 / celebrity)
+                                                                                          :ARG1-of (c8-13 / actual-02))))
+                                                :manner (c8-9 / literal)))))
+
+# ::snt He is one ugly son of a bitch
+# ::tokens ["He", "is", "one", "ugly", "son", "of", "a", "bitch"]
+# ::lemmas ["he", "be", "one", "ugly", "son", "of", "a", "bitch"]
+(c9-2 / son-of-a-bitch
+      :mod (c9-0 / ugly)
+      :domain (c9-1 / he))
+
+# ::snt Thats what celebrities do best
+# ::tokens ["That", "s", "what", "celebrities", "do", "best"]
+# ::lemmas ["that", "s", "what", "celebrity", "do", "well"]
+(c10-1 / have-degree-91
+       :ARG1 (c10-3 / that)
+       :ARG2 (c10-5 / good-02
+                    :ARG1 c10-3)
+       :ARG3 (c10-0 / most)
+       :ARG5 (c10-4 / thing
+                    :ARG1-of (c10-6 / do-02
+                                    :ARG0 (c10-2 / celebrity))))
+
+# ::snt Hes a big orange pudding short of custard
+# ::tokens ["He", "s", "a", "big", "orange", "pudding", "short", "of", "custard"]
+# ::lemmas ["he", "s", "a", "big", "orange", "pudding", "short", "of", "custard"]
+(c11-3 / pudding
+       :mod (c11-0 / orange)
+       :mod (c11-1 / big)
+       :ARG1-of (c11-2 / short-06
+                       :ARG2 (c11-4 / custard)))
+
+# ::snt So Trump, what are you doing about it? It IS your responsibility.
+# ::tokens ["So", "Trump", ",", "what", "are", "you", "doing", "about", "it", "?", "It", "IS", "your", "responsibility", "."]
+# ::lemmas ["so", "Trump", ",", "what", "be", "you", "do", "about", "it", "?", "it", "be", "your", "responsibility", "."]
+(c12-2 / multi-sentence
+       :snt1 (c12-3 / say-01
+                    :ARG1 (c12-9 / do-02
+                                 :ARG0 (c12-6 / person
+                                              :name (c12-1 / name
+                                                           :op1 "Trump"))
+                                 :ARG1 (c12-8 / amr-unknown)
+                                 :ARG2 (c12-7 / it))
+                    :ARG2 c12-6)
+       :snt2 (c12-5 / responsible-03
+                    :ARG0 (c12-0 / you)
+                    :ARG1 (c12-4 / it)))
+
+# ::snt La celebridades que dieron concierto gratis para ayudar a Hillary Clinton en su campaa son los mismo que estn criticando a trump!
+# ::tokens ["La", "celebridades", "que", "dieron", "concierto", "gratis", "para", "ayudar", "a", "Hillary", "Clinton", "en", "su", "campaa", "son", "los", "mismo", "que", "estn", "criticando", "a", "trump", "!"]
+# ::lemmas ["La", "celebridade", "que", "dieron", "concierto", "gratis", "para", "ayudar", "a", "Hillary", "Clinton", "en", "su", "campaa", "son", "los", "mismo", "que", "estn", "criticando", "a", "trump", "!"]
+(c13-2 / multi-sentence
+       :snt1 (c13-5 / event
+                    :name (c13-1 / name
+                                 :op1 "La"
+                                 :op2 "Celebridades")
+                    :ARG0-of (c13-6 / have-03
+                                    :ARG1 (c13-10 / concierto
+                                                  :mod (c13-15 / gratis))))
+       :snt2 (c13-14 / ayudar-01
+                     :ARG0 (c13-7 / person
+                                  :name (c13-8 / name
+                                               :op1 "Hillary"
+                                               :op2 "Clinton"))
+                     :ARG1 (c13-17 / campaa
+                                   :poss c13-7)
+                     :ARG1-of (c13-11 / cause-01
+                                      :ARG0 (c13-3 / person
+                                                   :ARG0-of (c13-12 / have-rel-role-91
+                                                                    :ARG1 c13-7
+                                                                    :ARG2 (c13-4 / son))
+                                                   :mod (c13-9 / mismo
+                                                               :ARG0-of (c13-0 / criticize-01
+                                                                               :ARG1 (c13-13 / trump)
+                                                                               :ARG1-of (c13-16 / possible-01)))))))
+
+# ::snt How does it feel to be so HATED, ? Well-deserved disgust.
+# ::tokens ["How", "does", "it", "feel", "to", "be", "so", "HATED", ",", "?", "Well", "-", "deserved", "disgust", "."]
+# ::lemmas ["how", "do", "it", "feel", "to", "be", "so", "hated", ",", "?", "well", "-", "deserve", "disgust", "."]
+(c14-1 / multi-sentence
+       :snt1 (c14-0 / feel-01
+                    :ARG1 (c14-3 / hate-01
+                                 :degree (c14-2 / so))
+                    :manner (c14-7 / amr-unknown))
+       :snt2 (c14-8 / disgust-01
+                    :ARG1-of (c14-5 / deserve-01
+                                    :degree (c14-4 / well)))
+       :snt3 (c14-6 / amr-unknown))
+
+# ::snt Superior, no. Kind human being yes. Glad you donated! Well, I hope you have a nice day!
+# ::tokens ["Superior", ",", "no", ".", "Kind", "human", "being", "yes", ".", "Glad", "you", "donated", "!", "Well", ",", "I", "hope", "you", "have", "a", "nice", "day", "!"]
+# ::lemmas ["Superior", ",", "no", ".", "kind", "human", "be", "yes", ".", "glad", "you", "donate", "!", "well", ",", "i", "hope", "you", "have", "a", "nice", "day", "!"]
+(c15-3 / multi-sentence
+       :snt1 (c15-13 / and
+                     :op1 (c15-4 / superior)
+                     :op2 (c15-2 / no))
+       :snt2 (c15-0 / being
+                    :mod (c15-6 / human)
+                    :mod (c15-7 / kind))
+       :snt3 (c15-14 / glad-02
+                     :ARG0 (c15-15 / donate-01
+                                   :ARG0 (c15-1 / you)))
+       :snt4 (c15-11 / hope-01
+                     :ARG0 (c15-12 / i)
+                     :ARG1 (c15-5 / have-03
+                                  :ARG0 (c15-16 / you)
+                                  :ARG1 (c15-10 / day
+                                                :ARG1-of (c15-8 / nice-01)))
+                     :mod (c15-9 / well)))
+
+# ::snt When will these so called "celebrities" understand we don't give a damn what they think or say??
+# ::tokens ["When", "will", "these", "so", "called", "\"", "celebrities", "\"", "understand", "we", "do", "n't", "give", "a", "damn", "what", "they", "think", "or", "say", "?", "?"]
+# ::lemmas ["when", "will", "these", "so", "call", "\"", "celebrity", "\"", "understand", "we", "do", "not", "give", "a", "damn", "what", "they", "think", "or", "say", "?", "?"]
+(c16-11 / understand-01
+        :ARG0 (c16-5 / celebrity
+                     :mod (c16-8 / this)
+                     :mod (c16-2 / so-called))
+        :ARG1 (c16-9 / give-16
+                     :ARG0 (c16-6 / we)
+                     :ARG1 (c16-10 / damn)
+                     :ARG2 (c16-0 / or
+                                  :op1 (c16-12 / thing
+                                               :ARG1-of (c16-7 / think-01
+                                                               :ARG0 c16-5))
+                                  :op2 (c16-4 / thing
+                                              :ARG1-of (c16-1 / say-01
+                                                              :ARG0 c16-5)))
+                     :polarity -)
+        :time (c16-3 / amr-unknown))
+
+# ::snt Donald Trump is vindictive, racist, greed, and selfish. He has a hard time "helping" anyone but himself.
+# ::tokens ["Donald", "Trump", "is", "vindictive", ",", "racist", ",", "greed", ",", "and", "selfish", ".", "He", "has", "a", "hard", "time", "\"", "helping", "\"", "anyone", "but", "himself", "."]
+# ::lemmas ["Donald", "Trump", "be", "vindictive", ",", "racist", ",", "greed", ",", "and", "selfish", ".", "he", "have", "a", "hard", "time", "\"", "help", "\"", "anyone", "but", "himself", "."]
+(c17-1 / multi-sentence
+       :snt1 (c17-11 / and
+                     :op1 (c17-4 / vindictive
+                                 :domain (c17-7 / person
+                                                :name (c17-0 / name
+                                                             :op1 "Donald"
+                                                             :op2 "Trump")))
+                     :op2 (c17-3 / racist
+                                 :domain c17-7)
+                     :op3 (c17-12 / greed
+                                  :domain c17-7)
+                     :op4 (c17-2 / selfish
+                                 :domain c17-7))
+       :snt2 (c17-6 / hard-02
+                    :ARG1 (c17-9 / help-01
+                                 :ARG0 (c17-5 / he)
+                                 :ARG2 (c17-10 / anyone
+                                               :ARG2-of (c17-8 / except-01
+                                                               :ARG1 c17-5)))))
+
+# ::snt I've donated, supplies and money. What have you done to help our fellow citizens?
+# ::tokens ["I", "'ve", "donated", ",", "supplies", "and", "money", ".", "What", "have", "you", "done", "to", "help", "our", "fellow", "citizens", "?"]
+# ::lemmas ["i", "'ve", "donate", ",", "supply", "and", "money", ".", "what", "have", "you", "do", "to", "help", "our", "fellow", "citizen", "?"]
+(c18-2 / multi-sentence
+       :snt1 (c18-10 / and
+                     :op1 (c18-12 / donate-01
+                                  :ARG0 (c18-9 / i))
+                     :op2 (c18-3 / supply-01
+                                 :ARG0 c18-9)
+                     :op3 (c18-4 / money))
+       :snt2 (c18-7 / do-02
+                    :ARG0 (c18-1 / you)
+                    :ARG1 (c18-11 / amr-unknown)
+                    :ARG2 (c18-5 / help-01
+                                 :ARG0 c18-1
+                                 :ARG2 (c18-6 / citizen
+                                              :mod (c18-0 / fellow)
+                                              :poss (c18-8 / we)))))
+
+# ::snt Not just celebrities, everyone with sense of humanity. Fox propaganda filters the reality so those lame viewers don't get upset...fake storm
+# ::tokens ["Not", "just", "celebrities", ",", "everyone", "with", "sense", "of", "humanity", ".", "Fox", "propaganda", "filters", "the", "reality", "so", "those", "lame", "viewers", "do", "n't", "get", "upset", "...", "fake", "storm"]
+# ::lemmas ["not", "just", "celebrity", ",", "everyone", "with", "sense", "of", "humanity", ".", "Fox", "propaganda", "filter", "the", "reality", "so", "those", "lame", "viewer", "do", "not", "get", "upset", "...", "fake", "storm"]
+(c19-9 / multi-sentence
+       :snt1 (c19-11 / contrast-01
+                     :ARG1 (c19-7 / celebrity
+                                  :mod (c19-5 / just
+                                              :polarity -))
+                     :ARG2 (c19-16 / everyone
+                                   :ARG0-of (c19-0 / sense-01
+                                                   :ARG1 (c19-4 / humanity))))
+       :snt2 (c19-13 / filter-02
+                     :ARG0 (c19-17 / propaganda
+                                   :source (c19-8 / broadcast-program
+                                                  :name (c19-14 / name
+                                                                :op1 "Fox")))
+                     :ARG1 (c19-15 / reality)
+                     :purpose (c19-12 / upset-01
+                                      :ARG1 (c19-10 / person
+                                                    :ARG0-of (c19-3 / view-01)
+                                                    :mod (c19-1 / lame)
+                                                    :mod (c19-6 / that))
+                                      :polarity -))
+       :snt3 (c19-2 / storm
+                    :ARG1-of (c19-18 / fake-02)))
+
+# ::snt Or maybe you should go help. I'm well aware that he sent that hospital ship, The Comfort, too many days late.
+# ::tokens ["Or", "maybe", "you", "should", "go", "help", ".", "I", "'m", "well", "aware", "that", "he", "sent", "that", "hospital", "ship", ",", "The", "Comfort", ",", "too", "many", "days", "late", "."]
+# ::lemmas ["or", "maybe", "you", "should", "go", "help", ".", "i", "be", "well", "aware", "that", "he", "send", "that", "hospital", "ship", ",", "the", "Comfort", ",", "too", "many", "day", "late", "."]
+(c20-11 / multi-sentence
+        :snt1 (c20-3 / or
+                     :op2 (c20-16 / possible-01
+                                  :ARG1 (c20-15 / recommend-01
+                                                :ARG1 (c20-10 / go-05
+                                                              :ARG0 (c20-5 / you)
+                                                              :ARG1 (c20-7 / help-01
+                                                                           :ARG0 c20-5))
+                                                :ARG2 c20-5)))
+        :snt2 (c20-2 / realize-01
+                     :ARG0 (c20-19 / i)
+                     :ARG1 (c20-0 / send-01
+                                  :ARG0 (c20-18 / he)
+                                  :ARG1 (c20-4 / ship
+                                               :name (c20-14 / name
+                                                             :op1 "The"
+                                                             :op2 "Comfort")
+                                               :mod (c20-6 / hospital)
+                                               :mod (c20-9 / that)
+                                               :ARG1-of (c20-1 / late-02
+                                                               :ARG2 (c20-20 / day
+                                                                             :ARG1-of (c20-13 / have-quant-91
+                                                                                              :ARG2 (c20-8 / many)
+                                                                                              :ARG3 (c20-12 / too))))))
+                     :degree (c20-17 / well)))
+
+# ::snt Shocker celebrities run their mouth once again
+# ::tokens ["Shocker", "celebrities", "run", "their", "mouth", "once", "again"]
+# ::lemmas ["shocker", "celebrity", "run", "their", "mouth", "once", "again"]
+(c21-3 / run-01
+       :ARG0 (c21-4 / celebrity
+                    :part (c21-1 / mouth
+                                 :ARG1-of c21-3))
+       :ARG1-of (c21-2 / shock-01)
+       :mod (c21-5 / again
+                   :mod (c21-0 / once)))
+
+# ::snt Well, he's president. I would hope he'd send as much as he could
+# ::tokens ["Well", ",", "he", "'s", "president", ".", "I", "would", "hope", "he", "'d", "send", "as", "much", "as", "he", "could"]
+# ::lemmas ["well", ",", "he", "be", "president", ".", "i", "would", "hope", "he", "would", "send", "as", "much", "as", "he", "could"]
+(c22-1 / multi-sentence
+       :snt1 (c22-5 / have-org-role-91
+                    :ARG0 (c22-11 / he)
+                    :ARG2 (c22-6 / president)
+                    :mod (c22-10 / well))
+       :snt2 (c22-4 / hope-01
+                    :ARG0 (c22-12 / i)
+                    :ARG1 (c22-3 / send-01
+                                 :ARG0 (c22-14 / he)
+                                 :ARG1 (c22-13 / thing
+                                               :ARG1-of (c22-7 / have-quant-91
+                                                               :ARG2 (c22-8 / much)
+                                                               :ARG3 (c22-9 / equal)
+                                                               :ARG4 (c22-2 / possible-01
+                                                                            :ARG1 (c22-0 / send-01
+                                                                                         :ARG0 c22-14)))))))
+
+# ::snt Suddenly life has become a Leslie Nielsen movie, without Leslie Nielsen, and without the fun.
+# ::tokens ["Suddenly", "life", "has", "become", "a", "Leslie", "Nielsen", "movie", ",", "without", "Leslie", "Nielsen", ",", "and", "without", "the", "fun", "."]
+# ::lemmas ["suddenly", "life", "have", "become", "a", "Leslie", "Nielsen", "movie", ",", "without", "Leslie", "Nielsen", ",", "and", "without", "the", "fun", "."]
+(c23-1 / become-01
+       :ARG1 (c23-6 / life)
+       :ARG2 (c23-2 / movie
+                    :mod (c23-5 / person
+                                :name (c23-3 / name
+                                             :op1 "Leslie"
+                                             :op2 "Nielsen"))
+                    :ARG1-of (c23-0 / fun-01
+                                    :polarity -))
+       :manner (c23-4 / sudden))
+
+# ::snt Its not a state, they should be greatful for the help they get, we are not going to fix their mess. No bk bailout
+# ::tokens ["Its", "not", "a", "state", ",", "they", "should", "be", "greatful", "for", "the", "help", "they", "get", ",", "we", "are", "not", "going", "to", "fix", "their", "mess", ".", "No", "bk", "bailout"]
+# ::lemmas ["its", "not", "a", "state", ",", "they", "should", "be", "greatful", "for", "the", "help", "they", "get", ",", "we", "be", "not", "go", "to", "fix", "their", "mess", ".", "no", "bk", "bailout"]
+(c24-2 / multi-sentence
+       :snt1 (c24-3 / state
+                    :domain (c24-10 / it)
+                    :polarity -)
+       :snt2 (c24-4 / recommend-01
+                    :ARG1 (c24-12 / great
+                                  :domain (c24-11 / they)
+                                  :topic (c24-5 / help-01
+                                                :ARG1 c24-11))
+                    :ARG1-of (c24-8 / cause-01
+                                    :ARG0 (c24-0 / fix-02
+                                                 :ARG0 (c24-9 / we)
+                                                 :ARG1 (c24-6 / mess
+                                                              :poss c24-11)
+                                                 :polarity -)))
+       :snt3 (c24-1 / bail-out-02
+                    :ARG1 (c24-7 / bank)
+                    :polarity -))
+
+# ::snt , PLEASE move Republican states, VOTE THEM OUT when able, FORCE Congress make PR the st State RT
+# ::tokens [",", "PLEASE", "move", "Republican", "states", ",", "VOTE", "THEM", "OUT", "when", "able", ",", "FORCE", "Congress", "make", "PR", "the", "st", "State", "RT"]
+# ::lemmas [",", "please", "move", "Republican", "state", ",", "VOTE", "THEM", "OUT", "when", "able", ",", "FORCE", "Congress", "make", "PR", "the", "st", "State", "RT"]
+(c25-15 / and
+        :op1 (c25-2 / move-01
+                    :ARG0 (c25-1 / you)
+                    :ARG1 (c25-4 / state
+                                 :ARG0-of (c25-8 / have-org-role-91
+                                                 :ARG1 (c25-9 / political-party
+                                                              :name (c25-3 / name
+                                                                           :op1 "Republican"
+                                                                           :op2 "Party"))))
+                    :mode imperative
+                    :polite +)
+        :op2 (c25-7 / vote-out-03
+                    :ARG0 c25-1
+                    :ARG1 c25-4
+                    :time (c25-5 / possible-01)
+                    :mode imperative)
+        :op3 (c25-0 / force-01
+                    :ARG0 c25-1
+                    :ARG1 (c25-16 / government-organization
+                                  :name (c25-10 / name
+                                                :op1 "Congress"))
+                    :ARG2 (c25-11 / make-02
+                                  :ARG0 c25-16
+                                  :ARG1 (c25-13 / thing
+                                                :ARG1-of (c25-6 / report-01
+                                                                :ARG0 (c25-14 / government-organization
+                                                                              :name (c25-12 / name
+                                                                                            :op1 "State"
+                                                                                            :op2 "of"
+                                                                                            :op3 "Representatives")))))
+                    :mode imperative
+                    :polite +))
+
+# ::snt All the people saying they don't care about a "celebrities" opinion, yet.... They elected one into office. The irony.
+# ::tokens ["All", "the", "people", "saying", "they", "do", "n't", "care", "about", "a", "\"", "celebrities", "\"", "opinion", ",", "yet", "....", "They", "elected", "one", "into", "office", ".", "The", "irony", "."]
+# ::lemmas ["all", "the", "people", "say", "they", "do", "not", "care", "about", "a", "\"", "celebrity", "\"", "opinion", ",", "yet", "....", "they", "elect", "one", "into", "office", ".", "the", "irony", "."]
+(c26-3 / multi-sentence
+       :snt1 (c26-6 / have-concession-91
+                    :ARG1 (c26-4 / say-01
+                                 :ARG0 (c26-7 / person
+                                              :mod (c26-11 / all))
+                                 :ARG1 (c26-8 / care-01
+                                              :ARG0 c26-7
+                                              :ARG1 (c26-0 / opine-01
+                                                           :ARG0 (c26-13 / celebrity))
+                                              :polarity -))
+                    :ARG2 (c26-2 / yet))
+       :snt2 (c26-5 / elect-01
+                    :ARG0 (c26-9 / they)
+                    :ARG1 (c26-1 / one)
+                    :ARG2 (c26-12 / office))
+       :snt3 (c26-10 / irony))
+
+# ::snt Heartless, cruel bully that only cares about himself and his whites. Now his base is calling Latinos lazy, that they want others help them
+# ::tokens ["Heartless", ",", "cruel", "bully", "that", "only", "cares", "about", "himself", "and", "his", "whites", ".", "Now", "his", "base", "is", "calling", "Latinos", "lazy", ",", "that", "they", "want", "others", "help", "them"]
+# ::lemmas ["heartless", ",", "cruel", "bully", "that", "only", "care", "about", "himself", "and", "his", "white", ".", "now", "his", "base", "be", "call", "Latinos", "lazy", ",", "that", "they", "want", "other", "help", "they"]
+(c27-12 / multi-sentence
+        :snt1 (c27-11 / bully
+                      :ARG0-of (c27-15 / care-01
+                                       :ARG1 (c27-8 / and
+                                                    :op1 c27-11
+                                                    :op2 (c27-18 / person
+                                                                 :ARG1-of (c27-19 / white-02)))
+                                       :mod (c27-4 / only))
+                      :mod (c27-6 / heartless)
+                      :ARG0-of (c27-9 / cruel-01))
+        :snt2 (c27-3 / call-01
+                     :ARG0 (c27-0 / base
+                                  :poss (c27-20 / he))
+                     :ARG1 (c27-13 / person
+                                   :mod (c27-17 / ethnic-group
+                                                :name (c27-16 / name
+                                                              :op1 "Latino")))
+                     :ARG2 (c27-7 / and
+                                  :op1 (c27-1 / lazy)
+                                  :op2 (c27-2 / want-01
+                                              :ARG0 c27-13
+                                              :ARG1 (c27-5 / help-01
+                                                           :ARG0 (c27-10 / other)
+                                                           :ARG2 c27-13)))
+                     :time (c27-14 / now)))
+
+# ::snt Funny how celebs were able to get things to people on the island quicker than those containers Trump sent
+# ::tokens ["Funny", "how", "celebs", "were", "able", "to", "get", "things", "to", "people", "on", "the", "island", "quicker", "than", "those", "containers", "Trump", "sent"]
+# ::lemmas ["funny", "how", "celebs", "be", "able", "to", "get", "thing", "to", "people", "on", "the", "island", "quick", "than", "those", "container", "Trump", "send"]
+(c28-0 / funny
+       :domain (c28-10 / thing
+                       :manner-of (c28-6 / possible-01
+                                         :ARG1 (c28-11 / get-05
+                                                       :ARG0 (c28-7 / celebrity)
+                                                       :ARG1 (c28-15 / thing)
+                                                       :ARG2 (c28-2 / person
+                                                                    :location (c28-9 / island))
+                                                       :manner (c28-12 / quick-02
+                                                                       :ARG2-of (c28-5 / have-degree-91
+                                                                                       :ARG1 c28-11
+                                                                                       :ARG3 (c28-1 / more)
+                                                                                       :ARG4 (c28-14 / container
+                                                                                                     :mod (c28-13 / that)
+                                                                                                     :ARG1-of (c28-3 / send-01
+                                                                                                                     :ARG0 (c28-8 / person
+                                                                                                                                  :name (c28-4 / name
+                                                                                                                                               :op1 "Trump"))))))))))
+
+# ::snt I agree that citizens need to get to work along with the aid workers. When will people stop criticizing and just help out?
+# ::tokens ["I", "agree", "that", "citizens", "need", "to", "get", "to", "work", "along", "with", "the", "aid", "workers", ".", "When", "will", "people", "stop", "criticizing", "and", "just", "help", "out", "?"]
+# ::lemmas ["i", "agree", "that", "citizen", "need", "to", "get", "to", "work", "along", "with", "the", "aid", "worker", ".", "when", "will", "people", "stop", "criticize", "and", "just", "help", "out", "?"]
+(c29-1 / multi-sentence
+       :snt1 (c29-13 / agree-01
+                     :ARG0 (c29-12 / i)
+                     :ARG1 (c29-0 / need-01
+                                  :ARG0 (c29-8 / citizen)
+                                  :ARG1 (c29-14 / get-05
+                                                :ARG1 c29-8
+                                                :ARG2 (c29-9 / work-01
+                                                             :ARG0 c29-8
+                                                             :accompanier (c29-6 / person
+                                                                                 :ARG0-of (c29-7 / work-01
+                                                                                                 :ARG1 (c29-15 / aid-01)))))))
+       :snt2 (c29-10 / and
+                     :op1 (c29-2 / stop-01
+                                 :ARG0 (c29-3 / person)
+                                 :ARG1 (c29-16 / criticize-01
+                                               :ARG0 c29-3))
+                     :op2 (c29-5 / help-out-03
+                                 :ARG0 c29-3
+                                 :mod (c29-11 / just))
+                     :time (c29-4 / amr-unknown)))
+
+# ::snt Celebrities will say anything to be quoted by the Fake News..
+# ::tokens ["Celebrities", "will", "say", "anything", "to", "be", "quoted", "by", "the", "Fake", "News", ".."]
+# ::lemmas ["celebrity", "will", "say", "anything", "to", "be", "quote", "by", "the", "Fake", "News", ".."]
+(c30-2 / say-01
+       :ARG0 (c30-3 / celebrity)
+       :ARG1 (c30-5 / anything)
+       :ARG3 (c30-4 / quote-01
+                    :ARG0 (c30-0 / broadcast-program
+                                 :name (c30-1 / name
+                                              :op1 " Fake"
+                                              :op2 "News"))
+                    :ARG2 c30-3))
+
+# ::snt Why don't they go to pr and help unload all the cartons waiting to be given out. Wait that would mean they have to do something besides talk
+# ::tokens ["Why", "do", "n't", "they", "go", "to", "pr", "and", "help", "unload", "all", "the", "cartons", "waiting", "to", "be", "given", "out", ".", "Wait", "that", "would", "mean", "they", "have", "to", "do", "something", "besides", "talk"]
+# ::lemmas ["why", "do", "not", "they", "go", "to", "pr", "and", "help", "unload", "all", "the", "carton", "wait", "to", "be", "give", "out", ".", "wait", "that", "would", "mean", "they", "have", "to", "do", "something", "besides", "talk"]
+(c31-12 / multi-sentence
+        :snt1 (c31-13 / cause-01
+                      :ARG0 (c31-9 / amr-unknown)
+                      :ARG1 (c31-7 / and
+                                   :op1 (c31-10 / go-02
+                                                :ARG0 (c31-8 / they)
+                                                :ARG4 (c31-17 / pr))
+                                   :op2 (c31-4 / help-01
+                                               :ARG0 c31-8
+                                               :ARG1 (c31-15 / unload-01
+                                                             :ARG1 (c31-11 / carton
+                                                                           :mod (c31-6 / all))
+                                                             :ARG2 (c31-18 / wait-01
+                                                                           :ARG1 c31-11
+                                                                           :ARG2 (c31-2 / give-out-06
+                                                                                        :ARG1 c31-11))))
+                                   :polarity -))
+        :snt2 (c31-5 / mean-01
+                     :ARG1 (c31-14 / that)
+                     :ARG2 (c31-3 / obligate-01
+                                  :ARG1 (c31-19 / they)
+                                  :ARG2 (c31-20 / do-02
+                                                :ARG0 c31-19
+                                                :ARG1 (c31-0 / something
+                                                             :ARG2-of (c31-16 / except-01
+                                                                              :ARG1 (c31-1 / talk-01
+                                                                                           :ARG0 c31-19)))))))
+
+# ::snt He is a complete disaster! They should plant his ass in the hardest hit areas in Puerto Rico with no support
+# ::tokens ["He", "is", "a", "complete", "disaster", "!", "They", "should", "plant", "his", "ass", "in", "the", "hardest", "hit", "areas", "in", "Puerto", "Rico", "with", "no", "support"]
+# ::lemmas ["he", "be", "a", "complete", "disaster", "!", "they", "should", "plant", "his", "ass", "in", "the", "hard", "hit", "area", "in", "Puerto", "Rico", "with", "no", "support"]
+(c32-0 / multi-sentence
+       :snt1 (c32-13 / disaster
+                     :ARG1-of (c32-8 / complete-02)
+                     :domain (c32-5 / he
+                                    :part (c32-12 / ass)))
+       :snt2 (c32-3 / recommend-01
+                    :ARG1 (c32-6 / plant-01
+                                 :ARG0 (c32-10 / they)
+                                 :ARG1 c32-12
+                                 :ARG2 (c32-11 / area
+                                               :ARG1-of (c32-9 / hit-01
+                                                               :ARG1-of (c32-4 / hard-02
+                                                                               :ARG2-of (c32-14 / have-degree-91
+                                                                                                :ARG1 c32-9
+                                                                                                :ARG3 (c32-7 / most))))
+                                               :part c32-12
+                                               :location (c32-15 / territory
+                                                                 :name (c32-1 / name
+                                                                              :op1 "Puerto"
+                                                                              :op2 "Rico")))
+                                 :manner (c32-2 / support-01
+                                                :ARG0 c32-10
+                                                :polarity -))))
+
+# ::snt Yes, actually they have. Pitbull had his private plane pick up cancer patients, jlo gave a million dollars and more. I could keep going...
+# ::tokens ["Yes", ",", "actually", "they", "have", ".", "Pitbull", "had", "his", "private", "plane", "pick", "up", "cancer", "patients", ",", "jlo", "gave", "a", "million", "dollars", "and", "more", ".", "I", "could", "keep", "going", "..."]
+# ::lemmas ["yes", ",", "actually", "they", "have", ".", "Pitbull", "have", "his", "private", "plane", "pick", "up", "cancer", "patient", ",", "jlo", "give", "a", "million", "dollar", "and", "more", ".", "i", "could", "keep", "go", "..."]
+(c33-11 / multi-sentence
+        :snt1 (c33-3 / have-06
+                     :ARG0 (c33-7 / they)
+                     :ARG1-of (c33-8 / actual-02))
+        :snt2 (c33-6 / and
+                     :op1 (c33-17 / have-04
+                                  :ARG0 (c33-16 / person
+                                                :name (c33-15 / name
+                                                              :op1 "Pitbull"))
+                                  :ARG1 (c33-12 / plane
+                                                :ARG1-of (c33-2 / private-03)
+                                                :poss c33-16))
+                     :op2 (c33-9 / give-01
+                                 :ARG0 (c33-0 / person
+                                              :name (c33-13 / name
+                                                            :op1 "Jlo"))
+                                 :ARG1 (c33-4 / monetary-quantity
+                                              :unit (c33-19 / dollar)
+                                              :quant 1000000))
+                     :op3 (c33-14 / more))
+        :snt3 (c33-10 / possible-01
+                      :ARG1 (c33-5 / keep-02
+                                   :ARG0 (c33-18 / i)
+                                   :ARG1 (c33-1 / go-02
+                                                :ARG0 c33-18))))
+
+# ::snt Apparently celebs aren't supposed to have opinions but everyone else can?
+# ::tokens ["Apparently", "celebs", "are", "n't", "supposed", "to", "have", "opinions", "but", "everyone", "else", "can", "?"]
+# ::lemmas ["apparently", "celebs", "be", "not", "suppose", "to", "have", "opinion", "but", "everyone", "else", "can", "?"]
+(c34-5 / contrast-01
+       :ARG1 (c34-2 / suppose-02
+                    :ARG1 (c34-9 / celebrity)
+                    :ARG2 (c34-0 / opine-01
+                                 :ARG0 c34-9)
+                    :ARG1-of (c34-7 / appear-02)
+                    :polarity -)
+       :ARG2 (c34-4 / possible-01
+                    :ARG1 (c34-1 / opine-01
+                                 :ARG0 (c34-3 / everyone
+                                              :mod (c34-8 / else))))
+       :polarity (c34-6 / amr-unknown))
+
+# ::snt We dont care about celeb's opinions. Do what you are paid for --act.
+# ::tokens ["We", "do", "nt", "care", "about", "celeb", "'s", "opinions", ".", "Do", "what", "you", "are", "paid", "for", "--act", "."]
+# ::lemmas ["we", "do", "not", "care", "about", "celeb", "'s", "opinion", ".", "do", "what", "you", "be", "pay", "for", "--act", "."]
+(c35-2 / multi-sentence
+       :snt1 (c35-5 / care-01
+                    :ARG0 (c35-6 / we)
+                    :ARG1 (c35-0 / opine-01
+                                 :ARG0 (c35-9 / celebrity))
+                    :polarity -)
+       :snt2 (c35-8 / do-02
+                    :ARG0 (c35-1 / you)
+                    :ARG1 (c35-7 / thing
+                                 :ARG3-of (c35-4 / pay-01
+                                                 :ARG2 c35-1))
+                    :mode imperative)
+       :snt3 (c35-3 / act-01
+                    :ARG0 c35-1
+                    :mode imperative))
+
+# ::snt How much longer....he bites
+# ::tokens ["How", "much", "longer", "....", "he", "bites"]
+# ::lemmas ["how", "much", "long", "....", "he", "bite"]
+(c36-1 / multi-sentence
+       :snt1 (c36-3 / have-degree-91
+                    :ARG2 (c36-4 / long-03)
+                    :ARG3 (c36-2 / more
+                                 :quant (c36-6 / amr-unknown)))
+       :snt2 (c36-0 / bite-01
+                    :ARG0 (c36-5 / he)))
+
+# ::snt The mayor should be criticized for not being effective or proactive, no plan
+# ::tokens ["The", "mayor", "should", "be", "criticized", "for", "not", "being", "effective", "or", "proactive", ",", "no", "plan"]
+# ::lemmas ["the", "mayor", "should", "be", "criticize", "for", "not", "be", "effective", "or", "proactive", ",", "no", "plan"]
+(c37-3 / recommend-01
+       :ARG1 (c37-8 / criticize-01
+                    :ARG1 (c37-6 / person
+                                 :ARG0-of (c37-5 / have-org-role-91
+                                                 :ARG2 (c37-1 / mayor)))
+                    :ARG2 (c37-0 / or
+                                 :op1 (c37-4 / effective-04
+                                             :ARG0 c37-6
+                                             :polarity -)
+                                 :op2 (c37-2 / proactive
+                                             :domain c37-6
+                                             :polarity -)
+                                 :ARG1-of (c37-7 / mean-01
+                                                 :ARG2 (c37-9 / plan-01
+                                                              :polarity -)))))

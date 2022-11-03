@@ -1,0 +1,51 @@
+# ::snt Except that the Spanish title is "Los ltimos Jedi". Plural.
+# ::tokens ["Except", "that", "the", "Spanish", "title", "is", "\"", "Los", "ltimos", "Jedi", "\"", ".", "Plural", "."]
+# ::lemmas ["except", "that", "the", "Spanish", "title", "be", "\"", "Los", "ltimos", "Jedi", "\"", ".", "Plural", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-3 / except-01
+                  :ARG1 (c1-7 / title-01
+                              :ARG2 (c1-0 / book
+                                          :name (c1-1 / name
+                                                      :op1 "Los"
+                                                      :op2 "Ltimos"
+                                                      :op3 "Jedi"))
+                              :mod (c1-5 / language
+                                         :name (c1-4 / name
+                                                     :op1 "Spanish"))))
+      :snt2 (c1-6 / Plural))
+
+# ::snt I want it to be a surprise because going into spoilers upsets and I'm not going to upset him
+# ::tokens ["I", "want", "it", "to", "be", "a", "surprise", "because", "going", "into", "spoilers", "upsets", "and", "I", "'m", "not", "going", "to", "upset", "him"]
+# ::lemmas ["i", "want", "it", "to", "be", "a", "surprise", "because", "go", "into", "spoiler", "upset", "and", "i", "be", "not", "go", "to", "upset", "he"]
+(c2-4 / cause-01
+      :ARG0 (c2-7 / and
+                  :op1 (c2-8 / upset-01
+                             :ARG0 (c2-6 / i)
+                             :ARG1 (c2-2 / he)
+                             :polarity -)
+                  :op2 (c2-3 / upset-01
+                             :ARG0 c2-6
+                             :ARG1 c2-2
+                             :polarity -))
+      :ARG1 (c2-5 / want-01
+                  :ARG0 c2-6
+                  :ARG1 (c2-0 / surprise-01
+                              :ARG0 (c2-1 / it))))
+
+# ::snt Jar jar binks!
+# ::tokens ["Jar", "jar", "binks", "!"]
+# ::lemmas ["Jar", "jar", "bink", "!"]
+(c3-1 / bink
+      :mod (c3-2 / jar
+                 :mod (c3-0 / product
+                            :name (c3-3 / name
+                                        :op1 "Jar")))
+      :mode expressive)
+
+# ::snt Luke, presumably
+# ::tokens ["Luke", ",", "presumably"]
+# ::lemmas ["Luke", ",", "presumably"]
+(c4-1 / presume-01
+      :ARG1 (c4-2 / person
+                  :name (c4-0 / name
+                              :op1 "Luke")))

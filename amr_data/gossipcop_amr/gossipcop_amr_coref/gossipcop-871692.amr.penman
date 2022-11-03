@@ -1,0 +1,97 @@
+# ::snt Enough of Jennifer please
+# ::tokens ["Enough", "of", "Jennifer", "please"]
+# ::lemmas ["enough", "of", "Jennifer", "please"]
+(c1-2 / have-quant-91
+      :ARG3 (c1-1 / enough)
+      :ARG6 (c1-3 / person
+                  :name (c1-0 / name
+                              :op1 "Jennifer"))
+      :polite +)
+
+# ::snt It's a no from me for Lisa. Lmao.
+# ::tokens ["It", "'s", "a", "no", "from", "me", "for", "Lisa", ".", "Lmao", "."]
+# ::lemmas ["it", "be", "a", "no", "from", "i", "for", "Lisa", ".", "Lmao", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-0 / no
+                  :domain (c2-6 / it)
+                  :source (c2-2 / i)
+                  :beneficiary (c2-4 / person
+                                     :name (c2-3 / name
+                                                 :op1 "Lisa")))
+      :snt2 (c2-5 / laugh-01
+                  :ARG0 c2-2
+                  :mode expressive)
+      :manner (c2-7 / loud))
+
+# ::snt What about Lisa Kudrow???
+# ::tokens ["What", "about", "Lisa", "Kudrow", "?", "?", "?"]
+# ::lemmas ["what", "about", "Lisa", "Kudrow", "?", "?", "?"]
+(c3-2 / amr-unknown
+      :topic (c3-1 / person
+                   :name (c3-0 / name
+                               :op1 "Lisa"
+                               :op2 "Kudrow")))
+
+# ::snt I want her and Courteney Cox to be my aunts. Lmaooo.
+# ::tokens ["I", "want", "her", "and", "Courteney", "Cox", "to", "be", "my", "aunts", ".", "Lmaooo", "."]
+# ::lemmas ["i", "want", "she", "and", "Courteney", "Cox", "to", "be", "my", "aunt", ".", "Lmaooo", "."]
+(c4-5 / want-01
+      :ARG0 (c4-6 / i)
+      :ARG1 (c4-2 / have-rel-role-91
+                  :ARG0 (c4-7 / and
+                              :op1 (c4-1 / she)
+                              :op2 (c4-3 / person
+                                         :name (c4-0 / name
+                                                     :op1 "Courteney"
+                                                     :op2 "Cox")))
+                  :ARG1 c4-6
+                  :ARG2 (c4-8 / aunt))
+      :mod (c4-4 / laugh-01
+                 :ARG0 c4-6
+                 :manner (c4-9 / loud)
+                 :mode expressive))
+
+# ::snt I want to be Jennifer Aniston.
+# ::tokens ["I", "want", "to", "be", "Jennifer", "Aniston", "."]
+# ::lemmas ["i", "want", "to", "be", "Jennifer", "Aniston", "."]
+(c5-0 / want-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-2 / person
+                  :name (c5-1 / name
+                              :op1 "Jennifer"
+                              :op2 "Aniston")
+                  :domain c5-3))
+
+# ::snt So glad she's happy, that they're both happy
+# ::tokens ["So", "glad", "she", "'s", "happy", ",", "that", "they", "'re", "both", "happy"]
+# ::lemmas ["so", "glad", "she", "be", "happy", ",", "that", "they", "be", "both", "happy"]
+(c6-6 / glad-02
+      :ARG0 (c6-3 / happy-01
+                  :ARG1 (c6-2 / she))
+      :ARG1 (c6-4 / happy-01
+                  :ARG1 (c6-5 / they
+                              :mod (c6-1 / both)))
+      :degree (c6-0 / so))
+
+# ::snt I'm very happy for them!
+# ::tokens ["I", "'m", "very", "happy", "for", "them", "!"]
+# ::lemmas ["i", "be", "very", "happy", "for", "they", "!"]
+(c7-1 / happy-01
+      :ARG0 (c7-3 / they)
+      :ARG1 (c7-2 / i)
+      :degree (c7-0 / very))
+
+# ::snt Justin and Jennifer Theroux are one cute couple!
+# ::tokens ["Justin", "and", "Jennifer", "Theroux", "are", "one", "cute", "couple", "!"]
+# ::lemmas ["Justin", "and", "Jennifer", "Theroux", "be", "one", "cute", "couple", "!"]
+(c8-4 / cute
+      :domain (c8-6 / couple
+                    :domain (c8-5 / and
+                                  :op1 (c8-3 / person
+                                             :name (c8-0 / name
+                                                         :op1 "Justin"))
+                                  :op2 (c8-1 / person
+                                             :name (c8-2 / name
+                                                         :op1 "Jennifer"
+                                                         :op2 "Theroux"))))
+      :quant 1)

@@ -1,0 +1,191 @@
+# ::snt oh my god
+# ::tokens ["oh", "my", "god"]
+# ::lemmas ["oh", "my", "god"]
+(c1-2 / person
+      :name (c1-1 / name
+                  :op1 "God")
+      :mod (c1-3 / oh
+                 :mode expressive)
+      :poss (c1-0 / i))
+
+# ::snt both dead angus injured
+# ::tokens ["both", "dead", "angus", "injured"]
+# ::lemmas ["both", "dead", "angus", "injure"]
+(c3-3 / injure-01
+      :ARG1 (c3-2 / person
+                  :mod (c3-1 / country
+                             :name (c3-4 / name
+                                         :op1 "Angus"))
+                  :mod (c3-5 / both)
+                  :ARG1-of (c3-0 / die-01)))
+
+# ::snt THANK GAWD IT'S OVER
+# ::tokens ["THANK", "GAWD", "IT", "'S", "OVER"]
+# ::lemmas ["thank", "GAWD", "IT", "be", "over"]
+(c4-0 / thank-01
+      :ARG1 (c4-2 / person
+                  :name (c4-4 / name
+                              :op1 "God"))
+      :ARG2 (c4-3 / over-01
+                  :ARG1 (c4-1 / it)))
+
+# ::snt I'm fucking traumatized
+# ::tokens ["I", "'m", "fucking", "traumatized"]
+# ::lemmas ["i", "be", "fucking", "traumatize"]
+(c5-2 / traumatize-01
+      :ARG1 (c5-1 / i)
+      :mod (c5-0 / fucking))
+
+# ::snt I think it's injured. I can't believe this is happening. I've also heard people have died
+# ::tokens ["I", "think", "it", "'s", "injured", ".", "I", "ca", "n't", "believe", "this", "is", "happening", ".", "I", "'ve", "also", "heard", "people", "have", "died"]
+# ::lemmas ["i", "think", "it", "be", "injure", ".", "i", "can", "not", "believe", "this", "be", "happen", ".", "i", "'ve", "also", "hear", "people", "have", "die"]
+(c6-3 / multi-sentence
+      :snt1 (c6-2 / think-01
+                  :ARG0 (c6-9 / i)
+                  :ARG1 (c6-0 / injure-01
+                              :ARG1 (c6-4 / it)))
+      :snt2 (c6-10 / possible-01
+                   :ARG1 (c6-14 / believe-01
+                                :ARG0 (c6-7 / i)
+                                :ARG1 (c6-13 / event
+                                             :mod (c6-5 / this)))
+                   :polarity -)
+      :snt3 (c6-1 / hear-01
+                  :ARG0 (c6-6 / i)
+                  :ARG1 (c6-8 / die-01
+                              :ARG1 (c6-11 / person))
+                  :mod (c6-12 / also)))
+
+# ::snt Angus!! They havent said anything about the gunman??
+# ::tokens ["Angus", "!", "!", "They", "have", "nt", "said", "anything", "about", "the", "gunman", "?", "?"]
+# ::lemmas ["Angus", "!", "!", "they", "have", "not", "say", "anything", "about", "the", "gunman", "?", "?"]
+(c7-1 / multi-sentence
+      :snt1 (c7-2 / person
+                  :name (c7-7 / name
+                              :op1 "Angus")
+                  :mode expressive)
+      :snt2 (c7-6 / say-01
+                  :ARG0 (c7-0 / they)
+                  :ARG1 (c7-3 / anything
+                              :topic (c7-4 / gunman))
+                  :polarity (c7-5 / amr-unknown)
+                  :polarity -))
+
+# ::snt watching it live!
+# ::tokens ["watching", "it", "live", "!"]
+# ::lemmas ["watch", "it", "live", "!"]
+(c8-1 / watch-01
+      :ARG1 (c8-2 / it)
+      :manner (c8-0 / live))
+
+# ::snt so thankful everyone's safe it's been a long day
+# ::tokens ["so", "thankful", "everyone", "'s", "safe", "it", "'s", "been", "a", "long", "day"]
+# ::lemmas ["so", "thankful", "everyone", "'s", "safe", "it", "be", "be", "a", "long", "day"]
+(c9-2 / multi-sentence
+      :snt1 (c9-1 / thankful-02
+                  :ARG0 (c9-4 / i)
+                  :ARG1 (c9-6 / safe-01
+                              :ARG1 (c9-7 / everyone))
+                  :degree (c9-0 / so))
+      :snt2 (c9-3 / day
+                  :ARG1-of (c9-5 / long-03)))
+
+# ::snt THATS THE LADY FROM THE VIDEO
+# ::tokens ["THATS", "THE", "LADY", "FROM", "THE", "VIDEO"]
+# ::lemmas ["THATS", "the", "lady", "from", "the", "video"]
+(c10-1 / lady
+       :source (c10-0 / video)
+       :domain (c10-2 / that))
+
+# ::snt I DIDNT WATCH THE VIDEO I WAS TOO SCARED WHAT HAPPENED
+# ::tokens ["I", "DIDNT", "WATCH", "THE", "VIDEO", "I", "WAS", "TOO", "SCARED", "WHAT", "HAPPENED"]
+# ::lemmas ["i", "didnt", "watch", "the", "video", "i", "be", "too", "scared", "what", "happen"]
+(c11-3 / and
+       :op1 (c11-0 / watch-01
+                   :ARG0 (c11-1 / i)
+                   :ARG1 (c11-2 / video)
+                   :polarity -)
+       :op2 (c11-4 / scare-01
+                   :ARG0 c11-1
+                   :ARG1 (c11-5 / event)))
+
+# ::snt people escaping and it's all over mow
+# ::tokens ["people", "escaping", "and", "it", "'s", "all", "over", "mow"]
+# ::lemmas ["people", "escape", "and", "it", "be", "all", "over", "mow"]
+(c12-3 / and
+       :op1 (c12-5 / escape-01
+                   :ARG0 (c12-2 / person))
+       :op2 (c12-6 / be-located-at-91
+                   :ARG1 (c12-1 / it)
+                   :ARG2 (c12-4 / all-over
+                                :op1 (c12-0 / mow))))
+
+# ::snt omfg it is
+# ::tokens ["omfg", "it", "is"]
+# ::lemmas ["omfg", "it", "be"]
+(c13-0 / it
+       :mod (c13-1 / oh-my-god
+                   :mode expressive))
+
+# ::snt The of us are watching this unfold, I'm shaking, My heart goes out to the hostages and their families.
+# ::tokens ["The", "of", "us", "are", "watching", "this", "unfold", ",", "I", "'m", "shaking", ",", "My", "heart", "goes", "out", "to", "the", "hostages", "and", "their", "families", "."]
+# ::lemmas ["the", "of", "we", "be", "watch", "this", "unfold", ",", "i", "be", "shake", ",", "my", "heart", "go", "out", "to", "the", "hostage", "and", "their", "family", "."]
+(c14-10 / and
+        :op1 (c14-0 / watch-01
+                    :ARG0 (c14-8 / person
+                                 :ARG1-of (c14-7 / include-91
+                                                 :ARG2 (c14-14 / we)))
+                    :ARG1 (c14-9 / unfold-02
+                                 :ARG1 (c14-3 / this)))
+        :op2 (c14-15 / shake-01
+                     :ARG1 (c14-1 / i
+                                  :part (c14-2 / heart)))
+        :op3 (c14-11 / go-01
+                     :ARG1 c14-2
+                     :ARG4 (c14-13 / and
+                                   :op1 (c14-6 / hostage)
+                                   :op2 (c14-4 / family
+                                               :ARG1-of (c14-16 / have-org-role-91
+                                                                :ARG0 c14-6
+                                                                :ARG2 (c14-5 / member))))
+                     :direction (c14-12 / out)))
+
+# ::snt thank god they're all safe now. some wounded, but still safe.
+# ::tokens ["thank", "god", "they", "'re", "all", "safe", "now", ".", "some", "wounded", ",", "but", "still", "safe", "."]
+# ::lemmas ["thank", "god", "they", "be", "all", "safe", "now", ".", "some", "wound", ",", "but", "still", "safe", "."]
+(c15-5 / multi-sentence
+       :snt1 (c15-4 / thank-01
+                    :ARG1 (c15-9 / person
+                                 :name (c15-13 / name
+                                               :op1 "God"))
+                    :ARG2 (c15-12 / safe-01
+                                  :ARG1 (c15-6 / they
+                                               :mod (c15-11 / all))
+                                  :time (c15-8 / now)))
+       :snt2 (c15-10 / contrast-01
+                     :ARG1 (c15-1 / wound-01
+                                  :ARG1 (c15-7 / person
+                                               :quant (c15-2 / some)))
+                     :ARG2 (c15-0 / safe-01
+                                  :ARG1 c15-7
+                                  :mod (c15-3 / still))))
+
+# ::snt thank god its over, they're finally safe, although some are wounded. what a terrifying thing to be put through
+# ::tokens ["thank", "god", "its", "over", ",", "they", "'re", "finally", "safe", ",", "although", "some", "are", "wounded", ".", "what", "a", "terrifying", "thing", "to", "be", "put", "through"]
+# ::lemmas ["thank", "god", "its", "over", ",", "they", "be", "finally", "safe", ",", "although", "some", "be", "wound", ".", "what", "a", "terrifying", "thing", "to", "be", "put", "through"]
+(c16-5 / multi-sentence
+       :snt1 (c16-4 / thank-01
+                    :ARG0 (c16-9 / i)
+                    :ARG1 (c16-11 / god)
+                    :ARG2 (c16-12 / over-01
+                                  :ARG1 (c16-2 / it)))
+       :snt2 (c16-13 / safe-01
+                     :ARG1 (c16-6 / they
+                                  :quant (c16-3 / some))
+                     :time (c16-7 / final)
+                     :concession (c16-1 / wound-01
+                                        :ARG1 c16-3))
+       :snt3 (c16-8 / thing
+                    :ARG0-of (c16-14 / terrify-01
+                                     :degree (c16-0 / so))
+                    :ARG1-of (c16-10 / put-through-20)))

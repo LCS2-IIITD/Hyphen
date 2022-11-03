@@ -1,0 +1,44 @@
+# ::snt So far so good then! Hope it keeps going well!
+# ::tokens ["So", "far", "so", "good", "then", "!", "Hope", "it", "keeps", "going", "well", "!"]
+# ::lemmas ["so", "far", "so", "good", "then", "!", "hope", "it", "keep", "go", "well", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-5 / good-02
+                  :mod (c1-0 / so-far)
+                  :mod (c1-4 / then)
+                  :mod (c1-6 / so))
+      :snt2 (c1-2 / hope-01
+                  :ARG0 (c1-7 / i)
+                  :ARG1 (c1-9 / keep-02
+                              :ARG1 (c1-10 / go-06
+                                           :ARG1 (c1-3 / it)
+                                           :ARG1-of (c1-1 / well-09)))))
+
+# ::snt Went well! One hour has passed arm isn't sore yet!
+# ::tokens ["Went", "well", "!", "One", "hour", "has", "passed", "arm", "is", "n't", "sore", "yet", "!"]
+# ::lemmas ["go", "well", "!", "One", "hour", "have", "pass", "arm", "be", "not", "sore", "yet", "!"]
+(c2-7 / multi-sentence
+      :snt1 (c2-5 / go-06
+                  :manner (c2-2 / well))
+      :snt2 (c2-0 / sore-03
+                  :ARG1 (c2-1 / arm)
+                  :time (c2-8 / yet)
+                  :time (c2-6 / pass-03
+                              :ARG1 (c2-4 / temporal-quantity
+                                          :unit (c2-3 / hour)
+                                          :quant 1))
+                  :polarity -))
+
+# ::snt Hope it goes well for you! Let us know!
+# ::tokens ["Hope", "it", "goes", "well", "for", "you", "!", "Let", "us", "know", "!"]
+# ::lemmas ["hope", "it", "go", "well", "for", "you", "!", "let", "we", "know", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-1 / hope-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-4 / go-on-15
+                              :ARG1 (c3-2 / it)
+                              :ARG1-of (c3-0 / well-09)
+                              :beneficiary (c3-7 / you)))
+      :snt2 (c3-3 / let-know-07
+                  :ARG0 c3-7
+                  :mode imperative)
+      :ARG1 (c3-8 / we))

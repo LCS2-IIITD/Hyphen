@@ -1,0 +1,72 @@
+# ::snt Thank you Marianne xx
+# ::tokens ["Thank", "you", "Marianne", "xx"]
+# ::lemmas ["thank", "you", "Marianne", "xx"]
+(c1-3 / say-01
+      :ARG0 (c1-0 / i)
+      :ARG1 (c1-4 / thank-01
+                  :ARG0 c1-0
+                  :ARG1 (c1-2 / person
+                              :name (c1-1 / name
+                                          :op1 "Marianne")
+                              :ARG2-of c1-3)))
+
+# ::snt thank you we all need to work together
+# ::tokens ["thank", "you", "we", "all", "need", "to", "work", "together"]
+# ::lemmas ["thank", "you", "we", "all", "need", "to", "work", "together"]
+(c2-6 / thank-01
+      :ARG1 (c2-0 / you)
+      :ARG0-of (c2-4 / cause-01
+                     :ARG1 (c2-3 / need-01
+                                 :ARG0 (c2-1 / we
+                                             :mod (c2-7 / all))
+                                 :ARG1 (c2-2 / work-01
+                                             :ARG0 c2-1
+                                             :manner (c2-5 / together)))))
+
+# ::snt amo su libro De regreso al amor
+# ::tokens ["amo", "su", "libro", "De", "regreso", "al", "amor"]
+# ::lemmas ["amo", "su", "libro", "De", "regreso", "al", "amor"]
+(c3-3 / amr-unintelligible
+      :domain (c3-2 / amo-01
+                    :ARG1 (c3-1 / libre))
+      :mod (c3-0 / al-amor)
+      :value "Libro")
+
+# ::snt Amen! Thank u! I was near this cafe on Friday. I was protected by divine grace as they choase today. Love and prayers to all
+# ::tokens ["Amen", "!", "Thank", "u", "!", "I", "was", "near", "this", "cafe", "on", "Friday", ".", "I", "was", "protected", "by", "divine", "grace", "as", "they", "choase", "today", ".", "Love", "and", "prayers", "to", "all"]
+# ::lemmas ["amen", "!", "thank", "u", "!", "i", "be", "near", "this", "cafe", "on", "Friday", ".", "i", "be", "protect", "by", "divine", "grace", "as", "they", "choase", "today", ".", "Love", "and", "prayer", "to", "all"]
+(c4-2 / multi-sentence
+      :snt1 c4-2
+      :snt2 (c4-13 / thank-01
+                   :ARG0 (c4-4 / i)
+                   :ARG1 (c4-0 / you))
+      :snt3 (c4-6 / protect-01
+                  :ARG0 (c4-9 / grace
+                              :mod (c4-7 / divine))
+                  :ARG1 (c4-10 / i)
+                  :ARG1-of (c4-8 / cause-01
+                                 :ARG0 (c4-11 / choase-00
+                                              :ARG0 (c4-12 / they)
+                                              :time (c4-5 / today))))
+      :snt4 (c4-15 / and
+                   :op1 (c4-1 / love-01)
+                   :op2 (c4-14 / pray-01)
+                   :beneficiary (c4-3 / all)))
+
+# ::snt For a miracle Archangel Raphael is the one - maybe we should make a joint session praying to him
+# ::tokens ["For", "a", "miracle", "Archangel", "Raphael", "is", "the", "one", "-", "maybe", "we", "should", "make", "a", "joint", "session", "praying", "to", "him"]
+# ::lemmas ["for", "a", "miracle", "Archangel", "Raphael", "be", "the", "one", "-", "maybe", "we", "should", "make", "a", "joint", "session", "pray", "to", "he"]
+(c6-3 / multi-sentence
+      :snt1 (c6-5 / one
+                  :domain (c6-7 / person
+                                :name (c6-6 / name
+                                            :op1 "Ariel"
+                                            :op2 "Raphael"))
+                  :purpose (c6-8 / miracle))
+      :snt2 (c6-11 / possible-01
+                   :ARG1 (c6-9 / recommend-01
+                               :ARG1 (c6-10 / session
+                                            :mod (c6-0 / joint)
+                                            :manner-of (c6-4 / pray-01
+                                                             :ARG0 (c6-1 / we)
+                                                             :ARG2 (c6-2 / he))))))

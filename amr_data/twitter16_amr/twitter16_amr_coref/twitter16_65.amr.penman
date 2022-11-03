@@ -1,0 +1,88 @@
+# ::snt disgusting
+# ::tokens ["disgusting"]
+# ::lemmas ["disgusting"]
+(c1-0 / disgust-01)
+
+# ::snt The White House bathed in rainbow RT
+# ::tokens ["The", "White", "House", "bathed", "in", "rainbow", "RT"]
+# ::lemmas ["The", "White", "House", "bathe", "in", "rainbow", "RT"]
+(c2-0 / bathe-01
+      :ARG1 (c2-3 / government-organization
+                  :name (c2-4 / name
+                              :op1 "White"
+                              :op2 "House"))
+      :ARG2 (c2-2 / broadcast-program
+                  :name (c2-1 / name
+                              :op1 " rainbow"
+                              :op2 "RT")))
+
+# ::snt "Please get out of the new one if you can't lend a hand for the times they are a changing" - Bob Dylan
+# ::tokens ["\"", "Please", "get", "out", "of", "the", "new", "one", "if", "you", "ca", "n't", "lend", "a", "hand", "for", "the", "times", "they", "are", "a", "changing", "\"", "-", "Bob", "Dylan"]
+# ::lemmas ["\"", "please", "get", "out", "of", "the", "new", "one", "if", "you", "can", "not", "lend", "a", "hand", "for", "the", "time", "they", "be", "a", "change", "\"", "-", "Bob", "Dylan"]
+(c3-5 / say-01
+      :ARG0 (c3-6 / person
+                  :name (c3-7 / name
+                              :op1 "Bob"
+                              :op2 "Dylan"))
+      :ARG1 (c3-3 / get-05
+                  :ARG0 (c3-2 / you
+                              :ARG1-of c3-3)
+                  :ARG2 (c3-8 / out-06
+                              :ARG1 c3-2
+                              :ARG2 (c3-0 / one
+                                          :ARG1-of (c3-1 / new-01)))
+                  :condition (c3-4 / possible-01
+                                   :ARG1 (c3-9 / lend-01
+                                               :ARG0 c3-2
+                                               :ARG1 (c3-10 / hand)
+                                               :purpose (c3-11 / change-01
+                                                               :ARG1 c3-0))
+                                   :polarity -)
+                  :mode imperative
+                  :polite +))
+
+# ::snt Today, a building, known for being notoriously WHITEWas seen, by all, in a distinctly different light.
+# ::tokens ["Today", ",", "a", "building", ",", "known", "for", "being", "notoriously", "WHITEWas", "seen", ",", "by", "all", ",", "in", "a", "distinctly", "different", "light", "."]
+# ::lemmas ["Today", ",", "a", "building", ",", "know", "for", "be", "notoriously", "WHITEWas", "see", ",", "you", "all", ",", "in", "a", "distinctly", "different", "light", "."]
+(c4-5 / see-01
+      :ARG1 (c4-2 / building
+                  :ARG1-of (c4-3 / know-02
+                                 :ARG3 (c4-7 / whore-01
+                                             :ARG1-of (c4-6 / notorious-01))))
+      :ARG2 (c4-8 / light
+                  :ARG1-of (c4-9 / differ-02
+                                 :mod (c4-0 / distinct)))
+      :mod (c4-4 / by-all)
+      :time (c4-1 / today))
+
+# ::snt Got all teary eyed when I heard that RT : The White House bathed in rainbow
+# ::tokens ["Got", "all", "teary", "eyed", "when", "I", "heard", "that", "RT", ":", "The", "White", "House", "bathed", "in", "rainbow"]
+# ::lemmas ["get", "all", "teary", "eyed", "when", "i", "hear", "that", "rt", ":", "The", "White", "House", "bathe", "in", "rainbow"]
+(c5-5 / get-03
+      :ARG1 (c5-7 / i)
+      :ARG2 (c5-1 / teary-03
+                  :ARG1 c5-7
+                  :mod (c5-0 / all))
+      :time (c5-10 / hear-01
+                   :ARG0 c5-7
+                   :ARG1 (c5-3 / bathe-01
+                               :ARG1 (c5-6 / government-organization
+                                           :name (c5-8 / name
+                                                       :op1 "White"
+                                                       :op2 "House"))
+                               :ARG2 (c5-2 / rainbow))
+                   :ARG2 (c5-9 / publication
+                               :name (c5-4 / name
+                                           :op1 "RT"))))
+
+# ::snt calls for impeachment in ... ...
+# ::tokens ["calls", "for", "impeachment", "in", "...", "..."]
+# ::lemmas ["call", "for", "impeachment", "in", "...", "..."]
+(c6-1 / call-03
+      :ARG1 (c6-0 / impeach-01))
+
+# ::snt Love it.
+# ::tokens ["Love", "it", "."]
+# ::lemmas ["Love", "it", "."]
+(c7-0 / love-01
+      :ARG1 (c7-1 / it))

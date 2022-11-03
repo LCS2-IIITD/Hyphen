@@ -1,0 +1,40 @@
+comment,amr
+"When on the phone with a company and the call is being recorded, am I still being recorded when put on hold?","# ::snt When on the phone with a company and the call is being recorded, am I still being recorded when put on hold?
+(r / record-01
+      :polarity (a / amr-unknown)
+      :ARG1 (ii / i)
+      :mod (s / still)
+      :time (p / put-on-08
+            :ARG1 ii
+            :ARG2 (h / hold-on-08))
+      :time (a2 / and
+            :op1 (b / be-located-at-91
+                  :ARG1 ii
+                  :ARG2 (p2 / phone))
+            :op2 (r2 / record-01
+                  :ARG1 (c / call-02
+                        :ARG0 ii))))"
+"911 calls do (yes, we put people on hold sometimes), not sure about other random companies","# ::snt 911 calls do (yes, we put people on hold sometimes), not sure about other random companies
+(m / multi-sentence
+      :snt1 (c / call-02
+            :ARG1 (p / phone-number-entity
+                  :value 911)
+            :ARG1-of (m2 / mean-01
+                  :ARG2 (p2 / put-01
+                        :ARG0 (w / we)
+                        :ARG1 (p3 / person)
+                        :ARG2 (h / hold-on-05
+                              :ARG1 p3)
+                        :frequency (s / sometimes))))
+      :snt2 (s2 / sure-02
+            :polarity -
+            :ARG1 (c2 / company
+                  :mod (r / random)
+                  :mod (o / other))))"
+What's a reason for putting a 911 call on hold?,"# ::snt What's a reason for putting a 911 call on hold?
+(c / cause-01
+      :ARG0 (a / amr-unknown)
+      :ARG1 (p / put-on-08
+            :ARG1 (c2 / call-02
+                  :ARG1 (p2 / phone-number-entity
+                        :value 911))))"

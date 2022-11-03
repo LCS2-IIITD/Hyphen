@@ -1,0 +1,562 @@
+# ::snt Ill come with you x
+# ::tokens ["Ill", "come", "with", "you", "x"]
+# ::lemmas ["Ill", "come", "with", "you", "x"]
+(c1-0 / come-01
+      :ARG1 (c1-2 / i)
+      :accompanier (c1-1 / you))
+
+# ::snt I dont care Im going X
+# ::tokens ["I", "do", "nt", "care", "I", "m", "going", "X"]
+# ::lemmas ["i", "do", "not", "care", "i", "m", "go", "x"]
+(c2-3 / and
+      :op1 (c2-1 / care-01
+                 :ARG0 (c2-2 / i)
+                 :polarity -)
+      :op2 (c2-0 / go-02
+                 :ARG0 c2-2))
+
+# ::snt Because we live in England the land of rain
+# ::tokens ["Because", "we", "live", "in", "England", "the", "land", "of", "rain"]
+# ::lemmas ["because", "we", "live", "in", "England", "the", "land", "of", "rain"]
+(c3-3 / cause-01
+      :ARG0 (c3-2 / live-01
+                  :ARG0 (c3-4 / we)
+                  :location (c3-6 / country
+                                  :name (c3-0 / name
+                                              :op1 "England")
+                                  :mod (c3-5 / land
+                                             :ARG1-of (c3-1 / rain-01)))))
+
+# ::snt why has this never happened to me yet?
+# ::tokens ["why", "has", "this", "never", "happened", "to", "me", "yet", "?"]
+# ::lemmas ["why", "have", "this", "never", "happen", "to", "i", "yet", "?"]
+(c4-3 / cause-01
+      :ARG0 (c4-1 / amr-unknown)
+      :ARG1 (c4-2 / event
+                  :mod (c4-5 / this)
+                  :time (c4-0 / yet)
+                  :mod (c4-4 / i)
+                  :polarity -))
+
+# ::snt It was
+# ::tokens ["It", "was"]
+# ::lemmas ["it", "be"]
+(c5-0 / it)
+
+# ::snt Making some hits I guess.
+# ::tokens ["Making", "some", "hits", "I", "guess", "."]
+# ::lemmas ["make", "some", "hit", "i", "guess", "."]
+(c6-4 / guess-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-1 / hit-11
+                  :ARG0 (c6-3 / they)
+                  :quant (c6-0 / some)))
+
+# ::snt Jajaja no es mi tipo pero no es feo el cabro
+# ::tokens ["Jajaja", "no", "es", "mi", "tipo", "pero", "no", "es", "feo", "el", "cabro"]
+# ::lemmas ["Jajaja", "no", "es", "mi", "tipo", "pero", "no", "es", "feo", "el", "cabro"]
+(c7-2 / have-condition-91
+      :ARG1 (c7-6 / tip-off-04
+                  :ARG0 (c7-3 / person
+                              :name (c7-1 / name
+                                          :op1 "Jajaja"))
+                  :ARG1 (c7-5 / i)
+                  :polarity -)
+      :ARG2 (c7-0 / feo-00
+                  :ARG0 c7-5
+                  :ARG1 (c7-4 / cabro)
+                  :polarity -))
+
+# ::snt Khachanov. Es igual
+# ::tokens ["Khachanov", ".", "Es", "igual"]
+# ::lemmas ["Khachanov", ".", "Es", "igual"]
+(c8-2 / multi-sentence
+      :snt1 (c8-0 / person
+                  :name (c8-1 / name
+                              :op1 "Khachanov"))
+      :snt2 (c8-3 / es-fual))
+
+# ::snt Jaja s, hincha bola nivel dios
+# ::tokens ["Jaja", "s", ",", "hincha", "bola", "nivel", "dios"]
+# ::lemmas ["Jaja", "s", ",", "hincha", "bola", "nivel", "dio"]
+(c9-2 / say-01
+      :ARG0 (c9-5 / i)
+      :ARG1 (c9-0 / bola
+                  :mod (c9-1 / nivel
+                             :mode expressive)
+                  :mode expressive)
+      :ARG2 (c9-4 / person
+                  :name (c9-3 / name
+                              :op1 "Jaja")))
+
+# ::snt lets actually go visit in NC soon
+# ::tokens ["lets", "actually", "go", "visit", "in", "NC", "soon"]
+# ::lemmas ["lets", "actually", "go", "visit", "in", "NC", "soon"]
+(c10-3 / visit-01
+       :ARG0 (c10-4 / we)
+       :ARG1 (c10-2 / state
+                    :name (c10-1 / name
+                                 :op1 "NC"))
+       :time (c10-0 / soon)
+       :ARG1-of (c10-5 / actual-02)
+       :mode imperative)
+
+# ::snt Quizs el hermano acepte
+# ::tokens ["Quizs", "el", "hermano", "acepte"]
+# ::lemmas ["Quizs", "el", "hermano", "acepte"]
+(c11-0 / quizs
+       :mod (c11-1 / acepte))
+
+# ::snt Faa me arruinaste la sorpresa
+# ::tokens ["Faa", "me", "arruinaste", "la", "sorpresa"]
+# ::lemmas ["faa", "i", "arruinaste", "la", "sorpresa"]
+(c12-1 / say-01
+       :ARG0 (c12-3 / i)
+       :ARG1 (c12-4 / arruinaste
+                    :domain (c12-2 / person
+                                   :name (c12-0 / name
+                                                :op1 "La"
+                                                :op2 "Sorpresa")
+                                   :ARG2-of c12-1)
+                    :mode expressive))
+
+# ::snt correct
+# ::tokens ["correct"]
+# ::lemmas ["correct"]
+(c13-0 / correct-02)
+
+# ::snt im sorry
+# ::tokens ["i", "m", "sorry"]
+# ::lemmas ["i", "m", "sorry"]
+(c15-1 / sorry-01
+       :ARG1 (c15-0 / i))
+
+# ::snt damn stop exposing me
+# ::tokens ["damn", "stop", "exposing", "me"]
+# ::lemmas ["damn", "stop", "expose", "i"]
+(c16-1 / stop-01
+       :ARG0 (c16-0 / you)
+       :ARG1 (c16-2 / expose-01
+                    :ARG0 c16-0
+                    :ARG1 (c16-3 / i))
+       :mod (c16-4 / damn
+                   :mode expressive)
+       :mode imperative)
+
+# ::snt Thor is ugly too -
+# ::tokens ["Thor", "is", "ugly", "too", "-"]
+# ::lemmas ["Thor", "be", "ugly", "too", "-"]
+(c17-1 / ugly
+       :domain (c17-2 / person
+                      :name (c17-0 / name
+                                   :op1 "Thor"))
+       :mod (c17-3 / too))
+
+# ::snt For a second I thought the actual "liam hemsworth" replied to me !!Then I checked for the blue tick and I didn't find it.
+# ::tokens ["For", "a", "second", "I", "thought", "the", "actual", "\"", "liam", "hemsworth", "\"", "replied", "to", "me", "!", "!", "Then", "I", "checked", "for", "the", "blue", "tick", "and", "I", "did", "n't", "find", "it", "."]
+# ::lemmas ["for", "a", "second", "i", "think", "the", "actual", "\"", "liam", "hemsworth", "\"", "reply", "to", "i", "!", "!", "then", "i", "check", "for", "the", "blue", "tick", "and", "i", "do", "not", "find", "it", "."]
+(c18-2 / multi-sentence
+       :snt1 (c18-12 / think-01
+                     :ARG0 (c18-11 / i)
+                     :ARG1 (c18-6 / reply-01
+                                  :ARG0 (c18-9 / person
+                                               :name (c18-3 / name
+                                                            :op1 "liam"
+                                                            :op2 "Hemsworth")
+                                               :ARG1-of (c18-7 / actual-02))
+                                  :ARG1 c18-11)
+                     :duration (c18-15 / temporal-quantity
+                                       :unit (c18-4 / second)
+                                       :quant 1)
+                     :mode expressive)
+       :snt2 (c18-13 / and
+                     :op1 (c18-10 / check-01
+                                  :ARG0 (c18-5 / i)
+                                  :ARG1 (c18-14 / tick
+                                                :mod (c18-1 / blue))
+                                  :time (c18-8 / then))
+                     :op2 (c18-0 / find-01
+                                 :ARG0 c18-5
+                                 :ARG1 c18-14
+                                 :polarity -)))
+
+# ::snt I dont know
+# ::tokens ["I", "do", "nt", "know"]
+# ::lemmas ["i", "do", "not", "know"]
+(c19-0 / know-01
+       :ARG0 (c19-1 / i)
+       :polarity -)
+
+# ::snt minute appearance and months of milking
+# ::tokens ["minute", "appearance", "and", "months", "of", "milking"]
+# ::lemmas ["minute", "appearance", "and", "months", "of", "milking"]
+(c20-5 / and
+       :op1 (c20-4 / appear-01
+                   :time (c20-0 / minute))
+       :op2 (c20-1 / milk-02
+                   :duration (c20-6 / multiple
+                                    :op1 (c20-3 / temporal-quantity
+                                                :unit (c20-2 / month)
+                                                :quant 1))))
+
+# ::snt When is the trailer coming out ???????I can't wait !!
+# ::tokens ["When", "is", "the", "trailer", "coming", "out", "?", "?", "?", "?", "?", "?", "?", "I", "ca", "n't", "wait", "!", "!"]
+# ::lemmas ["when", "be", "the", "trailer", "come", "out", "?", "?", "?", "?", "?", "?", "?", "i", "can", "not", "wait", "!", "!"]
+(c21-1 / possible-01
+       :ARG1 (c21-2 / wait-01
+                    :ARG1 (c21-4 / i)
+                    :ARG2 (c21-3 / come-out-09
+                                 :ARG1 (c21-5 / trailer))
+                    :time (c21-0 / amr-unknown))
+       :polarity -)
+
+# ::snt Ogbon Agbere.... SMH
+# ::tokens ["Ogbon", "Agbere", "....", "SMH"]
+# ::lemmas ["Ogbon", "Agbere", "....", "SMH"]
+(c22-3 / say-01
+       :ARG1 (c22-0 / shame-02
+                    :ARG0 (c22-2 / person
+                                 :name (c22-1 / name
+                                              :op1 "Ogbon"
+                                              :op2 "Agbere")
+                                 :ARG2-of c22-3)))
+
+# ::snt Please. help reset My decoder smart card number
+# ::tokens ["Please", ".", "help", "reset", "My", "decoder", "smart", "card", "number"]
+# ::lemmas ["please", ".", "help", "reset", "my", "decoder", "smart", "card", "number"]
+(c23-4 / help-01
+       :ARG0 (c23-0 / you)
+       :ARG1 (c23-3 / reset-01
+                    :ARG0 c23-0
+                    :ARG1 (c23-1 / number
+                                 :mod (c23-5 / card
+                                             :ARG1-of (c23-2 / smart-06))
+                                 :poss (c23-6 / i)
+                                 :instrument-of (c23-7 / decoder)))
+       :polite +)
+
+# ::snt pls tell me what's really happen to dstv walka
+# ::tokens ["pls", "tell", "me", "what", "'s", "really", "happen", "to", "dstv", "walka"]
+# ::lemmas ["pls", "tell", "i", "what", "be", "really", "happen", "to", "dstv", "walka"]
+(c24-6 / tell-01
+       :ARG0 (c24-0 / you)
+       :ARG1 (c24-3 / event
+                    :ARG1-of (c24-2 / real-04)
+                    :beneficiary (c24-4 / person
+                                        :name (c24-1 / name
+                                                     :op1 "Stv"
+                                                     :op2 "Walka")))
+       :ARG2 (c24-5 / i)
+       :mode imperative
+       :polite +)
+
+# ::snt You guys are the best in terms of customer care. attended very well to me today and i rate her +5
+# ::tokens ["You", "guys", "are", "the", "best", "in", "terms", "of", "customer", "care", ".", "attended", "very", "well", "to", "me", "today", "and", "i", "rate", "her", "+5"]
+# ::lemmas ["you", "guy", "be", "the", "good", "in", "term", "of", "customer", "care", ".", "attend", "very", "well", "to", "i", "today", "and", "i", "rate", "her", "+5"]
+(c25-1 / multi-sentence
+       :snt1 (c25-12 / good-02
+                     :ARG1 (c25-0 / you
+                                  :mod (c25-10 / guy))
+                     :topic (c25-7 / care-03
+                                   :ARG1 (c25-15 / customer))
+                     :ARG2-of (c25-5 / have-degree-91
+                                     :ARG1 c25-0
+                                     :ARG3 (c25-6 / most)))
+       :snt2 (c25-11 / and
+                     :op1 (c25-13 / attend-01
+                                  :ARG0 (c25-14 / i)
+                                  :ARG1 (c25-2 / she)
+                                  :time (c25-9 / today)
+                                  :ARG1-of (c25-8 / well-09
+                                                  :degree (c25-4 / very)))
+                     :op2 (c25-3 / rate-01
+                                 :ARG0 c25-14
+                                 :ARG1 c25-2
+                                 :ARG2 +5)))
+
+# ::snt Que mamera Liam..menos mal Miley no sufre del corazn.
+# ::tokens ["Que", "mamera", "Liam", "..", "menos", "mal", "Miley", "no", "sufre", "del", "corazn", "."]
+# ::lemmas ["Que", "mamera", "Liam", "..", "menos", "mal", "Miley", "no", "sufre", "del", "corazn", "."]
+(c26-1 / multi-sentence
+       :snt1 (c26-7 / call-01
+                    :ARG1 (c26-5 / person
+                                 :name (c26-0 / name
+                                              :op1 "Mamera"
+                                              :op2 "Liam")
+                                 :ARG2-of c26-7))
+       :snt2 (c26-4 / have-polarity-91
+                    :ARG1 (c26-2 / person
+                                 :name (c26-6 / name
+                                              :op1 "Miley"))
+                    :mod (c26-3 / sufre
+                                :mode expressive)
+                    :mod (c26-8 / del-cazn)
+                    :ARG2 -))
+
+# ::snt They aren't together Just sayin
+# ::tokens ["They", "are", "n't", "together", "Just", "sayin"]
+# ::lemmas ["they", "be", "not", "together", "just", "sayin"]
+(c30-3 / say-01
+       :ARG1 (c30-1 / together
+                    :domain (c30-2 / they)
+                    :polarity -)
+       :mod (c30-0 / just))
+
+# ::snt BOUK BOUK
+# ::tokens ["BOUK", "BOUK"]
+# ::lemmas ["BOUK", "BOUK"]
+(c31-0 / bouk
+       :mode expressive)
+
+# ::snt Sila na! Hahaha!!!
+# ::tokens ["Sila", "na", "!", "Hahaha", "!", "!", "!"]
+# ::lemmas ["Sila", "na", "!", "Hahaha", "!", "!", "!"]
+(c32-0 / haha
+       :mode expressive)
+
+# ::snt Hahahahaha! Sa Byron Bay si Hemsworth diba? Sobrang swerte ni Miley. Sobrang love sya ni Liam
+# ::tokens ["Hahahahaha", "!", "Sa", "Byron", "Bay", "si", "Hemsworth", "diba", "?", "Sobrang", "swerte", "ni", "Miley", ".", "Sobrang", "love", "sya", "ni", "Liam"]
+# ::lemmas ["Hahahahaha", "!", "Sa", "Byron", "Bay", "si", "Hemsworth", "diba", "?", "Sobrang", "swerte", "ni", "Miley", ".", "Sobrang", "love", "sya", "ni", "Liam"]
+(c33-10 / multi-sentence
+        :snt1 (c33-5 / haha
+                     :domain (c33-0 / si
+                                    :op1 (c33-9 / bay
+                                                :name (c33-15 / name
+                                                              :op1 "Byron"
+                                                              :op2 "Bay"))
+                                    :op2 (c33-17 / person
+                                                 :name (c33-12 / name
+                                                               :op1 "Hemsworth"))
+                                    :op3 (c33-20 / iba))
+                     :mode expressive)
+        :snt2 (c33-8 / and
+                     :op1 (c33-4 / swerte
+                                 :ARG1-of (c33-6 / mean-01
+                                                 :ARG2 (c33-11 / person
+                                                               :name (c33-18 / name
+                                                                             :op1 "Sobrang"))))
+                     :op2 (c33-3 / person
+                                 :name (c33-13 / name
+                                               :op1 "Miley")
+                                 :ARG1-of (c33-14 / mean-01
+                                                  :ARG2 (c33-2 / person
+                                                               :name (c33-19 / name
+                                                                             :op1 "Sobrang")))))
+        :snt3 (c33-1 / love-01
+                     :ARG1 (c33-7 / person
+                                  :name (c33-16 / name
+                                                :op1 "Liam"))))
+
+# ::snt Tara sa Australia! Hanap naman akong Kuya Chris.
+# ::tokens ["Tara", "sa", "Australia", "!", "Hanap", "naman", "akong", "Kuya", "Chris", "."]
+# ::lemmas ["Tara", "sa", "Australia", "!", "Hanap", "naman", "akong", "Kuya", "Chris", "."]
+(c34-1 / multi-sentence
+       :snt1 (c34-9 / tara
+                    :snt2 (c34-7 / country
+                                 :name (c34-0 / name
+                                              :op1 "Australia"))
+                    :mode expressive)
+       :snt3 (c34-4 / naman
+                    :ARG1-of (c34-5 / mean-01
+                                    :ARG2 (c34-6 / name
+                                                 :op1 "Hanap"))
+                    :mode expressive)
+       :snt4 (c34-2 / say-01
+                    :ARG0 (c34-8 / i)
+                    :ARG1 (c34-3 / akong)))
+
+# ::snt I MISS MY BABY SOOOO MUCH
+# ::tokens ["I", "MISS", "MY", "BABY", "SOOOO", "MUCH"]
+# ::lemmas ["i", "miss", "my", "baby", "soooo", "much"]
+(c36-1 / miss-01
+       :ARG0 (c36-6 / i)
+       :ARG1 (c36-4 / person
+                    :ARG0-of (c36-3 / have-rel-role-91
+                                    :ARG1 c36-6
+                                    :ARG2 (c36-0 / baby)))
+       :degree (c36-5 / much
+                      :degree (c36-2 / so)))
+
+# ::snt Kayp ikizi olmal
+# ::tokens ["Kayp", "ikizi", "olmal"]
+# ::lemmas ["Kayp", "ikizi", "olmal"]
+(c37-1 / person
+       :name (c37-0 / name
+                    :op1 "Kayp"
+                    :op2 "Iikizi"
+                    :op3 "Olmal"))
+
+# ::snt Tpksnn ayns
+# ::tokens ["Tpksnn", "ayns"]
+# ::lemmas ["Tpksnn", "ayn"]
+(c38-1 / person
+       :name (c38-0 / name
+                    :op1 "Tpksnn"
+                    :op2 "Ayns"))
+
+# ::snt Putain javais jamais capt !!!!
+# ::tokens ["Putain", "javais", "jamais", "capt", "!", "!", "!", "!"]
+# ::lemmas ["Putain", "javais", "jamais", "capt", "!", "!", "!", "!"]
+(c39-0 / putain-jamais
+       :mode expressive)
+
+# ::snt what is it called?
+# ::tokens ["what", "is", "it", "called", "?"]
+# ::lemmas ["what", "be", "it", "call", "?"]
+(c40-0 / call-01
+       :ARG1 (c40-1 / it)
+       :ARG2 (c40-2 / amr-unknown))
+
+# ::snt typically* the smoldering threw me off
+# ::tokens ["typically", "*", "the", "smoldering", "threw", "me", "off"]
+# ::lemmas ["typically", "*", "the", "smoldering", "throw", "i", "off"]
+(c41-3 / throw-off-07
+       :ARG0 (c41-0 / smolder-01)
+       :ARG1 (c41-2 / i)
+       :ARG1-of (c41-1 / typical-02))
+
+# ::snt this is the first shot of dwayne djdjdjdj Im hollering why is this so funny to me. its just... so typical dwayne.
+# ::tokens ["this", "is", "the", "first", "shot", "of", "dwayne", "djdjdjdj", "I", "m", "hollering", "why", "is", "this", "so", "funny", "to", "me", ".", "its", "just", "...", "so", "typical", "dwayne", "."]
+# ::lemmas ["this", "be", "the", "first", "shot", "of", "dwayne", "djdjdjdj", "i", "m", "holler", "why", "be", "this", "so", "funny", "to", "i", ".", "its", "just", "...", "so", "typical", "dwayne", "."]
+(c42-4 / multi-sentence
+       :snt1 (c42-5 / shoot-01
+                    :ARG0 (c42-9 / person
+                                 :name (c42-3 / name
+                                              :op1 "Dwayne"
+                                              :op2 "djdjdj"))
+                    :ARG1 (c42-14 / this)
+                    :ord (c42-0 / ordinal-entity
+                                :value 1))
+       :snt2 (c42-8 / holler-01
+                    :ARG0 (c42-13 / i)
+                    :ARG1 (c42-11 / cause-01
+                                  :ARG0 (c42-7 / amr-unknown)
+                                  :ARG1 (c42-1 / funny-02
+                                               :ARG1 (c42-16 / this)
+                                               :degree (c42-2 / so))))
+       :snt3 (c42-15 / typical-02
+                     :ARG1 (c42-6 / person
+                                  :name (c42-10 / name
+                                                :op1 "Dwayne"))
+                     :degree (c42-17 / so)
+                     :mod (c42-12 / just)))
+
+# ::snt *puts lips on microphone* personally uhh I am more attracted to liam than I am to chris hemsworth however- please maam dont throw that at me- however, Im not picky and Ill gladly say yes to either if they asked for my hand in marriage. thats all. drive home safe, folks.
+# ::tokens ["*", "puts", "lips", "on", "microphone", "*", "personally", "uhh", "I", "am", "more", "attracted", "to", "liam", "than", "I", "am", "to", "chris", "hemsworth", "however-", "please", "maam", "do", "nt", "throw", "that", "at", "me-", "however", ",", "I", "m", "not", "picky", "and", "Ill", "gladly", "say", "yes", "to", "either", "if", "they", "asked", "for", "my", "hand", "in", "marriage", ".", "that", "s", "all", ".", "drive", "home", "safe", ",", "folks", "."]
+# ::lemmas ["*", "put", "lip", "on", "microphone", "*", "personally", "uhh", "i", "be", "more", "attract", "to", "liam", "than", "i", "be", "to", "chris", "hemsworth", "however-", "please", "maam", "do", "not", "throw", "that", "at", "me-", "however", ",", "i", "m", "not", "picky", "and", "Ill", "gladly", "say", "yes", "to", "either", "if", "they", "ask", "for", "my", "hand", "in", "marriage", ".", "that", "s", "all", ".", "drive", "home", "safe", ",", "folk", "."]
+(c43-19 / multi-sentence
+        :snt1 (c43-31 / put-01
+                      :ARG0 (c43-9 / he)
+                      :ARG1 (c43-1 / lip)
+                      :ARG2 (c43-4 / on
+                                   :op1 (c43-10 / micrometer)))
+        :snt2 (c43-23 / contrast-01
+                      :ARG1 (c43-14 / attract-01
+                                    :ARG0 (c43-20 / person
+                                                  :name (c43-28 / name
+                                                                :op1 "Liam"))
+                                    :ARG1 (c43-34 / i)
+                                    :ARG1-of (c43-3 / personal-02)
+                                    :ARG2-of (c43-33 / have-degree-91
+                                                     :ARG1 c43-34
+                                                     :ARG3 (c43-26 / more)
+                                                     :ARG4 (c43-12 / attract-01
+                                                                   :ARG0 (c43-2 / person
+                                                                                :name (c43-21 / name
+                                                                                              :op1 "Chris"
+                                                                                              :op2 "Hemsworth"))
+                                                                   :ARG1 c43-34)))
+                      :ARG2 (c43-13 / throw-01
+                                    :ARG0 (c43-6 / you)
+                                    :ARG1 (c43-24 / that)
+                                    :ARG2 (c43-7 / i)
+                                    :ARG1-of (c43-18 / contrast-01
+                                                     :ARG2 (c43-11 / and
+                                                                   :op1 (c43-15 / picky
+                                                                                :domain c43-7
+                                                                                :polarity -)
+                                                                   :op2 (c43-0 / say-01
+                                                                               :ARG0 c43-7
+                                                                               :ARG1 (c43-16 / yes)
+                                                                               :ARG2 (c43-30 / either)
+                                                                               :manner (c43-17 / glad-02)
+                                                                               :condition (c43-36 / ask-02
+                                                                                                  :ARG0 (c43-35 / they)
+                                                                                                  :ARG1 (c43-8 / have-hand-in-17
+                                                                                                               :ARG0 c43-7
+                                                                                                               :ARG1 (c43-22 / marry-01))))))
+                                    :mode imperative
+                                    :polite +))
+        :snt3 (c43-32 / all
+                      :snt4 (c43-29 / drive-01
+                                    :ARG0 (c43-27 / folk)
+                                    :ARG1 (c43-25 / home)
+                                    :manner (c43-5 / safe-01)
+                                    :mode imperative)))
+
+# ::snt JAJAJAJ me encantaaan!
+# ::tokens ["JAJAJAJ", "me", "encantaaan", "!"]
+# ::lemmas ["JAJAJAJ", "i", "encantaaan", "!"]
+(c44-1 / say-01
+       :ARG0 (c44-5 / i)
+       :ARG1 (c44-3 / come-on-25
+                    :ARG1 c44-5
+                    :manner (c44-4 / jeez
+                                   :mode expressive)
+                    :mode imperative)
+       :ARG2 (c44-2 / person
+                    :name (c44-0 / name
+                                 :op1 "Jesus"))
+       :mode expressive)
+
+# ::snt Pinche liam
+# ::tokens ["Pinche", "liam"]
+# ::lemmas ["pinche", "liam"]
+(c45-1 / person
+       :name (c45-0 / name
+                    :op1 "Pinche"
+                    :op2 "Liam"))
+
+# ::snt Jajajajaja lo amoo
+# ::tokens ["Jajajajaja", "lo", "amoo"]
+# ::lemmas ["Jajajajaja", "lo", "amoo"]
+(c46-2 / amoo
+       :mod (c46-1 / person
+                   :name (c46-0 / name
+                                :op1 "Jajajajaja"))
+       :mode expressive)
+
+# ::snt JAJAJ es un pelotudo
+# ::tokens ["JAJAJ", "es", "un", "pelotudo"]
+# ::lemmas ["JAJAJ", "es", "un", "pelotudo"]
+(c47-1 / pelotudo
+       :domain (c47-2 / person
+                      :name (c47-0 / name
+                                   :op1 "JAJAJ"))
+       :polarity -)
+
+# ::snt or it just like a co play of the TV series, LOST!
+# ::tokens ["or", "it", "just", "like", "a", "co", "play", "of", "the", "TV", "series", ",", "LOST", "!"]
+# ::lemmas ["or", "it", "just", "like", "a", "co", "play", "of", "the", "tv", "series", ",", "LOST", "!"]
+(c48-0 / or
+       :op2 (c48-3 / resemble-01
+                   :ARG1 (c48-7 / it)
+                   :ARG2 (c48-5 / coopplay-00
+                                :ARG1 (c48-2 / series
+                                             :medium (c48-8 / television)
+                                             :ARG1-of (c48-1 / mean-01
+                                                             :ARG2 (c48-4 / lose-02))))
+                   :mod (c48-6 / just)))
+
+# ::snt FLY ON THE WALL
+# ::tokens ["FLY", "ON", "THE", "WALL"]
+# ::lemmas ["fly", "ON", "the", "wall"]
+(c49-1 / laugh-01
+       :location (c49-0 / wall)
+       :mode expressive)
+
+# ::snt Pleaseeeee
+# ::tokens ["Pleaseeeee"]
+# ::lemmas ["Pleaseeeee"]
+(c50-0 / please
+       :polite +)

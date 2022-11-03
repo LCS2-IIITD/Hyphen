@@ -1,0 +1,24 @@
+# ::snt It's a plural . IME frequently confusing without much grammatical gymnastics .
+# ::tokens ["It", "'s", "a", "plural", ".", "IME", "frequently", "confusing", "without", "much", "grammatical", "gymnastics", "."]
+# ::lemmas ["it", "be", "a", "plural", ".", "IME", "frequently", "confuse", "without", "much", "grammatical", "gymnastic", "."]
+(c1-8 / multi-sentence
+      :snt1 (c1-7 / plural
+                  :domain (c1-1 / it))
+      :snt2 (c1-5 / opine-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-2 / confuse-01
+                              :ARG1-of (c1-0 / frequent-02)
+                              :manner (c1-6 / gymnastics
+                                            :topic (c1-9 / grammar)
+                                            :quant (c1-3 / much)
+                                            :polarity -))))
+
+# ::snt how do you then manage with " you " being ambiguous ?
+# ::tokens ["how", "do", "you", "then", "manage", "with", "\"", "you", "\"", "being", "ambiguous", "?"]
+# ::lemmas ["how", "do", "you", "then", "manage", "with", "\"", "you", "\"", "be", "ambiguous", "?"]
+(c2-2 / manage-02
+      :ARG0 (c2-3 / you)
+      :ARG1 (c2-0 / ambiguous
+                  :domain c2-3)
+      :manner (c2-4 / amr-unknown)
+      :time (c2-1 / then))

@@ -1,0 +1,78 @@
+# ::snt Blah blah blah . Just listen to this guy . He says NOTHING . it s all blabber . <URL>
+# ::tokens ["Blah", "blah", "blah", ".", "Just", "listen", "to", "this", "guy", ".", "He", "says", "NOTHING", ".", "it", "s", "all", "blabber", ".", "<", "URL", ">"]
+# ::lemmas ["blah", "blah", "blah", ".", "just", "listen", "to", "this", "guy", ".", "he", "say", "nothing", ".", "it", "s", "all", "blabber", ".", "<", "URL", ">"]
+(c1-10 / multi-sentence
+       :snt1 (c1-7 / blah-blah-blah)
+       :snt2 (c1-6 / listen-01
+                   :ARG0 (c1-12 / you)
+                   :ARG1 (c1-5 / guy
+                               :mod (c1-4 / this))
+                   :mod (c1-8 / just)
+                   :mode imperative)
+       :snt3 (c1-0 / say-01
+                   :ARG0 (c1-3 / he)
+                   :ARG1 (c1-11 / nothing))
+       :snt4 (c1-1 / blabber
+                   :domain (c1-9 / it)
+                   :mod (c1-2 / all)))
+
+# ::snt I am very confused . How does President Trump undo something Obama did , when Obama never did anything ? Very confusing Johnny , very , very , very confusing . You make good ketchup though <URL>
+# ::tokens ["I", "am", "very", "confused", ".", "How", "does", "President", "Trump", "undo", "something", "Obama", "did", ",", "when", "Obama", "never", "did", "anything", "?", "Very", "confusing", "Johnny", ",", "very", ",", "very", ",", "very", "confusing", ".", "You", "make", "good", "ketchup", "though", "<", "URL", ">"]
+# ::lemmas ["i", "be", "very", "confused", ".", "how", "do", "President", "Trump", "undo", "something", "Obama", "do", ",", "when", "Obama", "never", "do", "anything", "?", "very", "confusing", "Johnny", ",", "very", ",", "very", ",", "very", "confusing", ".", "you", "make", "good", "ketchup", "though", "<", "URL", ">"]
+(c2-8 / multi-sentence
+      :snt1 (c2-5 / confuse-01
+                  :ARG1 (c2-4 / i)
+                  :degree (c2-6 / very))
+      :snt2 (c2-23 / undo-01
+                   :ARG0 (c2-25 / person
+                                :name (c2-9 / name
+                                            :op1 "Trump")
+                                :ARG0-of (c2-22 / have-org-role-91
+                                                :ARG2 (c2-24 / president)))
+                   :ARG1 (c2-12 / something
+                                :ARG1-of (c2-0 / do-02
+                                               :ARG0 (c2-14 / person
+                                                            :name (c2-2 / name
+                                                                        :op1 "Obama"))))
+                   :manner (c2-19 / amr-unknown)
+                   :time (c2-17 / do-02
+                                :ARG0 c2-14
+                                :ARG1 (c2-10 / anything)
+                                :time (c2-11 / ever)
+                                :polarity -))
+      :snt3 (c2-1 / confuse-01
+                  :ARG1 (c2-13 / person
+                               :name (c2-16 / name
+                                            :op1 "Johnny"))
+                  :degree (c2-20 / very
+                                 :degree (c2-15 / very)))
+      :snt4 (c2-3 / have-concession-91
+                  :ARG1 (c2-21 / make-01
+                               :ARG0 (c2-18 / you)
+                               :ARG1 (c2-26 / ketchup
+                                            :ARG1-of (c2-7 / good-02)))))
+
+# ::snt He has nothing to do with making ketchup . His wife inherited % from her late husband & sold it off .
+# ::tokens ["He", "has", "nothing", "to", "do", "with", "making", "ketchup", ".", "His", "wife", "inherited", "%", "from", "her", "late", "husband", "&", "sold", "it", "off", "."]
+# ::lemmas ["he", "have", "nothing", "to", "do", "with", "make", "ketchup", ".", "his", "wife", "inherit", "%", "from", "her", "late", "husband", "&", "sell", "it", "off", "."]
+(c3-16 / multi-sentence
+       :snt1 (c3-7 / have-to-do-with-04
+                   :ARG0 (c3-14 / he)
+                   :ARG1 (c3-3 / make-01
+                               :ARG1 (c3-17 / ketchup))
+                   :ARG2 (c3-15 / nothing))
+       :snt2 (c3-2 / and
+                   :op1 (c3-4 / inherit-01
+                              :ARG0 (c3-11 / person
+                                           :ARG0-of (c3-1 / have-rel-role-91
+                                                          :ARG1 (c3-9 / he)
+                                                          :ARG2 (c3-5 / wife)))
+                              :ARG1 (c3-10 / percentage)
+                              :ARG2 (c3-6 / person
+                                          :ARG0-of (c3-8 / have-rel-role-91
+                                                         :ARG1 c3-11
+                                                         :ARG2 (c3-12 / husband))
+                                          :ARG1-of (c3-13 / late-03)))
+                   :op2 (c3-0 / sell-off-04
+                              :ARG0 c3-11
+                              :ARG1 c3-10)))

@@ -1,0 +1,66 @@
+# ::snt That is absolutely terrible
+# ::tokens ["That", "is", "absolutely", "terrible"]
+# ::lemmas ["that", "be", "absolutely", "terrible"]
+(c1-0 / terrible-01
+      :ARG1 (c1-2 / that)
+      :degree (c1-1 / absolute))
+
+# ::snt Why are they protesting?
+# ::tokens ["Why", "are", "they", "protesting", "?"]
+# ::lemmas ["why", "be", "they", "protest", "?"]
+(c2-2 / cause-01
+      :ARG0 (c2-3 / amr-unknown)
+      :ARG1 (c2-1 / protest-01
+                  :ARG0 (c2-0 / they)))
+
+# ::snt : Protestors have crossed the police line in
+# ::tokens [":", "Protestors", "have", "crossed", "the", "police", "line", "in"]
+# ::lemmas [":", "protestor", "have", "cross", "the", "police", "line", "in"]
+(c3-3 / cross-02
+      :ARG0 (c3-2 / person
+                  :ARG0-of (c3-4 / protest-01))
+      :ARG1 (c3-0 / line
+                  :mod (c3-1 / police)))
+
+# ::snt : Protestors have crossed the police line in
+# ::tokens [":", "Protestors", "have", "crossed", "the", "police", "line", "in"]
+# ::lemmas [":", "protestor", "have", "cross", "the", "police", "line", "in"]
+(c4-3 / cross-02
+      :ARG0 (c4-2 / person
+                  :ARG0-of (c4-4 / protest-01))
+      :ARG1 (c4-0 / line
+                  :mod (c4-1 / police)))
+
+# ::snt yr old unarmed black kid shot by the police when he didnt do anything
+# ::tokens ["yr", "old", "unarmed", "black", "kid", "shot", "by", "the", "police", "when", "he", "did", "nt", "do", "anything"]
+# ::lemmas ["yr", "old", "unarmed", "black", "kid", "shoot", "by", "the", "police", "when", "he", "do", "not", "do", "anything"]
+(c5-6 / shoot-02
+      :ARG0 (c5-4 / police)
+      :ARG1 (c5-3 / kid
+                  :ARG1-of (c5-1 / black-05)
+                  :age (c5-7 / temporal-quantity
+                             :unit (c5-0 / year)
+                             :quant 1)
+                  :ARG1-of (c5-8 / arm-01
+                                 :polarity -))
+      :time (c5-5 / do-02
+                  :ARG0 c5-3
+                  :ARG1 (c5-2 / anything)
+                  :polarity -))
+
+# ::snt The sound of the people. , thank you so much for your work reporting on this.
+# ::tokens ["The", "sound", "of", "the", "people", ".", ",", "thank", "you", "so", "much", "for", "your", "work", "reporting", "on", "this", "."]
+# ::lemmas ["the", "sound", "of", "the", "people", ".", ",", "thank", "you", "so", "much", "for", "your", "work", "report", "on", "this", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-9 / sound-02
+                  :ARG1 (c6-5 / person))
+      :snt2 (c6-10 / thank-01
+                   :ARG1 (c6-1 / you)
+                   :ARG2 (c6-2 / work-01
+                               :ARG0 c6-1
+                               :ARG1 (c6-6 / report-01
+                                           :ARG0 c6-1
+                                           :ARG1 (c6-8 / this)))
+                   :ARG1-of (c6-0 / have-quant-91
+                                  :ARG2 (c6-7 / much)
+                                  :ARG3 (c6-4 / so))))

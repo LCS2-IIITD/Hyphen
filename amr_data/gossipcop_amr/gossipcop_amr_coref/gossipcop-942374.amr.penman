@@ -1,0 +1,41 @@
+# ::snt I meant ,And so what
+# ::tokens ["I", "meant", ",", "And", "so", "what"]
+# ::lemmas ["i", "mean", ",", "and", "so", "what"]
+(c1-1 / mean-01
+      :ARG0 (c1-2 / i)
+      :ARG2 (c1-0 / infer-01
+                  :ARG1 (c1-3 / amr-unknown)))
+
+# ::snt And do what
+# ::tokens ["And", "do", "what"]
+# ::lemmas ["and", "do", "what"]
+(c2-3 / and
+      :op2 (c2-0 / do-02
+                 :ARG0 (c2-1 / you)
+                 :ARG1 (c2-2 / amr-unknown)
+                 :mode imperative))
+
+# ::snt Looking for Web Developer? Contact me or
+# ::tokens ["Looking", "for", "Web", "Developer", "?", "Contact", "me", "or"]
+# ::lemmas ["look", "for", "web", "Developer", "?", "contact", "i", "or"]
+(c3-1 / multi-sentence
+      :snt1 (c3-3 / look-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-2 / person
+                              :ARG0-of (c3-8 / develop-02
+                                             :ARG1 (c3-4 / web)))
+                  :polarity (c3-7 / amr-unknown))
+      :snt2 (c3-5 / contact-01
+                  :ARG0 c3-0)
+      :ARG1 (c3-6 / i))
+
+# ::snt I need a ticket to see up close!!
+# ::tokens ["I", "need", "a", "ticket", "to", "see", "up", "close", "!", "!"]
+# ::lemmas ["i", "need", "a", "ticket", "to", "see", "up", "close", "!", "!"]
+(c4-0 / need-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-4 / ticket)
+      :purpose (c4-1 / see-01
+                     :ARG0 c4-3
+                     :ARG1-of (c4-2 / close-10))
+      :mode expressive)

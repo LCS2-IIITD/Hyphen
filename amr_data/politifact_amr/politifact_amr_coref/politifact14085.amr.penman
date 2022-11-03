@@ -1,0 +1,60 @@
+# ::snt Fake news
+# ::tokens ["Fake", "news"]
+# ::lemmas ["fake", "news"]
+(c1-0 / news
+      :ARG1-of (c1-1 / fake-02))
+
+# ::snt VICTORIA HOLD UP IM NOT SEEING ANY OTHER REPORT  ON THIS FLASH NEWS CORNER MAY BE ALL BULL
+# ::tokens ["VICTORIA", "HOLD", "UP", "IM", "NOT", "SEEING", "ANY", "OTHER", "REPORT", " ", "ON", "THIS", "FLASH", "NEWS", "CORNER", "MAY", "BE", "ALL", "BULL"]
+# ::lemmas ["VICTORIA", "HOLD", "UP", "im", "not", "see", "any", "other", "report", " ", "on", "THIS", "FLASH", "NEWS", "CORNER", "may", "be", "all", "bull"]
+(c2-10 / multi-sentence
+       :snt1 (c2-9 / hold-up-11
+                   :ARG0 (c2-6 / victim))
+       :snt2 (c2-8 / see-01
+                   :ARG0 (c2-12 / i)
+                   :ARG1 (c2-3 / possible-01
+                               :ARG1 (c2-13 / blind-02
+                                            :ARG1 (c2-1 / report-01
+                                                        :mod (c2-0 / other)
+                                                        :location (c2-2 / broadcast-program
+                                                                        :name (c2-11 / name
+                                                                                     :op1 "Fox"
+                                                                                     :op2 "News"
+                                                                                     :op3 "Corner")
+                                                                        :mod (c2-5 / this)
+                                                                        :mod (c2-4 / news)))
+                                            :mod (c2-7 / all)))
+                   :polarity -))
+
+# ::snt All these recent breaking news from httpflashnewscornercom  is totally unreliable Baloney
+# ::tokens ["All", "these", "recent", "breaking", "news", "from", "httpflashnewscornercom", " ", "is", "totally", "unreliable", "Baloney"]
+# ::lemmas ["all", "these", "recent", "break", "news", "from", "httpflashnewscornercom", " ", "be", "totally", "unreliable", "Baloney"]
+(c3-8 / say-01
+      :ARG1 (c3-0 / rely-01
+                  :ARG1 (c3-9 / news
+                              :ARG1-of (c3-10 / break-13)
+                              :time (c3-7 / recent)
+                              :source (c3-2 / url-entity
+                                            :value "httpflashnewscornercom")
+                              :mod (c3-5 / this)
+                              :mod (c3-6 / all))
+                  :degree (c3-1 / total)
+                  :polarity -)
+      :ARG2 (c3-3 / person
+                  :name (c3-4 / name
+                              :op1 "Baloney")))
+
+# ::snt IM NOT SURE ON THIS NEWS CORNER IT MAY BE FAKE
+# ::tokens ["IM", "NOT", "SURE", "ON", "THIS", "NEWS", "CORNER", "IT", "MAY", "BE", "FAKE"]
+# ::lemmas ["im", "not", "sure", "on", "THIS", "news", "corner", "it", "may", "be", "fake"]
+(c4-4 / sure-02
+      :ARG0 (c4-6 / i)
+      :ARG1 (c4-1 / possible-01
+                  :ARG1 (c4-3 / fake-02
+                              :ARG1 (c4-0 / it)))
+      :location (c4-7 / broadcast-program
+                      :name (c4-5 / name
+                                  :op1 "News"
+                                  :op2 "Corner")
+                      :mod (c4-2 / this))
+      :polarity -)

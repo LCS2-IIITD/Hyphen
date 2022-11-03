@@ -1,0 +1,91 @@
+# ::snt damn i wanna be a man then
+# ::tokens ["damn", "i", "wanna", "be", "a", "man", "then"]
+# ::lemmas ["damn", "i", "wanna", "be", "a", "man", "then"]
+(c1-1 / want-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / man
+                  :domain c1-2)
+      :mod (c1-3 / then)
+      :ARG1-of (c1-4 / damn-01
+                     :ARG0 c1-2))
+
+# ::snt then and now she's still beautiful
+# ::tokens ["then", "and", "now", "she", "'s", "still", "beautiful"]
+# ::lemmas ["then", "and", "now", "she", "be", "still", "beautiful"]
+(c2-1 / beautiful-02
+      :ARG1 (c2-3 / she)
+      :mod (c2-0 / still)
+      :time (c2-4 / and
+                  :op1 (c2-5 / then)
+                  :op2 (c2-2 / now)))
+
+# ::snt I thought that was Cher
+# ::tokens ["I", "thought", "that", "was", "Cher"]
+# ::lemmas ["i", "think", "that", "be", "Cher"]
+(c4-2 / think-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-1 / person
+                  :name (c4-0 / name
+                              :op1 "Cher")
+                  :domain (c4-4 / that)))
+
+# ::snt Miley's ugly? Damn you must be blind then.
+# ::tokens ["Miley", "'s", "ugly", "?", "Damn", "you", "must", "be", "blind", "then", "."]
+# ::lemmas ["Miley", "'s", "ugly", "?", "Damn", "you", "must", "be", "blind", "then", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-9 / ugly
+                  :domain (c5-4 / person
+                                :name (c5-2 / name
+                                            :op1 "Miley"))
+                  :polarity (c5-7 / amr-unknown))
+      :snt2 (c5-6 / infer-01
+                  :ARG1 (c5-0 / blind-02
+                              :ARG1 (c5-1 / you)
+                              :mod (c5-5 / then)
+                              :mod (c5-8 / damn
+                                         :mode expressive))))
+
+# ::snt Which one is Billy Ray..? Which one is Tish
+# ::tokens ["Which", "one", "is", "Billy", "Ray", "..", "?", "Which", "one", "is", "Tish"]
+# ::lemmas ["which", "one", "be", "Billy", "Ray", "..", "?", "which", "one", "be", "Tish"]
+(c6-3 / multi-sentence
+      :snt1 (c6-6 / person
+                  :name (c6-2 / name
+                              :op1 "Billy"
+                              :op2 "Ray")
+                  :domain (c6-0 / one))
+      :snt2 (c6-4 / person
+                  :name (c6-5 / name
+                              :op1 "Tish")
+                  :domain (c6-1 / one)))
+
+# ::snt Mad
+# ::tokens ["Mad"]
+# ::lemmas ["mad"]
+(c7-0 / mad-02)
+
+# ::snt and it should stay that way
+# ::tokens ["and", "it", "should", "stay", "that", "way"]
+# ::lemmas ["and", "it", "should", "stay", "that", "way"]
+(c9-5 / and
+      :op2 (c9-1 / recommend-01
+                 :ARG1 (c9-0 / stay-01
+                             :ARG1 (c9-4 / it)
+                             :ARG3 (c9-2 / way
+                                         :mod (c9-3 / that)))))
+
+# ::snt Can't stand any of them
+# ::tokens ["Ca", "n't", "stand", "any", "of", "them"]
+# ::lemmas ["can", "not", "stand", "any", "of", "they"]
+(c10-1 / possible-01
+       :ARG1 (c10-0 / stand-03
+                    :ARG0 (c10-3 / i)
+                    :ARG1 (c10-2 / they
+                                 :mod (c10-4 / any)))
+       :polarity -)
+
+# ::snt great pic
+# ::tokens ["great", "pic"]
+# ::lemmas ["great", "pic"]
+(c11-1 / pic
+       :mod (c11-0 / great))

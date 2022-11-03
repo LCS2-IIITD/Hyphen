@@ -1,0 +1,39 @@
+# ::snt Mixologist
+# ::tokens ["Mixologist"]
+# ::lemmas ["mixologist"]
+(c1-0 / person
+      :ARG0-of (c1-1 / mix-01))
+
+# ::snt She knows how to earn the tips.
+# ::tokens ["She", "knows", "how", "to", "earn", "the", "tips", "."]
+# ::lemmas ["she", "know", "how", "to", "earn", "the", "tip", "."]
+(c2-1 / know-03
+      :ARG0 (c2-0 / she)
+      :ARG1 (c2-3 / earn-01
+                  :ARG0 c2-0
+                  :ARG1 (c2-2 / tip)))
+
+# ::snt It's almost infuriating as a former male server what she must make per hour in tips for what very well may be mediocre service.
+# ::tokens ["It", "'s", "almost", "infuriating", "as", "a", "former", "male", "server", "what", "she", "must", "make", "per", "hour", "in", "tips", "for", "what", "very", "well", "may", "be", "mediocre", "service", "."]
+# ::lemmas ["it", "be", "almost", "infuriate", "as", "a", "former", "male", "server", "what", "she", "must", "make", "per", "hour", "in", "tip", "for", "what", "very", "well", "may", "be", "mediocre", "service", "."]
+(c3-0 / infuriate-01
+      :ARG0 (c3-4 / obligate-01
+                  :ARG1 (c3-9 / she)
+                  :ARG2 (c3-8 / make-05
+                              :ARG0 c3-9
+                              :ARG1 (c3-6 / rate-entity-91
+                                          :ARG1 (c3-14 / monetary-quantity
+                                                       :ARG1-of (c3-5 / tip-02
+                                                                      :ARG3 (c3-17 / serve-01
+                                                                                   :ARG1-of (c3-11 / mediocre-00
+                                                                                                   :ARG1-of (c3-18 / possible-01)
+                                                                                                   :mod (c3-1 / well
+                                                                                                              :degree (c3-3 / very))))))
+                                          :ARG2 (c3-2 / temporal-quantity
+                                                      :unit (c3-15 / hour)
+                                                      :quant 1))
+                              :ARG2 (c3-16 / person
+                                           :ARG0-of (c3-10 / server-01)
+                                           :mod (c3-7 / male)
+                                           :time (c3-13 / former))))
+      :mod (c3-12 / almost))

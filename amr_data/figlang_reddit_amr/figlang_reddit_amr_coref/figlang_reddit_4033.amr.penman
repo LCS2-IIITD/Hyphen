@@ -1,0 +1,59 @@
+# ::snt Comcast to offer gigabit Internet nationwide by 2018
+# ::tokens ["Comcast", "to", "offer", "gigabit", "Internet", "nationwide", "by", "2018"]
+# ::lemmas ["comcast", "to", "offer", "gigabit", "internet", "nationwide", "by", "2018"]
+(c1-7 / plan-01
+      :ARG0 (c1-2 / company
+                  :name (c1-8 / name
+                              :op1 "Comcast"))
+      :ARG1 (c1-4 / offer-01
+                  :ARG0 c1-2
+                  :ARG1 (c1-1 / internet
+                              :mod (c1-6 / gigabit))
+                  :location (c1-5 / nationwide)
+                  :time (c1-3 / by
+                              :op1 (c1-0 / date-entity
+                                         :year 2018))))
+
+# ::snt for the low price of $100,000.00/ month
+# ::tokens ["for", "the", "low", "price", "of", "$", "100,000.00/", "month"]
+# ::lemmas ["for", "the", "low", "price", "of", "$", "100,000.00/", "month"]
+(c2-5 / price-01
+      :ARG2 (c2-3 / rate-entity-91
+                  :ARG1 (c2-6 / monetary-quantity
+                              :unit (c2-0 / dollar)
+                              :quant 100000.00)
+                  :ARG2 (c2-2 / temporal-quantity
+                              :unit (c2-1 / month)
+                              :quant 1))
+      :ARG1-of (c2-4 / low-04))
+
+# ::snt For the first 3 months
+# ::tokens ["For", "the", "first", "3", "months"]
+# ::lemmas ["for", "the", "first", "3", "months"]
+(c3-2 / temporal-quantity
+      :unit (c3-1 / month)
+      :ord (c3-0 / ordinal-entity
+                 :value 1)
+      :quant 3)
+
+# ::snt After which it begins quietly rising every month, until you finally notice and call them.
+# ::tokens ["After", "which", "it", "begins", "quietly", "rising", "every", "month", ",", "until", "you", "finally", "notice", "and", "call", "them", "."]
+# ::lemmas ["after", "which", "it", "begins", "quietly", "rise", "every", "month", ",", "until", "you", "finally", "notice", "and", "call", "they", "."]
+(c4-8 / begin-01
+      :ARG1 (c4-7 / rise-01
+                  :ARG1 (c4-9 / it)
+                  :ARG1-of (c4-3 / quiet-04)
+                  :frequency (c4-4 / rate-entity-91
+                                   :ARG3 (c4-6 / temporal-quantity
+                                               :unit (c4-10 / month)
+                                               :quant 1)))
+      :time (c4-0 / after)
+      :time (c4-5 / until
+                  :op1 (c4-13 / and
+                              :op1 (c4-11 / notice-01
+                                          :ARG0 (c4-12 / you)
+                                          :ARG1 c4-7
+                                          :time (c4-1 / final))
+                              :op2 (c4-2 / call-02
+                                         :ARG0 c4-12
+                                         :ARG1 c4-7))))

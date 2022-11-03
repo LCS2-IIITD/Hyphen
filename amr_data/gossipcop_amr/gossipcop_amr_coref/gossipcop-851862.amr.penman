@@ -1,0 +1,116 @@
+# ::snt Your. 's Sally evin?
+# ::tokens ["Your", ".", "'s", "Sally", "evin", "?"]
+# ::lemmas ["your", ".", "'s", "Sally", "evin", "?"]
+(c1-2 / person
+      :polarity (c1-3 / amr-unknown)
+      :name (c1-0 / name
+                  :op1 "Sally"
+                  :op2 "Eva")
+      :poss (c1-1 / you))
+
+# ::snt Congrats Kevin and Eniko!
+# ::tokens ["Congrats", "Kevin", "and", "Eniko", "!"]
+# ::lemmas ["Congrats", "Kevin", "and", "Eniko", "!"]
+(c2-4 / congratulate-01
+      :ARG1 (c2-5 / and
+                  :op1 (c2-3 / person
+                             :name (c2-0 / name
+                                         :op1 "Kevin"))
+                  :op2 (c2-1 / person
+                             :name (c2-2 / name
+                                         :op1 "Eniko"))))
+
+# ::snt He's so tiny i could put him in my pocket.
+# ::tokens ["He", "'s", "so", "tiny", "i", "could", "put", "him", "in", "my", "pocket", "."]
+# ::lemmas ["he", "be", "so", "tiny", "i", "could", "put", "he", "in", "my", "pocket", "."]
+(c3-2 / have-degree-91
+      :ARG1 (c3-4 / he)
+      :ARG2 (c3-6 / tiny)
+      :ARG3 (c3-1 / so)
+      :ARG6 (c3-3 / possible-01
+                  :ARG1 (c3-0 / put-01
+                              :ARG0 (c3-5 / i)
+                              :ARG1 c3-4
+                              :ARG2 (c3-7 / pocket
+                                          :poss c3-5))))
+
+# ::snt What about tax reform? Healthcare?
+# ::tokens ["What", "about", "tax", "reform", "?", "Healthcare", "?"]
+# ::lemmas ["what", "about", "tax", "reform", "?", "Healthcare", "?"]
+(c4-1 / and
+      :op1 (c4-4 / amr-unknown
+                 :topic (c4-0 / reform-01
+                              :ARG1 (c4-5 / tax-01)))
+      :op2 (c4-2 / healthcare
+                 :polarity (c4-3 / amr-unknown)))
+
+# ::snt : Comedian Kevin Hart and his wife Eniko Parrish are expecting a baby boy, their ...
+# ::tokens [":", "Comedian", "Kevin", "Hart", "and", "his", "wife", "Eniko", "Parrish", "are", "expecting", "a", "baby", "boy", ",", "their", "..."]
+# ::lemmas [":", "Comedian", "Kevin", "Hart", "and", "his", "wife", "Eniko", "Parrish", "be", "expect", "a", "baby", "boy", ",", "their", "..."]
+(c5-3 / expect-01
+      :ARG0 (c5-10 / and
+                   :op1 (c5-5 / person
+                              :name (c5-1 / name
+                                          :op1 "Kevin"
+                                          :op2 "Hart")
+                              :mod (c5-8 / comedian))
+                   :op2 (c5-2 / person
+                              :name (c5-4 / name
+                                          :op1 "Eniko"
+                                          :op2 "Parrish")
+                              :ARG0-of (c5-6 / have-rel-role-91
+                                             :ARG1 c5-5
+                                             :ARG2 (c5-9 / wife))))
+      :ARG1 (c5-0 / boy
+                  :mod (c5-7 / baby)))
+
+# ::snt Why would we care? Whoop tee do
+# ::tokens ["Why", "would", "we", "care", "?", "Whoop", "tee", "do"]
+# ::lemmas ["why", "would", "we", "care", "?", "whoop", "tee", "do"]
+(c6-0 / multi-sentence
+      :snt1 (c6-2 / care-01
+                  :ARG0 (c6-3 / we)
+                  :ARG1-of (c6-5 / cause-01
+                                 :ARG0 (c6-4 / amr-unknown)))
+      :snt2 (c6-1 / whoop-de-do-00
+                  :mode expressive))
+
+# ::snt congratulations on new baby on the way
+# ::tokens ["congratulations", "on", "new", "baby", "on", "the", "way"]
+# ::lemmas ["congratulation", "on", "new", "baby", "on", "the", "way"]
+(c7-0 / congratulate-01
+      :ARG1 (c7-1 / baby
+                  :ARG1-of (c7-2 / new-01)
+                  :location (c7-3 / way)))
+
+# ::snt May your family be bless
+# ::tokens ["May", "your", "family", "be", "bless"]
+# ::lemmas ["may", "your", "family", "be", "bles"]
+(c8-5 / wish-01
+      :ARG1 (c8-1 / bless-01
+                  :ARG1 (c8-0 / family
+                              :ARG1-of (c8-4 / have-org-role-91
+                                             :ARG0 (c8-2 / you)
+                                             :ARG2 (c8-3 / member)))))
+
+# ::snt congrats to Mr Hart and Mrs Hart on there first
+# ::tokens ["congrats", "to", "Mr", "Hart", "and", "Mrs", "Hart", "on", "there", "first"]
+# ::lemmas ["congrat", "to", "Mr", "Hart", "and", "Mrs", "Hart", "on", "there", "first"]
+(c9-5 / congratulate-01
+      :ARG1 (c9-7 / and
+                  :op1 (c9-4 / person
+                             :name (c9-1 / name
+                                         :op1 "Mr"
+                                         :op2 "Hart"))
+                  :op2 (c9-2 / person
+                             :name (c9-3 / name
+                                         :op1 "Mrs"
+                                         :op2 "Hart")))
+      :location (c9-6 / there)
+      :ord (c9-0 / ordinal-entity
+                 :value 1))
+
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c10-0 / congratulate-01)

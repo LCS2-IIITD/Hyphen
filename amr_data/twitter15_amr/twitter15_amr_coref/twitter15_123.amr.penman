@@ -1,0 +1,103 @@
+# ::snt this can't be true
+# ::tokens ["this", "ca", "n't", "be", "true"]
+# ::lemmas ["this", "can", "not", "be", "true"]
+(c1-2 / possible-01
+      :ARG1 (c1-0 / true-01
+                  :ARG1 (c1-1 / this))
+      :polarity -)
+
+# ::snt : Tupac Was Hiding For Years
+# ::tokens [":", "Tupac", "Was", "Hiding", "For", "Years"]
+# ::lemmas [":", "Tupac", "be", "hide", "for", "Years"]
+(c2-3 / hide-01
+      :ARG0 (c2-0 / person
+                  :name (c2-5 / name
+                              :op1 "Tupac"))
+      :duration (c2-2 / multiple
+                      :op1 (c2-1 / temporal-quantity
+                                 :unit (c2-4 / year)
+                                 :quant 1)))
+
+# ::snt : Tupac Was Hiding For Years you know damn well that's Jay Z's body attached to Pac's head.
+# ::tokens [":", "Tupac", "Was", "Hiding", "For", "Years", "you", "know", "damn", "well", "that", "'s", "Jay", "Z", "'s", "body", "attached", "to", "Pac", "'s", "head", "."]
+# ::lemmas [":", "Tupac", "be", "hide", "for", "year", "you", "know", "damn", "well", "that", "be", "Jay", "Z", "'s", "body", "attach", "to", "Pac", "'s", "head", "."]
+(c3-5 / and
+      :op1 (c3-17 / hide-01
+                  :ARG0 (c3-9 / person
+                              :name (c3-14 / name
+                                           :op1 "Tupac"))
+                  :duration (c3-11 / multiple
+                                   :op1 (c3-16 / temporal-quantity
+                                               :unit (c3-12 / year)
+                                               :quant 1)))
+      :op2 (c3-18 / know-01
+                  :ARG0 (c3-8 / you)
+                  :ARG1 (c3-1 / body
+                              :poss (c3-15 / person
+                                           :name (c3-13 / name
+                                                        :op1 "Jay"
+                                                        :op2 "Z"))
+                              :ARG1-of (c3-0 / attach-01
+                                             :ARG2 (c3-2 / head
+                                                         :part-of (c3-7 / person
+                                                                        :name (c3-3 / name
+                                                                                    :op1 "Pac"))))
+                              :domain (c3-10 / that))
+                  :degree (c3-4 / well
+                                :degree (c3-6 / damn))))
+
+# ::snt that's really gonna be op if he been hiding for years smh
+# ::tokens ["that", "'s", "really", "gon", "na", "be", "op", "if", "he", "been", "hiding", "for", "years", "smh"]
+# ::lemmas ["that", "be", "really", "going", "to", "be", "op", "if", "he", "been", "hide", "for", "years", "smh"]
+(c4-2 / op
+      :domain (c4-3 / that)
+      :ARG1-of (c4-8 / real-04)
+      :condition (c4-6 / hide-01
+                       :ARG0 (c4-1 / he)
+                       :duration (c4-5 / multiple
+                                       :op1 (c4-4 / temporal-quantity
+                                                  :unit (c4-7 / year)
+                                                  :quant 1)))
+      :ARG1-of (c4-0 / smh-01))
+
+# ::snt they gotta do something but the article said he's seen with celebrities already like that's bey in the pic right?
+# ::tokens ["they", "got", "ta", "do", "something", "but", "the", "article", "said", "he", "'s", "seen", "with", "celebrities", "already", "like", "that", "'s", "bey", "in", "the", "pic", "right", "?"]
+# ::lemmas ["they", "got", "to", "do", "something", "but", "the", "article", "say", "he", "be", "see", "with", "celebrity", "already", "like", "that", "be", "bey", "in", "the", "pic", "right", "?"]
+(c5-11 / contrast-01
+       :ARG1 (c5-5 / obligate-01
+                   :ARG1 (c5-6 / they)
+                   :ARG2 (c5-14 / do-02
+                                :ARG0 c5-6
+                                :ARG1 (c5-0 / something)))
+       :ARG2 (c5-1 / say-01
+                   :ARG0 (c5-13 / article)
+                   :ARG1 (c5-9 / see-01
+                               :ARG0 (c5-12 / he)
+                               :ARG1 (c5-10 / celebrity
+                                            :ARG1-of (c5-7 / resemble-01
+                                                           :ARG2 (c5-2 / bey
+                                                                       :location (c5-3 / pic)
+                                                                       :mode expressive)))
+                               :time (c5-8 / already))
+                   :ARG1-of (c5-4 / request-confirmation-91)))
+
+# ::snt : yo that's crazy if it is this not the first time I seen an article like this though, but hell yeah it's cray
+# ::tokens [":", "yo", "that", "'s", "crazy", "if", "it", "is", "this", "not", "the", "first", "time", "I", "seen", "an", "article", "like", "this", "though", ",", "but", "hell", "yeah", "it", "'s", "cray"]
+# ::lemmas [":", "yo", "that", "be", "crazy", "if", "it", "be", "this", "not", "the", "first", "time", "i", "see", "an", "article", "like", "this", "though", ",", "but", "hell", "yeah", "it", "be", "cray"]
+(c6-8 / crazy-03
+      :ARG1 (c6-3 / that)
+      :condition (c6-0 / see-01
+                       :ARG0 (c6-1 / i)
+                       :ARG1 (c6-13 / article
+                                    :ARG1-of (c6-4 / resemble-01
+                                                   :ARG2 (c6-5 / this)))
+                       :ord (c6-6 / ordinal-entity
+                                  :value 1)
+                       :ARG1-of (c6-10 / have-concession-91)
+                       :polarity -)
+      :ARG1-of (c6-7 / contrast-01
+                     :ARG2 (c6-9 / cray
+                                 :domain (c6-12 / it)
+                                 :mod (c6-2 / hell
+                                            :mode expressive)))
+      :mod (c6-11 / yo))

@@ -1,0 +1,47 @@
+# ::snt CS:GO Sound Engine "Bug"
+# ::tokens ["CS", ":", "GO", "Sound", "Engine", "\"", "Bug", "\""]
+# ::lemmas ["CS", ":", "GO", "Sound", "Engine", "\"", "bug", "\""]
+(c1-0 / bug
+      :mod (c1-1 / product
+                 :name (c1-2 / name
+                             :op1 "CS:GO")
+                 :mod (c1-3 / sound)))
+
+# ::snt we can only hope that Source2 will fix this ( ._.)
+# ::tokens ["we", "can", "only", "hope", "that", "Source2", "will", "fix", "this", "(", "._.", ")"]
+# ::lemmas ["we", "can", "only", "hope", "that", "Source2", "will", "fix", "this", "(", "._.", ")"]
+(c2-7 / possible-01
+      :ARG1 (c2-3 / hope-01
+                  :ARG0 (c2-1 / we)
+                  :ARG1 (c2-0 / fix-02
+                              :ARG0 (c2-6 / thing
+                                          :name (c2-9 / name
+                                                      :op1 " Source2"))
+                              :ARG1 (c2-2 / this))
+                  :mod (c2-4 / only))
+      :ARG1-of (c2-8 / mean-01
+                     :ARG2 (c2-5 / person
+                                 :name c2-9
+                                 :op1 "._")))
+
+# ::snt CS:GO is also getting ported?
+# ::tokens ["CS", ":", "GO", "is", "also", "getting", "ported", "?"]
+# ::lemmas ["CS", ":", "GO", "be", "also", "getting", "port", "?"]
+(c3-2 / port-01
+      :polarity (c3-0 / amr-unknown)
+      :ARG1 (c3-1 / product
+                  :name (c3-3 / name
+                              :op1 "CS:GO"))
+      :mod (c3-4 / also))
+
+# ::snt Not confirmed but it's all we can hope really
+# ::tokens ["Not", "confirmed", "but", "it", "'s", "all", "we", "can", "hope", "really"]
+# ::lemmas ["not", "confirm", "but", "it", "be", "all", "we", "can", "hope", "really"]
+(c4-1 / confirm-01
+      :concession-of (c4-0 / all
+                           :ARG1-of (c4-4 / hope-01
+                                          :ARG0 (c4-2 / we)
+                                          :ARG1-of (c4-5 / real-04)
+                                          :ARG1-of (c4-6 / possible-01))
+                           :domain (c4-3 / it))
+      :polarity -)

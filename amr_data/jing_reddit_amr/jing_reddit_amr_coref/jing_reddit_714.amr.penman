@@ -1,0 +1,520 @@
+# ::snt she should feel lucky she wasn't executed
+# ::tokens ["she", "should", "feel", "lucky", "she", "was", "n't", "executed"]
+# ::lemmas ["she", "should", "feel", "lucky", "she", "be", "not", "execute"]
+(c1-2 / recommend-01
+      :ARG1 (c1-1 / feel-01
+                  :ARG0 (c1-0 / she)
+                  :ARG1 (c1-3 / lucky)
+                  :ARG2 (c1-4 / execute-01
+                              :ARG1 c1-0
+                              :polarity -)))
+
+# ::snt I'd rather be excexuted than be a female prisoner in Iraq of all places
+# ::tokens ["I", "'d", "rather", "be", "excexuted", "than", "be", "a", "female", "prisoner", "in", "Iraq", "of", "all", "places"]
+# ::lemmas ["i", "would", "rather", "be", "excexute", "than", "be", "a", "female", "prisoner", "in", "Iraq", "of", "all", "place"]
+(c2-6 / prefer-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-8 / excel-01
+                  :ARG1 c2-2)
+      :ARG2 (c2-4 / imprison-01
+                  :ARG1 c2-2
+                  :ARG3 (c2-1 / female)
+                  :location (c2-3 / country
+                                  :name (c2-7 / name
+                                              :op1 "Iraq")
+                                  :mod (c2-5 / place
+                                             :mod (c2-0 / all)))))
+
+# ::snt See, I feel like you're picturing a really ethical kind of execution. That's not what you'd get.
+# ::tokens ["See", ",", "I", "feel", "like", "you", "'re", "picturing", "a", "really", "ethical", "kind", "of", "execution", ".", "That", "'s", "not", "what", "you", "'d", "get", "."]
+# ::lemmas ["see", ",", "i", "feel", "like", "you", "be", "picture", "a", "really", "ethical", "kind", "of", "execution", ".", "that", "be", "not", "what", "you", "would", "get", "."]
+(c3-8 / multi-sentence
+      :snt1 (c3-1 / feel-06
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-5 / picture-01
+                              :ARG0 (c3-10 / you)
+                              :ARG1 (c3-12 / execute-01
+                                           :mod (c3-9 / kind
+                                                      :mod (c3-2 / ethics
+                                                                 :degree (c3-4 / really)))))
+                  :mod (c3-0 / see-03
+                             :ARG0 c3-7))
+      :snt2 (c3-6 / get-01
+                  :ARG0 (c3-11 / you)
+                  :ARG1 (c3-3 / that)
+                  :polarity -))
+
+# ::snt See, I feel you're picturing a really ethical kind of imprisonment. That's not what you'd get. Which is better? Half an hour of agony or several years of rape, humiliation and agony?
+# ::tokens ["See", ",", "I", "feel", "you", "'re", "picturing", "a", "really", "ethical", "kind", "of", "imprisonment", ".", "That", "'s", "not", "what", "you", "'d", "get", ".", "Which", "is", "better", "?", "Half", "an", "hour", "of", "agony", "or", "several", "years", "of", "rape", ",", "humiliation", "and", "agony", "?"]
+# ::lemmas ["see", ",", "i", "feel", "you", "be", "picture", "a", "really", "ethical", "kind", "of", "imprisonment", ".", "that", "be", "not", "what", "you", "would", "get", ".", "which", "be", "well", "?", "Half", "an", "hour", "of", "agony", "or", "several", "years", "of", "rape", ",", "humiliation", "and", "agony", "?"]
+(c4-7 / multi-sentence
+      :snt1 (c4-17 / feel-02
+                   :ARG0 (c4-2 / i)
+                   :ARG1 (c4-21 / picture-01
+                                :ARG0 (c4-13 / you)
+                                :ARG1 (c4-12 / imprison-01
+                                             :mod (c4-22 / kind
+                                                         :ARG1-of (c4-5 / real-04)))))
+      :snt2 (c4-6 / get-01
+                  :ARG0 (c4-14 / you)
+                  :ARG1 (c4-4 / that)
+                  :polarity -)
+      :snt3 (c4-16 / amr-choice
+                   :op1 (c4-20 / pain-01
+                               :duration (c4-3 / temporal-quantity
+                                               :unit (c4-19 / hour)
+                                               :quant "1/2"))
+                   :op2 (c4-11 / pain-01
+                               :duration (c4-9 / several
+                                               :op1 (c4-8 / temporal-quantity
+                                                          :unit (c4-0 / year)
+                                                          :quant 1)))
+                   :op3 (c4-10 / pain-01
+                               :duration c4-9))
+      :snt4 (c4-15 / good-02
+                   :ARG1 c4-16)
+      :ARG2-of (c4-1 / have-degree-91
+                     :ARG1 c4-16
+                     :ARG3 (c4-18 / more)))
+
+# ::snt The fuck are you talking about? Shes gonna be in a female prison.
+# ::tokens ["The", "fuck", "are", "you", "talking", "about", "?", "She", "s", "gon", "na", "be", "in", "a", "female", "prison", "."]
+# ::lemmas ["the", "fuck", "be", "you", "talk", "about", "?", "she", "s", "going", "to", "be", "in", "a", "female", "prison", "."]
+(c5-7 / multi-sentence
+      :snt1 (c5-4 / talk-01
+                  :ARG0 (c5-8 / you)
+                  :ARG1 (c5-0 / amr-unknown)
+                  :mod (c5-1 / fuck
+                             :mode expressive))
+      :snt2 (c5-5 / be-located-at-91
+                  :ARG1 (c5-2 / he)
+                  :ARG2 (c5-6 / prison
+                              :mod (c5-3 / female))))
+
+# ::snt Yeah because guards never rape in shithole prisons...
+# ::tokens ["Yeah", "because", "guards", "never", "rape", "in", "shithole", "prisons", "..."]
+# ::lemmas ["yeah", "because", "guard", "never", "rape", "in", "shithole", "prison", "..."]
+(c6-1 / cause-01
+      :ARG0 (c6-3 / rape-01
+                  :ARG0 (c6-5 / person
+                              :ARG0-of (c6-4 / guard-01))
+                  :time (c6-6 / ever)
+                  :location (c6-2 / prison
+                                  :mod (c6-0 / shithole))
+                  :polarity -))
+
+# ::snt I hope they do. She deserves whatever is coming for her.
+# ::tokens ["I", "hope", "they", "do", ".", "She", "deserves", "whatever", "is", "coming", "for", "her", "."]
+# ::lemmas ["i", "hope", "they", "do", ".", "she", "deserve", "whatever", "be", "come", "for", "she", "."]
+(c7-7 / multi-sentence
+      :snt1 (c7-4 / hope-01
+                  :ARG0 (c7-6 / i)
+                  :ARG1 (c7-8 / event
+                              :mod (c7-5 / they)))
+      :snt2 (c7-0 / deserve-01
+                  :ARG0 (c7-1 / she)
+                  :ARG1 (c7-3 / whatever
+                              :ARG1-of (c7-2 / come-01
+                                             :ARG4 c7-1))))
+
+# ::snt No one deserves to be raped in a shithole prison. Sure she was an idiot, but then most of us were idiots at . Granted, maybe not 'Join ISIS' idiots, but idiots nonetheless. Let her just sit in a reasonable prison for the rest of her life, that's all I ask for.
+# ::tokens ["No", "one", "deserves", "to", "be", "raped", "in", "a", "shithole", "prison", ".", "Sure", "she", "was", "an", "idiot", ",", "but", "then", "most", "of", "us", "were", "idiots", "at", ".", "Granted", ",", "maybe", "not", "'", "Join", "ISIS", "'", "idiots", ",", "but", "idiots", "nonetheless", ".", "Let", "her", "just", "sit", "in", "a", "reasonable", "prison", "for", "the", "rest", "of", "her", "life", ",", "that", "'s", "all", "I", "ask", "for", "."]
+# ::lemmas ["no", "one", "deserve", "to", "be", "rape", "in", "a", "shithole", "prison", ".", "sure", "she", "be", "an", "idiot", ",", "but", "then", "most", "of", "we", "be", "idiot", "at", ".", "grant", ",", "maybe", "not", "'", "join", "ISIS", "'", "idiot", ",", "but", "idiot", "nonetheless", ".", "let", "she", "just", "sit", "in", "a", "reasonable", "prison", "for", "the", "rest", "of", "her", "life", ",", "that", "be", "all", "i", "ask", "for", "."]
+(c8-13 / multi-sentence
+       :snt1 (c8-0 / deserve-01
+                   :ARG0 (c8-14 / no-one)
+                   :ARG1 (c8-11 / rape-01
+                                :ARG1 c8-14
+                                :location (c8-33 / prison
+                                                 :mod (c8-16 / shithole))))
+       :snt2 (c8-7 / contrast-01
+                   :ARG1 (c8-4 / idiot
+                               :domain (c8-32 / she)
+                               :ARG1-of (c8-20 / sure-02))
+                   :ARG2 (c8-19 / idiot
+                                :domain (c8-28 / person
+                                               :ARG1-of (c8-21 / include-91
+                                                               :ARG2 (c8-8 / we)
+                                                               :ARG3 (c8-25 / most)))
+                                :mod (c8-24 / at)))
+       :snt3 (c8-1 / contrast-01
+                   :ARG1 (c8-18 / possible-01
+                                :ARG1 (c8-27 / idiot
+                                             :domain (c8-22 / you)))
+                   :ARG2 (c8-9 / idiot
+                               :domain (c8-23 / you)
+                               :ARG1-of (c8-26 / have-concession-91))
+                   :snt4 (c8-30 / let-01
+                                :ARG0 c8-23
+                                :ARG1 (c8-5 / sit-01
+                                            :ARG1 (c8-6 / she)
+                                            :ARG2 (c8-17 / prison
+                                                         :ARG1-of (c8-10 / reasonable-02))
+                                            :mod (c8-29 / just)
+                                            :duration (c8-12 / rest
+                                                             :part-of (c8-3 / live-01
+                                                                            :ARG0 c8-6)))
+                                :ARG1-of (c8-15 / ask-02
+                                                :ARG0 (c8-2 / i))
+                                :ARG1-of (c8-31 / be-it-08)
+                                :mode imperative)))
+
+# ::snt You are a disgusting fleck of distended rectum mucus. I sincerely hope you are raped to death by a roving band of grizzly bears in broad daylight, and that someone uploads it to youtube for all time.
+# ::tokens ["You", "are", "a", "disgusting", "fleck", "of", "distended", "rectum", "mucus", ".", "I", "sincerely", "hope", "you", "are", "raped", "to", "death", "by", "a", "roving", "band", "of", "grizzly", "bears", "in", "broad", "daylight", ",", "and", "that", "someone", "uploads", "it", "to", "youtube", "for", "all", "time", "."]
+# ::lemmas ["you", "be", "a", "disgusting", "fleck", "of", "distend", "rectum", "mucus", ".", "i", "sincerely", "hope", "you", "be", "rape", "to", "death", "by", "a", "rove", "band", "of", "grizzly", "bear", "in", "broad", "daylight", ",", "and", "that", "someone", "upload", "it", "to", "youtube", "for", "all", "time", "."]
+(c9-8 / multi-sentence
+      :snt1 (c9-19 / fleck
+                   :domain (c9-15 / you)
+                   :ARG0-of (c9-0 / disgust-01)
+                   :consist-of (c9-20 / mucus
+                                      :ARG1-of (c9-14 / distend-01)
+                                      :mod (c9-5 / rectum)))
+      :snt2 (c9-21 / hope-01
+                   :ARG0 (c9-1 / i)
+                   :ARG1 (c9-18 / and
+                                :op1 (c9-2 / rape-01
+                                           :ARG0 (c9-23 / band
+                                                        :consist-of (c9-17 / bear
+                                                                           :mod (c9-6 / grizzly))
+                                                        :ARG0-of (c9-7 / rove-01))
+                                           :ARG1 (c9-16 / you)
+                                           :degree (c9-12 / die-01
+                                                          :ARG1 c9-16)
+                                           :time (c9-3 / daylight
+                                                       :ARG1-of (c9-13 / broad-02)))
+                                :op2 (c9-22 / upload-01
+                                            :ARG0 (c9-11 / someone)
+                                            :ARG1 c9-2
+                                            :ARG2 (c9-25 / publication
+                                                         :name (c9-9 / name
+                                                                     :op1 "YouTube"))
+                                            :duration (c9-4 / time
+                                                            :mod (c9-10 / all))))
+                   :manner (c9-24 / sincere)))
+
+# ::snt There we go. That got your blood pumping. Now if we can get eurocucks to react the same way to the Muslim invasion were in business.
+# ::tokens ["There", "we", "go", ".", "That", "got", "your", "blood", "pumping", ".", "Now", "if", "we", "can", "get", "eurocucks", "to", "react", "the", "same", "way", "to", "the", "Muslim", "invasion", "were", "in", "business", "."]
+# ::lemmas ["there", "we", "go", ".", "that", "get", "your", "blood", "pump", ".", "now", "if", "we", "can", "get", "eurocuck", "to", "react", "the", "same", "way", "to", "the", "Muslim", "invasion", "be", "in", "business", "."]
+(c10-9 / multi-sentence
+       :snt1 (c10-8 / go-01
+                    :ARG1 (c10-3 / we)
+                    :ARG4 (c10-6 / there))
+       :snt2 (c10-19 / pump-01
+                     :ARG0 (c10-4 / that)
+                     :ARG1 (c10-18 / blood
+                                   :part-of (c10-15 / you)))
+       :snt3 (c10-16 / business
+                     :condition (c10-17 / possible-01
+                                        :ARG1 (c10-14 / get-04
+                                                      :ARG0 (c10-11 / we)
+                                                      :ARG1 (c10-7 / react-01
+                                                                   :ARG0 (c10-12 / eurocuck)
+                                                                   :ARG1 (c10-2 / invade-01
+                                                                                :ARG0 (c10-5 / religious-group
+                                                                                             :name (c10-10 / name
+                                                                                                           :op1 "Muslim")))
+                                                                   :manner (c10-1 / way
+                                                                                  :ARG1-of (c10-13 / same-01)))))
+                     :time (c10-0 / now)))
+
+# ::snt Muslim invasion? Are you out of your fucking mind? Seriously, I really want to understand the perspective of one such as you. Even though you are a rancid pelican shitstain, I'd love to take a few posts and give you the opportunity to enlighten me as to how someone who is capable of getting on the internet and typing words cam be so monumentally, fucktastically, unbelievably stupid. I might even pay you for your time.
+# ::tokens ["Muslim", "invasion", "?", "Are", "you", "out", "of", "your", "fucking", "mind", "?", "Seriously", ",", "I", "really", "want", "to", "understand", "the", "perspective", "of", "one", "such", "as", "you", ".", "Even", "though", "you", "are", "a", "rancid", "pelican", "shitstain", ",", "I", "'d", "love", "to", "take", "a", "few", "posts", "and", "give", "you", "the", "opportunity", "to", "enlighten", "me", "as", "to", "how", "someone", "who", "is", "capable", "of", "getting", "on", "the", "internet", "and", "typing", "words", "cam", "be", "so", "monumentally", ",", "fucktastically", ",", "unbelievably", "stupid", ".", "I", "might", "even", "pay", "you", "for", "your", "time", "."]
+# ::lemmas ["Muslim", "invasion", "?", "be", "you", "out", "of", "your", "fucking", "mind", "?", "seriously", ",", "i", "really", "want", "to", "understand", "the", "perspective", "of", "one", "such", "as", "you", ".", "even", "though", "you", "be", "a", "rancid", "pelican", "shitstain", ",", "i", "would", "love", "to", "take", "a", "few", "post", "and", "give", "you", "the", "opportunity", "to", "enlighten", "i", "as", "to", "how", "someone", "who", "be", "capable", "of", "get", "on", "the", "internet", "and", "type", "word", "cam", "be", "so", "monumentally", ",", "fucktastically", ",", "unbelievably", "stupid", ".", "i", "might", "even", "pay", "you", "for", "your", "time", "."]
+(c11-17 / multi-sentence
+        :snt1 (c11-3 / invade-01
+                     :ARG0 (c11-45 / person
+                                   :mod (c11-14 / religious-group
+                                                :name (c11-18 / name
+                                                              :op1 "Islam")))
+                     :polarity (c11-35 / amr-unknown)
+                     :snt2 (c11-11 / out-06
+                                   :ARG1 (c11-32 / you)
+                                   :ARG2 (c11-37 / mind
+                                                 :mod (c11-36 / fucking))
+                                   :polarity (c11-20 / amr-unknown))
+                     :snt3 (c11-7 / want-01
+                                  :ARG0 (c11-26 / i)
+                                  :ARG1 (c11-40 / understand-01
+                                                :ARG0 c11-26
+                                                :ARG1 (c11-42 / perspective
+                                                              :poss (c11-25 / person
+                                                                            :ARG1-of (c11-10 / resemble-01
+                                                                                             :ARG2 c11-32))))
+                                  :ARG1-of (c11-16 / real-04)
+                                  :ARG1-of (c11-22 / serious-01)
+                                  :concession (c11-44 / shitstain
+                                                      :mod (c11-24 / pelican)
+                                                      :mod (c11-12 / rancid)
+                                                      :domain c11-32))
+                     :snt4 (c11-43 / love-02
+                                   :ARG0 (c11-27 / i)
+                                   :ARG1 (c11-0 / and
+                                                :op1 (c11-13 / take-01
+                                                             :ARG0 c11-27
+                                                             :ARG1 (c11-1 / post-01
+                                                                          :quant (c11-30 / few)))
+                                                :op2 (c11-15 / give-01
+                                                             :ARG0 c11-27
+                                                             :ARG1 (c11-38 / opportunity
+                                                                           :topic (c11-21 / enlighten-01
+                                                                                          :ARG0 (c11-33 / you
+                                                                                                        :ARG1 c11-27
+                                                                                                        :ARG2 (c11-8 / thing
+                                                                                                                     :manner-of (c11-28 / someone
+                                                                                                                                        :ARG1-of (c11-6 / capable-01
+                                                                                                                                                        :ARG2 (c11-47 / and
+                                                                                                                                                                      :op1 (c11-34 / get-05
+                                                                                                                                                                                   :ARG0 c11-28
+                                                                                                                                                                                   :ARG2 (c11-41 / internet))
+                                                                                                                                                                      :op2 (c11-19 / type-01
+                                                                                                                                                                                   :ARG0 c11-28
+                                                                                                                                                                                   :ARG1 (c11-23 / word)))
+                                                                                                                                                        :mod (c11-4 / stupid
+                                                                                                                                                                    :degree (c11-5 / so)
+                                                                                                                                                                    :mod c11-36)
+                                                                                                                                                        :mod (c11-9 / incredible))))
+                                                                                                        :ARG2-of c11-15)))))
+                                   :snt5 (c11-31 / possible-01
+                                                 :ARG1 (c11-46 / pay-01
+                                                               :ARG0 (c11-2 / i)
+                                                               :ARG1 (c11-29 / time
+                                                                             :poss c11-33)
+                                                               :ARG2 c11-33
+                                                               :mod (c11-39 / even))))))
+
+# ::snt Haha as I thought. A eurocuck who is more interested in saving a treacherous terrorist bride than his own people doing Christmas shopping. Bring Adolf back, at least he got shit done.
+# ::tokens ["Haha", "as", "I", "thought", ".", "A", "eurocuck", "who", "is", "more", "interested", "in", "saving", "a", "treacherous", "terrorist", "bride", "than", "his", "own", "people", "doing", "Christmas", "shopping", ".", "Bring", "Adolf", "back", ",", "at", "least", "he", "got", "shit", "done", "."]
+# ::lemmas ["Haha", "as", "i", "think", ".", "a", "eurocuck", "who", "be", "more", "interested", "in", "save", "a", "treacherous", "terrorist", "bride", "than", "his", "own", "people", "do", "Christmas", "shopping", ".", "bring", "Adolf", "back", ",", "at", "least", "he", "got", "shit", "do", "."]
+(c12-6 / multi-sentence
+       :snt1 (c12-19 / haha
+                     :ARG1-of (c12-5 / think-01
+                                     :ARG0 (c12-3 / i)))
+       :snt2 (c12-9 / eurocuck
+                    :ARG1-of (c12-12 / interest-01
+                                     :ARG2 (c12-10 / save-02
+                                                   :ARG0 c12-9
+                                                   :ARG1 (c12-21 / bride
+                                                                 :mod (c12-4 / terrorist)
+                                                                 :mod (c12-8 / treachery)))
+                                     :ARG2-of (c12-2 / have-degree-91
+                                                     :ARG1 c12-9
+                                                     :ARG3 (c12-18 / more)
+                                                     :ARG4 (c12-23 / person
+                                                                   :ARG0-of (c12-22 / shop-01
+                                                                                    :mod (c12-17 / festival
+                                                                                                 :name (c12-7 / name
+                                                                                                              :op1 "Christmas")))
+                                                                   :poss c12-9))))
+       :snt3 (c12-15 / bring-01
+                     :ARG0 (c12-14 / you)
+                     :ARG1 (c12-20 / person
+                                   :name (c12-1 / name
+                                                :op1 "Adolf"))
+                     :ARG2 (c12-11 / back)
+                     :mod (c12-16 / at-least)
+                     :time-of (c12-0 / do-02
+                                     :ARG0 c12-20
+                                     :ARG1 (c12-13 / shit))
+                     :mode imperative))
+
+# ::snt I just gave you the opportunity to share your perspective with no bias for me to evaluate. And you waste that opportunity to cuck and kek. You really are a fucking idiot, you know that right?
+# ::tokens ["I", "just", "gave", "you", "the", "opportunity", "to", "share", "your", "perspective", "with", "no", "bias", "for", "me", "to", "evaluate", ".", "And", "you", "waste", "that", "opportunity", "to", "cuck", "and", "kek", ".", "You", "really", "are", "a", "fucking", "idiot", ",", "you", "know", "that", "right", "?"]
+# ::lemmas ["i", "just", "give", "you", "the", "opportunity", "to", "share", "your", "perspective", "with", "no", "bias", "for", "i", "to", "evaluate", ".", "and", "you", "waste", "that", "opportunity", "to", "cuck", "and", "kek", ".", "you", "really", "be", "a", "fucking", "idiot", ",", "you", "know", "that", "right", "?"]
+(c13-10 / multi-sentence
+        :snt1 (c13-9 / give-01
+                     :ARG0 (c13-1 / i)
+                     :ARG1 (c13-6 / opportunity
+                                  :purpose (c13-13 / share-01
+                                                   :ARG0 (c13-15 / you)
+                                                   :ARG1 (c13-21 / perspective
+                                                                 :poss c13-15)
+                                                   :manner (c13-19 / bias-01
+                                                                   :ARG1-of (c13-12 / evaluate-01
+                                                                                    :ARG0 c13-1)
+                                                                   :polarity -)))
+                     :ARG2 c13-15
+                     :mod (c13-20 / just))
+        :snt2 (c13-17 / and
+                      :op2 (c13-4 / waste-01
+                                  :ARG0 (c13-16 / you)
+                                  :ARG1 c13-6
+                                  :purpose (c13-11 / and
+                                                   :op1 (c13-3 / cuck-01
+                                                               :ARG0 c13-16)
+                                                   :op2 (c13-22 / kek-01
+                                                                :ARG0 c13-16))))
+        :snt3 (c13-14 / idiot
+                      :domain (c13-0 / you)
+                      :mod (c13-18 / fucking)
+                      :ARG1-of (c13-8 / real-04)
+                      :ARG1-of (c13-5 / request-confirmation-91
+                                      :ARG2 c13-16))
+        :snt4 (c13-2 / know-01
+                     :ARG0 c13-0
+                     :ARG1 (c13-7 / that)
+                     :ARG1-of c13-5
+                     :ARG2 c13-0))
+
+# ::snt Somehow I could tell that you were a sadistic fuckstick that enjoys the suffering of others. I had a feeling. Where did you bury all the small animals you tortured? Do you ever have dreams of your mother finding them? At what age did you finally stop wetting the bed? ? ?
+# ::tokens ["Somehow", "I", "could", "tell", "that", "you", "were", "a", "sadistic", "fuckstick", "that", "enjoys", "the", "suffering", "of", "others", ".", "I", "had", "a", "feeling", ".", "Where", "did", "you", "bury", "all", "the", "small", "animals", "you", "tortured", "?", "Do", "you", "ever", "have", "dreams", "of", "your", "mother", "finding", "them", "?", "At", "what", "age", "did", "you", "finally", "stop", "wetting", "the", "bed", "?", "?", "?"]
+# ::lemmas ["somehow", "i", "could", "tell", "that", "you", "be", "a", "sadistic", "fuckstick", "that", "enjoy", "the", "suffering", "of", "other", ".", "i", "have", "a", "feeling", ".", "where", "do", "you", "you", "all", "the", "small", "animal", "you", "torture", "?", "do", "you", "ever", "have", "dream", "of", "your", "mother", "find", "they", "?", "at", "what", "age", "do", "you", "finally", "stop", "wet", "the", "bed", "?", "?", "?"]
+(c14-11 / multi-sentence
+        :snt1 (c14-31 / possible-01
+                      :ARG1 (c14-10 / tell-01
+                                    :ARG0 (c14-4 / i)
+                                    :ARG1 (c14-24 / fuckstick
+                                                  :mod (c14-14 / sadistic)
+                                                  :ARG0-of (c14-13 / enjoy-01
+                                                                   :ARG1 (c14-30 / suffer-01
+                                                                                 :ARG0 (c14-9 / other)))
+                                                  :domain (c14-20 / you))
+                                    :manner (c14-17 / somehow)))
+        :snt2 (c14-18 / feel-01
+                      :ARG0 (c14-16 / i))
+        :snt3 c14-11
+        :snt4 (c14-29 / bury-01
+                      :ARG0 (c14-21 / you)
+                      :ARG1 (c14-23 / animal
+                                    :mod (c14-12 / all)
+                                    :mod (c14-5 / small)
+                                    :ARG1-of (c14-8 / torture-01
+                                                    :ARG0 c14-21))
+                      :ARG2 (c14-1 / amr-unknown))
+        :snt5 (c14-0 / dream-01
+                     :ARG0 (c14-2 / you)
+                     :ARG1 (c14-19 / find-01
+                                   :ARG0 (c14-28 / person
+                                                 :ARG0-of (c14-26 / have-rel-role-91
+                                                                  :ARG1 c14-2
+                                                                  :ARG2 (c14-25 / mother)))
+                                   :ARG1 c14-23)
+                     :time (c14-27 / ever))
+        :snt6 (c14-6 / stop-01
+                     :ARG0 (c14-15 / you)
+                     :ARG1 (c14-7 / wet-01
+                                  :ARG0 c14-15
+                                  :ARG1 (c14-22 / bed))
+                     :time (c14-32 / amr-unknown)
+                     :mod (c14-3 / final)))
+
+# ::snt Stop your kvetching Schlomo, its tiring.
+# ::tokens ["Stop", "your", "kvetching", "Schlomo", ",", "its", "tiring", "."]
+# ::lemmas ["stop", "your", "kvetch", "Schlomo", ",", "its", "tiring", "."]
+(c15-0 / say-01
+       :ARG0 (c15-7 / i)
+       :ARG1 (c15-6 / stop-01
+                    :ARG0 (c15-5 / person
+                                 :name (c15-8 / name
+                                              :op1 "Schlomo"))
+                    :ARG1 (c15-1 / kvetch-01
+                                 :ARG0 c15-5
+                                 :ARG1 c15-5)
+                    :ARG1-of (c15-2 / cause-01
+                                    :ARG0 (c15-4 / tiring-02
+                                                 :ARG1 (c15-3 / it)))
+                    :mode imperative)
+       :ARG2 c15-5)
+
+# ::snt You wouldn't be so tired if you hadn't spent all night fapping to reruns of Beakman's World you reprobate little shit licker.
+# ::tokens ["You", "would", "n't", "be", "so", "tired", "if", "you", "had", "n't", "spent", "all", "night", "fapping", "to", "reruns", "of", "Beakman", "'s", "World", "you", "reprobate", "little", "shit", "licker", "."]
+# ::lemmas ["you", "would", "not", "be", "so", "tired", "if", "you", "have", "not", "spend", "all", "night", "fappe", "to", "rerun", "of", "Beakman", "'s", "World", "you", "reprobate", "little", "shit", "licker", "."]
+(c16-0 / say-01
+       :ARG0 (c16-12 / i)
+       :ARG1 (c16-3 / have-condition-91
+                    :ARG1 (c16-6 / tire-01
+                                 :ARG1 (c16-15 / you
+                                               :ARG0-of (c16-8 / lick-01
+                                                               :ARG1 (c16-11 / shit)
+                                                               :mod (c16-9 / little))
+                                               :mod (c16-7 / reprobate))
+                                 :degree (c16-4 / so)
+                                 :polarity -)
+                    :ARG2 (c16-13 / spend-02
+                                  :ARG0 c16-15
+                                  :ARG1 (c16-14 / night
+                                                :mod (c16-1 / all))
+                                  :ARG2 (c16-2 / fap-01
+                                               :ARG0 c16-15
+                                               :purpose (c16-5 / rerun-01
+                                                               :ARG0 c16-15
+                                                               :ARG1 (c16-10 / broadcast-program
+                                                                             :name (c16-16 / name
+                                                                                           :op1 "Beakman's"
+                                                                                           :op2 "World"))))
+                                  :polarity -))
+       :ARG2 c16-15)
+
+# ::snt k
+# ::tokens ["k"]
+# ::lemmas ["k"]
+(c17-0 / person
+       :name (c17-1 / name
+                    :op1 "k"))
+
+# ::snt Both of you need to stop, no one deserves rape. let's not bring back genocide, and name calling doesn't accomplish anything
+# ::tokens ["Both", "of", "you", "need", "to", "stop", ",", "no", "one", "deserves", "rape", ".", "let", "'s", "not", "bring", "back", "genocide", ",", "and", "name", "calling", "does", "n't", "accomplish", "anything"]
+# ::lemmas ["both", "of", "you", "need", "to", "stop", ",", "no", "one", "deserve", "rape", ".", "let", "us", "not", "bring", "back", "genocide", ",", "and", "name", "calling", "do", "not", "accomplish", "anything"]
+(c18-8 / multi-sentence
+       :snt1 (c18-9 / need-01
+                    :ARG0 (c18-19 / person
+                                  :mod (c18-18 / both)
+                                  :ARG1-of (c18-3 / include-91
+                                                  :ARG2 (c18-14 / you)))
+                    :ARG1 (c18-11 / stop-01
+                                  :ARG0 c18-19))
+       :snt2 (c18-0 / deserve-01
+                    :ARG0 (c18-2 / no-one)
+                    :ARG1 (c18-6 / rape-01
+                                 :ARG1 c18-2))
+       :snt3 (c18-16 / and
+                     :op1 (c18-17 / let-01
+                                  :ARG0 (c18-5 / we)
+                                  :ARG1 (c18-15 / bring-01
+                                                :ARG0 c18-5
+                                                :ARG1 (c18-7 / genocide-01)
+                                                :direction (c18-12 / back))
+                                  :polarity -
+                                  :mode imperative)
+                     :op2 (c18-10 / accomplish-01
+                                  :ARG0 (c18-4 / call-01
+                                               :ARG2 (c18-13 / name))
+                                  :ARG1 (c18-1 / anything)
+                                  :polarity -)))
+
+# ::snt Your post uses speech that denigrates disability and/or sexual orientation in violation of our Content Policy and User Agreement
+# ::tokens ["Your", "post", "uses", "speech", "that", "denigrates", "disability", "and/or", "sexual", "orientation", "in", "violation", "of", "our", "Content", "Policy", "and", "User", "Agreement"]
+# ::lemmas ["your", "post", "use", "speech", "that", "denigrate", "disability", "and/or", "sexual", "orientation", "in", "violation", "of", "our", "Content", "Policy", "and", "User", "Agreement"]
+(c19-6 / use-01
+       :ARG0 (c19-11 / post-01
+                     :ARG0 (c19-12 / you))
+       :ARG1 (c19-0 / speak-01
+                    :ARG0-of (c19-1 / denigrate-01
+                                    :ARG1 (c19-2 / and-or
+                                                 :op1 (c19-5 / disability)
+                                                 :op2 (c19-8 / orient-01
+                                                             :ARG2 (c19-10 / sex)))))
+       :ARG2 (c19-7 / violate-01
+                    :ARG0 c19-11
+                    :ARG1 c19-2
+                    :op1 (c19-9 / policy-01
+                                :ARG0 (c19-4 / we)
+                                :ARG2 (c19-3 / content))
+                    :op2 (c19-13 / agree-01
+                                 :ARG0 c19-4
+                                 :ARG1 c19-6)))
+
+# ::snt To use sexuality as a means of insulting people is only showing of your lack of creativity.
+# ::tokens ["To", "use", "sexuality", "as", "a", "means", "of", "insulting", "people", "is", "only", "showing", "of", "your", "lack", "of", "creativity", "."]
+# ::lemmas ["to", "use", "sexuality", "as", "a", "means", "of", "insult", "people", "be", "only", "show", "of", "your", "lack", "of", "creativity", "."]
+(c20-0 / show-01
+       :ARG0 (c20-2 / use-01
+                    :ARG0 (c20-9 / you)
+                    :ARG1 (c20-6 / sexuality)
+                    :ARG2 (c20-8 / means
+                                 :manner-of (c20-7 / insult-01
+                                                   :ARG0 c20-9
+                                                   :ARG1 (c20-4 / person))))
+       :ARG1 (c20-5 / lack-01
+                    :ARG0 c20-9
+                    :ARG1 (c20-1 / creativity))
+       :mod (c20-3 / only))

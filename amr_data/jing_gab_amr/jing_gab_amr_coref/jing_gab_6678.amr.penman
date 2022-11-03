@@ -1,0 +1,67 @@
+# ::snt yep !
+# ::tokens ["yep", "!"]
+# ::lemmas ["yep", "!"]
+(c2-0 / yep
+      :mode expressive)
+
+# ::snt Please refrain from using racial slurs in your description. They are hurtful and insulting
+# ::tokens ["Please", "refrain", "from", "using", "racial", "slurs", "in", "your", "description", ".", "They", "are", "hurtful", "and", "insulting"]
+# ::lemmas ["please", "refrain", "from", "use", "racial", "slur", "in", "your", "description", ".", "they", "be", "hurtful", "and", "insult"]
+(c3-9 / multi-sentence
+      :snt1 (c3-7 / refrain-01
+                  :ARG0 (c3-10 / you)
+                  :ARG1 (c3-4 / use-01
+                              :ARG0 c3-10
+                              :ARG1 (c3-0 / slur
+                                          :mod (c3-5 / race))
+                              :ARG2 (c3-1 / describe-01
+                                          :ARG0 c3-10))
+                  :mode imperative
+                  :polite +)
+      :snt2 (c3-2 / and
+                  :op1 (c3-3 / hurt-01
+                             :ARG0 (c3-6 / they))
+                  :op2 (c3-8 / insult-01
+                             :ARG0 c3-6)))
+
+# ::snt Just use a nicer word to describe this person. I doubt you would describe someone you agree with like this.
+# ::tokens ["Just", "use", "a", "nicer", "word", "to", "describe", "this", "person", ".", "I", "doubt", "you", "would", "describe", "someone", "you", "agree", "with", "like", "this", "."]
+# ::lemmas ["just", "use", "a", "nice", "word", "to", "describe", "this", "person", ".", "i", "doubt", "you", "would", "describe", "someone", "you", "agree", "with", "like", "this", "."]
+(c4-6 / multi-sentence
+      :snt1 (c4-16 / use-01
+                   :ARG0 (c4-11 / you)
+                   :ARG1 (c4-2 / word
+                               :ARG1-of (c4-7 / nice-01
+                                              :ARG2-of (c4-15 / have-degree-91
+                                                              :ARG1 c4-2
+                                                              :ARG3 (c4-14 / more))))
+                   :ARG2 (c4-0 / describe-01
+                               :ARG0 c4-11
+                               :ARG1 (c4-18 / person
+                                            :mod (c4-4 / this)))
+                   :mod (c4-17 / just)
+                   :mode imperative)
+      :snt2 (c4-10 / doubt-01
+                   :ARG0 (c4-1 / i)
+                   :ARG1 (c4-9 / describe-01
+                               :ARG0 (c4-12 / you)
+                               :ARG1 (c4-8 / someone
+                                           :ARG1-of (c4-13 / agree-01
+                                                           :ARG0 c4-12)
+                                           :ARG1-of (c4-5 / resemble-01
+                                                          :ARG2 (c4-3 / this))))))
+
+# ::snt The n-word no longer has any place in society and everybody knows this.
+# ::tokens ["The", "n", "-", "word", "no", "longer", "has", "any", "place", "in", "society", "and", "everybody", "knows", "this", "."]
+# ::lemmas ["the", "n", "-", "word", "no", "long", "have", "any", "place", "in", "society", "and", "everybody", "know", "this", "."]
+(c5-1 / and
+      :op1 (c5-4 / have-03
+                 :ARG0 (c5-3 / word
+                             :mod (c5-7 / n-word))
+                 :ARG1 (c5-6 / place
+                             :location (c5-0 / society)
+                             :mod (c5-8 / any))
+                 :time (c5-5 / no-longer))
+      :op2 (c5-2 / know-01
+                 :ARG0 (c5-9 / everybody)
+                 :ARG1 c5-4))

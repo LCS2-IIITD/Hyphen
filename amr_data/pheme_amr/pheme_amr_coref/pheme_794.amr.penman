@@ -1,0 +1,83 @@
+# ::snt Hi, unfortunately not as someone sent me this image
+# ::tokens ["Hi", ",", "unfortunately", "not", "as", "someone", "sent", "me", "this", "image"]
+# ::lemmas ["hi", ",", "unfortunately", "not", "as", "someone", "send", "i", "this", "image"]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / hi)
+      :snt2 (c1-6 / send-01
+                  :ARG0 (c1-3 / someone)
+                  :ARG1 (c1-4 / image
+                              :mod (c1-7 / this))
+                  :ARG2 (c1-5 / i)
+                  :ARG2-of (c1-1 / fortunate-01
+                                 :polarity -)
+                  :polarity -))
+
+# ::snt L'Amrique se tient avec la France.
+# ::tokens ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+# ::lemmas ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+(c2-4 / tient-of
+      :ARG1 (c2-3 / city
+                  :name (c2-0 / name
+                              :op1 "L'Amrique"))
+      :ARG3 (c2-2 / country
+                  :name (c2-1 / name
+                              :op1 "France")))
+
+# ::snt thanks anyway. I found it. It's by . Massive list of attributed cartoons (170 so far) at
+# ::tokens ["thanks", "anyway", ".", "I", "found", "it", ".", "It", "'s", "by", ".", "Massive", "list", "of", "attributed", "cartoons", "(", "170", "so", "far", ")", "at"]
+# ::lemmas ["thank", "anyway", ".", "i", "find", "it", ".", "it", "be", "by", ".", "massive", "list", "of", "attribute", "cartoon", "(", "170", "so", "far", ")", "at"]
+(c3-1 / multi-sentence
+      :snt1 (c3-10 / thank-01
+                   :ARG0 (c3-5 / i)
+                   :mod (c3-11 / anyway))
+      :snt2 (c3-0 / find-01
+                  :ARG0 c3-5
+                  :ARG1 (c3-8 / it))
+      :snt3 (c3-3 / by
+                  :domain (c3-2 / list
+                                :mod (c3-6 / massive)
+                                :consist-of (c3-7 / cartoon
+                                                  :ARG1-of (c3-4 / attribute-01)
+                                                  :time (c3-9 / so-far)
+                                                  :quant 170))))
+
+# ::snt Hi Amrit. Did you draw this or do you know who did? I am compiling a record of cartoons so that artists can be acknowledged
+# ::tokens ["Hi", "Amrit", ".", "Did", "you", "draw", "this", "or", "do", "you", "know", "who", "did", "?", "I", "am", "compiling", "a", "record", "of", "cartoons", "so", "that", "artists", "can", "be", "acknowledged"]
+# ::lemmas ["hi", "Amrit", ".", "do", "you", "draw", "this", "or", "do", "you", "know", "who", "do", "?", "i", "be", "compile", "a", "record", "of", "cartoon", "so", "that", "artist", "can", "be", "acknowledge"]
+(c4-1 / multi-sentence
+      :snt1 (c4-5 / say-01
+                  :ARG1 (c4-8 / hi)
+                  :ARG2 (c4-2 / person
+                              :name (c4-9 / name
+                                          :op1 "Amrit")))
+      :snt2 (c4-16 / or
+                   :op1 (c4-3 / draw-01
+                              :ARG0 (c4-15 / you)
+                              :ARG1 (c4-20 / this))
+                   :op2 (c4-14 / know-01
+                               :ARG0 (c4-18 / you)
+                               :ARG1 (c4-0 / draw-01
+                                           :ARG0 (c4-7 / amr-unknown)
+                                           :ARG1 (c4-12 / amr-unknown))))
+      :snt3 (c4-17 / compile-01
+                   :ARG0 (c4-13 / i)
+                   :ARG1 (c4-11 / record-01
+                                :ARG1 (c4-4 / cartoon))
+                   :purpose (c4-6 / possible-01
+                                  :ARG1 (c4-10 / acknowledge-01
+                                               :ARG1 (c4-19 / artist)))))
+
+# ::snt Stop Lying This Attack Was Nothing To Do With Free Speech
+# ::tokens ["Stop", "Lying", "This", "Attack", "Was", "Nothing", "To", "Do", "With", "Free", "Speech"]
+# ::lemmas ["stop", "lie", "this", "Attack", "be", "nothing", "to", "do", "with", "Free", "Speech"]
+(c5-6 / stop-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-2 / lie-08
+                  :ARG0 c5-1
+                  :ARG1 (c5-8 / attack-01
+                              :mod (c5-7 / this))
+                  :ARG2-of (c5-0 / have-to-do-with-04
+                                 :ARG1 (c5-4 / speak-01
+                                             :ARG3-of (c5-3 / free-04))
+                                 :ARG2 (c5-5 / nothing)))
+      :mode imperative)

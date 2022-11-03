@@ -1,0 +1,76 @@
+# ::snt Well said.
+# ::tokens ["Well", "said", "."]
+# ::lemmas ["well", "say", "."]
+(c1-0 / say-01
+      :manner (c1-1 / good-02))
+
+# ::snt Yet another Wahhabi inspired atrocity.To fight jihadism, stop Saudi Wahabi textbooks' indoctrination &amp; proselytizing
+# ::tokens ["Yet", "another", "Wahhabi", "inspired", "atrocity", ".", "To", "fight", "jihadism", ",", "stop", "Saudi", "Wahabi", "textbooks", "'", "indoctrination", "&", "amp", ";", "proselytizing"]
+# ::lemmas ["yet", "another", "Wahhabi", "inspire", "atrocity", ".", "to", "fight", "jihadism", ",", "stop", "Saudi", "Wahabi", "textbook", "'", "indoctrination", "&", "amp", ";", "proselytize"]
+(c2-5 / atrocity
+      :ARG1-of (c2-2 / inspire-01
+                     :ARG0 (c2-4 / religious-group
+                                 :name (c2-3 / name
+                                             :op1 "Wahhabi")))
+      :mod (c2-1 / another)
+      :mod (c2-0 / yet))
+
+# ::snt . Thus you will print 's cartoons, for sure?
+# ::tokens [".", "Thus", "you", "will", "print", "'s", "cartoons", ",", "for", "sure", "?"]
+# ::lemmas [".", "thus", "you", "will", "print", "'s", "cartoon", ",", "for", "sure", "?"]
+(c3-1 / infer-01
+      :polarity (c3-6 / amr-unknown)
+      :ARG1 (c3-2 / print-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-3 / cartoon
+                              :poss (c3-5 / they)))
+      :ARG1-of (c3-4 / sure-02))
+
+# ::snt "no blaspheme harms Islam and Muslims so much as the call for murdering" Naguib Mahfouz
+# ::tokens ["\"", "no", "blaspheme", "harms", "Islam", "and", "Muslims", "so", "much", "as", "the", "call", "for", "murdering", "\"", "Naguib", "Mahfouz"]
+# ::lemmas ["\"", "no", "blaspheme", "harm", "Islam", "and", "Muslims", "so", "much", "as", "the", "call", "for", "murder", "\"", "Naguib", "Mahfouz"]
+(c4-12 / say-01
+       :ARG0 (c4-8 / person
+                   :name (c4-6 / name
+                               :op1 "Naguib"
+                               :op2 "Mahfouz"))
+       :ARG1 (c4-0 / harm-01
+                   :ARG0 (c4-3 / blaspheme-01)
+                   :ARG1 (c4-13 / and
+                                :op1 (c4-9 / religious-group
+                                           :name (c4-7 / name
+                                                       :op1 "Islam"))
+                                :op2 (c4-5 / religious-group
+                                           :name (c4-10 / name
+                                                        :op1 "Muslim")))
+                   :ARG1-of (c4-1 / have-quant-91
+                                  :ARG3 (c4-4 / so)
+                                  :ARG6 (c4-11 / call-03
+                                               :ARG1 (c4-2 / murder-01)))
+                   :polarity -))
+
+# ::snt : Leading article: We are all Charlie now sad
+# ::tokens [":", "Leading", "article", ":", "We", "are", "all", "Charlie", "now", "sad"]
+# ::lemmas [":", "lead", "article", ":", "we", "be", "all", "Charlie", "now", "sad"]
+(c5-5 / say-01
+      :ARG0 (c5-6 / article
+                  :ARG0-of (c5-1 / lead-01))
+      :ARG1 (c5-2 / sad-02
+                  :ARG1 (c5-0 / we
+                              :mod (c5-3 / all))
+                  :time (c5-4 / now)))
+
+# ::snt are you? Incredible how stupid hatred can blind people!!
+# ::tokens ["are", "you", "?", "Incredible", "how", "stupid", "hatred", "can", "blind", "people", "!", "!"]
+# ::lemmas ["be", "you", "?", "incredible", "how", "stupid", "hatred", "can", "blind", "people", "!", "!"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / event
+                  :polarity (c6-9 / amr-unknown)
+                  :mod (c6-1 / you))
+      :snt2 (c6-5 / amaze-01
+                  :ARG0 (c6-6 / possible-01
+                              :ARG1 (c6-3 / blind-01
+                                          :ARG0 (c6-0 / hate-01
+                                                      :mod (c6-7 / stupid))
+                                          :ARG1 (c6-8 / person)))
+                  :mode expressive))

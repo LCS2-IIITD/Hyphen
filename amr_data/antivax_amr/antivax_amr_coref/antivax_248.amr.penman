@@ -1,0 +1,290 @@
+# ::snt Awesome
+# ::tokens ["Awesome"]
+# ::lemmas ["Awesome"]
+(c1-0 / awe-01)
+
+# ::snt hours in I felt foggy , but next day it hit me so hard, I never felt so sick before. I prepped myself with soup: broth and your gonna get hella dehydrated.
+# ::tokens ["hours", "in", "I", "felt", "foggy", ",", "but", "next", "day", "it", "hit", "me", "so", "hard", ",", "I", "never", "felt", "so", "sick", "before", ".", "I", "prepped", "myself", "with", "soup", ":", "broth", "and", "your", "gon", "na", "get", "hella", "dehydrated", "."]
+# ::lemmas ["hours", "in", "i", "feel", "foggy", ",", "but", "next", "day", "it", "hit", "i", "so", "hard", ",", "i", "never", "feel", "so", "sick", "before", ".", "i", "preppe", "myself", "with", "soup", ":", "broth", "and", "your", "going", "to", "get", "hella", "dehydrate", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-5 / contrast-01
+                  :ARG1 (c2-22 / feel-01
+                               :ARG0 (c2-2 / i)
+                               :ARG1 (c2-16 / foggy)
+                               :time (c2-23 / multiple
+                                            :op1 (c2-7 / temporal-quantity
+                                                       :unit (c2-24 / hour)
+                                                       :quant 1)))
+                  :ARG2 (c2-1 / hit-01
+                              :ARG0 (c2-12 / it)
+                              :ARG1 c2-2
+                              :time (c2-0 / day
+                                          :mod (c2-9 / next))
+                              :ARG1-of (c2-4 / hard-02
+                                             :degree (c2-11 / so))))
+      :snt2 (c2-17 / feel-01
+                   :ARG0 (c2-13 / i)
+                   :ARG1 (c2-27 / sick-05
+                                :degree (c2-14 / so))
+                   :time (c2-26 / before)
+                   :time (c2-10 / ever)
+                   :polarity -)
+      :snt3 (c2-28 / prep-02
+                   :ARG0 (c2-25 / i
+                                :ARG1-of c2-28)
+                   :ARG2 (c2-3 / soup
+                               :ARG1-of (c2-15 / mean-01
+                                               :ARG2 (c2-21 / and
+                                                            :op1 (c2-20 / broth)
+                                                            :op2 (c2-18 / dehydrate-01
+                                                                        :ARG1 (c2-19 / you)
+                                                                        :degree (c2-6 / hell)))))))
+
+# ::snt nd Phizer hit me around hours later.
+# ::tokens ["nd", "Phizer", "hit", "me", "around", "hours", "later", "."]
+# ::lemmas ["nd", "Phizer", "hit", "i", "around", "hours", "later", "."]
+(c3-2 / hit-01
+      :ARG0 (c3-5 / product
+                  :name (c3-7 / name
+                              :op1 "Phizer"))
+      :ARG1 (c3-1 / i)
+      :time (c3-0 / after
+                  :quant (c3-6 / multiple
+                               :op1 (c3-3 / temporal-quantity
+                                          :unit (c3-4 / hour)
+                                          :quant 1))))
+
+# ::snt Vr chat?
+# ::tokens ["Vr", "chat", "?"]
+# ::lemmas ["vr", "chat", "?"]
+(c4-2 / chat-01
+      :polarity (c4-1 / amr-unknown)
+      :mod (c4-0 / virtual))
+
+# ::snt Yeah in wondering if it'll hit me
+# ::tokens ["Yeah", "in", "wondering", "if", "it", "'ll", "hit", "me"]
+# ::lemmas ["yeah", "in", "wonder", "if", "it", "'ll", "hit", "i"]
+(c5-0 / wonder-01
+      :ARG1 (c5-3 / truth-value
+                  :polarity-of (c5-1 / hit-01
+                                     :ARG0 (c5-4 / it)
+                                     :ARG1 (c5-2 / i)))
+      :mod (c5-5 / yeah
+                 :mode expressive))
+
+# ::snt Yea i got it yesterday afternoon and it hit me hard this morning. Fever, chills, headache, nausea. The usual flu stuff. Hopefully it doesn't last too long
+# ::tokens ["Yea", "i", "got", "it", "yesterday", "afternoon", "and", "it", "hit", "me", "hard", "this", "morning", ".", "Fever", ",", "chills", ",", "headache", ",", "nausea", ".", "The", "usual", "flu", "stuff", ".", "Hopefully", "it", "does", "n't", "last", "too", "long"]
+# ::lemmas ["yea", "i", "get", "it", "yesterday", "afternoon", "and", "it", "hit", "i", "hard", "this", "morning", ".", "fever", ",", "chill", ",", "headache", ",", "nausea", ".", "the", "usual", "flu", "stuff", ".", "hopefully", "it", "do", "not", "last", "too", "long"]
+(c7-13 / multi-sentence
+       :snt1 (c7-22 / and
+                    :op1 (c7-12 / get-01
+                                :ARG0 (c7-5 / i)
+                                :ARG1 (c7-18 / it)
+                                :time (c7-0 / date-entity
+                                            :dayperiod (c7-15 / afternoon)
+                                            :mod (c7-21 / yesterday)))
+                    :op2 (c7-25 / hit-01
+                                :ARG0 (c7-19 / it)
+                                :ARG1 c7-5
+                                :ARG1-of (c7-4 / hard-02)
+                                :time (c7-20 / date-entity
+                                             :dayperiod (c7-24 / morning)
+                                             :mod (c7-11 / today))))
+       :snt2 (c7-1 / and
+                   :op1 (c7-23 / fever)
+                   :op2 (c7-7 / chill)
+                   :op3 (c7-6 / headache)
+                   :op4 (c7-14 / nausea)
+                   :op5 (c7-16 / stuff
+                               :mod (c7-26 / usual)
+                               :topic (c7-17 / disease
+                                             :name (c7-2 / name
+                                                         :op1 "influenza"))))
+       :snt3 (c7-10 / hope-01
+                    :ARG1 (c7-28 / last-01
+                                 :ARG1 (c7-27 / it)
+                                 :ARG2 (c7-3 / long-03
+                                             :ARG2-of (c7-9 / have-degree-91
+                                                            :ARG1 c7-27
+                                                            :ARG3 (c7-8 / too)))
+                                 :polarity -)))
+
+# ::snt Uhh oh
+# ::tokens ["Uhh", "oh"]
+# ::lemmas ["uhh", "oh"]
+(c9-0 / uhh
+      :mode expressive)
+
+# ::snt Ok!
+# ::tokens ["Ok", "!"]
+# ::lemmas ["ok", "!"]
+(c10-0 / okay-01
+       :mode expressive)
+
+# ::snt We'll see haha
+# ::tokens ["We", "'ll", "see", "haha"]
+# ::lemmas ["we", "'ll", "see", "haha"]
+(c11-0 / see-01
+       :ARG0 (c11-1 / we)
+       :mod (c11-2 / haha
+                   :mode expressive))
+
+# ::snt Have that option thankfully
+# ::tokens ["Have", "that", "option", "thankfully"]
+# ::lemmas ["have", "that", "option", "thankfully"]
+(c12-1 / have-03
+       :ARG0 (c12-4 / you)
+       :ARG1 (c12-2 / option
+                    :mod (c12-3 / that))
+       :ARG2-of (c12-0 / thankful-02
+                       :ARG0 c12-4)
+       :mode imperative)
+
+# ::snt Nothing yet haha
+# ::tokens ["Nothing", "yet", "haha"]
+# ::lemmas ["nothing", "yet", "haha"]
+(c13-1 / nothing
+       :time (c13-2 / yet)
+       :mod (c13-0 / haha
+                   :mode expressive))
+
+# ::snt Yes!
+# ::tokens ["Yes", "!"]
+# ::lemmas ["yes", "!"]
+(c14-0 / yes)
+
+# ::snt Curious to see what happens!
+# ::tokens ["Curious", "to", "see", "what", "happens", "!"]
+# ::lemmas ["curious", "to", "see", "what", "happen", "!"]
+(c15-2 / curious-01
+       :ARG0 (c15-0 / see-01
+                    :ARG1 (c15-1 / event)))
+
+# ::snt naptime incoming
+# ::tokens ["naptime", "incoming"]
+# ::lemmas ["naptime", "incoming"]
+(c16-0 / incoming
+       :domain (c16-1 / nap-01))
+
+# ::snt Same and im really feeling it rn
+# ::tokens ["Same", "and", "i", "m", "really", "feeling", "it", "rn"]
+# ::lemmas ["same", "and", "i", "m", "really", "feel", "it", "rn"]
+(c17-1 / and
+       :op1 (c17-0 / same-01)
+       :op2 (c17-2 / feel-01
+                   :ARG0 (c17-6 / i)
+                   :ARG1 (c17-3 / it)
+                   :ARG1-of (c17-5 / real-04))
+       :ARG1-of (c17-4 / request-confirmation-91))
+
+# ::snt Lets hang out.
+# ::tokens ["Lets", "hang", "out", "."]
+# ::lemmas ["let", "hang", "out", "."]
+(c18-1 / hang-out-06
+       :ARG1 (c18-0 / we)
+       :mode imperative)
+
+# ::snt Nice! I didn't feel much myself (was just more tired than usual), but that could have been because I was on Tylenol those few days. Hopefully your body can brush it off like it's nothing!
+# ::tokens ["Nice", "!", "I", "did", "n't", "feel", "much", "myself", "(", "was", "just", "more", "tired", "than", "usual", ")", ",", "but", "that", "could", "have", "been", "because", "I", "was", "on", "Tylenol", "those", "few", "days", ".", "Hopefully", "your", "body", "can", "brush", "it", "off", "like", "it", "'s", "nothing", "!"]
+# ::lemmas ["nice", "!", "i", "do", "not", "feel", "much", "myself", "(", "be", "just", "more", "tired", "than", "usual", ")", ",", "but", "that", "could", "have", "be", "because", "i", "be", "on", "Tylenol", "those", "few", "days", ".", "hopefully", "your", "body", "can", "brush", "it", "off", "like", "it", "be", "nothing", "!"]
+(c19-10 / multi-sentence
+        :snt1 (c19-11 / nice-01
+                      :mode expressive)
+        :snt2 (c19-5 / contrast-01
+                     :ARG1 (c19-20 / feel-01
+                                   :ARG0 (c19-4 / i)
+                                   :ARG1 (c19-21 / much)
+                                   :ARG1-of (c19-15 / mean-01
+                                                    :ARG2 (c19-7 / tire-01
+                                                                 :ARG1 c19-4
+                                                                 :ARG2-of (c19-22 / have-degree-91
+                                                                                  :ARG1 c19-4
+                                                                                  :ARG3 (c19-9 / more)
+                                                                                  :ARG4 (c19-23 / usual))))
+                                   :polarity -)
+                     :ARG2 (c19-26 / possible-01
+                                   :ARG1 (c19-0 / cause-01
+                                                :ARG0 (c19-6 / take-01
+                                                             :ARG0 c19-4
+                                                             :ARG1 (c19-24 / product
+                                                                           :name (c19-2 / name
+                                                                                        :op1 "Tylenol"))
+                                                             :time (c19-16 / few
+                                                                           :op1 (c19-12 / temporal-quantity
+                                                                                        :unit (c19-1 / day)
+                                                                                        :quant 1)
+                                                                           :mod (c19-14 / that)))
+                                                :ARG1 c19-20)))
+        :snt3 (c19-3 / hope-01
+                     :ARG1 c19-26
+                     :ARG1 (c19-25 / brush-off-02
+                                   :ARG0 (c19-19 / body
+                                                 :poss (c19-18 / you))
+                                   :ARG1 (c19-13 / it)
+                                   :ARG1-of (c19-8 / resemble-01
+                                                   :ARG2 (c19-17 / nothing
+                                                                 :domain c19-13)))))
+
+# ::snt Might wanna make sure you have tomorrow off just in case; the second dose did me IN
+# ::tokens ["Might", "wanna", "make", "sure", "you", "have", "tomorrow", "off", "just", "in", "case", ";", "the", "second", "dose", "did", "me", "IN"]
+# ::lemmas ["might", "wanna", "make", "sure", "you", "have", "tomorrow", "off", "just", "in", "case", ";", "the", "second", "dose", "do", "i", "in"]
+(c20-13 / multi-sentence
+        :snt1 (c20-12 / possible-01
+                      :ARG1 (c20-2 / want-01
+                                   :ARG0 (c20-1 / i)
+                                   :ARG1 (c20-15 / ensure-01
+                                                 :ARG0 c20-1
+                                                 :ARG1 (c20-5 / have-03
+                                                              :ARG0 (c20-14 / you)
+                                                              :ARG1 (c20-10 / tomorrow)
+                                                              :mod (c20-9 / off)
+                                                              :mod (c20-3 / case
+                                                                          :mod (c20-11 / just))))))
+        :snt2 (c20-0 / do-02
+                     :ARG0 (c20-4 / dose
+                                  :ord (c20-6 / ordinal-entity
+                                              :value 2))
+                     :ARG1 (c20-7 / i)
+                     :location (c20-8 / inside)))
+
+# ::snt jabbers for makkers!
+# ::tokens ["jabbers", "for", "makkers", "!"]
+# ::lemmas ["jabber", "for", "makker", "!"]
+(c21-0 / jabber-01
+       :beneficiary (c21-1 / makker)
+       :mode expressive)
+
+# ::snt Getting my second dose today too after work!! How are you feeling so far?
+# ::tokens ["Getting", "my", "second", "dose", "today", "too", "after", "work", "!", "!", "How", "are", "you", "feeling", "so", "far", "?"]
+# ::lemmas ["get", "my", "second", "dose", "today", "too", "after", "work", "!", "!", "how", "be", "you", "feel", "so", "far", "?"]
+(c22-10 / multi-sentence
+        :snt1 (c22-8 / get-01
+                     :ARG0 (c22-9 / i)
+                     :ARG1 (c22-0 / dose
+                                  :ord (c22-6 / ordinal-entity
+                                              :value 2))
+                     :time (c22-7 / today)
+                     :time (c22-2 / after
+                                  :op1 (c22-4 / work-01
+                                              :ARG0 c22-9))
+                     :mod (c22-5 / too))
+        :snt2 (c22-3 / feel-01
+                     :ARG0 (c22-11 / you)
+                     :ARG1 (c22-12 / amr-unknown)
+                     :time (c22-1 / so-far)))
+
+# ::snt freedom soon!
+# ::tokens ["freedom", "soon", "!"]
+# ::lemmas ["freedom", "soon", "!"]
+(c23-1 / free-04
+       :time (c23-0 / soon))
+
+# ::snt Prepare to nap!
+# ::tokens ["Prepare", "to", "nap", "!"]
+# ::lemmas ["prepare", "to", "nap", "!"]
+(c24-0 / prepare-02
+       :ARG0 (c24-2 / you
+                    :ARG1-of c24-0)
+       :ARG2 (c24-1 / nap-01
+                    :ARG0 c24-2)
+       :mode imperative)

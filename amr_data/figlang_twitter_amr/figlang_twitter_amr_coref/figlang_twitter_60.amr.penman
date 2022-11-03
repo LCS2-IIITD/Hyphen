@@ -1,0 +1,48 @@
+# ::snt A6 Great ! We had pounds of candy & RAN OUT ! For the last few minutes , I gave out herbal tea bags !
+# ::tokens ["A6", "Great", "!", "We", "had", "pounds", "of", "candy", "&", "RAN", "OUT", "!", "For", "the", "last", "few", "minutes", ",", "I", "gave", "out", "herbal", "tea", "bags", "!"]
+# ::lemmas ["A6", "Great", "!", "we", "have", "pound", "of", "candy", "&", "RAN", "out", "!", "for", "the", "last", "few", "minutes", ",", "i", "give", "out", "herbal", "tea", "bag", "!"]
+(c1-10 / multi-sentence
+       :snt1 (c1-12 / event
+                    :name (c1-11 / name
+                                 :op1 "A6"
+                                 :op2 "Great"))
+       :snt2 (c1-15 / and
+                    :op1 (c1-18 / have-03
+                                :ARG0 (c1-4 / we)
+                                :ARG1 (c1-3 / candy
+                                            :quant (c1-17 / multiple
+                                                          :op1 (c1-13 / mass-quantity
+                                                                      :unit (c1-20 / pound)
+                                                                      :quant 1))))
+                    :op2 (c1-7 / ration-01
+                               :ARG0 c1-4
+                               :ARG1 c1-3))
+       :snt3 (c1-8 / give-out-06
+                   :ARG0 (c1-2 / i)
+                   :ARG1 (c1-19 / bag
+                                :mod (c1-6 / tea)
+                                :mod (c1-1 / herb))
+                   :time (c1-14 / before
+                                :op1 (c1-0 / now)
+                                :duration (c1-16 / few
+                                                 :op1 (c1-5 / temporal-quantity
+                                                            :unit (c1-9 / minute)
+                                                            :quant 1)))))
+
+# ::snt No one complained thank goodness ! Next year , we're getting pounds of candy , though ...
+# ::tokens ["No", "one", "complained", "thank", "goodness", "!", "Next", "year", ",", "we", "'re", "getting", "pounds", "of", "candy", ",", "though", "..."]
+# ::lemmas ["no", "one", "complain", "thank", "goodness", "!", "Next", "year", ",", "we", "be", "get", "pound", "of", "candy", ",", "though", "..."]
+(c2-10 / multi-sentence
+       :snt1 (c2-1 / complain-01
+                   :ARG0 (c2-11 / no-one)
+                   :ARG2-of (c2-5 / thank-01
+                                  :ARG1 (c2-8 / goodness)))
+       :snt2 (c2-12 / get-01
+                    :ARG0 (c2-2 / we)
+                    :ARG1 (c2-0 / candy
+                                :quant (c2-3 / mass-quantity
+                                             :unit (c2-9 / pound)
+                                             :quant 1))
+                    :time (c2-6 / year
+                                :mod (c2-7 / next))
+                    :ARG1-of (c2-4 / have-concession-91)))

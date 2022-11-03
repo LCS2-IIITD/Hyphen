@@ -1,0 +1,44 @@
+# ::snt Annnnnnd she's still single
+# ::tokens ["Annnnnnd", "she", "'s", "still", "single"]
+# ::lemmas ["Annnnnnd", "she", "be", "still", "single"]
+(c1-3 / single-03
+      :ARG1 (c1-1 / she)
+      :mod (c1-0 / still)
+      :time (c1-2 / Annnnnd))
+
+# ::snt Hasn't everyone?
+# ::tokens ["Has", "n't", "everyone", "?"]
+# ::lemmas ["have", "not", "everyone", "?"]
+(c2-1 / event
+      :polarity (c2-2 / amr-unknown)
+      :mod (c2-0 / everyone))
+
+# ::snt Said she went on two dates with him. I wouldn't exactly call that a relationship.
+# ::tokens ["Said", "she", "went", "on", "two", "dates", "with", "him", ".", "I", "would", "n't", "exactly", "call", "that", "a", "relationship", "."]
+# ::lemmas ["say", "she", "go", "on", "two", "date", "with", "he", ".", "i", "would", "not", "exactly", "call", "that", "a", "relationship", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-2 / say-01
+                  :ARG1 (c3-9 / go-02
+                              :ARG0 (c3-0 / she)
+                              :ARG4 (c3-10 / date-02
+                                           :ARG0 c3-0
+                                           :accompanier (c3-5 / he)
+                                           :quant 2)))
+      :snt2 (c3-6 / call-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-8 / that)
+                  :ARG2 (c3-3 / relation-03)
+                  :mod (c3-4 / exact)
+                  :polarity -))
+
+# ::snt So did everyone else, she's not special
+# ::tokens ["So", "did", "everyone", "else", ",", "she", "'s", "not", "special"]
+# ::lemmas ["so", "do", "everyone", "else", ",", "she", "be", "not", "special"]
+(c4-4 / cause-01
+      :ARG0 (c4-1 / special-02
+                  :ARG1 (c4-0 / she)
+                  :polarity -)
+      :ARG1 (c4-5 / do-02
+                  :ARG0 (c4-3 / everyone
+                              :mod (c4-2 / else))
+                  :ARG1 (c4-6 / so)))

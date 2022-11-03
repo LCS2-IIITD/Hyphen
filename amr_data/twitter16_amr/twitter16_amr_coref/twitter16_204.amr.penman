@@ -1,0 +1,84 @@
+# ::snt Viral videos are important! /sarcasm
+# ::tokens ["Viral", "videos", "are", "important", "!", "/sarcasm"]
+# ::lemmas ["viral", "video", "be", "important", "!", "/sarcasm"]
+(c1-1 / important-01
+      :ARG1 (c1-0 / video
+                  :mod (c1-2 / iral))
+      :mod (c1-3 / sarcasm))
+
+# ::snt : UPDATE: Gunman says devices are located around Sydney. Security response underway. Police calling for calm. Sherlock!?!?
+# ::tokens [":", "UPDATE", ":", "Gunman", "says", "devices", "are", "located", "around", "Sydney", ".", "Security", "response", "underway", ".", "Police", "calling", "for", "calm", ".", "Sherlock", "!", "?", "!", "?"]
+# ::lemmas [":", "update", ":", "Gunman", "say", "device", "be", "locate", "around", "Sydney", ".", "security", "response", "underway", ".", "police", "call", "for", "calm", ".", "Sherlock", "!", "?", "!", "?"]
+(c2-18 / multi-sentence
+       :snt1 (c2-6 / say-01
+                   :ARG0 (c2-14 / person
+                                :name (c2-1 / name
+                                            :op1 "Gunman"))
+                   :ARG1 (c2-7 / locate-01
+                               :ARG1 (c2-16 / device)
+                               :location (c2-10 / around
+                                                :op1 (c2-9 / city
+                                                           :name (c2-5 / name
+                                                                       :op1 "Sydney"))))
+                   :ARG1-of (c2-13 / update-02))
+       :snt2 (c2-2 / underway
+                   :domain (c2-3 / respond-01
+                                 :ARG0 (c2-0 / security)))
+       :snt3 (c2-12 / call-03
+                    :ARG0 (c2-11 / police)
+                    :ARG1 (c2-4 / calm-03))
+       :snt4 (c2-17 / person
+                    :name (c2-15 / name
+                                 :op1 "Sherlock")
+                    :polarity (c2-8 / amr-unknown)))
+
+# ::snt Damn BREAKING UPDATE: Gunman says four devices are located around Sydney. Security response underway. Police calling for calm. News
+# ::tokens ["Damn", "BREAKING", "UPDATE", ":", "Gunman", "says", "four", "devices", "are", "located", "around", "Sydney", ".", "Security", "response", "underway", ".", "Police", "calling", "for", "calm", ".", "News"]
+# ::lemmas ["Damn", "breaking", "update", ":", "Gunman", "say", "four", "device", "be", "locate", "around", "Sydney", ".", "security", "response", "underway", ".", "police", "call", "for", "calm", ".", "news"]
+(c3-18 / multi-sentence
+       :snt1 (c3-14 / update-02
+                    :ARG2 (c3-8 / say-01
+                                :ARG0 (c3-15 / person
+                                             :name (c3-3 / name
+                                                         :op1 "Gunman"))
+                                :ARG1 (c3-9 / locate-01
+                                            :ARG1 (c3-17 / device
+                                                         :quant 4)
+                                            :location (c3-11 / around
+                                                             :op1 (c3-10 / city
+                                                                         :name (c3-7 / name
+                                                                                     :op1 "Sydney")))))
+                    :ARG1-of (c3-2 / break-13
+                                   :mod (c3-1 / damn)))
+       :snt2 (c3-4 / underway
+                   :domain (c3-5 / respond-01
+                                 :ARG0 (c3-0 / security)))
+       :snt3 (c3-13 / call-03
+                    :ARG0 (c3-12 / police)
+                    :ARG1 (c3-6 / calm-03))
+       :snt4 (c3-16 / news))
+
+# ::snt : BREAKING UPDATE: Gunman says four devices are located around Sydney. Security response underway. Police calling for calm. News
+# ::tokens [":", "BREAKING", "UPDATE", ":", "Gunman", "says", "four", "devices", "are", "located", "around", "Sydney", ".", "Security", "response", "underway", ".", "Police", "calling", "for", "calm", ".", "News"]
+# ::lemmas [":", "breaking", "update", ":", "Gunman", "say", "four", "device", "be", "locate", "around", "Sydney", ".", "security", "response", "underway", ".", "police", "call", "for", "calm", ".", "news"]
+(c4-6 / multi-sentence
+      :snt1 (c4-9 / update-02
+                  :ARG2 (c4-10 / say-01
+                               :ARG0 (c4-11 / person
+                                            :name (c4-12 / name
+                                                         :op1 "Gunman"))
+                               :ARG1 (c4-14 / locate-01
+                                            :ARG1 (c4-16 / device
+                                                         :quant 4)
+                                            :location (c4-0 / around
+                                                            :op1 (c4-15 / city
+                                                                        :name (c4-4 / name
+                                                                                    :op1 "Sydney")))))
+                  :ARG1-of (c4-3 / break-13))
+      :snt2 (c4-17 / underway
+                   :domain (c4-2 / respond-01
+                                 :ARG0 (c4-1 / security)))
+      :snt3 (c4-8 / call-03
+                  :ARG0 (c4-7 / police)
+                  :ARG1 (c4-5 / calm-03))
+      :snt4 (c4-13 / news))

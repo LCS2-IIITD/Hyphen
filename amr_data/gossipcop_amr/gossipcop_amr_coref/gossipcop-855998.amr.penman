@@ -1,0 +1,42 @@
+# ::snt Hope it's a happy ending,,
+# ::tokens ["Hope", "it", "'s", "a", "happy", "ending", ",", ","]
+# ::lemmas ["hope", "it", "be", "a", "happy", "ending", ",", ","]
+(c1-2 / hope-01
+      :ARG1 (c1-1 / end-01
+                  :ARG1 (c1-3 / it)
+                  :ARG1-of (c1-0 / happy-02)))
+
+# ::snt So this will be her st engagement
+# ::tokens ["So", "this", "will", "be", "her", "st", "engagement"]
+# ::lemmas ["so", "this", "will", "be", "her", "st", "engagement"]
+(c2-1 / engagement-02
+      :ARG0 (c2-3 / she)
+      :mod (c2-0 / st)
+      :domain (c2-2 / this))
+
+# ::snt I don't know who he is. But obviously, this poor bastard has no idea what he's in for.
+# ::tokens ["I", "do", "n't", "know", "who", "he", "is", ".", "But", "obviously", ",", "this", "poor", "bastard", "has", "no", "idea", "what", "he", "'s", "in", "for", "."]
+# ::lemmas ["i", "do", "not", "know", "who", "he", "be", ".", "but", "obviously", ",", "this", "poor", "bastard", "have", "no", "idea", "what", "he", "be", "in", "for", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / know-01
+                  :ARG0 (c3-11 / i)
+                  :ARG1 (c3-7 / person
+                              :domain (c3-6 / he))
+                  :polarity -)
+      :snt2 (c3-9 / contrast-01
+                  :ARG2 (c3-10 / have-03
+                               :ARG0 (c3-1 / bastard
+                                           :mod (c3-3 / poor)
+                                           :mod (c3-12 / this))
+                               :ARG1 (c3-4 / idea
+                                           :topic (c3-13 / thing
+                                                         :prep-for (c3-5 / he)))
+                               :ARG1-of (c3-0 / obvious-01)
+                               :polarity -)))
+
+# ::snt CONGRATS TO BOTH OF YOU
+# ::tokens ["CONGRATS", "TO", "BOTH", "OF", "YOU"]
+# ::lemmas ["congrat", "to", "both", "of", "you"]
+(c4-2 / accountable-02
+      :ARG0 (c4-1 / you
+                  :mod (c4-0 / both)))

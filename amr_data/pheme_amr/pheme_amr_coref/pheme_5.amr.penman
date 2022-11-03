@@ -1,0 +1,61 @@
+# ::snt so very true!
+# ::tokens ["so", "very", "true", "!"]
+# ::lemmas ["so", "very", "true", "!"]
+(c1-2 / true-01
+      :degree (c1-1 / very
+                    :degree (c1-0 / so)))
+
+# ::snt it's a blank page
+# ::tokens ["it", "'s", "a", "blank", "page"]
+# ::lemmas ["it", "be", "a", "blank", "page"]
+(c2-0 / page
+      :mod (c2-2 / blank)
+      :domain (c2-1 / it))
+
+# ::snt A movie that's been stalled by Censor Board for two years for hurting Christian sentiments
+# ::tokens ["A", "movie", "that", "'s", "been", "stalled", "by", "Censor", "Board", "for", "two", "years", "for", "hurting", "Christian", "sentiments"]
+# ::lemmas ["a", "movie", "that", "be", "be", "stall", "by", "Censor", "Board", "for", "two", "years", "for", "hurt", "Christian", "sentiment"]
+(c3-2 / movie
+      :ARG1-of (c3-9 / stall-01
+                     :ARG0 (c3-3 / organization
+                                 :name (c3-5 / name
+                                             :op1 "Censor"
+                                             :op2 "Board"))
+                     :duration (c3-10 / temporal-quantity
+                                      :unit (c3-1 / year)
+                                      :quant 2)
+                     :ARG1-of (c3-8 / cause-01
+                                    :ARG0 (c3-0 / hurt-01
+                                                :ARG0 c3-2
+                                                :ARG1 (c3-4 / sentiment
+                                                            :mod (c3-7 / religious-group
+                                                                       :name (c3-6 / name
+                                                                                   :op1 "Christian")))))))
+
+# ::snt We salute the Brave Journalist Stand/Speak against Muslim Terrorists
+# ::tokens ["We", "salute", "the", "Brave", "Journalist", "Stand", "/", "Speak", "against", "Muslim", "Terrorists"]
+# ::lemmas ["we", "salute", "the", "Brave", "Journalist", "Stand", "/", "speak", "against", "Muslim", "Terrorists"]
+(c4-7 / salute-01
+      :ARG0 (c4-0 / we)
+      :ARG1 (c4-5 / person
+                  :name (c4-3 / name
+                              :op1 "Brave"
+                              :op2 "Journalist")
+                  :ARG0-of (c4-2 / stand-11
+                                 :ARG1 (c4-1 / oppose-01
+                                             :ARG0 c4-5
+                                             :ARG1 (c4-8 / terrorist
+                                                         :mod (c4-6 / religious-group
+                                                                    :name (c4-4 / name
+                                                                                :op1 "Muslim")))))))
+
+# ::snt Superb. Thanks for sharing
+# ::tokens ["Superb", ".", "Thanks", "for", "sharing"]
+# ::lemmas ["Superb", ".", "thank", "for", "share"]
+(c6-4 / thank-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-0 / you)
+      :ARG2 (c6-3 / share-01
+                  :ARG0 c6-0)
+      :mod (c6-1 / superb
+                 :mode expressive))

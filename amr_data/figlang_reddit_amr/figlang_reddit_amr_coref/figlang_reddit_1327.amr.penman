@@ -1,0 +1,85 @@
+# ::snt This is confusing to look at
+# ::tokens ["This", "is", "confusing", "to", "look", "at"]
+# ::lemmas ["this", "be", "confusing", "to", "look", "at"]
+(c1-2 / confuse-01
+      :ARG0 (c1-1 / look-01
+                  :ARG1 (c1-0 / this)))
+
+# ::snt i dont smoke cigarettes, but i might smoke a chicken noodle cigarette
+# ::tokens ["i", "do", "nt", "smoke", "cigarettes", ",", "but", "i", "might", "smoke", "a", "chicken", "noodle", "cigarette"]
+# ::lemmas ["i", "do", "not", "smoke", "cigarette", ",", "but", "i", "might", "smoke", "a", "chicken", "noodle", "cigarette"]
+(c2-2 / contrast-01
+      :ARG1 (c2-0 / smoke-02
+                  :ARG0 (c2-7 / i)
+                  :ARG1 (c2-1 / cigarette)
+                  :polarity -)
+      :ARG2 (c2-4 / possible-01
+                  :ARG1 (c2-6 / smoke-02
+                              :ARG0 c2-7
+                              :ARG1 (c2-3 / cigarette
+                                          :mod (c2-8 / noodle
+                                                     :mod (c2-5 / chicken))))))
+
+# ::snt Yes, but would you soup a bowl of Marlboro?
+# ::tokens ["Yes", ",", "but", "would", "you", "soup", "a", "bowl", "of", "Marlboro", "?"]
+# ::lemmas ["yes", ",", "but", "would", "you", "soup", "a", "bowl", "of", "Marlboro", "?"]
+(c3-2 / contrast-01
+      :ARG2 (c3-0 / soup
+                  :polarity (c3-1 / amr-unknown)
+                  :mod (c3-4 / product
+                             :name (c3-5 / name
+                                         :op1 "Marlboro")
+                             :quant (c3-3 / bowl))
+                  :domain (c3-6 / you)))
+
+# ::snt That's not cool dude, my friends cousins buddy's sister died like that
+# ::tokens ["That", "'s", "not", "cool", "dude", ",", "my", "friends", "cousins", "buddy", "'s", "sister", "died", "like", "that"]
+# ::lemmas ["that", "be", "not", "cool", "dude", ",", "my", "friend", "cousin", "buddy", "'s", "sister", "die", "like", "that"]
+(c4-4 / cool-04
+      :ARG1 (c4-11 / that)
+      :ARG1-of (c4-0 / cause-01
+                     :ARG0 (c4-1 / die-01
+                                 :ARG1 (c4-14 / person
+                                              :ARG0-of (c4-8 / have-rel-role-91
+                                                             :ARG1 (c4-10 / person
+                                                                          :ARG0-of (c4-13 / have-rel-role-91
+                                                                                          :ARG1 (c4-5 / i)
+                                                                                          :ARG2 (c4-3 / friend))
+                                                                          :ARG3 (c4-9 / cousin)))
+                                              :ARG2 (c4-2 / sister))
+                                 :ARG1-of (c4-12 / resemble-01
+                                                 :ARG2 (c4-6 / that))))
+      :mod (c4-7 / dude)
+      :polarity -)
+
+# ::snt My uncle was a two-can-a-day souper and lived to be 97.
+# ::tokens ["My", "uncle", "was", "a", "two", "-", "can", "-", "a", "-", "day", "souper", "and", "lived", "to", "be", "97", "."]
+# ::lemmas ["my", "uncle", "be", "a", "two", "-", "can", "-", "a", "-", "day", "souper", "and", "live", "to", "be", "97", "."]
+(c5-2 / and
+      :op1 (c5-0 / souper
+                 :domain (c5-11 / person
+                                :ARG0-of (c5-5 / have-rel-role-91
+                                               :ARG1 (c5-3 / i)
+                                               :ARG2 (c5-6 / uncle)))
+                 :frequency (c5-9 / rate-entity-91
+                                  :ARG1 (c5-7 / possible-01
+                                              :ARG2 (c5-8 / temporal-quantity
+                                                          :unit (c5-1 / day)
+                                                          :quant 1)
+                                              :ARG1 c5-9
+                                              :ARG1 2)))
+      :op2 (c5-10 / live-01
+                  :ARG0 c5-11
+                  :time (c5-4 / to
+                              :op1 (c5-13 / age-01
+                                          :ARG1 c5-11
+                                          :ARG2 c5-8
+                                          :unit (c5-12 / year)
+                                          :quant 97))))
+
+# ::snt Was he souperstitious?
+# ::tokens ["Was", "he", "souperstitious", "?"]
+# ::lemmas ["be", "he", "souperstitious", "?"]
+(c6-0 / souperstitious
+      :polarity (c6-1 / amr-unknown)
+      :domain (c6-2 / he))

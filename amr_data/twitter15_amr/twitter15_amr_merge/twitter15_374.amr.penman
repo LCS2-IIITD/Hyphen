@@ -1,0 +1,35 @@
+# ::subgraphs [["c1-3", "c1-2", "c1-0", "c1-1"], ["c2-5", "c2-3", "c2-1", "c2-0", "c2-4", "c2-2"], ["c3-5", "c3-3", "c3-1", "c3-0", "c3-4", "c3-2"]]
+(d / dummy
+   :COMMENT (c1-3 / mark
+                  :ARG1 (c1-2 / date
+                              :month 9)
+                  :ARG2 (c1-0 / word
+                              :poss (c1-1 / i
+                                          :SAME c3-1
+                                          :SAME c2-1
+                                          :COREF c3-4
+                                          :COREF c3-1
+                                          :COREF c2-4
+                                          :COREF c2-1))
+                  :mode expressive)
+   :COMMENT (c2-5 / and
+                  :op1 (c2-3 / live
+                             :ARG0 (c2-1 / i)
+                             :SAME c3-3)
+                  :op2 (c2-0 / see
+                             :ARG0 c2-1
+                             :ARG1 (c2-4 / you
+                                         :SAME c3-4)
+                             :time (c2-2 / soon)
+                             :SAME c3-0)
+                  :mode expressive
+                  :SAME c3-5)
+   :COMMENT (c3-5 / and
+                  :op1 (c3-3 / live
+                             :ARG0 (c3-1 / i))
+                  :op2 (c3-0 / see
+                             :ARG0 c3-1
+                             :ARG1 (c3-4 / you)
+                             :time (c3-2 / soon
+                                         :SAME-of c2-2))
+                  :mode expressive))

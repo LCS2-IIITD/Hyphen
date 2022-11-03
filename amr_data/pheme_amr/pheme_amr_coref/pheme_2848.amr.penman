@@ -1,0 +1,50 @@
+# ::snt : "The pilot did send an SOS message saying the plane was in distress." - reporting on plane crash.
+# ::tokens [":", "\"", "The", "pilot", "did", "send", "an", "SOS", "message", "saying", "the", "plane", "was", "in", "distress", ".", "\"", "-", "reporting", "on", "plane", "crash", "."]
+# ::lemmas [":", "\"", "the", "pilot", "do", "send", "an", "SOS", "message", "say", "the", "plane", "be", "in", "distress", ".", "\"", "-", "report", "on", "plane", "crash", "."]
+(c1-7 / send-01
+      :ARG0 (c1-3 / person
+                  :ARG0-of (c1-8 / pilot-01))
+      :ARG1 (c1-0 / message-01
+                  :ARG0 c1-3
+                  :ARG1 (c1-4 / distress-01
+                              :ARG1 (c1-1 / plane))
+                  :ARG0-of (c1-2 / say-01
+                                 :ARG1 c1-4)
+                  :ARG0-of (c1-5 / report-01
+                                 :ARG1 (c1-6 / crash-01
+                                             :ARG1 c1-1))))
+
+# ::snt : "The pilot did send an SOS message saying the plane was in distress." - reporting on plane crash.
+# ::tokens [":", "\"", "The", "pilot", "did", "send", "an", "SOS", "message", "saying", "the", "plane", "was", "in", "distress", ".", "\"", "-", "reporting", "on", "plane", "crash", "."]
+# ::lemmas [":", "\"", "the", "pilot", "do", "send", "an", "SOS", "message", "say", "the", "plane", "be", "in", "distress", ".", "\"", "-", "report", "on", "plane", "crash", "."]
+(c2-7 / send-01
+      :ARG0 (c2-3 / person
+                  :ARG0-of (c2-8 / pilot-01))
+      :ARG1 (c2-0 / message-01
+                  :ARG0 c2-3
+                  :ARG1 (c2-4 / distress-01
+                              :ARG1 (c2-1 / plane))
+                  :ARG0-of (c2-2 / say-01
+                                 :ARG1 c2-4)
+                  :ARG0-of (c2-5 / report-01
+                                 :ARG1 (c2-6 / crash-01
+                                             :ARG1 c2-1))))
+
+# ::snt BREAKING - Germanwings plane crashes in France, up to believed dead
+# ::tokens ["BREAKING", "-", "Germanwings", "plane", "crashes", "in", "France", ",", "up", "to", "believed", "dead"]
+# ::lemmas ["BREAKING", "-", "Germanwings", "plane", "crash", "in", "France", ",", "up", "to", "believe", "dead"]
+(c3-1 / break-01
+      :ARG1 (c3-6 / crash-01
+                  :ARG1 (c3-4 / plane
+                              :poss (c3-5 / company
+                                          :name (c3-2 / name
+                                                      :op1 "Germanwings")))
+                  :location (c3-9 / country
+                                  :name (c3-3 / name
+                                              :op1 "France"))
+                  :ARG0-of (c3-11 / cause-01
+                                  :ARG1 (c3-7 / believe-01
+                                              :ARG1 (c3-8 / die-01
+                                                          :ARG1 (c3-10 / person
+                                                                       :quant (c3-0 / up-to
+                                                                                    :op1 1)))))))

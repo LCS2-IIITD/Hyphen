@@ -1,0 +1,76 @@
+# ::snt I get mine tom
+# ::tokens ["I", "get", "mine", "tom"]
+# ::lemmas ["i", "get", "mine", "tom"]
+(c1-0 / get-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-3 / thing
+                  :poss c1-2)
+      :mod (c1-1 / tom))
+
+# ::snt Marias second shot was worse than the first. You might want to plan to have the next day aff.
+# ::tokens ["Marias", "second", "shot", "was", "worse", "than", "the", "first", ".", "You", "might", "want", "to", "plan", "to", "have", "the", "next", "day", "aff", "."]
+# ::lemmas ["Marias", "second", "shot", "be", "bad", "than", "the", "first", ".", "you", "might", "want", "to", "plan", "to", "have", "the", "next", "day", "aff", "."]
+(c2-15 / multi-sentence
+       :snt1 (c2-12 / bad-02
+                    :ARG1 (c2-0 / shot
+                                :ord (c2-9 / ordinal-entity
+                                           :value 2)
+                                :poss (c2-14 / person
+                                             :name (c2-16 / name
+                                                          :op1 "Marias")))
+                    :ARG2-of (c2-6 / have-degree-91
+                                   :ARG1 c2-0
+                                   :ARG3 (c2-3 / more)
+                                   :ARG4 (c2-13 / shot
+                                                :ord (c2-7 / ordinal-entity
+                                                           :value 1))))
+       :snt2 (c2-10 / possible-01
+                    :ARG1 (c2-4 / want-01
+                                :ARG0 (c2-17 / you)
+                                :ARG1 (c2-5 / plan-01
+                                            :ARG0 c2-17
+                                            :ARG1 (c2-8 / have-06
+                                                        :ARG0 c2-17
+                                                        :ARG1 (c2-2 / aff)
+                                                        :time (c2-1 / day
+                                                                    :mod (c2-11 / next)))))))
+
+# ::snt Thanks for the advise I've never been this excited about getting a shot!
+# ::tokens ["Thanks", "for", "the", "advise", "I", "'ve", "never", "been", "this", "excited", "about", "getting", "a", "shot", "!"]
+# ::lemmas ["thank", "for", "the", "advise", "i", "'ve", "never", "be", "this", "excited", "about", "get", "a", "shot", "!"]
+(c3-8 / multi-sentence
+      :snt1 (c3-5 / thank-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-9 / you)
+                  :ARG2 (c3-1 / advise-01
+                              :ARG0 c3-9
+                              :ARG1 c3-7))
+      :snt2 (c3-10 / excite-01
+                   :ARG0 (c3-6 / get-01
+                               :ARG0 (c3-3 / i)
+                               :ARG1 (c3-0 / shoot-02))
+                   :ARG1 c3-3
+                   :time (c3-4 / ever)
+                   :degree (c3-2 / this)
+                   :polarity -))
+
+# ::snt Take some ibuprofen before you go to bed after the shot and sleep with an extra blanket!
+# ::tokens ["Take", "some", "ibuprofen", "before", "you", "go", "to", "bed", "after", "the", "shot", "and", "sleep", "with", "an", "extra", "blanket", "!"]
+# ::lemmas ["take", "some", "ibuprofen", "before", "you", "go", "to", "bed", "after", "the", "shot", "and", "sleep", "with", "an", "extra", "blanket", "!"]
+(c4-2 / and
+      :op1 (c4-5 / take-01
+                 :ARG0 (c4-10 / you)
+                 :ARG1 (c4-9 / ibuprofen
+                             :quant (c4-0 / some))
+                 :time (c4-7 / before
+                             :op1 (c4-6 / go-01
+                                        :ARG1 c4-10
+                                        :ARG4 (c4-1 / bed)
+                                        :time (c4-11 / after
+                                                     :op1 (c4-8 / shoot-02))))
+                 :mode imperative)
+      :op2 (c4-4 / sleep-01
+                 :ARG0 c4-10
+                 :manner (c4-3 / blanket
+                               :mod (c4-12 / extra))
+                 :mode imperative))

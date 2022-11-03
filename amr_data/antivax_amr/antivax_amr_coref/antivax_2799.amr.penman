@@ -1,0 +1,65 @@
+# ::snt Its like a horror movie playing out in real time.
+# ::tokens ["Its", "like", "a", "horror", "movie", "playing", "out", "in", "real", "time", "."]
+# ::lemmas ["its", "like", "a", "horror", "movie", "play", "out", "in", "real", "time", "."]
+(c1-2 / resemble-01
+      :ARG1 (c1-4 / it)
+      :ARG2 (c1-5 / movie
+                  :mod (c1-0 / horror)
+                  :ARG1-of (c1-3 / play-out-03
+                                 :manner (c1-1 / real-time))))
+
+# ::snt I had a feeling they would turn into super spreaders.
+# ::tokens ["I", "had", "a", "feeling", "they", "would", "turn", "into", "super", "spreaders", "."]
+# ::lemmas ["i", "have", "a", "feeling", "they", "would", "turn", "into", "super", "spreader", "."]
+(c2-1 / feel-02
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-3 / turn-02
+                  :ARG1 (c2-2 / they)
+                  :ARG2 (c2-4 / person
+                              :ARG1-of (c2-0 / spread-03
+                                             :degree (c2-5 / super)))))
+
+# ::snt *makes reference to...
+# ::tokens ["*", "makes", "reference", "to", "..."]
+# ::lemmas ["*", "make", "reference", "to", "..."]
+(c3-0 / reference-04)
+
+# ::snt st video makes a vaccine scientist who previously worked for GAVI/Gates Foundation.2nd video is interview with the Gateses These revelations were given to me via the Holy Spirit months ago.
+# ::tokens ["st", "video", "makes", "a", "vaccine", "scientist", "who", "previously", "worked", "for", "GAVI", "/", "Gates", "Foundation.2nd", "video", "is", "interview", "with", "the", "Gateses", "These", "revelations", "were", "given", "to", "me", "via", "the", "Holy", "Spirit", "months", "ago", "."]
+# ::lemmas ["st", "video", "make", "a", "vaccine", "scientist", "who", "previously", "work", "for", "GAVI", "/", "Gates", "Foundation.2nd", "video", "be", "interview", "with", "the", "Gateses", "these", "revelation", "be", "give", "to", "i", "via", "the", "Holy", "Spirit", "months", "ago", "."]
+(c4-13 / multi-sentence
+       :snt1 (c4-21 / make-02
+                    :ARG0 (c4-6 / video
+                                :ord (c4-7 / ordinal-entity
+                                           :value 1))
+                    :ARG1 (c4-16 / scientist
+                                 :ARG0-of (c4-20 / vaccinate-01)
+                                 :ARG0-of (c4-4 / work-01
+                                                :ARG2 (c4-25 / slash
+                                                             :op1 (c4-22 / organization
+                                                                         :name (c4-14 / name
+                                                                                      :op1 "GAVI"))
+                                                             :op2 (c4-2 / organization
+                                                                        :name (c4-0 / name
+                                                                                    :op1 "Gates"
+                                                                                    :op2 "Foundation")))
+                                                :time (c4-26 / previous))))
+       :snt2 (c4-1 / interview-01
+                   :ARG1 (c4-23 / person
+                                :name (c4-19 / name
+                                             :op1 "Gates"))
+                   :snt3 (c4-11 / give-01
+                                :ARG1 (c4-8 / thing
+                                            :ARG1-of (c4-9 / reveal-01)
+                                            :mod (c4-5 / this))
+                                :ARG2 (c4-17 / i)
+                                :instrument c4-23
+                                :name (c4-3 / name
+                                            :op1 "Holy"
+                                            :op2 "Spirit"))
+                   :time (c4-24 / before
+                                :op1 (c4-10 / now)
+                                :quant (c4-18 / multiple
+                                              :op1 (c4-15 / temporal-quantity
+                                                          :unit (c4-12 / month)
+                                                          :quant 1)))))

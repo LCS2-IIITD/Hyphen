@@ -1,0 +1,49 @@
+# ::snt New News / WaPo poll : % say Trump should release his tax returns , including % of his own supporters <URL>
+# ::tokens ["New", "News", "/", "WaPo", "poll", ":", "%", "say", "Trump", "should", "release", "his", "tax", "returns", ",", "including", "%", "of", "his", "own", "supporters", "<", "URL", ">"]
+# ::lemmas ["New", "News", "/", "WaPo", "poll", ":", "%", "say", "Trump", "should", "release", "his", "tax", "return", ",", "include", "%", "of", "his", "own", "supporter", "<", "URL", ">"]
+(c1-0 / say-01
+      :ARG0 (c1-14 / poll-01
+                   :ARG0 (c1-13 / slash
+                                :op1 (c1-8 / publication
+                                           :name (c1-15 / name
+                                                        :op1 "New"
+                                                        :op2 "News"))
+                                :op2 (c1-4 / publication
+                                           :name (c1-10 / name
+                                                        :op1 "WaPo"))))
+      :ARG1 (c1-11 / recommend-01
+                   :ARG1 (c1-6 / release-01
+                               :ARG0 (c1-3 / person
+                                           :name (c1-7 / name
+                                                       :op1 "Trump"))
+                               :ARG1 (c1-12 / return-06
+                                            :ARG1 (c1-9 / tax-01
+                                                        :ARG2 c1-3)
+                                            :ARG2 c1-3
+                                            :ARG2-of (c1-2 / include-91
+                                                           :ARG1 (c1-1 / person
+                                                                       :ARG0-of (c1-5 / support-01
+                                                                                      :ARG1 c1-3))))))
+      :ARG2 c1-3)
+
+# ::snt If he refused to release those returns before election day , there's zero chance he will do so now . Media fail .
+# ::tokens ["If", "he", "refused", "to", "release", "those", "returns", "before", "election", "day", ",", "there", "'s", "zero", "chance", "he", "will", "do", "so", "now", ".", "Media", "fail", "."]
+# ::lemmas ["if", "he", "refuse", "to", "release", "those", "return", "before", "election", "day", ",", "there", "be", "zero", "chance", "he", "will", "do", "so", "now", ".", "medium", "fail", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-2 / chance-02
+                   :ARG1 (c2-8 / release-01
+                               :ARG0 (c2-4 / he)
+                               :ARG1 (c2-5 / return-06
+                                           :mod (c2-7 / that))
+                               :time (c2-9 / before
+                                           :op1 (c2-0 / day
+                                                      :time-of (c2-13 / elect-01)))
+                               :time (c2-12 / now))
+                   :condition (c2-10 / refuse-01
+                                     :ARG0 c2-4
+                                     :ARG1 (c2-6 / release-01
+                                                 :ARG0 c2-4
+                                                 :ARG1 c2-5))
+                   :polarity -)
+       :snt2 (c2-1 / fail-01
+                   :ARG1 (c2-3 / media)))

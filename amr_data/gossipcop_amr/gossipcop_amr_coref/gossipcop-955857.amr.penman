@@ -1,0 +1,42 @@
+# ::snt can't wait to start it!
+# ::tokens ["ca", "n't", "wait", "to", "start", "it", "!"]
+# ::lemmas ["can", "not", "wait", "to", "start", "it", "!"]
+(c1-1 / wait-01
+      :ARG1 (c1-2 / i)
+      :ARG2 (c1-3 / start-01
+                  :ARG0 c1-2
+                  :ARG1 (c1-0 / it)))
+
+# ::snt Watch it!!! It's only eight episodes and hopefully you'll be hooked by the very first one.
+# ::tokens ["Watch", "it", "!", "!", "!", "It", "'s", "only", "eight", "episodes", "and", "hopefully", "you", "'ll", "be", "hooked", "by", "the", "very", "first", "one", "."]
+# ::lemmas ["watch", "it", "!", "!", "!", "it", "be", "only", "eight", "episode", "and", "hopefully", "you", "'ll", "be", "hook", "by", "the", "very", "first", "one", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-8 / watch-01
+                  :ARG0 (c2-2 / you)
+                  :ARG1 (c2-10 / it)
+                  :mode imperative)
+      :snt2 (c2-11 / and
+                   :op1 (c2-6 / episode
+                              :mod (c2-0 / only)
+                              :domain (c2-4 / it)
+                              :quant 8)
+                   :op2 (c2-7 / hook-01
+                              :ARG0 (c2-13 / episode
+                                           :ord (c2-1 / ordinal-entity
+                                                      :degree (c2-5 / very)
+                                                      :value 1))
+                              :ARG1 (c2-12 / you)
+                              :ARG1-of (c2-9 / hope-01))))
+
+# ::snt its that good huh? I've been thinking about watching!
+# ::tokens ["its", "that", "good", "huh", "?", "I", "'ve", "been", "thinking", "about", "watching", "!"]
+# ::lemmas ["its", "that", "good", "huh", "?", "i", "'ve", "be", "think", "about", "watch", "!"]
+(c3-0 / multi-sentence
+      :snt1 (c3-7 / good-02
+                  :polarity (c3-6 / amr-unknown)
+                  :ARG1 (c3-5 / it)
+                  :ARG1-of (c3-2 / request-confirmation-91))
+      :snt2 (c3-4 / think-01
+                  :ARG0 (c3-1 / i)
+                  :ARG1 (c3-3 / watch-01
+                              :ARG0 c3-1)))

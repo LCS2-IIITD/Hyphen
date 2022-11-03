@@ -1,0 +1,64 @@
+# ::snt Wait for second one it's happen after first dose our remarks same
+# ::tokens ["Wait", "for", "second", "one", "it", "'s", "happen", "after", "first", "dose", "our", "remarks", "same"]
+# ::lemmas ["wait", "for", "second", "one", "it", "be", "happen", "after", "first", "dose", "our", "remark", "same"]
+(c1-8 / multi-sentence
+      :snt1 (c1-4 / wait-01
+                  :ARG1 (c1-9 / you)
+                  :ARG2 (c1-6 / one
+                              :ord (c1-5 / ordinal-entity
+                                         :value 2))
+                  :mode imperative)
+      :snt2 (c1-0 / same-01
+                  :ARG1 (c1-7 / remark-01
+                              :ARG0 (c1-10 / we)
+                              :time (c1-3 / after
+                                          :op1 (c1-1 / dose-01
+                                                     :ord (c1-2 / ordinal-entity
+                                                                :value 1))))))
+
+# ::snt filhaal koi khabar to nai ai
+# ::tokens ["filhaal", "koi", "khabar", "to", "nai", "ai"]
+# ::lemmas ["filhaal", "koi", "khabar", "to", "nai", "ai"]
+(c2-0 / and
+      :op1 (c2-5 / person
+                 :name (c2-6 / name
+                             :op1 "Filhaal"))
+      :op2 (c2-3 / person
+                 :name (c2-4 / name
+                             :op1 "Khabar"))
+      :op3 (c2-1 / person
+                 :name (c2-2 / name
+                             :op1 "Nai"
+                             :op2 "ai")))
+
+# ::snt Ok
+# ::tokens ["Ok"]
+# ::lemmas ["ok"]
+(c4-0 / okay-01)
+
+# ::snt Sahiwal, Punjab
+# ::tokens ["Sahiwal", ",", "Punjab"]
+# ::lemmas ["Sahiwal", ",", "Punjab"]
+(c5-3 / city
+      :name (c5-1 / name
+                  :op1 "Sahiwal")
+      :location (c5-0 / province
+                      :name (c5-2 / name
+                                  :op1 "Punjab")))
+
+# ::snt Karachi.?
+# ::tokens ["Karachi", ".", "?"]
+# ::lemmas ["Karachi", ".", "?"]
+(c6-2 / city
+      :name (c6-1 / name
+                  :op1 "Karachi")
+      :polarity (c6-0 / amr-unknown))
+
+# ::snt stay safe
+# ::tokens ["stay", "safe"]
+# ::lemmas ["stay", "safe"]
+(c7-0 / stay-01
+      :ARG1 (c7-2 / you)
+      :ARG3 (c7-1 / safe-01
+                  :ARG1 c7-2)
+      :mode imperative)

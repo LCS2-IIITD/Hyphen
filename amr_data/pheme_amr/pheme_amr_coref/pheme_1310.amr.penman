@@ -1,0 +1,133 @@
+# ::snt WOW
+# ::tokens ["WOW"]
+# ::lemmas ["WOW"]
+(c1-0 / wow
+      :mode expressive)
+
+# ::snt rcmp should have put em down by now.
+# ::tokens ["rcmp", "should", "have", "put", "em", "down", "by", "now", "."]
+# ::lemmas ["rcmp", "should", "have", "put", "em", "down", "by", "now", "."]
+(c2-4 / recommend-01
+      :ARG1 (c2-3 / put-01
+                  :ARG0 (c2-7 / person
+                              :name (c2-1 / name
+                                          :op1 "rcmp"))
+                  :ARG1 (c2-6 / they)
+                  :ARG2 (c2-5 / down)
+                  :time (c2-0 / by
+                              :op1 (c2-2 / now))))
+
+# ::snt SOLUTION? A-Bombs. Let Our God and Their "God" sort it out.
+# ::tokens ["SOLUTION", "?", "A", "-", "Bombs", ".", "Let", "Our", "God", "and", "Their", "\"", "God", "\"", "sort", "it", "out", "."]
+# ::lemmas ["solution", "?", "a", "-", "Bombs", ".", "let", "our", "God", "and", "their", "\"", "God", "\"", "sort", "it", "out", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-4 / bomb
+                  :polarity (c3-13 / amr-unknown)
+                  :domain (c3-9 / constitution))
+      :snt2 (c3-2 / let-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-10 / sort-out-02
+                               :ARG1 (c3-5 / and
+                                           :op1 (c3-8 / person
+                                                      :name (c3-7 / name
+                                                                  :op1 "God")
+                                                      :poss (c3-1 / we))
+                                           :op2 (c3-12 / person
+                                                       :name c3-7
+                                                       :op1 "God")
+                                           :poss (c3-11 / they)))
+                  :ARG2 (c3-6 / it)
+                  :mode imperative))
+
+# ::snt Scary news from Parliament Hill in Ottawa. I was an intern once there - thinking of everyone today
+# ::tokens ["Scary", "news", "from", "Parliament", "Hill", "in", "Ottawa", ".", "I", "was", "an", "intern", "once", "there", "-", "thinking", "of", "everyone", "today"]
+# ::lemmas ["scary", "news", "from", "Parliament", "Hill", "in", "Ottawa", ".", "i", "be", "an", "intern", "once", "there", "-", "thinking", "of", "everyone", "today"]
+(c4-0 / multi-sentence
+      :snt1 (c4-4 / news
+                  :ARG0-of (c4-12 / scary-03)
+                  :source (c4-9 / government-organization
+                                :name (c4-5 / name
+                                            :op1 "Parliament"
+                                            :op2 "Hill")
+                                :location (c4-8 / city
+                                                :name (c4-6 / name
+                                                            :op1 "Ottawa"))))
+      :snt2 (c4-3 / intern
+                  :domain (c4-10 / i)
+                  :time (c4-1 / be-located-at-91
+                              :ARG1 c4-10
+                              :ARG2 (c4-14 / there))
+                  :ARG0-of (c4-7 / mean-01
+                                 :ARG1 (c4-11 / think-01
+                                              :ARG0 c4-10
+                                              :ARG2 (c4-2 / everyone)
+                                              :time (c4-13 / today)))))
+
+# ::snt : WATCH: Sounds of apparent gunfire inside halls of Canada's Parliament Hill
+# ::tokens [":", "WATCH", ":", "Sounds", "of", "apparent", "gunfire", "inside", "halls", "of", "Canada", "'s", "Parliament", "Hill"]
+# ::lemmas [":", "watch", ":", "sound", "of", "apparent", "gunfire", "inside", "hall", "of", "Canada", "'s", "Parliament", "Hill"]
+(c5-1 / watch-01
+      :ARG1 (c5-7 / sound-01
+                  :ARG1 (c5-6 / gunfire
+                              :ARG1-of (c5-8 / appear-02))
+                  :location (c5-0 / hall
+                                  :part-of (c5-2 / building
+                                                 :name (c5-3 / name
+                                                             :op1 "Parliament"
+                                                             :op2 "Hill")
+                                                 :location (c5-5 / country
+                                                                 :name (c5-4 / name
+                                                                             :op1 "Canada"))))))
+
+# ::snt :why does it say apparent gunfire? Interesting
+# ::tokens [":", "why", "does", "it", "say", "apparent", "gunfire", "?", "Interesting"]
+# ::lemmas [":", "why", "do", "it", "say", "apparent", "gunfire", "?", "interesting"]
+(c6-0 / multi-sentence
+      :snt1 (c6-3 / cause-01
+                  :ARG0 (c6-6 / amr-unknown)
+                  :ARG1 (c6-5 / say-01
+                              :ARG1 (c6-4 / gunfire
+                                          :ARG1-of (c6-1 / appear-02))))
+      :snt2 (c6-2 / interest-01))
+
+# ::snt Wowww crazy : WATCH: Sounds of apparent gunfire inside halls of Canada's Parliament Hill
+# ::tokens ["Wowww", "crazy", ":", "WATCH", ":", "Sounds", "of", "apparent", "gunfire", "inside", "halls", "of", "Canada", "'s", "Parliament", "Hill"]
+# ::lemmas ["Wowww", "crazy", ":", "watch", ":", "sound", "of", "apparent", "gunfire", "inside", "hall", "of", "Canada", "'s", "Parliament", "Hill"]
+(c7-2 / multi-sentence
+      :snt1 (c7-8 / crazy-03
+                  :mod (c7-1 / wow
+                             :mode expressive))
+      :snt2 (c7-4 / watch-01
+                  :ARG1 (c7-10 / sound-01
+                               :ARG1 (c7-9 / gunfire
+                                           :ARG1-of (c7-11 / appear-02))
+                               :location (c7-0 / hall
+                                               :part-of (c7-3 / building
+                                                              :name (c7-5 / name
+                                                                          :op1 "Parliament"
+                                                                          :op2 "Hill")
+                                                              :location (c7-7 / country
+                                                                              :name (c7-6 / name
+                                                                                          :op1 "Canada")))))))
+
+# ::snt Our thoughts are with you Ottawa
+# ::tokens ["Our", "thoughts", "are", "with", "you", "Ottawa"]
+# ::lemmas ["our", "thought", "be", "with", "you", "Ottawa"]
+(c8-4 / think-01
+      :ARG0 (c8-0 / we)
+      :ARG2 (c8-1 / you)
+      :location (c8-3 / city
+                      :name (c8-2 / name
+                                  :op1 "Ottawa")))
+
+# ::snt sounds like terrorists. maybe ISIS
+# ::tokens ["sounds", "like", "terrorists", ".", "maybe", "ISIS"]
+# ::lemmas ["sound", "like", "terrorist", ".", "maybe", "ISIS"]
+(c9-0 / multi-sentence
+      :snt1 (c9-4 / sound-01
+                  :ARG2 (c9-5 / terrorist))
+      :snt2 (c9-2 / possible-01
+                  :ARG1 (c9-3 / criminal-organization
+                              :name (c9-1 / name
+                                          :op1 "Islamic"
+                                          :op2 "organization"))))

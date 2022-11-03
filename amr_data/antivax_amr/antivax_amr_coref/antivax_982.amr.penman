@@ -1,0 +1,244 @@
+# ::snt congratulations!
+# ::tokens ["congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c1-0 / congratulate-01)
+
+# ::snt Mazel
+# ::tokens ["Mazel"]
+# ::lemmas ["mazel"]
+(c2-0 / person
+      :name (c2-1 / name
+                  :op1 "Mazel"))
+
+# ::snt Huzzah!
+# ::tokens ["Huzzah", "!"]
+# ::lemmas ["Huzzah", "!"]
+(c3-0 / huzzah
+      :mode expressive)
+
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c4-0 / congratulate-01
+      :mode expressive)
+
+# ::snt And now my second dose. Good to have this done.
+# ::tokens ["And", "now", "my", "second", "dose", ".", "Good", "to", "have", "this", "done", "."]
+# ::lemmas ["and", "now", "my", "second", "dose", ".", "good", "to", "have", "this", "do", "."]
+(c5-8 / multi-sentence
+      :snt1 (c5-1 / and
+                  :op2 (c5-0 / dose-01
+                             :ARG1 (c5-7 / i)
+                             :ord (c5-4 / ordinal-entity
+                                        :value 2)
+                             :time (c5-9 / now)))
+      :snt2 (c5-6 / good-02
+                  :ARG1 (c5-3 / have-04
+                              :ARG1 (c5-2 / do-02
+                                          :ARG1 (c5-5 / this)))))
+
+# ::snt I teach high school by day, so I'm fortunate to be in the early group!
+# ::tokens ["I", "teach", "high", "school", "by", "day", ",", "so", "I", "'m", "fortunate", "to", "be", "in", "the", "early", "group", "!"]
+# ::lemmas ["i", "teach", "high", "school", "by", "day", ",", "so", "i", "be", "fortunate", "to", "be", "in", "the", "early", "group", "!"]
+(c6-5 / teach-01
+      :ARG0 (c6-8 / i)
+      :ARG1 (c6-3 / high-school)
+      :frequency (c6-0 / day
+                       :mod (c6-7 / by))
+      :ARG0-of (c6-2 / cause-01
+                     :ARG1 (c6-1 / fortunate-01
+                                 :ARG1 c6-8
+                                 :ARG2 (c6-4 / include-91
+                                             :ARG1 c6-8
+                                             :ARG2 (c6-6 / group
+                                                         :mod (c6-9 / early))))))
+
+# ::snt That's great!! How did you get the vaccine so fast? Where did you sign up?
+# ::tokens ["That", "'s", "great", "!", "!", "How", "did", "you", "get", "the", "vaccine", "so", "fast", "?", "Where", "did", "you", "sign", "up", "?"]
+# ::lemmas ["that", "be", "great", "!", "!", "how", "do", "you", "get", "the", "vaccine", "so", "fast", "?", "where", "do", "you", "sign", "up", "?"]
+(c7-9 / multi-sentence
+      :snt1 (c7-7 / great
+                  :domain (c7-5 / that))
+      :snt2 (c7-10 / get-01
+                   :ARG0 (c7-6 / you)
+                   :ARG1 (c7-4 / vaccine)
+                   :ARG1-of (c7-2 / fast-02
+                                  :degree (c7-0 / so))
+                   :manner (c7-1 / amr-unknown))
+      :snt3 (c7-8 / sign-up-03
+                  :ARG0 (c7-11 / you)
+                  :ARG3 (c7-3 / amr-unknown)))
+
+# ::snt Thats how my first dose was, too. No big deal at all.
+# ::tokens ["That", "s", "how", "my", "first", "dose", "was", ",", "too", ".", "No", "big", "deal", "at", "all", "."]
+# ::lemmas ["that", "s", "how", "my", "first", "dose", "be", ",", "too", ".", "no", "big", "deal", "at", "all", "."]
+(c8-8 / multi-sentence
+      :snt1 (c8-5 / that
+                  :manner-of (c8-0 / dose-01
+                                   :ARG1 (c8-7 / i)
+                                   :ord (c8-4 / ordinal-entity
+                                              :value 1)
+                                   :mod (c8-2 / too)))
+      :snt2 (c8-3 / deal-03
+                  :mod (c8-6 / big)
+                  :mod (c8-1 / at-all)
+                  :polarity -))
+
+# ::snt For anyone who might be wondering, my shoulder was pretty sore for about a day and half (but not too sore to keep me from shoveling all this damned snow we keep getting), but that was it as far as side effects.
+# ::tokens ["For", "anyone", "who", "might", "be", "wondering", ",", "my", "shoulder", "was", "pretty", "sore", "for", "about", "a", "day", "and", "half", "(", "but", "not", "too", "sore", "to", "keep", "me", "from", "shoveling", "all", "this", "damned", "snow", "we", "keep", "getting", ")", ",", "but", "that", "was", "it", "as", "far", "as", "side", "effects", "."]
+# ::lemmas ["for", "anyone", "who", "might", "be", "wonder", ",", "my", "shoulder", "be", "pretty", "sore", "for", "about", "a", "day", "and", "half", "(", "but", "not", "too", "sore", "to", "keep", "i", "from", "shovel", "all", "this", "damned", "snow", "we", "keep", "get", ")", ",", "but", "that", "be", "it", "as", "far", "as", "side", "effect", "."]
+(c9-7 / contrast-01
+      :ARG1 (c9-15 / sore
+                   :domain (c9-22 / shoulder
+                                  :part-of (c9-3 / i))
+                   :degree (c9-23 / pretty)
+                   :duration (c9-18 / about
+                                    :op1 (c9-10 / temporal-quantity
+                                                :unit (c9-0 / day)
+                                                :quant 1.5))
+                   :concession (c9-17 / sore
+                                      :ARG2-of (c9-19 / have-degree-91
+                                                      :ARG1 c9-22
+                                                      :ARG3 (c9-9 / too)
+                                                      :ARG6 (c9-24 / keep-04
+                                                                   :ARG0 c9-17
+                                                                   :ARG1 c9-3
+                                                                   :ARG2 (c9-4 / shovel-01
+                                                                               :ARG0 c9-3
+                                                                               :ARG1 (c9-5 / snow
+                                                                                           :mod (c9-13 / all)
+                                                                                           :mod (c9-12 / this)
+                                                                                           :ARG1-of (c9-11 / get-01
+                                                                                                           :ARG0 (c9-8 / we)
+                                                                                                           :ARG1-of (c9-6 / keep-02
+                                                                                                                          :ARG0 c9-8)))))
+                                                      :polarity -)))
+      :ARG2 (c9-1 / concern-02
+                  :ARG0 c9-15
+                  :ARG1 (c9-14 / effect-03
+                               :mod (c9-21 / side)))
+      :beneficiary (c9-2 / anyone
+                         :ARG0-of (c9-16 / wonder-01
+                                         :ARG1-of (c9-20 / possible-01))))
+
+# ::snt Moderna for me, and so far no side effects other than slight soreness in my shoulder.
+# ::tokens ["Moderna", "for", "me", ",", "and", "so", "far", "no", "side", "effects", "other", "than", "slight", "soreness", "in", "my", "shoulder", "."]
+# ::lemmas ["Moderna", "for", "i", ",", "and", "so", "far", "no", "side", "effect", "other", "than", "slight", "soreness", "in", "my", "shoulder", "."]
+(c10-1 / and
+       :op1 (c10-10 / event
+                    :mod (c10-8 / modern)
+                    :beneficiary (c10-7 / i
+                                        :part (c10-0 / shoulder)))
+       :op2 (c10-2 / effect-03
+                   :ARG1 c10-10
+                   :mod (c10-6 / side)
+                   :ARG2-of (c10-3 / except-01
+                                   :ARG1 (c10-4 / soreness
+                                                :location c10-0
+                                                :degree (c10-5 / slight)))
+                   :mod (c10-9 / so-far)
+                   :polarity -))
+
+# ::snt My day job is teaching high school, so I am fortunate to be eligible early in the process.
+# ::tokens ["My", "day", "job", "is", "teaching", "high", "school", ",", "so", "I", "am", "fortunate", "to", "be", "eligible", "early", "in", "the", "process", "."]
+# ::lemmas ["my", "day", "job", "be", "teach", "high", "school", ",", "so", "i", "be", "fortunate", "to", "be", "eligible", "early", "in", "the", "process", "."]
+(c11-2 / cause-01
+       :ARG0 (c11-5 / teach-01
+                    :ARG0 (c11-7 / job
+                                 :mod (c11-0 / day)
+                                 :poss (c11-8 / i))
+                    :ARG1 (c11-4 / high-school))
+       :ARG1 (c11-1 / fortunate-01
+                    :ARG1 c11-8
+                    :ARG2 (c11-3 / qualify-02
+                                 :ARG1 c11-8
+                                 :time (c11-9 / early
+                                              :op1 (c11-6 / process-02)))))
+
+# ::snt Illinois
+# ::tokens ["Illinois"]
+# ::lemmas ["Illinois"]
+(c12-0 / state
+       :name (c12-1 / name
+                    :op1 " Illinois"))
+
+# ::snt Congrats! What state?
+# ::tokens ["Congrats", "!", "What", "state", "?"]
+# ::lemmas ["Congrats", "!", "what", "state", "?"]
+(c13-3 / multi-sentence
+       :snt1 (c13-2 / congratulate-01
+                    :ARG1 (c13-4 / you))
+       :snt2 (c13-0 / state
+                    :mod (c13-1 / amr-unknown)))
+
+# ::snt Awesome! I got my first dose of the Moderna one last week.
+# ::tokens ["Awesome", "!", "I", "got", "my", "first", "dose", "of", "the", "Moderna", "one", "last", "week", "."]
+# ::lemmas ["Awesome", "!", "i", "get", "my", "first", "dose", "of", "the", "Moderna", "one", "last", "week", "."]
+(c14-1 / awe-01
+       :ARG0 (c14-6 / get-01
+                    :ARG0 (c14-7 / i)
+                    :ARG1 (c14-0 / dose-01
+                                 :ARG1 c14-7
+                                 :ARG2 (c14-4 / product
+                                              :name (c14-8 / name
+                                                           :op1 "Moderna"))
+                                 :ord (c14-3 / ordinal-entity
+                                             :value 1))
+                    :time (c14-2 / week
+                                 :mod (c14-5 / last)))
+       :mode expressive)
+
+# ::snt For sure. Looking forward to more people being able to get theirs.
+# ::tokens ["For", "sure", ".", "Looking", "forward", "to", "more", "people", "being", "able", "to", "get", "theirs", "."]
+# ::lemmas ["for", "sure", ".", "look", "forward", "to", "more", "people", "be", "able", "to", "get", "theirs", "."]
+(c16-7 / multi-sentence
+       :snt1 (c16-0 / sure-02)
+       :snt2 (c16-4 / look-forward-03
+                    :ARG1 (c16-6 / possible-01
+                                 :ARG1 (c16-5 / get-01
+                                              :ARG0 (c16-2 / person
+                                                           :quant (c16-1 / more))
+                                              :ARG1 (c16-3 / thing
+                                                           :poss c16-2)))))
+
+# ::snt I got Pfizer last week. Headed back two weeks from Thursday for the second round. Thankful to get this done.
+# ::tokens ["I", "got", "Pfizer", "last", "week", ".", "Headed", "back", "two", "weeks", "from", "Thursday", "for", "the", "second", "round", ".", "Thankful", "to", "get", "this", "done", "."]
+# ::lemmas ["i", "get", "Pfizer", "last", "week", ".", "head", "back", "two", "weeks", "from", "Thursday", "for", "the", "second", "round", ".", "thankful", "to", "get", "this", "do", "."]
+(c17-9 / multi-sentence
+       :snt1 (c17-8 / get-01
+                    :ARG0 (c17-1 / i)
+                    :ARG1 (c17-2 / company
+                                 :name (c17-10 / name
+                                               :op1 "Pfizer"))
+                    :time (c17-3 / week
+                                 :mod (c17-18 / last)))
+       :snt2 (c17-17 / hedge-01
+                     :ARG2 (c17-7 / round
+                                  :ord (c17-5 / ordinal-entity
+                                              :value 2))
+                     :time (c17-16 / after
+                                   :op1 (c17-0 / date-entity
+                                               :weekday (c17-6 / thursday))
+                                   :quant (c17-4 / temporal-quantity
+                                                 :unit (c17-12 / week)
+                                                 :quant 2))
+                     :direction (c17-19 / back))
+       :snt3 (c17-11 / thankful-02
+                     :ARG0 (c17-14 / get-04
+                                   :ARG1 (c17-15 / be-done-08
+                                                 :ARG1 (c17-13 / this)))))
+
+# ::snt Moderna
+# ::tokens ["Moderna"]
+# ::lemmas ["Moderna"]
+(c18-0 / person
+       :name (c18-1 / name
+                    :op1 "Moderna"))
+
+# ::snt which one did you get?
+# ::tokens ["which", "one", "did", "you", "get", "?"]
+# ::lemmas ["which", "one", "do", "you", "get", "?"]
+(c19-0 / get-01
+       :ARG0 (c19-3 / you)
+       :ARG1 (c19-2 / amr-unknown
+                    :mod (c19-1 / one)))

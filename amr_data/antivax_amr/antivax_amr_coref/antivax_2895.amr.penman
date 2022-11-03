@@ -1,0 +1,119 @@
+# ::snt What a relief. I think mines is during the week and I may take a PTO off so I can make sure nothing goes wrong
+# ::tokens ["What", "a", "relief", ".", "I", "think", "mines", "is", "during", "the", "week", "and", "I", "may", "take", "a", "PTO", "off", "so", "I", "can", "make", "sure", "nothing", "goes", "wrong"]
+# ::lemmas ["what", "a", "relief", ".", "i", "think", "mine", "be", "during", "the", "week", "and", "i", "may", "take", "a", "PTO", "off", "so", "i", "can", "make", "sure", "nothing", "go", "wrong"]
+(c1-13 / multi-sentence
+       :snt1 (c1-7 / relieve-01
+                   :degree (c1-0 / so))
+       :snt2 (c1-6 / think-01
+                   :ARG0 (c1-12 / i)
+                   :ARG1 (c1-1 / and
+                               :op1 (c1-10 / be-temporally-at-91
+                                           :ARG1 (c1-2 / mine)
+                                           :ARG2 (c1-3 / week))
+                               :op2 (c1-8 / possible-01
+                                          :ARG1 (c1-4 / take-off-07
+                                                      :ARG0 c1-12
+                                                      :ARG1 (c1-15 / thing
+                                                                   :name (c1-14 / name
+                                                                                :op1 "PTO"))
+                                                      :purpose (c1-5 / possible-01
+                                                                     :ARG1 (c1-17 / ensure-01
+                                                                                  :ARG0 c1-12
+                                                                                  :ARG1 (c1-9 / go-08
+                                                                                              :ARG1 (c1-11 / nothing)
+                                                                                              :ARG2 (c1-16 / wrong-02)))))))))
+
+# ::snt No she didn't because she got it on a Friday
+# ::tokens ["No", "she", "did", "n't", "because", "she", "got", "it", "on", "a", "Friday"]
+# ::lemmas ["no", "she", "do", "not", "because", "she", "get", "it", "on", "a", "Friday"]
+(c2-3 / cause-01
+      :ARG0 (c2-5 / get-01
+                  :ARG0 (c2-1 / she)
+                  :ARG1 (c2-6 / it)
+                  :time (c2-0 / date-entity
+                              :weekday (c2-2 / friday)))
+      :ARG1 (c2-4 / do-02
+                  :ARG0 c2-1
+                  :polarity -))
+
+# ::snt Did she have to take a day off of work?
+# ::tokens ["Did", "she", "have", "to", "take", "a", "day", "off", "of", "work", "?"]
+# ::lemmas ["do", "she", "have", "to", "take", "a", "day", "off", "of", "work", "?"]
+(c3-6 / obligate-01
+      :polarity (c3-2 / amr-unknown)
+      :ARG1 (c3-0 / she)
+      :ARG2 (c3-7 / take-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-4 / temporal-quantity
+                              :unit (c3-1 / day)
+                              :quant 1)
+                  :ARG2 (c3-5 / off
+                              :op1 (c3-3 / work-01
+                                         :ARG0 c3-0))))
+
+# ::snt I get the second one in weeks. I'll see what happens then
+# ::tokens ["I", "get", "the", "second", "one", "in", "weeks", ".", "I", "'ll", "see", "what", "happens", "then"]
+# ::lemmas ["i", "get", "the", "second", "one", "in", "weeks", ".", "i", "'ll", "see", "what", "happen", "then"]
+(c4-11 / multi-sentence
+       :snt1 (c4-9 / get-01
+                   :ARG0 (c4-10 / i)
+                   :ARG1 (c4-7 / one
+                               :ord (c4-6 / ordinal-entity
+                                          :value 2))
+                   :time (c4-1 / after
+                               :op1 (c4-12 / now)
+                               :quant (c4-2 / multiple
+                                            :op1 (c4-8 / temporal-quantity
+                                                       :unit (c4-3 / week)
+                                                       :quant 1))))
+       :snt2 (c4-0 / see-01
+                   :ARG0 (c4-5 / i)
+                   :ARG1 (c4-13 / event)
+                   :time (c4-4 / then)))
+
+# ::snt My wife didn't have anything on the first one but the second one kicked her ass
+# ::tokens ["My", "wife", "did", "n't", "have", "anything", "on", "the", "first", "one", "but", "the", "second", "one", "kicked", "her", "ass"]
+# ::lemmas ["my", "wife", "do", "not", "have", "anything", "on", "the", "first", "one", "but", "the", "second", "one", "kick", "her", "ass"]
+(c5-3 / contrast-01
+      :ARG1 (c5-5 / have-03
+                  :ARG0 (c5-9 / person
+                              :ARG0-of (c5-8 / have-rel-role-91
+                                             :ARG1 (c5-2 / i)
+                                             :ARG2 (c5-4 / wife))
+                              :part (c5-1 / ass))
+                  :ARG1 (c5-11 / anything)
+                  :prep-on (c5-7 / one
+                                 :ord (c5-6 / ordinal-entity
+                                            :value 1))
+                  :polarity -)
+      :ARG2 (c5-10 / kick-01
+                   :ARG0 (c5-0 / one
+                               :ord (c5-12 / ordinal-entity
+                                           :value 2))
+                   :ARG1 c5-1))
+
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c6-0 / congratulate-01
+      :mode expressive)
+
+# ::snt It didn't hurt and I don't feel woozy or anything.
+# ::tokens ["It", "did", "n't", "hurt", "and", "I", "do", "n't", "feel", "woozy", "or", "anything", "."]
+# ::lemmas ["it", "do", "not", "hurt", "and", "i", "do", "not", "feel", "woozy", "or", "anything", "."]
+(c7-0 / and
+      :op1 (c7-3 / hurt-01
+                 :ARG0 (c7-6 / it)
+                 :polarity -)
+      :op2 (c7-1 / feel-01
+                 :ARG0 (c7-4 / i)
+                 :ARG1 (c7-5 / or
+                             :op1 (c7-2 / woozy)
+                             :op2 (c7-7 / anything))
+                 :polarity -))
+
+# ::snt Nice!!
+# ::tokens ["Nice", "!", "!"]
+# ::lemmas ["nice", "!", "!"]
+(c8-0 / nice-01
+      :mode expressive)

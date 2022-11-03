@@ -1,0 +1,95 @@
+# ::snt with all due respect to creativity, two wrongs don't make a right. the cycle of wronging each continues
+# ::tokens ["with", "all", "due", "respect", "to", "creativity", ",", "two", "wrongs", "do", "n't", "make", "a", "right", ".", "the", "cycle", "of", "wronging", "each", "continues"]
+# ::lemmas ["with", "all", "due", "respect", "to", "creativity", ",", "two", "wrong", "do", "not", "make", "a", "right", ".", "the", "cycle", "of", "wrong", "each", "continue"]
+(c1-1 / multi-sentence
+      :snt1 (c1-4 / make-02
+                  :ARG0 (c1-0 / wrong-02
+                              :quant 2)
+                  :ARG1 (c1-6 / right-02)
+                  :mod (c1-5 / due
+                             :mod (c1-9 / all))
+                  :polarity -)
+      :snt2 (c1-7 / continue-01
+                  :ARG1 (c1-8 / cycle-02
+                              :ARG1 (c1-3 / wrong-02
+                                          :ARG1 (c1-2 / each)))))
+
+# ::snt ": This cartoon from Gado nails it - "
+# ::tokens ["\"", ":", "This", "cartoon", "from", "Gado", "nails", "it", "-", "\""]
+# ::lemmas ["\"", ":", "this", "cartoon", "from", "Gado", "nail", "it", "-", "\""]
+(c2-1 / nail-01
+      :ARG0 (c2-4 / cartoon
+                  :source (c2-3 / person
+                                :name (c2-2 / name
+                                            :op1 "Gado"))
+                  :mod (c2-5 / this))
+      :ARG1 (c2-0 / it))
+
+# ::snt : This cartoon from Gado nails it - OMG
+# ::tokens [":", "This", "cartoon", "from", "Gado", "nails", "it", "-", "OMG"]
+# ::lemmas [":", "this", "cartoon", "from", "Gado", "nail", "it", "-", "OMG"]
+(c3-2 / nail-01
+      :ARG0 (c3-5 / cartoon
+                  :source (c3-4 / person
+                                :name (c3-3 / name
+                                            :op1 "Gado"))
+                  :mod (c3-6 / this))
+      :ARG1 (c3-1 / it)
+      :mod (c3-0 / oh-my-god
+                 :mode expressive))
+
+# ::snt No. THIS article nails it.
+# ::tokens ["No", ".", "THIS", "article", "nails", "it", "."]
+# ::lemmas ["no", ".", "this", "article", "nail", "it", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-2 / no)
+      :snt2 (c4-3 / nail-01
+                  :ARG0 (c4-5 / article
+                              :mod (c4-4 / this))
+                  :ARG1 (c4-1 / it)))
+
+# ::snt Agree. But it is important for cartoonist and journalist community to stand up, and not be cowed by violence.
+# ::tokens ["Agree", ".", "But", "it", "is", "important", "for", "cartoonist", "and", "journalist", "community", "to", "stand", "up", ",", "and", "not", "be", "cowed", "by", "violence", "."]
+# ::lemmas ["agree", ".", "but", "it", "be", "important", "for", "cartoonist", "and", "journalist", "community", "to", "stand", "up", ",", "and", "not", "be", "cow", "by", "violence", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-10 / agree-01
+                   :ARG0 (c5-3 / i))
+      :snt2 (c5-6 / contrast-01
+                  :ARG2 (c5-7 / important-01
+                              :ARG1 (c5-2 / and
+                                          :op1 (c5-9 / stand-up-07
+                                                     :ARG1 (c5-5 / community
+                                                                 :consist-of c5-2
+                                                                 :op1 (c5-8 / cartoonist)
+                                                                 :op2 (c5-0 / journalist))))
+                              :op2 (c5-11 / cower-01
+                                          :ARG0 (c5-4 / violence)
+                                          :ARG1 c5-5
+                                          :polarity -))))
+
+# ::snt watching extremists from both sides jump on this is scary.
+# ::tokens ["watching", "extremists", "from", "both", "sides", "jump", "on", "this", "is", "scary", "."]
+# ::lemmas ["watch", "extremist", "from", "both", "side", "jump", "on", "this", "be", "scary", "."]
+(c6-5 / scary-03
+      :ARG0 (c6-1 / watch-01
+                  :ARG1 (c6-0 / jump-03
+                              :ARG0 (c6-3 / extremist
+                                          :source (c6-4 / side
+                                                        :mod (c6-2 / both)))
+                              :ARG1 (c6-6 / this))))
+
+# ::snt stand up in right way not wrong way
+# ::tokens ["stand", "up", "in", "right", "way", "not", "wrong", "way"]
+# ::lemmas ["stand", "up", "in", "right", "way", "not", "wrong", "way"]
+(c7-6 / contrast-01
+      :ARG1 (c7-7 / stand-up-07
+                  :ARG1 (c7-0 / you)
+                  :manner (c7-1 / way
+                                :ARG1-of (c7-5 / right-02))
+                  :mode imperative)
+      :ARG2 (c7-3 / stand-up-07
+                  :ARG1 c7-0
+                  :manner (c7-4 / way
+                                :ARG1-of (c7-2 / wrong-02))
+                  :mode imperative
+                  :polarity -))

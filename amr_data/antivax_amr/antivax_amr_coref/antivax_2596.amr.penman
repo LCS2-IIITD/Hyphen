@@ -1,0 +1,27 @@
+# ::snt I do agree with you.
+# ::tokens ["I", "do", "agree", "with", "you", "."]
+# ::lemmas ["i", "do", "agree", "with", "you", "."]
+(c1-1 / agree-01
+      :ARG0 (c1-0 / i)
+      :ARG2 (c1-2 / you))
+
+# ::snt True.The new strain we see here hits everyone. All from age to .Vaccines should be for all.
+# ::tokens ["True", ".", "The", "new", "strain", "we", "see", "here", "hits", "everyone", ".", "All", "from", "age", "to", ".Vaccines", "should", "be", "for", "all", "."]
+# ::lemmas ["true", ".", "the", "new", "strain", "we", "see", "here", "hit", "everyone", ".", "all", "from", "age", "to", ".vaccine", "should", "be", "for", "all", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-6 / true-01)
+      :snt2 (c2-3 / hit-01
+                  :ARG0 (c2-0 / strain
+                              :ARG1-of (c2-10 / new-01)
+                              :ARG1-of (c2-8 / see-01
+                                             :ARG0 (c2-2 / we)
+                                             :location (c2-4 / here)))
+                  :ARG1 (c2-11 / everyone))
+      :snt3 (c2-7 / recommend-01
+                  :ARG1 (c2-5 / vaccinate-01
+                              :beneficiary (c2-1 / all))))
+
+# ::snt Absolutely
+# ::tokens ["Absolutely"]
+# ::lemmas ["absolutely"]
+(c3-0 / absolute)

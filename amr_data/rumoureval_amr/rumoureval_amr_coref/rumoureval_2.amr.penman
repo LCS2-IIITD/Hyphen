@@ -1,0 +1,82 @@
+# ::snt If we know the name of the maniac, but not the name of its victim, we are failing... failing... utterly.
+# ::tokens ["If", "we", "know", "the", "name", "of", "the", "maniac", ",", "but", "not", "the", "name", "of", "its", "victim", ",", "we", "are", "failing", "...", "failing", "...", "utterly", "."]
+# ::lemmas ["if", "we", "know", "the", "name", "of", "the", "maniac", ",", "but", "not", "the", "name", "of", "its", "victim", ",", "we", "be", "fail", "...", "fail", "...", "utterly", "."]
+(c1-4 / fail-01
+      :ARG1 (c1-2 / we)
+      :ARG1-of (c1-9 / utter-02)
+      :condition (c1-8 / contrast-01
+                       :ARG1 (c1-0 / know-01
+                                   :ARG0 c1-2
+                                   :ARG1 (c1-3 / thing
+                                               :ARG2-of (c1-10 / name-01
+                                                               :ARG1 (c1-5 / maniac))))
+                       :ARG2 (c1-1 / know-01
+                                   :ARG0 c1-2
+                                   :ARG1 (c1-6 / thing
+                                               :ARG2-of (c1-7 / name-01
+                                                              :ARG1 c1-5))
+                                   :polarity -)))
+
+# ::snt So very sad. Thoughts and prayers for his wife, young son and family that are grieving at this sad, sad time.
+# ::tokens ["So", "very", "sad", ".", "Thoughts", "and", "prayers", "for", "his", "wife", ",", "young", "son", "and", "family", "that", "are", "grieving", "at", "this", "sad", ",", "sad", "time", "."]
+# ::lemmas ["so", "very", "sad", ".", "thought", "and", "prayer", "for", "his", "wife", ",", "young", "son", "and", "family", "that", "be", "grieve", "at", "this", "sad", ",", "sad", "time", "."]
+(c2-20 / multi-sentence
+       :snt1 (c2-8 / sad-02
+                   :degree (c2-2 / very
+                                 :degree (c2-13 / so)))
+       :snt2 (c2-17 / and
+                    :op1 (c2-5 / thing
+                               :ARG1-of (c2-19 / think-01
+                                               :ARG2 (c2-3 / and
+                                                           :op1 (c2-16 / person
+                                                                       :ARG0-of (c2-1 / have-rel-role-91
+                                                                                      :ARG1 (c2-7 / he)
+                                                                                      :ARG2 (c2-0 / wife)))
+                                                           :op2 (c2-21 / person
+                                                                       :ARG0-of (c2-9 / have-rel-role-91
+                                                                                      :ARG1 c2-7
+                                                                                      :ARG2 (c2-11 / son))
+                                                                       :mod (c2-4 / young))
+                                                           :op3 (c2-15 / family
+                                                                       :ARG1-of (c2-18 / grieve-01
+                                                                                       :time (c2-6 / time
+                                                                                                   :ARG1-of (c2-14 / sad-02)
+                                                                                                   :mod (c2-10 / this)))))))
+                    :op2 (c2-12 / pray-01
+                                :ARG2 c2-3)))
+
+# ::snt RIP Brother!!
+# ::tokens ["RIP", "Brother", "!", "!"]
+# ::lemmas ["RIP", "Brother", "!", "!"]
+(c3-0 / wish-01
+      :ARG1 (c3-4 / rest-01
+                  :ARG1 (c3-3 / person
+                              :ARG0-of (c3-1 / have-rel-role-91
+                                             :ARG2 (c3-5 / brother)))
+                  :manner (c3-2 / peace)))
+
+# ::snt R.I.P my condolences to his family
+# ::tokens ["R.I.P", "my", "condolences", "to", "his", "family"]
+# ::lemmas ["R.I.P", "my", "condolence", "to", "his", "family"]
+(c4-6 / send-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-4 / condolence
+                  :poss c4-5)
+      :ARG2 (c4-1 / family
+                  :ARG1-of (c4-0 / have-org-role-91
+                                 :ARG0 (c4-3 / he)
+                                 :ARG2 (c4-2 / member))))
+
+# ::snt So sorry for him &amp; his FAMILY.
+# ::tokens ["So", "sorry", "for", "him", "&", "amp", ";", "his", "FAMILY", "."]
+# ::lemmas ["so", "sorry", "for", "he", "&", "amp", ";", "his", "FAMILY", "."]
+(c5-6 / say-01
+      :ARG1 (c5-1 / sorry-01
+                  :degree (c5-0 / so))
+      :ARG2 (c5-5 / and
+                  :op1 (c5-2 / he)
+                  :op2 (c5-4 / person
+                             :name (c5-7 / name
+                                         :op1 "amp"))
+                  :op3 (c5-3 / family
+                             :poss c5-2)))

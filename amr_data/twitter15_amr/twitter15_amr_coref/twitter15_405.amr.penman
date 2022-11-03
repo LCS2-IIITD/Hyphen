@@ -1,0 +1,74 @@
+# ::snt did he say anything about Charlie?
+# ::tokens ["did", "he", "say", "anything", "about", "Charlie", "?"]
+# ::lemmas ["do", "he", "say", "anything", "about", "Charlie", "?"]
+(c2-0 / say-01
+      :ARG0 (c2-4 / he)
+      :ARG1 (c2-5 / anything
+                  :topic (c2-1 / person
+                               :name (c2-3 / name
+                                           :op1 "Charlie")))
+      :polarity (c2-2 / amr-unknown))
+
+# ::snt Tabloid news. Insanity.
+# ::tokens ["Tabloid", "news", ".", "Insanity", "."]
+# ::lemmas ["Tabloid", "news", ".", "insanity", "."]
+(c3-0 / and
+      :op1 (c3-3 / news
+                 :mod (c3-1 / tabloid))
+      :op2 (c3-2 / Insanity))
+
+# ::snt These people are mental.
+# ::tokens ["These", "people", "are", "mental", "."]
+# ::lemmas ["these", "people", "be", "mental", "."]
+(c4-1 / mental
+      :domain (c4-2 / person
+                    :mod (c4-0 / this)))
+
+# ::snt : A Saudi cleric has declared that the building of snowmen as being anti-Islamic. Allah hates frosty? RUDE
+# ::tokens [":", "A", "Saudi", "cleric", "has", "declared", "that", "the", "building", "of", "snowmen", "as", "being", "anti", "-", "Islamic", ".", "Allah", "hates", "frosty", "?", "RUDE"]
+# ::lemmas [":", "a", "Saudi", "cleric", "have", "declare", "that", "the", "building", "of", "snowman", "as", "be", "anti", "-", "Islamic", ".", "Allah", "hate", "frosty", "?", "RUDE"]
+(c5-7 / multi-sentence
+      :snt1 (c5-14 / declare-01
+                   :ARG0 (c5-9 / cleric
+                               :mod (c5-8 / country
+                                          :name (c5-13 / name
+                                                       :op1 "Saudi"
+                                                       :op2 "Arabia")))
+                   :ARG1 (c5-1 / build-01
+                               :ARG1 (c5-0 / snowman))
+                   :ARG2 (c5-4 / oppose-01
+                               :ARG0 c5-1
+                               :ARG1 (c5-5 / religious-group
+                                           :name (c5-12 / name
+                                                        :op1 "Islam"))))
+      :snt2 (c5-11 / hate-01
+                   :ARG0 (c5-2 / person
+                               :name (c5-10 / name
+                                            :op1 "Allah"))
+                   :ARG1 (c5-15 / frosty)
+                   :polarity (c5-6 / amr-unknown))
+      :snt3 (c5-3 / RUDE))
+
+# ::snt : A Saudi cleric has declared that the building of snowmen as being anti-Islamic. Well, no snow in Arabia
+# ::tokens [":", "A", "Saudi", "cleric", "has", "declared", "that", "the", "building", "of", "snowmen", "as", "being", "anti", "-", "Islamic", ".", "Well", ",", "no", "snow", "in", "Arabia"]
+# ::lemmas [":", "a", "Saudi", "cleric", "have", "declare", "that", "the", "building", "of", "snowman", "as", "be", "anti", "-", "Islamic", ".", "well", ",", "no", "snow", "in", "Arabia"]
+(c6-6 / multi-sentence
+      :snt1 (c6-13 / declare-01
+                   :ARG0 (c6-8 / cleric
+                               :mod (c6-7 / country
+                                          :name (c6-12 / name
+                                                       :op1 "Saudi"
+                                                       :op2 "Arabia")))
+                   :ARG1 (c6-2 / build-01
+                               :ARG1 (c6-0 / snowman)
+                               :ARG0-of (c6-4 / oppose-01
+                                              :ARG1 (c6-5 / religious-group
+                                                          :name (c6-11 / name
+                                                                       :op1 "Islam")))))
+      :snt2 (c6-3 / snow-01
+                  :location (c6-9 / country
+                                  :name (c6-10 / name
+                                               :op1 "Saudi"
+                                               :op2 "Arabia"))
+                  :mod (c6-1 / well)
+                  :polarity -))

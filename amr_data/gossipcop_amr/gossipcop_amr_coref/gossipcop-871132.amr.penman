@@ -1,0 +1,72 @@
+# ::snt They're such a mess. It's delicious
+# ::tokens ["They", "'re", "such", "a", "mess", ".", "It", "'s", "delicious"]
+# ::lemmas ["they", "be", "such", "a", "mess", ".", "it", "be", "delicious"]
+(c1-0 / multi-sentence
+      :snt1 (c1-2 / mess
+                  :domain (c1-4 / they)
+                  :degree (c1-1 / such))
+      :snt2 (c1-5 / delicious
+                  :domain (c1-3 / it)))
+
+# ::snt True. I'm ok for now. Just missing VPR. I started from the beginning on Hulu. Didn't start watching until a few seasons ago.
+# ::tokens ["True", ".", "I", "'m", "ok", "for", "now", ".", "Just", "missing", "VPR", ".", "I", "started", "from", "the", "beginning", "on", "Hulu", ".", "Did", "n't", "start", "watching", "until", "a", "few", "seasons", "ago", "."]
+# ::lemmas ["true", ".", "i", "be", "ok", "for", "now", ".", "just", "miss", "VPR", ".", "i", "start", "from", "the", "beginning", "on", "Hulu", ".", "do", "not", "start", "watch", "until", "a", "few", "seasons", "ago", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-8 / true-01)
+       :snt2 (c2-3 / okay-04
+                   :ARG1 (c2-21 / i)
+                   :time (c2-18 / now))
+       :snt3 (c2-6 / miss-01
+                   :ARG0 (c2-5 / i)
+                   :ARG1 (c2-10 / broadcast-program
+                                :name (c2-12 / name
+                                             :op1 "VPR"))
+                   :mod (c2-7 / just))
+       :snt4 (c2-0 / start-01
+                   :ARG0 (c2-9 / i)
+                   :ARG2 (c2-1 / begin-01
+                               :medium (c2-13 / company
+                                              :name (c2-19 / name
+                                                           :op1 "H Hulu")))
+                   :snt5-of c2-11)
+       :ARG0 c2-9
+       :ARG1 (c2-20 / watch-01
+                    :ARG0 c2-9)
+       :time (c2-16 / until
+                    :op1 (c2-2 / before
+                               :op1 (c2-14 / now)
+                               :quant (c2-17 / few
+                                             :op1 (c2-15 / temporal-quantity
+                                                         :unit (c2-4 / season)
+                                                         :quant 1))))
+       :polarity -)
+
+# ::snt I'd cry if I had to wait until December!
+# ::tokens ["I", "'d", "cry", "if", "I", "had", "to", "wait", "until", "December", "!"]
+# ::lemmas ["i", "would", "cry", "if", "i", "have", "to", "wait", "until", "December", "!"]
+(c3-1 / cry-02
+      :ARG0 (c3-3 / i)
+      :condition (c3-0 / obligate-01
+                       :ARG1 c3-3
+                       :ARG2 (c3-2 / wait-01
+                                   :ARG1 c3-3
+                                   :time (c3-5 / until
+                                               :op1 (c3-4 / date-entity
+                                                          :month 12))))
+      :mode expressive)
+
+# ::snt I can't wait!!!!! So glad it's starting in September!
+# ::tokens ["I", "ca", "n't", "wait", "!", "!", "!", "!", "!", "So", "glad", "it", "'s", "starting", "in", "September", "!"]
+# ::lemmas ["i", "can", "not", "wait", "!", "!", "!", "!", "!", "so", "glad", "it", "be", "start", "in", "September", "!"]
+(c4-0 / multi-sentence
+      :snt1 (c4-3 / possible-01
+                  :ARG1 (c4-4 / wait-01
+                              :ARG1 (c4-5 / i))
+                  :polarity -)
+      :snt2 (c4-6 / glad-02
+                  :ARG0 (c4-1 / start-01
+                              :ARG1 (c4-2 / it)
+                              :time (c4-7 / date-entity
+                                          :month 9))
+                  :ARG1 (c4-8 / i)
+                  :mode expressive))

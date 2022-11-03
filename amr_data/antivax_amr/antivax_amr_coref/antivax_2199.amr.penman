@@ -1,0 +1,32 @@
+# ::snt Tell me about it !!
+# ::tokens ["Tell", "me", "about", "it", "!", "!"]
+# ::lemmas ["tell", "i", "about", "it", "!", "!"]
+(c1-2 / tell-01
+      :ARG0 (c1-3 / you)
+      :ARG1 (c1-0 / it)
+      :ARG2 (c1-1 / i)
+      :mode imperative)
+
+# ::snt There arent enough Tesco Club Points in the world
+# ::tokens ["There", "are", "nt", "enough", "Tesco", "Club", "Points", "in", "the", "world"]
+# ::lemmas ["there", "be", "not", "enough", "Tesco", "Club", "Points", "in", "the", "world"]
+(c2-4 / point
+      :mod (c2-1 / club)
+      :mod (c2-0 / company
+                 :name (c2-5 / name
+                             :op1 "Tesco"))
+      :location (c2-2 / world)
+      :ARG1-of (c2-3 / have-quant-91
+                     :ARG3 (c2-6 / enough))
+      :polarity -)
+
+# ::snt Surprised they didnt offer you club points
+# ::tokens ["Surprised", "they", "did", "nt", "offer", "you", "club", "points"]
+# ::lemmas ["surprise", "they", "do", "not", "offer", "you", "club", "point"]
+(c3-0 / surprise-01
+      :ARG0 (c3-2 / offer-01
+                  :ARG0 (c3-3 / they)
+                  :ARG1 (c3-4 / point
+                              :mod (c3-1 / club))
+                  :ARG3 (c3-5 / you)
+                  :polarity -))

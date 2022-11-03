@@ -1,0 +1,41 @@
+# ::snt MRNA does not change your DNA. Go back to school fool!!!
+# ::tokens ["MRNA", "does", "not", "change", "your", "DNA", ".", "Go", "back", "to", "school", "fool", "!", "!", "!"]
+# ::lemmas ["MRNA", "do", "not", "change", "your", "dna", ".", "go", "back", "to", "school", "fool", "!", "!", "!"]
+(c2-6 / multi-sentence
+      :snt1 (c2-2 / change-01
+                  :ARG0 (c2-7 / nucleic-acid
+                              :name (c2-4 / name
+                                          :op1 "DNA")
+                              :domain (c2-8 / you)
+                              :ARG1-of c2-2)
+                  :polarity -)
+      :snt2 (c2-5 / go-02
+                  :ARG0 (c2-9 / you
+                              :ARG1-of (c2-1 / fool-01))
+                  :ARG4 (c2-0 / school)
+                  :direction (c2-3 / back)
+                  :mode imperative))
+
+# ::snt Oh Shirley, please provide the reliable sources that show that it changes your DNA.
+# ::tokens ["Oh", "Shirley", ",", "please", "provide", "the", "reliable", "sources", "that", "show", "that", "it", "changes", "your", "DNA", "."]
+# ::lemmas ["oh", "Shirley", ",", "please", "provide", "the", "reliable", "source", "that", "show", "that", "it", "change", "your", "dna", "."]
+(c3-0 / say-01
+      :ARG1 (c3-11 / provide-01
+                   :ARG0 (c3-6 / person
+                               :name (c3-12 / name
+                                            :op1 "Shirley"))
+                   :ARG1 (c3-10 / source
+                                :ARG1-of (c3-8 / rely-01
+                                               :ARG1-of (c3-3 / possible-01))
+                                :ARG0-of (c3-4 / show-01
+                                               :ARG1 (c3-1 / change-01
+                                                           :ARG0 (c3-2 / it)
+                                                           :ARG1 (c3-9 / nucleic-acid
+                                                                       :name (c3-5 / name
+                                                                                   :op1 "DNA")
+                                                                       :poss c3-6))))
+                   :mod (c3-7 / oh
+                              :mode expressive)
+                   :mode imperative
+                   :polite +)
+      :ARG2 c3-6)

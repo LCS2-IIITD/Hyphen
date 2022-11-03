@@ -1,0 +1,36 @@
+# ::snt The robber from China
+# ::tokens ["The", "robber", "from", "China"]
+# ::lemmas ["the", "robber", "from", "China"]
+(c1-0 / person
+      :ARG0-of (c1-2 / rob-01)
+      :source (c1-3 / country
+                    :name (c1-1 / name
+                                :op1 "China")))
+
+# ::snt Korean, please and thanks
+# ::tokens ["Korean", ",", "please", "and", "thanks"]
+# ::lemmas ["Korean", ",", "please", "and", "thank"]
+(c2-0 / and
+      :op1 (c2-1 / country
+                 :name (c2-4 / name
+                             :op1 "Korea")
+                 :polite +)
+      :op2 (c2-2 / thank-01
+                 :ARG0 (c2-3 / i)
+                 :ARG1 (c2-5 / you)))
+
+# ::snt Chinese always take credit for things that dont belong to them.
+# ::tokens ["Chinese", "always", "take", "credit", "for", "things", "that", "do", "nt", "belong", "to", "them", "."]
+# ::lemmas ["Chinese", "always", "take", "credit", "for", "thing", "that", "do", "not", "belong", "to", "they", "."]
+(c3-4 / take-01
+      :ARG0 (c3-6 / person
+                  :mod (c3-2 / country
+                             :name (c3-7 / name
+                                         :op1 "China")))
+      :ARG1 (c3-0 / credit-01
+                  :ARG1 c3-6
+                  :ARG2 (c3-3 / thing
+                              :ARG0-of (c3-5 / belong-01
+                                             :ARG1 c3-6
+                                             :polarity -)))
+      :time (c3-1 / always))

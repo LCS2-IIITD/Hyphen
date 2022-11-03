@@ -1,0 +1,57 @@
+# ::snt Nice..they gave ya that mL treatment I see
+# ::tokens ["Nice", "..", "they", "gave", "ya", "that", "mL", "treatment", "I", "see"]
+# ::lemmas ["nice", "..", "they", "give", "ya", "that", "mL", "treatment", "i", "see"]
+(c1-5 / multi-sentence
+      :snt1 (c1-6 / nice-01)
+      :snt2 (c1-3 / treat-03
+                  :ARG0 (c1-2 / they)
+                  :ARG1 (c1-7 / you)
+                  :mod (c1-1 / mL)
+                  :ARG1-of (c1-0 / see-01
+                                 :ARG0 (c1-4 / i))))
+
+# ::snt Just for you !
+# ::tokens ["Just", "for", "you", "!"]
+# ::lemmas ["just", "for", "you", "!"]
+(c2-0 / benefit-01
+      :ARG1 (c2-2 / you)
+      :mod (c2-1 / just))
+
+# ::snt Where's your "vaxxie" pic. Show the lot or it doesn't count! Great work Justin, keep it up!
+# ::tokens ["Where", "'s", "your", "\"", "vaxxie", "\"", "pic", ".", "Show", "the", "lot", "or", "it", "does", "n't", "count", "!", "Great", "work", "Justin", ",", "keep", "it", "up", "!"]
+# ::lemmas ["where", "be", "your", "\"", "vaxxie", "\"", "pic", ".", "show", "the", "lot", "or", "it", "do", "not", "count", "!", "great", "work", "Justin", ",", "keep", "it", "up", "!"]
+(c3-7 / multi-sentence
+      :snt1 (c3-16 / be-located-at-91
+                   :ARG1 (c3-18 / pic
+                                :mod (c3-14 / person
+                                            :name (c3-8 / name
+                                                        :op1 "Vaxxie"))
+                                :poss (c3-11 / you))
+                   :ARG2 (c3-13 / amr-unknown))
+      :snt2 (c3-5 / or
+                  :op1 (c3-9 / show-01
+                             :ARG0 (c3-12 / you)
+                             :ARG1 (c3-15 / lot)
+                             :mode imperative)
+                  :op2 (c3-3 / count-04
+                             :ARG1 c3-15
+                             :polarity -))
+      :snt3 (c3-17 / say-01
+                   :ARG1 (c3-4 / work-01
+                               :ARG0 (c3-10 / person
+                                            :name (c3-1 / name
+                                                        :op1 "Justin"))
+                               :mod (c3-6 / great)
+                               :mode expressive)
+                   :ARG2 c3-10)
+      :snt4 (c3-19 / keep-up-10
+                   :ARG0 (c3-0 / you)
+                   :ARG1 (c3-2 / it)
+                   :mode imperative))
+
+# ::snt Thats my pharmacist
+# ::tokens ["That", "s", "my", "pharmacist"]
+# ::lemmas ["that", "s", "my", "pharmacist"]
+(c4-0 / pharmacist
+      :domain (c4-1 / that)
+      :poss (c4-2 / i))

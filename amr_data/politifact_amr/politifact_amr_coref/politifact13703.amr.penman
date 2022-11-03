@@ -1,0 +1,65 @@
+# ::snt Its not a true story
+# ::tokens ["Its", "not", "a", "true", "story"]
+# ::lemmas ["its", "not", "a", "true", "story"]
+(c1-1 / true-01
+      :ARG1 (c1-0 / story)
+      :polarity -)
+
+# ::snt in shock how could virus have entered the bananas
+# ::tokens ["in", "shock", "how", "could", "virus", "have", "entered", "the", "bananas"]
+# ::lemmas ["in", "shock", "how", "could", "virus", "have", "enter", "the", "banana"]
+(c2-4 / shock-01
+      :ARG0 (c2-0 / possible-01
+                  :ARG1 (c2-1 / enter-01
+                              :ARG0 (c2-2 / virus)
+                              :ARG1 (c2-5 / banana))
+                  :manner (c2-3 / amr-unknown)))
+
+# ::snt httpwwwsnopescombananainjectedbloodhiv …
+# ::tokens ["httpwwwsnopescombananainjectedbloodhiv", "\u2026"]
+# ::lemmas ["httpwwwsnopescombananainjectedbloodhiv", "\u2026"]
+(c3-0 / url-entity
+      :value "httpwwwsnopescombananainjectedbloodhiv")
+
+# ::snt Caught from Bananas in Walmart
+# ::tokens ["Caught", "from", "Bananas", "in", "Walmart"]
+# ::lemmas ["catch", "from", "Bananas", "in", "Walmart"]
+(c4-0 / catch-03
+      :ARG2 (c4-2 / banana)
+      :location (c4-3 / company
+                      :name (c4-1 / name
+                                  :op1 "Walmart")))
+
+# ::snt BethIsAwake it came out to be fake  Bananas Injected with HIVInfected Blood  httpsnopescom  httpwwwsnopescombananainjectedbloodhiv …
+# ::tokens ["BethIsAwake", "it", "came", "out", "to", "be", "fake", " ", "Bananas", "Injected", "with", "HIVInfected", "Blood", " ", "httpsnopescom", " ", "httpwwwsnopescombananainjectedbloodhiv", "\u2026"]
+# ::lemmas ["BethIsAwake", "it", "come", "out", "to", "be", "fake", " ", "Bananas", "inject", "with", "HIVInfected", "Blood", " ", "httpsnopescom", " ", "httpwwwsnopescombananainjectedbloodhiv", "\u2026"]
+(c5-5 / multi-sentence
+      :snt1 (c5-2 / come-out-09
+                  :ARG1 (c5-4 / fake-02
+                              :ARG1 (c5-7 / it)))
+      :snt2 (c5-0 / inject-01
+                  :ARG1 (c5-8 / banana)
+                  :ARG2 (c5-1 / disease
+                              :name (c5-6 / name
+                                          :op1 "HIVInfected"
+                                          :op2 "Blood")))
+      :snt3 (c5-3 / url-entity
+                  :value "httpwwwsnopescombananainjectedbloodhiv")
+      :snt4 (c5-9 / url-entity
+                  :value "bethIsAwake"))
+
+# ::snt Panteralandia Who is responsible  Wow
+# ::tokens ["Panteralandia", "Who", "is", "responsible", " ", "Wow"]
+# ::lemmas ["Panteralandia", "who", "be", "responsible", " ", "wow"]
+(c6-3 / multi-sentence
+      :snt1 (c6-1 / person
+                  :name (c6-4 / name
+                              :op1 "Panteralandia")
+                  :ARG0-of (c6-0 / responsible-01))
+      :snt2 (c6-2 / wow-01))
+
+# ::snt This is horrible
+# ::tokens ["This", "is", "horrible"]
+# ::lemmas ["this", "be", "horrible"]
+(c7-1 / horrible
+      :domain (c7-0 / this))

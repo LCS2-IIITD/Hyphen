@@ -1,0 +1,107 @@
+# ::snt : UPDATE CRASH The arrivals board at Dusseldorf Airport
+# ::tokens [":", "UPDATE", "CRASH", "The", "arrivals", "board", "at", "Dusseldorf", "Airport"]
+# ::lemmas [":", "update", "crash", "the", "arrival", "board", "at", "Dusseldorf", "Airport"]
+(c1-4 / check-01
+      :ARG1 (c1-1 / board-01
+                  :ARG1 (c1-5 / arrive-01)
+                  :location (c1-2 / airport
+                                  :name (c1-3 / name
+                                              :op1 "Dusseldorf"
+                                              :op2 "Airport")))
+      :ARG1-of (c1-0 / update-01))
+
+# ::snt keine Antwort ist auch ne Antwort....
+# ::tokens ["keine", "Antwort", "ist", "auch", "ne", "Antwort", "...."]
+# ::lemmas ["keine", "Antwort", "ist", "auch", "ne", "Antwort", "...."]
+(c2-1 / equal-01
+      :ARG1 (c2-2 / person
+                  :name (c2-0 / name
+                              :op1 "keine"
+                              :op2 "Antwort"))
+      :ARG2 (c2-3 / person
+                  :name c2-0
+                  :op1 "Antwort"))
+
+# ::snt so which flight number is this GWI9525 or are we talking about to different flights here??
+# ::tokens ["so", "which", "flight", "number", "is", "this", "GWI9525", "or", "are", "we", "talking", "about", "to", "different", "flights", "here", "?", "?"]
+# ::lemmas ["so", "which", "flight", "number", "be", "this", "gwi9525", "or", "be", "we", "talk", "about", "to", "different", "flight", "here", "?", "?"]
+(c3-9 / amr-choice
+      :op1 (c3-5 / number
+                 :mod (c3-2 / fly-01)
+                 :mod (c3-8 / this)
+                 :domain (c3-3 / amr-unknown))
+      :op2 (c3-7 / talk-01
+                 :ARG0 (c3-1 / we)
+                 :ARG1 (c3-4 / fly-01
+                             :ARG1-of (c3-6 / differ-02))
+                 :location (c3-0 / here)))
+
+# ::snt sad day. hope they found some survivors. . sending my prayers to the families of the passengers. comfort them.
+# ::tokens ["sad", "day", ".", "hope", "they", "found", "some", "survivors", ".", ".", "sending", "my", "prayers", "to", "the", "families", "of", "the", "passengers", ".", "comfort", "them", "."]
+# ::lemmas ["sad", "day", ".", "hope", "they", "find", "some", "survivor", ".", ".", "send", "my", "prayer", "to", "the", "family", "of", "the", "passenger", ".", "comfort", "they", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-14 / sad-02
+                   :ARG1 (c4-10 / day))
+      :snt2 (c4-0 / hope-01
+                  :ARG1 (c4-1 / find-01
+                              :ARG0 (c4-15 / they)
+                              :ARG1 (c4-9 / person
+                                          :ARG0-of (c4-6 / survive-01)
+                                          :quant (c4-3 / some))))
+      :snt3 (c4-5 / send-01
+                  :ARG1 (c4-13 / thing
+                               :ARG1-of (c4-16 / pray-01
+                                               :ARG0 (c4-7 / i)))
+                  :ARG2 (c4-8 / family
+                              :ARG1-of (c4-17 / have-rel-role-91
+                                              :ARG0 (c4-4 / passenger)
+                                              :ARG2 (c4-11 / member))))
+      :snt4 (c4-12 / comfort-01
+                   :ARG1 c4-15))
+
+# ::snt I think, they are waiting oficial information from germanwings
+# ::tokens ["I", "think", ",", "they", "are", "waiting", "oficial", "information", "from", "germanwings"]
+# ::lemmas ["i", "think", ",", "they", "be", "wait", "oficial", "information", "from", "germanwing"]
+(c5-7 / think-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-0 / wait-01
+                  :ARG1 (c5-6 / they)
+                  :ARG2 (c5-5 / information
+                              :mod (c5-1 / icial)
+                              :source (c5-2 / organization
+                                            :name (c5-4 / name
+                                                        :op1 "Germanwings")))))
+
+# ::snt there is no info on that flight. What happened?
+# ::tokens ["there", "is", "no", "info", "on", "that", "flight", ".", "What", "happened", "?"]
+# ::lemmas ["there", "be", "no", "info", "on", "that", "flight", ".", "what", "happen", "?"]
+(c7-1 / multi-sentence
+      :snt1 (c7-3 / information
+                  :topic (c7-0 / fly-01
+                               :mod (c7-4 / that))
+                  :polarity -)
+      :snt2 (c7-2 / event
+                  :mod (c7-5 / amr-unknown)))
+
+# ::snt Terrible
+# ::tokens ["Terrible"]
+# ::lemmas ["terrible"]
+(c8-0 / horrible)
+
+# ::snt crashed, no survivors...
+# ::tokens ["crashed", ",", "no", "survivors", "..."]
+# ::lemmas ["crash", ",", "no", "survivor", "..."]
+(c9-3 / and
+      :op1 (c9-0 / smash-01)
+      :op2 (c9-1 / person
+                 :ARG0-of (c9-2 / survive-01)
+                 :polarity -))
+
+# ::snt I see... That's horrible... :/
+# ::tokens ["I", "see", "...", "That", "'s", "horrible", "...", ":/"]
+# ::lemmas ["i", "see", "...", "that", "be", "horrible", "...", ":/"]
+(c10-1 / multi-sentence
+       :snt1 (c10-3 / see-01
+                    :ARG0 (c10-2 / i))
+       :snt2 (c10-0 / horrible
+                    :domain (c10-4 / that)))

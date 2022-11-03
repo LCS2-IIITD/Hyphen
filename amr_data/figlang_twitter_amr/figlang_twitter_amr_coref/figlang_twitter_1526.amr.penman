@@ -1,0 +1,52 @@
+# ::snt Pep replaced oranges with a bit of Cha Cha at half time
+# ::tokens ["Pep", "replaced", "oranges", "with", "a", "bit", "of", "Cha", "Cha", "at", "half", "time"]
+# ::lemmas ["Pep", "replace", "orange", "with", "a", "bit", "of", "Cha", "Cha", "at", "half", "time"]
+(c1-3 / replace-01
+      :ARG0 (c1-1 / person
+                  :name (c1-2 / name
+                              :op1 "Pep"))
+      :ARG1 (c1-0 / orange))
+
+# ::snt don't you like have a game in an hour ? Chop chop get a move on
+# ::tokens ["do", "n't", "you", "like", "have", "a", "game", "in", "an", "hour", "?", "Chop", "chop", "get", "a", "move", "on"]
+# ::lemmas ["do", "not", "you", "like", "have", "a", "game", "in", "an", "hour", "?", "Chop", "chop", "get", "a", "move", "on"]
+(c2-11 / multi-sentence
+       :snt1 (c2-8 / like-02
+                   :polarity (c2-2 / amr-unknown)
+                   :ARG0 (c2-13 / you)
+                   :ARG1 (c2-6 / have-03
+                               :ARG0 c2-13
+                               :ARG1 (c2-9 / game)
+                               :time (c2-14 / after
+                                            :op1 (c2-12 / now)
+                                            :quant (c2-7 / temporal-quantity
+                                                         :unit (c2-10 / hour)
+                                                         :quant 1))))
+       :snt2 (c2-1 / and
+                   :op1 (c2-4 / chop-01
+                              :mod (c2-0 / Chop-01))
+                   :op2 (c2-5 / move-01
+                              :ARG0 (c2-3 / you)
+                              :mode imperative)))
+
+# ::snt Yes there certainly is a game Warren it's an kick off , I know you'll be watching lad your obsessed like the rest of em
+# ::tokens ["Yes", "there", "certainly", "is", "a", "game", "Warren", "it", "'s", "an", "kick", "off", ",", "I", "know", "you", "'ll", "be", "watching", "lad", "your", "obsessed", "like", "the", "rest", "of", "em"]
+# ::lemmas ["yes", "there", "certainly", "be", "a", "game", "Warren", "it", "be", "an", "kick", "off", ",", "i", "know", "you", "'ll", "be", "watch", "lad", "your", "obsessed", "like", "the", "rest", "of", "em"]
+(c3-14 / multi-sentence
+       :snt1 (c3-0 / say-01
+                   :ARG0 (c3-13 / i)
+                   :ARG1 (c3-15 / kick-off-04
+                                :mod (c3-4 / certain))
+                   :ARG2 (c3-10 / person
+                                :name (c3-11 / name
+                                             :op1 "Warren")))
+       :snt2 (c3-1 / know-01
+                   :ARG0 (c3-6 / i)
+                   :ARG1 (c3-5 / watch-01
+                               :ARG0 (c3-16 / you)
+                               :ARG1 (c3-12 / lad
+                                            :ARG1-of (c3-8 / obsess-01
+                                                           :ARG0 (c3-2 / lad)
+                                                           :ARG1-of (c3-9 / resemble-01
+                                                                          :ARG2 (c3-7 / rest
+                                                                                      :part-of (c3-3 / lad))))))))

@@ -1,0 +1,49 @@
+# ::snt CAPA announces that 'Hamilton' will be part of the 2018-19 Broadway in Columbus series.
+# ::tokens ["CAPA", "announces", "that", "'", "Hamilton", "'", "will", "be", "part", "of", "the", "2018", "-", "19", "Broadway", "in", "Columbus", "series", "."]
+# ::lemmas ["CAPA", "announce", "that", "'", "Hamilton", "'", "will", "be", "part", "of", "the", "2018", "-", "19", "Broadway", "in", "Columbus", "series", "."]
+(c1-2 / announce-01
+      :ARG0 (c1-6 / organization
+                  :name (c1-10 / name
+                               :op1 "CAPA"))
+      :ARG1 (c1-5 / have-part-91
+                  :ARG1 (c1-0 / series
+                              :name (c1-8 / name
+                                          :op1 "Broadway"
+                                          :op2 "in"
+                                          :op3 "Columbus")
+                              :time (c1-1 / date-interval
+                                          :op1 (c1-9 / date-entity
+                                                     :year 2018)
+                                          :op2 (c1-3 / date-entity
+                                                     :year 19)))
+                  :ARG2 (c1-4 / work-of-art
+                              :name (c1-7 / name
+                                          :op1 "Hamilton"))))
+
+# ::snt Aaron Burr was a hero.
+# ::tokens ["Aaron", "Burr", "was", "a", "hero", "."]
+# ::lemmas ["Aaron", "Burr", "be", "a", "hero", "."]
+(c2-1 / hero
+      :domain (c2-0 / person
+                    :name (c2-2 / name
+                                :op1 "Aaron"
+                                :op2 "Burgh")))
+
+# ::snt He was a captain under General Montgomery until he took a bullet in the neck in Quebec.
+# ::tokens ["He", "was", "a", "captain", "under", "General", "Montgomery", "until", "he", "took", "a", "bullet", "in", "the", "neck", "in", "Quebec", "."]
+# ::lemmas ["he", "be", "a", "captain", "under", "General", "Montgomery", "until", "he", "take", "a", "bullet", "in", "the", "neck", "in", "Quebec", "."]
+(c3-0 / captain
+      :domain (c3-1 / he)
+      :prep-under (c3-10 / person
+                         :name (c3-11 / name
+                                      :op1 "Montgomery")
+                         :ARG0-of (c3-9 / have-org-role-91
+                                        :ARG2 (c3-8 / general)))
+      :time (c3-3 / until
+                  :op1 (c3-6 / take-01
+                             :ARG0 c3-1
+                             :ARG1 (c3-2 / bullet)
+                             :ARG3 (c3-7 / neck)
+                             :location (c3-5 / province
+                                             :name (c3-4 / name
+                                                         :op1 "Quebec")))))

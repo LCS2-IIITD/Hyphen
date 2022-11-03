@@ -1,0 +1,66 @@
+# ::snt Hey, hey, hey... THIS IS LIBRARY!
+# ::tokens ["Hey", ",", "hey", ",", "hey", "...", "THIS", "IS", "LIBRARY", "!"]
+# ::lemmas ["hey", ",", "hey", ",", "hey", "...", "this", "be", "LIBRARY", "!"]
+(c1-2 / free-04
+      :mod (c1-0 / hey
+                 :mode expressive)
+      :mod (c1-1 / this))
+
+# ::snt He's just trying to study
+# ::tokens ["He", "'s", "just", "trying", "to", "study"]
+# ::lemmas ["he", "be", "just", "try", "to", "study"]
+(c2-3 / try-01
+      :ARG0 (c2-2 / he)
+      :ARG1 (c2-0 / study-01
+                  :ARG0 c2-2)
+      :mod (c2-1 / just))
+
+# ::snt like everyone else... in a library
+# ::tokens ["like", "everyone", "else", "...", "in", "a", "library"]
+# ::lemmas ["like", "everyone", "else", "...", "in", "a", "library"]
+(c3-1 / resemble-01
+      :ARG2 (c3-3 / everyone
+                  :mod (c3-0 / else))
+      :location (c3-2 / library))
+
+# ::snt If you study, you get job If you have job, you'll have no time to protest.
+# ::tokens ["If", "you", "study", ",", "you", "get", "job", "If", "you", "have", "job", ",", "you", "'ll", "have", "no", "time", "to", "protest", "."]
+# ::lemmas ["if", "you", "study", ",", "you", "get", "job", "if", "you", "have", "job", ",", "you", "'ll", "have", "no", "time", "to", "protest", "."]
+(c4-7 / multi-sentence
+      :snt1 (c4-4 / get-01
+                  :ARG0 (c4-9 / you)
+                  :ARG1 (c4-5 / job)
+                  :condition (c4-0 / study-01
+                                   :ARG0 c4-9))
+      :snt2 (c4-1 / have-03
+                  :ARG0 (c4-10 / you)
+                  :ARG1 (c4-3 / time
+                              :purpose (c4-6 / protest-01
+                                             :ARG0 c4-10)
+                              :polarity -)
+                  :condition (c4-2 / have-03
+                                   :ARG0 c4-10
+                                   :ARG1 (c4-8 / job))))
+
+# ::snt If you don't protest you end up with an oligarchy of billionaires running your country convincing you to work instead of protest.
+# ::tokens ["If", "you", "do", "n't", "protest", "you", "end", "up", "with", "an", "oligarchy", "of", "billionaires", "running", "your", "country", "convincing", "you", "to", "work", "instead", "of", "protest", "."]
+# ::lemmas ["if", "you", "do", "not", "protest", "you", "end", "up", "with", "an", "oligarchy", "of", "billionaire", "run", "your", "country", "convince", "you", "to", "work", "instead", "of", "protest", "."]
+(c5-11 / end-up-03
+       :ARG1 (c5-10 / you)
+       :ARG2 (c5-3 / have-03
+                   :ARG0 c5-10
+                   :ARG1 (c5-4 / oligarchy
+                               :consist-of (c5-8 / billionaire
+                                                 :ARG0-of (c5-6 / run-01
+                                                                :ARG1 (c5-1 / country
+                                                                            :poss c5-10)))
+                               :ARG0-of (c5-0 / convince-01
+                                              :ARG1 c5-10
+                                              :ARG2 (c5-2 / work-01
+                                                          :ARG0 c5-10
+                                                          :ARG1-of (c5-9 / instead-of-91
+                                                                         :ARG2 (c5-7 / protest-01
+                                                                                     :ARG0 c5-10))))))
+       :condition (c5-5 / protest-01
+                        :ARG0 c5-10
+                        :polarity -))

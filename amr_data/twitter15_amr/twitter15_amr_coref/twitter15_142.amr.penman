@@ -1,0 +1,48 @@
+# ::snt : Actor Eric Lawson who portrayed the Marlboro man dies from chronic obstructive pulmonary disease
+# ::tokens [":", "Actor", "Eric", "Lawson", "who", "portrayed", "the", "Marlboro", "man", "dies", "from", "chronic", "obstructive", "pulmonary", "disease"]
+# ::lemmas [":", "actor", "Eric", "Lawson", "who", "portray", "the", "Marlboro", "man", "die", "from", "chronic", "obstructive", "pulmonary", "disease"]
+(c1-10 / die-01
+       :ARG1 (c1-1 / person
+                   :name (c1-9 / name
+                               :op1 "Eric"
+                               :op2 "Lawson")
+                   :ARG0-of (c1-2 / act-01)
+                   :ARG0-of (c1-11 / portray-01
+                                   :ARG1 (c1-3 / man
+                                               :location (c1-5 / city
+                                                               :name (c1-8 / name
+                                                                           :op1 "Marlboro")))))
+       :ARG1-of (c1-4 / cause-01
+                      :ARG0 (c1-0 / disease
+                                  :name (c1-6 / name
+                                              :op1 "Obstruction"
+                                              :op2 "Pulmonary"
+                                              :op3 "Disorder")
+                                  :mod (c1-7 / chronic))))
+
+# ::snt :How sad...may he rest in peace.
+# ::tokens [":", "How", "sad", "...", "may", "he", "rest", "in", "peace", "."]
+# ::lemmas [":", "how", "sad", "...", "may", "he", "rest", "in", "peace", "."]
+(c3-6 / and
+      :op1 (c3-0 / sad-02
+                 :degree (c3-2 / so))
+      :op2 (c3-1 / wish-01
+                 :ARG1 (c3-4 / rest-01
+                             :ARG1 (c3-5 / he)
+                             :manner (c3-3 / peace))))
+
+# ::snt Phil Everly also lost his life to COPD
+# ::tokens ["Phil", "Everly", "also", "lost", "his", "life", "to", "COPD"]
+# ::lemmas ["Phil", "Everly", "also", "lose", "his", "life", "to", "copd"]
+(c4-1 / lose-02
+      :ARG0 (c4-0 / person
+                  :name (c4-7 / name
+                              :op1 "Phil"
+                              :op2 "Everly"))
+      :ARG1 (c4-2 / thing
+                  :ARG1-of (c4-5 / live-01
+                                 :ARG0 c4-0))
+      :ARG2 (c4-3 / organization
+                  :name (c4-6 / name
+                              :op1 "COPD"))
+      :mod (c4-4 / also))

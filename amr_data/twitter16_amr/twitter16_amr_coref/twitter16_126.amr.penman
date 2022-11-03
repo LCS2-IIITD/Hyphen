@@ -1,0 +1,845 @@
+# ::snt That looks gay... Bhaaaaaa
+# ::tokens ["That", "looks", "gay", "...", "Bhaaaaaa"]
+# ::lemmas ["that", "look", "gay", "...", "Bhaaaaaa"]
+(c1-1 / look-02
+      :ARG0 (c1-2 / that)
+      :ARG1 (c1-3 / gay-01)
+      :mod (c1-0 / bha
+                 :mode expressive))
+
+# ::snt I thought you guys were being serious at first
+# ::tokens ["I", "thought", "you", "guys", "were", "being", "serious", "at", "first"]
+# ::lemmas ["i", "think", "you", "guy", "be", "be", "serious", "at", "first"]
+(c2-1 / think-01
+      :ARG0 (c2-4 / i)
+      :ARG1 (c2-5 / serious-01
+                  :ARG1 (c2-3 / guy
+                              :mod (c2-2 / you)))
+      :time (c2-0 / at-first))
+
+# ::snt BIGAMY is next, let's start the supreme court on that now, shouldn't be a fight after this RULING!!!
+# ::tokens ["BIGAMY", "is", "next", ",", "let", "'s", "start", "the", "supreme", "court", "on", "that", "now", ",", "should", "n't", "be", "a", "fight", "after", "this", "RULING", "!", "!", "!"]
+# ::lemmas ["bigamy", "be", "next", ",", "let", "us", "start", "the", "supreme", "court", "on", "that", "now", ",", "should", "not", "be", "a", "fight", "after", "this", "ruling", "!", "!", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-11 / next
+                   :domain (c3-10 / person
+                                  :name (c3-4 / name
+                                              :op1 "BIGAMY")))
+      :snt2 (c3-9 / start-01
+                  :ARG0 (c3-13 / we)
+                  :ARG1 (c3-7 / government-organization
+                              :name (c3-12 / name
+                                           :op1 "Supreme"
+                                           :op2 "Court"))
+                  :ARG2 (c3-1 / that)
+                  :time (c3-2 / now)
+                  :mode imperative)
+      :snt3 (c3-3 / recommend-01
+                  :ARG1 (c3-14 / fight-01
+                               :time (c3-0 / after
+                                           :op1 (c3-8 / rule-01
+                                                      :mod (c3-5 / this)))
+                               :polarity -)))
+
+# ::snt Ahh, "natural" doesn't mean what you think it means. You tried...
+# ::tokens ["Ahh", ",", "\"", "natural", "\"", "does", "n't", "mean", "what", "you", "think", "it", "means", ".", "You", "tried", "..."]
+# ::lemmas ["Ahh", ",", "\"", "natural", "\"", "do", "not", "mean", "what", "you", "think", "it", "mean", ".", "you", "try", "..."]
+(c4-7 / multi-sentence
+      :snt1 (c4-3 / mean-01
+                  :ARG1 (c4-8 / natural-03)
+                  :ARG2 (c4-1 / thing
+                              :ARG1-of (c4-9 / mean-01
+                                             :ARG2-of (c4-4 / think-01
+                                                            :ARG0 (c4-6 / you))))
+                  :mod (c4-0 / ah
+                             :mode expressive)
+                  :polarity -)
+      :snt2 (c4-5 / try-01
+                  :ARG0 (c4-2 / you)))
+
+# ::snt The rainbow flag lit on our White House is ok even though it offends millions of Americans but my state can't fly a confederate flag
+# ::tokens ["The", "rainbow", "flag", "lit", "on", "our", "White", "House", "is", "ok", "even", "though", "it", "offends", "millions", "of", "Americans", "but", "my", "state", "ca", "n't", "fly", "a", "confederate", "flag"]
+# ::lemmas ["the", "rainbow", "flag", "light", "on", "our", "White", "House", "be", "ok", "even", "though", "it", "offend", "millions", "of", "Americans", "but", "my", "state", "can", "not", "fly", "a", "confederate", "flag"]
+(c5-12 / okay-04
+       :ARG1 (c5-16 / flag
+                    :mod (c5-0 / rainbow)
+                    :ARG1-of (c5-15 / light-04
+                                    :location (c5-4 / government-organization
+                                                    :name (c5-10 / name
+                                                                 :op1 "White"
+                                                                 :op2 "House")
+                                                    :poss (c5-14 / we))))
+       :concession (c5-2 / offend-01
+                         :ARG0 c5-16
+                         :ARG1 (c5-11 / person
+                                      :mod (c5-17 / country
+                                                  :name (c5-3 / name
+                                                              :op1 "America"))
+                                      :quant (c5-5 / multiple
+                                                   :op1 1000000)))
+       :concession (c5-6 / possible-01
+                         :ARG1 (c5-1 / fly-01
+                                     :ARG0 (c5-9 / state
+                                                 :poss (c5-8 / i))
+                                     :ARG1 (c5-13 / flag
+                                                  :mod (c5-7 / confederate)))
+                         :polarity -))
+
+# ::snt no way he can sleep good at night with it lit up like a circus which is all his presidency has ever been.
+# ::tokens ["no", "way", "he", "can", "sleep", "good", "at", "night", "with", "it", "lit", "up", "like", "a", "circus", "which", "is", "all", "his", "presidency", "has", "ever", "been", "."]
+# ::lemmas ["no", "way", "he", "can", "sleep", "good", "at", "night", "with", "it", "light", "up", "like", "a", "circus", "which", "be", "all", "his", "presidency", "have", "ever", "be", "."]
+(c6-8 / possible-01
+      :ARG1 (c6-7 / sleep-01
+                  :ARG0 (c6-12 / he)
+                  :ARG1-of (c6-3 / good-02)
+                  :time (c6-13 / date-entity
+                               :dayperiod (c6-9 / night))
+                  :manner (c6-10 / light-up-08
+                                 :ARG1 (c6-6 / it)
+                                 :ARG1-of (c6-1 / resemble-01
+                                                :ARG2 (c6-11 / circus
+                                                             :domain (c6-5 / have-org-role-91
+                                                                           :ARG0 c6-12
+                                                                           :ARG2 (c6-4 / president)
+                                                                           :time (c6-2 / ever))
+                                                             :mod (c6-0 / all)))))
+      :polarity -)
+
+# ::snt absolutely pathetic disgraceful. Ever lit it up in red white and blue for freedom and soldiers !??
+# ::tokens ["absolutely", "pathetic", "disgraceful", ".", "Ever", "lit", "it", "up", "in", "red", "white", "and", "blue", "for", "freedom", "and", "soldiers", "!", "?", "?"]
+# ::lemmas ["absolutely", "pathetic", "disgraceful", ".", "ever", "light", "it", "up", "in", "red", "white", "and", "blue", "for", "freedom", "and", "soldier", "!", "?", "?"]
+(c7-5 / multi-sentence
+      :snt1 (c7-12 / disgrace-01
+                   :degree (c7-0 / absolute))
+      :snt2 (c7-10 / lit-up-03
+                   :ARG1 (c7-7 / it)
+                   :time (c7-3 / ever)
+                   :manner (c7-8 / and
+                                 :op1 (c7-2 / red-02)
+                                 :op2 (c7-4 / blue))
+                   :beneficiary (c7-1 / and
+                                      :op1 (c7-11 / free-04)
+                                      :op2 (c7-9 / soldier))
+                   :polarity (c7-6 / amr-unknown)))
+
+# ::snt : White House lit in rainbow colors after high court's gay marriage ruling (with photo) O &amp; Mooch?
+# ::tokens [":", "White", "House", "lit", "in", "rainbow", "colors", "after", "high", "court", "'s", "gay", "marriage", "ruling", "(", "with", "photo", ")", "O", "&", "amp", ";", "Mooch", "?"]
+# ::lemmas [":", "White", "House", "light", "in", "rainbow", "color", "after", "high", "court", "'s", "gay", "marriage", "ruling", "(", "with", "photo", ")", "O", "&", "amp", ";", "Mooch", "?"]
+(c8-5 / multi-sentence
+      :snt1 (c8-12 / lit-01
+                   :ARG1 (c8-6 / government-organization
+                               :name (c8-10 / name
+                                            :op1 "White"
+                                            :op2 "House"))
+                   :ARG2 (c8-14 / color
+                                :mod (c8-1 / rainbow))
+                   :time (c8-0 / after
+                               :op1 (c8-8 / rule-01
+                                          :ARG0 c8-6
+                                          :name (c8-3 / name
+                                                      :op1 "High"
+                                                      :op2 "Court"))
+                               :ARG3 (c8-2 / marry-01
+                                           :mod (c8-7 / gay-01))))
+      :ARG1-of (c8-4 / describe-01
+                     :ARG0 (c8-11 / photo))
+      :snt2 (c8-13 / hooch
+                   :polarity (c8-9 / amr-unknown)))
+
+# ::snt Check out Brand New Speck iPhone /5S Candyshell Case For Apple % Authentic via
+# ::tokens ["Check", "out", "Brand", "New", "Speck", "iPhone", "/5S", "Candyshell", "Case", "For", "Apple", "%", "Authentic", "via"]
+# ::lemmas ["check", "out", "Brand", "New", "Speck", "iPhone", "/5s", "Candyshell", "Case", "for", "Apple", "%", "Authentic", "via"]
+(c9-11 / check-out-05
+       :ARG0 (c9-3 / you)
+       :ARG1 (c9-5 / case-03
+                   :ARG1 (c9-0 / and
+                               :op1 (c9-8 / phone-number-entity
+                                          :value "iPhone")
+                               :op2 (c9-4 / phone-number-entity
+                                          :value "5S"))
+                   :mod (c9-7 / style
+                              :ARG1-of (c9-9 / new-01))
+                   :mod (c9-10 / flagship)
+                   :mod (c9-1 / company
+                              :name (c9-2 / name
+                                          :op1 "Apple"))
+                   :ARG0-of (c9-6 / authentic-02
+                                  :polarity -))
+       :mode imperative)
+
+# ::snt this world is finished!!!! blackpuppet
+# ::tokens ["this", "world", "is", "finished", "!", "!", "!", "!", "blackpuppet"]
+# ::lemmas ["this", "world", "be", "finish", "!", "!", "!", "!", "blackpuppet"]
+(c10-2 / say-01
+       :ARG0 (c10-1 / i)
+       :ARG1 (c10-6 / finish-01
+                    :ARG1 (c10-5 / world
+                                 :mod (c10-0 / this)))
+       :ARG2 (c10-3 / person
+                    :name (c10-4 / name
+                                 :op1 "blackpuppet")))
+
+# ::snt obama's spending the money to fix the mess bush left in his tracks. you gotta spend some to earn some
+# ::tokens ["obama", "'s", "spending", "the", "money", "to", "fix", "the", "mess", "bush", "left", "in", "his", "tracks", ".", "you", "got", "ta", "spend", "some", "to", "earn", "some"]
+# ::lemmas ["obama", "'s", "spend", "the", "money", "to", "fix", "the", "mess", "bush", "leave", "in", "his", "track", ".", "you", "got", "to", "spend", "some", "to", "earn", "some"]
+(c11-6 / multi-sentence
+       :snt1 (c11-8 / spend-01
+                    :ARG0 (c11-9 / person
+                                 :name (c11-10 / name
+                                               :op1 "Obama"))
+                    :ARG1 (c11-14 / fix-02
+                                  :ARG0 c11-9
+                                  :ARG1 (c11-3 / mess
+                                               :ARG1-of (c11-13 / leave-12
+                                                                :ARG0 (c11-4 / bush)
+                                                                :ARG2 (c11-1 / track
+                                                                             :poss c11-4))))
+                    :ARG3 (c11-11 / money))
+       :snt2 (c11-7 / obligate-01
+                    :ARG1 (c11-5 / you)
+                    :ARG2 (c11-0 / spend-01
+                                 :ARG0 c11-5
+                                 :ARG3 (c11-12 / some)
+                                 :purpose (c11-2 / earn-01
+                                                 :ARG0 c11-5
+                                                 :ARG1 (c11-15 / some)))))
+
+# ::snt to be fair, the economy was far more screwed up during bush's reign. it's gonna take some time to build it up again.
+# ::tokens ["to", "be", "fair", ",", "the", "economy", "was", "far", "more", "screwed", "up", "during", "bush", "'s", "reign", ".", "it", "'s", "gon", "na", "take", "some", "time", "to", "build", "it", "up", "again", "."]
+# ::lemmas ["to", "be", "fair", ",", "the", "economy", "be", "far", "more", "screw", "up", "during", "bush", "'s", "reign", ".", "it", "be", "going", "to", "take", "some", "time", "to", "build", "it", "up", "again", "."]
+(c12-9 / multi-sentence
+       :snt1 (c12-11 / screw-up-01
+                     :ARG1 (c12-4 / economy)
+                     :time (c12-3 / reign-01
+                                  :ARG0 (c12-12 / person
+                                                :name (c12-13 / name
+                                                              :op1 "Bush")))
+                     :ARG2-of (c12-15 / have-degree-91
+                                      :ARG1 c12-4
+                                      :ARG3 (c12-5 / more
+                                                   :quant (c12-14 / far)))
+                     :ARG1-of (c12-6 / fair-01))
+       :snt2 (c12-2 / take-10
+                    :ARG0 (c12-7 / build-up-05
+                                 :ARG1 (c12-10 / it)
+                                 :mod (c12-0 / again))
+                    :ARG1 (c12-8 / time
+                                 :quant (c12-1 / some))))
+
+# ::snt Be blessed!
+# ::tokens ["Be", "blessed", "!"]
+# ::lemmas ["be", "bless", "!"]
+(c13-0 / bless-01
+       :ARG1 (c13-1 / you))
+
+# ::snt marriage it's not as much a privilege as it is a right
+# ::tokens ["marriage", "it", "'s", "not", "as", "much", "a", "privilege", "as", "it", "is", "a", "right"]
+# ::lemmas ["marriage", "it", "be", "not", "as", "much", "a", "privilege", "as", "it", "be", "a", "right"]
+(c14-4 / have-degree-91
+       :ARG1 (c14-2 / marry-01)
+       :ARG2 (c14-3 / privilege-01
+                    :ARG1 c14-2)
+       :ARG3 (c14-1 / equal
+                    :polarity -)
+       :ARG4 (c14-0 / right-05
+                    :ARG2 c14-2))
+
+# ::snt is knocking on embassy doors trying get OUR US MARINE held by days
+# ::tokens ["is", "knocking", "on", "embassy", "doors", "trying", "get", "OUR", "US", "MARINE", "held", "by", "days"]
+# ::lemmas ["be", "knock", "on", "embassy", "door", "try", "get", "OUR", "US", "MARINE", "hold", "by", "days"]
+(c15-4 / knock-01
+       :ARG1 (c15-12 / door
+                     :part-of (c15-2 / embassy))
+       :purpose (c15-0 / try-01
+                       :ARG1 (c15-6 / get-04
+                                    :ARG1 (c15-11 / hold-04
+                                                  :ARG1 (c15-7 / marry-01
+                                                               :ARG1 (c15-9 / we)
+                                                               :mod (c15-10 / country
+                                                                            :name (c15-8 / name
+                                                                                         :op1 "US")))
+                                                  :duration (c15-3 / multiple
+                                                                   :op1 (c15-5 / temporal-quantity
+                                                                               :unit (c15-1 / day)
+                                                                               :quant 1))))))
+
+# ::snt These are truly sad times for Americans. We so desperately need a real President in the WHITE HOUSE!
+# ::tokens ["These", "are", "truly", "sad", "times", "for", "Americans", ".", "We", "so", "desperately", "need", "a", "real", "President", "in", "the", "WHITE", "HOUSE", "!"]
+# ::lemmas ["these", "be", "truly", "sad", "time", "for", "Americans", ".", "we", "so", "desperately", "need", "a", "real", "President", "in", "the", "WHITE", "HOUSE", "!"]
+(c16-7 / multi-sentence
+       :snt1 (c16-11 / sad-02
+                     :ARG1 (c16-2 / time
+                                  :mod (c16-4 / this))
+                     :ARG2 (c16-12 / person
+                                   :mod (c16-17 / country
+                                                :name (c16-13 / name
+                                                              :op1 "America")))
+                     :degree (c16-5 / truly))
+       :snt2 (c16-6 / need-01
+                    :ARG0 (c16-15 / we)
+                    :ARG1 (c16-8 / person
+                                 :ARG0-of (c16-16 / have-org-role-91
+                                                  :ARG2 (c16-1 / president))
+                                 :ARG1-of (c16-3 / real-04))
+                    :location (c16-9 / government-organization
+                                     :name (c16-14 / name
+                                                   :op1 "White"
+                                                   :op2 "House"))
+                    :ARG1-of (c16-10 / desperate-02)
+                    :degree (c16-0 / so)))
+
+# ::snt makes it fairly natural.
+# ::tokens ["makes", "it", "fairly", "natural", "."]
+# ::lemmas ["make", "it", "fairly", "natural", "."]
+(c17-1 / make-02
+       :ARG1 (c17-3 / natural-02
+                    :ARG1 (c17-0 / it)
+                    :ARG1-of (c17-2 / fair-04)))
+
+# ::snt only ones who's got a problem with it. i feel like if the rest of nature's beings shows signs of homosexuality, then that-
+# ::tokens ["only", "ones", "who", "'s", "got", "a", "problem", "with", "it", ".", "i", "feel", "like", "if", "the", "rest", "of", "nature", "'s", "beings", "shows", "signs", "of", "homosexuality", ",", "then", "that-"]
+# ::lemmas ["only", "one", "who", "be", "get", "a", "problem", "with", "it", ".", "i", "feel", "like", "if", "the", "rest", "of", "nature", "'s", "being", "show", "sign", "of", "homosexuality", ",", "then", "that-"]
+(c18-6 / multi-sentence
+       :snt1 (c18-12 / one
+                     :ARG0-of (c18-15 / have-03
+                                      :ARG1 (c18-10 / problem
+                                                    :topic (c18-8 / it)))
+                     :mod (c18-5 / only))
+       :snt2 (c18-14 / feel-06
+                     :ARG0 (c18-3 / i)
+                     :ARG1 (c18-7 / have-condition-91
+                                  :ARG1 (c18-1 / that)
+                                  :ARG2 (c18-9 / show-01
+                                               :ARG0 (c18-4 / being
+                                                            :part-of (c18-11 / nature)
+                                                            :mod (c18-2 / rest))
+                                               :ARG1 (c18-0 / signal-07
+                                                            :ARG0 c18-4
+                                                            :ARG1 (c18-13 / homosexuality))))))
+
+# ::snt assholes
+# ::tokens ["assholes"]
+# ::lemmas ["asshole"]
+(c19-0 / asshole)
+
+# ::snt DISGRACE
+# ::tokens ["DISGRACE"]
+# ::lemmas ["DISGRACE"]
+(c20-0 / disgrace-01)
+
+# ::snt hmm. that depends how you look at it i suppose. all living species on earth have homosexual individuals, yet humans are the-
+# ::tokens ["hmm", ".", "that", "depends", "how", "you", "look", "at", "it", "i", "suppose", ".", "all", "living", "species", "on", "earth", "have", "homosexual", "individuals", ",", "yet", "humans", "are", "the-"]
+# ::lemmas ["hmm", ".", "that", "depend", "how", "you", "look", "at", "it", "i", "suppose", ".", "all", "live", "specie", "on", "earth", "have", "homosexual", "individual", ",", "yet", "human", "be", "the-"]
+(c21-18 / multi-sentence
+        :snt1 (c21-6 / suppose-01
+                     :ARG0 (c21-2 / i)
+                     :ARG1 (c21-16 / depend-01
+                                   :ARG0 (c21-1 / that)
+                                   :ARG1 (c21-7 / look-01
+                                                :ARG0 (c21-17 / you)
+                                                :ARG1 (c21-10 / it)))
+                     :mod (c21-8 / hmm
+                                 :mode expressive))
+        :snt2 (c21-9 / contrast-01
+                     :ARG1 (c21-12 / have-03
+                                   :ARG0 (c21-0 / species
+                                                :ARG0-of (c21-5 / live-01)
+                                                :mod (c21-11 / all)
+                                                :location (c21-13 / planet
+                                                                  :name (c21-4 / name
+                                                                               :op1 "Earth")))
+                                   :ARG1 (c21-15 / individual
+                                                 :mod (c21-3 / homosexual)))
+                     :ARG2 (c21-14 / human
+                                   :domain c21-14)))
+
+# ::snt No hate brother! It may be but it doesn't make it natural.
+# ::tokens ["No", "hate", "brother", "!", "It", "may", "be", "but", "it", "does", "n't", "make", "it", "natural", "."]
+# ::lemmas ["no", "hate", "brother", "!", "it", "may", "be", "but", "it", "do", "not", "make", "it", "natural", "."]
+(c23-3 / multi-sentence
+       :snt1 (c23-5 / say-01
+                    :ARG0 (c23-4 / i)
+                    :ARG1 (c23-10 / hate-01
+                                  :ARG0 c23-4
+                                  :polarity -)
+                    :ARG2 (c23-1 / brother))
+       :snt2 (c23-6 / possible-01
+                    :ARG1 (c23-0 / it)
+                    :concession-of (c23-2 / make-02
+                                          :ARG0 (c23-9 / it)
+                                          :ARG1 (c23-7 / natural-02
+                                                       :ARG1 (c23-8 / it))
+                                          :polarity -)))
+
+# ::snt of course it is, but that doesn't make the lives of all the LGBTQ+ people out there any less important
+# ::tokens ["of", "course", "it", "is", ",", "but", "that", "does", "n't", "make", "the", "lives", "of", "all", "the", "LGBTQ+", "people", "out", "there", "any", "less", "important"]
+# ::lemmas ["of", "course", "it", "be", ",", "but", "that", "do", "not", "make", "the", "life", "of", "all", "the", "lgbtq+", "people", "out", "there", "any", "less", "important"]
+(c24-16 / contrast-01
+        :ARG1 (c24-10 / it
+                      :mod (c24-13 / of-course))
+        :ARG2 (c24-6 / make-02
+                     :ARG0 c24-10
+                     :ARG1 (c24-15 / important-01
+                                   :ARG1 (c24-14 / life
+                                                 :poss (c24-11 / person
+                                                               :mod (c24-0 / all)
+                                                               :mod (c24-5 / or
+                                                                           :op1 (c24-3 / lesbian)
+                                                                           :op2 (c24-7 / gay-01)
+                                                                           :op3 (c24-4 / bisexual)
+                                                                           :op4 (c24-2 / transgender)
+                                                                           :op5 (c24-8 / queer))
+                                                               :location (c24-12 / out-there)))
+                                   :ARG2-of (c24-9 / have-degree-91
+                                                   :ARG1 c24-14
+                                                   :ARG3 (c24-1 / less)))
+                     :polarity -))
+
+# ::snt Teach your children the principles of God! Continue to contend for our Christian Faith &amp; Heritage.
+# ::tokens ["Teach", "your", "children", "the", "principles", "of", "God", "!", "Continue", "to", "contend", "for", "our", "Christian", "Faith", "&", "amp", ";", "Heritage", "."]
+# ::lemmas ["teach", "your", "child", "the", "principle", "of", "God", "!", "continue", "to", "contend", "for", "our", "Christian", "Faith", "&", "amp", ";", "Heritage", "."]
+(c25-9 / multi-sentence
+       :snt1 (c25-2 / teach-01
+                    :ARG0 (c25-7 / you)
+                    :ARG1 (c25-12 / principle
+                                  :source (c25-8 / person
+                                                 :name (c25-13 / name
+                                                               :op1 "God")))
+                    :ARG2 (c25-1 / person
+                                 :ARG0-of (c25-16 / have-rel-role-91
+                                                  :ARG1 c25-7
+                                                  :ARG2 (c25-17 / child)))
+                    :mode imperative)
+       :snt2 (c25-10 / continue-01
+                     :ARG0 (c25-4 / you)
+                     :ARG1 (c25-5 / contend-02
+                                  :ARG0 c25-4
+                                  :ARG2 (c25-0 / and
+                                               :op1 (c25-15 / faith
+                                                            :mod (c25-3 / religious-group
+                                                                        :name (c25-6 / name
+                                                                                     :op1 "Christian"))
+                                                            :poss (c25-14 / we))
+                                               :op2 (c25-11 / heritage
+                                                            :poss c25-14)))
+                     :mode imperative))
+
+# ::snt And I'm sure the will be lit in green and red in December, correct?
+# ::tokens ["And", "I", "'m", "sure", "the", "will", "be", "lit", "in", "green", "and", "red", "in", "December", ",", "correct", "?"]
+# ::lemmas ["and", "i", "be", "sure", "the", "will", "be", "light", "in", "green", "and", "red", "in", "December", ",", "correct", "?"]
+(c26-0 / and
+       :op2 (c26-7 / sure-02
+                   :ARG0 (c26-6 / i)
+                   :ARG1 (c26-8 / light-04
+                                :ARG1 (c26-1 / thing)
+                                :ARG2 (c26-9 / and
+                                             :op1 (c26-4 / green)
+                                             :op2 (c26-2 / red))
+                                :time (c26-3 / date-entity
+                                             :month 12))
+                   :ARG1-of (c26-5 / request-confirmation-91
+                                   :ARG0 c26-6)))
+
+# ::snt sometimes you gotta put them aside for a second, and decide if they're really worth the unhappiness of thousands of people
+# ::tokens ["sometimes", "you", "got", "ta", "put", "them", "aside", "for", "a", "second", ",", "and", "decide", "if", "they", "'re", "really", "worth", "the", "unhappiness", "of", "thousands", "of", "people"]
+# ::lemmas ["sometimes", "you", "got", "to", "put", "they", "aside", "for", "a", "second", ",", "and", "decide", "if", "they", "be", "really", "worth", "the", "unhappiness", "of", "thousands", "of", "people"]
+(c27-12 / obligate-01
+        :ARG1 (c27-6 / you)
+        :ARG2 (c27-0 / and
+                     :op1 (c27-11 / put-01
+                                  :ARG0 c27-6
+                                  :ARG1 (c27-2 / they)
+                                  :ARG2 (c27-15 / aside)
+                                  :duration (c27-4 / temporal-quantity
+                                                   :unit (c27-10 / second)
+                                                   :quant 1))
+                     :op2 (c27-5 / decide-01
+                                 :ARG0 c27-6
+                                 :ARG1 (c27-7 / truth-value
+                                              :polarity-of (c27-13 / worth-02
+                                                                   :ARG1 c27-2
+                                                                   :ARG2 (c27-14 / happy-01
+                                                                                 :ARG1 (c27-8 / person
+                                                                                              :quant (c27-9 / multiple
+                                                                                                            :op1 1000))
+                                                                                 :polarity -)
+                                                                   :ARG1-of (c27-3 / real-04)))))
+        :frequency (c27-1 / sometimes))
+
+# ::snt forbidden. imagine if you were the one who wasn't allowed to marry the person you love. you're entitled to your beliefs, but-
+# ::tokens ["forbidden", ".", "imagine", "if", "you", "were", "the", "one", "who", "was", "n't", "allowed", "to", "marry", "the", "person", "you", "love", ".", "you", "'re", "entitled", "to", "your", "beliefs", ",", "but-"]
+# ::lemmas ["forbid", ".", "imagine", "if", "you", "be", "the", "one", "who", "be", "not", "allow", "to", "marry", "the", "person", "you", "love", ".", "you", "be", "entitle", "to", "your", "belief", ",", "but-"]
+(c28-7 / multi-sentence
+       :snt1 (c28-10 / sin-01
+                     :ARG1-of (c28-11 / possible-01))
+       :snt2 (c28-9 / imagine-01
+                    :ARG0 (c28-6 / you)
+                    :ARG1 (c28-8 / person
+                                 :ARG1-of (c28-0 / allow-01
+                                                 :ARG2 (c28-4 / marry-01
+                                                              :ARG1 c28-6
+                                                              :ARG2 (c28-1 / person
+                                                                           :ARG1-of (c28-12 / love-01
+                                                                                            :ARG0 c28-6)))
+                                                 :polarity -)
+                                 :domain c28-6)
+                    :mode imperative)
+       :snt3 (c28-13 / contrast-01
+                     :ARG1 (c28-3 / entitle-01
+                                  :ARG1 (c28-2 / thing
+                                               :ARG1-of (c28-5 / believe-01
+                                                               :ARG0 c28-6))
+                                  :ARG2 c28-6)))
+
+# ::snt I'm fine with the law, it's the lights that bother me. What budget did that come out of?
+# ::tokens ["I", "'m", "fine", "with", "the", "law", ",", "it", "'s", "the", "lights", "that", "bother", "me", ".", "What", "budget", "did", "that", "come", "out", "of", "?"]
+# ::lemmas ["i", "be", "fine", "with", "the", "law", ",", "it", "be", "the", "light", "that", "bother", "i", ".", "what", "budget", "do", "that", "come", "out", "of", "?"]
+(c29-5 / multi-sentence
+       :snt1 (c29-8 / fine-04
+                    :ARG1 (c29-7 / law)
+                    :ARG2 (c29-6 / i))
+       :snt2 (c29-3 / bother-01
+                    :ARG0 (c29-2 / light)
+                    :ARG1 (c29-9 / i))
+       :snt3 (c29-10 / come-out-09
+                     :ARG1 (c29-0 / amr-unknown
+                                  :ARG2-of (c29-4 / budget-01))
+                     :ARG2 (c29-1 / that)))
+
+# ::snt isn't it better with a society where people can marry the person they love, regardless of gender, than one where some are-
+# ::tokens ["is", "n't", "it", "better", "with", "a", "society", "where", "people", "can", "marry", "the", "person", "they", "love", ",", "regardless", "of", "gender", ",", "than", "one", "where", "some", "are-"]
+# ::lemmas ["be", "not", "it", "well", "with", "a", "society", "where", "people", "can", "marry", "the", "person", "they", "love", ",", "regardless", "of", "gender", ",", "than", "one", "where", "some", "are-"]
+(c30-6 / good-02
+       :ARG1 (c30-9 / society
+                    :location-of (c30-10 / possible-01
+                                         :ARG1 (c30-4 / marry-01
+                                                      :ARG1 (c30-5 / person)
+                                                      :ARG2 (c30-1 / person
+                                                                   :ARG1-of (c30-13 / love-01
+                                                                                    :ARG0 c30-5))
+                                                      :ARG1-of (c30-2 / regardless-91
+                                                                      :ARG2 (c30-7 / gender)))))
+       :ARG2-of (c30-14 / have-degree-91
+                        :ARG1 c30-9
+                        :ARG3 (c30-3 / more)
+                        :ARG4 (c30-0 / society
+                                     :location-of (c30-11 / marry-01
+                                                          :ARG1 (c30-12 / some)
+                                                          :ARG2 c30-1)))
+       :ARG1-of (c30-8 / request-confirmation-91))
+
+# ::snt That's your right but know this...when God gives "us" over to "ourselves" we often self-destruct!
+# ::tokens ["That", "'s", "your", "right", "but", "know", "this", "...", "when", "God", "gives", "\"", "us", "\"", "over", "to", "\"", "ourselves", "\"", "we", "often", "self", "-", "destruct", "!"]
+# ::lemmas ["that", "be", "your", "right", "but", "know", "this", "...", "when", "God", "give", "\"", "we", "\"", "over", "to", "\"", "ourselves", "\"", "we", "often", "self", "-", "destruct", "!"]
+(c32-10 / contrast-01
+        :ARG1 (c32-1 / right-06
+                     :ARG1 (c32-4 / you)
+                     :ARG2 (c32-0 / that))
+        :ARG2 (c32-2 / know-01
+                     :ARG0 c32-4
+                     :ARG1 (c32-3 / destroy-01
+                                  :ARG0 (c32-9 / we
+                                               :ARG1-of c32-3)
+                                  :frequency (c32-8 / often)
+                                  :time (c32-5 / give-over-12
+                                               :ARG0 (c32-6 / person
+                                                            :name (c32-7 / name
+                                                                         :op1 "God"))
+                                               :ARG1 c32-9
+                                               :ARG2 c32-9))))
+
+# ::snt someone's got their underoos in a twist
+# ::tokens ["someone", "'s", "got", "their", "underoos", "in", "a", "twist"]
+# ::lemmas ["someone", "be", "get", "their", "underoos", "in", "a", "twist"]
+(c34-2 / get-02
+       :ARG0 (c34-3 / someone)
+       :ARG1 (c34-1 / underoos
+                    :poss c34-3)
+       :manner (c34-0 / twist-01))
+
+# ::snt It never should have happen, I've known for a longtime the dignity of the WH is lost along with it's leader
+# ::tokens ["It", "never", "should", "have", "happen", ",", "I", "'ve", "known", "for", "a", "longtime", "the", "dignity", "of", "the", "WH", "is", "lost", "along", "with", "it", "'s", "leader"]
+# ::lemmas ["it", "never", "should", "have", "happen", ",", "i", "'ve", "know", "for", "a", "longtime", "the", "dignity", "of", "the", "WH", "be", "lose", "along", "with", "it", "be", "leader"]
+(c35-5 / multi-sentence
+       :snt1 (c35-2 / recommend-01
+                    :ARG1 (c35-7 / it)
+                    :time (c35-3 / ever)
+                    :polarity -)
+       :snt2 (c35-4 / know-01
+                    :ARG0 (c35-11 / i)
+                    :ARG1 (c35-10 / lose-02
+                                  :ARG1 (c35-12 / dignity
+                                                :poss (c35-6 / government-organization
+                                                             :name (c35-8 / name
+                                                                          :op1 "White"
+                                                                          :op2 "House"))
+                                                :accompanier (c35-9 / person
+                                                                    :ARG0-of (c35-1 / lead-02
+                                                                                    :ARG1 c35-6))))
+                    :duration (c35-0 / longtime)))
+
+# ::snt preach as much as you want but what's done is done. us gays will forever be able to marry from now.
+# ::tokens ["preach", "as", "much", "as", "you", "want", "but", "what", "'s", "done", "is", "done", ".", "us", "gays", "will", "forever", "be", "able", "to", "marry", "from", "now", "."]
+# ::lemmas ["preach", "as", "much", "as", "you", "want", "but", "what", "be", "do", "be", "do", ".", "we", "gay", "will", "forever", "be", "able", "to", "marry", "from", "now", "."]
+(c36-19 / multi-sentence
+        :snt1 (c36-12 / contrast-01
+                      :ARG1 (c36-11 / have-quant-91
+                                    :ARG1 (c36-0 / thing
+                                                 :ARG1-of (c36-15 / do-02))
+                                    :ARG2 (c36-6 / much)
+                                    :ARG3 (c36-16 / equal)
+                                    :ARG4 (c36-2 / thing
+                                                 :ARG1-of (c36-4 / want-01
+                                                                 :ARG0 (c36-18 / you))))
+                      :ARG2 (c36-1 / do-02
+                                   :ARG1 (c36-8 / thing
+                                                :ARG1-of (c36-13 / do-02))))
+        :snt2 (c36-14 / possible-01
+                      :ARG1 (c36-10 / marry-01
+                                    :ARG1 (c36-7 / we
+                                                 :ARG1-of (c36-9 / gay-01))
+                                    :time (c36-5 / from
+                                                 :op1 (c36-3 / now)))
+                      :duration (c36-17 / forever)))
+
+# ::snt Nothing against the gays. It's up to everyone!!!
+# ::tokens ["Nothing", "against", "the", "gays", ".", "It", "'s", "up", "to", "everyone", "!", "!", "!"]
+# ::lemmas ["nothing", "against", "the", "gay", ".", "it", "be", "up", "to", "everyone", "!", "!", "!"]
+(c37-3 / multi-sentence
+       :snt1 (c37-6 / nothing
+                    :prep-against (c37-5 / person
+                                         :ARG1-of (c37-2 / gay-01)))
+       :snt2 (c37-0 / responsible-03
+                    :ARG0 (c37-1 / everyone)
+                    :ARG1 (c37-4 / it)))
+
+# ::snt so much hate in the comments, you're part of the wrong side of history
+# ::tokens ["so", "much", "hate", "in", "the", "comments", ",", "you", "'re", "part", "of", "the", "wrong", "side", "of", "history"]
+# ::lemmas ["so", "much", "hate", "in", "the", "comment", ",", "you", "be", "part", "of", "the", "wrong", "side", "of", "history"]
+(c38-9 / hate-01
+       :ARG1 (c38-2 / you)
+       :location (c38-10 / comment-01)
+       :ARG1-of (c38-5 / have-quant-91
+                       :ARG2 (c38-3 / much)
+                       :ARG3 (c38-6 / so))
+       :ARG0-of (c38-4 / cause-01
+                       :ARG1 (c38-7 / have-part-91
+                                    :ARG1 (c38-0 / side
+                                                 :ARG2-of (c38-8 / wrong-04
+                                                                 :ARG1 (c38-1 / history)))
+                                    :ARG2 c38-2)))
+
+# ::snt proud day to be an American the hateful and ignorant voices can't drown out the rule of law which guarantees equal rights for all people
+# ::tokens ["proud", "day", "to", "be", "an", "American", "the", "hateful", "and", "ignorant", "voices", "ca", "n't", "drown", "out", "the", "rule", "of", "law", "which", "guarantees", "equal", "rights", "for", "all", "people"]
+# ::lemmas ["proud", "day", "to", "be", "an", "American", "the", "hateful", "and", "ignorant", "voice", "can", "not", "drown", "out", "the", "rule", "of", "law", "which", "guarantee", "equal", "right", "for", "all", "people"]
+(c39-11 / possible-01
+        :ARG1 (c39-17 / drown-out-01
+                      :ARG0 (c39-13 / voice
+                                    :ARG0-of (c39-16 / hate-01)
+                                    :ARG1-of (c39-10 / ignorant-02))
+                      :ARG1 (c39-2 / rule-01
+                                   :ARG0 (c39-14 / law)
+                                   :ARG0-of (c39-4 / guarantee-01
+                                                   :ARG1 (c39-7 / right-05
+                                                                :ARG1 (c39-5 / person
+                                                                             :mod (c39-0 / all))
+                                                                :ARG1-of (c39-3 / equal-01))
+                                                   :ARG2 c39-5)))
+        :ARG1-of (c39-15 / cause-01
+                         :ARG0 (c39-8 / have-mod-91
+                                      :ARG2 (c39-1 / person
+                                                   :mod (c39-6 / country
+                                                               :name (c39-12 / name
+                                                                             :op1 "America")))
+                                      :ARG1-of (c39-9 / pride-01)))
+        :polarity -)
+
+# ::snt I will continue to preach that marriage is between a man &amp; a woman. That's my right and the courts can't silence me!
+# ::tokens ["I", "will", "continue", "to", "preach", "that", "marriage", "is", "between", "a", "man", "&", "amp", ";", "a", "woman", ".", "That", "'s", "my", "right", "and", "the", "courts", "ca", "n't", "silence", "me", "!"]
+# ::lemmas ["i", "will", "continue", "to", "preach", "that", "marriage", "be", "between", "a", "man", "&", "amp", ";", "a", "woman", ".", "that", "be", "my", "right", "and", "the", "court", "can", "not", "silence", "i", "!"]
+(c40-3 / multi-sentence
+       :snt1 (c40-12 / continue-01
+                     :ARG0 (c40-6 / i)
+                     :ARG1 (c40-8 / preach-01
+                                  :ARG0 c40-6
+                                  :ARG1 (c40-2 / marry-01
+                                               :ARG1 (c40-9 / man
+                                                            :ARG2-of c40-2))
+                                  :ARG3 (c40-10 / woman)))
+       :snt2 (c40-0 / and
+                    :op1 (c40-1 / right-05
+                                :ARG1 (c40-11 / i)
+                                :ARG2 c40-2)
+                    :op2 (c40-4 / possible-01
+                                :ARG1 (c40-7 / silence-01
+                                             :ARG0 (c40-5 / court)
+                                             :ARG1 c40-11)
+                                :polarity -)))
+
+# ::snt You light up the White House with gay pride but yet Condemned the confederate flag!
+# ::tokens ["You", "light", "up", "the", "White", "House", "with", "gay", "pride", "but", "yet", "Condemned", "the", "confederate", "flag", "!"]
+# ::lemmas ["you", "light", "up", "the", "White", "House", "with", "gay", "pride", "but", "yet", "condemn", "the", "confederate", "flag", "!"]
+(c41-10 / contrast-01
+        :ARG1 (c41-8 / light-up-09
+                     :ARG0 (c41-2 / you)
+                     :ARG1 (c41-3 / government-organization
+                                  :name (c41-6 / name
+                                               :op1 "White"
+                                               :op2 "House"))
+                     :manner (c41-7 / pride-01
+                                    :ARG0 c41-2
+                                    :ARG1 (c41-4 / gay-01)))
+        :ARG2 (c41-5 / Condem01
+                     :ARG0 c41-2
+                     :ARG1 (c41-9 / flag
+                                  :mod (c41-1 / confederate))
+                     :mod (c41-0 / yet)))
+
+# ::snt Terrorists killing inocents around the world and White House in rainbow colors. Obama isn't worried. No word. Tomorrow would be late..
+# ::tokens ["Terrorists", "killing", "inocents", "around", "the", "world", "and", "White", "House", "in", "rainbow", "colors", ".", "Obama", "is", "n't", "worried", ".", "No", "word", ".", "Tomorrow", "would", "be", "late", ".."]
+# ::lemmas ["terrorist", "kill", "inocent", "around", "the", "world", "and", "White", "House", "in", "rainbow", "color", ".", "Obama", "be", "not", "worried", ".", "no", "word", ".", "Tomorrow", "would", "be", "late", ".."]
+(c42-6 / multi-sentence
+       :snt1 (c42-3 / kill-01
+                    :ARG0 (c42-1 / terrorist)
+                    :ARG1 (c42-12 / person
+                                  :ARG1-of (c42-11 / inoculate-01))
+                    :location (c42-0 / around
+                                     :op1 (c42-17 / and
+                                                  :op1 (c42-14 / world)
+                                                  :op2 (c42-7 / government-organization
+                                                              :name (c42-13 / name
+                                                                            :op1 "White"
+                                                                            :op2 "House"))))
+                    :manner (c42-16 / color
+                                    :mod (c42-2 / rainbow)))
+       :snt2 (c42-4 / worry-01
+                    :ARG1 (c42-8 / person
+                                 :name (c42-5 / name
+                                              :op1 "Obama"))
+                    :polarity -)
+       :snt3 (c42-9 / word-01
+                    :polarity -)
+       :snt4 (c42-15 / late-02
+                     :ARG1 (c42-10 / tomorrow)))
+
+# ::snt Love the SCOTUS ruling. But decor anything w/ rainbows &amp; it gives it the credibility and professionalism of a box of Lucky Charms.
+# ::tokens ["Love", "the", "SCOTUS", "ruling", ".", "But", "decor", "anything", "w/", "rainbows", "&", "amp", ";", "it", "gives", "it", "the", "credibility", "and", "professionalism", "of", "a", "box", "of", "Lucky", "Charms", "."]
+# ::lemmas ["love", "the", "SCOTUS", "ruling", ".", "but", "decor", "anything", "w/", "rainbows", "&", "amp", ";", "it", "give", "it", "the", "credibility", "and", "professionalism", "of", "a", "box", "of", "Lucky", "Charms", "."]
+(c43-20 / multi-sentence
+        :snt1 (c43-12 / love-01
+                      :ARG1 (c43-6 / rule-01
+                                   :ARG0 (c43-9 / government-organization
+                                                :name (c43-5 / name
+                                                             :op1 "SCOTUS"))))
+        :snt2 (c43-15 / and
+                      :op1 (c43-14 / contrast-01
+                                   :ARG2 (c43-19 / decorate-01
+                                                 :ARG1 (c43-13 / anything)
+                                                 :ARG2 (c43-1 / and
+                                                              :op1 (c43-3 / rainbow)
+                                                              :op2 (c43-11 / amp))))
+                      :op2 (c43-10 / give-01
+                                   :ARG0 (c43-4 / it)
+                                   :ARG1 (c43-0 / and
+                                                :op1 (c43-17 / credibility)
+                                                :op2 (c43-18 / professionalism)
+                                                :poss (c43-2 / box
+                                                             :ARG0-of (c43-7 / contain-01
+                                                                             :ARG1 (c43-16 / product
+                                                                                           :name (c43-8 / name
+                                                                                                        :op1 "Lucky"
+                                                                                                        :op2 "Charms")))))
+                                   :ARG2 c43-4)))
+
+# ::snt Same with hetero unions, Pastors are not obligated to preside over marriage ceremonies. We have a right!
+# ::tokens ["Same", "with", "hetero", "unions", ",", "Pastors", "are", "not", "obligated", "to", "preside", "over", "marriage", "ceremonies", ".", "We", "have", "a", "right", "!"]
+# ::lemmas ["same", "with", "hetero", "union", ",", "pastor", "be", "not", "obligate", "to", "preside", "over", "marriage", "ceremony", ".", "we", "have", "a", "right", "!"]
+(c44-4 / multi-sentence
+       :snt1 (c44-9 / obligate-01
+                    :ARG1 (c44-8 / person
+                                 :ARG0-of (c44-11 / have-org-role-91
+                                                  :ARG2 (c44-3 / pope)))
+                    :ARG2 (c44-0 / preside-01
+                                 :ARG0 c44-8
+                                 :ARG1 (c44-12 / ceremony
+                                               :mod (c44-2 / marry-01)))
+                    :ARG1-of (c44-7 / same-01
+                                    :ARG2 (c44-6 / union-02
+                                                 :mod (c44-5 / hetero)))
+                    :polarity -)
+       :snt2 (c44-1 / right-05
+                    :ARG1 (c44-10 / we)))
+
+# ::snt Reagan said no pastel colors in our flag, but here it comes.
+# ::tokens ["Reagan", "said", "no", "pastel", "colors", "in", "our", "flag", ",", "but", "here", "it", "comes", "."]
+# ::lemmas ["Reagan", "say", "no", "pastel", "color", "in", "our", "flag", ",", "but", "here", "it", "come", "."]
+(c45-10 / contrast-01
+        :ARG1 (c45-4 / say-01
+                     :ARG0 (c45-5 / person
+                                  :name (c45-6 / name
+                                               :op1 "Reagan"))
+                     :ARG1 (c45-2 / color-01
+                                  :ARG1 (c45-8 / flag
+                                               :poss (c45-7 / we))
+                                  :ARG2 (c45-1 / pastel)
+                                  :polarity -))
+        :ARG2 (c45-0 / come-01
+                     :ARG1 (c45-3 / it)
+                     :location (c45-9 / here)))
+
+# ::snt sad day in America
+# ::tokens ["sad", "day", "in", "America"]
+# ::lemmas ["sad", "day", "in", "America"]
+(c46-2 / day
+       :ARG1-of (c46-1 / sad-02)
+       :location (c46-0 / country
+                        :name (c46-3 / name
+                                     :op1 "America")))
+
+# ::snt that's what the fags are doing!
+# ::tokens ["that", "'s", "what", "the", "fags", "are", "doing", "!"]
+# ::lemmas ["that", "be", "what", "the", "fag", "be", "do", "!"]
+(c47-2 / do-02
+       :ARG0 (c47-1 / fag)
+       :ARG1 (c47-0 / that))
+
+# ::snt if you look it it it's forged!
+# ::tokens ["if", "you", "look", "it", "it", "it", "'s", "forged", "!"]
+# ::lemmas ["if", "you", "look", "it", "it", "it", "be", "forge", "!"]
+(c48-3 / forge-02
+       :ARG1 (c48-1 / it)
+       :condition (c48-2 / look-01
+                         :ARG0 (c48-0 / you)
+                         :ARG1 c48-1)
+       :mode expressive)
+
+# ::snt --&gt; I'm deeply offended by that, but WTH cares? I'm only a white guy born in the U.S.A!
+# ::tokens ["--&gt", ";", "I", "'m", "deeply", "offended", "by", "that", ",", "but", "WTH", "cares", "?", "I", "'m", "only", "a", "white", "guy", "born", "in", "the", "U.S.A", "!"]
+# ::lemmas ["--&gt", ";", "i", "be", "deeply", "offend", "by", "that", ",", "but", "WTH", "care", "?", "i", "be", "only", "a", "white", "guy", "bear", "in", "the", "U.S.A", "!"]
+(c49-7 / multi-sentence
+       :snt1 (c49-0 / and
+                    :op2 (c49-8 / gt))
+       :snt2 (c49-14 / contrast-01
+                     :ARG1 (c49-13 / offend-01
+                                   :ARG0 (c49-1 / that)
+                                   :ARG1 (c49-10 / i)
+                                   :ARG1-of (c49-4 / deep-02))
+                     :ARG2 (c49-9 / care-01
+                                  :ARG0 (c49-11 / amr-unknown)
+                                  :ARG1-of (c49-3 / cause-01
+                                                  :ARG0 (c49-5 / bear-02
+                                                               :ARG1 c49-10
+                                                               :location (c49-2 / country
+                                                                                :name (c49-12 / name
+                                                                                              :op1 "U.S.A."))
+                                                               :mod (c49-6 / only))))))
+
+# ::snt ! Less not more... Stupid...
+# ::tokens ["!", "Less", "not", "more", "...", "Stupid", "..."]
+# ::lemmas ["!", "less", "not", "more", "...", "stupid", "..."]
+(c50-0 / and
+       :op1 (c50-1 / less
+                   :mode expressive)
+       :op2 (c50-2 / more
+                   :polarity -)
+       :op3 (c50-3 / stupid))

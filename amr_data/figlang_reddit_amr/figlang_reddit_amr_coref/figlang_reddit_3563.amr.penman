@@ -1,0 +1,42 @@
+# ::snt Man executed last night in Arkansas chose Communion for his last meal
+# ::tokens ["Man", "executed", "last", "night", "in", "Arkansas", "chose", "Communion", "for", "his", "last", "meal"]
+# ::lemmas ["man", "execute", "last", "night", "in", "Arkansas", "choose", "Communion", "for", "his", "last", "meal"]
+(c1-3 / choose-01
+      :ARG0 (c1-7 / man
+                  :ARG1-of (c1-10 / execute-01
+                                  :time (c1-0 / date-entity
+                                              :dayperiod (c1-8 / night)
+                                              :mod (c1-9 / yesterday))
+                                  :location (c1-1 / state
+                                                  :name (c1-5 / name
+                                                              :op1 "Arkansas"))))
+      :ARG1 (c1-2 / Communion)
+      :purpose (c1-4 / meal
+                     :poss c1-7
+                     :mod (c1-6 / last)))
+
+# ::snt I pray that this man is in heaven.
+# ::tokens ["I", "pray", "that", "this", "man", "is", "in", "heaven", "."]
+# ::lemmas ["i", "pray", "that", "this", "man", "be", "in", "heaven", "."]
+(c2-4 / pray-01
+      :ARG0 (c2-0 / i)
+      :ARG1 (c2-3 / be-located-at-91
+                  :ARG1 (c2-5 / man
+                              :mod (c2-2 / this))
+                  :ARG2 (c2-1 / heaven)))
+
+# ::snt I do too, but as a gambling man, my money is on a stint in purgatory.
+# ::tokens ["I", "do", "too", ",", "but", "as", "a", "gambling", "man", ",", "my", "money", "is", "on", "a", "stint", "in", "purgatory", "."]
+# ::lemmas ["i", "do", "too", ",", "but", "as", "a", "gambling", "man", ",", "my", "money", "be", "on", "a", "stint", "in", "purgatory", "."]
+(c3-3 / contrast-01
+      :ARG1 (c3-0 / do-02
+                  :ARG0 (c3-8 / i)
+                  :mod (c3-5 / too))
+      :ARG2 (c3-1 / stint
+                  :location (c3-6 / purgatory)
+                  :domain (c3-9 / money
+                                :poss c3-8)
+                  :ARG1-of (c3-2 / cause-01
+                                 :ARG0 (c3-4 / man
+                                             :mod (c3-7 / gamble-01)
+                                             :domain c3-8))))

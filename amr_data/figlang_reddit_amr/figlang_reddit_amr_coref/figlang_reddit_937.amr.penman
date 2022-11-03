@@ -1,0 +1,57 @@
+# ::snt TIL that the United States owns and operates 11 aircraft carriers, one more than the rest of the world combined.
+# ::tokens ["TIL", "that", "the", "United", "States", "owns", "and", "operates", "11", "aircraft", "carriers", ",", "one", "more", "than", "the", "rest", "of", "the", "world", "combined", "."]
+# ::lemmas ["TIL", "that", "the", "United", "States", "own", "and", "operate", "11", "aircraft", "carrier", ",", "one", "more", "than", "the", "rest", "of", "the", "world", "combine", "."]
+(c1-1 / and
+      :op1 (c1-7 / own-01
+                 :ARG0 (c1-2 / country
+                             :name (c1-11 / name
+                                          :op1 "United"
+                                          :op2 "States"))
+                 :ARG1 (c1-0 / carrier
+                             :mod (c1-12 / aircraft)
+                             :ARG1-of (c1-4 / have-quant-91
+                                            :ARG3 (c1-10 / more)
+                                            :ARG4 (c1-6 / carrier
+                                                        :ARG1-of (c1-9 / combine-01
+                                                                       :ARG2 (c1-8 / rest
+                                                                                   :part-of (c1-3 / world)))
+                                                        :quant 1))
+                             :quant 11))
+      :op2 (c1-5 / operate-01
+                 :ARG0 c1-2
+                 :ARG1 c1-0))
+
+# ::snt Our allies don't need them and our enemies can't afford them.
+# ::tokens ["Our", "allies", "do", "n't", "need", "them", "and", "our", "enemies", "ca", "n't", "afford", "them", "."]
+# ::lemmas ["our", "ally", "do", "not", "need", "they", "and", "our", "enemy", "can", "not", "afford", "they", "."]
+(c2-1 / and
+      :op1 (c2-8 / need-01
+                 :ARG0 (c2-7 / person
+                             :ARG1-of (c2-9 / ally-01
+                                            :ARG2 (c2-2 / we)))
+                 :ARG1 (c2-6 / they)
+                 :polarity -)
+      :op2 (c2-5 / possible-01
+                 :ARG1 (c2-0 / afford-01
+                             :ARG0 (c2-3 / person
+                                         :ARG0-of (c2-4 / have-rel-role-91
+                                                        :ARG1 c2-2
+                                                        :ARG2 (c2-10 / enemy)))
+                             :ARG1 c2-6)
+                 :polarity -))
+
+# ::snt Thus...we can never be beaten on the ocean, and thus we never get invaded.
+# ::tokens ["Thus", "...", "we", "can", "never", "be", "beaten", "on", "the", "ocean", ",", "and", "thus", "we", "never", "get", "invaded", "."]
+# ::lemmas ["thus", "...", "we", "can", "never", "be", "beat", "on", "the", "ocean", ",", "and", "thus", "we", "never", "get", "invade", "."]
+(c3-1 / cause-01
+      :ARG1 (c3-7 / possible-01
+                  :ARG1 (c3-6 / beat-01
+                              :ARG1 (c3-2 / we)
+                              :location (c3-5 / ocean)
+                              :time (c3-8 / ever))
+                  :ARG0-of (c3-0 / cause-01
+                                 :ARG1 (c3-3 / invade-01
+                                             :ARG1 c3-2
+                                             :time (c3-4 / ever)
+                                             :polarity -))
+                  :polarity -))

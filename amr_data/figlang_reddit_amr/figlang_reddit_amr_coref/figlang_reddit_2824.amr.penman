@@ -1,0 +1,36 @@
+# ::snt Allo Coming Soon?
+# ::tokens ["Allo", "Coming", "Soon", "?"]
+# ::lemmas ["allo", "come", "soon", "?"]
+(c1-3 / come-01
+      :ARG1 (c1-1 / all)
+      :time (c1-0 / soon)
+      :polarity (c1-2 / amr-unknown))
+
+# ::snt Probably won't come out on Monday because that is a holiday in the US.
+# ::tokens ["Probably", "wo", "n't", "come", "out", "on", "Monday", "because", "that", "is", "a", "holiday", "in", "the", "US", "."]
+# ::lemmas ["probably", "will", "not", "come", "out", "on", "Monday", "because", "that", "be", "a", "holiday", "in", "the", "US", "."]
+(c2-2 / come-out-09
+      :ARG1-of (c2-0 / cause-01
+                     :ARG0 (c2-3 / holiday
+                                 :location (c2-4 / country
+                                                 :name (c2-8 / name
+                                                             :op1 "US"))
+                                 :domain (c2-5 / that)))
+      :mod (c2-6 / probable)
+      :time (c2-1 / date-entity
+                  :weekday (c2-7 / monday))
+      :polarity -)
+
+# ::snt Chrome was released on Labor Day in 2008!
+# ::tokens ["Chrome", "was", "released", "on", "Labor", "Day", "in", "2008", "!"]
+# ::lemmas ["Chrome", "be", "release", "on", "Labor", "Day", "in", "2008", "!"]
+(c3-3 / release-01
+      :ARG1 (c3-4 / person
+                  :name (c3-5 / name
+                              :op1 "Chrome"))
+      :time (c3-1 / festival
+                  :name (c3-2 / name
+                              :op1 "Labor"
+                              :op2 "Day"))
+      :time (c3-0 / date-entity
+                  :year 2008))

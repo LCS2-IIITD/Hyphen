@@ -1,0 +1,114 @@
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c1-0 / congratulate-01
+      :mode expressive)
+
+# ::snt Yay congratulations!
+# ::tokens ["Yay", "congratulations", "!"]
+# ::lemmas ["yay", "congratulation", "!"]
+(c2-1 / congratulate-01
+      :mod (c2-0 / yay))
+
+# ::snt Thank you.
+# ::tokens ["Thank", "you", "."]
+# ::lemmas ["thank", "you", "."]
+(c3-1 / thank-01
+      :ARG0 (c3-0 / i)
+      :ARG1 (c3-2 / you))
+
+# ::snt I just have a sore arm hope ur headache goes away
+# ::tokens ["I", "just", "have", "a", "sore", "arm", "hope", "ur", "headache", "goes", "away"]
+# ::lemmas ["i", "just", "have", "a", "sore", "arm", "hope", "ur", "headache", "go", "away"]
+(c4-2 / hope-01
+      :ARG0 (c4-6 / i
+                  :part (c4-1 / arm
+                              :ARG1-of (c4-0 / sore-03)))
+      :ARG1 (c4-4 / go-01
+                  :ARG1 (c4-5 / headache
+                              :poss c4-6)
+                  :direction (c4-7 / away))
+      :mod (c4-3 / just))
+
+# ::snt Congratulations!
+# ::tokens ["Congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c5-0 / congratulate-01
+      :mode expressive)
+
+# ::snt So far I just have a headache and some soreness in my arm.
+# ::tokens ["So", "far", "I", "just", "have", "a", "headache", "and", "some", "soreness", "in", "my", "arm", "."]
+# ::lemmas ["so", "far", "i", "just", "have", "a", "headache", "and", "some", "soreness", "in", "my", "arm", "."]
+(c6-3 / have-03
+      :ARG0 (c6-7 / i
+                  :part (c6-2 / arm))
+      :ARG1 (c6-8 / and
+                  :op1 (c6-6 / headache)
+                  :op2 (c6-0 / soreness
+                             :mod (c6-1 / some)
+                             :location c6-2))
+      :mod (c6-5 / just)
+      :time (c6-4 / so-far))
+
+# ::snt Do u have any side effects
+# ::tokens ["Do", "u", "have", "any", "side", "effects"]
+# ::lemmas ["do", "u", "have", "any", "side", "effect"]
+(c7-4 / effect-03
+      :polarity (c7-1 / amr-unknown)
+      :ARG0 (c7-3 / you)
+      :ARG1 (c7-2 / event
+                  :mod (c7-0 / side)))
+
+# ::snt Congrats Abe
+# ::tokens ["Congrats", "Abe"]
+# ::lemmas ["Congrats", "Abe"]
+(c8-2 / congratulate-01
+      :ARG1 (c8-0 / person
+                  :name (c8-1 / name
+                              :op1 "Abe")))
+
+# ::snt Ty I also got Pfizer
+# ::tokens ["Ty", "I", "also", "got", "Pfizer"]
+# ::lemmas ["ty", "i", "also", "get", "Pfizer"]
+(c9-2 / get-01
+      :ARG0 (c9-3 / i)
+      :ARG1 (c9-1 / company
+                  :name (c9-4 / name
+                              :op1 "Pfizer"))
+      :mod (c9-0 / also))
+
+# ::snt I got both, good job Abe
+# ::tokens ["I", "got", "both", ",", "good", "job", "Abe"]
+# ::lemmas ["i", "get", "both", ",", "good", "job", "Abe"]
+(c10-0 / say-01
+       :ARG0 (c10-6 / i)
+       :ARG1 (c10-1 / and
+                    :op1 (c10-2 / get-01
+                                :ARG0 c10-6
+                                :ARG1 (c10-4 / both))
+                    :op2 (c10-5 / job
+                                :ARG1-of (c10-8 / good-02)))
+       :ARG2 (c10-3 / person
+                    :name (c10-7 / name
+                                 :op1 "Abe")))
+
+# ::snt Wow, really?? That's amazing! Congrats to you too!!
+# ::tokens ["Wow", ",", "really", "?", "?", "That", "'s", "amazing", "!", "Congrats", "to", "you", "too", "!", "!"]
+# ::lemmas ["wow", ",", "really", "?", "?", "that", "be", "amazing", "!", "congrat", "to", "you", "too", "!", "!"]
+(c11-6 / multi-sentence
+       :snt1 (c11-0 / amaze-01
+                    :ARG0 (c11-3 / that)
+                    :ARG1-of (c11-4 / real-04)
+                    :mode expressive)
+       :snt2 (c11-1 / congratulate-01
+                    :ARG0 (c11-5 / i)
+                    :ARG1 (c11-7 / you)
+                    :mod (c11-2 / too)))
+
+# ::snt Omg same congratulations
+# ::tokens ["Omg", "same", "congratulations"]
+# ::lemmas ["omg", "same", "congratulation"]
+(c12-2 / congratulate-01
+       :ARG1-of (c12-0 / same-01)
+       :mod (c12-1 / oh-my-god
+                   :mode expressive))

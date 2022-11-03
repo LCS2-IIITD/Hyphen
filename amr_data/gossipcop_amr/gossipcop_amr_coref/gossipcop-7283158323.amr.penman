@@ -1,0 +1,156 @@
+# ::snt Nice
+# ::tokens ["Nice"]
+# ::lemmas ["nice"]
+(c1-0 / nice-01)
+
+# ::snt jennifer lopez all the way
+# ::tokens ["jennifer", "lopez", "all", "the", "way"]
+# ::lemmas ["jennifer", "lopez", "all", "the", "way"]
+(c2-1 / person
+      :name (c2-0 / name
+                  :op1 "Jennifer"
+                  :op2 "Lopez")
+      :extent (c2-2 / all-the-way))
+
+# ::snt jennifer lopez
+# ::tokens ["jennifer", "lopez"]
+# ::lemmas ["jennifer", "lopez"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "Jennifer"
+                  :op2 "Lopez"))
+
+# ::snt JLo
+# ::tokens ["JLo"]
+# ::lemmas ["jlo"]
+(c4-1 / person
+      :name (c4-0 / name
+                  :op1 "JLo"))
+
+# ::snt can't people leave Jennifer Anistan alone, Angie stole her man And Brad disgusts me for falling to Angie.
+# ::tokens ["ca", "n't", "people", "leave", "Jennifer", "Anistan", "alone", ",", "Angie", "stole", "her", "man", "And", "Brad", "disgusts", "me", "for", "falling", "to", "Angie", "."]
+# ::lemmas ["can", "not", "people", "leave", "Jennifer", "Anistan", "alone", ",", "Angie", "steal", "her", "man", "and", "Brad", "disgust", "i", "for", "fall", "to", "Angie", "."]
+(c5-5 / and
+      :op1 (c5-7 / possible-01
+                 :ARG1 (c5-8 / leave-15
+                             :ARG0 (c5-2 / person)
+                             :ARG1 (c5-12 / person
+                                          :name (c5-1 / name
+                                                      :op1 "Jennifer"
+                                                      :op2 "Anistan"))
+                             :ARG2 (c5-11 / alone))
+                 :polarity -)
+      :op2 (c5-3 / steal-01
+                 :ARG0 (c5-10 / person
+                              :name (c5-6 / name
+                                          :op1 "Angie"))
+                 :ARG1 (c5-4 / man
+                             :poss c5-10))
+      :op3 (c5-14 / disgust-01
+                  :ARG0 (c5-0 / fall-10
+                              :ARG1 (c5-13 / person
+                                           :name (c5-9 / name
+                                                       :op1 "Brad"))
+                              :ARG2 c5-10)
+                  :ARG1 (c5-15 / i)
+                  :ARG2 c5-0))
+
+# ::snt Aniston would be toast...not even close to Angelina!
+# ::tokens ["Aniston", "would", "be", "toast", "...", "not", "even", "close", "to", "Angelina", "!"]
+# ::lemmas ["Aniston", "would", "be", "toast", "...", "not", "even", "close", "to", "Angelina", "!"]
+(c6-6 / toast-01
+      :ARG1 (c6-4 / person
+                  :name (c6-0 / name
+                              :op1 "Aniston")
+                  :ARG1-of (c6-5 / close-13
+                                 :ARG2 (c6-1 / person
+                                             :name (c6-3 / name
+                                                         :op1 "Angelina"))
+                                 :mod (c6-2 / even)
+                                 :polarity -)))
+
+# ::snt I can say it's not true...but personal stuff needs to stay personal....
+# ::tokens ["I", "can", "say", "it", "'s", "not", "true", "...", "but", "personal", "stuff", "needs", "to", "stay", "personal", "...."]
+# ::lemmas ["i", "can", "say", "it", "be", "not", "true", "...", "but", "personal", "stuff", "need", "to", "stay", "personal", "...."]
+(c7-6 / contrast-01
+      :ARG1 (c7-5 / possible-01
+                  :ARG1 (c7-3 / say-01
+                              :ARG0 (c7-7 / i)
+                              :ARG1 (c7-8 / true-01
+                                          :ARG1 (c7-4 / it)
+                                          :polarity -)))
+      :ARG2 (c7-1 / need-01
+                  :ARG0 (c7-0 / stuff
+                              :ARG1-of (c7-2 / personal-02))
+                  :ARG1 (c7-10 / stay-01
+                               :ARG1 c7-0
+                               :ARG3 (c7-9 / personal-02
+                                           :ARG1 c7-0))))
+
+# ::snt Depends on who is willing to get the dirtiest in the sheets!! My money is on Gomez
+# ::tokens ["Depends", "on", "who", "is", "willing", "to", "get", "the", "dirtiest", "in", "the", "sheets", "!", "!", "My", "money", "is", "on", "Gomez"]
+# ::lemmas ["depend", "on", "who", "be", "willing", "to", "get", "the", "dirty", "in", "the", "sheet", "!", "!", "my", "money", "be", "on", "Gomez"]
+(c8-0 / multi-sentence
+      :snt1 (c8-12 / depend-01
+                   :ARG1 (c8-7 / will-02
+                               :ARG0 (c8-10 / amr-unknown)
+                               :ARG1 (c8-11 / get-01
+                                            :ARG0 c8-10
+                                            :ARG1 (c8-4 / have-degree-91
+                                                        :ARG1 c8-10
+                                                        :ARG2 (c8-8 / dirtiest)
+                                                        :ARG3 (c8-5 / most)
+                                                        :ARG5 (c8-9 / amr-unknown
+                                                                    :location (c8-2 / sheet))))))
+      :snt2 (c8-6 / put-01
+                  :ARG0 (c8-13 / i)
+                  :ARG1 (c8-14 / money
+                               :poss c8-13)
+                  :ARG2 (c8-1 / person
+                              :name (c8-3 / name
+                                          :op1 "Gomez"))))
+
+# ::snt I don't know. But, I do know that I couldn't give a crap.
+# ::tokens ["I", "do", "n't", "know", ".", "But", ",", "I", "do", "know", "that", "I", "could", "n't", "give", "a", "crap", "."]
+# ::lemmas ["i", "do", "not", "know", ".", "but", ",", "i", "do", "know", "that", "i", "could", "not", "give", "a", "crap", "."]
+(c9-0 / multi-sentence
+      :snt1 (c9-2 / know-01
+                  :ARG0 (c9-5 / i)
+                  :polarity -)
+      :snt2 (c9-4 / contrast-01
+                  :ARG2 (c9-7 / know-01
+                              :ARG0 (c9-1 / i)
+                              :ARG1 (c9-3 / possible-01
+                                          :ARG1 (c9-6 / give-16
+                                                      :ARG0 c9-1
+                                                      :ARG1 (c9-8 / crap-01))
+                                          :polarity -))))
+
+# ::snt jen id walk away n let selena get on with it,shame he is old enough to be her father,which is sick to be honest thou
+# ::tokens ["jen", "i", "d", "walk", "away", "n", "let", "selena", "get", "on", "with", "it", ",", "shame", "he", "is", "old", "enough", "to", "be", "her", "father", ",", "which", "is", "sick", "to", "be", "honest", "thou"]
+# ::lemmas ["jen", "i", "d", "walk", "away", "n", "let", "selena", "get", "on", "with", "it", ",", "shame", "he", "be", "old", "enough", "to", "be", "her", "father", ",", "which", "be", "sick", "to", "be", "honest", "thou"]
+(c10-9 / and
+       :op1 (c10-8 / and
+                   :op1 (c10-16 / walk-01
+                                :ARG0 (c10-18 / i)
+                                :direction (c10-7 / away))
+                   :op2 (c10-1 / let-01
+                               :ARG0 c10-18
+                               :ARG1 (c10-10 / get-on-21
+                                             :ARG0 (c10-15 / person
+                                                           :name (c10-13 / name
+                                                                         :op1 "Sylena"))
+                                             :ARG1 (c10-4 / it))))
+       :op2 (c10-0 / shame-02
+                   :ARG0 (c10-6 / have-degree-91
+                                :ARG1 (c10-17 / he)
+                                :ARG2 (c10-2 / old)
+                                :ARG3 (c10-14 / enough)
+                                :ARG6 (c10-5 / have-rel-role-91
+                                             :ARG0 c10-17
+                                             :ARG1 c10-15
+                                             :ARG2 (c10-12 / father))
+                                :ARG0-of (c10-3 / sick-02
+                                                :ARG1-of (c10-11 / honest-01
+                                                                 :ARG0 c10-18)))
+                   :ARG1 c10-18))

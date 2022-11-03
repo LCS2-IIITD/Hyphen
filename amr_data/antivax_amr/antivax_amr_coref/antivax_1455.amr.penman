@@ -1,0 +1,31 @@
+# ::snt Ooofff
+# ::tokens ["Ooofff"]
+# ::lemmas ["Ooofff"]
+(c1-0 / ooo
+      :mode expressive)
+
+# ::snt Watch "A Florida McDonalds is offering $50 just to come in for a job interview" on YouTube
+# ::tokens ["Watch", "\"", "A", "Florida", "McDonalds", "is", "offering", "$", "50", "just", "to", "come", "in", "for", "a", "job", "interview", "\"", "on", "YouTube"]
+# ::lemmas ["watch", "\"", "A", "Florida", "McDonalds", "be", "offer", "$", "50", "just", "to", "come", "in", "for", "a", "job", "interview", "\"", "on", "YouTube"]
+(c2-4 / watch-01
+      :ARG0 (c2-14 / you)
+      :ARG1 (c2-5 / offer-01
+                  :ARG0 (c2-3 / company
+                              :name (c2-13 / name
+                                           :op1 "McDonalds")
+                              :location (c2-0 / state
+                                              :name (c2-7 / name
+                                                          :op1 "Florida")))
+                  :ARG1 (c2-12 / monetary-quantity
+                               :unit (c2-1 / dollar)
+                               :quant 50)
+                  :ARG3 (c2-2 / come-in-07
+                              :ARG1 c2-14
+                              :purpose (c2-11 / interview-01
+                                              :ARG1 c2-14
+                                              :ARG2 (c2-10 / job))
+                              :mod (c2-9 / just)))
+      :medium (c2-8 / publication
+                    :name (c2-6 / name
+                                :op1 "YouTube"))
+      :mode imperative)

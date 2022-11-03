@@ -1,0 +1,35 @@
+# ::snt Rio de Janeiro Olympics pool, just six months after the 2016 games.
+# ::tokens ["Rio", "de", "Janeiro", "Olympics", "pool", ",", "just", "six", "months", "after", "the", "2016", "games", "."]
+# ::lemmas ["Rio", "de", "Janeiro", "Olympics", "pool", ",", "just", "six", "months", "after", "the", "2016", "game", "."]
+(c1-5 / pool
+      :mod (c1-3 / game
+                 :name (c1-7 / name
+                             :op1 "Rio"
+                             :op2 "de"
+                             :op3 "Janeiro"
+                             :op4 "Olympics"))
+      :time (c1-1 / after
+                  :op1 c1-3
+                  :time (c1-0 / date-entity
+                              :year 2016))
+      :quant (c1-2 / temporal-quantity
+                   :unit (c1-6 / month)
+                   :mod (c1-4 / just)
+                   :quant 6))
+
+# ::snt Seriously makes the case to only have the Olympics at a few choice host cities/ countries.
+# ::tokens ["Seriously", "makes", "the", "case", "to", "only", "have", "the", "Olympics", "at", "a", "few", "choice", "host", "cities/", "countries", "."]
+# ::lemmas ["seriously", "make", "the", "case", "to", "only", "have", "the", "Olympics", "at", "a", "few", "choice", "host", "cities/", "country", "."]
+(c2-4 / case-03
+      :ARG1 (c2-5 / have-03
+                  :ARG1 (c2-9 / game
+                              :name (c2-11 / name
+                                           :op1 "Olympics"))
+                  :location (c2-8 / or
+                                  :op1 (c2-0 / city)
+                                  :op2 (c2-7 / country)
+                                  :ARG0-of (c2-10 / host-01)
+                                  :ARG1-of (c2-2 / choose-01)
+                                  :quant (c2-3 / few))
+                  :mod (c2-6 / only))
+      :ARG2-of (c2-1 / serious-01))

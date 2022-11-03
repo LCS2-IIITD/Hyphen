@@ -1,0 +1,65 @@
+# ::snt Whaaaaaat?
+# ::tokens ["Whaaaaaat", "?"]
+# ::lemmas ["Whaaaaaat", "?"]
+(c1-0 / whaaat
+      :mode expressive)
+
+# ::snt She's right. Or at least they're trying to.
+# ::tokens ["She", "'s", "right", ".", "Or", "at", "least", "they", "'re", "trying", "to", "."]
+# ::lemmas ["she", "be", "right", ".", "or", "at", "least", "they", "be", "try", "to", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / right-06
+                  :ARG1 (c2-2 / she))
+      :snt2 (c2-0 / or
+                  :op2 (c2-5 / try-01
+                             :ARG0 (c2-6 / they)
+                             :mod (c2-4 / at-least))))
+
+# ::snt one trick whore hack bitch can't even act. I've hated her since effin Pirates of the Caribbean!!Figures she'd defend
+# ::tokens ["one", "trick", "whore", "hack", "bitch", "ca", "n't", "even", "act", ".", "I", "'ve", "hated", "her", "since", "effin", "Pirates", "of", "the", "Caribbean!!Figures", "she", "'d", "defend"]
+# ::lemmas ["one", "trick", "whore", "hack", "bitch", "can", "not", "even", "act", ".", "i", "'ve", "hate", "she", "since", "effin", "Pirates", "of", "the", "caribbean!!figure", "she", "would", "defend"]
+(c3-3 / multi-sentence
+      :snt1 (c3-9 / possible-01
+                  :ARG1 (c3-16 / act-01
+                               :ARG0 (c3-2 / bitch
+                                           :mod (c3-8 / hack)
+                                           :ARG0-of (c3-11 / whore-01
+                                                           :ARG2 (c3-14 / trick))
+                                           :quant 1)
+                               :mod (c3-7 / even))
+                  :polarity -)
+      :snt2 (c3-13 / hate-01
+                   :ARG0 (c3-15 / i)
+                   :ARG1 (c3-5 / she)
+                   :time (c3-0 / since
+                               :op1 (c3-10 / work-of-art
+                                           :name (c3-4 / name
+                                                       :op1 "Pirate"
+                                                       :op2 "of"
+                                                       :op3 "the"
+                                                       :op4 "Caribbean")
+                                           :mod (c3-17 / effin
+                                                       :mode expressive)))
+                   :ARG1-of (c3-12 / cause-01
+                                   :ARG0 (c3-1 / figure-01
+                                               :ARG1 (c3-6 / defend-01
+                                                           :ARG0 c3-5)))))
+
+# ::snt A lot of the Conservative actors are in hiding.
+# ::tokens ["A", "lot", "of", "the", "Conservative", "actors", "are", "in", "hiding", "."]
+# ::lemmas ["a", "lot", "of", "the", "Conservative", "actor", "be", "in", "hiding", "."]
+(c4-1 / hide-01
+      :ARG0 (c4-2 / person
+                  :ARG0-of (c4-5 / act-01)
+                  :quant (c4-3 / lot)
+                  :mod (c4-0 / person
+                             :mod (c4-4 / conservative))))
+
+# ::snt stand up lady.
+# ::tokens ["stand", "up", "lady", "."]
+# ::lemmas ["stand", "up", "lady", "."]
+(c5-2 / say-01
+      :ARG1 (c5-0 / stand-up-07
+                  :ARG1 (c5-1 / lady
+                              :ARG2-of c5-2)
+                  :mode imperative))

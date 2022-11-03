@@ -1,0 +1,80 @@
+# ::snt Lucky dudes
+# ::tokens ["Lucky", "dudes"]
+# ::lemmas ["lucky", "dude"]
+(c1-0 / dude
+      :ARG1-of (c1-1 / lucky-01))
+
+# ::snt Now reverse the genders. Are they lucky girls? Of course not, what a dumb point you make.
+# ::tokens ["Now", "reverse", "the", "genders", ".", "Are", "they", "lucky", "girls", "?", "Of", "course", "not", ",", "what", "a", "dumb", "point", "you", "make", "."]
+# ::lemmas ["now", "reverse", "the", "gender", ".", "be", "they", "lucky", "girl", "?", "of", "course", "not", ",", "what", "a", "dumb", "point", "you", "make", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-5 / reverse-01
+                   :ARG1 (c2-8 / gender)
+                   :time (c2-11 / now))
+       :snt2 (c2-12 / girl
+                    :polarity (c2-2 / amr-unknown)
+                    :mod (c2-6 / lucky)
+                    :domain (c2-4 / they))
+       :snt3 (c2-9 / point-04
+                   :ARG0 (c2-7 / you)
+                   :mod (c2-0 / dumb
+                              :degree (c2-1 / so))
+                   :mod (c2-3 / of-course)))
+
+# ::snt Woah, don't insult others by referencing mental disabilities.
+# ::tokens ["Woah", ",", "do", "n't", "insult", "others", "by", "referencing", "mental", "disabilities", "."]
+# ::lemmas ["Woah", ",", "do", "not", "insult", "other", "by", "reference", "mental", "disability", "."]
+(c3-4 / insult-01
+      :ARG0 (c3-6 / you)
+      :ARG1 (c3-2 / other)
+      :manner (c3-3 / reference-04
+                    :ARG0 c3-6
+                    :ARG1 (c3-0 / disability
+                                :mod (c3-5 / mind)))
+      :mod (c3-1 / wah
+                 :mode expressive)
+      :polarity -
+      :mode imperative)
+
+# ::snt Using mental illness as a way to call something stupid is only showing of your lack of creativity
+# ::tokens ["Using", "mental", "illness", "as", "a", "way", "to", "call", "something", "stupid", "is", "only", "showing", "of", "your", "lack", "of", "creativity"]
+# ::lemmas ["use", "mental", "illness", "as", "a", "way", "to", "call", "something", "stupid", "be", "only", "show", "of", "your", "lack", "of", "creativity"]
+(c4-0 / show-01
+      :ARG0 (c4-5 / use-01
+                  :ARG0 (c4-11 / you)
+                  :ARG1 (c4-9 / ill-01
+                              :ARG1 c4-11
+                              :ARG2 (c4-10 / mental))
+                  :ARG2 (c4-3 / way
+                              :manner-of (c4-2 / call-01
+                                               :ARG0 c4-11
+                                               :ARG1 (c4-8 / something)
+                                               :ARG2 (c4-4 / stupid))))
+      :ARG1 (c4-7 / lack-01
+                  :ARG0 c4-11
+                  :ARG1 (c4-1 / creativity))
+      :mod (c4-6 / only))
+
+# ::snt Gender bias exists but it's still wrong. That's why we use the word bias, to mean there's something wrong with the logic of it.
+# ::tokens ["Gender", "bias", "exists", "but", "it", "'s", "still", "wrong", ".", "That", "'s", "why", "we", "use", "the", "word", "bias", ",", "to", "mean", "there", "'s", "something", "wrong", "with", "the", "logic", "of", "it", "."]
+# ::lemmas ["Gender", "bias", "exist", "but", "it", "be", "still", "wrong", ".", "that", "be", "why", "we", "use", "the", "word", "bias", ",", "to", "mean", "there", "be", "something", "wrong", "with", "the", "logic", "of", "it", "."]
+(c5-14 / multi-sentence
+       :snt1 (c5-4 / contrast-01
+                   :ARG1 (c5-16 / exist-01
+                                :ARG1 (c5-11 / bias-01
+                                             :ARG1 (c5-9 / gender)))
+                   :ARG2 (c5-5 / wrong-02
+                               :ARG1 c5-11
+                               :mod (c5-0 / still)))
+       :snt2 (c5-1 / cause-01
+                   :ARG0 (c5-8 / that)
+                   :ARG1 (c5-7 / use-01
+                               :ARG0 (c5-15 / we)
+                               :ARG1 (c5-13 / word
+                                            :mod (c5-2 / bias-01))
+                               :ARG2 (c5-6 / mean-01
+                                           :ARG0 c5-15
+                                           :ARG2 (c5-3 / wrong-02
+                                                       :ARG1 (c5-12 / something)
+                                                       :ARG2 (c5-10 / logic
+                                                                    :poss c5-2))))))

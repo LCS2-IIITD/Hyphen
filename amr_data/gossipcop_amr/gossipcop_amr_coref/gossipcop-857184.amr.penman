@@ -1,0 +1,75 @@
+# ::snt He is a total piece of Trash and should have been charged with vehicular homicide IMO
+# ::tokens ["He", "is", "a", "total", "piece", "of", "Trash", "and", "should", "have", "been", "charged", "with", "vehicular", "homicide", "IMO"]
+# ::lemmas ["he", "be", "a", "total", "piece", "of", "Trash", "and", "should", "have", "be", "charge", "with", "vehicular", "homicide", "IMO"]
+(c1-1 / and
+      :op1 (c1-5 / piece
+                 :mod (c1-9 / trash)
+                 :ARG1-of (c1-10 / total-01)
+                 :domain (c1-4 / he))
+      :op2 (c1-2 / recommend-01
+                 :ARG1 (c1-6 / charge-05
+                             :ARG1 c1-4
+                             :ARG2 (c1-7 / homicide
+                                         :mod (c1-3 / vehicular)))
+                 :ARG1-of (c1-0 / opine-01
+                                :ARG0 (c1-8 / i))))
+
+# ::snt I definitely % agree !
+# ::tokens ["I", "definitely", "%", "agree", "!"]
+# ::lemmas ["i", "definitely", "%", "agree", "!"]
+(c2-2 / agree-01
+      :ARG0 (c2-1 / i)
+      :mod (c2-0 / definite))
+
+# ::snt Ah by using his white privilege...nice.
+# ::tokens ["Ah", "by", "using", "his", "white", "privilege", "...", "nice", "."]
+# ::lemmas ["ah", "by", "use", "his", "white", "privilege", "...", "nice", "."]
+(c3-0 / nice-01
+      :ARG1 (c3-5 / use-01
+                  :ARG1 (c3-2 / privilege-01
+                              :ARG1 (c3-1 / he)
+                              :ARG2 (c3-3 / white-02)))
+      :mod (c3-4 / ah
+                 :mode expressive))
+
+# ::snt YOU DO THE CRIME YOU DO THE TIME CHRIS SOULES
+# ::tokens ["YOU", "DO", "THE", "CRIME", "YOU", "DO", "THE", "TIME", "CHRIS", "SOULES"]
+# ::lemmas ["you", "do", "the", "crime", "you", "do", "the", "TIME", "CHRIS", "SOULES"]
+(c4-2 / say-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-6 / do-02
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-4 / crime-02
+                              :ARG0 c4-0))
+      :ARG2 (c4-3 / person
+                  :name (c4-1 / name
+                              :op1 "Chris"
+                              :op2 "Soules")))
+
+# ::snt I'm criminal defense lawyer in Pasadena-Ca,I've defended accused of fatal crash,which means accused of fatal crash=killed/paralyzed someone
+# ::tokens ["I", "'m", "criminal", "defense", "lawyer", "in", "Pasadena", "-", "Ca", ",", "I've", "defended", "accused", "of", "fatal", "crash", ",", "which", "means", "accused", "of", "fatal", "crash", "=", "killed", "/", "paralyzed", "someone"]
+# ::lemmas ["i", "be", "criminal", "defense", "lawyer", "in", "Pasadena", "-", "Ca", ",", "i've", "defend", "accuse", "of", "fatal", "crash", ",", "which", "mean", "accuse", "of", "fatal", "crash", "=", "kill", "/", "paralyze", "someone"]
+(c5-9 / multi-sentence
+      :snt1 (c5-1 / lawyer
+                  :ARG0-of (c5-20 / defend-01
+                                  :ARG3 (c5-11 / criminal-03))
+                  :location (c5-8 / city
+                                  :name (c5-15 / name
+                                               :op1 "Pasadena-Ca")))
+      :snt2 (c5-12 / defend-01
+                   :ARG0 (c5-19 / i)
+                   :ARG1 (c5-17 / person
+                                :ARG1-of (c5-7 / accuse-01
+                                               :ARG2 (c5-2 / crash-01
+                                                           :mod (c5-14 / fatal))
+                                               :ARG1-of (c5-4 / mean-01
+                                                              :ARG2 (c5-6 / accuse-01
+                                                                          :ARG1 c5-17
+                                                                          :ARG2 (c5-13 / crash-01
+                                                                                       :mod (c5-18 / fatal)
+                                                                                       :ARG1-of (c5-16 / equal-01
+                                                                                                       :ARG2 (c5-0 / slash
+                                                                                                                   :op1 (c5-5 / kill-01
+                                                                                                                              :ARG1 (c5-3 / someone))
+                                                                                                                   :op2 (c5-10 / paralyze-01
+                                                                                                                               :ARG1 c5-3))))))))))

@@ -1,0 +1,107 @@
+# ::snt Its just about time.
+# ::tokens ["Its", "just", "about", "time", "."]
+# ::lemmas ["its", "just", "about", "time", "."]
+(c1-2 / time
+      :mod (c1-1 / about
+                 :mod (c1-0 / just)))
+
+# ::snt Get well soon
+# ::tokens ["Get", "well", "soon"]
+# ::lemmas ["get", "well", "soon"]
+(c2-0 / get-03
+      :ARG1 (c2-2 / you)
+      :ARG2 (c2-1 / well-05
+                  :ARG1 c2-2)
+      :time (c2-3 / soon)
+      :mode imperative)
+
+# ::snt Its Go Time! Up Next? Ready to live in person, today .
+# ::tokens ["Its", "Go", "Time", "!", "Up", "Next", "?", "Ready", "to", "live", "in", "person", ",", "today", "."]
+# ::lemmas ["its", "Go", "time", "!", "up", "next", "?", "ready", "to", "live", "in", "person", ",", "today", "."]
+(c3-8 / multi-sentence
+      :snt1 (c3-6 / go-01
+                  :ARG1 (c3-10 / you)
+                  :time (c3-9 / now)
+                  :mode imperative)
+      :snt2 (c3-3 / next
+                  :domain (c3-1 / now)
+                  :ARG1-of (c3-0 / mean-01
+                                 :ARG2 (c3-4 / ready-02
+                                             :ARG1 (c3-11 / you)
+                                             :ARG2 (c3-5 / live-01
+                                                         :ARG0 c3-11
+                                                         :manner (c3-7 / in-person))
+                                             :time (c3-2 / today)))))
+
+# ::snt Seattle to see my grandkids. Oh and daughter/son-in-law. But I need st dose first
+# ::tokens ["Seattle", "to", "see", "my", "grandkids", ".", "Oh", "and", "daughter", "/", "son", "-", "in", "-", "law", ".", "But", "I", "need", "st", "dose", "first"]
+# ::lemmas ["Seattle", "to", "see", "my", "grandkid", ".", "oh", "and", "daughter", "/", "son", "-", "in", "-", "law", ".", "but", "i", "need", "st", "dose", "first"]
+(c4-9 / multi-sentence
+      :snt1 (c4-11 / see-01
+                   :ARG0 (c4-4 / i)
+                   :ARG1 (c4-21 / person
+                                :ARG0-of (c4-17 / have-rel-role-91
+                                                :ARG1 c4-4
+                                                :ARG2 (c4-8 / grandkid)))
+                   :location (c4-6 / city
+                                   :name (c4-10 / name
+                                                :op1 "Seattle")))
+      :snt2 (c4-16 / and
+                   :op1 (c4-7 / oh)
+                   :op2 (c4-20 / slash
+                               :op1 (c4-19 / person
+                                           :ARG0-of (c4-3 / have-rel-role-91
+                                                          :ARG1 c4-4
+                                                          :ARG2 (c4-0 / daughter)))
+                               :op2 (c4-12 / person
+                                           :ARG0-of (c4-5 / have-rel-role-91
+                                                          :ARG1 c4-4
+                                                          :ARG2 (c4-14 / son-in-law)))))
+      :snt3 (c4-1 / contrast-01
+                  :ARG2 (c4-2 / need-01
+                              :ARG0 (c4-13 / i)
+                              :ARG1 (c4-15 / dose)
+                              :ord (c4-18 / ordinal-entity
+                                          :value 1))))
+
+# ::snt I got sick after my second shot. Still sheltering in place.
+# ::tokens ["I", "got", "sick", "after", "my", "second", "shot", ".", "Still", "sheltering", "in", "place", "."]
+# ::lemmas ["i", "get", "sick", "after", "my", "second", "shot", ".", "still", "shelter", "in", "place", "."]
+(c5-9 / multi-sentence
+      :snt1 (c5-0 / sick-05
+                  :ARG1 (c5-8 / i)
+                  :time (c5-1 / after
+                              :op1 (c5-7 / shoot-02
+                                         :ARG0 c5-8
+                                         :ord (c5-5 / ordinal-entity
+                                                    :value 2))))
+      :snt2 (c5-3 / shelter-01
+                  :ARG1 (c5-2 / i)
+                  :mod (c5-6 / still)
+                  :mod (c5-4 / in-place)))
+
+# ::snt Watch at OBrate
+# ::tokens ["Watch", "at", "OBrate"]
+# ::lemmas ["watch", "at", "OBrate"]
+(c6-0 / watch-01
+      :ARG0 (c6-3 / you)
+      :location (c6-1 / publication
+                      :name (c6-2 / name
+                                  :op1 "OBrate"))
+      :mode imperative)
+
+# ::snt Throw my mask in the fireplace (once were out of this of course)
+# ::tokens ["Throw", "my", "mask", "in", "the", "fireplace", "(", "once", "were", "out", "of", "this", "of", "course", ")"]
+# ::lemmas ["throw", "my", "mask", "in", "the", "fireplace", "(", "once", "be", "out", "of", "this", "of", "course", ")"]
+(c7-4 / throw-01
+      :ARG0 (c7-8 / you)
+      :ARG1 (c7-7 / mask
+                  :poss (c7-6 / i))
+      :ARG2 (c7-0 / fireplace)
+      :ARG1-of (c7-1 / cause-01
+                     :ARG0 (c7-5 / be-located-at-91
+                                 :ARG1 c7-7
+                                 :ARG2 c7-0
+                                 :mod (c7-3 / of-course)
+                                 :time (c7-2 / once)))
+      :mode imperative)

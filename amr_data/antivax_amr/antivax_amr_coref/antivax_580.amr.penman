@@ -1,0 +1,54 @@
+# ::snt That dog is living the charmed life .
+# ::tokens ["That", "dog", "is", "living", "the", "charmed", "life", "."]
+# ::lemmas ["that", "dog", "be", "live", "the", "charmed", "life", "."]
+(c2-3 / live-01
+      :ARG0 (c2-0 / dog
+                  :mod (c2-2 / that))
+      :ARG1 (c2-4 / life
+                  :ARG1-of (c2-1 / char-01)))
+
+# ::snt *7lb
+# ::tokens ["*", "7", "lb"]
+# ::lemmas ["*", "7", "lb"]
+(c3-1 / mass-quantity
+      :unit (c3-0 / pound)
+      :quant 7)
+
+# ::snt he be phucking that can cheese up.. thats prob why he think he a pitbull (he a lbd Pomeranian) lol
+# ::tokens ["he", "be", "phucking", "that", "can", "cheese", "up", "..", "that", "s", "prob", "why", "he", "think", "he", "a", "pitbull", "(", "he", "a", "lbd", "Pomeranian", ")", "lol"]
+# ::lemmas ["he", "be", "phucke", "that", "can", "cheese", "up", "..", "that", "s", "prob", "why", "he", "think", "he", "a", "pitbull", "(", "he", "a", "lbd", "Pomeranian", ")", "lol"]
+(c4-15 / multi-sentence
+       :snt1 (c4-2 / cheese-up-00
+                   :ARG0 (c4-6 / he)
+                   :ARG1 (c4-10 / that)
+                   :ARG1-of (c4-14 / possible-01))
+       :snt2 (c4-9 / probable
+                   :domain (c4-0 / cause-01
+                                 :ARG0 (c4-4 / that)
+                                 :ARG1 (c4-17 / think-01
+                                              :ARG0 (c4-13 / he)
+                                              :ARG1 (c4-5 / pitbull
+                                                          :domain c4-13
+                                                          :ARG1-of (c4-3 / mean-01
+                                                                         :ARG2 (c4-7 / person
+                                                                                     :name (c4-16 / name
+                                                                                                  :op1 "Pomeranian")
+                                                                                     :domain c4-13
+                                                                                     :ARG1-of (c4-11 / liberal-02)))))))
+       :snt3 (c4-12 / laugh-01
+                    :ARG0 (c4-8 / i)
+                    :manner (c4-1 / loud)
+                    :mode expressive))
+
+# ::snt Damn, Ill tell my dog not to worry
+# ::tokens ["Damn", ",", "Ill", "tell", "my", "dog", "not", "to", "worry"]
+# ::lemmas ["damn", ",", "Ill", "tell", "my", "dog", "not", "to", "worry"]
+(c6-3 / tell-01
+      :ARG0 (c6-4 / i)
+      :ARG1 (c6-1 / worry-02
+                  :ARG0 (c6-0 / dog
+                              :poss c6-4
+                              :ARG2-of c6-3)
+                  :polarity -)
+      :mod (c6-2 / damn
+                 :mode expressive))

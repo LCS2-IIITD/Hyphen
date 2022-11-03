@@ -1,0 +1,66 @@
+# ::snt After marrying the first gay couple in Alabama, the judge requested a picture with the couple
+# ::tokens ["After", "marrying", "the", "first", "gay", "couple", "in", "Alabama", ",", "the", "judge", "requested", "a", "picture", "with", "the", "couple"]
+# ::lemmas ["after", "marry", "the", "first", "gay", "couple", "in", "Alabama", ",", "the", "judge", "request", "a", "picture", "with", "the", "couple"]
+(c1-5 / request-01
+      :ARG0 (c1-8 / person
+                  :ARG0-of (c1-7 / judge-01))
+      :ARG1 (c1-4 / picture-01
+                  :ARG1 (c1-2 / couple
+                              :ARG1-of (c1-6 / gay-01)
+                              :ord (c1-3 / ordinal-entity
+                                         :value 1)
+                              :location (c1-0 / state
+                                              :name (c1-10 / name
+                                                           :op1 "Alabama"))))
+      :time (c1-1 / after
+                  :op1 (c1-9 / marry-01
+                             :ARG1 c1-2
+                             :ARG2 c1-2)))
+
+# ::snt Am I the only one who doesn't know if the couple is two men or two women?
+# ::tokens ["Am", "I", "the", "only", "one", "who", "does", "n't", "know", "if", "the", "couple", "is", "two", "men", "or", "two", "women", "?"]
+# ::lemmas ["be", "i", "the", "only", "one", "who", "do", "not", "know", "if", "the", "couple", "be", "two", "man", "or", "two", "woman", "?"]
+(c2-5 / one
+      :mod (c2-4 / only)
+      :domain (c2-6 / i)
+      :ARG0-of (c2-8 / know-01
+                     :ARG1 (c2-0 / or
+                                 :op1 (c2-7 / man
+                                            :quant 2)
+                                 :op2 (c2-3 / woman
+                                            :quant 2)
+                                 :domain (c2-2 / couple))
+                     :polarity -)
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt I was like "No, wait... that one's the judge, so...."
+# ::tokens ["I", "was", "like", "\"", "No", ",", "wait", "...", "that", "one", "'s", "the", "judge", ",", "so", "....", "\""]
+# ::lemmas ["i", "be", "like", "\"", "no", ",", "wait", "...", "that", "one", "be", "the", "judge", ",", "so", "....", "\""]
+(c3-5 / like-01
+      :ARG0 (c3-8 / i)
+      :ARG1 (c3-1 / wait-01
+                  :ARG1 (c3-9 / you)
+                  :ARG1-of (c3-0 / cause-01
+                                 :ARG0 (c3-6 / person
+                                             :ARG0-of (c3-7 / judge-01)
+                                             :domain (c3-3 / one
+                                                           :mod (c3-4 / that))
+                                             :ARG1-of (c3-2 / infer-01)))
+                  :mode imperative))
+
+# ::snt I saw the white judge and was briefly hoping this was an interracial gay marriage.
+# ::tokens ["I", "saw", "the", "white", "judge", "and", "was", "briefly", "hoping", "this", "was", "an", "interracial", "gay", "marriage", "."]
+# ::lemmas ["i", "see", "the", "white", "judge", "and", "be", "briefly", "hope", "this", "be", "an", "interracial", "gay", "marriage", "."]
+(c4-1 / and
+      :op1 (c4-0 / see-01
+                 :ARG0 (c4-9 / i)
+                 :ARG1 (c4-6 / person
+                             :ARG0-of (c4-8 / judge-01)
+                             :ARG1-of (c4-2 / white-02)))
+      :op2 (c4-3 / hope-01
+                 :ARG0 c4-9
+                 :ARG1 (c4-10 / marry-01
+                              :mod (c4-7 / gay-01)
+                              :mod (c4-4 / interracial)
+                              :domain (c4-5 / this))
+                 :duration (c4-11 / brief)))

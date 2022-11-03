@@ -1,0 +1,28 @@
+# ::snt That's good
+# ::tokens ["That", "'s", "good"]
+# ::lemmas ["that", "be", "good"]
+(c1-0 / good-02
+      :ARG1 (c1-1 / that))
+
+# ::snt It's a great feeling - the camaraderie at the vaccine centre is nd to none
+# ::tokens ["It", "'s", "a", "great", "feeling", "-", "the", "camaraderie", "at", "the", "vaccine", "centre", "is", "nd", "to", "none"]
+# ::lemmas ["it", "be", "a", "great", "feeling", "-", "the", "camaraderie", "at", "the", "vaccine", "centre", "be", "nd", "to", "none"]
+(c2-1 / feel-01
+      :ARG1 (c2-6 / it)
+      :mod (c2-5 / great)
+      :ARG1-of (c2-2 / cause-01
+                     :ARG0 (c2-0 / camaraderie
+                                 :location (c2-3 / center
+                                                 :purpose (c2-4 / vaccine))
+                                 :mod (c2-7 / none))))
+
+# ::snt That's great news, mine is tomorrow
+# ::tokens ["That", "'s", "great", "news", ",", "mine", "is", "tomorrow"]
+# ::lemmas ["that", "be", "great", "news", ",", "mine", "be", "tomorrow"]
+(c3-0 / contrast-01
+      :ARG1 (c3-6 / news
+                  :mod (c3-4 / great)
+                  :domain (c3-2 / that))
+      :ARG2 (c3-3 / news
+                  :time (c3-1 / tomorrow)
+                  :poss (c3-5 / i)))

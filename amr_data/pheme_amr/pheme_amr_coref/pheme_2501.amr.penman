@@ -1,0 +1,98 @@
+# ::snt . A320 via
+# ::tokens [".", "A320", "via"]
+# ::lemmas [".", "A320", "via"]
+(c4-1 / via
+      :op1 (c4-2 / product
+                 :name (c4-0 / name
+                             :op1 "A320")))
+
+# ::snt RIP
+# ::tokens ["RIP"]
+# ::lemmas ["RIP"]
+(c7-2 / rest-01
+      :ARG1 (c7-0 / you)
+      :manner (c7-1 / peace))
+
+# ::snt Viel Kraft den Angehrigen. Wie Furchtbar ..........
+# ::tokens ["Viel", "Kraft", "den", "Angehrigen", ".", "Wie", "Furchtbar", ".........."]
+# ::lemmas ["Viel", "Kraft", "den", "Angehrigen", ".", "Wie", "Furchtbar", ".........."]
+(c8-0 / multi-sentence
+      :snt1 (c8-3 / person
+                  :name (c8-1 / name
+                              :op1 "Viel"
+                              :op2 "Kraft"
+                              :op3 "Den"
+                              :op4 "Angehrigen"))
+      :snt2 (c8-4 / person
+                  :name (c8-2 / name
+                              :op1 "Wie"
+                              :op2 "Furchtbar")))
+
+# ::snt where is this crash locaiton on a map?
+# ::tokens ["where", "is", "this", "crash", "locaiton", "on", "a", "map", "?"]
+# ::lemmas ["where", "be", "this", "crash", "locaiton", "on", "a", "map", "?"]
+(c10-2 / be-located-at-91
+       :ARG1 (c10-0 / locaiton
+                    :topic (c10-3 / crash-01)
+                    :mod (c10-4 / this))
+       :ARG2 (c10-5 / amr-unknown)
+       :location (c10-1 / map))
+
+# ::snt Ok if we use this on KTLA channel in Los Angeles?
+# ::tokens ["Ok", "if", "we", "use", "this", "on", "KTLA", "channel", "in", "Los", "Angeles", "?"]
+# ::lemmas ["ok", "if", "we", "use", "this", "on", "KTLA", "channel", "in", "Los", "Angeles", "?"]
+(c11-2 / okay-01
+       :polarity (c11-8 / amr-unknown)
+       :condition (c11-1 / use-01
+                         :ARG0 (c11-0 / we)
+                         :ARG1 (c11-7 / this)
+                         :location (c11-6 / channel
+                                          :name (c11-3 / name
+                                                       :op1 "KTLA")
+                                          :location (c11-5 / city
+                                                           :name (c11-4 / name
+                                                                        :op1 "Los"
+                                                                        :op2 "Angeles")))))
+
+# ::snt sincerest condolences to all the families. I feel so sorry for the rescuers it will be difficult.
+# ::tokens ["sincerest", "condolences", "to", "all", "the", "families", ".", "I", "feel", "so", "sorry", "for", "the", "rescuers", "it", "will", "be", "difficult", "."]
+# ::lemmas ["sincere", "condolence", "to", "all", "the", "family", ".", "i", "feel", "so", "sorry", "for", "the", "rescuer", "it", "will", "be", "difficult", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-9 / condolence
+                    :ARG1-of (c13-0 / have-degree-91
+                                    :ARG2 (c13-13 / sincere)
+                                    :ARG3 (c13-7 / most))
+                    :beneficiary (c13-1 / family
+                                        :mod (c13-14 / all)))
+       :snt2 (c13-6 / feel-01
+                    :ARG0 (c13-5 / i)
+                    :ARG1 (c13-4 / sorry-01
+                                 :ARG1 c13-5
+                                 :ARG2 (c13-8 / difficult
+                                              :domain (c13-10 / it))
+                                 :degree (c13-3 / so))
+                    :ARG2 (c13-11 / person
+                                  :ARG0-of (c13-12 / rescue-01))))
+
+# ::snt ! !
+# ::tokens ["!", "!"]
+# ::lemmas ["!", "!"]
+(c15-0 / thing
+       :mode expressive)
+
+# ::snt .: Here is a photo from helicopter of the crash area.France2journalists
+# ::tokens [".", ":", "Here", "is", "a", "photo", "from", "helicopter", "of", "the", "crash", "area", ".", "France2journalists"]
+# ::lemmas [".", ":", "here", "be", "a", "photo", "from", "helicopter", "of", "the", "crash", "area", ".", "france2journalist"]
+(c16-2 / photo
+       :source (c16-0 / helicopter)
+       :location (c16-5 / area
+                        :location-of (c16-3 / crash-01))
+       :source (c16-4 / publication
+                      :name (c16-1 / name
+                                   :op1 "France2"
+                                   :op2 "journalists")))
+
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c17-0 / amr-empty)

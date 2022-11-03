@@ -1,0 +1,33 @@
+# ::snt He has a talent for turning a $$$ from violence.
+# ::tokens ["He", "has", "a", "talent", "for", "turning", "a", "$", "$", "$", "from", "violence", "."]
+# ::lemmas ["he", "have", "a", "talent", "for", "turn", "a", "$", "$", "$", "from", "violence", "."]
+(c1-2 / have-03
+      :ARG0 (c1-5 / he)
+      :ARG1 (c1-4 / talent
+                  :topic (c1-1 / turn-02
+                               :ARG0 c1-5
+                               :ARG1 (c1-0 / dollar)
+                               :ARG2 (c1-3 / violence))))
+
+# ::snt Very evil family. AmWay Products dynasty.
+# ::tokens ["Very", "evil", "family", ".", "AmWay", "Products", "dynasty", "."]
+# ::lemmas ["very", "evil", "family", ".", "AmWay", "Products", "dynasty", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-1 / family
+                  :mod (c2-5 / evil
+                             :degree (c2-2 / very)))
+      :snt2 (c2-0 / dynasty
+                  :name (c2-4 / name
+                              :op1 "AmWay"
+                              :op2 "Products")))
+
+# ::snt He belongs in a lead-lined solitary prison cell.
+# ::tokens ["He", "belongs", "in", "a", "lead", "-", "lined", "solitary", "prison", "cell", "."]
+# ::lemmas ["he", "belong", "in", "a", "lead", "-", "line", "solitary", "prison", "cell", "."]
+(c3-5 / belong-01
+      :ARG0 (c3-2 / he)
+      :ARG1 (c3-1 / cell
+                  :location (c3-6 / prison)
+                  :mod (c3-0 / solitary)
+                  :ARG1-of (c3-3 / line-01
+                                 :ARG2 (c3-4 / lead-01))))

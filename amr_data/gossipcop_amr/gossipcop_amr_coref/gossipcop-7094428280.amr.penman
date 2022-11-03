@@ -1,0 +1,259 @@
+# ::snt Will the first amendment protect John Kennedy?
+# ::tokens ["Will", "the", "first", "amendment", "protect", "John", "Kennedy", "?"]
+# ::lemmas ["will", "the", "first", "amendment", "protect", "John", "Kennedy", "?"]
+(c1-3 / protect-01
+      :ARG0 (c1-4 / law
+                  :name (c1-0 / name
+                              :op1 "first"
+                              :op2 "amendment"))
+      :ARG1 (c1-1 / person
+                  :name (c1-2 / name
+                              :op1 "John"
+                              :op2 "Kennedy"))
+      :polarity (c1-5 / amr-unknown))
+
+# ::snt The word "chutzpah " comes to mind. Their minutes expired years ago
+# ::tokens ["The", "word", "\"", "chutzpah", "\"", "comes", "to", "mind", ".", "Their", "minutes", "expired", "years", "ago"]
+# ::lemmas ["the", "word", "\"", "chutzpah", "\"", "come", "to", "mind", ".", "Their", "minutes", "expired", "years", "ago"]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / come-to-mind-09
+                  :ARG2 (c2-8 / word
+                              :mod (c2-4 / string-entity
+                                         :value "chutzpah")))
+      :snt2 (c2-5 / expire-01
+                  :ARG1 (c2-6 / minute
+                              :poss (c2-9 / they))
+                  :time (c2-0 / before
+                              :op1 (c2-3 / now)
+                              :quant (c2-10 / multiple
+                                            :op1 (c2-11 / temporal-quantity
+                                                        :unit (c2-1 / year)
+                                                        :quant 1)))))
+
+# ::snt Holy cow, she looks like she's in her 's. She's had a hell of a lot of plastic surgery.
+# ::tokens ["Holy", "cow", ",", "she", "looks", "like", "she", "'s", "in", "her", "'", "s.", "She", "'s", "had", "a", "hell", "of", "a", "lot", "of", "plastic", "surgery", "."]
+# ::lemmas ["holy", "cow", ",", "she", "look", "like", "she", "be", "in", "she", "'", "s.", "she", "be", "have", "a", "hell", "of", "a", "lot", "of", "plastic", "surgery", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / look-02
+                  :ARG0 (c3-4 / she)
+                  :ARG1 (c3-5 / resemble-01
+                              :ARG2 (c3-7 / person
+                                          :age (c3-11 / temporal-quantity
+                                                      :unit (c3-1 / year)
+                                                      :quant 5)
+                                          :domain c3-4))
+                  :mod (c3-9 / cow
+                             :mod (c3-6 / holy)
+                             :mode expressive))
+      :snt2 (c3-0 / surgery-01
+                  :ARG1 (c3-13 / she)
+                  :ARG2 (c3-3 / plastic)
+                  :quant (c3-12 / lot
+                                :degree (c3-10 / hell))))
+
+# ::snt Criminal intent essentially. In this case, it's obviously just a joke. If all celebs did this comedians would be out of a job!
+# ::tokens ["Criminal", "intent", "essentially", ".", "In", "this", "case", ",", "it", "'s", "obviously", "just", "a", "joke", ".", "If", "all", "celebs", "did", "this", "comedians", "would", "be", "out", "of", "a", "job", "!"]
+# ::lemmas ["criminal", "intent", "essentially", ".", "in", "this", "case", ",", "it", "be", "obviously", "just", "a", "joke", ".", "if", "all", "celebs", "do", "this", "comedian", "would", "be", "out", "of", "a", "job", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-9 / intent-02
+                  :ARG1 (c4-6 / criminal-03)
+                  :manner (c4-4 / essential))
+      :snt2 (c4-8 / joke-01
+                  :mod (c4-13 / just)
+                  :ARG1-of (c4-0 / obvious-01)
+                  :condition (c4-12 / do-02
+                                    :ARG0 (c4-14 / celebrity
+                                                 :mod (c4-10 / all))
+                                    :ARG1 (c4-11 / this)))
+      :snt3 (c4-1 / out-05
+                  :ARG1 (c4-7 / comedian)
+                  :ARG2 (c4-3 / job)
+                  :condition c4-12
+                  :ARG0 c4-14
+                  :mod (c4-5 / this)))
+
+# ::snt Agreed. It's not slander if it's your honest opinion. This is frivolous and I can't wait to see Lohan publicly humiliated by the defense
+# ::tokens ["Agreed", ".", "It", "'s", "not", "slander", "if", "it", "'s", "your", "honest", "opinion", ".", "This", "is", "frivolous", "and", "I", "ca", "n't", "wait", "to", "see", "Lohan", "publicly", "humiliated", "by", "the", "defense"]
+# ::lemmas ["agree", ".", "it", "be", "not", "slander", "if", "it", "be", "your", "honest", "opinion", ".", "this", "be", "frivolous", "and", "i", "can", "not", "wait", "to", "see", "Lohan", "publicly", "humiliate", "by", "the", "defense"]
+(c5-10 / multi-sentence
+       :snt1 (c5-9 / agree-01
+                   :ARG1 (c5-14 / event))
+       :snt2 (c5-0 / slander-01
+                   :condition (c5-2 / opine-01
+                                    :ARG0 (c5-4 / you)
+                                    :ARG1 (c5-18 / it)
+                                    :ARG1-of (c5-6 / honest-01))
+                   :polarity -)
+       :snt3 (c5-7 / and
+                   :op1 (c5-12 / frivolous
+                               :domain (c5-8 / this))
+                   :op2 (c5-15 / possible-01
+                               :ARG1 (c5-16 / wait-01
+                                            :ARG1 (c5-5 / i)
+                                            :ARG2 (c5-3 / see-01
+                                                        :ARG0 c5-5
+                                                        :ARG1 (c5-17 / humiliate-01
+                                                                     :ARG0 (c5-19 / defend-01)
+                                                                     :ARG1 (c5-11 / person
+                                                                                  :name (c5-13 / name
+                                                                                               :op1 "Lindsay"))
+                                                                     :ARG1-of (c5-1 / public-02))))
+                               :polarity -)))
+
+# ::snt "Omg he made a joke reeee"
+# ::tokens ["\"", "Omg", "he", "made", "a", "joke", "reeee", "\""]
+# ::lemmas ["\"", "Omg", "he", "make", "a", "joke", "reeee", "\""]
+(c6-1 / say-01
+      :ARG0 (c6-5 / i)
+      :ARG1 (c6-4 / joke-01
+                  :ARG0 (c6-3 / he)
+                  :mod (c6-0 / oh-my-god
+                             :mode expressive))
+      :ARG2 (c6-2 / reeee))
+
+# ::snt Add all hobos for defaming them over "be on that like a hobo on a ham sandwich." They could use the $
+# ::tokens ["Add", "all", "hobos", "for", "defaming", "them", "over", "\"", "be", "on", "that", "like", "a", "hobo", "on", "a", "ham", "sandwich", ".", "\"", "They", "could", "use", "the", "$"]
+# ::lemmas ["add", "all", "hobo", "for", "defame", "they", "over", "\"", "be", "on", "that", "like", "a", "hobo", "on", "a", "ham", "sandwich", ".", "\"", "they", "could", "use", "the", "$"]
+(c7-9 / multi-sentence
+      :snt1 (c7-7 / add-02
+                  :ARG0 (c7-2 / you)
+                  :ARG1 (c7-4 / hobo
+                              :mod (c7-5 / all))
+                  :purpose (c7-18 / defame-01
+                                  :ARG0 c7-2
+                                  :ARG1 (c7-16 / hobo)
+                                  :ARG1-of (c7-17 / instead-of-91
+                                                  :ARG2 (c7-8 / be-located-at-91
+                                                              :ARG1 c7-2
+                                                              :ARG2 (c7-6 / that)
+                                                              :ARG1-of (c7-14 / resemble-01
+                                                                              :ARG2 (c7-1 / be-located-at-91
+                                                                                          :ARG1 (c7-3 / hobo)
+                                                                                          :ARG2 (c7-0 / sandwich
+                                                                                                      :consist-of (c7-12 / ham))))
+                                                              :mode imperative)))
+                  :mode imperative)
+      :snt2 (c7-15 / possible-01
+                   :ARG1 (c7-13 / use-01
+                                :ARG0 (c7-11 / they)
+                                :ARG1 (c7-10 / dollar))))
+
+# ::snt I hope they do!
+# ::tokens ["I", "hope", "they", "do", "!"]
+# ::lemmas ["i", "hope", "they", "do", "!"]
+(c8-1 / hope-01
+      :ARG0 (c8-2 / i)
+      :ARG1 (c8-0 / event
+                  :mod (c8-3 / they))
+      :mode expressive)
+
+# ::snt So even Lindsey Logan's parents think Equifax sucks?
+# ::tokens ["So", "even", "Lindsey", "Logan", "'s", "parents", "think", "Equifax", "sucks", "?"]
+# ::lemmas ["so", "even", "Lindsey", "Logan", "'s", "parent", "think", "Equifax", "suck", "?"]
+(c9-9 / think-01
+      :ARG0 (c9-6 / person
+                  :ARG0-of (c9-5 / have-rel-role-91
+                                 :ARG1 (c9-1 / person
+                                             :name (c9-0 / name
+                                                         :op1 "Lindsey"
+                                                         :op2 "Logan"))
+                                 :ARG2 (c9-10 / parent))
+                  :mod (c9-4 / even))
+      :ARG1 (c9-2 / suck-03
+                  :ARG0 (c9-8 / company
+                              :name (c9-7 / name
+                                          :op1 "Equifax")))
+      :polarity (c9-3 / amr-unknown))
+
+# ::snt GAWD! Are they STILL around?
+# ::tokens ["GAWD", "!", "Are", "they", "STILL", "around", "?"]
+# ::lemmas ["GAWD", "!", "be", "they", "still", "around", "?"]
+(c10-1 / multi-sentence
+       :snt1 (c10-6 / gwax
+                    :mode expressive)
+       :snt2 (c10-0 / be-located-at-91
+                    :ARG1 (c10-3 / they)
+                    :ARG2 (c10-5 / around)
+                    :mod (c10-2 / still)
+                    :polarity (c10-4 / amr-unknown)))
+
+# ::snt Wait until they find out they cant sue a Congressman engaged in legislative business. What morons.
+# ::tokens ["Wait", "until", "they", "find", "out", "they", "ca", "nt", "sue", "a", "Congressman", "engaged", "in", "legislative", "business", ".", "What", "morons", "."]
+# ::lemmas ["wait", "until", "they", "find", "out", "they", "can", "not", "sue", "a", "Congressman", "engage", "in", "legislative", "business", ".", "what", "moron", "."]
+(c11-3 / multi-sentence
+       :snt1 (c11-12 / wait-01
+                     :ARG1 (c11-2 / you)
+                     :time (c11-15 / until
+                                   :op1 (c11-0 / find-out-03
+                                               :ARG0 (c11-14 / they)
+                                               :ARG1 (c11-9 / possible-01
+                                                            :ARG1 (c11-5 / sue-02
+                                                                         :ARG0 c11-14
+                                                                         :ARG1 (c11-4 / person
+                                                                                      :ARG0-of (c11-8 / have-org-role-91
+                                                                                                      :ARG2 (c11-13 / congressman))
+                                                                                      :ARG1-of (c11-7 / engage-01
+                                                                                                      :ARG2 (c11-1 / business
+                                                                                                                   :mod (c11-10 / legislate-01)))))
+                                                            :polarity -)))
+                     :mode imperative)
+       :snt2 (c11-11 / moron
+                     :mod (c11-6 / amr-unknown)))
+
+# ::snt If only there was a privilege for things said and done while in Congress...
+# ::tokens ["If", "only", "there", "was", "a", "privilege", "for", "things", "said", "and", "done", "while", "in", "Congress", "..."]
+# ::lemmas ["if", "only", "there", "be", "a", "privilege", "for", "thing", "say", "and", "do", "while", "in", "Congress", "..."]
+(c12-4 / privilege-01
+       :ARG2 (c12-5 / thing
+                    :ARG1-of (c12-3 / say-01)
+                    :ARG1-of (c12-7 / do-02)
+                    :time (c12-1 / be-located-at-91
+                                 :ARG1 (c12-6 / government-organization
+                                              :name (c12-2 / name
+                                                           :op1 "Congress"))))
+       :mod (c12-0 / only))
+
+# ::snt good luck with that.
+# ::tokens ["good", "luck", "with", "that", "."]
+# ::lemmas ["good", "luck", "with", "that", "."]
+(c13-1 / luck
+       :ARG1-of (c13-0 / good-02)
+       :purpose (c13-2 / that))
+
+# ::snt Too little, too late with the parental concern.
+# ::tokens ["Too", "little", ",", "too", "late", "with", "the", "parental", "concern", "."]
+# ::lemmas ["too", "little", ",", "too", "late", "with", "the", "parental", "concern", "."]
+(c14-1 / and
+       :op1 (c14-3 / have-degree-91
+                   :ARG2 (c14-4 / little)
+                   :ARG3 (c14-8 / too))
+       :op2 (c14-7 / have-degree-91
+                   :ARG2 (c14-9 / late)
+                   :ARG3 (c14-10 / too))
+       :op3 (c14-6 / concern-01
+                   :ARG1 (c14-5 / person
+                                :ARG0-of (c14-2 / have-rel-role-91
+                                                :ARG2 (c14-0 / parent)))))
+
+# ::snt Why her parents, and not Lindsay herself? It's not like she is a minor at this point.
+# ::tokens ["Why", "her", "parents", ",", "and", "not", "Lindsay", "herself", "?", "It", "'s", "not", "like", "she", "is", "a", "minor", "at", "this", "point", "."]
+# ::lemmas ["why", "her", "parent", ",", "and", "not", "Lindsay", "herself", "?", "it", "be", "not", "like", "she", "be", "a", "minor", "at", "this", "point", "."]
+(c15-1 / multi-sentence
+       :snt1 (c15-9 / cause-01
+                    :ARG0 (c15-13 / amr-unknown)
+                    :ARG1 (c15-12 / and
+                                  :op1 (c15-7 / person
+                                              :ARG0-of (c15-6 / have-rel-role-91
+                                                              :ARG1 (c15-3 / she)
+                                                              :ARG2 (c15-2 / parent)))
+                                  :op2 (c15-15 / person
+                                               :name (c15-4 / name
+                                                            :op1 "Lindsay")
+                                               :polarity -)))
+       :snt2 (c15-5 / resemble-01
+                    :ARG1 (c15-14 / it)
+                    :ARG2 (c15-8 / minor-01
+                                 :ARG1 (c15-0 / she)
+                                 :time (c15-10 / point
+                                               :mod (c15-11 / this)))
+                    :polarity -))

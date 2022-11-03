@@ -1,0 +1,59 @@
+# ::snt Day 2 - XBOX Daily E3
+# ::tokens ["Day", "2", "-", "XBOX", "Daily", "E3"]
+# ::lemmas ["day", "2", "-", "XBOX", "Daily", "E3"]
+(c1-0 / day
+      :ord (c1-1 / ordinal-entity
+                 :value 2)
+      :subevent-of (c1-3 / event
+                         :name (c1-2 / name
+                                     :op1 "XBOX"
+                                     :op2 "Daily"
+                                     :op3 "E3")))
+
+# ::snt So can someone sum up what's happening i can't watch it right now
+# ::tokens ["So", "can", "someone", "sum", "up", "what", "'s", "happening", "i", "ca", "n't", "watch", "it", "right", "now"]
+# ::lemmas ["so", "can", "someone", "sum", "up", "what", "be", "happen", "i", "can", "not", "watch", "it", "right", "now"]
+(c2-8 / possible-01
+      :polarity (c2-1 / amr-unknown)
+      :ARG1 (c2-0 / sum-up-01
+                  :ARG0 (c2-7 / someone)
+                  :ARG1 (c2-10 / event))
+      :ARG0-of (c2-2 / cause-01
+                     :ARG1 (c2-5 / possible-01
+                                 :ARG1 (c2-3 / watch-01
+                                             :ARG0 (c2-4 / i)
+                                             :ARG1 c2-10
+                                             :time (c2-9 / now
+                                                         :mod (c2-6 / right)))
+                                 :polarity -)))
+
+# ::snt nothing.... Forza, Sea, color controllers.... I will never watch Xbox Daily again... I am burned every year
+# ::tokens ["nothing", "....", "Forza", ",", "Sea", ",", "color", "controllers", "....", "I", "will", "never", "watch", "Xbox", "Daily", "again", "...", "I", "am", "burned", "every", "year"]
+# ::lemmas ["nothing", "....", "Forza", ",", "Sea", ",", "color", "controller", "....", "i", "will", "never", "watch", "Xbox", "Daily", "again", "...", "i", "be", "burn", "every", "year"]
+(c3-9 / multi-sentence
+      :snt1 (c3-10 / nothing)
+      :snt2 (c3-17 / and
+                   :op1 (c3-8 / game
+                              :name (c3-1 / name
+                                          :op1 "Forza"))
+                   :op2 (c3-14 / game
+                               :name (c3-13 / name
+                                            :op1 "Sea"))
+                   :op3 (c3-19 / product
+                               :ARG0-of (c3-4 / control-01
+                                              :ARG1 (c3-0 / color))))
+      :snt3 (c3-5 / watch-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 (c3-18 / broadcast-program
+                               :name (c3-3 / name
+                                           :op1 "Xbox"
+                                           :op2 "Daily"))
+                  :time (c3-12 / ever)
+                  :mod (c3-11 / again)
+                  :polarity -)
+      :snt4 (c3-16 / burn-01
+                   :ARG1 c3-2
+                   :frequency (c3-7 / rate-entity-91
+                                    :ARG3 (c3-6 / temporal-quantity
+                                                :unit (c3-15 / year)
+                                                :quant 1))))

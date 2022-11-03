@@ -1,0 +1,226 @@
+# ::snt Can someone please confirm and not go by Kenney who may or may not no.
+# ::tokens ["Can", "someone", "please", "confirm", "and", "not", "go", "by", "Kenney", "who", "may", "or", "may", "not", "no", "."]
+# ::lemmas ["can", "someone", "please", "confirm", "and", "not", "go", "by", "Kenney", "who", "may", "or", "may", "not", "no", "."]
+(c1-4 / possible-01
+      :ARG1 (c1-11 / and
+                   :op1 (c1-6 / confirm-01
+                              :ARG0 (c1-8 / someone)
+                              :polite +)
+                   :op2 (c1-7 / go-02
+                              :ARG0 c1-8
+                              :ARG4 (c1-10 / person
+                                           :name (c1-2 / name
+                                                       :op1 "Kenney")
+                                           :ARG1-of (c1-1 / or
+                                                          :op1 (c1-0 / possible-01
+                                                                     :ARG1 (c1-3 / no))
+                                                          :op2 (c1-9 / possible-01
+                                                                     :ARG1 (c1-5 / no)
+                                                                     :polarity -)))
+                              :polarity -)))
+
+# ::snt : Canada's Minister of Employment Jason Kenney says the soldier shot in Ottawa has died -
+# ::tokens [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "says", "the", "soldier", "shot", "in", "Ottawa", "has", "died", "-"]
+# ::lemmas [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "say", "the", "soldier", "shoot", "in", "Ottawa", "have", "die", "-"]
+(c2-12 / say-01
+       :ARG0 (c2-7 / person
+                   :name (c2-5 / name
+                               :op1 "Jason"
+                               :op2 "Kenney")
+                   :ARG0-of (c2-0 / have-org-role-91
+                                  :ARG1 (c2-9 / country
+                                              :name (c2-6 / name
+                                                          :op1 "Canada"))
+                                  :ARG2 (c2-2 / minister
+                                              :topic (c2-3 / employ-01))))
+       :ARG1 (c2-8 / die-01
+                   :ARG1 (c2-4 / soldier
+                               :ARG1-of (c2-1 / shoot-01
+                                              :location (c2-10 / city
+                                                               :name (c2-11 / name
+                                                                            :op1 "Ottawa"))))))
+
+# ::snt confirm it first
+# ::tokens ["confirm", "it", "first"]
+# ::lemmas ["confirm", "it", "first"]
+(c3-2 / confirm-01
+      :ARG0 (c3-1 / you)
+      :ARG1 (c3-3 / it)
+      :ord (c3-0 / ordinal-entity
+                 :value 1)
+      :mode imperative)
+
+# ::snt He died in his country if not for his country.
+# ::tokens ["He", "died", "in", "his", "country", "if", "not", "for", "his", "country", "."]
+# ::lemmas ["he", "die", "in", "his", "country", "if", "not", "for", "his", "country", "."]
+(c4-1 / die-01
+      :ARG1 (c4-0 / he)
+      :location (c4-2 / country
+                      :poss c4-0)
+      :condition c4-1
+      :ARG1 c4-0
+      :location (c4-3 / country
+                      :poss c4-0)
+      :polarity -)
+
+# ::snt no
+# ::tokens ["no"]
+# ::lemmas ["no"]
+(c5-0 / no)
+
+# ::snt rest in peace
+# ::tokens ["rest", "in", "peace"]
+# ::lemmas ["rest", "in", "peace"]
+(c6-2 / rest-01
+      :ARG1 (c6-0 / you)
+      :manner (c6-1 / peace))
+
+# ::snt he was talking about the soldier that passed on Monday in Quebec
+# ::tokens ["he", "was", "talking", "about", "the", "soldier", "that", "passed", "on", "Monday", "in", "Quebec"]
+# ::lemmas ["he", "be", "talk", "about", "the", "soldier", "that", "pass", "on", "Monday", "in", "Quebec"]
+(c7-6 / talk-01
+      :ARG0 (c7-0 / he)
+      :ARG1 (c7-5 / soldier
+                  :ARG1-of (c7-3 / pass-20
+                                 :time (c7-4 / date-entity
+                                             :weekday (c7-1 / monday))
+                                 :location (c7-7 / province
+                                                 :name (c7-2 / name
+                                                             :op1 "Quebec")))))
+
+# ::snt . Oh nooooo oh my God
+# ::tokens [".", "Oh", "nooooo", "oh", "my", "God"]
+# ::lemmas [".", "oh", "nooooo", "oh", "my", "God"]
+(c8-0 / oh-no
+      :mod (c8-1 / person
+                 :name (c8-2 / name
+                             :op1 "God")
+                 :poss (c8-3 / i))
+      :mode expressive)
+
+# ::snt The minister of employment? So... Bullish? Seriously why is it this guy who says this...
+# ::tokens ["The", "minister", "of", "employment", "?", "So", "...", "Bullish", "?", "Seriously", "why", "is", "it", "this", "guy", "who", "says", "this", "..."]
+# ::lemmas ["the", "minister", "of", "employment", "?", "so", "...", "bullish", "?", "seriously", "why", "be", "it", "this", "guy", "who", "say", "this", "..."]
+(c9-1 / multi-sentence
+      :snt1 (c9-7 / person
+                  :polarity (c9-14 / amr-unknown)
+                  :ARG0-of (c9-0 / have-org-role-91
+                                 :ARG2 (c9-8 / minister
+                                             :topic (c9-3 / employ-01))))
+      :snt2 (c9-2 / bullshit-01
+                  :polarity (c9-5 / amr-unknown))
+      :snt3 (c9-9 / cause-01
+                  :ARG0 (c9-6 / amr-unknown)
+                  :ARG1 (c9-12 / say-01
+                               :ARG0 (c9-10 / guy
+                                            :mod (c9-13 / this))
+                               :ARG1 (c9-11 / this))
+                  :ARG2-of (c9-4 / serious-01)))
+
+# ::snt Damn RT : Canada's Minister of Employment Jason Kenney says the soldier shot in Ottawa has died -
+# ::tokens ["Damn", "RT", ":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "says", "the", "soldier", "shot", "in", "Ottawa", "has", "died", "-"]
+# ::lemmas ["Damn", "RT", ":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "say", "the", "soldier", "shoot", "in", "Ottawa", "have", "die", "-"]
+(c10-15 / say-01
+        :ARG0 (c10-9 / person
+                     :name (c10-7 / name
+                                  :op1 "Jason"
+                                  :op2 "Kenney")
+                     :ARG0-of (c10-0 / have-org-role-91
+                                     :ARG1 (c10-11 / country
+                                                   :name (c10-8 / name
+                                                                :op1 "Canada"))
+                                     :ARG2 (c10-3 / minister
+                                                  :topic (c10-5 / employ-01))))
+        :ARG1 (c10-10 / die-01
+                      :ARG1 (c10-6 / soldier
+                                   :ARG1-of (c10-2 / shoot-01
+                                                   :location (c10-12 / city
+                                                                     :name (c10-13 / name
+                                                                                   :op1 "Ottawa")))))
+        :mod (c10-1 / damn
+                    :mode expressive)
+        :ARG1-of (c10-16 / publication-91
+                         :ARG4 (c10-4 / publication
+                                      :name (c10-14 / name
+                                                    :op1 "RT"))))
+
+# ::snt : Canada's Minister of Employment Jason Kenney says the soldier shot in Ottawa has died -
+# ::tokens [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "says", "the", "soldier", "shot", "in", "Ottawa", "has", "died", "-"]
+# ::lemmas [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "say", "the", "soldier", "shoot", "in", "Ottawa", "have", "die", "-"]
+(c12-12 / say-01
+        :ARG0 (c12-7 / person
+                     :name (c12-5 / name
+                                  :op1 "Jason"
+                                  :op2 "Kenney")
+                     :ARG0-of (c12-0 / have-org-role-91
+                                     :ARG1 (c12-9 / country
+                                                  :name (c12-6 / name
+                                                               :op1 "Canada"))
+                                     :ARG2 (c12-2 / minister
+                                                  :topic (c12-3 / employ-01))))
+        :ARG1 (c12-8 / die-01
+                     :ARG1 (c12-4 / soldier
+                                  :ARG1-of (c12-1 / shoot-01
+                                                  :location (c12-10 / city
+                                                                    :name (c12-11 / name
+                                                                                  :op1 "Ottawa"))))))
+
+# ::snt oh no....
+# ::tokens ["oh", "no", "...."]
+# ::lemmas ["oh", "no", "...."]
+(c14-0 / oh-no
+       :mode expressive)
+
+# ::snt prayers!
+# ::tokens ["prayers", "!"]
+# ::lemmas ["prayer", "!"]
+(c15-0 / pray-01)
+
+# ::snt : Canada's Minister of Employment Jason Kenney says the soldier shot in Ottawa has died -
+# ::tokens [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "says", "the", "soldier", "shot", "in", "Ottawa", "has", "died", "-"]
+# ::lemmas [":", "Canada", "'s", "Minister", "of", "Employment", "Jason", "Kenney", "say", "the", "soldier", "shoot", "in", "Ottawa", "have", "die", "-"]
+(c16-12 / say-01
+        :ARG0 (c16-7 / person
+                     :name (c16-5 / name
+                                  :op1 "Jason"
+                                  :op2 "Kenney")
+                     :ARG0-of (c16-0 / have-org-role-91
+                                     :ARG1 (c16-9 / country
+                                                  :name (c16-6 / name
+                                                               :op1 "Canada"))
+                                     :ARG2 (c16-2 / minister
+                                                  :topic (c16-3 / employ-01))))
+        :ARG1 (c16-8 / die-01
+                     :ARG1 (c16-4 / soldier
+                                  :ARG1-of (c16-1 / shoot-01
+                                                  :location (c16-10 / city
+                                                                    :name (c16-11 / name
+                                                                                  :op1 "Ottawa"))))))
+
+# ::snt heard he is fine. Soooo which one is it?
+# ::tokens ["heard", "he", "is", "fine", ".", "Soooo", "which", "one", "is", "it", "?"]
+# ::lemmas ["hear", "he", "be", "fine", ".", "Soooo", "which", "one", "be", "it", "?"]
+(c17-2 / multi-sentence
+       :snt1 (c17-0 / hear-01
+                    :ARG1 (c17-1 / fine-04
+                                 :ARG1 (c17-3 / he)))
+       :snt2 (c17-5 / amr-unknown
+                    :mod (c17-4 / so-called)))
+
+# ::snt this has been retracted by many news outlets. Please confirm and correct.
+# ::tokens ["this", "has", "been", "retracted", "by", "many", "news", "outlets", ".", "Please", "confirm", "and", "correct", "."]
+# ::lemmas ["this", "have", "be", "retract", "by", "many", "news", "outlet", ".", "please", "confirm", "and", "correct", "."]
+(c18-1 / multi-sentence
+       :snt1 (c18-5 / retract-01
+                    :ARG0 (c18-2 / outlet
+                                 :mod (c18-3 / news)
+                                 :quant (c18-4 / many))
+                    :ARG1 (c18-8 / this))
+       :snt2 (c18-9 / and
+                    :op1 (c18-6 / confirm-01
+                                :ARG0 (c18-0 / you)
+                                :mode imperative)
+                    :op2 (c18-7 / correct-02
+                                :ARG0 c18-0
+                                :mode imperative)
+                    :polite +))

@@ -1,0 +1,90 @@
+# ::snt Lost height...but speed constant...
+# ::tokens ["Lost", "height", "...", "but", "speed", "constant", "..."]
+# ::lemmas ["lose", "height", "...", "but", "speed", "constant", "..."]
+(c1-3 / contrast-01
+      :ARG1 (c1-1 / lose-02
+                  :ARG1 (c1-0 / high-02))
+      :ARG2 (c1-2 / constant
+                  :domain (c1-4 / speed)))
+
+# ::snt Flightradar shows a gradual descent over the final minutes
+# ::tokens ["Flightradar", "shows", "a", "gradual", "descent", "over", "the", "final", "minutes"]
+# ::lemmas ["Flightradar", "show", "a", "gradual", "descent", "over", "the", "final", "minutes"]
+(c2-6 / show-01
+      :ARG0 (c2-8 / aircraft-type
+                  :name (c2-3 / name
+                              :op1 "Flightradar"))
+      :ARG1 (c2-4 / descend-01
+                  :ARG0 c2-8
+                  :manner (c2-5 / gradual)
+                  :time (c2-2 / over
+                              :op1 (c2-7 / temporal-quantity
+                                         :unit (c2-1 / minute)
+                                         :mod (c2-0 / final)
+                                         :quant 10))))
+
+# ::snt Another disaster. What's going wrong?
+# ::tokens ["Another", "disaster", ".", "What", "'s", "going", "wrong", "?"]
+# ::lemmas ["another", "disaster", ".", "what", "be", "go", "wrong", "?"]
+(c3-1 / multi-sentence
+      :snt1 (c3-3 / disaster
+                  :mod (c3-4 / another))
+      :snt2 (c3-0 / wrong-02
+                  :ARG1 (c3-2 / amr-unknown)))
+
+# ::snt U9525 flight?
+# ::tokens ["U9525", "flight", "?"]
+# ::lemmas ["u9525", "flight", "?"]
+(c4-1 / fly-01
+      :polarity (c4-3 / amr-unknown)
+      :destination (c4-2 / company
+                         :name (c4-0 / name
+                                     :op1 "U9525")))
+
+# ::snt no deutch compagnie flight from Marignane this morning
+# ::tokens ["no", "deutch", "compagnie", "flight", "from", "Marignane", "this", "morning"]
+# ::lemmas ["no", "deutch", "compagnie", "flight", "from", "Marignane", "this", "morning"]
+(c5-0 / fly-01
+      :ARG2 (c5-4 / city
+                  :name (c5-2 / name
+                              :op1 "Marianignane"))
+      :time (c5-3 / date-entity
+                  :dayperiod (c5-1 / morning)
+                  :mod (c5-6 / today))
+      :mod (c5-5 / compagnie)
+      :polarity -)
+
+# ::snt Gadver! : BREAKING We got reports the crash could be an Airbus A320 Germanwings between Barcelona and Dusseldorf.
+# ::tokens ["Gadver", "!", ":", "BREAKING", "We", "got", "reports", "the", "crash", "could", "be", "an", "Airbus", "A320", "Germanwings", "between", "Barcelona", "and", "Dusseldorf", "."]
+# ::lemmas ["Gadver", "!", ":", "BREAKING", "we", "get", "report", "the", "crash", "could", "be", "an", "Airbus", "A320", "Germanwings", "between", "Barcelona", "and", "Dusseldorf", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-11 / say-01
+                   :ARG1 (c6-1 / break-13
+                               :ARG1 (c6-6 / report-01
+                                           :ARG1 (c6-5 / possible-01
+                                                       :ARG1 (c6-7 / crash-01
+                                                                   :ARG1 (c6-15 / aircraft-type
+                                                                                :name (c6-3 / name
+                                                                                            :op1 "Airbus"
+                                                                                            :op2 "A320")
+                                                                                :mod (c6-8 / company
+                                                                                           :name (c6-4 / name
+                                                                                                       :op1 "Germanwings")))
+                                                                   :location (c6-9 / between
+                                                                                   :op1 (c6-10 / city
+                                                                                               :name (c6-12 / name
+                                                                                                            :op1 "Barcelona"))
+                                                                                   :op2 (c6-16 / city
+                                                                                               :name (c6-13 / name
+                                                                                                            :op1 "Dusseldorf")))))))
+                   :ARG2 (c6-14 / person
+                                :name (c6-2 / name
+                                            :op1 "Gadver"))
+                   :mode expressive))
+
+# ::snt OK, thank you.
+# ::tokens ["OK", ",", "thank", "you", "."]
+# ::lemmas ["ok", ",", "thank", "you", "."]
+(c7-1 / thank-01
+      :ARG0 (c7-2 / i)
+      :ARG1 (c7-0 / you))

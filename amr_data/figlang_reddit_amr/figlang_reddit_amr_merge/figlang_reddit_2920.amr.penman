@@ -1,0 +1,28 @@
+# ::subgraphs [["c1-1", "c1-3", "c1-7", "c1-2", "c1-0", "c1-6", "c1-4", "c1-5"], ["c2-4", "c2-1", "c2-2", "c2-5", "c2-7", "c2-3", "c2-0", "c2-6"]]
+(d / dummy
+   :COMMENT (c1-1 / approve
+                  :ARG0 (c1-3 / company
+                              :name (c1-7 / name
+                                          :op1 "United"
+                                          :op2 "Airlines"
+                                          :SAME c1-5
+                                          :SAME c1-6)
+                              :COREF c2-2)
+                  :ARG1 (c1-2 / fly
+                              :ARG3 (c1-0 / city
+                                          :name (c1-6 / name
+                                                      :op1 "Houston")
+                                          :SAME c1-4)
+                              :ARG4 (c1-4 / city
+                                          :name (c1-5 / name
+                                                      :op1 "Havana")))
+                  :SAME c2-1)
+   :COMMENT (c2-4 / have-concession
+                  :ARG1 (c2-1 / approve
+                              :ARG1 (c2-2 / it)
+                              :ARG2 (c2-5 / travel
+                                          :ARG0 (c2-7 / person
+                                                      :ARG0-of (c2-3 / tour)))
+                              :mod (c2-0 / still)
+                              :ARG1-of (c2-6 / request-confirmation)
+                              :polarity -)))

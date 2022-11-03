@@ -1,0 +1,59 @@
+# ::snt Monday Moan Thread As a Stoke fan, I need this
+# ::tokens ["Monday", "Moan", "Thread", "As", "a", "Stoke", "fan", ",", "I", "need", "this"]
+# ::lemmas ["Monday", "Moan", "Thread", "as", "a", "Stoke", "fan", ",", "i", "need", "this"]
+(c1-8 / need-01
+      :ARG0 (c1-6 / i
+                  :mod (c1-1 / fan
+                             :mod (c1-4 / team
+                                        :name (c1-5 / name
+                                                    :op1 "Stoke"))))
+      :ARG1 (c1-2 / thread
+                  :mod (c1-9 / team
+                             :name (c1-3 / name
+                                         :op1 "Moan"))
+                  :time (c1-0 / date-entity
+                              :weekday (c1-7 / monday))))
+
+# ::snt Missed the Arsenal game (which we lost) because I was at work where I had a gun pointed at my head in a robbery.
+# ::tokens ["Missed", "the", "Arsenal", "game", "(", "which", "we", "lost", ")", "because", "I", "was", "at", "work", "where", "I", "had", "a", "gun", "pointed", "at", "my", "head", "in", "a", "robbery", "."]
+# ::lemmas ["miss", "the", "arsenal", "game", "(", "which", "we", "lose", ")", "because", "i", "be", "at", "work", "where", "i", "have", "a", "gun", "point", "at", "my", "head", "in", "a", "robbery", "."]
+(c2-10 / miss-02
+       :ARG0 (c2-9 / i
+                   :part (c2-2 / head))
+       :ARG1 (c2-8 / game
+                   :mod (c2-4 / team
+                              :name (c2-11 / name
+                                           :op1 "Arsenal"))
+                   :ARG1-of (c2-6 / lose-03
+                                  :ARG0 (c2-1 / we)))
+       :ARG1-of (c2-0 / cause-01
+                      :ARG0 (c2-3 / be-located-at-91
+                                  :ARG1 c2-9
+                                  :ARG2 (c2-13 / work-01
+                                               :ARG0 c2-9
+                                               :location-of (c2-7 / point-01
+                                                                  :ARG1 (c2-12 / gun)
+                                                                  :ARG2 c2-2
+                                                                  :time (c2-5 / rob-01
+                                                                              :ARG0 c2-9))))))
+
+# ::snt Where did this happen?
+# ::tokens ["Where", "did", "this", "happen", "?"]
+# ::lemmas ["where", "do", "this", "happen", "?"]
+(c3-0 / be-located-at-91
+      :ARG1 (c3-2 / this)
+      :ARG2 (c3-1 / amr-unknown))
+
+# ::snt I'd guess North America as he said gas station
+# ::tokens ["I", "'d", "guess", "North", "America", "as", "he", "said", "gas", "station"]
+# ::lemmas ["i", "would", "guess", "North", "America", "as", "he", "say", "gas", "station"]
+(c4-3 / guess-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-0 / say-01
+                  :ARG0 (c4-2 / he)
+                  :ARG1 (c4-1 / country
+                              :name (c4-6 / name
+                                          :op1 "North"
+                                          :op2 "America"))
+                  :ARG3 (c4-4 / station
+                              :mod (c4-7 / gas))))

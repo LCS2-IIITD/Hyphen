@@ -1,0 +1,69 @@
+# ::snt YAY
+# ::tokens ["YAY"]
+# ::lemmas ["YAY"]
+(c1-0 / yay)
+
+# ::snt : : Another four or five hostages have escaped from the caf in . bro!!!!
+# ::tokens [":", ":", "Another", "four", "or", "five", "hostages", "have", "escaped", "from", "the", "caf", "in", ".", "bro", "!", "!", "!", "!"]
+# ::lemmas [":", ":", "another", "four", "or", "five", "hostage", "have", "escape", "from", "the", "caf", "in", ".", "bro", "!", "!", "!", "!"]
+(c2-2 / escape-01
+      :ARG0 (c2-0 / hostage
+                  :quant (c2-1 / or
+                               :op1 4
+                               :op2 5)
+                  :mod (c2-6 / another))
+      :ARG1 (c2-5 / cafeteria
+                  :location (c2-4 / city
+                                  :name (c2-3 / name
+                                              :op1 "New"
+                                              :op2 "Orleans"))))
+
+# ::snt OH MY GOD THATS AMAZING!!!!
+# ::tokens ["OH", "MY", "GOD", "THATS", "AMAZING", "!", "!", "!", "!"]
+# ::lemmas ["OH", "MY", "god", "THATS", "amazing", "!", "!", "!", "!"]
+(c3-4 / amaze-01
+      :ARG0 (c3-3 / that)
+      :mod (c3-0 / oh
+                 :op1 (c3-2 / god
+                            :poss (c3-1 / i))
+                 :mode expressive)
+      :mode expressive)
+
+# ::snt : : Another four or five hostages have escaped from the caf in . YES YES YESSSS
+# ::tokens [":", ":", "Another", "four", "or", "five", "hostages", "have", "escaped", "from", "the", "caf", "in", ".", "YES", "YES", "YESSSS"]
+# ::lemmas [":", ":", "another", "four", "or", "five", "hostage", "have", "escape", "from", "the", "caf", "in", ".", "yes", "yes", "YESSSS"]
+(c4-2 / multi-sentence
+      :snt1 (c4-4 / escape-01
+                  :ARG0 (c4-0 / hostage
+                              :quant (c4-3 / or
+                                           :op1 4
+                                           :op2 5)
+                              :mod (c4-6 / another))
+                  :ARG1 (c4-5 / cafeteria))
+      :snt2 (c4-1 / yes
+                  :snt3-of c4-2
+                  :snt4-of c4-2))
+
+# ::snt Can you tell them hostages to go back and pick up as many chocolate boxes they can before escaping please.
+# ::tokens ["Can", "you", "tell", "them", "hostages", "to", "go", "back", "and", "pick", "up", "as", "many", "chocolate", "boxes", "they", "can", "before", "escaping", "please", "."]
+# ::lemmas ["can", "you", "tell", "they", "hostage", "to", "go", "back", "and", "pick", "up", "as", "many", "chocolate", "box", "they", "can", "before", "escape", "please", "."]
+(c5-8 / possible-01
+      :ARG1 (c5-12 / tell-01
+                   :ARG0 (c5-1 / you)
+                   :ARG1 (c5-14 / and
+                                :op1 (c5-10 / go-back-19
+                                            :ARG1 (c5-0 / hostage))
+                                :op2 (c5-13 / pick-up-04
+                                            :ARG0 c5-0
+                                            :ARG1 (c5-5 / box
+                                                        :mod (c5-9 / chocolate)
+                                                        :ARG1-of (c5-2 / have-quant-91
+                                                                       :ARG2 (c5-3 / many)
+                                                                       :ARG3 (c5-7 / equal)
+                                                                       :ARG4 (c5-4 / possible-01
+                                                                                   :ARG1 c5-13)))
+                                            :time (c5-11 / before
+                                                         :op1 (c5-6 / escape-01
+                                                                    :ARG0 c5-0))))
+                   :ARG2 c5-0
+                   :polite +))

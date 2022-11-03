@@ -1,0 +1,56 @@
+# ::snt This could have made my day
+# ::tokens ["This", "could", "have", "made", "my", "day"]
+# ::lemmas ["this", "could", "have", "make", "my", "day"]
+(c1-4 / possible-01
+      :ARG1 (c1-1 / make-02
+                  :ARG0 (c1-0 / this)
+                  :ARG1 (c1-2 / day
+                              :poss (c1-3 / i))))
+
+# ::snt It really was too good to be true.
+# ::tokens ["It", "really", "was", "too", "good", "to", "be", "true", "."]
+# ::lemmas ["it", "really", "be", "too", "good", "to", "be", "true", "."]
+(c2-0 / have-degree-91
+      :ARG1 (c2-3 / it)
+      :ARG2 (c2-4 / good-02
+                  :ARG1 c2-3
+                  :ARG1-of (c2-5 / real-04))
+      :ARG3 (c2-1 / too)
+      :ARG6 (c2-2 / true-01
+                  :ARG1 c2-3
+                  :polarity -))
+
+# ::snt No way. That boat's far too *fabulous* for something like that.
+# ::tokens ["No", "way", ".", "That", "boat", "'s", "far", "too", "*", "fabulous", "*", "for", "something", "like", "that", "."]
+# ::lemmas ["no", "way", ".", "that", "boat", "'s", "far", "too", "*", "fabulous", "*", "for", "something", "like", "that", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-0 / way
+                  :polarity -)
+      :snt2 (c3-1 / have-degree-91
+                  :ARG1 (c3-10 / boat
+                               :mod (c3-2 / that))
+                  :ARG2 (c3-4 / fabulous)
+                  :ARG3 (c3-5 / too
+                              :mod (c3-8 / far))
+                  :ARG6 (c3-9 / something
+                              :ARG1-of (c3-7 / resemble-01
+                                             :ARG2 (c3-6 / that)))))
+
+# ::snt I so want someone to buy it and turn it into a Pastafarian Pirate ship.
+# ::tokens ["I", "so", "want", "someone", "to", "buy", "it", "and", "turn", "it", "into", "a", "Pastafarian", "Pirate", "ship", "."]
+# ::lemmas ["i", "so", "want", "someone", "to", "buy", "it", "and", "turn", "it", "into", "a", "Pastafarian", "Pirate", "ship", "."]
+(c4-1 / want-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-7 / and
+                  :op1 (c4-11 / buy-01
+                              :ARG0 (c4-9 / someone)
+                              :ARG1 (c4-2 / it))
+                  :op2 (c4-4 / turn-02
+                             :ARG0 c4-9
+                             :ARG1 c4-2
+                             :ARG2 (c4-3 / ship
+                                         :mod (c4-6 / pirate
+                                                    :mod (c4-8 / religious-group
+                                                               :name (c4-10 / name
+                                                                            :op1 "Pastafarian"))))))
+      :degree (c4-0 / so))

@@ -1,0 +1,108 @@
+comment,amr
+"They're put in sports drinks because when you sweat, you lose a lot of your electrolytes.","# ::snt They're put in sports drinks because when you sweat, you lose a lot of your electrolytes.
+(p / put-01
+      :ARG1 (t / they)
+      :ARG2 (d / drink
+            :mod (s / sport))
+      :ARG1-of (c / cause-01
+            :ARG0 (l / lose-02
+                  :ARG0 (y / you)
+                  :ARG1 (e / electrolyte
+                        :quant (l2 / lot)
+                        :poss y)
+                  :time (s2 / sweat-01
+                        :ARG0 y))))"
+"Maybe they're made because when you drink large amounts of water, you are creating a hypotonic concentration in the cells? ""Hyponatremia occurs ) when the hypothalamic-renal feedback loop is overwhelmed by increased fluid intake""","# ::snt Maybe they're made because when you drink large amounts of water, you are creating a hypotonic concentration in the cells? ""Hyponatremia occurs ) when the hypothalamic-renal feedback loop is overwhelmed by increased fluid intake""
+(m / multi-sentence
+      :snt1 (p / possible-01
+            :ARG1 (m2 / make-01
+                  :ARG1 (t / they)
+                  :ARG1-of (c / cause-01
+                        :ARG0 (c2 / create-01
+                              :ARG0 (y / you)
+                              :ARG1 (c3 / concentrate-02
+                                    :ARG1 (c4 / cell)
+                                    :mod (h / hypotonic)
+                                    :time (d / drink-01
+                                          :ARG0 y
+                                          :ARG1 (w / water
+                                                :quant (a / amount
+                                                      :mod (l / large))))))))
+            :snt2 (h2 / hyponatremia
+                  :time (o / overwhelm-01
+                        :ARG0 (ii / increase-01
+                              :ARG1 (ii2 / intake
+                                    :mod (f / fluid)))
+                        :ARG1 (l2 / loop
+                              :mod (f2 / feedback)
+                              :mod (h3 / hypothalamic))))))"
+This is why sports drinks have a lot of sodium in them. Salt helps your body retain water.,"# ::snt This is why sports drinks have a lot of sodium in them. Salt helps your body retain water.
+(m / multi-sentence
+      :snt1 (c / cause-01
+            :ARG0 (t / this)
+            :ARG1 (h / have-03
+                  :ARG0 (d / drink
+                        :mod (s / sport))
+                  :ARG1 (s2 / sodium
+                        :quant (l / lot))))
+      :snt2 (h2 / help-01
+            :ARG0 (s3 / salt)
+            :ARG1 (r / retain-01
+                  :ARG0 (b / body
+                        :poss (y / you))
+                  :ARG1 (w / water))
+            :ARG2 b))"
+"Yes. But doesn't water consumption reduce cellular Na+ and K+ concentration needed for the NaK pump used for muscle contraction? Which would mean water toxicity causes death by reducing the levels of electrolytes, not increasing them, which was the original claim: "" interrupting normal brain function caused by abnormally high levels of electrolytes.""","# ::snt Yes. But doesn't water consumption reduce cellular Na+ and K+ concentration needed for the NaK pump used for muscle contraction? Which would mean water toxicity causes death by reducing the levels of electrolytes, not increasing them, which was the original claim: "" interrupting normal brain function caused by abnormally high levels of electrolytes.""
+(m / multi-sentence
+      :snt1 (y / yes)
+      :snt2 (c / contrast-01
+            :ARG2 (r / reduce-01
+                  :polarity -
+                  :ARG0 (c2 / consume-01
+                        :ARG1 (w / water))
+                  :ARG1 (c3 / concentrate-02
+                        :ARG1 (a / and
+                              :op1 (s / small-molecule
+                                    :name (n / name
+                                          :op1 ""Na+""))
+                              :op2 (s2 / small-molecule
+                                    :name (n2 / name
+                                          :op1 ""K+"")))
+                        :ARG1-of (n3 / need-01
+                              :purpose (p / pump
+                                    :mod (s3 / small-molecule
+                                          :name (n4 / name
+                                                :op1 ""NaK""))
+                                    :ARG1-of (u / use-01
+                                          :ARG2 (c4 / contraction-00
+                                                :ARG1 (m2 / muscle))))))
+                  :polarity (a2 / amr-unknown))
+            :snt3 (m3 / mean-01
+                  :ARG1 (t / toxicity
+                        :mod (w2 / water))
+                  :ARG2 (c5 / cause-01
+                        :ARG0 (r2 / reduce-01
+                              :ARG0 t
+                              :ARG1 (l / level
+                                    :consist-of (e / electrolyte))
+                              :ARG1-of (c6 / contrast-01
+                                    :ARG2 (ii / increase-01
+                                          :polarity -
+                                          :ARG0 t
+                                          :ARG1 (l2 / level
+                                                :consist-of (e2 / electrolyte)))))
+                        :ARG1 (d / die-01)
+                        :ARG1-of (m4 / mean-01
+                              :ARG2 (c7 / claim-01
+                                    :ARG1 (ii2 / interrupt-01
+                                          :ARG0 t
+                                          :ARG1 (f / function-01
+                                                :ARG0 (b / brain)
+                                                :ARG1-of (n5 / normal-02))
+                                          :ARG1-of (c8 / cause-01
+                                                :ARG0 (l3 / level
+                                                      :consist-of (e3 / electrolyte)
+                                                      :ARG1-of (h / high-02
+                                                            :mod (a3 / abnormally)))))
+                                    :mod (o / original)))
+                        :polarity (a4 / amr-unknown)))))"

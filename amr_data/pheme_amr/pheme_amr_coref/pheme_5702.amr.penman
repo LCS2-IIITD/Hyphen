@@ -1,0 +1,249 @@
+# ::snt Seriously tell us something we don't already know
+# ::tokens ["Seriously", "tell", "us", "something", "we", "do", "n't", "already", "know"]
+# ::lemmas ["seriously", "tell", "we", "something", "we", "do", "not", "already", "know"]
+(c1-5 / tell-01
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-4 / something
+                  :ARG1-of (c1-3 / know-01
+                                 :ARG0 (c1-1 / we)
+                                 :time (c1-6 / already)
+                                 :polarity -))
+      :ARG2 c1-1
+      :ARG2-of (c1-2 / serious-01)
+      :mode imperative)
+
+# ::snt new??
+# ::tokens ["new", "?", "?"]
+# ::lemmas ["new", "?", "?"]
+(c2-0 / new-01
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt you should see lapd's arsenal
+# ::tokens ["you", "should", "see", "lapd", "'s", "arsenal"]
+# ::lemmas ["you", "should", "see", "lapd", "'s", "arsenal"]
+(c3-3 / recommend-01
+      :ARG1 (c3-4 / see-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-5 / arsenal
+                              :poss (c3-2 / person
+                                          :name (c3-1 / name
+                                                      :op1 " lapd")))))
+
+# ::snt via ()
+# ::tokens ["via", "(", ")"]
+# ::lemmas ["via", "(", ")"]
+(c4-1 / via
+      :name (c4-0 / name
+                  :op1 " ()"))
+
+# ::snt always figured someone above was pulling strings
+# ::tokens ["always", "figured", "someone", "above", "was", "pulling", "strings"]
+# ::lemmas ["always", "figure", "someone", "above", "be", "pull", "string"]
+(c5-0 / figure-01
+      :ARG1 (c5-3 / pull-01
+                  :ARG0 (c5-4 / someone
+                              :location (c5-5 / above))
+                  :ARG1 (c5-1 / string))
+      :time (c5-2 / always))
+
+# ::snt NEW DEVELOPMENT: Pentagon supplied St. Louis County police with military-grade weapons.
+# ::tokens ["NEW", "DEVELOPMENT", ":", "Pentagon", "supplied", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapons", "."]
+# ::lemmas ["NEW", "DEVELOPMENT", ":", "Pentagon", "supply", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapon", "."]
+(c6-11 / and
+       :op1 (c6-7 / city
+                  :name (c6-3 / name
+                              :op1 "New"
+                              :op2 "Delight"))
+       :op2 (c6-10 / supply-01
+                   :ARG0 (c6-8 / government-organization
+                               :name (c6-4 / name
+                                           :op1 "Pentagon"))
+                   :ARG1 (c6-0 / weapon
+                               :mod (c6-2 / weapons
+                                          :mod (c6-1 / military-grade))
+                               :ARG2 (c6-5 / police
+                                           :location (c6-6 / county
+                                                           :name (c6-9 / name
+                                                                       :op1 "St."
+                                                                       :op2 "Louis"))
+                                           :ARG2-of c6-10))))
+
+# ::snt : NEW DEVELOPMENT: Pentagon supplied St. Louis County police with military-grade weapons. oh my God....
+# ::tokens [":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supplied", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapons", ".", "oh", "my", "God", "...."]
+# ::lemmas [":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supply", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapon", ".", "oh", "my", "God", "...."]
+(c7-1 / multi-sentence
+      :snt1 (c7-6 / develop-01
+                  :ARG1-of (c7-3 / new-01))
+      :snt2 (c7-11 / supply-01
+                   :ARG0 (c7-8 / government-organization
+                               :name (c7-4 / name
+                                           :op1 "Pentagon"))
+                   :ARG1 (c7-0 / weapon
+                               :mod (c7-5 / military-grade))
+                   :ARG2 (c7-7 / police
+                               :location (c7-9 / county
+                                               :name (c7-10 / name
+                                                            :op1 "St."
+                                                            :op2 "Louis"
+                                                            :op3 "County"))))
+      :snt3 (c7-13 / person
+                   :name (c7-12 / name
+                                :op1 "God")
+                   :mod (c7-2 / oh
+                              :mode expressive)
+                   :mode expressive))
+
+# ::snt when did this occur? Recently or some time ago?
+# ::tokens ["when", "did", "this", "occur", "?", "Recently", "or", "some", "time", "ago", "?"]
+# ::lemmas ["when", "do", "this", "occur", "?", "recently", "or", "some", "time", "ago", "?"]
+(c8-0 / multi-sentence
+      :snt1 (c8-1 / be-temporally-at-91
+                  :ARG1 (c8-9 / this)
+                  :ARG2 (c8-10 / amr-unknown))
+      :snt2 (c8-2 / or
+                  :op1 (c8-5 / recent)
+                  :op2 (c8-6 / before
+                             :op1 (c8-4 / now)
+                             :quant (c8-7 / time
+                                          :mod (c8-8 / some)))
+                  :polarity (c8-3 / amr-unknown)))
+
+# ::snt Not a new development. Standard across the country. It's the program.
+# ::tokens ["Not", "a", "new", "development", ".", "Standard", "across", "the", "country", ".", "It", "'s", "the", "program", "."]
+# ::lemmas ["not", "a", "new", "development", ".", "standard", "across", "the", "country", ".", "it", "be", "the", "program", "."]
+(c10-0 / multi-sentence
+       :snt1 (c10-4 / develop-02
+                    :ARG1-of (c10-2 / new-01)
+                    :polarity -)
+       :snt2 (c10-6 / standard-02
+                    :location (c10-7 / across
+                                     :op1 (c10-5 / country)))
+       :snt3 (c10-3 / program
+                    :domain (c10-1 / it)))
+
+# ::snt actually no since the military has been giving "ALL" police dept their excess supplies
+# ::tokens ["actually", "no", "since", "the", "military", "has", "been", "giving", "\"", "ALL", "\"", "police", "dept", "their", "excess", "supplies"]
+# ::lemmas ["actually", "no", "since", "the", "military", "have", "be", "give", "\"", "all", "\"", "police", "dept", "their", "excess", "supply"]
+(c11-4 / no
+       :ARG1-of (c11-9 / actual-02)
+       :time (c11-7 / since
+                    :op1 (c11-6 / give-01
+                                :ARG0 (c11-0 / military)
+                                :ARG1 (c11-8 / thing
+                                             :ARG1-of (c11-1 / supply-01)
+                                             :mod (c11-2 / excess)
+                                             :poss (c11-5 / police)
+                                             :mod (c11-3 / all))
+                                :ARG2 c11-5)))
+
+# ::snt As a grant or no? : NEW DEVELOPMENT: Pentagon supplied St. Louis County police with military-grade weapons.
+# ::tokens ["As", "a", "grant", "or", "no", "?", ":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supplied", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapons", "."]
+# ::lemmas ["as", "a", "grant", "or", "no", "?", ":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supply", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapon", "."]
+(c12-13 / and
+        :op1 (c12-2 / or
+                    :op1 (c12-9 / grant-01)
+                    :op2 (c12-4 / no)
+                    :ARG1-of (c12-5 / new-01))
+        :op2 (c12-12 / supply-01
+                     :ARG0 (c12-7 / government-organization
+                                  :name (c12-6 / name
+                                               :op1 "Pentagon"))
+                     :ARG1 (c12-0 / weapon
+                                  :mod (c12-3 / weapons
+                                              :mod (c12-1 / military-grade))
+                                  :ARG2 (c12-8 / police
+                                               :location (c12-10 / county
+                                                                 :name (c12-11 / name
+                                                                               :op1 "St."
+                                                                               :op2 "Louis"))
+                                               :ARG2-of c12-12))))
+
+# ::snt you rely on for your source? Your an idiot. It's well known dhs trained and armed police all over the US
+# ::tokens ["you", "rely", "on", "for", "your", "source", "?", "Your", "an", "idiot", ".", "It", "'s", "well", "known", "dhs", "trained", "and", "armed", "police", "all", "over", "the", "US"]
+# ::lemmas ["you", "rely", "on", "for", "your", "source", "?", "your", "an", "idiot", ".", "it", "be", "well", "know", "dhs", "train", "and", "armed", "police", "all", "over", "the", "US"]
+(c14-2 / multi-sentence
+       :snt1 (c14-9 / rely-01
+                    :polarity (c14-17 / amr-unknown)
+                    :ARG0 (c14-0 / you)
+                    :ARG1 (c14-16 / thing
+                                  :ARG2-of (c14-14 / source-01
+                                                   :ARG0 c14-0)))
+       :snt2 (c14-4 / idiot
+                    :domain (c14-13 / you))
+       :snt3 (c14-8 / police
+                    :ARG1-of (c14-5 / know-02
+                                    :degree (c14-1 / well))
+                    :ARG1-of (c14-3 / arm-01)
+                    :ARG2-of (c14-15 / train-01
+                                     :ARG0 (c14-11 / government-organization
+                                                   :name (c14-6 / name
+                                                                :op1 "Dhs")))
+                    :location (c14-7 / all-over
+                                     :op1 (c14-10 / country
+                                                  :name (c14-12 / name
+                                                                :op1 "US")))))
+
+# ::snt They supply the entire world with weapons!
+# ::tokens ["They", "supply", "the", "entire", "world", "with", "weapons", "!"]
+# ::lemmas ["they", "supply", "the", "entire", "world", "with", "weapon", "!"]
+(c15-3 / supply-01
+       :ARG0 (c15-4 / they)
+       :ARG1 (c15-0 / weapon)
+       :ARG2 (c15-2 / world
+                    :mod (c15-1 / entire))
+       :mode expressive)
+
+# ::snt it was dhs you idiot. Spreading more missing information I see. Go back to making shitty videos kid
+# ::tokens ["it", "was", "dhs", "you", "idiot", ".", "Spreading", "more", "missing", "information", "I", "see", ".", "Go", "back", "to", "making", "shitty", "videos", "kid"]
+# ::lemmas ["it", "be", "dhs", "you", "idiot", ".", "spread", "more", "missing", "information", "i", "see", ".", "go", "back", "to", "make", "shitty", "video", "kid"]
+(c16-2 / multi-sentence
+       :snt1 (c16-16 / say-01
+                     :ARG0 (c16-7 / i)
+                     :ARG1 (c16-13 / it)
+                     :ARG2 (c16-10 / person
+                                   :mod (c16-1 / idiot)
+                                   :domain (c16-0 / you)))
+       :snt2 (c16-11 / read-01
+                     :ARG0 (c16-5 / i)
+                     :ARG1 (c16-8 / information
+                                  :ARG1-of (c16-12 / miss-01)
+                                  :quant (c16-3 / more)
+                                  :ARG1-of (c16-6 / see-01
+                                                  :ARG0 c16-5)))
+       :snt3 (c16-14 / go-back-19
+                     :ARG1 (c16-17 / kid)
+                     :ARG2 (c16-15 / make-01
+                                   :ARG0 c16-17
+                                   :ARG1 (c16-9 / video
+                                                :mod (c16-4 / shitty)))
+                     :mode imperative))
+
+# ::snt : NEW DEVELOPMENT: Pentagon supplied St. Louis County police with military-grade weapons. BRUH
+# ::tokens [":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supplied", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapons", ".", "BRUH"]
+# ::lemmas [":", "NEW", "DEVELOPMENT", ":", "Pentagon", "supply", "St.", "Louis", "County", "police", "with", "military", "-", "grade", "weapon", ".", "BRUH"]
+(c17-1 / multi-sentence
+       :snt2 (c17-7 / city
+                    :name (c17-3 / name
+                                 :op1 "BRUH"))
+       :snt1 (c17-14 / and
+                     :op1 (c17-6 / develop-01
+                                 :ARG1-of (c17-4 / new-01))
+                     :op2 (c17-11 / supply-01
+                                  :ARG0 (c17-8 / government-organization
+                                               :name (c17-5 / name
+                                                            :op1 "Pentagon"))
+                                  :ARG1 (c17-0 / weapon
+                                               :mod (c17-2 / weapons
+                                                           :mod (c17-9 / military-grade))
+                                               :ARG2 (c17-10 / police
+                                                             :location (c17-12 / county
+                                                                               :name (c17-13 / name
+                                                                                             :op1 "St."
+                                                                                             :op2 "Louis"
+                                                                                             :op3 "County")))))))
+
+# ::snt this has been happening since
+# ::tokens ["this", "has", "been", "happening", "since"]
+# ::lemmas ["this", "have", "be", "happen", "since"]
+(c18-1 / this
+       :time (c18-0 / since))

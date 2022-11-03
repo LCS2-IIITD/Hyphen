@@ -1,0 +1,88 @@
+# ::snt good to see the ar machine not missing a chance to to stir the pot
+# ::tokens ["good", "to", "see", "the", "ar", "machine", "not", "missing", "a", "chance", "to", "to", "stir", "the", "pot"]
+# ::lemmas ["good", "to", "see", "the", "ar", "machine", "not", "miss", "a", "chance", "to", "to", "stir", "the", "pot"]
+(c1-5 / good-02
+      :ARG1 (c1-6 / see-01
+                  :ARG1 (c1-0 / miss-02
+                              :ARG0 (c1-2 / machine
+                                          :mod (c1-7 / ar))
+                              :ARG1 (c1-4 / chance-02
+                                          :ARG0 c1-2
+                                          :ARG1 (c1-1 / stir-01
+                                                      :ARG0 c1-2
+                                                      :ARG1 (c1-3 / pot)))
+                              :polarity -)))
+
+# ::snt i am Charlie, you are Charlie, WE are Charlie
+# ::tokens ["i", "am", "Charlie", ",", "you", "are", "Charlie", ",", "WE", "are", "Charlie"]
+# ::lemmas ["i", "be", "Charlie", ",", "you", "be", "Charlie", ",", "we", "be", "Charlie"]
+(c2-5 / and
+      :op1 (c2-3 / person
+                 :name (c2-2 / name
+                             :op1 "Charlie")
+                 :domain (c2-1 / i))
+      :op2 (c2-4 / person
+                 :name c2-2
+                 :op1 "Charlie")
+      :domain c2-1
+      :op3 (c2-0 / we
+                 :domain c2-3))
+
+# ::snt powerful pic.
+# ::tokens ["powerful", "pic", "."]
+# ::lemmas ["powerful", "pic", "."]
+(c3-0 / pic
+      :ARG1-of (c3-1 / powerful-02))
+
+# ::snt total y absoluta condena y tan repulsivos actos
+# ::tokens ["total", "y", "absoluta", "condena", "y", "tan", "repulsivos", "actos"]
+# ::lemmas ["total", "y", "absoluta", "condena", "y", "tan", "repulsivos", "actos"]
+(c5-6 / and
+      :op1 (c5-5 / total)
+      :op2 (c5-0 / absoluta
+                 :domain (c5-3 / condena))
+      :op3 (c5-2 / repulsivos
+                 :domain (c5-1 / acto)
+                 :ARG1-of (c5-4 / tan-02)))
+
+# ::snt when goes wrong.
+# ::tokens ["when", "goes", "wrong", "."]
+# ::lemmas ["when", "go", "wrong", "."]
+(c6-2 / be-temporally-at-91
+      :ARG2 (c6-1 / go-08
+                  :ARG2 (c6-0 / wrong-02)))
+
+# ::snt What Muslims NOT condemning a terror attack looks like.
+# ::tokens ["What", "Muslims", "NOT", "condemning", "a", "terror", "attack", "looks", "like", "."]
+# ::lemmas ["what", "Muslims", "not", "condemn", "a", "terror", "attack", "look", "like", "."]
+(c7-0 / look-02
+      :ARG0 (c7-3 / person
+                  :mod (c7-4 / religious-group
+                             :name (c7-2 / name
+                                         :op1 "Islam"))
+                  :ARG0-of (c7-5 / condemn-01
+                                 :ARG1 (c7-7 / attack-01
+                                             :mod (c7-6 / terror))
+                                 :polarity -))
+      :ARG1 (c7-1 / amr-unknown))
+
+# ::snt Nice cartoon but USA today would show some spine by publishing the charlie cartoons. Cowards to the man.
+# ::tokens ["Nice", "cartoon", "but", "USA", "today", "would", "show", "some", "spine", "by", "publishing", "the", "charlie", "cartoons", ".", "Cowards", "to", "the", "man", "."]
+# ::lemmas ["nice", "cartoon", "but", "USA", "today", "would", "show", "some", "spine", "by", "publish", "the", "charlie", "cartoon", ".", "coward", "to", "the", "man", "."]
+(c8-1 / multi-sentence
+      :snt1 (c8-9 / contrast-01
+                  :ARG1 (c8-8 / cartoon
+                              :ARG1-of (c8-5 / nice-01))
+                  :ARG2 (c8-12 / show-01
+                               :ARG0 (c8-11 / country
+                                            :name (c8-6 / name
+                                                        :op1 "USA"))
+                               :ARG1 (c8-4 / spine
+                                           :quant (c8-0 / some))
+                               :manner (c8-7 / publish-01
+                                             :ARG0 c8-11
+                                             :ARG1 (c8-14 / cartoon
+                                                          :topic (c8-2 / charlie)))
+                               :time (c8-13 / today)))
+      :snt2 (c8-3 / coward
+                  :beneficiary (c8-10 / man)))

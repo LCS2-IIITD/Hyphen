@@ -1,0 +1,52 @@
+# ::snt Neighbour's colleague was in hospital for months with COVID19. Should be immune now. Wrong. Got D variant and is back in hospital.
+# ::tokens ["Neighbour", "'s", "colleague", "was", "in", "hospital", "for", "months", "with", "COVID19", ".", "Should", "be", "immune", "now", ".", "Wrong", ".", "Got", "D", "variant", "and", "is", "back", "in", "hospital", "."]
+# ::lemmas ["Neighbour", "'s", "colleague", "be", "in", "hospital", "for", "months", "with", "COVID19", ".", "should", "be", "immune", "now", ".", "wrong", ".", "got", "D", "variant", "and", "be", "back", "in", "hospital", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-20 / be-located-at-91
+                    :ARG1 (c2-5 / colleague
+                                :ARG1-of (c2-19 / have-org-role-91
+                                                :ARG0 (c2-12 / neighbor)
+                                                :ARG2 c2-5)))
+       :ARG2 (c2-2 / hospital)
+       :duration (c2-18 / multiple
+                        :op1 (c2-8 / temporal-quantity
+                                   :unit (c2-14 / month)
+                                   :quant 1))
+       :topic (c2-0 / disease
+                    :name (c2-1 / name
+                                :op1 "COVID19"))
+       :snt2 (c2-9 / recommend-01
+                   :ARG1 (c2-3 / immune-02
+                               :time (c2-15 / now)))
+       :snt3 (c2-6 / wrong-04)
+       :snt4 (c2-17 / and
+                    :op1 (c2-10 / get-01
+                                :ARG1 (c2-7 / variant
+                                            :mod (c2-13 / string-entity
+                                                        :value "D")))
+                    :op2 c2-20
+                    :ARG1 c2-5
+                    :ARG2 (c2-4 / hospital)
+                    :mod (c2-16 / back)))
+
+# ::snt It's almost like you have no background in science at all.
+# ::tokens ["It", "'s", "almost", "like", "you", "have", "no", "background", "in", "science", "at", "all", "."]
+# ::lemmas ["it", "be", "almost", "like", "you", "have", "no", "background", "in", "science", "at", "all", "."]
+(c3-3 / resemble-01
+      :ARG1 (c3-2 / have-03
+                  :ARG0 (c3-5 / you)
+                  :ARG1 (c3-4 / background
+                              :topic (c3-0 / science))
+                  :mod (c3-1 / at-all)
+                  :polarity -)
+      :mod (c3-6 / almost))
+
+# ::snt So I am fruit diets all day
+# ::tokens ["So", "I", "am", "fruit", "diets", "all", "day"]
+# ::lemmas ["so", "i", "be", "fruit", "diet", "all", "day"]
+(c4-3 / infer-01
+      :ARG1 (c4-0 / diet
+                  :mod (c4-2 / fruit)
+                  :domain (c4-4 / i)
+                  :duration (c4-5 / day
+                                  :mod (c4-1 / all))))

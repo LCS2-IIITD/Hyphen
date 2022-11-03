@@ -1,0 +1,43 @@
+# ::snt =Live coverage(www
+# ::tokens ["=", "Live", "coverage(www"]
+# ::lemmas ["=", "live", "coverage(www"]
+(c1-1 / cover-03
+      :ARG1-of (c1-0 / live-01))
+
+# ::snt : Follow our live coverage of the shootings in Ottawa here
+# ::tokens [":", "Follow", "our", "live", "coverage", "of", "the", "shootings", "in", "Ottawa", "here"]
+# ::lemmas [":", "follow", "our", "live", "coverage", "of", "the", "shooting", "in", "Ottawa", "here"]
+(c2-3 / follow-02
+      :ARG0 (c2-2 / you)
+      :ARG1 (c2-7 / cover-03
+                  :ARG0 (c2-1 / we)
+                  :ARG1 (c2-8 / shoot-02
+                              :location (c2-6 / city
+                                              :name (c2-5 / name
+                                                          :op1 "Ottawa")))
+                  :manner (c2-4 / live))
+      :location (c2-0 / here)
+      :mode imperative)
+
+# ::snt :Thank goodness - Ottawa game postponed tonite
+# ::tokens [":", "Thank", "goodness", "-", "Ottawa", "game", "postponed", "tonite"]
+# ::lemmas [":", "thank", "goodness", "-", "Ottawa", "game", "postpone", "tonite"]
+(c3-0 / multi-sentence
+      :snt1 (c3-9 / thank-01
+                  :ARG1 (c3-6 / goodness))
+      :snt2 (c3-3 / postpone-01
+                  :ARG1 (c3-4 / game
+                              :location (c3-5 / city
+                                              :name (c3-1 / name
+                                                          :op1 "Ottawa")))
+                  :time (c3-7 / date-entity
+                              :dayperiod (c3-2 / night)
+                              :mod (c3-8 / today))))
+
+# ::snt a sad day in our history.
+# ::tokens ["a", "sad", "day", "in", "our", "history", "."]
+# ::lemmas ["a", "sad", "day", "in", "our", "history", "."]
+(c4-3 / day
+      :ARG1-of (c4-0 / sad-02)
+      :part-of (c4-2 / history
+                     :poss (c4-1 / we)))

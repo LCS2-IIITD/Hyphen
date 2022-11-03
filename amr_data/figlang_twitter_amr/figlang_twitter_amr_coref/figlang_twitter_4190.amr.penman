@@ -1,0 +1,65 @@
+# ::snt I need a plus one for this . Any takers ? <URL>
+# ::tokens ["I", "need", "a", "plus", "one", "for", "this", ".", "Any", "takers", "?", "<", "URL", ">"]
+# ::lemmas ["i", "need", "a", "plus", "one", "for", "this", ".", "any", "taker", "?", "<", "URL", ">"]
+(c1-6 / multi-sentence
+      :snt1 (c1-7 / need-01
+                  :ARG0 (c1-5 / i)
+                  :ARG1 (c1-4 / plus
+                              :op1 1)
+                  :purpose (c1-3 / this))
+      :snt2 (c1-2 / person
+                  :ARG0-of (c1-1 / take-01)
+                  :polarity (c1-0 / amr-unknown)
+                  :mod (c1-8 / any)))
+
+# ::snt Do it and then you can do the ride . Amazing place west of Ireland .
+# ::tokens ["Do", "it", "and", "then", "you", "can", "do", "the", "ride", ".", "Amazing", "place", "west", "of", "Ireland", "."]
+# ::lemmas ["do", "it", "and", "then", "you", "can", "do", "the", "ride", ".", "amazing", "place", "west", "of", "Ireland", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-1 / and
+                   :op1 (c2-0 / do-02
+                              :ARG0 (c2-12 / you)
+                              :ARG1 (c2-9 / it)
+                              :mode imperative)
+                   :op2 (c2-8 / possible-01
+                              :ARG1 (c2-4 / do-02
+                                          :ARG0 c2-12
+                                          :ARG1 (c2-7 / ride-01)
+                                          :time (c2-6 / then))))
+       :snt2 (c2-5 / place
+                   :ARG1-of (c2-13 / awe-01)
+                   :location (c2-3 / west
+                                   :part-of (c2-2 / country
+                                                  :name (c2-11 / name
+                                                               :op1 "Ireland")))))
+
+# ::snt Definitely ! Planned to do the Wild Atlantic Way a couple of years ago , but ended up doing something else instead . It's still on my list .
+# ::tokens ["Definitely", "!", "Planned", "to", "do", "the", "Wild", "Atlantic", "Way", "a", "couple", "of", "years", "ago", ",", "but", "ended", "up", "doing", "something", "else", "instead", ".", "It", "'s", "still", "on", "my", "list", "."]
+# ::lemmas ["definitely", "!", "plan", "to", "do", "the", "Wild", "Atlantic", "way", "a", "couple", "of", "years", "ago", ",", "but", "end", "up", "do", "something", "else", "instead", ".", "it", "be", "still", "on", "my", "list", "."]
+(c3-7 / multi-sentence
+      :snt1 (c3-4 / contrast-01
+                  :ARG1 (c3-20 / plan-01
+                               :ARG1 (c3-0 / do-02
+                                           :ARG1 (c3-5 / way
+                                                       :name (c3-8 / name
+                                                                   :op1 "Wild"
+                                                                   :op2 "Atlantic"
+                                                                   :op3 "Way"))
+                                           :time (c3-18 / before
+                                                        :op1 (c3-2 / now)
+                                                        :quant (c3-1 / couple
+                                                                     :op1 (c3-6 / temporal-quantity
+                                                                                :unit (c3-15 / year)
+                                                                                :quant 1))))
+                               :mod (c3-14 / definite))
+                  :ARG2 (c3-9 / end-up-03
+                              :ARG1 (c3-3 / i)
+                              :ARG2 (c3-11 / do-02
+                                           :ARG0 c3-3
+                                           :ARG1 (c3-10 / something
+                                                        :mod (c3-16 / else))
+                                           :ARG1-of (c3-12 / instead-of-91))))
+      :snt2 (c3-17 / list-01
+                   :ARG0 c3-3
+                   :ARG1 (c3-13 / it)
+                   :mod (c3-19 / still)))

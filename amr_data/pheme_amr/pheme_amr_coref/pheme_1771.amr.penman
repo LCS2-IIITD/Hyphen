@@ -1,0 +1,63 @@
+# ::snt all alive? I thought earlier reports said two killed?
+# ::tokens ["all", "alive", "?", "I", "thought", "earlier", "reports", "said", "two", "killed", "?"]
+# ::lemmas ["all", "alive", "?", "i", "think", "early", "report", "say", "two", "kill", "?"]
+(c1-1 / multi-sentence
+      :snt1 (c1-0 / live-01
+                  :polarity (c1-10 / amr-unknown)
+                  :ARG0 (c1-3 / all))
+      :snt2 (c1-9 / think-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-8 / say-01
+                              :ARG0 (c1-7 / report-01
+                                          :time (c1-2 / before))
+                              :ARG1 (c1-5 / kill-01
+                                          :ARG1 (c1-6 / person
+                                                      :quant 2)))))
+
+# ::snt : Amazing photo apparently of hostages at supermarket siege being carried away
+# ::tokens [":", "Amazing", "photo", "apparently", "of", "hostages", "at", "supermarket", "siege", "being", "carried", "away"]
+# ::lemmas [":", "amazing", "photo", "apparently", "of", "hostage", "at", "supermarket", "siege", "be", "carry", "away"]
+(c2-4 / photo
+      :topic (c2-0 / hostage
+                   :ARG1-of (c2-5 / carry-01
+                                  :direction (c2-7 / away)
+                                  :time (c2-6 / standoff
+                                              :location (c2-1 / supermarket))))
+      :ARG0-of (c2-2 / amaze-01)
+      :ARG1-of (c2-3 / appear-02))
+
+# ::snt Just praying for the people's safety in France!! world global religion news
+# ::tokens ["Just", "praying", "for", "the", "people", "'s", "safety", "in", "France", "!", "!", "world", "global", "religion", "news"]
+# ::lemmas ["just", "pray", "for", "the", "people", "'s", "safety", "in", "France", "!", "!", "world", "global", "religion", "news"]
+(c3-2 / multi-sentence
+      :snt1 (c3-5 / pray-01
+                  :ARG1 (c3-9 / safe-01
+                              :ARG1 (c3-10 / person)
+                              :location (c3-7 / country
+                                              :name (c3-3 / name
+                                                          :op1 "France")))
+                  :mod (c3-0 / just)
+                  :mode expressive)
+      :snt2 (c3-4 / news
+                  :topic (c3-6 / religion
+                               :mod (c3-8 / globe))
+                  :mod (c3-1 / world)))
+
+# ::snt can i laugh a little at the lady being carried?
+# ::tokens ["can", "i", "laugh", "a", "little", "at", "the", "lady", "being", "carried", "?"]
+# ::lemmas ["can", "i", "laugh", "a", "little", "at", "the", "lady", "be", "carry", "?"]
+(c4-3 / possible-01
+      :polarity (c4-6 / amr-unknown)
+      :ARG1 (c4-1 / laugh-01
+                  :ARG0 (c4-2 / i)
+                  :ARG2 (c4-5 / lady
+                              :ARG1-of (c4-4 / carry-01))
+                  :degree (c4-0 / little)))
+
+# ::snt at least four dead
+# ::tokens ["at", "least", "four", "dead"]
+# ::lemmas ["at", "least", "four", "dead"]
+(c5-1 / die-01
+      :ARG1 (c5-0 / person
+                  :quant (c5-2 / at-least
+                               :op1 4)))

@@ -1,0 +1,111 @@
+# ::snt yooooooooooooooo
+# ::tokens ["yooooooooooooooo"]
+# ::lemmas ["yooooooooooooooo"]
+(c1-0 / yoooooooo
+      :mode expressive)
+
+# ::snt Well
+# ::tokens ["Well"]
+# ::lemmas ["well"]
+(c2-0 / well)
+
+# ::snt I can put $5 on the trip
+# ::tokens ["I", "can", "put", "$", "5", "on", "the", "trip"]
+# ::lemmas ["i", "can", "put", "$", "5", "on", "the", "trip"]
+(c3-2 / possible-01
+      :ARG1 (c3-1 / put-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-0 / monetary-quantity
+                              :unit (c3-5 / dollar)
+                              :quant 5)
+                  :ARG2 (c3-4 / trip-03)))
+
+# ::snt LETS GO
+# ::tokens ["LETS", "GO"]
+# ::lemmas ["LETS", "GO"]
+(c4-0 / go-01
+      :ARG1 (c4-1 / you)
+      :mode imperative)
+
+# ::snt idk greedy bastards.
+# ::tokens ["idk", "greedy", "bastards", "."]
+# ::lemmas ["idk", "greedy", "bastard", "."]
+(c5-1 / bastard
+      :mod (c5-0 / greedy)
+      :mod (c5-2 / idiot))
+
+# ::snt I SAW THIS!! That price though Why does everything Potter have to break the bank?????????
+# ::tokens ["I", "SAW", "THIS", "!", "!", "That", "price", "though", "Why", "does", "everything", "Potter", "have", "to", "break", "the", "bank", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+# ::lemmas ["i", "SAW", "this", "!", "!", "that", "price", "though", "why", "do", "everything", "Potter", "have", "to", "break", "the", "bank", "?", "?", "?", "?", "?", "?", "?", "?", "?"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / sell-01
+                  :ARG0 (c6-12 / i)
+                  :ARG1 (c6-13 / this))
+      :snt2 (c6-8 / have-concession-91
+                  :ARG1 (c6-11 / cause-01
+                               :ARG0 (c6-6 / amr-unknown)
+                               :ARG1 (c6-0 / obligate-01
+                                           :ARG1 (c6-7 / everything
+                                                       :topic (c6-9 / person
+                                                                    :name (c6-3 / name
+                                                                                :op1 "Potter")))
+                                           :ARG2 (c6-1 / break-01
+                                                       :ARG0 c6-7
+                                                       :ARG1 (c6-10 / bank))))
+                  :ARG2 (c6-15 / thing
+                               :ARG2-of (c6-5 / price-01)
+                               :mod (c6-14 / that))))
+
+# ::snt $5,350
+# ::tokens ["$", "5,350"]
+# ::lemmas ["$", "5,350"]
+(c7-1 / monetary-quantity
+      :unit (c7-0 / dollar)
+      :quant 5000)
+
+# ::snt cool
+# ::tokens ["cool"]
+# ::lemmas ["cool"]
+(c8-0 / cool-04)
+
+# ::snt It's actually not going to cost me a cent
+# ::tokens ["It", "'s", "actually", "not", "going", "to", "cost", "me", "a", "cent"]
+# ::lemmas ["it", "be", "actually", "not", "go", "to", "cost", "i", "a", "cent"]
+(c10-2 / cost-01
+       :ARG1 (c10-3 / it)
+       :ARG2 (c10-0 / monetary-quantity
+                    :unit (c10-5 / cent)
+                    :quant 1)
+       :ARG3 (c10-1 / i)
+       :ARG1-of (c10-4 / actual-02)
+       :polarity -)
+
+# ::snt Yes!
+# ::tokens ["Yes", "!"]
+# ::lemmas ["yes", "!"]
+(c11-0 / yes)
+
+# ::snt Should be fun
+# ::tokens ["Should", "be", "fun"]
+# ::lemmas ["should", "be", "fun"]
+(c13-0 / recommend-01
+       :ARG1 (c13-1 / fun-01))
+
+# ::snt sounds fun!
+# ::tokens ["sounds", "fun", "!"]
+# ::lemmas ["sound", "fun", "!"]
+(c14-1 / sound-01
+       :ARG1 (c14-0 / fun-01))
+
+# ::snt Send this to the WH and family.
+# ::tokens ["Send", "this", "to", "the", "WH", "and", "family", "."]
+# ::lemmas ["send", "this", "to", "the", "WH", "and", "family", "."]
+(c16-3 / send-01
+       :ARG0 (c16-1 / you)
+       :ARG1 (c16-4 / this)
+       :ARG2 (c16-5 / and
+                    :op1 (c16-6 / government-organization
+                                :name (c16-2 / name
+                                             :op1 "WH"))
+                    :op2 (c16-0 / family))
+       :mode imperative)

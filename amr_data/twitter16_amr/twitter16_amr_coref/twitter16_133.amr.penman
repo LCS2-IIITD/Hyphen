@@ -1,0 +1,256 @@
+# ::snt So cool.
+# ::tokens ["So", "cool", "."]
+# ::lemmas ["so", "cool", "."]
+(c1-1 / cool-04
+      :degree (c1-0 / so))
+
+# ::snt hope one day to see the Sydney Opera House in the same colours
+# ::tokens ["hope", "one", "day", "to", "see", "the", "Sydney", "Opera", "House", "in", "the", "same", "colours"]
+# ::lemmas ["hope", "one", "day", "to", "see", "the", "Sydney", "Opera", "House", "in", "the", "same", "colour"]
+(c2-7 / hope-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-4 / see-01
+                  :ARG0 c2-3
+                  :ARG1 (c2-1 / building
+                              :name (c2-5 / name
+                                          :op1 "Sydney"
+                                          :op2 "Opera"
+                                          :op3 "House"))
+                  :ARG2 (c2-8 / color
+                              :ARG1-of (c2-0 / same-01))
+                  :time (c2-2 / day
+                              :mod (c2-6 / one))))
+
+# ::snt should look like that all the time. No could do with a bit of colour too!
+# ::tokens ["should", "look", "like", "that", "all", "the", "time", ".", "No", "could", "do", "with", "a", "bit", "of", "colour", "too", "!"]
+# ::lemmas ["should", "look", "like", "that", "all", "the", "time", ".", "no", "could", "do", "with", "a", "bit", "of", "colour", "too", "!"]
+(c3-6 / multi-sentence
+      :snt1 (c3-2 / recommend-01
+                  :ARG1 (c3-9 / look-02
+                              :ARG1 (c3-1 / that)
+                              :time (c3-4 / time
+                                          :mod (c3-0 / all))))
+      :snt2 (c3-7 / possible-01
+                  :ARG1 (c3-11 / do-02
+                               :ARG0 (c3-8 / no)
+                               :ARG1 (c3-10 / color
+                                            :quant (c3-3 / bit))
+                               :mod (c3-5 / too))
+                  :polarity -))
+
+# ::snt I thought the same at first but yes indeed it happened.
+# ::tokens ["I", "thought", "the", "same", "at", "first", "but", "yes", "indeed", "it", "happened", "."]
+# ::lemmas ["i", "think", "the", "same", "at", "first", "but", "yes", "indeed", "it", "happen", "."]
+(c4-7 / contrast-01
+      :ARG1 (c4-1 / think-01
+                  :ARG0 (c4-4 / i)
+                  :ARG1 (c4-5 / same-01)
+                  :time (c4-0 / at-first))
+      :ARG2 (c4-2 / event
+                  :mod (c4-6 / indeed)
+                  :mod (c4-3 / yes)))
+
+# ::snt have fun and raise a glass from me
+# ::tokens ["have", "fun", "and", "raise", "a", "glass", "from", "me"]
+# ::lemmas ["have", "fun", "and", "raise", "a", "glass", "from", "i"]
+(c5-0 / and
+      :op1 (c5-5 / fun-01
+                 :ARG0 (c5-2 / you)
+                 :mode imperative)
+      :op2 (c5-1 / raise-01
+                 :ARG0 c5-2
+                 :ARG1 (c5-3 / glass)
+                 :ARG2 (c5-4 / i)
+                 :mode imperative))
+
+# ::snt I'm going to London Pride this afternoon to meet all the married couples from Ireland and the US.
+# ::tokens ["I", "'m", "going", "to", "London", "Pride", "this", "afternoon", "to", "meet", "all", "the", "married", "couples", "from", "Ireland", "and", "the", "US", "."]
+# ::lemmas ["i", "be", "go", "to", "London", "Pride", "this", "afternoon", "to", "meet", "all", "the", "married", "couple", "from", "Ireland", "and", "the", "US", "."]
+(c6-7 / go-02
+      :ARG0 (c6-10 / i)
+      :ARG4 (c6-3 / event
+                  :name (c6-12 / name
+                               :op1 "London"
+                               :op2 "Pride"))
+      :time (c6-15 / date-entity
+                   :dayperiod (c6-0 / afternoon)
+                   :mod (c6-1 / today))
+      :purpose (c6-8 / meet-03
+                     :ARG0 c6-10
+                     :ARG1 (c6-14 / couple
+                                  :ARG1-of (c6-4 / marry-01)
+                                  :source (c6-11 / and
+                                                 :op1 (c6-9 / country
+                                                            :name (c6-5 / name
+                                                                        :op1 "Ireland"))
+                                                 :op2 (c6-6 / country
+                                                            :name (c6-13 / name
+                                                                         :op1 "US")))
+                                  :mod (c6-2 / all))))
+
+# ::snt Holy sh, is this for real?
+# ::tokens ["Holy", "sh", ",", "is", "this", "for", "real", "?"]
+# ::lemmas ["holy", "sh", ",", "be", "this", "for", "real", "?"]
+(c7-2 / real-04
+      :polarity (c7-0 / amr-unknown)
+      :ARG1 (c7-1 / this)
+      :mod (c7-3 / shit
+                 :mod (c7-4 / holy)
+                 :mode expressive))
+
+# ::snt Cool!
+# ::tokens ["Cool", "!"]
+# ::lemmas ["cool", "!"]
+(c8-0 / cool-04)
+
+# ::snt true true
+# ::tokens ["true", "true"]
+# ::lemmas ["true", "true"]
+(c9-0 / true-01)
+
+# ::snt pride all the way
+# ::tokens ["pride", "all", "the", "way"]
+# ::lemmas ["pride", "all", "the", "way"]
+(c10-2 / pride-01
+       :ARG0 (c10-1 / you)
+       :extent (c10-0 / all-the-way)
+       :mode imperative)
+
+# ::snt : White House Lit in Rainbow Colors After Gay Marriage Ruling
+# ::tokens [":", "White", "House", "Lit", "in", "Rainbow", "Colors", "After", "Gay", "Marriage", "Ruling"]
+# ::lemmas [":", "White", "House", "Lit", "in", "Rainbow", "Colors", "after", "Gay", "Marriage", "ruling"]
+(c11-7 / light-04
+       :ARG0 (c11-2 / government-organization
+                    :name (c11-6 / name
+                                 :op1 "White"
+                                 :op2 "House"))
+       :ARG1 (c11-8 / color
+                    :mod (c11-1 / rainbow))
+       :time (c11-0 / after
+                    :op1 (c11-5 / rule-03
+                                :ARG3 (c11-3 / marry-01
+                                             :mod (c11-4 / gay-01)))))
+
+# ::snt Why in the hell is the white house doing this, he needs to be worried about the growing threat of ISIS
+# ::tokens ["Why", "in", "the", "hell", "is", "the", "white", "house", "doing", "this", ",", "he", "needs", "to", "be", "worried", "about", "the", "growing", "threat", "of", "ISIS"]
+# ::lemmas ["why", "in", "the", "hell", "be", "the", "white", "house", "do", "this", ",", "he", "need", "to", "be", "worried", "about", "the", "grow", "threat", "of", "ISIS"]
+(c12-0 / and
+       :op1 (c12-14 / do-02
+                    :ARG0 (c12-13 / house
+                                  :ARG1-of (c12-11 / white-02))
+                    :ARG1 (c12-1 / this)
+                    :ARG1-of (c12-12 / cause-01
+                                     :ARG0 (c12-8 / amr-unknown
+                                                  :mod (c12-7 / hell
+                                                              :mode expressive))))
+       :op2 (c12-10 / need-01
+                    :ARG0 (c12-9 / he)
+                    :ARG1 (c12-2 / worry-01
+                                 :ARG0 (c12-5 / grow-01
+                                              :ARG1 (c12-3 / threaten-01
+                                                           :ARG0 (c12-6 / criminal-organization
+                                                                        :name (c12-4 / name
+                                                                                     :op1 "Islamic"
+                                                                                     :op2 "organization"))))
+                                 :ARG1 c12-9)))
+
+# ::snt I think I see the shark ducking.
+# ::tokens ["I", "think", "I", "see", "the", "shark", "ducking", "."]
+# ::lemmas ["i", "think", "i", "see", "the", "shark", "duck", "."]
+(c13-1 / think-01
+       :ARG0 (c13-2 / i)
+       :ARG1 (c13-3 / see-01
+                    :ARG0 c13-2
+                    :ARG1 (c13-4 / duck-01
+                                 :ARG0 (c13-0 / shark))))
+
+# ::snt "dumb" and "it's". Try not to look so dum, brah.
+# ::tokens ["\"", "dumb", "\"", "and", "\"", "it", "'s", "\"", ".", "Try", "not", "to", "look", "so", "dum", ",", "brah", "."]
+# ::lemmas ["\"", "dumb", "\"", "and", "\"", "it", "be", "\"", ".", "try", "not", "to", "look", "so", "dum", ",", "brah", "."]
+(c15-5 / multi-sentence
+       :snt1 (c15-0 / and
+                    :op1 (c15-9 / dumb)
+                    :op2 (c15-6 / it))
+       :snt2 (c15-1 / try-01
+                    :ARG0 (c15-4 / you)
+                    :ARG1 (c15-8 / look-02
+                                 :ARG0 c15-4
+                                 :ARG1 (c15-2 / dum
+                                              :degree (c15-7 / so))
+                                 :polarity -)
+                    :mod (c15-3 / brah
+                                :mode expressive)
+                    :mode imperative))
+
+# ::snt very well..
+# ::tokens ["very", "well", ".."]
+# ::lemmas ["very", "well", ".."]
+(c16-1 / well-09
+       :degree (c16-0 / very))
+
+# ::snt : White House Lit in Rainbow Colors After Gay Marriage Ruling
+# ::tokens [":", "White", "House", "Lit", "in", "Rainbow", "Colors", "After", "Gay", "Marriage", "Ruling"]
+# ::lemmas [":", "White", "House", "Lit", "in", "Rainbow", "Colors", "after", "Gay", "Marriage", "ruling"]
+(c17-7 / light-04
+       :ARG0 (c17-2 / government-organization
+                    :name (c17-6 / name
+                                 :op1 "White"
+                                 :op2 "House"))
+       :ARG1 (c17-8 / color
+                    :mod (c17-1 / rainbow))
+       :time (c17-0 / after
+                    :op1 (c17-5 / rule-03
+                                :ARG3 (c17-3 / marry-01
+                                             :mod (c17-4 / gay-01)))))
+
+# ::snt A beautiful thing to behold.
+# ::tokens ["A", "beautiful", "thing", "to", "behold", "."]
+# ::lemmas ["a", "beautiful", "thing", "to", "behold", "."]
+(c18-2 / thing
+       :ARG1-of (c18-0 / beautiful-02)
+       :ARG1-of (c18-1 / behold-01))
+
+# ::snt So says someone with Van Damme in his profile photo.
+# ::tokens ["So", "says", "someone", "with", "Van", "Damme", "in", "his", "profile", "photo", "."]
+# ::lemmas ["so", "say", "someone", "with", "Van", "Damme", "in", "his", "profile", "photo", "."]
+(c19-3 / say-01
+       :ARG0 (c19-0 / someone
+                    :prep-with (c19-4 / person
+                                      :name (c19-5 / name
+                                                   :op1 "Van"
+                                                   :op2 "Damme"))
+                    :location (c19-2 / photo
+                                     :mod (c19-1 / profile)
+                                     :poss c19-4))
+       :ARG1 (c19-6 / so))
+
+# ::snt likes these it's a ReReTweet ....
+# ::tokens ["likes", "these", "it", "'s", "a", "ReReTweet", "...."]
+# ::lemmas ["like", "these", "it", "be", "a", "reretweet", "...."]
+(c20-0 / and
+       :op1 (c20-5 / like-01
+                   :ARG0 (c20-2 / i)
+                   :ARG1 (c20-1 / this))
+       :op2 (c20-3 / publication
+                   :name (c20-4 / name
+                                :op1 "ReReTweet")
+                   :domain c20-1))
+
+# ::snt So cool!! : White House Lit in Rainbow Colors After Gay Marriage Ruling
+# ::tokens ["So", "cool", "!", "!", ":", "White", "House", "Lit", "in", "Rainbow", "Colors", "After", "Gay", "Marriage", "Ruling"]
+# ::lemmas ["so", "cool", "!", "!", ":", "White", "House", "Lit", "in", "Rainbow", "Colors", "after", "Gay", "Marriage", "ruling"]
+(c21-4 / multi-sentence
+       :snt1 (c21-11 / cool-04
+                     :degree (c21-8 / so)
+                     :mode expressive)
+       :snt2 (c21-10 / light-04
+                     :ARG0 (c21-3 / government-organization
+                                  :name (c21-9 / name
+                                               :op1 "White"
+                                               :op2 "House"))
+                     :ARG1 (c21-5 / color
+                                  :mod (c21-1 / rainbow))
+                     :time (c21-0 / after
+                                  :op1 (c21-7 / rule-01
+                                              :ARG3 (c21-2 / marry-01
+                                                           :mod (c21-6 / gay-01))))))

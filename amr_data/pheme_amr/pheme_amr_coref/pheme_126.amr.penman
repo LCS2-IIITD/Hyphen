@@ -1,0 +1,150 @@
+# ::snt :..Actively looking for or more suspects in Canadian parliament shooting..
+# ::tokens [":", "..", "Actively", "looking", "for", "or", "more", "suspects", "in", "Canadian", "parliament", "shooting", ".."]
+# ::lemmas [":", "..", "actively", "look", "for", "or", "more", "suspect", "in", "Canadian", "parliament", "shooting", ".."]
+(c1-0 / look-01
+      :ARG1 (c1-4 / person
+                  :ARG2-of (c1-6 / suspect-01
+                                 :ARG1 (c1-1 / shoot-02
+                                             :location (c1-5 / government-organization
+                                                             :name (c1-3 / name
+                                                                         :op1 "Canadian"
+                                                                         :op2 "Parliament"))))
+                  :quant (c1-7 / at-least
+                               :op1 12))
+      :ARG1-of (c1-2 / activity-06))
+
+# ::snt Possibly more that one shooter? What are the odds this is terrorism?
+# ::tokens ["Possibly", "more", "that", "one", "shooter", "?", "What", "are", "the", "odds", "this", "is", "terrorism", "?"]
+# ::lemmas ["possibly", "more", "that", "one", "shooter", "?", "what", "be", "the", "odd", "this", "be", "terrorism", "?"]
+(c2-0 / multi-sentence
+      :snt1 (c2-2 / possible-01
+                  :ARG1 (c2-3 / more-than
+                              :op1 (c2-7 / person
+                                         :ARG0-of (c2-5 / shoot-02)
+                                         :quant 1)))
+      :snt2 (c2-1 / odds
+                  :domain (c2-6 / terrorism
+                                :domain (c2-4 / this))
+                  :polarity (c2-8 / amr-unknown)))
+
+# ::snt One day you'll be hearing the word "you're the last Muslim left on earth".
+# ::tokens ["One", "day", "you", "'ll", "be", "hearing", "the", "word", "\"", "you", "'re", "the", "last", "Muslim", "left", "on", "earth", "\"", "."]
+# ::lemmas ["One", "day", "you", "'ll", "be", "hear", "the", "word", "\"", "you", "be", "the", "last", "Muslim", "leave", "on", "earth", "\"", "."]
+(c3-0 / hear-01
+      :ARG0 (c3-1 / you)
+      :ARG1 (c3-2 / word-01
+                  :ARG1 (c3-8 / person
+                              :mod (c3-9 / religious-group
+                                         :name (c3-7 / name
+                                                     :op1 "Islam"))
+                              :ord (c3-5 / ordinal-entity
+                                         :value "-1")
+                              :ARG1-of (c3-3 / leave-17
+                                             :location (c3-6 / earth))
+                              :domain c3-1))
+      :time (c3-10 / day
+                   :mod (c3-4 / one)))
+
+# ::snt i think we very often hear the word CANADA
+# ::tokens ["i", "think", "we", "very", "often", "hear", "the", "word", "CANADA"]
+# ::lemmas ["i", "think", "we", "very", "often", "hear", "the", "word", "CANADA"]
+(c4-8 / think-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-0 / hear-01
+                  :ARG0 (c4-1 / we)
+                  :ARG1 (c4-4 / word
+                              :mod (c4-7 / country
+                                         :name (c4-5 / name
+                                                     :op1 "Canada")))
+                  :frequency (c4-2 / often
+                                   :degree (c4-6 / very))))
+
+# ::snt Big Trouble in Canuckistan, how's that working out for you up there in ?
+# ::tokens ["Big", "Trouble", "in", "Canuckistan", ",", "how", "'s", "that", "working", "out", "for", "you", "up", "there", "in", "?"]
+# ::lemmas ["big", "trouble", "in", "Canuckistan", ",", "how", "be", "that", "work", "out", "for", "you", "up", "there", "in", "?"]
+(c5-0 / work-out-02
+      :ARG1 (c5-6 / that)
+      :beneficiary (c5-1 / you)
+      :location (c5-2 / up-03
+                      :ARG2 (c5-5 / there))
+      :manner (c5-7 / amr-unknown)
+      :topic (c5-4 / thing
+                   :name (c5-3 / name
+                               :op1 "Big"
+                               :op2 "Trouble"
+                               :op3 "in"
+                               :op4 "Canuckistan")))
+
+# ::snt : police: Actively looking for one or more suspects in Canadian parliament shooting
+# ::tokens [":", "police", ":", "Actively", "looking", "for", "one", "or", "more", "suspects", "in", "Canadian", "parliament", "shooting"]
+# ::lemmas [":", "police", ":", "actively", "look", "for", "one", "or", "more", "suspect", "in", "Canadian", "parliament", "shooting"]
+(c6-0 / look-01
+      :ARG0 (c6-4 / police)
+      :ARG1 (c6-8 / person
+                  :ARG2-of (c6-7 / suspect-01)
+                  :quant (c6-9 / at-least
+                               :op1 1)
+                  :ARG1-of (c6-5 / cause-01
+                                 :ARG0 (c6-1 / shoot-02
+                                             :ARG1 (c6-6 / government-organization
+                                                         :name (c6-3 / name
+                                                                     :op1 "Canadian"
+                                                                     :op2 "Parliament")))))
+      :manner (c6-2 / active))
+
+# ::snt : Ottawa police: Actively looking for one or more suspects in Canadian parliament shooting.
+# ::tokens [":", "Ottawa", "police", ":", "Actively", "looking", "for", "one", "or", "more", "suspects", "in", "Canadian", "parliament", "shooting", "."]
+# ::lemmas [":", "Ottawa", "police", ":", "actively", "look", "for", "one", "or", "more", "suspect", "in", "Canadian", "parliament", "shooting", "."]
+(c7-0 / look-01
+      :ARG0 (c7-5 / police
+                  :mod (c7-6 / city
+                             :name (c7-3 / name
+                                         :op1 "Ottawa")))
+      :ARG1 (c7-9 / person
+                  :ARG2-of (c7-8 / suspect-01
+                                 :ARG1 (c7-1 / shoot-02
+                                             :ARG1 (c7-7 / government-organization
+                                                         :name (c7-4 / name
+                                                                     :op1 "Canadian"
+                                                                     :op2 "Parliament"))))
+                  :quant (c7-10 / at-least
+                                :op1 1))
+      :manner (c7-2 / actively))
+
+# ::snt narcissistic stalker, what does it mean, who r the examples n does it mean that they believe victims r following the stalker!!?!??!
+# ::tokens ["narcissistic", "stalker", ",", "what", "does", "it", "mean", ",", "who", "r", "the", "examples", "n", "does", "it", "mean", "that", "they", "believe", "victims", "r", "following", "the", "stalker", "!", "!", "?", "!", "?", "?", "!"]
+# ::lemmas ["narcissistic", "stalker", ",", "what", "do", "it", "mean", ",", "who", "r", "the", "example", "n", "do", "it", "mean", "that", "they", "believe", "victim", "r", "follow", "the", "stalker", "!", "!", "?", "!", "?", "?", "!"]
+(c8-1 / multi-sentence
+      :snt1 (c8-10 / person
+                   :ARG0-of (c8-13 / stalk-02)
+                   :mod (c8-8 / narcissism))
+      :snt2 (c8-12 / contrast-01
+                   :ARG1 (c8-11 / mean-01
+                                :ARG1 (c8-7 / it)
+                                :ARG2 (c8-16 / amr-unknown))
+                   :ARG2 (c8-0 / mean-01
+                               :ARG1 c8-7
+                               :ARG2 (c8-4 / believe-01
+                                           :ARG0 (c8-14 / they)
+                                           :ARG1 (c8-2 / follow-02
+                                                       :ARG0 (c8-15 / person
+                                                                    :ARG1-of (c8-9 / victimize-01))
+                                                       :ARG1 (c8-3 / person
+                                                                   :ARG0-of (c8-5 / stalk-02))))
+                               :polarity (c8-6 / amr-unknown))))
+
+# ::snt go fock yourself son of a biaaatch
+# ::tokens ["go", "fock", "yourself", "son", "of", "a", "biaaatch"]
+# ::lemmas ["go", "fock", "yourself", "son", "of", "a", "biaaatch"]
+(c9-8 / say-01
+      :ARG0 (c9-5 / i)
+      :ARG1 (c9-7 / go-05
+                  :ARG0 (c9-1 / you)
+                  :ARG1 (c9-2 / fuck-01
+                              :ARG0 c9-1
+                              :ARG1 (c9-6 / person
+                                          :ARG0-of (c9-0 / have-rel-role-91
+                                                         :ARG1 (c9-3 / biaaatch)
+                                                         :ARG2 (c9-4 / son))
+                                          :ARG2-of c9-8))
+                  :mode imperative))

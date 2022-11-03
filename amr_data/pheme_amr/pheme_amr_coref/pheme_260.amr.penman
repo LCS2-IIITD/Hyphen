@@ -1,0 +1,138 @@
+# ::snt if it was an explosive decompression then it means that everyone on board was unconscious?
+# ::tokens ["if", "it", "was", "an", "explosive", "decompression", "then", "it", "means", "that", "everyone", "on", "board", "was", "unconscious", "?"]
+# ::lemmas ["if", "it", "be", "an", "explosive", "decompression", "then", "it", "mean", "that", "everyone", "on", "board", "be", "unconscious", "?"]
+(c1-0 / have-condition-91
+      :ARG1 (c1-1 / mean-01
+                  :ARG1 (c1-6 / decompress-01
+                              :mod (c1-5 / explosive))
+                  :ARG2 (c1-2 / unconscious
+                              :domain (c1-3 / everyone
+                                            :location (c1-4 / board-01)))
+                  :polarity (c1-7 / amr-unknown))
+      :ARG2 c1-6)
+
+# ::snt so there was no signal sent. What a shame.
+# ::tokens ["so", "there", "was", "no", "signal", "sent", ".", "What", "a", "shame", "."]
+# ::lemmas ["so", "there", "be", "no", "signal", "send", ".", "what", "a", "shame", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-4 / cause-01
+                  :ARG1 (c2-5 / signal-07
+                              :ARG1-of (c2-3 / send-01)
+                              :polarity -))
+      :snt2 (c2-0 / shame-02
+                  :degree (c2-2 / so)))
+
+# ::snt : Update - AFP: Aviation official says crew did not send a distress signal so was there or wasn't there one? :/
+# ::tokens [":", "Update", "-", "AFP", ":", "Aviation", "official", "says", "crew", "did", "not", "send", "a", "distress", "signal", "so", "was", "there", "or", "was", "n't", "there", "one", "?", ":/"]
+# ::lemmas [":", "update", "-", "AFP", ":", "aviation", "official", "say", "crew", "do", "not", "send", "a", "distress", "signal", "so", "be", "there", "or", "be", "not", "there", "one", "?", ":/"]
+(c3-2 / update-02
+      :ARG0 (c3-9 / publication
+                  :name (c3-8 / name
+                              :op1 "AFP"))
+      :ARG2 (c3-14 / say-01
+                   :ARG0 (c3-16 / person
+                                :ARG0-of (c3-0 / have-org-role-91
+                                               :ARG1 (c3-17 / aviation)
+                                               :ARG2 (c3-5 / official)))
+                   :ARG1 (c3-6 / send-01
+                               :ARG0 (c3-3 / person
+                                           :ARG0-of (c3-11 / crew-01))
+                               :ARG1 (c3-1 / signal-07
+                                           :ARG1 (c3-10 / distress-01))
+                               :ARG0-of (c3-12 / cause-01
+                                               :ARG1 (c3-7 / amr-choice
+                                                           :op1 (c3-4 / be-located-at-91
+                                                                      :ARG1 c3-1
+                                                                      :ARG2 (c3-15 / there))
+                                                           :op2 (c3-13 / be-located-at-91
+                                                                       :ARG1 c3-1
+                                                                       :ARG2 c3-15
+                                                                       :polarity -)))
+                               :polarity -)))
+
+# ::snt so lots of time without oxygen and freezing temperatures, deg C. Hard to survive.
+# ::tokens ["so", "lots", "of", "time", "without", "oxygen", "and", "freezing", "temperatures", ",", "deg", "C.", "Hard", "to", "survive", "."]
+# ::lemmas ["so", "lot", "of", "time", "without", "oxygen", "and", "freezing", "temperature", ",", "deg", "C.", "Hard", "to", "survive", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / cause-01
+                  :ARG1 (c4-8 / time
+                              :quant (c4-1 / lot)
+                              :prep-without (c4-9 / and
+                                                  :op1 (c4-4 / oxygen)
+                                                  :op2 (c4-6 / temperature
+                                                             :ARG1-of (c4-3 / freeze-01)))))
+      :snt2 (c4-0 / hard-02
+                  :ARG1 (c4-7 / survive-01)))
+
+# ::snt that changes things if true. Explosive decompression, unconscious crew?
+# ::tokens ["that", "changes", "things", "if", "true", ".", "Explosive", "decompression", ",", "unconscious", "crew", "?"]
+# ::lemmas ["that", "change", "thing", "if", "true", ".", "explosive", "decompression", ",", "unconscious", "crew", "?"]
+(c5-0 / multi-sentence
+      :snt1 (c5-6 / change-01
+                  :ARG0 (c5-9 / that)
+                  :ARG1 (c5-8 / thing)
+                  :condition (c5-4 / true-01
+                                   :ARG1 c5-9))
+      :snt2 (c5-10 / and
+                   :op1 (c5-5 / decompress-01
+                              :manner (c5-2 / explosive))
+                   :op2 (c5-7 / crew
+                              :mod (c5-1 / unconscious))
+                   :polarity (c5-3 / amr-unknown)))
+
+# ::snt could be. It flew miles during its descent, ft/min drop, constant mph, descent slope deg.
+# ::tokens ["could", "be", ".", "It", "flew", "miles", "during", "its", "descent", ",", "ft", "/", "min", "drop", ",", "constant", "mph", ",", "descent", "slope", "deg", "."]
+# ::lemmas ["could", "be", ".", "it", "fly", "mile", "during", "its", "descent", ",", "ft", "/", "min", "drop", ",", "constant", "mph", ",", "descent", "slope", "deg", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-10 / possible-01)
+      :snt2 (c6-2 / fly-01
+                  :ARG1 (c6-6 / it)
+                  :duration (c6-9 / multiple
+                                  :op1 (c6-11 / distance-quantity
+                                              :unit (c6-4 / mile)
+                                              :quant 1))
+                  :time (c6-1 / descend-01
+                              :ARG0 c6-6)
+                  :snt3 (c6-15 / drop-01
+                               :ARG1 (c6-12 / rate-entity-91
+                                            :ARG1 c6-11
+                                            :unit (c6-7 / foot)
+                                            :quant 1)
+                               :ARG2 (c6-14 / temporal-quantity
+                                            :unit (c6-0 / hour)
+                                            :quant 1)))
+      :snt4 (c6-13 / slope
+                   :mod (c6-8 / descend-01)
+                   :mod (c6-5 / de-icer)))
+
+# ::snt BBC NEWS just said they did?
+# ::tokens ["BBC", "NEWS", "just", "said", "they", "did", "?"]
+# ::lemmas ["BBC", "NEWS", "just", "say", "they", "do", "?"]
+(c7-4 / say-01
+      :polarity (c7-6 / amr-unknown)
+      :ARG0 (c7-1 / broadcast-program
+                  :name (c7-2 / name
+                              :op1 "BBC"
+                              :op2 "News"))
+      :ARG1 (c7-3 / do-02
+                  :ARG0 (c7-5 / they))
+      :mod (c7-0 / just))
+
+# ::snt : Update - AFP: Aviation official says crew did not send a distress signal
+# ::tokens [":", "Update", "-", "AFP", ":", "Aviation", "official", "says", "crew", "did", "not", "send", "a", "distress", "signal"]
+# ::lemmas [":", "update", "-", "AFP", ":", "aviation", "official", "say", "crew", "do", "not", "send", "a", "distress", "signal"]
+(c8-2 / update-02
+      :ARG0 (c8-7 / publication
+                  :name (c8-6 / name
+                              :op1 "AFP"))
+      :ARG2 (c8-10 / say-01
+                   :ARG0 (c8-11 / person
+                                :ARG0-of (c8-0 / have-org-role-91
+                                               :ARG1 (c8-12 / aviation)
+                                               :ARG2 (c8-4 / official)))
+                   :ARG1 (c8-5 / send-01
+                               :ARG0 (c8-3 / person
+                                           :ARG0-of (c8-9 / crew-01))
+                               :ARG1 (c8-1 / signal-07
+                                           :ARG1 (c8-8 / distress-01))
+                               :polarity -)))

@@ -1,0 +1,63 @@
+# ::snt : Downtown . This man says he's marching for .
+# ::tokens [":", "Downtown", ".", "This", "man", "says", "he", "'s", "marching", "for", "."]
+# ::lemmas [":", "downtown", ".", "this", "man", "say", "he", "be", "march", "for", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-4 / city
+                  :name (c1-2 / name
+                              :op1 "Downtown"))
+      :snt2 (c1-5 / say-01
+                  :ARG0 (c1-3 / man
+                              :mod (c1-6 / this))
+                  :ARG1 (c1-0 / march-01
+                              :ARG0 c1-3)))
+
+# ::snt such a sad story . Your in our thoughts and prayers ^CG
+# ::tokens ["such", "a", "sad", "story", ".", "Your", "in", "our", "thoughts", "and", "prayers", "^CG"]
+# ::lemmas ["such", "a", "sad", "story", ".", "your", "in", "our", "thought", "and", "prayer", "^CG"]
+(c2-3 / multi-sentence
+      :snt1 (c2-10 / story
+                   :ARG1-of (c2-5 / sad-02
+                                  :degree (c2-2 / such)))
+      :snt2 (c2-4 / be-located-at-91
+                  :ARG1 (c2-0 / you)
+                  :ARG2 (c2-13 / and
+                               :op1 (c2-11 / thing
+                                           :ARG1-of (c2-9 / think-01
+                                                          :ARG0 (c2-1 / we)))
+                               :op2 (c2-7 / thing
+                                          :ARG1-of (c2-8 / pray-01
+                                                         :ARG0 c2-1))))
+      :snt3 (c2-12 / person
+                   :name (c2-6 / name
+                               :op1 "CG")))
+
+# ::snt ... AND... Whoever they are they can never waiver the Canadian spirit from any true Canadian!
+# ::tokens ["...", "AND", "...", "Whoever", "they", "are", "they", "can", "never", "waiver", "the", "Canadian", "spirit", "from", "any", "true", "Canadian", "!"]
+# ::lemmas ["...", "and", "...", "whoever", "they", "be", "they", "can", "never", "waiver", "the", "Canadian", "spirit", "from", "any", "true", "Canadian", "!"]
+(c3-10 / and
+       :op2 (c3-4 / possible-01
+                  :ARG1 (c3-0 / waive-01
+                              :ARG0 (c3-8 / they)
+                              :ARG1 (c3-7 / spirit
+                                          :mod (c3-5 / country
+                                                     :name (c3-3 / name
+                                                                 :op1 "Canada")))
+                              :ARG2 (c3-9 / person
+                                          :mod (c3-2 / any)
+                                          :ARG1-of (c3-6 / true-01)
+                                          :mod c3-5))
+                  :time (c3-1 / ever)
+                  :polarity -))
+
+# ::snt that's beautiful! I would join him if I lived in yxe!
+# ::tokens ["that", "'s", "beautiful", "!", "I", "would", "join", "him", "if", "I", "lived", "in", "yxe", "!"]
+# ::lemmas ["that", "be", "beautiful", "!", "i", "would", "join", "he", "if", "i", "live", "in", "yxe", "!"]
+(c4-4 / multi-sentence
+      :snt1 (c4-5 / beautiful-02
+                  :ARG1 (c4-7 / that))
+      :snt2 (c4-0 / join-04
+                  :ARG0 (c4-6 / i)
+                  :ARG1 (c4-1 / he)
+                  :condition (c4-3 / live-01
+                                   :ARG0 c4-6
+                                   :location (c4-2 / yxe))))

@@ -1,0 +1,76 @@
+# ::snt Remember when Reagan was elected and everyone said he was the devil and that Ronald Wilson Reagan each had letters = ?
+# ::tokens ["Remember", "when", "Reagan", "was", "elected", "and", "everyone", "said", "he", "was", "the", "devil", "and", "that", "Ronald", "Wilson", "Reagan", "each", "had", "letters", "=", "?"]
+# ::lemmas ["remember", "when", "Reagan", "be", "elect", "and", "everyone", "say", "he", "be", "the", "devil", "and", "that", "Ronald", "Wilson", "Reagan", "each", "have", "letter", "=", "?"]
+(c1-8 / remember-01
+      :ARG0 (c1-13 / you)
+      :ARG1 (c1-3 / and
+                  :op1 (c1-15 / elect-01
+                              :ARG1 (c1-11 / person
+                                           :name (c1-12 / name
+                                                        :op1 "Reagan")))
+                  :op2 (c1-0 / say-01
+                             :ARG0 (c1-5 / everyone)
+                             :ARG1 (c1-14 / and
+                                          :op1 (c1-1 / devil
+                                                     :domain c1-11)
+                                          :op2 (c1-4 / have-03
+                                                     :ARG0 (c1-7 / person
+                                                                 :name (c1-9 / name
+                                                                             :op1 "Ronald"
+                                                                             :op2 "Wilson"
+                                                                             :op3 "Reagan")
+                                                                 :mod (c1-6 / each))
+                                                     :ARG1 (c1-10 / letter)))))
+      :polarity (c1-2 / amr-unknown)
+      :mode imperative)
+
+# ::snt No , the hyperbole has increased . I don't recall colleges excusing traumatized students from taking tests after Reagan's election .
+# ::tokens ["No", ",", "the", "hyperbole", "has", "increased", ".", "I", "do", "n't", "recall", "colleges", "excusing", "traumatized", "students", "from", "taking", "tests", "after", "Reagan", "'s", "election", "."]
+# ::lemmas ["no", ",", "the", "hyperbole", "have", "increase", ".", "i", "do", "not", "recall", "college", "excuse", "traumatize", "student", "from", "take", "test", "after", "Reagan", "'s", "election", "."]
+(c2-12 / multi-sentence
+       :snt1 (c2-11 / increase-01
+                    :ARG1 (c2-4 / hyperbole))
+       :snt2 (c2-9 / recall-02
+                   :ARG0 (c2-5 / i)
+                   :ARG1 (c2-2 / college)
+                   :ARG2 (c2-15 / excuse-01
+                                :ARG0 c2-2
+                                :ARG1 (c2-10 / person
+                                             :ARG0-of (c2-0 / study-01)
+                                             :ARG1-of (c2-8 / traumatize-01))
+                                :ARG2 (c2-3 / take-01
+                                            :ARG0 c2-10
+                                            :ARG1 (c2-14 / test))
+                                :time (c2-1 / after
+                                            :op1 (c2-6 / elect-01
+                                                       :ARG1 (c2-7 / person
+                                                                   :name (c2-13 / name
+                                                                                :op1 "Reagan")))))
+                   :polarity -))
+
+# ::snt Reagan and Trump were both " outsiders " at first , but , Reagan seemed like a more likeable guy and better leader .
+# ::tokens ["Reagan", "and", "Trump", "were", "both", "\"", "outsiders", "\"", "at", "first", ",", "but", ",", "Reagan", "seemed", "like", "a", "more", "likeable", "guy", "and", "better", "leader", "."]
+# ::lemmas ["Reagan", "and", "Trump", "be", "both", "\"", "outsider", "\"", "at", "first", ",", "but", ",", "Reagan", "seem", "like", "a", "more", "likeable", "guy", "and", "well", "leader", "."]
+(c3-15 / have-concession-91
+       :ARG1 (c3-10 / seem-01
+                    :ARG1 (c3-13 / and
+                                 :op1 (c3-6 / guy
+                                            :ARG1-of (c3-3 / have-degree-91
+                                                           :ARG2 (c3-17 / like-01
+                                                                        :ARG1 c3-6)
+                                                           :ARG3 (c3-7 / more)))
+                                 :op2 (c3-18 / person
+                                             :ARG0-of (c3-2 / lead-02)
+                                             :ARG1-of (c3-4 / have-degree-91
+                                                            :ARG2 (c3-12 / good-03
+                                                                         :ARG1 c3-18)
+                                                            :ARG3 (c3-14 / more)))))
+       :ARG2 (c3-5 / outsider
+                   :domain (c3-9 / and
+                                 :op1 (c3-16 / person
+                                             :name (c3-8 / name
+                                                         :op1 "Reagan"))
+                                 :op2 (c3-11 / person
+                                             :name (c3-1 / name
+                                                         :op1 "Trump")))
+                   :time (c3-0 / at-first)))

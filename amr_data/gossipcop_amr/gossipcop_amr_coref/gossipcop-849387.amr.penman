@@ -1,0 +1,49 @@
+# ::snt That guy was great as Carlos.
+# ::tokens ["That", "guy", "was", "great", "as", "Carlos", "."]
+# ::lemmas ["that", "guy", "be", "great", "as", "Carlos", "."]
+(c1-4 / great
+      :domain (c1-2 / guy
+                    :mod (c1-3 / that))
+      :prep-as (c1-1 / person
+                     :name (c1-0 / name
+                                 :op1 "Carlos")))
+
+# ::snt and then Gaga as Donatella nombre callate shut up !!!!
+# ::tokens ["and", "then", "Gaga", "as", "Donatella", "nombre", "callate", "shut", "up", "!", "!", "!", "!"]
+# ::lemmas ["and", "then", "Gaga", "as", "Donatella", "nombre", "callate", "shut", "up", "!", "!", "!", "!"]
+(c2-9 / and
+      :op2 (c2-2 / shut-up-06
+                 :ARG0 (c2-5 / person
+                             :name (c2-0 / name
+                                         :op1 "Gaga")
+                             :ARG1-of (c2-3 / resemble-01
+                                            :ARG2 (c2-1 / person
+                                                        :name (c2-4 / name
+                                                                    :op1 "Don"
+                                                                    :op2 "Donatella")
+                                                        :mod (c2-7 / callate
+                                                                   :mod (c2-6 / nombre)))))
+                 :time (c2-8 / then)
+                 :mode imperative))
+
+# ::snt amazing
+# ::tokens ["amazing"]
+# ::lemmas ["amazing"]
+(c3-0 / amaze-01)
+
+# ::snt Please editors: - Ramrez - with accent mark. Respect the language.
+# ::tokens ["Please", "editors", ":", "-", "Ramrez", "-", "with", "accent", "mark", ".", "Respect", "the", "language", "."]
+# ::lemmas ["please", "editor", ":", "-", "Ramrez", "-", "with", "accent", "mark", ".", "respect", "the", "language", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-3 / say-01
+                  :ARG0 (c4-5 / editor)
+                  :ARG1 (c4-7 / person
+                              :name (c4-1 / name
+                                          :op1 "Ramrez")
+                              :ARG0-of (c4-6 / mark-01
+                                             :ARG2 (c4-9 / accent)))
+                  :polite +)
+      :snt2 (c4-4 / respect-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-8 / language)
+                  :mode imperative))

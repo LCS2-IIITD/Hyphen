@@ -1,0 +1,56 @@
+# ::snt Obviously she didn't do enough cross fit.
+# ::tokens ["Obviously", "she", "did", "n't", "do", "enough", "cross", "fit", "."]
+# ::lemmas ["obviously", "she", "do", "not", "do", "enough", "cross", "fit", "."]
+(c1-4 / obvious-01
+      :ARG1 (c1-1 / fit-06
+                  :ARG1 (c1-0 / she)
+                  :ARG2 (c1-2 / cross)
+                  :ARG1-of (c1-3 / have-quant-91
+                                 :ARG3 (c1-5 / enough))
+                  :polarity -))
+
+# ::snt She did actually summit though, which 99.999999999% of reddit couldn't do.
+# ::tokens ["She", "did", "actually", "summit", "though", ",", "which", "99.999999999", "%", "of", "reddit", "could", "n't", "do", "."]
+# ::lemmas ["she", "do", "actually", "summit", "though", ",", "which", "99.999999999", "%", "of", "reddit", "could", "not", "do", "."]
+(c2-6 / have-concession-91
+      :ARG2 (c2-0 / summit-00
+                  :ARG0 (c2-8 / she)
+                  :ARG1-of (c2-2 / actual-02)
+                  :ARG1-of (c2-1 / do-02
+                                 :ARG0 (c2-9 / person
+                                             :quant (c2-7 / percentage-entity
+                                                          :value 99.999999999)
+                                             :ARG1-of (c2-3 / include-91
+                                                            :ARG2 (c2-5 / publication
+                                                                        :name (c2-10 / name
+                                                                                     :op1 " reddit"))))
+                                 :ARG1-of (c2-4 / possible-01
+                                                :polarity -))))
+
+# ::snt Ya, because I would rather drink beers than pay a ton of money to go to Asia to hike up a giant mass of snowy rocks.
+# ::tokens ["Ya", ",", "because", "I", "would", "rather", "drink", "beers", "than", "pay", "a", "ton", "of", "money", "to", "go", "to", "Asia", "to", "hike", "up", "a", "giant", "mass", "of", "snowy", "rocks", "."]
+# ::lemmas ["ya", ",", "because", "i", "would", "rather", "drink", "beer", "than", "pay", "a", "ton", "of", "money", "to", "go", "to", "Asia", "to", "hike", "up", "a", "giant", "mass", "of", "snowy", "rock", "."]
+(c3-4 / cause-01
+      :ARG0 (c3-13 / prefer-01
+                   :ARG0 (c3-3 / i)
+                   :ARG1 (c3-0 / drink-01
+                               :ARG0 c3-3
+                               :ARG1 (c3-12 / beer))
+                   :ARG2 (c3-8 / pay-01
+                               :ARG0 c3-3
+                               :ARG1 (c3-14 / money
+                                            :quant (c3-5 / mass
+                                                         :mod (c3-11 / giant)
+                                                         :consist-of (c3-10 / rock
+                                                                            :ARG1-of (c3-1 / snowy-02))))
+                               :ARG3 (c3-16 / go-02
+                                            :ARG0 c3-3
+                                            :ARG4 (c3-2 / continent
+                                                        :name (c3-15 / name
+                                                                     :op1 "Asia"))
+                                            :purpose (c3-6 / hike-01
+                                                           :ARG0 c3-3
+                                                           :ARG2 c3-5
+                                                           :direction (c3-7 / up)))))
+      :mod (c3-9 / ya
+                 :mode expressive))

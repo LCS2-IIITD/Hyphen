@@ -1,0 +1,274 @@
+# ::snt FACK!!!!
+# ::tokens ["FACK", "!", "!", "!", "!"]
+# ::lemmas ["FACK", "!", "!", "!", "!"]
+(c1-0 / hack
+      :mode expressive)
+
+# ::snt that disappoints you.... today? Wow...
+# ::tokens ["that", "disappoints", "you", "....", "today", "?", "Wow", "..."]
+# ::lemmas ["that", "disappoint", "you", "....", "today", "?", "wow", "..."]
+(c2-3 / multi-sentence
+      :snt1 (c2-5 / disappoint-01
+                  :ARG0 (c2-4 / that)
+                  :ARG1 (c2-0 / you)
+                  :time (c2-2 / today))
+      :snt2 (c2-1 / wow-01
+                  :ARG0 (c2-6 / you)
+                  :mode expressive))
+
+# ::snt Ya it does bother me. Was looking forward to tonight's game.
+# ::tokens ["Ya", "it", "does", "bother", "me", ".", "Was", "looking", "forward", "to", "tonight", "'s", "game", "."]
+# ::lemmas ["ya", "it", "do", "bother", "i", ".", "be", "look", "forward", "to", "tonight", "'s", "game", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-10 / bother-01
+                   :ARG0 (c3-6 / it)
+                   :ARG1 (c3-1 / i)
+                   :mod (c3-0 / ya))
+      :snt2 (c3-7 / look-forward-03
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-8 / game
+                              :time (c3-5 / date-entity
+                                          :dayperiod (c3-9 / night)
+                                          :mod (c3-2 / today)))))
+
+# ::snt you need to re-evaluate....
+# ::tokens ["you", "need", "to", "re", "-", "evaluate", "...."]
+# ::lemmas ["you", "need", "to", "re", "-", "evaluate", "...."]
+(c4-2 / need-01
+      :ARG0 (c4-0 / you)
+      :ARG1 (c4-1 / reevaluate-01
+                  :ARG0 c4-0))
+
+# ::snt You need to flake off ass....
+# ::tokens ["You", "need", "to", "flake", "off", "ass", "...."]
+# ::lemmas ["you", "need", "to", "flake", "off", "ass", "...."]
+(c5-3 / need-01
+      :ARG0 (c5-0 / you
+                  :part (c5-1 / ass))
+      :ARG1 (c5-2 / flake-01
+                  :ARG1 c5-1))
+
+# ::snt stay classy.... I'm sorry that a tragedy ruined your ability to watch a sporting event.
+# ::tokens ["stay", "classy", "....", "I", "'m", "sorry", "that", "a", "tragedy", "ruined", "your", "ability", "to", "watch", "a", "sporting", "event", "."]
+# ::lemmas ["stay", "classy", "....", "i", "be", "sorry", "that", "a", "tragedy", "ruin", "your", "ability", "to", "watch", "a", "sporting", "event", "."]
+(c6-5 / multi-sentence
+      :snt1 (c6-10 / stay-01
+                   :ARG1 (c6-0 / you)
+                   :ARG3 (c6-6 / classy-02
+                               :ARG1 c6-0)
+                   :mode imperative)
+      :snt2 (c6-3 / sorry-01
+                  :ARG1 (c6-7 / i)
+                  :ARG2 (c6-8 / ruin-01
+                              :ARG0 (c6-4 / tragedy)
+                              :ARG1 (c6-9 / capable-01
+                                          :ARG1 (c6-11 / you)
+                                          :ARG2 (c6-2 / watch-01
+                                                      :ARG0 c6-11
+                                                      :ARG1 (c6-12 / event
+                                                                   :mod (c6-1 / sport)))))))
+
+# ::snt Didn't I say "FLAKE OFF"
+# ::tokens ["Did", "n't", "I", "say", "\"", "FLAKE", "OFF", "\""]
+# ::lemmas ["do", "not", "i", "say", "\"", "FLAKE", "OFF", "\""]
+(c7-4 / say-01
+      :ARG0 (c7-2 / i)
+      :ARG1 (c7-1 / shake-off-02
+                  :ARG0 (c7-0 / you)
+                  :mode imperative)
+      :ARG1-of (c7-3 / request-confirmation-91)
+      :polarity -)
+
+# ::snt at least your polite self absorbed person.
+# ::tokens ["at", "least", "your", "polite", "self", "absorbed", "person", "."]
+# ::lemmas ["at", "least", "your", "polite", "self", "absorb", "person", "."]
+(c8-2 / person
+      :ARG0-of (c8-3 / absorb-01
+                     :ARG1 c8-2)
+      :ARG1-of (c8-1 / polite-01)
+      :domain (c8-0 / you)
+      :mod (c8-4 / at-least))
+
+# ::snt So now you judge me for fucking RT with comment, one. Why don't you look at yourself in the mirror and judge that instead
+# ::tokens ["So", "now", "you", "judge", "me", "for", "fucking", "RT", "with", "comment", ",", "one", ".", "Why", "do", "n't", "you", "look", "at", "yourself", "in", "the", "mirror", "and", "judge", "that", "instead"]
+# ::lemmas ["so", "now", "you", "judge", "i", "for", "fuck", "RT", "with", "comment", ",", "one", ".", "why", "do", "not", "you", "look", "at", "yourself", "in", "the", "mirror", "and", "judge", "that", "instead"]
+(c9-3 / multi-sentence
+      :snt1 (c9-8 / cause-01
+                  :ARG0 (c9-12 / amr-unknown)
+                  :ARG1 (c9-4 / judge-01
+                              :ARG0 (c9-0 / you)
+                              :ARG1 (c9-9 / i)
+                              :ARG2 (c9-10 / publication
+                                           :name (c9-17 / name
+                                                        :op1 "RT")
+                                           :mod (c9-5 / fucking
+                                                      :mode expressive))
+                              :time (c9-7 / now)))
+      :snt2 (c9-15 / cause-01
+                   :ARG0 c9-12)
+      :ARG1 (c9-14 / and
+                   :op1 (c9-13 / look-01
+                               :ARG0 (c9-16 / you
+                                            :ARG1-of c9-13)
+                               :location (c9-11 / mirror)
+                               :polarity -)
+                   :op2 (c9-6 / judge-01
+                              :ARG0 c9-16
+                              :ARG1 (c9-2 / that)
+                              :ARG1-of (c9-1 / instead-of-91))))
+
+# ::snt game postponed, not cancelled.
+# ::tokens ["game", "postponed", ",", "not", "cancelled", "."]
+# ::lemmas ["game", "postpone", ",", "not", "cancel", "."]
+(c10-2 / and
+       :op1 (c10-3 / postpone-01
+                   :ARG1 (c10-1 / game))
+       :op2 (c10-0 / cancel-01
+                   :ARG1 c10-1
+                   :polarity -))
+
+# ::snt As it should be, having a game on the same day as a is just asking for trouble.
+# ::tokens ["As", "it", "should", "be", ",", "having", "a", "game", "on", "the", "same", "day", "as", "a", "is", "just", "asking", "for", "trouble", "."]
+# ::lemmas ["as", "it", "should", "be", ",", "have", "a", "game", "on", "the", "same", "day", "as", "a", "be", "just", "ask", "for", "trouble", "."]
+(c11-6 / ask-02
+       :ARG1 (c11-2 / trouble-05)
+       :ARG2 (c11-0 / have-03
+                    :ARG1 (c11-5 / game)
+                    :time (c11-4 / day
+                                 :ARG1-of (c11-8 / same-01
+                                                 :ARG2 (c11-1 / game))))
+       :mod (c11-3 / just)
+       :ARG1-of (c11-7 / recommend-01))
+
+# ::snt How unfortunate, but understandable.
+# ::tokens ["How", "unfortunate", ",", "but", "understandable", "."]
+# ::lemmas ["how", "unfortunate", ",", "but", "understandable", "."]
+(c12-2 / contrast-01
+       :ARG1 (c12-0 / fortunate-01
+                    :degree (c12-4 / so)
+                    :polarity -)
+       :ARG2 (c12-3 / understand-01
+                    :ARG1-of (c12-1 / possible-01)))
+
+# ::snt that makes no sense
+# ::tokens ["that", "makes", "no", "sense"]
+# ::lemmas ["that", "make", "no", "sense"]
+(c13-0 / sense-02
+       :ARG1 (c13-1 / that)
+       :polarity -)
+
+# ::snt as they should!!!!
+# ::tokens ["as", "they", "should", "!", "!", "!", "!"]
+# ::lemmas ["as", "they", "should", "!", "!", "!", "!"]
+(c14-1 / resemble-01
+       :ARG2 (c14-0 / recommend-01
+                    :ARG2 (c14-2 / they)))
+
+# ::snt this was the right thing to do
+# ::tokens ["this", "was", "the", "right", "thing", "to", "do"]
+# ::lemmas ["this", "be", "the", "right", "thing", "to", "do"]
+(c15-3 / thing
+       :ARG1-of (c15-2 / right-02)
+       :ARG1-of (c15-1 / do-02)
+       :domain (c15-0 / this))
+
+# ::snt You know it's serious when they cancel hockey ": cancels tonight's game between Ottawa and Toronto due to today's shootings."
+# ::tokens ["You", "know", "it", "'s", "serious", "when", "they", "cancel", "hockey", "\"", ":", "cancels", "tonight", "'s", "game", "between", "Ottawa", "and", "Toronto", "due", "to", "today", "'s", "shootings", ".", "\""]
+# ::lemmas ["you", "know", "it", "be", "serious", "when", "they", "cancel", "hockey", "\"", ":", "cancel", "tonight", "'s", "game", "between", "Ottawa", "and", "Toronto", "due", "to", "today", "'s", "shooting", ".", "\""]
+(c16-0 / know-01
+       :ARG0 (c16-1 / you)
+       :ARG1 (c16-13 / serious-01
+                     :time (c16-7 / cancel-01
+                                  :ARG0 (c16-4 / they)
+                                  :ARG1 (c16-10 / game
+                                                :time (c16-6 / date-entity
+                                                             :dayperiod (c16-14 / night)
+                                                             :mod (c16-5 / today))
+                                                :mod (c16-15 / between
+                                                             :op1 (c16-12 / city
+                                                                          :name (c16-8 / name
+                                                                                       :op1 "Ottawa"))
+                                                             :op2 (c16-9 / city
+                                                                         :name (c16-11 / name
+                                                                                       :op1 "Toronto")))
+                                                :ARG1-of (c16-2 / cause-01
+                                                                :ARG0 (c16-3 / shoot-02
+                                                                             :time c16-5))))))
+
+# ::snt I had a feeling that was going to happen, would of been a big risk for all fans. Safety first!
+# ::tokens ["I", "had", "a", "feeling", "that", "was", "going", "to", "happen", ",", "would", "of", "been", "a", "big", "risk", "for", "all", "fans", ".", "Safety", "first", "!"]
+# ::lemmas ["i", "have", "a", "feeling", "that", "be", "go", "to", "happen", ",", "would", "of", "be", "a", "big", "risk", "for", "all", "fan", ".", "safety", "first", "!"]
+(c17-1 / multi-sentence
+       :snt1 (c17-2 / feel-02
+                    :ARG0 (c17-3 / i)
+                    :ARG1 (c17-5 / risk-01
+                                 :ARG0 (c17-6 / fan
+                                              :mod (c17-4 / all))
+                                 :ARG2 (c17-0 / that)
+                                 :mod (c17-9 / big)))
+       :snt2 (c17-7 / first
+                    :domain (c17-8 / safe-01)))
+
+# ::snt Elderly people are subjected to toxic poison times legal limits but that does not seem important to CBC, CBS, or TC.
+# ::tokens ["Elderly", "people", "are", "subjected", "to", "toxic", "poison", "times", "legal", "limits", "but", "that", "does", "not", "seem", "important", "to", "CBC", ",", "CBS", ",", "or", "TC", "."]
+# ::lemmas ["elderly", "people", "be", "subject", "to", "toxic", "poison", "time", "legal", "limit", "but", "that", "do", "not", "seem", "important", "to", "CBC", ",", "CBS", ",", "or", "TC", "."]
+(c18-6 / contrast-01
+       :ARG1 (c18-13 / subject-01
+                     :ARG1 (c18-5 / person
+                                  :mod (c18-16 / elderly))
+                     :ARG2 (c18-2 / time
+                                  :ARG2-of (c18-9 / limit-01
+                                                  :ARG1 (c18-3 / poison-01))
+                                  :ARG1-of (c18-15 / legal-02)))
+       :ARG2 (c18-1 / seem-01
+                    :ARG1 (c18-7 / important-01
+                                 :ARG1 c18-13
+                                 :ARG2 (c18-12 / or
+                                               :op1 (c18-0 / publication
+                                                           :name (c18-14 / name
+                                                                         :op1 "CBC"))
+                                               :op2 (c18-10 / publication
+                                                            :name (c18-4 / name
+                                                                         :op1 "CBS"))
+                                               :op3 (c18-8 / publication
+                                                           :name (c18-11 / name
+                                                                         :op1 "TC"))))
+                    :polarity -))
+
+# ::snt You can add A Chanel News &amp; Chek News to that group also. Letting people be subject to toxic poison is such a Victoria thing.
+# ::tokens ["You", "can", "add", "A", "Chanel", "News", "&", "amp", ";", "Chek", "News", "to", "that", "group", "also", ".", "Letting", "people", "be", "subject", "to", "toxic", "poison", "is", "such", "a", "Victoria", "thing", "."]
+# ::lemmas ["you", "can", "add", "a", "Chanel", "News", "&", "amp", ";", "Chek", "News", "to", "that", "group", "also", ".", "let", "people", "be", "subject", "to", "toxic", "poison", "be", "such", "a", "Victoria", "thing", "."]
+(c19-17 / multi-sentence
+        :snt1 (c19-11 / possible-01
+                      :ARG1 (c19-12 / add-02
+                                    :ARG0 (c19-4 / you)
+                                    :ARG1 (c19-3 / and
+                                                 :op1 (c19-15 / broadcast-program
+                                                              :name (c19-8 / name
+                                                                           :op1 "A"
+                                                                           :op2 "Chanel"
+                                                                           :op3 "News"))
+                                                 :op2 (c19-19 / broadcast-program
+                                                              :name (c19-0 / name
+                                                                           :op1 "Chek"
+                                                                           :op2 "News")))
+                                    :ARG2 (c19-13 / group
+                                                  :mod (c19-5 / that))
+                                    :mod (c19-14 / also)))
+        :snt2 (c19-16 / thing
+                      :name (c19-1 / name
+                                   :op1 "Victoria")
+                      :domain (c19-2 / let-01
+                                     :ARG1 (c19-7 / subject-01
+                                                  :ARG1 (c19-18 / person)
+                                                  :ARG2 (c19-9 / poison
+                                                               :mod (c19-6 / toxic))))
+                      :mod (c19-10 / such)))
+
+# ::snt Now i's confirmed as a National Emergency.
+# ::tokens ["Now", "i", "'s", "confirmed", "as", "a", "National", "Emergency", "."]
+# ::lemmas ["now", "i", "be", "confirm", "as", "a", "National", "Emergency", "."]
+(c20-3 / confirm-01
+       :ARG1 (c20-2 / emergency
+                    :mod (c20-1 / nation))
+       :time (c20-0 / now))

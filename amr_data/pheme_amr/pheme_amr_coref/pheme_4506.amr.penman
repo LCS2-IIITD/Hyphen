@@ -1,0 +1,275 @@
+# ::snt wow
+# ::tokens ["wow"]
+# ::lemmas ["wow"]
+(c1-0 / wow
+      :mode expressive)
+
+# ::snt OMG
+# ::tokens ["OMG"]
+# ::lemmas ["OMG"]
+(c2-0 / OMG
+      :mode expressive)
+
+# ::snt oh please... This is ridiculous...
+# ::tokens ["oh", "please", "...", "This", "is", "ridiculous", "..."]
+# ::lemmas ["oh", "please", "...", "this", "be", "ridiculous", "..."]
+(c3-1 / ridiculous-02
+      :ARG1 (c3-2 / this)
+      :mod (c3-0 / oh
+                 :mode expressive)
+      :polite +)
+
+# ::snt Both should be able to look after themselves then
+# ::tokens ["Both", "should", "be", "able", "to", "look", "after", "themselves", "then"]
+# ::lemmas ["both", "should", "be", "able", "to", "look", "after", "themselves", "then"]
+(c4-2 / infer-01
+      :ARG1 (c4-3 / recommend-01
+                  :ARG1 (c4-4 / capable-01
+                              :ARG1 (c4-1 / both)
+                              :ARG2 (c4-0 / look-after-07
+                                          :ARG0 c4-1
+                                          :ARG1 c4-1))))
+
+# ::snt : Surreal photos out of Ottawa: This is a VIP being escorted on Sparks Street CDS
+# ::tokens [":", "Surreal", "photos", "out", "of", "Ottawa", ":", "This", "is", "a", "VIP", "being", "escorted", "on", "Sparks", "Street", "CDS"]
+# ::lemmas [":", "surreal", "photo", "out", "of", "Ottawa", ":", "this", "be", "a", "vip", "be", "escort", "on", "Sparks", "Street", "CDS"]
+(c5-4 / photograph-01
+      :ARG1 (c5-9 / person
+                  :ARG1-of (c5-3 / VIP-01)
+                  :domain (c5-8 / this)
+                  :ARG1-of (c5-0 / escort-01
+                                 :ARG4 (c5-7 / street
+                                             :name (c5-2 / name
+                                                         :op1 "Sparks"
+                                                         :op2 "Street"
+                                                         :op3 "CDS"))))
+      :mod (c5-1 / surreal)
+      :source (c5-6 / city
+                    :name (c5-5 / name
+                                :op1 "Ottawa")))
+
+# ::snt More than sureal when you are right beside it and still living it for that matter. Still in lock down.
+# ::tokens ["More", "than", "sureal", "when", "you", "are", "right", "beside", "it", "and", "still", "living", "it", "for", "that", "matter", ".", "Still", "in", "lock", "down", "."]
+# ::lemmas ["more", "than", "sureal", "when", "you", "be", "right", "beside", "it", "and", "still", "live", "it", "for", "that", "matter", ".", "still", "in", "lock", "down", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-13 / sure-02
+                   :time (c6-15 / and
+                                :op1 (c6-5 / be-located-at-91
+                                           :ARG1 (c6-0 / you)
+                                           :ARG2 (c6-10 / beside
+                                                        :op1 (c6-7 / it)
+                                                        :mod (c6-9 / right)))
+                                :op2 (c6-1 / live-01
+                                           :ARG0 c6-0
+                                           :ARG1 (c6-11 / it)
+                                           :mod (c6-6 / still)
+                                           :prep-for (c6-8 / matter
+                                                           :mod (c6-14 / that))))
+                   :degree (c6-3 / more-than))
+      :snt2 (c6-12 / lock-down-04
+                   :mod (c6-4 / still)))
+
+# ::snt MT : Surreal photos out of
+# ::tokens ["MT", ":", "Surreal", "photos", "out", "of"]
+# ::lemmas ["MT", ":", "surreal", "photo", "out", "of"]
+(c7-5 / say-01
+      :ARG0 (c7-2 / i)
+      :ARG1 (c7-4 / photo
+                  :mod (c7-1 / surreal)
+                  :ARG1-of (c7-0 / out-06))
+      :ARG2 (c7-6 / person
+                  :name (c7-3 / name
+                              :op1 "MT")))
+
+# ::snt : Surreal photos out of Ottawa: This is a VIP being escorted
+# ::tokens [":", "Surreal", "photos", "out", "of", "Ottawa", ":", "This", "is", "a", "VIP", "being", "escorted"]
+# ::lemmas [":", "surreal", "photo", "out", "of", "Ottawa", ":", "this", "be", "a", "vip", "be", "escort"]
+(c8-3 / photo
+      :mod (c8-5 / surreal)
+      :source (c8-4 / city
+                    :name (c8-1 / name
+                                :op1 "Ottawa"))
+      :topic (c8-0 / escort-01
+                   :ARG1 (c8-7 / person
+                               :ARG1-of (c8-2 / VIP-01)
+                               :domain (c8-6 / this))))
+
+# ::snt VIP... That is CDS!!!!
+# ::tokens ["VIP", "...", "That", "is", "CDS", "!", "!", "!", "!"]
+# ::lemmas ["vip", "...", "that", "be", "CDS", "!", "!", "!", "!"]
+(c9-5 / and
+      :op1 (c9-3 / ship
+                 :name (c9-0 / name
+                             :op1 "VIP"))
+      :op2 (c9-2 / publication
+                 :name (c9-1 / name
+                             :op1 "CDS")
+                 :domain (c9-4 / that)))
+
+# ::snt That's not just any VIP. That's the Chief of the Defence Staff and head of the Canadian Armed Forces.
+# ::tokens ["That", "'s", "not", "just", "any", "VIP", ".", "That", "'s", "the", "Chief", "of", "the", "Defence", "Staff", "and", "head", "of", "the", "Canadian", "Armed", "Forces", "."]
+# ::lemmas ["that", "be", "not", "just", "any", "vip", ".", "that", "be", "the", "Chief", "of", "the", "Defence", "Staff", "and", "head", "of", "the", "Canadian", "Armed", "Forces", "."]
+(c10-3 / multi-sentence
+       :snt1 (c10-5 / VIP
+                    :mod (c10-0 / just
+                                :polarity -)
+                    :domain (c10-12 / that))
+       :snt2 (c10-14 / and
+                     :op1 (c10-6 / person
+                                 :ARG0-of (c10-1 / have-org-role-91
+                                                 :ARG1 (c10-11 / staff
+                                                               :mod (c10-7 / defend-01))
+                                                 :ARG2 (c10-8 / chief)))
+                     :op2 (c10-13 / person
+                                  :ARG0-of (c10-2 / head-01
+                                                  :ARG1 (c10-9 / military
+                                                               :name (c10-4 / name
+                                                                            :op1 "Canadian"
+                                                                            :op2 "Armed"
+                                                                            :op3 "Forces")))
+                                  :domain (c10-10 / that))))
+
+# ::snt looks like the CDS being escorted out.
+# ::tokens ["looks", "like", "the", "CDS", "being", "escorted", "out", "."]
+# ::lemmas ["look", "like", "the", "CDS", "be", "escort", "out", "."]
+(c11-0 / look-02
+       :ARG1 (c11-3 / escort-01
+                    :ARG1 (c11-2 / organization
+                                 :name (c11-4 / name
+                                              :op1 "CDS"))
+                    :ARG3 (c11-1 / out-06
+                                 :ARG1 c11-2)))
+
+# ::snt stop posting police locations downtown, it makes it harder for them to do their jobs properly
+# ::tokens ["stop", "posting", "police", "locations", "downtown", ",", "it", "makes", "it", "harder", "for", "them", "to", "do", "their", "jobs", "properly"]
+# ::lemmas ["stop", "post", "police", "location", "downtown", ",", "it", "make", "it", "hard", "for", "they", "to", "do", "their", "job", "properly"]
+(c12-10 / stop-01
+        :ARG0 (c12-1 / you)
+        :ARG1 (c12-7 / post-01
+                     :ARG0 c12-1
+                     :ARG1 (c12-3 / location
+                                  :location-of (c12-11 / police))
+                     :ARG2 (c12-8 / downtown))
+        :ARG0-of (c12-4 / make-02
+                        :ARG1 (c12-0 / hard-02
+                                     :ARG1 (c12-2 / do-02
+                                                  :ARG0 c12-11
+                                                  :ARG1 (c12-5 / job
+                                                               :poss c12-11)
+                                                  :manner (c12-6 / proper))
+                                     :ARG2-of (c12-12 / have-degree-91
+                                                      :ARG1 c12-2
+                                                      :ARG3 (c12-9 / more))))
+        :mode imperative)
+
+# ::snt I'm pretty sure the police have asked that we not tweet images of police positions and mobilization.
+# ::tokens ["I", "'m", "pretty", "sure", "the", "police", "have", "asked", "that", "we", "not", "tweet", "images", "of", "police", "positions", "and", "mobilization", "."]
+# ::lemmas ["i", "be", "pretty", "sure", "the", "police", "have", "ask", "that", "we", "not", "tweet", "image", "of", "police", "position", "and", "mobilization", "."]
+(c13-7 / sure-02
+       :ARG0 (c13-4 / i)
+       :ARG1 (c13-10 / ask-02
+                     :ARG0 (c13-5 / police)
+                     :ARG1 (c13-8 / tweet-02
+                                  :ARG0 (c13-0 / we)
+                                  :ARG1 (c13-6 / image
+                                               :topic (c13-3 / and
+                                                             :op1 (c13-9 / position-01
+                                                                         :ARG1 c13-5)
+                                                             :op2 (c13-1 / mobilize-01
+                                                                         :ARG1 c13-5)))
+                                  :polarity -)
+                     :ARG2 c13-0)
+       :degree (c13-2 / pretty))
+
+# ::snt I guess its safe to say who this VIP is now that hes in safety?
+# ::tokens ["I", "guess", "its", "safe", "to", "say", "who", "this", "VIP", "is", "now", "that", "he", "s", "in", "safety", "?"]
+# ::lemmas ["i", "guess", "its", "safe", "to", "say", "who", "this", "vip", "be", "now", "that", "he", "s", "in", "safety", "?"]
+(c14-6 / guess-01
+       :ARG0 (c14-2 / i)
+       :ARG1 (c14-7 / safe-01
+                    :ARG1 (c14-1 / say-01
+                                 :ARG1 (c14-5 / person
+                                              :mod (c14-8 / this)
+                                              :mod (c14-4 / VIP)
+                                              :ARG1-of (c14-0 / safe-01
+                                                              :time (c14-3 / now))))
+                    :polarity (c14-9 / amr-unknown)))
+
+# ::snt " Surreal photos out of Ottawa: This is a VIP being escorted on Sparks Street "
+# ::tokens ["\"", "Surreal", "photos", "out", "of", "Ottawa", ":", "This", "is", "a", "VIP", "being", "escorted", "on", "Sparks", "Street", "\""]
+# ::lemmas ["\"", "surreal", "photo", "out", "of", "Ottawa", ":", "this", "be", "a", "vip", "be", "escort", "on", "Sparks", "Street", "\""]
+(c15-4 / photograph-01
+       :ARG1 (c15-9 / person
+                    :ARG1-of (c15-3 / VIP-01)
+                    :domain (c15-8 / this)
+                    :ARG1-of (c15-0 / escort-01
+                                    :ARG4 (c15-7 / street
+                                                 :name (c15-2 / name
+                                                              :op1 "Sparks"
+                                                              :op2 "Street"))))
+       :mod (c15-1 / surreal)
+       :source (c15-6 / city
+                      :name (c15-5 / name
+                                   :op1 "Ottawa")))
+
+# ::snt It's hard to believe this is happening in my quiet, polite hometown.
+# ::tokens ["It", "'s", "hard", "to", "believe", "this", "is", "happening", "in", "my", "quiet", ",", "polite", "hometown", "."]
+# ::lemmas ["it", "be", "hard", "to", "believe", "this", "be", "happen", "in", "my", "quiet", ",", "polite", "hometown", "."]
+(c16-0 / hard-02
+       :ARG1 (c16-1 / believe-01
+                    :ARG1 (c16-2 / event
+                                 :mod (c16-6 / this)
+                                 :location (c16-7 / hometown
+                                                  :poss (c16-4 / i)
+                                                  :ARG1-of (c16-3 / quiet-04)
+                                                  :ARG1-of (c16-5 / polite-01)))))
+
+# ::snt At am this morning, I thought it was odd that this armoured vehicle was parked outside the Elgin station...
+# ::tokens ["At", "am", "this", "morning", ",", "I", "thought", "it", "was", "odd", "that", "this", "armoured", "vehicle", "was", "parked", "outside", "the", "Elgin", "station", "..."]
+# ::lemmas ["at", "am", "this", "morning", ",", "i", "think", "it", "be", "odd", "that", "this", "armoured", "vehicle", "be", "park", "outside", "the", "Elgin", "station", "..."]
+(c17-11 / think-01
+        :ARG0 (c17-3 / i)
+        :ARG1 (c17-2 / odd
+                     :domain (c17-6 / park-01
+                                    :ARG1 (c17-5 / vehicle
+                                                 :ARG1-of (c17-12 / armor-01)
+                                                 :mod (c17-9 / this))
+                                    :location (c17-0 / outside
+                                                     :op1 (c17-10 / station
+                                                                  :name (c17-4 / name
+                                                                               :op1 "Elgin")))))
+        :time (c17-7 / date-entity
+                     :dayperiod (c17-1 / morning)
+                     :mod (c17-8 / today)
+                     :time "15:00"))
+
+# ::snt the man in the blue jacket appears to be Cheif of Defence Staff,Gen Lawson
+# ::tokens ["the", "man", "in", "the", "blue", "jacket", "appears", "to", "be", "Cheif", "of", "Defence", "Staff", ",", "Gen", "Lawson"]
+# ::lemmas ["the", "man", "in", "the", "blue", "jacket", "appear", "to", "be", "Cheif", "of", "Defence", "Staff", ",", "Gen", "Lawson"]
+(c18-5 / appear-02
+       :ARG1 (c18-4 / person
+                    :name (c18-3 / name
+                                 :op1 "Cheif"
+                                 :op2 "of"
+                                 :op3 "Defence"
+                                 :op4 "Staff")
+                    :domain (c18-1 / man
+                                   :mod (c18-0 / jacket
+                                               :mod (c18-2 / blue)))))
+
+# ::snt hotos out of Ottawa:VIP escorted on Sparks St This where I had a meeting today
+# ::tokens ["hotos", "out", "of", "Ottawa", ":", "VIP", "escorted", "on", "Sparks", "St", "This", "where", "I", "had", "a", "meeting", "today"]
+# ::lemmas ["hoto", "out", "of", "Ottawa", ":", "VIP", "escort", "on", "Sparks", "St", "this", "where", "i", "have", "a", "meeting", "today"]
+(c19-2 / escort-01
+       :ARG0 (c19-0 / helicopter)
+       :ARG3 (c19-6 / road
+                    :name (c19-4 / name
+                                 :op1 "Sparks"
+                                 :op2 "St"
+                                 :op3 "This")
+                    :location-of (c19-1 / meet-03
+                                        :ARG0 (c19-3 / i)
+                                        :time (c19-8 / today)))
+       :source (c19-7 / city
+                      :name (c19-5 / name
+                                   :op1 "Ottawa")))

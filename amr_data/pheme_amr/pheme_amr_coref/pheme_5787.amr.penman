@@ -1,0 +1,245 @@
+# ::snt take care mate
+# ::tokens ["take", "care", "mate"]
+# ::lemmas ["take", "care", "mate"]
+(c1-3 / say-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-4 / take-01
+                  :ARG0 (c1-0 / mate)
+                  :ARG1 (c1-2 / care-03))
+      :ARG2 c1-0)
+
+# ::snt You be careful there Mr Reason!
+# ::tokens ["You", "be", "careful", "there", "Mr", "Reason", "!"]
+# ::lemmas ["you", "be", "careful", "there", "Mr", "Reason", "!"]
+(c2-3 / say-01
+      :ARG1 (c2-2 / care-04
+                  :ARG0 (c2-1 / person
+                              :name (c2-0 / name
+                                          :op1 "Mr"
+                                          :op2 "Reason"))
+                  :ARG1 (c2-4 / there)
+                  :mode imperative)
+      :ARG2 c2-1)
+
+# ::snt if you can see him.... sniper rifle and shoot the prick!
+# ::tokens ["if", "you", "can", "see", "him", "....", "sniper", "rifle", "and", "shoot", "the", "prick", "!"]
+# ::lemmas ["if", "you", "can", "see", "he", "....", "sniper", "rifle", "and", "shoot", "the", "prick", "!"]
+(c3-0 / have-condition-91
+      :ARG1 (c3-8 / and
+                  :op1 (c3-5 / rifle
+                             :mod (c3-6 / sniper))
+                  :op2 (c3-3 / shoot-02
+                             :ARG0 (c3-1 / you)
+                             :ARG2 (c3-4 / prick)
+                             :mode imperative))
+      :ARG2 (c3-7 / possible-01
+                  :ARG1 (c3-2 / see-01
+                              :ARG0 c3-1
+                              :ARG1 c3-4)))
+
+# ::snt be careful mate.
+# ::tokens ["be", "careful", "mate", "."]
+# ::lemmas ["be", "careful", "mate", "."]
+(c4-0 / say-01
+      :ARG1 (c4-2 / care-04
+                  :ARG0 (c4-1 / mate
+                              :ARG2-of c4-0)
+                  :mode imperative))
+
+# ::snt welcome home, and stay safe!
+# ::tokens ["welcome", "home", ",", "and", "stay", "safe", "!"]
+# ::lemmas ["welcome", "home", ",", "and", "stay", "safe", "!"]
+(c5-5 / and
+      :op1 (c5-1 / welcome-01
+                 :ARG2 (c5-0 / home))
+      :op2 (c5-4 / stay-01
+                 :ARG1 (c5-2 / you)
+                 :ARG3 (c5-3 / safe-01
+                             :ARG1 c5-2)))
+
+# ::snt take it easy mate please
+# ::tokens ["take", "it", "easy", "mate", "please"]
+# ::lemmas ["take", "it", "easy", "mate", "please"]
+(c6-3 / say-01
+      :ARG1 (c6-4 / take-01
+                  :ARG0 (c6-0 / mate)
+                  :ARG1 (c6-2 / it)
+                  :ARG1-of (c6-1 / easy-05)
+                  :mode imperative
+                  :polite +)
+      :ARG2 c6-0)
+
+# ::snt sounds different to reports of man previously: bald, black bandanna with white text. Possibly two?
+# ::tokens ["sounds", "different", "to", "reports", "of", "man", "previously", ":", "bald", ",", "black", "bandanna", "with", "white", "text", ".", "Possibly", "two", "?"]
+# ::lemmas ["sound", "different", "to", "report", "of", "man", "previously", ":", "bald", ",", "black", "bandanna", "with", "white", "text", ".", "possibly", "two", "?"]
+(c7-1 / multi-sentence
+      :snt1 (c7-9 / sound-01
+                  :ARG1 (c7-6 / resemble-01
+                              :ARG1 (c7-4 / report-01
+                                          :ARG1 (c7-5 / man)
+                                          :time (c7-7 / previous))
+                              :polarity -)
+                  :ARG2 (c7-3 / bandanna
+                              :ARG1-of (c7-8 / black-05)
+                              :ARG1-of (c7-10 / text-01
+                                              :ARG1-of (c7-0 / white-03))))
+      :snt2 (c7-11 / possible-01
+                   :ARG1 (c7-2 / person
+                               :quant 2)
+                   :polarity (c7-12 / amr-unknown)))
+
+# ::snt if you can see him you can also sniper him
+# ::tokens ["if", "you", "can", "see", "him", "you", "can", "also", "sniper", "him"]
+# ::lemmas ["if", "you", "can", "see", "he", "you", "can", "also", "sniper", "he"]
+(c8-3 / possible-01
+      :ARG1 (c8-4 / sniper-01
+                  :ARG0 (c8-1 / you)
+                  :ARG1 (c8-0 / he)
+                  :mod (c8-6 / also))
+      :condition (c8-5 / possible-01
+                       :ARG1 (c8-2 / see-01
+                                   :ARG0 c8-1
+                                   :ARG1 c8-0)))
+
+# ::snt k.
+# ::tokens ["k."]
+# ::lemmas ["k."]
+(c9-1 / person
+      :name (c9-0 / name
+                  :op1 "k"))
+
+# ::snt likely also unemployed.
+# ::tokens ["likely", "also", "unemployed", "."]
+# ::lemmas ["likely", "also", "unemployed", "."]
+(c10-1 / likely-01
+       :ARG1 (c10-0 / employ-01
+                    :mod (c10-2 / also)
+                    :polarity -))
+
+# ::snt If you have a clear view can't a sniper have a clear shot at this monsters head?
+# ::tokens ["If", "you", "have", "a", "clear", "view", "ca", "n't", "a", "sniper", "have", "a", "clear", "shot", "at", "this", "monsters", "head", "?"]
+# ::lemmas ["if", "you", "have", "a", "clear", "view", "can", "not", "a", "sniper", "have", "a", "clear", "shot", "at", "this", "monster", "head", "?"]
+(c11-5 / possible-01
+       :ARG1 (c11-0 / have-03
+                    :ARG0 (c11-9 / sniper)
+                    :ARG1 (c11-3 / shoot-01
+                                 :ARG0 c11-9
+                                 :ARG2 (c11-12 / head
+                                               :part-of (c11-2 / monster
+                                                               :mod (c11-11 / this)))
+                                 :ARG1-of (c11-7 / clear-06)))
+       :condition (c11-4 / have-03
+                         :ARG0 (c11-1 / you)
+                         :ARG1 (c11-6 / view-01
+                                      :ARG1-of (c11-8 / clear-06)))
+       :polarity (c11-10 / amr-unknown)
+       :polarity -)
+
+# ::snt seriously? A pump-action shotgun?
+# ::tokens ["seriously", "?", "A", "pump", "-", "action", "shotgun", "?"]
+# ::lemmas ["seriously", "?", "a", "pump", "-", "action", "shotgun", "?"]
+(c12-0 / multi-sentence
+       :snt1 (c12-3 / serious-01)
+       :snt2 (c12-1 / shotgun
+                    :mod (c12-2 / pump-action)
+                    :polarity (c12-4 / amr-unknown)))
+
+# ::snt Surely they can shoot him through the window?
+# ::tokens ["Surely", "they", "can", "shoot", "him", "through", "the", "window", "?"]
+# ::lemmas ["surely", "they", "can", "shoot", "he", "through", "the", "window", "?"]
+(c13-3 / possible-01
+       :polarity (c13-6 / amr-unknown)
+       :ARG1 (c13-4 / shoot-02
+                    :ARG0 (c13-5 / they)
+                    :ARG2 (c13-0 / he)
+                    :path (c13-1 / window))
+       :ARG1-of (c13-2 / sure-02))
+
+# ::snt how come u r aloud back in the news room?
+# ::tokens ["how", "come", "u", "r", "aloud", "back", "in", "the", "news", "room", "?"]
+# ::lemmas ["how", "come", "u", "r", "aloud", "back", "in", "the", "news", "room", "?"]
+(c14-6 / amr-unknown
+       :ARG0-of (c14-5 / cause-01
+                       :ARG1 (c14-2 / aloud
+                                    :domain (c14-0 / you)
+                                    :location (c14-4 / room
+                                                     :mod (c14-3 / news))
+                                    :direction (c14-1 / back))))
+
+# ::snt Stay safe, .
+# ::tokens ["Stay", "safe", ",", "."]
+# ::lemmas ["stay", "safe", ",", "."]
+(c15-0 / stay-01
+       :ARG1 (c15-1 / you)
+       :ARG3 (c15-2 / safe-01
+                    :ARG1 c15-1))
+
+# ::snt Good news Chris. Stay safe.
+# ::tokens ["Good", "news", "Chris", ".", "Stay", "safe", "."]
+# ::lemmas ["good", "news", "Chris", ".", "stay", "safe", "."]
+(c16-2 / multi-sentence
+       :snt1 (c16-8 / say-01
+                    :ARG1 (c16-4 / news
+                                 :ARG1-of (c16-7 / good-02))
+                    :ARG2 (c16-6 / person
+                                 :name (c16-5 / name
+                                              :op1 "Chris")))
+       :snt2 (c16-3 / stay-01
+                    :ARG1 (c16-0 / you)
+                    :ARG3 (c16-1 / safe-01
+                                 :ARG1 c16-0)))
+
+# ::snt Ask him if this is how his Mother would want him to treat others.My prayers and thoughts to you all.
+# ::tokens ["Ask", "him", "if", "this", "is", "how", "his", "Mother", "would", "want", "him", "to", "treat", "others", ".", "My", "prayers", "and", "thoughts", "to", "you", "all", "."]
+# ::lemmas ["ask", "he", "if", "this", "be", "how", "his", "Mother", "would", "want", "he", "to", "treat", "other", ".", "my", "prayer", "and", "thought", "to", "you", "all", "."]
+(c17-0 / multi-sentence
+       :snt1 (c17-5 / ask-01
+                    :ARG0 (c17-15 / you)
+                    :ARG1 (c17-19 / truth-value
+                                  :polarity-of (c17-10 / want-01
+                                                       :ARG0 (c17-2 / person
+                                                                    :ARG0-of (c17-6 / have-rel-role-91
+                                                                                    :ARG1 (c17-4 / he)
+                                                                                    :ARG2 (c17-9 / mother)))
+                                                       :ARG1 (c17-18 / treat-01
+                                                                     :ARG0 c17-4
+                                                                     :ARG1 (c17-3 / person
+                                                                                  :mod (c17-16 / other))
+                                                                     :ARG2 (c17-13 / this))))
+                    :ARG2 (c17-1 / he)
+                    :mode imperative)
+       :snt2 (c17-11 / and
+                     :op1 (c17-7 / pray-01
+                                 :ARG0 (c17-12 / i))
+                     :op2 (c17-17 / think-01
+                                  :ARG0 c17-12)
+                     :beneficiary (c17-14 / you
+                                          :mod (c17-8 / all))))
+
+# ::snt Translate his headband for us please?
+# ::tokens ["Translate", "his", "headband", "for", "us", "please", "?"]
+# ::lemmas ["translate", "his", "headband", "for", "we", "please", "?"]
+(c18-3 / translate-01
+       :ARG0 (c18-1 / you)
+       :ARG1 (c18-0 / headband
+                    :part-of (c18-4 / he))
+       :beneficiary (c18-2 / we)
+       :mode imperative
+       :polite +)
+
+# ::snt thoughts and prayers with you all. Stay safe
+# ::tokens ["thoughts", "and", "prayers", "with", "you", "all", ".", "Stay", "safe"]
+# ::lemmas ["thought", "and", "prayer", "with", "you", "all", ".", "stay", "safe"]
+(c19-1 / multi-sentence
+       :snt1 (c19-8 / and
+                    :op1 (c19-7 / think-01
+                                :ARG0 (c19-4 / i))
+                    :op2 (c19-5 / pray-01
+                                :ARG0 c19-4)
+                    :accompanier (c19-0 / you
+                                        :mod (c19-3 / all)))
+       :snt2 (c19-6 / stay-01
+                    :ARG1 c19-0
+                    :ARG3 (c19-2 / safe-01
+                                 :ARG1 c19-0)
+                    :mode imperative))

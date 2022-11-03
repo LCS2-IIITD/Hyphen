@@ -1,0 +1,37 @@
+# ::snt Low key af
+# ::tokens ["Low", "key", "af"]
+# ::lemmas ["low", "key", "af"]
+(c1-1 / key
+      :ARG1-of (c1-2 / low-04)
+      :mod (c1-0 / af))
+
+# ::snt He's gonna kill himself and innocent people.
+# ::tokens ["He", "'s", "gon", "na", "kill", "himself", "and", "innocent", "people", "."]
+# ::lemmas ["he", "be", "going", "to", "kill", "himself", "and", "innocent", "people", "."]
+(c2-4 / kill-01
+      :ARG0 (c2-2 / he)
+      :ARG1 (c2-0 / and
+                  :op1 c2-2
+                  :op2 (c2-3 / person
+                             :ARG1-of (c2-1 / innocent-01))))
+
+# ::snt Or most likely go 5-10 under the speed limit and annoy some commuters
+# ::tokens ["Or", "most", "likely", "go", "5", "-", "10", "under", "the", "speed", "limit", "and", "annoy", "some", "commuters"]
+# ::lemmas ["or", "most", "likely", "go", "5", "-", "10", "under", "the", "speed", "limit", "and", "annoy", "some", "commuter"]
+(c3-5 / or
+      :op2 (c3-6 / likely-01
+                 :ARG1 (c3-1 / and
+                             :op1 (c3-8 / go-01
+                                        :ARG2 (c3-4 / under
+                                                    :op1 (c3-7 / limit-01
+                                                               :ARG1 (c3-0 / speed)))
+                                        :quant (c3-12 / between
+                                                      :op1 5
+                                                      :op2 10))
+                             :op2 (c3-13 / annoy-01
+                                         :ARG1 (c3-10 / person
+                                                      :ARG0-of (c3-2 / commute-01)
+                                                      :quant (c3-9 / some))))
+                 :ARG2-of (c3-3 / have-degree-91
+                                :ARG1 c3-1
+                                :ARG3 (c3-11 / most))))

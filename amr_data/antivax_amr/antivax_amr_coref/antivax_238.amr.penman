@@ -1,0 +1,48 @@
+# ::snt Heating pad on my arm = GIFT
+# ::tokens ["Heating", "pad", "on", "my", "arm", "=", "GIFT"]
+# ::lemmas ["heating", "pad", "on", "my", "arm", "=", "GIFT"]
+(c1-6 / equal-01
+      :ARG1 (c1-4 / pad
+                  :ARG0-of (c1-2 / heat-01)
+                  :location (c1-0 / arm
+                                  :part-of (c1-1 / i)))
+      :ARG2 (c1-3 / product
+                  :name (c1-5 / name
+                              :op1 "GIFT")))
+
+# ::snt It's been about hours. So far, other than my arm being dead, I'm fine.
+# ::tokens ["It", "'s", "been", "about", "hours", ".", "So", "far", ",", "other", "than", "my", "arm", "being", "dead", ",", "I", "'m", "fine", "."]
+# ::lemmas ["it", "be", "be", "about", "hours", ".", "so", "far", ",", "other", "than", "my", "arm", "be", "dead", ",", "i", "be", "fine", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-7 / last-01
+                  :ARG2 (c2-2 / about
+                              :op1 (c2-4 / multiple
+                                         :op1 (c2-6 / temporal-quantity
+                                                    :unit (c2-5 / hour)
+                                                    :quant 1))))
+      :snt2 (c2-3 / fine-04
+                  :ARG1 (c2-8 / i
+                              :part (c2-10 / arm))
+                  :ARG2-of (c2-11 / except-01
+                                  :ARG1 (c2-0 / die-01
+                                              :ARG1 c2-10))
+                  :mod (c2-1 / so-far)))
+
+# ::snt Why thank you
+# ::tokens ["Why", "thank", "you"]
+# ::lemmas ["why", "thank", "you"]
+(c3-1 / thank-01
+      :ARG1 (c3-2 / you)
+      :ARG1-of (c3-3 / cause-01
+                     :ARG0 (c3-0 / amr-unknown)))
+
+# ::snt I like your RBG mask.
+# ::tokens ["I", "like", "your", "RBG", "mask", "."]
+# ::lemmas ["i", "like", "your", "RBG", "mask", "."]
+(c4-0 / like-01
+      :ARG0 (c4-2 / i)
+      :ARG1 (c4-3 / mask
+                  :mod (c4-1 / product
+                             :name (c4-4 / name
+                                         :op1 "RBG"))
+                  :poss (c4-5 / you)))

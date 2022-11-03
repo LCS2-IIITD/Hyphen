@@ -1,0 +1,134 @@
+# ::snt Hi Pepper! So cute.
+# ::tokens ["Hi", "Pepper", "!", "So", "cute", "."]
+# ::lemmas ["hi", "Pepper", "!", "so", "cute", "."]
+(c1-5 / multi-sentence
+      :snt1 (c1-0 / say-01
+                  :ARG1 (c1-2 / hi)
+                  :ARG2 (c1-4 / person
+                              :name (c1-6 / name
+                                          :op1 "Pepper")))
+      :snt2 (c1-1 / cute
+                  :degree (c1-3 / so)))
+
+# ::snt The elder statesmen says Hi
+# ::tokens ["The", "elder", "statesmen", "says", "Hi"]
+# ::lemmas ["the", "eld", "statesmen", "say", "hi"]
+(c2-0 / say-01
+      :ARG0 (c2-1 / statesman
+                  :mod (c2-3 / elder))
+      :ARG1 (c2-2 / hi))
+
+# ::snt Wow! Amazing eyes
+# ::tokens ["Wow", "!", "Amazing", "eyes"]
+# ::lemmas ["wow", "!", "amazing", "eye"]
+(c3-1 / eye
+      :ARG0-of (c3-0 / amaze-01))
+
+# ::snt Well now the newest member of our family pepper needs to say hi!
+# ::tokens ["Well", "now", "the", "newest", "member", "of", "our", "family", "pepper", "needs", "to", "say", "hi", "!"]
+# ::lemmas ["well", "now", "the", "new", "member", "of", "our", "family", "pepper", "need", "to", "say", "hi", "!"]
+(c4-11 / need-01
+       :ARG0 (c4-9 / person
+                   :ARG0-of (c4-5 / have-org-role-91
+                                  :ARG1 (c4-2 / family
+                                              :poss (c4-4 / we))
+                                  :ARG2 (c4-10 / member
+                                               :ARG1-of (c4-7 / new-01)))
+                   :ARG1-of (c4-8 / have-degree-91
+                                  :ARG2 c4-7
+                                  :ARG1 c4-10)
+                   :ARG3 (c4-3 / most))
+       :ARG1 (c4-0 / say-01
+                   :ARG0 c4-9
+                   :ARG1 (c4-1 / hi))
+       :time (c4-6 / now))
+
+# ::snt When will the COVID-19 vaccines move from emergency use to regular FDA authorization, so they can be required for healthcare workers like flu vaccines are already?
+# ::tokens ["When", "will", "the", "COVID-19", "vaccines", "move", "from", "emergency", "use", "to", "regular", "FDA", "authorization", ",", "so", "they", "can", "be", "required", "for", "healthcare", "workers", "like", "flu", "vaccines", "are", "already", "?"]
+# ::lemmas ["when", "will", "the", "covid-19", "vaccine", "move", "from", "emergency", "use", "to", "regular", "FDA", "authorization", ",", "so", "they", "can", "be", "require", "for", "healthcare", "worker", "like", "flu", "vaccine", "be", "already", "?"]
+(c5-11 / move-01
+       :ARG1 (c5-6 / vaccine
+                   :name (c5-12 / name
+                                :op1 "COVID-19"))
+       :ARG2 (c5-19 / use-01
+                    :mod (c5-14 / emergency))
+       :ARG3 (c5-16 / authorize-01
+                    :ARG0 (c5-9 / government-organization
+                                :name (c5-2 / name
+                                            :op1 "FDA"))
+                    :ARG1-of (c5-8 / regular-03))
+       :time (c5-13 / amr-unknown)
+       :purpose (c5-21 / possible-01
+                       :ARG1 (c5-5 / require-01
+                                   :ARG1 c5-6
+                                   :ARG2 (c5-20 / person
+                                                :ARG0-of (c5-4 / work-01
+                                                               :ARG2 (c5-18 / healthcare)))
+                                   :ARG1-of (c5-10 / resemble-01
+                                                   :ARG2 (c5-7 / require-01
+                                                               :ARG1 (c5-17 / vaccine
+                                                                            :ARG0-of (c5-3 / counter-01
+                                                                                           :ARG1 (c5-0 / disease
+                                                                                                       :name (c5-15 / name
+                                                                                                                    :op1 "influenza"))))
+                                                               :time (c5-1 / already))))))
+
+# ::snt That made my week! Manju says hi to Luna
+# ::tokens ["That", "made", "my", "week", "!", "Manju", "says", "hi", "to", "Luna"]
+# ::lemmas ["that", "make", "my", "week", "!", "Manju", "say", "hi", "to", "Luna"]
+(c6-9 / multi-sentence
+      :snt1 (c6-1 / make-02
+                  :ARG0 (c6-5 / that)
+                  :ARG1 (c6-2 / week
+                              :poss (c6-8 / i)))
+      :snt2 (c6-0 / say-01
+                  :ARG0 (c6-7 / person
+                              :name (c6-10 / name
+                                           :op1 "Manju"))
+                  :ARG1 (c6-3 / hi)
+                  :ARG2 (c6-4 / person
+                              :name (c6-6 / name
+                                          :op1 "Luna"))))
+
+# ::snt Plenty of Luna pics
+# ::tokens ["Plenty", "of", "Luna", "pics"]
+# ::lemmas ["plenty", "of", "Luna", "pic"]
+(c8-0 / picture
+      :topic (c8-1 / animal
+                   :name (c8-2 / name
+                               :op1 "Luna"))
+      :quant (c8-3 / plenty))
+
+# ::snt We want a clearer picture of the pup too
+# ::tokens ["We", "want", "a", "clearer", "picture", "of", "the", "pup", "too"]
+# ::lemmas ["we", "want", "a", "clear", "picture", "of", "the", "pup", "too"]
+(c9-1 / want-01
+      :ARG0 (c9-7 / we)
+      :ARG1 (c9-5 / picture-01
+                  :ARG1 (c9-3 / pup)
+                  :ARG1-of (c9-2 / have-degree-91
+                                 :ARG2 (c9-0 / clear-06
+                                             :ARG1 c9-5)
+                                 :ARG3 (c9-6 / more)))
+      :mod (c9-4 / too))
+
+# ::snt Yes! My first maskless dog walk today (mask on wrist just in case)
+# ::tokens ["Yes", "!", "My", "first", "maskless", "dog", "walk", "today", "(", "mask", "on", "wrist", "just", "in", "case", ")"]
+# ::lemmas ["yes", "!", "my", "first", "maskless", "dog", "walk", "today", "(", "mask", "on", "wrist", "just", "in", "case", ")"]
+(c10-10 / multi-sentence
+        :snt1 (c10-11 / yes
+                      :mode expressive)
+        :snt2 (c10-2 / walk-01
+                     :ARG0 (c10-9 / i
+                                  :part (c10-12 / wrist))
+                     :ARG1 (c10-0 / dog)
+                     :ord (c10-5 / ordinal-entity
+                                 :value 1)
+                     :mod (c10-1 / mask
+                                 :polarity -)
+                     :time (c10-6 / today)
+                     :ARG1-of (c10-4 / mean-01
+                                     :ARG2 (c10-8 / mask
+                                                  :location c10-12
+                                                  :ARG1-of (c10-3 / case-03
+                                                                  :mod (c10-7 / just))))))

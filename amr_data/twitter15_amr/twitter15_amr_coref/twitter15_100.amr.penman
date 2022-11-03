@@ -1,0 +1,71 @@
+# ::snt My God, I hope he will be alright and that they apprehend the bastard who has done this!
+# ::tokens ["My", "God", ",", "I", "hope", "he", "will", "be", "alright", "and", "that", "they", "apprehend", "the", "bastard", "who", "has", "done", "this", "!"]
+# ::lemmas ["my", "God", ",", "i", "hope", "he", "will", "be", "alright", "and", "that", "they", "apprehend", "the", "bastard", "who", "have", "do", "this", "!"]
+(c1-9 / hope-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-10 / and
+                   :op1 (c1-7 / all-right
+                              :domain (c1-0 / he))
+                   :op2 (c1-5 / apprehend-01
+                              :ARG0 (c1-4 / they)
+                              :ARG1 (c1-2 / bastard
+                                          :ARG0-of (c1-11 / do-02
+                                                          :ARG1 (c1-6 / this)))))
+      :mod (c1-3 / person
+                 :name (c1-8 / name
+                             :op1 "God")
+                 :poss c1-1
+                 :mode expressive))
+
+# ::snt WTF !! " At the war memorial in Ottawa. A soldier has been shot.They are giving him treatment now."
+# ::tokens ["WTF", "!", "!", "\"", "At", "the", "war", "memorial", "in", "Ottawa", ".", "A", "soldier", "has", "been", "shot", ".", "They", "are", "giving", "him", "treatment", "now", ".", "\""]
+# ::lemmas ["WTF", "!", "!", "\"", "at", "the", "war", "memorial", "in", "Ottawa", ".", "a", "soldier", "have", "be", "shoot", ".", "they", "be", "give", "he", "treatment", "now", ".", "\""]
+(c2-5 / multi-sentence
+      :snt1 (c2-9 / amr-unknown
+                  :mod (c2-11 / fuck
+                              :mode expressive)
+                  :location (c2-10 / memorial
+                                   :mod (c2-1 / war)
+                                   :location (c2-6 / city
+                                                   :name (c2-7 / name
+                                                               :op1 "Ottawa"))))
+      :snt2 (c2-0 / shoot-02
+                  :ARG1 (c2-2 / soldier))
+      :snt3 (c2-3 / treat-03
+                  :ARG0 (c2-4 / they)
+                  :ARG1 c2-2
+                  :time (c2-8 / now)))
+
+# ::snt Is this the same gunman being chased through parliament at this hour?
+# ::tokens ["Is", "this", "the", "same", "gunman", "being", "chased", "through", "parliament", "at", "this", "hour", "?"]
+# ::lemmas ["be", "this", "the", "same", "gunman", "be", "chase", "through", "parliament", "at", "this", "hour", "?"]
+(c4-8 / gunman
+      :ARG1-of (c4-0 / same-01)
+      :ARG1-of (c4-5 / chase-01
+                     :path (c4-4 / government-organization
+                                 :name (c4-7 / name
+                                             :op1 "Parliament"))
+                     :time (c4-6 / hour
+                                 :mod (c4-1 / this)))
+      :polarity (c4-2 / amr-unknown)
+      :domain (c4-3 / this))
+
+# ::snt Please contact CJAD Amanda Kline (514) -2173
+# ::tokens ["Please", "contact", "CJAD", "Amanda", "Kline", "(", "514", ")", "-2173"]
+# ::lemmas ["please", "contact", "CJAD", "Amanda", "Kline", "(", "514", ")", "-2173"]
+(c5-1 / contact-01
+      :ARG0 (c5-3 / you)
+      :ARG1 (c5-0 / person
+                  :name (c5-6 / name
+                              :op1 "Amanda"
+                              :op2 "Kline")
+                  :ARG0-of (c5-4 / have-org-role-91
+                                 :ARG1 (c5-8 / publication
+                                             :name (c5-5 / name
+                                                         :op1 "CJAD"))))
+      :ARG2 (c5-7 / phone-number-entity
+                  :mod (c5-2 / number
+                             :value "2173")
+                  :value "514")
+      :mode imperative
+      :polite +)

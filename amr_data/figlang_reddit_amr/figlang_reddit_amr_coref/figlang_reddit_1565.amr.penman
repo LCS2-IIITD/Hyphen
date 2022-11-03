@@ -1,0 +1,62 @@
+# ::snt True
+# ::tokens ["True"]
+# ::lemmas ["true"]
+(c1-0 / true-01)
+
+# ::snt how about downloading 320kbps MP3s instead of listening to 128kbps compressed YouTube bullshit
+# ::tokens ["how", "about", "downloading", "320kbps", "MP3s", "instead", "of", "listening", "to", "128kbps", "compressed", "YouTube", "bullshit"]
+# ::lemmas ["how", "about", "download", "320kbps", "mp3s", "instead", "of", "listen", "to", "128kbps", "compress", "YouTube", "bullshit"]
+(c2-2 / amr-unknown
+      :topic (c2-0 / download-01
+                   :ARG1 (c2-15 / MP3
+                                :mod (c2-9 / rate-entity-91
+                                           :ARG1 (c2-14 / distance-quantity
+                                                        :unit (c2-16 / kilowatt-hour)
+                                                        :quant 320)
+                                           :ARG2 (c2-8 / temporal-quantity
+                                                       :unit (c2-1 / second)
+                                                       :quant 1)))
+                   :ARG1-of (c2-3 / instead-of-91
+                                  :ARG2 (c2-10 / listen-01
+                                               :ARG1 (c2-12 / bullshit
+                                                            :mod (c2-11 / publication
+                                                                        :name (c2-7 / name
+                                                                                    :op1 "YouTube"))
+                                                            :ARG1-of (c2-4 / compress-01)
+                                                            :ARG1-of (c2-6 / rate-entity-91
+                                                                           :ARG2 (c2-5 / temporal-quantity
+                                                                                       :unit (c2-13 / second)
+                                                                                       :quant 128)))))))
+
+# ::snt 320kbps is a waste of drive space, I don't think most people can hear the difference between that and something like 192kbps or well encoded VBR file
+# ::tokens ["320kbps", "is", "a", "waste", "of", "drive", "space", ",", "I", "do", "n't", "think", "most", "people", "can", "hear", "the", "difference", "between", "that", "and", "something", "like", "192kbps", "or", "well", "encoded", "VBR", "file"]
+# ::lemmas ["320kbps", "be", "a", "waste", "of", "drive", "space", ",", "i", "do", "not", "think", "most", "people", "can", "hear", "the", "difference", "between", "that", "and", "something", "like", "192kbps", "or", "well", "encode", "VBR", "file"]
+(c3-17 / and
+       :op1 (c3-2 / waste-01
+                  :ARG0 (c3-6 / rate-entity-91
+                              :ARG1 (c3-0 / drive)
+                              :ARG2 (c3-5 / temporal-quantity
+                                          :unit (c3-3 / terabyte)
+                                          :quant 320))
+                  :ARG1 (c3-12 / space
+                               :mod c3-0))
+       :op2 (c3-9 / think-01
+                  :ARG0 (c3-1 / i)
+                  :ARG1 (c3-22 / possible-01
+                               :ARG1 (c3-19 / hear-01
+                                            :ARG0 (c3-20 / person
+                                                         :mod (c3-8 / most))
+                                            :ARG1 (c3-16 / differ-02
+                                                         :ARG1 c3-6
+                                                         :ARG2 (c3-21 / something
+                                                                      :ARG1-of (c3-4 / resemble-01
+                                                                                     :ARG2 (c3-7 / rate-entity-91
+                                                                                                 :ARG1 (c3-13 / information-quantity
+                                                                                                              :unit (c3-14 / terabyte)
+                                                                                                              :quant 192000)
+                                                                                                 :ARG2 (c3-18 / file
+                                                                                                              :mod (c3-15 / string-entity
+                                                                                                                          :value "VBR")
+                                                                                                              :ARG1-of (c3-11 / encode-01
+                                                                                                                              :ARG1-of (c3-10 / well-09)))))))))
+                  :polarity -))

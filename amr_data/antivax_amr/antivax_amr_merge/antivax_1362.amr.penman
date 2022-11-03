@@ -1,0 +1,69 @@
+# ::subgraphs [["c2-3", "c2-5", "c2-2", "c2-6", "c2-0", "c2-1", "c2-4"], ["c3-2", "c3-0", "c3-5", "c3-7", "c3-6", "c3-9", "c3-3", "c3-4", "c3-8", "c3-1"], ["c4-7", "c4-0", "c4-4", "c4-1", "c4-5", "c4-8", "c4-6", "c4-3", "c4-2"], ["c5-0"], ["c6-2", "c6-3", "c6-6", "c6-1", "c6-7", "c6-4", "c6-5", "c6-0"], ["c7-0", "c7-1", "c7-6", "c7-3", "c7-5", "c7-4", "c7-2", "c7-7"]]
+(d / dummy
+   :COMMENT (c2-3 / list
+                  :ARG1 (c2-5 / it
+                              :SAME c6-6
+                              :SAME c4-4
+                              :SAME c3-4
+                              :COREF c6-6
+                              :COREF c4-4
+                              :COREF c3-4)
+                  :ARG2 (c2-2 / vaccine
+                              :SAME c7-3
+                              :SAME c6-3
+                              :SAME c3-6
+                              :COREF c6-3)
+                  :mod (c2-6 / even)
+                  :location (c2-0 / company
+                                  :ARG0-of (c2-1 / have-rel-role
+                                                 :ARG2 (c2-4 / parent)))
+                  :polarity -)
+   :COMMENT (c3-2 / cause
+                  :ARG1 (c3-0 / concern
+                              :ARG1 (c3-5 / chemotherapy
+                                          :ARG1-of (c3-7 / instead-of
+                                                         :ARG2 (c3-6 / vaccine
+                                                                     :name (c3-9 / name
+                                                                                 :op1 "Covid"
+                                                                                 :SAME c7-5)))
+                                          :SAME c6-0)
+                              :ARG2-of (c3-3 / have-degree
+                                             :ARG1 (c3-4 / it)
+                                             :ARG3 (c3-8 / more))
+                              :polarity (c3-1 / amr
+                                              :SAME c7-7)))
+   :COMMENT (c4-7 / infer
+                  :ARG1 (c4-0 / damage
+                              :ARG0 (c4-4 / it)
+                              :ARG1 (c4-1 / system
+                                          :ARG1-of (c4-5 / immune)
+                                          :poss (c4-8 / you
+                                                      :SAME c7-6))
+                              :ARG1-of (c4-6 / resemble
+                                             :ARG2 (c4-3 / damage
+                                                         :ARG0 (c4-2 / chemo)
+                                                         :ARG1 c4-1))
+                              :SAME c4-3))
+   :COMMENT (c5-0 / wow
+                  :mode expressive)
+   :COMMENT (c6-2 / contrast
+                  :ARG1 (c6-3 / vaccine
+                              :domain (c6-6 / it)
+                              :mod (c6-1 / at)
+                              :polarity -)
+                  :ARG2 (c6-7 / and
+                              :op1 (c6-4 / therapy
+                                         :mod (c6-5 / gene))
+                              :op2 (c6-0 / chemotherapy)
+                              :domain c6-6
+                              :SAME c7-0))
+   :COMMENT (c7-0 / and
+                  :op1 (c7-1 / wait
+                             :ARG1 (c7-6 / you)
+                             :mode imperative)
+                  :op2 (c7-3 / vaccine
+                             :name (c7-5 / name
+                                         :op1 "Covid")
+                             :domain (c7-4 / this)
+                             :poss (c7-2 / they)
+                             :polarity (c7-7 / amr))))

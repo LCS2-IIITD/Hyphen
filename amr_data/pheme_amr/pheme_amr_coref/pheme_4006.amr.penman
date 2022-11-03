@@ -1,0 +1,129 @@
+# ::snt half Canuck.
+# ::tokens ["half", "Canuck", "."]
+# ::lemmas ["half", "Canuck", "."]
+(c1-2 / thing
+      :mod (c1-0 / half)
+      :ARG1-of (c1-1 / capable-01))
+
+# ::snt Are you Canadian? We're having a debate on .
+# ::tokens ["Are", "you", "Canadian", "?", "We", "'re", "having", "a", "debate", "on", "."]
+# ::lemmas ["be", "you", "Canadian", "?", "we", "be", "have", "a", "debate", "on", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / person
+                  :mod (c2-6 / country
+                             :name (c2-3 / name
+                                         :op1 "Canada"))
+                  :domain (c2-0 / you)
+                  :polarity (c2-7 / amr-unknown))
+      :snt2 (c2-5 / debate-01
+                  :ARG0 (c2-1 / we)))
+
+# ::snt : Rest In Peace Cpl. Nathan Cirillo and thank you for serving our country
+# ::tokens [":", "Rest", "In", "Peace", "Cpl", ".", "Nathan", "Cirillo", "and", "thank", "you", "for", "serving", "our", "country"]
+# ::lemmas [":", "rest", "in", "Peace", "Cpl", ".", "Nathan", "Cirillo", "and", "thank", "you", "for", "serve", "our", "country"]
+(c3-10 / and
+       :op1 (c3-4 / rest-01
+                  :ARG1 (c3-3 / person
+                              :name (c3-2 / name
+                                          :op1 "Nathan"
+                                          :op2 "Cirillo")
+                              :ARG0-of (c3-0 / have-org-role-91
+                                             :ARG2 (c3-5 / commander
+                                                         :mod (c3-9 / peace)))))
+       :op2 (c3-8 / thank-01
+                  :ARG1 c3-3
+                  :ARG2 (c3-7 / serve-01
+                              :ARG0 c3-3
+                              :ARG1 (c3-6 / country
+                                          :poss (c3-1 / we)))))
+
+# ::snt brave man. May his soul RIP.
+# ::tokens ["brave", "man", ".", "May", "his", "soul", "RIP", "."]
+# ::lemmas ["brave", "man", ".", "may", "his", "soul", "RIP", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-4 / man
+                  :ARG0-of (c4-3 / brave-02))
+      :snt2 (c4-1 / wish-01
+                  :ARG1 (c4-5 / rest-01
+                              :ARG1 (c4-7 / soul
+                                          :part-of (c4-0 / he))
+                              :manner (c4-6 / peace))))
+
+# ::snt Born in Canada, raised in the US?
+# ::tokens ["Born", "in", "Canada", ",", "raised", "in", "the", "US", "?"]
+# ::lemmas ["bear", "in", "Canada", ",", "raise", "in", "the", "US", "?"]
+(c5-7 / and
+      :op1 (c5-0 / bear-02
+                 :location (c5-5 / country
+                                 :name (c5-2 / name
+                                             :op1 "Canada")))
+      :op2 (c5-4 / raise-03
+                 :location (c5-6 / country
+                                 :name (c5-3 / name
+                                             :op1 "US")))
+      :polarity (c5-1 / amr-unknown))
+
+# ::snt My condolences to his family, deeply sorry for your loss of this handsome man on his own soil. There is no justification.
+# ::tokens ["My", "condolences", "to", "his", "family", ",", "deeply", "sorry", "for", "your", "loss", "of", "this", "handsome", "man", "on", "his", "own", "soil", ".", "There", "is", "no", "justification", "."]
+# ::lemmas ["my", "condolence", "to", "his", "family", ",", "deeply", "sorry", "for", "your", "loss", "of", "this", "handsome", "man", "on", "his", "own", "soil", ".", "there", "be", "no", "justification", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-15 / and
+                   :op1 (c6-12 / condolence
+                               :poss (c6-9 / i)
+                               :beneficiary (c6-3 / family
+                                                  :ARG1-of (c6-0 / have-org-role-91
+                                                                 :ARG0 c6-9
+                                                                 :ARG2 (c6-10 / member))))
+                   :op2 (c6-13 / sorry-01
+                               :ARG1 c6-9
+                               :ARG2 (c6-5 / lose-02
+                                           :ARG0 (c6-1 / you)
+                                           :ARG1 (c6-6 / man
+                                                       :mod (c6-7 / handsome)
+                                                       :mod (c6-14 / this))
+                                           :location (c6-8 / soil
+                                                           :poss c6-1))
+                               :ARG1-of (c6-11 / deep-02)))
+      :snt2 (c6-2 / justify-01
+                  :polarity -))
+
+# ::snt RIP CPT NATHAN CIRILLO,MY THOUGHT ARE WITH YOUR FAMILY AND FRIENDS LOVE FROM THE UK
+# ::tokens ["RIP", "CPT", "NATHAN", "CIRILLO", ",", "MY", "THOUGHT", "ARE", "WITH", "YOUR", "FAMILY", "AND", "FRIENDS", "LOVE", "FROM", "THE", "UK"]
+# ::lemmas ["RIP", "CPT", "NATHAN", "CIRILLO", ",", "my", "thought", "be", "with", "your", "family", "and", "friend", "love", "from", "the", "UK"]
+(c7-7 / say-01
+      :ARG0 (c7-1 / i)
+      :ARG1 (c7-5 / rest-01
+                  :ARG1 c7-1
+                  :accompanier (c7-0 / love-01
+                                     :ARG0 (c7-6 / country
+                                                 :name (c7-2 / name
+                                                             :op1 "UK"))
+                                     :ARG1 c7-1))
+      :ARG2 (c7-4 / person
+                  :name (c7-3 / name
+                              :op1 "CPT"))
+      :mod (c7-8 / peace))
+
+# ::snt Much power to his family: Rest In Peace Cpl. Nathan Cirillo &amp; thank you for serving our country
+# ::tokens ["Much", "power", "to", "his", "family", ":", "Rest", "In", "Peace", "Cpl", ".", "Nathan", "Cirillo", "&", "amp", ";", "thank", "you", "for", "serving", "our", "country"]
+# ::lemmas ["much", "power", "to", "his", "family", ":", "rest", "in", "Peace", "Cpl", ".", "Nathan", "Cirillo", "&", "amp", ";", "thank", "you", "for", "serve", "our", "country"]
+(c8-4 / multi-sentence
+      :snt1 (c8-9 / power-01
+                  :ARG1 (c8-15 / person
+                               :name (c8-7 / name
+                                           :op1 "Nathan"
+                                           :op2 "Cirillo")
+                               :ARG0-of (c8-0 / have-org-role-91
+                                              :ARG2 (c8-6 / officer
+                                                          :mod (c8-11 / chief)
+                                                          :mod (c8-5 / peace)))
+                               :ARG0-of (c8-16 / have-rel-role-91
+                                               :ARG1 (c8-8 / he)
+                                               :ARG2 (c8-3 / family)))
+                  :mod (c8-10 / much))
+      :snt2 (c8-14 / thank-01
+                   :ARG1 (c8-1 / you)
+                   :ARG2 (c8-13 / serve-01
+                                :ARG0 c8-1
+                                :ARG1 (c8-12 / country
+                                             :poss (c8-2 / we)))))

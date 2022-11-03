@@ -1,0 +1,225 @@
+# ::snt yea
+# ::tokens ["yea"]
+# ::lemmas ["yea"]
+(c1-0 / ya)
+
+# ::snt . Having two groups of armed attackers running around Paris is not worse?
+# ::tokens [".", "Having", "two", "groups", "of", "armed", "attackers", "running", "around", "Paris", "is", "not", "worse", "?"]
+# ::lemmas [".", "have", "two", "group", "of", "armed", "attacker", "run", "around", "Paris", "be", "not", "bad", "?"]
+(c2-3 / bad-07
+      :ARG1 (c2-0 / have-03
+                  :ARG1 (c2-8 / run-02
+                              :ARG0 (c2-10 / group
+                                           :consist-of (c2-7 / person
+                                                             :ARG0-of (c2-12 / attack-01)
+                                                             :ARG1-of (c2-4 / arm-01))
+                                           :quant 2)
+                              :path (c2-6 / around
+                                          :op1 (c2-9 / city
+                                                     :name (c2-5 / name
+                                                                 :op1 "Paris")))))
+      :ARG2-of (c2-1 / have-degree-91
+                     :ARG1 c2-0
+                     :ARG3 (c2-2 / more))
+      :polarity (c2-11 / amr-unknown)
+      :polarity -)
+
+# ::snt . Their tweet should read, " Unknown if incident is related to yesterday's attack"
+# ::tokens [".", "Their", "tweet", "should", "read", ",", "\"", "Unknown", "if", "incident", "is", "related", "to", "yesterday", "'s", "attack", "\""]
+# ::lemmas [".", "their", "tweet", "should", "read", ",", "\"", "unknown", "if", "incident", "be", "relate", "to", "yesterday", "'s", "attack", "\""]
+(c3-6 / recommend-01
+      :ARG1 (c3-4 / read-01
+                  :ARG1 (c3-8 / tweet-01
+                              :ARG0 (c3-7 / they))
+                  :ARG3 (c3-3 / know-01
+                              :ARG1 (c3-5 / truth-value
+                                          :polarity-of (c3-1 / relate-01
+                                                             :ARG1 (c3-2 / incident)
+                                                             :ARG2 (c3-9 / attack-01
+                                                                         :time (c3-0 / yesterday))))
+                              :polarity -)))
+
+# ::snt I thought the way they worded it was clear /shrug
+# ::tokens ["I", "thought", "the", "way", "they", "worded", "it", "was", "clear", "/shrug"]
+# ::lemmas ["i", "think", "the", "way", "they", "word", "it", "be", "clear", "/shrug"]
+(c4-8 / think-01
+      :ARG0 (c4-2 / i)
+      :ARG1 (c4-0 / way
+                  :manner-of (c4-3 / word-01
+                                   :ARG0 (c4-6 / they)
+                                   :ARG1 (c4-5 / it))
+                  :ARG1-of (c4-7 / slash
+                                 :op1 (c4-4 / clear-06)
+                                 :op2 (c4-1 / shrug-01))))
+
+# ::snt shootings happen every day. It could be unrelated entirely. I hope it is.
+# ::tokens ["shootings", "happen", "every", "day", ".", "It", "could", "be", "unrelated", "entirely", ".", "I", "hope", "it", "is", "."]
+# ::lemmas ["shooting", "happen", "every", "day", ".", "it", "could", "be", "unrelated", "entirely", ".", "i", "hope", "it", "be", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-9 / shoot-02
+                  :frequency (c5-6 / day
+                                   :mod (c5-3 / every)))
+      :snt2 (c5-5 / possible-01
+                  :ARG1 (c5-7 / relate-01
+                              :ARG1 (c5-4 / it)
+                              :degree (c5-2 / entire)
+                              :polarity -))
+      :snt3 (c5-0 / hope-01
+                  :ARG0 (c5-8 / i)
+                  :ARG1 c5-7))
+
+# ::snt The Government is paying for its policy to give residency to any Tom, Dick and Harry.
+# ::tokens ["The", "Government", "is", "paying", "for", "its", "policy", "to", "give", "residency", "to", "any", "Tom", ",", "Dick", "and", "Harry", "."]
+# ::lemmas ["the", "Government", "be", "pay", "for", "its", "policy", "to", "give", "residency", "to", "any", "Tom", ",", "Dick", "and", "Harry", "."]
+(c6-5 / pay-01
+      :ARG0 (c6-8 / government-organization
+                  :ARG0-of (c6-6 / govern-01))
+      :ARG3 (c6-12 / policy-01
+                   :ARG0 c6-8
+                   :ARG1 (c6-3 / give-01
+                               :ARG0 c6-8
+                               :ARG1 (c6-7 / residency)
+                               :ARG2 (c6-13 / and
+                                            :op1 (c6-0 / person
+                                                       :name (c6-4 / name
+                                                                   :op1 "Tom"))
+                                            :op2 (c6-11 / person
+                                                        :name (c6-9 / name
+                                                                    :op1 "Dick"))
+                                            :op3 (c6-1 / person
+                                                       :name (c6-10 / name
+                                                                    :op1 "Harry"))
+                                            :mod (c6-2 / any)))))
+
+# ::snt . Agreed. Its bad already and possibly really bad if its spreading.
+# ::tokens [".", "Agreed", ".", "Its", "bad", "already", "and", "possibly", "really", "bad", "if", "its", "spreading", "."]
+# ::lemmas [".", "agree", ".", "its", "bad", "already", "and", "possibly", "really", "bad", "if", "its", "spreading", "."]
+(c7-0 / multi-sentence
+      :snt1 (c7-9 / agree-01)
+      :snt2 (c7-2 / and
+                  :op1 (c7-1 / bad-07
+                             :ARG1 (c7-3 / it)
+                             :time (c7-4 / already))
+                  :op2 (c7-5 / possible-01
+                             :ARG1 (c7-7 / bad-07
+                                         :ARG1 c7-3
+                                         :degree (c7-6 / really))
+                             :condition (c7-8 / spread-03
+                                              :ARG1 c7-3))))
+
+# ::snt why is it better or worse? And they're not "trying" to draw a connection. They're reporting facts.
+# ::tokens ["why", "is", "it", "better", "or", "worse", "?", "And", "they", "'re", "not", "\"", "trying", "\"", "to", "draw", "a", "connection", ".", "They", "'re", "reporting", "facts", "."]
+# ::lemmas ["why", "be", "it", "well", "or", "bad", "?", "and", "they", "be", "not", "\"", "try", "\"", "to", "draw", "a", "connection", ".", "they", "be", "report", "fact", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-16 / amr-choice
+                   :op1 (c8-0 / have-degree-91
+                              :ARG1 (c8-7 / it)
+                              :ARG2 (c8-12 / good-02
+                                           :ARG1 c8-7)
+                              :ARG3 (c8-9 / more))
+                   :op2 (c8-1 / have-degree-91
+                              :ARG1 c8-7
+                              :ARG2 (c8-5 / bad-07
+                                          :ARG1 c8-7)
+                              :ARG3 (c8-3 / more)))
+      :snt2 (c8-6 / and
+                  :op2 (c8-15 / try-01
+                              :ARG0 (c8-14 / they)
+                              :ARG1 (c8-10 / draw-02
+                                           :ARG0 c8-14
+                                           :ARG1 (c8-11 / connect-01))
+                              :polarity -))
+      :snt3 (c8-13 / report-01
+                   :ARG0 (c8-8 / they)
+                   :ARG1 (c8-4 / fact)))
+
+# ::snt unless they guys know each other, there nothing in common?
+# ::tokens ["unless", "they", "guys", "know", "each", "other", ",", "there", "nothing", "in", "common", "?"]
+# ::lemmas ["unless", "they", "guy", "know", "each", "other", ",", "there", "nothing", "in", "common", "?"]
+(c9-2 / common-00
+      :polarity (c9-5 / amr-unknown)
+      :ARG1 (c9-1 / nothing)
+      :condition (c9-0 / know-02
+                       :ARG0 (c9-4 / they
+                                   :mod (c9-3 / guy)
+                                   :ARG1-of c9-0)
+                       :polarity -))
+
+# ::snt if it's related it's either the same people or someone inspired by this. That's a bad sign.
+# ::tokens ["if", "it", "'s", "related", "it", "'s", "either", "the", "same", "people", "or", "someone", "inspired", "by", "this", ".", "That", "'s", "a", "bad", "sign", "."]
+# ::lemmas ["if", "it", "be", "relate", "it", "be", "either", "the", "same", "people", "or", "someone", "inspire", "by", "this", ".", "that", "be", "a", "bad", "sign", "."]
+(c10-1 / multi-sentence
+       :snt1 (c10-3 / or
+                    :op1 (c10-6 / person
+                                :ARG1-of (c10-9 / same-01))
+                    :op2 (c10-4 / someone
+                                :ARG1-of (c10-5 / inspire-01
+                                                :ARG0 (c10-10 / this)))
+                    :condition (c10-7 / relate-01
+                                      :ARG1 c10-10))
+       :snt2 (c10-0 / signal-07
+                    :ARG1 (c10-8 / that)
+                    :ARG1-of (c10-2 / bad-07)))
+
+# ::snt best of luck French forces, do your best.
+# ::tokens ["best", "of", "luck", "French", "forces", ",", "do", "your", "best", "."]
+# ::lemmas ["good", "of", "luck", "French", "force", ",", "do", "your", "good", "."]
+(c11-6 / do-02
+       :ARG0 (c11-1 / force
+                    :mod (c11-7 / country
+                                :name (c11-3 / name
+                                             :op1 "France")))
+       :ARG1 (c11-8 / good-02
+                    :ARG1-of (c11-0 / have-degree-91
+                                    :ARG2 (c11-9 / good-02
+                                                 :ARG1 c11-6)
+                                    :ARG3 (c11-2 / most)))
+       :ARG1-of (c11-10 / have-degree-91
+                        :ARG2 (c11-4 / good-02
+                                     :ARG1 c11-6)
+                        :ARG3 (c11-5 / most))
+       :mode imperative)
+
+# ::snt if it's unrelated, it's just one of the unfortunate shootings that might have happened anyway today.
+# ::tokens ["if", "it", "'s", "unrelated", ",", "it", "'s", "just", "one", "of", "the", "unfortunate", "shootings", "that", "might", "have", "happened", "anyway", "today", "."]
+# ::lemmas ["if", "it", "be", "unrelated", ",", "it", "be", "just", "one", "of", "the", "unfortunate", "shooting", "that", "might", "have", "happen", "anyway", "today", "."]
+(c12-2 / include-91
+       :ARG1 (c12-5 / it)
+       :ARG2 (c12-6 / shoot-02
+                    :time (c12-7 / today)
+                    :ARG2-of (c12-1 / fortunate-01
+                                    :polarity -)
+                    :ARG1-of (c12-3 / possible-01)
+                    :mod (c12-8 / anyway))
+       :condition (c12-4 / relate-01
+                         :ARG1 c12-5
+                         :polarity -)
+       :mod (c12-0 / just))
+
+# ::snt . Why are you trying to 'draw a connection'. It's worse if they are not connected.
+# ::tokens [".", "Why", "are", "you", "trying", "to", "'", "draw", "a", "connection", "'", ".", "It", "'s", "worse", "if", "they", "are", "not", "connected", "."]
+# ::lemmas [".", "why", "be", "you", "try", "to", "'", "draw", "a", "connection", "'", ".", "it", "be", "bad", "if", "they", "be", "not", "connect", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-10 / try-01
+                     :ARG0 (c13-1 / you)
+                     :ARG1 (c13-5 / draw-02
+                                  :ARG0 c13-1
+                                  :ARG1 (c13-6 / connect-01))
+                     :ARG1-of (c13-7 / cause-01
+                                     :ARG0 (c13-11 / amr-unknown)))
+       :snt2 (c13-3 / bad-07
+                    :ARG1 (c13-9 / connect-01
+                                 :ARG1 (c13-8 / they)
+                                 :polarity -)
+                    :ARG2-of (c13-0 / have-degree-91
+                                    :ARG1 c13-9
+                                    :ARG3 (c13-4 / more))))
+
+# ::snt I prefer this not be an epidemic.
+# ::tokens ["I", "prefer", "this", "not", "be", "an", "epidemic", "."]
+# ::lemmas ["i", "prefer", "this", "not", "be", "an", "epidemic", "."]
+(c14-1 / prefer-01
+       :ARG0 (c14-3 / i)
+       :ARG1 (c14-2 / epidemic
+                    :domain (c14-0 / this)
+                    :polarity -))

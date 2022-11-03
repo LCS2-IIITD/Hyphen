@@ -1,0 +1,104 @@
+# ::snt P.M.Presser
+# ::tokens ["P.M.Presser"]
+# ::lemmas ["p.m.presser"]
+(c1-1 / person
+      :name (c1-0 / name
+                  :op1 "P.M."
+                  :op2 "Presser"))
+
+# ::snt Has car-jacking by suspects been confirmed? Questionable.
+# ::tokens ["Has", "car", "-", "jacking", "by", "suspects", "been", "confirmed", "?", "Questionable", "."]
+# ::lemmas ["have", "car", "-", "jacking", "by", "suspect", "be", "confirm", "?", "questionable", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-5 / confirm-01
+                  :polarity (c2-6 / amr-unknown)
+                  :ARG1 (c2-1 / hijack-01
+                              :ARG0 (c2-4 / person
+                                          :ARG2-of (c2-8 / suspect-01))
+                              :ARG1 (c2-7 / car)))
+      :snt2 (c2-0 / question-03
+                  :ARG1-of (c2-3 / possible-01)))
+
+# ::snt What's the matter with ppl crazy fuck
+# ::tokens ["What", "'s", "the", "matter", "with", "ppl", "crazy", "fuck"]
+# ::lemmas ["what", "be", "the", "matter", "with", "ppl", "crazy", "fuck"]
+(c3-0 / matter-01
+      :ARG1 (c3-4 / amr-unknown)
+      :ARG2 (c3-1 / fuck
+                  :ARG1-of (c3-3 / crazy-03)
+                  :poss (c3-2 / person
+                              :name (c3-5 / name
+                                          :op1 "pl")
+                              :mode expressive)))
+
+# ::snt let's hope the medias don't gratified these people by publicizing their names all over.. which is exactly what they want.!
+# ::tokens ["let", "'s", "hope", "the", "medias", "do", "n't", "gratified", "these", "people", "by", "publicizing", "their", "names", "all", "over", "..", "which", "is", "exactly", "what", "they", "want", ".", "!"]
+# ::lemmas ["let", "us", "hope", "the", "media", "do", "not", "gratify", "these", "people", "by", "publicize", "their", "name", "all", "over", "..", "which", "be", "exactly", "what", "they", "want", ".", "!"]
+(c4-1 / hope-01
+      :ARG0 (c4-0 / we)
+      :ARG1 (c4-7 / gratify-01
+                  :ARG0 (c4-4 / media)
+                  :ARG1 (c4-6 / person
+                              :mod (c4-3 / this))
+                  :manner (c4-5 / publicize-01
+                                :ARG0 c4-4
+                                :ARG1 (c4-10 / name
+                                             :poss c4-6)
+                                :location (c4-8 / all-over)
+                                :ARG1-of (c4-9 / want-01
+                                               :ARG0 c4-4
+                                               :mod (c4-2 / exact)))
+                  :polarity -)
+      :mode imperative)
+
+# ::snt our prayers are with our leaders &amp; authorities, may they return safely to their homes
+# ::tokens ["our", "prayers", "are", "with", "our", "leaders", "&", "amp", ";", "authorities", ",", "may", "they", "return", "safely", "to", "their", "homes"]
+# ::lemmas ["our", "prayer", "be", "with", "our", "leader", "&", "amp", ";", "authority", ",", "may", "they", "return", "safely", "to", "their", "home"]
+(c5-4 / pray-01
+      :ARG0 (c5-0 / we)
+      :ARG1 (c5-5 / and
+                  :op1 (c5-3 / person
+                             :ARG0-of (c5-6 / lead-02
+                                            :ARG1 c5-0))
+                  :op2 (c5-1 / person
+                             :name (c5-11 / name
+                                          :op1 "amp"))
+                  :op3 (c5-9 / authority))
+      :ARG2 (c5-7 / possible-01
+                  :ARG1 (c5-8 / return-01
+                              :ARG1 c5-5
+                              :ARG4 (c5-2 / home
+                                          :poss c5-5)
+                              :ARG0-of (c5-10 / safe-01))))
+
+# ::snt is it over or are they still looking for the gunmen?
+# ::tokens ["is", "it", "over", "or", "are", "they", "still", "looking", "for", "the", "gunmen", "?"]
+# ::lemmas ["be", "it", "over", "or", "be", "they", "still", "look", "for", "the", "gunman", "?"]
+(c6-2 / amr-choice
+      :op1 (c6-5 / over-01
+                 :ARG1 (c6-1 / it))
+      :op2 (c6-3 / look-01
+                 :ARG0 (c6-0 / they)
+                 :ARG1 (c6-4 / gunman)
+                 :mod (c6-6 / still)))
+
+# ::snt let's cut off his head and send back to his family in the middle east.
+# ::tokens ["let", "'s", "cut", "off", "his", "head", "and", "send", "back", "to", "his", "family", "in", "the", "middle", "east", "."]
+# ::lemmas ["let", "us", "cut", "off", "his", "head", "and", "send", "back", "to", "his", "family", "in", "the", "middle", "east", "."]
+(c7-5 / and
+      :op1 (c7-4 / cut-off-04
+                 :ARG0 (c7-0 / we)
+                 :ARG1 (c7-1 / head
+                             :part-of (c7-3 / he))
+                 :mode imperative)
+      :op2 (c7-7 / send-01
+                 :ARG0 c7-0
+                 :ARG1 c7-3
+                 :ARG2 (c7-2 / family
+                             :location (c7-6 / world-region
+                                             :name (c7-8 / name
+                                                         :op1 "Middle"
+                                                         :op2 "East"))
+                             :poss c7-3)
+                 :direction (c7-9 / back)
+                 :mode imperative))

@@ -1,0 +1,67 @@
+# ::snt I'm sorry early reports said but I wasn't updated
+# ::tokens ["I", "'m", "sorry", "early", "reports", "said", "but", "I", "was", "n't", "updated"]
+# ::lemmas ["i", "be", "sorry", "early", "report", "say", "but", "i", "be", "not", "update"]
+(c1-5 / contrast-01
+      :ARG1 (c1-6 / sorry-01
+                  :ARG1 (c1-3 / i)
+                  :ARG2 (c1-1 / say-01
+                              :ARG0 (c1-4 / report-01
+                                          :time (c1-2 / early))))
+      :ARG2 (c1-0 / update-02
+                  :ARG1 c1-3
+                  :polarity -))
+
+# ::snt early reports said i meant
+# ::tokens ["early", "reports", "said", "i", "meant"]
+# ::lemmas ["early", "report", "say", "i", "mean"]
+(c2-4 / say-01
+      :ARG0 (c2-3 / report-01
+                  :time (c2-1 / early))
+      :ARG1 (c2-0 / mean-01
+                  :ARG0 (c2-2 / i)))
+
+# ::snt dumbasses have had multiple opportunities to kill the bastard with a sniper. WTF wrong with them?
+# ::tokens ["dumbasses", "have", "had", "multiple", "opportunities", "to", "kill", "the", "bastard", "with", "a", "sniper", ".", "WTF", "wrong", "with", "them", "?"]
+# ::lemmas ["dumbass", "have", "have", "multiple", "opportunity", "to", "kill", "the", "bastard", "with", "a", "sniper", ".", "WTF", "wrong", "with", "they", "?"]
+(c3-3 / multi-sentence
+      :snt1 (c3-0 / have-03
+                  :ARG0 (c3-7 / dumbass)
+                  :ARG1 (c3-5 / opportunity
+                              :quant (c3-6 / multiple)
+                              :purpose (c3-10 / kill-01
+                                              :ARG0 c3-7
+                                              :ARG1 (c3-4 / bastard)
+                                              :ARG2 (c3-8 / sniper))))
+      :snt2 (c3-1 / wrong-02
+                  :ARG1 (c3-11 / amr-unknown)
+                  :ARG2 (c3-9 / they)
+                  :mod (c3-2 / fuck
+                             :mode expressive)))
+
+# ::snt one shooter in Australia. Only place I was talking about.
+# ::tokens ["one", "shooter", "in", "Australia", ".", "Only", "place", "I", "was", "talking", "about", "."]
+# ::lemmas ["one", "shooter", "in", "Australia", ".", "only", "place", "i", "be", "talk", "about", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-4 / person
+                  :ARG0-of (c4-6 / shoot-02)
+                  :location (c4-5 / country
+                                  :name (c4-3 / name
+                                              :op1 "Australia"))
+                  :quant 1)
+      :snt2 (c4-8 / place
+                  :mod (c4-1 / only)
+                  :ARG1-of (c4-7 / talk-01
+                                 :ARG0 (c4-2 / i))))
+
+# ::snt there's gunmen if one gets taken out the other will take out the rest of the hostages
+# ::tokens ["there", "'s", "gunmen", "if", "one", "gets", "taken", "out", "the", "other", "will", "take", "out", "the", "rest", "of", "the", "hostages"]
+# ::lemmas ["there", "be", "gunman", "if", "one", "gets", "take", "out", "the", "other", "will", "take", "out", "the", "rest", "of", "the", "hostage"]
+(c5-0 / have-condition-91
+      :ARG1 (c5-6 / take-out-11
+                  :ARG0 (c5-4 / gunman
+                              :mod (c5-1 / other))
+                  :ARG1 (c5-7 / hostage
+                              :mod (c5-2 / rest)))
+      :ARG2 (c5-5 / take-out-11
+                  :ARG0 (c5-3 / gunman)
+                  :ARG1 c5-7))

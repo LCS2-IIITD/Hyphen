@@ -1,0 +1,73 @@
+# ::snt Thank you guys.
+# ::tokens ["Thank", "you", "guys", "."]
+# ::lemmas ["thank", "you", "guy", "."]
+(c1-0 / say-01
+      :ARG1 (c1-1 / thank-01
+                  :ARG1 (c1-2 / guy
+                              :ARG2-of c1-0)))
+
+# ::snt Thank you
+# ::tokens ["Thank", "you"]
+# ::lemmas ["thank", "you"]
+(c2-1 / thank-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-0 / you))
+
+# ::snt we are with you.
+# ::tokens ["we", "are", "with", "you", "."]
+# ::lemmas ["we", "be", "with", "you", "."]
+(c3-2 / accompany-01
+      :ARG0 (c3-0 / we)
+      :ARG1 (c3-1 / you))
+
+# ::snt today, we are Team
+# ::tokens ["today", ",", "we", "are", "Team"]
+# ::lemmas ["today", ",", "we", "be", "Team"]
+(c4-1 / team
+      :domain (c4-0 / we)
+      :time (c4-2 / today))
+
+# ::snt thank you
+# ::tokens ["thank", "you"]
+# ::lemmas ["thank", "you"]
+(c5-1 / thank-01
+      :ARG0 (c5-2 / i)
+      :ARG1 (c5-0 / you))
+
+# ::snt Living in a city with a military base in Canada and not hearing planes flying, very creepy and eerily quiet
+# ::tokens ["Living", "in", "a", "city", "with", "a", "military", "base", "in", "Canada", "and", "not", "hearing", "planes", "flying", ",", "very", "creepy", "and", "eerily", "quiet"]
+# ::lemmas ["live", "in", "a", "city", "with", "a", "military", "base", "in", "Canada", "and", "not", "hear", "plane", "fly", ",", "very", "creepy", "and", "eerily", "quiet"]
+(c6-16 / and
+       :op1 (c6-8 / and
+                  :op1 (c6-1 / live-01
+                             :location (c6-13 / city
+                                              :ARG0-of (c6-0 / have-03
+                                                             :ARG1 (c6-5 / base
+                                                                         :mod (c6-2 / military)))
+                                              :location (c6-12 / country
+                                                               :name (c6-9 / name
+                                                                           :op1 "Canada"))))
+                  :op2 (c6-3 / hear-01
+                             :ARG1 (c6-4 / fly-01
+                                         :ARG1 (c6-11 / plane))
+                             :polarity -))
+       :op2 (c6-10 / and
+                   :op1 (c6-15 / creepy-04
+                               :degree (c6-14 / very))
+                   :op2 (c6-7 / quiet-04
+                              :degree (c6-6 / easy-05))))
+
+# ::snt : Our thoughts are with those in Ottawa and everyone affected by today's events.
+# ::tokens [":", "Our", "thoughts", "are", "with", "those", "in", "Ottawa", "and", "everyone", "affected", "by", "today", "'s", "events", "."]
+# ::lemmas [":", "our", "thought", "be", "with", "those", "in", "Ottawa", "and", "everyone", "affect", "by", "today", "'s", "event", "."]
+(c7-8 / think-01
+      :ARG0 (c7-0 / we)
+      :ARG2 (c7-9 / and
+                  :op1 (c7-5 / person
+                             :location (c7-6 / city
+                                             :name (c7-4 / name
+                                                         :op1 "Ottawa")))
+                  :op2 (c7-2 / everyone
+                             :ARG1-of (c7-3 / affect-01
+                                            :ARG0 (c7-1 / event
+                                                        :time (c7-7 / today))))))

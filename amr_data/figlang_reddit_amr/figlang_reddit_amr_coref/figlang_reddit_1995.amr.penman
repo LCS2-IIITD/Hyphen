@@ -1,0 +1,55 @@
+# ::snt TIL that if your phone's GPS tracks going over 1,000MPH, it legally is required to deactivate as it probably means it's being used to guide a missile.
+# ::tokens ["TIL", "that", "if", "your", "phone", "'s", "GPS", "tracks", "going", "over", "1,000MPH", ",", "it", "legally", "is", "required", "to", "deactivate", "as", "it", "probably", "means", "it", "'s", "being", "used", "to", "guide", "a", "missile", "."]
+# ::lemmas ["TIL", "that", "if", "your", "phone", "'s", "GPS", "track", "go", "over", "1,000MPH", ",", "it", "legally", "be", "require", "to", "deactivate", "as", "it", "probably", "mean", "it", "be", "be", "use", "to", "guide", "a", "missile", "."]
+(c1-5 / require-01
+      :ARG1 (c1-0 / deactivate-01
+                  :ARG1 (c1-4 / track
+                              :mod (c1-18 / product
+                                          :name (c1-8 / name
+                                                      :op1 "GPS"))
+                              :poss (c1-16 / phone
+                                           :poss (c1-13 / you))
+                              :ARG1-of (c1-6 / go-over
+                                             :op1 (c1-11 / distance-quantity
+                                                         :unit (c1-7 / millisievert)
+                                                         :quant 1000))))
+      :ARG1-of (c1-17 / legal-02)
+      :condition (c1-12 / go-01
+                        :ARG1 c1-4
+                        :ARG4 (c1-3 / over
+                                    :op1 c1-11))
+      :ARG1-of (c1-2 / cause-01
+                     :ARG0 (c1-14 / mean-01
+                                  :ARG1 c1-0
+                                  :ARG2 (c1-15 / use-01
+                                               :ARG1 c1-4
+                                               :ARG2 (c1-1 / guide-01
+                                                           :ARG0 c1-4
+                                                           :ARG1 (c1-10 / missile)))
+                                  :mod (c1-9 / probable))))
+
+# ::snt So really smart engineers and scientists are able to produce dangerous missiles but making their own GPS is too hard?
+# ::tokens ["So", "really", "smart", "engineers", "and", "scientists", "are", "able", "to", "produce", "dangerous", "missiles", "but", "making", "their", "own", "GPS", "is", "too", "hard", "?"]
+# ::lemmas ["so", "really", "smart", "engineer", "and", "scientist", "be", "able", "to", "produce", "dangerous", "missile", "but", "make", "their", "own", "GPS", "be", "too", "hard", "?"]
+(c2-13 / possible-01
+       :ARG1 (c2-9 / produce-01
+                   :ARG0 (c2-1 / and
+                               :op1 (c2-5 / person
+                                          :ARG0-of (c2-17 / engineer-01))
+                               :op2 (c2-0 / scientist)
+                               :ARG1-of (c2-12 / smart-06
+                                               :degree (c2-11 / really)))
+                   :ARG1 (c2-14 / missile
+                                :ARG0-of (c2-7 / endanger-01)))
+       :ARG1-of (c2-2 / contrast-01
+                      :ARG2 (c2-6 / hard-02
+                                  :ARG1 (c2-3 / make-01
+                                              :ARG0 c2-1
+                                              :ARG1 (c2-4 / product
+                                                          :name (c2-15 / name
+                                                                       :op1 "GPS")
+                                                          :poss c2-1))
+                                  :ARG2-of (c2-8 / have-degree-91
+                                                 :ARG1 c2-3
+                                                 :ARG3 (c2-10 / too))))
+       :polarity (c2-16 / amr-unknown))

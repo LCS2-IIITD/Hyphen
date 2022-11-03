@@ -1,0 +1,156 @@
+# ::snt every morning. Even when I
+# ::tokens ["every", "morning", ".", "Even", "when", "I"]
+# ::lemmas ["every", "morning", ".", "even", "when", "i"]
+(c1-5 / have-concession-91
+      :ARG2 (c1-1 / even-when
+                  :op1 (c1-3 / i))
+      :frequency (c1-0 / rate-entity-91
+                       :ARG3 (c1-6 / date-entity
+                                   :dayperiod (c1-2 / morning)
+                                   :mod (c1-4 / every))))
+
+# ::snt if that is the case you burned a ton of calories Tues morning.
+# ::tokens ["if", "that", "is", "the", "case", "you", "burned", "a", "ton", "of", "calories", "Tues", "morning", "."]
+# ::lemmas ["if", "that", "be", "the", "case", "you", "burn", "a", "ton", "of", "calorie", "Tues", "morning", "."]
+(c2-1 / burn-01
+      :ARG0 (c2-4 / you)
+      :ARG1 (c2-8 / calorie
+                  :quant (c2-5 / mass-quantity
+                               :unit (c2-0 / ton)
+                               :quant 1))
+      :time (c2-2 / date-entity
+                  :weekday (c2-3 / tuesday)
+                  :dayperiod (c2-6 / morning))
+      :condition (c2-7 / that))
+
+# ::snt scientifically proven
+# ::tokens ["scientifically", "proven"]
+# ::lemmas ["scientifically", "prove"]
+(c3-1 / prove-01
+      :manner (c3-0 / scientific))
+
+# ::snt technically not weight loss, but if you could collect the gas..........
+# ::tokens ["technically", "not", "weight", "loss", ",", "but", "if", "you", "could", "collect", "the", "gas", ".........."]
+# ::lemmas ["technically", "not", "weight", "loss", ",", "but", "if", "you", "could", "collect", "the", "gas", ".........."]
+(c4-8 / contrast-01
+      :ARG1 (c4-6 / lose-02
+                  :ARG1 (c4-5 / weight)
+                  :manner (c4-0 / technical)
+                  :polarity -)
+      :ARG2 (c4-7 / have-condition-91
+                  :ARG2 (c4-4 / possible-01
+                              :ARG1 (c4-3 / collect-01
+                                          :ARG0 (c4-1 / you)
+                                          :ARG1 (c4-2 / gas)))))
+
+# ::snt If it was, I wouldn't weigh kg.
+# ::tokens ["If", "it", "was", ",", "I", "would", "n't", "weigh", "kg", "."]
+# ::lemmas ["if", "it", "be", ",", "i", "would", "not", "weigh", "kg", "."]
+(c5-3 / weigh-01
+      :ARG0 (c5-2 / i)
+      :ARG1 (c5-1 / mass-quantity
+                  :unit (c5-0 / kilogram)
+                  :quant 1)
+      :condition (c5-4 / it)
+      :polarity -)
+
+# ::snt I'm sure any calorie burn comes from various poses one assumes or leg lifting one died prior to farting.
+# ::tokens ["I", "'m", "sure", "any", "calorie", "burn", "comes", "from", "various", "poses", "one", "assumes", "or", "leg", "lifting", "one", "died", "prior", "to", "farting", "."]
+# ::lemmas ["i", "be", "sure", "any", "calorie", "burn", "come", "from", "various", "pose", "one", "assume", "or", "leg", "lift", "one", "die", "prior", "to", "fart", "."]
+(c6-5 / sure-02
+      :ARG0 (c6-4 / i)
+      :ARG1 (c6-11 / come-03
+                   :ARG1 (c6-1 / burn-01
+                               :ARG1 (c6-3 / calorie)
+                               :mod (c6-0 / any))
+                   :ARG2 (c6-6 / pose
+                               :mod (c6-9 / various)
+                               :ARG1-of (c6-7 / assume-02
+                                              :ARG0 (c6-8 / one)))
+                   :time (c6-2 / prior
+                               :op1 (c6-10 / fart-01
+                                           :ARG0 c6-8))))
+
+# ::snt great. back to the drawing board.
+# ::tokens ["great", ".", "back", "to", "the", "drawing", "board", "."]
+# ::lemmas ["great", ".", "back", "to", "the", "drawing", "board", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-3 / great)
+      :snt2 (c7-0 / back-02
+                  :ARG3 (c7-1 / board
+                              :mod (c7-4 / draw-02))))
+
+# ::snt the people who need to read this probably won't.*poot*
+# ::tokens ["the", "people", "who", "need", "to", "read", "this", "probably", "won't.*poot", "*"]
+# ::lemmas ["the", "people", "who", "need", "to", "read", "this", "probably", "won't.*poot", "*"]
+(c8-3 / probable
+      :domain (c8-4 / need-01
+                    :ARG0 (c8-2 / person
+                                :ARG0-of (c8-1 / read-01
+                                               :ARG1 (c8-0 / this)
+                                               :ARG1-of c8-4))
+                    :polarity -))
+
+# ::snt I have never even heard of this before... I don't see how anyone would believe it.
+# ::tokens ["I", "have", "never", "even", "heard", "of", "this", "before", "...", "I", "do", "n't", "see", "how", "anyone", "would", "believe", "it", "."]
+# ::lemmas ["i", "have", "never", "even", "hear", "of", "this", "before", "...", "i", "do", "not", "see", "how", "anyone", "would", "believe", "it", "."]
+(c9-0 / and
+      :op1 (c9-9 / hear-01
+                 :ARG0 (c9-6 / i)
+                 :ARG1 (c9-1 / this)
+                 :time (c9-2 / ever)
+                 :mod (c9-8 / even)
+                 :time (c9-3 / before)
+                 :polarity -)
+      :op2 (c9-7 / see-01
+                 :ARG0 c9-6
+                 :ARG1 (c9-4 / thing
+                             :manner-of (c9-5 / believe-01
+                                              :ARG0 (c9-10 / anyone)
+                                              :ARG1 c9-1))
+                 :polarity -))
+
+# ::snt cc
+# ::tokens ["cc"]
+# ::lemmas ["cc"]
+(c10-0 / person
+       :name (c10-1 / name
+                    :op1 "cc"))
+
+# ::snt how did people believe that one?
+# ::tokens ["how", "did", "people", "believe", "that", "one", "?"]
+# ::lemmas ["how", "do", "people", "believe", "that", "one", "?"]
+(c11-2 / believe-01
+       :ARG0 (c11-3 / person)
+       :ARG1 (c11-4 / one
+                    :mod (c11-1 / that))
+       :manner (c11-0 / amr-unknown))
+
+# ::snt damn I dropped today...smh
+# ::tokens ["damn", "I", "dropped", "today", "...", "smh"]
+# ::lemmas ["damn", "i", "drop", "today", "...", "smh"]
+(c12-4 / drop-01
+       :ARG1 (c12-2 / i)
+       :time (c12-0 / today)
+       :mod (c12-1 / damn
+                   :mode expressive)
+       :mod (c12-3 / smh
+                   :mode expressive))
+
+# ::snt eh, I could see it.
+# ::tokens ["eh", ",", "I", "could", "see", "it", "."]
+# ::lemmas ["eh", ",", "i", "could", "see", "it", "."]
+(c14-3 / possible-01
+       :ARG1 (c14-2 / see-01
+                    :ARG0 (c14-1 / i)
+                    :ARG1 (c14-4 / it))
+       :mod (c14-0 / eh
+                   :mode expressive))
+
+# ::snt people really are thick as fuck.
+# ::tokens ["people", "really", "are", "thick", "as", "fuck", "."]
+# ::lemmas ["people", "really", "be", "thick", "as", "fuck", "."]
+(c15-2 / thick-03
+       :ARG1 (c15-3 / person)
+       :ARG1-of (c15-0 / real-04)
+       :degree (c15-1 / as-fuck))

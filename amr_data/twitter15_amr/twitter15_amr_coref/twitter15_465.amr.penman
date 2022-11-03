@@ -1,0 +1,38 @@
+# ::snt be careful with your hot pocket...
+# ::tokens ["be", "careful", "with", "your", "hot", "pocket", "..."]
+# ::lemmas ["be", "careful", "with", "your", "hot", "pocket", "..."]
+(c1-3 / care-04
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-2 / pocket
+                  :ARG1-of (c1-1 / hot-05)
+                  :poss c1-0)
+      :mode imperative)
+
+# ::snt mine either
+# ::tokens ["mine", "either"]
+# ::lemmas ["mine", "either"]
+(c2-0 / mine
+      :mod (c2-1 / either))
+
+# ::snt ": Hot Pockets recall involves meat from place FDA says "processed diseased and unsound animals. " great.
+# ::tokens ["\"", ":", "Hot", "Pockets", "recall", "involves", "meat", "from", "place", "FDA", "says", "\"", "processed", "diseased", "and", "unsound", "animals", ".", "\"", "great", "."]
+# ::lemmas ["\"", ":", "Hot", "Pockets", "recall", "involve", "meat", "from", "place", "FDA", "say", "\"", "process", "diseased", "and", "unsound", "animal", ".", "\"", "great", "."]
+(c3-6 / multi-sentence
+      :snt1 (c3-9 / recall-02
+                  :ARG1 (c3-4 / organization
+                              :name (c3-8 / name
+                                          :op1 "Hot"
+                                          :op2 "Pockets"))
+                  :ARG2-of (c3-2 / involve-01
+                                 :ARG1 (c3-10 / meat
+                                              :source (c3-3 / place)
+                                              :ARG1-of (c3-1 / say-01
+                                                             :ARG0 (c3-13 / government-organization
+                                                                          :name c3-8
+                                                                          :op1 "FDA"))
+                                              :ARG3 (c3-5 / animal
+                                                          :ARG1-of (c3-12 / process-01)
+                                                          :mod (c3-0 / diseased)
+                                                          :mod (c3-11 / ound
+                                                                      :polarity -)))))
+      :snt2 (c3-7 / great))

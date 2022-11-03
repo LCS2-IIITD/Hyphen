@@ -1,0 +1,39 @@
+# ::snt In about an hour , I am going to be getting an exam to see if Lasik will work for me . Kinda excited !
+# ::tokens ["In", "about", "an", "hour", ",", "I", "am", "going", "to", "be", "getting", "an", "exam", "to", "see", "if", "Lasik", "will", "work", "for", "me", ".", "Kinda", "excited", "!"]
+# ::lemmas ["in", "about", "an", "hour", ",", "i", "be", "go", "to", "be", "get", "an", "exam", "to", "see", "if", "Lasik", "will", "work", "for", "i", ".", "Kinda", "excited", "!"]
+(c1-13 / multi-sentence
+       :snt1 (c1-11 / get-01
+                    :ARG0 (c1-12 / i)
+                    :ARG1 (c1-16 / exam)
+                    :purpose (c1-0 / see-01
+                                   :ARG0 c1-12
+                                   :ARG1 (c1-8 / truth-value
+                                               :polarity-of (c1-3 / work-09
+                                                                  :ARG1 (c1-10 / person
+                                                                               :name (c1-14 / name
+                                                                                            :op1 "Lasik"))
+                                                                  :ARG2 c1-12)))
+                    :time (c1-1 / after
+                                :op1 (c1-9 / now)
+                                :quant (c1-15 / about
+                                              :op1 (c1-4 / temporal-quantity
+                                                         :unit (c1-5 / hour)
+                                                         :quant 1))))
+       :snt2 (c1-6 / excite-01
+                   :ARG0 (c1-7 / i)
+                   :degree (c1-2 / kind-of)
+                   :mode expressive))
+
+# ::snt Not the coke-bottle-bottom kind I have to wear , they aren't
+# ::tokens ["Not", "the", "coke", "-", "bottle", "-", "bottom", "kind", "I", "have", "to", "wear", ",", "they", "are", "n't"]
+# ::lemmas ["not", "the", "coke", "-", "bottle", "-", "bottom", "kind", "i", "have", "to", "wear", ",", "they", "be", "not"]
+(c2-1 / contrast-01
+      :ARG1 (c2-7 / kind
+                  :mod (c2-5 / bottom
+                             :mod (c2-0 / coke-bottle))
+                  :ARG1-of (c2-2 / wear-01
+                                 :ARG0 (c2-6 / i)
+                                 :ARG2-of (c2-3 / obligate-01))
+                  :polarity -)
+      :ARG2 (c2-4 / they
+                  :polarity -))

@@ -1,0 +1,116 @@
+# ::snt I know! The second hand embarrassment was excruciating!
+# ::tokens ["I", "know", "!", "The", "second", "hand", "embarrassment", "was", "excruciating", "!"]
+# ::lemmas ["i", "know", "!", "the", "second", "hand", "embarrassment", "be", "excruciating", "!"]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / know-01
+                  :ARG0 (c1-6 / i))
+      :snt2 (c1-4 / pain-01
+                  :ARG0 (c1-2 / embarrass-01
+                              :mod (c1-3 / hand
+                                         :ord (c1-0 / ordinal-entity
+                                                    :value 2)))
+                  :mode expressive))
+
+# ::snt Didnt even notice. Thats how much attention i give her
+# ::tokens ["Did", "nt", "even", "notice", ".", "That", "s", "how", "much", "attention", "i", "give", "her"]
+# ::lemmas ["do", "nt", "even", "notice", ".", "that", "s", "how", "much", "attention", "i", "give", "she"]
+(c2-1 / multi-sentence
+      :snt1 (c2-0 / notice-01
+                  :ARG0 (c2-6 / i)
+                  :mod (c2-5 / even)
+                  :polarity -)
+      :snt2 (c2-7 / thing
+                  :degree-of (c2-4 / attend-02
+                                   :ARG0 (c2-3 / i)
+                                   :ARG1 (c2-2 / she))
+                  :domain (c2-8 / that)))
+
+# ::snt The way the number of followers increased was embarrassing
+# ::tokens ["The", "way", "the", "number", "of", "followers", "increased", "was", "embarrassing"]
+# ::lemmas ["the", "way", "the", "number", "of", "follower", "increase", "be", "embarrassing"]
+(c3-2 / embarrass-01
+      :ARG0 (c3-4 / increase-01
+                  :ARG1 (c3-1 / number
+                              :quant-of (c3-3 / person
+                                              :ARG0-of (c3-0 / follow-02)))))
+
+# ::snt This!!!! Great article!!!!! Tess who?
+# ::tokens ["This", "!", "!", "!", "!", "Great", "article", "!", "!", "!", "!", "!", "Tess", "who", "?"]
+# ::lemmas ["this", "!", "!", "!", "!", "great", "article", "!", "!", "!", "!", "!", "tess", "who", "?"]
+(c5-0 / multi-sentence
+      :snt1 (c5-5 / article
+                  :mod (c5-6 / great))
+      :snt2 (c5-2 / say-01
+                  :ARG1 (c5-4 / amr-unknown)
+                  :ARG2 (c5-3 / person
+                              :name (c5-1 / name
+                                          :op1 "Tess"))))
+
+# ::snt Ohh haha, looks like all articles aren't hopeless
+# ::tokens ["Ohh", "haha", ",", "looks", "like", "all", "articles", "are", "n't", "hopeless"]
+# ::lemmas ["Ohh", "haha", ",", "look", "like", "all", "article", "be", "not", "hopeless"]
+(c6-2 / look-02
+      :ARG1 (c6-1 / hopeless
+                  :domain (c6-5 / article
+                                :mod (c6-4 / all))
+                  :polarity -)
+      :mod (c6-0 / oh
+                 :mode expressive)
+      :mod (c6-3 / haha
+                 :mode expressive))
+
+# ::snt There was no relationship to be "dumped" in the first place.
+# ::tokens ["There", "was", "no", "relationship", "to", "be", "\"", "dumped", "\"", "in", "the", "first", "place", "."]
+# ::lemmas ["there", "be", "no", "relationship", "to", "be", "\"", "dump", "\"", "in", "the", "first", "place", "."]
+(c7-0 / ditch-01
+      :ARG1 (c7-2 / relation-03)
+      :mod (c7-1 / in-the-first-place)
+      :polarity -)
+
+# ::snt Tess who??!!
+# ::tokens ["Tess", "who", "?", "?", "!", "!"]
+# ::lemmas ["tess", "who", "?", "?", "!", "!"]
+(c8-0 / guess-01
+      :ARG0 (c8-1 / you)
+      :ARG1 (c8-2 / person)
+      :polarity (c8-3 / amr-unknown)
+      :mode imperative)
+
+# ::snt They never dated it's really hard to dump someone when they never dated
+# ::tokens ["They", "never", "dated", "it", "'s", "really", "hard", "to", "dump", "someone", "when", "they", "never", "dated"]
+# ::lemmas ["they", "never", "date", "it", "be", "really", "hard", "to", "dump", "someone", "when", "they", "never", "date"]
+(c9-0 / multi-sentence
+      :snt1 (c9-9 / date-02
+                  :ARG0 (c9-8 / they)
+                  :time (c9-4 / ever)
+                  :polarity -)
+      :snt2 (c9-5 / hard-02
+                  :ARG1 (c9-7 / dump-01
+                              :ARG0 (c9-10 / they)
+                              :ARG1 (c9-1 / someone)
+                              :time (c9-6 / date-02
+                                          :ARG0 c9-10
+                                          :time (c9-2 / ever)
+                                          :polarity -))
+                  :degree (c9-3 / really)))
+
+# ::snt "He was never dating her, so he couldnt get dumped.
+# ::tokens ["\"", "He", "was", "never", "dating", "her", ",", "so", "he", "could", "nt", "get", "dumped", "."]
+# ::lemmas ["\"", "he", "be", "never", "date", "she", ",", "so", "he", "could", "not", "get", "dump", "."]
+(c11-4 / cause-01
+       :ARG0 (c11-6 / date-02
+                    :ARG0 (c11-2 / he)
+                    :ARG1 (c11-0 / she)
+                    :time (c11-1 / ever)
+                    :polarity -)
+       :ARG1 (c11-3 / possible-01
+                    :ARG1 (c11-5 / dump-01
+                                 :ARG1 c11-2)
+                    :polarity -))
+
+# ::snt Ooh, BUSTED!!
+# ::tokens ["Ooh", ",", "BUSTED", "!", "!"]
+# ::lemmas ["Ooh", ",", "BUSTED", "!", "!"]
+(c12-1 / bust-01
+       :mod (c12-0 / oh
+                   :mode expressive))

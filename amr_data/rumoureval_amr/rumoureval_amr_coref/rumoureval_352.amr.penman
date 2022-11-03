@@ -1,0 +1,68 @@
+# ::snt The gov said no not from citizens but can national guard buy from retail. I heard
+# ::tokens ["The", "gov", "said", "no", "not", "from", "citizens", "but", "can", "national", "guard", "buy", "from", "retail", ".", "I", "heard"]
+# ::lemmas ["the", "gov", "say", "no", "not", "from", "citizen", "but", "can", "national", "guard", "buy", "from", "retail", ".", "i", "hear"]
+(c1-2 / multi-sentence
+      :snt1 (c1-10 / say-01
+                   :ARG0 (c1-7 / government-organization
+                               :ARG0-of (c1-0 / govern-01))
+                   :ARG1 (c1-12 / no
+                                :source (c1-4 / citizen)
+                                :ARG1-of (c1-9 / contrast-01
+                                               :ARG2 (c1-5 / possible-01
+                                                           :ARG1 (c1-13 / buy-01
+                                                                        :ARG0 (c1-11 / guard
+                                                                                     :mod (c1-3 / nation))
+                                                                        :ARG2 (c1-8 / retail-01))))))
+      :snt2 (c1-1 / hear-01
+                  :ARG0 (c1-6 / i)))
+
+# ::snt Someone please correct me if I'm wrong
+# ::tokens ["Someone", "please", "correct", "me", "if", "I", "'m", "wrong"]
+# ::lemmas ["someone", "please", "correct", "i", "if", "i", "be", "wrong"]
+(c2-3 / correct-01
+      :ARG0 (c2-1 / someone)
+      :ARG1 (c2-0 / i)
+      :condition (c2-2 / wrong-04
+                       :ARG1 c2-0)
+      :mode imperative
+      :polite +)
+
+# ::snt Not sure. Virgin Islands is US territory but not under the same Constitution. Governor c
+# ::tokens ["Not", "sure", ".", "Virgin", "Islands", "is", "US", "territory", "but", "not", "under", "the", "same", "Constitution", ".", "Governor", "c"]
+# ::lemmas ["not", "sure", ".", "Virgin", "Islands", "be", "US", "territory", "but", "not", "under", "the", "same", "Constitution", ".", "Governor", "c"]
+(c3-3 / multi-sentence
+      :snt1 (c3-14 / sure-02
+                   :polarity -)
+      :snt2 (c3-6 / contrast-01
+                  :ARG1 (c3-2 / territory
+                              :domain (c3-5 / island
+                                            :name (c3-15 / name
+                                                         :op1 "Virgin"
+                                                         :op2 "Islands"))
+                              :mod (c3-13 / country
+                                          :name (c3-4 / name
+                                                      :op1 "US")))
+                  :ARG2 (c3-8 / under
+                              :op1 (c3-9 / law
+                                         :name (c3-10 / name
+                                                      :op1 "Constitution")
+                                         :ARG1-of (c3-0 / same-01))
+                              :polarity -))
+      :snt3 (c3-7 / person
+                  :name (c3-11 / name
+                               :op1 "c")
+                  :ARG0-of (c3-1 / have-org-role-91
+                                 :ARG2 (c3-12 / governor))))
+
+# ::snt Copy of Governor's Emergency Order is at the foot of the article
+# ::tokens ["Copy", "of", "Governor", "'s", "Emergency", "Order", "is", "at", "the", "foot", "of", "the", "article"]
+# ::lemmas ["Copy", "of", "Governor", "'s", "Emergency", "Order", "be", "at", "the", "foot", "of", "the", "article"]
+(c4-8 / be-located-at-91
+      :ARG1 (c4-3 / copy-01
+                  :ARG1 (c4-6 / order
+                              :mod (c4-7 / emergency)
+                              :poss (c4-2 / person
+                                          :ARG0-of (c4-0 / have-org-role-91
+                                                         :ARG2 (c4-4 / governor)))))
+      :ARG2 (c4-1 / foot
+                  :part-of (c4-5 / article)))

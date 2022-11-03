@@ -1,0 +1,101 @@
+# ::snt hehehe
+# ::tokens ["hehehe"]
+# ::lemmas ["hehehe"]
+(c1-0 / hehe
+      :mode expressive)
+
+# ::snt : one Child, one teacher, one book, and one pen, can change the World -Malala- "
+# ::tokens [":", "one", "Child", ",", "one", "teacher", ",", "one", "book", ",", "and", "one", "pen", ",", "can", "change", "the", "World", "-Malala-", "\""]
+# ::lemmas [":", "one", "Child", ",", "one", "teacher", ",", "one", "book", ",", "and", "one", "pen", ",", "can", "change", "the", "World", "-malala-", "\""]
+(c2-4 / possible-01
+      :ARG1 (c2-6 / change-01
+                  :ARG0 (c2-10 / and
+                               :op1 (c2-5 / child
+                                          :quant 1)
+                               :op2 (c2-9 / person
+                                          :ARG0-of (c2-8 / teach-01))
+                               :op3 (c2-2 / book
+                                          :quant 1)
+                               :op4 (c2-1 / pen
+                                          :quant 1))
+                  :ARG1 (c2-0 / world))
+      :ARG1-of (c2-7 / say-01
+                     :ARG0 c2-9
+                     :name (c2-3 / name
+                                 :op1 "Malala")))
+
+# ::snt brilliant!
+# ::tokens ["brilliant", "!"]
+# ::lemmas ["brilliant", "!"]
+(c3-0 / brilliant-01)
+
+# ::snt Thank you
+# ::tokens ["Thank", "you"]
+# ::lemmas ["thank", "you"]
+(c5-1 / thank-01
+      :ARG0 (c5-2 / i)
+      :ARG1 (c5-0 / you))
+
+# ::snt . science and education hurts their religious feelings. Havn't we heard this before from the Bible belt?
+# ::tokens [".", "science", "and", "education", "hurts", "their", "religious", "feelings", ".", "Havn't", "we", "heard", "this", "before", "from", "the", "Bible", "belt", "?"]
+# ::lemmas [".", "science", "and", "education", "hurt", "their", "religious", "feeling", ".", "havn't", "we", "hear", "this", "before", "from", "the", "Bible", "belt", "?"]
+(c7-3 / multi-sentence
+      :snt1 (c7-0 / hurt-01
+                  :ARG0 (c7-15 / and
+                               :op1 (c7-12 / science)
+                               :op2 (c7-6 / educate-01))
+                  :ARG1 (c7-2 / feel-01
+                              :ARG0 (c7-14 / they)
+                              :ARG1 (c7-9 / religion)))
+      :snt2 (c7-4 / hear-01
+                  :ARG0 (c7-1 / we)
+                  :ARG1 (c7-11 / this)
+                  :ARG2 (c7-5 / belt
+                              :mod (c7-10 / book
+                                          :name (c7-8 / name
+                                                      :op1 "Bible")))
+                  :polarity (c7-7 / amr-unknown)
+                  :time (c7-13 / before)))
+
+# ::snt si consentimos en nuestras ciudades el uso del burka, nikab, la aplicacin de la shara ms radical..etc estamos contribuyendo
+# ::tokens ["si", "consentimos", "en", "nuestras", "ciudades", "el", "uso", "del", "burka", ",", "nikab", ",", "la", "aplicacin", "de", "la", "shara", "ms", "radical", "..", "etc", "estamos", "contribuyendo"]
+# ::lemmas ["si", "consentimos", "en", "nuestra", "ciudade", "el", "uso", "del", "burka", ",", "nikab", ",", "la", "aplicacin", "de", "la", "shara", "ms", "radical", "..", "etc", "estamos", "contribuyendo"]
+(c8-10 / consent-01
+       :ARG0 (c8-5 / i)
+       :ARG1 (c8-15 / and
+                    :op1 (c8-3 / el
+                               :mod (c8-9 / del
+                                          :op1 (c8-1 / burqa)))
+                    :op2 (c8-6 / nikab)
+                    :op3 (c8-4 / aplicacin-00
+                               :ARG1 (c8-8 / product
+                                           :name (c8-7 / name
+                                                       :op1 "Shara")
+                                           :ARG1-of (c8-11 / radical-02)))
+                    :op4 (c8-2 / et-cetera))
+       :location (c8-12 / ciudades
+                        :mod (c8-13 / nuestra))
+       :ARG0-of (c8-14 / cause-01
+                       :ARG1 (c8-0 / estamos-of)))
+
+# ::snt . Education not extremists. But who can change that? Its no freedom for journalism anymore, its freedom for extremism! Sick!
+# ::tokens [".", "Education", "not", "extremists", ".", "But", "who", "can", "change", "that", "?", "Its", "no", "freedom", "for", "journalism", "anymore", ",", "its", "freedom", "for", "extremism", "!", "Sick", "!"]
+# ::lemmas [".", "education", "not", "extremist", ".", "but", "who", "can", "change", "that", "?", "its", "no", "freedom", "for", "journalism", "anymore", ",", "its", "freedom", "for", "extremism", "!", "sick", "!"]
+(c9-3 / multi-sentence
+      :snt1 (c9-5 / extremist
+                  :domain (c9-4 / educate-01)
+                  :polarity -)
+      :snt2 (c9-11 / contrast-01
+                   :ARG2 (c9-9 / possible-01
+                               :ARG1 (c9-10 / change-01
+                                            :ARG0 (c9-14 / amr-unknown)
+                                            :ARG1 (c9-13 / that))))
+      :snt3 (c9-6 / and
+                  :op1 (c9-2 / free-04
+                             :ARG1 (c9-0 / journalism)
+                             :time (c9-8 / anymore)
+                             :polarity -)
+                  :op2 (c9-7 / free-04
+                             :ARG1 (c9-1 / extremism)))
+      :snt4 (c9-12 / sick-02
+                   :mode expressive))

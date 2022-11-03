@@ -1,0 +1,154 @@
+# ::snt Small headache!?
+# ::tokens ["Small", "headache", "!", "?"]
+# ::lemmas ["small", "headache", "!", "?"]
+(c1-2 / headache
+      :polarity (c1-1 / amr-unknown)
+      :mod (c1-0 / small))
+
+# ::snt A couple pf shots or mo wont kill ya, but a bad one could have you running for the john, son.
+# ::tokens ["A", "couple", "pf", "shots", "or", "mo", "wo", "nt", "kill", "ya", ",", "but", "a", "bad", "one", "could", "have", "you", "running", "for", "the", "john", ",", "son", "."]
+# ::lemmas ["a", "couple", "pf", "shot", "or", "mo", "will", "not", "kill", "ya", ",", "but", "a", "bad", "one", "could", "have", "you", "run", "for", "the", "john", ",", "son", "."]
+(c2-4 / contrast-01
+      :ARG1 (c2-20 / kill-01
+                   :ARG0 (c2-5 / or
+                               :op1 (c2-8 / shoot-02
+                                          :quant (c2-0 / couple)
+                                          :mod (c2-13 / fucking))
+                               :op2 (c2-12 / shoot-02
+                                           :ARG0 (c2-19 / person
+                                                        :name (c2-7 / name
+                                                                    :op1 "Mo"))
+                                           :quant c2-0))
+                   :ARG1 (c2-11 / you)
+                   :polarity -)
+      :ARG2 (c2-16 / possible-01
+                   :ARG1 (c2-14 / have-03
+                                :ARG0 (c2-15 / one
+                                             :ARG1-of (c2-17 / bad-07))
+                                :ARG1 (c2-6 / run-02
+                                            :ARG0 c2-11
+                                            :ARG1 (c2-18 / john))))
+      :ARG1-of (c2-10 / say-01
+                      :ARG0 (c2-2 / i)
+                      :ARG2 (c2-9 / person
+                                  :ARG0-of (c2-1 / have-rel-role-91
+                                                 :ARG2 (c2-3 / son)))))
+
+# ::snt meh, a couple of vodkas or whiskeys might give you a small headache the next day. but that one shot of tequila...
+# ::tokens ["meh", ",", "a", "couple", "of", "vodkas", "or", "whiskeys", "might", "give", "you", "a", "small", "headache", "the", "next", "day", ".", "but", "that", "one", "shot", "of", "tequila", "..."]
+# ::lemmas ["meh", ",", "a", "couple", "of", "vodkas", "or", "whiskey", "might", "give", "you", "a", "small", "headache", "the", "next", "day", ".", "but", "that", "one", "shot", "of", "tequila", "..."]
+(c3-3 / contrast-01
+      :ARG1 (c3-12 / possible-01
+                   :ARG1 (c3-10 / give-01
+                                :ARG0 (c3-8 / or
+                                            :op1 (c3-7 / vodka
+                                                       :quant (c3-0 / couple))
+                                            :op2 (c3-4 / whiskey
+                                                       :quant c3-0))
+                                :ARG1 (c3-6 / headache
+                                            :mod (c3-1 / small))
+                                :ARG2 (c3-15 / you)
+                                :time (c3-2 / day
+                                            :mod (c3-14 / next)))
+                   :mod (c3-13 / meh
+                               :mode expressive))
+      :ARG2 (c3-11 / shot
+                   :mod (c3-9 / tequila)
+                   :mod (c3-5 / that)
+                   :quant 1))
+
+# ::snt But I got the whiskey one...can't mix them
+# ::tokens ["But", "I", "got", "the", "whiskey", "one", "...", "can't", "mix", "them"]
+# ::lemmas ["but", "i", "get", "the", "whiskey", "one", "...", "can't", "mix", "they"]
+(c4-1 / contrast-01
+      :ARG2 (c4-0 / and
+                  :op1 (c4-5 / get-01
+                             :ARG0 (c4-6 / i)
+                             :ARG1 (c4-2 / whiskey
+                                         :mod (c4-3 / one)))
+                  :op2 (c4-4 / possible-01
+                             :ARG1 (c4-7 / mix-01
+                                         :ARG0 c4-6
+                                         :ARG1 c4-2)
+                             :polarity -)))
+
+# ::snt Ahhhhhh ok
+# ::tokens ["Ahhhhhh", "ok"]
+# ::lemmas ["ahhhhhh", "ok"]
+(c5-0 / okay-04
+      :mod (c5-1 / ah
+                 :mode expressive))
+
+# ::snt no i think its :1 vaccine to vodka. yeah. thats the ratio
+# ::tokens ["no", "i", "think", "its", ":1", "vaccine", "to", "vodka", ".", "yeah", ".", "that", "s", "the", "ratio"]
+# ::lemmas ["no", "i", "think", "its", ":1", "vaccine", "to", "vodka", ".", "yeah", ".", "that", "s", "the", "ratio"]
+(c6-6 / multi-sentence
+      :snt1 (c6-3 / think-01
+                  :ARG0 (c6-5 / i)
+                  :ARG1 (c6-8 / equal-01
+                              :ARG1 (c6-2 / vaccine
+                                          :quant 1)
+                              :ARG2 (c6-0 / vodka)))
+      :snt2 (c6-7 / yeah
+                  :mode expressive)
+      :snt3 (c6-4 / ratio
+                  :domain (c6-1 / that)))
+
+# ::snt ...THEY AREN'T?!?
+# ::tokens ["...", "THEY", "AREN'T", "?", "!", "?"]
+# ::lemmas ["...", "they", "aren't", "?", "!", "?"]
+(c7-1 / request-confirmation-91
+      :ARG1 (c7-0 / they))
+
+# ::snt if only vaccinations were like happy hour...
+# ::tokens ["if", "only", "vaccinations", "were", "like", "happy", "hour", "..."]
+# ::lemmas ["if", "only", "vaccination", "be", "like", "happy", "hour", "..."]
+(c8-1 / have-condition-91
+      :ARG2 (c8-4 / resemble-01
+                  :ARG1 (c8-2 / vaccinate-01)
+                  :ARG2 (c8-5 / hour
+                              :ARG1-of (c8-0 / happy-02))
+                  :mod (c8-3 / only)))
+
+# ::snt Something like that...don't mix your vaccines
+# ::tokens ["Something", "like", "that", "...", "don't", "mix", "your", "vaccines"]
+# ::lemmas ["something", "like", "that", "...", "don't", "mix", "your", "vaccine"]
+(c9-5 / multi-sentence
+      :snt1 (c9-4 / resemble-01
+                  :ARG1 (c9-0 / something)
+                  :ARG2 (c9-3 / that))
+      :snt2 (c9-1 / mix-01
+                  :ARG0 (c9-6 / you)
+                  :ARG1 (c9-2 / vaccine
+                              :poss c9-6)
+                  :mode imperative
+                  :polarity -))
+
+# ::snt Best of luck. One glass of water for every shot or something like that.
+# ::tokens ["Best", "of", "luck", ".", "One", "glass", "of", "water", "for", "every", "shot", "or", "something", "like", "that", "."]
+# ::lemmas ["good", "of", "luck", ".", "One", "glass", "of", "water", "for", "every", "shot", "or", "something", "like", "that", "."]
+(c10-9 / multi-sentence
+       :snt1 (c10-8 / good-02
+                    :ARG2-of (c10-3 / have-degree-91
+                                    :ARG1 (c10-7 / luck)
+                                    :ARG3 (c10-1 / most)))
+       :snt2 (c10-5 / or
+                    :op1 (c10-2 / water
+                                :quant (c10-4 / volume-quantity
+                                              :unit (c10-10 / glass)
+                                              :quant 1))
+                    :op2 (c10-0 / something
+                                :ARG1-of (c10-6 / resemble-01
+                                                :ARG2 c10-2))
+                    :mod (c10-11 / every)))
+
+# ::snt We'll see if I'm doing that tomorrow
+# ::tokens ["We", "'ll", "see", "if", "I", "'m", "doing", "that", "tomorrow"]
+# ::lemmas ["we", "'ll", "see", "if", "i", "be", "do", "that", "tomorrow"]
+(c11-0 / see-01
+       :ARG0 (c11-2 / we)
+       :ARG1 (c11-4 / truth-value
+                    :polarity-of (c11-1 / do-02
+                                        :ARG0 (c11-5 / i)
+                                        :ARG1 (c11-3 / that)
+                                        :time (c11-6 / tomorrow))))

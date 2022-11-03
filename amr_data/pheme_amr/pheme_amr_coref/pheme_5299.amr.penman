@@ -1,0 +1,112 @@
+# ::snt police once beat a man then charged him with destruction of property for bleeding on their uniforms
+# ::tokens ["police", "once", "beat", "a", "man", "then", "charged", "him", "with", "destruction", "of", "property", "for", "bleeding", "on", "their", "uniforms"]
+# ::lemmas ["police", "once", "beat", "a", "man", "then", "charge", "he", "with", "destruction", "of", "property", "for", "bleed", "on", "their", "uniform"]
+(c1-10 / and
+       :op1 (c1-2 / beat-01
+                  :ARG0 (c1-3 / police)
+                  :ARG1 (c1-0 / man)
+                  :frequency 1)
+       :op2 (c1-5 / charge-05
+                  :ARG0 c1-3
+                  :ARG1 c1-0
+                  :ARG2 (c1-4 / destroy-01
+                              :ARG0 c1-0
+                              :ARG1 (c1-9 / property))
+                  :ARG1-of (c1-6 / cause-01
+                                 :ARG0 (c1-7 / bleed-01
+                                             :location (c1-1 / uniform
+                                                             :poss c1-3)))
+                  :time (c1-8 / then)))
+
+# ::snt I thought this was tongue in cheek or something from The Onion when I first read it.
+# ::tokens ["I", "thought", "this", "was", "tongue", "in", "cheek", "or", "something", "from", "The", "Onion", "when", "I", "first", "read", "it", "."]
+# ::lemmas ["i", "think", "this", "be", "tongue", "in", "cheek", "or", "something", "from", "the", "onion", "when", "i", "first", "read", "it", "."]
+(c2-9 / think-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-1 / or
+                  :op1 (c2-7 / tongue-in-cheek
+                             :domain (c2-4 / this))
+                  :op2 (c2-8 / something
+                             :source (c2-3 / newspaper
+                                           :name (c2-5 / name
+                                                       :op1 "The"
+                                                       :op2 "Onion"))
+                             :domain c2-4))
+      :time (c2-6 / read-01
+                  :ARG0 c2-2
+                  :ARG1 c2-4
+                  :ord (c2-0 / ordinal-entity
+                             :value 1)))
+
+# ::snt wow wtf
+# ::tokens ["wow", "wtf"]
+# ::lemmas ["wow", "wtf"]
+(c3-2 / amr-unknown
+      :mod (c3-1 / fuck
+                 :mode expressive)
+      :mod (c3-0 / wow))
+
+# ::snt it's sad when REAL headlines read like the . PD needs and overhaul!
+# ::tokens ["it", "'s", "sad", "when", "REAL", "headlines", "read", "like", "the", ".", "PD", "needs", "and", "overhaul", "!"]
+# ::lemmas ["it", "be", "sad", "when", "real", "headline", "read", "like", "the", ".", "pd", "need", "and", "overhaul", "!"]
+(c4-8 / sad-02
+      :time (c4-6 / read-01
+                  :ARG1 (c4-0 / headline
+                              :ARG1-of (c4-3 / real-04))
+                  :ARG1-of (c4-2 / resemble-01
+                                 :ARG2 (c4-9 / and
+                                             :op1 (c4-4 / need-01
+                                                        :ARG0 (c4-7 / government-organization
+                                                                    :name (c4-5 / name
+                                                                                :op1 "PD")))
+                                             :op2 (c4-1 / overhaul-01
+                                                        :ARG0 c4-7)))))
+
+# ::snt Notice how the surveillance video in the jail, mysteriously malfunctioned.
+# ::tokens ["Notice", "how", "the", "surveillance", "video", "in", "the", "jail", ",", "mysteriously", "malfunctioned", "."]
+# ::lemmas ["notice", "how", "the", "surveillance", "video", "in", "the", "jail", ",", "mysteriously", "malfunction", "."]
+(c5-3 / notice-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-2 / malfunction-01
+                  :ARG0 (c5-4 / video
+                              :ARG0-of (c5-6 / surveil-01)
+                              :location (c5-0 / jail))
+                  :manner (c5-5 / mysterious))
+      :mode imperative)
+
+# ::snt Quit inciting more violence. Isn't there enough .
+# ::tokens ["Quit", "inciting", "more", "violence", ".", "Is", "n't", "there", "enough", "."]
+# ::lemmas ["Quit", "incite", "more", "violence", ".", "be", "not", "there", "enough", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / quit-01
+                  :ARG0 (c6-1 / you)
+                  :ARG1 (c6-5 / incite-01
+                              :ARG0 c6-1
+                              :ARG1 (c6-6 / violence
+                                          :mod (c6-7 / more)))
+                  :mode imperative)
+      :snt2 (c6-0 / have-quant-91
+                  :ARG1 (c6-8 / there)
+                  :ARG3 (c6-3 / enough)
+                  :polarity (c6-9 / amr-unknown)))
+
+# ::snt ...duh...it's because they care about the community and meeting their budget so they can buy more RIOT GEAR!
+# ::tokens ["...", "duh", "...", "it", "'s", "because", "they", "care", "about", "the", "community", "and", "meeting", "their", "budget", "so", "they", "can", "buy", "more", "RIOT", "GEAR", "!"]
+# ::lemmas ["...", "duh", "...", "it", "be", "because", "they", "care", "about", "the", "community", "and", "meet", "their", "budget", "so", "they", "can", "buy", "more", "RIOT", "GEAR", "!"]
+(c7-5 / cause-01
+      :ARG0 (c7-12 / and
+                   :op1 (c7-4 / care-01
+                              :ARG0 (c7-11 / they)
+                              :ARG1 (c7-9 / community))
+                   :op2 (c7-1 / meet-01
+                              :ARG0 c7-11
+                              :ARG1 (c7-2 / budget
+                                          :poss c7-11)
+                              :purpose (c7-3 / possible-01
+                                             :ARG1 (c7-6 / buy-01
+                                                         :ARG0 c7-11
+                                                         :ARG1 (c7-7 / gear
+                                                                     :purpose (c7-0 / win-01)
+                                                                     :mod (c7-8 / more))))))
+      :mod (c7-10 / duh
+                  :mode expressive))

@@ -1,0 +1,101 @@
+# ::snt Thank you!
+# ::tokens ["Thank", "you", "!"]
+# ::lemmas ["thank", "you", "!"]
+(c2-1 / thank-01
+      :ARG0 (c2-0 / i)
+      :ARG1 (c2-2 / you)
+      :mode expressive)
+
+# ::snt Thank you!
+# ::tokens ["Thank", "you", "!"]
+# ::lemmas ["thank", "you", "!"]
+(c3-1 / thank-01
+      :ARG0 (c3-0 / i)
+      :ARG1 (c3-2 / you)
+      :mode expressive)
+
+# ::snt Thank you, I appreciate it!
+# ::tokens ["Thank", "you", ",", "I", "appreciate", "it", "!"]
+# ::lemmas ["thank", "you", ",", "i", "appreciate", "it", "!"]
+(c4-0 / and
+      :op1 (c4-2 / thank-01
+                 :ARG0 (c4-3 / i)
+                 :ARG1 (c4-4 / you))
+      :op2 (c4-5 / appreciate-02
+                 :ARG0 c4-3
+                 :ARG1 (c4-1 / it)))
+
+# ::snt Thank you! Im proud of you too!
+# ::tokens ["Thank", "you", "!", "I", "m", "proud", "of", "you", "too", "!"]
+# ::lemmas ["thank", "you", "!", "i", "m", "proud", "of", "you", "too", "!"]
+(c5-5 / multi-sentence
+      :snt1 (c5-2 / thank-01
+                  :ARG0 (c5-4 / i)
+                  :ARG1 (c5-6 / you))
+      :snt2 (c5-3 / pride-01
+                  :ARG0 (c5-1 / i)
+                  :ARG1 (c5-7 / you)
+                  :mod (c5-0 / too)))
+
+# ::snt Great congratulations
+# ::tokens ["Great", "congratulations"]
+# ::lemmas ["great", "congratulation"]
+(c7-1 / congratulate-01
+      :mod (c7-0 / great))
+
+# ::snt Thank youuu!
+# ::tokens ["Thank", "youuu", "!"]
+# ::lemmas ["thank", "youuu", "!"]
+(c9-1 / thank-01
+      :ARG0 (c9-0 / i)
+      :ARG1 (c9-2 / you))
+
+# ::snt Awww thank you so much! And I definitely appreciate the advice!
+# ::tokens ["Awww", "thank", "you", "so", "much", "!", "And", "I", "definitely", "appreciate", "the", "advice", "!"]
+# ::lemmas ["Awww", "thank", "you", "so", "much", "!", "and", "i", "definitely", "appreciate", "the", "advice", "!"]
+(c10-9 / multi-sentence
+       :snt1 (c10-7 / thank-01
+                    :ARG0 (c10-8 / i)
+                    :ARG1 (c10-10 / you)
+                    :degree (c10-4 / much
+                                   :degree (c10-0 / so))
+                    :mod (c10-3 / awww
+                                :mode expressive))
+       :snt2 (c10-11 / and
+                     :op2 (c10-1 / appreciate-02
+                                 :ARG0 (c10-5 / i)
+                                 :ARG1 (c10-6 / advice)
+                                 :mod (c10-2 / definite))))
+
+# ::snt Have you some juice, tylenol and popsicles ready just in case, So Proud!!!!
+# ::tokens ["Have", "you", "some", "juice", ",", "tylenol", "and", "popsicles", "ready", "just", "in", "case", ",", "So", "Proud", "!", "!", "!", "!"]
+# ::lemmas ["have", "you", "some", "juice", ",", "tylenol", "and", "popsicle", "ready", "just", "in", "case", ",", "so", "Proud", "!", "!", "!", "!"]
+(c11-12 / pride-01
+        :ARG0 (c11-3 / i)
+        :ARG1 (c11-5 / have-04
+                     :ARG0 c11-3
+                     :ARG1 (c11-9 / ready-02
+                                  :ARG1 (c11-2 / and
+                                               :op1 (c11-11 / juice
+                                                            :quant (c11-0 / some))
+                                               :op2 (c11-8 / tylenol
+                                                           :quant (c11-1 / some))
+                                               :op3 (c11-7 / popsicle
+                                                           :quant (c11-6 / some)))
+                                  :condition (c11-4 / case
+                                                    :mod (c11-10 / just))))
+        :degree (c11-13 / so)
+        :mode expressive)
+
+# ::snt Congratulation, good luck.
+# ::tokens ["Congratulation", ",", "good", "luck", "."]
+# ::lemmas ["Congratulation", ",", "good", "luck", "."]
+(c12-1 / and
+       :op1 (c12-3 / congratulate-01)
+       :op2 (c12-2 / luck
+                   :ARG1-of (c12-0 / good-02)))
+
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c13-0 / congratulate-01)

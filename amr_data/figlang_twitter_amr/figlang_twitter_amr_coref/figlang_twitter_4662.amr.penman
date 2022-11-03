@@ -1,0 +1,64 @@
+# ::snt What is going to be your priority for the next week ?
+# ::tokens ["What", "is", "going", "to", "be", "your", "priority", "for", "the", "next", "week", "?"]
+# ::lemmas ["what", "be", "go", "to", "be", "your", "priority", "for", "the", "next", "week", "?"]
+(c1-2 / prioritize-01
+      :ARG0 (c1-4 / you)
+      :ARG1 (c1-0 / amr-unknown)
+      :time (c1-1 / week
+                  :mod (c1-3 / next)))
+
+# ::snt . Getting that marketing plan mapped out . . Getting house tidied to a non-embarrassing level . packing a bag to airline acceptable level and successfully jetting off for first ski holiday in yrs !
+# ::tokens [".", "Getting", "that", "marketing", "plan", "mapped", "out", ".", ".", "Getting", "house", "tidied", "to", "a", "non", "-", "embarrassing", "level", ".", "packing", "a", "bag", "to", "airline", "acceptable", "level", "and", "successfully", "jetting", "off", "for", "first", "ski", "holiday", "in", "yrs", "!"]
+# ::lemmas [".", "get", "that", "marketing", "plan", "map", "out", ".", ".", "get", "house", "tidy", "to", "a", "non", "-", "embarrassing", "level", ".", "pack", "a", "bag", "to", "airline", "acceptable", "level", "and", "successfully", "jet", "off", "for", "first", "ski", "holiday", "in", "yrs", "!"]
+(c2-5 / multi-sentence
+      :snt1 (c2-16 / map-01
+                   :ARG1 (c2-23 / plan-01
+                                :ARG1 (c2-11 / market-01)
+                                :mod (c2-4 / that)))
+      :snt2 (c2-2 / tidy-01
+                  :ARG1 (c2-17 / house)
+                  :mod (c2-20 / level
+                              :ARG0-of (c2-8 / embarrass-01
+                                             :polarity -)))
+      :snt3 (c2-19 / pack-01
+                   :ARG1 (c2-21 / bag)
+                   :ARG2 (c2-0 / level
+                               :ARG1-of (c2-15 / accept-01
+                                               :ARG1-of (c2-10 / possible-01))
+                               :mod (c2-7 / airline)))
+      :snt4 (c2-22 / jet-01
+                   :ARG1 (c2-12 / you)
+                   :direction (c2-3 / off)
+                   :purpose (c2-1 / holiday
+                                  :mod (c2-9 / ski-01)
+                                  :ord (c2-18 / ordinal-entity
+                                              :range (c2-6 / temporal-quantity
+                                                           :unit (c2-13 / year)
+                                                           :quant 1)
+                                              :value 1))
+                   :ARG1-of (c2-14 / succeed-01
+                                   :ARG0 c2-12)))
+
+# ::snt Precisely my point haha but that's one advantage of having a tea bar , we just host friends there
+# ::tokens ["Precisely", "my", "point", "haha", "but", "that", "'s", "one", "advantage", "of", "having", "a", "tea", "bar", ",", "we", "just", "host", "friends", "there"]
+# ::lemmas ["precisely", "my", "point", "haha", "but", "that", "be", "one", "advantage", "of", "have", "a", "tea", "bar", ",", "we", "just", "host", "friend", "there"]
+(c3-4 / contrast-01
+      :ARG1 (c3-14 / point-04
+                   :ARG0 (c3-3 / i)
+                   :mod (c3-9 / precise)
+                   :mod (c3-7 / haha
+                              :mode expressive))
+      :ARG2 (c3-1 / advantage-01
+                  :ARG1 (c3-13 / have-03
+                               :ARG0 (c3-5 / we)
+                               :ARG1 (c3-12 / bar
+                                            :mod (c3-10 / tea)))
+                  :ARG2 (c3-0 / host-01
+                              :ARG0 c3-5
+                              :ARG1 (c3-6 / person
+                                          :ARG0-of (c3-8 / have-rel-role-91
+                                                         :ARG1 c3-5
+                                                         :ARG2 (c3-2 / friend)))
+                              :location c3-12
+                              :mod (c3-11 / just))
+                  :quant 1))

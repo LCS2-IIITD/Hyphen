@@ -1,0 +1,88 @@
+# ::snt This is John Lavender- Thanks for answering. My wife is getting the Moderna vaccine tomorrow. Any side effects you noticed or anything she might expect?
+# ::tokens ["This", "is", "John", "Lavender-", "Thanks", "for", "answering", ".", "My", "wife", "is", "getting", "the", "Moderna", "vaccine", "tomorrow", ".", "Any", "side", "effects", "you", "noticed", "or", "anything", "she", "might", "expect", "?"]
+# ::lemmas ["this", "be", "John", "Lavender-", "thank", "for", "answer", ".", "my", "wife", "be", "get", "the", "Moderna", "vaccine", "tomorrow", ".", "any", "side", "effect", "you", "notice", "or", "anything", "she", "might", "expect", "?"]
+(c1-9 / multi-sentence
+      :snt1 (c1-24 / person
+                   :name (c1-10 / name
+                                :op1 "John"
+                                :op2 "Lavender")
+                   :domain (c1-7 / this))
+      :snt2 (c1-4 / thank-01
+                  :ARG0 (c1-2 / i)
+                  :ARG1 (c1-17 / you)
+                  :ARG2 (c1-19 / answer-01
+                               :ARG0 c1-17))
+      :snt3 (c1-8 / get-01
+                  :ARG0 (c1-22 / person
+                               :ARG0-of (c1-20 / have-rel-role-91
+                                               :ARG1 c1-2
+                                               :ARG2 (c1-3 / wife)))
+                  :ARG1 (c1-5 / vaccine
+                              :name (c1-1 / name
+                                          :op1 "Moderna"))
+                  :time (c1-11 / tomorrow))
+      :snt4 (c1-6 / or
+                  :op1 (c1-16 / notice-01
+                              :ARG0 (c1-18 / you)
+                              :ARG1 (c1-13 / event
+                                           :mod (c1-14 / side)))
+                  :op2 (c1-12 / anything
+                              :ARG1-of (c1-21 / expect-01
+                                              :ARG0 (c1-23 / she)
+                                              :ARG1-of (c1-15 / possible-01)))
+                  :polarity (c1-0 / amr-unknown)))
+
+# ::snt Send me a message!
+# ::tokens ["Send", "me", "a", "message", "!"]
+# ::lemmas ["send", "i", "a", "message", "!"]
+(c2-0 / send-01
+      :ARG0 (c2-3 / you)
+      :ARG1 (c2-2 / message-01)
+      :ARG2 (c2-1 / i)
+      :mode imperative)
+
+# ::snt I would like to know if anyone had the Moderna vaccine. My wife gets her first shot tomorrow. She is a type diabetic with lots of underlying health issues. She already had COVID. Im trying to get information from folks
+# ::tokens ["I", "would", "like", "to", "know", "if", "anyone", "had", "the", "Moderna", "vaccine", ".", "My", "wife", "gets", "her", "first", "shot", "tomorrow", ".", "She", "is", "a", "type", "diabetic", "with", "lots", "of", "underlying", "health", "issues", ".", "She", "already", "had", "COVID", ".", "I", "m", "trying", "to", "get", "information", "from", "folks"]
+# ::lemmas ["i", "would", "like", "to", "know", "if", "anyone", "have", "the", "Moderna", "vaccine", ".", "my", "wife", "get", "her", "first", "shot", "tomorrow", ".", "she", "be", "a", "type", "diabetic", "with", "lot", "of", "underlie", "health", "issue", ".", "she", "already", "have", "COVID", ".", "i", "m", "try", "to", "get", "information", "from", "folk"]
+(c3-16 / multi-sentence
+       :snt1 (c3-30 / like-02
+                    :ARG0 (c3-5 / i)
+                    :ARG1 (c3-33 / know-01
+                                 :ARG0 c3-5
+                                 :ARG1 (c3-14 / truth-value
+                                              :polarity-of (c3-26 / have-03
+                                                                  :ARG0 (c3-24 / anyone)
+                                                                  :ARG1 (c3-11 / vaccine
+                                                                               :name (c3-17 / name
+                                                                                            :op1 "Moderna"))))))
+       :snt2 (c3-15 / get-01
+                    :ARG0 (c3-32 / person
+                                 :ARG0-of (c3-4 / have-rel-role-91
+                                                :ARG1 (c3-21 / i)
+                                                :ARG2 (c3-8 / wife)))
+                    :ARG1 (c3-20 / shoot-02
+                                 :ARG1 c3-32
+                                 :ord (c3-12 / ordinal-entity
+                                             :value 1))
+                    :time (c3-9 / tomorrow))
+       :snt3 c3-32
+       :mod (c3-18 / type)
+       :mod (c3-0 / diabetes)
+       :ARG0-of (c3-6 / have-03
+                      :ARG1 (c3-22 / issue-02
+                                   :ARG0 (c3-13 / health)
+                                   :ARG0-of (c3-27 / underlie-01)
+                                   :quant (c3-3 / lot)))
+       :domain (c3-31 / she)
+       :snt4 (c3-10 / have-03
+                    :ARG0 (c3-28 / i)
+                    :ARG1 (c3-29 / program
+                                 :name (c3-2 / name
+                                             :op1 "COVID"))
+                    :time (c3-19 / already))
+       :snt5 (c3-23 / try-01
+                    :ARG0 (c3-7 / i)
+                    :ARG1 c3-15
+                    :ARG0 c3-7
+                    :ARG1 (c3-1 / information)
+                    :ARG2 (c3-25 / folk)))

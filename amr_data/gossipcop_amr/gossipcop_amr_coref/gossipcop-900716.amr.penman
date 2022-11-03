@@ -1,0 +1,106 @@
+# ::snt Does she hang em w needles or just throw em up on it ?
+# ::tokens ["Does", "she", "hang", "em", "w", "needles", "or", "just", "throw", "em", "up", "on", "it", "?"]
+# ::lemmas ["do", "she", "hang", "em", "w", "needle", "or", "just", "throw", "em", "up", "on", "it", "?"]
+(c1-2 / amr-choice
+      :op1 (c1-3 / hang-01
+                 :ARG0 (c1-1 / she)
+                 :ARG1 (c1-6 / they)
+                 :ARG2 (c1-0 / needle))
+      :op2 (c1-7 / throw-01
+                 :ARG0 c1-1
+                 :ARG1 c1-6
+                 :ARG2 (c1-5 / it)
+                 :mod (c1-4 / just)))
+
+# ::snt dancerTsukasa YamasakiMONA MODEL
+# ::tokens ["dancerTsukasa", "YamasakiMONA", "MODEL"]
+# ::lemmas ["dancerTsukasa", "YamasakiMONA", "MODEL"]
+(c2-3 / person
+      :name (c2-0 / name
+                  :op1 "Tsukasa"
+                  :op2 "Yamasaki")
+      :ARG0-of (c2-4 / do-02
+                     :ARG1 (c2-1 / product
+                                 :name (c2-2 / name
+                                             :op1 "MONA"
+                                             :op2 "Model"))))
+
+# ::snt Because you're rich
+# ::tokens ["Because", "you", "'re", "rich"]
+# ::lemmas ["because", "you", "be", "rich"]
+(c3-0 / cause-01
+      :ARG0 (c3-2 / rich
+                  :domain (c3-1 / you)))
+
+# ::snt I would say not having children is my biggest gift.
+# ::tokens ["I", "would", "say", "not", "having", "children", "is", "my", "biggest", "gift", "."]
+# ::lemmas ["i", "would", "say", "not", "have", "child", "be", "my", "big", "gift", "."]
+(c4-2 / say-01
+      :ARG0 (c4-6 / i)
+      :ARG1 (c4-7 / gift-01
+                  :ARG0 c4-6
+                  :ARG1 (c4-3 / have-05
+                              :ARG0 c4-6
+                              :ARG1 (c4-4 / child)
+                              :polarity -)
+                  :ARG1-of (c4-5 / have-degree-91
+                                 :ARG2 (c4-0 / big)
+                                 :ARG3 (c4-1 / most))))
+
+# ::snt Freedom of expression, Palestinian style, soon at your favore European street....Hamas opens fire on Fatah rally commemorating Arafat, at least killed via
+# ::tokens ["Freedom", "of", "expression", ",", "Palestinian", "style", ",", "soon", "at", "your", "favore", "European", "street", "....", "Hamas", "opens", "fire", "on", "Fatah", "rally", "commemorating", "Arafat", ",", "at", "least", "killed", "via"]
+# ::lemmas ["freedom", "of", "expression", ",", "Palestinian", "style", ",", "soon", "at", "your", "favore", "European", "street", "....", "Hamas", "open", "fire", "on", "Fatah", "rally", "commemorate", "Arafat", ",", "at", "least", "kill", "via"]
+(c5-11 / multi-sentence
+       :snt1 (c5-16 / free-04
+                    :ARG3 (c5-19 / express-01)
+                    :mod (c5-0 / style
+                               :mod (c5-14 / country
+                                           :name (c5-17 / name
+                                                        :op1 "Palestine")))
+                    :location (c5-3 / street
+                                    :mod (c5-9 / continent
+                                               :name (c5-13 / name
+                                                            :op1 "Europe"))
+                                    :ARG1-of (c5-21 / favor-01
+                                                    :ARG0 (c5-5 / you)))
+                    :time (c5-2 / soon))
+       :snt2 (c5-4 / open-fire-07
+                   :ARG0 (c5-10 / organization
+                                :name (c5-20 / name
+                                             :op1 "Hamas"))
+                   :location (c5-18 / rally-01
+                                    :ARG1 (c5-22 / political-party
+                                                 :name (c5-15 / name
+                                                              :op1 "Fatah"))
+                                    :ARG0-of (c5-1 / commemorate-01
+                                                   :ARG1 (c5-12 / person
+                                                                :name (c5-23 / name
+                                                                             :op1 "Arafat")
+                                                                :ARG1-of (c5-7 / kill-01
+                                                                               :mod (c5-8 / at-least)
+                                                                               :manner (c5-6 / via)))))))
+
+# ::snt Methodist Church Quetta has been blast by terrorist Worshipers killed and injured. We stage protest at Lahore Press club
+# ::tokens ["Methodist", "Church", "Quetta", "has", "been", "blast", "by", "terrorist", "Worshipers", "killed", "and", "injured", ".", "We", "stage", "protest", "at", "Lahore", "Press", "club"]
+# ::lemmas ["Methodist", "Church", "Quetta", "have", "be", "blast", "by", "terrorist", "worshiper", "kill", "and", "injure", ".", "we", "stage", "protest", "at", "Lahore", "Press", "club"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / blast-05
+                  :ARG0 (c6-6 / person
+                              :ARG0-of (c6-9 / worship-01)
+                              :mod (c6-12 / terrorist)
+                              :ARG1-of (c6-7 / kill-01)
+                              :ARG1-of (c6-11 / injure-01))
+                  :ARG1 (c6-8 / worship-place
+                              :name (c6-2 / name
+                                          :op1 "Methodist"
+                                          :op2 "Church"
+                                          :op3 "Quetta")))
+      :snt2 (c6-3 / stage-01
+                  :ARG0 (c6-15 / we)
+                  :ARG1 (c6-4 / protest-01
+                              :ARG0 c6-15)
+                  :location (c6-10 / club
+                                   :mod (c6-13 / press)
+                                   :location (c6-14 / city
+                                                    :name (c6-5 / name
+                                                                :op1 "Lahore")))))

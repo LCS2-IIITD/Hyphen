@@ -1,0 +1,81 @@
+# ::snt Mine too!
+# ::tokens ["Mine", "too", "!"]
+# ::lemmas ["mine", "too", "!"]
+(c1-2 / thing
+      :poss (c1-1 / i)
+      :mod (c1-0 / too))
+
+# ::snt legit everything! It is not-so-secretly one of my favorite slices of NYC pizza
+# ::tokens ["legit", "everything", "!", "It", "is", "not", "-", "so", "-", "secretly", "one", "of", "my", "favorite", "slices", "of", "NYC", "pizza"]
+# ::lemmas ["legit", "everything", "!", "it", "be", "not", "-", "so", "-", "secretly", "one", "of", "my", "favorite", "slice", "of", "NYC", "pizza"]
+(c2-10 / multi-sentence
+       :snt1 (c2-6 / legal-02
+                   :ARG1 (c2-12 / everything))
+       :snt2 (c2-0 / secret
+                   :degree (c2-8 / so)
+                   :domain (c2-4 / slice
+                                 :ARG1-of (c2-9 / include-91
+                                                :ARG2 (c2-5 / slice
+                                                            :mod (c2-7 / pizza
+                                                                       :location (c2-2 / city
+                                                                                       :name (c2-11 / name
+                                                                                                    :op1 "NYC")))
+                                                            :ARG1-of (c2-1 / favor-01
+                                                                           :ARG0 (c2-3 / i)))))
+                   :polarity -))
+
+# ::snt Roses Pizza is everything to me
+# ::tokens ["Roses", "Pizza", "is", "everything", "to", "me"]
+# ::lemmas ["Roses", "Pizza", "be", "everything", "to", "i"]
+(c3-3 / everything
+      :domain (c3-0 / pizza
+                    :name (c3-1 / name
+                                :op1 "Roses"
+                                :op2 "Pizza"))
+      :prep-to (c3-2 / i))
+
+# ::snt they ALL slap tbh
+# ::tokens ["they", "ALL", "slap", "tbh"]
+# ::lemmas ["you", "all", "slap", "tbh"]
+(c4-0 / slap-01
+      :ARG0 (c4-2 / they
+                  :mod (c4-1 / all))
+      :ARG1-of (c4-3 / honest-01)
+      :mode expressive)
+
+# ::snt ok but the one place next to Krispy Kreme actually kind of slaps
+# ::tokens ["ok", "but", "the", "one", "place", "next", "to", "Krispy", "Kreme", "actually", "kind", "of", "slaps"]
+# ::lemmas ["ok", "but", "the", "one", "place", "next", "to", "Krispy", "Kreme", "actually", "kind", "of", "slap"]
+(c5-4 / contrast-01
+      :ARG1 (c5-5 / okay-04)
+      :ARG2 (c5-0 / slap-01
+                  :ARG1 (c5-7 / place
+                              :location (c5-8 / next-to
+                                              :op1 (c5-3 / facility
+                                                         :name (c5-6 / name
+                                                                     :op1 "Krispy"
+                                                                     :op2 "Kreme")))
+                              :quant 1)
+                  :degree (c5-2 / kind-of)
+                  :ARG1-of (c5-1 / actual-02)))
+
+# ::snt No but its still in old Penn!
+# ::tokens ["No", "but", "its", "still", "in", "old", "Penn", "!"]
+# ::lemmas ["no", "but", "its", "still", "in", "old", "Penn", "!"]
+(c6-1 / contrast-01
+      :ARG1 (c6-7 / no)
+      :ARG2 (c6-5 / be-located-at-91
+                  :ARG1 (c6-6 / it)
+                  :ARG2 (c6-2 / university
+                              :name (c6-4 / name
+                                          :op1 "Penn")
+                              :mod (c6-3 / old))
+                  :mod (c6-0 / still)))
+
+# ::snt Is there roses in new penn
+# ::tokens ["Is", "there", "roses", "in", "new", "penn"]
+# ::lemmas ["be", "there", "rose", "in", "new", "penn"]
+(c7-3 / rose
+      :polarity (c7-1 / amr-unknown)
+      :location (c7-0 / penn
+                      :ARG1-of (c7-2 / new-01)))

@@ -1,0 +1,46 @@
+# ::snt Yes.
+# ::tokens ["Yes", "."]
+# ::lemmas ["yes", "."]
+(c1-0 / yes)
+
+# ::snt Trying to trigger the bird?
+# ::tokens ["Trying", "to", "trigger", "the", "bird", "?"]
+# ::lemmas ["try", "to", "trigger", "the", "bird", "?"]
+(c2-3 / try-01
+      :polarity (c2-2 / amr-unknown)
+      :ARG1 (c2-1 / trigger-01
+                  :ARG1 (c2-0 / bird)))
+
+# ::snt Try adding "D*mini*n" to that list, but with the correct letter in place of the asterisks.
+# ::tokens ["Try", "adding", "\"", "D*mini*n", "\"", "to", "that", "list", ",", "but", "with", "the", "correct", "letter", "in", "place", "of", "the", "asterisks", "."]
+# ::lemmas ["try", "add", "\"", "d*mini*n", "\"", "to", "that", "list", ",", "but", "with", "the", "correct", "letter", "in", "place", "of", "the", "asterisk", "."]
+(c3-6 / try-01
+      :ARG0 (c3-10 / you)
+      :ARG1 (c3-2 / add-02
+                  :ARG0 c3-10
+                  :ARG1 (c3-0 / string-entity
+                              :value "D*mini*n")
+                  :ARG2 (c3-7 / list-01
+                              :mod (c3-4 / that))
+                  :ARG1-of (c3-3 / contrast-01
+                                 :ARG2 (c3-5 / have-03
+                                             :ARG0 c3-10
+                                             :ARG1 (c3-8 / letter
+                                                         :ARG1-of (c3-1 / correct-02)
+                                                         :ARG1-of (c3-9 / instead-of-91
+                                                                        :ARG2 (c3-11 / asterisk))))))
+      :mode imperative)
+
+# ::snt masks
+# ::tokens ["masks"]
+# ::lemmas ["mask"]
+(c4-1 / thing
+      :ARG1-of (c4-0 / mask-01))
+
+# ::snt Hmm didn't work.
+# ::tokens ["Hmm", "did", "n't", "work", "."]
+# ::lemmas ["hmm", "do", "not", "work", "."]
+(c5-0 / work-09
+      :mod (c5-1 / hmm
+                 :mode expressive)
+      :polarity -)

@@ -1,0 +1,51 @@
+# ::snt In an ominous report, researchers warn that as many as 19 various 'tipping points' could be triggered by the increasingly warm temperatures in the world's northern polar region.
+# ::tokens ["In", "an", "ominous", "report", ",", "researchers", "warn", "that", "as", "many", "as", "19", "various", "'", "tipping", "points", "'", "could", "be", "triggered", "by", "the", "increasingly", "warm", "temperatures", "in", "the", "world", "'s", "northern", "polar", "region", "."]
+# ::lemmas ["in", "an", "ominous", "report", ",", "researcher", "warn", "that", "as", "many", "as", "19", "various", "'", "tipping", "point", "'", "could", "be", "trigger", "by", "the", "increasingly", "warm", "temperature", "in", "the", "world", "'s", "northern", "polar", "region", "."]
+(c1-2 / warn-01
+      :ARG0 (c1-14 / person
+                   :ARG0-of (c1-11 / research-01))
+      :ARG1 (c1-9 / possible-01
+                  :ARG1 (c1-10 / trigger-01
+                               :ARG0 (c1-3 / temperature
+                                           :ARG1-of (c1-17 / warm-07
+                                                           :ARG1-of (c1-1 / increase-01))
+                                           :location (c1-6 / region
+                                                           :mod (c1-15 / north)
+                                                           :part-of (c1-12 / world)
+                                                           :mod (c1-4 / polar)))
+                               :ARG1 (c1-5 / point
+                                           :ARG2-of (c1-16 / tip-01)
+                                           :mod (c1-7 / various)
+                                           :quant (c1-0 / as-many-as
+                                                        :op1 19))))
+      :location (c1-13 / report
+                       :mod (c1-8 / ominous)))
+
+# ::snt Your kids and grandkids are going to be so pissed.
+# ::tokens ["Your", "kids", "and", "grandkids", "are", "going", "to", "be", "so", "pissed", "."]
+# ::lemmas ["your", "kid", "and", "grandkid", "be", "go", "to", "be", "so", "pissed", "."]
+(c2-7 / piss-03
+      :ARG1 (c2-1 / and
+                  :op1 (c2-4 / person
+                             :ARG0-of (c2-3 / have-rel-role-91
+                                            :ARG1 (c2-9 / you)
+                                            :ARG2 (c2-8 / kid)))
+                  :op2 (c2-2 / person
+                             :ARG0-of (c2-6 / have-rel-role-91
+                                            :ARG1 c2-9
+                                            :ARG2 (c2-5 / grandkid))))
+      :degree (c2-0 / so))
+
+# ::snt if you're younger than 30, **you** will be so pissed.
+# ::tokens ["if", "you", "'re", "younger", "than", "30", ",", "*", "*", "you", "*", "*", "will", "be", "so", "pissed", "."]
+# ::lemmas ["if", "you", "be", "young", "than", "30", ",", "*", "*", "you", "*", "*", "will", "be", "so", "pissed", "."]
+(c3-4 / piss-03
+      :ARG1 (c3-6 / you)
+      :degree (c3-0 / so)
+      :condition (c3-2 / have-degree-91
+                       :ARG1 c3-6
+                       :ARG2 (c3-7 / young)
+                       :ARG3 (c3-5 / more)
+                       :ARG4 (c3-3 / temporal-quantity
+                                   :unit (c3-1 / year)
+                                   :quant 30)))

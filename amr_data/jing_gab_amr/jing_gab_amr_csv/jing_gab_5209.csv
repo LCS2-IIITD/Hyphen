@@ -1,0 +1,49 @@
+comment,amr
+,"# ::snt 
+(a / amr-empty)"
+,"# ::snt 
+(a / amr-empty)"
+"Language denigrating race, ethnicity, or sexual preference is unacceptable. Please refrain from its use.","# ::snt Language denigrating race, ethnicity, or sexual preference is unacceptable. Please refrain from its use.
+(m / multi-sentence
+      :snt1 (p / possible-01
+            :polarity -
+            :ARG1 (a / accept-01
+                  :ARG1 (d / denigrate-01
+                        :ARG0 (l / language)
+                        :ARG1 (o / or
+                              :op1 (r / race)
+                              :op2 (e / ethnicity)
+                              :op3 (p2 / prefer-01
+                                    :manner (s / sex))))))
+      :snt2 (r2 / refrain-01
+            :mode imperative
+            :polite +
+            :ARG0 (y / you)
+            :ARG1 (u / use-01
+                  :ARG0 y
+                  :ARG1 (ii / it))))"
+Please avoid slurs based on ethnicity and/or sexual orientation.,"# ::snt Please avoid slurs based on ethnicity and/or sexual orientation.
+(a / avoid-01
+      :mode imperative
+      :polite +
+      :ARG0 (y / you)
+      :ARG1 (s / slur
+            :ARG1-of (b / base-02
+                  :ARG2 (a2 / and-or
+                        :op1 (e / ethnicity)
+                        :op2 (o / orient-01
+                              :ARG2 (s2 / sex))))))"
+"Let's simmer it down, we don't need that many slurs here","# ::snt Let's simmer it down, we don't need that many slurs here
+(c / cause-01
+      :ARG0 (n / need-01
+            :polarity -
+            :ARG0 (w / we)
+            :ARG1 (s / slur
+                  :quant (m / many
+                        :degree (t / that)))
+            :location (h / here))
+      :ARG1 (s2 / simmer-01
+            :mode imperative
+            :ARG0 w
+            :ARG1 (ii / it)
+            :mod (d / down)))"

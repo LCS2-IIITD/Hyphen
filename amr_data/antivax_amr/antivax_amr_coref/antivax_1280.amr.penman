@@ -1,0 +1,135 @@
+# ::snt God is good!
+# ::tokens ["God", "is", "good", "!"]
+# ::lemmas ["God", "be", "good", "!"]
+(c1-0 / good-02
+      :ARG1 (c1-1 / person
+                  :name (c1-2 / name
+                              :op1 "God")))
+
+# ::snt Congrats hun they need it!
+# ::tokens ["Congrats", "hun", "they", "need", "it", "!"]
+# ::lemmas ["congrat", "hun", "they", "need", "it", "!"]
+(c3-0 / say-01
+      :ARG1 (c3-1 / congratulate-01
+                  :ARG1 (c3-6 / you)
+                  :ARG2 (c3-5 / need-01
+                              :ARG0 (c3-3 / they)
+                              :ARG1 (c3-4 / it)))
+      :ARG2 (c3-2 / hun))
+
+# ::snt Yes.
+# ::tokens ["Yes", "."]
+# ::lemmas ["yes", "."]
+(c4-0 / yes)
+
+# ::snt Thats great. Im sure you were glad.
+# ::tokens ["That", "s", "great", ".", "I", "m", "sure", "you", "were", "glad", "."]
+# ::lemmas ["that", "s", "great", ".", "i", "m", "sure", "you", "be", "glad", "."]
+(c5-5 / multi-sentence
+      :snt1 (c5-3 / great
+                  :domain (c5-1 / that))
+      :snt2 (c5-0 / sure-02
+                  :ARG0 (c5-4 / i)
+                  :ARG1 (c5-6 / glad-02
+                              :ARG1 (c5-2 / you))))
+
+# ::snt My mom got her first shot last Friday.
+# ::tokens ["My", "mom", "got", "her", "first", "shot", "last", "Friday", "."]
+# ::lemmas ["my", "mom", "get", "her", "first", "shot", "last", "Friday", "."]
+(c6-7 / get-01
+      :ARG0 (c6-8 / person
+                  :ARG0-of (c6-4 / have-rel-role-91
+                                 :ARG1 (c6-3 / i)
+                                 :ARG2 (c6-9 / mom)))
+      :ARG1 (c6-0 / shoot-01
+                  :ARG1 c6-8
+                  :ord (c6-5 / ordinal-entity
+                             :value 1))
+      :time (c6-1 / date-entity
+                  :weekday (c6-2 / friday)
+                  :mod (c6-6 / last)))
+
+# ::snt Yay for mom!! My parents have an appt for drive thru.....I hope it goes smoothly.
+# ::tokens ["Yay", "for", "mom", "!", "!", "My", "parents", "have", "an", "appt", "for", "drive", "thru", ".....", "I", "hope", "it", "goes", "smoothly", "."]
+# ::lemmas ["yay", "for", "mom", "!", "!", "my", "parent", "have", "an", "appt", "for", "drive", "thru", ".....", "i", "hope", "it", "go", "smoothly", "."]
+(c7-14 / multi-sentence
+       :snt1 (c7-15 / yay
+                    :prep-for (c7-13 / person
+                                     :ARG0-of (c7-7 / have-rel-role-91
+                                                    :ARG2 (c7-4 / mom))))
+       :snt2 (c7-12 / have-03
+                    :ARG0 (c7-10 / person
+                                 :ARG0-of (c7-1 / have-rel-role-91
+                                                :ARG1 (c7-5 / i)
+                                                :ARG2 (c7-6 / parent)))
+                    :ARG1 (c7-3 / appointment-02
+                                :purpose (c7-0 / drive-thru)))
+       :snt3 (c7-9 / hope-01
+                   :ARG0 c7-5
+                   :ARG1 (c7-11 / go-06
+                                :ARG0 (c7-8 / it)
+                                :ARG1-of (c7-2 / smooth-06))))
+
+# ::snt Thats awesome!! Im sure its a relief to you that she will be vaccinated.
+# ::tokens ["That", "s", "awesome", "!", "!", "I", "m", "sure", "its", "a", "relief", "to", "you", "that", "she", "will", "be", "vaccinated", "."]
+# ::lemmas ["that", "s", "awesome", "!", "!", "i", "m", "sure", "its", "a", "relief", "to", "you", "that", "she", "will", "be", "vaccinate", "."]
+(c8-7 / multi-sentence
+      :snt1 (c8-1 / awesome-03
+                  :ARG0 (c8-3 / that))
+      :snt2 (c8-0 / sure-02
+                  :ARG0 (c8-6 / i)
+                  :ARG1 (c8-4 / relieve-01
+                              :ARG0 (c8-2 / vaccinate-01
+                                          :ARG1 (c8-5 / she))
+                              :ARG1 (c8-8 / you))))
+
+# ::snt My year old Mom had her first last week finally (she didn't want to stand in line-er, wait in line in a car so waited for awhile).Go Mom!!
+# ::tokens ["My", "year", "old", "Mom", "had", "her", "first", "last", "week", "finally", "(", "she", "did", "n't", "want", "to", "stand", "in", "line", "-", "er", ",", "wait", "in", "line", "in", "a", "car", "so", "waited", "for", "awhile).Go", "Mom", "!", "!"]
+# ::lemmas ["My", "year", "old", "Mom", "have", "her", "first", "last", "week", "finally", "(", "she", "do", "not", "want", "to", "stand", "in", "line", "-", "er", ",", "wait", "in", "line", "in", "a", "car", "so", "wait", "for", "awhile).go", "mom", "!", "!"]
+(c9-11 / multi-sentence
+       :snt1 (c9-20 / have-03
+                    :ARG0 (c9-24 / person
+                                 :ARG0-of (c9-4 / have-rel-role-91
+                                                :ARG1 (c9-5 / i)
+                                                :ARG2 (c9-19 / mom))
+                                 :age (c9-10 / temporal-quantity
+                                             :unit (c9-16 / year)
+                                             :quant 1))
+                    :ARG1 (c9-21 / person
+                                 :ARG0-of (c9-7 / have-rel-role-91
+                                                :ARG1 c9-5
+                                                :ARG2 (c9-15 / mom)))
+                    :time (c9-9 / week
+                                :mod (c9-22 / last))
+                    :mod (c9-18 / final))
+       :snt2 (c9-12 / want-01
+                    :ARG0 (c9-14 / she)
+                    :ARG1 (c9-17 / and
+                                 :op1 (c9-23 / stand-01
+                                             :ARG1 c9-14
+                                             :manner (c9-3 / line))
+                                 :op2 (c9-6 / wait-01
+                                            :ARG1 c9-14
+                                            :manner (c9-1 / line)
+                                            :location (c9-8 / car)))
+                    :ARG0-of (c9-0 / cause-01
+                                   :ARG1 (c9-2 / wait-01
+                                               :ARG1 c9-14
+                                               :duration (c9-13 / awhile)))
+                    :polarity -))
+
+# ::snt My year old Mom gets her nd shot tomorrow.
+# ::tokens ["My", "year", "old", "Mom", "gets", "her", "nd", "shot", "tomorrow", "."]
+# ::lemmas ["My", "year", "old", "Mom", "get", "her", "nd", "shoot", "tomorrow", "."]
+(c10-6 / get-01
+       :ARG0 (c10-7 / person
+                    :ARG0-of (c10-4 / have-rel-role-91
+                                    :ARG1 (c10-2 / i)
+                                    :ARG2 (c10-8 / mom))
+                    :age (c10-5 / temporal-quantity
+                                :unit (c10-9 / year)
+                                :quant 1))
+       :ARG1 (c10-0 / shoot-02
+                    :ARG1 c10-7
+                    :mod (c10-1 / dear))
+       :time (c10-3 / tomorrow))

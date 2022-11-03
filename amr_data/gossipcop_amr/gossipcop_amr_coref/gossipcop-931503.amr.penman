@@ -1,0 +1,27 @@
+# ::snt I feel sorry for the whole clan. Everyone is obese; the baby has little chance.
+# ::tokens ["I", "feel", "sorry", "for", "the", "whole", "clan", ".", "Everyone", "is", "obese", ";", "the", "baby", "has", "little", "chance", "."]
+# ::lemmas ["i", "feel", "sorry", "for", "the", "whole", "clan", ".", "everyone", "be", "obese", ";", "the", "baby", "have", "little", "chance", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-0 / feel-01
+                  :ARG0 (c1-9 / i)
+                  :ARG1 (c1-4 / sorry-01
+                              :ARG1 c1-9
+                              :ARG2 (c1-7 / clan
+                                          :mod (c1-8 / whole)
+                                          :ARG2-of c1-0)))
+      :snt2 (c1-10 / and
+                   :op1 (c1-1 / obese
+                              :domain (c1-5 / everyone))
+                   :op2 (c1-11 / chance-02
+                               :ARG0 (c1-2 / baby)
+                               :quant (c1-6 / little))))
+
+# ::snt I had no idea she had a baby
+# ::tokens ["I", "had", "no", "idea", "she", "had", "a", "baby"]
+# ::lemmas ["i", "have", "no", "idea", "she", "have", "a", "baby"]
+(c3-3 / know-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-2 / have-05
+                  :ARG0 (c3-1 / she)
+                  :ARG1 (c3-0 / baby))
+      :polarity -)

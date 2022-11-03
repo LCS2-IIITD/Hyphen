@@ -1,0 +1,67 @@
+# ::snt who gives a shit
+# ::tokens ["who", "gives", "a", "shit"]
+# ::lemmas ["who", "give", "a", "shit"]
+(c1-0 / give-16
+      :ARG0 (c1-2 / amr-unknown)
+      :ARG1 (c1-1 / shit))
+
+# ::snt They weren't married, folks.
+# ::tokens ["They", "were", "n't", "married", ",", "folks", "."]
+# ::lemmas ["they", "be", "not", "marry", ",", "folk", "."]
+(c2-2 / say-01
+      :ARG1 (c2-1 / marry-01
+                  :ARG1 (c2-0 / folk
+                              :ARG2-of c2-2)
+                  :polarity -))
+
+# ::snt Williams and Ledger never married.
+# ::tokens ["Williams", "and", "Ledger", "never", "married", "."]
+# ::lemmas ["Williams", "and", "Ledger", "never", "marry", "."]
+(c3-1 / marry-01
+      :ARG1 (c3-5 / person
+                  :name (c3-0 / name
+                              :op1 "Williams"))
+      :ARG2 (c3-2 / person
+                  :name (c3-4 / name
+                              :op1 "Ledger"))
+      :time (c3-3 / ever)
+      :polarity -)
+
+# ::snt He's a singer/songwriter.
+# ::tokens ["He", "'s", "a", "singer", "/", "songwriter", "."]
+# ::lemmas ["he", "be", "a", "singer", "/", "songwriter", "."]
+(c4-2 / slash
+      :op1 (c4-4 / person
+                 :ARG0-of (c4-0 / sing-01))
+      :op2 (c4-1 / person
+                 :ARG0-of c4-0)
+      :domain (c4-3 / he))
+
+# ::snt No, her new love.
+# ::tokens ["No", ",", "her", "new", "love", "."]
+# ::lemmas ["no", ",", "her", "new", "love", "."]
+(c5-1 / love-01
+      :ARG0 (c5-2 / she)
+      :ARG1-of (c5-0 / new-01)
+      :polarity -)
+
+# ::snt Heath Ledger?
+# ::tokens ["Heath", "Ledger", "?"]
+# ::lemmas ["Heath", "Ledger", "?"]
+(c6-1 / person
+      :polarity (c6-2 / amr-unknown)
+      :name (c6-0 / name
+                  :op1 "Heath"
+                  :op2 "Ledger"))
+
+# ::snt Oh really? Is he famous?
+# ::tokens ["Oh", "really", "?", "Is", "he", "famous", "?"]
+# ::lemmas ["oh", "really", "?", "be", "he", "famous", "?"]
+(c7-2 / multi-sentence
+      :snt1 (c7-3 / real-04
+                  :polarity (c7-6 / amr-unknown)
+                  :mod (c7-0 / oh
+                             :mode expressive))
+      :snt2 (c7-1 / fame-01
+                  :ARG1 (c7-4 / he)
+                  :polarity (c7-5 / amr-unknown)))

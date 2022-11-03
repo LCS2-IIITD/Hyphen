@@ -1,0 +1,193 @@
+# ::snt I live in Fukushima, and I've not seen any of that here.
+# ::tokens ["I", "live", "in", "Fukushima", ",", "and", "I", "'ve", "not", "seen", "any", "of", "that", "here", "."]
+# ::lemmas ["i", "live", "in", "Fukushima", ",", "and", "i", "'ve", "not", "see", "any", "of", "that", "here", "."]
+(c1-4 / and
+      :op1 (c1-5 / live-01
+                 :ARG0 (c1-3 / i)
+                 :location (c1-2 / facility
+                                 :name (c1-8 / name
+                                             :op1 "Fukushima")))
+      :op2 (c1-7 / see-01
+                 :ARG0 c1-3
+                 :ARG1 (c1-1 / that
+                             :mod (c1-6 / any))
+                 :location (c1-0 / here)
+                 :polarity -))
+
+# ::snt Fasciation can be caused by radiation, so yes.
+# ::tokens ["Fasciation", "can", "be", "caused", "by", "radiation", ",", "so", "yes", "."]
+# ::lemmas ["fasciation", "can", "be", "cause", "by", "radiation", ",", "so", "yes", "."]
+(c2-2 / possible-01
+      :ARG1 (c2-1 / cause-01
+                  :ARG0 (c2-3 / radiate-01)
+                  :ARG1 (c2-4 / ciation))
+      :mod (c2-0 / yes))
+
+# ::snt Yup, that's fasciation. Seen it in many places.
+# ::tokens ["Yup", ",", "that", "'s", "fasciation", ".", "Seen", "it", "in", "many", "places", "."]
+# ::lemmas ["yup", ",", "that", "be", "fasciation", ".", "see", "it", "in", "many", "place", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-3 / confuse-01
+                  :ARG2 (c3-1 / that)
+                  :mod (c3-0 / yup))
+      :snt2 (c3-7 / see-01
+                  :ARG1 (c3-4 / it)
+                  :location (c3-5 / place
+                                  :quant (c3-6 / many))))
+
+# ::snt &gt; fasciationAny occurrence of fasciation has several possible causes, including hormonal, genetic, bacterial, fungal, viral and environmental causes.So yes it could be fasciation, which could be caused by fukushima but not necessarily by fukushima.
+# ::tokens ["&", "gt", ";", "fasciationAny", "occurrence", "of", "fasciation", "has", "several", "possible", "causes", ",", "including", "hormonal", ",", "genetic", ",", "bacterial", ",", "fungal", ",", "viral", "and", "environmental", "causes", ".", "So", "yes", "it", "could", "be", "fasciation", ",", "which", "could", "be", "caused", "by", "fukushima", "but", "not", "necessarily", "by", "fukushima", "."]
+# ::lemmas ["&", "gt", ";", "fasciationany", "occurrence", "of", "fasciation", "have", "several", "possible", "cause", ",", "include", "hormonal", ",", "genetic", ",", "bacterial", ",", "fungal", ",", "viral", "and", "environmental", "cause", ".", "so", "yes", "it", "could", "be", "fasciation", ",", "which", "could", "be", "cause", "by", "fukushima", "but", "not", "necessarily", "by", "fukushima", "."]
+(c4-9 / and
+      :op1 (c4-6 / possible-01
+                 :ARG1 (c4-5 / cause-01
+                             :ARG0 (c4-12 / and
+                                          :op1 (c4-1 / hormone)
+                                          :op2 (c4-10 / genetics)
+                                          :op3 (c4-17 / bacterium)
+                                          :op4 (c4-3 / fungal)
+                                          :op5 (c4-7 / virus)
+                                          :op6 (c4-16 / environment))
+                             :quant (c4-14 / several)
+                             :ARG1-of (c4-4 / possible-01)))
+      :op2 (c4-0 / possible-01
+                 :ARG1 (c4-11 / cause-01
+                              :ARG0 (c4-2 / fukushima)
+                              :ARG1 (c4-13 / fasciation)
+                              :ARG1-of (c4-8 / contrast-01
+                                             :ARG2 (c4-15 / need-01
+                                                          :ARG1 c4-2
+                                                          :polarity -)))))
+
+# ::snt Fasciation is caused by damage to the plants' genetic material. Radiation causes damage to genetic material. The article claims that the site where the photo was taken is still receiving an elevated dose of radiation.I rate it plausible.
+# ::tokens ["Fasciation", "is", "caused", "by", "damage", "to", "the", "plants", "'", "genetic", "material", ".", "Radiation", "causes", "damage", "to", "genetic", "material", ".", "The", "article", "claims", "that", "the", "site", "where", "the", "photo", "was", "taken", "is", "still", "receiving", "an", "elevated", "dose", "of", "radiation", ".", "I", "rate", "it", "plausible", "."]
+# ::lemmas ["fasciation", "be", "cause", "by", "damage", "to", "the", "plant", "'", "genetic", "material", ".", "radiation", "cause", "damage", "to", "genetic", "material", ".", "the", "article", "claim", "that", "the", "site", "where", "the", "photo", "be", "take", "be", "still", "receive", "an", "elevated", "dose", "of", "radiation", ".", "i", "rate", "it", "plausible", "."]
+(c5-18 / multi-sentence
+       :snt1 (c5-6 / cause-01
+                   :ARG0 (c5-12 / damage-01
+                                :ARG1 (c5-21 / material
+                                             :mod (c5-15 / genetics)
+                                             :poss (c5-13 / plant)))
+                   :ARG1 (c5-2 / ciation))
+       :snt2 (c5-20 / cause-01
+                    :ARG0 (c5-1 / radiate-01)
+                    :ARG1 (c5-0 / damage-01
+                                :ARG1 c5-21))
+       :snt3 (c5-3 / claim-01
+                   :ARG0 (c5-16 / article)
+                   :ARG1 (c5-4 / receive-01
+                               :ARG0 (c5-7 / site
+                                           :location-of (c5-19 / photograph-01))
+                               :ARG1 (c5-22 / dose-01
+                                            :ARG2 (c5-11 / radiate-01)
+                                            :ARG1-of (c5-17 / elevate-01))
+                               :mod (c5-9 / still)))
+       :snt4 (c5-10 / rate-01
+                    :ARG0 (c5-14 / i)
+                    :ARG1 (c5-5 / it)
+                    :ARG2 (c5-8 / plausible)))
+
+# ::snt It's not plausible. The amount of radiation in the area is only Sv - roughly the same as bananas, and rated safe for long term habitation. This is just a common plant mutation, it was spotted in Japan, and someone who knows nothing about radiation or plants posted it online thinking "It's all *mutated* and stuff, it must be from the nuclear plant that melted down four years ago!"
+# ::tokens ["It", "'s", "not", "plausible", ".", "The", "amount", "of", "radiation", "in", "the", "area", "is", "only", "Sv", "-", "roughly", "the", "same", "as", "bananas", ",", "and", "rated", "safe", "for", "long", "term", "habitation", ".", "This", "is", "just", "a", "common", "plant", "mutation", ",", "it", "was", "spotted", "in", "Japan", ",", "and", "someone", "who", "knows", "nothing", "about", "radiation", "or", "plants", "posted", "it", "online", "thinking", "\"", "It", "'s", "all", "*", "mutated", "*", "and", "stuff", ",", "it", "must", "be", "from", "the", "nuclear", "plant", "that", "melted", "down", "four", "years", "ago", "!", "\""]
+# ::lemmas ["it", "be", "not", "plausible", ".", "the", "amount", "of", "radiation", "in", "the", "area", "be", "only", "Sv", "-", "roughly", "the", "same", "as", "banana", ",", "and", "rate", "safe", "for", "long", "term", "habitation", ".", "this", "be", "just", "a", "common", "plant", "mutation", ",", "it", "be", "spot", "in", "Japan", ",", "and", "someone", "who", "know", "nothing", "about", "radiation", "or", "plant", "post", "it", "online", "think", "\"", "it", "be", "all", "*", "mutate", "*", "and", "stuff", ",", "it", "must", "be", "from", "the", "nuclear", "plant", "that", "melt", "down", "four", "years", "ago", "!", "\""]
+(c6-39 / multi-sentence
+       :snt1 (c6-31 / plausible
+                    :domain (c6-30 / it)
+                    :polarity -)
+       :snt2 (c6-33 / and
+                    :op1 (c6-9 / amount
+                               :quant-of (c6-7 / radiate-01)
+                               :location (c6-35 / area)
+                               :mod (c6-34 / only)
+                               :ARG1-of (c6-19 / same-01
+                                               :ARG2 (c6-36 / banana)
+                                               :degree (c6-13 / rough)))
+                    :op2 (c6-27 / rate-01
+                                :ARG1 c6-9
+                                :ARG2 (c6-24 / safe-01
+                                             :ARG0 c6-9
+                                             :ARG2 (c6-0 / habitate-01
+                                                         :ARG1-of (c6-5 / long-03)))))
+       :snt3 (c6-4 / and
+                   :op1 (c6-44 / mutate-01
+                               :ARG1 (c6-40 / plant)
+                               :mod (c6-17 / common)
+                               :mod (c6-16 / just))
+                   :op2 (c6-22 / spot-01
+                               :ARG1 (c6-14 / it)
+                               :location (c6-10 / country
+                                                :name (c6-20 / name
+                                                             :op1 "Japan")))
+                   :op3 (c6-23 / post-01
+                               :ARG0 (c6-25 / someone
+                                            :ARG0-of (c6-37 / know-01
+                                                            :ARG1 (c6-3 / nothing
+                                                                        :topic (c6-28 / or
+                                                                                      :op1 (c6-26 / radiate-01)
+                                                                                      :op2 (c6-18 / plant)))
+                                                            :polarity -))
+                               :ARG1 c6-14
+                               :ARG2 (c6-21 / online)
+                               :manner (c6-15 / think-01
+                                              :ARG0 c6-25
+                                              :ARG1 (c6-11 / and
+                                                           :op1 c6-44
+                                                           :ARG1 (c6-42 / all))
+                                              :op2 (c6-32 / stuff))
+                               :op2 (c6-1 / infer-01
+                                          :ARG1 (c6-43 / be-from-91
+                                                       :ARG1 (c6-29 / plant
+                                                                    :mod (c6-6 / nucleus))
+                                                       :ARG2 (c6-8 / melt-01
+                                                                   :ARG1 c6-29
+                                                                   :time (c6-2 / before
+                                                                               :op1 (c6-41 / now)
+                                                                               :quant (c6-38 / temporal-quantity
+                                                                                             :unit (c6-12 / year)
+                                                                                             :quant 4))))))))
+
+# ::snt It's more than twice the normal background radiation and normal background radiation can cause genetic mutations. I still think it's plausible.
+# ::tokens ["It", "'s", "more", "than", "twice", "the", "normal", "background", "radiation", "and", "normal", "background", "radiation", "can", "cause", "genetic", "mutations", ".", "I", "still", "think", "it", "'s", "plausible", "."]
+# ::lemmas ["it", "be", "more", "than", "twice", "the", "normal", "background", "radiation", "and", "normal", "background", "radiation", "can", "cause", "genetic", "mutation", ".", "i", "still", "think", "it", "be", "plausible", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-6 / possible-01
+                  :ARG1 (c7-7 / cause-01
+                              :ARG0 (c7-9 / and
+                                          :op1 (c7-12 / radiate-01
+                                                      :ARG1 (c7-16 / background
+                                                                   :ARG1-of (c7-15 / normal-02)))
+                                          :op2 (c7-0 / radiate-01
+                                                     :ARG1 (c7-10 / background
+                                                                  :ARG1-of (c7-5 / normal-02))))
+                              :ARG1 (c7-13 / mutate-01
+                                           :mod (c7-11 / genetics))))
+      :snt2 (c7-2 / think-01
+                  :ARG0 (c7-8 / i)
+                  :ARG1 (c7-4 / plausible
+                              :domain (c7-1 / it))
+                  :mod (c7-14 / still)))
+
+# ::snt Next time I'm at the store I need to load up on bananas and see if I can make some mutated daisies in my garden!
+# ::tokens ["Next", "time", "I", "'m", "at", "the", "store", "I", "need", "to", "load", "up", "on", "bananas", "and", "see", "if", "I", "can", "make", "some", "mutated", "daisies", "in", "my", "garden", "!"]
+# ::lemmas ["next", "time", "i", "be", "at", "the", "store", "i", "need", "to", "load", "up", "on", "banana", "and", "see", "if", "i", "can", "make", "some", "mutate", "daisy", "in", "my", "garden", "!"]
+(c8-14 / need-01
+       :ARG0 (c8-5 / i)
+       :ARG1 (c8-8 / and
+                   :op1 (c8-9 / load-up-02
+                              :ARG0 c8-5
+                              :ARG2 (c8-15 / banana))
+                   :op2 (c8-13 / see-01
+                               :ARG0 c8-5
+                               :ARG1 (c8-2 / truth-value
+                                           :polarity-of (c8-6 / possible-01
+                                                              :ARG1 (c8-3 / make-01
+                                                                          :ARG0 c8-5
+                                                                          :ARG1 (c8-4 / daisy
+                                                                                      :ARG1-of (c8-12 / mutate-01)
+                                                                                      :quant (c8-1 / some))
+                                                                          :location (c8-10 / garden
+                                                                                           :poss c8-5))))))
+       :time (c8-11 / be-located-at-91
+                    :ARG1 c8-5
+                    :ARG2 (c8-0 / store)
+                    :mod (c8-7 / next)))

@@ -1,0 +1,56 @@
+# ::snt The Theater must always be a safe and special place.The cast of Hamilton was very rude last night to a very good man , Mike Pence . Apologize !
+# ::tokens ["The", "Theater", "must", "always", "be", "a", "safe", "and", "special", "place", ".", "The", "cast", "of", "Hamilton", "was", "very", "rude", "last", "night", "to", "a", "very", "good", "man", ",", "Mike", "Pence", ".", "Apologize", "!"]
+# ::lemmas ["the", "Theater", "must", "always", "be", "a", "safe", "and", "special", "place", ".", "the", "cast", "of", "Hamilton", "be", "very", "rude", "last", "night", "to", "a", "very", "good", "man", ",", "Mike", "Pence", ".", "apologize", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-4 / obligate-01
+                  :ARG2 (c1-20 / place
+                               :ARG0-of (c1-11 / safe-01)
+                               :ARG1-of (c1-19 / special-02)
+                               :domain (c1-5 / theater)
+                               :time (c1-15 / always)))
+      :snt2 (c1-10 / apologize-01
+                   :ARG0 (c1-13 / you)
+                   :ARG1 (c1-6 / rude-01
+                               :ARG1 (c1-2 / cast-03
+                                           :ARG1 (c1-18 / person
+                                                        :name (c1-9 / name
+                                                                    :op1 "Hamilton")))
+                               :ARG2 (c1-17 / man
+                                            :ARG1-of (c1-7 / good-02
+                                                           :degree (c1-3 / very))
+                                            :domain c1-18
+                                            :name (c1-1 / name
+                                                        :op1 "Mike"
+                                                        :op2 "Pence")))
+                   :time (c1-0 / date-entity
+                               :dayperiod (c1-12 / night)
+                               :mod (c1-14 / yesterday))
+                   :degree (c1-16 / very)
+                   :mode imperative))
+
+# ::snt They read a respectful prepared statement . Grow up .
+# ::tokens ["They", "read", "a", "respectful", "prepared", "statement", ".", "Grow", "up", "."]
+# ::lemmas ["they", "read", "a", "respectful", "prepared", "statement", ".", "grow", "up", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-3 / read-01
+                  :ARG0 (c2-2 / they)
+                  :ARG1 (c2-0 / statement
+                              :ARG1-of (c2-5 / prepare-01)
+                              :ARG0-of (c2-1 / respect-01)))
+      :snt2 (c2-4 / grow-up-04
+                  :ARG1 (c2-7 / you)
+                  :mode imperative))
+
+# ::snt They turned entertainment into a political arena by crying about how " scared " they are .
+# ::tokens ["They", "turned", "entertainment", "into", "a", "political", "arena", "by", "crying", "about", "how", "\"", "scared", "\"", "they", "are", "."]
+# ::lemmas ["they", "turn", "entertainment", "into", "a", "political", "arena", "by", "cry", "about", "how", "\"", "scared", "\"", "they", "be", "."]
+(c3-4 / turn-02
+      :ARG0 (c3-3 / they)
+      :ARG1 (c3-7 / entertainment)
+      :ARG2 (c3-1 / arena
+                  :mod (c3-5 / politics))
+      :manner (c3-2 / cry-01
+                    :ARG0 c3-3
+                    :ARG1 (c3-6 / thing
+                                :degree-of (c3-0 / scare-01
+                                                 :ARG1 c3-3))))

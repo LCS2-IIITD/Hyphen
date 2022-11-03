@@ -1,0 +1,147 @@
+# ::snt any updates?
+# ::tokens ["any", "updates", "?"]
+# ::lemmas ["any", "update", "?"]
+(c1-1 / update-01
+      :polarity (c1-2 / amr-unknown)
+      :mod (c1-0 / any))
+
+# ::snt AND war memorial, or is this same?
+# ::tokens ["AND", "war", "memorial", ",", "or", "is", "this", "same", "?"]
+# ::lemmas ["and", "war", "memorial", ",", "or", "be", "this", "same", "?"]
+(c2-3 / and
+      :op2 (c2-2 / memorial
+                 :mod (c2-0 / war)
+                 :ARG1-of (c2-5 / same-01
+                                :polarity (c2-4 / amr-unknown)
+                                :mod (c2-1 / this))))
+
+# ::snt Targeting the soldiers is a stupid act. They have not decided to go in ...
+# ::tokens ["Targeting", "the", "soldiers", "is", "a", "stupid", "act", ".", "They", "have", "not", "decided", "to", "go", "in", "..."]
+# ::lemmas ["target", "the", "soldier", "be", "a", "stupid", "act", ".", "they", "have", "not", "decide", "to", "go", "in", "..."]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / act-02
+                  :mod (c3-8 / stupid)
+                  :domain (c3-1 / target-01
+                                :ARG1 (c3-0 / soldier)))
+      :snt2 (c3-4 / decide-01
+                  :ARG0 (c3-3 / they)
+                  :ARG1 (c3-7 / go-06
+                              :ARG0 c3-3
+                              :ARG1 (c3-5 / inside))
+                  :polarity -))
+
+# ::snt lock it down! find the criminals.. wait, the buildings full of criminals!
+# ::tokens ["lock", "it", "down", "!", "find", "the", "criminals", "..", "wait", ",", "the", "buildings", "full", "of", "criminals", "!"]
+# ::lemmas ["lock", "it", "down", "!", "find", "the", "criminal", "..", "wait", ",", "the", "building", "full", "of", "criminal", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-8 / lock-down-03
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-4 / it)
+                  :mode imperative)
+      :snt2 (c4-3 / find-01
+                  :ARG0 (c4-11 / you)
+                  :ARG1 (c4-5 / person
+                              :ARG2-of (c4-6 / criminal-03))
+                  :mode imperative)
+      :snt3 (c4-1 / wait-01
+                  :ARG1 c4-11
+                  :ARG1-of (c4-10 / cause-01
+                                  :ARG0 (c4-12 / building
+                                               :ARG1-of (c4-9 / full-09
+                                                              :ARG2 c4-5
+                                                              :ARG2-of (c4-7 / criminal-03))))
+                  :mode imperative))
+
+# ::snt : BREAKING - Shooting on Parliament Hill. RCMP have weapons drawn sirens galore down here
+# ::tokens [":", "BREAKING", "-", "Shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapons", "drawn", "sirens", "galore", "down", "here"]
+# ::lemmas [":", "breaking", "-", "shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapon", "draw", "siren", "galore", "down", "here"]
+(c5-4 / multi-sentence
+      :snt1 (c5-12 / break-13
+                   :ARG1 (c5-10 / shoot-02
+                                :location (c5-5 / facility
+                                                :name (c5-11 / name
+                                                             :op1 "Parliament"
+                                                             :op2 "Hill"))))
+      :snt2 (c5-1 / have-03
+                  :ARG0 (c5-9 / organization
+                              :name (c5-7 / name
+                                          :op1 "RCRC"))
+                  :ARG1 (c5-2 / siren
+                              :ARG1-of (c5-8 / draw-02
+                                             :ARG2 (c5-0 / weapon)))
+                  :location (c5-3 / down
+                                  :op1 (c5-6 / here))))
+
+# ::snt : BREAKING - Shooting on Parliament Hill. RCMP have weapons drawn holy shit
+# ::tokens [":", "BREAKING", "-", "Shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapons", "drawn", "holy", "shit"]
+# ::lemmas [":", "breaking", "-", "shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapon", "draw", "holy", "shit"]
+(c6-3 / multi-sentence
+      :snt1 (c6-11 / break-13
+                   :ARG1 (c6-9 / shoot-02
+                               :location (c6-4 / facility
+                                               :name (c6-10 / name
+                                                            :op1 "Parliament"
+                                                            :op2 "Hill"))))
+      :snt2 (c6-1 / have-03
+                  :ARG0 (c6-8 / organization
+                              :name (c6-6 / name
+                                          :op1 "RCRC"))
+                  :ARG1 (c6-0 / weapon
+                              :ARG1-of (c6-7 / draw-02
+                                             :ARG0 (c6-2 / shit
+                                                         :mod (c6-5 / holy))))))
+
+# ::snt : BREAKING - Shooting on Parliament Hill. RCMP have weapons drawn Oh Canada!
+# ::tokens [":", "BREAKING", "-", "Shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapons", "drawn", "Oh", "Canada", "!"]
+# ::lemmas [":", "breaking", "-", "shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapon", "draw", "oh", "Canada", "!"]
+(c7-2 / multi-sentence
+      :snt1 (c7-12 / break-13
+                   :ARG1 (c7-10 / shoot-02
+                                :location (c7-3 / facility
+                                                :name (c7-11 / name
+                                                             :op1 "Parliament"
+                                                             :op2 "Hill"))))
+      :snt2 (c7-1 / have-03
+                  :ARG0 (c7-9 / military
+                              :name (c7-4 / name
+                                          :op1 "RCRC"))
+                  :ARG1 (c7-0 / weapon
+                              :ARG1-of (c7-5 / draw-02
+                                             :ARG0 c7-9))
+                  :mod (c7-8 / oh
+                             :mod (c7-6 / country
+                                        :name (c7-7 / name
+                                                    :op1 "Canada"))
+                             :mode expressive)))
+
+# ::snt : BREAKING - Shooting on Parliament Hill. RCMP have weapons drawn
+# ::tokens [":", "BREAKING", "-", "Shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapons", "drawn"]
+# ::lemmas [":", "breaking", "-", "shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapon", "draw"]
+(c8-1 / multi-sentence
+      :snt1 (c8-8 / break-13
+                  :ARG1 (c8-6 / shoot-02
+                              :location (c8-2 / facility
+                                              :name (c8-7 / name
+                                                          :op1 "Parliament"
+                                                          :op2 "Hill"))))
+      :snt2 (c8-3 / draw-02
+                  :ARG0 (c8-5 / organization
+                              :name (c8-4 / name
+                                          :op1 "RCRC"))
+                  :ARG1 (c8-0 / weapon)))
+
+# ::snt : BREAKING - Shooting on Parliament Hill. RCMP have weapons drawn
+# ::tokens [":", "BREAKING", "-", "Shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapons", "drawn"]
+# ::lemmas [":", "breaking", "-", "shooting", "on", "Parliament", "Hill", ".", "RCMP", "have", "weapon", "draw"]
+(c9-1 / multi-sentence
+      :snt1 (c9-8 / break-13
+                  :ARG1 (c9-6 / shoot-02
+                              :location (c9-2 / facility
+                                              :name (c9-7 / name
+                                                          :op1 "Parliament"
+                                                          :op2 "Hill"))))
+      :snt2 (c9-3 / draw-02
+                  :ARG0 (c9-5 / organization
+                              :name (c9-4 / name
+                                          :op1 "RCRC"))
+                  :ARG1 (c9-0 / weapon)))

@@ -1,0 +1,51 @@
+# ::snt Men know they're unecessary.
+# ::tokens ["Men", "know", "they", "'re", "unecessary", "."]
+# ::lemmas ["man", "know", "they", "be", "unecessary", "."]
+(c1-2 / know-01
+      :ARG0 (c1-1 / man)
+      :ARG1 (c1-0 / need-01
+                  :ARG1 (c1-3 / they)
+                  :polarity -))
+
+# ::snt Probably discovered by a man
+# ::tokens ["Probably", "discovered", "by", "a", "man"]
+# ::lemmas ["probably", "discover", "by", "a", "man"]
+(c2-1 / probable
+      :domain (c2-0 / discover-01
+                    :ARG0 (c2-2 / man)))
+
+# ::snt Not only that, but the article also goes on to say that eggs can be made from male stem cells, so women are unnecessary, too.
+# ::tokens ["Not", "only", "that", ",", "but", "the", "article", "also", "goes", "on", "to", "say", "that", "eggs", "can", "be", "made", "from", "male", "stem", "cells", ",", "so", "women", "are", "unnecessary", ",", "too", "."]
+# ::lemmas ["not", "only", "that", ",", "but", "the", "article", "also", "go", "on", "to", "say", "that", "egg", "can", "be", "make", "from", "male", "stem", "cell", ",", "so", "woman", "be", "unnecessary", ",", "too", "."]
+(c3-3 / and
+      :op1 (c3-9 / that
+                 :mod (c3-8 / only
+                            :polarity -))
+      :op2 (c3-10 / go-on-15
+                  :ARG0 (c3-15 / article)
+                  :ARG1 (c3-0 / say-01
+                              :ARG0 c3-15
+                              :ARG1 (c3-12 / possible-01
+                                           :ARG1 (c3-13 / make-01
+                                                        :ARG1 (c3-16 / egg)
+                                                        :ARG2 (c3-4 / cell
+                                                                    :mod (c3-11 / stem)
+                                                                    :part-of (c3-5 / male)))
+                                           :ARG0-of (c3-1 / cause-01
+                                                          :ARG1 (c3-14 / need-01
+                                                                       :ARG1 (c3-6 / woman)
+                                                                       :mod (c3-7 / too)
+                                                                       :polarity -))))
+                  :mod (c3-2 / also)))
+
+# ::snt Still need a womb though as far as I know
+# ::tokens ["Still", "need", "a", "womb", "though", "as", "far", "as", "I", "know"]
+# ::lemmas ["still", "need", "a", "womb", "though", "as", "far", "as", "i", "know"]
+(c4-4 / have-concession-91
+      :ARG1 (c4-6 / need-01
+                  :ARG0 (c4-5 / i)
+                  :ARG1 (c4-3 / womb)
+                  :mod (c4-0 / still)
+                  :concession (c4-1 / as-far-as
+                                    :op1 (c4-2 / know-01
+                                               :ARG0 c4-5))))

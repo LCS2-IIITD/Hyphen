@@ -1,0 +1,32 @@
+# ::snt I thought it was good. Dialogue was hilarious.
+# ::tokens ["I", "thought", "it", "was", "good", ".", "Dialogue", "was", "hilarious", "."]
+# ::lemmas ["i", "think", "it", "be", "good", ".", "Dialogue", "be", "hilarious", "."]
+(c1-0 / multi-sentence
+      :snt1 (c1-4 / think-01
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-5 / good-02
+                              :ARG1 (c1-1 / it)))
+      :snt2 (c1-2 / hilarious
+                  :domain (c1-6 / dialogue-01)))
+
+# ::snt Great movie.
+# ::tokens ["Great", "movie", "."]
+# ::lemmas ["great", "movie", "."]
+(c2-1 / movie
+      :mod (c2-0 / great))
+
+# ::snt This movie was kind of funny. I would watch again on a rainy weekend night.
+# ::tokens ["This", "movie", "was", "kind", "of", "funny", ".", "I", "would", "watch", "again", "on", "a", "rainy", "weekend", "night", "."]
+# ::lemmas ["this", "movie", "be", "kind", "of", "funny", ".", "i", "would", "watch", "again", "on", "a", "rainy", "weekend", "night", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-0 / funny-02
+                  :ARG1 (c3-5 / movie
+                              :mod (c3-10 / this))
+                  :degree (c3-6 / kind-of))
+      :snt2 (c3-8 / watch-01
+                  :ARG0 (c3-9 / i)
+                  :mod (c3-3 / again)
+                  :time (c3-11 / date-entity
+                               :dayperiod (c3-2 / night)
+                               :mod (c3-7 / weekend)
+                               :mod (c3-4 / rainy))))

@@ -1,0 +1,72 @@
+# ::snt and that is
+# ::tokens ["and", "that", "is"]
+# ::lemmas ["and", "that", "be"]
+(c1-1 / and
+      :op2 (c1-0 / that))
+
+# ::snt is all class.
+# ::tokens ["is", "all", "class", "."]
+# ::lemmas ["be", "all", "class", "."]
+(c2-0 / class
+      :mod (c2-1 / all))
+
+# ::snt Kylie Minogue was the first Kylie I know
+# ::tokens ["Kylie", "Minogue", "was", "the", "first", "Kylie", "I", "know"]
+# ::lemmas ["Kylie", "Minogue", "be", "the", "first", "Kylie", "i", "know"]
+(c3-3 / person
+      :ord (c3-0 / ordinal-entity
+                 :value 1)
+      :ARG1-of (c3-4 / know-02
+                     :ARG0 (c3-5 / i))
+      :domain (c3-2 / person
+                    :name (c3-1 / name
+                                :op1 "Kylie"
+                                :op2 "Minogue")))
+
+# ::snt Ohh myyy goodness. STOP!
+# ::tokens ["Ohh", "myyy", "goodness", ".", "STOP", "!"]
+# ::lemmas ["Ohh", "myyy", "goodness", ".", "stop", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / goodness
+                  :mod (c4-0 / oh
+                             :mode expressive)
+                  :poss (c4-4 / i)
+                  :mode expressive)
+      :snt2 (c4-3 / stop-01
+                  :ARG0 (c4-1 / you)
+                  :mode imperative))
+
+# ::snt Jenner isn't the only one to own the name in the first place - Minogue was here WAY before she was even BORN!
+# ::tokens ["Jenner", "is", "n't", "the", "only", "one", "to", "own", "the", "name", "in", "the", "first", "place", "-", "Minogue", "was", "here", "WAY", "before", "she", "was", "even", "BORN", "!"]
+# ::lemmas ["Jenner", "be", "not", "the", "only", "one", "to", "own", "the", "name", "in", "the", "first", "place", "-", "Minogue", "be", "here", "way", "before", "she", "be", "even", "bear", "!"]
+(c5-1 / own-01
+      :ARG0 (c5-7 / person
+                  :name (c5-3 / name
+                              :op1 "Jenner")
+                  :mod (c5-0 / only
+                             :polarity -))
+      :ARG1 (c5-14 / thing
+                   :ARG2-of (c5-6 / name-01))
+      :mod (c5-13 / in-the-first-place)
+      :ARG1-of (c5-11 / cause-01
+                      :ARG0 (c5-2 / be-located-at-91
+                                  :ARG1 (c5-4 / person
+                                              :name (c5-8 / name
+                                                          :op1 "Minogue"))
+                                  :ARG2 (c5-9 / here)
+                                  :time (c5-10 / before
+                                               :op1 (c5-15 / bear-02
+                                                           :ARG1 c5-4
+                                                           :mod (c5-5 / even))
+                                               :degree (c5-12 / way)))))
+
+# ::snt Hail the OG Kylie
+# ::tokens ["Hail", "the", "OG", "Kylie"]
+# ::lemmas ["hail", "the", "OG", "Kylie"]
+(c6-3 / hail-02
+      :ARG0 (c6-1 / you)
+      :ARG1 (c6-4 / person
+                  :name (c6-2 / name
+                              :op1 "Kylie")
+                  :mod (c6-0 / original))
+      :mode imperative)

@@ -1,0 +1,65 @@
+# ::snt Got my nd AZ today too. Cheers from Canada.
+# ::tokens ["Got", "my", "nd", "AZ", "today", "too", ".", "Cheers", "from", "Canada", "."]
+# ::lemmas ["got", "my", "nd", "AZ", "today", "too", ".", "cheer", "from", "Canada", "."]
+(c1-9 / multi-sentence
+      :snt1 (c1-7 / get-01
+                  :ARG0 (c1-8 / i)
+                  :ARG1 (c1-6 / location
+                              :name (c1-10 / name
+                                           :op1 "AZ")
+                              :poss c1-8)
+                  :time (c1-4 / today)
+                  :mod (c1-2 / too))
+      :snt2 (c1-1 / cheer-02
+                  :ARG0 (c1-3 / i)
+                  :source (c1-0 / country
+                                :name (c1-5 / name
+                                            :op1 "Canada"))))
+
+# ::snt You have both of my experimental third phase trials inoculation FDA Emergency approved!
+# ::tokens ["You", "have", "both", "of", "my", "experimental", "third", "phase", "trials", "inoculation", "FDA", "Emergency", "approved", "!"]
+# ::lemmas ["you", "have", "both", "of", "my", "experimental", "third", "phase", "trial", "inoculation", "FDA", "Emergency", "approve", "!"]
+(c2-1 / have-03
+      :ARG0 (c2-10 / you)
+      :ARG1 (c2-0 / approve-01
+                  :ARG0 (c2-7 / government-organization
+                              :name (c2-9 / name
+                                          :op1 "FDA"))
+                  :ARG1 (c2-8 / inoculate-01
+                              :ARG2 (c2-6 / phase
+                                          :ord (c2-5 / ordinal-entity
+                                                     :value 3))
+                              :mod (c2-11 / experiment-01
+                                          :ARG0 (c2-2 / i))
+                              :mod (c2-3 / both))
+                  :mod (c2-4 / emergency)))
+
+# ::snt Great argument to convince your friends to get the vaccine
+# ::tokens ["Great", "argument", "to", "convince", "your", "friends", "to", "get", "the", "vaccine"]
+# ::lemmas ["great", "argument", "to", "convince", "your", "friend", "to", "get", "the", "vaccine"]
+(c3-0 / argue-01
+      :ARG1 (c3-3 / convince-01
+                  :ARG0 (c3-8 / you)
+                  :ARG1 (c3-7 / person
+                              :ARG0-of (c3-4 / have-rel-role-91
+                                             :ARG1 c3-8
+                                             :ARG2 (c3-2 / friend)))
+                  :ARG2 (c3-6 / get-01
+                              :ARG0 c3-7
+                              :ARG1 (c3-5 / vaccine)))
+      :mod (c3-1 / great))
+
+# ::snt :Im convinced lots of water before and after is the key to flush it through
+# ::tokens [":", "I", "m", "convinced", "lots", "of", "water", "before", "and", "after", "is", "the", "key", "to", "flush", "it", "through"]
+# ::lemmas [":", "i", "m", "convinced", "lot", "of", "water", "before", "and", "after", "be", "the", "key", "to", "flush", "it", "through"]
+(c5-2 / convince-01
+      :ARG1 (c5-8 / i)
+      :ARG2 (c5-9 / key-02
+                  :ARG1 (c5-3 / water
+                              :quant (c5-6 / lot)
+                              :time (c5-0 / and
+                                          :op1 (c5-7 / before)
+                                          :op2 (c5-10 / after)))
+                  :ARG2 (c5-1 / flush-01
+                              :ARG1 (c5-4 / it)
+                              :path (c5-5 / through))))

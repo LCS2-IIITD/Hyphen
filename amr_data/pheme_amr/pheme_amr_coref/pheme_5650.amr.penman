@@ -1,0 +1,227 @@
+# ::snt hostages dead
+# ::tokens ["hostages", "dead"]
+# ::lemmas ["hostage", "dead"]
+(c1-2 / die-01
+      :ARG1 (c1-1 / person
+                  :ARG0-of (c1-0 / host-01)))
+
+# ::snt The person yelling "what was that?!"...it wasn't an invitation to dance. It was a live hostage taking. Expect explosions
+# ::tokens ["The", "person", "yelling", "\"", "what", "was", "that?!\"", "...", "it", "was", "n't", "an", "invitation", "to", "dance", ".", "It", "was", "a", "live", "hostage", "taking", ".", "Expect", "explosions"]
+# ::lemmas ["the", "person", "yell", "\"", "what", "be", "that?!\"", "...", "it", "be", "not", "an", "invitation", "to", "dance", ".", "it", "be", "a", "live", "hostage", "taking", ".", "expect", "explosion"]
+(c2-3 / multi-sentence
+      :snt1 (c2-1 / yell-01
+                  :ARG0 (c2-8 / person)
+                  :ARG1 (c2-13 / amr-unknown
+                               :domain (c2-12 / that)))
+      :snt2 (c2-7 / invite-01
+                  :ARG2 (c2-9 / dance-01)
+                  :domain (c2-10 / it)
+                  :polarity -)
+      :snt3 (c2-11 / take-01
+                   :ARG1 (c2-0 / hostage)
+                   :manner (c2-2 / live)
+                   :domain (c2-4 / it))
+      :snt4 (c2-6 / expect-01
+                  :ARG0 (c2-14 / you)
+                  :ARG1 (c2-5 / explode-01)
+                  :mode imperative))
+
+# ::snt Watched that live on another network, scary stuff!
+# ::tokens ["Watched", "that", "live", "on", "another", "network", ",", "scary", "stuff", "!"]
+# ::lemmas ["watch", "that", "live", "on", "another", "network", ",", "scary", "stuff", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-0 / watch-01
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-7 / that)
+                  :manner (c3-1 / live
+                                :medium (c3-5 / network
+                                              :mod (c3-8 / another))))
+      :snt2 (c3-6 / scary-03
+                  :ARG0 (c3-3 / stuff)))
+
+# ::snt My heart stopped beating watching that footage
+# ::tokens ["My", "heart", "stopped", "beating", "watching", "that", "footage"]
+# ::lemmas ["my", "heart", "stop", "beat", "watch", "that", "footage"]
+(c4-5 / stop-01
+      :ARG1 (c4-3 / beat-01
+                  :ARG1 (c4-0 / heart
+                              :part-of (c4-4 / i)))
+      :ARG2 (c4-1 / watch-01
+                  :ARG0 c4-4
+                  :ARG1 (c4-2 / footage
+                              :mod (c4-6 / that))))
+
+# ::snt wild man. Never seen anything like it.
+# ::tokens ["wild", "man", ".", "Never", "seen", "anything", "like", "it", "."]
+# ::lemmas ["wild", "man", ".", "never", "see", "anything", "like", "it", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / man
+                  :mod (c5-0 / wild))
+      :snt2 (c5-7 / see-01
+                  :ARG0 (c5-3 / i)
+                  :ARG1 (c5-8 / anything
+                              :ARG1-of (c5-5 / resemble-01
+                                             :ARG2 (c5-6 / it)))
+                  :time (c5-2 / ever)
+                  :polarity -))
+
+# ::snt Fuck!!!!!!!! Speechless?!?!?
+# ::tokens ["Fuck", "!", "!", "!", "!", "!", "!", "!", "!", "Speechless", "?", "!", "?", "!", "?"]
+# ::lemmas ["fuck", "!", "!", "!", "!", "!", "!", "!", "!", "Speechless", "?", "!", "?", "!", "?"]
+(c6-0 / speechless
+      :mod (c6-1 / fuck
+                 :mode expressive)
+      :polarity (c6-2 / amr-unknown)
+      :mode expressive)
+
+# ::snt yes bizarre your reporters stating that all hostages came out looking healthy. We saw a number requiring CPR on footage
+# ::tokens ["yes", "bizarre", "your", "reporters", "stating", "that", "all", "hostages", "came", "out", "looking", "healthy", ".", "We", "saw", "a", "number", "requiring", "CPR", "on", "footage"]
+# ::lemmas ["yes", "bizarre", "your", "reporter", "state", "that", "all", "hostage", "come", "out", "look", "healthy", ".", "we", "see", "a", "number", "require", "CPR", "on", "footage"]
+(c7-4 / multi-sentence
+      :snt1 (c7-7 / bizarre
+                  :domain (c7-15 / state-01
+                                 :ARG0 (c7-11 / person
+                                              :ARG0-of (c7-12 / report-01)
+                                              :poss (c7-1 / you))
+                                 :ARG1 (c7-13 / come-out-09
+                                              :ARG1 (c7-0 / hostage
+                                                          :mod (c7-16 / all))
+                                              :ARG2 (c7-3 / look-02
+                                                          :ARG0 c7-0
+                                                          :ARG1 (c7-5 / healthy)))))
+      :snt2 (c7-8 / see-01
+                  :ARG0 (c7-2 / we)
+                  :ARG1 (c7-10 / number
+                               :ARG0-of (c7-9 / require-01
+                                              :ARG1 (c7-14 / CPR
+                                                           :instrument (c7-6 / footage))))))
+
+# ::snt geez the gunman was granted asylum. I bet Australia will scrutinize their decisions thus far. A shame for people needing asylum.
+# ::tokens ["geez", "the", "gunman", "was", "granted", "asylum", ".", "I", "bet", "Australia", "will", "scrutinize", "their", "decisions", "thus", "far", ".", "A", "shame", "for", "people", "needing", "asylum", "."]
+# ::lemmas ["geez", "the", "gunman", "be", "grant", "asylum", ".", "i", "bet", "Australia", "will", "scrutinize", "their", "decision", "thus", "far", ".", "a", "shame", "for", "people", "need", "asylum", "."]
+(c8-0 / multi-sentence
+      :snt1 (c8-10 / grant-01
+                   :ARG1 (c8-15 / asylum)
+                   :ARG2 (c8-7 / person
+                               :name (c8-5 / name
+                                           :op1 "geez")))
+      :snt2 (c8-1 / bet-01
+                  :ARG0 (c8-4 / i)
+                  :ARG2 (c8-12 / scrutinize-01
+                               :ARG0 (c8-9 / country
+                                           :name (c8-6 / name
+                                                       :op1 "Australia"))
+                               :ARG1 (c8-8 / decide-01
+                                           :ARG0 c8-9)
+                               :time (c8-13 / thus-far)))
+      :snt3 (c8-2 / shame-02
+                  :ARG1 (c8-14 / person
+                               :ARG0-of (c8-11 / need-01
+                                               :ARG1 (c8-3 / asylum)))))
+
+# ::snt dead, seriously injured, including a police officer
+# ::tokens ["dead", ",", "seriously", "injured", ",", "including", "a", "police", "officer"]
+# ::lemmas ["dead", ",", "seriously", "injure", ",", "include", "a", "police", "officer"]
+(c10-8 / and
+       :op1 (c10-4 / die-01)
+       :op2 (c10-2 / injure-01
+                   :ARG1-of (c10-6 / serious-02))
+       :ARG2-of (c10-5 / include-01
+                       :ARG1 (c10-3 / person
+                                    :ARG0-of (c10-0 / have-org-role-91
+                                                    :ARG1 (c10-7 / police)
+                                                    :ARG2 (c10-1 / officer)))))
+
+# ::snt Watch the dramatic breach of the cafe as special weapons police make a final assault. End of
+# ::tokens ["Watch", "the", "dramatic", "breach", "of", "the", "cafe", "as", "special", "weapons", "police", "make", "a", "final", "assault", ".", "End", "of"]
+# ::lemmas ["watch", "the", "dramatic", "breach", "of", "the", "cafe", "as", "special", "weapon", "police", "make", "a", "final", "assault", ".", "end", "of"]
+(c11-3 / multi-sentence
+       :snt1 (c11-0 / watch-01
+                    :ARG0 (c11-1 / you)
+                    :ARG1 (c11-4 / breach-01
+                                 :ARG1 (c11-9 / cafe)
+                                 :manner (c11-8 / dramatic)
+                                 :time (c11-11 / assault-01
+                                               :ARG0 (c11-7 / police
+                                                            :mod (c11-6 / weapon
+                                                                        :ARG1-of (c11-10 / special-02)))
+                                               :mod (c11-2 / final)))
+                    :mode imperative)
+       :snt2 (c11-5 / end-01))
+
+# ::snt Bloody hell : VIDEO: Watch the dramatic moment heavily armed police stormed the Lindt Chocolate Cafe
+# ::tokens ["Bloody", "hell", ":", "VIDEO", ":", "Watch", "the", "dramatic", "moment", "heavily", "armed", "police", "stormed", "the", "Lindt", "Chocolate", "Cafe"]
+# ::lemmas ["bloody", "hell", ":", "video", ":", "watch", "the", "dramatic", "moment", "heavily", "armed", "police", "storm", "the", "Lindt", "Chocolate", "Cafe"]
+(c12-4 / multi-sentence
+       :snt1 (c12-0 / hell
+                    :mod (c12-5 / bloody))
+       :snt2 (c12-1 / watch-01
+                    :ARG0 (c12-2 / you)
+                    :ARG1 (c12-7 / moment
+                                 :mod (c12-8 / dramatic)
+                                 :time-of (c12-11 / storm-02
+                                                  :ARG0 (c12-9 / police
+                                                               :ARG1-of (c12-12 / arm-01
+                                                                                :manner (c12-3 / heavy)))
+                                                  :ARG1 (c12-10 / cafe
+                                                                :name (c12-6 / name
+                                                                             :op1 "Lindt"
+                                                                             :op2 "Chocolat"
+                                                                             :op3 "Cafe"))))
+                    :mode imperative))
+
+# ::snt why is reporting ABC said dead in but ABC reporters on ground saying they hope everyone's ok. Bizarre.
+# ::tokens ["why", "is", "reporting", "ABC", "said", "dead", "in", "but", "ABC", "reporters", "on", "ground", "saying", "they", "hope", "everyone", "'s", "ok", ".", "Bizarre", "."]
+# ::lemmas ["why", "be", "report", "ABC", "say", "dead", "in", "but", "ABC", "reporter", "on", "ground", "say", "they", "hope", "everyone", "'s", "ok", ".", "Bizarre", "."]
+(c13-1 / multi-sentence
+       :snt1 (c13-11 / cause-01
+                     :ARG0 (c13-17 / amr-unknown)
+                     :ARG1 (c13-10 / report-01))
+       :snt2 (c13-9 / contrast-01
+                    :ARG1 (c13-14 / say-01
+                                  :ARG0 (c13-8 / publication
+                                               :name (c13-7 / name
+                                                            :op1 "ABC"))
+                                  :ARG1 (c13-12 / die-01))
+                    :ARG2 (c13-2 / be-located-at-91
+                                 :ARG1 (c13-16 / person
+                                               :ARG0-of (c13-6 / report-01)
+                                               :mod c13-8)
+                                 :ARG2 (c13-13 / ground)
+                                 :purpose (c13-4 / say-01
+                                                 :ARG0 c13-16
+                                                 :ARG1 (c13-0 / hope-01
+                                                              :ARG0 c13-16
+                                                              :ARG1 (c13-3 / okay-03
+                                                                           :ARG1 (c13-5 / everyone))))))
+       :snt3 (c13-15 / bizarre))
+
+# ::snt Why did that take so long.
+# ::tokens ["Why", "did", "that", "take", "so", "long", "."]
+# ::lemmas ["why", "do", "that", "take", "so", "long", "."]
+(c14-3 / take-10
+       :ARG0 (c14-1 / that)
+       :ARG1 (c14-0 / long-03
+                    :degree (c14-2 / so))
+       :ARG2 (c14-4 / amr-unknown))
+
+# ::snt suggest a producer watching the same live footage we've been watching brief your reporters on the ground.
+# ::tokens ["suggest", "a", "producer", "watching", "the", "same", "live", "footage", "we", "'ve", "been", "watching", "brief", "your", "reporters", "on", "the", "ground", "."]
+# ::lemmas ["suggest", "a", "producer", "watch", "the", "same", "live", "footage", "we", "'ve", "be", "watch", "brief", "your", "reporter", "on", "the", "ground", "."]
+(c15-12 / suggest-01
+        :ARG0 (c15-0 / you)
+        :ARG1 (c15-1 / watch-01
+                     :ARG0 (c15-9 / person
+                                  :ARG0-of (c15-13 / produce-01))
+                     :ARG1 (c15-2 / footage
+                                  :mod (c15-3 / live)
+                                  :ARG1-of (c15-7 / same-01)
+                                  :ARG1-of (c15-8 / watch-01
+                                                  :ARG0 (c15-5 / we)))
+                     :manner (c15-6 / brief-01
+                                    :ARG0 c15-9
+                                    :ARG1 (c15-4 / person
+                                                 :ARG0-of (c15-10 / report-01)
+                                                 :poss c15-0
+                                                 :location (c15-11 / ground))))
+        :mode imperative)

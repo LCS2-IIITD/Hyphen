@@ -1,0 +1,41 @@
+# ::snt It's Bond, Jane Bond: Gillian Anderson throws hat into the ring to be next 007
+# ::tokens ["It", "'s", "Bond", ",", "Jane", "Bond", ":", "Gillian", "Anderson", "throws", "hat", "into", "the", "ring", "to", "be", "next", "007"]
+# ::lemmas ["it", "be", "Bond", ",", "Jane", "Bond", ":", "Gillian", "Anderson", "throw", "hat", "into", "the", "ring", "to", "be", "next", "007"]
+(c1-10 / multi-sentence
+       :snt1 (c1-9 / person
+                   :name (c1-11 / name
+                                :op1 "Bond")
+                   :domain (c1-5 / person
+                                 :name (c1-7 / name
+                                             :op1 "Jane"
+                                             :op2 "Bond")))
+       :snt2 (c1-6 / throw-01
+                   :ARG0 (c1-2 / person
+                               :name (c1-4 / name
+                                           :op1 "Gillian"
+                                           :op2 "Anderson"))
+                   :ARG1 (c1-3 / hat)
+                   :ARG2 (c1-8 / ring)
+                   :purpose (c1-1 / next
+                                  :domain c1-2
+                                  :time (c1-0 / date-entity
+                                              :year 007))))
+
+# ::snt This could make the next Bond movie as successful as the new Ghostbusters reboot!
+# ::tokens ["This", "could", "make", "the", "next", "Bond", "movie", "as", "successful", "as", "the", "new", "Ghostbusters", "reboot", "!"]
+# ::lemmas ["this", "could", "make", "the", "next", "bond", "movie", "as", "successful", "as", "the", "new", "Ghostbusters", "reboot", "!"]
+(c2-9 / possible-01
+      :ARG1 (c2-10 / make-02
+                   :ARG0 (c2-5 / this)
+                   :ARG1 (c2-2 / have-degree-91
+                               :ARG1 (c2-1 / movie
+                                           :mod (c2-11 / next)
+                                           :mod (c2-4 / person
+                                                      :name (c2-6 / name
+                                                                  :op1 "Bond")))
+                               :ARG2 (c2-0 / succeed-01
+                                           :ARG0 c2-1)
+                               :ARG3 (c2-12 / equal)
+                               :ARG4 (c2-7 / reboot
+                                           :mod (c2-8 / ghostly)
+                                           :ARG1-of (c2-3 / new-01)))))

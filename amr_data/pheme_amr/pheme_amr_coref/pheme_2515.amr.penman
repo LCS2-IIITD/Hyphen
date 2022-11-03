@@ -1,0 +1,54 @@
+# ::snt Who are you? Do I even know you? Stay away SATAN!
+# ::tokens ["Who", "are", "you", "?", "Do", "I", "even", "know", "you", "?", "Stay", "away", "SATAN", "!"]
+# ::lemmas ["who", "be", "you", "?", "do", "i", "even", "know", "you", "?", "stay", "away", "SATAN", "!"]
+(c1-1 / multi-sentence
+      :snt1 (c1-0 / you
+                  :domain (c1-11 / amr-unknown))
+      :snt2 (c1-10 / know-01
+                   :polarity (c1-4 / amr-unknown)
+                   :ARG0 (c1-5 / i)
+                   :ARG1 (c1-8 / you)
+                   :mod (c1-3 / even))
+      :snt3 (c1-9 / stay-01
+                  :ARG1 (c1-2 / you
+                              :name (c1-6 / name
+                                          :op1 "SATAN"))
+                  :ARG3 (c1-7 / away)
+                  :mode imperative))
+
+# ::snt People praying is exactly what caused this situation in the first place.
+# ::tokens ["People", "praying", "is", "exactly", "what", "caused", "this", "situation", "in", "the", "first", "place", "."]
+# ::lemmas ["people", "pray", "be", "exactly", "what", "cause", "this", "situation", "in", "the", "first", "place", "."]
+(c2-3 / cause-01
+      :ARG0 (c2-2 / person
+                  :ARG0-of (c2-6 / pray-01))
+      :ARG1 (c2-4 / situation
+                  :mod (c2-5 / this))
+      :mod (c2-0 / exact)
+      :mod (c2-1 / in-the-first-place))
+
+# ::snt What if it's an ISIS attack? So sorry to all those hostages, keep calm because the police will get you out.
+# ::tokens ["What", "if", "it", "'s", "an", "ISIS", "attack", "?", "So", "sorry", "to", "all", "those", "hostages", ",", "keep", "calm", "because", "the", "police", "will", "get", "you", "out", "."]
+# ::lemmas ["what", "if", "it", "be", "an", "ISIS", "attack", "?", "so", "sorry", "to", "all", "those", "hostage", ",", "keep", "calm", "because", "the", "police", "will", "get", "you", "out", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-0 / have-condition-91
+                  :ARG1 (c3-16 / amr-unknown)
+                  :ARG2 (c3-5 / attack-01
+                              :ARG0 (c3-10 / criminal-organization
+                                           :name (c3-6 / name
+                                                       :op1 "Islamic"
+                                                       :op2 "organization"))))
+      :snt2 (c3-13 / sorry-01
+                   :ARG1 (c3-15 / keep-02
+                                :ARG0 (c3-1 / hostage
+                                            :mod (c3-7 / all)
+                                            :mod (c3-14 / that))
+                                :ARG1 (c3-9 / calm-03
+                                            :ARG1 c3-1)
+                                :ARG1-of (c3-12 / cause-01
+                                                :ARG0 (c3-11 / get-05
+                                                             :ARG0 (c3-8 / police)
+                                                             :ARG1 c3-1
+                                                             :ARG2 (c3-3 / out-06
+                                                                         :ARG1 c3-1))))
+                   :degree (c3-4 / so)))

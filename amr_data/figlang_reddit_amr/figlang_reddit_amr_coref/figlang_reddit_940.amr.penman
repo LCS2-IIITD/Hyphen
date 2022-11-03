@@ -1,0 +1,41 @@
+# ::snt Woah.
+# ::tokens ["Woah", "."]
+# ::lemmas ["Woah", "."]
+(c1-0 / Woah
+      :mode expressive)
+
+# ::snt Next you are going to tell me ditto is a failed mew.
+# ::tokens ["Next", "you", "are", "going", "to", "tell", "me", "ditto", "is", "a", "failed", "mew", "."]
+# ::lemmas ["next", "you", "be", "go", "to", "tell", "i", "ditto", "be", "a", "fail", "mew", "."]
+(c2-2 / tell-01
+      :ARG0 (c2-6 / you)
+      :ARG1 (c2-4 / mew
+                  :ARG1-of (c2-1 / fail-01)
+                  :domain (c2-0 / ditto))
+      :ARG2 (c2-3 / i)
+      :time (c2-5 / next))
+
+# ::snt Or that Gengar is Clefable's shadow.
+# ::tokens ["Or", "that", "Gengar", "is", "Clefable", "'s", "shadow", "."]
+# ::lemmas ["or", "that", "Gengar", "be", "Clefable", "'s", "shadow", "."]
+(c3-1 / or
+      :op2 (c3-0 / shadow-01
+                 :ARG0 (c3-4 / person
+                             :name (c3-5 / name
+                                         :op1 "Clefable"))
+                 :ARG1 (c3-2 / person
+                             :name (c3-3 / name
+                                         :op1 "Gengar"))))
+
+# ::snt Or that jet fuel can't melt steel beams
+# ::tokens ["Or", "that", "jet", "fuel", "ca", "n't", "melt", "steel", "beams"]
+# ::lemmas ["or", "that", "jet", "fuel", "can", "not", "melt", "steel", "beam"]
+(c4-2 / or
+      :op2 (c4-6 / possible-01
+                 :ARG1 (c4-7 / melt-01
+                             :ARG0 (c4-1 / fuel
+                                         :mod (c4-5 / jet)
+                                         :mod (c4-3 / that))
+                             :ARG1 (c4-4 / beam
+                                         :consist-of (c4-0 / steel)))
+                 :polarity -))

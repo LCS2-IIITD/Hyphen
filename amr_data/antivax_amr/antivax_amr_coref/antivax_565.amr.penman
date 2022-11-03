@@ -1,0 +1,153 @@
+# ::snt Masks do work. Think, damn you.
+# ::tokens ["Masks", "do", "work", ".", "Think", ",", "damn", "you", "."]
+# ::lemmas ["mask", "do", "work", ".", "think", ",", "damn", "you", "."]
+(c1-4 / multi-sentence
+      :snt1 (c1-1 / work-09
+                  :ARG1 (c1-3 / task))
+      :snt2 (c1-2 / think-01
+                  :ARG0 (c1-5 / you)
+                  :ARG1-of (c1-0 / damn-01
+                                 :ARG0 c1-5)
+                  :mode imperative))
+
+# ::snt Or, alternatively, you could start with evidence and stick to the truth
+# ::tokens ["Or", ",", "alternatively", ",", "you", "could", "start", "with", "evidence", "and", "stick", "to", "the", "truth"]
+# ::lemmas ["or", ",", "alternatively", ",", "you", "could", "start", "with", "evidence", "and", "stick", "to", "the", "truth"]
+(c2-2 / or
+      :op2 (c2-5 / possible-01
+                 :ARG1 (c2-1 / and
+                             :op1 (c2-0 / start-01
+                                        :ARG0 (c2-6 / you)
+                                        :ARG2 (c2-8 / evidence-01))
+                             :op2 (c2-4 / stick-01
+                                        :ARG1 c2-6
+                                        :ARG2 (c2-3 / truth)))
+                 :mod (c2-7 / alternatively)))
+
+# ::snt Too right BP...especially ,&amp;8...followed by all the others!!
+# ::tokens ["Too", "right", "BP", "...", "especially", ",", "&", "amp;8", "...", "followed", "by", "all", "the", "others", "!", "!"]
+# ::lemmas ["too", "right", "BP", "...", "especially", ",", "&", "amp;8", "...", "follow", "you", "all", "the", "other", "!", "!"]
+(c3-6 / right-06
+      :ARG1 (c3-2 / company
+                  :name (c3-7 / name
+                              :op1 "BP")
+                  :ARG1-of (c3-1 / follow-01
+                                 :ARG2 (c3-4 / other
+                                             :mod (c3-0 / all))))
+      :ARG2-of (c3-3 / have-degree-91
+                     :ARG1 c3-2
+                     :ARG3 (c3-5 / too))
+      :mod (c3-8 / especially))
+
+# ::snt Bollocks!
+# ::tokens ["Bollocks", "!"]
+# ::lemmas ["bollock", "!"]
+(c4-0 / boollocks
+      :mode expressive)
+
+# ::snt I think you need to do a little more research on the vaccine.I know many who have had the vaccine and have suffered side effects.So the masks work against the flu but not covid?.. why is that exactly?
+# ::tokens ["I", "think", "you", "need", "to", "do", "a", "little", "more", "research", "on", "the", "vaccine", ".", "I", "know", "many", "who", "have", "had", "the", "vaccine", "and", "have", "suffered", "side", "effects", ".", "So", "the", "masks", "work", "against", "the", "flu", "but", "not", "covid", "?", "..", "why", "is", "that", "exactly", "?"]
+# ::lemmas ["i", "think", "you", "need", "to", "do", "a", "little", "more", "research", "on", "the", "vaccine", ".", "i", "know", "many", "who", "have", "have", "the", "vaccine", "and", "have", "suffer", "side", "effect", ".", "so", "the", "mask", "work", "against", "the", "flu", "but", "not", "covid", "?", "..", "why", "be", "that", "exactly", "?"]
+(c5-12 / multi-sentence
+       :snt1 (c5-9 / think-01
+                   :ARG0 (c5-4 / i)
+                   :ARG1 (c5-13 / need-01
+                                :ARG0 (c5-20 / you)
+                                :ARG1 (c5-0 / do-02
+                                            :ARG0 c5-20
+                                            :ARG1 (c5-10 / research-01
+                                                         :ARG0 c5-20
+                                                         :ARG1 (c5-8 / vaccine)
+                                                         :ARG1-of (c5-24 / have-quant-91
+                                                                         :ARG3 (c5-23 / more
+                                                                                      :quant (c5-25 / little)))))))
+       :snt2 (c5-28 / know-02
+                    :ARG0 (c5-17 / i)
+                    :ARG1 (c5-18 / many
+                                 :ARG0-of (c5-3 / have-03
+                                                :ARG1 (c5-22 / vaccine))
+                                 :ARG0-of (c5-16 / suffer-01
+                                                 :ARG1 (c5-15 / effect-03
+                                                              :ARG0 c5-22
+                                                              :mod (c5-26 / side)))))
+       :snt3 (c5-5 / contrast-01
+                   :ARG1 (c5-6 / work-09
+                               :ARG1 (c5-11 / mask)
+                               :ARG2 (c5-1 / counter-01
+                                           :ARG1 (c5-19 / disease
+                                                        :name (c5-2 / name
+                                                                    :op1 "influenza"))))
+                   :ARG2 (c5-14 / work-09
+                                :ARG1 (c5-27 / product
+                                             :name c5-2
+                                             :op1 " covid")
+                                :polarity -)
+                   :ARG2 c5-1
+                   :ARG1-of (c5-7 / cause-01
+                                  :ARG0 (c5-21 / amr-unknown))))
+
+# ::snt It's fairly obvious why there is no flu this year masks, social distancing, and more vaccinated than normal."Vaccine makes you sterile" - utter rubbishI know a lot of people who have had the vaccine, and none of them had any side affects.Vaccines do work - figures from Israel
+# ::tokens ["It", "'s", "fairly", "obvious", "why", "there", "is", "no", "flu", "this", "year", "masks", ",", "social", "distancing", ",", "and", "more", "vaccinated", "than", "normal", ".", "\"Vaccine", "makes", "you", "sterile", "\"", "-", "utter", "rubbishI", "know", "a", "lot", "of", "people", "who", "have", "had", "the", "vaccine", ",", "and", "none", "of", "them", "had", "any", "side", "affects", ".", "Vaccines", "do", "work", "-", "figures", "from", "Israel"]
+# ::lemmas ["it", "be", "fairly", "obvious", "why", "there", "be", "no", "flu", "this", "year", "mask", ",", "social", "distancing", ",", "and", "more", "vaccinated", "than", "normal", ".", "\"vaccine", "make", "you", "sterile", "\"", "-", "utter", "rubbishi", "know", "a", "lot", "of", "people", "who", "have", "have", "the", "vaccine", ",", "and", "none", "of", "they", "have", "any", "side", "affect", ".", "vaccine", "do", "work", "-", "figure", "from", "Israel"]
+(c6-11 / multi-sentence
+       :snt1 (c6-8 / obvious-01
+                   :ARG1 (c6-9 / thing
+                               :ARG0-of (c6-5 / cause-01
+                                              :ARG1 (c6-22 / have-polarity-91
+                                                           :ARG1 (c6-0 / disease
+                                                                       :name (c6-12 / name
+                                                                                    :op1 "influenza"))
+                                                           :time (c6-16 / year
+                                                                        :mod (c6-6 / this))
+                                                           :ARG2 -)))
+                   :ARG1-of (c6-19 / fair-04))
+       :snt2 (c6-20 / make-02
+                    :ARG0 (c6-7 / vaccine)
+                    :ARG1 (c6-13 / sterile-02
+                                 :ARG1 (c6-17 / you)))
+       :snt3 (c6-10 / rubbish
+                    :mod (c6-23 / utter))
+       :snt4 (c6-27 / know-02
+                    :ARG0 (c6-3 / i)
+                    :ARG1 (c6-18 / and
+                                 :op1 (c6-26 / person
+                                             :quant (c6-25 / lot)
+                                             :ARG0-of (c6-2 / have-03
+                                                            :ARG1 (c6-21 / vaccine)))
+                                 :op2 (c6-24 / person
+                                             :quant (c6-1 / none)
+                                             :ARG1-of (c6-15 / include-91
+                                                             :ARG2 (c6-14 / person
+                                                                          :ARG0-of (c6-4 / have-03
+                                                                                         :ARG1 c6-21)))))))
+
+# ::snt Seems rather strange that theres no flu this year, how odd! I wonder what may have possibly been misdiagnosed?
+# ::tokens ["Seems", "rather", "strange", "that", "there", "s", "no", "flu", "this", "year", ",", "how", "odd", "!", "I", "wonder", "what", "may", "have", "possibly", "been", "misdiagnosed", "?"]
+# ::lemmas ["seem", "rather", "strange", "that", "there", "s", "no", "flu", "this", "year", ",", "how", "odd", "!", "i", "wonder", "what", "may", "have", "possibly", "be", "misdiagnose", "?"]
+(c7-14 / multi-sentence
+       :snt1 (c7-0 / seem-01
+                   :ARG1 (c7-12 / strange
+                                :domain (c7-1 / diagnose-01
+                                              :ARG2 (c7-13 / disease
+                                                           :name (c7-15 / name
+                                                                        :op1 "influenza"))
+                                              :time (c7-16 / year
+                                                           :mod (c7-9 / this))
+                                              :polarity -)
+                                :degree (c7-10 / rather)))
+       :snt2 (c7-8 / odd
+                   :degree (c7-7 / so)
+                   :domain (c7-3 / i))
+       :snt3 (c7-4 / wonder-01
+                   :ARG0 c7-3
+                   :ARG1 (c7-5 / thing
+                               :ARG1-of (c7-6 / mis
+                                              :ARG1-of (c7-11 / possible-01)))
+                   :polarity (c7-2 / amr-unknown)))
+
+# ::snt About sums it up
+# ::tokens ["About", "sums", "it", "up"]
+# ::lemmas ["about", "sum", "it", "up"]
+(c8-0 / sum-up-01
+      :ARG1 (c8-1 / it)
+      :degree (c8-2 / about))

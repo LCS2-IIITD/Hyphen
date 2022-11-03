@@ -1,0 +1,61 @@
+# ::snt One Million sign petition to stop Trump UK visit - Theresa May rejects calls for it to be cancelled as a "populist gesture"
+# ::tokens ["One", "Million", "sign", "petition", "to", "stop", "Trump", "UK", "visit", "-", "Theresa", "May", "rejects", "calls", "for", "it", "to", "be", "cancelled", "as", "a", "\"", "populist", "gesture", "\""]
+# ::lemmas ["One", "Million", "sign", "petition", "to", "stop", "Trump", "UK", "visit", "-", "Theresa", "May", "reject", "call", "for", "it", "to", "be", "cancel", "as", "a", "\"", "populist", "gesture", "\""]
+(c1-9 / multi-sentence
+      :snt1 (c1-11 / sign-01
+                   :ARG0 (c1-18 / person
+                                :quant 1000000)
+                   :ARG1 (c1-16 / petition-01
+                                :ARG1 (c1-17 / stop-01
+                                             :ARG1 (c1-6 / visit-01
+                                                         :ARG0 (c1-13 / person
+                                                                      :name (c1-10 / name
+                                                                                   :op1 "Trump"))
+                                                         :ARG1 (c1-4 / country
+                                                                     :name (c1-2 / name
+                                                                                 :op1 "UK"))))))
+      :snt2 (c1-7 / reject-01
+                  :ARG0 (c1-12 / person
+                               :name (c1-14 / name
+                                            :op1 "Theresa"
+                                            :op2 "May"))
+                  :ARG1 (c1-0 / call-03
+                              :ARG1 (c1-5 / cancel-01
+                                          :ARG1 c1-6
+                                          :ARG1-of (c1-15 / cause-01
+                                                          :ARG0 (c1-8 / gesture-01
+                                                                      :mod (c1-1 / political-movement
+                                                                                 :name (c1-3 / name
+                                                                                             :op1 "populism"))))))))
+
+# ::snt So what about the millions and millions of others that do want Trump to visit?
+# ::tokens ["So", "what", "about", "the", "millions", "and", "millions", "of", "others", "that", "do", "want", "Trump", "to", "visit", "?"]
+# ::lemmas ["so", "what", "about", "the", "million", "and", "millions", "of", "other", "that", "do", "want", "Trump", "to", "visit", "?"]
+(c2-0 / amr-unknown
+      :topic (c2-10 / and
+                    :op1 (c2-7 / person
+                               :quant (c2-8 / multiple
+                                            :op1 1000000))
+                    :op2 (c2-6 / person
+                               :mod (c2-5 / other)
+                               :quant (c2-1 / multiple
+                                            :op1 1000000))
+                    :ARG0-of (c2-2 / want-01
+                                   :ARG1 (c2-4 / visit-01
+                                               :ARG0 (c2-3 / person
+                                                           :name (c2-9 / name
+                                                                       :op1 "Trump"))))))
+
+# ::snt hush now, 1.5% of the population has spoken, don't you get it?
+# ::tokens ["hush", "now", ",", "1.5", "%", "of", "the", "population", "has", "spoken", ",", "do", "n't", "you", "get", "it", "?"]
+# ::lemmas ["hush", "now", ",", "1.5", "%", "of", "the", "population", "have", "speak", ",", "do", "not", "you", "get", "it", "?"]
+(c3-0 / speak-01
+      :ARG0 (c3-6 / population
+                  :ARG1-of (c3-1 / include-91
+                                 :ARG2 (c3-4 / population)
+                                 :ARG3 (c3-2 / percentage-entity
+                                             :value 1.5)))
+      :mod (c3-3 / hush
+                 :time (c3-7 / now)
+                 :mode expressive)
+      :ARG1-of (c3-5 / request-confirmation-91))

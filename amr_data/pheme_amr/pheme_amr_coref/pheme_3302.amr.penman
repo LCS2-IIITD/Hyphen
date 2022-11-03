@@ -1,0 +1,94 @@
+# ::snt Correspondent: Charlie Hebdo assailants spotted in central France
+# ::tokens ["Correspondent", ":", "Charlie", "Hebdo", "assailants", "spotted", "in", "central", "France"]
+# ::lemmas ["correspondent", ":", "Charlie", "Hebdo", "assailant", "spot", "in", "central", "France"]
+(c1-4 / report-01
+      :ARG1 (c1-7 / spot-01
+                  :ARG1 (c1-3 / person
+                              :ARG0-of (c1-8 / assail-01
+                                             :ARG1 (c1-0 / magazine
+                                                         :name (c1-1 / name
+                                                                     :op1 "Charlie"
+                                                                     :op2 "Ch Hebdo"))))
+                  :location (c1-5 / center
+                                  :part-of (c1-6 / country
+                                                 :name (c1-2 / name
+                                                             :op1 "France")))))
+
+# ::snt so what?
+# ::tokens ["so", "what", "?"]
+# ::lemmas ["so", "what", "?"]
+(c2-1 / infer-01
+      :ARG1 (c2-0 / amr-unknown))
+
+# ::snt do they care??? They instigated this reaction by allowing these insults &amp; cartoons
+# ::tokens ["do", "they", "care", "?", "?", "?", "They", "instigated", "this", "reaction", "by", "allowing", "these", "insults", "&", "amp", ";", "cartoons"]
+# ::lemmas ["do", "they", "care", "?", "?", "?", "they", "instigate", "this", "reaction", "by", "allow", "these", "insult", "&", "amp", ";", "cartoon"]
+(c4-0 / multi-sentence
+      :snt1 (c4-7 / care-01
+                  :polarity (c4-12 / amr-unknown)
+                  :ARG0 (c4-11 / they))
+      :snt2 (c4-3 / instigate-01
+                  :ARG0 (c4-10 / they)
+                  :ARG1 (c4-6 / react-01
+                              :mod (c4-4 / this))
+                  :manner (c4-2 / allow-01
+                                :ARG0 c4-10
+                                :ARG1 (c4-5 / and
+                                            :op1 (c4-8 / insult-01)
+                                            :op2 (c4-9 / cartoon)
+                                            :mod (c4-1 / this)))))
+
+# ::snt These monsters kill the Prophet evry time MT ": Among the names of the dead r 'Ahmed' &amp;'Mustapha'-both r also names of Muhammad
+# ::tokens ["These", "monsters", "kill", "the", "Prophet", "evry", "time", "MT", "\"", ":", "Among", "the", "names", "of", "the", "dead", "r", "'", "Ahmed", "'", "&", "amp;'Mustapha'-both", "r", "also", "names", "of", "Muhammad"]
+# ::lemmas ["these", "monster", "kill", "the", "Prophet", "evry", "time", "MT", "\"", ":", "among", "the", "name", "of", "the", "dead", "r", "'", "Ahmed", "'", "&", "amp;'mustapha'-both", "r", "also", "name", "of", "Muhammad"]
+(c5-5 / kill-01
+      :ARG0 (c5-1 / monster
+                  :mod (c5-13 / this))
+      :ARG1 (c5-8 / person
+                  :name (c5-6 / name
+                              :op1 "Prophet"))
+      :time (c5-12 / time
+                   :mod c5-13)
+      :ARG1-of (c5-9 / mean-01
+                     :ARG2 (c5-4 / include-91
+                                 :ARG1 (c5-15 / and
+                                              :op1 (c5-7 / name
+                                                         :op1 "Ahmed"))
+                                 :op2 (c5-14 / person
+                                             :name (c5-10 / name
+                                                          :op1 "amp"))
+                                 :op3 (c5-11 / name
+                                             :op1 "Mustapha"))
+                     :ARG2 (c5-16 / name
+                                  :poss (c5-2 / person
+                                              :name (c5-0 / name
+                                                          :op1 "Muhammad"))
+                                  :mod (c5-3 / also))))
+
+# ::snt Islam never allow violence but how Ahmed &amp; Mustapha work in place where Cartoon of Prophet(pbuh) drawn
+# ::tokens ["Islam", "never", "allow", "violence", "but", "how", "Ahmed", "&", "amp", ";", "Mustapha", "work", "in", "place", "where", "Cartoon", "of", "Prophet(pbuh", ")", "drawn"]
+# ::lemmas ["Islam", "never", "allow", "violence", "but", "how", "Ahmed", "&", "amp", ";", "Mustapha", "work", "in", "place", "where", "Cartoon", "of", "Prophet(pbuh", ")", "draw"]
+(c6-18 / contrast-01
+       :ARG1 (c6-8 / allow-01
+                   :ARG0 (c6-12 / religious-group
+                                :name (c6-11 / name
+                                             :op1 "Islam"))
+                   :ARG1 (c6-2 / violence)
+                   :time (c6-10 / ever)
+                   :polarity -)
+       :ARG2 (c6-14 / work-01
+                    :ARG0 (c6-15 / and
+                                 :op1 (c6-3 / person
+                                            :name (c6-17 / name
+                                                         :op1 "Ahmed"))
+                                 :op2 (c6-7 / person
+                                            :name (c6-1 / name
+                                                        :op1 "Mustapha")))
+                    :manner (c6-16 / in-place)
+                    :location (c6-4 / draw-01
+                                    :ARG1 (c6-5 / cartoon
+                                                :poss (c6-9 / person
+                                                            :name (c6-6 / name
+                                                                        :op1 "Prophet"))
+                                                :ARG1-of (c6-13 / praise-01
+                                                                :ARG1-of (c6-0 / wish-01))))))

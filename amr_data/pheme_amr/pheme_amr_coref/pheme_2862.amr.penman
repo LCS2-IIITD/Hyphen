@@ -1,0 +1,45 @@
+# ::snt : arrested in Times Square after march supporting !
+# ::tokens [":", "arrested", "in", "Times", "Square", "after", "march", "supporting", "!"]
+# ::lemmas [":", "arrest", "in", "Times", "Square", "after", "march", "support", "!"]
+(c1-5 / arrest-01
+      :location (c1-4 / square
+                      :name (c1-3 / name
+                                  :op1 "Times"
+                                  :op2 "Square"))
+      :time (c1-2 / after
+                  :op1 (c1-1 / support-01
+                             :ARG1 (c1-0 / march-01))))
+
+# ::snt : arrested in Times Square after march supporting
+# ::tokens [":", "arrested", "in", "Times", "Square", "after", "march", "supporting"]
+# ::lemmas [":", "arrest", "in", "Times", "Square", "after", "march", "support"]
+(c2-5 / arrest-01
+      :location (c2-4 / square
+                      :name (c2-3 / name
+                                  :op1 "Times"
+                                  :op2 "Square"))
+      :time (c2-2 / after
+                  :op1 (c2-0 / march-01
+                             :ARG0-of (c2-1 / support-01))))
+
+# ::snt I hope they were released w/ journalist. If not I Have faith you journalists will assure the release of all residents
+# ::tokens ["I", "hope", "they", "were", "released", "w/", "journalist", ".", "If", "not", "I", "Have", "faith", "you", "journalists", "will", "assure", "the", "release", "of", "all", "residents"]
+# ::lemmas ["i", "hope", "they", "be", "release", "w/", "journalist", ".", "if", "not", "i", "have", "faith", "you", "journalist", "will", "assure", "the", "release", "of", "all", "resident"]
+(c3-4 / multi-sentence
+      :snt1 (c3-0 / hope-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-11 / release-01
+                               :ARG1 (c3-14 / they)
+                               :prep-without (c3-1 / journalist)))
+      :snt2 (c3-16 / have-condition-91
+                   :ARG1 (c3-13 / assure-01
+                                :ARG0 (c3-15 / journalist
+                                             :mod (c3-2 / you))
+                                :ARG1 (c3-8 / release-01
+                                            :ARG1 (c3-10 / person
+                                                         :ARG0-of (c3-5 / reside-01)
+                                                         :mod (c3-6 / all))))
+                   :ARG2 (c3-9 / have-03
+                               :ARG0 (c3-12 / i)
+                               :ARG1 (c3-3 / faith)
+                               :polarity -)))

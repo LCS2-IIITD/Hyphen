@@ -1,0 +1,35 @@
+# ::snt That'll happen on your third night. It's a journey. Get ready!
+# ::tokens ["That", "'ll", "happen", "on", "your", "third", "night", ".", "It", "'s", "a", "journey", ".", "Get", "ready", "!"]
+# ::lemmas ["that", "'ll", "happen", "on", "your", "third", "night", ".", "it", "be", "a", "journey", ".", "get", "ready", "!"]
+(c1-7 / multi-sentence
+      :snt1 (c1-4 / be-temporally-at-91
+                  :ARG1 (c1-2 / that)
+                  :ARG2 (c1-0 / date-entity
+                              :dayperiod (c1-8 / night)
+                              :ord (c1-1 / ordinal-entity
+                                         :value 3)
+                              :poss (c1-9 / you)))
+      :snt2 (c1-5 / journey-01
+                  :domain (c1-6 / it))
+      :snt3 (c1-3 / ready-01
+                  :ARG0 c1-9
+                  :ARG1 c1-9
+                  :mode imperative))
+
+# ::snt Just waiting to get messages from Bill Gates
+# ::tokens ["Just", "waiting", "to", "get", "messages", "from", "Bill", "Gates"]
+# ::lemmas ["just", "wait", "to", "get", "message", "from", "Bill", "Gates"]
+(c2-0 / wait-01
+      :ARG2 (c2-1 / get-01
+                  :ARG1 (c2-4 / message-01
+                              :ARG0 (c2-3 / person
+                                          :name (c2-5 / name
+                                                      :op1 "Bill"
+                                                      :op2 "Gates"))))
+      :mod (c2-2 / just))
+
+# ::snt Excellent!
+# ::tokens ["Excellent", "!"]
+# ::lemmas ["excellent", "!"]
+(c3-0 / excellent-02
+      :mode expressive)

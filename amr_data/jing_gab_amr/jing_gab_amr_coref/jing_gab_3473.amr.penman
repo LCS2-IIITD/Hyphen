@@ -1,0 +1,56 @@
+# ::snt arrest this idiot !!!!!!!!!!!!!
+# ::tokens ["arrest", "this", "idiot", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["arrest", "this", "idiot", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+(c1-1 / arrest-01
+      :ARG0 (c1-3 / you)
+      :ARG1 (c1-0 / idiot
+                  :mod (c1-2 / this))
+      :mode imperative)
+
+# ::snt You don't have to agree with him, but those slurs are offensive to tons of people.
+# ::tokens ["You", "do", "n't", "have", "to", "agree", "with", "him", ",", "but", "those", "slurs", "are", "offensive", "to", "tons", "of", "people", "."]
+# ::lemmas ["you", "do", "not", "have", "to", "agree", "with", "he", ",", "but", "those", "slur", "be", "offensive", "to", "ton", "of", "people", "."]
+(c2-2 / contrast-01
+      :ARG1 (c2-6 / obligate-01
+                  :ARG1 (c2-9 / you)
+                  :ARG2 (c2-1 / agree-01
+                              :ARG0 c2-9
+                              :ARG2 (c2-4 / he))
+                  :polarity -)
+      :ARG2 (c2-5 / offend-01
+                  :ARG0 (c2-0 / slur
+                              :mod (c2-7 / that))
+                  :ARG1 (c2-8 / person
+                              :quant (c2-3 / ton))))
+
+# ::snt Kavanaugh and his family suffered a lot due to a political fight.
+# ::tokens ["Kavanaugh", "and", "his", "family", "suffered", "a", "lot", "due", "to", "a", "political", "fight", "."]
+# ::lemmas ["kavanaugh", "and", "his", "family", "suffer", "a", "lot", "due", "to", "a", "political", "fight", "."]
+(c3-0 / suffer-01
+      :ARG0 (c3-1 / and
+                  :op1 (c3-7 / person
+                             :name (c3-8 / name
+                                         :op1 "Kavanaugh"))
+                  :op2 (c3-2 / family
+                             :poss c3-7))
+      :ARG1 (c3-6 / lot)
+      :ARG1-of (c3-3 / cause-01
+                     :ARG0 (c3-4 / fight-01
+                                 :ARG0 c3-7
+                                 :ARG2 (c3-5 / politics))))
+
+# ::snt i would ask them if they would like it if someone called their grandfather that.
+# ::tokens ["i", "would", "ask", "them", "if", "they", "would", "like", "it", "if", "someone", "called", "their", "grandfather", "that", "."]
+# ::lemmas ["i", "would", "ask", "they", "if", "they", "would", "like", "it", "if", "someone", "call", "their", "grandfather", "that", "."]
+(c4-1 / ask-01
+      :ARG0 (c4-9 / i)
+      :ARG1 (c4-6 / like-02
+                  :ARG0 (c4-5 / they)
+                  :ARG1 (c4-2 / call-02
+                              :ARG0 (c4-0 / someone)
+                              :ARG1 (c4-7 / person
+                                          :ARG0-of (c4-4 / have-rel-role-91
+                                                         :ARG1 c4-5
+                                                         :ARG2 (c4-8 / grandfather)))
+                              :ARG2 (c4-3 / that)))
+      :ARG2 c4-5)

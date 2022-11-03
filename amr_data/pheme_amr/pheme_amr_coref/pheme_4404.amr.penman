@@ -1,0 +1,63 @@
+# ::snt . Jesus Christ. Humans should not do this to humans. It's WRONG. This sucks.
+# ::tokens [".", "Jesus", "Christ", ".", "Humans", "should", "not", "do", "this", "to", "humans", ".", "It", "'s", "WRONG", ".", "This", "sucks", "."]
+# ::lemmas [".", "Jesus", "Christ", ".", "human", "should", "not", "do", "this", "to", "human", ".", "it", "be", "wrong", ".", "this", "suck", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-5 / person
+                  :name (c1-4 / name
+                              :op1 "Jesus"
+                              :op2 "Christ"))
+      :snt2 (c1-6 / recommend-01
+                  :ARG1 (c1-7 / do-02
+                              :ARG0 (c1-0 / human)
+                              :ARG1 (c1-10 / this)
+                              :ARG2 (c1-11 / human)
+                              :polarity -))
+      :snt3 (c1-1 / wrong-02
+                  :ARG1 (c1-3 / it))
+      :snt4 (c1-9 / suck-03
+                  :ARG0 (c1-8 / this)))
+
+# ::snt making it right
+# ::tokens ["making", "it", "right"]
+# ::lemmas ["make", "it", "right"]
+(c2-1 / make-02
+      :ARG1 (c2-0 / right-02
+                  :ARG1 (c2-2 / it)))
+
+# ::snt he's the bitch for pulling out his gun, not you.
+# ::tokens ["he", "'s", "the", "bitch", "for", "pulling", "out", "his", "gun", ",", "not", "you", "."]
+# ::lemmas ["he", "be", "the", "bitch", "for", "pull", "out", "his", "gun", ",", "not", "you", "."]
+(c3-5 / contrast-01
+      :ARG1 (c3-2 / bitch
+                  :domain (c3-0 / he)
+                  :ARG1-of (c3-4 / cause-01
+                                 :ARG0 (c3-3 / pull-out-02
+                                             :ARG0 c3-0
+                                             :ARG1 (c3-6 / gun
+                                                         :poss c3-0))))
+      :ARG2 c3-2
+      :domain (c3-1 / you
+                    :polarity -))
+
+# ::snt I'm so sad that you have to put up with that shit. Racism is worse than dumb, it's dangerous.
+# ::tokens ["I", "'m", "so", "sad", "that", "you", "have", "to", "put", "up", "with", "that", "shit", ".", "Racism", "is", "worse", "than", "dumb", ",", "it", "'s", "dangerous", "."]
+# ::lemmas ["i", "be", "so", "sad", "that", "you", "have", "to", "put", "up", "with", "that", "shit", ".", "racism", "be", "bad", "than", "dumb", ",", "it", "be", "dangerous", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-13 / sad-02
+                   :ARG0 (c4-5 / obligate-01
+                               :ARG1 (c4-1 / you)
+                               :ARG2 (c4-9 / put-up-12
+                                           :ARG0 c4-1
+                                           :ARG1 (c4-6 / shit
+                                                       :mod (c4-14 / that))))
+                   :ARG1 (c4-8 / i)
+                   :degree (c4-2 / so))
+      :snt2 (c4-15 / and
+                   :op1 (c4-0 / have-degree-91
+                              :ARG1 (c4-10 / racism)
+                              :ARG2 (c4-4 / bad-07
+                                          :ARG1 c4-10)
+                              :ARG3 (c4-11 / more)
+                              :ARG4 (c4-12 / dumb))
+                   :op2 (c4-7 / endanger-01
+                              :ARG0 c4-10)))

@@ -1,0 +1,91 @@
+# ::snt Yup.
+# ::tokens ["Yup", "."]
+# ::lemmas ["yup", "."]
+(c1-0 / yup)
+
+# ::snt Isn't that guy from BLACK PANTHER
+# ::tokens ["Is", "n't", "that", "guy", "from", "BLACK", "PANTHER"]
+# ::lemmas ["be", "not", "that", "guy", "from", "BLACK", "PANTHER"]
+(c2-0 / guy
+      :mod (c2-3 / that)
+      :source (c2-1 / broadcast-program
+                    :name (c2-2 / name
+                                :op1 "Black"
+                                :op2 "PunTHER"))
+      :polarity -)
+
+# ::snt looking for logo, website, brochure, flyer apps, brand identity, UX/UI designer ? Contact
+# ::tokens ["looking", "for", "logo", ",", "website", ",", "brochure", ",", "flyer", "apps", ",", "brand", "identity", ",", "UX", "/", "UI", "designer", "?", "Contact"]
+# ::lemmas ["look", "for", "logo", ",", "website", ",", "brochure", ",", "flyer", "app", ",", "brand", "identity", ",", "UX", "/", "UI", "designer", "?", "contact"]
+(c3-2 / multi-sentence
+      :snt1 (c3-5 / look-01
+                  :ARG1 (c3-12 / and
+                               :op1 (c3-15 / logo)
+                               :op2 (c3-8 / website)
+                               :op3 (c3-1 / brochure)
+                               :op4 (c3-11 / app
+                                           :mod (c3-0 / flyer))
+                               :op5 (c3-13 / identity
+                                           :mod (c3-4 / brand))
+                               :op6 (c3-6 / person
+                                          :ARG0-of (c3-14 / design-01
+                                                          :ARG1 (c3-3 / slash
+                                                                      :op1 (c3-16 / UX)
+                                                                      :op2 (c3-7 / UI)))))
+                  :polarity (c3-9 / amr-unknown))
+      :snt2 (c3-10 / contact-01))
+
+# ::snt What? No, Taylor Swift?
+# ::tokens ["What", "?", "No", ",", "Taylor", "Swift", "?"]
+# ::lemmas ["what", "?", "no", ",", "Taylor", "Swift", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-6 / amr-unknown)
+      :snt2 (c4-2 / say-01
+                  :ARG0 (c4-5 / i)
+                  :ARG1 (c4-0 / no)
+                  :ARG2 (c4-4 / person
+                              :name (c4-3 / name
+                                          :op1 "Taylor"
+                                          :op2 "Swift"))))
+
+# ::snt Wishing our very own Goodluck
+# ::tokens ["Wishing", "our", "very", "own", "Goodluck"]
+# ::lemmas ["wish", "our", "very", "own", "Goodluck"]
+(c5-4 / wish-01
+      :ARG1 (c5-2 / luck
+                  :poss (c5-3 / we)
+                  :mod (c5-0 / own
+                             :degree (c5-1 / very))))
+
+# ::snt complete list? Tot it's on the th? Surprised!!!!
+# ::tokens ["complete", "list", "?", "Tot", "it", "'s", "on", "the", "th", "?", "Surprised", "!", "!", "!", "!"]
+# ::lemmas ["complete", "list", "?", "tot", "it", "be", "on", "the", "th", "?", "Surprised", "!", "!", "!", "!"]
+(c6-0 / multi-sentence
+      :snt1 (c6-2 / list-01
+                  :polarity (c6-7 / amr-unknown)
+                  :ARG1-of (c6-4 / complete-02))
+      :snt2 (c6-9 / list-01
+                  :polarity (c6-6 / amr-unknown)
+                  :ARG1 (c6-8 / it)
+                  :location (c6-3 / list-01
+                                  :mod (c6-5 / th)))
+      :snt3 (c6-1 / surprise-01
+                  :mode expressive))
+
+# ::snt I hope that BET Awards is in Live and not in the record!!
+# ::tokens ["I", "hope", "that", "BET", "Awards", "is", "in", "Live", "and", "not", "in", "the", "record", "!", "!"]
+# ::lemmas ["i", "hope", "that", "BET", "Awards", "be", "in", "live", "and", "not", "in", "the", "record", "!", "!"]
+(c7-2 / hope-01
+      :ARG0 (c7-6 / i)
+      :ARG1 (c7-7 / and
+                  :op1 (c7-0 / broadcast-program
+                             :name (c7-1 / name
+                                         :op1 "B BET"
+                                         :op2 "Awards")
+                             :location (c7-3 / live))
+                  :op2 (c7-4 / broadcast-program
+                             :name (c7-5 / name
+                                         :op1 "Record")
+                             :location c7-3
+                             :polarity -))
+      :mode expressive)

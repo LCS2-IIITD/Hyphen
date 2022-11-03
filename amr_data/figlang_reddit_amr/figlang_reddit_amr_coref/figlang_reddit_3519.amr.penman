@@ -1,0 +1,37 @@
+# ::snt Mercedes W08 five kilograms above minimum weight
+# ::tokens ["Mercedes", "W08", "five", "kilograms", "above", "minimum", "weight"]
+# ::lemmas ["Mercedes", "W08", "five", "kilograms", "above", "minimum", "weight"]
+(c1-2 / car-make
+      :name (c1-6 / name
+                  :op1 "Mercedes"
+                  :op2 "W08")
+      :mod (c1-0 / above
+                 :op1 (c1-3 / weight
+                            :mod (c1-5 / minimum))
+                 :quant (c1-4 / mass-quantity
+                              :unit (c1-1 / kilogram)
+                              :quant 5)))
+
+# ::snt Literal sandbags.
+# ::tokens ["Literal", "sandbags", "."]
+# ::lemmas ["literal", "sandbag", "."]
+(c2-0 / sandbag
+      :mod (c2-1 / particular))
+
+# ::snt Best thing about Ferrari winning WDC is that this meme will die
+# ::tokens ["Best", "thing", "about", "Ferrari", "winning", "WDC", "is", "that", "this", "meme", "will", "die"]
+# ::lemmas ["good", "thing", "about", "Ferrari", "win", "WDC", "be", "that", "this", "meme", "will", "die"]
+(c3-0 / die-01
+      :ARG1 (c3-8 / meme
+                  :mod (c3-5 / this))
+      :ARG1-of (c3-7 / good-02
+                     :ARG2-of (c3-4 / have-degree-91
+                                    :ARG1 c3-0
+                                    :ARG3 (c3-1 / most)))
+      :topic (c3-2 / win-01
+                   :ARG0 (c3-3 / team
+                               :name (c3-9 / name
+                                           :op1 "Ferrari"))
+                   :ARG1 (c3-10 / thing
+                                :name (c3-6 / name
+                                            :op1 "WDC"))))

@@ -1,0 +1,67 @@
+# ::snt This A320 was built in . years old. They say their are many A320 of this age flying workhorses.
+# ::tokens ["This", "A320", "was", "built", "in", ".", "years", "old", ".", "They", "say", "their", "are", "many", "A320", "of", "this", "age", "flying", "workhorses", "."]
+# ::lemmas ["this", "A320", "be", "build", "in", ".", "years", "old", ".", "they", "say", "their", "be", "many", "A320", "of", "this", "age", "fly", "workhorse", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-4 / build-01
+                  :ARG1 (c2-14 / aircraft-type
+                               :name (c2-7 / name
+                                           :op1 "A320")
+                               :mod (c2-13 / this))
+                  :time (c2-6 / age-01
+                              :ARG1 c2-14
+                              :ARG2 (c2-11 / temporal-quantity
+                                           :unit (c2-0 / year)
+                                           :quant 1)))
+      :snt2 (c2-12 / say-01
+                   :ARG0 (c2-8 / they)
+                   :ARG1 (c2-1 / workhorse
+                               :ARG0-of (c2-2 / fly-01)
+                               :domain c2-8)
+                   :quant (c2-9 / many)
+                   :age (c2-10 / age-01
+                               :mod (c2-5 / this))))
+
+# ::snt very sad news
+# ::tokens ["very", "sad", "news"]
+# ::lemmas ["very", "sad", "news"]
+(c3-0 / sad-02
+      :ARG0 (c3-2 / news)
+      :degree (c3-1 / very))
+
+# ::snt So sad! Lord give the passenger's loved ones strength
+# ::tokens ["So", "sad", "!", "Lord", "give", "the", "passenger", "'s", "loved", "ones", "strength"]
+# ::lemmas ["so", "sad", "!", "Lord", "give", "the", "passenger", "'s", "love", "one", "strength"]
+(c4-1 / multi-sentence
+      :snt1 (c4-8 / sad-02
+                  :degree (c4-4 / so))
+      :snt2 (c4-7 / give-01
+                  :ARG0 (c4-6 / person
+                              :name (c4-5 / name
+                                          :op1 "Lord"))
+                  :ARG1 (c4-0 / strong-02)
+                  :ARG2 (c4-9 / person
+                              :ARG1-of (c4-2 / love-01
+                                             :ARG0 (c4-3 / passenger)))
+                  :mode imperative))
+
+# ::snt God all the best all people
+# ::tokens ["God", "all", "the", "best", "all", "people"]
+# ::lemmas ["God", "all", "the", "good", "all", "people"]
+(c5-3 / person
+      :name (c5-2 / name
+                  :op1 "God")
+      :ARG1-of (c5-0 / have-degree-91
+                     :ARG2 (c5-4 / good-02
+                                 :ARG1 c5-3)
+                     :ARG3 (c5-1 / most)
+                     :ARG5 (c5-5 / person
+                                 :mod (c5-6 / all))))
+
+# ::snt Any idea how old the plane was?
+# ::tokens ["Any", "idea", "how", "old", "the", "plane", "was", "?"]
+# ::lemmas ["any", "idea", "how", "old", "the", "plane", "be", "?"]
+(c6-1 / idea
+      :mod (c6-4 / any)
+      :topic (c6-3 / temporal-quantity
+                   :age-of (c6-2 / plane))
+      :polarity (c6-0 / amr-unknown))

@@ -1,0 +1,54 @@
+# ::snt Who really gives a ?
+# ::tokens ["Who", "really", "gives", "a", "?"]
+# ::lemmas ["who", "really", "give", "a", "?"]
+(c1-0 / give-16
+      :ARG0 (c1-2 / amr-unknown)
+      :ARG1-of (c1-1 / real-04))
+
+# ::snt I just wish you enews treated all peoplr the same i meant people but you do not only the your chosen few
+# ::tokens ["I", "just", "wish", "you", "enews", "treated", "all", "peoplr", "the", "same", "i", "meant", "people", "but", "you", "do", "not", "only", "the", "your", "chosen", "few"]
+# ::lemmas ["i", "just", "wish", "you", "enew", "treat", "all", "peoplr", "the", "same", "i", "mean", "people", "but", "you", "do", "not", "only", "the", "your", "choose", "few"]
+(c2-8 / contrast-01
+      :ARG1 (c2-9 / wish-01
+                  :ARG0 (c2-12 / i)
+                  :ARG1 (c2-13 / treat-01
+                               :ARG0 (c2-2 / you)
+                               :ARG1 (c2-7 / person
+                                           :mod (c2-6 / all)
+                                           :mod (c2-14 / url-entity
+                                                       :value "http://www.christianforums.com"))
+                               :ARG2 (c2-5 / same-01
+                                           :ARG2 (c2-4 / person
+                                                       :ARG2-of (c2-3 / mean-01
+                                                                      :ARG0 c2-12)))
+                               :ARG1-of c2-5)
+                  :mod (c2-11 / just))
+      :ARG2 (c2-10 / person
+                   :quant (c2-0 / few
+                                :ARG1-of (c2-15 / choose-01
+                                                :ARG0 c2-2)
+                                :mod (c2-1 / only
+                                           :polarity -))))
+
+# ::snt That's good I guess. How depressing.
+# ::tokens ["That", "'s", "good", "I", "guess", ".", "How", "depressing", "."]
+# ::lemmas ["that", "be", "good", "i", "guess", ".", "how", "depressing", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-5 / guess-01
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-3 / good-02
+                              :ARG1 (c3-2 / that)))
+      :snt2 (c3-6 / depress-01
+                  :degree (c3-1 / so)))
+
+# ::snt Are you looking for , , , , ? Contact me:
+# ::tokens ["Are", "you", "looking", "for", ",", ",", ",", ",", "?", "Contact", "me", ":"]
+# ::lemmas ["be", "you", "look", "for", ",", ",", ",", ",", "?", "contact", "i", ":"]
+(c4-1 / multi-sentence
+      :snt1 (c4-2 / look-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-5 / amr-unknown))
+      :snt2 (c4-3 / contact-01
+                  :ARG0 c4-0
+                  :ARG1 (c4-4 / i)
+                  :mode imperative))

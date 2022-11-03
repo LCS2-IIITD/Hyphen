@@ -1,0 +1,164 @@
+# ::snt tweeting his name is unwise.
+# ::tokens ["tweeting", "his", "name", "is", "unwise", "."]
+# ::lemmas ["tweet", "his", "name", "be", "unwise", "."]
+(c1-1 / wise
+      :domain (c1-3 / tweet-02
+                    :ARG1 (c1-0 / name
+                                :poss (c1-2 / he)))
+      :polarity -)
+
+# ::snt : now police suspect two or three shooters on Parliament Hill. Sergeant at Arms KVickers shot assailant. +shooters
+# ::tokens [":", "now", "police", "suspect", "two", "or", "three", "shooters", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "KVickers", "shot", "assailant", ".", "+", "shooters"]
+# ::lemmas [":", "now", "police", "suspect", "two", "or", "three", "shooter", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "KVickers", "shoot", "assailant", ".", "+", "shooter"]
+(c2-0 / multi-sentence
+      :snt1 (c2-3 / suspect-01
+                  :ARG0 (c2-2 / police)
+                  :ARG1 (c2-4 / person
+                              :ARG0-of (c2-9 / shoot-02)
+                              :quant (c2-17 / or
+                                            :op1 2
+                                            :op2 3))
+                  :time (c2-11 / now)
+                  :location (c2-12 / government-organization
+                                   :name (c2-18 / name
+                                                :op1 "Parliament"
+                                                :op2 "Hill")))
+      :snt2 (c2-16 / shoot-02
+                   :ARG0 (c2-7 / person
+                               :name (c2-1 / name
+                                           :op1 "KVickers")
+                               :ARG0-of (c2-6 / have-org-role-91
+                                              :ARG2 (c2-8 / sergeant
+                                                          :mod (c2-5 / arms))))
+                   :ARG1 (c2-13 / person
+                                :ARG0-of (c2-14 / assail-01)))
+      :op2 (c2-10 / person
+                  :ARG0-of (c2-15 / shoot-02))
+      :snt3 +)
+
+# ::snt woah he carries a gun?
+# ::tokens ["woah", "he", "carries", "a", "gun", "?"]
+# ::lemmas ["woah", "he", "carry", "a", "gun", "?"]
+(c3-1 / carry-01
+      :polarity (c3-3 / amr-unknown)
+      :ARG0 (c3-0 / he)
+      :ARG1 (c3-2 / gun)
+      :mod (c3-4 / hey
+                 :mode expressive))
+
+# ::snt : Reports now police suspect two or three shooters on Parliament Hill. Sergeant at Arms, Kevin Vickers, shot one assailant.
+# ::tokens [":", "Reports", "now", "police", "suspect", "two", "or", "three", "shooters", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", ",", "Kevin", "Vickers", ",", "shot", "one", "assailant", "."]
+# ::lemmas [":", "report", "now", "police", "suspect", "two", "or", "three", "shooter", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", ",", "Kevin", "Vickers", ",", "shoot", "one", "assailant", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-13 / suspect-01
+                   :ARG0 (c4-10 / police)
+                   :ARG1 (c4-15 / person
+                                :quant (c4-4 / or
+                                             :op1 2
+                                             :op2 3)
+                                :ARG0-of (c4-6 / shoot-02)
+                                :location (c4-12 / government-organization
+                                                 :name (c4-8 / name
+                                                             :op1 "Parliament"
+                                                             :op2 "Hill")))
+                   :time (c4-9 / now))
+      :snt2 (c4-1 / shoot-02
+                  :ARG0 (c4-3 / person
+                              :name (c4-11 / name
+                                           :op1 "Kevin"
+                                           :op2 "Vickers")
+                              :ARG0-of (c4-0 / have-org-role-91
+                                             :ARG2 (c4-5 / sergeant
+                                                         :mod (c4-16 / arms))))
+                  :ARG1 (c4-14 / person
+                               :ARG0-of (c4-7 / assail-01)
+                               :quant 1)))
+
+# ::snt you're the best
+# ::tokens ["you", "'re", "the", "best"]
+# ::lemmas ["you", "be", "the", "good"]
+(c5-0 / have-degree-91
+      :ARG1 (c5-1 / you)
+      :ARG2 (c5-3 / good-02)
+      :ARG3 (c5-2 / most))
+
+# ::snt Are Canadian Returning immoderate tunnelling jihardis involved working/not working FBI in a
+# ::tokens ["Are", "Canadian", "Returning", "immoderate", "tunnelling", "jihardis", "involved", "working", "/", "not", "working", "FBI", "in", "a"]
+# ::lemmas ["be", "Canadian", "return", "immoderate", "tunnelling", "jihardi", "involve", "work", "/", "not", "work", "FBI", "in", "a"]
+(c6-2 / involve-01
+      :ARG1 (c6-11 / and
+                   :op1 (c6-0 / work-01
+                              :ARG0 (c6-8 / government-organization
+                                          :name (c6-4 / name
+                                                      :op1 "FBI")))
+                   :op2 (c6-3 / work-01
+                              :ARG0 c6-8
+                              :polarity -))
+      :ARG2 (c6-10 / tunnelling
+                   :mod (c6-9 / immoderate)
+                   :mod (c6-7 / country
+                              :name (c6-5 / name
+                                          :op1 "Canada"))
+                   :ARG1-of (c6-6 / return-01))
+      :polarity (c6-1 / amr-unknown))
+
+# ::snt Wow RT : Reports now police suspect two or three shooters on Parliament Hill. Sergeant at Arms Kevin Vickers shot one assailant.
+# ::tokens ["Wow", "RT", ":", "Reports", "now", "police", "suspect", "two", "or", "three", "shooters", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "Kevin", "Vickers", "shot", "one", "assailant", "."]
+# ::lemmas ["wow", "RT", ":", "report", "now", "police", "suspect", "two", "or", "three", "shooter", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "Kevin", "Vickers", "shoot", "one", "assailant", "."]
+(c7-0 / multi-sentence
+      :snt1 (c7-4 / say-01
+                  :ARG0 (c7-3 / publication
+                              :name (c7-12 / name
+                                           :op1 "RT"))
+                  :ARG1 (c7-10 / suspect-01
+                               :ARG0 (c7-5 / police)
+                               :ARG1 (c7-8 / person
+                                           :quant (c7-19 / or
+                                                         :op1 2
+                                                         :op2 3)
+                                           :ARG0-of (c7-18 / shoot-02)
+                                           :location (c7-13 / government-organization
+                                                            :name (c7-20 / name
+                                                                         :op1 "Parliament"
+                                                                         :op2 "Hill")))
+                               :time (c7-1 / now))
+                  :mod (c7-15 / wow
+                              :mode expressive))
+      :snt2 (c7-9 / shoot-02
+                  :ARG0 (c7-14 / person
+                               :name (c7-2 / name
+                                           :op1 "Kevin"
+                                           :op2 "Vickers")
+                               :ARG0-of (c7-7 / have-org-role-91
+                                              :ARG2 (c7-17 / sergeant
+                                                           :mod (c7-6 / arms))))
+                  :ARG1 (c7-11 / person
+                               :ARG0-of (c7-16 / assail-01)
+                               :quant 1)))
+
+# ::snt : Reports now police suspect two or three shooters on Parliament Hill. Sergeant at Arms Kevin Vickers shot one assailant.
+# ::tokens [":", "Reports", "now", "police", "suspect", "two", "or", "three", "shooters", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "Kevin", "Vickers", "shot", "one", "assailant", "."]
+# ::lemmas [":", "report", "now", "police", "suspect", "two", "or", "three", "shooter", "on", "Parliament", "Hill", ".", "Sergeant", "at", "Arms", "Kevin", "Vickers", "shoot", "one", "assailant", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-13 / suspect-01
+                   :ARG0 (c8-10 / police)
+                   :ARG1 (c8-6 / shoot-02
+                               :quant (c8-4 / or
+                                            :op1 2
+                                            :op2 3))
+                   :time (c8-8 / now)
+                   :location (c8-12 / government-organization
+                                    :name (c8-9 / name
+                                                :op1 "Parliament"
+                                                :op2 "Hill")))
+      :snt2 (c8-1 / shoot-02
+                  :ARG0 (c8-14 / person
+                               :name (c8-11 / name
+                                            :op1 "Kevin"
+                                            :op2 "Vickers")
+                               :ARG0-of (c8-0 / have-org-role-91
+                                              :ARG2 (c8-5 / sergeant
+                                                          :mod (c8-15 / arms))))
+                  :ARG1 (c8-3 / person
+                              :ARG0-of (c8-7 / assail-01)
+                              :quant 1)))

@@ -1,0 +1,82 @@
+# ::snt : Anyone in downtown reminded to stay inside, away from roofs, windows and doors. Please stay safe out there.
+# ::tokens [":", "Anyone", "in", "downtown", "reminded", "to", "stay", "inside", ",", "away", "from", "roofs", ",", "windows", "and", "doors", ".", "Please", "stay", "safe", "out", "there", "."]
+# ::lemmas [":", "anyone", "in", "downtown", "remind", "to", "stay", "inside", ",", "away", "from", "roof", ",", "window", "and", "door", ".", "please", "stay", "safe", "out", "there", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-11 / remind-01
+                   :ARG1 (c1-13 / stay-01
+                                :ARG1 (c1-15 / anyone
+                                             :location (c1-12 / downtown))
+                                :ARG3 (c1-7 / and
+                                            :op1 (c1-8 / inside)
+                                            :op2 (c1-10 / away
+                                                        :op1 (c1-14 / and
+                                                                    :op1 (c1-9 / roof)
+                                                                    :op2 (c1-0 / window)
+                                                                    :op3 (c1-1 / door)))))
+                   :ARG2 c1-15)
+      :snt2 (c1-6 / stay-01
+                  :ARG1 (c1-2 / you)
+                  :ARG3 (c1-4 / safe-01
+                              :ARG1 c1-2)
+                  :location (c1-5 / out-there)
+                  :mode imperative
+                  :polite +))
+
+# ::snt Our thoughts are with the people in Ottawa
+# ::tokens ["Our", "thoughts", "are", "with", "the", "people", "in", "Ottawa"]
+# ::lemmas ["our", "thought", "be", "with", "the", "people", "in", "Ottawa"]
+(c2-4 / think-01
+      :ARG0 (c2-0 / we)
+      :ARG2 (c2-2 / person
+                  :location (c2-3 / city
+                                  :name (c2-1 / name
+                                              :op1 "Ottawa"))))
+
+# ::snt : Anyone in downtown reminded to stay inside, away fr roofs, windows&amp; doorsPlease stay safe out there
+# ::tokens [":", "Anyone", "in", "downtown", "reminded", "to", "stay", "inside", ",", "away", "fr", "roofs", ",", "windows&amp", ";", "doorsPlease", "stay", "safe", "out", "there"]
+# ::lemmas [":", "anyone", "in", "downtown", "remind", "to", "stay", "inside", ",", "away", "fr", "roof", ",", "windows&amp", ";", "doorsplease", "stay", "safe", "out", "there"]
+(c3-9 / remind-01
+      :ARG1 (c3-11 / stay-01
+                   :ARG1 (c3-12 / anyone
+                                :location (c3-10 / downtown))
+                   :ARG3 (c3-5 / and
+                               :op1 (c3-6 / inside
+                                          :domain c3-12)
+                               :op2 (c3-8 / away
+                                          :op1 (c3-7 / roof))
+                               :op3 (c3-0 / window)
+                               :op4 (c3-1 / door))
+                   :mode imperative)
+      :ARG2 c3-12
+      :ARG3 (c3-4 / stay-01
+                  :ARG1 c3-12
+                  :ARG3 (c3-2 / safe-01
+                              :ARG1 c3-12)
+                  :location (c3-3 / out-there)
+                  :mode imperative
+                  :polite +))
+
+# ::snt We are thinking of you all in Canada. Keep safe from your friends in the United Kingdom.
+# ::tokens ["We", "are", "thinking", "of", "you", "all", "in", "Canada", ".", "Keep", "safe", "from", "your", "friends", "in", "the", "United", "Kingdom", "."]
+# ::lemmas ["we", "be", "think", "of", "you", "all", "in", "Canada", ".", "keep", "safe", "from", "your", "friend", "in", "the", "United", "Kingdom", "."]
+(c4-4 / multi-sentence
+      :snt1 (c4-13 / think-01
+                   :ARG0 (c4-1 / we)
+                   :ARG2 (c4-2 / you
+                               :mod (c4-14 / all))
+                   :location (c4-10 / country
+                                    :name (c4-6 / name
+                                                :op1 "Canada")))
+      :snt2 (c4-5 / keep-02
+                  :ARG0 (c4-11 / you)
+                  :ARG1 (c4-12 / safe-01
+                               :ARG1 c4-11
+                               :ARG2 (c4-8 / person
+                                           :ARG0-of (c4-0 / have-rel-role-91
+                                                          :ARG1 c4-11
+                                                          :ARG2 (c4-3 / friend))
+                                           :location (c4-9 / country
+                                                           :name (c4-7 / name
+                                                                       :op1 "United"
+                                                                       :op2 "Kingdom"))))
+                  :mode imperative))

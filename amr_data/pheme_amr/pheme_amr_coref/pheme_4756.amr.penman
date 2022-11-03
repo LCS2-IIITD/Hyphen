@@ -1,0 +1,83 @@
+# ::snt that's just outstanding.
+# ::tokens ["that", "'s", "just", "outstanding", "."]
+# ::lemmas ["that", "be", "just", "outstanding", "."]
+(c1-0 / outstanding
+      :domain (c1-2 / that)
+      :mod (c1-1 / just))
+
+# ::snt it's a bag of combos q
+# ::tokens ["it", "'s", "a", "bag", "of", "combos", "q"]
+# ::lemmas ["it", "be", "a", "bag", "of", "combo", "q"]
+(c2-2 / bag
+      :consist-of (c2-0 / combos)
+      :domain (c2-1 / it))
+
+# ::snt The product placement implications are tremendous.
+# ::tokens ["The", "product", "placement", "implications", "are", "tremendous", "."]
+# ::lemmas ["the", "product", "placement", "implication", "be", "tremendous", "."]
+(c3-1 / tremendous
+      :domain (c3-3 / implicate-01
+                    :ARG1 (c3-0 / place-01
+                                :ARG1 (c3-2 / product))))
+
+# ::snt RAGE AGAINST THE MACHINE - KNOW YOUR ENEMY -DRUM COVER
+# ::tokens ["RAGE", "AGAINST", "THE", "MACHINE", "-", "KNOW", "YOUR", "ENEMY", "-DRUM", "COVER"]
+# ::lemmas ["RAGE", "AGAINST", "the", "MACHINE", "-", "know", "your", "ENEMY", "-drum", "COVER"]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / fight-01
+                  :ARG1 (c4-4 / mother))
+      :snt2 (c4-7 / know-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-3 / identity
+                              :poss c4-0)
+                  :mode imperative)
+      :snt3 (c4-6 / cover-02
+                  :ARG1 (c4-5 / drum)))
+
+# ::snt : Is that a bag of chips?! RT : May be the dopest photo of the year
+# ::tokens [":", "Is", "that", "a", "bag", "of", "chips", "?", "!", "RT", ":", "May", "be", "the", "dopest", "photo", "of", "the", "year"]
+# ::lemmas [":", "be", "that", "a", "bag", "of", "chip", "?", "!", "RT", ":", "may", "be", "the", "dop", "photo", "of", "the", "year"]
+(c5-2 / multi-sentence
+      :snt1 (c5-4 / bag
+                  :consist-of (c5-8 / chip)
+                  :domain (c5-11 / that)
+                  :polarity (c5-13 / amr-unknown))
+      :snt2 (c5-10 / say-01
+                   :ARG0 (c5-6 / publication
+                               :name (c5-5 / name
+                                           :op1 "RT"))
+                   :ARG1 (c5-12 / possible-01
+                                :ARG1 (c5-0 / have-degree-91
+                                            :ARG1 (c5-3 / photo
+                                                        :time (c5-1 / year))
+                                            :ARG2 (c5-7 / dopest)
+                                            :ARG3 (c5-9 / most)))))
+
+# ::snt : Is that a bag of chips?! RT : May be the dopest photo of the year
+# ::tokens [":", "Is", "that", "a", "bag", "of", "chips", "?", "!", "RT", ":", "May", "be", "the", "dopest", "photo", "of", "the", "year"]
+# ::lemmas [":", "be", "that", "a", "bag", "of", "chip", "?", "!", "RT", ":", "may", "be", "the", "dop", "photo", "of", "the", "year"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / bag
+                  :consist-of (c6-8 / chip)
+                  :domain (c6-11 / that)
+                  :polarity (c6-13 / amr-unknown))
+      :snt2 (c6-10 / say-01
+                   :ARG0 (c6-6 / publication
+                               :name (c6-5 / name
+                                           :op1 "RT"))
+                   :ARG1 (c6-12 / possible-01
+                                :ARG1 (c6-0 / have-degree-91
+                                            :ARG1 (c6-3 / photo
+                                                        :time (c6-1 / year))
+                                            :ARG2 (c6-7 / dopest)
+                                            :ARG3 (c6-9 / most)))))
+
+# ::snt Know your enemy
+# ::tokens ["Know", "your", "enemy"]
+# ::lemmas ["know", "your", "enemy"]
+(c7-4 / know-01
+      :ARG0 (c7-1 / you)
+      :ARG1 (c7-3 / person
+                  :ARG0-of (c7-0 / have-rel-role-91
+                                 :ARG1 c7-1
+                                 :ARG2 (c7-2 / enemy))))

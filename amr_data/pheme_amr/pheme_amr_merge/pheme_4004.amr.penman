@@ -1,0 +1,995 @@
+# ::subgraphs [["c1-3", "c1-10", "c1-15", "c1-11", "c1-12", "c1-9", "c1-14", "c1-5", "c1-13", "c1-2", "c1-0", "c1-4", "c1-8", "c1-16", "c1-1", "c1-6", "c1-7"], ["c2-5", "c2-3", "c2-2", "c2-7", "c2-0", "c2-8", "c2-4", "c2-1", "c2-6"], ["c3-3", "c3-9", "c3-0", "c3-10", "c3-8", "c3-4", "c3-2", "c3-1", "c3-5", "c3-7", "c3-6", "c3-11", "c3-12"], ["c4-2", "c4-0", "c4-11", "c4-8", "c4-10", "c4-13", "c4-1", "c4-9", "c4-3", "c4-4", "c4-5", "c4-12", "c4-6", "c4-7"], ["c5-2", "c5-7", "c5-1", "c5-0", "c5-8", "c5-3", "c5-6", "c5-4", "c5-5"], ["c6-2", "c6-8", "c6-7", "c6-1", "c6-5", "c6-3", "c6-4", "c6-0", "c6-6"], ["c7-2", "c7-9", "c7-4", "c7-8", "c7-7", "c7-10", "c7-12", "c7-14", "c7-15", "c7-11", "c7-16", "c7-1", "c7-13", "c7-5", "c7-6", "c7-0", "c7-3"], ["c8-1", "c8-5", "c8-4", "c8-7", "c8-2", "c8-8", "c8-3", "c8-6", "c8-9", "c8-0"], ["c9-1", "c9-2", "c9-0"], ["c10-6", "c10-4", "c10-1", "c10-0", "c10-5", "c10-3", "c10-2"], ["c11-1", "c11-14", "c11-9", "c11-0", "c11-7", "c11-6", "c11-3", "c11-8", "c11-13", "c11-4", "c11-12", "c11-5", "c11-10", "c11-11", "c11-15", "c11-2"], ["c12-2", "c12-0", "c12-4", "c12-6", "c12-3", "c12-7", "c12-5", "c12-1"], ["c13-2", "c13-9", "c13-11", "c13-10", "c13-7", "c13-15", "c13-0", "c13-12", "c13-13", "c13-1", "c13-3", "c13-14", "c13-8", "c13-4", "c13-5", "c13-6", "c13-16"], ["c14-1", "c14-2", "c14-3", "c14-0", "c14-4"], ["c15-9", "c15-1", "c15-5", "c15-2", "c15-4", "c15-8", "c15-3", "c15-7", "c15-0", "c15-6"], ["c16-1", "c16-7", "c16-2", "c16-6", "c16-4", "c16-5", "c16-3", "c16-0"], ["c17-11", "c17-8", "c17-4", "c17-7", "c17-5", "c17-10", "c17-1", "c17-3", "c17-9", "c17-2", "c17-6", "c17-0"], ["c18-3", "c18-7", "c18-5", "c18-6", "c18-2", "c18-4", "c18-1", "c18-0"], ["c19-9", "c19-0", "c19-12", "c19-1", "c19-3", "c19-10", "c19-8", "c19-7", "c19-2", "c19-13", "c19-5", "c19-4", "c19-11", "c19-6", "c19-14"], ["c20-1", "c20-0", "c20-2"], ["c21-2", "c21-8", "c21-3", "c21-6", "c21-7", "c21-4", "c21-1", "c21-0", "c21-9", "c21-10", "c21-14", "c21-11", "c21-5", "c21-13", "c21-12"], ["c22-3", "c22-0", "c22-8", "c22-14", "c22-4", "c22-7", "c22-12", "c22-10", "c22-15", "c22-5", "c22-1", "c22-6", "c22-11", "c22-9", "c22-2", "c22-13"], ["c23-3", "c23-7", "c23-4", "c23-2", "c23-6", "c23-8", "c23-1", "c23-9", "c23-12", "c23-5", "c23-10", "c23-0", "c23-11"], ["c24-3", "c24-1", "c24-2", "c24-0"], ["c25-8", "c25-6", "c25-5", "c25-3", "c25-1", "c25-7", "c25-4", "c25-0", "c25-2"], ["c26-4", "c26-3", "c26-1", "c26-2", "c26-0"], ["c27-0", "c27-20", "c27-4", "c27-8", "c27-5", "c27-13", "c27-9", "c27-15", "c27-16", "c27-2", "c27-17", "c27-18", "c27-3", "c27-12", "c27-7", "c27-19", "c27-10", "c27-1", "c27-11", "c27-14", "c27-6"], ["c28-2", "c28-1", "c28-0", "c28-10", "c28-5", "c28-6", "c28-7", "c28-3", "c28-8", "c28-9", "c28-4"], ["c29-7", "c29-4", "c29-13", "c29-0", "c29-1", "c29-3", "c29-8", "c29-9", "c29-12", "c29-2", "c29-11", "c29-6", "c29-5", "c29-10"], ["c30-3", "c30-4", "c30-7", "c30-0", "c30-8", "c30-6", "c30-5", "c30-9", "c30-1", "c30-2"], ["c31-2", "c31-7", "c31-9", "c31-0", "c31-6", "c31-14", "c31-10", "c31-8", "c31-3", "c31-11", "c31-15", "c31-13", "c31-16", "c31-1", "c31-12", "c31-4", "c31-5"], ["c32-6", "c32-4", "c32-3", "c32-5", "c32-0", "c32-2", "c32-1"], ["c33-10", "c33-8", "c33-3", "c33-5", "c33-9", "c33-0", "c33-6", "c33-7", "c33-1", "c33-2", "c33-4"], ["c34-8", "c34-11", "c34-9", "c34-2", "c34-6", "c34-13", "c34-12", "c34-5", "c34-4", "c34-1", "c34-7", "c34-10", "c34-0", "c34-3"], ["c35-2", "c35-0", "c35-8", "c35-3", "c35-4", "c35-1", "c35-7", "c35-5", "c35-6", "c35-9"], ["c36-9", "c36-1", "c36-3", "c36-7", "c36-6", "c36-0", "c36-8", "c36-4", "c36-5", "c36-2"], ["c37-2", "c37-9", "c37-1", "c37-10", "c37-13", "c37-5", "c37-4", "c37-12", "c37-7", "c37-8", "c37-3", "c37-6", "c37-11", "c37-0", "c37-14"], ["c38-3", "c38-8", "c38-11", "c38-10", "c38-14", "c38-2", "c38-0", "c38-15", "c38-9", "c38-4", "c38-5", "c38-1", "c38-6", "c38-13", "c38-12", "c38-7"], ["c39-13", "c39-4", "c39-9", "c39-1", "c39-0", "c39-7", "c39-3", "c39-8", "c39-5", "c39-14", "c39-10", "c39-2", "c39-6", "c39-12", "c39-11"], ["c40-2", "c40-15", "c40-5", "c40-8", "c40-0", "c40-4", "c40-16", "c40-14", "c40-9", "c40-11", "c40-12", "c40-6", "c40-1", "c40-3", "c40-13", "c40-10", "c40-7"], ["c41-0", "c41-4", "c41-6", "c41-2", "c41-7", "c41-3", "c41-1", "c41-5"], ["c42-1", "c42-6", "c42-7", "c42-4", "c42-3", "c42-10", "c42-9", "c42-0", "c42-5", "c42-8", "c42-2", "c42-11"], ["c43-12", "c43-7", "c43-6", "c43-2", "c43-8", "c43-10", "c43-5", "c43-0", "c43-1", "c43-9", "c43-4", "c43-3", "c43-11"], ["c44-1", "c44-0", "c44-2"], ["c45-3", "c45-7", "c45-1", "c45-4", "c45-8", "c45-9", "c45-0", "c45-2", "c45-6", "c45-5", "c45-11", "c45-10"], ["c46-1", "c46-0", "c46-2", "c46-3"], ["c47-7", "c47-9", "c47-6", "c47-2", "c47-4", "c47-1", "c47-5", "c47-8", "c47-0", "c47-3"], ["c48-0", "c48-2", "c48-1"], ["c49-2", "c49-11", "c49-9", "c49-7", "c49-12", "c49-1", "c49-0", "c49-4", "c49-5", "c49-6", "c49-3", "c49-10", "c49-8"], ["c50-8", "c50-6", "c50-7", "c50-1", "c50-3", "c50-0", "c50-10", "c50-9", "c50-11", "c50-4", "c50-2", "c50-5"]]
+(d / dummy
+   :COMMENT (c1-3 / multi
+                  :snt1 (c1-10 / person
+                               :ARG0-of (c1-15 / pilot
+                                               :ARG1 (c1-11 / drone
+                                                            :SAME c13-12))
+                               :mod (c1-12 / country
+                                           :name (c1-9 / name
+                                                       :op1 "Uk"
+                                                       :SAME c50-5
+                                                       :SAME c49-7
+                                                       :SAME c40-6
+                                                       :SAME c39-6
+                                                       :SAME c39-5
+                                                       :SAME c38-9
+                                                       :SAME c37-6
+                                                       :SAME c36-5
+                                                       :SAME c34-7
+                                                       :SAME c34-6
+                                                       :SAME c29-5
+                                                       :SAME c27-6
+                                                       :SAME c27-1
+                                                       :SAME c27-19
+                                                       :SAME c27-12
+                                                       :SAME c25-4
+                                                       :SAME c25-3
+                                                       :SAME c21-5
+                                                       :SAME c21-4
+                                                       :SAME c19-6
+                                                       :SAME c19-5
+                                                       :SAME c17-5
+                                                       :SAME c13-16
+                                                       :SAME c13-7
+                                                       :SAME c10-2
+                                                       :SAME c7-5
+                                                       :SAME c6-5
+                                                       :SAME c4-9
+                                                       :SAME c4-8
+                                                       :SAME c2-4)
+                                           :SAME c39-8
+                                           :SAME c19-11
+                                           :SAME c13-10)
+                               :ARG0-of (c1-14 / killle
+                                               :ARG1 (c1-5 / kid
+                                                           :mod (c1-13 / school)))
+                               :SAME c50-11
+                               :SAME c47-5
+                               :SAME c40-8
+                               :SAME c38-10
+                               :SAME c37-8
+                               :SAME c34-10
+                               :SAME c34-1
+                               :SAME c34-12
+                               :SAME c32-5
+                               :SAME c31-15
+                               :SAME c30-5
+                               :SAME c30-8
+                               :SAME c30-7
+                               :SAME c29-6
+                               :SAME c27-10
+                               :SAME c27-7
+                               :SAME c27-3
+                               :SAME c25-5
+                               :SAME c24-1
+                               :SAME c23-10
+                               :SAME c19-13
+                               :SAME c17-10
+                               :SAME c17-7
+                               :SAME c15-8
+                               :SAME c10-3
+                               :SAME c8-4
+                               :SAME c3-9)
+                  :snt2 (c1-2 / fund
+                              :ARG0 (c1-0 / you
+                                          :part (c1-4 / part
+                                                      :SAME c38-7)
+                                          :SAME c45-1
+                                          :SAME c36-0
+                                          :SAME c31-0
+                                          :SAME c30-1
+                                          :SAME c23-1
+                                          :SAME c20-0
+                                          :SAME c12-1
+                                          :SAME c11-15
+                                          :SAME c11-0
+                                          :SAME c6-0
+                                          :SAME c2-0
+                                          :COREF c2-0)
+                              :ARG1 (c1-8 / it
+                                          :SAME c37-4
+                                          :SAME c15-2
+                                          :SAME c13-5
+                                          :SAME c7-3
+                                          :SAME c7-4)
+                              :polarity (c1-16 / amr
+                                               :SAME c49-8
+                                               :SAME c49-12
+                                               :SAME c47-9
+                                               :SAME c41-1
+                                               :SAME c37-14
+                                               :SAME c36-2
+                                               :SAME c31-5
+                                               :SAME c28-10
+                                               :SAME c27-17
+                                               :SAME c27-8
+                                               :SAME c26-1
+                                               :SAME c20-2
+                                               :SAME c19-14)
+                              :condition (c1-1 / work
+                                               :ARG0 c1-0
+                                               :ARG1 c1-8))
+                  :snt3 (c1-6 / same
+                              :ARG1 (c1-7 / all
+                                          :SAME c14-4
+                                          :SAME c10-6)
+                              :SAME c50-10
+                              :SAME c49-10
+                              :SAME c21-12
+                              :SAME c13-4
+                              :SAME c4-13)
+                  :SAME c49-2
+                  :SAME c45-3
+                  :SAME c41-0
+                  :SAME c40-2
+                  :SAME c38-3
+                  :SAME c37-2
+                  :SAME c35-2
+                  :SAME c31-2
+                  :SAME c28-2
+                  :SAME c27-0
+                  :SAME c23-3
+                  :SAME c22-3
+                  :SAME c21-2
+                  :SAME c16-1
+                  :SAME c13-2
+                  :SAME c12-2
+                  :SAME c11-1
+                  :SAME c8-1
+                  :SAME c7-2
+                  :SAME c6-2
+                  :SAME c5-2
+                  :SAME c3-3)
+   :COMMENT (c2-5 / pleasure
+                  :poss (c2-3 / i
+                              :SAME c48-2
+                              :SAME c46-2
+                              :SAME c43-7
+                              :SAME c41-2
+                              :SAME c40-11
+                              :SAME c40-5
+                              :SAME c39-4
+                              :SAME c36-3
+                              :SAME c35-5
+                              :SAME c33-3
+                              :SAME c32-4
+                              :SAME c31-6
+                              :SAME c29-4
+                              :SAME c22-7
+                              :SAME c21-3
+                              :SAME c16-4
+                              :SAME c12-4
+                              :SAME c10-1
+                              :SAME c9-2
+                              :SAME c3-8
+                              :COREF c36-0
+                              :COREF c23-1
+                              :COREF c16-4
+                              :COREF c12-4
+                              :COREF c10-1
+                              :COREF c9-2
+                              :COREF c3-8)
+                  :concession (c2-2 / even
+                                    :op1 (c2-7 / support
+                                               :ARG0 (c2-0 / you)
+                                               :ARG1 (c2-8 / team
+                                                           :name (c2-4 / name
+                                                                       :op1 "Chelsea")
+                                                           :SAME c40-12)
+                                               :ARG2-of (c2-1 / laugh
+                                                              :ARG0 c2-3
+                                                              :manner (c2-6 / loud)
+                                                              :SAME c42-2
+                                                              :SAME c35-1)
+                                               :SAME c50-4)))
+   :COMMENT (c3-3 / multi
+                  :snt1 (c3-9 / person
+                              :mod (c3-0 / human
+                                         :SAME c29-0)
+                              :mod (c3-10 / devout)
+                              :domain (c3-8 / i)
+                              :mod (c3-4 / by-the
+                                         :SAME c35-3))
+                  :snt2 (c3-2 / look-out
+                              :ARG0 (c3-1 / we
+                                          :SAME c38-1
+                                          :SAME c28-7
+                                          :SAME c28-0
+                                          :SAME c19-1
+                                          :SAME c13-0)
+                              :ARG1 (c3-5 / other
+                                          :mod (c3-7 / each
+                                                     :SAME c5-5)
+                                          :SAME c5-4
+                                          :COREF c5-4)
+                              :topic (c3-6 / exist
+                                           :ARG1 (c3-11 / brief)
+                                           :mod (c3-12 / this
+                                                       :SAME c37-13
+                                                       :SAME c35-8
+                                                       :SAME c33-4
+                                                       :SAME c31-12
+                                                       :SAME c31-14
+                                                       :SAME c22-14))
+                              :mode imperative))
+   :COMMENT (c4-2 / fortunate
+                  :ARG2 (c4-0 / have
+                              :ARG0 (c4-11 / religious
+                                           :name (c4-8 / name
+                                                       :op1 "Islam")
+                                           :SAME c37-3
+                                           :SAME c27-14
+                                           :SAME c21-7
+                                           :SAME c7-13)
+                              :ARG1 (c4-10 / problem
+                                           :ARG1-of (c4-13 / same
+                                                           :ARG2 (c4-1 / world
+                                                                       :name (c4-9 / name
+                                                                                   :op1 "West"))
+                                                           :ARG3 (c4-3 / many
+                                                                       :ARG0-of (c4-4 / understand
+                                                                                      :degree (c4-5 / little)
+                                                                                      :SAME c44-2
+                                                                                      :SAME c30-4
+                                                                                      :SAME c19-3
+                                                                                      :SAME c11-2)
+                                                                       :ARG1-of (c4-12 / manipulate
+                                                                                       :ARG0 (c4-6 / man
+                                                                                                   :mod (c4-7 / evil
+                                                                                                              :SAME c17-3)
+                                                                                                   :SAME c46-1
+                                                                                                   :SAME c27-13)
+                                                                                       :SAME c19-2)))
+                                           :SAME c34-8)
+                              :SAME c27-9)
+                  :polarity -
+                  :SAME c8-0)
+   :COMMENT (c5-2 / multi
+                  :snt1 (c5-7 / murder
+                              :domain (c5-1 / murder)
+                              :SAME c26-0
+                              :SAME c6-6
+                              :SAME c5-1)
+                  :snt2 (c5-0 / have-degree
+                              :ARG1 (c5-8 / they
+                                          :SAME c37-11
+                                          :SAME c33-7
+                                          :SAME c15-7)
+                              :ARG2 (c5-3 / bad
+                                          :ARG1 c5-8
+                                          :SAME c39-1
+                                          :SAME c6-3)
+                              :ARG3 (c5-6 / equal
+                                          :SAME c22-5
+                                          :SAME c18-3)
+                              :ARG4 (c5-4 / other
+                                          :mod (c5-5 / each))
+                              :SAME c43-0
+                              :SAME c42-0
+                              :SAME c22-0))
+   :COMMENT (c6-2 / multi
+                  :snt1 (c6-8 / translate
+                              :ARG1 (c6-7 / that
+                                          :SAME c47-8
+                                          :SAME c45-9
+                                          :SAME c41-6
+                                          :SAME c38-12
+                                          :SAME c38-14
+                                          :SAME c33-9
+                                          :SAME c22-13
+                                          :SAME c10-5
+                                          :SAME c8-6
+                                          :SAME c8-8
+                                          :SAME c7-11
+                                          :COREF c41-6)
+                              :ARG3 (c6-1 / language
+                                          :name (c6-5 / name
+                                                      :op1 "Hebrew"))
+                              :ARG1-of (c6-3 / bad))
+                  :snt2 (c6-4 / obligate
+                              :ARG1 (c6-0 / you
+                                          :COREF c30-1)
+                              :ARG2 (c6-6 / murder
+                                          :ARG0 c6-0
+                                          :polarity -
+                                          :COREF c7-4)))
+   :COMMENT (c7-2 / multi
+                  :snt1 (c7-9 / do
+                              :ARG0 (c7-4 / it)
+                              :SAME c38-11
+                              :SAME c33-5
+                              :SAME c25-0
+                              :SAME c17-8
+                              :SAME c15-0
+                              :SAME c15-5
+                              :SAME c8-5)
+                  :snt2 (c7-8 / contrast
+                              :ARG2 (c7-7 / care
+                                          :ARG0 (c7-10 / idiot
+                                                       :ARG0-of (c7-12 / commit
+                                                                       :ARG1 (c7-14 / terrorism
+                                                                                    :mod (c7-15 / such)))
+                                                       :SAME c8-3)
+                                          :ARG1 (c7-11 / that
+                                                       :COREF c8-8)
+                                          :polarity -
+                                          :SAME c7-1)
+                              :SAME c50-8
+                              :SAME c47-7
+                              :SAME c43-10
+                              :SAME c27-20
+                              :SAME c19-9)
+                  :snt3 (c7-16 / cause
+                               :ARG1 (c7-1 / care
+                                           :ARG0 c7-10
+                                           :ARG1 (c7-13 / religious
+                                                        :name (c7-5 / name
+                                                                    :op1 "Islam")))
+                               :SAME c43-9
+                               :SAME c19-8)
+                  :snt4 (c7-6 / mask
+                              :mod (c7-0 / just
+                                         :SAME c47-0
+                                         :SAME c45-10
+                                         :SAME c45-0
+                                         :SAME c22-1)
+                              :domain (c7-3 / it)))
+   :COMMENT (c8-1 / multi
+                  :snt1 (c8-5 / do
+                              :ARG0 (c8-4 / person
+                                          :ARG1-of (c8-7 / sick)
+                                          :mod (c8-2 / only
+                                                     :SAME c47-4))
+                              :ARG1 (c8-8 / that))
+                  :snt2 (c8-3 / idiot
+                              :domain (c8-6 / that)
+                              :ARG1-of (c8-9 / publicize
+                                             :ARG2-of (c8-0 / fortunate
+                                                            :polarity -))))
+   :COMMENT (c9-1 / think
+                  :ARG0 (c9-2 / i)
+                  :ARG1 (c9-0 / moderate
+                              :ARG1 c9-2
+                              :SAME c43-2)
+                  :SAME c39-13)
+   :COMMENT (c10-6 / all
+                   :ARG1-of (c10-4 / say
+                                   :ARG0 (c10-1 / i)
+                                   :ARG3 (c10-0 / joke
+                                                :mod (c10-5 / that))
+                                   :SAME c34-9
+                                   :SAME c32-3
+                                   :SAME c32-6
+                                   :SAME c16-6)
+                   :domain (c10-3 / person
+                                  :name (c10-2 / name
+                                               :op1 "Mae"
+                                               :op2 "West")))
+   :COMMENT (c11-1 / multi
+                   :snt1 (c11-14 / and
+                                 :op1 (c11-9 / read
+                                             :ARG0 (c11-0 / you
+                                                          :COREF c12-1)
+                                             :ARG1 (c11-7 / verse
+                                                          :time (c11-6 / and
+                                                                       :op1 (c11-3 / before)
+                                                                       :op2 (c11-8 / after
+                                                                                   :SAME c49-5))
+                                                          :SAME c11-4)
+                                             :mode imperative
+                                             :polite +
+                                             :SAME c37-5)
+                                 :op2 (c11-13 / take
+                                              :ARG0 c11-0
+                                              :ARG1 (c11-4 / verse
+                                                           :ARG1-of (c11-12 / single)
+                                                           :quant 1)
+                                              :ARG2 (c11-5 / out
+                                                           :ARG2 (c11-10 / context))
+                                              :mode imperative
+                                              :polite +)
+                                 :SAME c41-7
+                                 :SAME c40-14
+                                 :SAME c39-14
+                                 :SAME c36-9
+                                 :SAME c34-4
+                                 :SAME c33-10
+                                 :SAME c29-13
+                                 :SAME c28-6
+                                 :SAME c26-4
+                                 :SAME c25-8
+                                 :SAME c24-3
+                                 :SAME c17-4
+                                 :SAME c17-11
+                                 :SAME c15-1
+                                 :SAME c15-9
+                                 :SAME c11-6)
+                   :snt2 (c11-11 / thank
+                                 :ARG1 (c11-15 / you)
+                                 :ARG2 (c11-2 / understand
+                                              :ARG0 c11-15)
+                                 :SAME c40-15
+                                 :SAME c12-5))
+   :COMMENT (c12-2 / multi
+                   :snt1 (c12-0 / hope
+                                :ARG0 (c12-4 / i)
+                                :ARG1 (c12-6 / so)
+                                :manner (c12-3 / sincere)
+                                :mod (c12-7 / too)
+                                :SAME c33-0)
+                   :snt2 (c12-5 / thank
+                                :ARG0 c12-4
+                                :ARG1 (c12-1 / you)))
+   :COMMENT (c13-2 / multi
+                   :snt1 (c13-9 / place
+                                :ARG0 (c13-11 / child
+                                              :mod (c13-10 / country
+                                                           :name (c13-7 / name
+                                                                        :op1 "Pakistan"))
+                                              :ARG1-of (c13-15 / strike
+                                                               :ARG0 (c13-0 / we
+                                                                            :COREF c38-1
+                                                                            :COREF c28-0
+                                                                            :COREF c19-1)
+                                                               :instrument (c13-12 / drone))
+                                              :ARG0-of (c13-13 / regard
+                                                               :ARG1 (c13-1 / life)
+                                                               :mod (c13-3 / economy
+                                                                           :mod (c13-14 / macro))))
+                                :ARG1 (c13-8 / value
+                                             :ARG1 c13-11
+                                             :ARG1-of (c13-4 / same))
+                                :ARG2 (c13-5 / it
+                                             :COREF c15-2))
+                   :snt2 (c13-6 / water
+                                :name (c13-16 / name
+                                              :op1 "AKA")))
+   :COMMENT (c14-1 / boy
+                   :mod (c14-2 / posh)
+                   :ARG1-of (c14-3 / typical)
+                   :ARG0-of (c14-0 / wind
+                                   :mod (c14-4 / all)
+                                   :polarity -)
+                   :COREF c15-7)
+   :COMMENT (c15-9 / and
+                   :op2 (c15-1 / and
+                               :op1 (c15-5 / do
+                                           :ARG1 (c15-2 / it)
+                                           :purpose (c15-4 / protect
+                                                           :ARG1 (c15-8 / person
+                                                                        :ARG1-of (c15-3 / victimize
+                                                                                        :ARG0 (c15-7 / they)))))
+                               :op2 (c15-0 / do
+                                           :ARG1 c15-2
+                                           :purpose (c15-6 / avenge
+                                                           :ARG0 c15-7)
+                                           :polarity -)))
+   :COMMENT (c16-1 / multi
+                   :snt1 (c16-7 / terrible
+                                :ARG1 (c16-2 / both
+                                             :SAME c46-3)
+                                :SAME c16-5)
+                   :snt2 (c16-6 / say
+                                :ARG0 (c16-4 / i)
+                                :ARG1 (c16-5 / terrible
+                                             :ARG1 (c16-3 / one)
+                                             :mod (c16-0 / less
+                                                         :SAME c43-1))))
+   :COMMENT (c17-11 / and
+                    :op1 (c17-8 / do
+                                :ARG0 (c17-4 / and
+                                             :op1 (c17-7 / person
+                                                         :name (c17-5 / name
+                                                                      :op1 "Hitler"))
+                                             :op2 (c17-10 / person
+                                                          :ARG0-of (c17-1 / follow
+                                                                          :ARG1 c17-7
+                                                                          :SAME c47-1
+                                                                          :SAME c24-2)))
+                                :ARG1 (c17-3 / evil))
+                    :op2 (c17-9 / recommend
+                                :ARG1 (c17-2 / punish
+                                             :ARG1 c17-4
+                                             :mod (c17-6 / alone)
+                                             :SAME c41-3
+                                             :SAME c26-2)
+                                :SAME c37-9
+                                :SAME c26-3)
+                    :mod (c17-0 / well
+                                :SAME c45-2
+                                :SAME c32-1))
+   :COMMENT (c18-3 / equal
+                   :ARG1 (c18-7 / get
+                                :ARG0 (c18-5 / violence
+                                             :mod (c18-6 / random
+                                                         :SAME c18-4)
+                                             :SAME c22-8
+                                             :SAME c18-0
+                                             :SAME c18-2
+                                             :COREF c22-8)
+                                :ARG1 (c18-2 / violence
+                                             :mod (c18-4 / random)))
+                   :ARG2 (c18-1 / escelate
+                                :ARG1 (c18-0 / violence)))
+   :COMMENT (c19-9 / contrast
+                   :ARG2 (c19-0 / have-condition
+                                :ARG2 (c19-12 / try
+                                              :ARG0 (c19-1 / we)
+                                              :ARG1 (c19-3 / understand
+                                                           :ARG0 c19-1
+                                                           :ARG1 (c19-10 / thing
+                                                                         :ARG0-of (c19-8 / cause
+                                                                                         :ARG1 (c19-7 / possible
+                                                                                                      :ARG1 (c19-2 / manipulate
+                                                                                                                   :ARG0 (c19-13 / person
+                                                                                                                                 :name (c19-5 / name
+                                                                                                                                              :op1 "Hitler"))
+                                                                                                                   :ARG1 (c19-4 / people
+                                                                                                                                :mod (c19-11 / country
+                                                                                                                                             :name (c19-6 / name
+                                                                                                                                                          :op1 "Germany"))))
+                                                                                                      :SAME c50-6
+                                                                                                      :SAME c38-4
+                                                                                                      :SAME c31-8))
+                                                                         :SAME c36-7
+                                                                         :SAME c34-11
+                                                                         :SAME c21-13))
+                                              :polarity (c19-14 / amr)
+                                              :SAME c44-0)))
+   :COMMENT (c20-1 / know
+                   :ARG0 (c20-0 / you)
+                   :polarity (c20-2 / amr)
+                   :polarity -)
+   :COMMENT (c21-2 / multi
+                   :snt1 (c21-8 / chat
+                                :ARG0 (c21-3 / i
+                                             :COREF c22-7)
+                                :ARG2 (c21-6 / priest
+                                             :mod (c21-7 / religious
+                                                         :name (c21-4 / name
+                                                                      :op1 "Irish"
+                                                                      :op2 "Catholic")))
+                                :ARG1-of (c21-1 / long)
+                                :time (c21-0 / high
+                                             :ARG1 (c21-9 / in-trouble))
+                                :frequency 1)
+                   :snt2 (c21-10 / condemn
+                                 :ARG0 (c21-14 / he
+                                               :SAME c49-0
+                                               :SAME c39-0
+                                               :SAME c29-1
+                                               :SAME c24-0
+                                               :COREF c49-0
+                                               :COREF c39-0
+                                               :COREF c29-1
+                                               :COREF c24-0)
+                                 :ARG1 (c21-11 / military
+                                               :name (c21-5 / name
+                                                            :op1 "IRA")))
+                   :snt3 (c21-13 / thing
+                                 :ARG1-of (c21-12 / same)))
+   :COMMENT (c22-3 / multi
+                   :snt1 (c22-0 / have-degree
+                                :ARG1 (c22-8 / violence
+                                             :mod (c22-14 / this)
+                                             :ARG1-of (c22-4 / opine
+                                                             :ARG0 (c22-7 / i)))
+                                :ARG2 (c22-12 / inherent
+                                              :beneficiary (c22-10 / religion
+                                                                   :mod (c22-15 / any
+                                                                                :SAME c31-16)))
+                                :ARG3 (c22-5 / equal
+                                             :mod (c22-1 / just))
+                                :ARG4 (c22-6 / act
+                                             :purpose (c22-11 / charity)))
+                   :snt2 (c22-9 / prove
+                                :ARG0 (c22-2 / history
+                                             :SAME c50-0)
+                                :ARG1 (c22-13 / that)))
+   :COMMENT (c23-3 / multi
+                   :snt1 (c23-7 / die
+                                :polarity -
+                                :SAME c23-2)
+                   :snt2 (c23-4 / end
+                                :ARG1 (c23-2 / die)
+                                :mod (c23-6 / proper))
+                   :snt3 (c23-8 / remember
+                                :ARG0 (c23-1 / you)
+                                :ARG1 (c23-9 / magazine
+                                             :ARG1-of (c23-12 / dedicate
+                                                              :ARG2 (c23-5 / ridicule
+                                                                           :ARG1 (c23-10 / person
+                                                                                         :ARG0-of (c23-0 / have-rel-role
+                                                                                                         :ARG1 c23-1
+                                                                                                         :ARG2 nan
+                                                                                                         :SAME c40-0
+                                                                                                         :SAME c34-0
+                                                                                                         :SAME c32-0
+                                                                                                         :SAME c30-9
+                                                                                                         :SAME c30-0)))
+                                                              :location (c23-11 / heaven))
+                                             :SAME c43-3
+                                             :COREF c43-3)
+                                :mode imperative))
+   :COMMENT (c24-3 / and
+                   :op2 (c24-1 / person
+                               :ARG0-of (c24-2 / follow
+                                               :ARG1 (c24-0 / he))))
+   :COMMENT (c25-8 / and
+                   :op1 (c25-6 / disgrace
+                               :op2 (c25-5 / person
+                                           :name (c25-3 / name
+                                                        :op1 "amp"))
+                               :ARG1 c25-8)
+                   :op2 (c25-1 / massacre
+                               :instrument (c25-7 / product
+                                                  :name (c25-4 / name
+                                                               :op1 "Kalashnikov"))
+                               :ARG1 c25-8)
+                   :ARG1-of (c25-0 / do
+                                   :manner (c25-2 / exact)
+                                   :ARG0 c25-8))
+   :COMMENT (c26-4 / and
+                   :op2 (c26-3 / recommend
+                               :ARG1 (c26-1 / amr
+                                            :ARG2-of (c26-2 / punish
+                                                            :ARG3 (c26-0 / murder)))))
+   :COMMENT (c27-0 / multi
+                   :snt1 (c27-20 / contrast
+                                 :ARG2 (c27-4 / dare
+                                              :ARG0 (c27-8 / amr)
+                                              :ARG2 (c27-5 / criticize
+                                                           :ARG0 c27-8
+                                                           :ARG1 (c27-13 / man
+                                                                         :ARG0-of (c27-9 / have
+                                                                                         :ARG1 (c27-15 / gun))))))
+                   :snt2 (c27-16 / win
+                                 :mod (c27-2 / violent)
+                                 :polarity (c27-17 / amr)
+                                 :condition (c27-18 / or
+                                                    :op1 (c27-3 / person
+                                                                :name (c27-12 / name
+                                                                              :op1 "Che"))
+                                                    :op2 (c27-7 / person
+                                                                :name (c27-19 / name
+                                                                              :op1 "Mao"))
+                                                    :op3 (c27-10 / person
+                                                                 :name (c27-1 / name
+                                                                              :op1 "Hitler"))
+                                                    :op4 (c27-11 / extremist
+                                                                 :mod (c27-14 / religious
+                                                                              :name (c27-6 / name
+                                                                                           :op1 "Muslim")))
+                                                    :SAME c35-4
+                                                    :SAME c31-3)
+                                 :SAME c50-1
+                                 :SAME c49-1))
+   :COMMENT (c28-2 / multi
+                   :snt1 (c28-1 / look
+                                :ARG0 (c28-0 / we)
+                                :ARG1 (c28-10 / amr)
+                                :ARG2 (c28-5 / outsider))
+                   :snt2 (c28-6 / and
+                                :op2 (c28-7 / we
+                                            :quant (c28-3 / few)
+                                            :ARG0-of (c28-8 / fight
+                                                            :ARG2 (c28-9 / peace)
+                                                            :medium (c28-4 / online)))))
+   :COMMENT (c29-7 / doubt
+                   :ARG0 (c29-4 / i
+                                :COREF c35-5
+                                :COREF c33-3
+                                :COREF c32-4)
+                   :ARG1 (c29-13 / and
+                                 :op1 (c29-0 / human
+                                             :domain (c29-1 / he))
+                                 :op2 (c29-3 / amp
+                                             :domain c29-1)
+                                 :op3 (c29-8 / character
+                                             :mod (c29-9 / cartoon)
+                                             :mod (c29-12 / sort
+                                                          :mod (c29-2 / some))
+                                             :ARG1-of (c29-11 / control
+                                                              :ARG0 (c29-6 / person
+                                                                           :name (c29-5 / name
+                                                                                        :op1 "Cameron"))
+                                                              :SAME c47-6)
+                                             :domain c29-1))
+                   :ARG1-of (c29-10 / real))
+   :COMMENT (c30-3 / make
+                   :ARG0 (c30-4 / understand
+                                :ARG1 (c30-7 / person
+                                             :ARG0-of (c30-0 / have-rel-role
+                                                             :ARG1 (c30-8 / person)
+                                                             :ARG2 (c30-6 / enemy))))
+                   :ARG1 (c30-5 / person
+                                :ARG0-of (c30-9 / have-rel-role
+                                                :ARG1 (c30-1 / you)
+                                                :ARG2 (c30-2 / friend))
+                                :domain c30-8)
+                   :polarity -
+                   :SAME c45-6)
+   :COMMENT (c31-2 / multi
+                   :snt1 (c31-7 / no)
+                   :snt2 (c31-9 / differ
+                                :ARG0 (c31-0 / you)
+                                :ARG1 (c31-6 / i)
+                                :ARG2 (c31-14 / this)
+                                :ARG1-of (c31-10 / complete))
+                   :snt3 (c31-8 / possible
+                                :ARG1 (c31-3 / or
+                                             :op1 (c31-11 / condone
+                                                          :ARG0 (c31-15 / person
+                                                                        :mod (c31-13 / sane)
+                                                                        :mod (c31-16 / any))
+                                                          :ARG1 (c31-1 / outrage
+                                                                       :mod (c31-12 / this)))
+                                             :op2 (c31-4 / sympathize
+                                                         :ARG0 c31-15
+                                                         :SAME c43-6))
+                                :manner (c31-5 / amr)))
+   :COMMENT (c32-6 / say
+                   :ARG0 (c32-4 / i)
+                   :ARG1 (c32-3 / say
+                                :ARG0 c32-4
+                                :ARG2 (c32-5 / person
+                                             :ARG0-of (c32-0 / have-rel-role
+                                                             :ARG1 c32-4
+                                                             :ARG2 (c32-2 / bro))
+                                             :COREF c37-11
+                                             :COREF c33-9
+                                             :COREF c33-7))
+                   :ARG1-of (c32-1 / well))
+   :COMMENT (c33-10 / and
+                    :op1 (c33-8 / sorry
+                                :ARG1 (c33-3 / i)
+                                :ARG2 (c33-5 / do
+                                             :ARG0 c33-3
+                                             :ARG1 (c33-9 / that)))
+                    :op2 (c33-0 / hope
+                                :ARG0 c33-3
+                                :ARG1 (c33-6 / improve
+                                             :ARG1 (c33-7 / they)
+                                             :location (c33-1 / league)
+                                             :time (c33-2 / season
+                                                          :mod (c33-4 / this)
+                                                          :SAME c40-13))))
+   :COMMENT (c34-8 / problem
+                   :domain (c34-11 / thing
+                                   :ARG1-of (c34-9 / say
+                                                   :ARG0 (c34-2 / book
+                                                                :name (c34-6 / name
+                                                                             :op1 "Quran"))
+                                                   :mod (c34-13 / also))
+                                   :topic (c34-12 / person
+                                                  :ARG0-of (c34-5 / insult
+                                                                  :ARG1 (c34-4 / and
+                                                                               :op1 (c34-1 / person
+                                                                                           :name (c34-7 / name
+                                                                                                        :op1 "Allah"))
+                                                                               :op2 (c34-10 / person
+                                                                                            :ARG0-of (c34-0 / have-rel-role
+                                                                                                            :ARG2 (c34-3 / prophet
+                                                                                                                         :SAME c43-11))))))))
+   :COMMENT (c35-2 / multi
+                   :snt1 (c35-0 / justify
+                                :ARG1 (c35-8 / this)
+                                :mod (c35-3 / by-the)
+                                :polarity -)
+                   :snt2 (c35-4 / or
+                                :op1 (c35-1 / laugh
+                                            :ARG2 (c35-7 / teach
+                                                         :ARG0 (c35-5 / i)))
+                                :op2 (c35-6 / ignore
+                                            :ARG1 c35-7)
+                                :time (c35-9 / always)))
+   :COMMENT (c36-9 / and
+                   :op1 (c36-1 / love
+                               :ARG0 (c36-3 / i
+                                            :COREF c48-2
+                                            :COREF c46-2
+                                            :COREF c43-7
+                                            :COREF c41-2
+                                            :COREF c40-5
+                                            :COREF c40-11
+                                            :COREF c39-4)
+                               :ARG1 (c36-7 / thing
+                                            :ARG1-of (c36-6 / post
+                                                            :ARG0 (c36-0 / you)
+                                                            :SAME c36-8)))
+                   :op2 (c36-8 / post
+                               :ARG0 c36-0
+                               :ARG2 (c36-4 / network
+                                            :name (c36-5 / name
+                                                         :op1 "Proximity"
+                                                         :op2 "Based"
+                                                         :op3 "Travel"
+                                                         :op4 "Network"))
+                               :polarity -)
+                   :polarity (c36-2 / amr))
+   :COMMENT (c37-2 / multi
+                   :snt1 (c37-9 / recommend
+                                :ARG1 (c37-1 / learn
+                                             :ARG0 (c37-10 / chap
+                                                           :mod (c37-13 / this))
+                                             :ARG1 (c37-5 / read
+                                                          :ARG0 c37-10
+                                                          :ARG1 (c37-4 / it))
+                                             :time (c37-12 / then)))
+                   :snt2 (c37-7 / view
+                                :ARG0 (c37-8 / person
+                                             :mod (c37-3 / religious
+                                                         :name (c37-6 / name
+                                                                      :op1 "Islam")))
+                                :ARG1 (c37-11 / they)
+                                :ARG2 (c37-0 / heretic)
+                                :polarity (c37-14 / amr)
+                                :mod c37-12))
+   :COMMENT (c38-3 / multi
+                   :snt1 (c38-8 / easy
+                                :ARG1 (c38-11 / do
+                                              :ARG2 (c38-10 / person
+                                                            :mod (c38-14 / that)
+                                                            :ARG0-of (c38-2 / live
+                                                                            :location (c38-0 / hell
+                                                                                             :location (c38-15 / planet
+                                                                                                               :name (c38-9 / name
+                                                                                                                            :op1 "Earth")))))))
+                   :snt2 (c38-4 / possible
+                                :ARG1 (c38-5 / blame
+                                             :ARG0 (c38-1 / we)
+                                             :ARG1 (c38-6 / exploit
+                                                          :manner (c38-13 / politics))
+                                             :ARG2 (c38-12 / that)
+                                             :degree (c38-7 / part))))
+   :COMMENT (c39-13 / think
+                    :ARG0 (c39-4 / i)
+                    :ARG1 (c39-9 / cop
+                                 :ARG1-of (c39-1 / bad)
+                                 :domain (c39-0 / he)
+                                 :part-of (c39-7 / plan
+                                                 :ARG0 (c39-3 / establish
+                                                              :ARG1 (c39-8 / country
+                                                                           :name (c39-5 / name
+                                                                                        :op1 "Uk")))
+                                                 :ARG1 (c39-14 / and
+                                                               :op1 (c39-10 / renegotiate
+                                                                            :ARG0 c39-3
+                                                                            :ARG1 (c39-2 / organization
+                                                                                         :name (c39-6 / name
+                                                                                                      :op1 "EU")))
+                                                               :op2 (c39-12 / stay-on
+                                                                            :ARG1 c39-0))
+                                                 :mod (c39-11 / grand))))
+   :COMMENT (c40-2 / multi
+                   :snt1 (c40-15 / thank
+                                 :ARG0 (c40-5 / i)
+                                 :ARG1 (c40-8 / person
+                                              :ARG0-of (c40-0 / have-rel-role
+                                                              :ARG1 c40-5
+                                                              :ARG2 (c40-4 / brother)))
+                                 :mod (c40-16 / haha
+                                              :mode expressive))
+                   :snt2 (c40-14 / and
+                                 :op1 (c40-9 / respect
+                                             :ARG0 (c40-11 / i)
+                                             :ARG1 (c40-12 / team
+                                                           :name (c40-6 / name
+                                                                        :op1 "LFC"))
+                                             :SAME c46-0)
+                                 :op2 (c40-1 / feel
+                                             :ARG0 c40-11
+                                             :ARG1 (c40-3 / lucky
+                                                          :domain c40-12
+                                                          :time (c40-13 / season
+                                                                        :mod (c40-10 / last))
+                                                          :degree (c40-7 / very)
+                                                          :polarity -))))
+   :COMMENT (c41-0 / multi
+                   :snt1 (c41-4 / depend
+                                :ARG0 (c41-6 / that)
+                                :ARG1 (c41-2 / i)
+                                :polarity -)
+                   :snt2 (c41-7 / and
+                                :op2 (c41-3 / punish
+                                            :ARG2 (c41-1 / amr)
+                                            :ARG1-of (c41-5 / take-out))))
+   :COMMENT (c42-1 / way
+                   :ARG1-of (c42-6 / include
+                                   :ARG2 (c42-7 / way
+                                                :manner-of (c42-4 / open
+                                                                  :ARG1 (c42-3 / mind
+                                                                               :ARG1-of (c42-10 / close)
+                                                                               :SAME c47-2)
+                                                                  :ARG3 (c42-9 / reason
+                                                                               :SAME c50-9))
+                                                :ARG1-of (c42-0 / have-degree
+                                                                :ARG2 (c42-5 / effective
+                                                                             :ARG1 c42-7)
+                                                                :ARG3 (c42-8 / most
+                                                                             :SAME c43-8))))
+                   :domain (c42-2 / laugh
+                                  :manner (c42-11 / consistent
+                                                  :polarity -))
+                   :SAME c42-7)
+   :COMMENT (c43-12 / suspect
+                    :ARG0 (c43-7 / i)
+                    :ARG1 (c43-6 / sympathize
+                                 :ARG0 (c43-2 / moderate
+                                              :quant (c43-8 / most)
+                                              :ARG1-of (c43-10 / contrast
+                                                               :ARG2 (c43-5 / oppose
+                                                                            :ARG0 c43-2)))
+                                 :ARG2-of (c43-0 / have-degree
+                                                 :ARG1 c43-2
+                                                 :ARG3 (c43-1 / less)))
+                    :ARG1-of (c43-9 / cause
+                                    :ARG0 (c43-4 / bully
+                                                 :ARG0 (c43-3 / magazine)
+                                                 :ARG1 (c43-11 / prophet))))
+   :COMMENT (c44-1 / condoning
+                   :ARG1 (c44-0 / try
+                                :ARG1 (c44-2 / understand))
+                   :polarity -)
+   :COMMENT (c45-3 / multi
+                   :snt1 (c45-7 / convince
+                                :ARG0 (c45-1 / you)
+                                :ARG1 c45-1
+                                :ARG2 (c45-4 / innocent
+                                             :ARG1 (c45-8 / soul
+                                                          :mod (c45-9 / that))
+                                             :polarity -)
+                                :mod (c45-0 / just)
+                                :mod (c45-2 / well))
+                   :snt2 (c45-6 / make
+                                :ARG1 (c45-5 / kill
+                                             :mod (c45-11 / again
+                                                          :mod (c45-10 / just)))))
+   :COMMENT (c46-1 / man
+                   :ARG1-of (c46-0 / respect
+                                   :ARG0 (c46-2 / i))
+                   :mod (c46-3 / both))
+   :COMMENT (c47-7 / contrast
+                   :polarity (c47-9 / amr)
+                   :ARG1 (c47-6 / control
+                                :ARG1 (c47-2 / mind)
+                                :mod (c47-4 / only))
+                   :ARG2 (c47-1 / follow
+                                :ARG0 (c47-5 / person
+                                             :mod (c47-8 / that)
+                                             :mod (c47-0 / just))
+                                :ARG1 (c47-3 / order)))
+   :COMMENT (c48-0 / see
+                   :ARG0 (c48-2 / i)
+                   :ARG1 (c48-1 / relevant)
+                   :polarity -)
+   :COMMENT (c49-2 / multi
+                   :snt1 (c49-11 / treaty
+                                 :topic (c49-9 / city
+                                               :name (c49-7 / name
+                                                            :op1 "Versailles"))
+                                 :polarity (c49-12 / amr))
+                   :snt2 (c49-1 / win
+                                :ARG0 (c49-0 / he)
+                                :ARG2 (c49-4 / elect
+                                             :SAME c50-3)
+                                :concession (c49-5 / after))
+                   :snt3 (c49-6 / infer
+                                :ARG1 (c49-3 / outcome
+                                             :ARG1-of (c49-10 / same)
+                                             :polarity (c49-8 / amr))))
+   :COMMENT (c50-8 / contrast
+                   :ARG1 (c50-6 / possible
+                                :ARG1 (c50-7 / debatable
+                                             :domain (c50-1 / win
+                                                            :ARG2 (c50-3 / elect)))
+                                :polarity -)
+                   :ARG2 (c50-0 / history
+                                :ARG1-of (c50-10 / same
+                                                 :ARG2 (c50-9 / reason
+                                                              :poss (c50-11 / person
+                                                                            :ARG0-of (c50-4 / support
+                                                                                            :ARG1 (c50-2 / political
+                                                                                                         :name (c50-5 / name
+                                                                                                                      :op1 "UKIP")))))))))

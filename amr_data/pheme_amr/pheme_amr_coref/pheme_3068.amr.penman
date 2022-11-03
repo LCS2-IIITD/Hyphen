@@ -1,0 +1,264 @@
+# ::snt Absolutely.
+# ::tokens ["Absolutely", "."]
+# ::lemmas ["absolutely", "."]
+(c1-0 / absolute)
+
+# ::snt Thanks Jose!
+# ::tokens ["Thanks", "Jose", "!"]
+# ::lemmas ["thank", "Jose", "!"]
+(c2-2 / thank-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-1 / person
+                  :name (c2-0 / name
+                              :op1 "Jose")))
+
+# ::snt thanks Jose. We need it!
+# ::tokens ["thanks", "Jose", ".", "We", "need", "it", "!"]
+# ::lemmas ["thank", "Jose", ".", "we", "need", "it", "!"]
+(c3-1 / multi-sentence
+      :snt1 (c3-7 / thank-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 (c3-5 / person
+                              :name (c3-3 / name
+                                          :op1 "Jose")))
+      :snt2 (c3-4 / need-01
+                  :ARG0 (c3-0 / we)
+                  :ARG1 (c3-6 / it)))
+
+# ::snt Absolutely!! Keep up the GREAT work bro!!!
+# ::tokens ["Absolutely", "!", "!", "Keep", "up", "the", "GREAT", "work", "bro", "!", "!", "!"]
+# ::lemmas ["absolutely", "!", "!", "keep", "up", "the", "GREAT", "work", "bro", "!", "!", "!"]
+(c4-3 / multi-sentence
+      :snt1 (c4-8 / absolute
+                  :mode expressive)
+      :snt2 (c4-7 / keep-up-10
+                  :ARG0 (c4-2 / you)
+                  :ARG1 (c4-1 / work-01
+                              :ARG0 (c4-6 / you
+                                          :ARG0-of (c4-0 / have-rel-role-91
+                                                         :ARG2 (c4-4 / bro)))
+                              :mod (c4-5 / great))
+                  :mode imperative))
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe. So sad
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", ".", "So", "sad"]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", ".", "so", "sad"]
+(c5-2 / multi-sentence
+      :snt1 (c5-12 / and
+                   :op1 (c5-11 / thing
+                               :ARG1-of (c5-9 / think-01
+                                              :ARG0 (c5-4 / everybody
+                                                          :location (c5-8 / city
+                                                                          :name (c5-6 / name
+                                                                                      :op1 "Ottawa")))))
+                   :op2 (c5-7 / pray-01
+                              :ARG0 c5-4))
+      :snt2 (c5-10 / stay-01
+                   :ARG1 (c5-0 / you)
+                   :ARG3 (c5-5 / safe-01
+                               :ARG1 c5-0)
+                   :mode imperative)
+      :snt3 (c5-1 / sad-02
+                  :degree (c5-3 / so)))
+
+# ::snt Gracias jose
+# ::tokens ["Gracias", "jose"]
+# ::lemmas ["Gracias", "jose"]
+(c6-1 / person
+      :name (c6-0 / name
+                  :op1 "Gracias"
+                  :op2 "Jose"))
+
+# ::snt Thanks Jose, means a lot to us here in the nation's capital!
+# ::tokens ["Thanks", "Jose", ",", "means", "a", "lot", "to", "us", "here", "in", "the", "nation", "'s", "capital", "!"]
+# ::lemmas ["thank", "Jose", ",", "mean", "a", "lot", "to", "we", "here", "in", "the", "nation", "'s", "capital", "!"]
+(c7-10 / thank-01
+       :ARG0 (c7-4 / i)
+       :ARG1 (c7-7 / person
+                   :name (c7-5 / name
+                               :op1 "Jose"))
+       :ARG0-of (c7-3 / mean-01
+                      :ARG1 (c7-2 / lot)
+                      :ARG2 (c7-1 / we
+                                  :location (c7-0 / here
+                                                  :location (c7-9 / city
+                                                                  :ARG0-of (c7-11 / have-org-role-91
+                                                                                  :ARG1 (c7-6 / nation)
+                                                                                  :ARG2 (c7-8 / capital)))))))
+
+# ::snt thank you
+# ::tokens ["thank", "you"]
+# ::lemmas ["thank", "you"]
+(c8-1 / thank-01
+      :ARG0 (c8-2 / i)
+      :ARG1 (c8-0 / you))
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe. sad, thoughts &amp; prayers to family's
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", ".", "sad", ",", "thoughts", "&", "amp", ";", "prayers", "to", "family", "'s"]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", ".", "sad", ",", "thought", "&", "amp", ";", "prayer", "to", "family", "'s"]
+(c9-0 / multi-sentence
+      :snt1 (c9-5 / and
+                  :op1 (c9-19 / thing
+                              :ARG1-of (c9-12 / think-01
+                                              :ARG0 (c9-7 / everybody
+                                                          :location (c9-17 / city
+                                                                           :name (c9-9 / name
+                                                                                       :op1 "Ottawa")))))
+                  :op2 (c9-11 / thing
+                              :ARG1-of (c9-2 / pray-01
+                                             :ARG0 c9-7)))
+      :snt2 (c9-3 / stay-01
+                  :ARG1 (c9-13 / you)
+                  :ARG3 (c9-8 / safe-01
+                              :ARG1 c9-13))
+      :snt3 (c9-10 / and
+                   :op1 (c9-16 / thing
+                               :ARG1-of (c9-14 / sad-02))
+                   :op2 (c9-18 / thing
+                               :ARG1-of (c9-15 / think-01))
+                   :op3 (c9-1 / thing
+                              :ARG1-of (c9-4 / pray-01
+                                             :ARG2 (c9-6 / family)))))
+
+# ::snt gracias jos para tus oraciones
+# ::tokens ["gracias", "jos", "para", "tus", "oraciones"]
+# ::lemmas ["gracias", "jos", "para", "tus", "oracione"]
+(c10-0 / jos-polarity
+       :ARG1-of (c10-2 / cause-01
+                       :ARG0 (c10-3 / oraciones
+                                    :poss (c10-1 / we))))
+
+# ::snt mi amor
+# ::tokens ["mi", "amor"]
+# ::lemmas ["mi", "amor"]
+(c11-0 / amr-empty)
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe.
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", "."]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", "."]
+(c12-1 / multi-sentence
+       :snt1 (c12-10 / and
+                     :op1 (c12-9 / thing
+                                 :ARG1-of (c12-7 / think-01
+                                                 :ARG0 (c12-2 / everybody
+                                                              :location (c12-6 / city
+                                                                               :name (c12-4 / name
+                                                                                            :op1 "Ottawa")))))
+                     :op2 (c12-5 / pray-01
+                                 :ARG0 c12-2))
+       :snt2 (c12-8 / stay-01
+                    :ARG1 (c12-0 / you)
+                    :ARG3 (c12-3 / safe-01
+                                 :ARG1 c12-0)
+                    :mode imperative))
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe.
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", "."]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", "."]
+(c13-1 / multi-sentence
+       :snt1 (c13-10 / and
+                     :op1 (c13-9 / thing
+                                 :ARG1-of (c13-7 / think-01
+                                                 :ARG0 (c13-2 / everybody
+                                                              :location (c13-6 / city
+                                                                               :name (c13-4 / name
+                                                                                            :op1 "Ottawa")))))
+                     :op2 (c13-5 / pray-01
+                                 :ARG0 c13-2))
+       :snt2 (c13-8 / stay-01
+                    :ARG1 (c13-0 / you)
+                    :ARG3 (c13-3 / safe-01
+                                 :ARG1 c13-0)
+                    :mode imperative))
+
+# ::snt Great shout out and show of sense of community outside of TO
+# ::tokens ["Great", "shout", "out", "and", "show", "of", "sense", "of", "community", "outside", "of", "TO"]
+# ::lemmas ["great", "shout", "out", "and", "show", "of", "sense", "of", "community", "outside", "of", "TO"]
+(c14-8 / and
+       :op1 (c14-7 / shout-out-03)
+       :op2 (c14-2 / show-01
+                   :ARG1 (c14-0 / sense-01
+                                :ARG1 (c14-5 / community)))
+       :mod (c14-6 / great)
+       :location (c14-1 / outside
+                        :op1 (c14-4 / publication
+                                    :name (c14-3 / name
+                                                 :op1 " TO"))))
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe.
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", "."]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", "."]
+(c15-1 / multi-sentence
+       :snt1 (c15-10 / and
+                     :op1 (c15-9 / thing
+                                 :ARG1-of (c15-7 / think-01
+                                                 :ARG0 (c15-2 / everybody
+                                                              :location (c15-6 / city
+                                                                               :name (c15-4 / name
+                                                                                            :op1 "Ottawa")))))
+                     :op2 (c15-5 / pray-01
+                                 :ARG0 c15-2))
+       :snt2 (c15-8 / stay-01
+                    :ARG1 (c15-0 / you)
+                    :ARG3 (c15-3 / safe-01
+                                 :ARG1 c15-0)
+                    :mode imperative))
+
+# ::snt tu saves quien soy alguien que te dijo quien iba hacer en el beisboll
+# ::tokens ["tu", "saves", "quien", "soy", "alguien", "que", "te", "dijo", "quien", "iba", "hacer", "en", "el", "beisboll"]
+# ::lemmas ["tu", "save", "quien", "soy", "alguien", "que", "te", "dijo", "quien", "iba", "hacer", "en", "el", "beisboll"]
+(c16-2 / multi-sentence
+       :snt1 (c16-10 / save-02
+                     :ARG0 (c16-1 / you)
+                     :ARG1 (c16-12 / amr-unknown))
+       :snt2 (c16-8 / cause-01
+                    :ARG0 (c16-5 / amr-unknown)
+                    :ARG1 (c16-7 / possible-01
+                                 :ARG1 (c16-11 / tell-01
+                                               :ARG0 (c16-9 / you)
+                                               :ARG1 (c16-0 / hacer-01
+                                                            :ARG0 (c16-6 / i)
+                                                            :ARG1 (c16-3 / beisboll))
+                                               :ARG2 (c16-4 / you)))))
+
+# ::snt good job joey!!!
+# ::tokens ["good", "job", "joey", "!", "!", "!"]
+# ::lemmas ["good", "job", "joey", "!", "!", "!"]
+(c17-3 / say-01
+       :ARG0 (c17-1 / i)
+       :ARG1 (c17-0 / job
+                    :ARG1-of (c17-2 / good-02))
+       :ARG2 (c17-4 / joey))
+
+# ::snt : Thoughts and prayers with everybody in Ottawa. Stay safe.
+# ::tokens [":", "Thoughts", "and", "prayers", "with", "everybody", "in", "Ottawa", ".", "Stay", "safe", "."]
+# ::lemmas [":", "thought", "and", "prayer", "with", "everybody", "in", "Ottawa", ".", "stay", "safe", "."]
+(c18-1 / multi-sentence
+       :snt1 (c18-10 / and
+                     :op1 (c18-9 / thing
+                                 :ARG1-of (c18-7 / think-01
+                                                 :ARG0 (c18-2 / everybody
+                                                              :location (c18-6 / city
+                                                                               :name (c18-4 / name
+                                                                                            :op1 "Ottawa")))))
+                     :op2 (c18-5 / pray-01
+                                 :ARG0 c18-2))
+       :snt2 (c18-8 / stay-01
+                    :ARG1 (c18-0 / you)
+                    :ARG3 (c18-3 / safe-01
+                                 :ARG1 c18-0)
+                    :mode imperative))
+
+# ::snt shout out to ottawa knowing I from the u.s
+# ::tokens ["shout", "out", "to", "ottawa", "knowing", "I", "from", "the", "u.s"]
+# ::lemmas ["shout", "out", "to", "ottawa", "know", "i", "from", "the", "u.s"]
+(c19-5 / shout-out-03
+       :ARG0 (c19-2 / i)
+       :ARG1 (c19-4 / person
+                    :name (c19-3 / name
+                                 :op1 "ottawa"))
+       :manner (c19-6 / know-01
+                      :ARG0 c19-2
+                      :ARG1 (c19-1 / be-from-91
+                                   :ARG1 c19-2
+                                   :ARG2 (c19-0 / university))))

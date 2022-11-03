@@ -1,0 +1,60 @@
+# ::snt Not your typical WTF, but this is the NYS Thruway near Buffalo this afternoon.
+# ::tokens ["Not", "your", "typical", "WTF", ",", "but", "this", "is", "the", "NYS", "Thruway", "near", "Buffalo", "this", "afternoon", "."]
+# ::lemmas ["not", "your", "typical", "WTF", ",", "but", "this", "be", "the", "NYS", "Thruway", "near", "Buffalo", "this", "afternoon", "."]
+(c1-5 / contrast-01
+      :ARG1 (c1-9 / typical-02
+                  :ARG1 (c1-6 / thing
+                              :name (c1-11 / name
+                                           :op1 "WTF"))
+                  :ARG2 (c1-12 / this)
+                  :polarity -)
+      :ARG2 (c1-10 / near-02
+                   :ARG1 (c1-4 / facility
+                               :name (c1-8 / name
+                                           :op1 "NYS"
+                                           :op2 "Thruway"))
+                   :ARG2 (c1-0 / city
+                               :name (c1-3 / name
+                                           :op1 "Buffalo"))
+                   :time (c1-1 / date-entity
+                               :dayperiod (c1-2 / afternoon)
+                               :mod (c1-7 / today))))
+
+# ::snt Suddenly I don't mind living in Wisconsin.
+# ::tokens ["Suddenly", "I", "do", "n't", "mind", "living", "in", "Wisconsin", "."]
+# ::lemmas ["suddenly", "i", "do", "not", "mind", "live", "in", "Wisconsin", "."]
+(c2-4 / mind-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-1 / live-01
+                  :ARG0 c2-3
+                  :location (c2-0 / state
+                                  :name (c2-5 / name
+                                              :op1 "Wisconsin")))
+      :manner (c2-2 / sudden)
+      :polarity -)
+
+# ::snt Plus you guys have have some darn good cheese
+# ::tokens ["Plus", "you", "guys", "have", "have", "some", "darn", "good", "cheese"]
+# ::lemmas ["plus", "you", "guy", "have", "have", "some", "darn", "good", "cheese"]
+(c3-3 / have-03
+      :ARG0 (c3-4 / you
+                  :mod (c3-5 / guy))
+      :ARG1 (c3-2 / cheese
+                  :ARG1-of (c3-7 / good-02
+                                 :mod (c3-0 / darn))
+                  :quant (c3-1 / some))
+      :mod (c3-6 / plus))
+
+# ::snt I'd rather have great chicken wings than cheese.
+# ::tokens ["I", "'d", "rather", "have", "great", "chicken", "wings", "than", "cheese", "."]
+# ::lemmas ["i", "would", "rather", "have", "great", "chicken", "wing", "than", "cheese", "."]
+(c4-7 / prefer-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-4 / have-03
+                  :ARG0 c4-3
+                  :ARG1 (c4-2 / wing
+                              :mod (c4-1 / chicken)
+                              :mod (c4-5 / great)))
+      :ARG2 (c4-6 / have-03
+                  :ARG0 c4-3
+                  :ARG1 (c4-0 / cheese)))

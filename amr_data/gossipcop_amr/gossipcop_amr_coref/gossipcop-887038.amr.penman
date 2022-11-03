@@ -1,0 +1,51 @@
+# ::snt someday
+# ::tokens ["someday"]
+# ::lemmas ["someday"]
+(c1-0 / someday)
+
+# ::snt They are cute for the weekend
+# ::tokens ["They", "are", "cute", "for", "the", "weekend"]
+# ::lemmas ["they", "be", "cute", "for", "the", "weekend"]
+(c2-0 / cute
+      :domain (c2-2 / they)
+      :time (c2-1 / weekend))
+
+# ::snt the jeans Kate Mara is wearing are !
+# ::tokens ["the", "jeans", "Kate", "Mara", "is", "wearing", "are", "!"]
+# ::lemmas ["the", "jean", "Kate", "Mara", "be", "wear", "be", "!"]
+(c3-2 / jeans
+      :ARG1-of (c3-0 / wear-01
+                     :ARG0 (c3-3 / person
+                                 :name (c3-1 / name
+                                             :op1 "Kate"
+                                             :op2 "Mara")))
+      :mode expressive)
+
+# ::snt I love her
+# ::tokens ["I", "love", "her"]
+# ::lemmas ["i", "love", "she"]
+(c4-0 / love-01
+      :ARG0 (c4-1 / i)
+      :ARG1 (c4-2 / she))
+
+# ::snt Lazy girls or lazy weekends? Hmm
+# ::tokens ["Lazy", "girls", "or", "lazy", "weekends", "?", "Hmm"]
+# ::lemmas ["lazy", "girl", "or", "lazy", "weekend", "?", "hmm"]
+(c5-2 / amr-choice
+      :op1 (c5-3 / girl
+                 :mod (c5-0 / lazy))
+      :op2 (c5-1 / weekend
+                 :mod (c5-4 / lazy)))
+
+# ::snt I would have e read the article is ads didn't pop up! Ugh
+# ::tokens ["I", "would", "have", "e", "read", "the", "article", "is", "ads", "did", "n't", "pop", "up", "!", "Ugh"]
+# ::lemmas ["i", "would", "have", "e", "read", "the", "article", "be", "ad", "do", "not", "pop", "up", "!", "ugh"]
+(c6-0 / multi-sentence
+      :snt1 (c6-1 / read-01
+                  :ARG0 (c6-3 / i)
+                  :ARG1 (c6-4 / article)
+                  :ARG3 (c6-2 / pop-up-03
+                              :ARG1 (c6-5 / advertise-01)
+                              :polarity -))
+      :snt2 (c6-6 / ugh
+                  :mode expressive))

@@ -1,0 +1,219 @@
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c1-0 / congratulate-01
+      :mode expressive)
+
+# ::snt Wasnt she just married and divorced? Some people are addicted to new love.
+# ::tokens ["Was", "nt", "she", "just", "married", "and", "divorced", "?", "Some", "people", "are", "addicted", "to", "new", "love", "."]
+# ::lemmas ["be", "not", "she", "just", "marry", "and", "divorced", "?", "some", "people", "be", "addict", "to", "new", "love", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-10 / and
+                   :op1 (c2-4 / marry-01
+                              :ARG1 (c2-3 / she)
+                              :time (c2-8 / just))
+                   :op2 (c2-11 / divorce-01
+                               :ARG0 c2-3
+                               :time c2-8)
+                   :polarity (c2-9 / amr-unknown))
+      :snt2 (c2-7 / addict-01
+                  :ARG1 (c2-5 / person
+                              :quant (c2-0 / some))
+                  :ARG2 (c2-6 / love-01
+                              :ARG1-of (c2-2 / new-01))))
+
+# ::snt Not Again!!
+# ::tokens ["Not", "Again", "!", "!"]
+# ::lemmas ["not", "again", "!", "!"]
+(c3-0 / again
+      :polarity -)
+
+# ::snt Wonderful! Best wishes! Peace, Harmony
+# ::tokens ["Wonderful", "!", "Best", "wishes", "!", "Peace", ",", "Harmony"]
+# ::lemmas ["wonderful", "!", "good", "wish", "!", "Peace", ",", "Harmony"]
+(c4-0 / multi-sentence
+      :snt1 (c4-7 / wonderful-03)
+      :snt2 (c4-6 / wish-01
+                  :ARG1 (c4-8 / thing
+                              :ARG1-of (c4-3 / have-degree-91
+                                             :ARG2 (c4-9 / good-02
+                                                         :ARG1 c4-8)
+                                             :ARG3 (c4-4 / most))))
+      :snt3 (c4-5 / peace)
+      :snt4 (c4-1 / person
+                  :name (c4-2 / name
+                              :op1 "Harmony")))
+
+# ::snt I hate the initials K.C. for two reasons now... fuck Karl Cook
+# ::tokens ["I", "hate", "the", "initials", "K.C.", "for", "two", "reasons", "now", "...", "fuck", "Karl", "Cook"]
+# ::lemmas ["i", "hate", "the", "initial", "K.C.", "for", "two", "reason", "now", "...", "fuck", "Karl", "Cook"]
+(c5-3 / multi-sentence
+      :snt1 (c5-5 / hate-01
+                  :ARG0 (c5-10 / i)
+                  :ARG1 (c5-2 / name
+                              :op1 "K."
+                              :op2 "C.")
+                  :ARG1-of (c5-9 / cause-01
+                                 :ARG0 (c5-4 / reason
+                                             :quant 2))
+                  :time (c5-6 / now))
+      :snt2 (c5-0 / fuck-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-7 / person
+                              :name (c5-8 / name
+                                          :op1 "Karl"
+                                          :op2 "Cook"))
+                  :mode imperative))
+
+# ::snt Who cares!
+# ::tokens ["Who", "cares", "!"]
+# ::lemmas ["who", "care", "!"]
+(c6-0 / care-01
+      :ARG0 (c6-1 / amr-unknown)
+      :mode expressive)
+
+# ::snt Shes a serial bride
+# ::tokens ["She", "s", "a", "serial", "bride"]
+# ::lemmas ["she", "s", "a", "serial", "bride"]
+(c7-0 / bride
+      :mod (c7-2 / serial)
+      :domain (c7-1 / he))
+
+# ::snt We've done this before, haven't we?They'll be split up b4 end of , SMH
+# ::tokens ["We", "'ve", "done", "this", "before", ",", "have", "n't", "we?They'll", "be", "split", "up", "b4", "end", "of", ",", "SMH"]
+# ::lemmas ["we", "'ve", "do", "this", "before", ",", "have", "not", "we?they'll", "be", "split", "up", "b4", "end", "of", ",", "SMH"]
+(c8-3 / multi-sentence
+      :snt1 (c8-9 / do-02
+                  :ARG0 (c8-7 / we)
+                  :ARG1 (c8-8 / this)
+                  :time (c8-2 / before)
+                  :ARG1-of (c8-5 / request-confirmation-91))
+      :snt2 (c8-4 / split-up-03
+                  :ARG1 (c8-10 / they)
+                  :ARG2 (c8-6 / end
+                              :mod (c8-0 / four)))
+      :snt3 (c8-1 / sigh-02
+                  :mode expressive))
+
+# ::snt Congratulations and best wishes
+# ::tokens ["Congratulations", "and", "best", "wishes"]
+# ::lemmas ["congratulation", "and", "good", "wish"]
+(c10-4 / and
+       :op1 (c10-2 / congratulate-01)
+       :op2 (c10-3 / wish-01
+                   :ARG1-of (c10-1 / have-degree-91
+                                   :ARG2 (c10-5 / good-02
+                                                :ARG1 c10-3)
+                                   :ARG3 (c10-0 / most))))
+
+# ::snt Happy for her but dont know if it will last . She acted the same way last time.
+# ::tokens ["Happy", "for", "her", "but", "do", "nt", "know", "if", "it", "will", "last", ".", "She", "acted", "the", "same", "way", "last", "time", "."]
+# ::lemmas ["happy", "for", "she", "but", "do", "not", "know", "if", "it", "will", "last", ".", "she", "act", "the", "same", "way", "last", "time", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-8 / contrast-01
+                    :ARG1 (c11-5 / happy-01
+                                 :ARG1 (c11-2 / she))
+                    :ARG2 (c11-6 / know-01
+                                 :ARG0 (c11-10 / i)
+                                 :ARG1 (c11-11 / truth-value
+                                               :polarity-of (c11-7 / last-01
+                                                                   :ARG1 (c11-3 / it)))
+                                 :polarity -))
+       :snt2 (c11-4 / act-01
+                    :ARG0 (c11-0 / she)
+                    :ARG1 (c11-9 / way
+                                 :ARG1-of (c11-14 / same-01))
+                    :time (c11-13 / time
+                                  :mod (c11-12 / last))))
+
+# ::snt Dude, Chris Pratt is single and you settle for this guy??
+# ::tokens ["Dude", ",", "Chris", "Pratt", "is", "single", "and", "you", "settle", "for", "this", "guy", "?", "?"]
+# ::lemmas ["dude", ",", "Chris", "Pratt", "be", "single", "and", "you", "settle", "for", "this", "guy", "?", "?"]
+(c12-2 / say-01
+       :ARG0 (c12-5 / i)
+       :ARG1 (c12-6 / and
+                    :op1 (c12-0 / single-03
+                                :ARG1 (c12-3 / person
+                                             :name (c12-1 / name
+                                                          :op1 "Chris"
+                                                          :op2 "Pratt")))
+                    :op2 (c12-10 / settle-03
+                                 :ARG0 (c12-8 / dude)
+                                 :ARG4 (c12-7 / guy
+                                              :mod (c12-4 / this)))
+                    :polarity (c12-9 / amr-unknown))
+       :ARG2 c12-8)
+
+# ::snt Again!? How long will this last!? And how much will it cost her this time!?
+# ::tokens ["Again", "!", "?", "How", "long", "will", "this", "last", "!", "?", "And", "how", "much", "will", "it", "cost", "her", "this", "time", "!", "?"]
+# ::lemmas ["again", "!", "?", "how", "long", "will", "this", "last", "!", "?", "and", "how", "much", "will", "it", "cost", "she", "this", "time", "!", "?"]
+(c13-0 / multi-sentence
+       :snt1 (c13-2 / again
+                    :polarity (c13-8 / amr-unknown))
+       :snt2 (c13-4 / last-01
+                    :ARG1 (c13-9 / this)
+                    :ARG2 (c13-6 / amr-unknown))
+       :snt3 (c13-11 / and
+                     :op2 (c13-5 / cost-01
+                                 :ARG1 (c13-12 / this)
+                                 :ARG2 (c13-7 / amr-unknown)
+                                 :ARG3 (c13-1 / she)
+                                 :time (c13-10 / time
+                                               :mod (c13-3 / this)))))
+
+# ::snt Who???
+# ::tokens ["Who", "?", "?", "?"]
+# ::lemmas ["who", "?", "?", "?"]
+(c14-0 / amr-unknown)
+
+# ::snt I give it months. Anyone care to wager?
+# ::tokens ["I", "give", "it", "months", ".", "Anyone", "care", "to", "wager", "?"]
+# ::lemmas ["i", "give", "it", "month", ".", "anyone", "care", "to", "wager", "?"]
+(c15-0 / multi-sentence
+       :snt1 (c15-8 / give-01
+                    :ARG0 (c15-6 / i)
+                    :ARG1 (c15-3 / multiple
+                                 :op1 (c15-7 / temporal-quantity
+                                             :unit (c15-10 / month)
+                                             :quant 1))
+                    :ARG2 (c15-1 / it))
+       :snt2 (c15-4 / care-02
+                    :polarity (c15-2 / amr-unknown)
+                    :ARG0 (c15-9 / anyone)
+                    :ARG1 (c15-5 / wager-01
+                                 :ARG0 c15-9)))
+
+# ::snt Wait did she get engaged on her birthday?!
+# ::tokens ["Wait", "did", "she", "get", "engaged", "on", "her", "birthday", "?", "!"]
+# ::lemmas ["wait", "do", "she", "get", "engage", "on", "her", "birthday", "?", "!"]
+(c16-4 / wait-01
+       :polarity (c16-5 / amr-unknown)
+       :ARG1 (c16-1 / you)
+       :ARG2 (c16-3 / engagement-02
+                    :ARG1 (c16-2 / she)
+                    :time (c16-0 / birthday
+                                 :poss c16-2)))
+
+# ::snt O/U years
+# ::tokens ["O", "/", "U", "years"]
+# ::lemmas ["o", "/", "U", "years"]
+(c17-1 / multiple
+       :op1 (c17-2 / temporal-quantity
+                   :unit (c17-0 / year)
+                   :quant 1))
+
+# ::snt I'm heartbroken once again.
+# ::tokens ["I", "'m", "heartbroken", "once", "again", "."]
+# ::lemmas ["i", "be", "heartbroken", "once", "again", "."]
+(c19-1 / break-heart-31
+       :ARG1 (c19-2 / i)
+       :mod (c19-3 / again
+                   :mod (c19-0 / once)))
+
+# ::snt Oh yeah it will last
+# ::tokens ["Oh", "yeah", "it", "will", "last"]
+# ::lemmas ["oh", "yeah", "it", "will", "last"]
+(c20-1 / last-04
+       :ARG1 (c20-2 / it)
+       :mod (c20-0 / oh-yeah
+                   :mode expressive))

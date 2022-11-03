@@ -1,0 +1,126 @@
+# ::snt I KNOW
+# ::tokens ["I", "KNOW"]
+# ::lemmas ["i", "KNOW"]
+(c1-0 / know-01
+      :ARG0 (c1-1 / i))
+
+# ::snt hey are you alright?
+# ::tokens ["hey", "are", "you", "alright", "?"]
+# ::lemmas ["hey", "be", "you", "alright", "?"]
+(c3-2 / all-right
+      :polarity (c3-1 / amr-unknown)
+      :domain (c3-0 / you))
+
+# ::snt Wasn't John Mulane the Die Hard guy?
+# ::tokens ["Was", "n't", "John", "Mulane", "the", "Die", "Hard", "guy", "?"]
+# ::lemmas ["be", "not", "John", "Mulane", "the", "Die", "Hard", "guy", "?"]
+(c4-3 / guy
+      :mod (c4-4 / die-hard)
+      :domain (c4-2 / person
+                    :name (c4-0 / name
+                                :op1 "John"
+                                :op2 "Mulane"))
+      :ARG1-of (c4-1 / request-confirmation-91)
+      :polarity -)
+
+# ::snt Wow john Mullaney was ? He really did have a baby face
+# ::tokens ["Wow", "john", "Mullaney", "was", "?", "He", "really", "did", "have", "a", "baby", "face"]
+# ::lemmas ["wow", "john", "Mullaney", "be", "?", "he", "really", "do", "have", "a", "baby", "face"]
+(c5-3 / multi-sentence
+      :snt1 (c5-7 / wow
+                  :domain (c5-6 / person
+                                :name (c5-2 / name
+                                            :op1 "John"
+                                            :op2 "Mullaney"))
+                  :mode expressive)
+      :snt2 (c5-5 / have-03
+                  :ARG0 (c5-8 / he)
+                  :ARG1 (c5-0 / face
+                              :mod (c5-1 / baby))
+                  :ARG1-of (c5-4 / real-04)))
+
+# ::snt rip john mulaney, comedian
+# ::tokens ["rip", "john", "mulaney", ",", "comedian"]
+# ::lemmas ["rip", "john", "mulaney", ",", "comedian"]
+(c6-2 / person
+      :name (c6-0 / name
+                  :op1 "John"
+                  :op2 "Mulaney")
+      :mod (c6-1 / comedian))
+
+# ::snt i don't know why i had to tag you here, but i felt compelled.
+# ::tokens ["i", "do", "n't", "know", "why", "i", "had", "to", "tag", "you", "here", ",", "but", "i", "felt", "compelled", "."]
+# ::lemmas ["i", "do", "not", "know", "why", "i", "have", "to", "tag", "you", "here", ",", "but", "i", "feel", "compel", "."]
+(c7-5 / contrast-01
+      :ARG1 (c7-4 / know-01
+                  :ARG0 (c7-7 / i)
+                  :ARG1 (c7-8 / thing
+                              :ARG0-of (c7-10 / cause-01
+                                              :ARG1 (c7-0 / obligate-01
+                                                          :ARG1 c7-7
+                                                          :ARG2 (c7-9 / tag-01
+                                                                      :ARG0 c7-7
+                                                                      :ARG1 (c7-2 / you)
+                                                                      :location (c7-3 / here)))))
+                  :polarity -)
+      :ARG2 (c7-1 / feel-01
+                  :ARG0 c7-7
+                  :ARG1 (c7-6 / compel-01
+                              :ARG1 c7-7)))
+
+# ::snt Fucking same
+# ::tokens ["Fucking", "same"]
+# ::lemmas ["fucking", "same"]
+(c8-1 / same-01
+      :mod (c8-0 / fucking))
+
+# ::snt them spelling his name wrong is why people dont trust the mainstream media anymore
+# ::tokens ["them", "spelling", "his", "name", "wrong", "is", "why", "people", "do", "nt", "trust", "the", "mainstream", "media", "anymore"]
+# ::lemmas ["they", "spell", "his", "name", "wrong", "be", "why", "people", "do", "not", "trust", "the", "mainstream", "medium", "anymore"]
+(c9-2 / spell-01
+      :ARG0 (c9-9 / they)
+      :ARG1 (c9-0 / name
+                  :poss (c9-4 / he))
+      :ARG2-of (c9-7 / wrong-04)
+      :ARG0-of (c9-8 / cause-01
+                     :ARG1 (c9-10 / trust-02
+                                  :ARG0 (c9-5 / person)
+                                  :ARG1 (c9-1 / media
+                                              :ARG1-of (c9-6 / mainstream-02))
+                                  :time (c9-3 / anymore)
+                                  :polarity -)))
+
+# ::snt Rest In Peace
+# ::tokens ["Rest", "In", "Peace"]
+# ::lemmas ["rest", "in", "peace"]
+(c10-0 / rest-01
+       :manner (c10-1 / peace))
+
+# ::snt RIP! He was great. Loved him.
+# ::tokens ["RIP", "!", "He", "was", "great", ".", "Loved", "him", "."]
+# ::lemmas ["RIP", "!", "he", "be", "great", ".", "love", "he", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-2 / rest-01
+                    :ARG1 (c11-0 / you)
+                    :manner (c11-4 / peace))
+       :snt2 (c11-7 / great
+                    :domain (c11-3 / he))
+       :snt3 (c11-5 / love-01
+                    :ARG1 (c11-6 / he)))
+
+# ::snt RIP
+# ::tokens ["RIP"]
+# ::lemmas ["RIP"]
+(c12-0 / rest-01
+       :ARG1 (c12-1 / you)
+       :manner (c12-2 / peace))
+
+# ::snt He was perfect in "Moonstruck," too.
+# ::tokens ["He", "was", "perfect", "in", "\"", "Moonstruck", ",", "\"", "too", "."]
+# ::lemmas ["he", "be", "perfect", "in", "\"", "Moonstruck", ",", "\"", "too", "."]
+(c14-2 / perfect-02
+       :ARG1 (c14-1 / he)
+       :location (c14-3 / work-of-art
+                        :name (c14-0 / name
+                                     :op1 "Moonstruck"))
+       :mod (c14-4 / too))

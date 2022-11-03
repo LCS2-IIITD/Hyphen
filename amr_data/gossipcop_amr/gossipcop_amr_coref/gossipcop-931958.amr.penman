@@ -1,0 +1,79 @@
+# ::snt NO WAY
+# ::tokens ["NO", "WAY"]
+# ::lemmas ["no", "way"]
+(c1-0 / way
+      :polarity -)
+
+# ::snt It ain't safe. It ain't safe. It ain't safe.
+# ::tokens ["It", "ai", "n't", "safe", ".", "It", "ai", "n't", "safe", ".", "It", "ai", "n't", "safe", "."]
+# ::lemmas ["it", "be", "not", "safe", ".", "it", "be", "not", "safe", ".", "it", "be", "not", "safe", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / safe-01
+                  :ARG0 (c2-4 / it)
+                  :polarity -)
+      :snt2 (c2-0 / safe-01
+                  :ARG1 (c2-3 / it)
+                  :polarity -)
+      :snt3 (c2-6 / safe-01
+                  :ARG1 (c2-5 / it)
+                  :polarity -))
+
+# ::snt Damn thats wild
+# ::tokens ["Damn", "that", "s", "wild"]
+# ::lemmas ["damn", "that", "s", "wild"]
+(c3-0 / wild
+      :domain (c3-2 / that)
+      :mod (c3-1 / damn
+                 :mode expressive))
+
+# ::snt I guess he's never watched Locked Up Abroad. Good luck getting out of jail anytime soon.
+# ::tokens ["I", "guess", "he", "'s", "never", "watched", "Locked", "Up", "Abroad", ".", "Good", "luck", "getting", "out", "of", "jail", "anytime", "soon", "."]
+# ::lemmas ["i", "guess", "he", "be", "never", "watch", "lock", "up", "abroad", ".", "good", "luck", "get", "out", "of", "jail", "anytime", "soon", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-13 / guess-01
+                   :ARG0 (c4-11 / i)
+                   :ARG1 (c4-9 / watch-01
+                               :ARG0 (c4-7 / he)
+                               :ARG1 (c4-4 / show
+                                           :name (c4-3 / name
+                                                       :op1 "Lock"
+                                                       :op2 "Up"
+                                                       :op3 "Abroad"))
+                               :time (c4-6 / ever)
+                               :polarity -))
+      :snt2 (c4-8 / luck
+                  :ARG1-of (c4-12 / good-02)
+                  :topic (c4-14 / get-05
+                                :ARG2 (c4-0 / out-06
+                                            :ARG2 (c4-10 / jail))
+                                :time (c4-5 / anytime
+                                            :mod (c4-1 / soon)))))
+
+# ::snt is bad luck
+# ::tokens ["is", "bad", "luck"]
+# ::lemmas ["be", "bad", "luck"]
+(c5-1 / luck
+      :ARG1-of (c5-0 / bad-07))
+
+# ::snt No.
+# ::tokens ["No", "."]
+# ::lemmas ["no", "."]
+(c6-0 / no)
+
+# ::snt Living his best life.
+# ::tokens ["Living", "his", "best", "life", "."]
+# ::lemmas ["live", "his", "good", "life", "."]
+(c7-2 / live-01
+      :ARG0 (c7-1 / he)
+      :ARG1 (c7-5 / life
+                  :ARG1-of (c7-3 / have-degree-91
+                                 :ARG2 (c7-4 / good-02
+                                             :ARG1 c7-5)
+                                 :ARG3 (c7-0 / most))))
+
+# ::snt Hell Yeah
+# ::tokens ["Hell", "Yeah"]
+# ::lemmas ["Hell", "yeah"]
+(c8-0 / yeah
+      :mod (c8-1 / hell)
+      :mode expressive)

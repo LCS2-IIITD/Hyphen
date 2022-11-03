@@ -1,0 +1,372 @@
+# ::snt They are killing the victim again
+# ::tokens ["They", "are", "killing", "the", "victim", "again"]
+# ::lemmas ["they", "be", "kill", "the", "victim", "again"]
+(c1-2 / kill-01
+      :ARG0 (c1-0 / they)
+      :ARG1 (c1-1 / victim)
+      :mod (c1-3 / again))
+
+# ::snt FOLLOW ME..ILL FOLLOW BACK ASAP.. (not spam)!
+# ::tokens ["FOLLOW", "ME", "..", "ILL", "FOLLOW", "BACK", "ASAP", "..", "(", "not", "spam", ")", "!"]
+# ::lemmas ["FOLLOW", "ME", "..", "ILL", "follow", "back", "asap", "..", "(", "not", "spam", ")", "!"]
+(c2-8 / and
+      :op1 (c2-1 / follow-02
+                 :ARG0 (c2-0 / you)
+                 :ARG1 (c2-5 / i)
+                 :mode imperative)
+      :op2 (c2-6 / follow-02
+                 :ARG0 c2-0
+                 :ARG1 c2-5
+                 :direction (c2-3 / back)
+                 :time (c2-4 / ASAP)
+                 :ARG1-of (c2-2 / mean-01
+                                :ARG2 (c2-7 / spam-01
+                                            :polarity -))
+                 :mode imperative))
+
+# ::snt Exactly bruh. I'm from this area. They had to get their story together. Fortunately this will NOT be politics as usual.
+# ::tokens ["Exactly", "bruh", ".", "I", "'m", "from", "this", "area", ".", "They", "had", "to", "get", "their", "story", "together", ".", "Fortunately", "this", "will", "NOT", "be", "politics", "as", "usual", "."]
+# ::lemmas ["exactly", "bruh", ".", "i", "be", "from", "this", "area", ".", "they", "have", "to", "get", "their", "story", "together", ".", "fortunately", "this", "will", "not", "be", "politic", "as", "usual", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-4 / exact)
+      :snt2 (c3-2 / be-from-91
+                  :ARG1 (c3-7 / i)
+                  :ARG2 (c3-14 / area
+                               :mod (c3-13 / this)))
+      :snt3 (c3-3 / obligate-01
+                  :ARG1 (c3-11 / they)
+                  :ARG2 (c3-10 / get-04
+                               :ARG0 c3-11
+                               :ARG1 (c3-12 / story
+                                            :poss c3-11)
+                               :ARG2 (c3-8 / together)))
+      :snt4 (c3-9 / politics
+                  :domain (c3-5 / this)
+                  :ARG2-of (c3-0 / fortunate-01)
+                  :mod (c3-6 / as-usual)
+                  :polarity -))
+
+# ::snt because it takes a while to set up a good (not so good) lie. Have to have right people in place. They covering up something
+# ::tokens ["because", "it", "takes", "a", "while", "to", "set", "up", "a", "good", "(", "not", "so", "good", ")", "lie", ".", "Have", "to", "have", "right", "people", "in", "place", ".", "They", "covering", "up", "something"]
+# ::lemmas ["because", "it", "take", "a", "while", "to", "set", "up", "a", "good", "(", "not", "so", "good", ")", "lie", ".", "have", "to", "have", "right", "people", "in", "place", ".", "they", "cover", "up", "something"]
+(c4-3 / multi-sentence
+      :snt1 (c4-10 / cause-01
+                   :ARG0 (c4-16 / take-10
+                                :ARG0 (c4-14 / set-up-03
+                                             :ARG1 (c4-2 / lie-08
+                                                         :ARG1-of (c4-11 / good-02
+                                                                         :ARG1-of (c4-0 / have-degree-91
+                                                                                        :ARG2 (c4-9 / good-02)
+                                                                                        :ARG3 (c4-6 / so)
+                                                                                        :polarity -))))
+                                :ARG1 (c4-1 / while)))
+      :snt2 (c4-5 / obligate-01
+                  :ARG2 (c4-7 / in-place
+                              :domain (c4-8 / person
+                                            :ARG1-of (c4-12 / right-03))))
+      :snt3 (c4-13 / cover-up-04
+                   :ARG0 (c4-15 / they)
+                   :ARG1 (c4-4 / something)))
+
+# ::snt and why wasn't Michael Brown's friend arrested as an accomplice to armed robbery if that story was true?
+# ::tokens ["and", "why", "was", "n't", "Michael", "Brown", "'s", "friend", "arrested", "as", "an", "accomplice", "to", "armed", "robbery", "if", "that", "story", "was", "true", "?"]
+# ::lemmas ["and", "why", "be", "not", "Michael", "Brown", "'s", "friend", "arrest", "as", "an", "accomplice", "to", "armed", "robbery", "if", "that", "story", "be", "true", "?"]
+(c5-14 / and
+       :op2 (c5-8 / cause-01
+                  :ARG0 (c5-3 / amr-unknown)
+                  :ARG1 (c5-5 / arrest-01
+                              :ARG1 (c5-6 / person
+                                          :ARG0-of (c5-0 / have-rel-role-91
+                                                         :ARG1 (c5-13 / person
+                                                                      :name (c5-4 / name
+                                                                                  :op1 "Michael"
+                                                                                  :op2 "Brown"))
+                                                         :ARG2 (c5-1 / friend)
+                                                         :ARG2-of c5-5))
+                              :ARG0 c5-6
+                              :ARG1 c5-13
+                              :ARG2 (c5-11 / accomplice
+                                           :prep-to (c5-7 / rob-01
+                                                          :instrument (c5-2 / arm)))
+                              :polarity -)
+                  :condition (c5-12 / true-01
+                                    :ARG1 (c5-10 / story
+                                                 :mod (c5-9 / that)))))
+
+# ::snt This is simple: IF was a robbery suspect, why didnt police say that on DAY ONE? Why wait six days?
+# ::tokens ["This", "is", "simple", ":", "IF", "was", "a", "robbery", "suspect", ",", "why", "did", "nt", "police", "say", "that", "on", "DAY", "ONE", "?", "Why", "wait", "six", "days", "?"]
+# ::lemmas ["this", "be", "simple", ":", "if", "be", "a", "robbery", "suspect", ",", "why", "do", "not", "police", "say", "that", "on", "DAY", "one", "?", "why", "wait", "six", "days", "?"]
+(c6-1 / multi-sentence
+      :snt1 (c6-5 / simple-02
+                  :ARG1 (c6-18 / this))
+      :snt2 (c6-8 / have-condition-91
+                  :ARG1 (c6-16 / cause-01
+                               :ARG0 (c6-7 / amr-unknown)
+                               :ARG1 (c6-9 / say-01
+                                           :ARG0 (c6-2 / police)
+                                           :ARG1 (c6-17 / that)
+                                           :time (c6-3 / day
+                                                       :ord (c6-15 / ordinal-entity
+                                                                   :value 1))
+                                           :polarity -))
+                  :ARG2 (c6-14 / suspect-01
+                               :ARG2 (c6-10 / rob-01)
+                               :domain (c6-6 / person)))
+      :snt3 (c6-4 / cause-01
+                  :ARG0 (c6-12 / amr-unknown)
+                  :ARG1 (c6-11 / wait-01
+                               :ARG2 (c6-13 / temporal-quantity
+                                            :unit (c6-0 / day)
+                                            :quant 6))))
+
+# ::snt maybe because they wanted to gather all the facts and make sure before they run their mouths like media experts
+# ::tokens ["maybe", "because", "they", "wanted", "to", "gather", "all", "the", "facts", "and", "make", "sure", "before", "they", "run", "their", "mouths", "like", "media", "experts"]
+# ::lemmas ["maybe", "because", "they", "want", "to", "gather", "all", "the", "fact", "and", "make", "sure", "before", "they", "run", "their", "mouth", "like", "medium", "expert"]
+(c7-8 / possible-01
+      :ARG1 (c7-10 / cause-01
+                   :ARG0 (c7-0 / want-01
+                               :ARG0 (c7-13 / they
+                                            :part (c7-2 / mouth))
+                               :ARG1 (c7-15 / and
+                                            :op1 (c7-11 / gather-01
+                                                        :ARG0 c7-13
+                                                        :ARG1 (c7-1 / fact
+                                                                    :mod (c7-6 / all)))
+                                            :op2 (c7-5 / ensure-01
+                                                       :ARG0 c7-13
+                                                       :time (c7-3 / before
+                                                                   :op1 (c7-9 / run-10
+                                                                              :ARG0 c7-13
+                                                                              :ARG1 c7-2
+                                                                              :ARG1-of (c7-7 / resemble-01
+                                                                                             :ARG2 (c7-14 / person
+                                                                                                          :ARG1-of (c7-4 / expert-01
+                                                                                                                         :ARG2 (c7-12 / media)))))))))))
+
+# ::snt This is simple: IF was a robbery suspect, why didnt police say that on DAY ONE? Why wait six days?
+# ::tokens ["This", "is", "simple", ":", "IF", "was", "a", "robbery", "suspect", ",", "why", "did", "nt", "police", "say", "that", "on", "DAY", "ONE", "?", "Why", "wait", "six", "days", "?"]
+# ::lemmas ["this", "be", "simple", ":", "if", "be", "a", "robbery", "suspect", ",", "why", "do", "not", "police", "say", "that", "on", "DAY", "one", "?", "why", "wait", "six", "days", "?"]
+(c8-1 / multi-sentence
+      :snt1 (c8-5 / simple-02
+                  :ARG1 (c8-18 / this))
+      :snt2 (c8-8 / have-condition-91
+                  :ARG1 (c8-16 / cause-01
+                               :ARG0 (c8-7 / amr-unknown)
+                               :ARG1 (c8-9 / say-01
+                                           :ARG0 (c8-2 / police)
+                                           :ARG1 (c8-17 / that)
+                                           :time (c8-3 / day
+                                                       :ord (c8-15 / ordinal-entity
+                                                                   :value 1))
+                                           :polarity -))
+                  :ARG2 (c8-14 / suspect-01
+                               :ARG2 (c8-10 / rob-01)
+                               :domain (c8-6 / person)))
+      :snt3 (c8-4 / cause-01
+                  :ARG0 (c8-12 / amr-unknown)
+                  :ARG1 (c8-11 / wait-01
+                               :ARG2 (c8-13 / temporal-quantity
+                                            :unit (c8-0 / day)
+                                            :quant 6))))
+
+# ::snt Exactly what I was thinking. Do they think we're that dumb?
+# ::tokens ["Exactly", "what", "I", "was", "thinking", ".", "Do", "they", "think", "we", "'re", "that", "dumb", "?"]
+# ::lemmas ["exactly", "what", "i", "be", "think", ".", "do", "they", "think", "we", "be", "that", "dumb", "?"]
+(c9-1 / multi-sentence
+      :snt1 (c9-9 / think-01
+                  :ARG0 (c9-4 / i)
+                  :ARG1 (c9-8 / thing
+                              :mod (c9-2 / exact)))
+      :snt2 (c9-6 / think-01
+                  :polarity (c9-10 / amr-unknown)
+                  :ARG0 (c9-3 / they)
+                  :ARG1 (c9-7 / dumb
+                              :degree (c9-5 / that)
+                              :domain (c9-0 / we))))
+
+# ::snt why did he cont to shoot after his hands were raised? thats where this is a clear murder
+# ::tokens ["why", "did", "he", "cont", "to", "shoot", "after", "his", "hands", "were", "raised", "?", "that", "s", "where", "this", "is", "a", "clear", "murder"]
+# ::lemmas ["why", "do", "he", "cont", "to", "shoot", "after", "his", "hand", "be", "raise", "?", "that", "s", "where", "this", "be", "a", "clear", "murder"]
+(c10-2 / multi-sentence
+       :snt1 (c10-7 / cause-01
+                    :ARG0 (c10-13 / amr-unknown)
+                    :ARG1 (c10-6 / cont-02
+                                 :ARG0 (c10-0 / he
+                                              :part (c10-1 / hand))
+                                 :ARG1 (c10-10 / shoot-02
+                                               :ARG0 c10-0)
+                                 :time (c10-4 / after
+                                              :op1 (c10-8 / raise-01
+                                                          :ARG1 c10-1))))
+       :snt2 (c10-3 / be-located-at-91
+                    :ARG1 (c10-5 / murder-01
+                                 :ARG1-of (c10-9 / clear-06)
+                                 :domain (c10-12 / this))
+                    :ARG2 (c10-11 / that)))
+
+# ::snt the police said time x again he was a robbery suspect
+# ::tokens ["the", "police", "said", "time", "x", "again", "he", "was", "a", "robbery", "suspect"]
+# ::lemmas ["the", "police", "say", "time", "x", "again", "he", "be", "a", "robbery", "suspect"]
+(c11-6 / say-01
+       :ARG0 (c11-4 / police)
+       :ARG1 (c11-1 / suspect-01
+                    :ARG1 (c11-5 / rob-01
+                                 :ARG0 (c11-0 / he
+                                              :ARG2-of c11-1)))
+       :mod (c11-8 / again
+                   :mod (c11-7 / time
+                               :mod (c11-3 / variable
+                                           :name (c11-2 / name
+                                                        :op1 "x")))))
+
+# ::snt they had to get their LIE straight
+# ::tokens ["they", "had", "to", "get", "their", "LIE", "straight"]
+# ::lemmas ["they", "have", "to", "get", "their", "lie", "straight"]
+(c12-0 / obligate-01
+       :ARG1 (c12-2 / they)
+       :ARG2 (c12-3 / straighten-01
+                    :ARG0 c12-2
+                    :ARG1 (c12-1 / lie-08
+                                 :ARG0 c12-2)))
+
+# ::snt They waited six days to develop the best diversion tactic they could create to demonize and make him the "bad guy"
+# ::tokens ["They", "waited", "six", "days", "to", "develop", "the", "best", "diversion", "tactic", "they", "could", "create", "to", "demonize", "and", "make", "him", "the", "\"", "bad", "guy", "\""]
+# ::lemmas ["they", "wait", "six", "days", "to", "develop", "the", "good", "diversion", "tactic", "they", "could", "create", "to", "demonize", "and", "make", "he", "the", "\"", "bad", "guy", "\""]
+(c13-1 / wait-01
+       :ARG1 (c13-15 / they)
+       :ARG2 (c13-9 / develop-02
+                    :ARG0 c13-15
+                    :ARG1 (c13-13 / tactic
+                                  :purpose (c13-2 / divert-01)
+                                  :ARG1-of (c13-10 / create-01
+                                                   :ARG0 c13-15
+                                                   :ARG1-of (c13-8 / possible-01)
+                                                   :purpose (c13-16 / and
+                                                                    :op1 (c13-17 / demonize-01
+                                                                                 :ARG0 c13-15
+                                                                                 :ARG1 (c13-11 / guy
+                                                                                               :ARG1-of (c13-5 / bad-07)
+                                                                                               :domain (c13-0 / he)))
+                                                                    :op2 (c13-4 / make-02
+                                                                                :ARG0 c13-15
+                                                                                :ARG1 c13-11)))
+                                  :ARG1-of (c13-3 / have-degree-91
+                                                  :ARG2 (c13-12 / good-03
+                                                                :ARG1 c13-13)
+                                                  :ARG3 (c13-14 / most))))
+       :duration (c13-7 / temporal-quantity
+                        :unit (c13-6 / day)
+                        :quant 6))
+
+# ::snt and if he was why didn't they apprehend the boy that was with him?
+# ::tokens ["and", "if", "he", "was", "why", "did", "n't", "they", "apprehend", "the", "boy", "that", "was", "with", "him", "?"]
+# ::lemmas ["and", "if", "he", "be", "why", "do", "not", "they", "apprehend", "the", "boy", "that", "be", "with", "he", "?"]
+(c14-7 / and
+       :op2 (c14-3 / apprehend-01
+                   :ARG0 (c14-6 / they)
+                   :ARG1 (c14-2 / boy
+                                :accompanier (c14-0 / he))
+                   :ARG1-of (c14-5 / cause-01
+                                   :ARG0 (c14-4 / amr-unknown))
+                   :condition (c14-1 / have-mod-91
+                                     :ARG1 c14-0)
+                   :polarity -))
+
+# ::snt Due to the situation ,they made no real statements of the event. And they should not have until the AG/IA get the details
+# ::tokens ["Due", "to", "the", "situation", ",", "they", "made", "no", "real", "statements", "of", "the", "event", ".", "And", "they", "should", "not", "have", "until", "the", "AG", "/", "IA", "get", "the", "details"]
+# ::lemmas ["due", "to", "the", "situation", ",", "they", "make", "no", "real", "statement", "of", "the", "event", ".", "and", "they", "should", "not", "have", "until", "the", "AG", "/", "IA", "get", "the", "detail"]
+(c15-0 / multi-sentence
+       :snt1 (c15-16 / cause-01
+                     :ARG0 (c15-5 / situation)
+                     :ARG1 (c15-8 / state-01
+                                  :ARG0 (c15-18 / they)
+                                  :ARG1 (c15-9 / event)
+                                  :ARG1-of (c15-11 / real-04)
+                                  :polarity -))
+       :snt2 (c15-6 / and
+                    :op2 (c15-1 / recommend-01
+                                :ARG1 (c15-7 / have-06
+                                             :ARG0 (c15-17 / they)
+                                             :time (c15-13 / until
+                                                           :op1 (c15-12 / get-01
+                                                                        :ARG0 (c15-14 / slash
+                                                                                      :op1 (c15-3 / government-organization
+                                                                                                  :name (c15-10 / name
+                                                                                                                :op1 "AG"))
+                                                                                      :op2 (c15-2 / government-organization
+                                                                                                  :name (c15-15 / name
+                                                                                                                :op1 "IA")))
+                                                                        :ARG1 (c15-4 / detail-01)))
+                                             :polarity -))))
+
+# ::snt because they're lying. Clothes of dead mike brown do not match that of man in strong arm robbery
+# ::tokens ["because", "they", "'re", "lying", ".", "Clothes", "of", "dead", "mike", "brown", "do", "not", "match", "that", "of", "man", "in", "strong", "arm", "robbery"]
+# ::lemmas ["because", "they", "be", "lie", ".", "clothe", "of", "dead", "mike", "brown", "do", "not", "match", "that", "of", "man", "in", "strong", "arm", "robbery"]
+(c16-1 / multi-sentence
+       :snt1 (c16-5 / cause-01
+                    :ARG0 (c16-0 / lie-08
+                                 :ARG0 (c16-10 / they)))
+       :snt2 (c16-3 / match-01
+                    :ARG1 (c16-4 / clothes
+                                 :consist-of (c16-2 / mike
+                                                    :ARG1-of (c16-6 / die-01)))
+                    :ARG2 (c16-9 / clothes
+                                 :consist-of (c16-7 / man
+                                                    :ARG0-of (c16-8 / rob-01
+                                                                    :manner (c16-12 / arm
+                                                                                    :ARG1-of (c16-11 / strong-02)))))
+                    :polarity -))
+
+# ::snt Great point!!! Why didn't they arrest his "accomplice" if they were robbery suspects?
+# ::tokens ["Great", "point", "!", "!", "!", "Why", "did", "n't", "they", "arrest", "his", "\"", "accomplice", "\"", "if", "they", "were", "robbery", "suspects", "?"]
+# ::lemmas ["great", "point", "!", "!", "!", "why", "do", "not", "they", "arrest", "his", "\"", "accomplice", "\"", "if", "they", "be", "robbery", "suspect", "?"]
+(c17-1 / multi-sentence
+       :snt1 (c17-4 / point-04
+                    :mod (c17-7 / great))
+       :snt2 (c17-6 / cause-01
+                    :ARG0 (c17-11 / amr-unknown)
+                    :ARG1 (c17-2 / arrest-01
+                                 :ARG0 (c17-9 / they)
+                                 :ARG1 (c17-10 / person
+                                               :ARG0-of (c17-3 / assist-01
+                                                               :ARG1 (c17-0 / he)))
+                                 :condition (c17-8 / suspect-01
+                                                   :ARG1 c17-10
+                                                   :ARG2 (c17-5 / rob-01
+                                                                :ARG0 c17-10))
+                                 :polarity -)))
+
+# ::snt Exactly! Smells fishy to me. They are trying to cover up their own tracks.
+# ::tokens ["Exactly", "!", "Smells", "fishy", "to", "me", ".", "They", "are", "trying", "to", "cover", "up", "their", "own", "tracks", "."]
+# ::lemmas ["exactly", "!", "smell", "fishy", "to", "i", ".", "they", "be", "try", "to", "cover", "up", "their", "own", "track", "."]
+(c18-1 / multi-sentence
+       :snt1 (c18-2 / exact
+                    :mode expressive)
+       :snt2 (c18-7 / smell-02
+                    :ARG1 (c18-0 / fishy)
+                    :ARG2 (c18-3 / i))
+       :snt3 (c18-8 / try-01
+                    :ARG0 (c18-6 / they)
+                    :ARG1 (c18-5 / cover-up-04
+                                 :ARG0 c18-6
+                                 :ARG1 (c18-4 / track
+                                              :poss c18-6))))
+
+# ::snt Even if true...since when are suspects gunned down in the street with their hands up? What about
+# ::tokens ["Even", "if", "true", "...", "since", "when", "are", "suspects", "gunned", "down", "in", "the", "street", "with", "their", "hands", "up", "?", "What", "about"]
+# ::lemmas ["even", "if", "true", "...", "since", "when", "be", "suspect", "gun", "down", "in", "the", "street", "with", "their", "hand", "up", "?", "what", "about"]
+(c19-2 / multi-sentence
+       :snt1 (c19-0 / have-concession-91
+                    :ARG2 (c19-6 / even-if
+                                 :op1 (c19-13 / true-01)))
+       :snt2 (c19-14 / amr-unknown
+                     :polarity (c19-8 / amr-unknown)
+                     :snt3 (c19-9 / amr-unknown
+                                  :topic (c19-11 / shoot-down-05
+                                                 :ARG1 (c19-10 / person
+                                                               :ARG2-of (c19-7 / suspect-01)
+                                                               :part (c19-1 / hand
+                                                                            :ARG1-of (c19-3 / up-03)))
+                                                 :location (c19-4 / street)
+                                                 :time (c19-5 / since
+                                                              :op1 (c19-12 / amr-unknown))))))

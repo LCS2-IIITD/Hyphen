@@ -1,0 +1,55 @@
+# ::snt people on the plane. Souce: French Medias.
+# ::tokens ["people", "on", "the", "plane", ".", "Souce", ":", "French", "Medias", "."]
+# ::lemmas ["people", "on", "the", "plane", ".", "souce", ":", "French", "Medias", "."]
+(c1-0 / multi-sentence
+      :snt1 (c1-3 / person
+                  :location (c1-6 / plane))
+      :snt2 (c1-1 / ignore-01
+                  :ARG0 (c1-4 / media
+                              :mod (c1-5 / country
+                                         :name (c1-2 / name
+                                                     :op1 "France")))))
+
+# ::snt .: No survivors expected.
+# ::tokens [".", ":", "No", "survivors", "expected", "."]
+# ::lemmas [".", ":", "no", "survivor", "expect", "."]
+(c2-1 / expect-01
+      :ARG1 (c2-2 / person
+                  :ARG0-of (c2-0 / survive-01)
+                  :polarity -))
+
+# ::snt oh GOD not again
+# ::tokens ["oh", "GOD", "not", "again"]
+# ::lemmas ["oh", "GOD", "not", "again"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "God")
+      :mod (c3-2 / oh
+                 :mode expressive)
+      :mod (c3-3 / again
+                 :polarity -))
+
+# ::snt people on board. Plane has crashed near the town of Digne (southern French Alps).
+# ::tokens ["people", "on", "board", ".", "Plane", "has", "crashed", "near", "the", "town", "of", "Digne", "(", "southern", "French", "Alps", ")", "."]
+# ::lemmas ["people", "on", "board", ".", "Plane", "have", "crash", "near", "the", "town", "of", "Digne", "(", "southern", "French", "Alps", ")", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-4 / person
+                  :location (c4-1 / board-01
+                                  :ARG1 (c4-10 / plane)))
+      :snt2 (c4-6 / crash-01
+                  :ARG1 c4-10
+                  :ARG1-of (c4-2 / near-02
+                                 :ARG2 (c4-9 / town
+                                             :name (c4-3 / name
+                                                         :op1 "Digne")
+                                             :location (c4-8 / south
+                                                             :part-of (c4-5 / mountain
+                                                                            :name (c4-7 / name
+                                                                                        :op1 "French"
+                                                                                        :op2 "Alps")))))))
+
+# ::snt wow
+# ::tokens ["wow"]
+# ::lemmas ["wow"]
+(c5-0 / wow
+      :mode expressive)

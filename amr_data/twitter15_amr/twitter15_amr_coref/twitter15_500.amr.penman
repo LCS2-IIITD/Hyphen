@@ -1,0 +1,32 @@
+# ::snt great man!
+# ::tokens ["great", "man", "!"]
+# ::lemmas ["great", "man", "!"]
+(c1-0 / man
+      :mod (c1-1 / great)
+      :mode expressive)
+
+# ::snt Bad-ass!
+# ::tokens ["Bad", "-", "ass", "!"]
+# ::lemmas ["bad", "-", "ass", "!"]
+(c2-0 / bad-ass
+      :mode expressive)
+
+# ::snt Sgt at Arms is actually armed? Thought it a more ceremonial title than anything
+# ::tokens ["Sgt", "at", "Arms", "is", "actually", "armed", "?", "Thought", "it", "a", "more", "ceremonial", "title", "than", "anything"]
+# ::lemmas ["Sgt", "at", "Arms", "be", "actually", "armed", "?", "think", "it", "a", "more", "ceremonial", "title", "than", "anything"]
+(c3-5 / multi-sentence
+      :snt1 (c3-11 / arm-01
+                   :polarity (c3-4 / amr-unknown)
+                   :ARG1 (c3-12 / military
+                                :name (c3-6 / name
+                                            :op1 "Sgt"
+                                            :op2 "at"
+                                            :op3 "Arms"))
+                   :ARG1-of (c3-2 / actual-02))
+      :snt2 (c3-1 / think-01
+                  :ARG1 (c3-3 / title-01
+                              :ARG2 (c3-0 / it)
+                              :ARG1-of (c3-10 / have-degree-91
+                                              :ARG2 (c3-7 / ceremonial)
+                                              :ARG3 (c3-8 / more)
+                                              :ARG4 (c3-9 / anything)))))

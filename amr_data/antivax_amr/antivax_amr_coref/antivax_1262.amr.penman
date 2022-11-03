@@ -1,0 +1,300 @@
+# ::snt They code for a damn novel protein.
+# ::tokens ["They", "code", "for", "a", "damn", "novel", "protein", "."]
+# ::lemmas ["they", "code", "for", "a", "damn", "novel", "protein", "."]
+(c1-1 / code-01
+      :ARG0 (c1-2 / they)
+      :ARG3 (c1-3 / protein
+                  :mod (c1-4 / novel)
+                  :mod (c1-0 / damn
+                             :mode expressive)))
+
+# ::snt Good. This explains very well why the mRNA vaccines are not gene therapy. They don't alter or replace any genes.
+# ::tokens ["Good", ".", "This", "explains", "very", "well", "why", "the", "mRNA", "vaccines", "are", "not", "gene", "therapy", ".", "They", "do", "n't", "alter", "or", "replace", "any", "genes", "."]
+# ::lemmas ["good", ".", "this", "explain", "very", "well", "why", "the", "mrna", "vaccine", "be", "not", "gene", "therapy", ".", "they", "do", "not", "alter", "or", "replace", "any", "gene", "."]
+(c2-14 / multi-sentence
+       :snt1 (c2-13 / good-02)
+       :snt2 (c2-17 / explain-01
+                    :ARG0 (c2-11 / this)
+                    :ARG1 (c2-6 / thing
+                                :ARG0-of (c2-4 / cause-01
+                                               :ARG1 (c2-15 / therapy
+                                                            :mod (c2-2 / gene)
+                                                            :domain (c2-9 / vaccine
+                                                                          :mod (c2-5 / mRNA))
+                                                            :polarity -)))
+                    :manner (c2-7 / well
+                                  :degree (c2-3 / very)))
+       :snt3 (c2-10 / or
+                    :op1 (c2-1 / alter-01
+                               :ARG0 (c2-8 / they)
+                               :ARG1 (c2-0 / gene
+                                           :mod (c2-16 / any))
+                               :polarity -)
+                    :op2 (c2-12 / replace-01
+                                :ARG0 c2-8
+                                :ARG1 c2-0
+                                :polarity -)))
+
+# ::snt I'm done with you.
+# ::tokens ["I", "'m", "done", "with", "you", "."]
+# ::lemmas ["i", "be", "do", "with", "you", "."]
+(c3-0 / be-done-08
+      :ARG0 (c3-1 / i)
+      :ARG1 (c3-2 / you))
+
+# ::snt In summary, one hit in four.
+# ::tokens ["In", "summary", ",", "one", "hit", "in", "four", "."]
+# ::lemmas ["in", "summary", ",", "one", "hit", "in", "four", "."]
+(c4-0 / summarize-01
+      :ARG1 (c4-3 / hit-01
+                  :ARG1-of (c4-2 / include-91
+                                 :ARG2 (c4-1 / hit-01
+                                             :quant 4))
+                  :quant 1))
+
+# ::snt th article you cite:Throughout the article they talk about 'mRNA and gene therapies.' So they are distinguishing, correctly, between mRNA therapy and gene therapy. They are clear that mRNA use is not a form of gene therapy. It is an alternative.
+# ::tokens ["th", "article", "you", "cite", ":", "Throughout", "the", "article", "they", "talk", "about", "'", "mRNA", "and", "gene", "therapies", ".", "'", "So", "they", "are", "distinguishing", ",", "correctly", ",", "between", "mRNA", "therapy", "and", "gene", "therapy", ".", "They", "are", "clear", "that", "mRNA", "use", "is", "not", "a", "form", "of", "gene", "therapy", ".", "It", "is", "an", "alternative", "."]
+# ::lemmas ["th", "article", "you", "cite", ":", "throughout", "the", "article", "they", "talk", "about", "'", "mrna", "and", "gene", "therapy", ".", "'", "so", "they", "be", "distinguish", ",", "correctly", ",", "between", "mRNA", "therapy", "and", "gene", "therapy", ".", "they", "be", "clear", "that", "mrna", "use", "be", "not", "a", "form", "of", "gene", "therapy", ".", "it", "be", "an", "alternative", "."]
+(c5-11 / multi-sentence
+       :snt1 (c5-9 / talk-01
+                   :ARG0 (c5-6 / they)
+                   :ARG1 (c5-20 / and
+                                :op1 (c5-25 / protein
+                                            :name (c5-12 / name
+                                                         :op1 "mRNA"))
+                                :op2 (c5-13 / therapy
+                                            :mod (c5-10 / gene)))
+                   :time (c5-17 / throughout
+                                :op1 (c5-14 / article
+                                            :ARG1-of (c5-5 / cite-01
+                                                           :ARG0 (c5-19 / you)))))
+       :snt2 (c5-4 / infer-01
+                   :ARG1 (c5-0 / distinguish-01
+                               :ARG0 (c5-21 / they)
+                               :ARG1 (c5-1 / and
+                                           :op1 (c5-23 / therapy
+                                                       :mod (c5-18 / gene))
+                                           :op2 c5-13)
+                               :ARG1-of (c5-2 / correct-02)))
+       :snt3 (c5-7 / clear-06
+                   :ARG0 (c5-8 / they)
+                   :ARG1 (c5-22 / form
+                                :mod (c5-15 / therapy
+                                            :mod (c5-3 / gene))
+                                :domain (c5-24 / use-01
+                                               :ARG1 c5-25)
+                                :polarity -))
+       :snt4 (c5-26 / alternative
+                    :domain (c5-16 / it)))
+
+# ::snt Dude, have fun. Learn on your own.
+# ::tokens ["Dude", ",", "have", "fun", ".", "Learn", "on", "your", "own", "."]
+# ::lemmas ["dude", ",", "have", "fun", ".", "learn", "on", "your", "own", "."]
+(c7-6 / multi-sentence
+      :snt1 (c7-0 / say-01
+                  :ARG0 (c7-5 / i)
+                  :ARG1 (c7-2 / fun-01
+                              :ARG0 (c7-1 / dude
+                                          :ARG2-of c7-0)
+                              :mode imperative))
+      :snt2 (c7-3 / learn-01
+                  :ARG0 c7-1
+                  :mod (c7-4 / by-oneself)
+                  :mode imperative))
+
+# ::snt rd articleYes, they do call the introduction of mRNA into a cell 'gene therapy'. You are right. But they are wrong. The genes are not being altered so it should not be called gene therapy.
+# ::tokens ["rd", "articleYes", ",", "they", "do", "call", "the", "introduction", "of", "mRNA", "into", "a", "cell", "'", "gene", "therapy", "'", ".", "You", "are", "right", ".", "But", "they", "are", "wrong", ".", "The", "genes", "are", "not", "being", "altered", "so", "it", "should", "not", "be", "called", "gene", "therapy", "."]
+# ::lemmas ["rd", "articleYes", ",", "they", "do", "call", "the", "introduction", "of", "mRNA", "into", "a", "cell", "'", "gene", "therapy", "'", ".", "you", "be", "right", ".", "but", "they", "be", "wrong", ".", "the", "gene", "be", "not", "be", "alter", "so", "it", "should", "not", "be", "call", "gene", "therapy", "."]
+(c8-12 / multi-sentence
+       :snt1 (c8-20 / article
+                    :ord (c8-8 / ordinal-entity
+                               :value 3))
+       :snt2 (c8-3 / call-01
+                   :ARG0 (c8-9 / they)
+                   :ARG1 (c8-2 / introduce-02
+                               :ARG1 (c8-21 / mRNA)
+                               :ARG2 (c8-0 / cell))
+                   :ARG2 (c8-5 / therapy
+                               :mod (c8-11 / gene)))
+       :snt3 (c8-10 / right-06
+                    :ARG1 (c8-19 / you))
+       :snt4 (c8-6 / contrast-01
+                   :ARG2 (c8-4 / wrong-04
+                               :ARG1 (c8-13 / they)))
+       :snt5 (c8-14 / alter-01
+                    :ARG1 (c8-18 / gene)
+                    :ARG0-of (c8-17 / cause-01
+                                    :ARG1 (c8-7 / recommend-01
+                                                :ARG1 (c8-15 / call-01
+                                                             :ARG1 (c8-16 / it)
+                                                             :ARG2 c8-5
+                                                             :mod (c8-1 / gene)
+                                                             :polarity -)))
+                    :polarity -))
+
+# ::snt nd article cited. Title is:As a Gene/Cell therapy deliver, mRNA is a more efficient coding language.This is not English. No idea what it is supposed to mean. Computer translated?
+# ::tokens ["nd", "article", "cited", ".", "Title", "is", ":", "As", "a", "Gene", "/", "Cell", "therapy", "deliver", ",", "mRNA", "is", "a", "more", "efficient", "coding", "language", ".", "This", "is", "not", "English", ".", "No", "idea", "what", "it", "is", "supposed", "to", "mean", ".", "Computer", "translated", "?"]
+# ::lemmas ["nd", "article", "cite", ".", "title", "be", ":", "as", "a", "Gene", "/", "Cell", "therapy", "deliver", ",", "mRNA", "be", "a", "more", "efficient", "code", "language", ".", "this", "be", "not", "English", ".", "no", "idea", "what", "it", "be", "suppose", "to", "mean", ".", "computer", "translate", "?"]
+(c9-11 / multi-sentence
+       :snt1 (c9-5 / cite-01
+                   :ARG1 (c9-22 / article
+                                :ord (c9-8 / ordinal-entity
+                                           :value 2)))
+       :snt2 (c9-9 / title-01
+                   :ARG2 (c9-25 / have-degree-91
+                                :ARG1 (c9-26 / language
+                                             :name (c9-12 / name
+                                                          :op1 "M mRNA")
+                                             :mod (c9-0 / code-01))
+                                :ARG2 (c9-15 / efficient-01
+                                             :ARG1 c9-26)
+                                :ARG3 (c9-24 / more)
+                                :ARG4 (c9-1 / deliver-01
+                                            :ARG1 (c9-6 / therapy
+                                                        :mod (c9-10 / gene)
+                                                        :mod (c9-7 / cell)))))
+       :snt3 c9-26
+       :name (c9-2 / name
+                   :op1 "English")
+       :domain (c9-13 / this)
+       :snt4 (c9-3 / have-03
+                   :ARG0 (c9-4 / i)
+                   :ARG1 (c9-17 / idea
+                                :topic (c9-18 / thing
+                                              :ARG2-of (c9-20 / mean-01
+                                                              :ARG1 (c9-19 / it)
+                                                              :ARG1-of (c9-16 / suppose-02))))
+                   :polarity -)
+       :snt5 (c9-23 / translate-01
+                    :ARG2 (c9-21 / computer)
+                    :polarity (c9-14 / amr-unknown))
+       :polarity -)
+
+# ::snt Dude, who's paying you?
+# ::tokens ["Dude", ",", "who", "'s", "paying", "you", "?"]
+# ::lemmas ["dude", ",", "who", "be", "pay", "you", "?"]
+(c10-0 / say-01
+       :ARG0 (c10-4 / i)
+       :ARG1 (c10-3 / pay-01
+                    :ARG0 (c10-2 / amr-unknown)
+                    :ARG2 (c10-1 / dude
+                                 :ARG2-of c10-0)))
+
+# ::snt First article cited: all about how mRNA can be used INSTEAD OF DNA. So it AVOIDS the use of gene therapy.
+# ::tokens ["First", "article", "cited", ":", "all", "about", "how", "mRNA", "can", "be", "used", "INSTEAD", "OF", "DNA", ".", "So", "it", "AVOIDS", "the", "use", "of", "gene", "therapy", "."]
+# ::lemmas ["First", "article", "cite", ":", "all", "about", "how", "mrna", "can", "be", "use", "instead", "of", "DNA", ".", "so", "it", "avoid", "the", "use", "of", "gene", "therapy", "."]
+(c11-14 / multi-sentence
+        :snt1 (c11-2 / article
+                     :ord (c11-9 / ordinal-entity
+                                 :value 1)
+                     :ARG1-of (c11-3 / cite-01)
+                     :topic (c11-13 / possible-01
+                                    :ARG1 (c11-8 / use-01
+                                                 :ARG1 (c11-4 / mRNA)
+                                                 :manner (c11-5 / in-STEAD
+                                                                :op1 (c11-15 / nucleic-acid
+                                                                             :name (c11-11 / name
+                                                                                           :op1 "DNA")))))
+                     :mod (c11-16 / all))
+        :snt2 (c11-0 / cause-01
+                     :ARG1 (c11-1 / AVOIDS-00
+                                  :ARG0 (c11-7 / it)
+                                  :ARG1 (c11-6 / use-01
+                                               :ARG1 (c11-10 / therapy
+                                                             :mod (c11-12 / gene))))))
+
+# ::snt Now the question is, who's paying you to troll around questioning everyone who's pointing out the fact that this Is Technically gene therapy/Not a vaccine?
+# ::tokens ["Now", "the", "question", "is", ",", "who", "'s", "paying", "you", "to", "troll", "around", "questioning", "everyone", "who", "'s", "pointing", "out", "the", "fact", "that", "this", "Is", "Technically", "gene", "therapy", "/", "Not", "a", "vaccine", "?"]
+# ::lemmas ["now", "the", "question", "be", ",", "who", "be", "pay", "you", "to", "troll", "around", "question", "everyone", "who", "be", "point", "out", "the", "fact", "that", "this", "be", "Technically", "gene", "therapy", "/", "not", "a", "vaccine", "?"]
+(c12-2 / question-01
+       :ARG1 (c12-11 / pay-01
+                     :ARG0 (c12-0 / amr-unknown)
+                     :ARG2 (c12-13 / you)
+                     :ARG3 (c12-8 / troll-01
+                                  :ARG0 c12-13
+                                  :ARG2 (c12-10 / question-01
+                                                :ARG0 c12-13
+                                                :ARG1 (c12-15 / everyone
+                                                              :ARG0-of (c12-7 / point-out-02
+                                                                              :ARG1 (c12-6 / or
+                                                                                           :op1 (c12-3 / therapy
+                                                                                                       :mod (c12-9 / gene)
+                                                                                                       :mod (c12-1 / technical)
+                                                                                                       :domain (c12-4 / this))
+                                                                                           :op2 (c12-5 / vaccine
+                                                                                                       :domain c12-4
+                                                                                                       :polarity -)))))
+                                  :location (c12-14 / around)))
+       :time (c12-12 / now))
+
+# ::snt Appears you need to do some more searching.There's plenty of info on mRNA gene therapy.(You are welcome.)
+# ::tokens ["Appears", "you", "need", "to", "do", "some", "more", "searching", ".", "There", "'s", "plenty", "of", "info", "on", "mRNA", "gene", "therapy.(You", "are", "welcome", ".", ")"]
+# ::lemmas ["appear", "you", "need", "to", "do", "some", "more", "searching", ".", "there", "be", "plenty", "of", "info", "on", "mrna", "gene", "therapy.(you", "be", "welcome", ".", ")"]
+(c13-11 / multi-sentence
+        :snt1 (c13-2 / appear-02
+                     :ARG1 (c13-12 / need-01
+                                   :ARG0 (c13-13 / you)
+                                   :ARG1 (c13-0 / do-02
+                                                :ARG0 c13-13
+                                                :ARG1 (c13-1 / search-01
+                                                             :ARG0 c13-13
+                                                             :mod (c13-3 / more)
+                                                             :quant (c13-9 / some)))))
+        :snt2 (c13-10 / information
+                      :quant (c13-7 / plenty)
+                      :topic (c13-6 / therapy
+                                    :mod (c13-8 / gene
+                                                :mod (c13-5 / mRNA))))
+        :snt3 (c13-4 / welcome-01
+                     :ARG1 (c13-14 / you)))
+
+# ::snt So someone saying 'it is gene therapy' means that it is gene therapy? No. Gene therapy is when genes are changed. mRNA vaccines do not do that.
+# ::tokens ["So", "someone", "saying", "'", "it", "is", "gene", "therapy", "'", "means", "that", "it", "is", "gene", "therapy", "?", "No", ".", "Gene", "therapy", "is", "when", "genes", "are", "changed", ".", "mRNA", "vaccines", "do", "not", "do", "that", "."]
+# ::lemmas ["so", "someone", "say", "'", "it", "be", "gene", "therapy", "'", "mean", "that", "it", "be", "gene", "therapy", "?", "no", ".", "gene", "therapy", "be", "when", "gene", "be", "change", ".", "mrna", "vaccine", "do", "not", "do", "that", "."]
+(c14-15 / multi-sentence
+        :snt1 (c14-4 / mean-01
+                     :polarity (c14-3 / amr-unknown)
+                     :ARG1 (c14-0 / say-01
+                                  :ARG0 (c14-14 / someone)
+                                  :ARG1 (c14-10 / therapy
+                                                :mod (c14-13 / gene)))
+                     :ARG2 (c14-6 / therapy
+                                  :mod (c14-17 / gene)))
+        :snt2 (c14-16 / no)
+        :snt3 (c14-5 / therapy
+                     :mod (c14-2 / gene)
+                     :domain (c14-7 / change-01
+                                    :ARG1 (c14-11 / gene)))
+        :snt4 (c14-1 / do-02
+                     :ARG0 (c14-9 / vaccine
+                                  :mod (c14-12 / gene))
+                     :ARG1 (c14-8 / that)
+                     :polarity -))
+
+# ::snt Because it is technically a gene therapy.
+# ::tokens ["Because", "it", "is", "technically", "a", "gene", "therapy", "."]
+# ::lemmas ["because", "it", "be", "technically", "a", "gene", "therapy", "."]
+(c15-0 / cause-01
+       :ARG0 (c15-2 / therapy
+                    :mod (c15-3 / gene)
+                    :domain (c15-4 / it)
+                    :mod (c15-1 / technical)))
+
+# ::snt Please explain why you call it a gene therapy. Thanks.
+# ::tokens ["Please", "explain", "why", "you", "call", "it", "a", "gene", "therapy", ".", "Thanks", "."]
+# ::lemmas ["please", "explain", "why", "you", "call", "it", "a", "gene", "therapy", ".", "thank", "."]
+(c17-8 / multi-sentence
+       :snt1 (c17-11 / explain-01
+                     :ARG0 (c17-9 / you)
+                     :ARG1 (c17-5 / thing
+                                  :ARG0-of (c17-1 / cause-01
+                                                  :ARG1 (c17-0 / call-01
+                                                               :ARG0 c17-9
+                                                               :ARG1 (c17-7 / it)
+                                                               :ARG2 (c17-3 / therapy
+                                                                            :mod (c17-6 / gene)))))
+                     :mode imperative
+                     :polite +)
+       :snt2 (c17-2 / thank-01
+                    :ARG0 (c17-4 / i)
+                    :ARG1 (c17-10 / you)))

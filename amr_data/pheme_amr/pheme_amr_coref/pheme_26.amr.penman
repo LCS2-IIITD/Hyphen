@@ -1,0 +1,126 @@
+# ::snt . I think you should add this one as well. Not sure how you could have missed it.
+# ::tokens [".", "I", "think", "you", "should", "add", "this", "one", "as", "well", ".", "Not", "sure", "how", "you", "could", "have", "missed", "it", "."]
+# ::lemmas [".", "i", "think", "you", "should", "add", "this", "one", "as", "well", ".", "not", "sure", "how", "you", "could", "have", "miss", "it", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-12 / think-01
+                   :ARG0 (c1-4 / i)
+                   :ARG1 (c1-7 / recommend-01
+                               :ARG1 (c1-13 / add-02
+                                            :ARG0 (c1-0 / you)
+                                            :ARG1 (c1-2 / one
+                                                        :mod (c1-10 / this))
+                                            :mod (c1-3 / as-well))))
+      :snt2 (c1-11 / sure-02
+                   :ARG0 c1-4
+                   :polarity -)
+      :ARG1 (c1-5 / thing
+                  :manner-of (c1-6 / miss-02
+                                   :ARG0 (c1-14 / you)
+                                   :ARG1 (c1-9 / it)
+                                   :ARG1-of (c1-8 / possible-01))))
+
+# ::snt to
+# ::tokens ["to"]
+# ::lemmas ["to"]
+(c2-0 / to)
+
+# ::snt Swedish newspaper Expressen's front page is by far the best, and should be included
+# ::tokens ["Swedish", "newspaper", "Expressen", "'s", "front", "page", "is", "by", "far", "the", "best", ",", "and", "should", "be", "included"]
+# ::lemmas ["Swedish", "newspaper", "Expressen", "'s", "front", "page", "be", "by", "far", "the", "good", ",", "and", "should", "be", "include"]
+(c4-12 / and
+       :op1 (c4-7 / page
+                  :mod (c4-1 / front)
+                  :poss (c4-5 / newspaper
+                              :name (c4-6 / name
+                                          :op1 "Expressen")
+                              :mod (c4-9 / country
+                                         :name (c4-8 / name
+                                                     :op1 "Sweden")))
+                  :ARG1-of (c4-0 / have-degree-91
+                                 :ARG2 (c4-10 / good-02
+                                              :ARG1 c4-7
+                                              :mod (c4-4 / far))
+                                 :ARG3 (c4-2 / most)))
+       :op2 (c4-11 / recommend-01
+                   :ARG1 (c4-3 / include-01
+                               :ARG1 c4-7)))
+
+# ::snt :Dont miss the Swedish newspaper Expressen!
+# ::tokens [":", "Do", "nt", "miss", "the", "Swedish", "newspaper", "Expressen", "!"]
+# ::lemmas [":", "do", "not", "miss", "the", "Swedish", "newspaper", "Expressen", "!"]
+(c6-1 / miss-01
+      :ARG0 (c6-0 / you)
+      :ARG1 (c6-2 / newspaper
+                  :name (c6-3 / name
+                              :op1 "Expressen")
+                  :mod (c6-5 / country
+                             :name (c6-4 / name
+                                         :op1 "Sweden")))
+      :polarity -
+      :mode imperative)
+
+# ::snt but you don't show the front pages of newspapers reprinting the cartoons -why?
+# ::tokens ["but", "you", "do", "n't", "show", "the", "front", "pages", "of", "newspapers", "reprinting", "the", "cartoons", "-why", "?"]
+# ::lemmas ["but", "you", "do", "not", "show", "the", "front", "page", "of", "newspaper", "reprint", "the", "cartoon", "-why", "?"]
+(c7-5 / contrast-01
+      :ARG2 (c7-8 / show-01
+                  :ARG0 (c7-0 / you)
+                  :ARG1 (c7-3 / page
+                              :mod (c7-1 / front)
+                              :part-of (c7-2 / newspaper
+                                             :ARG0-of (c7-4 / reprint-01
+                                                            :ARG1 (c7-6 / cartoon))))
+                  :ARG1-of (c7-7 / cause-01
+                                 :ARG0 (c7-9 / amr-unknown))
+                  :polarity -))
+
+# ::snt : Newspaper front pages after the attack on Charlie Hebdo in pictures must see!
+# ::tokens [":", "Newspaper", "front", "pages", "after", "the", "attack", "on", "Charlie", "Hebdo", "in", "pictures", "must", "see", "!"]
+# ::lemmas [":", "newspaper", "front", "page", "after", "the", "attack", "on", "Charlie", "Hebdo", "in", "picture", "must", "see", "!"]
+(c8-2 / obligate-01
+      :ARG2 (c8-7 / see-01
+                  :ARG1 (c8-6 / page
+                              :mod (c8-0 / front)
+                              :part-of (c8-4 / newspaper))
+                  :time (c8-9 / after
+                              :op1 (c8-3 / attack-01
+                                         :ARG1 (c8-1 / magazine
+                                                     :name (c8-5 / name
+                                                                 :op1 "Charlie"
+                                                                 :op2 "Ch Hebdo"))))
+                  :medium (c8-8 / picture)))
+
+# ::snt : Newspaper front pages after the attack on Charlie Hebdo in pictures
+# ::tokens [":", "Newspaper", "front", "pages", "after", "the", "attack", "on", "Charlie", "Hebdo", "in", "pictures"]
+# ::lemmas [":", "newspaper", "front", "page", "after", "the", "attack", "on", "Charlie", "Hebdo", "in", "picture"]
+(c9-5 / page
+      :mod (c9-0 / front)
+      :part-of (c9-3 / newspaper)
+      :time (c9-7 / after
+                  :op1 (c9-2 / attack-01
+                             :ARG1 (c9-1 / magazine
+                                         :name (c9-4 / name
+                                                     :op1 "Charlie"
+                                                     :op2 "Ch Hebdo"))))
+      :ARG1-of (c9-6 / picture-01))
+
+# ::snt these are the newspapers WITHOUT the cartoons on them, great show of support from the courageous British Press
+# ::tokens ["these", "are", "the", "newspapers", "WITHOUT", "the", "cartoons", "on", "them", ",", "great", "show", "of", "support", "from", "the", "courageous", "British", "Press"]
+# ::lemmas ["these", "be", "the", "newspaper", "without", "the", "cartoon", "on", "they", ",", "great", "show", "of", "support", "from", "the", "courageous", "British", "Press"]
+(c10-11 / and
+        :op1 (c10-2 / newspaper
+                    :domain (c10-10 / this)
+                    :ARG0-of (c10-0 / have-03
+                                    :ARG1 (c10-6 / cartoon
+                                                 :location c10-2)
+                                    :polarity -))
+        :op2 (c10-9 / show-01
+                    :ARG0 (c10-4 / press
+                                 :mod (c10-5 / courageous)
+                                 :mod (c10-8 / country
+                                             :name (c10-3 / name
+                                                          :op1 "Great"
+                                                          :op2 "Britain")))
+                    :ARG1 (c10-1 / support-01
+                                 :ARG0 c10-4)
+                    :mod (c10-7 / great)))

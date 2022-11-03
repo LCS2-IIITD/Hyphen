@@ -1,0 +1,39 @@
+# ::snt Millions of Donald Trump voters to lose overtime pay the moment he takes office
+# ::tokens ["Millions", "of", "Donald", "Trump", "voters", "to", "lose", "overtime", "pay", "the", "moment", "he", "takes", "office"]
+# ::lemmas ["Millions", "of", "Donald", "Trump", "voter", "to", "lose", "overtime", "pay", "the", "moment", "he", "take", "office"]
+(c1-7 / lose-02
+      :ARG0 (c1-8 / person
+                  :ARG0-of (c1-3 / vote-01)
+                  :quant (c1-9 / multiple
+                               :op1 1000000)
+                  :mod (c1-5 / person
+                             :name (c1-10 / name
+                                          :op1 "Donald"
+                                          :op2 "Trump")))
+      :ARG1 (c1-1 / pay-01
+                  :mod (c1-4 / overtime))
+      :time (c1-0 / moment
+                  :time-of (c1-6 / take-01
+                                 :ARG0 c1-5
+                                 :ARG1 (c1-2 / office))))
+
+# ::snt If you make **between $23,660 and $47,476** you will literally take a **pay cut** at the hands of Trump.
+# ::tokens ["If", "you", "make", "*", "*", "between", "$", "23,660", "and", "$", "47,476", "*", "*", "you", "will", "literally", "take", "a", "*", "*", "pay", "cut", "*", "*", "at", "the", "hands", "of", "Trump", "."]
+# ::lemmas ["if", "you", "make", "*", "*", "between", "$", "23,660", "and", "$", "47,476", "*", "*", "you", "will", "literally", "take", "a", "*", "*", "pay", "cut", "*", "*", "at", "the", "hand", "of", "Trump", "."]
+(c2-6 / take-01
+      :ARG0 (c2-12 / you)
+      :ARG1 (c2-1 / cut-02
+                  :ARG1 (c2-9 / pay-01))
+      :ARG2 (c2-5 / person
+                  :name (c2-11 / name
+                               :op1 "Trump"))
+      :manner (c2-7 / literal)
+      :condition (c2-10 / make-05
+                        :ARG0 c2-12
+                        :ARG1 (c2-8 / between
+                                    :op1 (c2-2 / monetary-quantity
+                                               :unit (c2-0 / dollar)
+                                               :quant 23660)
+                                    :op2 (c2-4 / monetary-quantity
+                                               :unit (c2-3 / dollar)
+                                               :quant 47476))))

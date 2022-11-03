@@ -1,0 +1,84 @@
+# ::snt Now Petra is double checking on you!
+# ::tokens ["Now", "Petra", "is", "double", "checking", "on", "you", "!"]
+# ::lemmas ["now", "Petra", "be", "double", "check", "on", "you", "!"]
+(c1-1 / check-01
+      :ARG0 (c1-3 / person
+                  :name (c1-4 / name
+                              :op1 "Petra"))
+      :ARG1 (c1-5 / you)
+      :ARG1-of (c1-0 / double-01)
+      :time (c1-2 / now)
+      :mode expressive)
+
+# ::snt Thank you Ted x
+# ::tokens ["Thank", "you", "Ted", "x"]
+# ::lemmas ["thank", "you", "Ted", "x"]
+(c2-0 / say-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-1 / thank-01
+                  :ARG0 c2-3
+                  :ARG1 (c2-2 / person
+                              :name (c2-4 / name
+                                          :op1 "Ted")
+                              :ARG2-of c2-0)))
+
+# ::snt Hoping you feel better soon. Ted also wants to check you feel better soon
+# ::tokens ["Hoping", "you", "feel", "better", "soon", ".", "Ted", "also", "wants", "to", "check", "you", "feel", "better", "soon"]
+# ::lemmas ["hope", "you", "feel", "well", "soon", ".", "Ted", "also", "want", "to", "check", "you", "feel", "well", "soon"]
+(c3-6 / multi-sentence
+      :snt1 (c3-17 / hope-01
+                   :ARG0 (c3-2 / i)
+                   :ARG1 (c3-15 / feel-01
+                                :ARG0 (c3-12 / you)
+                                :ARG1 (c3-5 / well-05
+                                            :ARG1 c3-12
+                                            :ARG2-of (c3-0 / have-degree-91
+                                                           :ARG1 c3-12
+                                                           :ARG3 (c3-16 / more)))
+                                :time (c3-9 / soon)))
+      :snt2 (c3-8 / want-01
+                  :ARG0 (c3-19 / person
+                               :name (c3-7 / name
+                                           :op1 "Ted"))
+                  :ARG1 (c3-4 / check-01
+                              :ARG0 c3-19
+                              :ARG1 (c3-11 / feel-01
+                                           :ARG0 (c3-13 / you)
+                                           :ARG1 (c3-1 / well-05
+                                                       :ARG2-of (c3-3 / have-degree-91
+                                                                      :ARG1 c3-13
+                                                                      :ARG3 (c3-10 / more))))
+                              :time (c3-18 / soon))
+                  :mod (c3-14 / also)))
+
+# ::snt Hope you feel better soon
+# ::tokens ["Hope", "you", "feel", "better", "soon"]
+# ::lemmas ["hope", "you", "feel", "well", "soon"]
+(c4-3 / hope-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-1 / feel-01
+                  :ARG0 (c4-7 / you)
+                  :ARG1 (c4-2 / well-05
+                              :ARG1 c4-7
+                              :ARG2-of (c4-4 / have-degree-91
+                                             :ARG1 c4-7
+                                             :ARG3 (c4-6 / more)))
+                  :time (c4-0 / soon)))
+
+# ::snt Poor you! Hope you feel much better tomorrow.
+# ::tokens ["Poor", "you", "!", "Hope", "you", "feel", "much", "better", "tomorrow", "."]
+# ::lemmas ["poor", "you", "!", "hope", "you", "feel", "much", "well", "tomorrow", "."]
+(c5-9 / multi-sentence
+      :snt1 (c5-8 / poor
+                  :domain (c5-10 / you))
+      :snt2 (c5-4 / hope-01
+                  :ARG0 (c5-1 / i)
+                  :ARG1 (c5-0 / feel-01
+                              :ARG0 (c5-11 / you)
+                              :ARG1 (c5-2 / well-05
+                                          :ARG1 c5-11
+                                          :ARG2-of (c5-7 / have-degree-91
+                                                         :ARG1 c5-0
+                                                         :ARG3 (c5-3 / more
+                                                                     :quant (c5-5 / much))))
+                              :time (c5-6 / tomorrow))))

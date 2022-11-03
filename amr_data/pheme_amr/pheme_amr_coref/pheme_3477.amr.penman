@@ -1,0 +1,462 @@
+# ::snt I got thrown off, people were calling it "The Siege of Sydney", I thought it was some military type of thing.
+# ::tokens ["I", "got", "thrown", "off", ",", "people", "were", "calling", "it", "\"", "The", "Siege", "of", "Sydney", "\"", ",", "I", "thought", "it", "was", "some", "military", "type", "of", "thing", "."]
+# ::lemmas ["i", "got", "throw", "off", ",", "people", "be", "call", "it", "\"", "The", "Siege", "of", "Sydney", "\"", ",", "i", "think", "it", "be", "some", "military", "type", "of", "thing", "."]
+(c1-13 / and
+       :op1 (c1-8 / get-03
+                  :ARG1 (c1-12 / throw-off-06
+                               :ARG1 (c1-3 / i)))
+       :op2 (c1-7 / call-01
+                  :ARG0 (c1-6 / person)
+                  :ARG1 (c1-9 / it)
+                  :ARG2 (c1-1 / event
+                              :name (c1-4 / name
+                                          :op1 "Siege"
+                                          :op2 "of"
+                                          :op3 "Sydney")))
+       :op3 (c1-10 / think-01
+                   :ARG0 c1-3
+                   :ARG1 (c1-5 / thing
+                               :mod (c1-2 / type
+                                          :mod (c1-0 / military)
+                                          :mod (c1-11 / some))
+                               :domain c1-9)))
+
+# ::snt damn. Thanks for letting me know!
+# ::tokens ["damn", ".", "Thanks", "for", "letting", "me", "know", "!"]
+# ::lemmas ["damn", ".", "thank", "for", "let", "i", "know", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / damn-01)
+      :snt2 (c2-5 / thank-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-0 / you)
+                  :ARG2 (c2-1 / let-know-07
+                              :ARG0 c2-0
+                              :ARG1 c2-3)
+                  :mode expressive))
+
+# ::snt oh wow that's terrible sorry for those people there
+# ::tokens ["oh", "wow", "that", "'s", "terrible", "sorry", "for", "those", "people", "there"]
+# ::lemmas ["oh", "wow", "that", "be", "terrible", "sorry", "for", "those", "people", "there"]
+(c3-5 / terrible-01
+      :ARG1 (c3-4 / that)
+      :ARG2 (c3-3 / person
+                  :mod c3-4)
+      :location (c3-2 / there)
+      :mod (c3-0 / wow
+                 :mod (c3-1 / oh)
+                 :mode expressive))
+
+# ::snt people are being held hostage in a cafe. They've been there for sixish hours
+# ::tokens ["people", "are", "being", "held", "hostage", "in", "a", "cafe", ".", "They", "'ve", "been", "there", "for", "sixish", "hours"]
+# ::lemmas ["people", "be", "be", "hold", "hostage", "in", "a", "cafe", ".", "they", "'ve", "be", "there", "for", "sixish", "hours"]
+(c4-1 / multi-sentence
+      :snt1 (c4-0 / hold-01
+                  :ARG1 (c4-8 / hostage
+                              :domain (c4-4 / person))
+                  :location (c4-5 / cafe))
+      :snt2 (c4-2 / be-located-at-91
+                  :ARG1 (c4-7 / they)
+                  :ARG2 c4-5
+                  :duration (c4-6 / temporal-quantity
+                                  :unit (c4-3 / hour)
+                                  :quant 6)))
+
+# ::snt according to the news, no one is hurt, they're unsure of the motives and hostages have escaped.
+# ::tokens ["according", "to", "the", "news", ",", "no", "one", "is", "hurt", ",", "they", "'re", "unsure", "of", "the", "motives", "and", "hostages", "have", "escaped", "."]
+# ::lemmas ["accord", "to", "the", "news", ",", "no", "one", "be", "hurt", ",", "they", "be", "unsure", "of", "the", "motive", "and", "hostage", "have", "escape", "."]
+(c5-7 / say-01
+      :ARG0 (c5-5 / news)
+      :ARG1 (c5-8 / and
+                  :op1 (c5-0 / hurt-01
+                             :ARG1 (c5-6 / no-one))
+                  :op2 (c5-3 / sure-02
+                             :ARG0 c5-6
+                             :ARG1 (c5-2 / motive)
+                             :polarity -)
+                  :op3 (c5-4 / escape-01
+                             :ARG0 (c5-1 / hostage))))
+
+# ::snt yea, a couple of people have come out.
+# ::tokens ["yea", ",", "a", "couple", "of", "people", "have", "come", "out", "."]
+# ::lemmas ["yea", ",", "a", "couple", "of", "people", "have", "come", "out", "."]
+(c6-3 / come-out-09
+      :ARG1 (c6-1 / person
+                  :quant (c6-2 / couple))
+      :mod (c6-0 / yeh
+                 :mode expressive))
+
+# ::snt that's ok
+# ::tokens ["that", "'s", "ok"]
+# ::lemmas ["that", "be", "ok"]
+(c7-0 / okay-04
+      :ARG1 (c7-1 / that))
+
+# ::snt do you know if anyone is hurt
+# ::tokens ["do", "you", "know", "if", "anyone", "is", "hurt"]
+# ::lemmas ["do", "you", "know", "if", "anyone", "be", "hurt"]
+(c9-3 / know-01
+      :polarity (c9-5 / amr-unknown)
+      :ARG0 (c9-1 / you)
+      :ARG1 (c9-4 / truth-value
+                  :polarity-of (c9-0 / hurt-01
+                                     :ARG1 (c9-2 / anyone))))
+
+# ::snt killed before Christmas
+# ::tokens ["killed", "before", "Christmas"]
+# ::lemmas ["kill", "before", "Christmas"]
+(c10-2 / kill-01
+       :time (c10-3 / before
+                    :op1 (c10-1 / festival
+                                :name (c10-0 / name
+                                             :op1 "Christmas"))))
+
+# ::snt not surprising. It's a pretty big cafe
+# ::tokens ["not", "surprising", ".", "It", "'s", "a", "pretty", "big", "cafe"]
+# ::lemmas ["not", "surprising", ".", "it", "be", "a", "pretty", "big", "cafe"]
+(c11-0 / multi-sentence
+       :snt1 (c11-5 / surprise-01
+                    :polarity -)
+       :snt2 (c11-4 / cafe
+                    :mod (c11-1 / big
+                                :degree (c11-3 / pretty))
+                    :domain (c11-2 / it)))
+
+# ::snt police say much lower thank god
+# ::tokens ["police", "say", "much", "lower", "thank", "god"]
+# ::lemmas ["police", "say", "much", "low", "thank", "god"]
+(c12-8 / thank-01
+       :ARG0 (c12-3 / i)
+       :ARG1 (c12-5 / person
+                    :name (c12-4 / name
+                                 :op1 "God"))
+       :ARG2 (c12-7 / say-01
+                    :ARG0 (c12-9 / police)
+                    :ARG1 (c12-1 / low-04
+                                 :ARG2-of (c12-0 / have-degree-91
+                                                 :ARG1 c12-7
+                                                 :ARG3 (c12-2 / more
+                                                              :quant (c12-6 / much))))))
+
+# ::snt I don't think so. Don't take my word on that though.
+# ::tokens ["I", "do", "n't", "think", "so", ".", "Do", "n't", "take", "my", "word", "on", "that", "though", "."]
+# ::lemmas ["i", "do", "not", "think", "so", ".", "do", "not", "take", "my", "word", "on", "that", "though", "."]
+(c13-3 / multi-sentence
+       :snt1 (c13-9 / think-01
+                    :ARG0 (c13-4 / i)
+                    :ARG1 (c13-8 / so)
+                    :polarity -)
+       :snt2 (c13-7 / take-01
+                    :ARG0 (c13-1 / you)
+                    :ARG1 (c13-2 / word
+                                 :poss (c13-6 / i)
+                                 :topic (c13-5 / that))
+                    :ARG1-of (c13-0 / have-concession-91)
+                    :mode imperative
+                    :polarity -))
+
+# ::snt thank god
+# ::tokens ["thank", "god"]
+# ::lemmas ["thank", "god"]
+(c14-2 / thank-01
+       :ARG1 (c14-1 / person
+                    :name (c14-0 / name
+                                 :op1 "God")))
+
+# ::snt only one
+# ::tokens ["only", "one"]
+# ::lemmas ["only", "one"]
+(c15-0 / one
+       :mod (c15-1 / only))
+
+# ::snt yeah.
+# ::tokens ["yeah", "."]
+# ::lemmas ["yeah", "."]
+(c16-0 / yeah)
+
+# ::snt that's really good to hear!
+# ::tokens ["that", "'s", "really", "good", "to", "hear", "!"]
+# ::lemmas ["that", "be", "really", "good", "to", "hear", "!"]
+(c17-2 / good-02
+       :ARG1 (c17-0 / hear-01)
+       :degree (c17-1 / really))
+
+# ::snt I would assume the goal is to not get anyone killed before any time, not just Christmas.
+# ::tokens ["I", "would", "assume", "the", "goal", "is", "to", "not", "get", "anyone", "killed", "before", "any", "time", ",", "not", "just", "Christmas", "."]
+# ::lemmas ["i", "would", "assume", "the", "goal", "be", "to", "not", "get", "anyone", "kill", "before", "any", "time", ",", "not", "just", "Christmas", "."]
+(c18-12 / assume-02
+        :ARG0 (c18-4 / i)
+        :ARG1 (c18-9 / goal
+                     :consist-of (c18-7 / get-04
+                                        :ARG1 (c18-11 / kill-01
+                                                      :ARG1 (c18-3 / anyone))
+                                        :time (c18-2 / before
+                                                     :op1 (c18-10 / time
+                                                                  :mod (c18-6 / any)))
+                                        :ARG1-of (c18-8 / contrast-01
+                                                        :ARG2 (c18-1 / festival
+                                                                     :name (c18-5 / name
+                                                                                  :op1 "Christmas")
+                                                                     :mod (c18-0 / just
+                                                                                 :polarity -)))
+                                        :polarity -)))
+
+# ::snt oh OK hope this all sorts out soon and no one gets hurt anymore
+# ::tokens ["oh", "OK", "hope", "this", "all", "sorts", "out", "soon", "and", "no", "one", "gets", "hurt", "anymore"]
+# ::lemmas ["oh", "ok", "hope", "this", "all", "sort", "out", "soon", "and", "no", "one", "gets", "hurt", "anymore"]
+(c19-0 / hope-01
+       :ARG0 (c19-6 / i)
+       :ARG1 (c19-10 / and
+                     :op1 (c19-8 / sort-out-02
+                                 :ARG1 (c19-9 / this)
+                                 :time (c19-4 / soon))
+                     :op2 (c19-1 / hurt-01
+                                 :ARG1 (c19-7 / no-one)
+                                 :time (c19-5 / anymore)))
+       :mod (c19-3 / oh
+                   :mode expressive)
+       :ARG1-of (c19-2 / okay-04))
+
+# ::snt you know how many people?
+# ::tokens ["you", "know", "how", "many", "people", "?"]
+# ::lemmas ["you", "know", "how", "many", "people", "?"]
+(c20-3 / know-01
+       :ARG0 (c20-0 / you)
+       :ARG1 (c20-1 / number
+                    :quant-of (c20-2 / person))
+       :polarity (c20-4 / amr-unknown))
+
+# ::snt there is now two dead not including the gunman
+# ::tokens ["there", "is", "now", "two", "dead", "not", "including", "the", "gunman"]
+# ::lemmas ["there", "be", "now", "two", "dead", "not", "include", "the", "gunman"]
+(c21-3 / die-01
+       :ARG1 (c21-2 / person
+                    :ARG2-of (c21-0 / include-01
+                                    :ARG1 (c21-4 / gunman)
+                                    :polarity -)
+                    :quant 2)
+       :time (c21-1 / now))
+
+# ::snt welcome
+# ::tokens ["welcome"]
+# ::lemmas ["welcome"]
+(c22-0 / welcome-01)
+
+# ::snt sounds about right.
+# ::tokens ["sounds", "about", "right", "."]
+# ::lemmas ["sound", "about", "right", "."]
+(c23-0 / sound-01
+       :ARG1 (c23-1 / right-06
+                    :degree (c23-2 / about)))
+
+# ::snt how many gunman are there
+# ::tokens ["how", "many", "gunman", "are", "there"]
+# ::lemmas ["how", "many", "gunman", "be", "there"]
+(c24-1 / gunman
+       :quant (c24-2 / amr-unknown)
+       :location (c24-0 / there))
+
+# ::snt thanks Burnie it's pretty intense here! Hopefully all the people are ok.
+# ::tokens ["thanks", "Burnie", "it", "'s", "pretty", "intense", "here", "!", "Hopefully", "all", "the", "people", "are", "ok", "."]
+# ::lemmas ["thank", "Burnie", "it", "be", "pretty", "intense", "here", "!", "you", "all", "the", "people", "be", "ok", "."]
+(c25-1 / multi-sentence
+       :snt1 (c25-8 / thank-01
+                    :ARG1 (c25-6 / person
+                                 :name (c25-5 / name
+                                              :op1 "Burnie")))
+       :snt2 (c25-4 / intense-02
+                    :ARG1 (c25-0 / here)
+                    :degree (c25-9 / pretty))
+       :snt3 (c25-10 / hope-01
+                     :ARG1 (c25-3 / okay-03
+                                  :ARG1 (c25-2 / person
+                                               :mod (c25-7 / all)))))
+
+# ::snt hopefully it'll all be over soon, I hope all the people are ok!
+# ::tokens ["hopefully", "it", "'ll", "all", "be", "over", "soon", ",", "I", "hope", "all", "the", "people", "are", "ok", "!"]
+# ::lemmas ["hopefully", "it", "'ll", "all", "be", "over", "soon", ",", "i", "hope", "all", "the", "people", "be", "ok", "!"]
+(c26-9 / and
+       :op1 (c26-0 / hope-01
+                   :ARG0 (c26-4 / i)
+                   :ARG1 (c26-2 / over-01
+                                :ARG1 (c26-7 / it)
+                                :time (c26-8 / soon)
+                                :mod (c26-3 / all))
+                   :op2-of c26-9)
+       :ARG0 c26-4
+       :ARG1 (c26-1 / okay-03
+                    :ARG1 (c26-6 / person
+                                 :mod (c26-5 / all))))
+
+# ::snt it is pretty brutal
+# ::tokens ["it", "is", "pretty", "brutal"]
+# ::lemmas ["it", "be", "pretty", "brutal"]
+(c27-2 / brutal-02
+       :ARG0 (c27-1 / it)
+       :degree (c27-0 / pretty))
+
+# ::snt people are being held hostage in a cafe. They've been there for sixish hours
+# ::tokens ["people", "are", "being", "held", "hostage", "in", "a", "cafe", ".", "They", "'ve", "been", "there", "for", "sixish", "hours"]
+# ::lemmas ["people", "be", "be", "hold", "hostage", "in", "a", "cafe", ".", "they", "'ve", "be", "there", "for", "sixish", "hours"]
+(c28-1 / multi-sentence
+       :snt1 (c28-0 / hold-01
+                    :ARG1 (c28-8 / hostage
+                                 :domain (c28-4 / person))
+                    :location (c28-5 / cafe))
+       :snt2 (c28-2 / be-located-at-91
+                    :ARG1 (c28-7 / they)
+                    :ARG2 c28-5
+                    :duration (c28-6 / temporal-quantity
+                                     :unit (c28-3 / hour)
+                                     :quant 6)))
+
+# ::snt they're saying about people.
+# ::tokens ["they", "'re", "saying", "about", "people", "."]
+# ::lemmas ["they", "be", "say", "about", "people", "."]
+(c29-0 / say-01
+       :ARG0 (c29-2 / they)
+       :ARG3 (c29-1 / person))
+
+# ::snt indeed
+# ::tokens ["indeed"]
+# ::lemmas ["indeed"]
+(c30-0 / indeed)
+
+# ::snt there's so many cops and military personnel there. It's right in the city too and they're trying not to get people +
+# ::tokens ["there", "'s", "so", "many", "cops", "and", "military", "personnel", "there", ".", "It", "'s", "right", "in", "the", "city", "too", "and", "they", "'re", "trying", "not", "to", "get", "people", "+"]
+# ::lemmas ["there", "be", "so", "many", "cop", "and", "military", "personnel", "there", ".", "it", "be", "right", "in", "the", "city", "too", "and", "they", "be", "try", "not", "to", "get", "people", "+"]
+(c31-0 / multi-sentence
+       :snt1 (c31-8 / be-located-at-91
+                    :ARG1 (c31-5 / and
+                                 :op1 (c31-16 / cop)
+                                 :op2 (c31-1 / personnel
+                                             :mod (c31-9 / military))
+                                 :ARG1-of (c31-6 / have-quant-91
+                                                 :ARG2 (c31-7 / many)
+                                                 :ARG3 (c31-3 / so)))
+                    :ARG2 (c31-18 / there))
+       :snt2 (c31-12 / and
+                     :op1 (c31-10 / right-06
+                                  :ARG1 (c31-13 / it)
+                                  :ARG2 (c31-2 / city)
+                                  :mod (c31-17 / too))
+                     :op2 (c31-14 / try-01
+                                  :ARG0 (c31-15 / they)
+                                  :ARG1 (c31-11 / get-05
+                                                :ARG0 c31-15
+                                                :ARG1 (c31-4 / person)
+                                                :polarity -))))
+
+# ::snt what happened???
+# ::tokens ["what", "happened", "?", "?", "?"]
+# ::lemmas ["what", "happen", "?", "?", "?"]
+(c32-0 / amr-unknown)
+
+# ::snt cheers mate. Come back soon
+# ::tokens ["cheers", "mate", ".", "Come", "back", "soon"]
+# ::lemmas ["cheer", "mate", ".", "come", "back", "soon"]
+(c33-1 / multi-sentence
+       :snt1 (c33-5 / cheers)
+       :snt2 (c33-4 / come-01
+                    :ARG1 (c33-0 / you)
+                    :ARG4 (c33-2 / back)
+                    :time (c33-6 / soon)
+                    :mode imperative)
+       :snt3 (c33-3 / mate))
+
+# ::snt what happened?
+# ::tokens ["what", "happened", "?"]
+# ::lemmas ["what", "happen", "?"]
+(c34-0 / event
+       :polarity (c34-1 / amr-unknown))
+
+# ::snt ok thanks for filling me in first time hearing of this
+# ::tokens ["ok", "thanks", "for", "filling", "me", "in", "first", "time", "hearing", "of", "this"]
+# ::lemmas ["ok", "thank", "for", "fill", "i", "in", "first", "time", "hearing", "of", "this"]
+(c35-7 / thank-01
+       :ARG0 (c35-5 / i)
+       :ARG1 (c35-1 / you)
+       :ARG2 (c35-2 / fill-in-08
+                    :ARG0 c35-1
+                    :ARG1 c35-5
+                    :ARG2 (c35-0 / hear-01
+                                 :ARG0 c35-1
+                                 :ARG1 (c35-6 / this)
+                                 :ord (c35-4 / ordinal-entity
+                                             :value 1)))
+       :ARG1-of (c35-3 / okay-04))
+
+# ::snt and they've had people get out
+# ::tokens ["and", "they", "'ve", "had", "people", "get", "out"]
+# ::lemmas ["and", "they", "'ve", "have", "people", "get", "out"]
+(c36-5 / and
+       :op2 (c36-0 / have-04
+                   :ARG0 (c36-4 / they)
+                   :ARG1 (c36-3 / get-05
+                                :ARG1 (c36-2 / person)
+                                :ARG2 (c36-1 / out))))
+
+# ::snt more than .
+# ::tokens ["more", "than", "."]
+# ::lemmas ["more", "than", "."]
+(c37-0 / more-than)
+
+# ::snt hopefully without any casualties
+# ::tokens ["hopefully", "without", "any", "casualties"]
+# ::lemmas ["hopefully", "without", "any", "casualty"]
+(c38-0 / hope-01
+       :ARG1 (c38-1 / casualty
+                    :mod (c38-2 / any)
+                    :polarity -))
+
+# ::snt they won't tell us how many, some people have been let out. It was quite a popular cafe and Monday morning. I think+
+# ::tokens ["they", "wo", "n't", "tell", "us", "how", "many", ",", "some", "people", "have", "been", "let", "out", ".", "It", "was", "quite", "a", "popular", "cafe", "and", "Monday", "morning", ".", "I", "think+"]
+# ::lemmas ["they", "will", "not", "tell", "we", "how", "many", ",", "some", "people", "have", "be", "let", "out", ".", "it", "be", "quite", "a", "popular", "cafe", "and", "Monday", "morning", ".", "i", "think+"]
+(c39-2 / multi-sentence
+       :snt1 (c39-15 / tell-01
+                     :ARG0 (c39-13 / they)
+                     :ARG1 (c39-7 / number
+                                  :quant-of (c39-9 / person
+                                                   :mod (c39-14 / some)
+                                                   :ARG1-of (c39-1 / let-01
+                                                                   :ARG2 (c39-4 / out-06
+                                                                                :ARG1 c39-9))))
+                     :ARG2 (c39-0 / we)
+                     :polarity -)
+       :snt2 (c39-17 / and
+                     :op1 (c39-11 / cafe
+                                  :ARG1-of (c39-16 / popular-02
+                                                   :degree (c39-5 / quite)))
+                     :op2 (c39-10 / date-entity
+                                  :weekday (c39-12 / monday)
+                                  :dayperiod (c39-3 / morning)))
+       :snt3 (c39-8 / think-01
+                    :ARG0 (c39-6 / i)))
+
+# ::snt What the heck is going on?
+# ::tokens ["What", "the", "heck", "is", "going", "on", "?"]
+# ::lemmas ["what", "the", "heck", "be", "go", "on", "?"]
+(c40-1 / amr-unknown
+       :mod (c40-0 / heck
+                   :mode expressive))
+
+# ::snt there are people according to the news.
+# ::tokens ["there", "are", "people", "according", "to", "the", "news", "."]
+# ::lemmas ["there", "be", "people", "accord", "to", "the", "news", "."]
+(c41-0 / say-01
+       :ARG0 (c41-1 / news)
+       :ARG1 (c41-2 / person))
+
+# ::snt people are being held hostage in a cafe. They've been there for sixish hours
+# ::tokens ["people", "are", "being", "held", "hostage", "in", "a", "cafe", ".", "They", "'ve", "been", "there", "for", "sixish", "hours"]
+# ::lemmas ["people", "be", "be", "hold", "hostage", "in", "a", "cafe", ".", "they", "'ve", "be", "there", "for", "sixish", "hours"]
+(c42-1 / multi-sentence
+       :snt1 (c42-0 / hold-01
+                    :ARG1 (c42-8 / hostage
+                                 :domain (c42-4 / person))
+                    :location (c42-5 / cafe))
+       :snt2 (c42-2 / be-located-at-91
+                    :ARG1 (c42-7 / they)
+                    :ARG2 c42-5
+                    :duration (c42-6 / temporal-quantity
+                                     :unit (c42-3 / hour)
+                                     :quant 6)))

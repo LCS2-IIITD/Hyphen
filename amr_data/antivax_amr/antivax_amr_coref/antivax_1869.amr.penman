@@ -1,0 +1,50 @@
+# ::snt hours: fatigue and body aches last night, headache, fever and chills. Did not sleep well at all. Woke up multiple times throughout the night
+# ::tokens ["hours", ":", "fatigue", "and", "body", "aches", "last", "night", ",", "headache", ",", "fever", "and", "chills", ".", "Did", "not", "sleep", "well", "at", "all", ".", "Woke", "up", "multiple", "times", "throughout", "the", "night"]
+# ::lemmas ["hours", ":", "fatigue", "and", "body", "ache", "last", "night", ",", "headache", ",", "fever", "and", "chill", ".", "do", "not", "sleep", "well", "at", "all", ".", "woke", "up", "multiple", "time", "throughout", "the", "night"]
+(c1-6 / multi-sentence
+      :snt1 (c1-13 / and
+                   :op1 (c1-14 / fatigue)
+                   :op2 (c1-9 / ache-01
+                              :ARG0 (c1-17 / body))
+                   :time (c1-0 / date-entity
+                               :dayperiod (c1-7 / night)
+                               :mod (c1-12 / yesterday)))
+      :snt2 (c1-1 / and
+                  :op1 (c1-16 / headache)
+                  :op2 (c1-11 / fever)
+                  :op3 (c1-3 / chill))
+      :snt3 (c1-10 / sleep-01
+                   :ARG1-of (c1-4 / well-09
+                                  :degree (c1-18 / at-all))
+                   :polarity -)
+      :snt4 (c1-8 / wake-up-02
+                  :frequency (c1-15 / multiple)
+                  :time (c1-5 / throughout
+                              :op1 (c1-2 / night))))
+
+# ::snt hours: no symptoms
+# ::tokens ["hours", ":", "no", "symptoms"]
+# ::lemmas ["hours", ":", "no", "symptom"]
+(c2-0 / symptom
+      :duration (c2-1 / multiple
+                      :op1 (c2-2 / temporal-quantity
+                                 :unit (c2-3 / hour)
+                                 :quant 1))
+      :polarity -)
+
+# ::snt hrs post. Sore arm at injection site, no other symptoms
+# ::tokens ["hrs", "post", ".", "Sore", "arm", "at", "injection", "site", ",", "no", "other", "symptoms"]
+# ::lemmas ["hrs", "post", ".", "sore", "arm", "at", "injection", "site", ",", "no", "other", "symptom"]
+(c3-9 / multi-sentence
+      :snt1 (c3-8 / post-01
+                  :duration (c3-2 / multiple
+                                  :op1 (c3-6 / temporal-quantity
+                                             :unit (c3-10 / year)
+                                             :quant 1)))
+      :snt2 (c3-0 / symptom
+                  :mod (c3-5 / other)
+                  :domain (c3-1 / arm
+                                :ARG1-of (c3-7 / sear-01)
+                                :location (c3-4 / site
+                                                :location-of (c3-3 / inject-01)))
+                  :polarity -))

@@ -1,0 +1,42 @@
+# ::snt The City in the year 1950(1925)
+# ::tokens ["The", "City", "in", "the", "year", "1950(1925", ")"]
+# ::lemmas ["The", "City", "in", "the", "year", "1950(1925", ")"]
+(c1-3 / city
+      :time (c1-0 / date-interval
+                  :op1 (c1-1 / date-entity
+                             :year 1950)
+                  :op2 (c1-2 / date-entity
+                             :year 1925)))
+
+# ::snt good to know making unrealistic predictions 20-30 years out isn't something new.
+# ::tokens ["good", "to", "know", "making", "unrealistic", "predictions", "20", "-", "30", "years", "out", "is", "n't", "something", "new", "."]
+# ::lemmas ["good", "to", "know", "make", "unrealistic", "prediction", "20", "-", "30", "years", "out", "be", "not", "something", "new", "."]
+(c2-7 / good-02
+      :ARG1 (c2-1 / know-01
+                  :ARG1 (c2-9 / new-01
+                              :ARG1 (c2-8 / predict-01
+                                          :manner (c2-5 / realistic-03
+                                                        :polarity -)
+                                          :time (c2-0 / after
+                                                      :op1 (c2-6 / now)
+                                                      :quant (c2-3 / between
+                                                                   :op1 (c2-4 / temporal-quantity
+                                                                              :unit (c2-10 / year)
+                                                                              :quant 20)
+                                                                   :op2 (c2-2 / temporal-quantity
+                                                                              :unit (c2-11 / year)
+                                                                              :quant 30))))
+                              :polarity -)))
+
+# ::snt Good thing scientists aren't predicting anything bad will happen due to global warming.
+# ::tokens ["Good", "thing", "scientists", "are", "n't", "predicting", "anything", "bad", "will", "happen", "due", "to", "global", "warming", "."]
+# ::lemmas ["good", "thing", "scientist", "be", "not", "predict", "anything", "bad", "will", "happen", "due", "to", "global", "warming", "."]
+(c3-6 / predict-01
+      :ARG0 (c3-0 / scientist)
+      :ARG1 (c3-1 / anything
+                  :ARG1-of (c3-5 / bad-07))
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-3 / warm-01
+                                 :ARG1 (c3-4 / globe)))
+      :ARG1-of (c3-7 / good-02)
+      :polarity -)

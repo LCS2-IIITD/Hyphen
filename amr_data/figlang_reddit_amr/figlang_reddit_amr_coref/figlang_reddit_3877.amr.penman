@@ -1,0 +1,32 @@
+# ::snt "I will push 100% and if I'm not in the points, I will retire"
+# ::tokens ["\"", "I", "will", "push", "100", "%", "and", "if", "I", "'m", "not", "in", "the", "points", ",", "I", "will", "retire", "\""]
+# ::lemmas ["\"", "i", "will", "push", "100", "%", "and", "if", "i", "be", "not", "in", "the", "point", ",", "i", "will", "retire", "\""]
+(c1-0 / and
+      :op1 (c1-6 / push-01
+                 :ARG0 (c1-1 / i)
+                 :ARG2 (c1-3 / percentage-entity
+                             :value 100))
+      :op2 (c1-4 / retire-01
+                 :ARG0 c1-1
+                 :condition (c1-5 / be-located-at-91
+                                  :ARG1 c1-1
+                                  :ARG2 (c1-2 / point)
+                                  :polarity -)))
+
+# ::snt its the second time he retired shortly before the race ended so there MIGHT actually be some truth to it.
+# ::tokens ["its", "the", "second", "time", "he", "retired", "shortly", "before", "the", "race", "ended", "so", "there", "MIGHT", "actually", "be", "some", "truth", "to", "it", "."]
+# ::lemmas ["its", "the", "second", "time", "he", "retire", "shortly", "before", "the", "race", "end", "so", "there", "might", "actually", "be", "some", "truth", "to", "it", "."]
+(c2-2 / cause-01
+      :ARG0 (c2-7 / retire-01
+                  :ARG0 (c2-3 / he)
+                  :ord (c2-5 / ordinal-entity
+                             :value 2)
+                  :time (c2-8 / before
+                              :op1 (c2-11 / end-01
+                                          :ARG1 (c2-4 / race-02))
+                              :ARG1-of (c2-0 / short-07)))
+      :ARG1 (c2-10 / possible-01
+                   :ARG1 (c2-6 / true-01
+                               :ARG1 c2-7
+                               :quant (c2-9 / some)
+                               :ARG1-of (c2-1 / actual-02))))

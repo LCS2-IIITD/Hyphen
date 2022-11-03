@@ -1,0 +1,98 @@
+# ::snt Can she sing?
+# ::tokens ["Can", "she", "sing", "?"]
+# ::lemmas ["can", "she", "sing", "?"]
+(c1-2 / possible-01
+      :polarity (c1-3 / amr-unknown)
+      :ARG1 (c1-0 / sing-01
+                  :ARG0 (c1-1 / she)))
+
+# ::snt Don't lie to the people like that
+# ::tokens ["Do", "n't", "lie", "to", "the", "people", "like", "that"]
+# ::lemmas ["do", "not", "lie", "to", "the", "people", "like", "that"]
+(c2-3 / lie-08
+      :ARG0 (c2-0 / you)
+      :ARG2 (c2-2 / person
+                  :ARG1-of (c2-1 / resemble-01
+                                 :ARG2 (c2-4 / that)))
+      :polarity -
+      :mode imperative)
+
+# ::snt what a great fit for the spot she is..... no doubt about that....
+# ::tokens ["what", "a", "great", "fit", "for", "the", "spot", "she", "is", ".....", "no", "doubt", "about", "that", "...."]
+# ::lemmas ["what", "a", "great", "fit", "for", "the", "spot", "she", "be", ".....", "no", "doubt", "about", "that", "...."]
+(c3-0 / fit-06
+      :ARG1 (c3-2 / she)
+      :ARG2 (c3-1 / spot
+                  :domain c3-2)
+      :degree (c3-3 / great)
+      :ARG1-of (c3-4 / doubt-01
+                     :polarity -))
+
+# ::snt Hey guys, cmon to watch my build skill &amp; item videos about Chaugnar in Garena AOV (Arena of Valor). Check this
+# ::tokens ["Hey", "guys", ",", "cmon", "to", "watch", "my", "build", "skill", "&", "amp", ";", "item", "videos", "about", "Chaugnar", "in", "Garena", "AOV", "(", "Arena", "of", "Valor", ")", ".", "Check", "this"]
+# ::lemmas ["hey", "guy", ",", "cmon", "to", "watch", "my", "build", "skill", "&", "amp", ";", "item", "video", "about", "Chaugnar", "in", "Garena", "AOV", "(", "Arena", "of", "Valor", ")", ".", "check", "this"]
+(c4-13 / multi-sentence
+       :snt1 (c4-0 / say-01
+                   :ARG1 (c4-8 / and
+                               :op1 (c4-4 / hey
+                                          :mode expressive)
+                               :op2 (c4-19 / possible-01
+                                           :ARG1 (c4-21 / watch-01
+                                                        :ARG0 (c4-9 / guy)
+                                                        :ARG1 (c4-7 / and
+                                                                    :op1 (c4-1 / skill
+                                                                               :mod (c4-12 / build-01)
+                                                                               :poss c4-9)
+                                                                    :op2 (c4-6 / amp)))
+                                           :polarity -))
+                   :ARG2 c4-9)
+       :snt2 (c4-3 / video
+                   :mod (c4-22 / item)
+                   :topic (c4-14 / person
+                                 :name (c4-18 / name
+                                              :op1 "Chaugnar")
+                                 :location (c4-16 / city-district
+                                                  :name (c4-15 / name
+                                                               :op1 "Garena"
+                                                               :op2 "AOV")
+                                                  :ARG1-of (c4-5 / mean-01
+                                                                 :ARG2 (c4-17 / mountain
+                                                                              :name (c4-20 / name
+                                                                                           :op1 "Arena"
+                                                                                           :op2 "of"
+                                                                                           :op3 "Valor"))))))
+       :snt3 (c4-11 / check-01
+                    :ARG0 (c4-2 / you)
+                    :ARG1 (c4-10 / this)
+                    :mode imperative))
+
+# ::snt You mean because she's gorgeous and highly intelligent? Or...because she happens to sing a bit!? lol
+# ::tokens ["You", "mean", "because", "she", "'s", "gorgeous", "and", "highly", "intelligent", "?", "Or", "...", "because", "she", "happens", "to", "sing", "a", "bit", "!", "?", "lol"]
+# ::lemmas ["you", "mean", "because", "she", "be", "gorgeous", "and", "highly", "intelligent", "?", "or", "...", "because", "she", "happen", "to", "sing", "a", "bit", "!", "?", "lol"]
+(c5-16 / multi-sentence
+       :snt1 (c5-7 / mean-01
+                   :ARG0 (c5-5 / you)
+                   :ARG2 (c5-17 / cause-01
+                                :ARG0 (c5-11 / and
+                                             :op1 (c5-12 / gorgeous
+                                                         :domain (c5-0 / she))
+                                             :op2 (c5-18 / intelligent-01
+                                                         :ARG1 c5-0
+                                                         :degree (c5-8 / high-02))))
+                   :polarity (c5-10 / amr-unknown))
+       :snt2 (c5-3 / or
+                   :op2 (c5-14 / cause-01
+                               :ARG0 (c5-4 / sing-01
+                                           :ARG0 (c5-2 / she)
+                                           :degree (c5-15 / bit))
+                               :polarity (c5-9 / amr-unknown)
+                               :ARG2-of (c5-1 / laugh-01
+                                              :ARG0 (c5-6 / i)
+                                              :manner (c5-13 / loud)))))
+
+# ::snt Coz she is perfect
+# ::tokens ["Coz", "she", "is", "perfect"]
+# ::lemmas ["Coz", "she", "be", "perfect"]
+(c6-0 / cause-01
+      :ARG0 (c6-1 / perfect-02
+                  :ARG1 (c6-2 / she)))

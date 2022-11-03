@@ -1,0 +1,104 @@
+# ::snt ? ?
+# ::tokens ["?", "?"]
+# ::lemmas ["?", "?"]
+(c3-0 / request-confirmation-91)
+
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c4-0 / amr-empty)
+
+# ::snt MX RT!
+# ::tokens ["MX", "RT", "!"]
+# ::lemmas ["MX", "RT", "!"]
+(c5-1 / product
+      :name (c5-0 / name
+                  :op1 "MX"
+                  :op2 "RT"))
+
+# ::snt Mord von Flugpassagiern muss bestraft werden !!!
+# ::tokens ["Mord", "von", "Flugpassagiern", "muss", "bestraft", "werden", "!", "!", "!"]
+# ::lemmas ["Mord", "von", "Flugpassagiern", "muss", "bestraft", "werden", "!", "!", "!"]
+(c6-0 / say-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-1 / bestraft
+                  :domain (c6-3 / person
+                                :name (c6-4 / name
+                                            :op1 "Mord"
+                                            :op2 "von"
+                                            :op3 "Flugpassagiern")
+                                :ARG2-of c6-0)))
+
+# ::snt Yah . U bring down a big kite flying freely in the air ... U fucking bastard .
+# ::tokens ["Yah", ".", "U", "bring", "down", "a", "big", "kite", "flying", "freely", "in", "the", "air", "...", "U", "fucking", "bastard", "."]
+# ::lemmas ["yah", ".", "u", "bring", "down", "a", "big", "kite", "fly", "freely", "in", "the", "air", "...", "u", "fucking", "bastard", "."]
+(c7-6 / multi-sentence
+      :snt1 (c7-8 / yah
+                  :mode expressive)
+      :snt2 (c7-3 / bring-down-03
+                  :ARG0 (c7-1 / you)
+                  :ARG1 (c7-10 / kite
+                               :mod (c7-7 / big)
+                               :ARG1-of (c7-11 / fly-01
+                                               :ARG1-of (c7-0 / free-04)
+                                               :path (c7-9 / air))))
+      :snt3 (c7-4 / bastard
+                  :domain (c7-2 / you)
+                  :mod (c7-5 / fucking)))
+
+# ::snt Detta. r. S. Sjukt. Om. Det. Stmmer. RT Update: Rebel leader in recorded call: We just shot down a plane
+# ::tokens ["Detta", ".", "r.", "S.", "Sjukt", ".", "Om", ".", "Det", ".", "Stmmer", ".", "RT", "Update", ":", "Rebel", "leader", "in", "recorded", "call", ":", "We", "just", "shot", "down", "a", "plane"]
+# ::lemmas ["Detta", ".", "r.", "S.", "Sjukt", ".", "Om", ".", "Det", ".", "Stmmer", ".", "RT", "Update", ":", "Rebel", "leader", "in", "recorded", "call", ":", "we", "just", "shoot", "down", "a", "plane"]
+(c8-17 / multi-sentence
+       :snt1 (c8-11 / and
+                    :op1 (c8-16 / person
+                                :name (c8-20 / name
+                                             :op1 "Detta"))
+                    :op2 (c8-22 / person
+                                :name (c8-19 / name
+                                             :op1 "R."
+                                             :op2 "S."
+                                             :op3 "Sjukt"))
+                    :op3 (c8-14 / person
+                                :name (c8-8 / name
+                                            :op1 "Om"
+                                            :op2 "Det."
+                                            :op3 "Stmmer")))
+       :snt2 (c8-3 / update-02
+                   :ARG2 (c8-7 / publication
+                               :name (c8-21 / name
+                                            :op1 "RT"))
+                   :ARG1-of (c8-13 / mean-01
+                                   :ARG2 (c8-18 / person
+                                                :ARG0-of (c8-1 / lead-02
+                                                               :ARG1 (c8-5 / political-movement
+                                                                           :name (c8-10 / name
+                                                                                        :op1 "Rebel")))
+                                                :ARG0-of (c8-2 / call-02
+                                                               :ARG1-of (c8-4 / record-01))
+                                                :ARG0-of (c8-0 / say-01
+                                                               :ARG1 (c8-6 / shoot-down-05
+                                                                           :ARG0 (c8-12 / we)
+                                                                           :ARG1 (c8-15 / plane)
+                                                                           :mod (c8-9 / just)))))))
+
+# ::snt Rebel leader in recorded call: We just shot down a plane (English subtitles)
+# ::tokens ["Rebel", "leader", "in", "recorded", "call", ":", "We", "just", "shot", "down", "a", "plane", "(", "English", "subtitles", ")"]
+# ::lemmas ["rebel", "leader", "in", "recorded", "call", ":", "we", "just", "shoot", "down", "a", "plane", "(", "English", "subtitle", ")"]
+(c9-0 / say-01
+      :ARG0 (c9-3 / person
+                  :ARG0-of (c9-4 / lead-02
+                                 :ARG1 (c9-12 / religious-group
+                                              :name (c9-7 / name
+                                                          :op1 "Rebel"))))
+      :ARG1 (c9-2 / shoot-down-05
+                  :ARG0 (c9-1 / we)
+                  :ARG1 (c9-13 / plane)
+                  :time (c9-10 / just))
+      :medium (c9-8 / call-02
+                    :ARG0 c9-3
+                    :ARG1-of (c9-5 / record-01))
+      :ARG2-of (c9-6 / translate-01
+                     :ARG3 (c9-9 / language
+                                 :name (c9-11 / name
+                                              :op1 "English"))))

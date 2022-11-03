@@ -1,0 +1,102 @@
+# ::snt the hate is too real
+# ::tokens ["the", "hate", "is", "too", "real"]
+# ::lemmas ["the", "hate", "be", "too", "real"]
+(c1-0 / have-degree-91
+      :ARG1 (c1-3 / hate-01)
+      :ARG2 (c1-1 / real-04
+                  :ARG1 c1-3)
+      :ARG3 (c1-2 / too))
+
+# ::snt for real man it's been real dumb haha he's proving them wrong though
+# ::tokens ["for", "real", "man", "it", "'s", "been", "real", "dumb", "haha", "he", "'s", "proving", "them", "wrong", "though"]
+# ::lemmas ["for", "real", "man", "it", "be", "be", "real", "dumb", "haha", "he", "be", "prove", "they", "wrong", "though"]
+(c2-0 / have-concession-91
+      :ARG1 (c2-4 / prove-01
+                  :ARG0 (c2-9 / he)
+                  :ARG1 (c2-1 / wrong-04
+                              :ARG1 (c2-8 / they
+                                          :ARG2-of c2-4)))
+      :ARG2 (c2-7 / and
+                  :op1 (c2-5 / dumb
+                             :ARG1-of (c2-6 / real-04
+                                            :ARG1 (c2-2 / man)))
+                  :op2 (c2-3 / haha
+                             :mode expressive)))
+
+# ::snt Henry Abbott will someday regret what he wrote AGAINST Kobe Bryant. Well he's a stand up comedian anyway.
+# ::tokens ["Henry", "Abbott", "will", "someday", "regret", "what", "he", "wrote", "AGAINST", "Kobe", "Bryant", ".", "Well", "he", "'s", "a", "stand", "up", "comedian", "anyway", "."]
+# ::lemmas ["Henry", "Abbott", "will", "someday", "regret", "what", "he", "write", "AGAINST", "Kobe", "Bryant", ".", "well", "he", "be", "a", "stand", "up", "comedian", "anyway", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-8 / regret-01
+                  :ARG0 (c4-7 / person
+                              :name (c4-5 / name
+                                          :op1 "Henry"
+                                          :op2 "Abbott"))
+                  :ARG1 (c4-11 / thing
+                               :ARG1-of (c4-0 / write-01
+                                              :ARG0 c4-7
+                                              :ARG3 (c4-2 / oppose-01
+                                                          :ARG0 c4-7
+                                                          :ARG1 (c4-12 / person
+                                                                       :name (c4-6 / name
+                                                                                   :op1 "Kobe"
+                                                                                   :op2 "Bryant")))))
+                  :time (c4-10 / someday))
+      :snt2 (c4-9 / comedian
+                  :mod (c4-3 / stand-up-07)
+                  :mod (c4-4 / well)
+                  :mod (c4-13 / anyway)))
+
+# ::snt stfu Tal
+# ::tokens ["stfu", "Tal"]
+# ::lemmas ["stfu", "Tal"]
+(c5-1 / person
+      :name (c5-0 / name
+                  :op1 "stfu"
+                  :op2 "Tal"))
+
+# ::snt he's the shooting guard! Just ask the players who have to defend him.
+# ::tokens ["he", "'s", "the", "shooting", "guard", "!", "Just", "ask", "the", "players", "who", "have", "to", "defend", "him", "."]
+# ::lemmas ["he", "be", "the", "shooting", "guard", "!", "just", "ask", "the", "player", "who", "have", "to", "defend", "he", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-7 / guard-01
+                  :manner (c6-8 / shoot-01)
+                  :domain (c6-0 / he))
+      :snt2 (c6-10 / ask-01
+                   :ARG0 (c6-1 / you)
+                   :ARG2 (c6-5 / person
+                               :ARG0-of (c6-9 / play-01)
+                               :ARG0-of (c6-6 / defend-01
+                                              :ARG1 (c6-3 / he)))
+                   :mod (c6-2 / just)
+                   :mode imperative))
+
+# ::snt yeah man I just can't wait. I'll let his game do the talking.
+# ::tokens ["yeah", "man", "I", "just", "ca", "n't", "wait", ".", "I", "'ll", "let", "his", "game", "do", "the", "talking", "."]
+# ::lemmas ["yeah", "man", "i", "just", "can", "not", "wait", ".", "i", "'ll", "let", "his", "game", "do", "the", "talking", "."]
+(c7-4 / multi-sentence
+      :snt1 (c7-7 / possible-01
+                  :ARG1 (c7-1 / wait-01
+                              :ARG1 (c7-6 / i)
+                              :mod (c7-0 / just))
+                  :mod (c7-2 / yeah
+                             :mode expressive)
+                  :polarity -)
+      :snt2 (c7-3 / let-01
+                  :ARG0 (c7-9 / i)
+                  :ARG1 (c7-8 / do-02
+                              :ARG0 (c7-10 / game
+                                           :poss (c7-5 / he))
+                              :ARG1 (c7-11 / talk-01))))
+
+# ::snt that why I drafted him son
+# ::tokens ["that", "why", "I", "drafted", "him", "son"]
+# ::lemmas ["that", "why", "i", "draft", "he", "son"]
+(c8-3 / cause-01
+      :ARG0 (c8-5 / that)
+      :ARG1 (c8-2 / draft-02
+                  :ARG0 (c8-1 / i)
+                  :ARG1 (c8-0 / he))
+      :ARG1-of (c8-6 / have-rel-role-91
+                     :ARG0 c8-1
+                     :ARG2 (c8-4 / son)))

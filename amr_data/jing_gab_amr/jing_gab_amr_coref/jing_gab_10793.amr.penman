@@ -1,0 +1,50 @@
+# ::snt where's my money !
+# ::tokens ["where", "'s", "my", "money", "!"]
+# ::lemmas ["where", "be", "my", "money", "!"]
+(c1-1 / money
+      :poss (c1-0 / i)
+      :location (c1-2 / amr-unknown))
+
+# ::snt Money owed is money owed. Don't lend it if you can't trust repayment upon the agreed time.
+# ::tokens ["Money", "owed", "is", "money", "owed", ".", "Do", "n't", "lend", "it", "if", "you", "ca", "n't", "trust", "repayment", "upon", "the", "agreed", "time", "."]
+# ::lemmas ["money", "owe", "be", "money", "owe", ".", "do", "not", "lend", "it", "if", "you", "can", "not", "trust", "repayment", "upon", "the", "agree", "time", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-4 / owe-01
+                  :ARG1 (c2-1 / money))
+      :snt2 (c2-7 / lend-01
+                  :ARG0 (c2-10 / you)
+                  :ARG1 (c2-3 / money
+                              :ARG1-of (c2-2 / owe-01))
+                  :condition (c2-8 / possible-01
+                                   :ARG1 (c2-5 / trust-02
+                                               :ARG0 c2-10
+                                               :ARG1 (c2-6 / repay-01
+                                                           :time (c2-0 / agree-01
+                                                                       :ARG1 c2-3)))
+                                   :polarity -)
+                  :polarity -
+                  :mode imperative))
+
+# ::snt Homophobic slurs don't help to get your point across.
+# ::tokens ["Homophobic", "slurs", "do", "n't", "help", "to", "get", "your", "point", "across", "."]
+# ::lemmas ["homophobic", "slur", "do", "not", "help", "to", "get", "your", "point", "across", "."]
+(c3-2 / help-01
+      :ARG0 (c3-0 / slur
+                  :mod (c3-4 / homophobia))
+      :ARG1 (c3-3 / get-04
+                  :ARG0 c3-0
+                  :ARG1 (c3-1 / across
+                              :domain (c3-5 / point-04
+                                            :ARG0 (c3-6 / you))))
+      :polarity -)
+
+# ::snt im asking where my money is now give it here
+# ::tokens ["i", "m", "asking", "where", "my", "money", "is", "now", "give", "it", "here"]
+# ::lemmas ["i", "m", "ask", "where", "my", "money", "be", "now", "give", "it", "here"]
+(c4-1 / give-01
+      :ARG0 (c4-5 / you)
+      :ARG1 (c4-3 / money
+                  :poss (c4-2 / i)
+                  :location (c4-0 / amr-unknown)
+                  :ARG2-of c4-1)
+      :time (c4-4 / now))

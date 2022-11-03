@@ -1,0 +1,63 @@
+# ::snt And the translation would be: "I'm so sorry!"
+# ::tokens ["And", "the", "translation", "would", "be", ":", "\"", "I", "'m", "so", "sorry", "!", "\""]
+# ::lemmas ["and", "the", "translation", "would", "be", ":", "\"", "i", "be", "so", "sorry", "!", "\""]
+(c1-1 / and
+      :op2 (c1-2 / translate-01
+                 :ARG2 (c1-0 / sorry-01
+                             :ARG1 (c1-4 / i)
+                             :degree (c1-3 / so))))
+
+# ::snt Should have put panels 1 and 2 out of order.
+# ::tokens ["Should", "have", "put", "panels", "1", "and", "2", "out", "of", "order", "."]
+# ::lemmas ["should", "have", "put", "panel", "1", "and", "2", "out", "of", "order", "."]
+(c2-4 / recommend-01
+      :ARG1 (c2-5 / put-03
+                  :ARG1 (c2-0 / and
+                              :op1 (c2-3 / panel
+                                         :mod 1)
+                              :op2 (c2-1 / panel
+                                         :mod 2))
+                  :ARG2 (c2-2 / order-03
+                              :ARG1 c2-0
+                              :polarity -)))
+
+# ::snt Yeah, there is no actual joke here, except that their language can look like a cup-ring.
+# ::tokens ["Yeah", ",", "there", "is", "no", "actual", "joke", "here", ",", "except", "that", "their", "language", "can", "look", "like", "a", "cup", "-", "ring", "."]
+# ::lemmas ["yeah", ",", "there", "be", "no", "actual", "joke", "here", ",", "except", "that", "their", "language", "can", "look", "like", "a", "cup", "-", "ring", "."]
+(c3-8 / joke-01
+      :location (c3-2 / here)
+      :ARG1-of (c3-0 / actual-02)
+      :ARG2-of (c3-10 / except-01
+                      :ARG1 (c3-9 / possible-01
+                                  :ARG1 (c3-6 / look-02
+                                              :ARG0 (c3-7 / language
+                                                          :poss (c3-4 / they))
+                                              :ARG1 (c3-5 / resemble-01
+                                                          :ARG1 c3-7
+                                                          :ARG2 (c3-3 / ring
+                                                                      :consist-of (c3-1 / cup))))))
+      :polarity -)
+
+# ::snt "Yeah there is no actual joke here, except for the joke that's here."
+# ::tokens ["\"", "Yeah", "there", "is", "no", "actual", "joke", "here", ",", "except", "for", "the", "joke", "that", "'s", "here", ".", "\""]
+# ::lemmas ["\"", "yeah", "there", "be", "no", "actual", "joke", "here", ",", "except", "for", "the", "joke", "that", "be", "here", ".", "\""]
+(c4-2 / be-located-at-91
+      :ARG1 (c4-3 / joke-01
+                  :ARG1-of (c4-0 / actual-02)
+                  :polarity -)
+      :ARG2 (c4-1 / here)
+      :ARG2-of (c4-5 / except-01
+                     :ARG1 (c4-4 / joke-01
+                                 :location c4-1)))
+
+# ::snt I guess I feel that only funny things are jokes.
+# ::tokens ["I", "guess", "I", "feel", "that", "only", "funny", "things", "are", "jokes", "."]
+# ::lemmas ["i", "guess", "i", "feel", "that", "only", "funny", "thing", "be", "joke", "."]
+(c5-4 / guess-01
+      :ARG0 (c5-6 / i)
+      :ARG1 (c5-0 / feel-02
+                  :ARG0 c5-6
+                  :ARG1 (c5-5 / joke-01
+                              :ARG2 (c5-3 / thing
+                                          :mod (c5-1 / funny)
+                                          :mod (c5-2 / only)))))

@@ -1,0 +1,73 @@
+# ::snt He is fired.
+# ::tokens ["He", "is", "fired", "."]
+# ::lemmas ["he", "be", "fire", "."]
+(c1-1 / fire-02
+      :ARG1 (c1-0 / he))
+
+# ::snt We trust West with full faith.
+# ::tokens ["We", "trust", "West", "with", "full", "faith", "."]
+# ::lemmas ["we", "trust", "West", "with", "full", "faith", "."]
+(c2-3 / trust-02
+      :ARG0 (c2-1 / we)
+      :ARG1 (c2-5 / world-region
+                  :name (c2-4 / name
+                              :op1 "West"))
+      :manner (c2-0 / faith
+                    :degree (c2-2 / full)))
+
+# ::snt Chacha jee, No Vaccine, No Umrah.
+# ::tokens ["Chacha", "jee", ",", "No", "Vaccine", ",", "No", "Umrah", "."]
+# ::lemmas ["Chacha", "jee", ",", "no", "Vaccine", ",", "no", "Umrah", "."]
+(c3-0 / and
+      :op1 (c3-1 / chacha
+                 :mod (c3-4 / jee)
+                 :mode expressive)
+      :op2 (c3-3 / vaccine
+                 :polarity -)
+      :op3 (c3-2 / Umrah
+                 :polarity -))
+
+# ::snt This makes me so happy. All my colleagues who are virologists and health professionals shit on the vaccine regularly.
+# ::tokens ["This", "makes", "me", "so", "happy", ".", "All", "my", "colleagues", "who", "are", "virologists", "and", "health", "professionals", "shit", "on", "the", "vaccine", "regularly", "."]
+# ::lemmas ["this", "make", "i", "so", "happy", ".", "all", "my", "colleague", "who", "be", "virologist", "and", "health", "professional", "shit", "on", "the", "vaccine", "regularly", "."]
+(c9-15 / multi-sentence
+       :snt1 (c9-4 / make-02
+                   :ARG0 (c9-10 / this)
+                   :ARG1 (c9-6 / happy-01
+                               :ARG1 (c9-14 / i)
+                               :degree (c9-0 / so)))
+       :snt2 (c9-13 / shit-01
+                    :ARG0 (c9-12 / person
+                                 :ARG0-of (c9-7 / have-rel-role-91
+                                                :ARG1 c9-14
+                                                :ARG2 (c9-5 / colleague))
+                                 :mod (c9-2 / all)
+                                 :mod (c9-8 / virologist)
+                                 :mod (c9-9 / professional
+                                            :topic (c9-1 / healthy)))
+                    :ARG1 (c9-3 / vaccine)
+                    :ARG1-of (c9-11 / regular-02)))
+
+# ::snt Yes
+# ::tokens ["Yes"]
+# ::lemmas ["yes"]
+(c10-0 / yes)
+
+# ::snt Thanks for telling. It takes days to become effective, right?
+# ::tokens ["Thanks", "for", "telling", ".", "It", "takes", "days", "to", "become", "effective", ",", "right", "?"]
+# ::lemmas ["thank", "for", "telling", ".", "it", "take", "days", "to", "become", "effective", ",", "right", "?"]
+(c11-9 / multi-sentence
+       :snt1 (c11-5 / thank-01
+                    :ARG0 (c11-8 / i)
+                    :ARG1 (c11-10 / you)
+                    :ARG2 (c11-3 / tell-01
+                                 :ARG0 c11-10))
+       :snt2 (c11-1 / take-10
+                    :ARG0 (c11-7 / become-01
+                                 :ARG2 (c11-11 / effective-04))
+                    :ARG1 (c11-2 / multiple
+                                 :op1 (c11-4 / temporal-quantity
+                                             :unit (c11-0 / day)
+                                             :quant 1))
+                    :ARG1-of (c11-6 / request-confirmation-91
+                                    :ARG2 c11-10)))

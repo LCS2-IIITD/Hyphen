@@ -1,0 +1,33 @@
+# ::snt My body My choice
+# ::tokens ["My", "body", "My", "choice"]
+# ::lemmas ["my", "body", "my", "choice"]
+(c2-2 / choose-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-0 / body
+                  :poss c2-1))
+
+# ::snt Didn't the NAZI's teach us anything? The only good to come out of the regime was the Nuremburg rules against forced medical procedures!
+# ::tokens ["Did", "n't", "the", "NAZI", "'s", "teach", "us", "anything", "?", "The", "only", "good", "to", "come", "out", "of", "the", "regime", "was", "the", "Nuremburg", "rules", "against", "forced", "medical", "procedures", "!"]
+# ::lemmas ["do", "not", "the", "NAZI", "'s", "teach", "we", "anything", "?", "the", "only", "good", "to", "come", "out", "of", "the", "regime", "be", "the", "Nuremburg", "rule", "against", "force", "medical", "procedure", "!"]
+(c3-15 / multi-sentence
+       :snt1 (c3-10 / teach-01
+                    :ARG0 (c3-14 / person
+                                 :mod (c3-9 / political-movement
+                                            :name (c3-16 / name
+                                                         :op1 "Nazi")))
+                    :ARG1 (c3-1 / anything)
+                    :ARG2 (c3-4 / we)
+                    :polarity -)
+       :snt2 (c3-13 / good-02
+                    :ARG1 (c3-11 / rule-01
+                                 :ARG0 (c3-7 / regime)
+                                 :ARG1 (c3-17 / against
+                                              :op1 (c3-6 / procedure
+                                                         :mod (c3-3 / medicine)
+                                                         :ARG2-of (c3-2 / force-01)))
+                                 :mod (c3-5 / city
+                                            :name (c3-12 / name
+                                                         :op1 "Nuremburg")))
+                    :mod (c3-8 / only)
+                    :ARG1-of (c3-0 / come-out-09
+                                   :ARG2 c3-7)))

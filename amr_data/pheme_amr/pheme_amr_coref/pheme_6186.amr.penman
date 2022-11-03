@@ -1,0 +1,81 @@
+# ::snt YES
+# ::tokens ["YES"]
+# ::lemmas ["yes"]
+(c1-0 / yes)
+
+# ::snt I am not Charlie, Iam the dead cop. Charlieridiculed my faith and culture and Idied defending his right to do so
+# ::tokens ["I", "am", "not", "Charlie", ",", "Iam", "the", "dead", "cop", ".", "Charlieridiculed", "my", "faith", "and", "culture", "and", "Idied", "defending", "his", "right", "to", "do", "so"]
+# ::lemmas ["i", "be", "not", "Charlie", ",", "Iam", "the", "dead", "cop", ".", "charlieridicule", "my", "faith", "and", "culture", "and", "idie", "defend", "his", "right", "to", "do", "so"]
+(c2-2 / multi-sentence
+      :snt1 (c2-18 / contrast-01
+                   :ARG1 (c2-3 / person
+                               :name (c2-10 / name
+                                            :op1 "Charlie")
+                               :domain (c2-14 / i)
+                               :polarity -)
+                   :ARG2 (c2-4 / cop
+                               :ARG1-of (c2-5 / die-01)
+                               :domain c2-14))
+      :snt2 (c2-8 / and
+                  :op1 (c2-17 / override-01
+                              :ARG0 (c2-7 / person
+                                          :name c2-10
+                                          :op1 "Charlieridic"))
+                  :ARG1 (c2-13 / and
+                               :op1 (c2-9 / faith
+                                          :poss (c2-15 / i))
+                               :op2 (c2-16 / culture
+                                           :poss c2-15)))
+      :op2 (c2-1 / Idied-01
+                 :ARG0 c2-7
+                 :ARG1 (c2-0 / defend-01
+                             :ARG0 c2-7
+                             :ARG1 (c2-11 / right-05
+                                          :ARG1 c2-7
+                                          :ARG2 (c2-12 / do-02
+                                                       :ARG0 c2-7
+                                                       :ARG1 (c2-6 / so))))))
+
+# ::snt Charlie Hebdo must go ONLINE too the French abroad &amp; all the Charlies ! RT
+# ::tokens ["Charlie", "Hebdo", "must", "go", "ONLINE", "too", "the", "French", "abroad", "&", "amp", ";", "all", "the", "Charlies", "!", "RT"]
+# ::lemmas ["Charlie", "Hebdo", "must", "go", "ONLINE", "too", "the", "French", "abroad", "&", "amp", ";", "all", "the", "Charlies", "!", "rt"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / obligate-01
+                  :ARG1 (c4-7 / publication
+                              :name (c4-5 / name
+                                          :op1 "Charlie"
+                                          :op2 " Hebdo"))
+                  :ARG2 (c4-10 / go-01
+                               :ARG1 (c4-14 / and
+                                            :op1 (c4-8 / magazine
+                                                       :name (c4-6 / name
+                                                                   :op1 "International"
+                                                                   :op2 "&"
+                                                                   :op3 "Post"))
+                                            :op2 (c4-0 / magazine
+                                                       :name (c4-9 / name
+                                                                   :op1 "The"
+                                                                   :op2 "Charlies")
+                                                       :mod (c4-4 / all)))
+                               :ARG4 (c4-2 / online)
+                               :mod (c4-12 / too)))
+      :snt2 (c4-13 / person
+                   :name (c4-11 / name
+                                :op1 "Charlies")
+                   :mod c4-4))
+
+# ::snt : will print million copies next week
+# ::tokens [":", "will", "print", "million", "copies", "next", "week"]
+# ::lemmas [":", "will", "print", "million", "copy", "next", "week"]
+(c5-2 / print-out-02
+      :ARG1 (c5-4 / thing
+                  :ARG2-of (c5-3 / copy-01)
+                  :quant 1000000)
+      :time (c5-0 / week
+                  :mod (c5-1 / next)))
+
+# ::snt good!!
+# ::tokens ["good", "!", "!"]
+# ::lemmas ["good", "!", "!"]
+(c6-0 / good-02
+      :mode expressive)

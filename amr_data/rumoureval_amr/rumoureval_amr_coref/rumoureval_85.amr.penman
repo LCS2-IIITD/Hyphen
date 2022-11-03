@@ -1,0 +1,54 @@
+# ::snt Reset.
+# ::tokens ["Reset", "."]
+# ::lemmas ["Reset", "."]
+(c1-0 / Reset-01)
+
+# ::snt The meme makers are letting us down on this! We should see that red button ! //
+# ::tokens ["The", "meme", "makers", "are", "letting", "us", "down", "on", "this", "!", "We", "should", "see", "that", "red", "button", "!", "//"]
+# ::lemmas ["the", "meme", "maker", "be", "let", "we", "down", "on", "this", "!", "we", "should", "see", "that", "red", "button", "!", "//"]
+(c2-3 / multi-sentence
+      :snt1 (c2-6 / let-down-04
+                  :ARG0 (c2-5 / person
+                              :ARG0-of (c2-9 / make-01
+                                             :ARG1 (c2-8 / meme)))
+                  :ARG1 (c2-1 / we)
+                  :topic (c2-2 / this))
+      :snt2 (c2-7 / recommend-01
+                  :ARG1 (c2-11 / see-01
+                               :ARG0 (c2-10 / we)
+                               :ARG1 (c2-12 / button
+                                            :ARG1-of (c2-0 / red-02)
+                                            :mod (c2-4 / that)))))
+
+# ::snt Russian Emb denies. RT min This is not true.// I have more time for speculation
+# ::tokens ["Russian", "Emb", "denies", ".", "RT", "min", "This", "is", "not", "true.//", "I", "have", "more", "time", "for", "speculation"]
+# ::lemmas ["Russian", "Emb", "deny", ".", "RT", "min", "this", "be", "not", "true.//", "i", "have", "more", "time", "for", "speculation"]
+(c3-2 / multi-sentence
+      :snt1 (c3-4 / deny-01
+                  :ARG0 (c3-6 / country
+                              :name (c3-14 / name
+                                           :op1 "Russia"))
+                  :ARG1 (c3-5 / publication
+                              :name (c3-7 / name
+                                          :op1 "Emb")))
+      :snt2 (c3-3 / publication
+                  :name (c3-9 / name
+                              :op1 "RT")
+                  :ARG1-of (c3-13 / quote-01))
+      :snt3 (c3-0 / have-03
+                  :ARG0 (c3-8 / i)
+                  :ARG1 (c3-1 / time
+                              :mod (c3-12 / more)
+                              :purpose (c3-10 / speculate-01))
+                  :polarity (c3-11 / amr-unknown)))
+
+# ::snt Or preparing to launch yet another war?
+# ::tokens ["Or", "preparing", "to", "launch", "yet", "another", "war", "?"]
+# ::lemmas ["or", "prepare", "to", "launch", "yet", "another", "war", "?"]
+(c4-5 / or
+      :op2 (c4-2 / prepare-02
+                 :ARG2 (c4-4 / launch-01
+                             :ARG1 (c4-1 / war
+                                         :mod (c4-3 / another
+                                                    :mod (c4-0 / yet))))
+                 :polarity (c4-6 / amr-unknown)))

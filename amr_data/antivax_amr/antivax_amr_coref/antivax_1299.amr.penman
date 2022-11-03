@@ -1,0 +1,124 @@
+# ::snt That's a good idea.
+# ::tokens ["That", "'s", "a", "good", "idea", "."]
+# ::lemmas ["that", "be", "a", "good", "idea", "."]
+(c1-1 / idea
+      :ARG1-of (c1-0 / good-02)
+      :domain (c1-2 / that))
+
+# ::snt Should go away within hours. I had side ffects for the first Moderna shot and went ahead and put in to take a day off after my nd one to be safe.
+# ::tokens ["Should", "go", "away", "within", "hours", ".", "I", "had", "side", "ffects", "for", "the", "first", "Moderna", "shot", "and", "went", "ahead", "and", "put", "in", "to", "take", "a", "day", "off", "after", "my", "nd", "one", "to", "be", "safe", "."]
+# ::lemmas ["should", "go", "away", "within", "hours", ".", "i", "have", "side", "ffect", "for", "the", "first", "Moderna", "shoot", "and", "go", "ahead", "and", "put", "in", "to", "take", "a", "day", "off", "after", "my", "nd", "one", "to", "be", "safe", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-9 / recommend-01
+                   :ARG1 (c2-10 / go-02
+                                :direction (c2-19 / away)
+                                :time (c2-13 / after
+                                             :op1 (c2-12 / now)
+                                             :quant (c2-24 / up-to
+                                                           :op1 (c2-21 / multiple
+                                                                       :op1 (c2-8 / temporal-quantity
+                                                                                  :unit (c2-22 / hour)
+                                                                                  :quant 1))))))
+       :snt2 (c2-1 / and
+                   :op1 (c2-4 / have-03
+                              :ARG0 (c2-5 / i)
+                              :ARG1 (c2-20 / ffect
+                                           :mod (c2-14 / side))
+                              :topic (c2-26 / shoot-01
+                                            :ARG1 (c2-27 / product
+                                                         :name (c2-3 / name
+                                                                     :op1 "Moderna"))
+                                            :ord (c2-7 / ordinal-entity
+                                                       :value 1)))
+                   :op2 (c2-28 / and
+                               :op1 (c2-18 / go-06
+                                           :ARG0 c2-5
+                                           :ARG2 (c2-2 / ahead))
+                               :op2 (c2-25 / put-in-05
+                                           :ARG0 c2-5
+                                           :purpose (c2-6 / take-01
+                                                          :ARG0 c2-5
+                                                          :ARG1 (c2-0 / day
+                                                                      :mod (c2-23 / off))
+                                                          :time (c2-16 / after
+                                                                       :op1 (c2-17 / die-01
+                                                                                   :ARG1 c2-5)))
+                                           :purpose (c2-15 / safe-01
+                                                           :ARG1 c2-5)))))
+
+# ::snt Wow. You are lucky!
+# ::tokens ["Wow", ".", "You", "are", "lucky", "!"]
+# ::lemmas ["wow", ".", "you", "be", "lucky", "!"]
+(c3-1 / multi-sentence
+      :snt1 (c3-0 / wow
+                  :mode expressive)
+      :snt2 (c3-3 / lucky
+                  :domain (c3-2 / you)))
+
+# ::snt has helped.
+# ::tokens ["has", "helped", "."]
+# ::lemmas ["have", "help", "."]
+(c4-0 / help-01)
+
+# ::snt Felt fine last night, but experiencing side effects this morning. Noticed as soon as I woke up that I was achy all over. Probably have a fever, but don't have a thermometer to confirm (I should get one). Also, brain fog. Luckily, no headache. I expect this'll last only a day.
+# ::tokens ["Felt", "fine", "last", "night", ",", "but", "experiencing", "side", "effects", "this", "morning", ".", "Noticed", "as", "soon", "as", "I", "woke", "up", "that", "I", "was", "achy", "all", "over", ".", "Probably", "have", "a", "fever", ",", "but", "do", "n't", "have", "a", "thermometer", "to", "confirm", "(", "I", "should", "get", "one", ")", ".", "Also", ",", "brain", "fog", ".", "Luckily", ",", "no", "headache", ".", "I", "expect", "this", "'ll", "last", "only", "a", "day", "."]
+# ::lemmas ["feel", "fine", "last", "night", ",", "but", "experience", "side", "effect", "this", "morning", ".", "notice", "as", "soon", "as", "i", "wake", "up", "that", "i", "be", "you", "all", "over", ".", "probably", "have", "a", "fever", ",", "but", "do", "not", "have", "a", "thermometer", "to", "confirm", "(", "i", "should", "get", "one", ")", ".", "also", ",", "brain", "fog", ".", "luckily", ",", "no", "headache", ".", "i", "expect", "this", "'ll", "last", "only", "a", "day", "."]
+(c5-17 / multi-sentence
+       :snt1 (c5-9 / contrast-01
+                   :ARG1 (c5-33 / feel-01
+                                :ARG0 (c5-7 / i)
+                                :ARG1 (c5-28 / fine-04
+                                             :ARG1 c5-7)
+                                :time (c5-0 / date-entity
+                                            :dayperiod (c5-18 / night)
+                                            :mod (c5-31 / yesterday)))
+                   :ARG2 (c5-21 / experience-01
+                                :ARG0 c5-7
+                                :ARG1 (c5-36 / effect-03
+                                             :mod (c5-22 / side))
+                                :time (c5-30 / date-entity
+                                             :dayperiod (c5-34 / morning)
+                                             :mod (c5-14 / today))))
+       :snt2 (c5-5 / notice-01
+                   :ARG0 c5-7
+                   :ARG1 (c5-32 / achy
+                                :domain c5-7
+                                :degree (c5-20 / all-over))
+                   :time (c5-1 / as-soon-as
+                               :op1 (c5-10 / wake-up-02
+                                           :ARG1 c5-7)))
+       :snt3 (c5-40 / probable
+                    :domain (c5-35 / have-03
+                                   :ARG0 (c5-25 / i)
+                                   :ARG1 (c5-29 / fever)))
+       :snt4 (c5-6 / have-concession-91
+                   :ARG1 (c5-8 / have-03
+                               :ARG0 c5-25
+                               :ARG1 (c5-11 / temperatureometer
+                                            :ARG1-of (c5-2 / confirm-01
+                                                           :ARG0 c5-25
+                                                           :ARG1-of (c5-15 / recommend-01
+                                                                           :ARG0 c5-25)))
+                               :polarity -)
+                   :ARG2 (c5-12 / obligate-01
+                                :ARG1 c5-25
+                                :ARG2 (c5-16 / get-01
+                                             :ARG0 c5-25
+                                             :ARG1 c5-11)))
+       :snt5 (c5-3 / fog
+                   :mod (c5-39 / brain)
+                   :mod (c5-41 / also))
+       :snt6 (c5-13 / headache
+                    :ARG2-of (c5-23 / fortunate-01)
+                    :duration (c5-19 / temporal-quantity
+                                     :unit (c5-24 / day)
+                                     :mod (c5-37 / only)
+                                     :quant 1)
+                    :polarity -)
+       :snt7 (c5-4 / expect-01
+                   :ARG0 (c5-26 / i)
+                   :ARG1 (c5-38 / last-03
+                                :ARG1 (c5-27 / this)
+                                :ARG2 c5-19
+                                :unit c5-24
+                                :quant 1)))

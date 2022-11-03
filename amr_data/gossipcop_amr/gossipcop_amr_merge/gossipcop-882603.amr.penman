@@ -1,0 +1,30 @@
+# ::subgraphs [["c1-1", "c1-3", "c1-4", "c1-2", "c1-0"], ["c4-1", "c4-5", "c4-4", "c4-0", "c4-3", "c4-2"], ["c5-1", "c5-3", "c5-4", "c5-2", "c5-0", "c5-5"]]
+(d / dummy
+   :COMMENT (c1-1 / say
+                  :ARG1 (c1-3 / congratulate
+                              :ARG0 (c1-4 / i)
+                              :ARG1 (c1-2 / person
+                                          :name (c1-0 / name
+                                                      :op1 "Adele"
+                                                      :op2 "Dazeem"
+                                                      :SAME c4-0)
+                                          :ARG2-of c1-1
+                                          :SAME c4-4
+                                          :COREF c5-3
+                                          :COREF c5-0
+                                          :COREF c4-2)))
+   :COMMENT (c4-1 / multi
+                  :snt1 (c4-5 / love
+                              :ARG1 (c4-4 / person
+                                          :name (c4-0 / name
+                                                      :op1 "Idina"))
+                              :mode expressive)
+                  :snt2 (c4-3 / happy
+                              :ARG1 (c4-2 / she)))
+   :COMMENT (c5-1 / see
+                  :ARG0 (c5-3 / we)
+                  :ARG1 (c5-4 / temporal
+                              :duration-of (c5-2 / last
+                                                 :ARG1 (c5-0 / one
+                                                             :mod (c5-5 / this))))
+                  :mode imperative))

@@ -1,0 +1,37 @@
+# ::snt 80-2-0?
+# ::tokens ["80", "-", "2", "-", "0", "?"]
+# ::lemmas ["80", "-", "2", "-", "0", "?"]
+(c1-0 / score-entity
+      :polarity (c1-1 / amr-unknown)
+      :op1 80
+      :op2 0)
+
+# ::snt tanknation
+# ::tokens ["tanknation"]
+# ::lemmas ["tanknation"]
+(c2-0 / person
+      :name (c2-1 / name
+                  :op1 "tanknation"))
+
+# ::snt The leafs could go 0-82, and with their luck, would lose the lottery and not end up with McDavid.
+# ::tokens ["The", "leafs", "could", "go", "0", "-", "82", ",", "and", "with", "their", "luck", ",", "would", "lose", "the", "lottery", "and", "not", "end", "up", "with", "McDavid", "."]
+# ::lemmas ["the", "leafs", "could", "go", "0", "-", "82", ",", "and", "with", "their", "luck", ",", "would", "lose", "the", "lottery", "and", "not", "end", "up", "with", "McDavid", "."]
+(c3-2 / and
+      :op1 (c3-8 / possible-01
+                 :ARG1 (c3-7 / go-01
+                             :ARG1 (c3-5 / leaf)
+                             :ARG2 (c3-0 / score-entity
+                                         :op1 0
+                                         :op2 82)))
+      :op2 (c3-10 / and
+                  :op1 (c3-6 / lose-03
+                             :ARG0 c3-5
+                             :ARG1 (c3-1 / lottery))
+                  :op2 (c3-11 / end-up-03
+                              :ARG1 c3-5
+                              :ARG2 (c3-4 / person
+                                          :name (c3-9 / name
+                                                      :op1 "McDavid"))
+                              :polarity -)
+                  :condition (c3-3 / luck
+                                   :poss c3-5)))

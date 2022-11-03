@@ -1,0 +1,145 @@
+# ::snt i didnt have any arm pain last time so this shall be interesting
+# ::tokens ["i", "did", "nt", "have", "any", "arm", "pain", "last", "time", "so", "this", "shall", "be", "interesting"]
+# ::lemmas ["i", "do", "not", "have", "any", "arm", "pain", "last", "time", "so", "this", "shall", "be", "interesting"]
+(c1-5 / pain-01
+      :ARG1 (c1-0 / arm)
+      :time (c1-4 / last)
+      :ARG0-of (c1-2 / cause-01
+                     :ARG1 (c1-1 / interest-01
+                                 :ARG2 (c1-3 / this)))
+      :mod c1-0
+      :polarity -)
+
+# ::snt Nada. None. Bubkus. Diddly-squat.
+# ::tokens ["Nada", ".", "None", ".", "Bubkus", ".", "Diddly", "-", "squat", "."]
+# ::lemmas ["Nada", ".", "none", ".", "Bubkus", ".", "diddly", "-", "squat", "."]
+(c2-2 / and
+      :op1 (c2-5 / nada)
+      :op2 (c2-3 / none)
+      :op3 (c2-4 / bubkus)
+      :op4 (c2-0 / squat
+                 :mod (c2-1 / diddly)))
+
+# ::snt Drink plenty of water. Arm got sore after a few hours, like w first dose. Had mild congestion &amp; headache, but water helped. Nurse giving shot recommended Tylenol, PRN
+# ::tokens ["Drink", "plenty", "of", "water", ".", "Arm", "got", "sore", "after", "a", "few", "hours", ",", "like", "w", "first", "dose", ".", "Had", "mild", "congestion", "&", "amp", ";", "headache", ",", "but", "water", "helped", ".", "Nurse", "giving", "shot", "recommended", "Tylenol", ",", "PRN"]
+# ::lemmas ["drink", "plenty", "of", "water", ".", "Arm", "get", "sore", "after", "a", "few", "hours", ",", "like", "w", "first", "dose", ".", "have", "mild", "congestion", "&", "amp", ";", "headache", ",", "but", "water", "help", ".", "Nurse", "give", "shot", "recommend", "Tylenol", ",", "PRN"]
+(c3-16 / multi-sentence
+       :snt1 (c3-0 / drink-01
+                   :ARG0 (c3-22 / you)
+                   :ARG1 (c3-9 / water
+                               :quant (c3-29 / plenty))
+                   :mode imperative)
+       :snt2 (c3-20 / sore-03
+                    :ARG1 (c3-23 / arm)
+                    :time (c3-18 / after
+                                 :quant (c3-24 / few
+                                               :op1 (c3-13 / temporal-quantity
+                                                           :unit (c3-26 / hour)
+                                                           :quant 1)))
+                    :ARG1-of (c3-14 / resemble-01
+                                    :ARG2 (c3-21 / dose-01
+                                                 :ARG2 (c3-10 / thing
+                                                              :ord (c3-12 / ordinal-entity
+                                                                          :value 1)))))
+       :snt3 (c3-1 / and
+                   :op1 (c3-5 / have-03
+                              :ARG1 (c3-30 / and
+                                           :op1 (c3-8 / congest-01
+                                                      :degree (c3-25 / mild))
+                                           :op2 (c3-3 / amp)))
+                   :op2 (c3-2 / contrast-01
+                              :ARG1 (c3-7 / help-01
+                                          :ARG0 (c3-19 / water))
+                              :ARG2 (c3-15 / give-01
+                                           :ARG0 (c3-17 / nurse)
+                                           :ARG1 (c3-28 / shot
+                                                        :ARG1-of (c3-11 / recommend-01)
+                                                        :mod (c3-27 / product
+                                                                    :name (c3-4 / name
+                                                                                :op1 "Tylenol")))))
+                   :snt4 c3-7
+                   :ARG0 (c3-6 / water)))
+
+# ::snt I got my shot at am, felt poorly (chills, fatigue) around pm, went to bed early. Woke up fine.
+# ::tokens ["I", "got", "my", "shot", "at", "am", ",", "felt", "poorly", "(", "chills", ",", "fatigue", ")", "around", "pm", ",", "went", "to", "bed", "early", ".", "Woke", "up", "fine", "."]
+# ::lemmas ["i", "get", "my", "shot", "at", "am", ",", "feel", "poorly", "(", "chill", ",", "fatigue", ")", "around", "pm", ",", "go", "to", "bed", "early", ".", "wake", "up", "fine", "."]
+(c4-13 / multi-sentence
+       :snt1 (c4-3 / and
+                   :op1 (c4-11 / get-01
+                               :ARG0 (c4-12 / i)
+                               :ARG1 (c4-0 / shoot-02
+                                           :ARG0 c4-12)
+                               :time (c4-1 / date-entity
+                                           :time "18:00"))
+                   :op2 (c4-4 / feel-01
+                              :ARG0 c4-12
+                              :ARG1 (c4-10 / poor
+                                           :example (c4-16 / and
+                                                           :op1 (c4-5 / chill-01)
+                                                           :op2 (c4-8 / fatigue-01)))
+                              :time (c4-2 / around
+                                          :op1 c4-1
+                                          :time "18:00")))
+       :op3 (c4-15 / go-02
+                   :ARG0 c4-12
+                   :ARG4 (c4-14 / bed)
+                   :time (c4-17 / early))
+       :snt2 (c4-6 / wake-up-02
+                   :ARG1 (c4-7 / i)
+                   :ARG1-of (c4-9 / fine-04)))
+
+# ::snt Mine where what they list on the CDC website for Pfizer. They started about an hour after the shot, mostly arm pain, then progressed to sweating/nausea/malaise. Arm sore overnight then back to normal by mid morning today! (Got it yesterday) my arm feels almost fine now.
+# ::tokens ["Mine", "where", "what", "they", "list", "on", "the", "CDC", "website", "for", "Pfizer", ".", "They", "started", "about", "an", "hour", "after", "the", "shot", ",", "mostly", "arm", "pain", ",", "then", "progressed", "to", "sweating", "/", "nausea", "/", "malaise", ".", "Arm", "sore", "overnight", "then", "back", "to", "normal", "by", "mid", "morning", "today", "!", "(", "Got", "it", "yesterday", ")", "my", "arm", "feels", "almost", "fine", "now", "."]
+# ::lemmas ["mine", "where", "what", "they", "list", "on", "the", "CDC", "website", "for", "Pfizer", ".", "they", "start", "about", "an", "hour", "after", "the", "shot", ",", "mostly", "arm", "pain", ",", "then", "progress", "to", "sweat", "/", "nausea", "/", "malaise", ".", "arm", "sore", "overnight", "then", "back", "to", "normal", "by", "mid", "morning", "today", "!", "(", "got", "it", "yesterday", ")", "my", "arm", "feel", "almost", "fine", "now", "."]
+(c5-18 / multi-sentence
+       :snt1 (c5-14 / thing
+                    :location-of (c5-10 / thing
+                                        :ARG1-of (c5-39 / list-01
+                                                        :ARG0 (c5-20 / they)
+                                                        :ARG2 (c5-8 / company
+                                                                    :name (c5-19 / name
+                                                                                 :op1 "Pfizer"))
+                                                        :medium (c5-9 / website
+                                                                      :mod (c5-16 / government-organization
+                                                                                  :name (c5-3 / name
+                                                                                              :op1 "CDC")))))
+                    :poss (c5-4 / i))
+       :snt2 (c5-33 / and
+                    :op1 (c5-22 / start-01
+                                :ARG0 (c5-24 / they)
+                                :time (c5-21 / after
+                                             :op1 (c5-41 / shoot-02)
+                                             :quant (c5-1 / about
+                                                          :op1 (c5-34 / temporal-quantity
+                                                                      :unit (c5-37 / hour)
+                                                                      :quant 1))))
+                    :op2 (c5-42 / progress-01
+                                :ARG1 c5-24
+                                :ARG2 (c5-25 / slash
+                                             :op1 (c5-5 / sweat-01
+                                                        :ARG0 c5-24)
+                                             :op2 (c5-28 / nausea)
+                                             :op3 (c5-36 / malaise))
+                                :time (c5-38 / then)))
+       :snt3 (c5-43 / and
+                    :op1 (c5-6 / sore-02
+                               :ARG1 (c5-2 / arm)
+                               :time (c5-12 / overnight))
+                    :op2 (c5-40 / back-02
+                                :ARG1 c5-2
+                                :direction (c5-7 / normal-02
+                                                 :ARG1 c5-2)
+                                :time (c5-32 / by
+                                             :op1 (c5-0 / date-entity
+                                                        :dayperiod (c5-26 / morning)
+                                                        :mod (c5-17 / middle)))
+                                :time (c5-13 / today))
+                    :snt4 (c5-30 / get-01
+                                 :ARG0 (c5-23 / i
+                                              :part (c5-29 / arm))
+                                 :time (c5-31 / yesterday))
+                    :snt5 (c5-35 / feel-05
+                                 :ARG1 c5-29
+                                 :ARG2 (c5-27 / fine-04
+                                              :mod (c5-11 / almost))
+                                 :time (c5-15 / now))))

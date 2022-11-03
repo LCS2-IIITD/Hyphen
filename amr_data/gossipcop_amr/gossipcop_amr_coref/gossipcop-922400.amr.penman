@@ -1,0 +1,209 @@
+# ::snt Again
+# ::tokens ["Again"]
+# ::lemmas ["again"]
+(c1-0 / again)
+
+# ::snt I have a chance!
+# ::tokens ["I", "have", "a", "chance", "!"]
+# ::lemmas ["i", "have", "a", "chance", "!"]
+(c2-0 / chance-02
+      :ARG0 (c2-1 / i))
+
+# ::snt Chris we know your type, stop trying to make this happen...Im joking lol
+# ::tokens ["Chris", "we", "know", "your", "type", ",", "stop", "trying", "to", "make", "this", "happen", "...", "Im", "joking", "lol"]
+# ::lemmas ["Chris", "we", "know", "your", "type", ",", "stop", "try", "to", "make", "this", "happen", "...", "Im", "joke", "lol"]
+(c3-3 / say-01
+      :ARG0 (c3-9 / i)
+      :ARG1 (c3-10 / and
+                   :op1 (c3-4 / know-01
+                              :ARG0 (c3-7 / we)
+                              :ARG1 (c3-8 / type
+                                          :poss (c3-5 / person
+                                                      :name (c3-1 / name
+                                                                  :op1 "Chris"))))
+                   :op2 (c3-0 / stop-01
+                              :ARG0 c3-5
+                              :ARG1 (c3-13 / try-01
+                                           :ARG0 c3-5
+                                           :ARG1 (c3-2 / make-02
+                                                       :ARG0 c3-5
+                                                       :ARG1 (c3-11 / this)))
+                              :mode imperative)
+                   :op3 (c3-12 / joke-01
+                               :ARG0 c3-9
+                               :manner (c3-6 / loud)))
+      :ARG2 c3-5)
+
+# ::snt If only I cared
+# ::tokens ["If", "only", "I", "cared"]
+# ::lemmas ["if", "only", "i", "care"]
+(c4-1 / have-condition-91
+      :ARG2 (c4-0 / care-01
+                  :ARG0 (c4-2 / i)
+                  :mod (c4-3 / only)))
+
+# ::snt Chris ...I am here !!
+# ::tokens ["Chris", "...", "I", "am", "here", "!", "!"]
+# ::lemmas ["Chris", "...", "i", "be", "here", "!", "!"]
+(c5-2 / say-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-0 / be-located-at-91
+                  :ARG1 c5-5
+                  :ARG2 (c5-3 / here))
+      :ARG2 (c5-4 / person
+                  :name (c5-1 / name
+                              :op1 "Chris")))
+
+# ::snt Internet's favourite? LOL. Good joke
+# ::tokens ["Internet", "'s", "favourite", "?", "LOL", ".", "Good", "joke"]
+# ::lemmas ["internet", "'s", "favourite", "?", "lol", ".", "good", "joke"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / favor-01
+                  :ARG0 (c6-4 / internet)
+                  :polarity (c6-5 / amr-unknown)
+                  :ARG1-of (c6-2 / laugh-01
+                                 :manner (c6-7 / loud)
+                                 :mode expressive))
+      :snt2 (c6-3 / joke-01
+                  :ARG1-of (c6-6 / good-02)))
+
+# ::snt What a shame. They went together like peanutbutter and spackle.
+# ::tokens ["What", "a", "shame", ".", "They", "went", "together", "like", "peanutbutter", "and", "spackle", "."]
+# ::lemmas ["what", "a", "shame", ".", "they", "go", "together", "like", "peanutbutter", "and", "spackle", "."]
+(c9-1 / multi-sentence
+      :snt1 (c9-2 / shame
+                  :degree (c9-0 / so))
+      :snt2 (c9-7 / go-06
+                  :ARG0 (c9-6 / they)
+                  :manner (c9-8 / together)
+                  :ARG1-of (c9-3 / resemble-01
+                                 :ARG2 (c9-4 / and
+                                             :op1 (c9-5 / peanutbutter)
+                                             :op2 (c9-9 / spackle-01)))))
+
+# ::snt I hate her strategy to play &amp; paid on social media for her tricky relationship. It was toxic awful. The end is what to deserved.
+# ::tokens ["I", "hate", "her", "strategy", "to", "play", "&", "amp", ";", "paid", "on", "social", "media", "for", "her", "tricky", "relationship", ".", "It", "was", "toxic", "awful", ".", "The", "end", "is", "what", "to", "deserved", "."]
+# ::lemmas ["i", "hate", "her", "strategy", "to", "play", "&", "amp", ";", "pay", "on", "social", "medium", "for", "her", "tricky", "relationship", ".", "it", "be", "toxic", "awful", ".", "the", "end", "be", "what", "to", "deserve", "."]
+(c10-1 / multi-sentence
+       :snt1 (c10-6 / hate-01
+                    :ARG0 (c10-11 / i)
+                    :ARG1 (c10-3 / strategy
+                                 :poss (c10-0 / she)
+                                 :topic (c10-12 / and
+                                                :op1 (c10-7 / play-01
+                                                            :ARG0 c10-0)
+                                                :op2 (c10-13 / amp-00
+                                                             :ARG0 c10-0))))
+       :snt2 (c10-2 / pay-01
+                    :ARG2 (c10-8 / media
+                                 :mod (c10-16 / social))
+                    :ARG3 (c10-4 / relation-03
+                                 :ARG0 c10-0
+                                 :ARG1-of (c10-10 / tricky-02)))
+       :snt3 (c10-9 / awful
+                    :mod (c10-15 / toxic)
+                    :domain (c10-5 / end-01)
+                    :ARG1-of (c10-14 / deserve-01
+                                     :ARG0 c10-11)))
+
+# ::snt She cheated her husband for Chris. This toxic love should end. IT'S OVER that's what should be.
+# ::tokens ["She", "cheated", "her", "husband", "for", "Chris", ".", "This", "toxic", "love", "should", "end", ".", "IT", "'S", "OVER", "that", "'s", "what", "should", "be", "."]
+# ::lemmas ["she", "cheat", "her", "husband", "for", "Chris", ".", "this", "toxic", "love", "should", "end", ".", "it", "be", "over", "that", "be", "what", "should", "be", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-10 / cheat-03
+                     :ARG0 (c11-3 / she)
+                     :ARG1 (c11-8 / person
+                                  :ARG0-of (c11-7 / have-rel-role-91
+                                                  :ARG1 c11-3
+                                                  :ARG2 (c11-11 / husband)))
+                     :ARG2 (c11-2 / person
+                                  :name (c11-4 / name
+                                               :op1 "Chris")))
+       :snt2 (c11-5 / recommend-01
+                    :ARG1 (c11-6 / end-01
+                                 :ARG1 (c11-9 / love-01
+                                              :mod (c11-13 / toxic)
+                                              :mod (c11-15 / this))))
+       :snt3 (c11-0 / over-01
+                    :ARG1 (c11-12 / it)
+                    :ARG1-of (c11-14 / recommend-01)))
+
+# ::snt Again??? It's over since Feb.
+# ::tokens ["Again", "?", "?", "?", "It", "'s", "over", "since", "Feb."]
+# ::lemmas ["again", "?", "?", "?", "it", "be", "over", "since", "Feb."]
+(c12-1 / multi-sentence
+       :snt1 (c12-3 / again
+                    :polarity (c12-5 / amr-unknown))
+       :snt2 (c12-0 / over-01
+                    :ARG1 (c12-4 / it)
+                    :time (c12-2 / since
+                                 :op1 (c12-6 / date-entity
+                                             :month 2))))
+
+# ::snt ya in like november
+# ::tokens ["ya", "in", "like", "november"]
+# ::lemmas ["ya", "in", "like", "november"]
+(c13-1 / be-temporally-at-91
+       :ARG1 (c13-2 / you)
+       :ARG2 (c13-0 / festival
+                    :name (c13-3 / name
+                                 :op1 "November")))
+
+# ::snt oh i didnt know they got back together
+# ::tokens ["oh", "i", "did", "nt", "know", "they", "got", "back", "together"]
+# ::lemmas ["oh", "i", "do", "not", "know", "they", "get", "back", "together"]
+(c14-1 / know-01
+       :ARG0 (c14-3 / i)
+       :ARG1 (c14-5 / get-back-10
+                    :ARG1 (c14-2 / they)
+                    :ARG2 (c14-4 / together))
+       :mod (c14-0 / oh)
+       :polarity -)
+
+# ::snt Lol why
+# ::tokens ["Lol", "why"]
+# ::lemmas ["Lol", "why"]
+(c15-0 / cause-01
+       :ARG0 (c15-3 / amr-unknown)
+       :mod (c15-2 / laugh-01
+                   :manner (c15-1 / loud)
+                   :mode expressive))
+
+# ::snt Good shes ugly!
+# ::tokens ["Good", "she", "s", "ugly", "!"]
+# ::lemmas ["good", "she", "s", "ugly", "!"]
+(c17-1 / ugly
+       :domain (c17-2 / she)
+       :ARG1-of (c17-0 / good-02))
+
+# ::snt Kind of why they call it dating
+# ::tokens ["Kind", "of", "why", "they", "call", "it", "dating"]
+# ::lemmas ["kind", "of", "why", "they", "call", "it", "date"]
+(c18-2 / thing
+       :ARG0-of (c18-1 / cause-01
+                       :ARG1 (c18-6 / call-01
+                                    :ARG0 (c18-4 / they)
+                                    :ARG1 (c18-3 / it)
+                                    :ARG2 (c18-5 / date-02)))
+       :degree (c18-0 / kind-of))
+
+# ::snt Noooooo RT : Did Chris Evans and Jenny Slate Break UpAgain?
+# ::tokens ["Noooooo", "RT", ":", "Did", "Chris", "Evans", "and", "Jenny", "Slate", "Break", "UpAgain", "?"]
+# ::lemmas ["Noooooo", "RT", ":", "do", "Chris", "Evans", "and", "Jenny", "Slate", "Break", "UpAgain", "?"]
+(c19-9 / ask-01
+       :ARG1 (c19-0 / break-up-08
+                    :ARG1 (c19-8 / and
+                                 :op1 (c19-4 / person
+                                             :name (c19-1 / name
+                                                          :op1 "Chris"
+                                                          :op2 "Evans"))
+                                 :op2 (c19-2 / person
+                                             :name (c19-3 / name
+                                                          :op1 "Jenny"
+                                                          :op2 "Sl Slate")))
+                    :mod (c19-6 / again)
+                    :polarity (c19-10 / amr-unknown))
+       :ARG2 (c19-11 / publication
+                     :name (c19-5 / name
+                                  :op1 "RT"))
+       :mod (c19-7 / no))

@@ -1,0 +1,102 @@
+# ::snt That's stupid
+# ::tokens ["That", "'s", "stupid"]
+# ::lemmas ["that", "be", "stupid"]
+(c1-0 / stupid
+      :domain (c1-1 / that))
+
+# ::snt Sure?
+# ::tokens ["Sure", "?"]
+# ::lemmas ["sure", "?"]
+(c2-0 / sure-02
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt Nothing to do with his wife giving birth then?
+# ::tokens ["Nothing", "to", "do", "with", "his", "wife", "giving", "birth", "then", "?"]
+# ::lemmas ["nothing", "to", "do", "with", "his", "wife", "give", "birth", "then", "?"]
+(c3-0 / have-to-do-with-04
+      :ARG1 (c3-2 / bear-02
+                  :ARG0 (c3-5 / person
+                              :ARG0-of (c3-8 / have-rel-role-91
+                                             :ARG1 (c3-4 / he)
+                                             :ARG2 (c3-1 / wife))))
+      :ARG2 (c3-3 / nothing)
+      :polarity (c3-6 / amr-unknown)
+      :mod (c3-7 / then))
+
+# ::snt he has prolly been having a facelift
+# ::tokens ["he", "has", "prolly", "been", "having", "a", "facelift"]
+# ::lemmas ["he", "have", "prolly", "be", "have", "a", "facelift"]
+(c4-2 / facelift-01
+      :ARG1 (c4-0 / he)
+      :mod (c4-1 / probable))
+
+# ::snt Ah yes to be closer to his billions of rubles
+# ::tokens ["Ah", "yes", "to", "be", "closer", "to", "his", "billions", "of", "rubles"]
+# ::lemmas ["ah", "yes", "to", "be", "close", "to", "his", "billions", "of", "rubles"]
+(c5-1 / yes
+      :domain (c5-0 / have-degree-91
+                    :ARG2 (c5-4 / close-10
+                                :ARG2 (c5-3 / ruble
+                                            :poss (c5-6 / he)
+                                            :quant 1000000000))
+                    :ARG3 (c5-2 / more))
+      :mod (c5-5 / ah
+                 :mode expressive))
+
+# ::snt Something big is happening right now in Moscow : Putin disappeared due to impending political coup
+# ::tokens ["Something", "big", "is", "happening", "right", "now", "in", "Moscow", ":", "Putin", "disappeared", "due", "to", "impending", "political", "coup"]
+# ::lemmas ["something", "big", "be", "happen", "right", "now", "in", "Moscow", ":", "Putin", "disappear", "due", "to", "impend", "political", "coup"]
+(c6-2 / event
+      :mod (c6-1 / big)
+      :time (c6-4 / now
+                  :mod (c6-7 / right))
+      :location (c6-8 / city
+                      :name (c6-5 / name
+                                  :op1 "Moscow"))
+      :ARG1-of (c6-0 / mean-01
+                     :ARG2 (c6-9 / disappear-01
+                                 :ARG1 (c6-6 / person
+                                             :name (c6-10 / name
+                                                          :op1 "Putin"))
+                                 :ARG1-of (c6-11 / cause-01
+                                                 :ARG0 (c6-12 / coup-01
+                                                              :mod (c6-13 / politics)
+                                                              :ARG1-of (c6-3 / impend-01))))))
+
+# ::snt are we ready for war?
+# ::tokens ["are", "we", "ready", "for", "war", "?"]
+# ::lemmas ["be", "we", "ready", "for", "war", "?"]
+(c8-1 / ready-02
+      :polarity (c8-2 / amr-unknown)
+      :ARG1 (c8-0 / we)
+      :ARG2 (c8-3 / war))
+
+# ::snt would be nice if it's true but I doubt it. Just one more of Putin's games.
+# ::tokens ["would", "be", "nice", "if", "it", "'s", "true", "but", "I", "doubt", "it", ".", "Just", "one", "more", "of", "Putin", "'s", "games", "."]
+# ::lemmas ["would", "be", "nice", "if", "it", "be", "true", "but", "i", "doubt", "it", ".", "Just", "one", "more", "of", "Putin", "'s", "game", "."]
+(c9-2 / multi-sentence
+      :snt1 (c9-5 / nice-01
+                  :condition (c9-14 / true-01
+                                    :ARG1 (c9-4 / it))
+                  :concession (c9-8 / doubt-01
+                                    :ARG0 (c9-10 / i)
+                                    :ARG1 (c9-12 / true-01
+                                                 :ARG1 (c9-1 / it))))
+      :snt2 (c9-11 / game
+                   :ARG1-of (c9-3 / include-91
+                                  :ARG2 (c9-9 / game
+                                              :poss (c9-7 / person
+                                                          :name (c9-6 / name
+                                                                      :op1 "Putin"))))
+                   :mod (c9-13 / more)
+                   :mod (c9-0 / just)
+                   :quant 1))
+
+# ::snt He should disappear feet under.
+# ::tokens ["He", "should", "disappear", "feet", "under", "."]
+# ::lemmas ["he", "should", "disappear", "foot", "under", "."]
+(c10-4 / recommend-01
+       :ARG1 (c10-3 / disappear-01
+                    :ARG1 (c10-0 / he)
+                    :location (c10-2 / under
+                                     :op1 (c10-1 / foot))))

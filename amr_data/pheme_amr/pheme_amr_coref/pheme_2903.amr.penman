@@ -1,0 +1,244 @@
+# ::snt Yeah, I'm down with that.
+# ::tokens ["Yeah", ",", "I", "'m", "down", "with", "that", "."]
+# ::lemmas ["yeah", ",", "i", "be", "down", "with", "that", "."]
+(c1-0 / down-01
+      :ARG1 (c1-2 / i)
+      :ARG2 (c1-1 / that))
+
+# ::snt wow dam terrorist
+# ::tokens ["wow", "dam", "terrorist"]
+# ::lemmas ["wow", "dam", "terrorist"]
+(c4-1 / terrorist
+      :mod (c4-0 / wow
+                 :mode expressive))
+
+# ::snt Probably a drill.
+# ::tokens ["Probably", "a", "drill", "."]
+# ::lemmas ["probably", "a", "drill", "."]
+(c5-0 / probable
+      :domain (c5-1 / drill-01))
+
+# ::snt : BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings. Wow
+# ::tokens [":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings", ".", "Wow"]
+# ::lemmas [":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shooting", ".", "wow"]
+(c6-2 / multi-sentence
+      :snt1 (c6-3 / break-13
+                  :ARG1 (c6-12 / say-01
+                               :ARG0 (c6-7 / police)
+                               :ARG1 (c6-8 / die-01
+                                           :ARG1 (c6-13 / and
+                                                        :op1 (c6-5 / soldier)
+                                                        :op2 (c6-10 / gunman
+                                                                    :ARG2-of (c6-1 / suspect-01)))
+                                           :ARG1-of (c6-9 / cause-01
+                                                          :ARG0 (c6-4 / shoot-02
+                                                                      :location (c6-11 / city
+                                                                                       :name (c6-6 / name
+                                                                                                   :op1 "Ottawa")))))))
+      :snt2 (c6-0 / wow-01))
+
+# ::snt LTIMA HORA: reporta que un soldado y el sospechoso han muerto en balaceras en Ottawa, Canad.
+# ::tokens ["LTIMA", "HORA", ":", "reporta", "que", "un", "soldado", "y", "el", "sospechoso", "han", "muerto", "en", "balaceras", "en", "Ottawa", ",", "Canad", "."]
+# ::lemmas ["LTIMA", "HORA", ":", "reporta", "que", "un", "soldado", "y", "el", "sospechoso", "han", "muerto", "en", "balaceras", "en", "Ottawa", ",", "Canad", "."]
+(c7-14 / say-01
+       :ARG0 (c7-9 / person
+                   :name (c7-7 / name
+                               :op1 "LTIMA"
+                               :op2 " HORA"))
+       :ARG1 (c7-10 / report-01
+                    :ARG0 c7-9
+                    :ARG1 (c7-0 / han-01
+                                :ARG0 (c7-15 / and
+                                             :op1 (c7-5 / sellado
+                                                        :mod (c7-3 / un))
+                                             :op2 (c7-1 / sospechoso
+                                                        :mod (c7-6 / el)))
+                                :ARG1 (c7-2 / muerto)
+                                :location (c7-4 / balaceras
+                                                :location (c7-11 / city
+                                                                 :name (c7-8 / name
+                                                                             :op1 "Ottawa")
+                                                                 :location (c7-12 / country
+                                                                                  :name (c7-13 / name
+                                                                                               :op1 "Canada")))))))
+
+# ::snt What I've learned from Twitter: The is usually around minutes behind reporting news.
+# ::tokens ["What", "I", "'ve", "learned", "from", "Twitter", ":", "The", "is", "usually", "around", "minutes", "behind", "reporting", "news", "."]
+# ::lemmas ["what", "i", "'ve", "learn", "from", "Twitter", ":", "the", "be", "usually", "around", "minute", "behind", "report", "news", "."]
+(c8-0 / learn-01
+      :ARG0 (c8-4 / i)
+      :ARG1 (c8-3 / be-temporally-at-91
+                  :ARG1 (c8-9 / behind
+                              :op1 (c8-8 / report-01
+                                         :ARG1 (c8-5 / news))
+                              :quant (c8-11 / around
+                                            :op1 (c8-10 / temporal-quantity
+                                                        :unit (c8-1 / minute)
+                                                        :quant 1))
+                              :mod (c8-2 / usual))
+                  :ARG2 (c8-7 / publication
+                              :name (c8-6 / name
+                                          :op1 "Twitter")
+                              :ARG2-of c8-0)))
+
+# ::snt Which is fine. Just don't call it "BREAKING" RT In fairness, I'd rather they get it right than just go with rumors
+# ::tokens ["Which", "is", "fine", ".", "Just", "do", "n't", "call", "it", "\"", "BREAKING", "\"", "RT", "In", "fairness", ",", "I", "'d", "rather", "they", "get", "it", "right", "than", "just", "go", "with", "rumors"]
+# ::lemmas ["which", "be", "fine", ".", "just", "do", "not", "call", "it", "\"", "BREAKING", "\"", "RT", "in", "fairness", ",", "i", "would", "rather", "they", "get", "it", "right", "than", "just", "go", "with", "rumor"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / fine-04
+                  :ARG1 (c9-18 / thing))
+      :snt2 (c9-16 / call-01
+                   :ARG0 (c9-14 / you)
+                   :ARG1 (c9-12 / it)
+                   :ARG2 (c9-10 / report-01
+                                :ARG1 (c9-8 / break-13))
+                   :mod (c9-0 / just)
+                   :polarity -
+                   :mode imperative)
+      :snt3 (c9-4 / prefer-01
+                  :ARG0 (c9-13 / i)
+                  :ARG1 (c9-11 / get-30
+                               :ARG0 (c9-17 / they)
+                               :ARG1 (c9-1 / it)
+                               :ARG2-of (c9-3 / right-06))
+                  :ARG2 (c9-5 / go-06
+                              :ARG0 c9-17
+                              :ARG1 (c9-9 / rumor-01)
+                              :mod (c9-6 / just))
+                  :ARG1-of (c9-15 / fair-01)))
+
+# ::snt : BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings.
+# ::tokens [":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings", "."]
+# ::lemmas [":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shooting", "."]
+(c10-1 / break-01
+       :ARG1 (c10-10 / say-01
+                     :ARG0 (c10-5 / police)
+                     :ARG1 (c10-6 / die-01
+                                  :ARG1 (c10-11 / and
+                                                :op1 (c10-3 / soldier)
+                                                :op2 (c10-8 / gunman
+                                                            :ARG2-of (c10-0 / suspect-01)))
+                                  :ARG1-of (c10-7 / cause-01
+                                                  :ARG0 (c10-2 / shoot-02
+                                                               :location (c10-9 / city
+                                                                                :name (c10-4 / name
+                                                                                             :op1 "Ottawa")))))))
+
+# ::snt and that is on a good day.
+# ::tokens ["and", "that", "is", "on", "a", "good", "day", "."]
+# ::lemmas ["and", "that", "be", "on", "a", "good", "day", "."]
+(c11-4 / and
+       :op2 (c11-0 / be-temporally-at-91
+                   :ARG1 (c11-3 / that)
+                   :ARG2 (c11-1 / day
+                                :ARG1-of (c11-2 / good-02))))
+
+# ::snt In fairness, I'd rather they get it right than just go with rumors.
+# ::tokens ["In", "fairness", ",", "I", "'d", "rather", "they", "get", "it", "right", "than", "just", "go", "with", "rumors", "."]
+# ::lemmas ["in", "fairness", ",", "i", "would", "rather", "they", "get", "it", "right", "than", "just", "go", "with", "rumor", "."]
+(c12-4 / prefer-01
+       :ARG0 (c12-2 / i)
+       :ARG1 (c12-8 / get-30
+                    :ARG0 (c12-9 / they)
+                    :ARG1 (c12-7 / it)
+                    :ARG2-of (c12-5 / right-06))
+       :ARG2 (c12-6 / go-06
+                    :ARG0 c12-9
+                    :ARG1 (c12-3 / rumor-01)
+                    :mod (c12-0 / just))
+       :mod (c12-1 / fairness))
+
+# ::snt : BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings.
+# ::tokens [":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings", "."]
+# ::lemmas [":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shooting", "."]
+(c13-1 / break-01
+       :ARG1 (c13-10 / say-01
+                     :ARG0 (c13-5 / police)
+                     :ARG1 (c13-6 / die-01
+                                  :ARG1 (c13-11 / and
+                                                :op1 (c13-3 / soldier)
+                                                :op2 (c13-8 / gunman
+                                                            :ARG2-of (c13-0 / suspect-01)))
+                                  :ARG1-of (c13-7 / cause-01
+                                                  :ARG0 (c13-2 / shoot-02
+                                                               :location (c13-9 / city
+                                                                                :name (c13-4 / name
+                                                                                             :op1 "Ottawa")))))))
+
+# ::snt ": BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings.
+# ::tokens ["\"", ":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings", "."]
+# ::lemmas ["\"", ":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shooting", "."]
+(c14-1 / break-01
+       :ARG1 (c14-10 / say-01
+                     :ARG0 (c14-5 / police)
+                     :ARG1 (c14-6 / die-01
+                                  :ARG1 (c14-11 / and
+                                                :op1 (c14-3 / soldier)
+                                                :op2 (c14-8 / gunman
+                                                            :ARG2-of (c14-0 / suspect-01)))
+                                  :ARG1-of (c14-7 / cause-01
+                                                  :ARG0 (c14-2 / shoot-02
+                                                               :location (c14-9 / city
+                                                                                :name (c14-4 / name
+                                                                                             :op1 "Ottawa")))))))
+
+# ::snt : BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings.an act of evil
+# ::tokens [":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings.an", "act", "of", "evil"]
+# ::lemmas [":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shootings.an", "act", "of", "evil"]
+(c15-1 / multi-sentence
+       :snt1 (c15-2 / break-13
+                    :ARG1 (c15-13 / say-01
+                                  :ARG0 (c15-8 / police)
+                                  :ARG1 (c15-9 / die-01
+                                               :ARG1 (c15-14 / and
+                                                             :op1 (c15-4 / soldier)
+                                                             :op2 (c15-11 / gunman
+                                                                          :ARG2-of (c15-0 / suspect-01)))
+                                               :ARG1-of (c15-10 / cause-01
+                                                                :ARG0 (c15-3 / shoot-02
+                                                                             :location (c15-12 / city
+                                                                                               :name (c15-7 / name
+                                                                                                            :op1 "Ottawa")))))))
+       :snt2 (c15-6 / act-02
+                    :mod (c15-5 / evil)))
+
+# ::snt dang shame. didn't have to be this way
+# ::tokens ["dang", "shame", ".", "did", "n't", "have", "to", "be", "this", "way"]
+# ::lemmas ["dang", "shame", ".", "do", "not", "have", "to", "be", "this", "way"]
+(c17-1 / multi-sentence
+       :snt1 (c17-5 / shame
+                    :mod (c17-4 / dang))
+       :snt2 (c17-2 / obligate-01
+                    :ARG2 (c17-0 / way
+                                 :mod (c17-6 / this)
+                                 :domain (c17-3 / it))
+                    :polarity -))
+
+# ::snt : BREAKING: Police say soldier, suspected gunman dead in Ottawa shootings.
+# ::tokens [":", "BREAKING", ":", "Police", "say", "soldier", ",", "suspected", "gunman", "dead", "in", "Ottawa", "shootings", "."]
+# ::lemmas [":", "breaking", ":", "police", "say", "soldier", ",", "suspect", "gunman", "dead", "in", "Ottawa", "shooting", "."]
+(c18-1 / break-01
+       :ARG1 (c18-10 / say-01
+                     :ARG0 (c18-5 / police)
+                     :ARG1 (c18-6 / die-01
+                                  :ARG1 (c18-11 / and
+                                                :op1 (c18-3 / soldier)
+                                                :op2 (c18-8 / gunman
+                                                            :ARG2-of (c18-0 / suspect-01)))
+                                  :ARG1-of (c18-7 / cause-01
+                                                  :ARG0 (c18-2 / shoot-02
+                                                               :location (c18-9 / city
+                                                                                :name (c18-4 / name
+                                                                                             :op1 "Ottawa")))))))
+
+# ::snt and about an hour behind reporting the truth.
+# ::tokens ["and", "about", "an", "hour", "behind", "reporting", "the", "truth", "."]
+# ::lemmas ["and", "about", "an", "hour", "behind", "report", "the", "truth", "."]
+(c19-6 / and
+       :op2 (c19-1 / behind
+                   :op1 (c19-3 / report-01
+                               :ARG1 (c19-5 / truth))
+                   :duration (c19-2 / about
+                                    :op1 (c19-4 / temporal-quantity
+                                                :unit (c19-0 / hour)
+                                                :quant 1))))

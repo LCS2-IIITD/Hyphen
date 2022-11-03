@@ -1,0 +1,138 @@
+# ::snt remove all photos of police until the incident is over.
+# ::tokens ["remove", "all", "photos", "of", "police", "until", "the", "incident", "is", "over", "."]
+# ::lemmas ["remove", "all", "photo", "of", "police", "until", "the", "incident", "be", "over", "."]
+(c1-4 / remove-01
+      :ARG1 (c1-3 / photograph-01
+                  :ARG1 (c1-5 / police)
+                  :mod (c1-6 / all))
+      :time (c1-0 / until
+                  :op1 (c1-1 / over-01
+                             :ARG1 (c1-2 / incident))))
+
+# ::snt : LIVE: Sydney cafe siege, hostages held in CBD, reporter at scene
+# ::tokens [":", "LIVE", ":", "Sydney", "cafe", "siege", ",", "hostages", "held", "in", "CBD", ",", "reporter", "at", "scene"]
+# ::lemmas [":", "live", ":", "Sydney", "cafe", "siege", ",", "hostage", "hold", "in", "CBD", ",", "reporter", "at", "scene"]
+(c2-15 / and
+       :op1 (c2-3 / be-located-at-91
+                  :ARG1 (c2-5 / and
+                              :op1 (c2-14 / siege-01
+                                          :ARG1 (c2-10 / cafe
+                                                       :location (c2-9 / city
+                                                                       :name (c2-6 / name
+                                                                                   :op1 "Sydney"))))
+                              :op2 (c2-0 / hold-01
+                                         :ARG1 (c2-1 / hostage))
+                              :location (c2-13 / city-district
+                                               :name (c2-7 / name
+                                                           :op1 "CBD")))
+                  :ARG2 (c2-2 / live))
+       :op2 (c2-11 / be-located-at-91
+                   :ARG1 (c2-8 / person
+                               :ARG0-of (c2-12 / report-01))
+                   :ARG2 (c2-4 / scene)))
+
+# ::snt what are you doing? How is this the smart thing to do? Pack it in.
+# ::tokens ["what", "are", "you", "doing", "?", "How", "is", "this", "the", "smart", "thing", "to", "do", "?", "Pack", "it", "in", "."]
+# ::lemmas ["what", "be", "you", "do", "?", "how", "be", "this", "the", "smart", "thing", "to", "do", "?", "pack", "it", "in", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / do-02
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-10 / amr-unknown))
+      :snt2 (c3-8 / smart-06
+                  :ARG1 (c3-1 / do-02
+                              :ARG1 (c3-9 / this))
+                  :manner (c3-3 / amr-unknown))
+      :snt3 (c3-5 / pack-in-02
+                  :ARG0 (c3-7 / you)
+                  :ARG1 (c3-4 / it)
+                  :mode imperative))
+
+# ::snt let's not be those ppl. Let's not tweet images of what police operations are doing! Let's make it safe!
+# ::tokens ["let", "'s", "not", "be", "those", "ppl", ".", "Let", "'s", "not", "tweet", "images", "of", "what", "police", "operations", "are", "doing", "!", "Let", "'s", "make", "it", "safe", "!"]
+# ::lemmas ["let", "us", "not", "be", "those", "ppl", ".", "let", "us", "not", "tweet", "image", "of", "what", "police", "operation", "be", "do", "!", "let", "us", "make", "it", "safe", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-0 / have-polarity-91
+                  :ARG1 (c4-8 / person
+                              :mod (c4-14 / that)
+                              :domain (c4-1 / we))
+                  :mode imperative
+                  :ARG2 -)
+      :snt2 (c4-12 / tweet-02
+                   :ARG0 (c4-6 / we)
+                   :ARG1 (c4-5 / image
+                               :topic (c4-7 / thing
+                                            :ARG1-of (c4-9 / do-02
+                                                           :ARG0 (c4-4 / operation
+                                                                       :mod (c4-15 / police)))))
+                   :mode imperative
+                   :polarity -)
+      :snt3 (c4-10 / make-02
+                   :ARG0 (c4-3 / we)
+                   :ARG1 (c4-13 / safe-01
+                                :ARG1 (c4-11 / it))
+                   :mode imperative))
+
+# ::snt thanks for sharing! I've highlighted you on my
+# ::tokens ["thanks", "for", "sharing", "!", "I", "'ve", "highlighted", "you", "on", "my"]
+# ::lemmas ["thank", "for", "sharing", "!", "i", "'ve", "highlight", "you", "on", "my"]
+(c5-3 / multi-sentence
+      :snt1 (c5-8 / thank-01
+                  :ARG0 (c5-4 / i)
+                  :ARG1 (c5-1 / you)
+                  :ARG2 (c5-7 / share-01
+                              :ARG0 c5-1))
+      :snt2 (c5-0 / highlight-01
+                  :ARG0 (c5-5 / i)
+                  :ARG1 (c5-6 / you)
+                  :location (c5-2 / i)))
+
+# ::snt We just shared one of your tweets, come check it out on our site
+# ::tokens ["We", "just", "shared", "one", "of", "your", "tweets", ",", "come", "check", "it", "out", "on", "our", "site"]
+# ::lemmas ["we", "just", "share", "one", "of", "your", "tweet", ",", "come", "check", "it", "out", "on", "our", "site"]
+(c6-10 / and
+       :op1 (c6-8 / share-01
+                  :ARG0 (c6-1 / we)
+                  :ARG1 (c6-9 / tweet
+                              :ARG1-of (c6-4 / include-91
+                                             :ARG2 (c6-7 / tweet
+                                                         :poss (c6-2 / you)))
+                              :quant 1)
+                  :time (c6-0 / just))
+       :op2 (c6-6 / come-01
+                  :ARG1 c6-2
+                  :ARG4 (c6-5 / check-out-05
+                              :ARG0 c6-2
+                              :ARG1 (c6-3 / site
+                                          :poss c6-1))
+                  :mode imperative))
+
+# ::snt hope this doesn't end in tragedy. We are all behind you Australia x sending love x
+# ::tokens ["hope", "this", "does", "n't", "end", "in", "tragedy", ".", "We", "are", "all", "behind", "you", "Australia", "x", "sending", "love", "x"]
+# ::lemmas ["hope", "this", "do", "not", "end", "in", "tragedy", ".", "we", "be", "all", "behind", "you", "Australia", "x", "send", "love", "x"]
+(c7-4 / multi-sentence
+      :snt1 (c7-0 / hope-01
+                  :ARG0 (c7-7 / i)
+                  :ARG1 (c7-6 / end-01
+                              :ARG1 (c7-12 / this)
+                              :ARG2 (c7-10 / tragedy)
+                              :polarity -))
+      :snt2 (c7-1 / we
+                  :location (c7-5 / behind
+                                  :op1 (c7-2 / you)
+                                  :mod (c7-13 / all))
+                  :mod (c7-9 / country
+                             :name (c7-8 / name
+                                         :op1 "Australia")))
+      :snt3 (c7-11 / send-01
+                   :ARG1 (c7-3 / love)))
+
+# ::snt what kind of nuts do we have in this society
+# ::tokens ["what", "kind", "of", "nuts", "do", "we", "have", "in", "this", "society"]
+# ::lemmas ["what", "kind", "of", "nut", "do", "we", "have", "in", "this", "society"]
+(c8-0 / have-03
+      :ARG0 (c8-1 / we)
+      :ARG1 (c8-2 / nuts
+                  :mod (c8-5 / kind
+                             :mod (c8-6 / amr-unknown)))
+      :location (c8-3 / society
+                      :mod (c8-4 / this)))

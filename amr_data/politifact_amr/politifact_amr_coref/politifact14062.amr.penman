@@ -1,0 +1,72 @@
+# ::snt I hope she is ok
+# ::tokens ["I", "hope", "she", "is", "ok"]
+# ::lemmas ["i", "hope", "she", "be", "ok"]
+(c1-3 / hope-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-0 / okay-04
+                  :ARG1 (c1-2 / she)))
+
+# ::snt How could they tell ahe was in a coma
+# ::tokens ["How", "could", "they", "tell", "ahe", "was", "in", "a", "coma"]
+# ::lemmas ["how", "could", "they", "tell", "ahe", "be", "in", "a", "coma"]
+(c2-0 / possible-01
+      :ARG1 (c2-2 / tell-01
+                  :ARG0 (c2-5 / they)
+                  :ARG1 (c2-1 / coma-00
+                              :ARG1 (c2-4 / he))
+                  :manner (c2-3 / amr-unknown)))
+
+# ::snt That is fake news
+# ::tokens ["That", "is", "fake", "news"]
+# ::lemmas ["that", "be", "fake", "news"]
+(c3-0 / news
+      :ARG1-of (c3-1 / fake-02)
+      :domain (c3-2 / that))
+
+# ::snt you DO realize this is old fake news dont you
+# ::tokens ["you", "DO", "realize", "this", "is", "old", "fake", "news", "do", "nt", "you"]
+# ::lemmas ["you", "DO", "realize", "this", "be", "old", "fake", "news", "do", "not", "you"]
+(c4-1 / realize-01
+      :ARG0 (c4-6 / you)
+      :ARG1 (c4-5 / news
+                  :mod (c4-0 / old)
+                  :ARG1-of (c4-4 / fake-02)
+                  :domain (c4-2 / this))
+      :ARG1-of (c4-3 / request-confirmation-91
+                     :ARG2 c4-6))
+
+# ::snt please delete this old and fake story
+# ::tokens ["please", "delete", "this", "old", "and", "fake", "story"]
+# ::lemmas ["please", "delete", "this", "old", "and", "fake", "story"]
+(c5-1 / delete-01
+      :ARG0 (c5-5 / you)
+      :ARG1 (c5-4 / story
+                  :mod (c5-0 / old)
+                  :ARG1-of (c5-3 / fake-02)
+                  :mod (c5-2 / this))
+      :mode imperative
+      :polite +)
+
+# ::snt Im thankful that this is a fake story Please be more careful and verify before posting
+# ::tokens ["I", "m", "thankful", "that", "this", "is", "a", "fake", "story", "Please", "be", "more", "careful", "and", "verify", "before", "posting"]
+# ::lemmas ["i", "be", "thankful", "that", "this", "be", "a", "fake", "story", "please", "be", "more", "careful", "and", "verify", "before", "post"]
+(c6-9 / multi-sentence
+      :snt1 (c6-4 / thankful-02
+                  :ARG0 (c6-8 / story
+                              :ARG1-of (c6-7 / fake-02)
+                              :domain (c6-12 / this))
+                  :ARG1 (c6-11 / i))
+      :snt2 (c6-6 / and
+                  :op1 (c6-2 / care-04
+                             :ARG0 (c6-13 / you)
+                             :ARG1-of (c6-10 / have-quant-91
+                                             :ARG3 (c6-1 / more))
+                             :mode imperative
+                             :polite +)
+                  :op2 (c6-5 / verify-01
+                             :ARG0 c6-13
+                             :time (c6-0 / before
+                                         :op1 (c6-3 / post-01
+                                                    :ARG0 c6-13))
+                             :mode imperative
+                             :polite +)))

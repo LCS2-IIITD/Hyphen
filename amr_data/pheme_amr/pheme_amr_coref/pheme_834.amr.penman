@@ -1,0 +1,106 @@
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c1-2 / congratulate-01
+      :ARG1 (c1-1 / you)
+      :ARG2 (c1-0 / tweet-01
+                  :ARG0 c1-1))
+
+# ::snt My new favorite magazine. RT Charlie Hebdo, we love you
+# ::tokens ["My", "new", "favorite", "magazine", ".", "RT", "Charlie", "Hebdo", ",", "we", "love", "you"]
+# ::lemmas ["my", "new", "favorite", "magazine", ".", "RT", "Charlie", "Hebdo", ",", "we", "love", "you"]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / magazine
+                  :ARG1-of (c2-1 / favor-01
+                                 :ARG0 (c2-4 / i)
+                                 :ARG1-of (c2-5 / new-01)))
+      :snt2 (c2-9 / say-01
+                  :ARG1 (c2-3 / love-01
+                              :ARG0 (c2-0 / we)
+                              :ARG1 (c2-8 / publication
+                                          :name (c2-6 / name
+                                                      :op1 "RT"
+                                                      :op2 "Charlie"
+                                                      :op3 " Hebdo")
+                                          :ARG2-of c2-9))))
+
+# ::snt Yanks: false flag artists since Boston tea party.
+# ::tokens ["Yanks", ":", "false", "flag", "artists", "since", "Boston", "tea", "party", "."]
+# ::lemmas ["yank", ":", "false", "flag", "artist", "since", "Boston", "tea", "party", "."]
+(c3-5 / person
+      :mod (c3-9 / political-party
+                 :name (c3-3 / name
+                             :op1 "Yanks"))
+      :mod (c3-10 / artist
+                  :mod (c3-0 / flag
+                             :mod (c3-2 / false)))
+      :time (c3-8 / since
+                  :op1 (c3-1 / political-movement
+                             :name (c3-4 / name
+                                         :op1 "Tea"
+                                         :op2 "Party")
+                             :location (c3-7 / city
+                                             :name (c3-6 / name
+                                                         :op1 "Boston")))))
+
+# ::snt centuries all cultures have been satired for fun.we must not let pathetic jihad take away freedom of press
+# ::tokens ["centuries", "all", "cultures", "have", "been", "satired", "for", "fun.we", "must", "not", "let", "pathetic", "jihad", "take", "away", "freedom", "of", "press"]
+# ::lemmas ["century", "all", "culture", "have", "be", "satire", "for", "fun.we", "must", "not", "let", "pathetic", "jihad", "take", "away", "freedom", "of", "press"]
+(c5-4 / multi-sentence
+      :snt1 (c5-0 / hunger-01
+                  :ARG0 (c5-10 / culture
+                               :mod (c5-13 / all))
+                  :ARG1 (c5-3 / fun-01)
+                  :duration (c5-9 / century))
+      :snt2 (c5-6 / obligate-01
+                  :ARG1 (c5-1 / we)
+                  :ARG2 (c5-5 / let-01
+                              :ARG0 c5-1
+                              :ARG1 (c5-11 / take-away-05
+                                           :ARG0 (c5-2 / jihad
+                                                       :mod (c5-8 / pathetic))
+                                           :ARG1 (c5-7 / free-04
+                                                       :ARG1 (c5-12 / press)))
+                              :polarity -)))
+
+# ::snt : Charlie Hebdo, we love you Yes we do! Understanding satire requires intelligence, a quality terrorists seldom have.
+# ::tokens [":", "Charlie", "Hebdo", ",", "we", "love", "you", "Yes", "we", "do", "!", "Understanding", "satire", "requires", "intelligence", ",", "a", "quality", "terrorists", "seldom", "have", "."]
+# ::lemmas [":", "Charlie", "Hebdo", ",", "we", "love", "you", "yes", "we", "do", "!", "understand", "satire", "require", "intelligence", ",", "a", "quality", "terrorist", "seldom", "have", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-14 / say-01
+                   :ARG1 (c6-3 / love-01
+                               :ARG0 (c6-1 / we)
+                               :ARG1 (c6-11 / person
+                                            :name (c6-10 / name
+                                                         :op1 "Charlie"
+                                                         :op2 "She Hebdo")
+                                            :ARG2-of c6-14)))
+      :snt2 (c6-16 / and
+                   :op1 (c6-2 / yes
+                              :domain (c6-13 / love-01
+                                             :ARG0 (c6-9 / we)))
+                   :op2 (c6-12 / require-01
+                               :ARG0 (c6-5 / understand-01
+                                           :ARG1 (c6-7 / satire))
+                               :ARG1 (c6-8 / intelligent-01
+                                           :ARG1-of (c6-0 / have-03
+                                                          :ARG0 (c6-15 / terrorist)
+                                                          :frequency (c6-6 / seldom))))))
+
+# ::snt So print the exact front cover - all newspapers, satirical mags - on the same day
+# ::tokens ["So", "print", "the", "exact", "front", "cover", "-", "all", "newspapers", ",", "satirical", "mags", "-", "on", "the", "same", "day"]
+# ::lemmas ["so", "print", "the", "exact", "front", "cover", "-", "all", "newspaper", ",", "satirical", "mag", "-", "on", "the", "same", "day"]
+(c7-8 / print-out-02
+      :ARG0 (c7-0 / you)
+      :ARG1 (c7-10 / cover
+                   :mod (c7-1 / front)
+                   :mod (c7-3 / exact)
+                   :ARG2-of (c7-6 / include-91
+                                  :ARG1 (c7-12 / and
+                                               :op1 (c7-7 / newspaper
+                                                          :mod (c7-5 / all))
+                                               :op2 (c7-2 / magazine
+                                                          :mod (c7-11 / satire)))))
+      :time (c7-9 / day
+                  :ARG1-of (c7-4 / same-01))
+      :mode imperative)

@@ -1,0 +1,218 @@
+# ::snt This is what I expect from I hope it happens and Owen Smith lives up to this statement <URL>
+# ::tokens ["This", "is", "what", "I", "expect", "from", "I", "hope", "it", "happens", "and", "Owen", "Smith", "lives", "up", "to", "this", "statement", "<", "URL", ">"]
+# ::lemmas ["this", "be", "what", "i", "expect", "from", "i", "hope", "it", "happen", "and", "Owen", "Smith", "live", "up", "to", "this", "statement", "<", "URL", ">"]
+(c1-1 / and
+      :op1 (c1-11 / expect-01
+                  :ARG0 (c1-8 / i)
+                  :ARG1 (c1-5 / this)
+                  :source (c1-3 / hope-01
+                                :ARG0 c1-8
+                                :ARG1 (c1-4 / event)))
+      :op2 (c1-6 / live-up-04
+                 :ARG0 (c1-7 / person
+                             :name (c1-9 / name
+                                         :op1 "Owen"
+                                         :op2 "Smith"))
+                 :ARG1 (c1-2 / thing
+                             :ARG1-of (c1-0 / state-01)
+                             :mod (c1-10 / this))))
+
+# ::snt We had our say , Owen is trying to undermine democracy <URL>
+# ::tokens ["We", "had", "our", "say", ",", "Owen", "is", "trying", "to", "undermine", "democracy", "<", "URL", ">"]
+# ::lemmas ["we", "have", "our", "say", ",", "Owen", "be", "try", "to", "undermine", "democracy", "<", "URL", ">"]
+(c2-0 / say-01
+      :ARG0 (c2-2 / we)
+      :ARG1 (c2-4 / try-01
+                  :ARG0 (c2-5 / person
+                              :name (c2-6 / name
+                                          :op1 "Owen"))
+                  :ARG1 (c2-3 / undermine-01
+                              :ARG0 c2-5
+                              :ARG1 (c2-1 / democracy))))
+
+# ::snt I didn't have my say and neither did million of my peers . Hopefully Owen will speak for us
+# ::tokens ["I", "did", "n't", "have", "my", "say", "and", "neither", "did", "million", "of", "my", "peers", ".", "Hopefully", "Owen", "will", "speak", "for", "us"]
+# ::lemmas ["i", "do", "not", "have", "my", "say", "and", "neither", "do", "million", "of", "my", "peer", ".", "Hopefully", "Owen", "will", "speak", "for", "we"]
+(c3-12 / multi-sentence
+       :snt1 (c3-3 / and
+                   :op1 (c3-5 / have-03
+                              :ARG0 (c3-11 / i)
+                              :ARG1 (c3-0 / say-01
+                                          :ARG0 c3-11)
+                              :polarity -)
+                   :op2 (c3-10 / have-03
+                               :ARG0 (c3-6 / i)
+                               :ARG1 (c3-1 / say-01
+                                           :ARG0 (c3-9 / peer
+                                                       :poss c3-6
+                                                       :quant 1000000))
+                               :polarity -))
+       :snt2 (c3-2 / hope-01
+                   :ARG1 (c3-7 / speak-01
+                               :ARG0 (c3-8 / person
+                                           :name (c3-13 / name
+                                                        :op1 "Owen"))
+                               :beneficiary (c3-4 / we))))
+
+# ::snt If you are British + then that's your own fault & so you have no argument .
+# ::tokens ["If", "you", "are", "British", "+", "then", "that", "'s", "your", "own", "fault", "&", "so", "you", "have", "no", "argument", "."]
+# ::lemmas ["if", "you", "be", "British", "+", "then", "that", "be", "your", "own", "fault", "&", "so", "you", "have", "no", "argument", "."]
+(c4-2 / fault-01
+      :ARG1 (c4-7 / you)
+      :ARG2 (c4-4 / that)
+      :condition (c4-5 / person
+                       :mod (c4-3 / country
+                                  :name (c4-6 / name
+                                              :op1 "Great"
+                                              :op2 "Britain"))
+                       :domain c4-7)
+      :ARG0-of (c4-0 / cause-01
+                     :ARG1 (c4-1 / argue-02
+                                 :ARG0 c4-7
+                                 :polarity -)))
+
+# ::snt I mean I voted to stay , not that I didn't vote . I haven't had my say about the leaving terms ! Now I will
+# ::tokens ["I", "mean", "I", "voted", "to", "stay", ",", "not", "that", "I", "did", "n't", "vote", ".", "I", "have", "n't", "had", "my", "say", "about", "the", "leaving", "terms", "!", "Now", "I", "will"]
+# ::lemmas ["i", "mean", "i", "vote", "to", "stay", ",", "not", "that", "i", "do", "not", "vote", ".", "i", "have", "not", "have", "my", "say", "about", "the", "leave", "term", "!", "now", "i", "will"]
+(c5-13 / multi-sentence
+       :snt1 (c5-3 / mean-01
+                   :ARG0 (c5-12 / i)
+                   :ARG2 (c5-2 / contrast-01
+                               :ARG1 (c5-8 / vote-01
+                                           :ARG0 c5-12
+                                           :ARG1 (c5-0 / stay-01
+                                                       :ARG1 c5-12))
+                               :ARG2 (c5-1 / vote-01
+                                           :ARG0 c5-12
+                                           :polarity -)))
+       :snt2 (c5-4 / have-03
+                   :ARG0 (c5-5 / i)
+                   :ARG1 (c5-11 / say-01
+                                :ARG0 c5-5
+                                :ARG1 (c5-9 / term
+                                            :mod (c5-10 / leave-11)))
+                   :polarity -)
+       :snt3 (c5-7 / have-03
+                   :ARG0 (c5-6 / i)
+                   :ARG1 c5-11
+                   :ARG0 c5-6
+                   :ARG1 c5-9)
+       :time (c5-14 / now))
+
+# ::snt You won't be negotiating so it doesn't matter , we leave .
+# ::tokens ["You", "wo", "n't", "be", "negotiating", "so", "it", "does", "n't", "matter", ",", "we", "leave", "."]
+# ::lemmas ["you", "will", "not", "be", "negotiate", "so", "it", "do", "not", "matter", ",", "we", "leave", "."]
+(c6-5 / multi-sentence
+      :snt1 (c6-6 / negotiate-01
+                  :ARG0 (c6-7 / you)
+                  :ARG0-of (c6-1 / cause-01
+                                 :ARG1 (c6-0 / matter-01
+                                             :ARG1 (c6-4 / it)
+                                             :polarity -))
+                  :polarity -)
+      :snt2 (c6-3 / leave-11
+                  :ARG0 (c6-2 / we)))
+
+# ::snt Yes but we stay in the single market and hopefully stay open to free movement . An result I can support
+# ::tokens ["Yes", "but", "we", "stay", "in", "the", "single", "market", "and", "hopefully", "stay", "open", "to", "free", "movement", ".", "An", "result", "I", "can", "support"]
+# ::lemmas ["yes", "but", "we", "stay", "in", "the", "single", "market", "and", "hopefully", "stay", "open", "to", "free", "movement", ".", "an", "result", "i", "can", "support"]
+(c7-15 / multi-sentence
+       :snt1 (c7-3 / contrast-01
+                   :ARG2 (c7-1 / and
+                               :op1 (c7-0 / stay-01
+                                          :ARG1 (c7-4 / we)
+                                          :ARG3 (c7-5 / market
+                                                      :ARG1-of (c7-13 / single-02)))
+                               :op2 (c7-8 / stay-01
+                                          :ARG1 c7-4
+                                          :ARG3 (c7-10 / open-05
+                                                       :ARG1 c7-4
+                                                       :ARG2 (c7-9 / movement-07
+                                                                   :ARG1-of (c7-2 / free-04)))
+                                          :ARG1-of (c7-7 / hope-01))))
+       :snt2 (c7-14 / possible-01
+                    :ARG1 (c7-11 / support-01
+                                 :ARG0 (c7-6 / i)
+                                 :ARG1 (c7-12 / result))))
+
+# ::snt That is no Brexit just ask Donald Tusk .
+# ::tokens ["That", "is", "no", "Brexit", "just", "ask", "Donald", "Tusk", "."]
+# ::lemmas ["that", "be", "no", "Brexit", "just", "ask", "Donald", "Tusk", "."]
+(c8-1 / ask-01
+      :ARG0 (c8-8 / you)
+      :ARG1 (c8-2 / cause-01
+                  :ARG0 (c8-3 / that)
+                  :ARG1 (c8-0 / country
+                              :name (c8-7 / name
+                                          :op1 "Britain"))
+                  :polarity -)
+      :ARG2 (c8-6 / person
+                  :name (c8-4 / name
+                              :op1 "Donald"
+                              :op2 "Tusk"))
+      :mod (c8-5 / just)
+      :mode imperative)
+
+# ::snt I don't need to . Parliament will do it for as they are supposed to by law
+# ::tokens ["I", "do", "n't", "need", "to", ".", "Parliament", "will", "do", "it", "for", "as", "they", "are", "supposed", "to", "by", "law"]
+# ::lemmas ["i", "do", "not", "need", "to", ".", "Parliament", "will", "do", "it", "for", "as", "they", "be", "suppose", "to", "by", "law"]
+(c9-9 / multi-sentence
+      :snt1 (c9-10 / need-01
+                   :ARG0 (c9-8 / i)
+                   :ARG1 (c9-4 / to)
+                   :polarity -)
+      :snt2 (c9-0 / do-02
+                  :ARG0 (c9-7 / government-organization
+                              :name (c9-5 / name
+                                          :op1 "Parliament"))
+                  :ARG1 (c9-3 / it)
+                  :manner (c9-1 / suppose-02
+                                :ARG0 (c9-6 / law)
+                                :ARG1 (c9-2 / do-02
+                                            :ARG0 c9-7
+                                            :ARG1 c9-3))))
+
+# ::snt Parliament will vote with the people as majority is saying
+# ::tokens ["Parliament", "will", "vote", "with", "the", "people", "as", "majority", "is", "saying"]
+# ::lemmas ["Parliament", "will", "vote", "with", "the", "people", "as", "majority", "be", "say"]
+(c10-1 / vote-01
+       :ARG0 (c10-3 / parliament)
+       :accompanier (c10-2 / person
+                           :ARG0-of (c10-0 / say-01
+                                           :ARG1 (c10-4 / majority))))
+
+# ::snt I'm just baiting you fool . I'm not over keen on right wing middle aged men & you were ripe . Au revoir
+# ::tokens ["I", "'m", "just", "baiting", "you", "fool", ".", "I", "'m", "not", "over", "keen", "on", "right", "wing", "middle", "aged", "men", "&", "you", "were", "ripe", ".", "Au", "revoir"]
+# ::lemmas ["i", "be", "just", "bait", "you", "fool", ".", "i", "be", "not", "over", "keen", "on", "right", "wing", "middle", "aged", "man", "&", "you", "be", "ripe", ".", "Au", "revoir"]
+(c11-14 / multi-sentence
+        :snt1 (c11-11 / bait-01
+                      :ARG0 (c11-13 / i)
+                      :ARG1 (c11-16 / you
+                                    :mod (c11-2 / fool))
+                      :mod (c11-12 / just))
+        :snt2 (c11-1 / and
+                     :op1 (c11-15 / keen-02
+                                  :ARG1 (c11-4 / i)
+                                  :ARG2 (c11-3 / man
+                                               :age (c11-9 / temporal-quantity
+                                                           :quant (c11-5 / middle
+                                                                         :unit (c11-17 / year))
+                                                           :ARG1-of (c11-10 / right-08))
+                                               :degree (c11-8 / over))
+                                  :op2 (c11-6 / ripe-02
+                                              :ARG1 (c11-0 / you))
+                                  :polarity -)
+                     :snt3 (c11-7 / au-voir
+                                  :mode expressive)))
+
+# ::snt Seems you are being racist & focusing on skin colour .
+# ::tokens ["Seems", "you", "are", "being", "racist", "&", "focusing", "on", "skin", "colour", "."]
+# ::lemmas ["seem", "you", "be", "be", "racist", "&", "focus", "on", "skin", "colour", "."]
+(c12-0 / seem-01
+       :ARG1 (c12-1 / and
+                    :op1 (c12-4 / racist
+                                :domain (c12-6 / you))
+                    :op2 (c12-2 / focus-01
+                                :ARG0 c12-6
+                                :ARG2 (c12-3 / color
+                                             :mod (c12-5 / skin)))))

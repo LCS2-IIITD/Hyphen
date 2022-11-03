@@ -1,0 +1,72 @@
+# ::snt My st jab completed on Saturday!!
+# ::tokens ["My", "st", "jab", "completed", "on", "Saturday", "!", "!"]
+# ::lemmas ["my", "st", "jab", "complete", "on", "Saturday", "!", "!"]
+(c2-3 / complete-01
+      :ARG1 (c2-4 / jab-01
+                  :ARG0 (c2-5 / i)
+                  :mod (c2-0 / st))
+      :time (c2-1 / date-entity
+                  :weekday (c2-2 / saturday)))
+
+# ::snt Excellent news. I look forward to mine on Friday. Hope the side effects are mild to non-existent!
+# ::tokens ["Excellent", "news", ".", "I", "look", "forward", "to", "mine", "on", "Friday", ".", "Hope", "the", "side", "effects", "are", "mild", "to", "non", "-", "existent", "!"]
+# ::lemmas ["excellent", "news", ".", "i", "look", "forward", "to", "mine", "on", "Friday", ".", "hope", "the", "side", "effect", "be", "mild", "to", "non", "-", "existent", "!"]
+(c3-11 / multi-sentence
+       :snt1 (c3-13 / excellent-02
+                    :ARG1 (c3-12 / news))
+       :snt2 (c3-9 / look-forward-03
+                   :ARG0 (c3-10 / i)
+                   :ARG1 (c3-8 / news
+                               :poss c3-10)
+                   :time (c3-0 / date-entity
+                               :weekday (c3-3 / friday)))
+       :snt3 (c3-5 / hope-01
+                   :ARG0 c3-10
+                   :ARG1 (c3-2 / and
+                               :op1 (c3-4 / mild
+                                          :domain (c3-6 / effect
+                                                        :mod (c3-1 / side)))
+                               :op2 (c3-7 / exist-01
+                                          :ARG1 c3-6
+                                          :polarity -))))
+
+# ::snt Got jabbed minutes early, super efficient
+# ::tokens ["Got", "jabbed", "minutes", "early", ",", "super", "efficient"]
+# ::lemmas ["Got", "jabbed", "minute", "early", ",", "super", "efficient"]
+(c4-1 / and
+      :op1 (c4-4 / jab-01
+                 :ARG1 (c4-5 / i)
+                 :time (c4-7 / early
+                             :op1 (c4-3 / temporal-quantity
+                                        :unit (c4-6 / minute)
+                                        :quant 1)))
+      :op2 (c4-2 / efficient-01
+                 :ARG1 c4-5
+                 :degree (c4-0 / super)))
+
+# ::snt Oh that looks like an impressive que. Did you get seen on time or were they running late?
+# ::tokens ["Oh", "that", "looks", "like", "an", "impressive", "que", ".", "Did", "you", "get", "seen", "on", "time", "or", "were", "they", "running", "late", "?"]
+# ::lemmas ["oh", "that", "look", "like", "an", "impressive", "que", ".", "do", "you", "get", "see", "on", "time", "or", "be", "they", "run", "late", "?"]
+(c5-11 / multi-sentence
+       :snt1 (c5-8 / look-02
+                   :ARG0 (c5-6 / that)
+                   :ARG1 (c5-2 / que
+                               :ARG0-of (c5-10 / impress-01))
+                   :mod (c5-5 / oh
+                              :mode expressive))
+       :snt2 (c5-1 / amr-choice
+                   :op1 (c5-0 / see-01
+                              :ARG1 (c5-12 / you)
+                              :mod (c5-4 / on-time))
+                   :op2 (c5-7 / run-02
+                              :ARG0 (c5-3 / they)
+                              :time (c5-9 / late))))
+
+# ::snt Getting mine on Monday.
+# ::tokens ["Getting", "mine", "on", "Monday", "."]
+# ::lemmas ["get", "mine", "on", "Monday", "."]
+(c6-2 / get-01
+      :ARG1 (c6-1 / thing
+                  :poss (c6-3 / i))
+      :time (c6-0 / date-entity
+                  :weekday (c6-4 / monday)))

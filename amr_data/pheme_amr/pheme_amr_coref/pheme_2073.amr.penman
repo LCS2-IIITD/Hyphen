@@ -1,0 +1,61 @@
+# ::snt what is happening with game tonight has the made a decision yet?
+# ::tokens ["what", "is", "happening", "with", "game", "tonight", "has", "the", "made", "a", "decision", "yet", "?"]
+# ::lemmas ["what", "be", "happen", "with", "game", "tonight", "have", "the", "make", "a", "decision", "yet", "?"]
+(c1-3 / decide-01
+      :polarity (c1-6 / amr-unknown)
+      :ARG0 (c1-4 / game
+                  :time (c1-1 / date-entity
+                              :dayperiod (c1-2 / night)
+                              :mod (c1-5 / today)))
+      :time (c1-0 / yet))
+
+# ::snt just got it from NHL app. Updated phone software and my phone went wonky! Needs a time out!
+# ::tokens ["just", "got", "it", "from", "NHL", "app", ".", "Updated", "phone", "software", "and", "my", "phone", "went", "wonky", "!", "Needs", "a", "time", "out", "!"]
+# ::lemmas ["just", "get", "it", "from", "NHL", "app", ".", "update", "phone", "software", "and", "my", "phone", "go", "wonky", "!", "need", "a", "time", "out", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-10 / get-01
+                   :ARG0 (c2-14 / i)
+                   :ARG1 (c2-15 / it)
+                   :ARG2 (c2-7 / app
+                               :mod (c2-8 / league
+                                          :name (c2-9 / name
+                                                      :op1 "NHL")))
+                   :mod (c2-0 / just))
+      :snt2 (c2-13 / and
+                   :op1 (c2-12 / update-01
+                               :ARG1 (c2-5 / software
+                                           :mod (c2-3 / phone)))
+                   :op2 (c2-4 / go-08
+                              :ARG1 (c2-6 / phone
+                                          :poss (c2-1 / i))
+                              :ARG2 (c2-11 / wonky)))
+      :snt3 (c2-17 / need-01
+                   :ARG0 (c2-16 / i)
+                   :ARG1 (c2-18 / time-out-03)))
+
+# ::snt I'm told that all the bridges into from West Quebec are closed. Can you confirm ?
+# ::tokens ["I", "'m", "told", "that", "all", "the", "bridges", "into", "from", "West", "Quebec", "are", "closed", ".", "Can", "you", "confirm", "?"]
+# ::lemmas ["i", "be", "tell", "that", "all", "the", "bridge", "into", "from", "West", "Quebec", "be", "closed", ".", "can", "you", "confirm", "?"]
+(c3-2 / multi-sentence
+      :snt1 (c3-10 / tell-01
+                   :ARG1 (c3-9 / close-01
+                               :ARG1 (c3-3 / bridge
+                                           :mod (c3-12 / all)
+                                           :source (c3-0 / west
+                                                         :part-of (c3-7 / province
+                                                                        :name (c3-6 / name
+                                                                                    :op1 "Quebec")))))
+                   :ARG2 (c3-5 / i))
+      :snt2 (c3-11 / possible-01
+                   :ARG1 (c3-8 / confirm-01
+                               :ARG0 (c3-1 / you)
+                               :polarity (c3-4 / amr-unknown))))
+
+# ::snt postponed per the League
+# ::tokens ["postponed", "per", "the", "League"]
+# ::lemmas ["postpone", "per", "the", "league"]
+(c4-2 / thing
+      :ARG1-of (c4-1 / post-01
+                     :ARG0 (c4-3 / political-party
+                                 :name (c4-0 / name
+                                             :op1 "League"))))

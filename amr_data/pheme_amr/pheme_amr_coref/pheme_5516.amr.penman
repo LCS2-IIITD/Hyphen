@@ -1,0 +1,38 @@
+# ::snt : At least Germans and Spanish killed in crash: Airline
+# ::tokens [":", "At", "least", "Germans", "and", "Spanish", "killed", "in", "crash", ":", "Airline"]
+# ::lemmas [":", "At", "least", "Germans", "and", "Spanish", "kill", "in", "crash", ":", "airline"]
+(c1-8 / kill-01
+      :ARG1 (c1-10 / and
+                   :op1 (c1-3 / person
+                              :mod (c1-5 / country
+                                         :name (c1-1 / name
+                                                     :op1 "Germany")))
+                   :op2 (c1-9 / person
+                              :mod (c1-4 / country
+                                         :name (c1-2 / name
+                                                     :op1 "Spain")))
+                   :quant (c1-0 / at-least
+                                :op1 1))
+      :ARG1-of (c1-7 / cause-01
+                     :ARG0 (c1-11 / crash-01))
+      :source (c1-6 / airline))
+
+# ::snt This news came a tat too late.. I knew it first from first..
+# ::tokens ["This", "news", "came", "a", "tat", "too", "late", "..", "I", "knew", "it", "first", "from", "first", ".."]
+# ::lemmas ["this", "news", "come", "a", "tat", "too", "late", "..", "i", "know", "it", "first", "from", "first", ".."]
+(c2-2 / multi-sentence
+      :snt1 (c2-9 / come-01
+                  :ARG1 (c2-8 / news
+                              :mod (c2-12 / this))
+                  :time (c2-1 / late
+                              :ARG2-of (c2-0 / have-degree-91
+                                             :ARG1 c2-9
+                                             :ARG3 (c2-11 / too))))
+      :snt2 (c2-7 / know-01
+                  :ARG0 (c2-6 / i)
+                  :ARG1 (c2-10 / it)
+                  :ord (c2-5 / ordinal-entity
+                             :value 1)
+                  :time (c2-3 / from
+                              :op1 (c2-4 / ordinal-entity
+                                         :value 1))))

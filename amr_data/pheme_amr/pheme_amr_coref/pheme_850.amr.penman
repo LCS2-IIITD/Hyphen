@@ -1,0 +1,95 @@
+# ::snt The Spanish government has confirmed that Spanish citizens were abroad
+# ::tokens ["The", "Spanish", "government", "has", "confirmed", "that", "Spanish", "citizens", "were", "abroad"]
+# ::lemmas ["the", "Spanish", "government", "have", "confirm", "that", "Spanish", "citizen", "be", "abroad"]
+(c1-4 / confirm-01
+      :ARG0 (c1-5 / government-organization
+                  :ARG0-of (c1-3 / govern-01
+                                 :ARG1 (c1-2 / country
+                                             :name (c1-1 / name
+                                                         :op1 "Spain"))))
+      :ARG1 (c1-0 / be-located-at-91
+                  :ARG1 (c1-6 / citizen
+                              :mod c1-2)
+                  :ARG2 (c1-7 / abroad)))
+
+# ::snt and Belgian passenger.
+# ::tokens ["and", "Belgian", "passenger", "."]
+# ::lemmas ["and", "Belgian", "passenger", "."]
+(c2-3 / and
+      :op2 (c2-1 / passenger
+                 :mod (c2-2 / country
+                            :name (c2-0 / name
+                                        :op1 "Belgium"))))
+
+# ::snt Australians on Flight
+# ::tokens ["Australians", "on", "Flight"]
+# ::lemmas ["Australians", "on", "Flight"]
+(c3-1 / person
+      :mod (c3-3 / country
+                 :name (c3-0 / name
+                             :op1 "Australia"))
+      :ARG0-of (c3-2 / fly-01))
+
+# ::snt What a tragedy So very sad. My heart goes out to all the families.
+# ::tokens ["What", "a", "tragedy", "So", "very", "sad", ".", "My", "heart", "goes", "out", "to", "all", "the", "families", "."]
+# ::lemmas ["what", "a", "tragedy", "so", "very", "sad", ".", "my", "heart", "go", "out", "to", "all", "the", "family", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-8 / tragedy
+                  :degree (c4-5 / very
+                                :degree (c4-7 / so)))
+      :snt2 (c4-6 / go-01
+                  :ARG1 (c4-0 / heart
+                              :part-of (c4-4 / i))
+                  :ARG4 (c4-1 / family
+                              :mod (c4-9 / all))
+                  :direction (c4-3 / out)))
+
+# ::snt So sad! Pray for the families!!
+# ::tokens ["So", "sad", "!", "Pray", "for", "the", "families", "!", "!"]
+# ::lemmas ["so", "sad", "!", "pray", "for", "the", "family", "!", "!"]
+(c5-2 / multi-sentence
+      :snt1 (c5-5 / sad-02
+                  :degree (c5-3 / so))
+      :snt2 (c5-4 / pray-01
+                  :ARG0 (c5-0 / you)
+                  :beneficiary (c5-1 / family)
+                  :mode imperative))
+
+# ::snt argentinians
+# ::tokens ["argentinians"]
+# ::lemmas ["argentinian"]
+(c6-1 / product
+      :name (c6-0 / name
+                  :op1 "argentinians"))
+
+# ::snt : Germanwings CEO says Germans, Spanish citizens and two Americans aboard plane that crashed in France:
+# ::tokens [":", "Germanwings", "CEO", "says", "Germans", ",", "Spanish", "citizens", "and", "two", "Americans", "aboard", "plane", "that", "crashed", "in", "France", ":"]
+# ::lemmas [":", "germanwing", "ceo", "say", "Germans", ",", "Spanish", "citizen", "and", "two", "Americans", "aboard", "plane", "that", "crash", "in", "France", ":"]
+(c7-5 / say-01
+      :ARG0 (c7-3 / person
+                  :ARG0-of (c7-8 / have-org-role-91
+                                 :ARG1 (c7-20 / company
+                                              :name (c7-11 / name
+                                                           :op1 "Germanwings"))
+                                 :ARG2 (c7-18 / officer
+                                              :mod (c7-4 / chief)
+                                              :mod (c7-10 / executive))))
+      :ARG1 (c7-7 / and
+                  :op1 (c7-6 / person
+                             :mod (c7-16 / country
+                                         :name (c7-19 / name
+                                                      :op1 "Germany")))
+                  :op2 (c7-17 / citizen
+                              :mod (c7-0 / country
+                                         :name (c7-1 / name
+                                                     :op1 "Spain")))
+                  :op3 (c7-9 / person
+                             :mod (c7-14 / country
+                                         :name (c7-2 / name
+                                                     :op1 "America"))
+                             :quant 2)
+                  :location (c7-12 / plane
+                                   :ARG1-of (c7-15 / crash-01
+                                                   :location (c7-13 / country
+                                                                    :name (c7-21 / name
+                                                                                 :op1 "France"))))))

@@ -1,0 +1,190 @@
+# ::snt bullseye
+# ::tokens ["bullseye"]
+# ::lemmas ["bullseye"]
+(c1-0 / bullseye)
+
+# ::snt That's funny!!
+# ::tokens ["That", "'s", "funny", "!", "!"]
+# ::lemmas ["that", "be", "funny", "!", "!"]
+(c2-0 / funny
+      :domain (c2-1 / that))
+
+# ::snt : A man believed to be the gunman filmed wearing a black headband inside the cafe"Filmed? Shoot the bastard
+# ::tokens [":", "A", "man", "believed", "to", "be", "the", "gunman", "filmed", "wearing", "a", "black", "headband", "inside", "the", "cafe\"Filmed", "?", "Shoot", "the", "bastard"]
+# ::lemmas [":", "a", "man", "believe", "to", "be", "the", "gunman", "film", "wear", "a", "black", "headband", "inside", "the", "cafe\"filmed", "?", "shoot", "the", "bastard"]
+(c3-4 / multi-sentence
+      :snt1 (c3-5 / believe-01
+                  :ARG1 (c3-9 / gunman
+                              :ARG1-of (c3-3 / film-01)
+                              :ARG0-of (c3-1 / wear-01
+                                             :ARG1 (c3-0 / headband
+                                                         :ARG1-of (c3-8 / black-04))
+                                             :location (c3-6 / inside
+                                                             :op1 (c3-10 / cafe)))))
+      :snt2 (c3-13 / and
+                   :op1 (c3-7 / film-01)
+                   :op2 (c3-11 / shoot-02
+                               :ARG0 (c3-2 / you)
+                               :ARG1 (c3-12 / bastard)
+                               :mode imperative)))
+
+# ::snt Why not take him out? Clear view
+# ::tokens ["Why", "not", "take", "him", "out", "?", "Clear", "view"]
+# ::lemmas ["why", "not", "take", "he", "out", "?", "clear", "view"]
+(c4-1 / multi-sentence
+      :snt1 (c4-4 / cause-01
+                  :ARG0 (c4-6 / amr-unknown)
+                  :ARG1 (c4-5 / take-out-11
+                              :ARG1 (c4-0 / he)
+                              :polarity -))
+      :snt2 (c4-2 / view-01
+                  :ARG1-of (c4-3 / clear-06)))
+
+# ::snt The face of terror in Sydney
+# ::tokens ["The", "face", "of", "terror", "in", "Sydney"]
+# ::lemmas ["the", "face", "of", "terror", "in", "Sydney"]
+(c5-2 / face
+      :location (c5-3 / city
+                      :name (c5-0 / name
+                                  :op1 "Sydney"))
+      :ARG0-of (c5-1 / terror-02))
+
+# ::snt somebody crossed their leg and show him the bottom of their shoe
+# ::tokens ["somebody", "crossed", "their", "leg", "and", "show", "him", "the", "bottom", "of", "their", "shoe"]
+# ::lemmas ["somebody", "cross", "their", "leg", "and", "show", "he", "the", "bottom", "of", "their", "shoe"]
+(c6-7 / and
+      :op1 (c6-5 / cross-02
+                 :ARG0 (c6-6 / somebody
+                             :part (c6-1 / leg
+                                         :ARG1-of c6-5)))
+      :op2 (c6-4 / show-01
+                 :ARG0 c6-6
+                 :ARG1 (c6-3 / bottom
+                             :part-of (c6-2 / shoe
+                                            :poss c6-6))
+                 :ARG2 (c6-0 / he)))
+
+# ::snt The West, wake up!
+# ::tokens ["The", "West", ",", "wake", "up", "!"]
+# ::lemmas ["the", "West", ",", "wake", "up", "!"]
+(c7-1 / wake-up-02
+      :ARG1 (c7-2 / world-region
+                  :name (c7-0 / name
+                              :op1 "West"))
+      :mode imperative)
+
+# ::snt in less than hrs his headband will really be telling the tuuth..LOL!
+# ::tokens ["in", "less", "than", "hrs", "his", "headband", "will", "really", "be", "telling", "the", "tuuth", "..", "LOL", "!"]
+# ::lemmas ["in", "less", "than", "hrs", "his", "headband", "will", "really", "be", "tell", "the", "tuuth", "..", "LOL", "!"]
+(c8-12 / tell-01
+       :ARG0 (c8-0 / headband
+                   :part-of (c8-13 / he))
+       :ARG2 (c8-6 / person
+                   :mod (c8-10 / that))
+       :ARG1-of (c8-7 / real-04)
+       :ARG2-of (c8-2 / laugh-01
+                      :ARG0 (c8-3 / i)
+                      :manner (c8-8 / loud)
+                      :mode expressive)
+       :time (c8-11 / after
+                    :op1 (c8-4 / now)
+                    :quant (c8-1 / less-than
+                                 :op1 (c8-5 / temporal-quantity
+                                            :unit (c8-9 / hour)
+                                            :quant 1))))
+
+# ::snt the BBC translated the Arabic letters on the headband and it says.."I CAN"T BREATHE!"...lol
+# ::tokens ["the", "BBC", "translated", "the", "Arabic", "letters", "on", "the", "headband", "and", "it", "says", "..", "\"I", "CAN\"T", "BREATHE!\"", "...", "lol"]
+# ::lemmas ["the", "BBC", "translate", "the", "Arabic", "letter", "on", "the", "headband", "and", "it", "say", "..", "\"I", "CAN\"T", "breathe!\"", "...", "lol"]
+(c9-12 / and
+       :op1 (c9-10 / translate-01
+                   :ARG0 (c9-7 / publication
+                               :name (c9-5 / name
+                                           :op1 "BBC"))
+                   :ARG1 (c9-2 / letter
+                               :mod (c9-8 / language
+                                          :name (c9-6 / name
+                                                      :op1 "Arabic")))
+                   :ARG3 (c9-0 / headband))
+       :op2 (c9-9 / say-01
+                  :ARG0 c9-0
+                  :ARG1 (c9-11 / possible-01
+                               :ARG1 (c9-3 / break-heart-31
+                                           :ARG1 c9-0)
+                               :polarity -))
+       :ARG2-of (c9-1 / laugh-01
+                      :manner (c9-4 / loud)
+                      :mode expressive))
+
+# ::snt Looks like clean sniper shot. Should have take him out. Pigs, scum, low life losers. All terrorists are evil.
+# ::tokens ["Looks", "like", "clean", "sniper", "shot", ".", "Should", "have", "take", "him", "out", ".", "Pigs", ",", "scum", ",", "low", "life", "losers", ".", "All", "terrorists", "are", "evil", "."]
+# ::lemmas ["look", "like", "clean", "sniper", "shot", ".", "should", "have", "take", "he", "out", ".", "Pigs", ",", "scum", ",", "low", "life", "loser", ".", "all", "terrorist", "be", "evil", "."]
+(c10-3 / multi-sentence
+       :snt1 (c10-2 / look-02
+                    :ARG1 (c10-13 / shoot-01
+                                  :ARG2 (c10-5 / sniper)
+                                  :ARG1-of (c10-11 / clean-04)))
+       :snt2 (c10-10 / recommend-01
+                     :ARG1 (c10-15 / take-out-11
+                                   :ARG1 (c10-0 / he)))
+       :snt3 (c10-17 / and
+                     :op1 (c10-9 / pig)
+                     :op2 (c10-4 / scum)
+                     :op3 (c10-16 / person
+                                  :ARG0-of (c10-12 / lose-02
+                                                   :ARG1 (c10-1 / life
+                                                                :ARG1-of (c10-6 / low-04)))))
+       :snt4 (c10-7 / evil
+                    :domain (c10-14 / terrorist
+                                    :mod (c10-8 / all))))
+
+# ::snt LOL
+# ::tokens ["LOL"]
+# ::lemmas ["LOL"]
+(c11-0 / laugh-01
+       :ARG0 (c11-1 / i)
+       :manner (c11-2 / loud))
+
+# ::snt Your Tweet Takes Center Stage On
+# ::tokens ["Your", "Tweet", "Takes", "Center", "Stage", "On"]
+# ::lemmas ["your", "Tweet", "Takes", "Center", "Stage", "on"]
+(c12-5 / take-on-09
+       :ARG0 (c12-3 / thing
+                    :ARG1-of (c12-1 / tweet-01
+                                    :ARG0 (c12-0 / you)))
+       :ARG1 (c12-4 / stage
+                    :mod (c12-2 / center)))
+
+# ::snt time to finish these Islamic pricks
+# ::tokens ["time", "to", "finish", "these", "Islamic", "pricks"]
+# ::lemmas ["time", "to", "finish", "these", "Islamic", "prick"]
+(c13-5 / time
+       :time-of (c13-0 / finish-01
+                       :ARG1 (c13-2 / prick
+                                    :mod (c13-3 / religious-group
+                                                :name (c13-1 / name
+                                                             :op1 "Islam"))
+                                    :mod (c13-4 / this))))
+
+# ::snt its like /11 all over again
+# ::tokens ["its", "like", "/11", "all", "over", "again"]
+# ::lemmas ["its", "like", "/11", "all", "over", "again"]
+(c14-3 / resemble-01
+       :ARG1 (c14-1 / it)
+       :ARG2 (c14-4 / incident
+                    :name (c14-2 / name
+                                 :op1 "9/11"))
+       :mod (c14-5 / again
+                   :mod (c14-0 / all-over)))
+
+# ::snt Is he upset that the cafe didn't serve Halal products?
+# ::tokens ["Is", "he", "upset", "that", "the", "cafe", "did", "n't", "serve", "Halal", "products", "?"]
+# ::lemmas ["be", "he", "upset", "that", "the", "cafe", "do", "not", "serve", "Halal", "product", "?"]
+(c15-1 / upset-01
+       :ARG0 (c15-4 / serve-01
+                    :ARG0 (c15-3 / cafe)
+                    :ARG1 (c15-2 / product
+                                 :mod (c15-0 / halal))
+                    :polarity -)
+       :ARG1 (c15-6 / he)
+       :polarity (c15-5 / amr-unknown))

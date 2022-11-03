@@ -1,0 +1,54 @@
+# ::snt Are you looking for , , , , ? Contact me
+# ::tokens ["Are", "you", "looking", "for", ",", ",", ",", ",", "?", "Contact", "me"]
+# ::lemmas ["be", "you", "look", "for", ",", ",", ",", ",", "?", "contact", "i"]
+(c1-1 / multi-sentence
+      :snt1 (c1-2 / look-01
+                  :ARG0 (c1-0 / you)
+                  :ARG1 (c1-5 / amr-unknown))
+      :snt2 (c1-3 / contact-01
+                  :ARG0 c1-0
+                  :ARG1 (c1-4 / i)
+                  :mode imperative))
+
+# ::snt :I really thought him and Rachel would of been perfect.
+# ::tokens [":", "I", "really", "thought", "him", "and", "Rachel", "would", "of", "been", "perfect", "."]
+# ::lemmas [":", "i", "really", "think", "he", "and", "Rachel", "would", "of", "been", "perfect", "."]
+(c2-5 / think-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-4 / perfect-02
+                  :ARG1 (c2-7 / and
+                              :op1 (c2-3 / he)
+                              :op2 (c2-1 / person
+                                         :name (c2-0 / name
+                                                     :op1 "Rachel"))))
+      :ARG1-of (c2-2 / real-04))
+
+# ::snt Can u play Strip That Down by Liam Payne please
+# ::tokens ["Can", "u", "play", "Strip", "That", "Down", "by", "Liam", "Payne", "please"]
+# ::lemmas ["can", "u", "play", "Strip", "that", "down", "by", "Liam", "Payne", "please"]
+(c3-5 / possible-01
+      :ARG1 (c3-3 / play-11
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-1 / music
+                              :name (c3-2 / name
+                                          :op1 "Strip"
+                                          :op2 "That"
+                                          :op3 "Down")
+                              :source (c3-6 / person
+                                            :name (c3-4 / name
+                                                        :op1 "Liam"
+                                                        :op2 "Payne"))))
+      :polite +)
+
+# ::snt Omg let's pretend a shocked face ha ok bye
+# ::tokens ["Omg", "let", "'s", "pretend", "a", "shocked", "face", "ha", "ok", "bye"]
+# ::lemmas ["Omg", "let", "us", "pretend", "a", "shocked", "face", "ha", "ok", "bye"]
+(c4-3 / multi-sentence
+      :snt1 (c4-0 / oh-my-god
+                  :mode expressive)
+      :snt2 (c4-5 / pretend-01
+                  :ARG0 (c4-6 / we)
+                  :ARG1 (c4-1 / face
+                              :ARG1-of (c4-4 / shock-01))
+                  :mod (c4-2 / bye)
+                  :mode imperative))

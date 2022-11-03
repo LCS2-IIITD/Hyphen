@@ -1,0 +1,59 @@
+# ::snt I'm predicting now that will run for re-election in - and will win - along w / GOP contenders outperforming .
+# ::tokens ["I", "'m", "predicting", "now", "that", "will", "run", "for", "re", "-", "election", "in", "-", "and", "will", "win", "-", "along", "w", "/", "GOP", "contenders", "outperforming", "."]
+# ::lemmas ["i", "be", "predict", "now", "that", "will", "run", "for", "re", "-", "election", "in", "-", "and", "will", "win", "-", "along", "w", "/", "GOP", "contender", "outperforming", "."]
+(c1-10 / predict-01
+       :ARG0 (c1-1 / i)
+       :ARG1 (c1-0 / and
+                   :op1 (c1-8 / run-02
+                              :ARG0 (c1-7 / person
+                                          :ARG0-of (c1-2 / contend-02
+                                                         :ARG1 (c1-4 / political-party
+                                                                     :name (c1-11 / name
+                                                                                  :op1 "GOP"))))
+                              :ARG1 (c1-5 / reelect-01
+                                          :ARG1 c1-7))
+                   :op2 (c1-3 / win-01
+                              :ARG0 c1-7)
+                   :manner (c1-12 / along)
+                   :manner (c1-6 / outperform-01
+                                 :ARG0 c1-7))
+       :time (c1-9 / now))
+
+# ::snt The devastating defeat of the Democrats will take years to recover from . is the Democrats only true answer
+# ::tokens ["The", "devastating", "defeat", "of", "the", "Democrats", "will", "take", "years", "to", "recover", "from", ".", "is", "the", "Democrats", "only", "true", "answer"]
+# ::lemmas ["the", "devastating", "defeat", "of", "the", "Democrats", "will", "take", "years", "to", "recover", "from", ".", "be", "the", "Democrats", "only", "true", "answer"]
+(c2-10 / multi-sentence
+       :snt1 (c2-7 / take-10
+                   :ARG0 (c2-8 / recover-02
+                               :ARG1 (c2-0 / defeat-01
+                                           :ARG1 (c2-9 / political-party
+                                                       :name (c2-11 / name
+                                                                    :op1 "Democrat"))
+                                           :ARG0-of (c2-4 / devastate-01)))
+                   :ARG1 (c2-2 / multiple
+                               :op1 (c2-5 / temporal-quantity
+                                          :unit (c2-12 / year)
+                                          :quant 1)))
+       :snt2 (c2-1 / answer-01
+                   :ARG2 c2-0
+                   :ARG1-of (c2-3 / true-01)
+                   :mod (c2-6 / only)))
+
+# ::snt HRC was + million votes short of President Obama in - she failed miserably .
+# ::tokens ["HRC", "was", "+", "million", "votes", "short", "of", "President", "Obama", "in", "-", "she", "failed", "miserably", "."]
+# ::lemmas ["HRC", "be", "+", "million", "vote", "short", "of", "President", "Obama", "in", "-", "she", "fail", "miserably", "."]
+(c3-1 / fail-01
+      :ARG1 (c3-8 / person
+                  :name (c3-10 / name
+                               :op1 "HRC"))
+      :manner (c3-9 / miserable)
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-0 / short-06
+                                 :ARG1 c3-8
+                                 :ARG2 (c3-5 / vote-01
+                                             :quant +000000)
+                                 :ARG3 (c3-6 / person
+                                             :name (c3-7 / name
+                                                         :op1 "Obama")
+                                             :ARG0-of (c3-4 / have-org-role-91
+                                                            :ARG2 (c3-3 / president))))))

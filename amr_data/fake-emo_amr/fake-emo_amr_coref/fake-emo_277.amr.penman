@@ -1,0 +1,158 @@
+# ::snt @BloodyPopcorn Donald Chump. I love it!
+# ::tokens ["@BloodyPopcorn", "Donald", "Chump", ".", "I", "love", "it", "!"]
+# ::lemmas ["@bloodypopcorn", "Donald", "Chump", ".", "i", "love", "it", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-1 / person
+                  :name (c1-3 / name
+                              :op1 "BloodyPopcorn"
+                              :op2 "Donald"
+                              :op3 "Chump"))
+      :snt2 (c1-0 / love-01
+                  :ARG0 (c1-5 / i)
+                  :ARG1 (c1-4 / it)))
+
+# ::snt @BloodyPopcorn Haha... "Chrump"
+# ::tokens ["@BloodyPopcorn", "Haha", "...", "\"", "Chrump", "\""]
+# ::lemmas ["@bloodypopcorn", "Haha", "...", "\"", "chrump", "\""]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / say-01
+                  :ARG0 (c2-6 / i)
+                  :ARG2 (c2-1 / person
+                              :name (c2-3 / name
+                                          :op1 "BloodyPopcorn")))
+      :snt2 (c2-0 / laugh-01
+                  :ARG0 c2-6
+                  :manner (c2-5 / loud)
+                  :mode expressive))
+
+# ::snt @Dr_H_Bus He’s a phonetic genius 😂
+# ::tokens ["@Dr_H_Bus", "He", "\u2019s", "a", "phonetic", "genius", "\ud83d\ude02"]
+# ::lemmas ["@dr_h_bus", "he", "\u2019", "a", "phonetic", "genius", "\ud83d\ude02"]
+(c3-5 / say-01
+      :ARG1 (c3-0 / genius
+                  :mod (c3-2 / phonetic)
+                  :domain (c3-4 / he))
+      :ARG2 (c3-1 / person
+                  :name (c3-3 / name
+                              :op1 "Dr_H_Bus")))
+
+# ::snt @BloodyPopcorn I'd like to subscribe
+# ::tokens ["@BloodyPopcorn", "I", "'d", "like", "to", "subscribe"]
+# ::lemmas ["@bloodypopcorn", "i", "would", "like", "to", "subscribe"]
+(c4-4 / say-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-1 / like-02
+                  :ARG0 c4-5
+                  :ARG1 (c4-0 / subscribe-01
+                              :ARG0 c4-5))
+      :ARG2 (c4-2 / person
+                  :name (c4-3 / name
+                              :op1 "BloodyPopcorn")))
+
+# ::snt Chrump aside, I’m honestly surprised and impressed how he connected the dots and knew what today’s newspaper headline would say. Or at least what the topic would be. He’s a smart kid.
+# ::tokens ["Chrump", "aside", ",", "I", "\u2019m", "honestly", "surprised", "and", "impressed", "how", "he", "connected", "the", "dots", "and", "knew", "what", "today", "\u2019s", "newspaper", "headline", "would", "say", ".", "Or", "at", "least", "what", "the", "topic", "would", "be", ".", "He", "\u2019s", "a", "smart", "kid", "."]
+# ::lemmas ["Chrump", "aside", ",", "i", "\u2019m", "honestly", "surprised", "and", "impress", "how", "he", "connect", "the", "dot", "and", "know", "what", "today", "\u2019s", "newspaper", "headline", "would", "say", ".", "or", "at", "least", "what", "the", "topic", "would", "be", ".", "he", "\u2019", "a", "smart", "kid", "."]
+(c5-13 / multi-sentence
+       :snt1 (c5-20 / and
+                    :op1 (c5-6 / surprise-01
+                               :ARG0 (c5-15 / and
+                                            :op1 (c5-10 / connect-01
+                                                        :ARG0 (c5-0 / person
+                                                                    :name (c5-14 / name
+                                                                                 :op1 "Chrump"))
+                                                        :ARG1 (c5-17 / dot))
+                                            :op2 (c5-12 / know-01
+                                                        :ARG0 c5-0
+                                                        :ARG1 (c5-2 / thing
+                                                                    :ARG1-of (c5-5 / say-01
+                                                                                   :ARG0 (c5-19 / headline-01
+                                                                                                :ARG0 (c5-7 / newspaper
+                                                                                                            :time (c5-11 / today)))))))
+                               :ARG1 (c5-22 / i)
+                               :ARG1-of (c5-4 / honest-01))
+                    :op2 (c5-9 / or
+                               :op2 (c5-3 / thing
+                                          :domain (c5-21 / topic))
+                               :mod (c5-16 / at-least)))
+       :snt2 (c5-1 / kid
+                   :ARG1-of (c5-8 / smart-06)
+                   :domain (c5-18 / he)))
+
+# ::snt He’s also wrote this same “headline” on 7 different pieces of construction paper.
+# ::tokens ["He", "\u2019s", "also", "wrote", "this", "same", "\u201c", "headline", "\u201d", "on", "7", "different", "pieces", "of", "construction", "paper", "."]
+# ::lemmas ["he", "\u2019s", "also", "write", "this", "same", "\"", "headline", "\"", "on", "7", "different", "piece", "of", "construction", "paper", "."]
+(c6-7 / write-01
+      :ARG0 (c6-8 / he)
+      :ARG1 (c6-2 / line
+                  :mod (c6-0 / headline)
+                  :ARG1-of (c6-10 / same-01)
+                  :mod (c6-5 / this))
+      :location (c6-4 / piece
+                      :part-of (c6-3 / paper
+                                     :mod (c6-1 / construct-01))
+                      :ARG1-of (c6-6 / differ-02)
+                      :quant 7)
+      :mod (c6-9 / also))
+
+# ::snt @BloodyPopcorn Will there be a comic strip? I will pay in advance. 😁
+# ::tokens ["@BloodyPopcorn", "Will", "there", "be", "a", "comic", "strip", "?", "I", "will", "pay", "in", "advance", ".", "\ud83d\ude01"]
+# ::lemmas ["@bloodypopcorn", "will", "there", "be", "a", "comic", "strip", "?", "i", "will", "pay", "in", "advance", ".", "\ud83d\ude01"]
+(c7-4 / multi-sentence
+      :snt1 (c7-9 / say-01
+                  :ARG0 (c7-10 / i)
+                  :ARG1 (c7-8 / truth-value
+                              :polarity-of (c7-2 / strip
+                                                 :mod (c7-1 / comic)))
+                  :ARG2 (c7-5 / person
+                              :name (c7-6 / name
+                                          :op1 "BloodyPopcorn")))
+      :snt2 (c7-3 / pay-01
+                  :ARG0 (c7-7 / i)
+                  :ARG1-of (c7-0 / in-advance-04)))
+
+# ::snt @JudgmentalGizmo Gotta show him the funnies section!!
+# ::tokens ["@JudgmentalGizmo", "Got", "ta", "show", "him", "the", "funnies", "section", "!", "!"]
+# ::lemmas ["@JudgmentalGizmo", "Got", "to", "show", "he", "the", "funny", "section", "!", "!"]
+(c8-6 / say-01
+      :ARG0 (c8-8 / i)
+      :ARG1 (c8-7 / obligate-01
+                  :ARG1 (c8-0 / show-01
+                              :ARG0 (c8-1 / person
+                                          :name (c8-2 / name
+                                                      :op1 "JudgmentalGizmo"))
+                              :ARG1 (c8-5 / section
+                                          :topic (c8-3 / funny-02))
+                              :ARG2 (c8-4 / he)
+                              :mode imperative))
+      :ARG2 c8-1)
+
+# ::snt @BloodyPopcorn https://t.co/MuxaTL9TEB
+# ::tokens ["@BloodyPopcorn", "https://t.co/MuxaTL9TEB"]
+# ::lemmas ["@bloodypopcorn", "https://t.co/MuxaTL9TEB"]
+(c9-2 / say-01
+      :ARG0 (c9-4 / i)
+      :ARG2 (c9-0 / person
+                  :name (c9-1 / name
+                              :op1 "BloodyPopcorn"))
+      :medium (c9-3 / url-entity
+                    :value "https://t.co/MuxaTL9TEB"))
+
+# ::snt @TheAbyssOfWhoa https://t.co/KfCj651kaU
+# ::tokens ["@TheAbyssOfWhoa", "https://t.co/KfCj651kaU"]
+# ::lemmas ["@TheAbyssOfWhoa", "https://t.co/KfCj651kaU"]
+(c10-2 / say-01
+       :ARG0 (c10-4 / i)
+       :ARG2 (c10-0 / person
+                    :name (c10-1 / name
+                                 :op1 "TheAbyssOfWhoa"))
+       :medium (c10-3 / url-entity
+                      :value "https://t.co/KfCj651kaU"))
+
+# ::snt @YouKnowKoe I’ll let him know. https://t.co/n4dnxvgQOJ
+# ::tokens ["@YouKnowKoe", "I", "\u2019ll", "let", "him", "know", ".", "https://t.co/n4dnxvgQOJ"]
+# ::lemmas ["@youknowkoe", "i", "\u2019ll", "let", "he", "know", ".", "https://t.co/n4dnxvgqoj"]
+(c11-1 / let-know-07
+       :ARG0 (c11-3 / i)
+       :ARG1 (c11-2 / he)
+       :ARG2 (c11-0 / url-entity
+                    :value "https://t.co/n4dnxvgQOJ"))

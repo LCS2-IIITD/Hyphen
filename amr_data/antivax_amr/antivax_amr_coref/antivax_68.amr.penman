@@ -1,0 +1,65 @@
+# ::snt Praying for u
+# ::tokens ["Praying", "for", "u"]
+# ::lemmas ["pray", "for", "u"]
+(c1-0 / pray-01
+      :ARG0 (c1-2 / i)
+      :beneficiary (c1-1 / you))
+
+# ::snt True same.
+# ::tokens ["True", "same", "."]
+# ::lemmas ["true", "same", "."]
+(c2-0 / same-01
+      :ARG1-of (c2-1 / true-01))
+
+# ::snt Im trying to pop out this summer so I recommend it
+# ::tokens ["I", "m", "trying", "to", "pop", "out", "this", "summer", "so", "I", "recommend", "it"]
+# ::lemmas ["i", "m", "try", "to", "pop", "out", "this", "summer", "so", "i", "recommend", "it"]
+(c3-4 / try-01
+      :ARG0 (c3-7 / i)
+      :ARG1 (c3-6 / pop-out-00
+                  :ARG0 c3-7)
+      :time (c3-0 / date-entity
+                  :season (c3-1 / summer)
+                  :mod (c3-8 / year
+                             :mod (c3-3 / this)))
+      :ARG0-of (c3-2 / cause-01
+                     :ARG1 (c3-5 / recommend-01
+                                 :ARG0 c3-7
+                                 :ARG1 c3-6
+                                 :ARG2 c3-7)))
+
+# ::snt Oh yea true. That happens. Im thinking about getting it maybe next month.
+# ::tokens ["Oh", "yea", "true", ".", "That", "happens", ".", "I", "m", "thinking", "about", "getting", "it", "maybe", "next", "month", "."]
+# ::lemmas ["oh", "yea", "true", ".", "that", "happen", ".", "i", "m", "think", "about", "get", "it", "maybe", "next", "month", "."]
+(c4-8 / multi-sentence
+      :snt1 (c4-4 / true-01
+                  :mod (c4-3 / oh
+                             :mode expressive))
+      :snt2 (c4-11 / event
+                   :mod (c4-1 / that))
+      :snt3 (c4-10 / think-01
+                   :ARG0 (c4-7 / i)
+                   :ARG1 (c4-6 / get-01
+                               :ARG0 c4-7
+                               :ARG1 (c4-2 / it)
+                               :time (c4-0 / month
+                                           :mod (c4-9 / next)
+                                           :ARG1-of (c4-5 / possible-01)))))
+
+# ::snt Im good but my arm is sore af
+# ::tokens ["I", "m", "good", "but", "my", "arm", "is", "sore", "af"]
+# ::lemmas ["i", "m", "good", "but", "my", "arm", "be", "sore", "af"]
+(c5-2 / contrast-01
+      :ARG1 (c5-3 / good-02
+                  :ARG1 (c5-4 / i
+                              :part (c5-1 / arm)))
+      :ARG2 (c5-0 / sore
+                  :domain c5-1
+                  :mod (c5-5 / af)))
+
+# ::snt How you feel?
+# ::tokens ["How", "you", "feel", "?"]
+# ::lemmas ["how", "you", "feel", "?"]
+(c6-2 / feel-01
+      :ARG0 (c6-1 / you)
+      :ARG1 (c6-0 / amr-unknown))

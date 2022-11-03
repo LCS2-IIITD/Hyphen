@@ -1,0 +1,71 @@
+# ::snt I figured that was part of the issue. I keep hearing abt celebrities giving $ to Houston, whi
+# ::tokens ["I", "figured", "that", "was", "part", "of", "the", "issue", ".", "I", "keep", "hearing", "abt", "celebrities", "giving", "$", "to", "Houston", ",", "whi"]
+# ::lemmas ["i", "figure", "that", "be", "part", "of", "the", "issue", ".", "i", "keep", "hear", "abt", "celebrity", "give", "$", "to", "Houston", ",", "whi"]
+(c1-4 / multi-sentence
+      :snt1 (c1-5 / figure-01
+                  :ARG0 (c1-8 / i)
+                  :ARG1 (c1-3 / that
+                              :part-of (c1-1 / issue-02)))
+      :snt2 (c1-0 / keep-02
+                  :ARG0 (c1-6 / i)
+                  :ARG1 (c1-2 / hear-01
+                              :ARG0 c1-6
+                              :ARG1 (c1-12 / give-01
+                                           :ARG0 (c1-9 / celebrity)
+                                           :ARG1 (c1-7 / dollar)
+                                           :ARG2 (c1-13 / city
+                                                        :name (c1-14 / name
+                                                                     :op1 "Houston")))
+                              :ARG2 (c1-10 / person
+                                           :name (c1-11 / name
+                                                        :op1 "whi")))))
+
+# ::snt Just read Beyonce quietly donated mill..
+# ::tokens ["Just", "read", "Beyonce", "quietly", "donated", "mill", ".."]
+# ::lemmas ["just", "read", "Beyonce", "quietly", "donate", "mill", ".."]
+(c2-5 / read-01
+      :ARG1 (c2-3 / donate-01
+                  :ARG0 (c2-4 / person
+                              :name (c2-7 / name
+                                          :op1 "Beyonce"))
+                  :ARG1 (c2-1 / monetary-quantity
+                              :unit (c2-0 / dollar)
+                              :quant 1000000)
+                  :ARG1-of (c2-6 / quiet-04))
+      :mod (c2-2 / just))
+
+# ::snt I'm just curious if Katrina was covered this well. I don't remember. Also Flint's water crisis, how many milli
+# ::tokens ["I", "'m", "just", "curious", "if", "Katrina", "was", "covered", "this", "well", ".", "I", "do", "n't", "remember", ".", "Also", "Flint", "'s", "water", "crisis", ",", "how", "many", "milli"]
+# ::lemmas ["i", "be", "just", "curious", "if", "Katrina", "be", "cover", "this", "well", ".", "i", "do", "not", "remember", ".", "also", "Flint", "'s", "water", "crisis", ",", "how", "many", "milli"]
+(c3-4 / multi-sentence
+      :snt1 (c3-7 / curious-01
+                  :ARG0 (c3-15 / cover-03
+                               :ARG1 (c3-16 / natural-disaster
+                                            :name (c3-6 / name
+                                                        :op1 "Katrina"))
+                               :mod (c3-1 / well
+                                          :mod (c3-3 / this)))
+                  :ARG1 (c3-8 / i)
+                  :mod (c3-5 / just))
+      :snt2 (c3-12 / remember-01
+                   :ARG0 (c3-2 / i)
+                   :polarity -)
+      :snt3 (c3-9 / crisis
+                  :mod (c3-14 / water)
+                  :location (c3-0 / city
+                                  :name (c3-10 / name
+                                               :op1 "Flint"))
+                  :quant (c3-11 / amr-unknown)
+                  :mod (c3-13 / also)))
+
+# ::snt Miley Cyrus gave k
+# ::tokens ["Miley", "Cyrus", "gave", "k"]
+# ::lemmas ["Miley", "Cyrus", "give", "k"]
+(c4-0 / give-01
+      :ARG0 (c4-2 / person
+                  :name (c4-1 / name
+                              :op1 "Miley"
+                              :op2 "Cyrus"))
+      :ARG1 (c4-3 / thing
+                  :name c4-1
+                  :op1 "k"))

@@ -1,0 +1,47 @@
+# ::snt Healthy hybrid
+# ::tokens ["Healthy", "hybrid"]
+# ::lemmas ["healthy", "hybrid"]
+(c1-1 / hybrid
+      :mod (c1-0 / healthy))
+
+# ::snt Andy has opted for the same thing. AZ followed by Pfizer!
+# ::tokens ["Andy", "has", "opted", "for", "the", "same", "thing", ".", "AZ", "followed", "by", "Pfizer", "!"]
+# ::lemmas ["Andy", "have", "opt", "for", "the", "same", "thing", ".", "AZ", "follow", "by", "Pfizer", "!"]
+(c2-9 / multi-sentence
+      :snt1 (c2-4 / opt-01
+                  :ARG0 (c2-8 / person
+                              :name (c2-10 / name
+                                           :op1 "Andy"))
+                  :ARG1 (c2-6 / thing
+                              :ARG1-of (c2-0 / same-01)))
+      :snt2 (c2-2 / follow-01
+                  :ARG1 (c2-3 / country-region
+                              :name (c2-7 / name
+                                          :op1 "AZ"))
+                  :ARG2 (c2-1 / company
+                              :name (c2-5 / name
+                                          :op1 "Pfizer"))))
+
+# ::snt YAY! One step closer to cuddles!
+# ::tokens ["YAY", "!", "One", "step", "closer", "to", "cuddles", "!"]
+# ::lemmas ["YAY", "!", "One", "step", "close", "to", "cuddle", "!"]
+(c3-5 / multi-sentence
+      :snt1 (c3-6 / yay)
+      :snt2 (c3-4 / have-degree-91
+                  :ARG1 (c3-0 / step-01
+                              :quant 1)
+                  :ARG2 (c3-2 / close-10
+                              :ARG2 (c3-1 / cuddle-01))
+                  :ARG3 (c3-3 / more)))
+
+# ::snt Welcome to the Pfizer fam queen!!
+# ::tokens ["Welcome", "to", "the", "Pfizer", "fam", "queen", "!", "!"]
+# ::lemmas ["welcome", "to", "the", "Pfizer", "fam", "queen", "!", "!"]
+(c4-2 / welcome-01
+      :ARG0 (c4-4 / i)
+      :ARG1 (c4-6 / you)
+      :ARG2 (c4-3 / queen
+                  :mod (c4-0 / fam)
+                  :poss (c4-1 / company
+                              :name (c4-5 / name
+                                          :op1 "Pfizer"))))

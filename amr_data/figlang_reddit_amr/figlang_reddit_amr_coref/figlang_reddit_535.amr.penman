@@ -1,0 +1,26 @@
+# ::snt You two, come with me.
+# ::tokens ["You", "two", ",", "come", "with", "me", "."]
+# ::lemmas ["you", "two", ",", "come", "with", "i", "."]
+(c1-2 / come-01
+      :ARG1 (c1-1 / you
+                  :quant 2)
+      :accompanier (c1-0 / i)
+      :mode imperative)
+
+# ::snt Oh it's beautiful
+# ::tokens ["Oh", "it", "'s", "beautiful"]
+# ::lemmas ["oh", "it", "be", "beautiful"]
+(c2-0 / beautiful-02
+      :ARG1 (c2-1 / it)
+      :mod (c2-2 / oh
+                 :mode expressive))
+
+# ::snt Your comment is vague and unconvincing.
+# ::tokens ["Your", "comment", "is", "vague", "and", "unconvincing", "."]
+# ::lemmas ["your", "comment", "be", "vague", "and", "unconvincing", "."]
+(c3-0 / and
+      :op1 (c3-3 / vague
+                 :domain (c3-1 / comment-01
+                               :ARG0 (c3-4 / you)))
+      :op2 (c3-2 / unconvincing
+                 :domain c3-1))

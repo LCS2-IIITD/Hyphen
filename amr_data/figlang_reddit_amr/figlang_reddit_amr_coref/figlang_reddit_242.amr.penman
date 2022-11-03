@@ -1,0 +1,44 @@
+# ::snt Life in rural Russia
+# ::tokens ["Life", "in", "rural", "Russia"]
+# ::lemmas ["life", "in", "rural", "Russia"]
+(c1-2 / live-01
+      :location (c1-3 / country
+                      :name (c1-0 / name
+                                  :op1 "Russia")
+                      :mod (c1-1 / rural)))
+
+# ::snt This could also be a hippie commune in Vermont or north Cali
+# ::tokens ["This", "could", "also", "be", "a", "hippie", "commune", "in", "Vermont", "or", "north", "Cali"]
+# ::lemmas ["this", "could", "also", "be", "a", "hippie", "commune", "in", "Vermont", "or", "north", "Cali"]
+(c2-8 / possible-01
+      :ARG1 (c2-2 / commune
+                  :mod (c2-3 / hippie)
+                  :location (c2-4 / or
+                                  :op1 (c2-0 / state
+                                             :name (c2-9 / name
+                                                         :op1 "Vermont"))
+                                  :op2 (c2-7 / north
+                                             :part-of c2-0
+                                             :name (c2-5 / name
+                                                         :op1 "Cali"))))
+      :domain (c2-6 / this)
+      :mod (c2-1 / also))
+
+# ::snt Or Portland.
+# ::tokens ["Or", "Portland", "."]
+# ::lemmas ["or", "Portland", "."]
+(c3-0 / or
+      :op2 (c3-2 / city
+                 :name (c3-1 / name
+                             :op1 "Portland")))
+
+# ::snt Not enough beer to be Portland.
+# ::tokens ["Not", "enough", "beer", "to", "be", "Portland", "."]
+# ::lemmas ["not", "enough", "beer", "to", "be", "Portland", "."]
+(c4-2 / beer
+      :ARG1-of (c4-1 / have-quant-91
+                     :ARG3 (c4-4 / enough)
+                     :ARG6 (c4-0 / city
+                                 :name (c4-3 / name
+                                             :op1 "Portland"))
+                     :polarity -))

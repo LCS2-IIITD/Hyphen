@@ -1,0 +1,61 @@
+# ::snt should have been prepared due go last week suspected hit and run ???!!
+# ::tokens ["should", "have", "been", "prepared", "due", "go", "last", "week", "suspected", "hit", "and", "run", "?", "?", "?", "!", "!"]
+# ::lemmas ["should", "have", "be", "prepare", "due", "go", "last", "week", "suspect", "hit", "and", "run", "?", "?", "?", "!", "!"]
+(c1-1 / recommend-01
+      :polarity (c1-0 / amr-unknown)
+      :ARG1 (c1-6 / prepare-02
+                  :ARG2 (c1-2 / go-02
+                              :mod (c1-11 / due))
+                  :time (c1-7 / week
+                              :mod (c1-8 / last)))
+      :ARG1-of (c1-9 / cause-01
+                     :ARG0 (c1-5 / suspect-01
+                                 :ARG1 (c1-4 / and
+                                             :op1 (c1-10 / hit-01)
+                                             :op2 (c1-3 / run-02)))))
+
+# ::snt glad shooter is dead
+# ::tokens ["glad", "shooter", "is", "dead"]
+# ::lemmas ["glad", "shooter", "be", "dead"]
+(c2-2 / die-01
+      :ARG1 (c2-1 / person
+                  :ARG0-of (c2-3 / shoot-02)
+                  :mod (c2-0 / glad)))
+
+# ::snt =Killed one attacker(
+# ::tokens ["=", "Killed", "one", "attacker", "("]
+# ::lemmas ["=", "kill", "one", "attacker", "("]
+(c3-1 / kill-01
+      :ARG1 (c3-2 / person
+                  :ARG0-of (c3-0 / attack-01)
+                  :quant 1))
+
+# ::snt The world has gone .
+# ::tokens ["The", "world", "has", "gone", "."]
+# ::lemmas ["the", "world", "have", "go", "."]
+(c4-1 / go-02
+      :ARG0 (c4-0 / world))
+
+# ::snt looks like Canada caught a case of the United States ,
+# ::tokens ["looks", "like", "Canada", "caught", "a", "case", "of", "the", "United", "States", ","]
+# ::lemmas ["look", "like", "Canada", "catch", "a", "case", "of", "the", "United", "States", ","]
+(c5-5 / look-02
+      :ARG1 (c5-6 / catch-02
+                  :ARG0 (c5-3 / country
+                              :name (c5-4 / name
+                                          :op1 "Canada"))
+                  :ARG1 (c5-1 / case-03
+                              :ARG1 (c5-0 / country
+                                          :name (c5-2 / name
+                                                      :op1 "United"
+                                                      :op2 "States")))))
+
+# ::snt So sad. This is not right.
+# ::tokens ["So", "sad", ".", "This", "is", "not", "right", "."]
+# ::lemmas ["so", "sad", ".", "this", "be", "not", "right", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-4 / sad-02
+                  :degree (c6-0 / so))
+      :snt2 (c6-2 / right-06
+                  :ARG1 (c6-1 / this)
+                  :polarity -))

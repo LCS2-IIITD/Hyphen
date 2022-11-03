@@ -1,0 +1,53 @@
+# ::snt And none of them will regret waiting.
+# ::tokens ["And", "none", "of", "them", "will", "regret", "waiting", "."]
+# ::lemmas ["and", "none", "of", "they", "will", "regret", "wait", "."]
+(c1-5 / and
+      :op2 (c1-3 / regret-01
+                 :ARG0 (c1-2 / none
+                             :ARG1-of (c1-1 / include-91
+                                            :ARG2 (c1-4 / they)))
+                 :ARG1 (c1-0 / wait-01
+                             :ARG1 c1-4)))
+
+# ::snt Wow, I can't wait not to buy tickets.
+# ::tokens ["Wow", ",", "I", "ca", "n't", "wait", "not", "to", "buy", "tickets", "."]
+# ::lemmas ["wow", ",", "i", "can", "not", "wait", "not", "to", "buy", "ticket", "."]
+(c2-0 / wait-01
+      :ARG1 (c2-2 / i)
+      :ARG2 (c2-1 / buy-01
+                  :ARG0 c2-2
+                  :ARG1 (c2-4 / ticket)
+                  :polarity -)
+      :mod (c2-3 / wow
+                 :mode expressive)
+      :polarity -)
+
+# ::snt so it's a rumor and they're still standing outside for it? It would be hilarious if it was just a rumor!
+# ::tokens ["so", "it", "'s", "a", "rumor", "and", "they", "'re", "still", "standing", "outside", "for", "it", "?", "It", "would", "be", "hilarious", "if", "it", "was", "just", "a", "rumor", "!"]
+# ::lemmas ["so", "it", "be", "a", "rumor", "and", "they", "be", "still", "stand", "outside", "for", "it", "?", "it", "would", "be", "hilarious", "if", "it", "be", "just", "a", "rumor", "!"]
+(c3-3 / multi-sentence
+      :snt1 (c3-13 / and
+                   :op1 (c3-9 / rumor-01
+                              :ARG1 (c3-7 / it))
+                   :op2 (c3-11 / stand-01
+                               :ARG1 (c3-12 / they)
+                               :ARG2 (c3-4 / outside)
+                               :purpose (c3-10 / it)
+                               :mod (c3-5 / still))
+                   :polarity (c3-6 / amr-unknown))
+      :snt2 (c3-0 / hilarious
+                  :domain (c3-2 / it)
+                  :condition (c3-8 / rumor-01
+                                   :mod (c3-1 / just)
+                                   :domain c3-2)))
+
+# ::snt i WISH i was there right now
+# ::tokens ["i", "WISH", "i", "was", "there", "right", "now"]
+# ::lemmas ["i", "wish", "i", "be", "there", "right", "now"]
+(c4-0 / wish-01
+      :ARG0 (c4-2 / i)
+      :ARG1 (c4-1 / be-located-at-91
+                  :ARG1 c4-2
+                  :ARG2 (c4-5 / there)
+                  :time (c4-3 / now
+                              :mod (c4-4 / right))))

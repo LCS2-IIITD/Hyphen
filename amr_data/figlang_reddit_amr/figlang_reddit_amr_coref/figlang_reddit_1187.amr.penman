@@ -1,0 +1,30 @@
+# ::snt Amber Alert for Charlotte area, keep a look out.
+# ::tokens ["Amber", "Alert", "for", "Charlotte", "area", ",", "keep", "a", "look", "out", "."]
+# ::lemmas ["Amber", "Alert", "for", "Charlotte", "area", ",", "keep", "a", "look", "out", "."]
+(c1-1 / and
+      :op1 (c1-7 / alert-01
+                 :ARG1 (c1-0 / area
+                             :mod (c1-2 / city
+                                        :name (c1-5 / name
+                                                    :op1 "Charlotte")))
+                 :ARG2 (c1-3 / amber))
+      :op2 (c1-4 / look-out-05
+                 :ARG0 (c1-6 / you)
+                 :mode imperative))
+
+# ::snt I like how the general theme here seems to be "amber alert fucked up my Sunday on the couch".
+# ::tokens ["I", "like", "how", "the", "general", "theme", "here", "seems", "to", "be", "\"", "amber", "alert", "fucked", "up", "my", "Sunday", "on", "the", "couch", "\"", "."]
+# ::lemmas ["i", "like", "how", "the", "general", "theme", "here", "seem", "to", "be", "\"", "amber", "alert", "fuck", "up", "my", "Sunday", "on", "the", "couch", "\"", "."]
+(c2-7 / like-01
+      :ARG0 (c2-10 / i)
+      :ARG1 (c2-0 / seem-01
+                  :ARG1 (c2-6 / theme
+                              :ARG1-of (c2-8 / general-02)
+                              :domain (c2-3 / fuck-up-02
+                                            :ARG0 (c2-2 / alert-01
+                                                        :mod (c2-11 / amber))
+                                            :ARG1 (c2-1 / date-entity
+                                                        :weekday (c2-9 / sunday)
+                                                        :poss c2-10)
+                                            :location (c2-4 / couch))
+                              :location (c2-5 / here))))

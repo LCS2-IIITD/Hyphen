@@ -1,0 +1,307 @@
+# ::snt Its about chocolate!
+# ::tokens ["Its", "about", "chocolate", "!"]
+# ::lemmas ["its", "about", "chocolate", "!"]
+(c1-2 / concern-02
+      :ARG0 (c1-0 / it)
+      :ARG1 (c1-1 / chocolate))
+
+# ::snt perfect first comment
+# ::tokens ["perfect", "first", "comment"]
+# ::lemmas ["perfect", "first", "comment"]
+(c2-3 / thing
+      :ARG1-of (c2-2 / comment-01)
+      :ord (c2-0 / ordinal-entity
+                 :value 1)
+      :ARG1-of (c2-1 / perfect-02))
+
+# ::snt Little LATE on the ball, aren't you?
+# ::tokens ["Little", "LATE", "on", "the", "ball", ",", "are", "n't", "you", "?"]
+# ::lemmas ["little", "late", "on", "the", "ball", ",", "be", "not", "you", "?"]
+(c3-4 / be-located-at-91
+      :ARG1 (c3-0 / you)
+      :ARG2 (c3-1 / ball)
+      :degree (c3-2 / little)
+      :ARG1-of (c3-3 / request-confirmation-91))
+
+# ::snt It's Monday in Australia, this is from a few hours ago.
+# ::tokens ["It", "'s", "Monday", "in", "Australia", ",", "this", "is", "from", "a", "few", "hours", "ago", "."]
+# ::lemmas ["it", "be", "Monday", "in", "Australia", ",", "this", "be", "from", "a", "few", "hours", "ago", "."]
+(c4-5 / date-entity
+      :weekday (c4-2 / monday)
+      :location (c4-6 / country
+                      :name (c4-8 / name
+                                  :op1 "Australia"))
+      :domain (c4-1 / this
+                    :source (c4-9 / before
+                                  :op1 (c4-7 / now)
+                                  :quant (c4-3 / few
+                                               :op1 (c4-4 / temporal-quantity
+                                                          :unit (c4-0 / hour)
+                                                          :quant 1)))))
+
+# ::snt Sorry.I have been watching the coverage for a while now. Just thought AP was quicker than that. Tweet was posted min ago.
+# ::tokens ["Sorry", ".", "I", "have", "been", "watching", "the", "coverage", "for", "a", "while", "now", ".", "Just", "thought", "AP", "was", "quicker", "than", "that", ".", "Tweet", "was", "posted", "min", "ago", "."]
+# ::lemmas ["sorry", ".", "i", "have", "be", "watch", "the", "coverage", "for", "a", "while", "now", ".", "just", "think", "AP", "be", "quick", "than", "that", ".", "Tweet", "be", "post", "min", "ago", "."]
+(c5-18 / multi-sentence
+       :snt1 (c5-11 / sorry-01
+                    :ARG1 (c5-14 / i))
+       :snt2 (c5-0 / watch-01
+                   :ARG0 c5-14
+                   :ARG1 (c5-9 / cover-03)
+                   :duration (c5-10 / while)
+                   :time (c5-13 / now))
+       :snt3 (c5-6 / think-01
+                   :ARG0 c5-14
+                   :ARG1 (c5-21 / quick-02
+                                :ARG1 (c5-15 / publication
+                                             :name (c5-3 / name
+                                                         :op1 "AP"))
+                                :ARG2-of (c5-1 / have-degree-91
+                                               :ARG1 c5-15
+                                               :ARG3 (c5-20 / more)
+                                               :ARG4 (c5-17 / that)))
+                   :mod (c5-7 / just))
+       :snt4 (c5-19 / post-01
+                    :ARG1 (c5-8 / thing
+                                :ARG1-of (c5-12 / tweet-01))
+                    :time (c5-16 / before
+                                 :op1 (c5-4 / now)
+                                 :quant (c5-2 / temporal-quantity
+                                              :unit (c5-5 / minute)
+                                              :quant 1))))
+
+# ::snt I see, wasn't sure if that was what you meant. They could have been waiting for the briefing to end.
+# ::tokens ["I", "see", ",", "was", "n't", "sure", "if", "that", "was", "what", "you", "meant", ".", "They", "could", "have", "been", "waiting", "for", "the", "briefing", "to", "end", "."]
+# ::lemmas ["i", "see", ",", "be", "not", "sure", "if", "that", "be", "what", "you", "mean", ".", "they", "could", "have", "be", "wait", "for", "the", "briefing", "to", "end", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-9 / see-01
+                  :ARG0 (c6-6 / i))
+      :snt2 (c6-2 / sure-02
+                  :ARG0 c6-6
+                  :ARG1 (c6-8 / mean-02
+                              :ARG0 (c6-0 / you)
+                              :ARG1 (c6-3 / that))
+                  :polarity -)
+      :snt3 (c6-7 / possible-01
+                  :ARG1 (c6-1 / wait-01
+                              :ARG1 (c6-5 / they)
+                              :ARG2 (c6-10 / end-01
+                                           :ARG1 (c6-11 / brief-01)))))
+
+# ::snt : Hostage situation erupts in Sydney cafe, Australian prime minister says it may be "politically motivated"
+# ::tokens [":", "Hostage", "situation", "erupts", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "says", "it", "may", "be", "\"", "politically", "motivated", "\""]
+# ::lemmas [":", "hostage", "situation", "erupt", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "say", "it", "may", "be", "\"", "politically", "motivate", "\""]
+(c7-3 / multi-sentence
+      :snt1 (c7-16 / erupt-01
+                   :ARG1 (c7-14 / situation
+                                :mod (c7-1 / hostage))
+                   :location (c7-7 / cafe
+                                   :location (c7-12 / city
+                                                    :name (c7-15 / name
+                                                                 :op1 "Sydney"))))
+      :snt2 (c7-2 / say-01
+                  :ARG0 (c7-8 / person
+                              :ARG0-of (c7-4 / have-org-role-91
+                                             :ARG1 (c7-9 / country
+                                                         :name (c7-6 / name
+                                                                     :op1 "Australia"))
+                                             :ARG2 (c7-13 / minister
+                                                          :mod (c7-5 / prime))))
+                  :ARG1 (c7-0 / possible-01
+                              :ARG1 (c7-11 / motivate-01
+                                           :ARG0 (c7-10 / politics)
+                                           :ARG2 c7-14))))
+
+# ::snt : Hostage situation erupts in Sydney cafe, Australian prime minister says it may be politically motivated
+# ::tokens [":", "Hostage", "situation", "erupts", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "says", "it", "may", "be", "politically", "motivated"]
+# ::lemmas [":", "hostage", "situation", "erupt", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "say", "it", "may", "be", "politically", "motivate"]
+(c8-3 / multi-sentence
+      :snt1 (c8-16 / erupt-01
+                   :ARG1 (c8-14 / situation
+                                :mod (c8-1 / host-01))
+                   :location (c8-7 / cafe
+                                   :location (c8-12 / city
+                                                    :name (c8-15 / name
+                                                                 :op1 "Sydney"))))
+      :snt2 (c8-2 / say-01
+                  :ARG0 (c8-8 / person
+                              :ARG0-of (c8-4 / have-org-role-91
+                                             :ARG1 (c8-9 / country
+                                                         :name (c8-6 / name
+                                                                     :op1 "Australia"))
+                                             :ARG2 (c8-13 / minister
+                                                          :mod (c8-5 / prime))))
+                  :ARG1 (c8-0 / possible-01
+                              :ARG1 (c8-11 / motivate-01
+                                           :ARG0 (c8-10 / politics)
+                                           :ARG1 c8-14))))
+
+# ::snt "may be" really? (forehead smack)
+# ::tokens ["\"", "may", "be", "\"", "really", "?", "(", "forehead", "smack", ")"]
+# ::lemmas ["\"", "may", "be", "\"", "really", "?", "(", "forehead", "smack", ")"]
+(c9-2 / possible-01
+      :polarity (c9-3 / amr-unknown)
+      :ARG1-of (c9-4 / real-04)
+      :ARG1-of (c9-0 / mean-01
+                     :ARG2 (c9-5 / smack-02
+                                 :location (c9-1 / forehead))))
+
+# ::snt Actually, he said "We don't know if it's politically motivated". Check your facts, guys.
+# ::tokens ["Actually", ",", "he", "said", "\"", "We", "do", "n't", "know", "if", "it", "'s", "politically", "motivated", "\"", ".", "Check", "your", "facts", ",", "guys", "."]
+# ::lemmas ["actually", ",", "he", "say", "\"", "we", "do", "not", "know", "if", "it", "be", "politically", "motivated", "\"", ".", "check", "your", "fact", ",", "guy", "."]
+(c10-4 / multi-sentence
+       :snt1 (c10-12 / say-01
+                     :ARG0 (c10-2 / he)
+                     :ARG1 (c10-0 / know-01
+                                  :ARG0 (c10-1 / we)
+                                  :ARG1 (c10-3 / truth-value
+                                               :polarity-of (c10-11 / motivate-01
+                                                                    :ARG0 (c10-6 / politics)
+                                                                    :ARG1 (c10-7 / it)))
+                                  :polarity -)
+                     :ARG1-of (c10-9 / actual-02)
+                     :snt2-of c10-4)
+       :ARG0 (c10-10 / guy)
+       :ARG1 (c10-8 / check-01
+                    :ARG0 c10-10
+                    :ARG1 (c10-5 / fact
+                                 :poss c10-10)
+                    :mode imperative))
+
+# ::snt He's a moron, Islamic terrorism, stop pussy footing around it.
+# ::tokens ["He", "'s", "a", "moron", ",", "Islamic", "terrorism", ",", "stop", "pussy", "footing", "around", "it", "."]
+# ::lemmas ["he", "be", "a", "moron", ",", "Islamic", "terrorism", ",", "stop", "pussy", "footing", "around", "it", "."]
+(c11-6 / and
+       :op1 (c11-3 / moron
+                   :domain (c11-1 / he))
+       :op2 (c11-2 / terrorism
+                   :mod (c11-7 / religious-group
+                               :name (c11-10 / name
+                                             :op1 "Islamic")))
+       :op3 (c11-9 / stop-01
+                   :ARG0 (c11-0 / you)
+                   :ARG1 (c11-4 / foot-01
+                                :mod (c11-5 / pussy)
+                                :location (c11-8 / around
+                                                 :op1 c11-2))
+                   :mode imperative))
+
+# ::snt : Hostage situation erupts in Sydney cafe, Australian prime minister says it may be "politically motivated"
+# ::tokens [":", "Hostage", "situation", "erupts", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "says", "it", "may", "be", "\"", "politically", "motivated", "\""]
+# ::lemmas [":", "hostage", "situation", "erupt", "in", "Sydney", "cafe", ",", "Australian", "prime", "minister", "say", "it", "may", "be", "\"", "politically", "motivate", "\""]
+(c12-3 / multi-sentence
+       :snt1 (c12-16 / erupt-01
+                     :ARG1 (c12-14 / situation
+                                   :mod (c12-1 / hostage))
+                     :location (c12-7 / cafe
+                                      :location (c12-12 / city
+                                                        :name (c12-15 / name
+                                                                      :op1 "Sydney"))))
+       :snt2 (c12-2 / say-01
+                    :ARG0 (c12-8 / person
+                                 :ARG0-of (c12-4 / have-org-role-91
+                                                 :ARG1 (c12-9 / country
+                                                              :name (c12-6 / name
+                                                                           :op1 "Australia"))
+                                                 :ARG2 (c12-13 / minister
+                                                               :mod (c12-5 / prime))))
+                    :ARG1 (c12-0 / possible-01
+                                 :ARG1 (c12-11 / motivate-01
+                                               :ARG0 (c12-10 / politics)
+                                               :ARG2 c12-14))))
+
+# ::snt Politically Motivated? Really? Why's that then?
+# ::tokens ["Politically", "Motivated", "?", "Really", "?", "Why", "'s", "that", "then", "?"]
+# ::lemmas ["politically", "motivated", "?", "really", "?", "why", "be", "that", "then", "?"]
+(c13-1 / multi-sentence
+       :snt1 (c13-8 / motivate-01
+                    :ARG2 (c13-3 / politics))
+       :snt2 (c13-6 / real-04
+                    :polarity (c13-5 / amr-unknown))
+       :snt3 (c13-4 / cause-01
+                    :ARG0 (c13-7 / amr-unknown)
+                    :ARG1 (c13-0 / that)
+                    :time (c13-2 / then)))
+
+# ::snt Australian Govt language specialists defined these words as all-encompassing meaning any action perpetrated against Australian citizens
+# ::tokens ["Australian", "Govt", "language", "specialists", "defined", "these", "words", "as", "all", "-", "encompassing", "meaning", "any", "action", "perpetrated", "against", "Australian", "citizens"]
+# ::lemmas ["Australian", "Govt", "language", "specialist", "define", "these", "word", "as", "all", "-", "encompass", "mean", "any", "action", "perpetrate", "against", "Australian", "citizen"]
+(c14-6 / define-01
+       :ARG0 (c14-7 / person
+                    :ARG0-of (c14-15 / specialize-01
+                                     :ARG1 (c14-10 / language))
+                    :mod (c14-9 / government-organization
+                                :ARG0-of (c14-1 / govern-01
+                                                :ARG1 (c14-8 / country
+                                                             :name (c14-16 / name
+                                                                           :op1 "Australia")))))
+       :ARG1 (c14-0 / word
+                    :mod (c14-3 / this))
+       :ARG2 (c14-4 / mean-01
+                    :ARG1 c14-0
+                    :ARG2 (c14-11 / act-02
+                                  :mod (c14-13 / any)
+                                  :ARG1-of (c14-5 / perpetrate-01
+                                                  :ARG0 (c14-12 / citizen
+                                                                :mod c14-8)))
+                    :ARG0-of (c14-2 / encompass-01
+                                    :mod (c14-14 / all))))
+
+# ::snt *checks watch* Need a few more hours for your lawyers to check your facts? lol
+# ::tokens ["*", "checks", "watch", "*", "Need", "a", "few", "more", "hours", "for", "your", "lawyers", "to", "check", "your", "facts", "?", "lol"]
+# ::lemmas ["*", "check", "watch", "*", "need", "a", "few", "more", "hours", "for", "your", "lawyer", "to", "check", "your", "fact", "?", "lol"]
+(c15-4 / multi-sentence
+       :snt1 (c15-7 / check-01
+                    :ARG1 (c15-1 / watch-01))
+       :snt2 (c15-17 / need-01
+                     :ARG0 (c15-0 / you)
+                     :ARG1 (c15-5 / few
+                                  :op1 (c15-3 / temporal-quantity
+                                              :unit (c15-2 / hour)
+                                              :quant 1)
+                                  :mod (c15-13 / more))
+                     :purpose (c15-14 / check-01
+                                      :ARG0 (c15-8 / person
+                                                   :ARG0-of (c15-6 / have-rel-role-91
+                                                                   :ARG1 c15-0
+                                                                   :ARG2 (c15-10 / lawyer)))
+                                      :ARG1 (c15-12 / fact
+                                                    :poss c15-0))
+                     :polarity (c15-11 / amr-unknown))
+       :snt3 (c15-16 / laugh-01
+                     :ARG0 (c15-9 / i)
+                     :manner (c15-15 / loud)
+                     :mode expressive))
+
+# ::snt in other news, sky is blue.
+# ::tokens ["in", "other", "news", ",", "sky", "is", "blue", "."]
+# ::lemmas ["in", "other", "news", ",", "sky", "be", "blue", "."]
+(c16-3 / blue
+       :domain (c16-1 / sky)
+       :mod (c16-2 / news
+                   :mod (c16-0 / other)))
+
+# ::snt is headed there to beg the hostage takers to surrender.
+# ::tokens ["is", "headed", "there", "to", "beg", "the", "hostage", "takers", "to", "surrender", "."]
+# ::lemmas ["be", "head", "there", "to", "beg", "the", "hostage", "taker", "to", "surrender", "."]
+(c17-0 / head-02
+       :ARG1 (c17-2 / there)
+       :purpose (c17-6 / beg-01
+                       :ARG1 (c17-4 / person
+                                    :ARG0-of (c17-1 / take-01
+                                                    :ARG1 (c17-3 / hostage)))
+                       :ARG2 (c17-5 / surrender-01
+                                    :ARG0 c17-4)))
+
+# ::snt u r just now reporting on this? Wow
+# ::tokens ["u", "r", "just", "now", "reporting", "on", "this", "?", "Wow"]
+# ::lemmas ["u", "r", "just", "now", "report", "on", "this", "?", "wow"]
+(c18-3 / multi-sentence
+       :snt1 (c18-6 / report-01
+                    :polarity (c18-5 / amr-unknown)
+                    :ARG0 (c18-0 / you)
+                    :ARG1 (c18-2 / this)
+                    :time (c18-7 / now
+                                 :mod (c18-4 / just)))
+       :snt2 (c18-1 / wow-01
+                    :mode expressive))

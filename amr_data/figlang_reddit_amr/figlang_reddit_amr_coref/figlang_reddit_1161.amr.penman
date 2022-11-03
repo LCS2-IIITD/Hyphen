@@ -1,0 +1,43 @@
+# ::snt What are some stereotypes associated with your state/religion/ethnicity that you think are unfair?
+# ::tokens ["What", "are", "some", "stereotypes", "associated", "with", "your", "state", "/", "religion", "/", "ethnicity", "that", "you", "think", "are", "unfair", "?"]
+# ::lemmas ["what", "be", "some", "stereotype", "associate", "with", "your", "state", "/", "religion", "/", "ethnicity", "that", "you", "think", "be", "unfair", "?"]
+(c1-0 / stereotype-01
+      :ARG2 (c1-1 / amr-unknown)
+      :ARG1-of (c1-9 / associate-01
+                     :ARG2 (c1-6 / slash
+                                 :op1 (c1-3 / state)
+                                 :op2 (c1-5 / religion)
+                                 :op3 (c1-10 / ethnicity)
+                                 :poss (c1-8 / you)))
+      :ARG1-of (c1-2 / fair-01
+                     :ARG1-of (c1-4 / think-01
+                                    :ARG0 c1-8)
+                     :polarity -)
+      :quant (c1-7 / some))
+
+# ::snt People from ~~TN~~ South India are dark skinned and cannot speak Hindi, BC this is all bollywood portrayal of southies.
+# ::tokens ["People", "from", "~~TN~~", "South", "India", "are", "dark", "skinned", "and", "can", "not", "speak", "Hindi", ",", "BC", "this", "is", "all", "bollywood", "portrayal", "of", "southies", "."]
+# ::lemmas ["people", "from", "~~tn~~", "South", "India", "be", "dark", "skinned", "and", "can", "not", "speak", "Hindi", ",", "BC", "this", "be", "all", "bollywood", "portrayal", "of", "southie", "."]
+(c2-14 / multi-sentence
+       :snt1 (c2-2 / and
+                   :op1 (c2-0 / skin-01
+                              :ARG1 (c2-13 / person
+                                           :source (c2-3 / country-region
+                                                         :name (c2-15 / name
+                                                                      :op1 "South"
+                                                                      :op2 "India")))
+                              :ARG2 (c2-1 / dark))
+                   :op2 (c2-8 / possible-01
+                              :ARG1 (c2-12 / speak-01
+                                           :ARG0 c2-13
+                                           :ARG3 (c2-11 / language
+                                                        :name (c2-10 / name
+                                                                     :op1 "Hindi")))
+                              :polarity -))
+       :snt2 (c2-5 / portray-01
+                   :ARG0 (c2-4 / market-sector
+                               :name (c2-7 / name
+                                           :op1 "Bollywood"))
+                   :ARG1 (c2-6 / south)
+                   :mod (c2-9 / this
+                              :mod (c2-16 / all))))

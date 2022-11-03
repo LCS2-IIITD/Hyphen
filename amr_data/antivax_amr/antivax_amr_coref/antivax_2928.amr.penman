@@ -1,0 +1,23 @@
+# ::snt That was me earlier this week! (I managed to get my vaccine on Tuesday)
+# ::tokens ["That", "was", "me", "earlier", "this", "week", "!", "(", "I", "managed", "to", "get", "my", "vaccine", "on", "Tuesday", ")"]
+# ::lemmas ["that", "be", "i", "earlier", "this", "week", "!", "(", "i", "manage", "to", "get", "my", "vaccine", "on", "Tuesday", ")"]
+(c1-10 / multi-sentence
+       :snt1 (c1-9 / i
+                   :domain (c1-6 / that)
+                   :time (c1-8 / before)
+                   :time (c1-2 / week
+                               :mod (c1-3 / this)))
+       :snt2 (c1-1 / manage-02
+                   :ARG0 (c1-4 / i)
+                   :ARG1 (c1-7 / get-01
+                               :ARG0 c1-4
+                               :ARG1 (c1-5 / vaccine
+                                           :poss c1-4)
+                               :time (c1-0 / date-entity
+                                           :weekday (c1-11 / tuesday)))))
+
+# ::snt Woo yay!!
+# ::tokens ["Woo", "yay", "!", "!"]
+# ::lemmas ["Woo", "yay", "!", "!"]
+(c2-0 / yay
+      :mode expressive)

@@ -1,0 +1,48 @@
+# ::snt Cutting in half an SLR camera with a 60,000 PSI waterjet
+# ::tokens ["Cutting", "in", "half", "an", "SLR", "camera", "with", "a", "60,000", "PSI", "waterjet"]
+# ::lemmas ["cut", "in", "half", "an", "SLR", "camera", "with", "a", "60,000", "PSI", "waterjet"]
+(c1-1 / cut-02
+      :ARG1 (c1-0 / camera
+                  :mod (c1-6 / product
+                             :name (c1-8 / name
+                                         :op1 "SLR"))
+                  :quant (c1-3 / half))
+      :instrument (c1-2 / waterjet
+                        :ARG1-of (c1-4 / cost-01
+                                       :ARG2 (c1-7 / monetary-quantity
+                                                   :unit (c1-5 / pound)
+                                                   :quant 60000))))
+
+# ::snt "Velcome to the waterjet cut channel, today we cut camera in half."
+# ::tokens ["\"", "Velcome", "to", "the", "waterjet", "cut", "channel", ",", "today", "we", "cut", "camera", "in", "half", ".", "\""]
+# ::lemmas ["\"", "velcome", "to", "the", "waterjet", "cut", "channel", ",", "today", "we", "cut", "camera", "in", "half", ".", "\""]
+(c2-2 / welcome-01
+      :ARG2 (c2-1 / channel
+                  :mod (c2-0 / cut-02
+                             :ARG0 (c2-9 / waterjet)))
+      :ARG1-of (c2-5 / cause-01
+                     :ARG0 (c2-7 / cut-02
+                                 :ARG0 (c2-8 / we)
+                                 :ARG1 (c2-3 / camera)
+                                 :ARG2 (c2-4 / half)
+                                 :time (c2-6 / today))))
+
+# ::snt SLR camera is very dangerous and may strike at any time, so we must deal with it.
+# ::tokens ["SLR", "camera", "is", "very", "dangerous", "and", "may", "strike", "at", "any", "time", ",", "so", "we", "must", "deal", "with", "it", "."]
+# ::lemmas ["SLR", "camera", "be", "very", "dangerous", "and", "may", "strike", "at", "any", "time", ",", "so", "we", "must", "deal", "with", "it", "."]
+(c3-3 / and
+      :op1 (c3-12 / endanger-01
+                  :ARG0 (c3-4 / camera
+                              :ARG1-of (c3-8 / launch-01
+                                             :ARG0 (c3-9 / laser)))
+                  :degree (c3-6 / very))
+      :op2 (c3-10 / possible-01
+                  :ARG1 (c3-0 / strike-01
+                              :ARG1 c3-4
+                              :time (c3-11 / any)))
+      :ARG0-of (c3-1 / cause-01
+                     :ARG1 (c3-7 / obligate-01
+                                 :ARG1 (c3-5 / we)
+                                 :ARG2 (c3-2 / deal-01
+                                             :ARG0 c3-5
+                                             :ARG2 c3-4))))

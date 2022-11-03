@@ -1,0 +1,48 @@
+comment,amr
+"""Not being dramatic.""","# ::snt ""Not being dramatic.""
+(d / dramatic
+      :polarity -)"
+"Wishing someone to commit suicide and calling them a ""retarded cripple"" isn't very nice. If you don't have something nice to say shut up.","# ::snt Wishing someone to commit suicide and calling them a ""retarded cripple"" isn't very nice. If you don't have something nice to say shut up.
+(m / multi-sentence
+      :snt1 (n / nice-01
+            :polarity -
+            :ARG1 (a / and
+                  :op1 (w / wish-01
+                        :ARG1 (c / commit-02
+                              :ARG0 (s / someone)
+                              :ARG1 (s2 / suicide)))
+                  :op2 (c2 / call-01
+                        :ARG1 s
+                        :ARG2 (c3 / cripple
+                              :ARG1-of (r / retard-01))))
+            :degree (v / very))
+      :snt2 (s3 / shut-up-06
+            :mode imperative
+            :ARG0 (y / you)
+            :ARG1 y
+            :condition (h / have-03
+                  :polarity -
+                  :ARG0 y
+                  :ARG1 (s4 / something
+                        :ARG1-of (n2 / nice-01)
+                        :ARG1-of (s5 / say-01
+                              :ARG0 y)))))"
+Please be kinder to disabled people. You could be one one day.,"# ::snt Please be kinder to disabled people. You could be one one day.
+(m / multi-sentence
+      :snt1 (k / kind-01
+            :mode imperative
+            :polite +
+            :ARG0 (y / you)
+            :ARG2 (p / person
+                  :ARG1-of (d / disable-01)))
+      :snt2 (p2 / possible-01
+            :ARG1 (y2 / you
+                  :time (d2 / day
+                        :quant (o / one)))))"
+It is not right to catalog someone as being degenerate,"# ::snt It is not right to catalog someone as being degenerate
+(r / right-02
+      :polarity -
+      :ARG1 (c / catalogue-01
+            :ARG1 (s / someone)
+            :ARG2 (d / degenerate-01
+                  :ARG1 s)))"

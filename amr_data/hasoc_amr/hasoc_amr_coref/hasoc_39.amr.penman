@@ -1,0 +1,57 @@
+# ::snt its you bias that is speaking.
+# ::tokens ["its", "you", "bias", "that", "is", "speaking", "."]
+# ::lemmas ["its", "you", "bias", "that", "be", "speak", "."]
+(c1-0 / speak-01
+      :ARG0 (c1-1 / bias-01
+                  :ARG1 (c1-2 / you)))
+
+# ::snt Shame on u
+# ::tokens ["Shame", "on", "u"]
+# ::lemmas ["shame", "on", "u"]
+(c2-0 / shame-01
+      :ARG1 (c2-1 / you))
+
+# ::snt Assume in your family everyone suffered from dysentery and are on medicines. Now situation is evryone has to go to loo, but there are only two restrooms. Are you being head of the family responsible for this. This is pandemic and we all are facing the wrath. Support and help.
+# ::tokens ["Assume", "in", "your", "family", "everyone", "suffered", "from", "dysentery", "and", "are", "on", "medicines", ".", "Now", "situation", "is", "evryone", "has", "to", "go", "to", "loo", ",", "but", "there", "are", "only", "two", "restrooms", ".", "Are", "you", "being", "head", "of", "the", "family", "responsible", "for", "this", ".", "This", "is", "pandemic", "and", "we", "all", "are", "facing", "the", "wrath", ".", "Support", "and", "help", "."]
+# ::lemmas ["assume", "in", "your", "family", "everyone", "suffer", "from", "dysentery", "and", "be", "on", "medicine", ".", "now", "situation", "be", "evryone", "have", "to", "go", "to", "loo", ",", "but", "there", "be", "only", "two", "restroom", ".", "be", "you", "be", "head", "of", "the", "family", "responsible", "for", "this", ".", "this", "be", "pandemic", "and", "we", "all", "be", "face", "the", "wrath", ".", "support", "and", "help", "."]
+(c3-15 / multi-sentence
+       :snt1 (c3-26 / assume-02
+                    :ARG1 (c3-17 / and
+                                 :op1 (c3-19 / suffer-01
+                                             :ARG0 (c3-18 / everyone
+                                                          :part-of (c3-27 / family
+                                                                          :ARG1-of (c3-29 / have-org-role-91
+                                                                                          :ARG0 (c3-24 / you)
+                                                                                          :ARG2 (c3-28 / member))))
+                                             :ARG1 (c3-0 / dysentery))
+                                 :op2 (c3-10 / on
+                                             :op1 (c3-21 / medicine)
+                                             :domain c3-18)))
+       :snt2 (c3-7 / contrast-01
+                   :ARG1 (c3-30 / obligate-01
+                                :ARG1 (c3-35 / person
+                                             :name (c3-16 / name
+                                                          :op1 "Eva"))
+                                :ARG2 (c3-14 / go-02
+                                             :ARG0 c3-35
+                                             :ARG4 (c3-32 / loo))
+                                :time (c3-3 / now))
+                   :ARG2 (c3-33 / bathroom
+                                :mod (c3-6 / only)
+                                :quant 2))
+       :snt3 (c3-13 / responsible-01
+                    :ARG0 (c3-25 / you
+                                 :ARG0-of (c3-4 / have-org-role-91
+                                                :ARG1 (c3-22 / family)
+                                                :ARG2 (c3-5 / head-01)))
+                    :ARG1 (c3-12 / this))
+       :snt4 (c3-1 / and
+                   :op1 (c3-31 / pandemic
+                               :domain (c3-9 / this))
+                   :op2 (c3-23 / face-01
+                               :ARG0 (c3-8 / we
+                                           :mod (c3-36 / all))
+                               :ARG1 (c3-20 / wrath)))
+       :snt5 (c3-2 / and
+                   :op1 (c3-34 / support-01)
+                   :op2 (c3-11 / help-01)))

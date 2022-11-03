@@ -1,0 +1,111 @@
+# ::snt Depressing Teenager won't start college on Monday ...
+# ::tokens ["Depressing", "Teenager", "wo", "n't", "start", "college", "on", "Monday", "..."]
+# ::lemmas ["Depressing", "Teenager", "will", "not", "start", "college", "on", "Monday", "..."]
+(c1-4 / start-01
+      :ARG0 (c1-5 / teenager
+                  :ARG0-of (c1-2 / depress-01))
+      :ARG1 (c1-3 / college)
+      :time (c1-0 / date-entity
+                  :weekday (c1-1 / monday))
+      :polarity -)
+
+# ::snt Teenager won't start college on Monday because he was shot ten times by a police officer.
+# ::tokens ["Teenager", "wo", "n't", "start", "college", "on", "Monday", "because", "he", "was", "shot", "ten", "times", "by", "a", "police", "officer", "."]
+# ::lemmas ["Teenager", "will", "not", "start", "college", "on", "Monday", "because", "he", "be", "shoot", "ten", "time", "by", "a", "police", "officer", "."]
+(c2-5 / cause-01
+      :ARG0 (c2-7 / shoot-02
+                  :ARG0 (c2-1 / officer
+                              :mod (c2-3 / police))
+                  :ARG1 (c2-8 / teenager)
+                  :frequency 10)
+      :ARG1 (c2-2 / start-01
+                  :ARG0 c2-8
+                  :ARG1 (c2-4 / college)
+                  :time (c2-6 / date-entity
+                              :weekday (c2-0 / monday))
+                  :polarity -))
+
+# ::snt government does not care about us. We are nothing to them. Only together do we have power.
+# ::tokens ["government", "does", "not", "care", "about", "us", ".", "We", "are", "nothing", "to", "them", ".", "Only", "together", "do", "we", "have", "power", "."]
+# ::lemmas ["government", "do", "not", "care", "about", "we", ".", "we", "be", "nothing", "to", "they", ".", "only", "together", "do", "we", "have", "power", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / care-01
+                  :ARG0 (c3-9 / government-organization
+                              :ARG0-of (c3-7 / govern-01))
+                  :ARG1 (c3-1 / we)
+                  :polarity -)
+      :snt2 (c3-5 / we
+                  :beneficiary (c3-11 / they)
+                  :polarity -)
+      :snt3 (c3-0 / have-03
+                  :ARG0 (c3-3 / we)
+                  :ARG1 (c3-6 / power)
+                  :mod (c3-4 / only)
+                  :manner (c3-10 / together)))
+
+# ::snt I hate that picture. :'(
+# ::tokens ["I", "hate", "that", "picture", ".", ":'("]
+# ::lemmas ["i", "hate", "that", "picture", ".", ":'("]
+(c4-0 / hate-01
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-1 / picture
+                  :mod (c4-2 / that)))
+
+# ::snt I guess the cop is waiting to shoot in case he moves again.
+# ::tokens ["I", "guess", "the", "cop", "is", "waiting", "to", "shoot", "in", "case", "he", "moves", "again", "."]
+# ::lemmas ["i", "guess", "the", "cop", "be", "wait", "to", "shoot", "in", "case", "he", "move", "again", "."]
+(c5-5 / guess-01
+      :ARG0 (c5-2 / i)
+      :ARG1 (c5-0 / wait-01
+                  :ARG1 (c5-4 / cop)
+                  :ARG2 (c5-6 / shoot-01
+                              :ARG0 c5-4)
+                  :ARG1-of (c5-3 / cause-01
+                                 :ARG0 (c5-1 / move-01
+                                             :ARG1 c5-4
+                                             :mod (c5-7 / again)))))
+
+# ::snt seemingly so, can't believe the media are criminalising the poor boy. It's horrendous.
+# ::tokens ["seemingly", "so", ",", "ca", "n't", "believe", "the", "media", "are", "criminalising", "the", "poor", "boy", ".", "It", "'s", "horrendous", "."]
+# ::lemmas ["seemingly", "so", ",", "can", "not", "believe", "the", "medium", "be", "criminalise", "the", "poor", "boy", ".", "it", "be", "horrendous", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-9 / seem-01
+                  :ARG1 (c6-5 / possible-01
+                              :ARG1 (c6-2 / believe-01
+                                          :ARG1 (c6-7 / criminalize-01
+                                                      :ARG0 (c6-6 / media)
+                                                      :ARG1 (c6-8 / boy
+                                                                  :mod (c6-10 / poor))))
+                              :polarity -)
+                  :mod (c6-3 / so))
+      :snt2 (c6-0 / horrendous
+                  :domain (c6-4 / it)))
+
+# ::snt SOB unloaded the entire clip?
+# ::tokens ["SOB", "unloaded", "the", "entire", "clip", "?"]
+# ::lemmas ["SOB", "unload", "the", "entire", "clip", "?"]
+(c7-0 / unload-01
+      :polarity (c7-4 / amr-unknown)
+      :ARG0 (c7-3 / son-of-a-bitch)
+      :ARG1 (c7-2 / clip
+                  :mod (c7-1 / entire)))
+
+# ::snt itsALMOSTasIFtheyAREinDISBELIEFatWHATtheyJUSTdid?DOweHAVEanyCONTROLoverOURgovANYMORE?thisISwayOUTofHANDw/GUNS
+# ::tokens ["itsALMOSTasIFtheyAREinDISBELIEFatWHATtheyJUSTdid?DOweHAVEanyCONTROLoverOURgovANYMORE?thisISwayOUTofHANDw", "/", "GUNS"]
+# ::lemmas ["itsALMOSTasIFtheyAREinDISBELIEFatWHATtheyJUSTdid?DOweHAVEanyCONTROLoverOURgovANYMORE?thisISwayOUTofHANDw", "/", "GUNS"]
+(c8-3 / multi-sentence
+      :snt1 (c8-13 / amr-unknown
+                   :polarity (c8-5 / amr-unknown))
+      :snt2 (c8-8 / do-02
+                  :ARG0 (c8-12 / they)
+                  :ARG1 (c8-7 / amr-unknown)
+                  :mod (c8-0 / just))
+      :snt3 (c8-11 / amr-unknown
+                   :name (c8-6 / name
+                               :op1 "DOwehveanyCONTROLoverOURgovANYMORE")
+                   :polarity -)
+      :snt4 (c8-10 / slash
+                   :op1 (c8-1 / way
+                              :direction (c8-4 / out-of
+                                               :op1 (c8-2 / home)))
+                   :op2 (c8-9 / gut)))

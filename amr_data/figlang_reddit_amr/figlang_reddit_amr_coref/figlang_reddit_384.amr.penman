@@ -1,0 +1,28 @@
+# ::snt Workplace Fire Extinguisher
+# ::tokens ["Workplace", "Fire", "Extinguisher"]
+# ::lemmas ["Workplace", "Fire", "Extinguisher"]
+(c1-1 / product
+      :ARG0-of (c1-3 / extinguish-01
+                     :ARG1 (c1-2 / fire))
+      :mod (c1-0 / workplace))
+
+# ::snt This is okay... Just a seal...
+# ::tokens ["This", "is", "okay", "...", "Just", "a", "seal", "..."]
+# ::lemmas ["this", "be", "okay", "...", "just", "a", "seal", "..."]
+(c2-4 / multi-sentence
+      :snt1 (c2-1 / okay-04
+                  :ARG1 (c2-2 / this))
+      :snt2 (c2-0 / seal
+                  :mod (c2-3 / just)))
+
+# ::snt I think it breaks quite easily, right?
+# ::tokens ["I", "think", "it", "breaks", "quite", "easily", ",", "right", "?"]
+# ::lemmas ["i", "think", "it", "break", "quite", "easily", ",", "right", "?"]
+(c3-2 / think-01
+      :ARG0 (c3-5 / i)
+      :ARG1 (c3-4 / break-01
+                  :ARG1 (c3-1 / it)
+                  :ARG1-of (c3-6 / easy-05
+                                 :degree (c3-0 / quite)))
+      :ARG1-of (c3-3 / request-confirmation-91
+                     :ARG2 c3-5))

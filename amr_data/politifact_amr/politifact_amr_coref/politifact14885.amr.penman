@@ -1,0 +1,131 @@
+# ::snt My favorite candy
+# ::tokens ["My", "favorite", "candy"]
+# ::lemmas ["my", "favorite", "candy"]
+(c1-1 / candy
+      :ARG1-of (c1-2 / favor-01
+                     :ARG0 (c1-0 / i)))
+
+# ::snt This is terrible news
+# ::tokens ["This", "is", "terrible", "news"]
+# ::lemmas ["this", "be", "terrible", "news"]
+(c2-0 / news
+      :ARG1-of (c2-2 / terrible-01)
+      :domain (c2-1 / this))
+
+# ::snt Its fake
+# ::tokens ["Its", "fake"]
+# ::lemmas ["its", "fake"]
+(c3-1 / fake-02
+      :ARG1 (c3-0 / it))
+
+# ::snt ReesesPBCups please tell me this is NOT true I start every morning with 2 reeses and a cup of coffee America will be sooo mad
+# ::tokens ["ReesesPBCups", "please", "tell", "me", "this", "is", "NOT", "true", "I", "start", "every", "morning", "with", "2", "reeses", "and", "a", "cup", "of", "coffee", "America", "will", "be", "sooo", "mad"]
+# ::lemmas ["reesespbcup", "please", "tell", "me", "this", "be", "not", "true", "i", "start", "every", "morning", "with", "2", "reese", "and", "a", "cup", "of", "coffee", "America", "will", "be", "sooo", "mad"]
+(c4-13 / multi-sentence
+       :snt1 (c4-7 / tell-01
+                   :ARG0 (c4-4 / person
+                               :name (c4-16 / name
+                                            :op1 "ReesPBCups"))
+                   :ARG1 (c4-18 / true-01
+                                :ARG1 (c4-10 / this)
+                                :polarity -)
+                   :ARG2 (c4-17 / i)
+                   :polite +
+                   :mode imperative)
+       :snt2 (c4-12 / start-01
+                    :ARG0 (c4-5 / country
+                                :name (c4-6 / name
+                                            :op1 "America"))
+                    :ARG2 (c4-14 / coffee
+                                 :quant (c4-8 / volume-quantity
+                                              :unit (c4-0 / rees)
+                                              :quant 2))
+                    :frequency (c4-11 / rate-entity-91
+                                      :ARG4 (c4-3 / date-entity
+                                                  :dayperiod (c4-2 / morning)))
+                    :ARG0-of (c4-1 / cause-01
+                                   :ARG1 (c4-15 / mad-04
+                                                :ARG1 c4-5
+                                                :degree (c4-9 / so)))))
+
+# ::snt Probably right
+# ::tokens ["Probably", "right"]
+# ::lemmas ["probably", "right"]
+(c5-0 / probable
+      :domain (c5-1 / right-06))
+
+# ::snt its probably just some advertising gimmick bet theyre going to introduce a new healthy version
+# ::tokens ["its", "probably", "just", "some", "advertising", "gimmick", "bet", "they", "re", "going", "to", "introduce", "a", "new", "healthy", "version"]
+# ::lemmas ["its", "probably", "just", "some", "advertising", "gimmick", "bet", "they", "be", "go", "to", "introduce", "a", "new", "healthy", "version"]
+(c6-1 / probable
+      :domain (c6-10 / bet-01
+                     :ARG2 (c6-9 / introduce-02
+                                 :ARG0 (c6-2 / they)
+                                 :ARG1 (c6-3 / version
+                                             :mod (c6-6 / healthy)
+                                             :ARG1-of (c6-8 / new-01)))
+                     :mod (c6-7 / gimmick
+                                :instrument-of (c6-4 / advertise-01)
+                                :mod (c6-5 / some))
+                     :mod (c6-0 / just)))
+
+# ::snt Thats what they say Unbelievable to me
+# ::tokens ["That", "s", "what", "they", "say", "Unbelievable", "to", "me"]
+# ::lemmas ["that", "s", "what", "they", "say", "unbelievable", "to", "me"]
+(c7-3 / say-01
+      :ARG0 (c7-2 / they)
+      :ARG1 (c7-0 / possible-01
+                  :ARG1 (c7-5 / believe-01
+                              :ARG0 (c7-4 / i)
+                              :ARG1 (c7-1 / that))
+                  :polarity -))
+
+# ::snt what no more Reeses Peanut Butter Cups
+# ::tokens ["what", "no", "more", "Reeses", "Peanut", "Butter", "Cups"]
+# ::lemmas ["what", "no", "more", "reese", "Peanut", "Butter", "Cups"]
+(c8-0 / cup
+      :mod (c8-1 / peanut
+                 :butter (c8-2 / company
+                               :name (c8-4 / name
+                                           :op1 "Reeses")))
+      :mod (c8-3 / more
+                 :polarity -))
+
+# ::snt Thank goodness
+# ::tokens ["Thank", "goodness"]
+# ::lemmas ["thank", "goodness"]
+(c9-1 / thank-01
+      :ARG1 (c9-0 / goodness))
+
+# ::snt Nope httpwwwsnopescomreesespeanutbuttercups …
+# ::tokens ["Nope", "httpwwwsnopescomreesespeanutbuttercups", "\u2026"]
+# ::lemmas ["Nope", "httpwwwsnopescomreesespeanutbuttercup", "\u2026"]
+(c10-0 / nope
+       :medium (c10-1 / url-entity
+                      :value "httpwwwsnopescomreesespeanutbuttercups")
+       :mode expressive)
+
+# ::snt She didnt eat lunch today Low she
+# ::tokens ["She", "did", "nt", "eat", "lunch", "today", "Low", "she"]
+# ::lemmas ["she", "do", "not", "eat", "lunch", "today", "Low", "she"]
+(c11-0 / eat-01
+       :ARG0 (c11-3 / she)
+       :ARG1 (c11-4 / lunch)
+       :time (c11-1 / today)
+       :ARG1-of (c11-2 / low-04)
+       :polarity -)
+
+# ::snt Fuck u
+# ::tokens ["Fuck", "u"]
+# ::lemmas ["fuck", "u"]
+(c12-0 / fuck-01
+       :ARG1 (c12-1 / you)
+       :mode imperative
+       :mode expressive)
+
+# ::snt Most popular   na
+# ::tokens ["Most", "popular", "  ", "na"]
+# ::lemmas ["most", "popular", "  ", "na"]
+(c13-2 / have-degree-91
+       :ARG2 (c13-0 / popular-02)
+       :ARG3 (c13-1 / most))

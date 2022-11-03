@@ -1,0 +1,680 @@
+# ::snt This guy....
+# ::tokens ["This", "guy", "...."]
+# ::lemmas ["this", "guy", "...."]
+(c2-0 / guy
+      :mod (c2-1 / this))
+
+# ::snt Luke Evans
+# ::tokens ["Luke", "Evans"]
+# ::lemmas ["Luke", "Evans"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "Luke"
+                  :op2 "Evans"))
+
+# ::snt This guy
+# ::tokens ["This", "guy"]
+# ::lemmas ["this", "guy"]
+(c4-0 / guy
+      :mod (c4-1 / this))
+
+# ::snt Luke Evans should be James bond
+# ::tokens ["Luke", "Evans", "should", "be", "James", "bond"]
+# ::lemmas ["Luke", "Evans", "should", "be", "James", "bond"]
+(c5-3 / recommend-01
+      :ARG1 (c5-0 / bond
+                  :mod (c5-5 / person
+                             :name (c5-1 / name
+                                         :op1 "James"))
+                  :domain (c5-2 / person
+                                :name (c5-4 / name
+                                            :op1 "Luke"
+                                            :op2 "Evans"))))
+
+# ::snt Idris
+# ::tokens ["Idris"]
+# ::lemmas ["Idris"]
+(c7-1 / person
+      :name (c7-0 / name
+                  :op1 "Idris"))
+
+# ::snt Just cast Elba in the part already!
+# ::tokens ["Just", "cast", "Elba", "in", "the", "part", "already", "!"]
+# ::lemmas ["just", "cast", "Elba", "in", "the", "part", "already", "!"]
+(c8-4 / cast-03
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-3 / person
+                  :name (c8-1 / name
+                              :op1 "Elba"))
+      :ARG2 (c8-2 / part)
+      :time (c8-6 / already)
+      :mod (c8-5 / just)
+      :mode imperative)
+
+# ::snt Because it'll be fun watching a lot of assholes lose their shit about it for a couple of years? I mean people are still mad about Star Wars, imagine this.
+# ::tokens ["Because", "it", "'ll", "be", "fun", "watching", "a", "lot", "of", "assholes", "lose", "their", "shit", "about", "it", "for", "a", "couple", "of", "years", "?", "I", "mean", "people", "are", "still", "mad", "about", "Star", "Wars", ",", "imagine", "this", "."]
+# ::lemmas ["because", "it", "'ll", "be", "fun", "watch", "a", "lot", "of", "asshole", "lose", "their", "shit", "about", "it", "for", "a", "couple", "of", "years", "?", "i", "mean", "people", "be", "still", "mad", "about", "Star", "Wars", ",", "imagine", "this", "."]
+(c9-14 / multi-sentence
+       :snt1 (c9-15 / cause-01
+                    :ARG0 (c9-18 / fun-01
+                                 :ARG1 (c9-21 / watch-01
+                                              :ARG1 (c9-1 / lose-02
+                                                          :ARG0 (c9-9 / asshole
+                                                                      :quant (c9-11 / lot))
+                                                          :ARG1 (c9-0 / shit
+                                                                      :poss c9-9)
+                                                          :ARG2 (c9-22 / it)
+                                                          :duration (c9-13 / couple
+                                                                           :op1 (c9-8 / temporal-quantity
+                                                                                      :unit (c9-4 / year)
+                                                                                      :quant 1)))))
+                    :polarity (c9-7 / amr-unknown))
+       :snt2 (c9-6 / mean-01
+                   :ARG0 (c9-5 / i)
+                   :ARG2 (c9-17 / mad-04
+                                :ARG0 (c9-20 / person)
+                                :ARG1 (c9-2 / work-of-art
+                                            :name (c9-19 / name
+                                                         :op1 "Star"
+                                                         :op2 "Wars"))
+                                :mod (c9-3 / still)))
+       :snt3 (c9-12 / imagine-01
+                    :ARG0 (c9-10 / you)
+                    :ARG1 (c9-16 / this)
+                    :mode imperative))
+
+# ::snt Lol, no, but its good for diversity.
+# ::tokens ["Lol", ",", "no", ",", "but", "its", "good", "for", "diversity", "."]
+# ::lemmas ["Lol", ",", "no", ",", "but", "its", "good", "for", "diversity", "."]
+(c10-1 / contrast-01
+       :ARG1 (c10-0 / laugh-01
+                    :manner (c10-5 / loud)
+                    :mode expressive)
+       :ARG2 (c10-3 / good-04
+                    :ARG1 (c10-2 / it)
+                    :ARG2 (c10-4 / diversity)))
+
+# ::snt Agree on the cheese and misogyny of course, but I always go watch them as soon as theyre released!.
+# ::tokens ["Agree", "on", "the", "cheese", "and", "misogyny", "of", "course", ",", "but", "I", "always", "go", "watch", "them", "as", "soon", "as", "they", "re", "released", "!", "."]
+# ::lemmas ["agree", "on", "the", "cheese", "and", "misogyny", "of", "course", ",", "but", "i", "always", "go", "watch", "they", "as", "soon", "as", "they", "re", "release", "!", "."]
+(c11-4 / contrast-01
+       :ARG1 (c11-2 / agree-01
+                    :ARG0 (c11-8 / i)
+                    :ARG1 (c11-7 / and
+                                 :op1 (c11-11 / cheese)
+                                 :op2 (c11-1 / misogyny))
+                    :mod (c11-0 / of-course))
+       :ARG2 (c11-9 / go-05
+                    :ARG0 c11-8
+                    :ARG1 (c11-5 / watch-01
+                                 :ARG0 c11-8
+                                 :ARG1 c11-7
+                                 :time (c11-6 / as-soon-as
+                                              :op1 (c11-3 / release-01
+                                                          :ARG1 c11-7)))
+                    :time (c11-10 / always)))
+
+# ::snt Given how popular the franchise is, it will push the idea of a black star to such places like Asia (the poster for the recent Star Wars, which featured a black actor, had been changed in China and was omitted from it).
+# ::tokens ["Given", "how", "popular", "the", "franchise", "is", ",", "it", "will", "push", "the", "idea", "of", "a", "black", "star", "to", "such", "places", "like", "Asia", "(", "the", "poster", "for", "the", "recent", "Star", "Wars", ",", "which", "featured", "a", "black", "actor", ",", "had", "been", "changed", "in", "China", "and", "was", "omitted", "from", "it", ")", "."]
+# ::lemmas ["give", "how", "popular", "the", "franchise", "be", ",", "it", "will", "push", "the", "idea", "of", "a", "black", "star", "to", "such", "place", "like", "Asia", "(", "the", "poster", "for", "the", "recent", "Star", "Wars", ",", "which", "feature", "a", "black", "actor", ",", "have", "be", "change", "in", "China", "and", "be", "omit", "from", "it", ")", "."]
+(c12-14 / multi-sentence
+        :snt1 (c12-22 / push-01
+                      :ARG0 (c12-26 / it)
+                      :ARG1 (c12-8 / idea
+                                   :topic (c12-0 / star
+                                                 :ARG1-of (c12-13 / black-05)))
+                      :ARG2 (c12-15 / place
+                                    :mod (c12-6 / such)
+                                    :example (c12-17 / continent
+                                                     :name (c12-20 / name
+                                                                   :op1 "Asia")))
+                      :ARG1-of (c12-12 / cause-01
+                                       :ARG0 (c12-4 / popular-02
+                                                    :ARG1 (c12-19 / franchise-01)
+                                                    :degree (c12-5 / so))))
+        :snt2 (c12-10 / and
+                      :op1 (c12-3 / change-01
+                                  :ARG1 (c12-2 / poster
+                                               :poss (c12-25 / work-of-art
+                                                             :name (c12-16 / name
+                                                                           :op1 "Star"
+                                                                           :op2 "Wars")
+                                                             :time (c12-21 / recent)
+                                                             :ARG0-of (c12-23 / feature-01
+                                                                              :ARG1 (c12-9 / person
+                                                                                           :ARG0-of (c12-11 / act-01)
+                                                                                           :ARG1-of (c12-1 / black-05))))
+                                               :location (c12-18 / country
+                                                                 :name (c12-24 / name
+                                                                               :op1 "China")))
+                                  :op2 (c12-7 / omit-01
+                                              :ARG1 c12-2
+                                              :ARG2 c12-25))))
+
+# ::snt Pretty much. I always found the James Bond movies to be boring
+# ::tokens ["Pretty", "much", ".", "I", "always", "found", "the", "James", "Bond", "movies", "to", "be", "boring"]
+# ::lemmas ["pretty", "much", ".", "i", "always", "find", "the", "James", "Bond", "movie", "to", "be", "bore"]
+(c13-2 / multi-sentence
+       :snt1 (c13-5 / pretty-much)
+       :snt2 (c13-0 / find-02
+                    :ARG0 (c13-6 / i)
+                    :ARG1 (c13-1 / bore-02
+                                 :ARG0 (c13-4 / movie
+                                              :name (c13-3 / name
+                                                           :op1 "James"
+                                                           :op2 "Bond")))
+                    :time (c13-7 / always)))
+
+# ::snt Never?
+# ::tokens ["Never", "?"]
+# ::lemmas ["never", "?"]
+(c14-2 / have-polarity-91
+       :time (c14-1 / ever)
+       :ARG1-of (c14-0 / request-confirmation-91)
+       :ARG2 -)
+
+# ::snt Haven't seen the Harold and Kumar one, but yeah sausage party is awful and I'm crying for the fact that I've seen it twice
+# ::tokens ["Have", "n't", "seen", "the", "Harold", "and", "Kumar", "one", ",", "but", "yeah", "sausage", "party", "is", "awful", "and", "I", "'m", "crying", "for", "the", "fact", "that", "I", "'ve", "seen", "it", "twice"]
+# ::lemmas ["have", "not", "see", "the", "Harold", "and", "Kumar", "one", ",", "but", "yeah", "sausage", "party", "be", "awful", "and", "i", "be", "cry", "for", "the", "fact", "that", "i", "'ve", "see", "it", "twice"]
+(c15-9 / contrast-01
+       :ARG1 (c15-6 / see-01
+                    :ARG0 (c15-11 / i)
+                    :ARG1 (c15-0 / one
+                                 :mod (c15-8 / person
+                                             :name (c15-4 / name
+                                                          :op1 "Harold"
+                                                          :op2 "and"
+                                                          :op3 "Kumar")))
+                    :polarity -)
+       :ARG2 (c15-12 / and
+                     :op1 (c15-13 / awful
+                                  :domain (c15-5 / party
+                                                 :mod (c15-7 / meat)
+                                                 :mod (c15-3 / yeah)))
+                     :op2 (c15-14 / cry-02
+                                  :ARG0 c15-11
+                                  :ARG1-of (c15-10 / cause-01
+                                                   :ARG0 (c15-1 / fact
+                                                                :topic (c15-2 / see-01
+                                                                              :ARG0 c15-11
+                                                                              :ARG1 c15-5
+                                                                              :frequency 2))))))
+
+# ::snt Hahaha, no they were so awful xD
+# ::tokens ["Hahaha", ",", "no", "they", "were", "so", "awful", "xD"]
+# ::lemmas ["Hahaha", ",", "no", "they", "be", "so", "awful", "xd"]
+(c16-0 / multi-sentence
+       :snt1 (c16-4 / haha
+                    :mode expressive)
+       :snt2 (c16-2 / awful
+                    :domain (c16-5 / they)
+                    :degree (c16-1 / so)
+                    :mod (c16-3 / emoticon
+                                :value "xD")))
+
+# ::snt I guess I have to admit both sausage party and Harold and Kumar xmas wasnt the greatest movies
+# ::tokens ["I", "guess", "I", "have", "to", "admit", "both", "sausage", "party", "and", "Harold", "and", "Kumar", "xmas", "was", "nt", "the", "greatest", "movies"]
+# ::lemmas ["i", "guess", "i", "have", "to", "admit", "both", "sausage", "party", "and", "Harold", "and", "Kumar", "xmas", "be", "not", "the", "great", "movie"]
+(c17-11 / guess-01
+        :ARG0 (c17-9 / i)
+        :ARG1 (c17-0 / obligate-01
+                     :ARG1 c17-9
+                     :ARG2 (c17-10 / admit-01
+                                   :ARG0 c17-9
+                                   :ARG1 (c17-2 / movie
+                                                :ARG1-of (c17-5 / have-degree-91
+                                                                :ARG2 (c17-12 / great)
+                                                                :ARG3 (c17-6 / most))
+                                                :domain (c17-13 / and
+                                                                :op1 (c17-7 / party
+                                                                            :name (c17-3 / name
+                                                                                         :op1 "Sausage"
+                                                                                         :op2 "Party"))
+                                                                :op2 (c17-4 / event
+                                                                            :name (c17-8 / name
+                                                                                         :op1 "Harold"
+                                                                                         :op2 "and"
+                                                                                         :op3 "Kumar"
+                                                                                         :op4 "Xmas"))
+                                                                :mod (c17-1 / both))
+                                                :polarity -))))
+
+# ::snt Not even surprised
+# ::tokens ["Not", "even", "surprised"]
+# ::lemmas ["not", "even", "surprise"]
+(c18-1 / surprise-01
+       :mod (c18-0 / even)
+       :polarity -)
+
+# ::snt I think that almost every single movie I watch could be added to this list
+# ::tokens ["I", "think", "that", "almost", "every", "single", "movie", "I", "watch", "could", "be", "added", "to", "this", "list"]
+# ::lemmas ["i", "think", "that", "almost", "every", "single", "movie", "i", "watch", "could", "be", "add", "to", "this", "list"]
+(c19-6 / think-01
+       :ARG0 (c19-7 / i)
+       :ARG1 (c19-3 / possible-01
+                    :ARG1 (c19-8 / add-02
+                                 :ARG1 (c19-0 / movie
+                                              :ARG1-of (c19-1 / single-02)
+                                              :mod (c19-2 / every
+                                                          :mod (c19-9 / almost))
+                                              :ARG1-of (c19-5 / watch-01
+                                                              :ARG0 c19-7))
+                                 :ARG2 (c19-4 / list
+                                              :mod (c19-10 / this)))))
+
+# ::snt As in, they've never killed a human being in the wild to clarify my message above. If you feel Bond needs to be played by a man then of course, I'd compromise being a Bond Girl - I'd be quite clear about what I would &amp; wouldn't do though! Need help? Hope you find a new Director.
+# ::tokens ["As", "in", ",", "they", "'ve", "never", "killed", "a", "human", "being", "in", "the", "wild", "to", "clarify", "my", "message", "above", ".", "If", "you", "feel", "Bond", "needs", "to", "be", "played", "by", "a", "man", "then", "of", "course", ",", "I", "'d", "compromise", "being", "a", "Bond", "Girl", "-", "I", "'d", "be", "quite", "clear", "about", "what", "I", "would", "&", "amp", ";", "would", "n't", "do", "though", "!", "Need", "help", "?", "Hope", "you", "find", "a", "new", "Director", "."]
+# ::lemmas ["as", "in", ",", "they", "'ve", "never", "kill", "a", "human", "being", "in", "the", "wild", "to", "clarify", "my", "message", "above", ".", "if", "you", "feel", "Bond", "need", "to", "be", "play", "by", "a", "man", "then", "of", "course", ",", "i", "would", "compromise", "be", "a", "Bond", "Girl", "-", "i", "would", "be", "quite", "clear", "about", "what", "i", "would", "&", "amp", ";", "would", "not", "do", "though", "!", "need", "help", "?", "hope", "you", "find", "a", "new", "Director", "."]
+(c20-20 / multi-sentence
+        :snt1 (c20-31 / resemble-01
+                      :ARG2 (c20-9 / kill-01
+                                   :ARG0 (c20-14 / they)
+                                   :ARG1 (c20-19 / being
+                                                 :mod (c20-8 / human))
+                                   :time (c20-32 / ever)
+                                   :location (c20-36 / wild)
+                                   :purpose (c20-23 / clarify-10
+                                                    :ARG0 c20-14
+                                                    :ARG1 (c20-10 / message-01
+                                                                  :ARG0 (c20-38 / i)
+                                                                  :location (c20-13 / above)))
+                                   :polarity -))
+        :snt2 (c20-18 / compromise-01
+                      :ARG0 (c20-6 / i)
+                      :ARG1 (c20-15 / girl
+                                    :mod (c20-33 / person
+                                                 :name (c20-30 / name
+                                                               :op1 "Bond")))
+                      :mod (c20-4 / of-course)
+                      :condition (c20-29 / feel-02
+                                         :ARG0 (c20-5 / you)
+                                         :ARG1 (c20-22 / need-01
+                                                       :ARG0 c20-33
+                                                       :ARG1 (c20-21 / play-01
+                                                                     :ARG0 (c20-28 / man)
+                                                                     :ARG1 (c20-3 / person
+                                                                                  :name c20-30
+                                                                                  :op1 "Bond")))))
+        :mod c20-4
+        :snt3 (c20-2 / clear-08
+                     :ARG0 (c20-17 / i)
+                     :ARG1 (c20-25 / thing
+                                   :ARG1-of (c20-12 / and-or
+                                                    :op1 (c20-26 / kiss-01
+                                                                 :ARG0 c20-17
+                                                                 :op2-of c20-12)
+                                                    :ARG0 c20-17
+                                                    :polarity -)))
+        :degree (c20-16 / quite)
+        :ARG1-of (c20-37 / have-concession-91)
+        :snt4 (c20-34 / need-01
+                      :ARG0 c20-5
+                      :ARG1 (c20-7 / help-01)
+                      :polarity -)
+        :snt5 (c20-27 / hope-01
+                      :ARG0 (c20-0 / i)
+                      :ARG1 (c20-35 / find-01
+                                    :ARG0 c20-5
+                                    :ARG1 (c20-1 / person
+                                                 :ARG0-of (c20-11 / have-org-role-91
+                                                                  :ARG2 (c20-39 / director))
+                                                 :ARG1-of (c20-24 / new-01)))))
+
+# ::snt Have you thought of using a killer whale? Don't kill them in the film though, they've never killed in the wild. They're very intelligent animals and they could actually help bond or maybe dolphins but I think a killer whale would work well with a Bond. I'll play Bond if you like.
+# ::tokens ["Have", "you", "thought", "of", "using", "a", "killer", "whale", "?", "Do", "n't", "kill", "them", "in", "the", "film", "though", ",", "they", "'ve", "never", "killed", "in", "the", "wild", ".", "They", "'re", "very", "intelligent", "animals", "and", "they", "could", "actually", "help", "bond", "or", "maybe", "dolphins", "but", "I", "think", "a", "killer", "whale", "would", "work", "well", "with", "a", "Bond", ".", "I", "'ll", "play", "Bond", "if", "you", "like", "."]
+# ::lemmas ["have", "you", "think", "of", "use", "a", "killer", "whale", "?", "do", "not", "kill", "they", "in", "the", "film", "though", ",", "they", "'ve", "never", "kill", "in", "the", "wild", ".", "they", "be", "very", "intelligent", "animal", "and", "they", "could", "actually", "help", "bond", "or", "maybe", "dolphin", "but", "i", "think", "a", "killer", "whale", "would", "work", "well", "with", "a", "Bond", ".", "i", "'ll", "play", "bond", "if", "you", "like", "."]
+(c21-20 / multi-sentence
+        :snt1 (c21-15 / think-01
+                      :ARG0 (c21-7 / you)
+                      :ARG1 (c21-26 / use-01
+                                    :ARG0 c21-7
+                                    :ARG1 (c21-32 / whale
+                                                  :ARG0-of (c21-11 / kill-01)))
+                      :polarity (c21-14 / amr-unknown))
+        :snt2 (c21-25 / kill-01
+                      :ARG0 (c21-16 / you)
+                      :ARG1 (c21-24 / they)
+                      :location (c21-28 / film)
+                      :ARG1-of (c21-10 / have-concession-91)
+                      :ARG1-of (c21-23 / cause-01
+                                       :ARG0 (c21-5 / kill-01
+                                                    :ARG0 (c21-34 / they
+                                                                  :location (c21-3 / wild)
+                                                                  :time (c21-30 / ever))
+                                                    :polarity -))
+                      :snt3 (c21-18 / contrast-01
+                                    :ARG1 (c21-13 / and
+                                                  :op1 (c21-12 / animal
+                                                               :ARG1-of (c21-35 / intelligent-01
+                                                                                :degree (c21-9 / very))
+                                                               :domain (c21-1 / they)
+                                                               :op2 (c21-31 / possible-01
+                                                                            :ARG1 (c21-33 / help-01
+                                                                                          :ARG0 c21-12
+                                                                                          :ARG1 (c21-6 / or
+                                                                                                       :op1 (c21-19 / bond-01)
+                                                                                                       :op2 (c21-36 / dolphin))
+                                                                                          :ARG1-of (c21-21 / actual-02))))
+                                                  :ARG2 (c21-17 / think-01
+                                                                :ARG0 (c21-8 / i)
+                                                                :ARG1 (c21-27 / work-09
+                                                                              :ARG1 c21-32
+                                                                              :ARG2 (c21-22 / person
+                                                                                            :name (c21-29 / name
+                                                                                                          :op1 "Bond"))
+                                                                              :ARG1-of (c21-0 / well-09))))
+                                    :snt4 (c21-4 / play-02
+                                                 :ARG0 c21-8
+                                                 :ARG1 c21-22
+                                                 :name c21-29
+                                                 :op1 "Bond"))
+                      :condition (c21-2 / like-02
+                                        :ARG0 c21-16)
+                      :polarity -
+                      :mode imperative))
+
+# ::snt Piranha
+# ::tokens ["Piranha"]
+# ::lemmas ["piranha"]
+(c22-0 / pirateha)
+
+# ::snt Live and let die &amp; Dr No
+# ::tokens ["Live", "and", "let", "die", "&", "amp", ";", "Dr", "No"]
+# ::lemmas ["live", "and", "let", "die", "&", "amp", ";", "Dr", "no"]
+(c23-2 / say-01
+       :ARG0 (c23-6 / doctor
+                    :name (c23-1 / name
+                                 :op1 "No"))
+       :ARG1 (c23-5 / and
+                    :op1 (c23-3 / live-01
+                                :ARG0 (c23-0 / you)
+                                :mode imperative)
+                    :op2 (c23-7 / let-01
+                                :ARG0 c23-0
+                                :ARG1 (c23-4 / die-01
+                                             :ARG1 c23-0)
+                                :mode imperative))
+       :ARG2 c23-0)
+
+# ::snt Well...
+# ::tokens ["Well", "..."]
+# ::lemmas ["well", "..."]
+(c24-0 / well)
+
+# ::snt Guess you preferred blowing up like a balloon!
+# ::tokens ["Guess", "you", "preferred", "blowing", "up", "like", "a", "balloon", "!"]
+# ::lemmas ["guess", "you", "prefer", "blow", "up", "like", "a", "balloon", "!"]
+(c25-5 / guess-01
+       :ARG1 (c25-4 / prefer-01
+                    :ARG0 (c25-1 / you)
+                    :ARG1 (c25-0 / blow-up-06
+                                 :ARG1 c25-1
+                                 :ARG1-of (c25-2 / resemble-01
+                                                 :ARG2 (c25-3 / balloon)))))
+
+# ::snt I wasn't that impressed
+# ::tokens ["I", "was", "n't", "that", "impressed"]
+# ::lemmas ["i", "be", "not", "that", "impressed"]
+(c26-1 / impress-01
+       :ARG1 (c26-0 / i)
+       :degree (c26-2 / that)
+       :polarity -)
+
+# ::snt OMG!!! I saw my horror
+# ::tokens ["OMG", "!", "!", "!", "I", "saw", "my", "horror"]
+# ::lemmas ["OMG", "!", "!", "!", "i", "see", "my", "horror"]
+(c27-3 / see-01
+       :ARG0 (c27-2 / i)
+       :ARG1 (c27-1 / horror
+                    :poss c27-2)
+       :mod (c27-0 / oh-my-god
+                   :mode expressive))
+
+# ::snt The Skyfalls Scorpion , the only one defeated because of challenge and not of the villain
+# ::tokens ["The", "Skyfalls", "Scorpion", ",", "the", "only", "one", "defeated", "because", "of", "challenge", "and", "not", "of", "the", "villain"]
+# ::lemmas ["The", "Skyfalls", "Scorpion", ",", "the", "only", "one", "defeat", "because", "of", "challenge", "and", "not", "of", "the", "villain"]
+(c28-9 / defeat-01
+       :ARG1 (c28-4 / person
+                    :name (c28-1 / name
+                                 :op1 "Skyfalls"
+                                 :op2 "Scorpion")
+                    :mod (c28-0 / only)
+                    :ARG1-of (c28-7 / defeat-01
+                                    :ARG1-of (c28-6 / cause-01
+                                                    :ARG0 (c28-10 / challenge-01))
+                                    :ARG1-of (c28-8 / contrast-01
+                                                    :ARG2 (c28-5 / defeat-01
+                                                                 :ARG1 (c28-2 / person
+                                                                              :ARG0-of (c28-3 / villain-01))
+                                                                 :polarity -)))))
+
+# ::snt That parrot from For Your Eyes Only
+# ::tokens ["That", "parrot", "from", "For", "Your", "Eyes", "Only"]
+# ::lemmas ["that", "parrot", "from", "for", "your", "eye", "only"]
+(c29-2 / parrot
+       :mod (c29-3 / that)
+       :source (c29-1 / broadcast-program
+                      :name (c29-0 / name
+                                   :op1 "For"
+                                   :op2 "Your"
+                                   :op3 "Eyelid"
+                                   :op4 "Only")))
+
+# ::snt THE CROCS, THE YELLOW SNAKE AND THE KOMODO !!
+# ::tokens ["THE", "CROCS", ",", "THE", "YELLOW", "SNAKE", "AND", "THE", "KOMODO", "!", "!"]
+# ::lemmas ["the", "CROCS", ",", "the", "YELLOW", "snake", "and", "the", "KOMODO", "!", "!"]
+(c30-4 / and
+       :op1 (c30-3 / cricket)
+       :op2 (c30-1 / sea
+                   :name (c30-0 / name
+                                :op1 "Yellow"
+                                :op2 "SNAKE"))
+       :op3 (c30-2 / komodo))
+
+# ::snt Piranhas
+# ::tokens ["Piranhas"]
+# ::lemmas ["Piranhas"]
+(c31-0 / pirate)
+
+# ::snt Walken
+# ::tokens ["Walken"]
+# ::lemmas ["walken"]
+(c32-1 / person
+       :name (c32-0 / name
+                    :op1 "Walken"))
+
+# ::snt Crocodile bridge from NEVER LET DIE.
+# ::tokens ["Crocodile", "bridge", "from", "NEVER", "LET", "DIE", "."]
+# ::lemmas ["Crocodile", "bridge", "from", "NEVER", "LET", "DIE", "."]
+(c33-2 / say-01
+       :ARG0 (c33-6 / i)
+       :ARG1 (c33-4 / let-01
+                    :ARG0 (c33-0 / you)
+                    :ARG1 (c33-7 / die-01
+                                 :ARG1 c33-0)
+                    :mode imperative
+                    :polarity -)
+       :ARG2 (c33-5 / person
+                    :name (c33-1 / name
+                                 :op1 "Bridge")
+                    :mod (c33-3 / rocodile)))
+
+# ::snt Max the parrot.
+# ::tokens ["Max", "the", "parrot", "."]
+# ::lemmas ["Max", "the", "parrot", "."]
+(c34-1 / person
+       :name (c34-0 / name
+                    :op1 "Max")
+       :mod (c34-2 / parrot))
+
+# ::snt Snake
+# ::tokens ["Snake"]
+# ::lemmas ["snake"]
+(c35-1 / person
+       :name (c35-0 / name
+                    :op1 "Snake"))
+
+# ::snt Scorpion (skyfall)
+# ::tokens ["Scorpion", "(", "skyfall", ")"]
+# ::lemmas ["scorpion", "(", "skyfall", ")"]
+(c36-2 / planet
+       :name (c36-0 / name
+                    :op1 "Scorpion")
+       :ARG1-of (c36-1 / fall-01
+                       :ARG4 (c36-3 / sky)))
+
+# ::snt When Bond encounter Teri Hatcher
+# ::tokens ["When", "Bond", "encounter", "Teri", "Hatcher"]
+# ::lemmas ["when", "bond", "encounter", "Teri", "Hatcher"]
+(c37-2 / say-01
+       :ARG0 (c37-6 / i)
+       :ARG2 (c37-5 / person
+                    :name (c37-0 / name
+                                 :op1 "Teri"
+                                 :op2 "Hatcher"))
+       :time (c37-3 / encounter-01
+                    :ARG0 (c37-1 / person
+                                 :name (c37-4 / name
+                                              :op1 "Bond"))))
+
+# ::snt I like the lion! from
+# ::tokens ["I", "like", "the", "lion", "!", "from"]
+# ::lemmas ["i", "like", "the", "lion", "!", "from"]
+(c38-1 / like-01
+       :ARG0 (c38-2 / i)
+       :ARG1 (c38-0 / lion))
+
+# ::snt Komodo dragons in ! So frightening
+# ::tokens ["Komodo", "dragons", "in", "!", "So", "frightening"]
+# ::lemmas ["komodo", "dragon", "in", "!", "so", "frightening"]
+(c39-2 / multi-sentence
+       :snt1 (c39-1 / be-located-at-91
+                    :ARG1 (c39-6 / dragon
+                                 :mod (c39-5 / book
+                                             :name (c39-3 / name
+                                                          :op1 "Komodo"))))
+       :snt2 (c39-0 / frighten-01
+                    :degree (c39-4 / so)
+                    :mode expressive))
+
+# ::snt The look on Blofelds cat after his plans were foiled
+# ::tokens ["The", "look", "on", "Blofelds", "cat", "after", "his", "plans", "were", "foiled"]
+# ::lemmas ["the", "look", "on", "Blofelds", "cat", "after", "his", "plan", "be", "foil"]
+(c40-3 / look-01
+       :ARG1 (c40-5 / cat
+                    :poss (c40-4 / person
+                                 :name (c40-1 / name
+                                              :op1 "Blofelds")))
+       :time (c40-7 / after
+                    :op1 (c40-0 / foil-01
+                                :ARG1 (c40-6 / thing
+                                             :ARG1-of (c40-2 / plan-01
+                                                             :ARG0 c40-4)))))
+
+# ::snt Got to be Roger Moore skipping gators.
+# ::tokens ["Got", "to", "be", "Roger", "Moore", "skipping", "gators", "."]
+# ::lemmas ["got", "to", "be", "Roger", "Moore", "skip", "gator", "."]
+(c41-4 / get-06
+       :ARG1 (c41-1 / skip-01
+                    :ARG0 (c41-2 / person
+                                 :name (c41-0 / name
+                                              :op1 "Roger"
+                                              :op2 "Moore"))
+                    :ARG1 (c41-3 / car-make
+                                 :name c41-0
+                                 :op1 "Gator")))
+
+# ::snt And Sanchezs iguana
+# ::tokens ["And", "Sanchezs", "iguana"]
+# ::lemmas ["and", "sanchezs", "iguana"]
+(c43-3 / and
+       :op2 (c43-2 / iguana
+                   :poss (c43-1 / person
+                                :name (c43-0 / name
+                                             :op1 "Sanchez"))))
+
+# ::snt The scorpion or the Anaconda
+# ::tokens ["The", "scorpion", "or", "the", "Anaconda"]
+# ::lemmas ["the", "scorpion", "or", "the", "Anaconda"]
+(c44-0 / or
+       :op1 (c44-3 / scorpion)
+       :op2 (c44-2 / animal
+                   :name (c44-1 / name
+                                :op1 "Anaconda")))
+
+# ::snt Right on lol
+# ::tokens ["Right", "on", "lol"]
+# ::lemmas ["right", "on", "lol"]
+(c45-0 / on-01
+       :mod (c45-1 / right)
+       :ARG2-of (c45-2 / laugh-01
+                       :ARG0 (c45-3 / i)
+                       :manner (c45-4 / loud)
+                       :mode expressive))
+
+# ::snt Scorpion in Skyfall
+# ::tokens ["Scorpion", "in", "Skyfall"]
+# ::lemmas ["scorpion", "in", "Skyfall"]
+(c46-3 / planet
+       :name (c46-0 / name
+                    :op1 "Scorpion")
+       :location (c46-1 / broadcast-program
+                        :name (c46-2 / name
+                                     :op1 "Skyfall")))
+
+# ::snt Crocodiles in live and let die get my first preference vote for but Komodo dragons get a second preference vote.
+# ::tokens ["Crocodiles", "in", "live", "and", "let", "die", "get", "my", "first", "preference", "vote", "for", "but", "Komodo", "dragons", "get", "a", "second", "preference", "vote", "."]
+# ::lemmas ["Crocodiles", "in", "live", "and", "let", "die", "get", "my", "first", "preference", "vote", "for", "but", "Komodo", "dragon", "get", "a", "second", "preference", "vote", "."]
+(c48-8 / contrast-01
+       :ARG1 (c48-12 / get-01
+                     :ARG0 (c48-4 / rocodile
+                                  :ARG0-of (c48-6 / live-01)
+                                  :ARG0-of (c48-14 / let-01
+                                                   :ARG1 (c48-13 / die-01)))
+                     :ARG1 (c48-5 / vote-01
+                                  :ARG1 (c48-7 / prefer-01
+                                               :ARG0 (c48-10 / i)
+                                               :ARG1rocodile (c48-0 / ordinal-entity
+                                                                    :value 1))))
+       :ARG2 (c48-11 / get-01
+                     :ARG0 (c48-15 / company
+                                   :name (c48-2 / name
+                                                :op1 "Komodo"
+                                                :op2 " dragons"))
+                     :ARG1 (c48-9 / vote-01
+                                  :ARG1 (c48-3 / prefer-01
+                                               :ARG1 c48-15
+                                               :ord (c48-1 / ordinal-entity
+                                                           :value 2)))))
+
+# ::snt The crocs in Live and Let Die....and the tiger scene in Octopussy was pretty funny too
+# ::tokens ["The", "crocs", "in", "Live", "and", "Let", "Die", "....", "and", "the", "tiger", "scene", "in", "Octopussy", "was", "pretty", "funny", "too"]
+# ::lemmas ["the", "croc", "in", "Live", "and", "let", "Die", "....", "and", "the", "tiger", "scene", "in", "Octopussy", "be", "pretty", "funny", "too"]
+(c49-10 / and
+        :op1 (c49-6 / croc
+                    :location (c49-9 / and
+                                     :op1 (c49-7 / work-of-art
+                                                 :name (c49-1 / name
+                                                              :op1 "Live"
+                                                              :op2 "and"
+                                                              :op3 "Let"
+                                                              :op4 "Die"))
+                                     :op2 (c49-5 / work-of-art
+                                                 :name (c49-3 / name
+                                                              :op1 "Octopussy"))))
+        :op2 (c49-0 / funny-02
+                    :ARG1 (c49-2 / scene
+                                 :mod (c49-8 / tiger)
+                                 :location c49-5)
+                    :mod (c49-11 / too)
+                    :degree (c49-4 / pretty)))
+
+# ::snt Alligators live and let die
+# ::tokens ["Alligators", "live", "and", "let", "die"]
+# ::lemmas ["alligator", "live", "and", "let", "die"]
+(c50-2 / and
+       :op1 (c50-0 / live-01
+                   :ARG0 (c50-1 / alligator))
+       :op2 (c50-4 / let-01
+                   :ARG1 (c50-3 / die-01
+                                :ARG1 c50-1)))

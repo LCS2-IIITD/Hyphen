@@ -1,0 +1,71 @@
+# ::snt Praying for victim(s) in Parliament Hill shootings in Canada.
+# ::tokens ["Praying", "for", "victim(s", ")", "in", "Parliament", "Hill", "shootings", "in", "Canada", "."]
+# ::lemmas ["pray", "for", "victim(s", ")", "in", "Parliament", "Hill", "shooting", "in", "Canada", "."]
+(c1-3 / pray-01
+      :ARG1 (c1-2 / victim
+                  :ARG1-of (c1-5 / cause-01
+                                 :ARG0 (c1-7 / shoot-02
+                                             :location (c1-0 / facility
+                                                             :name (c1-1 / name
+                                                                         :op1 "Parliament"
+                                                                         :op2 "Hill"))
+                                             :location (c1-4 / country
+                                                             :name (c1-6 / name
+                                                                         :op1 "Canada"))))))
+
+# ::snt : Shots fired on Parliament Hill, soldier shot at National War Memorial
+# ::tokens [":", "Shots", "fired", "on", "Parliament", "Hill", ",", "soldier", "shot", "at", "National", "War", "Memorial"]
+# ::lemmas [":", "shot", "fire", "on", "Parliament", "Hill", ",", "soldier", "shoot", "at", "National", "War", "Memorial"]
+(c2-8 / and
+      :op1 (c2-0 / fire-01
+                 :ARG1 (c2-7 / shoot-01)
+                 :location (c2-1 / location
+                                 :name (c2-5 / name
+                                             :op1 "Parliament"
+                                             :op2 "Hill")))
+      :op2 (c2-3 / shoot-01
+                 :ARG1 (c2-2 / soldier)
+                 :location (c2-4 / facility
+                                 :name (c2-6 / name
+                                             :op1 "National"
+                                             :op2 "War"
+                                             :op3 "Memorial"))))
+
+# ::snt My app is mapping tweets from Ottawa shotting area
+# ::tokens ["My", "app", "is", "mapping", "tweets", "from", "Ottawa", "shotting", "area"]
+# ::lemmas ["my", "app", "be", "map", "tweet", "from", "Ottawa", "shot", "area"]
+(c3-0 / map-01
+      :ARG0 (c3-7 / app
+                  :poss (c3-2 / i))
+      :ARG1 (c3-6 / tweet-01
+                  :source (c3-1 / area
+                                :location-of (c3-5 / shoot-02)
+                                :location (c3-4 / city
+                                                :name (c3-3 / name
+                                                            :op1 "Ottawa")))))
+
+# ::snt please spread the word to not display or tell police positions and police doings. thank you.
+# ::tokens ["please", "spread", "the", "word", "to", "not", "display", "or", "tell", "police", "positions", "and", "police", "doings", ".", "thank", "you", "."]
+# ::lemmas ["please", "spread", "the", "word", "to", "not", "display", "or", "tell", "police", "position", "and", "police", "doing", ".", "thank", "you", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-10 / spread-01
+                   :ARG0 (c4-0 / you)
+                   :ARG1 (c4-1 / word)
+                   :purpose (c4-5 / or
+                                  :op1 (c4-8 / display-01
+                                             :ARG0 c4-0
+                                             :ARG1 (c4-13 / and
+                                                          :op1 (c4-7 / position
+                                                                     :mod (c4-12 / police))
+                                                          :op2 (c4-2 / do-02
+                                                                     :ARG0 (c4-4 / police)))
+                                             :polarity -)
+                                  :op2 (c4-11 / tell-01
+                                              :ARG0 c4-0
+                                              :ARG1 c4-13
+                                              :polarity -))
+                   :mode imperative
+                   :polite +)
+      :snt2 (c4-9 / thank-01
+                  :ARG0 (c4-6 / i)
+                  :ARG1 (c4-14 / you)))

@@ -1,0 +1,362 @@
+# ::snt I wish you all the happiness in the world!
+# ::tokens ["I", "wish", "you", "all", "the", "happiness", "in", "the", "world", "!"]
+# ::lemmas ["i", "wish", "you", "all", "the", "happiness", "in", "the", "world", "!"]
+(c1-3 / wish-01
+      :ARG0 (c1-4 / i)
+      :ARG1 (c1-1 / happy-01
+                  :ARG1 (c1-0 / you)
+                  :location (c1-2 / world)
+                  :mod (c1-5 / all))
+      :ARG2 c1-0)
+
+# ::snt And he a great wife!
+# ::tokens ["And", "he", "a", "great", "wife", "!"]
+# ::lemmas ["and", "he", "a", "great", "wife", "!"]
+(c2-3 / and
+      :op2 (c2-1 / wife
+                 :mod (c2-0 / great)
+                 :domain (c2-2 / he)))
+
+# ::snt Good ....Mila!The whole world is happy for you.
+# ::tokens ["Good", "....", "Mila!The", "whole", "world", "is", "happy", "for", "you", "."]
+# ::lemmas ["good", "....", "mila!the", "whole", "world", "be", "happy", "for", "you", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-6 / good-02)
+      :snt2 (c3-2 / happy-01
+                  :ARG1 (c3-5 / world
+                              :mod (c3-4 / whole))
+                  :ARG2 (c3-3 / person
+                              :name (c3-1 / name
+                                          :op1 "Mila"))))
+
+# ::snt She got a man that was trained by a cougar. Thank Demi
+# ::tokens ["She", "got", "a", "man", "that", "was", "trained", "by", "a", "cougar", ".", "Thank", "Demi"]
+# ::lemmas ["she", "get", "a", "man", "that", "be", "train", "by", "a", "cougar", ".", "thank", "Demi"]
+(c4-0 / multi-sentence
+      :snt1 (c4-7 / get-01
+                  :ARG0 (c4-2 / she)
+                  :ARG1 (c4-3 / man
+                              :ARG2-of (c4-6 / train-01
+                                             :ARG0 (c4-5 / cougar))))
+      :snt2 (c4-8 / thank-01
+                  :ARG1 (c4-4 / person
+                              :name (c4-1 / name
+                                          :op1 "Demi"))))
+
+# ::snt Except to his first wife
+# ::tokens ["Except", "to", "his", "first", "wife"]
+# ::lemmas ["except", "to", "his", "first", "wife"]
+(c5-1 / except-01
+      :ARG1 (c5-3 / person
+                  :ARG0-of (c5-2 / have-rel-role-91
+                                 :ARG1 (c5-5 / he)
+                                 :ARG2 (c5-4 / wife
+                                             :ord (c5-0 / ordinal-entity
+                                                        :value 1)))))
+
+# ::snt God bless him, and you're blessed lady
+# ::tokens ["God", "bless", "him", ",", "and", "you", "'re", "blessed", "lady"]
+# ::lemmas ["God", "bless", "he", ",", "and", "you", "be", "bless", "lady"]
+(c7-2 / say-01
+      :ARG1 (c7-7 / and
+                  :op1 (c7-0 / bless-01
+                             :ARG0 (c7-4 / person
+                                         :name (c7-1 / name
+                                                     :op1 "God"))
+                             :ARG1 (c7-3 / he))
+                  :op2 (c7-5 / bless-01
+                             :ARG0 c7-4
+                             :ARG1 (c7-6 / lady
+                                         :ARG2-of c7-2))))
+
+# ::snt When famous couples say things like this,they scare me cause the next thing you hear is that they are splitting eg Brangelina &amp; John &amp;Nikki
+# ::tokens ["When", "famous", "couples", "say", "things", "like", "this", ",", "they", "scare", "me", "cause", "the", "next", "thing", "you", "hear", "is", "that", "they", "are", "splitting", "eg", "Brangelina", "&", "amp", ";", "John", "&", "amp;Nikki"]
+# ::lemmas ["when", "famous", "couple", "say", "thing", "like", "this", ",", "they", "scare", "i", "cause", "the", "next", "thing", "you", "hear", "be", "that", "they", "be", "split", "eg", "Brangelina", "&", "amp", ";", "John", "&", "amp;Nikki"]
+(c8-0 / scare-01
+      :ARG0 (c8-3 / say-01
+                  :ARG0 (c8-11 / couple
+                               :ARG1-of (c8-14 / fame-01))
+                  :ARG1 (c8-7 / thing
+                              :ARG1-of (c8-16 / resemble-01
+                                              :ARG2 (c8-13 / this))))
+      :ARG1 (c8-19 / i)
+      :ARG1-of (c8-8 / cause-01
+                     :ARG0 (c8-5 / hear-01
+                                 :ARG0 (c8-4 / you)
+                                 :ARG1 (c8-2 / split-01
+                                             :ARG0 c8-11
+                                             :example (c8-6 / and
+                                                            :op1 (c8-17 / person
+                                                                        :name (c8-15 / name
+                                                                                     :op1 "Brangelina"))
+                                                            :op2 (c8-9 / person
+                                                                       :name (c8-10 / name
+                                                                                    :op1 "John"))
+                                                            :op3 (c8-1 / person
+                                                                       :name (c8-18 / name
+                                                                                    :op1 "Nikki")))
+                                             :mod (c8-12 / next)))))
+
+# ::snt They're both so gorgeous!
+# ::tokens ["They", "'re", "both", "so", "gorgeous", "!"]
+# ::lemmas ["they", "be", "both", "so", "gorgeous", "!"]
+(c9-0 / gorgeous
+      :domain (c9-3 / they
+                    :mod (c9-1 / both))
+      :degree (c9-2 / so))
+
+# ::snt That is awesome,it is something very rare in this world,hold on to it,for then you will always find happiness
+# ::tokens ["That", "is", "awesome", ",", "it", "is", "something", "very", "rare", "in", "this", "world", ",", "hold", "on", "to", "it", ",", "for", "then", "you", "will", "always", "find", "happiness"]
+# ::lemmas ["that", "be", "awesome", ",", "it", "be", "something", "very", "rare", "in", "this", "world", ",", "hold", "on", "to", "it", ",", "for", "then", "you", "will", "always", "find", "happiness"]
+(c10-2 / multi-sentence
+       :snt1 (c10-5 / awe-01
+                    :ARG0 (c10-12 / that))
+       :snt2 (c10-4 / rare-02
+                    :ARG1 (c10-3 / something)
+                    :degree (c10-6 / very)
+                    :location (c10-8 / world
+                                     :mod (c10-13 / this)))
+       :snt3 (c10-7 / hold-on-05
+                    :ARG0 (c10-1 / you)
+                    :ARG1 c10-3
+                    :ARG1-of (c10-9 / cause-01
+                                    :ARG0 (c10-0 / find-01
+                                                 :ARG0 c10-1
+                                                 :ARG1 (c10-10 / happy-01
+                                                               :ARG1 c10-1)
+                                                 :time (c10-11 / always)))
+                    :mode imperative))
+
+# ::snt Beautiful beautiful Couple
+# ::tokens ["Beautiful", "beautiful", "Couple"]
+# ::lemmas ["beautiful", "beautiful", "Couple"]
+(c11-0 / couple
+       :ARG1-of (c11-1 / beautiful-02
+                       :ARG1 c11-0))
+
+# ::snt my couple
+# ::tokens ["my", "couple"]
+# ::lemmas ["my", "couple"]
+(c13-0 / couple
+       :poss (c13-1 / i))
+
+# ::snt Aawww
+# ::tokens ["Aawww"]
+# ::lemmas ["Aawww"]
+(c14-0 / aw
+       :mode expressive)
+
+# ::snt This is always the kind of stuff we hear right before its announced theyre splitting up.
+# ::tokens ["This", "is", "always", "the", "kind", "of", "stuff", "we", "hear", "right", "before", "its", "announced", "they", "re", "splitting", "up", "."]
+# ::lemmas ["this", "be", "always", "the", "kind", "of", "stuff", "we", "hear", "right", "before", "its", "announce", "they", "re", "split", "up", "."]
+(c15-2 / stuff
+       :domain (c15-9 / this)
+       :mod (c15-6 / kind)
+       :ARG1-of (c15-5 / hear-01
+                       :ARG0 (c15-7 / we)
+                       :time (c15-1 / before
+                                    :op1 (c15-3 / announce-01
+                                                :ARG1 (c15-0 / split-up-03
+                                                             :ARG1 (c15-10 / they)))
+                                    :mod (c15-4 / right))
+                       :time (c15-8 / always)))
+
+# ::snt Demi sure taught him a lot
+# ::tokens ["Demi", "sure", "taught", "him", "a", "lot"]
+# ::lemmas ["Demi", "sure", "teach", "he", "a", "lot"]
+(c16-5 / teach-01
+       :ARG0 (c16-4 / person
+                    :name (c16-0 / name
+                                 :op1 "Demi"))
+       :ARG1 (c16-6 / thing
+                    :quant (c16-3 / lot))
+       :ARG2 (c16-2 / he)
+       :ARG1-of (c16-1 / sure-02))
+
+# ::snt Nope Mine is
+# ::tokens ["Nope", "Mine", "is"]
+# ::lemmas ["Nope", "Mine", "be"]
+(c17-0 / have-polarity-91
+       :ARG1 (c17-2 / thing
+                    :poss (c17-1 / i))
+       :ARG2 -)
+
+# ::snt This is video of it
+# ::tokens ["This", "is", "video", "of", "it"]
+# ::lemmas ["this", "be", "video", "of", "it"]
+(c18-0 / video
+       :topic (c18-1 / it)
+       :domain (c18-2 / this))
+
+# ::snt I thought Justin Theroux played her ex and Sam played an agent who helps her find him.
+# ::tokens ["I", "thought", "Justin", "Theroux", "played", "her", "ex", "and", "Sam", "played", "an", "agent", "who", "helps", "her", "find", "him", "."]
+# ::lemmas ["i", "think", "Justin", "Theroux", "play", "her", "ex", "and", "Sam", "play", "an", "agent", "who", "help", "she", "find", "he", "."]
+(c19-11 / think-01
+        :ARG0 (c19-12 / i)
+        :ARG1 (c19-13 / and
+                      :op1 (c19-6 / play-02
+                                  :ARG0 (c19-2 / person
+                                               :name (c19-1 / name
+                                                            :op1 "Justin"
+                                                            :op2 "Theroux"))
+                                  :ARG1 (c19-16 / person
+                                                :ARG0-of (c19-5 / have-rel-role-91
+                                                                :ARG1 c19-2
+                                                                :ARG2 (c19-3 / significant-other)
+                                                                :time (c19-4 / ex))))
+                      :op2 (c19-9 / play-02
+                                  :ARG0 (c19-14 / person
+                                                :name (c19-7 / name
+                                                             :op1 "Sam"))
+                                  :ARG1 (c19-15 / agent
+                                                :ARG0-of (c19-10 / help-01
+                                                                 :ARG1 (c19-0 / find-01
+                                                                              :ARG0 c19-14
+                                                                              :ARG1 (c19-8 / he))
+                                                                 :ARG2 c19-14)))))
+
+# ::snt Start your online income job with earning up to $ monthly. join link
+# ::tokens ["Start", "your", "online", "income", "job", "with", "earning", "up", "to", "$", "monthly", ".", "join", "link"]
+# ::lemmas ["start", "your", "online", "income", "job", "with", "earn", "up", "to", "$", "monthly", ".", "join", "link"]
+(c20-2 / multi-sentence
+       :snt1 (c20-3 / start-01
+                    :ARG0 (c20-1 / you)
+                    :ARG1 (c20-10 / job
+                                  :mod (c20-11 / income)
+                                  :mod (c20-0 / online)
+                                  :poss c20-1)
+                    :ARG2 (c20-5 / earn-01
+                                 :ARG0 c20-1
+                                 :ARG1 (c20-4 / rate-entity-91
+                                              :ARG1 (c20-14 / up-to
+                                                            :op1 (c20-6 / monetary-quantity
+                                                                        :unit (c20-13 / dollar)
+                                                                        :quant 1))
+                                              :ARG2 (c20-12 / temporal-quantity
+                                                            :unit (c20-9 / month)
+                                                            :quant 1))))
+       :snt2 (c20-7 / link-01
+                    :ARG2 (c20-8 / join-04
+                                 :ARG0 c20-1)))
+
+# ::snt im still shocked there even together in real life after thats s show but they were an awesome couple and still are
+# ::tokens ["i", "m", "still", "shocked", "there", "even", "together", "in", "real", "life", "after", "that", "s", "s", "show", "but", "they", "were", "an", "awesome", "couple", "and", "still", "are"]
+# ::lemmas ["i", "m", "still", "shock", "there", "even", "together", "in", "real", "life", "after", "that", "s", "s", "show", "but", "they", "be", "an", "awesome", "couple", "and", "still", "be"]
+(c21-8 / contrast-01
+       :ARG1 (c21-2 / shock-01
+                    :ARG0 (c21-1 / be-located-at-91
+                                 :ARG1 (c21-12 / they)
+                                 :ARG2 (c21-16 / there)
+                                 :manner (c21-11 / together
+                                                 :mod (c21-5 / even))
+                                 :location (c21-7 / life
+                                                  :ARG1-of (c21-3 / real-04))
+                                 :time (c21-4 / after
+                                              :op1 (c21-0 / show-04
+                                                          :ARG1 (c21-6 / that))))
+                    :ARG1 (c21-13 / i)
+                    :mod (c21-17 / still))
+       :ARG2 (c21-14 / and
+                     :op1 (c21-15 / couple
+                                  :ARG1-of (c21-9 / awesome-02)
+                                  :domain c21-12)
+                     :op2 (c21-10 / couple
+                                  :domain c21-12
+                                  :time c21-17)))
+
+# ::snt Awesome yes u are very lucky lady
+# ::tokens ["Awesome", "yes", "u", "are", "very", "lucky", "lady"]
+# ::lemmas ["awesome", "yes", "u", "be", "very", "lucky", "lady"]
+(c23-1 / multi-sentence
+       :snt1 (c23-4 / awe-01)
+       :snt2 (c23-3 / lady
+                    :mod (c23-5 / lucky
+                                :degree (c23-2 / very))
+                    :domain (c23-0 / you)))
+
+# ::snt How to get a Good chick in Cedar Rapids Iowa when your loser from a no one who met a hero once , who can be s true hero to be female in the city ?
+# ::tokens ["How", "to", "get", "a", "Good", "chick", "in", "Cedar", "Rapids", "Iowa", "when", "your", "loser", "from", "a", "no", "one", "who", "met", "a", "hero", "once", ",", "who", "can", "be", "s", "true", "hero", "to", "be", "female", "in", "the", "city", "?"]
+# ::lemmas ["how", "to", "get", "a", "good", "chick", "in", "Cedar", "Rapids", "Iowa", "when", "your", "loser", "from", "a", "no", "one", "who", "meet", "a", "hero", "once", ",", "who", "can", "be", "s", "true", "hero", "to", "be", "female", "in", "the", "city", "?"]
+(c24-7 / have-manner-91
+       :ARG1 (c24-10 / get-01
+                     :ARG0 (c24-5 / you)
+                     :ARG1 (c24-14 / chick
+                                   :ARG1-of (c24-3 / good-02))
+                     :ARG2 (c24-11 / city
+                                   :name (c24-15 / name
+                                                 :op1 "Cedar"
+                                                 :op2 "Rapid")
+                                   :part-of (c24-0 / state
+                                                   :name (c24-13 / name
+                                                                 :op1 "Iowa"))))
+       :ARG2 (c24-9 / amr-unknown)
+       :time (c24-16 / person
+                     :ARG0-of (c24-1 / lose-03)
+                     :source (c24-17 / no-one
+                                     :ARG0-of (c24-12 / meet-02
+                                                      :ARG1 (c24-18 / hero
+                                                                    :ARG1-of (c24-8 / true-01
+                                                                                    :ARG2 (c24-6 / hero
+                                                                                                 :domain c24-17)))
+                                                      :time (c24-4 / once)))
+                     :location (c24-2 / city)))
+
+# ::snt These two are just too cute together
+# ::tokens ["These", "two", "are", "just", "too", "cute", "together"]
+# ::lemmas ["these", "two", "be", "just", "too", "cute", "together"]
+(c25-1 / cute
+       :degree (c25-3 / too)
+       :mod (c25-2 / just)
+       :mod (c25-4 / together)
+       :domain (c25-0 / person
+                      :mod (c25-5 / this)
+                      :quant 2))
+
+# ::snt I wonder if Demi thinks so too? Lol
+# ::tokens ["I", "wonder", "if", "Demi", "thinks", "so", "too", "?", "Lol"]
+# ::lemmas ["i", "wonder", "if", "Demi", "think", "so", "too", "?", "Lol"]
+(c27-0 / multi-sentence
+       :snt1 (c27-6 / wonder-01
+                    :ARG0 (c27-7 / i)
+                    :ARG1 (c27-8 / think-01
+                                 :ARG0 (c27-4 / person
+                                              :name (c27-1 / name
+                                                           :op1 "Demi"))
+                                 :ARG1 (c27-2 / so)
+                                 :mod (c27-10 / too))
+                    :polarity (c27-3 / amr-unknown))
+       :snt2 (c27-5 / laugh-01
+                    :manner (c27-9 / loud)
+                    :mode expressive))
+
+# ::snt Aw! We love them together!
+# ::tokens ["Aw", "!", "We", "love", "them", "together", "!"]
+# ::lemmas ["aw", "!", "we", "love", "they", "together", "!"]
+(c28-0 / multi-sentence
+       :snt1 (c28-1 / aw
+                    :mode expressive)
+       :snt2 (c28-2 / love-01
+                    :ARG0 (c28-3 / we)
+                    :ARG1 (c28-4 / they)
+                    :mod (c28-5 / together)))
+
+# ::snt Demi had that
+# ::tokens ["Demi", "had", "that"]
+# ::lemmas ["Demi", "have", "that"]
+(c29-1 / have-03
+       :ARG0 (c29-2 / person
+                    :name (c29-0 / name
+                                 :op1 "Demi"))
+       :ARG1 (c29-3 / that))
+
+# ::snt You made it, Kelso, you made it, man.
+# ::tokens ["You", "made", "it", ",", "Kelso", ",", "you", "made", "it", ",", "man", "."]
+# ::lemmas ["you", "make", "it", ",", "Kelso", ",", "you", "make", "it", ",", "man", "."]
+(c30-2 / say-01
+       :ARG0 (c30-5 / i)
+       :ARG1 (c30-1 / make-01
+                    :ARG0 (c30-4 / person
+                                 :name (c30-0 / name
+                                              :op1 "Kelso"))
+                    :ARG1 (c30-3 / it))
+       :ARG2 c30-4)

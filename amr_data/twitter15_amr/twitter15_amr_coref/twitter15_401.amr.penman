@@ -1,0 +1,37 @@
+# ::snt : ": HP confirms that it's splitting into companies. And cutting k jobs. $HP
+# ::tokens [":", "\"", ":", "HP", "confirms", "that", "it", "'s", "splitting", "into", "companies", ".", "And", "cutting", "k", "jobs", ".", "$", "HP"]
+# ::lemmas [":", "\"", ":", "HP", "confirm", "that", "it", "be", "split", "into", "company", ".", "and", "cut", "k", "job", ".", "$", "HP"]
+(c1-3 / multi-sentence
+      :snt1 (c1-5 / confirm-01
+                  :ARG0 (c1-4 / company
+                              :name (c1-10 / name
+                                           :op1 "HP"))
+                  :ARG1 (c1-0 / split-01
+                              :ARG0 c1-4
+                              :ARG1 (c1-6 / company)))
+      :snt2 (c1-1 / and
+                  :op2 (c1-8 / cut-02
+                             :ARG0 c1-4
+                             :ARG1 (c1-7 / job)))
+      :snt3 (c1-2 / company
+                  :name (c1-9 / name
+                              :op1 "HP")))
+
+# ::snt : HP confirms that its splitting into two companies. And cutting jobs. // ouch!
+# ::tokens [":", "HP", "confirms", "that", "its", "splitting", "into", "two", "companies", ".", "And", "cutting", "jobs", ".", "//", "ouch", "!"]
+# ::lemmas [":", "HP", "confirm", "that", "its", "splitting", "into", "two", "company", ".", "and", "cut", "job", ".", "//", "ouch", "!"]
+(c2-3 / multi-sentence
+      :snt1 (c2-5 / confirm-01
+                  :ARG0 (c2-4 / company
+                              :name (c2-9 / name
+                                          :op1 "HP"))
+                  :ARG1 (c2-0 / split-01
+                              :ARG0 c2-4
+                              :ARG1 (c2-6 / company
+                                          :quant 2)))
+      :snt2 (c2-2 / and
+                  :op2 (c2-8 / cut-02
+                             :ARG0 c2-4
+                             :ARG1 (c2-7 / job)))
+      :snt3 (c2-1 / ouch
+                  :mode expressive))

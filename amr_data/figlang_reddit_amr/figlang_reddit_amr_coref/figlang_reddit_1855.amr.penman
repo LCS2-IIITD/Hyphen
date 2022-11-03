@@ -1,0 +1,47 @@
+# ::snt Apparently there's a prophecy I'm going to die in a car crash the day before valentine's day
+# ::tokens ["Apparently", "there", "'s", "a", "prophecy", "I", "'m", "going", "to", "die", "in", "a", "car", "crash", "the", "day", "before", "valentine", "'s", "day"]
+# ::lemmas ["apparently", "there", "be", "a", "prophecy", "i", "be", "go", "to", "die", "in", "a", "car", "crash", "the", "day", "before", "valentine", "'s", "day"]
+(c1-10 / prophecy
+       :domain (c1-0 / die-01
+                     :ARG1 (c1-5 / i)
+                     :ARG1-of (c1-4 / cause-01
+                                    :ARG0 (c1-1 / crash-01
+                                                :ARG1 (c1-7 / car)))
+                     :time (c1-9 / before
+                                 :op1 (c1-3 / festival
+                                            :name (c1-11 / name
+                                                         :op1 "Valentine's"
+                                                         :op2 "Day"))
+                                 :quant (c1-8 / temporal-quantity
+                                              :unit (c1-6 / day)
+                                              :quant 1)))
+       :manner (c1-2 / apparent))
+
+# ::snt I went to a psychic who told me I'd lose my virginity at 15 but jokes on her I'm still a virgin lmao
+# ::tokens ["I", "went", "to", "a", "psychic", "who", "told", "me", "I", "'d", "lose", "my", "virginity", "at", "15", "but", "jokes", "on", "her", "I", "'m", "still", "a", "virgin", "lmao"]
+# ::lemmas ["i", "go", "to", "a", "psychic", "who", "tell", "i", "i", "would", "lose", "my", "virginity", "at", "15", "but", "joke", "on", "she", "i", "be", "still", "a", "virgin", "lmao"]
+(c2-15 / multi-sentence
+       :snt1 (c2-12 / go-02
+                    :ARG0 (c2-14 / i)
+                    :ARG4 (c2-10 / psychic
+                                 :ARG0-of (c2-9 / tell-01
+                                                :ARG1 (c2-11 / lose-02
+                                                             :ARG0 c2-14
+                                                             :ARG1 (c2-8 / virginity
+                                                                         :poss c2-14)
+                                                             :time (c2-3 / age-01
+                                                                         :ARG1 c2-14
+                                                                         :ARG2 (c2-6 / temporal-quantity
+                                                                                     :unit (c2-16 / year)
+                                                                                     :quant 15)))
+                                                :ARG2 c2-14
+                                                :concession-of (c2-13 / joke-01
+                                                                      :ARG0 c2-14
+                                                                      :ARG2 (c2-5 / virgin
+                                                                                  :domain c2-14
+                                                                                  :mod (c2-0 / still)))))
+                    :snt2 (c2-1 / laugh-01
+                                :ARG0 (c2-7 / i)
+                                :ARG1 (c2-2 / she)
+                                :manner (c2-4 / loud)
+                                :mode expressive)))

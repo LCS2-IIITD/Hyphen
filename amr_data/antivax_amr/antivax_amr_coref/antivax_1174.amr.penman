@@ -1,0 +1,93 @@
+# ::snt Totally.
+# ::tokens ["Totally", "."]
+# ::lemmas ["totally", "."]
+(c1-0 / total)
+
+# ::snt You did that to yourself with all your sexiness.
+# ::tokens ["You", "did", "that", "to", "yourself", "with", "all", "your", "sexiness", "."]
+# ::lemmas ["you", "do", "that", "to", "yourself", "with", "all", "your", "sexiness", "."]
+(c2-0 / do-02
+      :ARG0 (c2-4 / you)
+      :ARG1 (c2-3 / that)
+      :ARG2 c2-4
+      :instrument (c2-1 / sexiness
+                        :mod (c2-2 / all)
+                        :poss c2-4))
+
+# ::snt Absolutely.
+# ::tokens ["Absolutely", "."]
+# ::lemmas ["absolutely", "."]
+(c3-0 / absolute)
+
+# ::snt You walking in to get your vaccine...
+# ::tokens ["You", "walking", "in", "to", "get", "your", "vaccine", "..."]
+# ::lemmas ["you", "walk", "in", "to", "get", "your", "vaccine", "..."]
+(c4-0 / walk-01
+      :ARG0 (c4-2 / you)
+      :destination (c4-3 / get-01
+                         :ARG0 c4-2
+                         :ARG1 (c4-1 / vaccine
+                                     :poss c4-2)))
+
+# ::snt Too bad someone left bite marks all over the arm I usually get needles in.
+# ::tokens ["Too", "bad", "someone", "left", "bite", "marks", "all", "over", "the", "arm", "I", "usually", "get", "needles", "in", "."]
+# ::lemmas ["too", "bad", "someone", "leave", "bite", "mark", "all", "over", "the", "arm", "i", "usually", "get", "needle", "in", "."]
+(c5-8 / bad-07
+      :ARG1 (c5-6 / leave-01
+                  :ARG0 (c5-0 / someone)
+                  :ARG1 (c5-10 / mark
+                               :mod (c5-1 / bite)
+                               :location (c5-2 / all-over
+                                               :op1 (c5-12 / arm))))
+      :ARG2-of (c5-3 / have-degree-91
+                     :ARG1 c5-6
+                     :ARG3 (c5-5 / too)
+                     :ARG6 (c5-7 / get-01
+                                 :ARG0 (c5-9 / i)
+                                 :ARG1 (c5-11 / needle)
+                                 :mod (c5-4 / usual))))
+
+# ::snt And her momma &amp; daddy
+# ::tokens ["And", "her", "momma", "&", "amp", ";", "daddy"]
+# ::lemmas ["and", "her", "momma", "&", "amp", ";", "daddy"]
+(c6-2 / and
+      :op2 (c6-8 / and
+                 :op1 (c6-6 / person
+                            :ARG0-of (c6-3 / have-rel-role-91
+                                           :ARG1 (c6-0 / she)
+                                           :ARG2 (c6-7 / mom)))
+                 :op2 (c6-4 / person
+                            :ARG0-of (c6-5 / have-rel-role-91
+                                           :ARG1 c6-0
+                                           :ARG2 (c6-1 / dad)))))
+
+# ::snt Awesome!! Im glad L is getting some peace of mind.
+# ::tokens ["Awesome", "!", "!", "I", "m", "glad", "L", "is", "getting", "some", "peace", "of", "mind", "."]
+# ::lemmas ["Awesome", "!", "!", "i", "m", "glad", "L", "be", "get", "some", "peace", "of", "mind", "."]
+(c7-7 / multi-sentence
+      :snt1 (c7-1 / awe-01
+                  :mode expressive)
+      :snt2 (c7-5 / glad-02
+                  :ARG0 (c7-9 / get-02
+                              :ARG0 (c7-6 / person
+                                          :name (c7-8 / name
+                                                      :op1 "L"))
+                              :ARG1 (c7-4 / peace
+                                          :mod (c7-2 / mind)
+                                          :quant (c7-0 / some)))
+                  :ARG1 (c7-3 / i)))
+
+# ::snt My daughter got her first one yesterday!!!!!!!!!!
+# ::tokens ["My", "daughter", "got", "her", "first", "one", "yesterday", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["my", "daughter", "get", "her", "first", "one", "yesterday", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+(c9-5 / get-01
+      :ARG0 (c9-6 / person
+                  :ARG0-of (c9-2 / have-rel-role-91
+                                 :ARG1 (c9-1 / i)
+                                 :ARG2 (c9-0 / daughter)))
+      :ARG1 (c9-4 / one
+                  :ord (c9-3 / ordinal-entity
+                             :value 1)
+                  :poss c9-6)
+      :time (c9-7 / yesterday)
+      :mode expressive)

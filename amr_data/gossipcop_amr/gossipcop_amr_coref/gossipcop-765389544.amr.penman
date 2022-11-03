@@ -1,0 +1,91 @@
+# ::snt Cest quoi cet article de mots
+# ::tokens ["Cest", "quoi", "cet", "article", "de", "mots"]
+# ::lemmas ["cest", "quoi", "cet", "article", "de", "mot"]
+(c1-3 / article
+      :mod (c1-2 / amr-unintelligible
+                 :poss (c1-1 / person
+                             :name (c1-0 / name
+                                         :op1 "Mots"))
+                 :value "Article"))
+
+# ::snt Philly Philly
+# ::tokens ["Philly", "Philly"]
+# ::lemmas ["Philly", "Philly"]
+(c2-0 / city
+      :name (c2-1 / name
+                  :op1 "Philadelphia"))
+
+# ::snt Gotta be happy for Rocket Raccoon
+# ::tokens ["Got", "ta", "be", "happy", "for", "Rocket", "Raccoon"]
+# ::lemmas ["got", "to", "be", "happy", "for", "Rocket", "Raccoon"]
+(c3-0 / obligate-01
+      :ARG1 (c3-2 / happy-01
+                  :ARG1 (c3-3 / person
+                              :name (c3-1 / name
+                                          :op1 "Rocket"
+                                          :op2 "Raccoon"))))
+
+# ::snt I think we might spend more time talking about this rather than LOST next Tuesday.
+# ::tokens ["I", "think", "we", "might", "spend", "more", "time", "talking", "about", "this", "rather", "than", "LOST", "next", "Tuesday", "."]
+# ::lemmas ["i", "think", "we", "might", "spend", "more", "time", "talk", "about", "this", "rather", "than", "lose", "next", "Tuesday", "."]
+(c4-13 / think-01
+       :ARG0 (c4-12 / i)
+       :ARG1 (c4-8 / possible-01
+                   :ARG1 (c4-2 / spend-02
+                               :ARG0 (c4-11 / we)
+                               :ARG1 (c4-16 / time
+                                            :ARG1-of (c4-7 / have-quant-91
+                                                           :ARG3 (c4-0 / more)))
+                               :ARG2 (c4-14 / talk-01
+                                            :ARG0 c4-11
+                                            :ARG1 (c4-6 / this))
+                               :ARG1-of (c4-3 / instead-of-91
+                                              :ARG0 c4-11
+                                              :ARG1 (c4-1 / time
+                                                          :ARG1-of c4-7
+                                                          :ARG3 (c4-9 / most))
+                                              :ARG2 c4-2)
+                               :ARG2 (c4-15 / time
+                                            :time (c4-4 / date-entity
+                                                        :weekday (c4-10 / tuesday)
+                                                        :mod (c4-5 / next))))))
+
+# ::snt I can't believe you've seen this before me! I shouldn't have waited for my idiot friends. I'm seeing tonight and am super excited!
+# ::tokens ["I", "ca", "n't", "believe", "you", "'ve", "seen", "this", "before", "me", "!", "I", "should", "n't", "have", "waited", "for", "my", "idiot", "friends", ".", "I", "'m", "seeing", "tonight", "and", "am", "super", "excited", "!"]
+# ::lemmas ["i", "can", "not", "believe", "you", "'ve", "see", "this", "before", "i", "!", "i", "should", "not", "have", "wait", "for", "my", "idiot", "friend", ".", "i", "be", "see", "tonight", "and", "be", "super", "excited", "!"]
+(c5-11 / multi-sentence
+       :snt1 (c5-18 / possible-01
+                    :ARG1 (c5-10 / believe-01
+                                 :ARG0 (c5-20 / i)
+                                 :ARG1 (c5-1 / see-01
+                                             :ARG0 (c5-4 / you)
+                                             :ARG1 (c5-8 / this)
+                                             :time (c5-2 / before
+                                                         :op1 c5-20)))
+                    :polarity -)
+       :snt2 (c5-16 / recommend-01
+                    :ARG1 (c5-19 / wait-01
+                                 :ARG1 (c5-5 / i)
+                                 :ARG2 (c5-12 / person
+                                              :mod (c5-9 / idiot)
+                                              :ARG0-of (c5-6 / have-rel-role-91
+                                                             :ARG1 c5-5
+                                                             :ARG2 (c5-14 / friend)))
+                                 :polarity -))
+       :snt3 (c5-7 / and
+                   :op1 c5-1
+                   :ARG0 (c5-0 / i)
+                   :time (c5-21 / date-entity
+                                :dayperiod (c5-15 / night)
+                                :mod (c5-13 / today)))
+       :op2 (c5-17 / excite-01
+                   :ARG1 c5-0
+                   :degree (c5-3 / super)))
+
+# ::snt My word review of it:
+# ::tokens ["My", "word", "review", "of", "it", ":"]
+# ::lemmas ["my", "word", "review", "of", "it", ":"]
+(c6-1 / review-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-0 / it)
+      :ARG2 (c6-3 / word))

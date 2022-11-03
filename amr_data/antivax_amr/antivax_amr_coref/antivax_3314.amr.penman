@@ -1,0 +1,51 @@
+# ::snt Ye I've gotten both of them like -2 months ago. I never want to experience them again
+# ::tokens ["Ye", "I", "'ve", "gotten", "both", "of", "them", "like", "-2", "months", "ago", ".", "I", "never", "want", "to", "experience", "them", "again"]
+# ::lemmas ["ye", "i", "'ve", "get", "both", "of", "they", "like", "-2", "months", "ago", ".", "i", "never", "want", "to", "experience", "they", "again"]
+(c1-12 / multi-sentence
+       :snt1 (c1-10 / get-01
+                    :ARG0 (c1-11 / i)
+                    :ARG1 (c1-7 / they
+                                :mod (c1-13 / both))
+                    :time (c1-0 / before
+                                :op1 (c1-9 / now)
+                                :quant (c1-8 / like
+                                             :op1 (c1-4 / temporal-quantity
+                                                        :unit (c1-2 / month)
+                                                        :quant 2))))
+       :snt2 (c1-3 / want-01
+                   :ARG0 (c1-5 / i)
+                   :ARG1 (c1-15 / experience-01
+                                :ARG0 c1-5
+                                :ARG1 (c1-14 / they)
+                                :mod (c1-1 / again))
+                   :time (c1-6 / ever)
+                   :polarity -))
+
+# ::snt Have you gotten urs
+# ::tokens ["Have", "you", "gotten", "urs"]
+# ::lemmas ["have", "you", "get", "ur"]
+(c2-0 / get-01
+      :polarity (c2-1 / amr-unknown)
+      :ARG0 (c2-3 / you)
+      :ARG1 (c2-2 / thing))
+
+# ::snt Try moving the arm aroundoften because it's probably going to be more painful to move as time passes
+# ::tokens ["Try", "moving", "the", "arm", "aroundoften", "because", "it", "'s", "probably", "going", "to", "be", "more", "painful", "to", "move", "as", "time", "passes"]
+# ::lemmas ["try", "move", "the", "arm", "aroundoften", "because", "it", "be", "probably", "go", "to", "be", "more", "painful", "to", "move", "as", "time", "pass"]
+(c3-9 / try-01
+      :ARG0 (c3-12 / you)
+      :ARG1 (c3-11 / move-01
+                   :ARG0 c3-12
+                   :ARG1 (c3-0 / arm)
+                   :direction (c3-13 / around))
+      :frequency (c3-7 / often)
+      :ARG1-of (c3-1 / cause-01
+                     :ARG0 (c3-10 / probable
+                                  :domain (c3-8 / pain-01
+                                                :ARG0 (c3-2 / move-01
+                                                            :time (c3-4 / pass-03
+                                                                        :ARG1 (c3-3 / time)))
+                                                :ARG2-of (c3-5 / have-degree-91
+                                                               :ARG1 c3-2
+                                                               :ARG3 (c3-6 / more)))))
+      :mode imperative)

@@ -1,0 +1,105 @@
+# ::snt Inside accomplice?
+# ::tokens ["Inside", "accomplice", "?"]
+# ::lemmas ["inside", "accomplice", "?"]
+(c1-3 / person
+      :polarity (c1-4 / amr-unknown)
+      :ARG0-of (c1-0 / have-rel-role-91
+                     :ARG2 (c1-1 / accomplice))
+      :location (c1-2 / inside))
+
+# ::snt not triggered by the artistic release of "the interview?"
+# ::tokens ["not", "triggered", "by", "the", "artistic", "release", "of", "\"", "the", "interview", "?", "\""]
+# ::lemmas ["not", "trigger", "by", "the", "artistic", "release", "of", "\"", "the", "interview", "?", "\""]
+(c2-4 / trigger-01
+      :ARG0 (c2-3 / release-01
+                  :ARG1 (c2-1 / interview-01)
+                  :mod (c2-5 / artistic))
+      :ARG1 (c2-0 / event)
+      :ARG1-of (c2-2 / request-confirmation-91)
+      :polarity -)
+
+# ::snt Some one on the staff leaked something Start with any Muslim employees
+# ::tokens ["Some", "one", "on", "the", "staff", "leaked", "something", "Start", "with", "any", "Muslim", "employees"]
+# ::lemmas ["some", "one", "on", "the", "staff", "leak", "something", "start", "with", "any", "Muslim", "employee"]
+(c3-1 / leak-01
+      :ARG0 (c3-10 / someone
+                   :ARG0-of (c3-0 / have-org-role-91
+                                  :ARG1 (c3-5 / staff)
+                                  :ARG2 (c3-2 / member)))
+      :ARG1 (c3-3 / something
+                  :ARG0-of (c3-4 / start-01
+                                 :ARG1 (c3-8 / person
+                                             :ARG1-of (c3-6 / employ-01
+                                                            :ARG0 (c3-9 / religious-group
+                                                                        :name (c3-7 / name
+                                                                                    :op1 "Muslim")))
+                                             :mod (c3-11 / any)))))
+
+# ::snt And despite the editor, who was present and appears to have died, being under police protection. Hmm.
+# ::tokens ["And", "despite", "the", "editor", ",", "who", "was", "present", "and", "appears", "to", "have", "died", ",", "being", "under", "police", "protection", ".", "Hmm", "."]
+# ::lemmas ["and", "despite", "the", "editor", ",", "who", "be", "present", "and", "appear", "to", "have", "die", ",", "be", "under", "police", "protection", ".", "hmm", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-9 / and
+                  :op2 (c4-0 / have-concession-91
+                             :ARG2 (c4-6 / protect-01
+                                         :ARG0 (c4-8 / police)
+                                         :ARG1 (c4-4 / editor
+                                                     :ARG1-of (c4-3 / present-02)
+                                                     :ARG1-of (c4-7 / die-01
+                                                                    :ARG1-of (c4-5 / appear-02))))))
+      :snt2 (c4-1 / hmm
+                  :mode expressive))
+
+# ::snt smells like an inside job, to me anyways.
+# ::tokens ["smells", "like", "an", "inside", "job", ",", "to", "me", "anyways", "."]
+# ::lemmas ["smell", "like", "an", "inside", "job", ",", "to", "i", "anyways", "."]
+(c5-4 / seem-01
+      :ARG1 (c5-2 / resemble-01
+                  :ARG2 (c5-0 / job
+                              :mod (c5-1 / inside)))
+      :ARG2 (c5-3 / i)
+      :mod (c5-5 / anyways))
+
+# ::snt MT : This was a well-planned attack: the gunmen hit in middle of weekly conference, with all staff present.
+# ::tokens ["MT", ":", "This", "was", "a", "well", "-", "planned", "attack", ":", "the", "gunmen", "hit", "in", "middle", "of", "weekly", "conference", ",", "with", "all", "staff", "present", "."]
+# ::lemmas ["MT", ":", "this", "be", "a", "well", "-", "plan", "attack", ":", "the", "gunman", "hit", "in", "middle", "of", "weekly", "conference", ",", "with", "all", "staff", "present", "."]
+(c6-14 / say-01
+       :ARG1 (c6-17 / attack-01
+                    :ARG1-of (c6-8 / plan-01
+                                   :ARG1-of (c6-1 / well-09))
+                    :domain (c6-15 / this)
+                    :ARG1-of (c6-2 / mean-01
+                                   :ARG2 (c6-0 / hit-01
+                                               :ARG1 (c6-11 / gunman)
+                                               :time (c6-9 / middle
+                                                           :part-of (c6-10 / conference
+                                                                           :frequency (c6-12 / rate-entity-91
+                                                                                             :ARG3 (c6-13 / temporal-quantity
+                                                                                                          :unit (c6-6 / week)
+                                                                                                          :quant 1))))
+                                               :accompanier (c6-16 / present
+                                                                   :domain (c6-4 / staff
+                                                                                 :mod (c6-5 / all))))))
+       :ARG2 (c6-3 / person
+                   :name (c6-7 / name
+                               :op1 "MT")))
+
+# ::snt they looked trained as well -- casual with guns. Novice are less likely to execute an escape plan.
+# ::tokens ["they", "looked", "trained", "as", "well", "--", "casual", "with", "guns", ".", "Novice", "are", "less", "likely", "to", "execute", "an", "escape", "plan", "."]
+# ::lemmas ["they", "look", "train", "as", "well", "--", "casual", "with", "gun", ".", "novice", "be", "less", "likely", "to", "execute", "an", "escape", "plan", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-2 / look-02
+                  :ARG0 (c7-12 / they)
+                  :ARG1 (c7-11 / train-01
+                               :ARG2 (c7-9 / casual
+                                           :prep-with (c7-10 / gun)
+                                           :domain c7-12))
+                  :mod (c7-13 / as-well))
+      :snt2 (c7-8 / likely-01
+                  :ARG1 (c7-5 / execute-02
+                              :ARG0 (c7-6 / Novice)
+                              :ARG1 (c7-7 / plan-01
+                                          :ARG1 (c7-4 / escape-01)))
+                  :ARG2-of (c7-0 / have-degree-91
+                                 :ARG1 c7-5
+                                 :ARG3 (c7-1 / less))))

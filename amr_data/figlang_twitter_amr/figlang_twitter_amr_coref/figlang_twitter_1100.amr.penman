@@ -1,0 +1,31 @@
+# ::snt Hi . Just woke up . Witcher marathon last night . Worth it .
+# ::tokens ["Hi", ".", "Just", "woke", "up", ".", "Witcher", "marathon", "last", "night", ".", "Worth", "it", "."]
+# ::lemmas ["hi", ".", "just", "wake", "up", ".", "witcher", "marathon", "last", "night", ".", "worth", "it", "."]
+(c1-8 / multi-sentence
+      :snt1 (c1-3 / hi)
+      :snt2 (c1-2 / wake-up-02
+                  :ARG1 (c1-7 / i)
+                  :time (c1-6 / just))
+      :snt3 (c1-1 / marathon
+                  :mod (c1-5 / person
+                             :name (c1-9 / name
+                                         :op1 "W Witcher"))
+                  :time (c1-0 / date-entity
+                              :dayperiod (c1-4 / night)
+                              :mod (c1-10 / yesterday))
+                  :ARG (c1-11 / worth-02)))
+
+# ::snt I did the same the other day and I m ready for the next season
+# ::tokens ["I", "did", "the", "same", "the", "other", "day", "and", "I", "m", "ready", "for", "the", "next", "season"]
+# ::lemmas ["i", "do", "the", "same", "the", "other", "day", "and", "i", "m", "ready", "for", "the", "next", "season"]
+(c2-2 / and
+      :op1 (c2-0 / do-02
+                 :ARG0 (c2-8 / i)
+                 :ARG1 (c2-5 / thing
+                             :ARG1-of (c2-1 / same-01))
+                 :time (c2-3 / day
+                             :mod (c2-4 / other)))
+      :op2 (c2-6 / ready-02
+                 :ARG1 c2-8
+                 :ARG2 (c2-7 / season
+                             :mod (c2-9 / next))))

@@ -1,0 +1,56 @@
+# ::snt For the first time in my life I'm not proud to be an American
+# ::tokens ["For", "the", "first", "time", "in", "my", "life", "I", "'m", "not", "proud", "to", "be", "an", "American"]
+# ::lemmas ["for", "the", "first", "time", "in", "my", "life", "i", "be", "not", "proud", "to", "be", "an", "American"]
+(c1-5 / pride-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-3 / person
+                  :mod (c1-0 / country
+                             :name (c1-6 / name
+                                         :op1 "America"))
+                  :domain c1-1)
+      :ord (c1-2 / ordinal-entity
+                 :range (c1-4 / life
+                              :poss c1-1)
+                 :value 1)
+      :polarity -)
+
+# ::snt do something . Change something . Or ... tweet about your personal feelings after millions people made a decision .
+# ::tokens ["do", "something", ".", "Change", "something", ".", "Or", "...", "tweet", "about", "your", "personal", "feelings", "after", "millions", "people", "made", "a", "decision", "."]
+# ::lemmas ["do", "something", ".", "change", "something", ".", "or", "...", "tweet", "about", "your", "personal", "feeling", "after", "millions", "people", "make", "a", "decision", "."]
+(c2-6 / or
+      :op1 (c2-0 / do-02
+                 :ARG0 (c2-11 / you)
+                 :ARG1 (c2-1 / something)
+                 :mode imperative)
+      :op2 (c2-4 / change-01
+                 :ARG0 c2-11
+                 :ARG1 c2-1
+                 :mode imperative)
+      :op3 c2-6
+      :op2 (c2-8 / tweet-01
+                 :ARG0 c2-11
+                 :topic (c2-3 / feel-01
+                              :ARG0 c2-11
+                              :ARG1-of (c2-9 / personal-02
+                                             :ARG2 c2-11))
+                 :time (c2-2 / after
+                             :op1 (c2-5 / decide-01
+                                        :ARG0 (c2-7 / person
+                                                    :quant (c2-10 / multiple
+                                                                  :op1 1000000))))
+                 :mode imperative))
+
+# ::snt I did do something . I chose not to vote for either candidate
+# ::tokens ["I", "did", "do", "something", ".", "I", "chose", "not", "to", "vote", "for", "either", "candidate"]
+# ::lemmas ["i", "do", "do", "something", ".", "i", "choose", "not", "to", "vote", "for", "either", "candidate"]
+(c3-7 / multi-sentence
+      :snt1 (c3-0 / do-02
+                  :ARG0 (c3-6 / i)
+                  :ARG1 (c3-1 / something))
+      :snt2 (c3-3 / choose-01
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-5 / vote-01
+                              :ARG0 c3-4
+                              :ARG1 (c3-2 / candidate
+                                          :mod (c3-8 / either))
+                              :polarity -)))

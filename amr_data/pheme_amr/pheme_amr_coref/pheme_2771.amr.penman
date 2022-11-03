@@ -1,0 +1,191 @@
+# ::snt poor little flower
+# ::tokens ["poor", "little", "flower"]
+# ::lemmas ["poor", "little", "flower"]
+(c1-1 / flower
+      :mod (c1-0 / poor)
+      :mod (c1-2 / little))
+
+# ::snt I hope this isn't true
+# ::tokens ["I", "hope", "this", "is", "n't", "true"]
+# ::lemmas ["i", "hope", "this", "be", "not", "true"]
+(c2-0 / hope-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-1 / true-01
+                  :ARG1 (c2-3 / this)
+                  :polarity -))
+
+# ::snt never was a show
+# ::tokens ["never", "was", "a", "show"]
+# ::lemmas ["never", "be", "a", "show"]
+(c3-0 / show-04
+      :time (c3-1 / ever)
+      :polarity -)
+
+# ::snt Who would want to go to a Prince show when he wasn't feeling it? It's called quality control.
+# ::tokens ["Who", "would", "want", "to", "go", "to", "a", "Prince", "show", "when", "he", "was", "n't", "feeling", "it", "?", "It", "'s", "called", "quality", "control", "."]
+# ::lemmas ["who", "would", "want", "to", "go", "to", "a", "Prince", "show", "when", "he", "be", "not", "feel", "it", "?", "it", "be", "call", "quality", "control", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-1 / want-01
+                  :ARG0 (c4-11 / amr-unknown)
+                  :ARG1 (c4-9 / go-02
+                              :ARG0 c4-11
+                              :ARG4 (c4-10 / show
+                                           :mod (c4-6 / prince)))
+                  :time (c4-2 / feel-01
+                              :ARG0 (c4-0 / he)
+                              :ARG1 c4-10
+                              :polarity -))
+      :snt2 (c4-8 / call-01
+                  :ARG1 (c4-5 / it)
+                  :ARG2 (c4-7 / control-01
+                              :ARG1 (c4-4 / quality))))
+
+# ::snt at least say something
+# ::tokens ["at", "least", "say", "something"]
+# ::lemmas ["at", "least", "say", "something"]
+(c5-0 / say-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-2 / something)
+      :mod (c5-3 / at-least)
+      :mode imperative)
+
+# ::snt Well if it was him &amp; his pr that started the rumor, he better 'start feelingit' or fans be pissed
+# ::tokens ["Well", "if", "it", "was", "him", "&", "amp", ";", "his", "pr", "that", "started", "the", "rumor", ",", "he", "better", "'", "start", "feelingit", "'", "or", "fans", "be", "pissed"]
+# ::lemmas ["well", "if", "it", "be", "he", "&", "amp", ";", "his", "pr", "that", "start", "the", "rumor", ",", "he", "well", "'", "start", "feelingit", "'", "or", "fan", "be", "piss"]
+(c6-10 / recommend-01
+       :ARG1 (c6-3 / or
+                   :op1 (c6-11 / start-01
+                               :ARG0 (c6-0 / he)
+                               :ARG1 (c6-2 / feel-01
+                                           :ARG0 c6-0
+                                           :ARG1 (c6-5 / it)))
+                   :op2 (c6-9 / piss-03
+                              :ARG1 (c6-6 / fan)))
+       :condition (c6-4 / start-01
+                        :ARG0 (c6-13 / and
+                                     :op1 c6-0
+                                     :op2 (c6-12 / person
+                                                 :name (c6-7 / name
+                                                             :op1 "Pat")
+                                                 :poss c6-0))
+                        :ARG1 (c6-8 / rumor-01))
+       :mod (c6-1 / well))
+
+# ::snt Why do some think this was just a power trip? Just manipulation? Not funny!
+# ::tokens ["Why", "do", "some", "think", "this", "was", "just", "a", "power", "trip", "?", "Just", "manipulation", "?", "Not", "funny", "!"]
+# ::lemmas ["why", "do", "some", "think", "this", "be", "just", "a", "power", "trip", "?", "just", "manipulation", "?", "not", "funny", "!"]
+(c7-2 / multi-sentence
+      :snt1 (c7-9 / think-01
+                  :ARG0 (c7-8 / some)
+                  :ARG1 (c7-7 / trip-03
+                              :ARG0 (c7-4 / power)
+                              :mod (c7-0 / just)
+                              :domain (c7-3 / this))
+                  :ARG1-of (c7-6 / cause-01
+                                 :ARG0 (c7-11 / amr-unknown)))
+      :snt2 (c7-5 / manipulate-02
+                  :mod (c7-10 / just))
+      :snt3 (c7-1 / funny-02
+                  :polarity -
+                  :mode expressive))
+
+# ::snt ....could be just a rumour! Not confirmed that it was really just that!
+# ::tokens ["....", "could", "be", "just", "a", "rumour", "!", "Not", "confirmed", "that", "it", "was", "really", "just", "that", "!"]
+# ::lemmas ["....", "could", "be", "just", "a", "rumour", "!", "not", "confirm", "that", "it", "be", "really", "just", "that", "!"]
+(c8-1 / multi-sentence
+      :snt1 (c8-4 / possible-01
+                  :ARG1 (c8-5 / rumor-01
+                              :mod (c8-0 / just)))
+      :snt2 (c8-6 / confirm-01
+                  :ARG1 (c8-7 / that
+                              :mod (c8-8 / just)
+                              :ARG1-of (c8-3 / real-04)
+                              :domain (c8-2 / it))
+                  :polarity -))
+
+# ::snt : Prince Pulls Out of Secret Toronto Show Because He 'Just Wasn't Feeling It' via
+# ::tokens [":", "Prince", "Pulls", "Out", "of", "Secret", "Toronto", "Show", "Because", "He", "'", "Just", "Was", "n't", "Feeling", "It", "'", "via"]
+# ::lemmas [":", "Prince", "pull", "out", "of", "Secret", "Toronto", "Show", "because", "he", "'", "just", "be", "not", "feel", "it", "'", "via"]
+(c9-7 / publication-91
+      :ARG1 (c9-11 / pull-out-02
+                   :ARG1 (c9-2 / person
+                               :name (c9-5 / name
+                                           :op1 "Prince"))
+                   :ARG2 (c9-10 / show
+                                :mod (c9-3 / secret)
+                                :location (c9-9 / city
+                                                :name (c9-6 / name
+                                                            :op1 "Toronto")))
+                   :ARG1-of (c9-8 / cause-01
+                                  :ARG0 (c9-1 / feel-01
+                                              :ARG0 c9-2
+                                              :ARG1 (c9-4 / it)
+                                              :mod (c9-0 / just)
+                                              :polarity -))))
+
+# ::snt He is an artist. He only performs if he feels inspired.
+# ::tokens ["He", "is", "an", "artist", ".", "He", "only", "performs", "if", "he", "feels", "inspired", "."]
+# ::lemmas ["he", "be", "an", "artist", ".", "he", "only", "perform", "if", "he", "feels", "inspire", "."]
+(c10-2 / multi-sentence
+       :snt1 (c10-6 / artist
+                    :domain (c10-0 / he))
+       :snt2 (c10-5 / perform-01
+                    :ARG0 (c10-7 / he)
+                    :mod (c10-3 / only)
+                    :condition (c10-1 / feel-01
+                                      :ARG0 c10-7
+                                      :ARG1 (c10-4 / inspire-01
+                                                   :ARG1 c10-7))))
+
+# ::snt he deleted original tweet and has since said nothing leaving peeps for hours cold and wet.
+# ::tokens ["he", "deleted", "original", "tweet", "and", "has", "since", "said", "nothing", "leaving", "peeps", "for", "hours", "cold", "and", "wet", "."]
+# ::lemmas ["he", "delete", "original", "tweet", "and", "have", "since", "say", "nothing", "leave", "peep", "for", "hours", "cold", "and", "wet", "."]
+(c11-14 / and
+        :op1 (c11-9 / delete-01
+                    :ARG0 (c11-0 / he)
+                    :ARG1 (c11-13 / tweet-01
+                                  :mod (c11-5 / original)))
+        :op2 (c11-12 / say-01
+                     :ARG0 c11-0
+                     :ARG1 (c11-7 / nothing
+                                  :ARG0-of (c11-2 / leave-13
+                                                  :ARG1 (c11-8 / peep)
+                                                  :duration (c11-3 / multiple
+                                                                   :op1 (c11-11 / temporal-quantity
+                                                                                :unit (c11-4 / hour)
+                                                                                :quant 1))
+                                                  :ARG1-of (c11-10 / cold-01)
+                                                  :ARG1-of (c11-1 / wet-01)))
+                     :time (c11-6 / since)))
+
+# ::snt The Artist Formerly Somewhat Interesting But Not To Me.
+# ::tokens ["The", "Artist", "Formerly", "Somewhat", "Interesting", "But", "Not", "To", "Me", "."]
+# ::lemmas ["The", "Artist", "Formerly", "Somewhat", "Interesting", "but", "not", "to", "i", "."]
+(c12-3 / contrast-01
+       :ARG1 (c12-2 / interest-01
+                    :ARG2 (c12-6 / artist)
+                    :degree (c12-5 / somewhat)
+                    :time (c12-0 / former))
+       :ARG2 (c12-4 / interest-01
+                    :ARG2 (c12-1 / i)
+                    :ARG3 c12-6
+                    :polarity -))
+
+# ::snt thats a complete disgrace
+# ::tokens ["that", "s", "a", "complete", "disgrace"]
+# ::lemmas ["that", "s", "a", "complete", "disgrace"]
+(c13-0 / disgrace-01
+       :ARG1-of (c13-1 / complete-02))
+
+# ::snt ....I'm still in hope that either the gig carries on or an announcement will say something x
+# ::tokens ["....", "I", "'m", "still", "in", "hope", "that", "either", "the", "gig", "carries", "on", "or", "an", "announcement", "will", "say", "something", "x"]
+# ::lemmas ["....", "i", "be", "still", "in", "hope", "that", "either", "the", "gig", "carry", "on", "or", "an", "announcement", "will", "say", "something", "x"]
+(c14-0 / hope-01
+       :ARG0 (c14-4 / i)
+       :ARG1 (c14-2 / or
+                    :op1 (c14-5 / carry-on-02
+                                :ARG1 (c14-6 / gig))
+                    :op2 (c14-7 / say-01
+                                :ARG0 (c14-8 / announce-01)
+                                :ARG1 (c14-3 / something)))
+       :mod (c14-1 / still))

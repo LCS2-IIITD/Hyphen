@@ -1,0 +1,21 @@
+# ::snt misleading !
+# ::tokens ["misleading", "!"]
+# ::lemmas ["mislead", "!"]
+(c1-0 / mislead-01)
+
+# ::snt Apparently you tweet is misleading. Covid jabs are the only way to true health
+# ::tokens ["Apparently", "you", "tweet", "is", "misleading", ".", "Covid", "jabs", "are", "the", "only", "way", "to", "true", "health"]
+# ::lemmas ["apparently", "you", "tweet", "be", "misleading", ".", "covid", "jab", "be", "the", "only", "way", "to", "true", "health"]
+(c2-9 / multi-sentence
+      :snt1 (c2-1 / mislead-01
+                  :ARG0 (c2-7 / tweet-01
+                              :ARG0 (c2-11 / you))
+                  :ARG1-of (c2-0 / appear-02))
+      :snt2 (c2-2 / way
+                  :mod (c2-6 / only)
+                  :path-of (c2-5 / health
+                                 :ARG1-of (c2-3 / true-01))
+                  :domain (c2-8 / jabs
+                                :mod (c2-4 / city
+                                           :name (c2-10 / name
+                                                        :op1 "Covid")))))

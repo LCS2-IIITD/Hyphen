@@ -1,0 +1,282 @@
+# ::snt -
+# ::tokens ["-"]
+# ::lemmas ["-"]
+(c1-0 / amr-empty)
+
+# ::snt Cue the bombardment now.
+# ::tokens ["Cue", "the", "bombardment", "now", "."]
+# ::lemmas ["Cue", "the", "bombardment", "now", "."]
+(c2-2 / cue-01
+      :ARG0 (c2-1 / you)
+      :ARG1 (c2-3 / bombard-01)
+      :time (c2-0 / now)
+      :mode imperative)
+
+# ::snt Isis
+# ::tokens ["Isis"]
+# ::lemmas ["isis"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "Isis"))
+
+# ::snt I am not in that area anymore. That was scary, disabled phone, no longer in the area. I hope I am safe
+# ::tokens ["I", "am", "not", "in", "that", "area", "anymore", ".", "That", "was", "scary", ",", "disabled", "phone", ",", "no", "longer", "in", "the", "area", ".", "I", "hope", "I", "am", "safe"]
+# ::lemmas ["i", "be", "not", "in", "that", "area", "anymore", ".", "that", "be", "scary", ",", "disabled", "phone", ",", "no", "long", "in", "the", "area", ".", "i", "hope", "i", "be", "safe"]
+(c4-1 / multi-sentence
+      :snt1 (c4-2 / be-located-at-91
+                  :ARG1 (c4-5 / i)
+                  :ARG2 (c4-14 / area
+                               :mod (c4-13 / that))
+                  :time (c4-4 / anymore)
+                  :polarity -)
+      :snt2 (c4-8 / phone
+                  :ARG0-of (c4-12 / scary-03)
+                  :ARG1-of (c4-9 / disable-01)
+                  :location (c4-7 / area
+                                  :time (c4-6 / no-longer))
+                  :domain (c4-11 / that))
+      :snt3 (c4-0 / hope-01
+                  :ARG0 (c4-10 / i)
+                  :ARG1 (c4-3 / safe-01
+                              :ARG1 c4-10)))
+
+# ::snt -
+# ::tokens ["-"]
+# ::lemmas ["-"]
+(c5-0 / amr-empty)
+
+# ::snt -
+# ::tokens ["-"]
+# ::lemmas ["-"]
+(c6-0 / amr-empty)
+
+# ::snt -
+# ::tokens ["-"]
+# ::lemmas ["-"]
+(c7-0 / amr-empty)
+
+# ::snt soldier has died
+# ::tokens ["soldier", "has", "died"]
+# ::lemmas ["soldier", "have", "die"]
+(c8-2 / die-01
+      :ARG1 (c8-1 / person
+                  :name (c8-0 / name
+                              :op1 "Soldier")))
+
+# ::snt : Ottawa Police Service: No one was hurt in the shooting near Ottawa's Rideau Centre. Live blog
+# ::tokens [":", "Ottawa", "Police", "Service", ":", "No", "one", "was", "hurt", "in", "the", "shooting", "near", "Ottawa", "'s", "Rideau", "Centre", ".", "Live", "blog"]
+# ::lemmas [":", "Ottawa", "Police", "Service", ":", "no", "one", "be", "hurt", "in", "the", "shooting", "near", "Ottawa", "'s", "Rideau", "Centre", ".", "live", "blog"]
+(c9-2 / multi-sentence
+      :snt1 (c9-13 / say-01
+                   :ARG0 (c9-11 / government-organization
+                                :name (c9-6 / name
+                                            :op1 "Ottawa"
+                                            :op2 "Police"
+                                            :op3 "Service"))
+                   :ARG1 (c9-0 / hurt-01
+                               :ARG1 (c9-7 / no-one)
+                               :ARG1-of (c9-10 / cause-01
+                                               :ARG0 (c9-5 / shoot-02
+                                                           :ARG1-of (c9-8 / near-02
+                                                                          :ARG2 (c9-1 / facility
+                                                                                      :name (c9-9 / name
+                                                                                                  :op1 "Rideau"
+                                                                                                  :op2 "Center")
+                                                                                      :location (c9-12 / city))))))
+                   :snt2 (c9-4 / blog-01
+                               :mod (c9-3 / live))))
+
+# ::snt :All the hallmarks of attk by those who believe"from chaos comes order":US jrno
+# ::tokens [":", "All", "the", "hallmarks", "of", "attk", "by", "those", "who", "believe\"from", "chaos", "comes", "order\":US", "jrno"]
+# ::lemmas [":", "all", "the", "hallmark", "of", "attk", "by", "those", "who", "believe\"from", "chaos", "come", "order\":US", "jrno"]
+(c10-0 / hallmark
+       :mod (c10-10 / all)
+       :poss (c10-8 / government-organization
+                    :name (c10-3 / name
+                                 :op1 "United"
+                                 :op2 "States"
+                                 :op3 "of"
+                                 :op4 "America")
+                    :domain-of c10-0)
+       :name (c10-4 / name
+                    :op1 "All"
+                    :op2 "Government")
+       :ARG1-of (c10-1 / believe-01
+                       :ARG0 (c10-5 / person
+                                    :mod (c10-9 / that))
+                       :ARG1 (c10-7 / come-03
+                                    :ARG1 (c10-2 / order)
+                                    :ARG2 (c10-6 / chaos))))
+
+# ::snt two more still at large? Shoot to kill!!!
+# ::tokens ["two", "more", "still", "at", "large", "?", "Shoot", "to", "kill", "!", "!", "!"]
+# ::lemmas ["two", "more", "still", "at", "large", "?", "shoot", "to", "kill", "!", "!", "!"]
+(c11-1 / multi-sentence
+       :snt1 (c11-8 / at-large
+                    :domain (c11-4 / person
+                                   :mod (c11-5 / more)
+                                   :quant 2)
+                    :mod (c11-6 / still)
+                    :polarity (c11-3 / amr-unknown))
+       :snt2 (c11-2 / shoot-02
+                    :ARG0 (c11-0 / you)
+                    :purpose (c11-7 / kill-01
+                                    :ARG0 c11-0)
+                    :mode imperative))
+
+# ::snt Thank God!
+# ::tokens ["Thank", "God", "!"]
+# ::lemmas ["thank", "God", "!"]
+(c12-2 / thank-01
+       :ARG1 (c12-1 / person
+                    :name (c12-0 / name
+                                 :op1 "God"))
+       :mode expressive)
+
+# ::snt finally some good news
+# ::tokens ["finally", "some", "good", "news"]
+# ::lemmas ["finally", "some", "good", "news"]
+(c13-0 / news
+       :ARG1-of (c13-2 / good-02)
+       :mod (c13-3 / some)
+       :mod (c13-1 / final))
+
+# ::snt one soldier shot and one shooter killed. Don't know where you are getting your info.
+# ::tokens ["one", "soldier", "shot", "and", "one", "shooter", "killed", ".", "Do", "n't", "know", "where", "you", "are", "getting", "your", "info", "."]
+# ::lemmas ["one", "soldier", "shoot", "and", "one", "shooter", "kill", ".", "do", "not", "know", "where", "you", "be", "get", "your", "info", "."]
+(c14-2 / multi-sentence
+       :snt1 (c14-11 / and
+                     :op1 (c14-9 / shoot-02
+                                 :ARG1 (c14-4 / soldier
+                                              :quant 1))
+                     :op2 (c14-10 / kill-01
+                                  :ARG1 (c14-7 / person
+                                               :ARG0-of (c14-1 / shoot-02)
+                                               :quant 1)))
+       :snt2 (c14-5 / know-01
+                    :ARG0 (c14-0 / you)
+                    :ARG1 (c14-3 / location
+                                 :location-of (c14-8 / get-01
+                                                     :ARG0 c14-0
+                                                     :ARG1 (c14-6 / information
+                                                                  :poss c14-0)))
+                    :polarity -))
+
+# ::snt its gonna be tuff to discern other shooters from the population! Hope they find all the nutz!
+# ::tokens ["its", "gon", "na", "be", "tuff", "to", "discern", "other", "shooters", "from", "the", "population", "!", "Hope", "they", "find", "all", "the", "nutz", "!"]
+# ::lemmas ["its", "going", "to", "be", "tuff", "to", "discern", "other", "shooter", "from", "the", "population", "!", "hope", "they", "find", "all", "the", "nutz", "!"]
+(c15-2 / multi-sentence
+       :snt1 (c15-10 / tuff
+                     :domain (c15-7 / discern-01
+                                    :ARG1 (c15-6 / person
+                                                 :ARG0-of (c15-9 / shoot-02)
+                                                 :mod (c15-3 / other))
+                                    :ARG2 (c15-11 / population)))
+       :snt2 (c15-0 / hope-01
+                    :ARG0 (c15-4 / i)
+                    :ARG1 (c15-1 / find-01
+                                 :ARG0 (c15-8 / they)
+                                 :ARG1 (c15-5 / nutz
+                                              :mod (c15-12 / all)))
+                    :mode expressive))
+
+# ::snt -_- !! -
+# ::tokens ["-_-", "!", "!", "-"]
+# ::lemmas ["-_-", "!", "!", "-"]
+(c16-0 / _-)
+
+# ::snt . Definitely then a Muslim behind the barrel. They're the Storm Troopers of shooting.
+# ::tokens [".", "Definitely", "then", "a", "Muslim", "behind", "the", "barrel", ".", "They", "'re", "the", "Storm", "Troopers", "of", "shooting", "."]
+# ::lemmas [".", "definitely", "then", "a", "Muslim", "behind", "the", "barrel", ".", "they", "be", "the", "Storm", "Troopers", "of", "shooting", "."]
+(c17-1 / multi-sentence
+       :snt1 (c17-6 / person
+                    :mod (c17-7 / religious-group
+                                :name (c17-4 / name
+                                             :op1 "Islam"))
+                    :mod (c17-8 / definite)
+                    :time (c17-12 / then)
+                    :location (c17-2 / behind
+                                     :op1 (c17-9 / barrel)))
+       :snt2 (c17-13 / person
+                     :ARG0-of (c17-0 / have-org-role-91
+                                     :ARG2 (c17-10 / troop
+                                                   :mod (c17-11 / storm)))
+                     :ARG0-of (c17-3 / shoot-01)
+                     :domain (c17-5 / they)))
+
+# ::snt is this related to Mondays actions in Quebec?? Ya think??
+# ::tokens ["is", "this", "related", "to", "Mondays", "actions", "in", "Quebec", "?", "?", "Ya", "think", "?", "?"]
+# ::lemmas ["be", "this", "related", "to", "Mondays", "action", "in", "Quebec", "?", "?", "ya", "think", "?", "?"]
+(c18-1 / multi-sentence
+       :snt1 (c18-5 / relate-01
+                    :polarity (c18-10 / amr-unknown)
+                    :ARG1 (c18-9 / this)
+                    :ARG2 (c18-2 / act-02
+                                 :time (c18-6 / date-entity
+                                              :weekday (c18-4 / monday))
+                                 :location (c18-7 / province
+                                                  :name (c18-3 / name
+                                                               :op1 "Quebec"))))
+       :snt2 (c18-8 / think-01
+                    :ARG0 (c18-0 / you)
+                    :polarity c18-10))
+
+# ::snt : Ottawa Police Service: No one was hurt in the shooting near Ottawa's Rideau Centre. Live blog
+# ::tokens [":", "Ottawa", "Police", "Service", ":", "No", "one", "was", "hurt", "in", "the", "shooting", "near", "Ottawa", "'s", "Rideau", "Centre", ".", "Live", "blog"]
+# ::lemmas [":", "Ottawa", "Police", "Service", ":", "no", "one", "be", "hurt", "in", "the", "shooting", "near", "Ottawa", "'s", "Rideau", "Centre", ".", "live", "blog"]
+(c19-2 / multi-sentence
+       :snt1 (c19-13 / say-01
+                     :ARG0 (c19-11 / government-organization
+                                   :name (c19-6 / name
+                                                :op1 "Ottawa"
+                                                :op2 "Police"
+                                                :op3 "Service"))
+                     :ARG1 (c19-0 / hurt-01
+                                  :ARG1 (c19-7 / no-one)
+                                  :ARG1-of (c19-10 / cause-01
+                                                   :ARG0 (c19-5 / shoot-02
+                                                                :ARG1-of (c19-8 / near-02
+                                                                                :ARG2 (c19-1 / facility
+                                                                                             :name (c19-9 / name
+                                                                                                          :op1 "Rideau"
+                                                                                                          :op2 "Center")
+                                                                                             :location (c19-12 / city))))))
+                     :snt2 (c19-4 / blog-01
+                                  :mod (c19-3 / live))))
+
+# ::snt :BULLSHIT R.C.M.P. SHOT AD KILLED AT LEAST OF THE SCUM BAGS MORE TO COME
+# ::tokens [":", "BULLSHIT", "R.C.M.P.", "SHOT", "AD", "KILLED", "AT", "LEAST", "OF", "THE", "SCUM", "BAGS", "MORE", "TO", "COME"]
+# ::lemmas [":", "BULLSHIT", "R.C.M.P.", "SHOT", "AD", "kill", "AT", "least", "of", "the", "SCUM", "BAGS", "more", "to", "come"]
+(c20-9 / kill-01
+       :ARG0 (c20-0 / hit-01
+                    :ARG1 (c20-6 / game
+                                 :name (c20-3 / name
+                                              :op1 "Bullshit"
+                                              :op2 "R.C.M.P.")))
+       :ARG1 (c20-2 / bag
+                    :mod (c20-8 / scum)
+                    :quant (c20-10 / at-least))
+       :mod (c20-1 / more)
+       :ARG0-of (c20-5 / cause-01
+                       :ARG1 (c20-4 / come-01
+                                    :ARG1 (c20-7 / gag))))
+
+# ::snt it must be really disappointing to set out to kill a bunch of people and then not even injure anyone. poor guy(s)
+# ::tokens ["it", "must", "be", "really", "disappointing", "to", "set", "out", "to", "kill", "a", "bunch", "of", "people", "and", "then", "not", "even", "injure", "anyone", ".", "poor", "guy(s", ")"]
+# ::lemmas ["it", "must", "be", "really", "disappointing", "to", "set", "out", "to", "kill", "a", "bunch", "of", "people", "and", "then", "not", "even", "injure", "anyone", ".", "poor", "guy(s", ")"]
+(c21-0 / multi-sentence
+       :snt1 (c21-4 / infer-01
+                    :ARG1 (c21-6 / disappoint-01
+                                 :ARG0 (c21-10 / set-out-07
+                                               :ARG1 (c21-14 / and
+                                                             :op1 (c21-12 / kill-01
+                                                                          :ARG1 (c21-5 / person
+                                                                                       :quant (c21-1 / bunch)))
+                                                             :op2 (c21-8 / injure-01
+                                                                         :ARG1 (c21-3 / anyone)
+                                                                         :mod (c21-2 / even)
+                                                                         :time (c21-11 / then)
+                                                                         :polarity -)))
+                                 :degree (c21-7 / really)))
+       :snt2 (c21-9 / guy
+                    :mod (c21-13 / poor)))

@@ -1,0 +1,47 @@
+# ::snt prayers!!!
+# ::tokens ["prayers", "!", "!", "!"]
+# ::lemmas ["prayer", "!", "!", "!"]
+(c1-0 / pray-01
+      :mode expressive)
+
+# ::snt live from Sydney
+# ::tokens ["live", "from", "Sydney"]
+# ::lemmas ["live", "from", "Sydney"]
+(c3-1 / live-01
+      :location (c3-2 / city
+                      :name (c3-0 / name
+                                  :op1 "Sydney")))
+
+# ::snt May be weird camera angle but who are people in the bground walking around? Cordoned off?
+# ::tokens ["May", "be", "weird", "camera", "angle", "but", "who", "are", "people", "in", "the", "bground", "walking", "around", "?", "Cordoned", "off", "?"]
+# ::lemmas ["may", "be", "weird", "camera", "angle", "but", "who", "be", "people", "in", "the", "bground", "walk", "around", "?", "cordone", "off", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-8 / contrast-01
+                  :ARG1 (c4-6 / possible-01
+                              :ARG1 (c4-12 / angle
+                                           :mod (c4-7 / camera)
+                                           :mod (c4-0 / weird)))
+                  :ARG2 (c4-11 / person
+                               :location (c4-9 / ground)
+                               :ARG0-of (c4-4 / walk-01
+                                              :ARG2 (c4-3 / around))
+                               :domain (c4-5 / amr-unknown)))
+      :snt2 (c4-10 / cordon-01
+                   :ARG1 (c4-2 / off)))
+
+# ::snt hopes everyone gets home safe &amp; sound for Christmas!!
+# ::tokens ["hopes", "everyone", "gets", "home", "safe", "&", "amp", ";", "sound", "for", "Christmas", "!", "!"]
+# ::lemmas ["hope", "everyone", "get", "home", "safe", "&", "amp", ";", "sound", "for", "Christmas", "!", "!"]
+(c5-0 / hope-01
+      :ARG1 (c5-8 / get-05
+                  :ARG1 (c5-4 / everyone)
+                  :ARG2 (c5-1 / home)
+                  :manner (c5-10 / and
+                                 :op1 (c5-9 / safe-01
+                                            :ARG1 c5-4)
+                                 :op2 (c5-6 / amp))
+                  :ARG1-of (c5-2 / mean-01
+                                 :ARG2 (c5-5 / sound
+                                             :mod (c5-3 / festival
+                                                        :name (c5-7 / name
+                                                                    :op1 "Christmas"))))))

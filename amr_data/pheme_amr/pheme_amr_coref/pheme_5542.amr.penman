@@ -1,0 +1,97 @@
+# ::snt No indication of survivors?
+# ::tokens ["No", "indication", "of", "survivors", "?"]
+# ::lemmas ["no", "indication", "of", "survivor", "?"]
+(c1-3 / indicate-01
+      :ARG1 (c1-1 / person
+                  :ARG0-of (c1-0 / survive-01))
+      :polarity (c1-2 / amr-unknown)
+      :polarity -)
+
+# ::snt sad sad news!
+# ::tokens ["sad", "sad", "news", "!"]
+# ::lemmas ["sad", "sad", "news", "!"]
+(c2-0 / sad-02
+      :ARG0 (c2-1 / news))
+
+# ::snt Shit... : : A Airbus A320 plane has crashed in southern France, police and aviation officials say.
+# ::tokens ["Shit", "...", ":", ":", "A", "Airbus", "A320", "plane", "has", "crashed", "in", "southern", "France", ",", "police", "and", "aviation", "officials", "say", "."]
+# ::lemmas ["shit", "...", ":", ":", "a", "Airbus", "A320", "plane", "have", "crash", "in", "southern", "France", ",", "police", "and", "aviation", "official", "say", "."]
+(c3-13 / say-01
+       :ARG0 (c3-16 / and
+                    :op1 (c3-10 / person
+                                :ARG0-of (c3-0 / have-org-role-91
+                                               :ARG1 (c3-15 / police)
+                                               :ARG2 (c3-5 / official)))
+                    :op2 (c3-4 / person
+                               :ARG0-of (c3-1 / have-org-role-91
+                                              :ARG1 (c3-7 / aviation)
+                                              :ARG2 (c3-2 / official))))
+       :ARG1 (c3-12 / crash-01
+                    :ARG1 (c3-14 / plane
+                                 :name (c3-8 / name
+                                             :op1 "Airbus"
+                                             :op2 "A320"))
+                    :location (c3-6 / south
+                                    :part-of (c3-11 / country
+                                                    :name (c3-9 / name
+                                                                :op1 "France"))))
+       :mod (c3-3 / shit))
+
+# ::snt oh no!
+# ::tokens ["oh", "no", "!"]
+# ::lemmas ["oh", "no", "!"]
+(c4-0 / oh-no
+      :mode expressive)
+
+# ::snt No, no, no. ~ RT : : A Airbus A320 plane has crashed in southern France, police and aviation officials say.
+# ::tokens ["No", ",", "no", ",", "no", ".", "~", "RT", ":", ":", "A", "Airbus", "A320", "plane", "has", "crashed", "in", "southern", "France", ",", "police", "and", "aviation", "officials", "say", "."]
+# ::lemmas ["no", ",", "no", ",", "no", ".", "~", "RT", ":", ":", "a", "Airbus", "A320", "plane", "have", "crash", "in", "southern", "France", ",", "police", "and", "aviation", "official", "say", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-5 / no
+                  :snt2-of c6-0)
+      :snt3 (c6-12 / say-01
+                   :ARG0 (c6-14 / and
+                                :op1 (c6-7 / police)
+                                :op2 (c6-2 / official
+                                           :topic (c6-4 / aviation)))
+                   :ARG1 (c6-9 / crash-01
+                               :ARG1 (c6-13 / plane
+                                            :name (c6-6 / name
+                                                        :op1 "Airbus"
+                                                        :op2 "A320"))
+                               :location (c6-3 / south
+                                               :part-of (c6-8 / country
+                                                              :name (c6-10 / name
+                                                                           :op1 "France")))))
+      :snt4 (c6-1 / publication
+                  :name (c6-11 / name
+                               :op1 "RT")))
+
+# ::snt Mein Mitgefhl gehrt den Opfern und deren Angehrigen. Ich bin geschockt und traurig.
+# ::tokens ["Mein", "Mitgefhl", "gehrt", "den", "Opfern", "und", "deren", "Angehrigen", ".", "Ich", "bin", "geschockt", "und", "traurig", "."]
+# ::lemmas ["Mein", "Mitgefhl", "gehrt", "den", "Opfern", "und", "deren", "Angehrigen", ".", "Ich", "bin", "geschockt", "und", "traurig", "."]
+(c7-1 / multi-sentence
+      :snt1 (c7-11 / gehrt-00
+                   :ARG0 (c7-8 / person
+                               :name (c7-6 / name
+                                           :op1 "Mein"
+                                           :op2 "Mitgefhl"))
+                   :ARG1 (c7-15 / and
+                                :op1 (c7-13 / thing
+                                            :ARG1-of (c7-3 / opfern-01))
+                                :op2 (c7-12 / thing
+                                            :ARG1-of (c7-0 / have-org-role-91
+                                                           :ARG0 (c7-14 / person
+                                                                        :name (c7-7 / name
+                                                                                    :op1 "Angehrigen"))))))
+      :snt2 (c7-2 / bin-01
+                  :ARG0 (c7-5 / i)
+                  :ARG1 (c7-4 / and
+                              :op1 (c7-9 / geschockt)
+                              :op2 (c7-10 / traurig))))
+
+# ::snt not good!!!!!
+# ::tokens ["not", "good", "!", "!", "!", "!", "!"]
+# ::lemmas ["not", "good", "!", "!", "!", "!", "!"]
+(c8-0 / good-02
+      :polarity -)

@@ -1,0 +1,95 @@
+# ::snt should we be using gab.com or gab.ai? which site is going to become the main one?
+# ::tokens ["should", "we", "be", "using", "gab.com", "or", "gab.ai", "?", "which", "site", "is", "going", "to", "become", "the", "main", "one", "?"]
+# ::lemmas ["should", "we", "be", "use", "gab.com", "or", "gab.ai", "?", "which", "site", "be", "go", "to", "become", "the", "main", "one", "?"]
+(c1-11 / multi-sentence
+       :snt1 (c1-8 / recommend-01
+                   :ARG1 (c1-5 / use-01
+                               :ARG0 (c1-3 / we)
+                               :ARG1 (c1-7 / or
+                                           :op1 (c1-4 / url-entity
+                                                      :value "gab.com")
+                                           :op2 (c1-6 / url-entity
+                                                      :value "gab.ai"))))
+       :snt2 (c1-9 / become-01
+                   :ARG1 (c1-0 / site
+                               :mod (c1-1 / amr-unknown))
+                   :ARG2 (c1-10 / site
+                                :mod (c1-2 / main))))
+
+# ::snt you can go away this is a free speech platform
+# ::tokens ["you", "can", "go", "away", "this", "is", "a", "free", "speech", "platform"]
+# ::lemmas ["you", "can", "go", "away", "this", "be", "a", "free", "speech", "platform"]
+(c2-7 / possible-01
+      :ARG1 (c2-6 / go-02
+                  :ARG0 (c2-8 / you)
+                  :ARG4 (c2-1 / away))
+      :ARG1-of (c2-3 / cause-01
+                     :ARG0 (c2-4 / platform
+                                 :mod (c2-0 / speak-01
+                                            :ARG3-of (c2-2 / free-04))
+                                 :domain (c2-5 / this))))
+
+# ::snt yeh so what get over it i followed you who cares? only you do
+# ::tokens ["yeh", "so", "what", "get", "over", "it", "i", "followed", "you", "who", "cares", "?", "only", "you", "do"]
+# ::lemmas ["yeh", "so", "what", "get", "over", "it", "i", "follow", "you", "who", "care", "?", "only", "you", "do"]
+(c3-12 / multi-sentence
+       :snt1 (c3-5 / cause-01
+                   :ARG0 (c3-2 / amr-unknown)
+                   :ARG1 (c3-9 / over-02
+                               :ARG1 (c3-13 / you)
+                               :ARG2 (c3-11 / it)
+                               :mode imperative)
+                   :mod (c3-14 / yeh
+                               :mode expressive))
+       :snt2 (c3-4 / follow-02
+                   :ARG0 (c3-6 / i)
+                   :ARG1 (c3-1 / you)
+                   :ARG0-of (c3-0 / care-01
+                                  :ARG1-of (c3-8 / contrast-01
+                                                 :ARG2 (c3-10 / care-01
+                                                              :ARG0 (c3-3 / you
+                                                                          :mod (c3-7 / only)))))))
+
+# ::snt I think it will be the regular site gab.com and not the other.
+# ::tokens ["I", "think", "it", "will", "be", "the", "regular", "site", "gab.com", "and", "not", "the", "other", "."]
+# ::lemmas ["i", "think", "it", "will", "be", "the", "regular", "site", "gab.com", "and", "not", "the", "other", "."]
+(c4-4 / think-01
+      :ARG0 (c4-7 / i)
+      :ARG1 (c4-1 / and
+                  :op1 (c4-0 / site
+                             :name (c4-8 / name
+                                         :op1 "Gab.com")
+                             :domain (c4-2 / it)
+                             :ARG1-of (c4-5 / regular-02))
+                  :op2 (c4-6 / site
+                             :mod (c4-3 / other)
+                             :domain c4-2
+                             :polarity -)))
+
+# ::snt These terms are not going to help you win an argument
+# ::tokens ["These", "terms", "are", "not", "going", "to", "help", "you", "win", "an", "argument"]
+# ::lemmas ["these", "term", "be", "not", "go", "to", "help", "you", "win", "an", "argument"]
+(c5-3 / help-01
+      :ARG0 (c5-4 / term
+                  :mod (c5-2 / this))
+      :ARG1 (c5-1 / win-01
+                  :ARG0 (c5-5 / you)
+                  :ARG1 (c5-0 / argue-01))
+      :ARG2 c5-5
+      :polarity -)
+
+# ::snt Why waste all this free speech by being vulgar and arguing silly points
+# ::tokens ["Why", "waste", "all", "this", "free", "speech", "by", "being", "vulgar", "and", "arguing", "silly", "points"]
+# ::lemmas ["why", "waste", "all", "this", "free", "speech", "by", "be", "vulgar", "and", "argue", "silly", "point"]
+(c6-5 / waste-01
+      :ARG1 (c6-0 / speak-01
+                  :ARG3-of (c6-3 / free-04)
+                  :mod (c6-8 / this)
+                  :mod (c6-2 / all))
+      :ARG2 (c6-11 / and
+                   :op1 (c6-6 / vulgar)
+                   :op2 (c6-1 / argue-02
+                              :ARG1 (c6-10 / point-04
+                                           :mod (c6-9 / silly))))
+      :ARG1-of (c6-4 / cause-01
+                     :ARG0 (c6-7 / amr-unknown)))

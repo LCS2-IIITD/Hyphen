@@ -1,0 +1,83 @@
+# ::snt crazy !!!!
+# ::tokens ["crazy", "!", "!", "!", "!"]
+# ::lemmas ["crazy", "!", "!", "!", "!"]
+(c1-0 / crazy-03
+      :mode expressive)
+
+# ::snt : 'Madden ' predicted the Patriots would win -24. Which is exactly what happened.
+# ::tokens [":", "'", "Madden", "'", "predicted", "the", "Patriots", "would", "win", "-24", ".", "Which", "is", "exactly", "what", "happened", "."]
+# ::lemmas [":", "'", "Madden", "'", "predict", "the", "Patriots", "would", "win", "-24", ".", "which", "be", "exactly", "what", "happen", "."]
+(c2-5 / multi-sentence
+      :snt1 (c2-2 / predict-01
+                  :ARG0 (c2-9 / person
+                              :name (c2-7 / name
+                                          :op1 "Madden"))
+                  :ARG1 (c2-1 / win-01
+                              :ARG0 (c2-3 / team
+                                          :name (c2-6 / name
+                                                      :op1 "Patriots"))
+                              :degree (c2-0 / score-entity
+                                            :op1 24
+                                            :op2 24)))
+      :snt2 (c2-8 / event
+                  :mod (c2-4 / exact)))
+
+# ::snt : 'Madden ' predicted the Patriots would win -24. Which is exactly what happened. what?
+# ::tokens [":", "'", "Madden", "'", "predicted", "the", "Patriots", "would", "win", "-24", ".", "Which", "is", "exactly", "what", "happened", ".", "what", "?"]
+# ::lemmas [":", "'", "Madden", "'", "predict", "the", "Patriots", "would", "win", "-24", ".", "which", "be", "exactly", "what", "happen", ".", "what", "?"]
+(c3-6 / multi-sentence
+      :snt1 (c3-2 / predict-01
+                  :ARG0 (c3-10 / person
+                               :name (c3-8 / name
+                                           :op1 "Madden"))
+                  :ARG1 (c3-1 / win-01
+                              :ARG0 (c3-3 / team
+                                          :name (c3-7 / name
+                                                      :op1 "Patriots"))
+                              :ARG2 (c3-0 / score-entity
+                                          :op1 24
+                                          :op2 24)))
+      :snt2 (c3-9 / event
+                  :mod (c3-4 / exact)
+                  :domain (c3-5 / amr-unknown)))
+
+# ::snt : 'Madden ' predicted the Patriots would win -24. Which is exactly what happened. wow
+# ::tokens [":", "'", "Madden", "'", "predicted", "the", "Patriots", "would", "win", "-24", ".", "Which", "is", "exactly", "what", "happened", ".", "wow"]
+# ::lemmas [":", "'", "Madden", "'", "predict", "the", "Patriots", "would", "win", "-24", ".", "which", "be", "exactly", "what", "happen", ".", "wow"]
+(c4-5 / multi-sentence
+      :snt1 (c4-2 / predict-01
+                  :ARG0 (c4-10 / person
+                               :name (c4-8 / name
+                                           :op1 "Madden"))
+                  :ARG1 (c4-1 / win-01
+                              :ARG0 (c4-3 / team
+                                          :name (c4-7 / name
+                                                      :op1 "Patriots"))
+                              :ARG4 (c4-0 / score-entity
+                                          :op1 24
+                                          :op2 24)))
+      :snt2 (c4-9 / event
+                  :mod (c4-4 / exact)
+                  :mod (c4-6 / wow
+                             :mode expressive)))
+
+# ::snt Witchcraft ! : 'Madden ' predicted the Patriots would win -24. Which is exactly what happened.
+# ::tokens ["Witchcraft", "!", ":", "'", "Madden", "'", "predicted", "the", "Patriots", "would", "win", "-24", ".", "Which", "is", "exactly", "what", "happened", "."]
+# ::lemmas ["Witchcraft", "!", ":", "'", "Madden", "'", "predict", "the", "Patriots", "would", "win", "-24", ".", "which", "be", "exactly", "what", "happen", "."]
+(c5-5 / multi-sentence
+      :snt1 (c5-2 / person
+                  :name (c5-8 / name
+                              :op1 "Witchcraft"))
+      :snt2 (c5-10 / predict-01
+                   :ARG0 c5-2
+                   :name (c5-7 / name
+                               :op1 "Madden"))
+      :ARG1 (c5-1 / win-01
+                  :ARG0 (c5-3 / team
+                              :name (c5-6 / name
+                                          :op1 "Patriots"))
+                  :degree (c5-0 / score-entity
+                                :op1 24
+                                :op2 24))
+      :snt3 (c5-9 / event
+                  :mod (c5-4 / exact)))

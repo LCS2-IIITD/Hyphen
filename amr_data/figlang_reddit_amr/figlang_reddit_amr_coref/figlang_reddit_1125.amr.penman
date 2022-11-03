@@ -1,0 +1,43 @@
+# ::snt The movement has begun guys
+# ::tokens ["The", "movement", "has", "begun", "guys"]
+# ::lemmas ["the", "movement", "have", "begin", "guy"]
+(c1-0 / begin-01
+      :ARG0 (c1-1 / movement-07)
+      :ARG1 (c1-2 / guy))
+
+# ::snt People who leave a country when it has problems rather than fix it... Good riddance.
+# ::tokens ["People", "who", "leave", "a", "country", "when", "it", "has", "problems", "rather", "than", "fix", "it", "...", "Good", "riddance", "."]
+# ::lemmas ["people", "who", "leave", "a", "country", "when", "it", "have", "problem", "rather", "than", "fix", "it", "...", "good", "riddance", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-6 / leave-15
+                  :ARG0 (c2-8 / person)
+                  :ARG1 (c2-1 / country)
+                  :time (c2-3 / have-03
+                              :ARG0 c2-1
+                              :ARG1 (c2-4 / problem))
+                  :ARG1-of (c2-2 / instead-of-91
+                                 :ARG2 (c2-0 / fix-02
+                                             :ARG0 c2-8
+                                             :ARG1 c2-1)))
+      :snt2 (c2-5 / riddance
+                  :ARG1-of (c2-7 / good-02)))
+
+# ::snt At what point do you stop trying to bail out the Titanic and start looking for a life boat?
+# ::tokens ["At", "what", "point", "do", "you", "stop", "trying", "to", "bail", "out", "the", "Titanic", "and", "start", "looking", "for", "a", "life", "boat", "?"]
+# ::lemmas ["at", "what", "point", "do", "you", "stop", "try", "to", "bail", "out", "the", "Titanic", "and", "start", "look", "for", "a", "life", "boat", "?"]
+(c3-0 / stop-01
+      :ARG0 (c3-11 / you)
+      :ARG1 (c3-4 / try-01
+                  :ARG0 c3-11
+                  :ARG1 (c3-7 / bail-out-02
+                              :ARG0 c3-11
+                              :ARG1 (c3-8 / ship
+                                          :name (c3-10 / name
+                                                       :op1 "Titanic"))))
+      :time (c3-9 / point
+                  :mod (c3-2 / amr-unknown))
+      :ARG0-of (c3-3 / start-01
+                     :ARG1 (c3-5 / look-01
+                                 :ARG0 c3-11
+                                 :ARG1 (c3-1 / boat
+                                             :purpose (c3-6 / life)))))

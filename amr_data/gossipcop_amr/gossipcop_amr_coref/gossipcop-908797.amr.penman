@@ -1,0 +1,49 @@
+# ::snt Forget the past. Bring me some
+# ::tokens ["Forget", "the", "past", ".", "Bring", "me", "some"]
+# ::lemmas ["forget", "the", "past", ".", "bring", "i", "some"]
+(c1-3 / multi-sentence
+      :snt1 (c1-0 / forget-01
+                  :ARG0 (c1-2 / you)
+                  :ARG1 (c1-5 / past)
+                  :mode imperative)
+      :snt2 (c1-1 / bring-01
+                  :ARG0 (c1-7 / you)
+                  :ARG1 (c1-4 / some)
+                  :ARG2 (c1-6 / i)
+                  :mode imperative))
+
+# ::snt By far Whitney Houston was the Best!!
+# ::tokens ["By", "far", "Whitney", "Houston", "was", "the", "Best", "!", "!"]
+# ::lemmas ["by", "far", "Whitney", "Houston", "be", "the", "good", "!", "!"]
+(c2-3 / have-degree-91
+      :ARG1 (c2-4 / person
+                  :name (c2-1 / name
+                              :op1 "Whitney"
+                              :op2 "Houston"))
+      :ARG2 (c2-5 / good-02
+                  :ARG1 c2-4)
+      :ARG3 (c2-2 / most
+                  :degree (c2-0 / far))
+      :mode expressive)
+
+# ::snt I guess I can't get both houses same address, is the single two residence bronze deed finished yet
+# ::tokens ["I", "guess", "I", "ca", "n't", "get", "both", "houses", "same", "address", ",", "is", "the", "single", "two", "residence", "bronze", "deed", "finished", "yet"]
+# ::lemmas ["i", "guess", "i", "can", "not", "get", "both", "house", "same", "address", ",", "be", "the", "single", "two", "residence", "bronze", "deed", "finish", "yet"]
+(c3-5 / and
+      :op1 (c3-13 / guess-01
+                  :ARG0 (c3-12 / i)
+                  :ARG1 (c3-9 / possible-01
+                              :ARG1 (c3-11 / get-01
+                                           :ARG0 c3-12
+                                           :ARG1 (c3-8 / house
+                                                       :mod (c3-2 / both))
+                                           :ARG2 (c3-14 / address
+                                                        :ARG1-of (c3-4 / same-01)))
+                              :polarity -))
+      :op2 (c3-0 / finish-01
+                 :ARG1 (c3-6 / deed
+                             :mod (c3-10 / bronze)
+                             :mod (c3-7 / reside-01
+                                        :quant 2)
+                             :ARG1-of (c3-1 / single-02))
+                 :time (c3-3 / yet)))

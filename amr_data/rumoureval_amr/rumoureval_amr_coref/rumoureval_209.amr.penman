@@ -1,0 +1,148 @@
+# ::snt "might" does not even constitute evidenciary support for ANY criminal charges.
+# ::tokens ["\"", "might", "\"", "does", "not", "even", "constitute", "evidenciary", "support", "for", "ANY", "criminal", "charges", "."]
+# ::lemmas ["\"", "might", "\"", "do", "not", "even", "constitute", "evidenciary", "support", "for", "any", "criminal", "charge", "."]
+(c1-3 / constitute-01
+      :ARG0 (c1-1 / possible-01)
+      :ARG1 (c1-6 / support-01
+                  :ARG1 (c1-5 / charge-05
+                              :ARG2 (c1-2 / criminal-03)
+                              :mod (c1-4 / any))
+                  :mod (c1-0 / credible))
+      :mod (c1-7 / even)
+      :polarity -)
+
+# ::snt attacking an officer is no a misdemeanor ....
+# ::tokens ["attacking", "an", "officer", "is", "no", "a", "misdemeanor", "...."]
+# ::lemmas ["attack", "an", "officer", "be", "no", "a", "misdemeanor", "...."]
+(c2-0 / misdemeanor
+      :domain (c2-1 / assault-01
+                    :ARG1 (c2-2 / officer))
+      :polarity -)
+
+# ::snt Hey look, it's a fucking racist! BLOCK, you son of a bitch.
+# ::tokens ["Hey", "look", ",", "it", "'s", "a", "fucking", "racist", "!", "BLOCK", ",", "you", "son", "of", "a", "bitch", "."]
+# ::lemmas ["hey", "look", ",", "it", "be", "a", "fucking", "racist", "!", "BLOCK", ",", "you", "son", "of", "a", "bitch", "."]
+(c3-4 / multi-sentence
+      :snt1 (c3-7 / look-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-8 / racist
+                              :domain (c3-6 / it)
+                              :mod (c3-5 / fucking))
+                  :mod (c3-1 / hey
+                             :mode expressive)
+                  :mode imperative)
+      :snt2 (c3-9 / say-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 (c3-11 / bust-01
+                               :ARG0 (c3-10 / you
+                                            :mod (c3-3 / son-of-a-bitch)
+                                            :ARG1-of c3-11
+                                            :ARG2-of c3-9)
+                               :mode imperative)))
+
+# ::snt Strong Armed Robbery ain't a misdemeanor &amp; supplies a motive for fighting w/the cop. And, yeah, I'm an asshole.
+# ::tokens ["Strong", "Armed", "Robbery", "ai", "n't", "a", "misdemeanor", "&", "amp", ";", "supplies", "a", "motive", "for", "fighting", "w", "/", "the", "cop", ".", "And", ",", "yeah", ",", "I", "'m", "an", "asshole", "."]
+# ::lemmas ["Strong", "Armed", "Robbery", "be", "not", "a", "misdemeanor", "&", "amp", ";", "supply", "a", "motive", "for", "fight", "w", "/", "the", "cop", ".", "and", ",", "yeah", ",", "i", "be", "an", "asshole", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-7 / and
+                  :op1 (c4-6 / misdemeanor
+                             :domain (c4-8 / rob-01
+                                           :ARG1-of (c4-10 / arm-01
+                                                           :ARG1-of (c4-12 / strong-02)))
+                             :polarity -)
+                  :op2 (c4-1 / supply-01
+                             :ARG1 (c4-9 / motive
+                                         :purpose (c4-3 / fight-01
+                                                        :ARG1 (c4-4 / cop)))))
+      :snt2 (c4-11 / asshole
+                   :domain (c4-5 / i)
+                   :mod (c4-0 / yeah)))
+
+# ::snt . Damn right you're an asshole! Since when is shooting an UNARMED TEENAGER ok? Only racists find it acceptable.
+# ::tokens [".", "Damn", "right", "you", "'re", "an", "asshole", "!", "Since", "when", "is", "shooting", "an", "UNARMED", "TEENAGER", "ok", "?", "Only", "racists", "find", "it", "acceptable", "."]
+# ::lemmas [".", "damn", "right", "you", "be", "an", "asshole", "!", "since", "when", "be", "shoot", "an", "unarmed", "teenager", "ok", "?", "only", "racist", "find", "it", "acceptable", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-11 / asshole
+                   :domain (c5-0 / you)
+                   :ARG1-of (c5-12 / right-06
+                                   :mod (c5-6 / damn)))
+      :snt2 (c5-7 / cause-01
+                  :ARG0 (c5-14 / amr-unknown
+                               :time-of (c5-13 / okay-04
+                                               :ARG1 (c5-16 / shoot-02
+                                                            :ARG1 (c5-8 / person
+                                                                        :ARG0-of (c5-2 / warn-01
+                                                                                       :polarity -)))))
+                  :ARG1 (c5-4 / find-02
+                              :ARG0 (c5-1 / racist
+                                          :mod (c5-5 / only))
+                              :ARG1 (c5-9 / possible-01
+                                          :ARG1 (c5-15 / accept-01
+                                                       :ARG1 (c5-10 / it))))))
+
+# ::snt If you don't think there is clear motive in fighting or fleeing from police after robbery, you are a fucking moron.
+# ::tokens ["If", "you", "do", "n't", "think", "there", "is", "clear", "motive", "in", "fighting", "or", "fleeing", "from", "police", "after", "robbery", ",", "you", "are", "a", "fucking", "moron", "."]
+# ::lemmas ["if", "you", "do", "not", "think", "there", "be", "clear", "motive", "in", "fighting", "or", "flee", "from", "police", "after", "robbery", ",", "you", "be", "a", "fucking", "moron", "."]
+(c6-3 / moron
+      :mod (c6-4 / fucking)
+      :domain (c6-0 / you)
+      :condition (c6-2 / think-01
+                       :ARG0 c6-0
+                       :ARG1 (c6-10 / motive
+                                    :ARG1-of (c6-5 / clear-06)
+                                    :domain (c6-9 / or
+                                                  :op1 (c6-1 / fight-01
+                                                             :ARG0 c6-0
+                                                             :ARG1 (c6-6 / police))
+                                                  :op2 (c6-11 / flee-05
+                                                              :ARG0 c6-0
+                                                              :ARG2 c6-6)
+                                                  :time (c6-7 / after
+                                                              :op1 (c6-8 / rob-01
+                                                                         :ARG0 c6-0))))
+                       :polarity -))
+
+# ::snt . This "fucking moron" has an IQ of &amp; admission to med school, but you are DEFINITELY a fucking racist.
+# ::tokens [".", "This", "\"", "fucking", "moron", "\"", "has", "an", "IQ", "of", "&", "amp", ";", "admission", "to", "med", "school", ",", "but", "you", "are", "DEFINITELY", "a", "fucking", "racist", "."]
+# ::lemmas [".", "this", "\"", "fucking", "moron", "\"", "have", "an", "IQ", "of", "&", "amp", ";", "admission", "to", "med", "school", ",", "but", "you", "be", "DEFINITELY", "a", "fucking", "racist", "."]
+(c7-1 / have-concession-91
+      :ARG1 (c7-11 / racist
+                   :domain (c7-0 / you)
+                   :mod (c7-3 / fucking)
+                   :mod (c7-6 / definite))
+      :ARG2 (c7-10 / and
+                   :op1 (c7-5 / have-03
+                              :ARG0 (c7-4 / moron
+                                          :mod (c7-12 / fucking)
+                                          :mod (c7-2 / this))
+                              :ARG1 (c7-15 / quotient
+                                           :quant-of (c7-7 / intelligent-01)
+                                           :ARG1-of (c7-16 / equal-01
+                                                           :ARG2 (c7-13 / amp))))
+                   :op2 (c7-14 / admit-02
+                               :ARG1 c7-4
+                               :ARG2 (c7-8 / school
+                                           :mod (c7-9 / medicine)))))
+
+# ::snt You've confirmed. Only the true idiots try to brag about their IQ on social media and believe admission equals intelligence.
+# ::tokens ["You", "'ve", "confirmed", ".", "Only", "the", "true", "idiots", "try", "to", "brag", "about", "their", "IQ", "on", "social", "media", "and", "believe", "admission", "equals", "intelligence", "."]
+# ::lemmas ["you", "'ve", "confirm", ".", "only", "the", "true", "idiot", "try", "to", "brag", "about", "their", "iq", "on", "social", "medium", "and", "believe", "admission", "equal", "intelligence", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-6 / confirm-01
+                  :ARG0 (c8-0 / you))
+      :snt2 (c8-9 / and
+                  :op1 (c8-2 / try-01
+                             :ARG0 (c8-7 / idiot
+                                         :ARG1-of (c8-4 / true-01)
+                                         :mod (c8-12 / only))
+                             :ARG1 (c8-16 / brag-01
+                                          :ARG0 c8-7
+                                          :ARG1 (c8-14 / quotient
+                                                       :quant-of (c8-1 / intelligent-01))
+                                          :medium (c8-13 / media
+                                                         :mod (c8-8 / social))))
+                  :op2 (c8-10 / believe-01
+                              :ARG0 c8-7
+                              :ARG1 (c8-15 / equate-01
+                                           :ARG1 (c8-11 / admit-02)
+                                           :ARG2 (c8-5 / intelligent-01)))))

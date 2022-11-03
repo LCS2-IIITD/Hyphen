@@ -1,0 +1,41 @@
+# ::snt Bloodborne ($20/50% off)
+# ::tokens ["Bloodborne", "(", "$", "20/50", "%", "off", ")"]
+# ::lemmas ["Bloodborne", "(", "$", "20/50", "%", "off", ")"]
+(c1-3 / bloodborne
+      :ARG1-of (c1-0 / discount-01
+                     :ARG2 (c1-1 / slash
+                                 :op1 (c1-4 / percentage-entity
+                                            :value 20)
+                                 :op2 (c1-2 / percentage-entity
+                                            :value 50))))
+
+# ::snt Is this game worth it?
+# ::tokens ["Is", "this", "game", "worth", "it", "?"]
+# ::lemmas ["be", "this", "game", "worth", "it", "?"]
+(c2-1 / worth-02
+      :polarity (c2-0 / amr-unknown)
+      :ARG1 (c2-3 / game
+                  :mod (c2-2 / this))
+      :ARG2 (c2-4 / it))
+
+# ::snt If this game isn't the reason you got a PS4...face the facts, you're a casual.
+# ::tokens ["If", "this", "game", "is", "n't", "the", "reason", "you", "got", "a", "PS4", "...", "face", "the", "facts", ",", "you", "'re", "a", "casual", "."]
+# ::lemmas ["if", "this", "game", "be", "not", "the", "reason", "you", "get", "a", "PS4", "...", "face", "the", "fact", ",", "you", "be", "a", "casual", "."]
+(c3-4 / have-condition-91
+      :ARG1 (c3-2 / face-01
+                  :ARG0 (c3-11 / you)
+                  :ARG1 (c3-5 / fact)
+                  :ARG1-of (c3-3 / cause-01
+                                 :ARG0 (c3-0 / casual
+                                             :domain c3-11))
+                  :mode imperative)
+      :ARG2 (c3-7 / reason
+                  :domain (c3-8 / game
+                                :mod (c3-6 / this))
+                  :ARG0-of c3-3
+                  :ARG1 (c3-1 / get-01
+                              :ARG0 c3-11
+                              :ARG1 (c3-10 / monetary-quantity
+                                           :unit (c3-9 / pound)
+                                           :quant 4))
+                  :polarity -))

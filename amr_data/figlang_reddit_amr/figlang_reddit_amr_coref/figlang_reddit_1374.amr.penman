@@ -1,0 +1,39 @@
+# ::snt Just under 30 percent of France's 3 to 4 million Muslims reject the country's secular laws, according to an Ifop poll
+# ::tokens ["Just", "under", "30", "percent", "of", "France", "'s", "3", "to", "4", "million", "Muslims", "reject", "the", "country", "'s", "secular", "laws", ",", "according", "to", "an", "Ifop", "poll"]
+# ::lemmas ["Just", "under", "30", "percent", "of", "France", "'s", "3", "to", "4", "million", "Muslims", "reject", "the", "country", "'s", "secular", "law", ",", "accord", "to", "an", "Ifop", "poll"]
+(c1-0 / say-01
+      :ARG0 (c1-16 / poll-01
+                   :ARG0 (c1-8 / organization
+                               :name (c1-17 / name
+                                            :op1 "Ifop")))
+      :ARG1 (c1-11 / reject-01
+                   :ARG0 (c1-9 / person
+                               :ARG1-of (c1-2 / include-91
+                                              :ARG2 (c1-5 / person
+                                                          :mod (c1-6 / religious-group
+                                                                     :name (c1-12 / name
+                                                                                  :op1 "Islam"))
+                                                          :location (c1-3 / country
+                                                                          :name (c1-10 / name
+                                                                                       :op1 "France"))
+                                                          :quant (c1-14 / between
+                                                                        :op1 3000000
+                                                                        :op2 4000000))
+                                              :ARG3 (c1-7 / under
+                                                          :op1 (c1-4 / percentage-entity
+                                                                     :mod (c1-15 / just)
+                                                                     :value 30))))
+                   :ARG1 (c1-13 / law
+                                :mod (c1-1 / secular)
+                                :poss c1-3)))
+
+# ::snt Boot em out if they don't like it
+# ::tokens ["Boot", "em", "out", "if", "they", "do", "n't", "like", "it"]
+# ::lemmas ["boot", "em", "out", "if", "they", "do", "not", "like", "it"]
+(c2-2 / boot-out-02
+      :ARG0 (c2-4 / you)
+      :ARG1 (c2-1 / they)
+      :condition (c2-0 / dislike-01
+                       :ARG0 c2-1
+                       :ARG1 (c2-3 / it))
+      :mode imperative)

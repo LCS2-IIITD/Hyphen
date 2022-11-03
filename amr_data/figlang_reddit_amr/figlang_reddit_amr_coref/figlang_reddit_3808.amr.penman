@@ -1,0 +1,37 @@
+# ::snt Suicide bomber attacks Shia mosque in Saudi Arabia
+# ::tokens ["Suicide", "bomber", "attacks", "Shia", "mosque", "in", "Saudi", "Arabia"]
+# ::lemmas ["suicide", "bomber", "attack", "Shia", "mosque", "in", "Saudi", "Arabia"]
+(c1-1 / attack-01
+      :ARG0 (c1-6 / person
+                  :ARG0-of (c1-5 / bomb-01
+                                 :mod (c1-0 / suicide)))
+      :ARG1 (c1-3 / worship-place
+                  :name (c1-7 / name
+                              :op1 "Shia"
+                              :op2 "Mosque")
+                  :location (c1-2 / country
+                                  :name (c1-4 / name
+                                              :op1 "Saudi"
+                                              :op2 "Arabia"))))
+
+# ::snt Sadly that is Shia minority that is getting attack and not the Wahhabism-loving royal family.
+# ::tokens ["Sadly", "that", "is", "Shia", "minority", "that", "is", "getting", "attack", "and", "not", "the", "Wahhabism", "-", "loving", "royal", "family", "."]
+# ::lemmas ["sadly", "that", "be", "Shia", "minority", "that", "be", "get", "attack", "and", "not", "the", "wahhabism", "-", "love", "royal", "family", "."]
+(c2-1 / and
+      :op1 (c2-7 / get-01
+                 :ARG0 (c2-8 / minority
+                             :mod (c2-4 / religious-group
+                                        :name (c2-9 / name
+                                                    :op1 "Shia")))
+                 :ARG1 (c2-11 / attack-01))
+      :op2 (c2-10 / get-01
+                  :ARG0 c2-8
+                  :ARG1 c2-11
+                  :ARG2 (c2-2 / family
+                              :mod (c2-3 / royal)
+                              :ARG1-of (c2-5 / love-01
+                                             :ARG0 c2-4
+                                             :name (c2-6 / name
+                                                         :op1 "Wahhabism")))
+                  :polarity -)
+      :ARG0-of (c2-0 / sad-02))

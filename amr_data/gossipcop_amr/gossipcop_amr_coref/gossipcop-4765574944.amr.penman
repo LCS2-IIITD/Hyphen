@@ -1,0 +1,88 @@
+# ::snt I know that Robert &amp; Katy are Rumor, so that's why Katy displayed overtly flirtatious behaviour.
+# ::tokens ["I", "know", "that", "Robert", "&", "amp", ";", "Katy", "are", "Rumor", ",", "so", "that", "'s", "why", "Katy", "displayed", "overtly", "flirtatious", "behaviour", "."]
+# ::lemmas ["i", "know", "that", "Robert", "&", "amp", ";", "Katy", "be", "Rumor", ",", "so", "that", "be", "why", "Katy", "display", "overtly", "flirtatious", "behaviour", "."]
+(c1-8 / know-01
+      :ARG0 (c1-10 / i)
+      :ARG1 (c1-5 / rumor-01
+                  :ARG1 (c1-11 / and
+                               :op1 (c1-7 / person
+                                          :name (c1-3 / name
+                                                      :op1 "Robert"
+                                                      :op2 "&"
+                                                      :op3 "amp"))
+                               :op2 (c1-4 / person
+                                          :name (c1-6 / name
+                                                      :op1 "Katy"))))
+      :ARG0-of (c1-9 / cause-01
+                     :ARG1 (c1-12 / display-01
+                                  :ARG0 c1-4
+                                  :ARG1 (c1-2 / behave-01
+                                              :ARG0 c1-4
+                                              :ARG1 (c1-0 / flirtatious
+                                                          :manner (c1-1 / overt))))))
+
+# ::snt certainly NOT ALL of these "witnesses" are CREDIBLE (January , ; :12 PST)
+# ::tokens ["certainly", "NOT", "ALL", "of", "these", "\"", "witnesses", "\"", "are", "CREDIBLE", "(", "January", ",", ";", ":", "12", "PST", ")"]
+# ::lemmas ["certainly", "not", "all", "of", "these", "\"", "witness", "\"", "be", "CREDIBLE", "(", "January", ",", ";", ":", "12", "PST", ")"]
+(c3-2 / possible-01
+      :ARG1 (c3-0 / predict-01
+                  :ARG1 (c3-7 / person
+                              :ARG0-of (c3-3 / witness-01)
+                              :mod (c3-5 / this)
+                              :mod (c3-1 / all
+                                         :polarity -)))
+      :ARG1-of (c3-4 / certain-02)
+      :time (c3-6 / date-entity
+                  :month 1
+                  :time "15:12"
+                  :timezone "PST"))
+
+# ::snt so, these two "spotted MAKING OUT"...,&amp; are therefore "TOTALLY A COUPLE (WITNESSES)??? (January , ; :12 PST)
+# ::tokens ["so", ",", "these", "two", "\"", "spotted", "MAKING", "OUT\"", "...", ",&amp", ";", "are", "therefore", "\"", "TOTALLY", "A", "COUPLE", "(", "WITNESSES", ")", "?", "?", "?", "(", "January", ",", ";", ":", "12", "PST", ")"]
+# ::lemmas ["so", ",", "these", "two", "\"", "spot", "MAKING", "out\"", "...", ",&amp", ";", "be", "therefore", "\"", "TOTALLY", "a", "COUPLE", "(", "WITNESSES", ")", "?", "?", "?", "(", "January", ",", ";", ":", "12", "PST", ")"]
+(c4-6 / cause-01
+      :ARG1 (c4-11 / couple
+                   :domain (c4-8 / and
+                                 :op1 (c4-3 / person
+                                            :ARG0-of (c4-5 / witness-01)
+                                            :quant 2)
+                                 :op2 (c4-1 / person
+                                            :mod (c4-7 / this)
+                                            :quant 1))
+                   :degree (c4-9 / total)
+                   :ARG1-of (c4-0 / mean-01
+                                  :ARG2 (c4-10 / person
+                                               :ARG0-of (c4-4 / walk-01))))
+      :time (c4-2 / date-entity
+                  :time-of c4-6
+                  :month 1)
+      :time ":12"
+      :timezone "PST")
+
+# ::snt Update: CELEBRITY INSIDER (January , ; :12 PST)
+# ::tokens ["Update", ":", "CELEBRITY", "INSIDER", "(", "January", ",", ";", ":", "12", "PST", ")"]
+# ::lemmas ["update", ":", "celebrity", "INSIDER", "(", "January", ",", ";", ":", "12", "PST", ")"]
+(c5-1 / update-02
+      :ARG2 (c5-2 / publication
+                  :name (c5-0 / name
+                              :op1 "CELEBRITY"
+                              :op2 " INSIDER")
+                  :time (c5-3 / date-entity
+                              :month 1
+                              :time "15:12"
+                              :timezone "PST")))
+
+# ::snt Who fucking cares about Rob. Stop this.
+# ::tokens ["Who", "fucking", "cares", "about", "Rob", ".", "Stop", "this", "."]
+# ::lemmas ["who", "fucking", "care", "about", "Rob", ".", "stop", "this", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-6 / care-01
+                  :ARG0 (c6-8 / amr-unknown)
+                  :ARG1 (c6-5 / person
+                              :name (c6-2 / name
+                                          :op1 "Rob"))
+                  :mod (c6-0 / fucking))
+      :snt2 (c6-4 / stop-01
+                  :ARG0 (c6-1 / you)
+                  :ARG1 (c6-7 / this)
+                  :mode imperative))

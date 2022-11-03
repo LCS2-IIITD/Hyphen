@@ -1,0 +1,67 @@
+# ::snt Thank You
+# ::tokens ["Thank", "You"]
+# ::lemmas ["thank", "you"]
+(c1-1 / thank-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / you))
+
+# ::snt thanks devils
+# ::tokens ["thanks", "devils"]
+# ::lemmas ["thank", "devil"]
+(c2-2 / thank-01
+      :ARG1 (c2-1 / person
+                  :name (c2-0 / name
+                              :op1 "Devil")))
+
+# ::snt Thank you so much for caring about us. It means alot to know we are not alone.
+# ::tokens ["Thank", "you", "so", "much", "for", "caring", "about", "us", ".", "It", "means", "alot", "to", "know", "we", "are", "not", "alone", "."]
+# ::lemmas ["thank", "you", "so", "much", "for", "care", "about", "we", ".", "it", "mean", "alot", "to", "know", "we", "be", "not", "alone", "."]
+(c3-4 / multi-sentence
+      :snt1 (c3-11 / thank-01
+                   :ARG1 (c3-1 / you)
+                   :ARG2 (c3-9 / care-01
+                               :ARG0 c3-1
+                               :ARG1 (c3-2 / we))
+                   :ARG1-of (c3-0 / have-quant-91
+                                  :ARG2 (c3-8 / much)
+                                  :ARG3 (c3-10 / so)))
+      :snt2 (c3-3 / mean-01
+                  :ARG1 (c3-6 / know-01
+                              :ARG1 (c3-12 / alone
+                                           :domain (c3-7 / we)
+                                           :polarity -))
+                  :ARG2 (c3-5 / lot)))
+
+# ::snt amen , thank you American friends I love New Jersey
+# ::tokens ["amen", ",", "thank", "you", "American", "friends", "I", "love", "New", "Jersey"]
+# ::lemmas ["amen", ",", "thank", "you", "American", "friend", "i", "love", "New", "Jersey"]
+(c4-11 / and
+       :op1 (c4-3 / amen)
+       :op2 (c4-10 / thank-01
+                   :ARG0 (c4-4 / i)
+                   :ARG1 (c4-7 / person
+                               :mod (c4-8 / country
+                                          :name (c4-5 / name
+                                                      :op1 "America"))
+                               :ARG0-of (c4-0 / have-rel-role-91
+                                              :ARG1 c4-4
+                                              :ARG2 (c4-1 / friend))))
+       :op3 (c4-2 / love-01
+                  :ARG0 c4-4
+                  :ARG1 (c4-9 / state
+                              :name (c4-6 / name
+                                          :op1 "New"
+                                          :op2 "Jersey"))))
+
+# ::snt Thoughts??? Prayers work. Enough said.
+# ::tokens ["Thoughts", "?", "?", "?", "Prayers", "work", ".", "Enough", "said", "."]
+# ::lemmas ["thought", "?", "?", "?", "prayer", "work", ".", "Enough", "say", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-7 / think-01
+                  :polarity (c5-8 / amr-unknown))
+      :snt2 (c5-1 / work-09
+                  :ARG1 (c5-4 / pray-01))
+      :snt3 (c5-6 / say-01
+                  :ARG1 (c5-5 / thing
+                              :ARG1-of (c5-0 / have-quant-91
+                                             :ARG3 (c5-3 / enough)))))

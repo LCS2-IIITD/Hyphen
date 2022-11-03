@@ -1,0 +1,33 @@
+# ::snt Such a relief.
+# ::tokens ["Such", "a", "relief", "."]
+# ::lemmas ["such", "a", "relief", "."]
+(c1-1 / relieve-01
+      :mod (c1-0 / such))
+
+# ::snt Yay!!
+# ::tokens ["Yay", "!", "!"]
+# ::lemmas ["Yay", "!", "!"]
+(c2-0 / yay
+      :mode expressive)
+
+# ::snt Me, too. Such a relief.
+# ::tokens ["Me", ",", "too", ".", "Such", "a", "relief", "."]
+# ::lemmas ["i", ",", "too", ".", "such", "a", "relief", "."]
+(c3-4 / multi-sentence
+      :snt1 (c3-3 / i
+                  :mod (c3-1 / too))
+      :snt2 (c3-2 / relieve-01
+                  :degree (c3-0 / such)))
+
+# ::snt Hooray! I'm so glad you have an appointment.
+# ::tokens ["Hooray", "!", "I", "'m", "so", "glad", "you", "have", "an", "appointment", "."]
+# ::lemmas ["Hooray", "!", "i", "be", "so", "glad", "you", "have", "an", "appointment", "."]
+(c4-5 / multi-sentence
+      :snt1 (c4-1 / hooray
+                  :mode expressive)
+      :snt2 (c4-2 / glad-02
+                  :ARG0 (c4-3 / have-03
+                              :ARG0 (c4-6 / you)
+                              :ARG1 (c4-0 / appointment-02
+                                          :ARG0 c4-6))
+                  :ARG1 (c4-4 / i)))

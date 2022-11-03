@@ -1,0 +1,334 @@
+# ::snt I hope that's the cover.
+# ::tokens ["I", "hope", "that", "'s", "the", "cover", "."]
+# ::lemmas ["i", "hope", "that", "be", "the", "cover", "."]
+(c1-0 / hope-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-2 / cover-03
+                  :ARG1 (c1-1 / that)))
+
+# ::snt that is a separate incident. there are
+# ::tokens ["that", "is", "a", "separate", "incident", ".", "there", "are"]
+# ::lemmas ["that", "be", "a", "separate", "incident", ".", "there", "be"]
+(c2-0 / multi-sentence
+      :snt1 (c2-2 / incident
+                  :ARG1-of (c2-3 / separate-02)
+                  :domain (c2-4 / that))
+      :snt2 (c2-1 / exist-01))
+
+# ::snt the supermarket is for the suspect from a different shooting, the killing of a black policewoman yesterday
+# ::tokens ["the", "supermarket", "is", "for", "the", "suspect", "from", "a", "different", "shooting", ",", "the", "killing", "of", "a", "black", "policewoman", "yesterday"]
+# ::lemmas ["the", "supermarket", "be", "for", "the", "suspect", "from", "a", "different", "shooting", ",", "the", "killing", "of", "a", "black", "policewoman", "yesterday"]
+(c3-0 / have-purpose-91
+      :ARG1 (c3-10 / supermarket)
+      :ARG2 (c3-8 / person
+                  :ARG2-of (c3-7 / suspect-01)
+                  :ARG1-of (c3-2 / shoot-02
+                                 :ARG1-of (c3-9 / differ-02)
+                                 :ARG1-of (c3-3 / mean-01
+                                                :ARG2 (c3-11 / kill-01
+                                                             :ARG1 (c3-12 / person
+                                                                          :ARG0-of (c3-13 / have-org-role-91
+                                                                                          :ARG1 (c3-4 / police)
+                                                                                          :ARG2 (c3-6 / oman))
+                                                                          :ARG1-of (c3-5 / black-05))
+                                                             :time (c3-1 / yesterday))))))
+
+# ::snt right
+# ::tokens ["right"]
+# ::lemmas ["right"]
+(c4-0 / right-06)
+
+# ::snt I'm trying not to giggle at the irony but it's really hard not to.
+# ::tokens ["I", "'m", "trying", "not", "to", "giggle", "at", "the", "irony", "but", "it", "'s", "really", "hard", "not", "to", "."]
+# ::lemmas ["i", "be", "try", "not", "to", "giggle", "at", "the", "irony", "but", "it", "be", "really", "hard", "not", "to", "."]
+(c5-3 / contrast-01
+      :ARG1 (c5-6 / try-01
+                  :ARG0 (c5-1 / i)
+                  :ARG1 (c5-5 / giggle-01
+                              :ARG0 c5-1
+                              :ARG1 (c5-4 / irony)
+                              :polarity -))
+      :ARG2 (c5-0 / hard-02
+                  :ARG1 c5-5
+                  :degree (c5-2 / really)))
+
+# ::snt it's True. The first cop was a musulman.
+# ::tokens ["it", "'s", "True", ".", "The", "first", "cop", "was", "a", "musulman", "."]
+# ::lemmas ["it", "be", "true", ".", "the", "first", "cop", "be", "a", "musulman", "."]
+(c6-0 / multi-sentence
+      :snt1 (c6-7 / true-01
+                  :ARG1 (c6-2 / it))
+      :snt2 (c6-6 / cop
+                  :ord (c6-1 / ordinal-entity
+                             :value 1)
+                  :domain (c6-4 / person
+                                :mod (c6-5 / religious-group
+                                           :name (c6-3 / name
+                                                       :op1 "Muslim")))))
+
+# ::snt you win Tweet of the Year.
+# ::tokens ["you", "win", "Tweet", "of", "the", "Year", "."]
+# ::lemmas ["you", "win", "Tweet", "of", "the", "Year", "."]
+(c7-1 / win-01
+      :ARG0 (c7-3 / you)
+      :ARG1 (c7-2 / publication
+                  :name (c7-0 / name
+                              :op1 "Twitter"
+                              :op2 "of"
+                              :op3 "the"
+                              :op4 "Year")))
+
+# ::snt Irony piles on irony! Also one of the police officers killed was a Muslim as I understand it.
+# ::tokens ["Irony", "piles", "on", "irony", "!", "Also", "one", "of", "the", "police", "officers", "killed", "was", "a", "Muslim", "as", "I", "understand", "it", "."]
+# ::lemmas ["Irony", "pile", "on", "irony", "!", "also", "one", "of", "the", "police", "officer", "kill", "be", "a", "Muslim", "as", "i", "understand", "it", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-8 / pile-01
+                  :ARG1 (c8-6 / irony
+                              :ARG2-of c8-8))
+      :snt2 (c8-9 / religious-group
+                  :name (c8-7 / name
+                              :op1 "Muslim")
+                  :domain (c8-12 / person
+                                 :ARG1-of (c8-10 / include-91
+                                                 :ARG2 (c8-4 / person
+                                                             :ARG0-of (c8-0 / have-org-role-91
+                                                                            :ARG1 (c8-11 / police)
+                                                                            :ARG2 (c8-5 / officer)))))
+                  :mod (c8-13 / also)
+                  :ARG1-of (c8-3 / understand-01
+                                 :ARG0 (c8-1 / i))))
+
+# ::snt there are separate incidents. one is at that kosher shop, one is at a printing shop.
+# ::tokens ["there", "are", "separate", "incidents", ".", "one", "is", "at", "that", "kosher", "shop", ",", "one", "is", "at", "a", "printing", "shop", "."]
+# ::lemmas ["there", "be", "separate", "incident", ".", "one", "be", "at", "that", "kosher", "shop", ",", "one", "be", "at", "a", "printing", "shop", "."]
+(c9-1 / multi-sentence
+      :snt1 (c9-6 / incident
+                  :ARG1-of (c9-9 / separate-02))
+      :snt2 (c9-12 / and
+                   :op1 (c9-3 / be-located-at-91
+                              :ARG1 (c9-4 / one)
+                              :ARG2 (c9-5 / shop
+                                          :mod (c9-11 / kosher)
+                                          :mod (c9-10 / that)))
+                   :op2 (c9-8 / be-located-at-91
+                              :ARG1 (c9-0 / one)
+                              :ARG2 (c9-2 / shop
+                                          :mod (c9-7 / print-01)))))
+
+# ::snt yes indeed
+# ::tokens ["yes", "indeed"]
+# ::lemmas ["yes", "indeed"]
+(c10-0 / yes
+       :mod (c10-1 / indeed))
+
+# ::snt they printed signs there, not the press. But still
+# ::tokens ["they", "printed", "signs", "there", ",", "not", "the", "press", ".", "But", "still"]
+# ::lemmas ["they", "print", "sign", "there", ",", "not", "the", "press", ".", "but", "still"]
+(c11-0 / multi-sentence
+       :snt1 (c11-4 / print-01
+                    :ARG0 (c11-8 / they)
+                    :ARG1 (c11-7 / sign)
+                    :location (c11-6 / there)
+                    :ARG1-of (c11-5 / contrast-01
+                                    :ARG2 (c11-9 / print-01
+                                                 :ARG0 (c11-3 / they)
+                                                 :ARG1 c11-7
+                                                 :location (c11-1 / press)
+                                                 :polarity -)
+                                    :snt2-of c11-0))
+       :ARG2 (c11-2 / still))
+
+# ::snt not sure but I think it was at a kosher market outside of Paris
+# ::tokens ["not", "sure", "but", "I", "think", "it", "was", "at", "a", "kosher", "market", "outside", "of", "Paris"]
+# ::lemmas ["not", "sure", "but", "i", "think", "it", "be", "at", "a", "kosher", "market", "outside", "of", "Paris"]
+(c12-7 / contrast-01
+       :ARG1 (c12-9 / sure-02
+                    :ARG0 (c12-3 / i)
+                    :polarity -)
+       :ARG2 (c12-10 / think-01
+                     :ARG0 c12-3
+                     :ARG1 (c12-1 / be-located-at-91
+                                  :ARG1 (c12-8 / it)
+                                  :ARG2 (c12-0 / market
+                                               :mod (c12-4 / kosher)
+                                               :location (c12-2 / outside
+                                                                :op1 (c12-6 / city
+                                                                            :name (c12-5 / name
+                                                                                         :op1 "Paris")))))))
+
+# ::snt She was and had started her internship a few weeks before
+# ::tokens ["She", "was", "and", "had", "started", "her", "internship", "a", "few", "weeks", "before"]
+# ::lemmas ["she", "be", "and", "have", "start", "her", "internship", "a", "few", "weeks", "before"]
+(c13-8 / and
+       :op1 (c13-2 / be-temporally-at-91
+                   :ARG1 (c13-6 / she)
+                   :ARG2 (c13-4 / internship
+                                :poss c13-6))
+       :op2 (c13-3 / start-01
+                   :ARG0 c13-6
+                   :ARG1 c13-4
+                   :time (c13-5 / before
+                                :quant (c13-1 / few
+                                              :op1 (c13-7 / temporal-quantity
+                                                          :unit (c13-0 / week)
+                                                          :quant 1)))))
+
+# ::snt got it - incidents. but not necessarily "separate" ykwim?
+# ::tokens ["got", "it", "-", "incidents", ".", "but", "not", "necessarily", "\"", "separate", "\"", "ykwim", "?"]
+# ::lemmas ["get", "it", "-", "incident", ".", "but", "not", "necessarily", "\"", "separate", "\"", "ykwim", "?"]
+(c14-2 / multi-sentence
+       :snt1 (c14-7 / get-02
+                    :ARG0 (c14-3 / i)
+                    :ARG1 (c14-6 / it))
+       :snt2 (c14-5 / contrast-01
+                    :ARG1 (c14-1 / incident)
+                    :ARG2 (c14-8 / separate-01
+                                 :ARG1 (c14-0 / you)
+                                 :ARG1-of (c14-4 / need-01)
+                                 :polarity (c14-9 / amr-unknown)
+                                 :polarity -)))
+
+# ::snt Yep! They can't be waterboarded or subjected to other CIA/French 'interrogation'!
+# ::tokens ["Yep", "!", "They", "ca", "n't", "be", "waterboarded", "or", "subjected", "to", "other", "CIA", "/", "French", "'", "interrogation", "'", "!"]
+# ::lemmas ["yep", "!", "they", "can", "not", "be", "waterboarde", "or", "subject", "to", "other", "CIA", "/", "French", "'", "interrogation", "'", "!"]
+(c15-7 / possible-01
+       :ARG1 (c15-3 / or
+                    :op1 (c15-2 / board-01
+                                :ARG1 (c15-11 / they))
+                    :op2 (c15-10 / subject-01
+                                 :ARG1 c15-11
+                                 :ARG2 (c15-4 / interrogate-01
+                                              :ARG0 c15-3
+                                              :op1 (c15-9 / government-organization
+                                                          :name (c15-5 / name
+                                                                       :op1 "CIA"))
+                                              :op2 (c15-8 / country
+                                                          :name (c15-6 / name
+                                                                       :op1 "France")))
+                                 :mod (c15-1 / other)))
+       :mod (c15-0 / yep
+                   :mode expressive)
+       :polarity -)
+
+# ::snt seriously. Iron exquisite
+# ::tokens ["seriously", ".", "Iron", "exquisite"]
+# ::lemmas ["seriously", ".", "iron", "exquisite"]
+(c16-2 / multi-sentence
+       :snt1 (c16-0 / serious-01)
+       :snt2 (c16-1 / exquisite
+                    :domain (c16-3 / iron)))
+
+# ::snt Amazing tweet!!!
+# ::tokens ["Amazing", "tweet", "!", "!", "!"]
+# ::lemmas ["amazing", "tweet", "!", "!", "!"]
+(c17-0 / thing
+       :ARG1-of (c17-2 / tweet-01)
+       :ARG0-of (c17-1 / amaze-01))
+
+# ::snt only one situation was. Other was in north east print warehouse.
+# ::tokens ["only", "one", "situation", "was", ".", "Other", "was", "in", "north", "east", "print", "warehouse", "."]
+# ::lemmas ["only", "one", "situation", "be", ".", "other", "be", "in", "north", "east", "print", "warehouse", "."]
+(c18-2 / multi-sentence
+       :snt1 (c18-9 / situation
+                    :mod (c18-3 / only)
+                    :quant 1)
+       :snt2 (c18-4 / situation
+                    :mod (c18-1 / other)
+                    :location (c18-0 / warehouse
+                                     :mod (c18-7 / print-01)
+                                     :location (c18-8 / relative-position
+                                                      :direction (c18-6 / north
+                                                                        :direction (c18-5 / east))))))
+
+# ::snt The pen/print is mightier than the sword/gun
+# ::tokens ["The", "pen", "/", "print", "is", "mightier", "than", "the", "sword", "/", "gun"]
+# ::lemmas ["the", "pen", "/", "print", "be", "mighty", "than", "the", "sword", "/", "gun"]
+(c19-0 / have-degree-91
+       :ARG1 (c19-7 / slash
+                    :op1 (c19-4 / pen)
+                    :op2 (c19-8 / print))
+       :ARG2 (c19-2 / mightier)
+       :ARG3 (c19-5 / more)
+       :ARG4 (c19-3 / slash
+                    :op1 (c19-1 / sword)
+                    :op2 (c19-6 / gun)))
+
+# ::snt were there not two different locations? a printing factory and a supermarket?
+# ::tokens ["were", "there", "not", "two", "different", "locations", "?", "a", "printing", "factory", "and", "a", "supermarket", "?"]
+# ::lemmas ["be", "there", "not", "two", "different", "location", "?", "a", "printing", "factory", "and", "a", "supermarket", "?"]
+(c20-1 / multi-sentence
+       :snt1 (c20-0 / location
+                    :polarity (c20-7 / amr-unknown)
+                    :ARG1-of (c20-5 / differ-02)
+                    :quant 2)
+       :snt2 (c20-3 / and
+                    :op1 (c20-2 / factory
+                                :ARG0-of (c20-4 / print-01))
+                    :op2 (c20-6 / supermarket)))
+
+# ::snt Irony with a capital I!
+# ::tokens ["Irony", "with", "a", "capital", "I", "!"]
+# ::lemmas ["Irony", "with", "a", "capital", "i", "!"]
+(c21-2 / irony
+       :prep-with (c21-0 / capital
+                         :mod (c21-1 / i))
+       :mode expressive)
+
+# ::snt kosher supermarket no?
+# ::tokens ["kosher", "supermarket", "no", "?"]
+# ::lemmas ["kosh", "supermarket", "no", "?"]
+(c22-0 / supermarket
+       :polarity (c22-2 / amr-unknown)
+       :mod (c22-1 / kosher))
+
+# ::snt Hmm. Dead alleged gunmen can't talk, can they.
+# ::tokens ["Hmm", ".", "Dead", "alleged", "gunmen", "ca", "n't", "talk", ",", "can", "they", "."]
+# ::lemmas ["hmm", ".", "Dead", "alleged", "gunman", "can", "not", "talk", ",", "can", "they", "."]
+(c23-1 / possible-01
+       :ARG1 (c23-4 / talk-01
+                    :ARG0 (c23-3 / gunman
+                                 :ARG1-of (c23-2 / die-01)
+                                 :ARG1-of (c23-6 / allege-01)))
+       :mod (c23-0 / hmm
+                   :mode expressive)
+       :ARG1-of (c23-5 / possible-01)
+       :polarity -)
+
+# ::snt Someone is bidding on movie rights. : If true that the magazine attackers met their fates at a printing shop...
+# ::tokens ["Someone", "is", "bidding", "on", "movie", "rights", ".", ":", "If", "true", "that", "the", "magazine", "attackers", "met", "their", "fates", "at", "a", "printing", "shop", "..."]
+# ::lemmas ["someone", "be", "bid", "on", "movie", "right", ".", ":", "if", "true", "that", "the", "magazine", "attacker", "meet", "their", "fate", "at", "a", "printing", "shop", "..."]
+(c24-1 / multi-sentence
+       :snt1 (c24-3 / bid-01
+                    :ARG0 (c24-9 / someone)
+                    :ARG1 (c24-6 / right-05
+                                 :ARG2 (c24-5 / movie)))
+       :snt2 (c24-0 / meet-03
+                    :ARG0 (c24-7 / person
+                                 :ARG0-of (c24-12 / attack-01)
+                                 :mod (c24-8 / magazine))
+                    :ARG1 (c24-2 / fate
+                                 :poss c24-7)
+                    :location (c24-4 / shop
+                                     :ARG0-of (c24-11 / print-01))
+                    :condition (c24-10 / true-01
+                                       :ARG1 c24-0)))
+
+# ::snt proof that God has a sense of humor when it comes doing evil in his name. Lol
+# ::tokens ["proof", "that", "God", "has", "a", "sense", "of", "humor", "when", "it", "comes", "doing", "evil", "in", "his", "name", ".", "Lol"]
+# ::lemmas ["proof", "that", "God", "have", "a", "sense", "of", "humor", "when", "it", "come", "do", "evil", "in", "his", "name", ".", "Lol"]
+(c25-6 / prove-01
+       :ARG1 (c25-10 / sense-01
+                     :ARG0 (c25-11 / person
+                                   :name (c25-4 / name
+                                                :op1 "God"))
+                     :ARG1 (c25-0 / humor)
+                     :time (c25-8 / come-12
+                                  :ARG1 (c25-7 / do-02
+                                               :ARG0 c25-11
+                                               :ARG1 (c25-2 / evil)
+                                               :manner (c25-5 / name-01
+                                                              :ARG1 c25-11))))
+       :ARG2-of (c25-1 / laugh-01
+                       :ARG0 (c25-3 / i)
+                       :manner (c25-9 / loud)
+                       :mode expressive))

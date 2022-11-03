@@ -1,0 +1,173 @@
+# ::snt Lol. You already know.
+# ::tokens ["Lol", ".", "You", "already", "know", "."]
+# ::lemmas ["Lol", ".", "you", "already", "know", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / laugh-01
+                  :manner (c2-5 / loud)
+                  :mode expressive)
+      :snt2 (c2-3 / know-01
+                  :ARG0 (c2-0 / you)
+                  :time (c2-4 / already)))
+
+# ::snt Had to tag you even though you may have already bought her tix before she even thought about going on tour.
+# ::tokens ["Had", "to", "tag", "you", "even", "though", "you", "may", "have", "already", "bought", "her", "tix", "before", "she", "even", "thought", "about", "going", "on", "tour", "."]
+# ::lemmas ["have", "to", "tag", "you", "even", "though", "you", "may", "have", "already", "buy", "her", "tix", "before", "she", "even", "think", "about", "go", "on", "tour", "."]
+(c3-0 / obligate-01
+      :ARG1 (c3-2 / you)
+      :ARG2 (c3-10 / tag-01
+                   :ARG0 c3-2
+                   :ARG1 c3-2)
+      :concession (c3-7 / possible-01
+                        :ARG1 (c3-1 / buy-01
+                                    :ARG0 c3-2
+                                    :ARG1 (c3-12 / tix)
+                                    :ARG4 (c3-3 / she)
+                                    :time (c3-4 / already)
+                                    :time (c3-6 / before
+                                                :op1 (c3-9 / think-01
+                                                           :ARG0 c3-3
+                                                           :ARG1 (c3-11 / go-02
+                                                                        :ARG0 c3-3
+                                                                        :ARG4 (c3-5 / tour))
+                                                           :mod (c3-8 / even))))))
+
+# ::snt I know she slayed my life today. Lol
+# ::tokens ["I", "know", "she", "slayed", "my", "life", "today", ".", "Lol"]
+# ::lemmas ["i", "know", "she", "slay", "my", "life", "today", ".", "Lol"]
+(c4-1 / multi-sentence
+      :snt1 (c4-4 / know-01
+                  :ARG0 (c4-7 / i)
+                  :ARG1 (c4-2 / slay-01
+                              :ARG0 (c4-0 / she)
+                              :ARG1 (c4-5 / life
+                                          :poss c4-7)
+                              :time (c4-8 / today)))
+      :snt2 (c4-9 / laugh-01
+                  :ARG0 (c4-3 / i)
+                  :manner (c4-6 / loud)
+                  :mode expressive))
+
+# ::snt November th!!
+# ::tokens ["November", "th", "!", "!"]
+# ::lemmas ["November", "th", "!", "!"]
+(c5-0 / date-entity
+      :day (c5-1 / th)
+      :month 11)
+
+# ::snt girl is missing can you fix that ? please ?
+# ::tokens ["girl", "is", "missing", "can", "you", "fix", "that", "?", "please", "?"]
+# ::lemmas ["girl", "be", "miss", "can", "you", "fix", "that", "?", "please", "?"]
+(c6-2 / multi-sentence
+      :snt1 (c6-3 / miss-01
+                  :ARG1 (c6-8 / girl)
+                  :polarity (c6-7 / amr-unknown))
+      :snt2 (c6-4 / possible-01
+                  :polarity (c6-6 / amr-unknown)
+                  :ARG1 (c6-0 / fix-02
+                              :ARG0 (c6-1 / you)
+                              :ARG1 (c6-5 / that))
+                  :polite +))
+
+# ::snt HOW ARE YALL NOT COMING TO THE ATL THO??!!!?!!
+# ::tokens ["HOW", "ARE", "YALL", "NOT", "COMING", "TO", "THE", "ATL", "THO", "?", "?", "!", "!", "!", "?", "!", "!"]
+# ::lemmas ["how", "be", "yall", "not", "come", "to", "the", "ATL", "THO", "?", "?", "!", "!", "!", "?", "!", "!"]
+(c7-2 / come-01
+      :ARG1 (c7-1 / person
+                  :mod (c7-4 / all))
+      :ARG4 (c7-5 / city-district
+                  :name (c7-0 / name
+                              :op1 "The"
+                              :op2 "ATL"))
+      :manner (c7-3 / amr-unknown)
+      :polarity -)
+
+# ::snt Nicki Minaj &amp; Future have announced the US &amp; Europe tour dates of their Tour, but Nicki teases that more international dates are coming: Not done announcing dates for the rest of the world yet yall
+# ::tokens ["Nicki", "Minaj", "&", "amp", ";", "Future", "have", "announced", "the", "US", "&", "amp", ";", "Europe", "tour", "dates", "of", "their", "Tour", ",", "but", "Nicki", "teases", "that", "more", "international", "dates", "are", "coming", ":", "Not", "done", "announcing", "dates", "for", "the", "rest", "of", "the", "world", "yet", "y", "all"]
+# ::lemmas ["Nicki", "Minaj", "&", "amp", ";", "Future", "have", "announce", "the", "US", "&", "amp", ";", "Europe", "tour", "date", "of", "their", "Tour", ",", "but", "Nicki", "tease", "that", "more", "international", "date", "be", "come", ":", "not", "do", "announce", "date", "for", "the", "rest", "of", "the", "world", "yet", "you", "all"]
+(c8-10 / multi-sentence
+       :snt1 (c8-14 / contrast-01
+                    :ARG1 (c8-5 / announce-01
+                                :ARG0 (c8-3 / and
+                                            :op1 (c8-20 / person
+                                                        :name (c8-17 / name
+                                                                     :op1 "Nicki"
+                                                                     :op2 "Minaj"))
+                                            :op2 (c8-11 / person
+                                                        :name (c8-13 / name
+                                                                     :op1 "amp")))
+                                :ARG1 (c8-2 / and
+                                            :op1 (c8-19 / event
+                                                        :name (c8-21 / name
+                                                                     :op1 "US"
+                                                                     :op2 "&amp"))
+                                            :op2 (c8-6 / event
+                                                       :name (c8-16 / name
+                                                                    :op1 "Europe"
+                                                                    :op2 "Tour"))))
+                    :ARG2 (c8-4 / teases-01
+                                :ARG0 c8-20
+                                :ARG1 (c8-8 / come-03
+                                            :ARG1 (c8-24 / date
+                                                         :mod (c8-23 / international)
+                                                         :mod (c8-1 / more)))))
+       :snt2 (c8-9 / be-done-08
+                   :ARG1 (c8-12 / announce-01
+                                :ARG1 (c8-15 / date
+                                             :beneficiary (c8-18 / rest
+                                                                 :part-of (c8-22 / world))))
+                   :time (c8-0 / yet)
+                   :mod (c8-7 / yall)
+                   :polarity -))
+
+# ::snt She may not.
+# ::tokens ["She", "may", "not", "."]
+# ::lemmas ["she", "may", "not", "."]
+(c10-1 / possible-01
+       :ARG1 (c10-0 / event
+                    :mod (c10-2 / she)
+                    :polarity -))
+
+# ::snt Nicki Minaj says that she and Future will announce the Tour date for Atlanta, Georgia next week: Announcing ATL date next week
+# ::tokens ["Nicki", "Minaj", "says", "that", "she", "and", "Future", "will", "announce", "the", "Tour", "date", "for", "Atlanta", ",", "Georgia", "next", "week", ":", "Announcing", "ATL", "date", "next", "week"]
+# ::lemmas ["Nicki", "Minaj", "say", "that", "she", "and", "Future", "will", "announce", "the", "Tour", "date", "for", "Atlanta", ",", "Georgia", "next", "week", ":", "announce", "ATL", "date", "next", "week"]
+(c11-3 / say-01
+       :ARG0 (c11-5 / person
+                    :name (c11-1 / name
+                                 :op1 "Nicki"
+                                 :op2 "Minaj"))
+       :ARG1 (c11-13 / announce-01
+                     :ARG0 (c11-12 / and
+                                   :op1 c11-5
+                                   :op2 (c11-7 / company
+                                               :name (c11-4 / name
+                                                            :op1 "Future")))
+                     :ARG1 (c11-15 / date
+                                   :time-of (c11-11 / tour-01)
+                                   :location (c11-17 / city
+                                                     :name (c11-6 / name
+                                                                  :op1 "Atlanta")
+                                                     :location (c11-0 / state
+                                                                      :name (c11-9 / name
+                                                                                   :op1 "Georgia"))))
+                     :time (c11-8 / week
+                                  :mod (c11-14 / next))
+                     :ARG1-of (c11-2 / mean-01
+                                     :ARG2 (c11-10 / announce-01
+                                                   :ARG1 (c11-16 / date
+                                                                 :time-of c11-11
+                                                                 :location c11-17)))))
+
+# ::snt But is Nicki gonna have a solo tour for Queen too?
+# ::tokens ["But", "is", "Nicki", "gon", "na", "have", "a", "solo", "tour", "for", "Queen", "too", "?"]
+# ::lemmas ["but", "be", "Nicki", "going", "to", "have", "a", "solo", "tour", "for", "Queen", "too", "?"]
+(c12-6 / contrast-01
+       :ARG2 (c12-7 / tour-01
+                    :ARG0 (c12-5 / person
+                                 :name (c12-0 / name
+                                              :op1 "Nicki"))
+                    :beneficiary (c12-1 / person
+                                        :name (c12-4 / name
+                                                     :op1 "Queen"))
+                    :mod (c12-2 / solo)
+                    :polarity (c12-3 / amr-unknown)
+                    :mod (c12-8 / too)))

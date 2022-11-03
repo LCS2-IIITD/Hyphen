@@ -1,0 +1,74 @@
+# ::snt : Map shows where suspects are holed up, surrounded by police
+# ::tokens [":", "Map", "shows", "where", "suspects", "are", "holed", "up", ",", "surrounded", "by", "police"]
+# ::lemmas [":", "Map", "show", "where", "suspect", "be", "hole", "up", ",", "surround", "by", "police"]
+(c1-4 / show-01
+      :ARG0 (c1-2 / map)
+      :ARG1 (c1-7 / location
+                  :location-of (c1-0 / and
+                                     :op1 (c1-8 / hole-up-01
+                                                :ARG1 (c1-5 / person
+                                                            :ARG2-of (c1-1 / suspect-01)))
+                                     :op2 (c1-6 / surround-01
+                                                :ARG1 (c1-3 / police)
+                                                :ARG2 c1-5))))
+
+# ::snt looks like a desperate attempt to get some last minute Xmas reductions from Aldi's has been thwarted there
+# ::tokens ["looks", "like", "a", "desperate", "attempt", "to", "get", "some", "last", "minute", "Xmas", "reductions", "from", "Aldi", "'s", "has", "been", "thwarted", "there"]
+# ::lemmas ["look", "like", "a", "desperate", "attempt", "to", "get", "some", "last", "minute", "Xmas", "reduction", "from", "Aldi", "'s", "have", "be", "thwart", "there"]
+(c3-11 / look-02
+       :ARG1 (c3-1 / thwart-01
+                   :ARG1 (c3-0 / attempt-01
+                               :ARG1 (c3-7 / get-01
+                                           :ARG1 (c3-3 / reduce-01
+                                                       :time (c3-12 / festival
+                                                                    :name (c3-10 / name
+                                                                                 :op1 "Xmas"))
+                                                       :quant (c3-9 / some)
+                                                       :mod (c3-8 / minute
+                                                                  :mod (c3-2 / last)))
+                                           :ARG2 (c3-13 / company
+                                                        :name (c3-4 / name
+                                                                    :op1 "Aldi's")))
+                               :ARG1-of (c3-5 / desperate-02))
+                   :location (c3-6 / there)))
+
+# ::snt Don't deny them their just reward, expadite dispatch ....., there's a small hitch though ..
+# ::tokens ["Do", "n't", "deny", "them", "their", "just", "reward", ",", "expadite", "dispatch", ".....", ",", "there", "'s", "a", "small", "hitch", "though", ".."]
+# ::lemmas ["do", "not", "deny", "they", "their", "just", "reward", ",", "expadite", "dispatch", ".....", ",", "there", "be", "a", "small", "hitch", "though", ".."]
+(c4-6 / multi-sentence
+      :snt1 (c4-10 / deny-01
+                   :ARG0 (c4-5 / you)
+                   :ARG1 (c4-2 / reward-01
+                               :ARG0 c4-5
+                               :ARG1 (c4-0 / they)
+                               :mod (c4-3 / just))
+                   :ARG2 c4-0
+                   :polarity -
+                   :mode imperative)
+      :snt2 (c4-1 / dispatch-01
+                  :mod (c4-4 / expadite))
+      :snt3 (c4-9 / have-concession-91
+                  :ARG1 (c4-7 / hitch
+                              :mod (c4-8 / small))))
+
+# ::snt Here is an so called Secular Indian Parliamentarian's thought.This party has ruled us for years
+# ::tokens ["Here", "is", "an", "so", "called", "Secular", "Indian", "Parliamentarian", "'s", "thought", ".", "This", "party", "has", "ruled", "us", "for", "years"]
+# ::lemmas ["here", "be", "an", "so", "call", "Secular", "Indian", "Parliamentarian", "'s", "thought", ".", "this", "party", "have", "rule", "we", "for", "years"]
+(c5-1 / think-01
+      :ARG0 (c5-11 / person
+                   :mod (c5-15 / country
+                               :name (c5-12 / name
+                                            :op1 "India"))
+                   :mod (c5-10 / so-called)
+                   :ARG0-of (c5-14 / have-org-role-91
+                                   :ARG1 (c5-7 / parliament)
+                                   :ARG2 (c5-8 / member)))
+      :ARG1 (c5-2 / rule-03
+                  :ARG0 (c5-0 / party
+                              :mod (c5-4 / this))
+                  :ARG1 (c5-13 / we)
+                  :duration (c5-3 / multiple
+                                  :op1 (c5-5 / temporal-quantity
+                                             :unit (c5-6 / year)
+                                             :quant 1)))
+      :location (c5-9 / here))

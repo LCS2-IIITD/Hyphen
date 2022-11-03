@@ -1,0 +1,31 @@
+# ::snt Still think he is strange sorry
+# ::tokens ["Still", "think", "he", "is", "strange", "sorry"]
+# ::lemmas ["still", "think", "he", "be", "strange", "sorry"]
+(c1-1 / sorry-01
+      :ARG1 (c1-3 / i)
+      :ARG2 (c1-4 / think-01
+                  :ARG0 c1-3
+                  :ARG1 (c1-0 / strange
+                              :domain (c1-2 / he))
+                  :mod (c1-5 / still)))
+
+# ::snt Congratulations!!! Love sent your way!!!
+# ::tokens ["Congratulations", "!", "!", "!", "Love", "sent", "your", "way", "!", "!", "!"]
+# ::lemmas ["congratulation", "!", "!", "!", "love", "send", "your", "way", "!", "!", "!"]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / congratulate-01)
+      :snt2 (c2-2 / send-01
+                  :ARG1 (c2-3 / love)
+                  :ARG2 (c2-4 / way
+                              :poss (c2-0 / you))))
+
+# ::snt So happy for the both of you and healthy babies!!
+# ::tokens ["So", "happy", "for", "the", "both", "of", "you", "and", "healthy", "babies", "!", "!"]
+# ::lemmas ["so", "happy", "for", "the", "both", "of", "you", "and", "healthy", "baby", "!", "!"]
+(c3-3 / happy-01
+      :ARG0 (c3-6 / and
+                  :op1 (c3-1 / you
+                             :mod (c3-0 / both))
+                  :op2 (c3-4 / baby
+                             :mod (c3-5 / healthy)))
+      :degree (c3-2 / so))

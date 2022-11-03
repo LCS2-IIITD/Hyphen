@@ -1,0 +1,28 @@
+# ::snt Odds on this one.
+# ::tokens ["Odds", "on", "this", "one", "."]
+# ::lemmas ["odd", "on", "this", "one", "."]
+(c1-0 / odds
+      :topic (c1-1 / this))
+
+# ::snt 70% increase in the national debt is one hell of a legacy
+# ::tokens ["70", "%", "increase", "in", "the", "national", "debt", "is", "one", "hell", "of", "a", "legacy"]
+# ::lemmas ["70", "%", "increase", "in", "the", "national", "debt", "be", "one", "hell", "of", "a", "legacy"]
+(c2-2 / legacy
+      :mod (c2-1 / hell
+                 :mode expressive)
+      :domain (c2-4 / increase-01
+                    :ARG1 (c2-0 / debt
+                                :mod (c2-5 / nation))
+                    :ARG2 (c2-3 / percentage-entity
+                                :value 70)))
+
+# ::snt But at least race relations are at an all time high.
+# ::tokens ["But", "at", "least", "race", "relations", "are", "at", "an", "all", "time", "high", "."]
+# ::lemmas ["but", "at", "least", "race", "relation", "be", "at", "an", "all", "time", "high", "."]
+(c3-1 / contrast-01
+      :ARG2 (c3-2 / high-02
+                  :ARG1 (c3-5 / relation-03
+                              :ARG1 (c3-3 / race))
+                  :mod (c3-0 / at-least)
+                  :time (c3-4 / time
+                              :mod (c3-6 / all))))

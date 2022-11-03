@@ -1,0 +1,78 @@
+# ::snt Thanks Chlo!
+# ::tokens ["Thanks", "Chlo", "!"]
+# ::lemmas ["thank", "Chlo", "!"]
+(c1-3 / say-01
+      :ARG0 (c1-0 / i)
+      :ARG1 (c1-4 / thank-01
+                  :ARG0 c1-0
+                  :ARG1 (c1-2 / person
+                              :name (c1-1 / name
+                                          :op1 "Chlo")
+                              :ARG2-of c1-3)))
+
+# ::snt Is this throughout the city or just the downtown core? Hope this isn't an unfair question. Understand if no answers.
+# ::tokens ["Is", "this", "throughout", "the", "city", "or", "just", "the", "downtown", "core", "?", "Hope", "this", "is", "n't", "an", "unfair", "question", ".", "Understand", "if", "no", "answers", "."]
+# ::lemmas ["be", "this", "throughout", "the", "city", "or", "just", "the", "downtown", "core", "?", "hope", "this", "be", "not", "an", "unfair", "question", ".", "understand", "if", "no", "answer", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-15 / or
+                   :op1 (c2-19 / this
+                               :location (c2-12 / throughout
+                                                :op1 (c2-17 / city)))
+                   :op2 (c2-11 / this
+                               :location (c2-2 / core
+                                               :mod (c2-3 / downtown)
+                                               :mod (c2-0 / just)))
+                   :polarity (c2-4 / amr-unknown))
+      :snt2 (c2-5 / hope-01
+                  :ARG0 (c2-10 / i)
+                  :ARG1 (c2-16 / thing
+                               :ARG1-of (c2-7 / question-01)
+                               :ARG1-of (c2-6 / fair-01
+                                              :polarity -)
+                               :domain (c2-18 / this)))
+      :snt3 (c2-8 / understand-01
+                  :ARG0 (c2-13 / you)
+                  :condition (c2-14 / thing
+                                    :ARG2-of (c2-9 / answer-01)
+                                    :polarity -)
+                  :mode imperative))
+
+# ::snt Anyone in Queen, Queen, Queen, Sparks, the Howard Building, Bank and OConnor
+# ::tokens ["Anyone", "in", "Queen", ",", "Queen", ",", "Queen", ",", "Sparks", ",", "the", "Howard", "Building", ",", "Bank", "and", "OConnor"]
+# ::lemmas ["anyone", "in", "Queen", ",", "Queen", ",", "Queen", ",", "Sparks", ",", "the", "Howard", "Building", ",", "Bank", "and", "OConnor"]
+(c3-11 / anyone
+       :location (c3-2 / and
+                       :op1 (c3-7 / city
+                                  :name (c3-3 / name
+                                              :op1 "Queen"))
+                       :op2 (c3-6 / city-district
+                                  :name (c3-4 / name
+                                              :op1 "Queen")
+                                  :op3-of c3-2)
+                       :name (c3-5 / name
+                                   :op1 "Sparks"))
+       :op4 (c3-1 / building
+                  :name (c3-8 / name
+                              :op1 "Howard"
+                              :op2 "Building"))
+       :op5 (c3-10 / company
+                   :name (c3-12 / name
+                                :op1 "Bank"))
+       :op6 (c3-9 / person
+                  :name (c3-0 / name
+                              :op1 "OConnor")))
+
+# ::snt Sorry, WHO should remain in current location? That's rather cryptic!
+# ::tokens ["Sorry", ",", "WHO", "should", "remain", "in", "current", "location", "?", "That", "'s", "rather", "cryptic", "!"]
+# ::lemmas ["sorry", ",", "who", "should", "remain", "in", "current", "location", "?", "that", "be", "rather", "cryptic", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-8 / sorry-01
+                  :ARG1 (c4-3 / i)
+                  :ARG2 (c4-5 / recommend-01
+                              :ARG1 (c4-4 / remain-01
+                                          :ARG1 (c4-10 / amr-unknown)
+                                          :location (c4-0 / location
+                                                          :time (c4-6 / current)))))
+      :snt2 (c4-7 / cryptic
+                  :domain (c4-9 / that)
+                  :degree (c4-2 / rather)))

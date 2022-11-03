@@ -1,0 +1,85 @@
+# ::snt are you saying free speech is absolute? Where is that happening exactly?
+# ::tokens ["are", "you", "saying", "free", "speech", "is", "absolute", "?", "Where", "is", "that", "happening", "exactly", "?"]
+# ::lemmas ["be", "you", "say", "free", "speech", "be", "absolute", "?", "where", "be", "that", "happen", "exactly", "?"]
+(c1-2 / multi-sentence
+      :snt1 (c1-8 / say-01
+                  :polarity (c1-11 / amr-unknown)
+                  :ARG0 (c1-0 / you)
+                  :ARG1 (c1-6 / absolute
+                              :domain (c1-4 / speak-01
+                                            :ARG3-of (c1-1 / free-04)))
+                  :polarity (c1-7 / amr-unknown))
+      :snt2 (c1-3 / be-located-at-91
+                  :ARG1 (c1-10 / that)
+                  :ARG2 (c1-9 / amr-unknown)
+                  :mod (c1-5 / exact)))
+
+# ::snt islamic terrorust murderers dont believe in it
+# ::tokens ["islamic", "terrorust", "murderers", "do", "nt", "believe", "in", "it"]
+# ::lemmas ["islamic", "terrorust", "murderer", "do", "not", "believe", "in", "it"]
+(c2-1 / believe-01
+      :ARG0 (c2-4 / person
+                  :ARG0-of (c2-0 / murder-01)
+                  :mod (c2-6 / terrorust)
+                  :mod (c2-5 / religious-group
+                             :name (c2-3 / name
+                                         :op1 "Islam")))
+      :ARG1 (c2-2 / it)
+      :polarity -)
+
+# ::snt censorship is incompatible with democracy
+# ::tokens ["censorship", "is", "incompatible", "with", "democracy"]
+# ::lemmas ["censorship", "be", "incompatible", "with", "democracy"]
+(c3-2 / incompatible
+      :prep-with (c3-0 / democracy)
+      :domain (c3-1 / censor-01))
+
+# ::snt the dignity of the Prophet of Islam is non negotiable
+# ::tokens ["the", "dignity", "of", "the", "Prophet", "of", "Islam", "is", "non", "negotiable"]
+# ::lemmas ["the", "dignity", "of", "the", "Prophet", "of", "Islam", "be", "non", "negotiable"]
+(c4-2 / possible-01
+      :ARG1 (c4-0 / win-01
+                  :ARG1 (c4-3 / dignity
+                              :poss (c4-4 / person
+                                          :name (c4-1 / name
+                                                      :op1 "Prophet"
+                                                      :op2 "of"
+                                                      :op3 "Islam"))))
+      :polarity -)
+
+# ::snt The law of do not say the truth.
+# ::tokens ["The", "law", "of", "do", "not", "say", "the", "truth", "."]
+# ::lemmas ["the", "law", "of", "do", "not", "say", "the", "truth", "."]
+(c5-2 / law
+      :topic (c5-0 / say-01
+                   :ARG0 (c5-1 / you)
+                   :ARG1 (c5-3 / truth)
+                   :polarity -))
+
+# ::snt We are united in a fundamental belief: that freedom of expression is irrevocable and fundamental to a free society. via
+# ::tokens ["We", "are", "united", "in", "a", "fundamental", "belief", ":", "that", "freedom", "of", "expression", "is", "irrevocable", "and", "fundamental", "to", "a", "free", "society", ".", "via"]
+# ::lemmas ["we", "be", "united", "in", "a", "fundamental", "belief", ":", "that", "freedom", "of", "expression", "be", "irrevocable", "and", "fundamental", "to", "a", "free", "society", ".", "via"]
+(c6-2 / unite-01
+      :ARG1 (c6-0 / we)
+      :ARG2 (c6-3 / believe-01
+                  :ARG1 (c6-9 / and
+                              :op1 (c6-6 / possible-01
+                                         :ARG1 (c6-7 / revoke-01
+                                                     :ARG1 (c6-1 / free-04
+                                                                 :ARG3 (c6-4 / express-01)))
+                                         :polarity -)
+                              :op2 (c6-5 / fundamental
+                                         :domain c6-1
+                                         :beneficiary (c6-8 / society
+                                                            :ARG1-of c6-1))))
+      :mod c6-5)
+
+# ::snt Where are the MoToons then Index?
+# ::tokens ["Where", "are", "the", "MoToons", "then", "Index", "?"]
+# ::lemmas ["where", "be", "the", "MoToons", "then", "Index", "?"]
+(c7-0 / be-located-at-91
+      :ARG1 (c7-2 / product
+                  :name (c7-1 / name
+                              :op1 "MoToon"))
+      :ARG2 (c7-4 / amr-unknown)
+      :mod (c7-3 / then))

@@ -1,0 +1,55 @@
+# ::snt &amp; mine
+# ::tokens ["&", "amp", ";", "mine"]
+# ::lemmas ["&", "amp", ";", "mine"]
+(c1-2 / and
+      :op2 (c1-0 / thing
+                 :poss (c1-1 / i)))
+
+# ::snt I have no valentine but will order for me
+# ::tokens ["I", "have", "no", "valentine", "but", "will", "order", "for", "me"]
+# ::lemmas ["i", "have", "no", "valentine", "but", "will", "order", "for", "i"]
+(c2-2 / have-concession-91
+      :ARG1 (c2-0 / order-02
+                  :ARG0 (c2-4 / i
+                              :beneficiary-of c2-0))
+      :ARG2 (c2-3 / have-03
+                  :ARG0 c2-4
+                  :ARG1 (c2-1 / valentine)
+                  :polarity -))
+
+# ::snt you didnt gift me shit so fuck you
+# ::tokens ["you", "did", "nt", "gift", "me", "shit", "so", "fuck", "you"]
+# ::lemmas ["you", "do", "not", "gift", "i", "shit", "so", "fuck", "you"]
+(c3-5 / gift-01
+      :ARG0 (c3-1 / you)
+      :ARG1 (c3-2 / shit)
+      :ARG2 (c3-4 / i)
+      :ARG0-of (c3-3 / cause-01
+                     :ARG1 (c3-0 / fuck-01
+                                 :ARG0 c3-1
+                                 :ARG1 c3-4
+                                 :mode imperative))
+      :polarity -)
+
+# ::snt I love late gifting too so feel free to get me a valentines gift anytime
+# ::tokens ["I", "love", "late", "gifting", "too", "so", "feel", "free", "to", "get", "me", "a", "valentines", "gift", "anytime"]
+# ::lemmas ["i", "love", "late", "gift", "too", "so", "feel", "free", "to", "get", "i", "a", "valentine", "gift", "anytime"]
+(c4-4 / love-01
+      :ARG0 (c4-8 / i)
+      :ARG1 (c4-10 / gift-01
+                   :time (c4-12 / late))
+      :mod (c4-9 / too)
+      :ARG0-of (c4-7 / cause-01
+                     :ARG1 (c4-0 / feel-01
+                                 :ARG0 (c4-1 / you)
+                                 :ARG1 (c4-5 / free-04
+                                             :ARG1 c4-1
+                                             :ARG3 (c4-11 / get-01
+                                                          :ARG0 c4-1
+                                                          :ARG1 (c4-13 / gift-01
+                                                                       :ARG1 (c4-6 / festival
+                                                                                   :name (c4-2 / name
+                                                                                               :op1 "Valentine's"))
+                                                                       :ARG2 c4-8)
+                                                          :time (c4-3 / anytime)))
+                                 :mode imperative)))

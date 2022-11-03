@@ -1,0 +1,91 @@
+# ::snt Oh, I am sure he did.
+# ::tokens ["Oh", ",", "I", "am", "sure", "he", "did", "."]
+# ::lemmas ["oh", ",", "i", "be", "sure", "he", "do", "."]
+(c1-4 / sure-02
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-3 / do-02
+                  :ARG0 (c1-0 / he))
+      :mod (c1-1 / oh
+                 :mode expressive))
+
+# ::snt Don't be racist
+# ::tokens ["Do", "n't", "be", "racist"]
+# ::lemmas ["do", "not", "be", "racist"]
+(c2-1 / racist
+      :domain (c2-0 / you)
+      :polarity -
+      :mode imperative)
+
+# ::snt And we have such a great record of bringing terrorists to Justice? Obama is laughable and that's shameful
+# ::tokens ["And", "we", "have", "such", "a", "great", "record", "of", "bringing", "terrorists", "to", "Justice", "?", "Obama", "is", "laughable", "and", "that", "'s", "shameful"]
+# ::lemmas ["and", "we", "have", "such", "a", "great", "record", "of", "bring", "terrorist", "to", "Justice", "?", "Obama", "be", "laughable", "and", "that", "be", "shameful"]
+(c3-4 / multi-sentence
+      :snt1 (c3-17 / and
+                   :op2 (c3-0 / have-03
+                              :ARG0 (c3-1 / we)
+                              :ARG1 (c3-11 / record
+                                           :topic (c3-5 / bring-01
+                                                        :ARG0 c3-1
+                                                        :ARG1 (c3-16 / terrorist)
+                                                        :ARG2 (c3-2 / justice))
+                                           :mod (c3-12 / great
+                                                       :degree (c3-14 / such)))
+                              :polarity (c3-7 / amr-unknown)))
+      :snt2 (c3-9 / and
+                  :op1 (c3-3 / laughable-03
+                             :ARG1 (c3-10 / person
+                                          :name (c3-8 / name
+                                                      :op1 "Obama")))
+                  :op2 (c3-6 / shame-02
+                             :ARG0 (c3-13 / that)))
+      :polarity (c3-15 / amr-unknown))
+
+# ::snt Drills Since Where = Actual Terrorist Explosion
+# ::tokens ["Drills", "Since", "Where", "=", "Actual", "Terrorist", "Explosion"]
+# ::lemmas ["drill", "since", "where", "=", "actual", "Terrorist", "Explosion"]
+(c4-1 / equal-01
+      :ARG1 (c4-3 / gas-03
+                  :time (c4-4 / since
+                              :op1 (c4-6 / amr-unknown)))
+      :ARG2 (c4-0 / explode-01
+                  :ARG0 (c4-5 / terrorist)
+                  :ARG1-of (c4-2 / actual-02)))
+
+# ::snt Ummm... Correction they DID mention terrorists. Smh.
+# ::tokens ["Ummm", "...", "Correction", "they", "DID", "mention", "terrorists", ".", "Smh", "."]
+# ::lemmas ["ummm", "...", "Correction", "they", "do", "mention", "terrorist", ".", "Smh", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-1 / um
+                  :mode expressive)
+      :snt2 (c5-2 / mention-01
+                  :ARG0 (c5-6 / they)
+                  :ARG1 (c5-4 / terrorist)
+                  :ARG2-of (c5-3 / correct-02))
+      :snt3 (c5-5 / smh
+                  :mode expressive))
+
+# ::snt Obama you're a big part of the problem you wanker
+# ::tokens ["Obama", "you", "'re", "a", "big", "part", "of", "the", "problem", "you", "wanker"]
+# ::lemmas ["Obama", "you", "be", "a", "big", "part", "of", "the", "problem", "you", "wanker"]
+(c6-7 / say-01
+      :ARG0 (c6-4 / i)
+      :ARG1 (c6-0 / have-part-91
+                  :ARG1 (c6-6 / problem)
+                  :ARG2 (c6-8 / person
+                              :name (c6-5 / name
+                                          :op1 "Obama"))
+                  :mod (c6-3 / big))
+      :ARG2 (c6-1 / you
+                  :mod (c6-2 / wanker)))
+
+# ::snt : White House responds to shooting at offices of .
+# ::tokens [":", "White", "House", "responds", "to", "shooting", "at", "offices", "of", "."]
+# ::lemmas [":", "White", "House", "respond", "to", "shoot", "at", "office", "of", "."]
+(c7-2 / respond-01
+      :ARG0 (c7-3 / government-organization
+                  :name (c7-1 / name
+                              :op1 "White"
+                              :op2 "House"))
+      :ARG1 (c7-4 / shoot-01
+                  :location (c7-0 / office
+                                  :poss c7-3)))

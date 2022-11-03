@@ -1,0 +1,33 @@
+# ::snt The chosen one
+# ::tokens ["The", "chosen", "one"]
+# ::lemmas ["the", "choose", "one"]
+(c1-0 / one
+      :ARG1-of (c1-1 / choose-01))
+
+# ::snt You gotta wonder what kind of hard stuff they were taking when they wrote that.
+# ::tokens ["You", "got", "ta", "wonder", "what", "kind", "of", "hard", "stuff", "they", "were", "taking", "when", "they", "wrote", "that", "."]
+# ::lemmas ["you", "got", "to", "wonder", "what", "kind", "of", "hard", "stuff", "they", "be", "take", "when", "they", "write", "that", "."]
+(c2-6 / get-06
+      :ARG0 (c2-8 / you)
+      :ARG1 (c2-2 / wonder-01
+                  :ARG0 c2-8
+                  :ARG1 (c2-7 / kind
+                              :mod (c2-0 / stuff
+                                         :ARG1-of (c2-4 / hard-04))
+                              :ARG1-of (c2-5 / take-01
+                                             :ARG0 (c2-3 / they)
+                                             :time (c2-9 / write-01
+                                                         :ARG0 c2-3
+                                                         :ARG1 (c2-1 / that))))))
+
+# ::snt Probably the same stuff the Falcons were taking at halftime
+# ::tokens ["Probably", "the", "same", "stuff", "the", "Falcons", "were", "taking", "at", "halftime"]
+# ::lemmas ["probably", "the", "same", "stuff", "the", "Falcons", "be", "take", "at", "halftime"]
+(c3-5 / probable
+      :domain (c3-0 / stuff
+                    :ARG1-of (c3-4 / same-01)
+                    :ARG1-of (c3-3 / take-01
+                                   :ARG0 (c3-1 / team
+                                               :name (c3-6 / name
+                                                           :op1 "Falcons"))
+                                   :time (c3-2 / halftime))))

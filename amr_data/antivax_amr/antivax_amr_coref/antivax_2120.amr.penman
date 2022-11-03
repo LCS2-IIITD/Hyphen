@@ -1,0 +1,139 @@
+# ::snt "COVID" which when properly boiled down, means you get tested for ANY hospital visit, and if you have COVID, that gets counted. It's "accurate" but it would be best to only count those being hospitalized FOR COVID symptoms.
+# ::tokens ["\"", "COVID", "\"", "which", "when", "properly", "boiled", "down", ",", "means", "you", "get", "tested", "for", "ANY", "hospital", "visit", ",", "and", "if", "you", "have", "COVID", ",", "that", "gets", "counted", ".", "It", "'s", "\"", "accurate", "\"", "but", "it", "would", "be", "best", "to", "only", "count", "those", "being", "hospitalized", "FOR", "COVID", "symptoms", "."]
+# ::lemmas ["\"", "COVID", "\"", "which", "when", "properly", "boil", "down", ",", "mean", "you", "get", "test", "for", "any", "hospital", "visit", ",", "and", "if", "you", "have", "COVID", ",", "that", "gets", "count", ".", "it", "be", "\"", "accurate", "\"", "but", "it", "would", "be", "good", "to", "only", "count", "those", "be", "hospitalize", "for", "covid", "symptom", "."]
+(c1-16 / multi-sentence
+       :snt1 (c1-25 / mean-01
+                    :ARG1 (c1-7 / care-03
+                                :ARG1 (c1-26 / health))
+                    :ARG2 (c1-24 / and
+                                 :op1 (c1-14 / test-01
+                                             :ARG1 (c1-23 / you)
+                                             :ARG2 (c1-11 / visit-01
+                                                          :ARG0 c1-23
+                                                          :ARG1 (c1-4 / hospital)
+                                                          :mod (c1-18 / any)))
+                                 :op2 (c1-0 / count-01
+                                            :ARG1 (c1-10 / care-03
+                                                         :ARG1 c1-26)
+                                            :condition (c1-6 / have-03
+                                                             :ARG0 c1-23
+                                                             :ARG1 (c1-22 / care-03
+                                                                          :ARG1 c1-26)))))
+       :snt2 (c1-20 / contrast-01
+                    :ARG1 (c1-1 / accurate
+                                :polarity -)
+                    :ARG2 (c1-12 / have-degree-91
+                                 :ARG1 (c1-5 / count-01
+                                             :ARG1 (c1-27 / person
+                                                          :mod (c1-8 / that)
+                                                          :ARG1-of (c1-9 / hospitalize-01
+                                                                         :ARG1-of (c1-3 / cause-01
+                                                                                        :ARG0 (c1-19 / symptom
+                                                                                                     :mod (c1-2 / disease
+                                                                                                                :name (c1-17 / name
+                                                                                                                             :op1 "COVID"))))))
+                                             :mod (c1-13 / only))
+                                 :ARG2 (c1-15 / good-02
+                                              :ARG1 c1-5)
+                                 :ARG3 (c1-21 / most))))
+
+# ::snt So they say.
+# ::tokens ["So", "they", "say", "."]
+# ::lemmas ["so", "they", "say", "."]
+(c3-0 / say-01
+      :ARG0 (c3-2 / they)
+      :ARG1 (c3-1 / so))
+
+# ::snt Unlike the % survival rate.
+# ::tokens ["Unlike", "the", "%", "survival", "rate", "."]
+# ::lemmas ["unlike", "the", "%", "survival", "rate", "."]
+(c4-2 / resemble-01
+      :ARG2 (c4-3 / rate
+                  :mod (c4-0 / survive-01)
+                  :mod (c4-1 / percentage-entity))
+      :polarity -)
+
+# ::snt Idk if you missed the recent controversy about the dude recommending something along the lines of we shouldn't vaccinate the elderly as a priority because they are more white than other groups,and we should vaccinate disenfranchised groups first.
+# ::tokens ["Idk", "if", "you", "missed", "the", "recent", "controversy", "about", "the", "dude", "recommending", "something", "along", "the", "lines", "of", "we", "should", "n't", "vaccinate", "the", "elderly", "as", "a", "priority", "because", "they", "are", "more", "white", "than", "other", "groups", ",", "and", "we", "should", "vaccinate", "disenfranchised", "groups", "first", "."]
+# ::lemmas ["Idk", "if", "you", "miss", "the", "recent", "controversy", "about", "the", "dude", "recommend", "something", "along", "the", "line", "of", "we", "should", "not", "vaccinate", "the", "elderly", "as", "a", "priority", "because", "they", "be", "more", "white", "than", "other", "group", ",", "and", "we", "should", "vaccinate", "disenfranchise", "group", "first", "."]
+(c5-2 / idiot
+      :condition (c5-12 / miss-02
+                        :ARG0 (c5-18 / you)
+                        :ARG1 (c5-3 / controversy
+                                    :time (c5-9 / recent)
+                                    :topic (c5-5 / recommend-01
+                                                 :ARG0 (c5-0 / dude)
+                                                 :ARG1 (c5-15 / something
+                                                              :ARG1-of (c5-11 / resemble-01
+                                                                              :ARG2 (c5-20 / and
+                                                                                           :op1 (c5-7 / recommend-01
+                                                                                                      :ARG1 (c5-6 / vaccinate-01
+                                                                                                                  :ARG1 (c5-26 / person
+                                                                                                                               :mod (c5-14 / elderly))
+                                                                                                                  :prep-as (c5-25 / priority)
+                                                                                                                  :ARG1-of (c5-1 / cause-01
+                                                                                                                                 :ARG0 (c5-4 / white-02
+                                                                                                                                             :ARG1 c5-26
+                                                                                                                                             :ARG2-of (c5-23 / have-degree-91
+                                                                                                                                                             :ARG1 c5-26
+                                                                                                                                                             :ARG3 (c5-22 / more)
+                                                                                                                                                             :ARG4 (c5-10 / group
+                                                                                                                                                                          :mod (c5-8 / other)))))
+                                                                                                                  :polarity -))
+                                                                                           :op2 (c5-16 / recommend-01
+                                                                                                       :ARG1 (c5-21 / vaccinate-01
+                                                                                                                    :ARG0 (c5-13 / we)
+                                                                                                                    :ARG1 (c5-19 / group
+                                                                                                                                 :ARG1-of (c5-17 / disenfranchise-01))
+                                                                                                                    :ord (c5-24 / ordinal-entity
+                                                                                                                                :value 1))))))))))
+
+# ::snt They aren't vaccinating the most vulnerable (the elderly.) Only two states, Texas and I forget the other one,are planning to break with CDC guidelines of vaccinating essential workers such as politicians and grocery workers before the elderly.
+# ::tokens ["They", "are", "n't", "vaccinating", "the", "most", "vulnerable", "(", "the", "elderly", ".", ")", "Only", "two", "states", ",", "Texas", "and", "I", "forget", "the", "other", "one", ",", "are", "planning", "to", "break", "with", "CDC", "guidelines", "of", "vaccinating", "essential", "workers", "such", "as", "politicians", "and", "grocery", "workers", "before", "the", "elderly", "."]
+# ::lemmas ["they", "be", "not", "vaccinate", "the", "most", "vulnerable", "(", "the", "elderly", ".", ")", "Only", "two", "state", ",", "Texas", "and", "i", "forget", "the", "other", "one", ",", "be", "plan", "to", "break", "with", "CDC", "guideline", "of", "vaccinate", "essential", "worker", "such", "as", "politician", "and", "grocery", "worker", "before", "the", "elderly", "."]
+(c6-10 / multi-sentence
+       :snt1 (c6-6 / vaccinate-01
+                   :ARG0 (c6-8 / they)
+                   :ARG1 (c6-33 / person
+                                :ARG1-of (c6-24 / vulnerable-01
+                                                :ARG2-of (c6-27 / have-degree-91
+                                                                :ARG1 c6-33
+                                                                :ARG3 (c6-25 / most)))
+                                :mod (c6-13 / elderly))
+                   :polarity -)
+       :snt2 (c6-30 / plan-01
+                    :ARG0 (c6-14 / state
+                                 :mod (c6-7 / only)
+                                 :ARG1-of (c6-20 / mean-01
+                                                 :ARG2 (c6-23 / and
+                                                              :op1 (c6-32 / state
+                                                                          :name (c6-11 / name
+                                                                                       :op1 "Texas"))
+                                                              :op2 (c6-18 / state
+                                                                          :mod (c6-28 / other)
+                                                                          :ARG1-of (c6-26 / forget-01
+                                                                                          :ARG0 (c6-4 / i)))))
+                                 :quant 2)
+                    :ARG1 (c6-31 / break-18
+                                 :ARG0 c6-14
+                                 :ARG1 (c6-9 / guideline
+                                             :poss (c6-21 / government-organization
+                                                          :name (c6-3 / name
+                                                                      :op1 "CDC"))
+                                             :topic (c6-19 / vaccinate-01
+                                                           :ARG1 (c6-17 / person
+                                                                        :ARG0-of (c6-5 / work-01)
+                                                                        :mod (c6-29 / essential)
+                                                                        :example (c6-12 / and
+                                                                                        :op1 (c6-16 / politician)
+                                                                                        :op2 (c6-0 / person
+                                                                                                   :ARG0-of (c6-15 / work-01
+                                                                                                                   :ARG1 (c6-1 / grocery))))
+                                                                        :time (c6-22 / before
+                                                                                     :op1 (c6-2 / elderly))))))))
+
+# ::snt %, in other words.
+# ::tokens ["%", ",", "in", "other", "words", "."]
+# ::lemmas ["%", ",", "in", "other", "word", "."]
+(c7-0 / word-01
+      :mod (c7-1 / other))

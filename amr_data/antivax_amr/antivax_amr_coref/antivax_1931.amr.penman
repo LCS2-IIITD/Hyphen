@@ -1,0 +1,229 @@
+# ::snt Got first does yesterday!
+# ::tokens ["Got", "first", "does", "yesterday", "!"]
+# ::lemmas ["get", "first", "do", "yesterday", "!"]
+(c1-2 / get-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-1 / thing
+                  :ord (c1-0 / ordinal-entity
+                             :value 1))
+      :time (c1-4 / yesterday))
+
+# ::snt Got my nd yesterday, at the VA in Little Rock.
+# ::tokens ["Got", "my", "nd", "yesterday", ",", "at", "the", "VA", "in", "Little", "Rock", "."]
+# ::lemmas ["got", "my", "nd", "yesterday", ",", "at", "the", "VA", "in", "Little", "Rock", "."]
+(c2-5 / get-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-3 / thing
+                  :name (c2-7 / name
+                              :op1 "ND"))
+      :time (c2-8 / yesterday)
+      :location (c2-0 / government-organization
+                      :name (c2-4 / name
+                                  :op1 "VA")
+                      :location (c2-1 / city
+                                      :name (c2-2 / name
+                                                  :op1 "Little"
+                                                  :op2 "Rock"))))
+
+# ::snt I think its interesting that you crossed out your birth date
+# ::tokens ["I", "think", "its", "interesting", "that", "you", "crossed", "out", "your", "birth", "date"]
+# ::lemmas ["i", "think", "its", "interesting", "that", "you", "cross", "out", "your", "birth", "date"]
+(c3-3 / think-01
+      :ARG0 (c3-5 / i)
+      :ARG1 (c3-2 / interest-01
+                  :ARG2 (c3-1 / cross-out-00
+                              :ARG0 (c3-6 / you)
+                              :ARG1 (c3-0 / date
+                                          :time-of (c3-4 / bear-02
+                                                         :ARG1 c3-6)))))
+
+# ::snt Got my second Pfizer shot yesterday! No symptoms at all today and not even a sure arm!
+# ::tokens ["Got", "my", "second", "Pfizer", "shot", "yesterday", "!", "No", "symptoms", "at", "all", "today", "and", "not", "even", "a", "sure", "arm", "!"]
+# ::lemmas ["got", "my", "second", "Pfizer", "shoot", "yesterday", "!", "no", "symptom", "at", "all", "today", "and", "not", "even", "a", "sure", "arm", "!"]
+(c4-10 / multi-sentence
+       :snt1 (c4-7 / get-01
+                   :ARG0 (c4-9 / i)
+                   :ARG1 (c4-0 / shoot-02
+                               :ARG0 (c4-3 / company
+                                           :name (c4-11 / name
+                                                        :op1 "Pfizer"))
+                               :ARG1 c4-9
+                               :ord (c4-5 / ordinal-entity
+                                          :value 2))
+                   :time (c4-12 / yesterday))
+       :snt2 (c4-2 / and
+                   :op1 (c4-8 / symptom
+                              :mod (c4-13 / at-all)
+                              :time (c4-6 / today)
+                              :polarity -)
+                   :op2 (c4-1 / arm
+                              :ARG1-of (c4-4 / sure-02
+                                             :mod (c4-14 / even)
+                                             :polarity -))))
+
+# ::snt Back in January, had to for work.
+# ::tokens ["Back", "in", "January", ",", "had", "to", "for", "work", "."]
+# ::lemmas ["back", "in", "January", ",", "have", "to", "for", "work", "."]
+(c5-2 / obligate-01
+      :ARG2 (c5-0 / work-01)
+      :time (c5-1 / date-entity
+                  :mod (c5-3 / back)
+                  :month 1))
+
+# ::snt Got my first shot yesterday. Seems unreal!
+# ::tokens ["Got", "my", "first", "shot", "yesterday", ".", "Seems", "unreal", "!"]
+# ::lemmas ["got", "my", "first", "shot", "yesterday", ".", "seem", "unreal", "!"]
+(c6-6 / multi-sentence
+      :snt1 (c6-3 / get-01
+                  :ARG0 (c6-5 / i)
+                  :ARG1 (c6-0 / shoot-02
+                              :ARG0 c6-5
+                              :ord (c6-1 / ordinal-entity
+                                         :value 1))
+                  :time (c6-7 / yesterday))
+      :snt2 (c6-4 / seem-01
+                  :ARG1 (c6-2 / real-04
+                              :polarity -)))
+
+# ::snt Got one a few days ago....no reaction....2nd one scheduled for mid April. Congratulations on getting yours.
+# ::tokens ["Got", "one", "a", "few", "days", "ago", "....", "no", "reaction", "....", "2nd", "one", "scheduled", "for", "mid", "April", ".", "Congratulations", "on", "getting", "yours", "."]
+# ::lemmas ["got", "one", "a", "few", "days", "ago", "....", "no", "reaction", "....", "2nd", "one", "schedule", "for", "mid", "April", ".", "congratulation", "on", "get", "yours", "."]
+(c7-8 / multi-sentence
+      :snt1 (c7-7 / get-01
+                  :ARG0 (c7-1 / i)
+                  :ARG1 (c7-4 / one)
+                  :time (c7-20 / before
+                               :op1 (c7-9 / now)
+                               :quant (c7-17 / few
+                                             :op1 (c7-5 / temporal-quantity
+                                                        :unit (c7-0 / day)
+                                                        :quant 1))))
+      :snt2 (c7-6 / react-01
+                  :ARG0 (c7-11 / i)
+                  :polarity -)
+      :snt3 (c7-10 / schedule-01
+                   :ARG1 (c7-19 / one
+                                :ord (c7-2 / ordinal-entity
+                                           :value 2))
+                   :ARG3 (c7-18 / mid
+                                :op1 (c7-13 / date-entity
+                                            :month 4)))
+      :snt4 (c7-3 / congratulate-01
+                  :ARG0 (c7-12 / i)
+                  :ARG1 (c7-14 / you)
+                  :ARG2 (c7-15 / get-01
+                               :ARG0 c7-14
+                               :ARG1 (c7-16 / one
+                                            :poss c7-14))))
+
+# ::snt Get my nd dose on the th! No symptoms and still did an arm workout that afternoon
+# ::tokens ["Get", "my", "nd", "dose", "on", "the", "th", "!", "No", "symptoms", "and", "still", "did", "an", "arm", "workout", "that", "afternoon"]
+# ::lemmas ["get", "my", "nd", "dose", "on", "the", "th", "!", "no", "symptom", "and", "still", "do", "an", "arm", "workout", "that", "afternoon"]
+(c8-12 / multi-sentence
+       :snt1 (c8-9 / get-01
+                   :ARG0 (c8-13 / you)
+                   :ARG1 (c8-0 / dose-01
+                               :ARG1 (c8-11 / i)
+                               :mod (c8-4 / dear))
+                   :prep-on (c8-8 / th)
+                   :mode imperative)
+       :snt2 (c8-2 / and
+                   :op1 (c8-1 / symptom
+                              :polarity -)
+                   :op2 (c8-3 / work-out-03
+                              :ARG0 (c8-6 / i)
+                              :mod (c8-10 / still)
+                              :time (c8-5 / date-entity
+                                          :dayperiod (c8-14 / afternoon)
+                                          :mod (c8-7 / that))
+                              :polarity -)))
+
+# ::snt Okay, I suggested this to when she posted a pic of her vaccine - Laura, you should do follow up tweets etc. about any soreness, fatigue etc. - you can better educate those people concerned about the side effects. My wife, and I had some arm soreness
+# ::tokens ["Okay", ",", "I", "suggested", "this", "to", "when", "she", "posted", "a", "pic", "of", "her", "vaccine", "-", "Laura", ",", "you", "should", "do", "follow", "up", "tweets", "etc", ".", "about", "any", "soreness", ",", "fatigue", "etc", ".", "-", "you", "can", "better", "educate", "those", "people", "concerned", "about", "the", "side", "effects", ".", "My", "wife", ",", "and", "I", "had", "some", "arm", "soreness"]
+# ::lemmas ["okay", ",", "i", "suggest", "this", "to", "when", "she", "post", "a", "pic", "of", "her", "vaccine", "-", "Laura", ",", "you", "should", "do", "follow", "up", "tweet", "etc", ".", "about", "any", "soreness", ",", "fatigue", "etc", ".", "-", "you", "can", "well", "educate", "those", "people", "concerned", "about", "the", "side", "effect", ".", "my", "wife", ",", "and", "i", "have", "some", "arm", "soreness"]
+(c9-14 / multi-sentence
+       :snt1 (c9-18 / suggest-01
+                    :ARG0 (c9-4 / i)
+                    :ARG1 (c9-11 / this)
+                    :ARG2 (c9-33 / person
+                                 :name (c9-15 / name
+                                              :op1 "Laura"))
+                    :time (c9-31 / post-01
+                                 :ARG0 c9-33
+                                 :ARG1 (c9-20 / pic
+                                              :topic (c9-9 / vaccine
+                                                           :poss c9-33)))
+                    :ARG1-of (c9-10 / okay-04))
+       :snt2 (c9-32 / say-01
+                    :ARG0 (c9-21 / i)
+                    :ARG1 (c9-12 / recommend-01
+                                 :ARG1 (c9-27 / follow-up-03
+                                              :ARG0 (c9-19 / person
+                                                           :mod (c9-8 / that)
+                                                           :ARG1-of (c9-6 / concern-01
+                                                                          :ARG0 (c9-17 / effect-03
+                                                                                       :mod (c9-22 / side))))
+                                              :ARG1 (c9-26 / and
+                                                           :op1 (c9-5 / soreness
+                                                                      :mod (c9-16 / any))
+                                                           :op2 (c9-24 / fatigue)
+                                                           :op3 (c9-30 / et-cetera)))
+                                 :ARG2 c9-19)
+                    :ARG2 c9-19)
+       :snt3 (c9-1 / possible-01
+                   :ARG1 (c9-2 / educate-01
+                               :ARG0 (c9-0 / and
+                                           :op1 (c9-25 / person
+                                                       :ARG0-of (c9-29 / have-rel-role-91
+                                                                       :ARG1 c9-21
+                                                                       :ARG2 (c9-7 / wife)))
+                                           :op2 (c9-23 / i
+                                                       :part (c9-35 / arm)))
+                               :ARG1 (c9-34 / person
+                                            :mod c9-8)
+                               :ARG1-of c9-6
+                               :ARG0 c9-17))
+       :ARG1-of (c9-3 / have-degree-91
+                      :ARG2 (c9-13 / good-02
+                                   :ARG1 c9-2)
+                      :ARG3 (c9-28 / more)))
+
+# ::snt I have
+# ::tokens ["I", "have"]
+# ::lemmas ["i", "have"]
+(c10-1 / have-03
+       :ARG0 (c10-0 / i))
+
+# ::snt No.
+# ::tokens ["No", "."]
+# ::lemmas ["no", "."]
+(c11-0 / no)
+
+# ::snt I got the Johnson and Johnson at the Walmart in Bryant two weeks ago. Its just the one shot.
+# ::tokens ["I", "got", "the", "Johnson", "and", "Johnson", "at", "the", "Walmart", "in", "Bryant", "two", "weeks", "ago", ".", "Its", "just", "the", "one", "shot", "."]
+# ::lemmas ["i", "get", "the", "Johnson", "and", "Johnson", "at", "the", "Walmart", "in", "Bryant", "two", "weeks", "ago", ".", "its", "just", "the", "one", "shot", "."]
+(c12-9 / multi-sentence
+       :snt1 (c12-8 / get-01
+                    :ARG0 (c12-2 / i)
+                    :ARG1 (c12-14 / and
+                                  :op1 (c12-18 / product
+                                               :name (c12-10 / name
+                                                             :op1 "Johnson"))
+                                  :op2 (c12-15 / product
+                                               :name (c12-1 / name
+                                                            :op1 "Johnson")))
+                    :location (c12-4 / company
+                                     :name (c12-13 / name
+                                                   :op1 "Walmart")
+                                     :location (c12-0 / city
+                                                      :name (c12-3 / name
+                                                                   :op1 "Bryant")))
+                    :time (c12-16 / before
+                                  :op1 (c12-7 / now)
+                                  :quant (c12-6 / temporal-quantity
+                                                :unit (c12-5 / week)
+                                                :quant 2)))
+       :snt2 (c12-11 / shoot-01
+                     :ARG1 (c12-12 / it)
+                     :mod (c12-17 / just)
+                     :quant 1))

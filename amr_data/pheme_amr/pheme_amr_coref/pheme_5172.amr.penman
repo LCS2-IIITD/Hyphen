@@ -1,0 +1,25 @@
+# ::snt complete security failure in
+# ::tokens ["complete", "security", "failure", "in"]
+# ::lemmas ["complete", "security", "failure", "in"]
+(c1-1 / fail-01
+      :ARG1 (c1-0 / security)
+      :ARG1-of (c1-2 / complete-02))
+
+# ::snt there is
+# ::tokens ["there", "is"]
+# ::lemmas ["there", "be"]
+(c2-0 / event)
+
+# ::snt : Five hostages are being held at a kosher grocery store in east Paris
+# ::tokens [":", "Five", "hostages", "are", "being", "held", "at", "a", "kosher", "grocery", "store", "in", "east", "Paris"]
+# ::lemmas [":", "Five", "hostage", "be", "be", "hold", "at", "a", "kosher", "grocery", "store", "in", "east", "Paris"]
+(c3-0 / hold-01
+      :ARG1 (c3-7 / hostage
+                  :quant 5)
+      :location (c3-5 / store
+                      :mod (c3-4 / grocery)
+                      :mod (c3-6 / kosher)
+                      :location (c3-1 / east
+                                      :part-of (c3-3 / city
+                                                     :name (c3-2 / name
+                                                                 :op1 "Paris")))))

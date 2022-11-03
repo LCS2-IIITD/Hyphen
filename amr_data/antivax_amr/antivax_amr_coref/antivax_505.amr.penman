@@ -1,0 +1,31 @@
+# ::snt Thanks
+# ::tokens ["Thanks"]
+# ::lemmas ["thank"]
+(c1-1 / thank-01
+      :ARG0 (c1-0 / i)
+      :ARG1 (c1-2 / you))
+
+# ::snt I was/am dealing with a slew of digestive issues that was/is causing a great deal of pain throughout. So any pain at the injection was minor by comparison. I hardly noticed it.
+# ::tokens ["I", "was", "/", "am", "dealing", "with", "a", "slew", "of", "digestive", "issues", "that", "was", "/", "is", "causing", "a", "great", "deal", "of", "pain", "throughout", ".", "So", "any", "pain", "at", "the", "injection", "was", "minor", "by", "comparison", ".", "I", "hardly", "noticed", "it", "."]
+# ::lemmas ["i", "be", "/", "be", "deal", "with", "a", "slew", "of", "digestive", "issue", "that", "be", "/", "be", "cause", "a", "great", "deal", "of", "pain", "throughout", ".", "so", "any", "pain", "at", "the", "injection", "be", "minor", "by", "comparison", ".", "i", "hardly", "notice", "it", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-0 / deal-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-12 / issue-02
+                               :ARG0 (c2-14 / digestive)
+                               :quant (c2-10 / slew)
+                               :ARG0-of (c2-4 / cause-01
+                                              :ARG1 (c2-20 / pain-01
+                                                           :quant (c2-11 / deal
+                                                                         :mod (c2-7 / great)))
+                                              :time (c2-6 / throughout))))
+      :snt2 (c2-13 / infer-01
+                   :ARG1 (c2-16 / minor-01
+                                :ARG1 (c2-19 / pain-01
+                                             :mod (c2-15 / any)
+                                             :time (c2-18 / inject-01))
+                                :manner (c2-1 / compare-01)))
+      :snt3 (c2-9 / notice-01
+                  :ARG0 (c2-5 / i)
+                  :ARG1 (c2-2 / it)
+                  :degree (c2-17 / hardly)))

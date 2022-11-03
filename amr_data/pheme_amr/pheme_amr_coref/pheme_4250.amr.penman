@@ -1,0 +1,233 @@
+# ::snt *dead
+# ::tokens ["*", "dead"]
+# ::lemmas ["*", "dead"]
+(c1-0 / die-01)
+
+# ::snt Gunfire has killed two more people and twenty are injured by bullets
+# ::tokens ["Gunfire", "has", "killed", "two", "more", "people", "and", "twenty", "are", "injured", "by", "bullets"]
+# ::lemmas ["Gunfire", "have", "kill", "two", "more", "people", "and", "twenty", "be", "injure", "by", "bullet"]
+(c2-7 / and
+      :op1 (c2-5 / kill-01
+                 :ARG0 (c2-0 / fire-01)
+                 :ARG1 (c2-4 / person
+                             :mod (c2-1 / more)
+                             :quant 2))
+      :op2 (c2-2 / injure-01
+                 :ARG0 (c2-3 / fire-01)
+                 :ARG1 (c2-6 / person
+                             :quant 20)))
+
+# ::snt Please, no more dead innocents. RT : "Reports in French media of hostage situation in manhunt for suspects"
+# ::tokens ["Please", ",", "no", "more", "dead", "innocents", ".", "RT", ":", "\"", "Reports", "in", "French", "media", "of", "hostage", "situation", "in", "manhunt", "for", "suspects", "\""]
+# ::lemmas ["please", ",", "no", "more", "dead", "innocent", ".", "RT", ":", "\"", "report", "in", "French", "medium", "of", "hostage", "situation", "in", "manhunt", "for", "suspect", "\""]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / please
+                  :ARG0-of (c3-10 / cause-01
+                                  :ARG1 (c3-16 / person
+                                               :ARG1-of (c3-5 / innocent-01)
+                                               :quant (c3-9 / more
+                                                            :polarity -)))
+                  :polite +
+                  :mode imperative)
+      :snt2 (c3-11 / report-01
+                   :ARG0 (c3-3 / publication
+                               :name (c3-6 / name
+                                           :op1 "RT"))
+                   :ARG1 (c3-14 / situation
+                                :mod (c3-0 / hostage)
+                                :location-of (c3-1 / manhunt-00
+                                                   :ARG1 (c3-15 / person
+                                                                :ARG2-of (c3-4 / suspect-01))))
+                   :medium (c3-12 / media
+                                  :mod (c3-13 / country
+                                              :name (c3-7 / name
+                                                          :op1 "France")))))
+
+# ::snt the French security services are a complete shambles
+# ::tokens ["the", "French", "security", "services", "are", "a", "complete", "shambles"]
+# ::lemmas ["the", "French", "security", "service", "be", "a", "complete", "shamble"]
+(c4-5 / shambles
+      :ARG1-of (c4-4 / complete-02)
+      :domain (c4-1 / service
+                    :mod (c4-0 / security)
+                    :mod (c4-3 / country
+                               :name (c4-2 / name
+                                           :op1 "France"))))
+
+# ::snt Again????
+# ::tokens ["Again", "?", "?", "?", "?"]
+# ::lemmas ["again", "?", "?", "?", "?"]
+(c5-1 / again
+      :polarity (c5-0 / amr-unknown))
+
+# ::snt hostages are being held in a company called Creation Tendance Decouverte
+# ::tokens ["hostages", "are", "being", "held", "in", "a", "company", "called", "Creation", "Tendance", "Decouverte"]
+# ::lemmas ["hostage", "be", "be", "hold", "in", "a", "company", "call", "Creation", "Tendance", "Decouverte"]
+(c6-0 / hold-01
+      :ARG1 (c6-3 / hostage)
+      :location (c6-2 / company
+                      :name (c6-1 / name
+                                  :op1 "Creation"
+                                  :op2 "Tendance"
+                                  :op3 "Decouverte")))
+
+# ::snt I thought this might happen more will die they want to be martyrs . Tragic!
+# ::tokens ["I", "thought", "this", "might", "happen", "more", "will", "die", "they", "want", "to", "be", "martyrs", ".", "Tragic", "!"]
+# ::lemmas ["i", "think", "this", "might", "happen", "more", "will", "die", "they", "want", "to", "be", "martyr", ".", "tragic", "!"]
+(c8-2 / multi-sentence
+      :snt1 (c8-11 / think-01
+                   :ARG0 (c8-5 / i)
+                   :ARG1 (c8-7 / possible-01
+                               :ARG1 (c8-3 / event
+                                           :mod (c8-10 / this)
+                                           :mod (c8-8 / more))))
+      :snt2 (c8-12 / and
+                   :op1 (c8-9 / die-01
+                              :ARG1 (c8-6 / they))
+                   :op2 (c8-0 / want-01
+                              :ARG0 c8-6
+                              :ARG1 (c8-1 / martyr-01
+                                          :ARG1 c8-6)))
+      :snt3 (c8-4 / tragic
+                  :mode expressive))
+
+# ::snt Afraid to say gunmen are making a mockery of French security apparatus.
+# ::tokens ["Afraid", "to", "say", "gunmen", "are", "making", "a", "mockery", "of", "French", "security", "apparatus", "."]
+# ::lemmas ["afraid", "to", "say", "gunman", "be", "make", "a", "mockery", "of", "French", "security", "apparatus", "."]
+(c11-0 / fear-01
+       :ARG1 (c11-6 / say-01
+                    :ARG1 (c11-1 / mock-01
+                                 :ARG0 (c11-5 / gunman)
+                                 :ARG1 (c11-7 / apparatus
+                                              :mod (c11-2 / security)
+                                              :mod (c11-4 / country
+                                                          :name (c11-3 / name
+                                                                       :op1 "France"))))))
+
+# ::snt because this isn't sensationalising and glamourising at all. What happened to you ?
+# ::tokens ["because", "this", "is", "n't", "sensationalising", "and", "glamourising", "at", "all", ".", "What", "happened", "to", "you", "?"]
+# ::lemmas ["because", "this", "be", "not", "sensationalise", "and", "glamourise", "at", "all", ".", "what", "happen", "to", "you", "?"]
+(c12-1 / multi-sentence
+       :snt1 (c12-5 / cause-01
+                    :ARG0 (c12-9 / and
+                                 :op1 (c12-7 / sensationalize-01
+                                             :ARG0 (c12-8 / this))
+                                 :op2 (c12-6 / glamourize-01
+                                             :ARG0 c12-8)
+                                 :domain c12-8
+                                 :mod (c12-3 / at-all)
+                                 :polarity -))
+       :snt2 (c12-2 / event
+                    :mod (c12-0 / you)
+                    :mod (c12-4 / amr-unknown)))
+
+# ::snt IN UKRAINE HAVE GIVEN THE NAZI COUP, SUPPORTED BY NATO AND MEDIA COMMUNICATION,AS SEE PHOTO.
+# ::tokens ["IN", "UKRAINE", "HAVE", "GIVEN", "THE", "NAZI", "COUP", ",", "SUPPORTED", "BY", "NATO", "AND", "MEDIA", "COMMUNICATION", ",", "AS", "SEE", "PHOTO", "."]
+# ::lemmas ["in", "UKRAINE", "have", "give", "the", "NAZI", "COUP", ",", "support", "by", "NATO", "and", "MEDIA", "COMMUNICATION", ",", "as", "SEE", "PHOTO", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-9 / give-01
+                    :ARG0 (c13-8 / country
+                                 :name (c13-4 / name
+                                              :op1 "UKRAINE"))
+                    :ARG1 (c13-7 / coup-01
+                                 :mod (c13-6 / political-movement
+                                             :name (c13-5 / name
+                                                          :op1 "Nazi"))
+                                 :ARG1-of (c13-12 / support-01
+                                                  :ARG0 (c13-15 / and
+                                                                :op1 (c13-10 / military
+                                                                             :name (c13-11 / name
+                                                                                           :op1 "NATO"))
+                                                                :op2 (c13-13 / community
+                                                                             :mod (c13-1 / media))))))
+       :snt2 (c13-3 / see-01
+                    :ARG0 (c13-0 / you)
+                    :ARG1 (c13-14 / photograph)
+                    :mode imperative))
+
+# ::snt Why France shock today? How many jews, christians, hindu, budha were killed by muslims? It's greater than people.why ?
+# ::tokens ["Why", "France", "shock", "today", "?", "How", "many", "jews", ",", "christians", ",", "hindu", ",", "budha", "were", "killed", "by", "muslims", "?", "It", "'s", "greater", "than", "people.why", "?"]
+# ::lemmas ["why", "France", "shock", "today", "?", "how", "many", "jews", ",", "christians", ",", "hindu", ",", "budha", "be", "kill", "by", "muslims", "?", "it", "be", "great", "than", "people.why", "?"]
+(c14-0 / multi-sentence
+       :snt1 (c14-25 / cause-01
+                     :ARG0 (c14-8 / amr-unknown)
+                     :ARG1 (c14-6 / shock-01
+                                  :ARG1 (c14-5 / country
+                                               :name (c14-12 / name
+                                                             :op1 "France"))
+                                  :time (c14-27 / today)))
+       :snt2 (c14-22 / kill-01
+                     :ARG0 (c14-4 / person
+                                  :mod (c14-15 / religious-group
+                                               :name (c14-24 / name
+                                                             :op1 "Islam")))
+                     :ARG1 (c14-19 / and
+                                   :op1 (c14-1 / religious-group
+                                               :name (c14-2 / name
+                                                            :op1 "Jew"))
+                                   :op2 (c14-11 / religious-group
+                                                :name (c14-3 / name
+                                                             :op1 "Christianity"))
+                                   :op3 (c14-18 / religious-group
+                                                :name (c14-28 / name
+                                                              :op1 "Hindu"))
+                                   :op4 (c14-17 / religious-group
+                                                :name (c14-10 / name
+                                                              :op1 "Buddha"))
+                                   :quant (c14-13 / amr-unknown)))
+       :snt3 (c14-9 / have-degree-91
+                    :ARG1 (c14-20 / it)
+                    :ARG2 (c14-16 / great)
+                    :ARG3 (c14-14 / more)
+                    :ARG4 (c14-7 / person)
+                    :polarity (c14-26 / amr-unknown))
+       :snt4 (c14-21 / cause-01
+                     :ARG0 (c14-23 / amr-unknown)))
+
+# ::snt sleeping Europe, you are sleeping for years and say Jesus is dead. Now Jesus is silent for you, and Muslims are your leader
+# ::tokens ["sleeping", "Europe", ",", "you", "are", "sleeping", "for", "years", "and", "say", "Jesus", "is", "dead", ".", "Now", "Jesus", "is", "silent", "for", "you", ",", "and", "Muslims", "are", "your", "leader"]
+# ::lemmas ["sleep", "Europe", ",", "you", "be", "sleep", "for", "years", "and", "say", "Jesus", "be", "dead", ".", "now", "Jesus", "be", "silent", "for", "you", ",", "and", "Muslims", "be", "your", "leader"]
+(c15-0 / multi-sentence
+       :snt1 (c15-7 / and
+                    :op1 (c15-5 / sleep-01
+                                :ARG0 (c15-18 / continent
+                                              :name (c15-11 / name
+                                                            :op1 "Europe"))
+                                :duration (c15-12 / multiple
+                                                  :op1 (c15-20 / temporal-quantity
+                                                               :unit (c15-15 / year)
+                                                               :quant 1)))
+                    :op2 (c15-10 / say-01
+                                 :ARG0 c15-18
+                                 :ARG1 (c15-4 / die-01
+                                              :ARG1 (c15-3 / person
+                                                           :name (c15-17 / name
+                                                                         :op1 "Jesus")))))
+       :snt2 (c15-14 / and
+                     :op1 (c15-16 / silent
+                                  :domain (c15-6 / person
+                                                 :name (c15-1 / name
+                                                              :op1 "Jesus"))
+                                  :beneficiary (c15-19 / you)
+                                  :time (c15-2 / now))
+                     :op2 (c15-9 / person
+                                 :ARG0-of (c15-8 / lead-02
+                                                 :ARG1 c15-19)
+                                 :mod (c15-13 / religious-group
+                                              :name (c15-21 / name
+                                                            :op1 "Muslim")))))
+
+# ::snt d e'er d charlie should be tried for extreme hate speech in court of law..
+# ::tokens ["d", "e'er", "d", "charlie", "should", "be", "tried", "for", "extreme", "hate", "speech", "in", "court", "of", "law", ".."]
+# ::lemmas ["d", "e'er", "d", "charlie", "should", "be", "try", "for", "extreme", "hate", "speech", "in", "court", "of", "law", ".."]
+(c16-5 / recommend-01
+       :ARG1 (c16-8 / try-02
+                    :ARG1 (c16-4 / person
+                                 :name (c16-3 / name
+                                              :op1 "D'E'er"
+                                              :op2 "Charlie"))
+                    :ARG3 (c16-7 / speak-01
+                                 :ARG1 (c16-0 / hate-01)
+                                 :degree (c16-2 / extreme))
+                    :location (c16-6 / court
+                                     :mod (c16-1 / law))))

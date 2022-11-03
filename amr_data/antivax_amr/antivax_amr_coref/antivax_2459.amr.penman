@@ -1,0 +1,78 @@
+# ::snt I wish!
+# ::tokens ["I", "wish", "!"]
+# ::lemmas ["i", "wish", "!"]
+(c1-0 / wish-01
+      :ARG0 (c1-1 / i))
+
+# ::snt Are you in your twenties?
+# ::tokens ["Are", "you", "in", "your", "twenties", "?"]
+# ::lemmas ["be", "you", "in", "your", "twenties", "?"]
+(c2-0 / age-01
+      :polarity (c2-1 / amr-unknown)
+      :ARG1 (c2-3 / you)
+      :ARG2 (c2-2 / temporal-quantity
+                  :unit (c2-4 / year)
+                  :quant 30))
+
+# ::snt Same with me, the last interval. My wife got the vaccine then since she's two years older than me...
+# ::tokens ["Same", "with", "me", ",", "the", "last", "interval", ".", "My", "wife", "got", "the", "vaccine", "then", "since", "she", "'s", "two", "years", "older", "than", "me", "..."]
+# ::lemmas ["same", "with", "i", ",", "the", "last", "interval", ".", "my", "wife", "get", "the", "vaccine", "then", "since", "she", "be", "two", "years", "old", "than", "i", "..."]
+(c3-16 / multi-sentence
+       :snt1 (c3-0 / same-01
+                   :ARG2 (c3-15 / i)
+                   :topic (c3-5 / interval
+                                :mod (c3-11 / last)))
+       :snt2 (c3-13 / get-01
+                    :ARG0 (c3-12 / person
+                                 :ARG0-of (c3-6 / have-rel-role-91
+                                                :ARG1 (c3-7 / i)
+                                                :ARG2 (c3-2 / wife)))
+                    :ARG1 (c3-8 / vaccine)
+                    :time (c3-10 / then)
+                    :ARG1-of (c3-1 / cause-01
+                                   :ARG0 (c3-14 / have-degree-91
+                                                :ARG1 c3-12
+                                                :ARG2 (c3-9 / old)
+                                                :ARG3 (c3-3 / more
+                                                            :quant (c3-4 / temporal-quantity
+                                                                         :unit (c3-17 / year)
+                                                                         :quant 2))
+                                                :ARG4 c3-7))))
+
+# ::snt Congratz! Missed the new age interval by one year
+# ::tokens ["Congratz", "!", "Missed", "the", "new", "age", "interval", "by", "one", "year"]
+# ::lemmas ["Congratz", "!", "miss", "the", "new", "age", "interval", "by", "one", "year"]
+(c4-5 / multi-sentence
+      :snt1 (c4-2 / congratulate-01
+                  :ARG1 (c4-7 / you)
+                  :mode expressive)
+      :snt2 (c4-1 / miss-02
+                  :ARG0 c4-7
+                  :ARG1 (c4-4 / interval
+                              :mod (c4-0 / age
+                                         :ARG1-of (c4-6 / new-01)))
+                  :ARG2 (c4-3 / temporal-quantity
+                              :unit (c4-8 / year)
+                              :quant 1)))
+
+# ::snt Here as well, was hammering until I got an appointment.
+# ::tokens ["Here", "as", "well", ",", "was", "hammering", "until", "I", "got", "an", "appointment", "."]
+# ::lemmas ["here", "as", "well", ",", "be", "hammer", "until", "i", "get", "an", "appointment", "."]
+(c5-1 / hammer-02
+      :location (c5-4 / here)
+      :mod (c5-0 / as-well)
+      :time (c5-2 / until
+                  :op1 (c5-3 / get-01
+                             :ARG0 (c5-5 / i)
+                             :ARG1 (c5-6 / appointment-02
+                                         :ARG0 c5-5))))
+
+# ::snt Congratulations. Somewhere in the near future, hopefully...
+# ::tokens ["Congratulations", ".", "Somewhere", "in", "the", "near", "future", ",", "hopefully", "..."]
+# ::lemmas ["congratulation", ".", "somewhere", "in", "the", "near", "future", ",", "hopefully", "..."]
+(c6-4 / multi-sentence
+      :snt1 (c6-2 / congratulate-01)
+      :snt2 (c6-3 / hope-01
+                  :time (c6-0 / somewhere
+                              :op1 (c6-1 / future
+                                         :ARG1-of (c6-5 / near-02)))))

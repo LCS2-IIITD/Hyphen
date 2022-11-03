@@ -1,0 +1,66 @@
+# ::snt Rs3 just got a 'duel-anywhere' system, where you can have a fun duel anywhere, with anyone you please!
+# ::tokens ["Rs3", "just", "got", "a", "'", "duel", "-", "anywhere", "'", "system", ",", "where", "you", "can", "have", "a", "fun", "duel", "anywhere", ",", "with", "anyone", "you", "please", "!"]
+# ::lemmas ["rs3", "just", "get", "a", "'", "duel", "-", "anywhere", "'", "system", ",", "where", "you", "can", "have", "a", "fun", "duel", "anywhere", ",", "with", "anyone", "you", "please", "!"]
+(c1-8 / get-01
+      :ARG0 (c1-11 / monetary-quantity
+                   :unit (c1-0 / dollar)
+                   :quant 3)
+      :ARG1 (c1-1 / system
+                  :mod (c1-10 / duel-01
+                              :mod (c1-3 / anywhere))
+                  :location-of (c1-7 / possible-01
+                                     :ARG1 (c1-5 / duel-01
+                                                 :ARG0 (c1-12 / you)
+                                                 :ARG1-of (c1-4 / fun-01)
+                                                 :accompanier (c1-13 / anyone
+                                                                     :ARG1-of (c1-6 / please-01)
+                                                                     :polite +)
+                                                 :location (c1-2 / anywhere))))
+      :mod (c1-9 / just))
+
+# ::snt can you imagine the bugs with this
+# ::tokens ["can", "you", "imagine", "the", "bugs", "with", "this"]
+# ::lemmas ["can", "you", "imagine", "the", "bug", "with", "this"]
+(c2-4 / possible-01
+      :ARG1 (c2-1 / imagine-01
+                  :ARG0 (c2-5 / you)
+                  :ARG1 (c2-3 / bug-01
+                              :ARG0 (c2-2 / this)))
+      :polarity (c2-0 / amr-unknown))
+
+# ::snt No, not really
+# ::tokens ["No", ",", "not", "really"]
+# ::lemmas ["no", ",", "not", "really"]
+(c3-0 / real-04
+      :polarity -)
+
+# ::snt lol there have already been significant glitches with it in RS3 who have a massive dev and QA team, a team of 2 people working on this is asking for trouble
+# ::tokens ["lol", "there", "have", "already", "been", "significant", "glitches", "with", "it", "in", "RS3", "who", "have", "a", "massive", "dev", "and", "QA", "team", ",", "a", "team", "of", "2", "people", "working", "on", "this", "is", "asking", "for", "trouble"]
+# ::lemmas ["lol", "there", "have", "already", "be", "significant", "glitch", "with", "it", "in", "RS3", "who", "have", "a", "massive", "dev", "and", "QA", "team", ",", "a", "team", "of", "2", "people", "work", "on", "this", "be", "ask", "for", "trouble"]
+(c4-13 / and
+       :op1 (c4-6 / glitch
+                  :ARG1-of (c4-11 / significant-02)
+                  :time (c4-10 / already)
+                  :prep-with (c4-18 / product
+                                    :name (c4-8 / name
+                                                :op1 "RS3")
+                                    :ARG0-of (c4-15 / have-03
+                                                    :ARG1 (c4-1 / and
+                                                                :op1 (c4-5 / team
+                                                                           :ARG0-of (c4-0 / dev-01)
+                                                                           :mod (c4-7 / massive))
+                                                                :op2 (c4-4 / team
+                                                                           :mod c4-18
+                                                                           :name c4-8
+                                                                           :op1 "QA")))))
+       :op2 (c4-19 / ask-02
+                   :ARG0 (c4-9 / team
+                               :consist-of (c4-16 / person
+                                                  :ARG0-of (c4-3 / work-01
+                                                                 :ARG1 (c4-12 / this))
+                                                  :quant 2))
+                   :ARG1 (c4-14 / trouble-05)
+                   :ARG2 c4-9)
+       :ARG2-of (c4-17 / laugh-01
+                       :manner (c4-2 / loud)
+                       :mode expressive))

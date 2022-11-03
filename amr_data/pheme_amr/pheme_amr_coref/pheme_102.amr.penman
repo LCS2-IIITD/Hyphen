@@ -1,0 +1,330 @@
+# ::snt do you enjoy being consistently wrong or is it really inadvertent?
+# ::tokens ["do", "you", "enjoy", "being", "consistently", "wrong", "or", "is", "it", "really", "inadvertent", "?"]
+# ::lemmas ["do", "you", "enjoy", "be", "consistently", "wrong", "or", "be", "it", "really", "inadvertent", "?"]
+(c1-6 / amr-choice
+      :op1 (c1-2 / enjoy-01
+                 :ARG0 (c1-1 / you)
+                 :ARG1 (c1-0 / wrong-04
+                             :ARG1 c1-1
+                             :ARG1-of (c1-5 / consistent-02)))
+      :op2 (c1-3 / inadvertent
+                 :domain c1-0
+                 :ARG1-of (c1-4 / real-04)
+                 :polarity -))
+
+# ::snt ": Hostages held inside Sydney cafe, Islamic flag held up" &lt;&lt;Terrifying stuff.Nutters&gt;&gt;
+# ::tokens ["\"", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up", "\"", "&", "lt;&lt;Terrifying", "stuff", ".", "Nutters&gt;&gt", ";"]
+# ::lemmas ["\"", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up", "\"", "&", "lt;&lt;terrifying", "stuff", ".", "Nutters&gt;&gt", ";"]
+(c2-2 / multi-sentence
+      :snt1 (c2-0 / hold-01
+                  :ARG1 (c2-12 / hostage)
+                  :location (c2-3 / inside
+                                  :op1 (c2-8 / cafe
+                                             :mod (c2-7 / city
+                                                        :name (c2-4 / name
+                                                                    :op1 "Sydney")))))
+      :snt2 (c2-5 / hold-up-10
+                  :ARG1 (c2-1 / flag
+                              :mod (c2-9 / religious-group
+                                         :name (c2-6 / name
+                                                     :op1 "Islam"))))
+      :snt3 (c2-10 / stuff
+                   :ARG0-of (c2-11 / terrify-01)))
+
+# ::snt Thoughts with Sydney tonight. : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens ["Thoughts", "with", "Sydney", "tonight", ".", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas ["thought", "with", "Sydney", "tonight", ".", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c3-2 / multi-sentence
+      :snt1 (c3-13 / think-01
+                   :ARG0 (c3-6 / person
+                               :location (c3-8 / city
+                                               :name (c3-4 / name
+                                                           :op1 "Sydney")))
+                   :time (c3-7 / date-entity
+                               :dayperiod (c3-5 / night)
+                               :mod (c3-11 / today)))
+      :snt2 (c3-0 / hold-up-11
+                  :ARG1 (c3-1 / flag
+                              :mod (c3-9 / religious-group
+                                         :name (c3-10 / name
+                                                      :op1 "Islam")))
+                  :location (c3-3 / inside
+                                  :op1 (c3-12 / cafe
+                                              :location c3-8))))
+
+# ::snt That's not the flag, just looks like it
+# ::tokens ["That", "'s", "not", "the", "flag", ",", "just", "looks", "like", "it"]
+# ::lemmas ["that", "be", "not", "the", "flag", ",", "just", "look", "like", "it"]
+(c4-5 / contrast-01
+      :ARG1 (c4-1 / flag
+                  :domain (c4-6 / that)
+                  :polarity -)
+      :ARG2 (c4-2 / look-02
+                  :ARG0 (c4-4 / flag)
+                  :ARG1 (c4-3 / it)
+                  :mod (c4-0 / just)))
+
+# ::snt fuck sorry. dnt like media giving IS exavtly what they want
+# ::tokens ["fuck", "sorry", ".", "dnt", "like", "media", "giving", "IS", "exavtly", "what", "they", "want"]
+# ::lemmas ["fuck", "sorry", ".", "dnt", "like", "medium", "give", "be", "exavtly", "what", "they", "want"]
+(c5-2 / multi-sentence
+      :snt1 (c5-9 / sorry-01
+                  :ARG1 (c5-4 / i)
+                  :mod (c5-1 / fuck
+                             :mode expressive))
+      :snt2 (c5-6 / dislike-01
+                  :ARG0 (c5-7 / i)
+                  :ARG1 (c5-8 / give-01
+                              :ARG0 (c5-5 / media)
+                              :ARG1 (c5-10 / thing
+                                           :ARG1-of (c5-0 / want-01
+                                                          :ARG0 c5-5)
+                                           :mod (c5-3 / exact))
+                              :ARG2 c5-5)))
+
+# ::snt : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens [":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas [":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c6-9 / and
+      :op1 (c6-0 / hold-01
+                 :ARG1 (c6-10 / hostage)
+                 :location (c6-2 / inside
+                                 :op1 (c6-7 / cafe
+                                            :location (c6-6 / city
+                                                            :name (c6-3 / name
+                                                                        :op1 "Sydney")))))
+      :op2 (c6-4 / hold-up-10
+                 :ARG1 (c6-1 / flag
+                             :mod (c6-8 / religious-group
+                                        :name (c6-5 / name
+                                                    :op1 "Islam")))))
+
+# ::snt Actually debate on the flag : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens ["Actually", "debate", "on", "the", "flag", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas ["actually", "debate", "on", "the", "flag", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c7-9 / debate-01
+      :ARG1 (c7-1 / flag)
+      :ARG1-of (c7-13 / actual-02)
+      :ARG1-of (c7-2 / mean-01
+                     :ARG2 (c7-4 / and
+                                 :op1 (c7-0 / hold-up-11
+                                            :ARG1 (c7-3 / hostage)
+                                            :location (c7-10 / cafe
+                                                             :location (c7-11 / city
+                                                                              :name (c7-6 / name
+                                                                                          :op1 "Sydney"))))
+                                 :op2 (c7-7 / hold-up-11
+                                            :ARG1 (c7-5 / flag
+                                                        :mod (c7-12 / religious-group
+                                                                    :name (c7-8 / name
+                                                                                :op1 "Islam")))))))
+
+# ::snt this is not an "Islamic" flag, not even the ISIS flag. The Islamic community in no way condones these action.
+# ::tokens ["this", "is", "not", "an", "\"", "Islamic", "\"", "flag", ",", "not", "even", "the", "ISIS", "flag", ".", "The", "Islamic", "community", "in", "no", "way", "condones", "these", "action", "."]
+# ::lemmas ["this", "be", "not", "an", "\"", "Islamic", "\"", "flag", ",", "not", "even", "the", "ISIS", "flag", ".", "the", "Islamic", "community", "in", "no", "way", "condone", "these", "action", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-9 / contrast-01
+                  :ARG1 (c8-1 / flag
+                              :mod (c8-8 / religious-group
+                                         :name (c8-5 / name
+                                                     :op1 "Islam"))
+                              :domain (c8-14 / this)
+                              :polarity -)
+                  :ARG2 (c8-4 / flag
+                              :mod (c8-3 / even
+                                         :polarity -)
+                              :mod (c8-7 / military
+                                         :name (c8-6 / name
+                                                     :op1 "Islamic"))
+                              :domain (c8-12 / this)))
+      :snt2 (c8-10 / condone-01
+                   :ARG0 (c8-13 / community
+                                :mod c8-8)
+                   :ARG1 (c8-15 / act-02
+                                :mod (c8-11 / this))
+                   :manner (c8-0 / way)
+                   :polarity -))
+
+# ::snt : held inside cafe, Islamic flag held up
+# ::tokens [":", "held", "inside", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas [":", "hold", "inside", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c9-6 / and
+      :op1 (c9-0 / hold-up-10
+                 :location (c9-2 / inside
+                                 :op1 (c9-5 / cafe)))
+      :op2 (c9-7 / hold-up-10
+                 :ARG1 (c9-1 / flag
+                             :mod (c9-4 / religious-group
+                                        :name (c9-3 / name
+                                                    :op1 "Islam")))))
+
+# ::snt ?! RT : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens ["?", "!", "RT", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas ["?", "!", "RT", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c10-11 / and
+        :op1 (c10-0 / hold-up-11
+                    :ARG1 (c10-13 / hostage)
+                    :location (c10-2 / inside
+                                     :op1 (c10-7 / cafe
+                                                 :location (c10-6 / city
+                                                                  :name (c10-3 / name
+                                                                               :op1 "Sydney")))))
+        :op2 (c10-4 / hold-up-11
+                    :ARG1 (c10-1 / flag
+                                 :mod (c10-8 / religious-group
+                                             :name (c10-5 / name
+                                                          :op1 "Islam"))))
+        :ARG1-of (c10-9 / publication-91
+                        :ARG4 (c10-12 / publication
+                                      :name (c10-10 / name
+                                                    :op1 "RT"))))
+
+# ::snt Oh no. RT : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens ["Oh", "no", ".", "RT", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas ["oh", "no", ".", "RT", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c11-2 / multi-sentence
+       :snt1 (c11-4 / oh-no
+                    :mode expressive)
+       :snt2 (c11-14 / say-01
+                     :ARG0 (c11-8 / publication
+                                  :name (c11-6 / name
+                                               :op1 "RT"))
+                     :ARG1 (c11-15 / and
+                                   :op1 (c11-0 / hold-01
+                                               :ARG1 (c11-1 / hostage)
+                                               :location (c11-5 / inside
+                                                                :op1 (c11-10 / cafe
+                                                                             :location (c11-9 / city
+                                                                                              :name (c11-7 / name
+                                                                                                           :op1 "Sydney")))))
+                                   :op2 (c11-11 / hold-up-11
+                                                :ARG1 (c11-3 / flag
+                                                             :mod (c11-12 / religious-group
+                                                                          :name (c11-13 / name
+                                                                                        :op1 "Islam")))))))
+
+# ::snt Don't let OBAMA or Holder talk, they would blame it on the racial make-up of Sydney!
+# ::tokens ["Do", "n't", "let", "OBAMA", "or", "Holder", "talk", ",", "they", "would", "blame", "it", "on", "the", "racial", "make", "-", "up", "of", "Sydney", "!"]
+# ::lemmas ["do", "not", "let", "OBAMA", "or", "Holder", "talk", ",", "they", "would", "blame", "it", "on", "the", "racial", "make", "-", "up", "of", "Sydney", "!"]
+(c12-1 / let-01
+       :ARG0 (c12-0 / you)
+       :ARG1 (c12-12 / talk-01
+                     :ARG0 (c12-4 / or
+                                  :op1 (c12-7 / person
+                                              :name (c12-5 / name
+                                                           :op1 "Obama"))
+                                  :op2 (c12-13 / person
+                                               :name (c12-6 / name
+                                                            :op1 "Holder"))))
+       :ARG1-of (c12-9 / cause-01
+                       :ARG0 (c12-3 / blame-01
+                                    :ARG0 c12-4
+                                    :ARG1 (c12-2 / make-up-10
+                                                 :ARG1 (c12-8 / city
+                                                              :name (c12-10 / name
+                                                                            :op1 "Sydney"))
+                                                 :ARG2 (c12-11 / race))))
+       :mode imperative
+       :polarity -)
+
+# ::snt : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens [":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas [":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c14-9 / and
+       :op1 (c14-0 / hold-01
+                   :ARG1 (c14-10 / hostage)
+                   :location (c14-2 / inside
+                                    :op1 (c14-7 / cafe
+                                                :location (c14-6 / city
+                                                                 :name (c14-3 / name
+                                                                              :op1 "Sydney")))))
+       :op2 (c14-4 / hold-up-10
+                   :ARG1 (c14-1 / flag
+                                :mod (c14-8 / religious-group
+                                            :name (c14-5 / name
+                                                         :op1 "Islam")))))
+
+# ::snt : Hostages held inside Sydney cafe, Islamic flag held up oh god
+# ::tokens [":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up", "oh", "god"]
+# ::lemmas [":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up", "oh", "god"]
+(c15-11 / and
+        :op1 (c15-0 / hold-01
+                    :ARG1 (c15-12 / hostage)
+                    :location (c15-7 / cafe
+                                     :location (c15-6 / city
+                                                      :name (c15-3 / name
+                                                                   :op1 "Sydney"))))
+        :op2 (c15-4 / hold-01
+                    :ARG1 (c15-1 / flag
+                                 :mod (c15-8 / religious-group
+                                             :name (c15-5 / name
+                                                          :op1 "Islam")))
+                    :mod (c15-2 / up))
+        :mod (c15-9 / person
+                    :name (c15-10 / name
+                                  :op1 "Oh"
+                                  :op2 "God")
+                    :mode expressive))
+
+# ::snt NOT the ISIS flag RT : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens ["NOT", "the", "ISIS", "flag", "RT", ":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas ["not", "the", "ISIS", "flag", "RT", ":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c16-2 / multi-sentence
+       :snt1 (c16-1 / flag
+                    :mod (c16-10 / religious-group
+                                 :name (c16-7 / name
+                                              :op1 "Islam"))
+                    :ARG1-of (c16-5 / instead-of-91
+                                    :ARG2 (c16-6 / flag
+                                                 :mod (c16-11 / country
+                                                              :name (c16-8 / name
+                                                                           :op1 "Saudi"
+                                                                           :op2 "Arabia"))))
+                    :polarity -)
+       :snt2 (c16-17 / and
+                     :op1 (c16-0 / hold-up-11
+                                 :ARG1 (c16-3 / hostage)
+                                 :location (c16-12 / cafe
+                                                   :location (c16-15 / city
+                                                                     :name (c16-9 / name
+                                                                                  :op1 "Sydney"))))
+                     :op2 (c16-13 / hold-up-11
+                                  :ARG1 (c16-4 / flag
+                                               :mod (c16-14 / religious-group
+                                                            :name (c16-16 / name
+                                                                          :op1 "Islam"))))))
+
+# ::snt It says Islamic flag, not IS flag. Not confirmed.
+# ::tokens ["It", "says", "Islamic", "flag", ",", "not", "IS", "flag", ".", "Not", "confirmed", "."]
+# ::lemmas ["it", "say", "Islamic", "flag", ",", "not", "be", "flag", ".", "not", "confirm", "."]
+(c17-1 / multi-sentence
+       :snt1 (c17-8 / say-01
+                    :ARG0 (c17-3 / it)
+                    :ARG1 (c17-0 / flag
+                                 :mod (c17-6 / religious-group
+                                             :name (c17-5 / name
+                                                          :op1 "Islam"))))
+       :snt2 (c17-2 / say-01
+                    :ARG0 c17-3
+                    :ARG1 (c17-4 / flag
+                                 :mod c17-6)
+                    :polarity -)
+       :snt3 (c17-7 / confirm-01
+                    :polarity -))
+
+# ::snt : Hostages held inside Sydney cafe, Islamic flag held up
+# ::tokens [":", "Hostages", "held", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "held", "up"]
+# ::lemmas [":", "Hostages", "hold", "inside", "Sydney", "cafe", ",", "Islamic", "flag", "hold", "up"]
+(c18-9 / and
+       :op1 (c18-0 / hold-01
+                   :ARG1 (c18-10 / hostage)
+                   :location (c18-2 / inside
+                                    :op1 (c18-7 / cafe
+                                                :location (c18-6 / city
+                                                                 :name (c18-3 / name
+                                                                              :op1 "Sydney")))))
+       :op2 (c18-4 / hold-up-10
+                   :ARG1 (c18-1 / flag
+                                :mod (c18-8 / religious-group
+                                            :name (c18-5 / name
+                                                         :op1 "Islam")))))

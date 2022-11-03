@@ -1,0 +1,71 @@
+# ::snt Tip jar in Mexico
+# ::tokens ["Tip", "jar", "in", "Mexico"]
+# ::lemmas ["tip", "jar", "in", "Mexico"]
+(c1-0 / jar
+      :location (c1-3 / country
+                      :name (c1-1 / name
+                                  :op1 "Mexico"))
+      :mod (c1-2 / tip))
+
+# ::snt Way to get Americans to pay for the wall Mexico, well played.
+# ::tokens ["Way", "to", "get", "Americans", "to", "pay", "for", "the", "wall", "Mexico", ",", "well", "played", "."]
+# ::lemmas ["way", "to", "get", "Americans", "to", "pay", "for", "the", "wall", "Mexico", ",", "well", "play", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-2 / way
+                  :manner-of (c2-7 / get-04
+                                   :ARG1 (c2-8 / pay-01
+                                               :ARG0 (c2-4 / person
+                                                           :mod (c2-1 / country
+                                                                      :name (c2-10 / name
+                                                                                   :op1 "America")))
+                                               :ARG3 (c2-11 / wall
+                                                            :poss (c2-0 / country
+                                                                        :name (c2-5 / name
+                                                                                    :op1 "Mexico"))))))
+      :snt2 (c2-3 / play-01
+                  :ARG1-of (c2-6 / well-09)))
+
+# ::snt If the tip jar is in Mexico like the caption says, how are Americans paying for it?
+# ::tokens ["If", "the", "tip", "jar", "is", "in", "Mexico", "like", "the", "caption", "says", ",", "how", "are", "Americans", "paying", "for", "it", "?"]
+# ::lemmas ["if", "the", "tip", "jar", "be", "in", "Mexico", "like", "the", "caption", "say", ",", "how", "be", "Americans", "pay", "for", "it", "?"]
+(c3-10 / pay-01
+       :ARG0 (c3-5 / person
+                   :mod (c3-3 / country
+                              :name (c3-11 / name
+                                           :op1 "America")))
+       :ARG3 (c3-9 / jar
+                   :mod (c3-6 / tip)
+                   :location (c3-0 / country
+                                   :name (c3-7 / name
+                                               :op1 "Mexico"))
+                   :ARG1-of (c3-8 / resemble-01
+                                  :ARG2 (c3-1 / say-01
+                                              :ARG0 (c3-4 / caption))))
+       :manner (c3-2 / amr-unknown))
+
+# ::snt Why would it be in English then?
+# ::tokens ["Why", "would", "it", "be", "in", "English", "then", "?"]
+# ::lemmas ["why", "would", "it", "be", "in", "English", "then", "?"]
+(c4-1 / cause-01
+      :ARG0 (c4-0 / amr-unknown)
+      :ARG1 (c4-3 / language
+                  :name (c4-5 / name
+                              :op1 "English")
+                  :domain (c4-4 / it)
+                  :mod (c4-2 / then)))
+
+# ::snt Because Americans don't want to learn Spanish
+# ::tokens ["Because", "Americans", "do", "n't", "want", "to", "learn", "Spanish"]
+# ::lemmas ["because", "Americans", "do", "not", "want", "to", "learn", "Spanish"]
+(c5-1 / cause-01
+      :ARG0 (c5-2 / want-01
+                  :ARG0 (c5-6 / person
+                              :mod (c5-0 / country
+                                         :name (c5-7 / name
+                                                     :op1 "America")))
+                  :ARG1 (c5-4 / learn-01
+                              :ARG0 c5-6
+                              :ARG1 (c5-5 / language
+                                          :name (c5-3 / name
+                                                      :op1 "Spanish")))
+                  :polarity -))

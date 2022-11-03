@@ -1,0 +1,155 @@
+# ::snt Friendly Race
+# ::tokens ["Friendly", "Race"]
+# ::lemmas ["Friendly", "race"]
+(c1-0 / race
+      :ARG0-of (c1-1 / friendly-01))
+
+# ::snt omg .. Catch them .. But pray hostages stay protected and safe
+# ::tokens ["omg", "..", "Catch", "them", "..", "But", "pray", "hostages", "stay", "protected", "and", "safe"]
+# ::lemmas ["omg", "..", "catch", "they", "..", "but", "pray", "hostage", "stay", "protect", "and", "safe"]
+(c2-2 / multi-sentence
+      :snt1 (c2-3 / oh-my-god
+                  :mode expressive)
+      :snt2 (c2-7 / catch-03
+                  :ARG0 (c2-1 / you)
+                  :ARG1 (c2-9 / they)
+                  :mode imperative)
+      :snt3 (c2-6 / contrast-01
+                  :ARG2 (c2-5 / pray-01
+                              :ARG0 c2-1
+                              :ARG1 (c2-8 / stay-01
+                                          :ARG1 (c2-0 / hostage)
+                                          :ARG3 (c2-11 / and
+                                                       :op1 (c2-10 / protect-01
+                                                                   :ARG1 c2-0)
+                                                       :op2 (c2-4 / safe-01
+                                                                  :ARG1 c2-0)))
+                              :mode imperative)))
+
+# ::snt rep dumb guys must know they are expendable,wont make it to courts, ,,
+# ::tokens ["rep", "dumb", "guys", "must", "know", "they", "are", "expendable", ",", "wont", "make", "it", "to", "courts", ",", ",", ","]
+# ::lemmas ["rep", "dumb", "guy", "must", "know", "they", "be", "expendable", ",", "wont", "make", "it", "to", "court", ",", ",", ","]
+(c4-2 / infer-01
+      :ARG1 (c4-8 / know-01
+                  :ARG0 (c4-6 / guy
+                              :mod (c4-5 / dumb)
+                              :ARG0-of (c4-4 / represent-01))
+                  :ARG1 (c4-1 / expend-01
+                              :ARG1 c4-6
+                              :ARG1-of (c4-3 / possible-01)))
+      :ARG2 (c4-0 / make-it-14
+                  :ARG0 c4-6
+                  :ARG1 (c4-7 / court)
+                  :polarity -))
+
+# ::snt drag them from the car through the streets when all said and done.
+# ::tokens ["drag", "them", "from", "the", "car", "through", "the", "streets", "when", "all", "said", "and", "done", "."]
+# ::lemmas ["drag", "they", "from", "the", "car", "through", "the", "street", "when", "all", "say", "and", "do", "."]
+(c5-4 / drag-01
+      :ARG0 (c5-0 / you)
+      :ARG1 (c5-7 / they)
+      :source (c5-5 / car)
+      :path (c5-6 / street)
+      :time (c5-8 / and
+                  :op1 (c5-2 / say-01
+                             :ARG1 (c5-3 / all))
+                  :op2 (c5-1 / be-done-08
+                             :ARG1 c5-3))
+      :mode imperative)
+
+# ::snt BREAKING! AK47's (Designed by Russia) used by suspects=MORE US SANCTIONS ON RUSSIA! Nah! They're not that stupid? Waitabit.........
+# ::tokens ["BREAKING", "!", "AK47", "'s", "(", "Designed", "by", "Russia", ")", "used", "by", "suspects", "=", "MORE", "US", "SANCTIONS", "ON", "RUSSIA", "!", "Nah", "!", "They", "'re", "not", "that", "stupid", "?", "Waitabit", "........."]
+# ::lemmas ["breaking", "!", "AK47", "'s", "(", "design", "by", "Russia", ")", "use", "by", "suspect", "=", "more", "US", "sanction", "ON", "RUSSIA", "!", "Nah", "!", "they", "be", "not", "that", "stupid", "?", "Waitabit", "........."]
+(c6-0 / multi-sentence
+      :snt1 (c6-8 / break-01
+                  :ARG1 (c6-3 / publication
+                              :name (c6-10 / name
+                                           :op1 "AK47")
+                              :ARG1-of (c6-4 / design-01
+                                             :ARG0 (c6-16 / country
+                                                          :name (c6-15 / name
+                                                                       :op1 "Russia")))
+                              :ARG1-of (c6-11 / mean-01
+                                              :ARG2 (c6-6 / sanction-02
+                                                          :ARG0 (c6-5 / country
+                                                                      :name (c6-1 / name
+                                                                                  :op1 "US"))
+                                                          :quant (c6-7 / more)
+                                                          :location (c6-13 / country
+                                                                           :name (c6-2 / name
+                                                                                       :op1 "RUSSIA"))))))
+      :snt2 (c6-19 / nah
+                   :mode expressive)
+      :snt3 (c6-9 / stupid
+                  :domain (c6-18 / they)
+                  :degree (c6-17 / that)
+                  :polarity -)
+      :snt4 (c6-12 / wait-01
+                   :ARG1 (c6-14 / you)
+                   :mode imperative))
+
+# ::snt !
+# ::tokens ["!"]
+# ::lemmas ["!"]
+(c7-0 / thing
+      :mode expressive)
+
+# ::snt Guessing they will be shot or silenced
+# ::tokens ["Guessing", "they", "will", "be", "shot", "or", "silenced"]
+# ::lemmas ["guess", "they", "will", "be", "shoot", "or", "silence"]
+(c8-2 / guess-01
+      :ARG1 (c8-0 / or
+                  :op1 (c8-3 / shoot-02
+                             :ARG1 (c8-4 / they))
+                  :op2 (c8-1 / silence-01
+                             :ARG1 c8-4)))
+
+# ::snt result of poor policy
+# ::tokens ["result", "of", "poor", "policy"]
+# ::lemmas ["result", "of", "poor", "policy"]
+(c9-1 / result-01
+      :ARG1 (c9-0 / policy-01
+                  :mod (c9-2 / poor)))
+
+# ::snt I don't remember the passage in the Quran that says to kidnap people and get in high speed chases.
+# ::tokens ["I", "do", "n't", "remember", "the", "passage", "in", "the", "Quran", "that", "says", "to", "kidnap", "people", "and", "get", "in", "high", "speed", "chases", "."]
+# ::lemmas ["i", "do", "not", "remember", "the", "passage", "in", "the", "Quran", "that", "say", "to", "kidnap", "people", "and", "get", "in", "high", "speed", "chase", "."]
+(c10-6 / remember-01
+       :ARG0 (c10-3 / i)
+       :ARG1 (c10-5 / passage
+                    :location (c10-1 / book
+                                     :name (c10-4 / name
+                                                  :op1 "Quran"))
+                    :ARG0-of (c10-8 / say-01
+                                    :ARG1 (c10-11 / and
+                                                  :op1 (c10-9 / kidnap-01
+                                                              :ARG1 (c10-10 / person))
+                                                  :op2 (c10-7 / chase-01
+                                                              :ARG1 c10-10
+                                                              :manner (c10-2 / speed
+                                                                             :ARG1-of (c10-0 / high-02))))))
+       :polarity -)
+
+# ::snt HOSTAGE? Fucking hell, when will they realize enough is enough?
+# ::tokens ["HOSTAGE", "?", "Fucking", "hell", ",", "when", "will", "they", "realize", "enough", "is", "enough", "?"]
+# ::lemmas ["HOSTAGE", "?", "fucking", "hell", ",", "when", "will", "they", "realize", "enough", "be", "enough", "?"]
+(c11-2 / multi-sentence
+       :snt1 (c11-0 / house-01
+                    :polarity (c11-10 / amr-unknown))
+       :snt2 (c11-7 / realize-01
+                    :ARG0 (c11-9 / they)
+                    :ARG1 (c11-1 / have-quant-91
+                                 :ARG1 (c11-8 / thing)
+                                 :ARG3 (c11-4 / enough))
+                    :time (c11-5 / amr-unknown
+                                 :mod (c11-6 / hell
+                                             :mod (c11-3 / fucking)
+                                             :mode expressive))))
+
+# ::snt shoot the cunts
+# ::tokens ["shoot", "the", "cunts"]
+# ::lemmas ["shoot", "the", "cunt"]
+(c12-0 / shoot-02
+       :ARG0 (c12-1 / you)
+       :ARG1 (c12-2 / cunt)
+       :mode imperative)

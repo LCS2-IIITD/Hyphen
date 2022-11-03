@@ -1,0 +1,109 @@
+# ::snt . As points out about 's video, how do we know which bullet felled the attacker?
+# ::tokens [".", "As", "points", "out", "about", "'s", "video", ",", "how", "do", "we", "know", "which", "bullet", "felled", "the", "attacker", "?"]
+# ::lemmas [".", "as", "point", "out", "about", "be", "video", ",", "how", "do", "we", "know", "which", "bullet", "fell", "the", "attacker", "?"]
+(c1-6 / know-01
+      :ARG0 (c1-0 / we)
+      :ARG1 (c1-2 / bullet
+                  :ARG1-of (c1-1 / fall-01
+                                 :ARG4 (c1-5 / person
+                                             :ARG0-of (c1-8 / attack-01))))
+      :manner (c1-3 / amr-unknown)
+      :ARG1-of (c1-7 / point-out-02
+                     :ARG0 (c1-4 / video
+                                 :poss c1-4)))
+
+# ::snt Pretty sure because Vickers was the one who actually hit the shooter, though many shots came from security and missed
+# ::tokens ["Pretty", "sure", "because", "Vickers", "was", "the", "one", "who", "actually", "hit", "the", "shooter", ",", "though", "many", "shots", "came", "from", "security", "and", "missed"]
+# ::lemmas ["pretty", "sure", "because", "Vickers", "be", "the", "one", "who", "actually", "hit", "the", "shooter", ",", "though", "many", "shot", "come", "from", "security", "and", "miss"]
+(c2-12 / sure-02
+       :ARG1 (c2-10 / cause-01
+                    :ARG0 (c2-0 / hit-01
+                                :ARG0 (c2-8 / person
+                                            :name (c2-7 / name
+                                                        :op1 "Vickers"))
+                                :ARG1 (c2-13 / person
+                                             :ARG0-of (c2-5 / shoot-02))
+                                :ARG1-of (c2-14 / actual-02)
+                                :concession (c2-6 / and
+                                                  :op1 (c2-9 / come-03
+                                                             :ARG1 (c2-1 / shoot-02
+                                                                         :quant (c2-2 / many))
+                                                             :ARG2 (c2-4 / security))
+                                                  :op2 (c2-11 / miss-02
+                                                              :ARG0 c2-1))))
+       :degree (c2-3 / pretty))
+
+# ::snt We already know which bullets went where? After the first few shots by Vickers, he was shot at odd more times?
+# ::tokens ["We", "already", "know", "which", "bullets", "went", "where", "?", "After", "the", "first", "few", "shots", "by", "Vickers", ",", "he", "was", "shot", "at", "odd", "more", "times", "?"]
+# ::lemmas ["we", "already", "know", "which", "bullet", "go", "where", "?", "after", "the", "first", "few", "shot", "by", "Vickers", ",", "he", "be", "shoot", "at", "odd", "more", "time", "?"]
+(c3-3 / multi-sentence
+      :snt1 (c3-16 / know-01
+                   :ARG0 (c3-1 / we)
+                   :ARG1 (c3-5 / bullet
+                               :ARG1-of (c3-13 / go-01
+                                               :ARG4 (c3-17 / amr-unknown)))
+                   :time (c3-8 / already))
+      :snt2 (c3-14 / shoot-02
+                   :ARG1 (c3-0 / he)
+                   :time (c3-10 / after
+                                :op1 (c3-7 / shoot-02
+                                           :ARG0 (c3-11 / person
+                                                        :name (c3-9 / name
+                                                                    :op1 "Vickers"))
+                                           :quant (c3-2 / few)
+                                           :ord (c3-6 / ordinal-entity
+                                                      :value 1)))
+                   :quant (c3-4 / odd
+                                :mod (c3-12 / more))
+                   :polarity (c3-15 / amr-unknown)
+                   :time c3-10))
+
+# ::snt Notice, he's an "Old Guy." From an "Old Guy."
+# ::tokens ["Notice", ",", "he", "'s", "an", "\"", "Old", "Guy", ".", "\"", "From", "an", "\"", "Old", "Guy", ".", "\""]
+# ::lemmas ["Notice", ",", "he", "be", "an", "\"", "Old", "Guy", ".", "\"", "from", "an", "\"", "Old", "Guy", ".", "\""]
+(c5-3 / multi-sentence
+      :snt1 (c5-5 / notice-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-7 / guy
+                              :mod (c5-4 / old)
+                              :domain (c5-0 / he))
+                  :mode imperative)
+      :snt2 (c5-6 / guy
+                  :mod (c5-2 / old)
+                  :domain c5-0))
+
+# ::snt The target probably wasn't shot that many times after the first bullet hit, and yes, the shooters know which shots went where.
+# ::tokens ["The", "target", "probably", "was", "n't", "shot", "that", "many", "times", "after", "the", "first", "bullet", "hit", ",", "and", "yes", ",", "the", "shooters", "know", "which", "shots", "went", "where", "."]
+# ::lemmas ["the", "target", "probably", "be", "not", "shoot", "that", "many", "time", "after", "the", "first", "bullet", "hit", ",", "and", "yes", ",", "the", "shooter", "know", "which", "shot", "go", "where", "."]
+(c6-16 / and
+       :op1 (c6-10 / possible-01
+                   :ARG1 (c6-13 / shoot-02
+                                :ARG1 (c6-14 / target)
+                                :time (c6-7 / after
+                                            :op1 (c6-0 / hit-01
+                                                       :ARG2 (c6-4 / bullet
+                                                                   :ord (c6-5 / ordinal-entity
+                                                                              :value 1))))
+                                :quant (c6-3 / many
+                                             :mod (c6-12 / that))
+                                :polarity -))
+       :op2 (c6-8 / know-01
+                  :ARG0 (c6-15 / person
+                               :ARG0-of (c6-6 / shoot-02))
+                  :ARG1 (c6-9 / thing
+                              :ARG1-of (c6-2 / shoot-02)
+                              :location (c6-11 / amr-unknown))
+                  :mod (c6-1 / yes)))
+
+# ::snt : Kevin Vickers hailed as hero who took down attacker
+# ::tokens [":", "Kevin", "Vickers", "hailed", "as", "hero", "who", "took", "down", "attacker"]
+# ::lemmas [":", "Kevin", "Vickers", "hail", "as", "hero", "who", "take", "down", "attacker"]
+(c7-0 / hail-02
+      :ARG1 (c7-2 / person
+                  :name (c7-1 / name
+                              :op1 "Kevin"
+                              :op2 "Vickers"))
+      :ARG2 (c7-6 / hero
+                  :ARG0-of (c7-4 / take-down-22
+                                 :ARG1 (c7-5 / person
+                                             :ARG0-of (c7-3 / attack-01)))))

@@ -1,0 +1,33 @@
+# ::snt Baguettes can save the world
+# ::tokens ["Baguettes", "can", "save", "the", "world"]
+# ::lemmas ["baguette", "can", "save", "the", "world"]
+(c1-2 / possible-01
+      :ARG1 (c1-0 / save-02
+                  :ARG0 (c1-3 / bagette)
+                  :ARG1 (c1-1 / world)))
+
+# ::snt Go large and get lard. You know the score.
+# ::tokens ["Go", "large", "and", "get", "lard", ".", "You", "know", "the", "score", "."]
+# ::lemmas ["go", "large", "and", "get", "lard", ".", "you", "know", "the", "score", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-1 / and
+                  :op1 (c2-5 / go-01
+                             :ARG1 (c2-8 / you)
+                             :ARG4 (c2-3 / large)
+                             :mode imperative)
+                  :op2 (c2-2 / get-01
+                             :ARG0 c2-8
+                             :ARG1 (c2-4 / lard)
+                             :mode imperative))
+      :snt2 (c2-7 / know-01
+                  :ARG0 (c2-9 / you)
+                  :ARG1 (c2-0 / score)))
+
+# ::snt Nice to see you're eating well
+# ::tokens ["Nice", "to", "see", "you", "'re", "eating", "well"]
+# ::lemmas ["nice", "to", "see", "you", "be", "eat", "well"]
+(c3-2 / nice-01
+      :ARG1 (c3-0 / see-01
+                  :ARG1 (c3-4 / eat-01
+                              :ARG0 (c3-3 / you)
+                              :ARG1-of (c3-1 / well-09))))

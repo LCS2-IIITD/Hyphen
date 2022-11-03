@@ -1,0 +1,41 @@
+# ::snt Just because YOU don't care, doesn't mean no one does.
+# ::tokens ["Just", "because", "YOU", "do", "n't", "care", ",", "does", "n't", "mean", "no", "one", "does", "."]
+# ::lemmas ["just", "because", "you", "do", "not", "care", ",", "do", "not", "mean", "no", "one", "do", "."]
+(c2-1 / mean-01
+      :ARG2 (c2-3 / care-01
+                  :ARG0 (c2-0 / you)
+                  :polarity -)
+      :ARG1-of (c2-6 / cause-01
+                     :ARG0 (c2-4 / care-01
+                                 :ARG0 (c2-2 / no-one)
+                                 :polarity -)
+                     :mod (c2-5 / just))
+      :polarity -)
+
+# ::snt No one cares E, no one cares...
+# ::tokens ["No", "one", "cares", "E", ",", "no", "one", "cares", "..."]
+# ::lemmas ["no", "one", "care", "e", ",", "no", "one", "care", "..."]
+(c3-5 / and
+      :op1 (c3-4 / care-01
+                 :ARG0 (c3-0 / no-one)
+                 :ARG1 (c3-2 / person
+                             :name (c3-1 / name
+                                         :op1 "E")))
+      :op2 (c3-6 / care-01
+                 :ARG0 (c3-3 / no-one)))
+
+# ::snt WOW. I was wondering if would get to a rose ceremony this week!
+# ::tokens ["WOW", ".", "I", "was", "wondering", "if", "would", "get", "to", "a", "rose", "ceremony", "this", "week", "!"]
+# ::lemmas ["WOW", ".", "i", "be", "wonder", "if", "would", "get", "to", "a", "rose", "ceremony", "this", "week", "!"]
+(c4-0 / multi-sentence
+      :snt1 (c4-3 / wow
+                  :mode expressive)
+      :snt2 (c4-2 / wonder-01
+                  :ARG0 (c4-5 / i)
+                  :ARG1 (c4-6 / truth-value
+                              :polarity-of (c4-7 / get-05
+                                                 :ARG1 c4-5
+                                                 :ARG2 (c4-4 / ceremony
+                                                             :mod (c4-1 / rose))
+                                                 :time (c4-9 / week
+                                                             :mod (c4-8 / this))))))

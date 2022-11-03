@@ -1,0 +1,30 @@
+# ::snt New Renault Alpine A110
+# ::tokens ["New", "Renault", "Alpine", "A110"]
+# ::lemmas ["New", "Renault", "Alpine", "A110"]
+(c1-2 / car-make
+      :name (c1-0 / name
+                  :op1 "Renault"
+                  :op2 "Alpine"
+                  :op3 "A110")
+      :ARG1-of (c1-1 / new-01))
+
+# ::snt Renault needs to come to America
+# ::tokens ["Renault", "needs", "to", "come", "to", "America"]
+# ::lemmas ["Renault", "need", "to", "come", "to", "America"]
+(c2-4 / need-01
+      :ARG0 (c2-2 / renault)
+      :ARG1 (c2-1 / come-01
+                  :ARG1 c2-2
+                  :ARG4 (c2-0 / country
+                              :name (c2-3 / name
+                                          :op1 "America"))))
+
+# ::snt We can trade them for the entirety of Nissan
+# ::tokens ["We", "can", "trade", "them", "for", "the", "entirety", "of", "Nissan"]
+# ::lemmas ["we", "can", "trade", "they", "for", "the", "entirety", "of", "Nissan"]
+(c3-3 / possible-01
+      :ARG1 (c3-2 / trade-01
+                  :ARG0 (c3-0 / we)
+                  :ARG1 (c3-1 / they)
+                  :ARG3 (c3-4 / Nissan
+                              :mod (c3-5 / entire))))

@@ -1,0 +1,25 @@
+# ::snt A ) you are . B ) here s the video . <URL> <URL>
+# ::tokens ["A", ")", "you", "are", ".", "B", ")", "here", "s", "the", "video", ".", "<", "URL", ">", "<", "URL", ">"]
+# ::lemmas ["a", ")", "you", "be", ".", "b", ")", "here", "s", "the", "video", ".", "<", "URL", ">", "<", "URL", ">"]
+(c1-3 / multi-sentence
+      :snt1 (c1-4 / you
+                  :li "A")
+      :snt2 (c1-2 / be-located-at-91
+                  :ARG1 (c1-1 / video)
+                  :ARG2 (c1-0 / here)
+                  :li "B"))
+
+# ::snt We need more of this ! Thank you , Senator !
+# ::tokens ["We", "need", "more", "of", "this", "!", "Thank", "you", ",", "Senator", "!"]
+# ::lemmas ["we", "need", "more", "of", "this", "!", "thank", "you", ",", "Senator", "!"]
+(c2-8 / multi-sentence
+      :snt1 (c2-9 / need-01
+                  :ARG0 (c2-2 / we)
+                  :ARG1 (c2-5 / this
+                              :quant (c2-1 / more)))
+      :snt2 (c2-3 / thank-01
+                  :ARG0 (c2-7 / i)
+                  :ARG1 (c2-6 / person
+                              :ARG0-of (c2-4 / have-org-role-91
+                                             :ARG2 (c2-0 / senator)))
+                  :mode expressive))

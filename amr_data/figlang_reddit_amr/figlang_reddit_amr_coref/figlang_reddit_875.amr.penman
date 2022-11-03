@@ -1,0 +1,26 @@
+# ::snt Minions are sexy duh
+# ::tokens ["Minions", "are", "sexy", "duh"]
+# ::lemmas ["minion", "be", "sexy", "duh"]
+(c1-0 / duh
+      :domain (c1-1 / minion)
+      :mod (c1-2 / sexy)
+      :mode expressive)
+
+# ::snt Cringe to both
+# ::tokens ["Cringe", "to", "both"]
+# ::lemmas ["cringe", "to", "both"]
+(c2-1 / cringe-01
+      :ARG0 (c2-0 / both))
+
+# ::snt "if you don't put it on a pedestal I'm not going to talk to you"
+# ::tokens ["\"", "if", "you", "do", "n't", "put", "it", "on", "a", "pedestal", "I", "'m", "not", "going", "to", "talk", "to", "you", "\""]
+# ::lemmas ["\"", "if", "you", "do", "not", "put", "it", "on", "a", "pedestal", "i", "be", "not", "go", "to", "talk", "to", "you", "\""]
+(c3-2 / talk-01
+      :ARG0 (c3-4 / i)
+      :ARG2 (c3-5 / you)
+      :condition (c3-3 / put-01
+                       :ARG0 c3-5
+                       :ARG1 (c3-0 / it)
+                       :ARG2 (c3-1 / pedestal)
+                       :polarity -)
+      :polarity -)

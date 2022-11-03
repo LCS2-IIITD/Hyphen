@@ -1,0 +1,616 @@
+# ::snt but he's white and a cop so nah
+# ::tokens ["but", "he", "'s", "white", "and", "a", "cop", "so", "nah"]
+# ::lemmas ["but", "he", "be", "white", "and", "a", "cop", "so", "nah"]
+(c1-3 / contrast-01
+      :ARG2 (c1-5 / and
+                  :op1 (c1-1 / white-02
+                             :ARG1 (c1-0 / he))
+                  :op2 (c1-2 / cop
+                             :domain c1-0)
+                  :mod (c1-4 / so)))
+
+# ::snt only kind I've heard do that.
+# ::tokens ["only", "kind", "I", "'ve", "heard", "do", "that", "."]
+# ::lemmas ["only", "kind", "i", "'ve", "hear", "do", "that", "."]
+(c2-0 / hear-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-3 / do-02
+                  :ARG0 (c2-5 / kind
+                              :mod (c2-1 / only))
+                  :ARG1 (c2-4 / that)))
+
+# ::snt He will get a lawyer and "if" he is guilty of a crime nobody wants him to get off on a sloppy or quick investigation.
+# ::tokens ["He", "will", "get", "a", "lawyer", "and", "\"", "if", "\"", "he", "is", "guilty", "of", "a", "crime", "nobody", "wants", "him", "to", "get", "off", "on", "a", "sloppy", "or", "quick", "investigation", "."]
+# ::lemmas ["he", "will", "get", "a", "lawyer", "and", "\"", "if", "\"", "he", "be", "guilty", "of", "a", "crime", "nobody", "want", "he", "to", "get", "off", "on", "a", "sloppy", "or", "quick", "investigation", "."]
+(c3-11 / and
+       :op1 (c3-9 / get-01
+                  :ARG0 (c3-0 / he)
+                  :ARG1 (c3-2 / lawyer))
+       :op2 (c3-12 / have-condition-91
+                   :ARG1 (c3-1 / want-01
+                               :ARG0 (c3-5 / nobody)
+                               :ARG1 (c3-7 / get-off-23
+                                           :ARG1 c3-0
+                                           :ARG2 (c3-4 / investigate-01
+                                                       :ARG0 c3-0
+                                                       :ARG1-of (c3-10 / sloppy-00)
+                                                       :ARG1-of (c3-3 / quick-02))))
+                   :ARG2 (c3-6 / guilty-01
+                               :ARG1 c3-0
+                               :ARG2 (c3-8 / crime-02))))
+
+# ::snt Oh he'll definitely have to be back soon. Or maybe he never really left...
+# ::tokens ["Oh", "he", "'ll", "definitely", "have", "to", "be", "back", "soon", ".", "Or", "maybe", "he", "never", "really", "left", "..."]
+# ::lemmas ["oh", "he", "'ll", "definitely", "have", "to", "be", "back", "soon", ".", "or", "maybe", "he", "never", "really", "leave", "..."]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / obligate-01
+                  :ARG1 (c4-0 / he)
+                  :ARG2 (c4-9 / return-01
+                              :ARG1 c4-0
+                              :time (c4-11 / soon))
+                  :mod (c4-10 / definite)
+                  :mod (c4-1 / oh
+                             :mode expressive))
+      :snt2 (c4-4 / or
+                  :op2 (c4-8 / possible-01
+                             :ARG1 (c4-3 / leave-11
+                                         :ARG0 (c4-12 / he)
+                                         :time (c4-6 / ever)
+                                         :ARG1-of (c4-7 / real-04)
+                                         :polarity -))))
+
+# ::snt oh, you don't want that. I'm not a criminal lawyer!
+# ::tokens ["oh", ",", "you", "do", "n't", "want", "that", ".", "I", "'m", "not", "a", "criminal", "lawyer", "!"]
+# ::lemmas ["oh", ",", "you", "do", "not", "want", "that", ".", "i", "be", "not", "a", "criminal", "lawyer", "!"]
+(c5-3 / multi-sentence
+      :snt1 (c5-0 / want-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-7 / that)
+                  :mod (c5-4 / oh
+                             :mode expressive)
+                  :polarity -)
+      :snt2 (c5-2 / lawyer
+                  :mod (c5-6 / criminal-03)
+                  :domain (c5-5 / i)
+                  :polarity -))
+
+# ::snt ferguson police?
+# ::tokens ["ferguson", "police", "?"]
+# ::lemmas ["ferguson", "police", "?"]
+(c6-1 / police
+      :polarity (c6-3 / amr-unknown)
+      :mod (c6-2 / city
+                 :name (c6-0 / name
+                             :op1 "Ferfolk")))
+
+# ::snt He shouldn't have been allowed to leave but they probably didn't think the FBI would get involved.
+# ::tokens ["He", "should", "n't", "have", "been", "allowed", "to", "leave", "but", "they", "probably", "did", "n't", "think", "the", "FBI", "would", "get", "involved", "."]
+# ::lemmas ["he", "should", "not", "have", "be", "allow", "to", "leave", "but", "they", "probably", "do", "not", "think", "the", "FBI", "would", "get", "involve", "."]
+(c7-6 / contrast-01
+      :ARG1 (c7-5 / recommend-01
+                  :ARG1 (c7-10 / allow-01
+                               :ARG1 (c7-1 / leave-11
+                                           :ARG0 (c7-0 / he)))
+                  :polarity -)
+      :ARG2 (c7-9 / think-01
+                  :ARG0 (c7-8 / they)
+                  :ARG1 (c7-2 / involve-01
+                              :ARG1 (c7-7 / government-organization
+                                          :name (c7-3 / name
+                                                      :op1 "FBI"))
+                              :polarity -)
+                  :mod (c7-4 / probable)))
+
+# ::snt If no one knows where he is, and he killed someone, what else can we call him
+# ::tokens ["If", "no", "one", "knows", "where", "he", "is", ",", "and", "he", "killed", "someone", ",", "what", "else", "can", "we", "call", "him"]
+# ::lemmas ["if", "no", "one", "know", "where", "he", "be", ",", "and", "he", "kill", "someone", ",", "what", "else", "can", "we", "call", "he"]
+(c8-7 / possible-01
+      :ARG1 (c8-8 / call-01
+                  :ARG0 (c8-1 / we)
+                  :ARG1 (c8-0 / he)
+                  :ARG2 (c8-11 / amr-unknown
+                               :mod (c8-3 / else)))
+      :condition (c8-5 / and
+                       :op1 (c8-10 / know-01
+                                   :ARG0 (c8-6 / no-one)
+                                   :ARG1 (c8-2 / location
+                                               :location-of c8-0))
+                       :op2 (c8-4 / kill-01
+                                  :ARG0 c8-0
+                                  :ARG1 (c8-9 / someone))))
+
+# ::snt well no he's not a fugitive charges haven't been pressed
+# ::tokens ["well", "no", "he", "'s", "not", "a", "fugitive", "charges", "have", "n't", "been", "pressed"]
+# ::lemmas ["well", "no", "he", "be", "not", "a", "fugitive", "charge", "have", "not", "be", "press"]
+(c9-3 / charge-05
+      :ARG2 (c9-2 / flee-05
+                  :ARG0 (c9-0 / he)
+                  :polarity -)
+      :mod (c9-1 / well
+                 :mode expressive)
+      :polarity -)
+
+# ::snt I think he would have to be arrested and then flee to be considered a fugitive. They probably know where he is.
+# ::tokens ["I", "think", "he", "would", "have", "to", "be", "arrested", "and", "then", "flee", "to", "be", "considered", "a", "fugitive", ".", "They", "probably", "know", "where", "he", "is", "."]
+# ::lemmas ["i", "think", "he", "would", "have", "to", "be", "arrest", "and", "then", "flee", "to", "be", "consider", "a", "fugitive", ".", "they", "probably", "know", "where", "he", "be", "."]
+(c10-2 / multi-sentence
+       :snt1 (c10-14 / think-01
+                     :ARG0 (c10-7 / i)
+                     :ARG1 (c10-5 / obligate-01
+                                  :ARG2 (c10-15 / and
+                                                :op1 (c10-6 / arrest-01
+                                                            :ARG1 (c10-0 / he))
+                                                :op2 (c10-1 / flee-05
+                                                            :ARG0 c10-0
+                                                            :time (c10-13 / then))
+                                                :purpose (c10-12 / consider-01
+                                                                 :ARG1 (c10-8 / flee-05
+                                                                              :ARG0 c10-0)))))
+       :snt2 (c10-11 / probable
+                     :domain (c10-9 / know-01
+                                    :ARG0 (c10-10 / they)
+                                    :ARG1 (c10-3 / location
+                                                 :location-of (c10-4 / he)))))
+
+# ::snt Aren't you an idiot and your progeny all retards?
+# ::tokens ["Are", "n't", "you", "an", "idiot", "and", "your", "progeny", "all", "retards", "?"]
+# ::lemmas ["be", "not", "you", "an", "idiot", "and", "your", "you", "all", "retard", "?"]
+(c11-6 / and
+       :op1 (c11-2 / idiot
+                   :domain (c11-0 / you))
+       :op2 (c11-5 / retard
+                   :domain (c11-4 / progeny
+                                  :poss c11-0)
+                   :mod (c11-1 / all))
+       :polarity (c11-3 / amr-unknown))
+
+# ::snt Darren Wilson neighbor said he been gone for /4 days and after the shooting there was lots of police protecting him
+# ::tokens ["Darren", "Wilson", "neighbor", "said", "he", "been", "gone", "for", "/4", "days", "and", "after", "the", "shooting", "there", "was", "lots", "of", "police", "protecting", "him"]
+# ::lemmas ["Darren", "Wilson", "neighbor", "say", "he", "been", "go", "for", "/4", "days", "and", "after", "the", "shooting", "there", "be", "lot", "of", "police", "protect", "he"]
+(c12-10 / say-01
+        :ARG0 (c12-6 / person
+                     :ARG1-of (c12-5 / neighbor-01
+                                     :ARG2 (c12-13 / person
+                                                   :name (c12-4 / name
+                                                                :op1 "Darren"
+                                                                :op2 "Wilson"))))
+        :ARG1 (c12-14 / and
+                      :op1 (c12-8 / go-02
+                                  :ARG0 c12-13
+                                  :duration (c12-0 / less-than
+                                                   :op1 (c12-12 / temporal-quantity
+                                                                :unit (c12-7 / day)
+                                                                :quant 4)))
+                      :op2 (c12-1 / protect-01
+                                  :ARG0 (c12-11 / police
+                                                :quant (c12-9 / lot))
+                                  :ARG1 c12-13
+                                  :time (c12-3 / after
+                                               :op1 (c12-2 / shoot-02)))))
+
+# ::snt This is what I dont understand. Wilson is the suspect being investigated. How is he not a fugitive right now?
+# ::tokens ["This", "is", "what", "I", "do", "nt", "understand", ".", "Wilson", "is", "the", "suspect", "being", "investigated", ".", "How", "is", "he", "not", "a", "fugitive", "right", "now", "?"]
+# ::lemmas ["this", "be", "what", "i", "do", "not", "understand", ".", "Wilson", "be", "the", "suspect", "be", "investigate", ".", "how", "be", "he", "not", "a", "fugitive", "right", "now", "?"]
+(c13-2 / multi-sentence
+       :snt1 (c13-3 / understand-01
+                    :ARG0 (c13-4 / i)
+                    :ARG1 (c13-11 / this)
+                    :polarity -)
+       :snt2 (c13-10 / suspect-01
+                     :ARG1 (c13-7 / person
+                                  :name (c13-5 / name
+                                               :op1 "Wilson"))
+                     :ARG2-of (c13-9 / investigate-01))
+       :snt3 (c13-1 / flee-05
+                    :ARG0 (c13-0 / he)
+                    :time (c13-6 / now
+                                 :mod (c13-8 / right))
+                    :manner (c13-12 / amr-unknown)
+                    :polarity -))
+
+# ::snt No.
+# ::tokens ["No", "."]
+# ::lemmas ["no", "."]
+(c14-0 / no)
+
+# ::snt Yes that is what they say until your cleared in the investigation!
+# ::tokens ["Yes", "that", "is", "what", "they", "say", "until", "your", "cleared", "in", "the", "investigation", "!"]
+# ::lemmas ["yes", "that", "be", "what", "they", "say", "until", "your", "clear", "in", "the", "investigation", "!"]
+(c15-5 / say-01
+       :ARG0 (c15-6 / they)
+       :ARG1 (c15-4 / that)
+       :time (c15-1 / until
+                    :op1 (c15-3 / clear-01
+                                :ARG0 c15-6
+                                :ARG1 (c15-0 / you)
+                                :subevent-of (c15-2 / investigate-01
+                                                    :ARG0 c15-0))))
+
+# ::snt when there is an investigation and your a suspect. Your still told not to go any where.
+# ::tokens ["when", "there", "is", "an", "investigation", "and", "your", "a", "suspect", ".", "Your", "still", "told", "not", "to", "go", "any", "where", "."]
+# ::lemmas ["when", "there", "be", "an", "investigation", "and", "your", "a", "suspect", ".", "your", "still", "tell", "not", "to", "go", "any", "where", "."]
+(c16-1 / multi-sentence
+       :snt1 (c16-2 / be-temporally-at-91
+                    :ARG2 (c16-12 / and
+                                  :op1 (c16-5 / investigate-01)
+                                  :op2 (c16-7 / person
+                                              :ARG2-of (c16-10 / suspect-01)
+                                              :domain (c16-0 / you))))
+       :snt2 (c16-11 / tell-01
+                     :ARG1 (c16-8 / go-02
+                                  :ARG0 (c16-9 / you)
+                                  :ARG4 (c16-4 / anywhere
+                                               :mod (c16-6 / any))
+                                  :polarity -)
+                     :ARG2 c16-9
+                     :mod (c16-3 / still)))
+
+# ::snt I believe that was a different officer. There was no mention of an assault rifle.
+# ::tokens ["I", "believe", "that", "was", "a", "different", "officer", ".", "There", "was", "no", "mention", "of", "an", "assault", "rifle", "."]
+# ::lemmas ["i", "believe", "that", "be", "a", "different", "officer", ".", "there", "be", "no", "mention", "of", "an", "assault", "rifle", "."]
+(c17-0 / multi-sentence
+       :snt1 (c17-1 / believe-01
+                    :ARG0 (c17-3 / i)
+                    :ARG1 (c17-5 / differ-02
+                                 :ARG1 (c17-2 / officer
+                                              :domain (c17-7 / that))))
+       :snt2 (c17-4 / mention-01
+                    :ARG1 (c17-6 / rifle
+                                 :instrument-of (c17-8 / assault-01))
+                    :polarity -))
+
+# ::snt yaaaaaas
+# ::tokens ["yaaaaaas"]
+# ::lemmas ["yaaaaaas"]
+(c18-0 / ya
+       :mode expressive)
+
+# ::snt Yesss
+# ::tokens ["Yesss"]
+# ::lemmas ["yesss"]
+(c19-0 / yesss)
+
+# ::snt I've never committed a crime, but I'd like to put you on retainer just in case.
+# ::tokens ["I", "'ve", "never", "committed", "a", "crime", ",", "but", "I", "'d", "like", "to", "put", "you", "on", "retainer", "just", "in", "case", "."]
+# ::lemmas ["i", "'ve", "never", "commit", "a", "crime", ",", "but", "i", "would", "like", "to", "put", "you", "on", "retainer", "just", "in", "case", "."]
+(c20-0 / have-concession-91
+       :ARG1 (c20-2 / like-02
+                    :ARG0 (c20-4 / i)
+                    :ARG1 (c20-5 / put-03
+                                 :ARG0 c20-4
+                                 :ARG1 (c20-1 / you)
+                                 :ARG2 (c20-6 / retainer)
+                                 :condition (c20-7 / commit-02
+                                                   :ARG0 c20-4
+                                                   :ARG1 (c20-8 / crime-02)
+                                                   :time (c20-3 / ever)
+                                                   :ARG2-of c20-0
+                                                   :polarity -)))
+       :ARG0 c20-4
+       :ARG1 c20-6
+       :time c20-3
+       :polarity -)
+
+# ::snt is there a warrant? I think has to be warrant for arrest to be fugitive
+# ::tokens ["is", "there", "a", "warrant", "?", "I", "think", "has", "to", "be", "warrant", "for", "arrest", "to", "be", "fugitive"]
+# ::lemmas ["be", "there", "a", "warrant", "?", "i", "think", "have", "to", "be", "warrant", "for", "arrest", "to", "be", "fugitive"]
+(c21-2 / multi-sentence
+       :snt1 (c21-0 / warrant
+                    :polarity (c21-8 / amr-unknown))
+       :snt2 (c21-7 / think-01
+                    :ARG0 (c21-5 / i)
+                    :ARG1 (c21-3 / obligate-01
+                                 :ARG2 (c21-6 / warrant
+                                              :purpose (c21-4 / arrest-01
+                                                              :ARG1 (c21-1 / fugitive))))))
+
+# ::snt And GO LOOKING u if u're wanted n connection w/murder. Who's looking Wilson besides media?
+# ::tokens ["And", "GO", "LOOKING", "u", "if", "u're", "wanted", "n", "connection", "w", "/", "murder", ".", "Who", "'s", "looking", "Wilson", "besides", "media", "?"]
+# ::lemmas ["and", "GO", "look", "u", "if", "u're", "want", "n", "connection", "w", "/", "murder", ".", "who", "be", "look", "Wilson", "besides", "medium", "?"]
+(c22-3 / multi-sentence
+       :snt1 (c22-12 / and
+                     :op2 (c22-2 / look-01
+                                 :ARG0 (c22-1 / you
+                                              :ARG1-of c22-2)
+                                 :condition (c22-0 / want-01
+                                                   :ARG0 c22-1
+                                                   :ARG1 (c22-10 / connect-01
+                                                                 :ARG1 c22-1
+                                                                 :ARG2 (c22-8 / murder-01))
+                                                   :polarity -)
+                                 :mode imperative))
+       :snt2 (c22-11 / look-01
+                     :ARG0 (c22-6 / amr-unknown)
+                     :ARG1 (c22-9 / person
+                                  :name (c22-7 / name
+                                               :op1 "Wilson"))
+                     :ARG2-of (c22-5 / except-01
+                                     :ARG1 (c22-4 / media))))
+
+# ::snt Exactly. Why is Wilson on the run? If he has nothing to hide, he'd be in Ferguson telling his side. Instead, gone in sec.
+# ::tokens ["Exactly", ".", "Why", "is", "Wilson", "on", "the", "run", "?", "If", "he", "has", "nothing", "to", "hide", ",", "he", "'d", "be", "in", "Ferguson", "telling", "his", "side", ".", "Instead", ",", "gone", "in", "sec", "."]
+# ::lemmas ["exactly", ".", "why", "be", "Wilson", "on", "the", "run", "?", "if", "he", "have", "nothing", "to", "hide", ",", "he", "would", "be", "in", "Ferguson", "tell", "his", "side", ".", "instead", ",", "go", "in", "sec", "."]
+(c23-0 / multi-sentence
+       :snt1 (c23-10 / run-02
+                     :ARG0 (c23-1 / person
+                                  :name (c23-9 / name
+                                               :op1 "Wilson"))
+                     :ARG1-of (c23-17 / cause-01
+                                      :ARG0 (c23-5 / amr-unknown)))
+       :snt2 (c23-6 / have-condition-91
+                    :ARG1 (c23-18 / tell-01
+                                  :ARG0 (c23-4 / he)
+                                  :ARG2 (c23-3 / side-01
+                                               :ARG0 c23-4))
+                    :ARG2 (c23-7 / be-located-at-91
+                                 :ARG1 c23-4
+                                 :ARG2 (c23-2 / city
+                                              :name (c23-16 / name
+                                                            :op1 "Ferguson")))
+                    :snt3 (c23-11 / go-02
+                                  :ARG0 (c23-13 / i)
+                                  :manner (c23-8 / security)
+                                  :ARG1-of (c23-14 / instead-of-91)))
+       :snt1 (c23-15 / cause-01
+                     :ARG0 (c23-12 / amr-unknown)
+                     :ARG1 c23-10))
+
+# ::snt This is just bizarre!
+# ::tokens ["This", "is", "just", "bizarre", "!"]
+# ::lemmas ["this", "be", "just", "bizarre", "!"]
+(c24-2 / bizarre
+       :domain (c24-1 / this)
+       :mod (c24-0 / just))
+
+# ::snt On top of "murderous," it's sick to be able to accurately add "incompetent" to description
+# ::tokens ["On", "top", "of", "\"", "murderous", ",", "\"", "it", "'s", "sick", "to", "be", "able", "to", "accurately", "add", "\"", "incompetent", "\"", "to", "description"]
+# ::lemmas ["on", "top", "of", "\"", "murderous", ",", "\"", "it", "be", "sick", "to", "be", "able", "to", "accurately", "add", "\"", "incompetent", "\"", "to", "description"]
+(c25-7 / and
+       :op1 (c25-6 / sick-02
+                   :ARG0 (c25-4 / capable-01
+                                :ARG2 (c25-1 / add-02
+                                             :ARG1 (c25-3 / competent-01
+                                                          :polarity -)
+                                             :ARG2 (c25-5 / describe-01)
+                                             :manner (c25-2 / accurate))))
+       :op2 (c25-0 / murder-01))
+
+# ::snt Good point.
+# ::tokens ["Good", "point", "."]
+# ::lemmas ["good", "point", "."]
+(c26-0 / point-04
+       :ARG1-of (c26-1 / good-02))
+
+# ::snt Thanks. I just saw it and am not even sure if it is legit. It seemed to be, but whaddya I know?
+# ::tokens ["Thanks", ".", "I", "just", "saw", "it", "and", "am", "not", "even", "sure", "if", "it", "is", "legit", ".", "It", "seemed", "to", "be", ",", "but", "whaddya", "I", "know", "?"]
+# ::lemmas ["thank", ".", "i", "just", "see", "it", "and", "be", "not", "even", "sure", "if", "it", "be", "legit", ".", "it", "seem", "to", "be", ",", "but", "whaddya", "i", "know", "?"]
+(c27-2 / multi-sentence
+       :snt1 (c27-18 / thank-01
+                     :ARG0 (c27-9 / i)
+                     :ARG1 (c27-13 / you))
+       :snt2 (c27-4 / and
+                    :op1 (c27-3 / see-01
+                                :ARG0 (c27-11 / i)
+                                :ARG1 (c27-1 / it)
+                                :time (c27-0 / just))
+                    :op2 (c27-6 / sure-02
+                                :ARG0 c27-11
+                                :ARG1 (c27-5 / legitimate-02
+                                             :ARG1 (c27-15 / it))
+                                :mod (c27-7 / even)
+                                :polarity -))
+       :snt3 (c27-16 / contrast-01
+                     :ARG1 (c27-14 / seem-01
+                                   :ARG1 (c27-10 / it))
+                     :ARG2 (c27-12 / know-01
+                                   :ARG0 (c27-17 / i)
+                                   :ARG1 (c27-8 / amr-unknown))))
+
+# ::snt I wouldn't be surprised if he gets arrested after a thorough investigation is done. A quick arrest wld be satisfying but..
+# ::tokens ["I", "would", "n't", "be", "surprised", "if", "he", "gets", "arrested", "after", "a", "thorough", "investigation", "is", "done", ".", "A", "quick", "arrest", "wld", "be", "satisfying", "but", ".."]
+# ::lemmas ["i", "would", "not", "be", "surprised", "if", "he", "gets", "arrest", "after", "a", "thorough", "investigation", "be", "do", ".", "a", "quick", "arrest", "wld", "be", "satisfy", "but", ".."]
+(c28-1 / multi-sentence
+       :snt1 (c28-9 / surprise-01
+                    :ARG0 (c28-11 / arrest-01
+                                  :ARG1 (c28-0 / he)
+                                  :time (c28-4 / after
+                                               :op1 (c28-5 / investigate-01
+                                                           :manner (c28-10 / thorough))))
+                    :ARG1 (c28-8 / i)
+                    :polarity -)
+       :snt2 (c28-7 / contrast-01
+                    :ARG1 (c28-2 / satisfy-01
+                                 :ARG0 (c28-6 / arrest-01
+                                              :ARG1-of (c28-3 / quick-02))
+                                 :ARG2-of c28-7)))
+
+# ::snt i just saw twitter feed of witness. Officer had what looked like AR. Any word on THAT?
+# ::tokens ["i", "just", "saw", "twitter", "feed", "of", "witness", ".", "Officer", "had", "what", "looked", "like", "AR", ".", "Any", "word", "on", "THAT", "?"]
+# ::lemmas ["i", "just", "see", "twitter", "feed", "of", "witness", ".", "Officer", "have", "what", "look", "like", "AR", ".", "any", "word", "on", "that", "?"]
+(c29-4 / multi-sentence
+       :snt1 (c29-12 / see-01
+                     :ARG0 (c29-7 / i)
+                     :ARG1 (c29-3 / feed-01
+                                  :ARG0 (c29-10 / publication
+                                                :name (c29-8 / name
+                                                             :op1 "Twitter"))
+                                  :ARG2 (c29-15 / person
+                                                :ARG0-of (c29-1 / witness-01)))
+                     :mod (c29-0 / just))
+       :snt2 (c29-2 / have-03
+                    :ARG0 (c29-5 / person
+                                 :ARG0-of (c29-16 / have-org-role-91
+                                                  :ARG2 (c29-6 / officer)))
+                    :ARG1 (c29-14 / thing
+                                  :ARG1-of (c29-11 / resemble-01
+                                                   :ARG2 (c29-13 / person
+                                                                 :name (c29-9 / name))))))
+
+# ::snt OK, so maybe not technically a fugitive. But dont they usually tell suspects NOT to leave the area?
+# ::tokens ["OK", ",", "so", "maybe", "not", "technically", "a", "fugitive", ".", "But", "do", "nt", "they", "usually", "tell", "suspects", "NOT", "to", "leave", "the", "area", "?"]
+# ::lemmas ["ok", ",", "so", "maybe", "not", "technically", "a", "fugitive", ".", "but", "do", "not", "they", "usually", "tell", "suspect", "not", "to", "leave", "the", "area", "?"]
+(c30-1 / multi-sentence
+       :snt1 (c30-9 / cause-01
+                    :ARG1 (c30-7 / possible-01
+                                 :ARG1 (c30-0 / fugitive
+                                              :mod (c30-12 / technical)
+                                              :polarity -))
+                    :ARG1-of (c30-4 / okay-01))
+       :snt2 (c30-8 / contrast-01
+                    :ARG2 (c30-10 / tell-01
+                                  :ARG0 (c30-6 / they)
+                                  :ARG1 (c30-2 / leave-11
+                                               :ARG0 (c30-13 / person
+                                                             :ARG2-of (c30-11 / suspect-01))
+                                               :ARG1 (c30-14 / area)
+                                               :polarity -)
+                                  :ARG2 c30-13
+                                  :mod (c30-3 / usual)
+                                  :polarity (c30-5 / amr-unknown)
+                                  :polarity -)))
+
+# ::snt Since FBI is investigating the shooting, isn't Darren Wilson a fugitive &amp; the cops who let him leave accessories after the fact?
+# ::tokens ["Since", "FBI", "is", "investigating", "the", "shooting", ",", "is", "n't", "Darren", "Wilson", "a", "fugitive", "&", "amp", ";", "the", "cops", "who", "let", "him", "leave", "accessories", "after", "the", "fact", "?"]
+# ::lemmas ["since", "FBI", "be", "investigate", "the", "shooting", ",", "be", "not", "Darren", "Wilson", "a", "fugitive", "&", "amp", ";", "the", "cop", "who", "let", "he", "leave", "accessory", "after", "the", "fact", "?"]
+(c31-16 / and
+        :op1 (c31-0 / fugitive
+                    :domain (c31-8 / person
+                                   :name (c31-6 / name
+                                                :op1 "Darren"
+                                                :op2 "Wilson"))
+                    :polarity -)
+        :op2 (c31-3 / amp
+                    :domain c31-8
+                    :polarity -)
+        :ARG1-of (c31-10 / cause-01
+                         :ARG0 (c31-4 / investigate-01
+                                      :ARG0 (c31-11 / government-organization
+                                                    :name (c31-7 / name
+                                                                 :op1 "FBI"))
+                                      :ARG1 (c31-14 / shoot-02)))
+        :domain (c31-9 / cop
+                       :ARG0-of (c31-1 / let-01
+                                       :ARG1 (c31-13 / leave-15
+                                                     :ARG0 c31-8
+                                                     :ARG1 (c31-12 / accessory)
+                                                     :time (c31-15 / after
+                                                                   :op1 (c31-5 / fact)))))
+        :polarity (c31-2 / amr-unknown))
+
+# ::snt Not to go anywhere the authorities don't know where you are. They may have wanted him out of his house.
+# ::tokens ["Not", "to", "go", "anywhere", "the", "authorities", "do", "n't", "know", "where", "you", "are", ".", "They", "may", "have", "wanted", "him", "out", "of", "his", "house", "."]
+# ::lemmas ["not", "to", "go", "anywhere", "the", "authority", "do", "not", "know", "where", "you", "be", ".", "they", "may", "have", "want", "he", "out", "of", "his", "house", "."]
+(c32-4 / multi-sentence
+       :snt1 (c32-8 / go-02
+                    :ARG0 (c32-1 / you)
+                    :ARG4 (c32-11 / anywhere)
+                    :ARG1-of (c32-10 / know-01
+                                     :ARG0 (c32-6 / authority)
+                                     :polarity -)
+                    :polarity -)
+       :snt2 (c32-7 / possible-01
+                    :ARG1 (c32-2 / want-01
+                                 :ARG0 (c32-9 / they)
+                                 :ARG1 (c32-5 / out-06
+                                              :ARG1 (c32-0 / he)
+                                              :ARG2 (c32-3 / house
+                                                           :poss c32-0)))))
+
+# ::snt I really hope Eric Holder is going to work out all his years of frustrations on these creeps.
+# ::tokens ["I", "really", "hope", "Eric", "Holder", "is", "going", "to", "work", "out", "all", "his", "years", "of", "frustrations", "on", "these", "creeps", "."]
+# ::lemmas ["i", "really", "hope", "Eric", "Holder", "be", "go", "to", "work", "out", "all", "his", "year", "of", "frustration", "on", "these", "creep", "."]
+(c33-0 / hope-01
+       :ARG0 (c33-5 / i)
+       :ARG1 (c33-1 / work-out-02
+                    :ARG0 (c33-7 / person
+                                 :name (c33-6 / name
+                                              :op1 "Eric"
+                                              :op2 "Holder"))
+                    :ARG1 (c33-3 / frustrate-01
+                                 :ARG1 c33-7
+                                 :duration (c33-4 / multiple
+                                                  :op1 (c33-11 / temporal-quantity
+                                                               :unit (c33-2 / year)
+                                                               :quant 1))
+                                 :mod (c33-12 / all))
+                    :ARG2 (c33-9 / creep
+                                 :mod (c33-10 / this)))
+       :ARG1-of (c33-8 / real-04))
+
+# ::snt Hi, like, please)
+# ::tokens ["Hi", ",", "like", ",", "please", ")"]
+# ::lemmas ["hi", ",", "like", ",", "please", ")"]
+(c34-2 / and
+       :op1 (c34-0 / hi)
+       :op2 (c34-1 / like-01
+                   :polite +))
+
+# ::snt Yep. They definitely do.
+# ::tokens ["Yep", ".", "They", "definitely", "do", "."]
+# ::lemmas ["yep", ".", "they", "definitely", "do", "."]
+(c35-1 / do-02
+       :ARG0 (c35-2 / they)
+       :mod (c35-0 / definite))
+
+# ::snt You watch it. Suspected of a crime they tell you don't go nowhere until investigation is done and your clear
+# ::tokens ["You", "watch", "it", ".", "Suspected", "of", "a", "crime", "they", "tell", "you", "do", "n't", "go", "nowhere", "until", "investigation", "is", "done", "and", "your", "clear"]
+# ::lemmas ["you", "watch", "it", ".", "suspect", "of", "a", "crime", "they", "tell", "you", "do", "not", "go", "nowhere", "until", "investigation", "be", "do", "and", "your", "clear"]
+(c36-2 / multi-sentence
+       :snt1 (c36-0 / watch-01
+                    :ARG0 (c36-1 / you)
+                    :ARG1 (c36-4 / it))
+       :snt2 (c36-13 / tell-01
+                     :ARG0 (c36-10 / they)
+                     :ARG1 (c36-8 / go-02
+                                  :ARG0 (c36-15 / you
+                                                :ARG1-of (c36-11 / suspect-01
+                                                                 :ARG2 (c36-7 / crime-02)))
+                                  :ARG4 (c36-5 / nowhere)
+                                  :time (c36-3 / until
+                                               :op1 (c36-14 / and
+                                                            :op1 (c36-6 / do-02
+                                                                        :ARG1 (c36-9 / investigate-01
+                                                                                     :ARG1 c36-15))
+                                                            :op2 (c36-12 / clear-08
+                                                                         :ARG1 c36-15)))
+                                  :polarity -)
+                     :ARG2 c36-15))
+
+# ::snt . What kinda police let murder suspect leave town?
+# ::tokens [".", "What", "kinda", "police", "let", "murder", "suspect", "leave", "town", "?"]
+# ::lemmas [".", "what", "kinda", "police", "let", "murder", "suspect", "leave", "town", "?"]
+(c37-0 / let-01
+       :ARG0 (c37-2 / police
+                    :mod (c37-6 / kind
+                                :mod (c37-8 / amr-unknown)))
+       :ARG1 (c37-3 / leave-11
+                    :ARG0 (c37-7 / person
+                                 :ARG2-of (c37-4 / suspect-01
+                                                 :ARG1 (c37-1 / murder-01)))
+                    :ARG1 (c37-5 / town)))
+
+# ::snt One would think?
+# ::tokens ["One", "would", "think", "?"]
+# ::lemmas ["One", "would", "think", "?"]
+(c38-1 / think-01
+       :polarity (c38-2 / amr-unknown)
+       :ARG0 (c38-0 / one))
+
+# ::snt Even some of the details of the shooting incl autopsy results might be concealed so the cop doesn't know during questioning.
+# ::tokens ["Even", "some", "of", "the", "details", "of", "the", "shooting", "incl", "autopsy", "results", "might", "be", "concealed", "so", "the", "cop", "does", "n't", "know", "during", "questioning", "."]
+# ::lemmas ["even", "some", "of", "the", "detail", "of", "the", "shooting", "incl", "autopsy", "result", "might", "be", "conceal", "so", "the", "cop", "do", "not", "know", "during", "questioning", "."]
+(c39-4 / possible-01
+       :ARG1 (c39-6 / conceal-01
+                    :ARG1 (c39-5 / detail-01
+                                 :ARG1 (c39-12 / and
+                                               :op1 (c39-10 / shoot-02)
+                                               :op2 (c39-7 / result-01
+                                                           :ARG2 (c39-3 / autopsy-01)))
+                                 :mod (c39-0 / even)
+                                 :quant (c39-1 / some))
+                    :ARG0-of (c39-8 / cause-01
+                                    :ARG1 (c39-11 / know-01
+                                                  :ARG0 (c39-9 / cop)
+                                                  :time (c39-2 / question-01
+                                                               :ARG0 c39-9)
+                                                  :polarity -))))

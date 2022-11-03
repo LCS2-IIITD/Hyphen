@@ -1,0 +1,60 @@
+# ::snt The Czech interior ministry wants to change the constitution to let its citizens use guns against terrorists
+# ::tokens ["The", "Czech", "interior", "ministry", "wants", "to", "change", "the", "constitution", "to", "let", "its", "citizens", "use", "guns", "against", "terrorists"]
+# ::lemmas ["the", "Czech", "interior", "ministry", "want", "to", "change", "the", "constitution", "to", "let", "its", "citizen", "use", "gun", "against", "terrorist"]
+(c1-2 / want-01
+      :ARG0 (c1-11 / ministry
+                   :topic (c1-10 / interior)
+                   :mod (c1-1 / country
+                              :name (c1-12 / name
+                                           :op1 "Czech")))
+      :ARG1 (c1-0 / change-01
+                  :ARG0 c1-11
+                  :ARG1 (c1-3 / constitution)
+                  :purpose (c1-7 / let-01
+                                 :ARG0 c1-3
+                                 :ARG1 (c1-4 / use-01
+                                             :ARG0 (c1-9 / citizen
+                                                         :poss c1-1)
+                                             :ARG1 (c1-8 / gun)
+                                             :ARG2 (c1-5 / oppose-01
+                                                         :ARG0 c1-9
+                                                         :ARG1 (c1-6 / terrorist))))))
+
+# ::snt Soooo who decides who the terrorists are?
+# ::tokens ["Soooo", "who", "decides", "who", "the", "terrorists", "are", "?"]
+# ::lemmas ["Soooo", "who", "decide", "who", "the", "terrorist", "be", "?"]
+(c2-0 / decide-01
+      :ARG0 (c2-1 / amr-unknown)
+      :ARG1 (c2-2 / terrorist)
+      :mod (c2-3 / so))
+
+# ::snt You just look if they're brown or not
+# ::tokens ["You", "just", "look", "if", "they", "'re", "brown", "or", "not"]
+# ::lemmas ["you", "just", "look", "if", "they", "be", "brown", "or", "not"]
+(c3-2 / look-01
+      :ARG0 (c3-5 / you)
+      :ARG1 (c3-0 / or
+                  :op1 (c3-3 / brown-02
+                             :ARG1 (c3-1 / they)
+                             :op2-of c3-0)
+                  :ARG1 c3-1
+                  :polarity -)
+      :mod (c3-4 / just))
+
+# ::snt I'm italian, olive skin, this means I'm in danger too?
+# ::tokens ["I", "'m", "italian", ",", "olive", "skin", ",", "this", "means", "I", "'m", "in", "danger", "too", "?"]
+# ::lemmas ["i", "be", "italian", ",", "olive", "skin", ",", "this", "mean", "i", "be", "in", "danger", "too", "?"]
+(c4-7 / mean-01
+      :ARG1 (c4-1 / and
+                  :op1 (c4-6 / person
+                             :mod (c4-2 / country
+                                        :name (c4-8 / name
+                                                    :op1 "Italy"))
+                             :domain (c4-3 / i))
+                  :op2 (c4-0 / skin
+                             :mod (c4-4 / olive)
+                             :domain c4-3))
+      :ARG2 (c4-10 / endanger-01
+                   :ARG1 c4-3
+                   :mod (c4-5 / too))
+      :polarity (c4-9 / amr-unknown))

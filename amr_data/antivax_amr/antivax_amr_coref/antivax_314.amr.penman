@@ -1,0 +1,38 @@
+# ::snt Bull
+# ::tokens ["Bull"]
+# ::lemmas ["bull"]
+(c2-0 / bull)
+
+# ::snt "Experimental vaccine"
+# ::tokens ["\"", "Experimental", "vaccine", "\""]
+# ::lemmas ["\"", "experimental", "vaccine", "\""]
+(c3-0 / vaccine
+      :ARG1-of (c3-1 / experiment-01))
+
+# ::snt Amen!!!!
+# ::tokens ["Amen", "!", "!", "!", "!"]
+# ::lemmas ["amen", "!", "!", "!", "!"]
+(c4-0 / amen
+      :mode expressive)
+
+# ::snt Yep
+# ::tokens ["Yep"]
+# ::lemmas ["yep"]
+(c5-0 / yep)
+
+# ::snt Truth. And the vaccine isnt really a vaccine.
+# ::tokens ["Truth", ".", "And", "the", "vaccine", "is", "nt", "really", "a", "vaccine", "."]
+# ::lemmas ["truth", ".", "and", "the", "vaccine", "be", "not", "really", "a", "vaccine", "."]
+(c6-5 / multi-sentence
+      :snt1 (c6-3 / truth)
+      :snt2 (c6-0 / and
+                  :op2 (c6-2 / vaccine
+                             :ARG1-of (c6-4 / real-04)
+                             :domain (c6-1 / vaccine)
+                             :polarity -)))
+
+# ::snt %
+# ::tokens ["%"]
+# ::lemmas ["%"]
+(c7-0 / percentage-entity
+      :value 25)

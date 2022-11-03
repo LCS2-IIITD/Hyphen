@@ -1,0 +1,311 @@
+# ::snt and all the cowardly politicians stand mute
+# ::tokens ["and", "all", "the", "cowardly", "politicians", "stand", "mute"]
+# ::lemmas ["and", "all", "the", "cowardly", "politician", "stand", "mute"]
+(c1-4 / and
+      :op2 (c1-3 / stand-
+                 :ARG1 (c1-1 / politician
+                             :mod (c1-2 / cowardly)
+                             :mod (c1-0 / all))))
+
+# ::snt perhaps but he works hard at it.
+# ::tokens ["perhaps", "but", "he", "works", "hard", "at", "it", "."]
+# ::lemmas ["perhaps", "but", "he", "work", "hard", "at", "it", "."]
+(c2-4 / contrast-01
+      :ARG1 (c2-3 / possible-01)
+      :ARG2 (c2-1 / work-01
+                  :ARG0 (c2-0 / he)
+                  :ARG1 (c2-2 / it)
+                  :ARG1-of (c2-5 / hard-02)))
+
+# ::snt I don't always carry an automatic weapon shopping,But when I do,Watch out!Nuts
+# ::tokens ["I", "do", "n't", "always", "carry", "an", "automatic", "weapon", "shopping", ",", "But", "when", "I", "do", ",", "Watch", "out!Nuts"]
+# ::lemmas ["i", "do", "not", "always", "carry", "an", "automatic", "weapon", "shopping", ",", "but", "when", "i", "do", ",", "watch", "out!nut"]
+(c3-6 / contrast-01
+      :ARG1 (c3-5 / carry-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-8 / shop-01
+                              :ARG0 c3-3
+                              :ARG1 (c3-0 / weapon
+                                          :mod (c3-9 / automatic)))
+                  :time (c3-2 / always)
+                  :polarity -)
+      :ARG2 (c3-4 / watch-out-02
+                  :ARG0 (c3-1 / you)
+                  :time (c3-7 / carry-01
+                              :ARG0 c3-3
+                              :ARG1 c3-0)
+                  :mode imperative))
+
+# ::snt Police in haven't been wearing identification
+# ::tokens ["Police", "in", "have", "n't", "been", "wearing", "identification"]
+# ::lemmas ["police", "in", "have", "not", "be", "wear", "identification"]
+(c4-0 / wear-01
+      :ARG0 (c4-1 / police)
+      :ARG1 (c4-2 / thing
+                  :ARG1-of (c4-3 / identify-01))
+      :polarity -)
+
+# ::snt :I wonder why?
+# ::tokens [":", "I", "wonder", "why", "?"]
+# ::lemmas [":", "i", "wonder", "why", "?"]
+(c6-0 / wonder-01
+      :ARG0 (c6-1 / i)
+      :ARG1 (c6-3 / thing
+                  :ARG0-of (c6-2 / cause-01))
+      :polarity (c6-4 / amr-unknown))
+
+# ::snt . "Community Policing": Killer Cop Wilson lives mins away in Lily White - Crestwood1%Black &amp; $65K Med income
+# ::tokens [".", "\"", "Community", "Policing", "\"", ":", "Killer", "Cop", "Wilson", "lives", "mins", "away", "in", "Lily", "White", "-", "Crestwood1%Black", "&", "amp", ";", "$", "65", "K", "Med", "income"]
+# ::lemmas [".", "\"", "community", "policing", "\"", ":", "Killer", "Cop", "Wilson", "live", "min", "away", "in", "Lily", "White", "-", "Crestwood1%Black", "&", "amp", ";", "$", "65", "K", "Med", "income"]
+(c7-0 / multi-sentence
+      :snt1 (c7-3 / Policing
+                  :mod (c7-23 / community))
+      :snt2 (c7-9 / live-01
+                  :ARG0 (c7-6 / person
+                              :name (c7-12 / name
+                                           :op1 "Wilson")
+                              :ARG0-of (c7-20 / kill-01)
+                              :ARG0-of (c7-8 / have-org-role-91
+                                             :ARG2 (c7-4 / cop)))
+                  :location (c7-14 / relative-position
+                                   :op1 (c7-11 / person
+                                               :name (c7-22 / name
+                                                            :op1 "Lily"
+                                                            :op2 "White"))
+                                   :quant (c7-13 / multiple
+                                                 :op1 (c7-24 / temporal-quantity
+                                                             :unit (c7-10 / minute)
+                                                             :quant 1))
+                                   :direction (c7-7 / away)
+                                   :location (c7-19 / city-district
+                                                    :name (c7-1 / name
+                                                                :op1 "Crestwood")))
+                  :snt3 (c7-15 / and
+                               :op1 (c7-21 / company
+                                           :name (c7-2 / name
+                                                       :op1 "Black"
+                                                       :op2 "&"
+                                                       :op3 "amp"))
+                               :op2 (c7-16 / income
+                                           :mod (c7-17 / medicine)
+                                           :mod (c7-18 / monetary-quantity
+                                                       :unit (c7-5 / dollar)
+                                                       :quant 65000)))))
+
+# ::snt The woman officer in the foreground doesn't look any too happy to be there either. Looks like she's on the verge of tears or mad.
+# ::tokens ["The", "woman", "officer", "in", "the", "foreground", "does", "n't", "look", "any", "too", "happy", "to", "be", "there", "either", ".", "Looks", "like", "she", "'s", "on", "the", "verge", "of", "tears", "or", "mad", "."]
+# ::lemmas ["the", "woman", "officer", "in", "the", "foreground", "do", "not", "look", "any", "too", "happy", "to", "be", "there", "either", ".", "look", "like", "she", "be", "on", "the", "verge", "of", "tear", "or", "mad", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-2 / look-02
+                  :ARG0 (c8-7 / officer
+                              :mod (c8-1 / woman)
+                              :location (c8-4 / foreground))
+                  :ARG1 (c8-0 / happy-01
+                              :ARG0 (c8-6 / be-located-at-91
+                                          :ARG1 c8-7
+                                          :ARG2 c8-4
+                                          :mod (c8-9 / either))
+                              :ARG2-of (c8-16 / have-degree-91
+                                              :ARG1 c8-7
+                                              :ARG3 (c8-15 / too
+                                                           :mod (c8-14 / any)))
+                              :polarity -))
+      :snt2 (c8-12 / look-02
+                   :ARG0 (c8-13 / she)
+                   :ARG1 (c8-5 / or
+                               :op1 (c8-10 / verge-01
+                                           :ARG1 c8-13
+                                           :ARG2 (c8-8 / tear))
+                               :op2 (c8-11 / mad-02
+                                           :ARG1 c8-13))))
+
+# ::snt Jesus. : Police in haven't been wearing identification
+# ::tokens ["Jesus", ".", ":", "Police", "in", "have", "n't", "been", "wearing", "identification"]
+# ::lemmas ["Jesus", ".", ":", "police", "in", "have", "not", "be", "wear", "identification"]
+(c9-1 / multi-sentence
+      :snt1 (c9-4 / person
+                  :name (c9-3 / name
+                              :op1 "Jesus")
+                  :mode expressive)
+      :snt2 (c9-0 / wear-01
+                  :ARG0 (c9-6 / police)
+                  :ARG1 (c9-5 / thing
+                              :ARG1-of (c9-2 / identify-01))
+                  :polarity -))
+
+# ::snt  Police in haven't been wearing identification
+# ::tokens [" ", "Police", "in", "have", "n't", "been", "wearing", "identification"]
+# ::lemmas [" ", "police", "in", "have", "not", "be", "wear", "identification"]
+(c11-0 / wear-01
+       :ARG0 (c11-1 / police)
+       :ARG1 (c11-2 / thing
+                    :ARG1-of (c11-3 / identify-01))
+       :polarity -)
+
+# ::snt :Kinda like the creepy rapist cop you always hear about &amp; look out for.
+# ::tokens [":", "Kinda", "like", "the", "creepy", "rapist", "cop", "you", "always", "hear", "about", "&", "amp", ";", "look", "out", "for", "."]
+# ::lemmas [":", "Kinda", "like", "the", "creepy", "rapist", "cop", "you", "always", "hear", "about", "&", "amp", ";", "look", "out", "for", "."]
+(c12-3 / multi-sentence
+       :snt1 (c12-7 / resemble-01
+                    :ARG2 (c12-6 / cop
+                                 :ARG0-of (c12-5 / creepy-04)
+                                 :ARG0-of (c12-4 / rape-01)
+                                 :ARG1-of (c12-0 / hear-01
+                                                 :ARG0 (c12-1 / you)
+                                                 :time (c12-9 / always)))
+                    :degree (c12-8 / kind-of))
+       :snt2 (c12-2 / look-out-08
+                    :ARG0 c12-1
+                    :mode imperative))
+
+# ::snt When they're in Para Military gear there is no identification either..thus they are prepared to act illegally..!
+# ::tokens ["When", "they", "'re", "in", "Para", "Military", "gear", "there", "is", "no", "identification", "either", "..", "thus", "they", "are", "prepared", "to", "act", "illegally", "..", "!"]
+# ::lemmas ["when", "they", "be", "in", "Para", "Military", "gear", "there", "be", "no", "identification", "either", "..", "thus", "they", "be", "prepared", "to", "act", "illegally", "..", "!"]
+(c13-4 / identify-01
+       :ARG1 (c13-10 / they)
+       :mod (c13-3 / either)
+       :time (c13-0 / wear-01
+                    :ARG0 c13-10
+                    :ARG1 (c13-9 / gear
+                                 :mod (c13-2 / military)
+                                 :poss (c13-8 / country
+                                              :name (c13-5 / name
+                                                           :op1 "Pakistan"))))
+       :ARG0-of (c13-7 / cause-01
+                       :ARG1 (c13-6 / prepare-02
+                                    :ARG1 c13-10
+                                    :ARG2 (c13-11 / act-02
+                                                  :ARG0 c13-10
+                                                  :ARG1-of (c13-1 / legal-02
+                                                                  :polarity -))))
+       :polarity -)
+
+# ::snt Because they're a bunch of inbred, WUSSY-assed trigger happy pieces of SHIT! Too many jumpy cops don't need to be cops!
+# ::tokens ["Because", "they", "'re", "a", "bunch", "of", "inbred", ",", "WUSSY", "-", "assed", "trigger", "happy", "pieces", "of", "SHIT", "!", "Too", "many", "jumpy", "cops", "do", "n't", "need", "to", "be", "cops", "!"]
+# ::lemmas ["because", "they", "be", "a", "bunch", "of", "inbreed", ",", "WUSSY", "-", "asse", "trigger", "happy", "piece", "of", "SHIT", "!", "too", "many", "jumpy", "cop", "do", "not", "need", "to", "be", "cop", "!"]
+(c14-4 / multi-sentence
+       :snt1 (c14-10 / cause-01
+                     :ARG0 (c14-8 / piece
+                                  :mod (c14-14 / trigger)
+                                  :ARG1-of (c14-0 / happy-01)
+                                  :mod (c14-15 / ass
+                                               :mod (c14-1 / wolf))
+                                  :domain (c14-12 / they)
+                                  :quant (c14-5 / bunch))
+                     :ARG1 c14-12)
+       :snt2 (c14-6 / need-01
+                    :ARG0 (c14-9 / cop
+                                 :mod (c14-2 / jumpy)
+                                 :ARG1-of (c14-3 / have-quant-91
+                                                 :ARG2 (c14-11 / many)
+                                                 :ARG3 (c14-7 / too)))
+                    :ARG1 (c14-13 / cop
+                                  :domain c14-12)
+                    :polarity -))
+
+# ::snt If you're smart,Gotta protect that shopping cart!Citizen's dutyGet all shootie
+# ::tokens ["If", "you", "'re", "smart", ",", "Gotta", "protect", "that", "shopping", "cart!Citizen", "'s", "dutyGet", "all", "shootie"]
+# ::lemmas ["if", "you", "be", "smart", ",", "Gotta", "protect", "that", "shopping", "cart!Citizen", "'s", "dutyGet", "all", "shootie"]
+(c15-1 / multi-sentence
+       :snt1 (c15-2 / obligate-01
+                    :ARG1 (c15-0 / you)
+                    :ARG2 (c15-5 / protect-01
+                                 :ARG0 c15-0
+                                 :ARG1 (c15-7 / cart
+                                              :purpose (c15-10 / shop-01)
+                                              :mod (c15-11 / that)))
+                    :condition (c15-3 / smart-06
+                                      :ARG1 c15-0))
+       :snt2 (c15-6 / duty
+                    :poss (c15-8 / citizen)
+                    :mod (c15-13 / all))
+       :snt3 (c15-9 / get-01
+                    :ARG0 c15-0
+                    :ARG1 (c15-12 / person
+                                  :name (c15-4 / name
+                                               :op1 "Pretty"
+                                               :op2 "All"))
+                    :mode imperative))
+
+# ::snt Standard operating procedure. Before you beat people up, remove IDs. Also illegal, but so what.
+# ::tokens ["Standard", "operating", "procedure", ".", "Before", "you", "beat", "people", "up", ",", "remove", "IDs", ".", "Also", "illegal", ",", "but", "so", "what", "."]
+# ::lemmas ["standard", "operating", "procedure", ".", "before", "you", "beat", "people", "up", ",", "remove", "id", ".", "also", "illegal", ",", "but", "so", "what", "."]
+(c16-2 / multi-sentence
+       :snt1 (c16-7 / procedure
+                    :ARG1-of (c16-13 / standard-02)
+                    :ARG0-of (c16-4 / operate-01))
+       :snt2 (c16-8 / remove-01
+                    :ARG0 (c16-0 / you)
+                    :ARG1 (c16-9 / document-01
+                                 :ARG1 (c16-6 / identity))
+                    :time (c16-3 / before
+                                 :op1 (c16-10 / beat-up-05
+                                              :ARG0 c16-0
+                                              :ARG1 (c16-14 / person)))
+                    :mode imperative)
+       :snt3 (c16-11 / contrast-01
+                     :ARG1 (c16-1 / legal-02
+                                  :mod (c16-15 / also)
+                                  :polarity -)
+                     :ARG2 (c16-12 / infer-01
+                                   :ARG1 (c16-5 / amr-unknown))))
+
+# ::snt Any time deal with disturbances, they should be required to wear BIG numbers, all unique. Cowards prefer anonymity.
+# ::tokens ["Any", "time", "deal", "with", "disturbances", ",", "they", "should", "be", "required", "to", "wear", "BIG", "numbers", ",", "all", "unique", ".", "Cowards", "prefer", "anonymity", "."]
+# ::lemmas ["any", "time", "deal", "with", "disturbance", ",", "they", "should", "be", "require", "to", "wear", "big", "number", ",", "all", "unique", ".", "coward", "prefer", "anonymity", "."]
+(c17-2 / multi-sentence
+       :snt1 (c17-10 / recommend-01
+                     :ARG1 (c17-6 / require-01
+                                  :ARG1 (c17-0 / wear-01
+                                               :ARG0 (c17-13 / they)
+                                               :ARG1 (c17-7 / number
+                                                            :mod (c17-4 / big)
+                                                            :ARG1-of (c17-3 / unique-01)
+                                                            :mod (c17-14 / all)))
+                                  :ARG2 c17-13)
+                     :time (c17-11 / deal-01
+                                   :ARG0 c17-13
+                                   :ARG2 (c17-1 / disturbances)
+                                   :mod (c17-5 / any)))
+       :snt2 (c17-9 / prefer-01
+                    :ARG0 (c17-12 / coward)
+                    :ARG1 (c17-8 / anonymity)))
+
+# ::snt What are they fighting about?
+# ::tokens ["What", "are", "they", "fighting", "about", "?"]
+# ::lemmas ["what", "be", "they", "fight", "about", "?"]
+(c18-0 / fight-01
+       :ARG0 (c18-1 / they)
+       :ARG2 (c18-2 / amr-unknown))
+
+# ::snt that police chief is the definition of incompetent
+# ::tokens ["that", "police", "chief", "is", "the", "definition", "of", "incompetent"]
+# ::lemmas ["that", "police", "chief", "be", "the", "definition", "of", "incompetent"]
+(c19-2 / define-01
+       :ARG1 (c19-1 / person
+                    :ARG0-of (c19-0 / have-org-role-91
+                                    :ARG1 (c19-6 / police)
+                                    :ARG2 (c19-3 / chief))
+                    :mod (c19-5 / that))
+       :ARG2 (c19-4 / competent-01
+                    :polarity -))
+
+# ::snt seriously, does that dude only own one outfit or are all those photos of this ammosexual taken on same day?
+# ::tokens ["seriously", ",", "does", "that", "dude", "only", "own", "one", "outfit", "or", "are", "all", "those", "photos", "of", "this", "ammosexual", "taken", "on", "same", "day", "?"]
+# ::lemmas ["seriously", ",", "do", "that", "dude", "only", "own", "one", "outfit", "or", "be", "all", "those", "photo", "of", "this", "ammosexual", "take", "on", "same", "day", "?"]
+(c20-13 / amr-choice
+        :op1 (c20-2 / own-01
+                    :ARG0 (c20-7 / dude
+                                 :mod (c20-11 / that))
+                    :ARG1 (c20-1 / outfit
+                                 :mod (c20-10 / only)
+                                 :quant 1))
+        :op2 (c20-9 / take-01
+                    :ARG1 (c20-6 / photograph-01
+                                 :ARG1 (c20-4 / ammosexual
+                                              :mod (c20-5 / this))
+                                 :mod c20-11)
+                    :mod (c20-8 / all))
+        :time (c20-0 / day
+                     :ARG1-of (c20-12 / same-01))
+        :ARG2-of (c20-3 / serious-01))

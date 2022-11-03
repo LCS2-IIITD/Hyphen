@@ -1,0 +1,90 @@
+# ::snt HOUSTON wow!
+# ::tokens ["HOUSTON", "wow", "!"]
+# ::lemmas ["HOUSTON", "wow", "!"]
+(c2-1 / wow
+      :location (c2-2 / city
+                      :name (c2-0 / name
+                                  :op1 "Houston"))
+      :mode expressive)
+
+# ::snt I am so sad about what is happening in Paris right now. ://
+# ::tokens ["I", "am", "so", "sad", "about", "what", "is", "happening", "in", "Paris", "right", "now", ".", ":", "//"]
+# ::lemmas ["i", "be", "so", "sad", "about", "what", "be", "happen", "in", "Paris", "right", "now", ".", ":", "//"]
+(c3-7 / sad-02
+      :ARG0 (c3-0 / event
+                  :location (c3-6 / city
+                                  :name (c3-4 / name
+                                              :op1 "Paris"))
+                  :time (c3-3 / now
+                              :mod (c3-5 / right)))
+      :ARG1 (c3-2 / i)
+      :degree (c3-1 / so))
+
+# ::snt Are they hunting for who ordered it?
+# ::tokens ["Are", "they", "hunting", "for", "who", "ordered", "it", "?"]
+# ::lemmas ["be", "they", "hunt", "for", "who", "order", "it", "?"]
+(c4-0 / hunt-01
+      :ARG0 (c4-4 / they)
+      :ARG1 (c4-3 / person
+                  :ARG0-of (c4-1 / order-01
+                                 :ARG1 (c4-2 / it)))
+      :polarity (c4-5 / amr-unknown))
+
+# ::snt : French authorities are conducting an intense manhunt for the Charlie Hebdo attack suspects
+# ::tokens [":", "French", "authorities", "are", "conducting", "an", "intense", "manhunt", "for", "the", "Charlie", "Hebdo", "attack", "suspects"]
+# ::lemmas [":", "French", "authority", "be", "conduct", "an", "intense", "manhunt", "for", "the", "Charlie", "Hebdo", "attack", "suspect"]
+(c5-7 / conduct-01
+      :ARG0 (c5-10 / authority
+                   :mod (c5-6 / country
+                              :name (c5-3 / name
+                                          :op1 "France")))
+      :ARG1 (c5-0 / manhunt-01
+                  :ARG0 c5-10
+                  :ARG1 (c5-5 / person
+                              :ARG2-of (c5-9 / suspect-01
+                                             :ARG1 (c5-1 / attack-01
+                                                         :ARG1 (c5-8 / magazine
+                                                                     :name (c5-4 / name
+                                                                                 :op1 "Charlie"
+                                                                                 :op2 "Ch Hebdo")))))
+                  :ARG1-of (c5-2 / intense-02)))
+
+# ::snt bet those two aren't even in France or in Europe anymore
+# ::tokens ["bet", "those", "two", "are", "n't", "even", "in", "France", "or", "in", "Europe", "anymore"]
+# ::lemmas ["bet", "those", "two", "be", "not", "even", "in", "France", "or", "in", "Europe", "anymore"]
+(c7-0 / bet-01
+      :ARG2 (c7-7 / be-located-at-91
+                  :ARG1 (c7-5 / person
+                              :mod (c7-9 / that)
+                              :quant 2)
+                  :ARG2 (c7-1 / or
+                              :op1 (c7-8 / country
+                                         :name (c7-3 / name
+                                                     :op1 "France"))
+                              :op2 (c7-6 / continent
+                                         :name (c7-4 / name
+                                                     :op1 "Europe")))
+                  :mod (c7-2 / even)
+                  :time (c7-10 / anymore)
+                  :polarity -))
+
+# ::snt reported late yesterday, the three attackers were in custody. One of them was shot dead.
+# ::tokens ["reported", "late", "yesterday", ",", "the", "three", "attackers", "were", "in", "custody", ".", "One", "of", "them", "was", "shot", "dead", "."]
+# ::lemmas ["report", "late", "yesterday", ",", "the", "three", "attacker", "be", "in", "custody", ".", "One", "of", "they", "be", "shoot", "dead", "."]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / report-01
+                  :ARG1 (c9-8 / custody
+                              :poss (c9-6 / person
+                                          :ARG0-of (c9-13 / attack-01)
+                                          :quant 3))
+                  :time (c9-1 / late
+                              :op1 (c9-0 / yesterday)))
+      :snt2 (c9-11 / shoot-02
+                   :ARG2 (c9-12 / person
+                                :ARG1-of (c9-5 / include-91
+                                               :ARG2 (c9-3 / person
+                                                           :ARG0-of (c9-4 / attack-01)))
+                                :quant 1)
+                   :ARG0-of (c9-9 / cause-01
+                                  :ARG1 (c9-10 / die-01
+                                               :ARG1 c9-12))))

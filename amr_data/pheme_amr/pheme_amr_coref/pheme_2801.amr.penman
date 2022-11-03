@@ -1,0 +1,63 @@
+# ::snt you were the only UK newspaper to have the balls to print a cartoon today. Kudos (although I wish you'd gone a bit further).
+# ::tokens ["you", "were", "the", "only", "UK", "newspaper", "to", "have", "the", "balls", "to", "print", "a", "cartoon", "today", ".", "Kudos", "(", "although", "I", "wish", "you", "'d", "gone", "a", "bit", "further", ")", "."]
+# ::lemmas ["you", "be", "the", "only", "UK", "newspaper", "to", "have", "the", "ball", "to", "print", "a", "cartoon", "today", ".", "Kudos", "(", "although", "i", "wish", "you", "would", "go", "a", "bit", "far", ")", "."]
+(c1-4 / multi-sentence
+      :snt1 (c1-9 / newspaper
+                  :mod (c1-13 / country
+                              :name (c1-10 / name
+                                           :op1 "UK"))
+                  :domain (c1-1 / you)
+                  :mod (c1-6 / only)
+                  :ARG0-of (c1-0 / have-03
+                                 :ARG1 (c1-5 / ball)
+                                 :purpose (c1-11 / print-01
+                                                 :ARG0 c1-9
+                                                 :ARG1 (c1-12 / cartoon)
+                                                 :time (c1-17 / today))))
+      :snt2 (c1-8 / kudos
+                  :concession (c1-2 / wish-01
+                                    :ARG0 (c1-7 / i)
+                                    :ARG1 (c1-14 / go-01
+                                                 :ARG1 (c1-16 / you)
+                                                 :ARG2 (c1-3 / further
+                                                             :quant (c1-15 / bit))))))
+
+# ::snt Czyli teraz na Wyspach kolejny atak? LOL RT : In solidarity with
+# ::tokens ["Czyli", "teraz", "na", "Wyspach", "kolejny", "atak", "?", "LOL", "RT", ":", "In", "solidarity", "with"]
+# ::lemmas ["czyli", "teraz", "na", "wyspach", "kolejny", "atak", "?", "lol", "RT", ":", "in", "solidarity", "with"]
+(c3-1 / multi-sentence
+      :snt1 (c3-3 / person
+                  :name (c3-2 / name
+                              :op1 "Czyli")
+                  :polarity (c3-5 / amr-unknown)
+                  :mod (c3-4 / teraz
+                             :mod (c3-0 / wyspach))))
+
+# ::snt It was time when The was in solidarity with Al Q
+# ::tokens ["It", "was", "time", "when", "The", "was", "in", "solidarity", "with", "Al", "Q"]
+# ::lemmas ["it", "be", "time", "when", "the", "be", "in", "solidarity", "with", "Al", "Q"]
+(c4-5 / time
+      :time-of (c4-4 / solidarity
+                     :domain (c4-0 / organization
+                                   :name (c4-1 / name
+                                               :op1 "The"))
+                     :prep-with (c4-3 / criminal-organization
+                                      :name (c4-2 / name
+                                                  :op1 "Al"
+                                                  :op2 "Qaeda"))))
+
+# ::snt You really want them to show them the finger. Publish the Cartoons.
+# ::tokens ["You", "really", "want", "them", "to", "show", "them", "the", "finger", ".", "Publish", "the", "Cartoons", "."]
+# ::lemmas ["you", "really", "want", "they", "to", "show", "they", "the", "finger", ".", "publish", "the", "Cartoons", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-0 / want-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-8 / show-01
+                              :ARG0 (c5-9 / they)
+                              :ARG1 (c5-2 / finger)
+                              :ARG2 (c5-7 / they))
+                  :ARG1-of (c5-5 / real-04))
+      :snt2 (c5-4 / publish-01
+                  :ARG0 (c5-10 / you)
+                  :ARG1 (c5-6 / cartel)
+                  :mode imperative))

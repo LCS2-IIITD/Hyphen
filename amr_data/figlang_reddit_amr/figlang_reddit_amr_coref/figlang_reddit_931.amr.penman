@@ -1,0 +1,44 @@
+# ::snt Election reaction on CNN.
+# ::tokens ["Election", "reaction", "on", "CNN", "."]
+# ::lemmas ["election", "reaction", "on", "CNN", "."]
+(c1-2 / react-01
+      :ARG0 (c1-0 / publication
+                  :name (c1-1 / name
+                              :op1 "CNN"))
+      :ARG1 (c1-3 / elect))
+
+# ::snt MRW media and candidates try to tell me how to vote.
+# ::tokens ["MRW", "media", "and", "candidates", "try", "to", "tell", "me", "how", "to", "vote", "."]
+# ::lemmas ["MRW", "medium", "and", "candidate", "try", "to", "tell", "i", "how", "to", "vote", "."]
+(c2-5 / try-01
+      :ARG0 (c2-0 / and
+                  :op1 (c2-7 / media
+                             :mod (c2-4 / organization
+                                        :name (c2-8 / name
+                                                    :op1 "MRW")))
+                  :op2 (c2-1 / candidate
+                             :mod c2-4))
+      :ARG1 (c2-2 / tell-01
+                  :ARG0 c2-0
+                  :ARG1 (c2-9 / thing
+                              :manner-of (c2-3 / vote-01
+                                               :ARG0 (c2-6 / i
+                                                           :ARG2-of c2-2)))))
+
+# ::snt MRW media and ~~candidates~~ celebrities try to tell me how to vote.
+# ::tokens ["MRW", "media", "and", "~~candidates~~", "celebrities", "try", "to", "tell", "me", "how", "to", "vote", "."]
+# ::lemmas ["MRW", "medium", "and", "~~candidates~~", "celebrity", "try", "to", "tell", "i", "how", "to", "vote", "."]
+(c3-5 / try-01
+      :ARG0 (c3-0 / and
+                  :op1 (c3-7 / media
+                             :mod (c3-6 / person
+                                        :name (c3-8 / name
+                                                    :op1 "MRW")))
+                  :op2 (c3-1 / celebrity
+                             :mod c3-6))
+      :ARG1 (c3-3 / tell-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-9 / thing
+                              :manner-of (c3-4 / vote-01
+                                               :ARG0 (c3-2 / i
+                                                           :ARG2-of c3-3)))))

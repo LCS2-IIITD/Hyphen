@@ -1,0 +1,331 @@
+# ::snt Still time for side effects..
+# ::tokens ["Still", "time", "for", "side", "effects", ".."]
+# ::lemmas ["still", "time", "for", "side", "effect", ".."]
+(c1-2 / time
+      :mod (c1-0 / still)
+      :purpose (c1-3 / effect-03
+                     :mod (c1-1 / side)))
+
+# ::snt Fine. Upper arm a bit sore but thats probably more from being stabbed with a needle in arm
+# ::tokens ["Fine", ".", "Upper", "arm", "a", "bit", "sore", "but", "that", "s", "probably", "more", "from", "being", "stabbed", "with", "a", "needle", "in", "arm"]
+# ::lemmas ["fine", ".", "upper", "arm", "a", "bit", "sore", "but", "that", "s", "probably", "more", "from", "be", "stab", "with", "a", "needle", "in", "arm"]
+(c2-10 / multi-sentence
+       :snt1 (c2-3 / fine-04)
+       :snt2 (c2-4 / contrast-01
+                   :ARG1 (c2-0 / sore
+                               :domain (c2-2 / arm
+                                             :mod (c2-6 / upper))
+                               :degree (c2-7 / bit))
+                   :ARG2 (c2-9 / probable
+                               :domain (c2-1 / cause-01
+                                             :ARG0 (c2-8 / stab-01
+                                                         :ARG1 c2-2
+                                                         :instrument (c2-11 / needle
+                                                                            :location c2-2))
+                                             :ARG1 c2-0
+                                             :mod (c2-5 / more)))))
+
+# ::snt How you feeling now? Any side effects?
+# ::tokens ["How", "you", "feeling", "now", "?", "Any", "side", "effects", "?"]
+# ::lemmas ["how", "you", "feel", "now", "?", "any", "side", "effect", "?"]
+(c3-5 / multi-sentence
+      :snt1 (c3-3 / feel-01
+                  :ARG0 (c3-7 / you)
+                  :ARG1 (c3-2 / amr-unknown)
+                  :time (c3-6 / now))
+      :snt2 (c3-9 / event
+                  :mod (c3-0 / side)
+                  :ARG1-of (c3-4 / effect-03
+                                 :polarity (c3-8 / amr-unknown))
+                  :mod (c3-1 / any)))
+
+# ::snt When I got to right place, its big room with seats for about people to wait for vaccine. And then about seats for people to wait the minutes
+# ::tokens ["When", "I", "got", "to", "right", "place", ",", "its", "big", "room", "with", "seats", "for", "about", "people", "to", "wait", "for", "vaccine", ".", "And", "then", "about", "seats", "for", "people", "to", "wait", "the", "minutes"]
+# ::lemmas ["when", "i", "get", "to", "right", "place", ",", "its", "big", "room", "with", "seat", "for", "about", "people", "to", "wait", "for", "vaccine", ".", "and", "then", "about", "seat", "for", "people", "to", "wait", "the", "minutes"]
+(c4-15 / multi-sentence
+       :snt1 (c4-10 / room
+                    :mod (c4-12 / big)
+                    :ARG0-of (c4-5 / have-03
+                                   :ARG1 (c4-0 / seat
+                                               :purpose (c4-3 / wait-01
+                                                              :ARG1 (c4-14 / person)
+                                                              :ARG2 (c4-7 / vaccine))))
+                    :time (c4-11 / get-05
+                                 :ARG1 (c4-2 / i)
+                                 :ARG2 (c4-8 / place
+                                             :ARG1-of (c4-6 / right-06))))
+       :snt2 (c4-1 / and
+                   :op2 (c4-13 / seat
+                               :purpose (c4-16 / wait-01
+                                               :ARG1 (c4-4 / person)
+                                               :ARG2 c4-7)
+                               :time (c4-9 / then))))
+
+# ::snt No. I was there minutes and that includes minutes waiting till after vaccine (in case have any side effects). Would have been shorter if I went to correct floor. The queue if booked via GP looked bit busier.
+# ::tokens ["No", ".", "I", "was", "there", "minutes", "and", "that", "includes", "minutes", "waiting", "till", "after", "vaccine", "(", "in", "case", "have", "any", "side", "effects", ")", ".", "Would", "have", "been", "shorter", "if", "I", "went", "to", "correct", "floor", ".", "The", "queue", "if", "booked", "via", "GP", "looked", "bit", "busier", "."]
+# ::lemmas ["no", ".", "i", "be", "there", "minute", "and", "that", "include", "minutes", "wait", "till", "after", "vaccine", "(", "in", "case", "have", "any", "side", "effect", ")", ".", "would", "have", "be", "short", "if", "i", "go", "to", "correct", "floor", ".", "the", "queue", "if", "book", "via", "GP", "look", "bit", "busy", "."]
+(c5-14 / multi-sentence
+       :snt1 (c5-15 / no)
+       :snt2 (c5-27 / and
+                    :op1 (c5-34 / be-located-at-91
+                                :ARG1 (c5-5 / i)
+                                :ARG2 (c5-11 / there)
+                                :duration (c5-30 / multiple
+                                                 :op1 (c5-9 / temporal-quantity
+                                                            :unit (c5-25 / minute)
+                                                            :quant 1)))
+                    :op2 (c5-23 / include-01
+                                :ARG1 (c5-8 / wait-01
+                                            :duration (c5-13 / multiple
+                                                             :op1 (c5-17 / temporal-quantity
+                                                                         :unit (c5-16 / minute)
+                                                                         :quant 1))
+                                            :time (c5-32 / until
+                                                         :op1 (c5-18 / after
+                                                                     :op1 (c5-10 / vaccine))))
+                                :ARG2 (c5-20 / event
+                                             :mod (c5-19 / side)
+                                             :condition (c5-7 / case-04
+                                                              :mod (c5-1 / any)
+                                                              :ARG1 c5-20))))
+       :snt3 (c5-31 / have-condition-91
+                    :ARG1 (c5-4 / have-degree-91
+                                :ARG1 (c5-12 / go-02
+                                             :ARG0 (c5-24 / i)
+                                             :ARG4 (c5-29 / floor
+                                                          :ARG1-of (c5-0 / correct-01)))
+                                :ARG2 (c5-35 / short-07
+                                             :ARG1 c5-12)
+                                :ARG3 (c5-28 / more))
+                    :ARG2 (c5-33 / look-02
+                                 :ARG1 c5-4
+                                 :ARG1 (c5-2 / queue
+                                             :condition (c5-26 / book-03
+                                                               :manner (c5-36 / person
+                                                                              :name (c5-3 / name
+                                                                                          :op1 "General"
+                                                                                          :op2 "Motors")))
+                                             :ARG2 (c5-22 / busier)
+                                             :ARG3 (c5-21 / more
+                                                          :quant (c5-6 / bit))))))
+
+# ::snt Was there a long queue at the actual place?
+# ::tokens ["Was", "there", "a", "long", "queue", "at", "the", "actual", "place", "?"]
+# ::lemmas ["be", "there", "a", "long", "queue", "at", "the", "actual", "place", "?"]
+(c6-1 / queue
+      :polarity (c6-0 / amr-unknown)
+      :ARG1-of (c6-2 / long-03)
+      :location (c6-3 / place
+                      :ARG1-of (c6-4 / actual-02)))
+
+# ::snt When I went on NHS to book, I did end up in a Ticketmaster type online queue. It said something like I was number in queue and wait about minutes. Ended up waiting about seconds
+# ::tokens ["When", "I", "went", "on", "NHS", "to", "book", ",", "I", "did", "end", "up", "in", "a", "Ticketmaster", "type", "online", "queue", ".", "It", "said", "something", "like", "I", "was", "number", "in", "queue", "and", "wait", "about", "minutes", ".", "Ended", "up", "waiting", "about", "seconds"]
+# ::lemmas ["when", "i", "go", "on", "NHS", "to", "book", ",", "i", "do", "end", "up", "in", "a", "ticketmaster", "type", "online", "queue", ".", "it", "say", "something", "like", "i", "be", "number", "in", "queue", "and", "wait", "about", "minutes", ".", "end", "up", "wait", "about", "seconds"]
+(c7-11 / multi-sentence
+       :snt1 (c7-15 / end-up-03
+                    :ARG1 (c7-3 / i)
+                    :ARG2 (c7-28 / be-located-at-91
+                                 :ARG1 c7-3
+                                 :ARG2 (c7-1 / queue
+                                             :mod (c7-7 / online)
+                                             :ARG1-of (c7-8 / type-03
+                                                            :ARG2 (c7-4 / company
+                                                                        :name (c7-12 / name
+                                                                                     :op1 "Ticketmaster"))))
+                                 :time (c7-10 / go-02
+                                              :ARG0 c7-3
+                                              :ARG4 (c7-22 / government-organization
+                                                           :name (c7-2 / name
+                                                                       :op1 "NHS"))
+                                              :purpose (c7-23 / book-01
+                                                              :ARG0 c7-3))))
+       :snt2 (c7-16 / say-01
+                    :ARG0 (c7-18 / it)
+                    :ARG1 (c7-29 / something
+                                 :ARG1-of (c7-9 / resemble-01
+                                                :ARG2 (c7-24 / and
+                                                             :op1 (c7-21 / number-01
+                                                                         :ARG1 (c7-19 / i)
+                                                                         :location (c7-30 / queue))
+                                                             :op2 (c7-5 / wait-01
+                                                                        :ARG1 c7-19
+                                                                        :duration (c7-14 / about
+                                                                                         :op1 (c7-6 / temporal-quantity
+                                                                                                    :unit (c7-25 / minute)
+                                                                                                    :quant 1)))))))
+       :snt3 (c7-26 / end-up-03
+                    :ARG1 (c7-27 / i)
+                    :ARG2 (c7-17 / wait-01
+                                 :duration (c7-0 / about
+                                                 :op1 (c7-13 / temporal-quantity
+                                                             :unit (c7-20 / second)
+                                                             :quant 1)))))
+
+# ::snt Who knows what it will be for you and all the other younger than people. They may continue offering to different ages. Or maybe open up to everyone but the NHS app would Probably be busier than Ticketmaster when Adele tickets go on sale.
+# ::tokens ["Who", "knows", "what", "it", "will", "be", "for", "you", "and", "all", "the", "other", "younger", "than", "people", ".", "They", "may", "continue", "offering", "to", "different", "ages", ".", "Or", "maybe", "open", "up", "to", "everyone", "but", "the", "NHS", "app", "would", "Probably", "be", "busier", "than", "Ticketmaster", "when", "Adele", "tickets", "go", "on", "sale", "."]
+# ::lemmas ["who", "know", "what", "it", "will", "be", "for", "you", "and", "all", "the", "other", "young", "than", "people", ".", "they", "may", "continue", "offer", "to", "different", "age", ".", "or", "maybe", "open", "up", "to", "everyone", "but", "the", "NHS", "app", "would", "probably", "be", "busy", "than", "ticketmaster", "when", "Adele", "ticket", "go", "on", "sale", "."]
+(c8-11 / multi-sentence
+       :snt1 (c8-29 / know-01
+                    :ARG0 (c8-22 / amr-unknown)
+                    :ARG1 (c8-13 / and
+                                 :op1 (c8-19 / you)
+                                 :op2 (c8-8 / other
+                                            :mod (c8-1 / all)
+                                            :ARG1-of (c8-24 / have-degree-91
+                                                            :ARG2 (c8-20 / young)
+                                                            :ARG3 (c8-23 / more)
+                                                            :ARG4 (c8-28 / person)))))
+       :snt2 (c8-26 / possible-01
+                    :ARG1 (c8-6 / continue-01
+                                :ARG0 (c8-9 / they)
+                                :ARG1 (c8-25 / offer-01
+                                             :ARG0 c8-9
+                                             :ARG3 (c8-30 / age
+                                                          :ARG1-of (c8-0 / differ-02)))))
+       :snt3 (c8-5 / or
+                   :op2 (c8-17 / possible-01
+                               :ARG1 (c8-21 / open-up-03
+                                            :ARG0 c8-9
+                                            :ARG3 (c8-14 / everyone)))
+                   :concession-of (c8-16 / probable
+                                         :domain c8-24
+                                         :ARG1 (c8-3 / app
+                                                     :mod (c8-10 / government-organization
+                                                                 :name (c8-12 / name
+                                                                              :op1 "NHS")))
+                                         :ARG2 (c8-27 / busier)
+                                         :ARG3 c8-23)
+                   :ARG4 (c8-2 / company
+                               :name (c8-4 / name
+                                           :op1 "Ticketmaster"))
+                   :time (c8-15 / sell-01
+                                :ARG1 (c8-7 / ticket
+                                            :mod c8-2
+                                            :name (c8-18 / name
+                                                         :op1 "Adele")))))
+
+# ::snt No letter or text. I assume at some point in future if I had not bothered to book myself, I would have got letter or text
+# ::tokens ["No", "letter", "or", "text", ".", "I", "assume", "at", "some", "point", "in", "future", "if", "I", "had", "not", "bothered", "to", "book", "myself", ",", "I", "would", "have", "got", "letter", "or", "text"]
+# ::lemmas ["no", "letter", "or", "text", ".", "i", "assume", "at", "some", "point", "in", "future", "if", "i", "have", "not", "bother", "to", "book", "myself", ",", "i", "would", "have", "get", "letter", "or", "text"]
+(c9-10 / multi-sentence
+       :snt1 (c9-4 / or
+                   :op1 (c9-6 / letter)
+                   :op2 (c9-5 / text)
+                   :polarity -)
+       :snt2 (c9-2 / assume-02
+                   :ARG0 (c9-9 / i)
+                   :ARG1 (c9-8 / get-01
+                               :ARG0 c9-9
+                               :ARG1 c9-4
+                               :condition (c9-11 / bother-02
+                                                 :ARG0 c9-9
+                                                 :ARG1 (c9-1 / book-03
+                                                             :ARG0 c9-9
+                                                             :ARG1 c9-9)
+                                                 :polarity -)
+                               :time (c9-7 / point
+                                           :mod (c9-0 / some)
+                                           :time (c9-3 / future)))))
+
+# ::snt Ah ok. Thanks. So they didn't send you a letter or text? Thought they would.
+# ::tokens ["Ah", "ok", ".", "Thanks", ".", "So", "they", "did", "n't", "send", "you", "a", "letter", "or", "text", "?", "Thought", "they", "would", "."]
+# ::lemmas ["ah", "ok", ".", "thank", ".", "so", "they", "do", "not", "send", "you", "a", "letter", "or", "text", "?", "thought", "they", "would", "."]
+(c10-11 / multi-sentence
+        :snt1 (c10-6 / okay-01
+                     :mod (c10-1 / ah
+                                 :mode expressive))
+        :snt2 (c10-7 / thank-01
+                     :ARG0 (c10-10 / i)
+                     :ARG1 (c10-12 / you))
+        :snt3 (c10-0 / send-01
+                     :ARG0 (c10-3 / they)
+                     :ARG1 (c10-4 / or
+                                  :op1 (c10-9 / letter)
+                                  :op2 (c10-2 / text))
+                     :ARG2 (c10-13 / you)
+                     :ARG1-of (c10-8 / request-confirmation-91)
+                     :polarity -)
+        :snt4 (c10-5 / think-01
+                     :ARG0 c10-10
+                     :ARG1 c10-0))
+
+# ::snt But I believe generally you get a text and then letter few days after. After they have offered to all + and most had it, maybe it will be open for everyone else to book appointment themselves (or just wait for the text/letter)
+# ::tokens ["But", "I", "believe", "generally", "you", "get", "a", "text", "and", "then", "letter", "few", "days", "after", ".", "After", "they", "have", "offered", "to", "all", "+", "and", "most", "had", "it", ",", "maybe", "it", "will", "be", "open", "for", "everyone", "else", "to", "book", "appointment", "themselves", "(", "or", "just", "wait", "for", "the", "text", "/", "letter", ")"]
+# ::lemmas ["but", "i", "believe", "generally", "you", "get", "a", "text", "and", "then", "letter", "few", "day", "after", ".", "after", "they", "have", "offer", "to", "all", "+", "and", "most", "have", "it", ",", "maybe", "it", "will", "be", "open", "for", "everyone", "else", "to", "book", "appointment", "themselves", "(", "or", "just", "wait", "for", "the", "text", "/", "letter", ")"]
+(c11-10 / multi-sentence
+        :snt1 (c11-4 / contrast-01
+                     :ARG2 (c11-24 / believe-01
+                                   :ARG0 (c11-2 / i)
+                                   :ARG1 (c11-9 / get-01
+                                                :ARG0 (c11-16 / you)
+                                                :ARG1 (c11-19 / and
+                                                              :op1 (c11-8 / text)
+                                                              :op2 (c11-23 / letter))
+                                                :ARG1-of (c11-15 / general-02)
+                                                :time (c11-12 / after
+                                                              :quant (c11-20 / few
+                                                                             :op1 (c11-6 / temporal-quantity
+                                                                                         :unit (c11-0 / day)
+                                                                                         :quant 1))))))
+        :snt2 (c11-26 / possible-01
+                      :ARG1 (c11-7 / open-09
+                                   :ARG1 (c11-14 / it)
+                                   :purpose (c11-21 / or
+                                                    :op1 (c11-18 / book-02
+                                                                 :ARG0 (c11-13 / everyone
+                                                                               :mod (c11-22 / else))
+                                                                 :ARG1 (c11-1 / appointment-02
+                                                                              :ARG0 c11-13
+                                                                              :ARG1 c11-13))
+                                                    :op2 (c11-5 / wait-01
+                                                                :ARG1 c11-13
+                                                                :ARG2 (c11-3 / or
+                                                                             :op1 c11-8
+                                                                             :op2 c11-23)
+                                                                :mod (c11-25 / just)))
+                                   :time c11-12
+                                   :op1 (c11-17 / offer-01
+                                                :ARG0 (c11-11 / they)
+                                                :ARG1 c11-19))))
+
+# ::snt They didn't. I just went on NHS web site when I heard in news they were now offering vaccine to +
+# ::tokens ["They", "did", "n't", ".", "I", "just", "went", "on", "NHS", "web", "site", "when", "I", "heard", "in", "news", "they", "were", "now", "offering", "vaccine", "to", "+"]
+# ::lemmas ["they", "do", "not", ".", "i", "just", "go", "on", "NHS", "web", "site", "when", "i", "hear", "in", "news", "they", "be", "now", "offer", "vaccine", "to", "+"]
+(c12-13 / multi-sentence
+        :snt1 (c12-0 / do-02
+                     :ARG0 (c12-8 / they)
+                     :polarity -)
+        :snt2 (c12-10 / go-02
+                      :ARG0 (c12-12 / i)
+                      :ARG4 (c12-1 / site
+                                   :mod (c12-2 / web)
+                                   :poss (c12-15 / government-organization
+                                                 :name (c12-14 / name
+                                                               :op1 "NHS")))
+                      :time (c12-4 / hear-01
+                                   :ARG0 c12-12
+                                   :ARG1 (c12-6 / offer-01
+                                                :ARG0 (c12-3 / they)
+                                                :ARG1 (c12-5 / vaccine)
+                                                :ARG3 c12-12)
+                                   :time (c12-9 / now))
+                      :medium (c12-7 / news))
+        :mod (c12-11 / just))
+
+# ::snt How did they contact you to get the vaccine? Text or post?
+# ::tokens ["How", "did", "they", "contact", "you", "to", "get", "the", "vaccine", "?", "Text", "or", "post", "?"]
+# ::lemmas ["how", "do", "they", "contact", "you", "to", "get", "the", "vaccine", "?", "text", "or", "post", "?"]
+(c13-8 / multi-sentence
+       :snt1 (c13-1 / contact-01
+                    :ARG0 (c13-5 / they)
+                    :ARG1 (c13-9 / you)
+                    :purpose (c13-6 / get-01
+                                    :ARG0 c13-9
+                                    :ARG1 (c13-3 / vaccine))
+                    :manner (c13-0 / amr-unknown))
+       :snt2 (c13-4 / or
+                    :op1 (c13-2 / text-01
+                                :ARG0 c13-9)
+                    :op2 (c13-7 / post-01
+                                :ARG0 c13-9)
+                    :polarity (c13-10 / amr-unknown)))

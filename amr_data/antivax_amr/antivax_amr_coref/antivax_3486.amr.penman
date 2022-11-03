@@ -1,0 +1,119 @@
+# ::snt Thank you
+# ::tokens ["Thank", "you"]
+# ::lemmas ["thank", "you"]
+(c1-1 / thank-01
+      :ARG0 (c1-0 / i)
+      :ARG1 (c1-2 / you))
+
+# ::snt Praying for you buddy. This too shall pass.
+# ::tokens ["Praying", "for", "you", "buddy", ".", "This", "too", "shall", "pass", "."]
+# ::lemmas ["pray", "for", "you", "buddy", ".", "this", "too", "shall", "pass", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-5 / pray-01
+                  :ARG0 (c2-0 / i)
+                  :beneficiary (c2-4 / buddy))
+      :snt2 (c2-2 / pass-03
+                  :ARG1 (c2-3 / this
+                              :mod (c2-1 / too))))
+
+# ::snt Thank you.
+# ::tokens ["Thank", "you", "."]
+# ::lemmas ["thank", "you", "."]
+(c3-1 / thank-01
+      :ARG0 (c3-0 / i)
+      :ARG1 (c3-2 / you))
+
+# ::snt Agreed Schmoo.
+# ::tokens ["Agreed", "Schmoo", "."]
+# ::lemmas ["Agreed", "Schmoo", "."]
+(c4-1 / agree-01
+      :ARG1 (c4-3 / event)
+      :ARG2 (c4-0 / person
+                  :name (c4-2 / name
+                              :op1 "Schmoo")))
+
+# ::snt I hate to hear this Shmoo I dont think theres any cure-all or roadmap for how to get through this without anxiety. Just know youre not alone.
+# ::tokens ["I", "hate", "to", "hear", "this", "Shmoo", "I", "do", "nt", "think", "there", "s", "any", "cure", "-", "all", "or", "roadmap", "for", "how", "to", "get", "through", "this", "without", "anxiety", ".", "Just", "know", "you", "re", "not", "alone", "."]
+# ::lemmas ["i", "hate", "to", "hear", "this", "shmoo", "i", "do", "not", "think", "there", "s", "any", "cure", "-", "all", "or", "roadmap", "for", "how", "to", "get", "through", "this", "without", "anxiety", ".", "just", "know", "you", "re", "not", "alone", "."]
+(c5-10 / multi-sentence
+       :snt1 (c5-16 / hate-01
+                    :ARG0 (c5-2 / i)
+                    :ARG1 (c5-1 / hear-01
+                                :ARG0 c5-2
+                                :ARG1 (c5-7 / this)))
+       :snt2 (c5-5 / think-01
+                   :ARG0 (c5-13 / i)
+                   :ARG1 (c5-6 / or
+                               :op1 (c5-4 / cure-01
+                                          :ARG1 (c5-15 / all))
+                               :op2 (c5-8 / roadmap)
+                               :mod (c5-12 / any)
+                               :purpose (c5-9 / get-through-13
+                                              :ARG0 c5-13
+                                              :ARG1 (c5-11 / this)
+                                              :manner (c5-3 / have-03
+                                                            :ARG0 c5-13
+                                                            :ARG1 (c5-0 / anxiety)
+                                                            :polarity -)))
+                   :polarity -)
+       :snt3 (c5-18 / know-01
+                    :ARG0 (c5-14 / you)
+                    :ARG1 (c5-19 / alone
+                                 :domain c5-14
+                                 :polarity -)
+                    :mod (c5-17 / just)
+                    :mode imperative))
+
+# ::snt I took some Advil and feel a bit better than I did earlier.
+# ::tokens ["I", "took", "some", "Advil", "and", "feel", "a", "bit", "better", "than", "I", "did", "earlier", "."]
+# ::lemmas ["i", "take", "some", "Advil", "and", "feel", "a", "bit", "well", "than", "i", "do", "early", "."]
+(c6-2 / and
+      :op1 (c6-7 / take-01
+                 :ARG0 (c6-10 / i)
+                 :ARG1 (c6-8 / product
+                             :name (c6-12 / name
+                                          :op1 "Advil")
+                             :quant (c6-0 / some)))
+      :op2 (c6-3 / feel-01
+                 :ARG0 c6-10
+                 :ARG1 (c6-9 / good-02
+                             :ARG2-of (c6-4 / have-degree-91
+                                            :ARG1 c6-3
+                                            :ARG3 (c6-11 / more
+                                                         :quant (c6-5 / bit))
+                                            :ARG4 (c6-6 / feel-01
+                                                        :ARG0 c6-10
+                                                        :time (c6-1 / before))))))
+
+# ::snt Thank you
+# ::tokens ["Thank", "you"]
+# ::lemmas ["thank", "you"]
+(c7-1 / thank-01
+      :ARG0 (c7-0 / i)
+      :ARG1 (c7-2 / you))
+
+# ::snt I'm pulling for ya! Thanks for all you are doing. Can't even imagine what the healthcare workers have been experiencing for the last months.
+# ::tokens ["I", "'m", "pulling", "for", "ya", "!", "Thanks", "for", "all", "you", "are", "doing", ".", "Ca", "n't", "even", "imagine", "what", "the", "healthcare", "workers", "have", "been", "experiencing", "for", "the", "last", "months", "."]
+# ::lemmas ["i", "be", "pull", "for", "ya", "!", "thank", "for", "all", "you", "be", "do", ".", "can", "not", "even", "imagine", "what", "the", "healthcare", "worker", "have", "be", "experience", "for", "the", "last", "months", "."]
+(c8-5 / multi-sentence
+      :snt1 (c8-19 / pull-01
+                   :ARG0 (c8-1 / i)
+                   :beneficiary (c8-10 / you))
+      :snt2 (c8-4 / thank-01
+                  :ARG0 (c8-8 / i)
+                  :ARG1 (c8-11 / you)
+                  :ARG2 (c8-12 / all
+                               :ARG1-of (c8-0 / do-02
+                                              :ARG0 c8-11)))
+      :snt3 (c8-17 / possible-01
+                   :ARG1 (c8-9 / imagine-01
+                               :ARG0 (c8-16 / i)
+                               :ARG1 (c8-3 / thing
+                                           :ARG1-of (c8-6 / experience-01
+                                                          :ARG0 (c8-7 / person
+                                                                      :ARG0-of (c8-2 / work-01
+                                                                                     :ARG1 (c8-14 / healthcare)))
+                                                          :time (c8-13 / month
+                                                                       :mod (c8-18 / last))))
+                               :mod (c8-15 / even))
+                   :polarity -))

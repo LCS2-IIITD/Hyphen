@@ -1,0 +1,33 @@
+# ::snt OK ... so this is disturbing on several levels but you gotta see this especially a . k . a <URL>
+# ::tokens ["OK", "...", "so", "this", "is", "disturbing", "on", "several", "levels", "but", "you", "got", "ta", "see", "this", "especially", "a", ".", "k", ".", "a", "<", "URL", ">"]
+# ::lemmas ["ok", "...", "so", "this", "be", "disturb", "on", "several", "level", "but", "you", "got", "to", "see", "this", "especially", "a", ".", "k", ".", "a", "<", "URL", ">"]
+(c1-9 / multi-sentence
+      :snt1 (c1-5 / okay-01)
+      :snt2 (c1-2 / contrast-01
+                  :ARG1 (c1-0 / disturb-01
+                              :ARG0 (c1-6 / this)
+                              :prep-on (c1-7 / level
+                                             :quant (c1-1 / several)))
+                  :ARG2 (c1-4 / obligate-01
+                              :ARG1 (c1-10 / you)
+                              :ARG2 (c1-8 / see-01
+                                          :ARG0 c1-10
+                                          :ARG1 (c1-3 / this
+                                                      :mod (c1-11 / especially))))))
+
+# ::snt Anyone from Tripoli is my hero . Tripoli , the role model for all of Lebanon .
+# ::tokens ["Anyone", "from", "Tripoli", "is", "my", "hero", ".", "Tripoli", ",", "the", "role", "model", "for", "all", "of", "Lebanon", "."]
+# ::lemmas ["anyone", "from", "Tripoli", "be", "my", "hero", ".", "Tripoli", ",", "the", "role", "model", "for", "all", "of", "Lebanon", "."]
+(c2-7 / multi-sentence
+      :snt1 (c2-3 / hero
+                  :poss (c2-6 / i)
+                  :domain (c2-1 / anyone
+                                :source (c2-2 / city
+                                              :name (c2-8 / name
+                                                          :op1 "Tripoli"))))
+      :snt2 (c2-4 / role-model
+                  :beneficiary (c2-0 / country
+                                     :name (c2-5 / name
+                                                 :op1 "Lebanon")
+                                     :mod (c2-9 / all))
+                  :domain c2-2))

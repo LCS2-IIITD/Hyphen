@@ -1,0 +1,43 @@
+# ::snt mine is booked for Thursday
+# ::tokens ["mine", "is", "booked", "for", "Thursday"]
+# ::lemmas ["mine", "be", "book", "for", "Thursday"]
+(c1-0 / book-03
+      :ARG1 (c1-2 / mine)
+      :ARG3 (c1-1 / date-entity
+                  :weekday (c1-3 / thursday)))
+
+# ::snt Congratulations Dan!
+# ::tokens ["Congratulations", "Dan", "!"]
+# ::lemmas ["Congratulations", "Dan", "!"]
+(c2-0 / say-01
+      :ARG1 (c2-3 / congratulate-01)
+      :ARG2 (c2-1 / person
+                  :name (c2-2 / name
+                              :op1 "Dan"))
+      :mode expressive)
+
+# ::snt Me too
+# ::tokens ["Me", "too"]
+# ::lemmas ["i", "too"]
+(c3-0 / i
+      :mod (c3-1 / too))
+
+# ::snt good
+# ::tokens ["good"]
+# ::lemmas ["good"]
+(c4-0 / good-02)
+
+# ::snt If it is AstraZeneca I hope you don't have much to do Tuesday!
+# ::tokens ["If", "it", "is", "AstraZeneca", "I", "hope", "you", "do", "n't", "have", "much", "to", "do", "Tuesday", "!"]
+# ::lemmas ["if", "it", "be", "AstraZeneca", "i", "hope", "you", "do", "not", "have", "much", "to", "do", "Tuesday", "!"]
+(c5-3 / hope-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-0 / do-02
+                  :ARG0 (c5-8 / you)
+                  :ARG1 (c5-6 / much)
+                  :time (c5-2 / date-entity
+                              :weekday (c5-4 / tuesday))
+                  :polarity -)
+      :condition (c5-1 / company
+                       :name (c5-7 / name
+                                   :op1 "AstraZeneca")))

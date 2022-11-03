@@ -1,0 +1,200 @@
+# ::snt anything for more attention.
+# ::tokens ["anything", "for", "more", "attention", "."]
+# ::lemmas ["anything", "for", "more", "attention", "."]
+(c1-2 / anything
+      :purpose (c1-1 / attend-02
+                     :mod (c1-0 / more)))
+
+# ::snt I love Sharon, but she's always messy.
+# ::tokens ["I", "love", "Sharon", ",", "but", "she", "'s", "always", "messy", "."]
+# ::lemmas ["i", "love", "Sharon", ",", "but", "she", "be", "always", "messy", "."]
+(c2-4 / contrast-01
+      :ARG1 (c2-3 / love-01
+                  :ARG0 (c2-5 / i)
+                  :ARG1 (c2-2 / person
+                              :name (c2-0 / name
+                                          :op1 "Sharon")))
+      :ARG2 (c2-1 / mess-up-02
+                  :ARG0 c2-2
+                  :time (c2-6 / always)))
+
+# ::snt You are already loose down there why get a surrogate
+# ::tokens ["You", "are", "already", "loose", "down", "there", "why", "get", "a", "surrogate"]
+# ::lemmas ["you", "be", "already", "loose", "down", "there", "why", "get", "a", "surrogate"]
+(c3-3 / cause-01
+      :ARG0 (c3-6 / amr-unknown)
+      :ARG1 (c3-7 / get-01
+                  :ARG0 (c3-0 / you)
+                  :ARG1 (c3-1 / surrogate))
+      :condition (c3-2 / loose-03
+                       :ARG1 c3-0
+                       :time (c3-5 / already)
+                       :location (c3-8 / down
+                                       :op1 (c3-4 / there))))
+
+# ::snt And what's with the forever-Zoolander face?
+# ::tokens ["And", "what", "'s", "with", "the", "forever", "-", "Zoolander", "face", "?"]
+# ::lemmas ["and", "what", "be", "with", "the", "forever", "-", "zoolander", "face", "?"]
+(c5-5 / and
+      :op2 (c5-4 / amr-unknown
+                 :topic (c5-0 / face
+                              :mod (c5-2 / product
+                                         :name (c5-1 / name
+                                                     :op1 "Zoolander"))
+                              :duration (c5-3 / forever))))
+
+# ::snt We don't need any more kardashion bitches
+# ::tokens ["We", "do", "n't", "need", "any", "more", "kardashion", "bitches"]
+# ::lemmas ["we", "do", "not", "need", "any", "more", "kardashion", "bitch"]
+(c6-2 / need-01
+      :ARG0 (c6-5 / we)
+      :ARG1 (c6-1 / bitch
+                  :mod (c6-0 / fashion
+                             :mod (c6-4 / kardashion))
+                  :quant (c6-3 / more
+                               :mod (c6-6 / any)))
+      :polarity -)
+
+# ::snt Gorgeous
+# ::tokens ["Gorgeous"]
+# ::lemmas ["gorgeous"]
+(c7-0 / gorgeous)
+
+# ::snt Kim looks awful with her hair blonde or any variation of blonde. However, Khloe looks amazing w blonde hair because she has a right skintone
+# ::tokens ["Kim", "looks", "awful", "with", "her", "hair", "blonde", "or", "any", "variation", "of", "blonde", ".", "However", ",", "Khloe", "looks", "amazing", "w", "blonde", "hair", "because", "she", "has", "a", "right", "skintone"]
+# ::lemmas ["Kim", "look", "awful", "with", "her", "hair", "blonde", "or", "any", "variation", "of", "blonde", ".", "however", ",", "Khloe", "look", "amazing", "w", "blonde", "hair", "because", "she", "have", "a", "right", "skintone"]
+(c8-15 / multi-sentence
+       :snt1 (c8-2 / look-02
+                   :ARG0 (c8-21 / person
+                                :name (c8-19 / name
+                                             :op1 "Kim")
+                                :part (c8-7 / hair))
+                   :ARG1 (c8-10 / awful)
+                   :ARG2 (c8-4 / or
+                               :op1 (c8-14 / blonde
+                                           :domain c8-7)
+                               :op2 (c8-5 / vary-01
+                                          :ARG1 c8-7
+                                          :ARG2 (c8-1 / blonde)
+                                          :mod (c8-9 / any))))
+       :snt2 (c8-18 / contrast-01
+                    :ARG2 (c8-11 / look-02
+                                 :ARG0 (c8-16 / person
+                                              :name (c8-17 / name
+                                                           :op1 "Khloe")
+                                              :part (c8-22 / hair
+                                                           :mod (c8-3 / blonde)))
+                                 :ARG1 (c8-8 / amazing)
+                                 :manner (c8-13 / blonde)
+                                 :ARG1-of (c8-12 / cause-01
+                                                 :ARG0 (c8-6 / have-03
+                                                             :ARG0 c8-16
+                                                             :ARG1 (c8-0 / skintone
+                                                                         :ARG1-of (c8-20 / right-03)))))))
+
+# ::snt Who cares she looks a hot mess ,so much id going on in this world
+# ::tokens ["Who", "cares", "she", "looks", "a", "hot", "mess", ",", "so", "much", "i", "d", "going", "on", "in", "this", "world"]
+# ::lemmas ["who", "care", "she", "look", "a", "hot", "mess", ",", "so", "much", "i", "d", "go", "on", "in", "this", "world"]
+(c9-11 / and
+       :op1 (c9-6 / care-01
+                  :ARG0 (c9-10 / amr-unknown)
+                  :ARG1 (c9-4 / look-02
+                              :ARG0 (c9-2 / she)
+                              :ARG1 (c9-1 / mess
+                                          :ARG1-of (c9-3 / hot-05))))
+       :op2 (c9-12 / go-on-15
+                   :ARG1 (c9-13 / i)
+                   :location (c9-7 / world
+                                   :mod (c9-9 / this))
+                   :ARG1-of (c9-8 / have-quant-91
+                                  :ARG2 (c9-5 / much)
+                                  :ARG3 (c9-0 / so))))
+
+# ::snt File this under nobody gives a fuck
+# ::tokens ["File", "this", "under", "nobody", "gives", "a", "fuck"]
+# ::lemmas ["file", "this", "under", "nobody", "give", "a", "fuck"]
+(c10-4 / give-16
+       :ARG0 (c10-1 / nobody)
+       :ARG1 (c10-0 / fuck)
+       :ARG2 (c10-2 / file-01
+                    :ARG0 c10-1
+                    :ARG1 (c10-3 / this)
+                    :ARG2 (c10-5 / under)))
+
+# ::snt When u r nosey..and didnt hear what u wanted to..then talk about who cares..
+# ::tokens ["When", "u", "r", "nosey", "..", "and", "did", "nt", "hear", "what", "u", "wanted", "to", "..", "then", "talk", "about", "who", "cares", ".."]
+# ::lemmas ["when", "u", "r", "nosey", "..", "and", "do", "not", "hear", "what", "u", "want", "to", "..", "then", "talk", "about", "who", "care", ".."]
+(c11-6 / talk-01
+       :ARG0 (c11-0 / you)
+       :ARG1 (c11-3 / person
+                    :ARG0-of (c11-4 / care-01))
+       :time (c11-7 / and
+                    :op1 (c11-1 / nosey
+                                :domain c11-0)
+                    :op2 (c11-2 / hear-01
+                                :ARG0 c11-0
+                                :ARG1 (c11-8 / thing
+                                             :ARG1-of (c11-5 / want-01
+                                                             :ARG0 c11-0))
+                                :polarity -))
+       :mode imperative)
+
+# ::snt We need to pay more minds on what's really going on in this world .
+# ::tokens ["We", "need", "to", "pay", "more", "minds", "on", "what", "'s", "really", "going", "on", "in", "this", "world", "."]
+# ::lemmas ["we", "need", "to", "pay", "more", "mind", "on", "what", "be", "really", "go", "on", "in", "this", "world", "."]
+(c13-0 / obligate-01
+       :ARG2 (c13-4 / pay-01
+                    :ARG0 (c13-6 / we)
+                    :ARG1 (c13-1 / mind
+                                 :quant (c13-3 / more))
+                    :ARG2 (c13-7 / thing
+                                 :ARG1-of (c13-8 / go-on-15
+                                                 :ARG1-of (c13-2 / real-04)
+                                                 :location (c13-5 / world
+                                                                  :mod (c13-9 / this))))))
+
+# ::snt Who cares? they're such old news, find something worth time and attention!
+# ::tokens ["Who", "cares", "?", "they", "'re", "such", "old", "news", ",", "find", "something", "worth", "time", "and", "attention", "!"]
+# ::lemmas ["who", "care", "?", "they", "be", "such", "old", "news", ",", "find", "something", "worth", "time", "and", "attention", "!"]
+(c14-5 / multi-sentence
+       :snt1 (c14-7 / care-01
+                    :ARG0 (c14-12 / amr-unknown))
+       :snt2 (c14-11 / and
+                     :op1 (c14-4 / news
+                                 :mod (c14-0 / old
+                                             :degree (c14-6 / such))
+                                 :domain (c14-10 / they))
+                     :op2 (c14-1 / find-01
+                                 :ARG0 (c14-3 / you)
+                                 :ARG1 (c14-2 / something
+                                              :ARG1-of (c14-8 / worth-02
+                                                              :ARG2 (c14-9 / and
+                                                                           :op1 (c14-14 / time)
+                                                                           :op2 (c14-13 / attend-02
+                                                                                        :ARG1 c14-2))))
+                                 :mode imperative)))
+
+# ::snt She complains about the attention but she wouldn't be famous without sooooooo why complain?
+# ::tokens ["She", "complains", "about", "the", "attention", "but", "she", "would", "n't", "be", "famous", "without", "sooooooo", "why", "complain", "?"]
+# ::lemmas ["she", "complain", "about", "the", "attention", "but", "she", "would", "not", "be", "famous", "without", "sooooooo", "why", "complain", "?"]
+(c15-2 / contrast-01
+       :ARG1 (c15-6 / complain-01
+                    :ARG0 (c15-1 / she)
+                    :ARG1 (c15-5 / attend-02))
+       :ARG2 (c15-0 / fame-01
+                    :ARG1 c15-1
+                    :ARG1-of (c15-3 / cause-01
+                                    :ARG0 (c15-4 / amr-unknown))
+                    :polarity -))
+
+# ::snt Super invasive? Mega Lols.
+# ::tokens ["Super", "invasive", "?", "Mega", "Lols", "."]
+# ::lemmas ["super", "invasive", "?", "Mega", "Lols", "."]
+(c16-0 / multi-sentence
+       :snt1 (c16-5 / invade-01
+                    :degree (c16-1 / super))
+       :snt2 (c16-4 / laugh-01
+                    :ARG0 (c16-2 / i)
+                    :ARG2 (c16-6 / loud
+                                 :mod (c16-3 / mega))
+                    :mode expressive))

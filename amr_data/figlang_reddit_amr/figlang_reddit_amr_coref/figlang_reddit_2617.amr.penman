@@ -1,0 +1,22 @@
+# ::snt A monkey jumping around in the snow
+# ::tokens ["A", "monkey", "jumping", "around", "in", "the", "snow"]
+# ::lemmas ["a", "monkey", "jump", "around", "in", "the", "snow"]
+(c1-3 / monkey
+      :ARG0-of (c1-1 / jump-03
+                     :ARG1 (c1-2 / around)
+                     :location (c1-0 / snow)))
+
+# ::snt man, some of you redditors are really sensitive.
+# ::tokens ["man", ",", "some", "of", "you", "redditors", "are", "really", "sensitive", "."]
+# ::lemmas ["man", ",", "some", "of", "you", "redditor", "be", "really", "sensitive", "."]
+(c2-0 / sensitive-03
+      :ARG0 (c2-6 / person
+                  :ARG1-of (c2-1 / include-91
+                                 :ARG2 (c2-3 / person
+                                             :ARG0-of (c2-4 / reddit-01)))
+                  :quant (c2-5 / some)
+                  :ARG1-of c2-1
+                  :ARG2 c2-3)
+      :degree (c2-2 / really)
+      :mod (c2-7 / man
+                 :mode expressive))

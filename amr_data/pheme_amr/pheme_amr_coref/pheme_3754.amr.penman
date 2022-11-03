@@ -1,0 +1,88 @@
+# ::snt told you. Terrorism
+# ::tokens ["told", "you", ".", "Terrorism"]
+# ::lemmas ["tell", "you", ".", "terrorism"]
+(c1-1 / multi-sentence
+      :snt1 (c1-4 / tell-01
+                  :ARG0 (c1-2 / i)
+                  :ARG2 (c1-0 / you))
+      :snt2 (c1-3 / terrorism))
+
+# ::snt is it true that the crush was due to a terrorist related incident?
+# ::tokens ["is", "it", "true", "that", "the", "crush", "was", "due", "to", "a", "terrorist", "related", "incident", "?"]
+# ::lemmas ["be", "it", "true", "that", "the", "crush", "be", "due", "to", "a", "terrorist", "related", "incident", "?"]
+(c2-5 / true-01
+      :polarity (c2-6 / amr-unknown)
+      :ARG1 (c2-2 / cause-01
+                  :ARG0 (c2-0 / incident
+                              :ARG1-of (c2-1 / relate-01
+                                             :ARG2 (c2-4 / terrorist)))
+                  :ARG1 (c2-3 / crush-02)))
+
+# ::snt Oops RT DEVELOPING Pilot locked out of cockpit in Alps crash report.
+# ::tokens ["Oops", "RT", "DEVELOPING", "Pilot", "locked", "out", "of", "cockpit", "in", "Alps", "crash", "report", "."]
+# ::lemmas ["oops", "RT", "DEVELOPING", "Pilot", "lock", "out", "of", "cockpit", "in", "Alps", "crash", "report", "."]
+(c3-0 / lock-01
+      :ARG1 (c3-5 / person
+                  :ARG0-of (c3-10 / pilot-01)
+                  :ARG0-of (c3-6 / develop-01))
+      :ARG2 (c3-3 / out-06
+                  :ARG1 c3-5
+                  :ARG2 (c3-7 / cockpit))
+      :time (c3-8 / report-01
+                  :ARG1 (c3-9 / crash-01
+                              :location (c3-1 / mountain
+                                              :name (c3-4 / name
+                                                          :op1 "Alps"))))
+      :mod (c3-2 / oops
+                 :mode expressive))
+
+# ::snt could it be possible that instead of a decline by plane it was an incline in topography?
+# ::tokens ["could", "it", "be", "possible", "that", "instead", "of", "a", "decline", "by", "plane", "it", "was", "an", "incline", "in", "topography", "?"]
+# ::lemmas ["could", "it", "be", "possible", "that", "instead", "of", "a", "decline", "by", "plane", "it", "be", "an", "incline", "in", "topography", "?"]
+(c4-2 / possible-01
+      :ARG1 (c4-1 / incline-01
+                  :ARG0 (c4-4 / it)
+                  :ARG1 (c4-5 / topography)
+                  :ARG1-of (c4-0 / instead-of-91
+                                 :ARG2 (c4-3 / decline-01
+                                             :manner (c4-6 / plane))))
+      :polarity (c4-7 / amr-unknown))
+
+# ::snt Yes, all of this is very shocking! wonderful people killed! Most students and working people
+# ::tokens ["Yes", ",", "all", "of", "this", "is", "very", "shocking", "!", "wonderful", "people", "killed", "!", "Most", "students", "and", "working", "people"]
+# ::lemmas ["yes", ",", "all", "of", "this", "be", "very", "shocking", "!", "wonderful", "people", "kill", "!", "most", "student", "and", "work", "people"]
+(c5-1 / multi-sentence
+      :snt1 (c5-10 / shock-01
+                   :ARG0 (c5-11 / this
+                                :mod (c5-13 / all))
+                   :degree (c5-7 / very))
+      :snt2 (c5-5 / kill-01
+                  :ARG1 (c5-8 / person
+                              :ARG1-of (c5-0 / wonderful-03)))
+      :snt3 (c5-4 / and
+                  :op1 (c5-12 / person
+                              :ARG0-of (c5-3 / study-01))
+                  :op2 (c5-2 / person
+                             :ARG0-of (c5-6 / work-01))
+                  :quant (c5-9 / most)))
+
+# ::snt Name the pilots. Therein may lie a clue.
+# ::tokens ["Name", "the", "pilots", ".", "Therein", "may", "lie", "a", "clue", "."]
+# ::lemmas ["name", "the", "pilot", ".", "therein", "may", "lie", "a", "clue", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / name-01
+                  :ARG0 (c6-0 / you)
+                  :ARG1 (c6-5 / person
+                              :ARG0-of (c6-8 / pilot-01))
+                  :mode imperative)
+      :snt2 (c6-3 / possible-01
+                  :ARG1 (c6-1 / lie-08
+                              :ARG0 (c6-7 / therein)
+                              :ARG1 (c6-6 / clue))))
+
+# ::snt WTF?
+# ::tokens ["WTF", "?"]
+# ::lemmas ["WTF", "?"]
+(c7-1 / amr-unknown
+      :mod (c7-0 / fuck
+                 :mode expressive))

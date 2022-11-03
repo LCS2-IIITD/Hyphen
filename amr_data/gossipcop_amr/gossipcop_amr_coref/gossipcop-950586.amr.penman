@@ -1,0 +1,69 @@
+# ::snt They Look Marvelous
+# ::tokens ["They", "Look", "Marvelous"]
+# ::lemmas ["they", "look", "marvelous"]
+(c1-1 / look-02
+      :ARG0 (c1-2 / they)
+      :ARG1 (c1-0 / comic-03
+                  :ARG1 c1-2))
+
+# ::snt Couple goals
+# ::tokens ["Couple", "goals"]
+# ::lemmas ["couple", "goal"]
+(c2-0 / goal
+      :quant (c2-1 / couple))
+
+# ::snt Kate aged like soy milk yikes !!
+# ::tokens ["Kate", "aged", "like", "soy", "milk", "yikes", "!", "!"]
+# ::lemmas ["Kate", "aged", "like", "soy", "milk", "yike", "!", "!"]
+(c3-6 / age-01
+      :ARG1 (c3-5 / person
+                  :name (c3-1 / name
+                              :op1 "Kate"))
+      :ARG1-of (c3-4 / resemble-01
+                     :ARG2 (c3-0 / yikes
+                                 :mod (c3-2 / milk
+                                            :source (c3-3 / soy)))))
+
+# ::snt What a bunch of great looking people!!
+# ::tokens ["What", "a", "bunch", "of", "great", "looking", "people", "!", "!"]
+# ::lemmas ["what", "a", "bunch", "of", "great", "look", "people", "!", "!"]
+(c4-2 / person
+      :quant (c4-1 / bunch)
+      :ARG0-of (c4-3 / look-02
+                     :ARG1 (c4-0 / great))
+      :mode expressive)
+
+# ::snt Couple goalsbeautiful
+# ::tokens ["Couple", "goalsbeautiful"]
+# ::lemmas ["couple", "goalsbeautiful"]
+(c5-2 / beautiful-02
+      :ARG1 (c5-0 / goal
+                  :quant (c5-1 / couple)))
+
+# ::snt They're with their husbands at a proper event - Please Use their Given Titles.
+# ::tokens ["They", "'re", "with", "their", "husbands", "at", "a", "proper", "event", "-", "Please", "Use", "their", "Given", "Titles", "."]
+# ::lemmas ["they", "be", "with", "their", "husband", "at", "a", "proper", "event", "-", "please", "use", "their", "give", "Titles", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-0 / be-with-10
+                  :ARG0 (c6-9 / they)
+                  :ARG1 (c6-6 / person
+                              :ARG0-of (c6-5 / have-rel-role-91
+                                             :ARG1 c6-9
+                                             :ARG2 (c6-7 / husband)))
+                  :location (c6-4 / event
+                                  :mod (c6-3 / proper)))
+      :snt2 (c6-11 / use-01
+                   :ARG0 (c6-1 / you)
+                   :ARG1 (c6-12 / Title
+                                :ARG1-of (c6-10 / give-01)
+                                :poss (c6-8 / they))
+                   :mode imperative
+                   :polite +))
+
+# ::snt Royals ...... I wanna be
+# ::tokens ["Royals", "......", "I", "wanna", "be"]
+# ::lemmas ["Royals", "......", "i", "wanna", "be"]
+(c7-1 / person
+      :mod (c7-0 / royal)
+      :ARG1-of (c7-3 / want-01
+                     :ARG0 (c7-2 / i)))

@@ -1,0 +1,81 @@
+# ::snt stunned is how I feel
+# ::tokens ["stunned", "is", "how", "I", "feel"]
+# ::lemmas ["stunned", "be", "how", "i", "feel"]
+(c1-1 / feel-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-0 / stun-01
+                  :ARG1 c1-2))
+
+# ::snt : Stunning photos from Ottawa This is where the shooter was killed.
+# ::tokens [":", "Stunning", "photos", "from", "Ottawa", "This", "is", "where", "the", "shooter", "was", "killed", "."]
+# ::lemmas [":", "stunning", "photo", "from", "Ottawa", "this", "be", "where", "the", "shooter", "be", "kill", "."]
+(c2-2 / photo
+      :ARG0-of (c2-4 / stun-01)
+      :source (c2-3 / city
+                    :name (c2-1 / name
+                                :op1 "Ottawa"))
+      :location-of (c2-6 / kill-01
+                         :ARG1 (c2-7 / person
+                                     :ARG0-of (c2-0 / shoot-02))
+                         :location (c2-5 / this)))
+
+# ::snt I can see no gain of knowledge from these pictures. None.
+# ::tokens ["I", "can", "see", "no", "gain", "of", "knowledge", "from", "these", "pictures", ".", "None", "."]
+# ::lemmas ["i", "can", "see", "no", "gain", "of", "knowledge", "from", "these", "picture", ".", "none", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-3 / possible-01
+                  :ARG1 (c3-5 / see-01
+                              :ARG0 (c3-1 / i)
+                              :ARG1 (c3-4 / gain-02
+                                          :ARG1 (c3-7 / know-01)
+                                          :ARG2 (c3-8 / picture
+                                                      :mod (c3-6 / this))))
+                  :polarity -)
+      :snt2 (c3-2 / none))
+
+# ::snt Shooting War Memorial Parliament One deadRT
+# ::tokens ["Shooting", "War", "Memorial", "Parliament", "One", "deadRT"]
+# ::lemmas ["shoot", "War", "Memorial", "Parliament", "one", "deadrt"]
+(c4-6 / say-01
+      :ARG0 (c4-4 / publication
+                  :name (c4-2 / name
+                              :op1 "RT"))
+      :ARG1 (c4-5 / die-01
+                  :ARG1 (c4-7 / person
+                              :part-of (c4-0 / building
+                                             :name (c4-3 / name
+                                                         :op1 "War"
+                                                         :op2 "Memorial"
+                                                         :op3 "Parliament"))
+                              :ARG0-of (c4-1 / shoot-02))))
+
+# ::snt so sorry they now have "workplace violence" like us!!
+# ::tokens ["so", "sorry", "they", "now", "have", "\"", "workplace", "violence", "\"", "like", "us", "!", "!"]
+# ::lemmas ["so", "sorry", "they", "now", "have", "\"", "workplace", "violence", "\"", "like", "we", "!", "!"]
+(c5-8 / sorry-01
+      :ARG1 (c5-3 / i)
+      :ARG2 (c5-0 / have-03
+                  :ARG0 (c5-9 / they)
+                  :ARG1 (c5-6 / violence
+                              :mod (c5-1 / workplace))
+                  :time (c5-5 / now)
+                  :ARG1-of (c5-7 / resemble-01
+                                 :ARG2 (c5-10 / have-03
+                                              :ARG0 (c5-4 / we))))
+      :degree (c5-2 / so))
+
+# ::snt this is absolute madness. What's going on in my country I fought so hard for.
+# ::tokens ["this", "is", "absolute", "madness", ".", "What", "'s", "going", "on", "in", "my", "country", "I", "fought", "so", "hard", "for", "."]
+# ::lemmas ["this", "be", "absolute", "madness", ".", "what", "be", "go", "on", "in", "my", "country", "i", "fight", "so", "hard", "for", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-5 / madness
+                  :degree (c7-10 / absolute)
+                  :domain (c7-9 / this))
+      :snt2 (c7-7 / go-on-15
+                  :ARG1 (c7-3 / amr-unknown)
+                  :location (c7-6 / country
+                                  :poss (c7-4 / i))
+                  :ARG2-of (c7-1 / fight-01
+                                 :ARG0 c7-4
+                                 :ARG1-of (c7-0 / hard-02
+                                                :degree (c7-8 / so)))))

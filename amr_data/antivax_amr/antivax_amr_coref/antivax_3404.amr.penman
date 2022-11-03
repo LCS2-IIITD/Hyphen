@@ -1,0 +1,76 @@
+# ::snt How dramatic.....
+# ::tokens ["How", "dramatic", "....."]
+# ::lemmas ["how", "dramatic", "....."]
+(c2-0 / dramatic
+      :degree (c2-1 / so))
+
+# ::snt I have a bit of a headache just from actually. Gonna have to lay down for a bit.
+# ::tokens ["I", "have", "a", "bit", "of", "a", "headache", "just", "from", "actually", ".", "Gon", "na", "have", "to", "lay", "down", "for", "a", "bit", "."]
+# ::lemmas ["i", "have", "a", "bit", "of", "a", "headache", "just", "from", "actually", ".", "going", "to", "have", "to", "lay", "down", "for", "a", "bit", "."]
+(c3-12 / multi-sentence
+       :snt1 (c3-4 / have-03
+                   :ARG0 (c3-11 / i)
+                   :ARG1 (c3-10 / headache
+                                :quant (c3-9 / bit))
+                   :ARG1-of (c3-3 / cause-01
+                                  :ARG0 (c3-13 / event
+                                               :ARG1-of (c3-2 / actual-02)
+                                               :mod (c3-7 / just))))
+       :snt2 (c3-6 / obligate-01
+                   :ARG1 (c3-5 / i)
+                   :ARG2 (c3-8 / lay-01
+                               :ARG1 c3-5
+                               :ARG2 (c3-0 / down)
+                               :duration (c3-1 / bit))))
+
+# ::snt Wait until knocks you on your ass for hours. But that means your immune system is working.
+# ::tokens ["Wait", "until", "knocks", "you", "on", "your", "ass", "for", "hours", ".", "But", "that", "means", "your", "immune", "system", "is", "working", "."]
+# ::lemmas ["wait", "until", "knock", "you", "on", "your", "ass", "for", "hours", ".", "but", "that", "mean", "your", "immune", "system", "be", "work", "."]
+(c4-12 / multi-sentence
+       :snt1 (c4-4 / wait-01
+                   :ARG1 (c4-14 / you
+                                :part (c4-1 / ass))
+                   :duration (c4-3 / multiple
+                                   :op1 (c4-10 / temporal-quantity
+                                               :unit (c4-7 / hour)
+                                               :quant 1))
+                   :time (c4-8 / until
+                               :op1 (c4-13 / knock-01
+                                           :ARG1 c4-1
+                                           :duration c4-3))
+                   :mode imperative)
+       :snt2 (c4-5 / contrast-01
+                   :ARG2 (c4-9 / mean-01
+                               :ARG1 (c4-6 / that)
+                               :ARG2 (c4-15 / work-09
+                                            :ARG1 (c4-0 / system
+                                                        :ARG1-of (c4-11 / immune-02)
+                                                        :poss (c4-2 / you))))))
+
+# ::snt Drink lots of water and move your arm . You'll be fine
+# ::tokens ["Drink", "lots", "of", "water", "and", "move", "your", "arm", ".", "You", "'ll", "be", "fine"]
+# ::lemmas ["drink", "lot", "of", "water", "and", "move", "your", "arm", ".", "you", "'ll", "be", "fine"]
+(c5-7 / multi-sentence
+      :snt1 (c5-1 / and
+                  :op1 (c5-0 / drink-01
+                             :ARG0 (c5-8 / you
+                                         :part (c5-9 / arm))
+                             :ARG1 (c5-5 / water
+                                         :quant (c5-6 / lot))
+                             :mode imperative)
+                  :op2 (c5-4 / move-01
+                             :ARG0 c5-8
+                             :ARG1 c5-9
+                             :mode imperative))
+      :snt2 (c5-3 / fine-04
+                  :ARG1 (c5-2 / you
+                              :part c5-9)))
+
+# ::snt Nice! Congratulations!!
+# ::tokens ["Nice", "!", "Congratulations", "!", "!"]
+# ::lemmas ["nice", "!", "congratulation", "!", "!"]
+(c6-0 / multi-sentence
+      :snt1 (c6-1 / nice-01)
+      :snt2 (c6-3 / congratulate-01
+                  :ARG1 (c6-2 / you)
+                  :mode expressive))

@@ -1,0 +1,34 @@
+# ::snt This is fake
+# ::tokens ["This", "is", "fake"]
+# ::lemmas ["this", "be", "fake"]
+(c1-0 / fake-02
+      :ARG1 (c1-1 / this))
+
+# ::snt Not seeing this reported anywhere else. +
+# ::tokens ["Not", "seeing", "this", "reported", "anywhere", "else", ".", "+"]
+# ::lemmas ["not", "see", "this", "report", "anywhere", "else", ".", "+"]
+(c2-4 / see-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-3 / report-01
+                  :ARG1 (c2-0 / this))
+      :location (c2-2 / anywhere
+                      :mod (c2-5 / else))
+      :polarity -)
+
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c3-0 / amr-empty)
+
+# ::snt maybe the news is fake but not the fact..one hydrologic cycle..
+# ::tokens ["maybe", "the", "news", "is", "fake", "but", "not", "the", "fact", "..", "one", "hydrologic", "cycle", ".."]
+# ::lemmas ["maybe", "the", "news", "be", "fake", "but", "not", "the", "fact", "..", "one", "hydrologic", "cycle", ".."]
+(c4-3 / contrast-01
+      :ARG1 (c4-2 / possible-01
+                  :ARG1 (c4-1 / fake-02
+                              :ARG1 (c4-6 / news)))
+      :ARG2 (c4-4 / fact
+                  :domain (c4-5 / cycle-02
+                                :ARG1 (c4-0 / hydrology)
+                                :quant 1)
+                  :polarity -))

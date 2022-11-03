@@ -1,0 +1,79 @@
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c1-0 / amr-empty)
+
+# ::snt Not only clash of cultures but civil war.
+# ::tokens ["Not", "only", "clash", "of", "cultures", "but", "civil", "war", "."]
+# ::lemmas ["not", "only", "clash", "of", "culture", "but", "civil", "war", "."]
+(c2-4 / and
+      :op1 (c2-2 / clash-01
+                 :ARG1 (c2-1 / culture))
+      :op2 (c2-0 / war-01
+                 :mod (c2-3 / civil)))
+
+# ::snt I don't know what to say I'm speechless why do people do these things
+# ::tokens ["I", "do", "n't", "know", "what", "to", "say", "I", "'m", "speechless", "why", "do", "people", "do", "these", "things"]
+# ::lemmas ["i", "do", "not", "know", "what", "to", "say", "i", "be", "speechless", "why", "do", "people", "do", "these", "thing"]
+(c3-0 / multi-sentence
+      :snt1 (c3-3 / know-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 (c3-11 / thing
+                               :ARG1-of (c3-10 / say-01
+                                               :ARG0 c3-2))
+                  :polarity -)
+      :snt2 (c3-1 / speak-01
+                  :ARG0 (c3-8 / i)
+                  :polarity -)
+      :snt3 (c3-6 / do-02
+                  :ARG0 (c3-5 / person)
+                  :ARG1 (c3-9 / thing
+                              :mod (c3-4 / this))
+                  :ARG1-of (c3-7 / cause-01
+                                 :ARG0 (c3-12 / amr-unknown))))
+
+# ::snt Paris gunman was from same jihadist cell as Hebdo suspects
+# ::tokens ["Paris", "gunman", "was", "from", "same", "jihadist", "cell", "as", "Hebdo", "suspects"]
+# ::lemmas ["Paris", "gunman", "be", "from", "same", "jihadist", "cell", "as", "Hebdo", "suspect"]
+(c4-3 / be-from-91
+      :ARG1 (c4-10 / gunman
+                   :location (c4-9 / city
+                                   :name (c4-5 / name
+                                               :op1 "Paris")))
+      :ARG2 (c4-8 / cell
+                  :mod (c4-0 / jihadist)
+                  :ARG1-of (c4-11 / same-01
+                                  :ARG2 (c4-7 / person
+                                              :ARG2-of (c4-4 / suspect-01)
+                                              :ARG0-of (c4-1 / have-org-role-91
+                                                             :ARG1 (c4-2 / magazine
+                                                                         :name (c4-6 / name
+                                                                                     :op1 "Charlie Hebdo")))))))
+
+# ::snt BTW it's not just a random 'grocery store' it's a Jewish owned kosher store. For some odd reason you forgot to mention that.
+# ::tokens ["BTW", "it", "'s", "not", "just", "a", "random", "'", "grocery", "store", "'", "it", "'s", "a", "Jewish", "owned", "kosher", "store", ".", "For", "some", "odd", "reason", "you", "forgot", "to", "mention", "that", "."]
+# ::lemmas ["btw", "it", "be", "not", "just", "a", "random", "'", "grocery", "store", "'", "it", "be", "a", "Jewish", "own", "kosher", "store", ".", "for", "some", "odd", "reason", "you", "forgot", "to", "mention", "that", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-18 / contrast-01
+                   :ARG1 (c5-3 / store
+                               :mod (c5-11 / grocery)
+                               :mod (c5-10 / random
+                                           :polarity -)
+                               :domain (c5-12 / it))
+                   :ARG2 (c5-6 / store
+                               :mod (c5-1 / religious-group
+                                          :name (c5-8 / name
+                                                      :op1 "Jew"))
+                               :ARG1-of (c5-17 / own-01
+                                               :ARG0 c5-1)
+                               :domain (c5-13 / it))
+                   :mod (c5-5 / by-the-way))
+      :snt2 (c5-4 / forget-01
+                  :ARG0 (c5-14 / you)
+                  :ARG1 (c5-9 / mention-01
+                              :ARG0 c5-14
+                              :ARG1 (c5-19 / that))
+                  :ARG1-of (c5-2 / cause-01
+                                 :ARG0 (c5-7 / reason
+                                             :mod (c5-15 / odd)
+                                             :mod (c5-16 / some)))))

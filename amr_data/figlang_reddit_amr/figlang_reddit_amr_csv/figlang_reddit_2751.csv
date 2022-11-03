@@ -1,0 +1,30 @@
+comment,amr
+"I drive for Dominos, and delivered pizzas, wings, breadsticks, and several bottles of soda.","# ::snt I drive for Dominos, and delivered pizzas, wings, breadsticks, and several bottles of soda.
+(a / and
+      :op1 (d / drive-01
+            :ARG0 (ii / i)
+            :beneficiary (c / company
+                  :name (n / name
+                        :op1 ""Dominos"")))
+      :op2 (d2 / deliver-01
+            :ARG0 ii
+            :ARG1 (a2 / and
+                  :op1 (p / pizzeria)
+                  :op2 (w / wing)
+                  :op3 (b / breadstick)
+                  :op4 (s / soda
+                        :quant (s2 / several
+                              :op1 (v / volume-quantity
+                                    :quant 1
+                                    :unit (b2 / bottle)))))))"
+I don't tip Domino's because of their delivery fees,"# ::snt I don't tip Domino's because of their delivery fees
+(t / tip-02
+      :polarity -
+      :ARG0 (ii / i)
+      :ARG2 (c / company
+            :name (n / name
+                  :op1 ""Domino's""))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (f / fee
+                  :mod (d / deliver-01
+                        :ARG0 c))))"

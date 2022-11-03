@@ -1,0 +1,92 @@
+# ::snt Has anyone noticed that this was so awkward no one has commented?
+# ::tokens ["Has", "anyone", "noticed", "that", "this", "was", "so", "awkward", "no", "one", "has", "commented", "?"]
+# ::lemmas ["have", "anyone", "notice", "that", "this", "be", "so", "awkward", "no", "one", "have", "comment", "?"]
+(c1-0 / notice-01
+      :ARG0 (c1-2 / anyone)
+      :ARG1 (c1-3 / have-degree-91
+                  :ARG1 (c1-8 / this)
+                  :ARG2 (c1-7 / awkward)
+                  :ARG3 (c1-1 / so)
+                  :ARG6 (c1-5 / comment-01
+                              :ARG0 (c1-4 / no-one)
+                              :polarity -))
+      :polarity (c1-6 / amr-unknown))
+
+# ::snt is a professional he handled it like a pro
+# ::tokens ["is", "a", "professional", "he", "handled", "it", "like", "a", "pro"]
+# ::lemmas ["be", "a", "professional", "he", "handle", "it", "like", "a", "pro"]
+(c2-2 / handle-01
+      :ARG0 (c2-4 / he)
+      :ARG1 (c2-5 / it)
+      :manner (c2-3 / professional)
+      :ARG1-of (c2-0 / resemble-01
+                     :ARG2 (c2-1 / handle-01
+                                 :ARG0 c2-4
+                                 :ARG1 c2-5)))
+
+# ::snt When I surpassed my sister in height and people started thinking I was the older one. Being -5 inches taller sure added the years on!! Haha
+# ::tokens ["When", "I", "surpassed", "my", "sister", "in", "height", "and", "people", "started", "thinking", "I", "was", "the", "older", "one", ".", "Being", "-5", "inches", "taller", "sure", "added", "the", "years", "on", "!", "!", "Haha"]
+# ::lemmas ["when", "i", "surpass", "my", "sister", "in", "height", "and", "people", "start", "think", "i", "be", "the", "old", "one", ".", "be", "-5", "inch", "tall", "sure", "add", "the", "years", "on", "!", "!", "haha"]
+(c3-14 / multi-sentence
+       :snt1 (c3-12 / and
+                    :op1 (c3-0 / surpass-01
+                               :ARG0 (c3-22 / i)
+                               :ARG1 (c3-20 / person
+                                            :ARG0-of (c3-7 / have-rel-role-91
+                                                           :ARG1 c3-22
+                                                           :ARG2 (c3-2 / sister)))
+                               :ARG2 (c3-21 / high-02))
+                    :op2 (c3-1 / start-01
+                               :ARG0 (c3-15 / person)
+                               :ARG1 (c3-11 / think-01
+                                            :ARG0 c3-15
+                                            :ARG1 (c3-6 / have-degree-91
+                                                        :ARG1 c3-22
+                                                        :ARG2 (c3-3 / old)
+                                                        :ARG3 (c3-8 / more)
+                                                        :ARG4 c3-22))))
+       :snt2 (c3-10 / add-02
+                    :ARG0 (c3-17 / have-degree-91
+                                 :ARG1 (c3-5 / i)
+                                 :ARG2 (c3-16 / tall)
+                                 :ARG3 c3-8
+                                 :quant (c3-24 / distance-quantity
+                                               :unit (c3-13 / inch)
+                                               :quant -5)))
+       :ARG2 (c3-18 / multiple
+                    :op1 (c3-23 / temporal-quantity
+                                :unit (c3-4 / year)
+                                :quant 1))
+       :ARG1-of (c3-19 / sure-02)
+       :snt3 (c3-9 / haha
+                   :mode expressive))
+
+# ::snt Start having periods
+# ::tokens ["Start", "having", "periods"]
+# ::lemmas ["start", "have", "period"]
+(c4-2 / start-01
+      :ARG0 (c4-1 / you)
+      :ARG1 (c4-0 / cycle-02
+                  :ARG0 c4-1)
+      :mode imperative)
+
+# ::snt I was so clumsy. I grew four inches my freshmen year of high school. It took forever to get coordinated.
+# ::tokens ["I", "was", "so", "clumsy", ".", "I", "grew", "four", "inches", "my", "freshmen", "year", "of", "high", "school", ".", "It", "took", "forever", "to", "get", "coordinated", "."]
+# ::lemmas ["i", "be", "so", "clumsy", ".", "i", "grow", "four", "inches", "my", "freshmen", "year", "of", "high", "school", ".", "it", "take", "forever", "to", "get", "coordinate", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-8 / clumsy
+                  :domain (c5-9 / i)
+                  :degree (c5-4 / so))
+      :snt2 (c5-11 / grow-01
+                   :ARG1 (c5-5 / i)
+                   :ARG2 (c5-12 / distance-quantity
+                                :unit (c5-13 / inch)
+                                :quant 4)
+                   :time (c5-2 / year
+                               :mod (c5-0 / freshman)
+                               :part-of (c5-6 / high-school)
+                               :poss c5-5))
+      :snt3 (c5-10 / take-10
+                   :ARG0 (c5-14 / coordinate-01
+                                :ARG1 (c5-1 / it))
+                   :ARG1 (c5-7 / forever)))

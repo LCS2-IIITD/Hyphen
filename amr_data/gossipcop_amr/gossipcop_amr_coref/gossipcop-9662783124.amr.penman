@@ -1,0 +1,42 @@
+# ::snt this is and I think articles like this are so . This is not journalism.
+# ::tokens ["this", "is", "and", "I", "think", "articles", "like", "this", "are", "so", ".", "This", "is", "not", "journalism", "."]
+# ::lemmas ["this", "be", "and", "i", "think", "article", "like", "this", "be", "so", ".", "this", "be", "not", "journalism", "."]
+(c1-0 / multi-sentence
+      :snt1 (c1-1 / and
+                  :op1 (c1-6 / this)
+                  :op2 (c1-9 / think-01
+                             :ARG0 (c1-5 / i)
+                             :ARG1 (c1-7 / article
+                                         :ARG1-of (c1-2 / resemble-01
+                                                        :ARG2 (c1-8 / this)))))
+      :snt2 (c1-4 / journalism
+                  :domain (c1-3 / this)
+                  :polarity -))
+
+# ::snt I don't see a difference but if she feels better then that's what matters
+# ::tokens ["I", "do", "n't", "see", "a", "difference", "but", "if", "she", "feels", "better", "then", "that", "'s", "what", "matters"]
+# ::lemmas ["i", "do", "not", "see", "a", "difference", "but", "if", "she", "feel", "well", "then", "that", "be", "what", "matter"]
+(c2-6 / contrast-01
+      :ARG1 (c2-3 / see-01
+                  :ARG0 (c2-7 / i)
+                  :ARG1 (c2-9 / differ-02)
+                  :polarity -)
+      :ARG2 (c2-2 / matter-01
+                  :ARG1 c2-9
+                  :condition (c2-0 / feel-01
+                                   :ARG0 (c2-1 / she)
+                                   :ARG1 (c2-8 / good-02
+                                               :ARG2-of (c2-4 / have-degree-91
+                                                              :ARG1 c2-0
+                                                              :ARG3 (c2-5 / more))))))
+
+# ::snt she looked healthier before
+# ::tokens ["she", "looked", "healthier", "before"]
+# ::lemmas ["she", "look", "healthier", "before"]
+(c3-4 / look-02
+      :ARG0 (c3-2 / she)
+      :ARG1 (c3-3 / healthy
+                  :ARG2-of (c3-5 / have-degree-91
+                                 :ARG1 c3-2
+                                 :ARG3 (c3-1 / more)))
+      :time (c3-0 / before))

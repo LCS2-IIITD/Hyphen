@@ -1,0 +1,95 @@
+# ::snt So youre more triggered by me? Thats the answer youre going with?
+# ::tokens ["So", "you", "re", "more", "triggered", "by", "me", "?", "That", "s", "the", "answer", "you", "re", "going", "with", "?"]
+# ::lemmas ["so", "you", "re", "more", "trigger", "by", "i", "?", "that", "s", "the", "answer", "you", "re", "go", "with", "?"]
+(c1-8 / multi-sentence
+      :snt1 (c1-6 / trigger-01
+                  :polarity (c1-1 / amr-unknown)
+                  :ARG0 (c1-7 / i)
+                  :ARG1 (c1-9 / you)
+                  :ARG2-of (c1-5 / have-degree-91
+                                 :ARG1 c1-9
+                                 :ARG3 (c1-3 / more)))
+      :snt2 (c1-10 / answer-01
+                   :ARG1 (c1-2 / you)
+                   :ARG2 (c1-4 / that)
+                   :polarity (c1-0 / amr-unknown)))
+
+# ::snt I had to look up who that guy is and its somewhat creepy that he was around alot of kids in those harry potter movies.
+# ::tokens ["I", "had", "to", "look", "up", "who", "that", "guy", "is", "and", "its", "somewhat", "creepy", "that", "he", "was", "around", "alot", "of", "kids", "in", "those", "harry", "potter", "movies", "."]
+# ::lemmas ["i", "have", "to", "look", "up", "who", "that", "guy", "be", "and", "its", "somewhat", "creepy", "that", "he", "be", "around", "alot", "of", "kid", "in", "those", "harry", "potter", "movie", "."]
+(c2-1 / and
+      :op1 (c2-6 / obligate-01
+                 :ARG1 (c2-12 / i)
+                 :ARG2 (c2-8 / look-up-05
+                             :ARG0 c2-12
+                             :ARG1 (c2-10 / guy
+                                          :mod (c2-7 / that))))
+      :op2 (c2-3 / creepy-04
+                 :ARG0 (c2-14 / be-located-at-91
+                              :ARG1 c2-10
+                              :ARG2 (c2-15 / around
+                                           :op1 (c2-2 / kid
+                                                      :quant (c2-9 / lot)))
+                              :subevent-of (c2-13 / movie
+                                                  :mod (c2-4 / that)
+                                                  :mod (c2-5 / harry)
+                                                  :mod (c2-11 / potter)))
+                 :degree (c2-0 / somewhat)))
+
+# ::snt peoples personal lives are theirs, why would you worry about something that doesn't involve you unless you want to participate yourself?
+# ::tokens ["peoples", "personal", "lives", "are", "theirs", ",", "why", "would", "you", "worry", "about", "something", "that", "does", "n't", "involve", "you", "unless", "you", "want", "to", "participate", "yourself", "?"]
+# ::lemmas ["people", "personal", "life", "be", "theirs", ",", "why", "would", "you", "worry", "about", "something", "that", "do", "not", "involve", "you", "unless", "you", "want", "to", "participate", "yourself", "?"]
+(c3-3 / worry-02
+      :ARG0 (c3-0 / something
+                  :ARG0-of (c3-8 / involve-01
+                                 :ARG1 (c3-9 / you)
+                                 :condition (c3-10 / want-01
+                                                   :ARG0 c3-9
+                                                   :ARG1 (c3-6 / participate-01
+                                                               :ARG0 c3-9
+                                                               :ARG1 c3-0)
+                                                   :polarity -)
+                                 :polarity -))
+      :ARG1 c3-9
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-1 / amr-unknown))
+      :condition (c3-7 / live-01
+                       :ARG0 (c3-5 / person)
+                       :ARG1-of (c3-4 / personal-02
+                                      :ARG2 c3-5)))
+
+# ::snt Please do not use homophobic, racist or antisemitic language.
+# ::tokens ["Please", "do", "not", "use", "homophobic", ",", "racist", "or", "antisemitic", "language", "."]
+# ::lemmas ["please", "do", "not", "use", "homophobic", ",", "racist", "or", "antisemitic", "language", "."]
+(c4-3 / use-01
+      :ARG0 (c4-8 / you)
+      :ARG1 (c4-4 / or
+                  :op1 (c4-6 / language
+                             :mod (c4-2 / homophobia))
+                  :op2 (c4-7 / language
+                             :mod (c4-5 / racist))
+                  :op3 (c4-0 / language
+                             :mod (c4-1 / antisemitic)))
+      :polarity -
+      :mode imperative
+      :polite +)
+
+# ::snt Please do not not use such language in your posting. It can really hurt someones feelings.
+# ::tokens ["Please", "do", "not", "not", "use", "such", "language", "in", "your", "posting", ".", "It", "can", "really", "hurt", "someones", "feelings", "."]
+# ::lemmas ["please", "do", "not", "not", "use", "such", "language", "in", "your", "posting", ".", "it", "can", "really", "hurt", "someone", "feeling", "."]
+(c5-10 / multi-sentence
+       :snt1 (c5-4 / use-01
+                   :ARG0 (c5-11 / you)
+                   :ARG1 (c5-7 / language
+                               :mod (c5-0 / such))
+                   :location (c5-9 / post-01
+                                   :ARG0 c5-11)
+                   :polarity -
+                   :polite +
+                   :mode imperative)
+       :snt2 (c5-5 / possible-01
+                   :ARG1 (c5-3 / hurt-01
+                               :ARG0 (c5-2 / it)
+                               :ARG1 (c5-1 / feel-01
+                                           :ARG0 (c5-8 / someone))
+                               :degree (c5-6 / really))))

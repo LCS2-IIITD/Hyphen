@@ -1,0 +1,467 @@
+# ::snt That would be so good!!!
+# ::tokens ["That", "would", "be", "so", "good", "!", "!", "!"]
+# ::lemmas ["that", "would", "be", "so", "good", "!", "!", "!"]
+(c1-0 / good-02
+      :ARG1 (c1-2 / that)
+      :degree (c1-1 / so))
+
+# ::snt That would be amazing
+# ::tokens ["That", "would", "be", "amazing"]
+# ::lemmas ["that", "would", "be", "amazing"]
+(c2-1 / amaze-01
+      :ARG0 (c2-0 / that))
+
+# ::snt I would love to see that!
+# ::tokens ["I", "would", "love", "to", "see", "that", "!"]
+# ::lemmas ["i", "would", "love", "to", "see", "that", "!"]
+(c3-1 / love-02
+      :ARG0 (c3-2 / i)
+      :ARG1 (c3-3 / see-01
+                  :ARG0 c3-2
+                  :ARG1 (c3-0 / that)))
+
+# ::snt I dont want to know her like that.
+# ::tokens ["I", "do", "nt", "want", "to", "know", "her", "like", "that", "."]
+# ::lemmas ["i", "do", "not", "want", "to", "know", "she", "like", "that", "."]
+(c5-3 / want-01
+      :ARG0 (c5-4 / i)
+      :ARG1 (c5-2 / know-02
+                  :ARG0 c5-4
+                  :ARG1 (c5-0 / she)
+                  :ARG1-of (c5-1 / resemble-01
+                                 :ARG2 (c5-5 / that)))
+      :polarity -)
+
+# ::snt That could be fun!
+# ::tokens ["That", "could", "be", "fun", "!"]
+# ::lemmas ["that", "could", "be", "fun", "!"]
+(c6-1 / possible-01
+      :ARG1 (c6-0 / fun-01
+                  :ARG1 (c6-2 / that)))
+
+# ::snt Im sure heather and rinna have been friends for years. I would love to see this...
+# ::tokens ["I", "m", "sure", "heather", "and", "rinna", "have", "been", "friends", "for", "years", ".", "I", "would", "love", "to", "see", "this", "..."]
+# ::lemmas ["i", "m", "sure", "heather", "and", "rinna", "have", "be", "friend", "for", "years", ".", "i", "would", "love", "to", "see", "this", "..."]
+(c7-3 / multi-sentence
+      :snt1 (c7-5 / sure-02
+                  :ARG0 (c7-13 / i)
+                  :ARG1 (c7-8 / have-rel-role-91
+                              :ARG0 (c7-9 / person
+                                          :name (c7-4 / name
+                                                      :op1 "Heather"))
+                              :ARG1 (c7-6 / person
+                                          :name (c7-10 / name
+                                                       :op1 "Rinna"))
+                              :ARG2 (c7-0 / friend)
+                              :duration (c7-11 / multiple
+                                               :op1 (c7-14 / temporal-quantity
+                                                           :unit (c7-2 / year)
+                                                           :quant 1))))
+      :snt2 (c7-12 / love-02
+                   :ARG0 (c7-7 / i)
+                   :ARG1 (c7-1 / see-01
+                               :ARG0 c7-7
+                               :ARG1 (c7-15 / this))))
+
+# ::snt Uhmmm....no...cuz then no one will be able to drink! U cant bring alcoholics around that group
+# ::tokens ["Uhmmm", "....", "no", "...", "cuz", "then", "no", "one", "will", "be", "able", "to", "drink", "!", "U", "ca", "nt", "bring", "alcoholics", "around", "that", "group"]
+# ::lemmas ["Uhmmm", "....", "no", "...", "cuz", "then", "no", "one", "will", "be", "able", "to", "drink", "!", "u", "can", "not", "bring", "alcoholic", "around", "that", "group"]
+(c8-2 / multi-sentence
+      :snt1 (c8-12 / uhmm
+                   :mode expressive)
+      :snt2 (c8-5 / possible-01
+                  :ARG1 (c8-11 / drink-01
+                               :ARG0 (c8-1 / no-one))
+                  :ARG1-of (c8-6 / cause-01
+                                 :ARG0 (c8-9 / then))
+                  :polarity -)
+      :snt3 (c8-3 / possible-01
+                  :ARG1 (c8-0 / bring-01
+                              :ARG0 (c8-7 / we)
+                              :ARG1 (c8-4 / alcoholic)
+                              :ARG2 (c8-8 / around
+                                          :op1 (c8-10 / group
+                                                      :mod (c8-13 / that))))
+                  :polarity -))
+
+# ::snt I doubt this will happen! She needs to focus on her recovery!
+# ::tokens ["I", "doubt", "this", "will", "happen", "!", "She", "needs", "to", "focus", "on", "her", "recovery", "!"]
+# ::lemmas ["i", "doubt", "this", "will", "happen", "!", "she", "need", "to", "focus", "on", "her", "recovery", "!"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / doubt-01
+                  :ARG0 (c9-5 / i)
+                  :ARG1 (c9-6 / this))
+      :snt2 (c9-1 / need-01
+                  :ARG0 (c9-3 / she)
+                  :ARG1 (c9-0 / focus-01
+                              :ARG0 c9-3
+                              :ARG2 (c9-4 / recover-01
+                                          :ARG1 c9-3))))
+
+# ::snt she has to. Its a no brainer.
+# ::tokens ["she", "has", "to", ".", "Its", "a", "no", "brainer", "."]
+# ::lemmas ["she", "have", "to", ".", "its", "a", "no", "brainer", "."]
+(c10-2 / multi-sentence
+       :snt1 (c10-0 / obligate-01
+                    :ARG1 (c10-3 / she))
+       :snt2 (c10-1 / no-brainer
+                    :domain (c10-4 / it)))
+
+# ::snt Stop it.
+# ::tokens ["Stop", "it", "."]
+# ::lemmas ["stop", "it", "."]
+(c11-2 / stop-01
+       :ARG0 (c11-0 / you)
+       :ARG1 (c11-1 / it)
+       :mode imperative)
+
+# ::snt Fake News...
+# ::tokens ["Fake", "News", "..."]
+# ::lemmas ["Fake", "News", "..."]
+(c12-1 / news
+       :ARG1-of (c12-0 / fake-02))
+
+# ::snt Yes please!!!!
+# ::tokens ["Yes", "please", "!", "!", "!", "!"]
+# ::lemmas ["yes", "please", "!", "!", "!", "!"]
+(c13-0 / yes
+       :polite +)
+
+# ::snt Toss her a Bone! Why not?! Melrose place it up and give Locklear another chance to pay her mortgage! Shell be better than or
+# ::tokens ["Toss", "her", "a", "Bone", "!", "Why", "not", "?", "!", "Melrose", "place", "it", "up", "and", "give", "Locklear", "another", "chance", "to", "pay", "her", "mortgage", "!", "Shell", "be", "better", "than", "or"]
+# ::lemmas ["toss", "she", "a", "bone", "!", "why", "not", "?", "!", "melrose", "place", "it", "up", "and", "give", "Locklear", "another", "chance", "to", "pay", "her", "mortgage", "!", "Shell", "be", "well", "than", "or"]
+(c14-16 / multi-sentence
+        :snt1 (c14-13 / toss-01
+                      :ARG0 (c14-6 / you)
+                      :ARG1 (c14-15 / bone)
+                      :beneficiary (c14-0 / she)
+                      :mode imperative)
+        :snt2 (c14-19 / cause-01
+                      :ARG0 (c14-11 / amr-unknown)
+                      :ARG1 (c14-7 / have-polarity-91
+                                   :ARG1-of (c14-14 / cause-01
+                                                    :ARG0 (c14-10 / amr-unknown))
+                                   :ARG2 -))
+        :snt3 (c14-9 / and
+                     :op1 (c14-24 / place-01
+                                  :ARG0 (c14-17 / person
+                                                :name (c14-23 / name
+                                                              :op1 "Melrose"))
+                                  :ARG1 (c14-27 / it)
+                                  :ARG2 (c14-20 / up))
+                     :op2 (c14-12 / give-01
+                                  :ARG0 c14-17
+                                  :ARG1 (c14-2 / chance-02
+                                               :ARG0 (c14-4 / person
+                                                            :name (c14-18 / name
+                                                                          :op1 "Locklear"))
+                                               :ARG1 (c14-1 / pay-01
+                                                            :ARG0 c14-4
+                                                            :ARG3 (c14-8 / mortgage
+                                                                         :poss c14-4))
+                                               :mod (c14-28 / another))
+                                  :ARG2 c14-4))
+        :snt4 (c14-26 / have-degree-91
+                      :ARG1 (c14-22 / company
+                                    :name (c14-25 / name
+                                                  :op1 "Shell"))
+                      :ARG2 (c14-3 / good-02
+                                   :ARG1 c14-22)
+                      :ARG3 (c14-21 / more)
+                      :ARG4 (c14-5 / or)))
+
+# ::snt Dear God, I hope not!
+# ::tokens ["Dear", "God", ",", "I", "hope", "not", "!"]
+# ::lemmas ["dear", "God", ",", "i", "hope", "not", "!"]
+(c15-1 / hope-01
+       :ARG0 (c15-3 / i)
+       :ARG1 (c15-4 / thing
+                    :polarity -)
+       :mod (c15-5 / dear
+                   :op1 (c15-2 / person
+                               :name (c15-0 / name
+                                            :op1 "God")))
+       :mode expressive)
+
+# ::snt Plz no
+# ::tokens ["Plz", "no"]
+# ::lemmas ["plz", "no"]
+(c16-1 / post-scriptum
+       :domain (c16-0 / no))
+
+# ::snt Ummmm no?
+# ::tokens ["Ummmm", "no", "?"]
+# ::lemmas ["ummmm", "no", "?"]
+(c17-1 / no
+       :mod (c17-0 / umm
+                   :mode expressive))
+
+# ::snt A liability but hell yeah! Im down for good tv!
+# ::tokens ["A", "liability", "but", "hell", "yeah", "!", "I", "m", "down", "for", "good", "tv", "!"]
+# ::lemmas ["a", "liability", "but", "hell", "yeah", "!", "i", "m", "down", "for", "good", "tv", "!"]
+(c18-3 / contrast-01
+       :ARG1 (c18-2 / liability)
+       :ARG2 (c18-0 / yeah
+                    :mod (c18-1 / hell)
+                    :mode expressive)
+       :ARG0-of (c18-8 / cause-01
+                       :ARG1 (c18-7 / down-03
+                                    :ARG1 (c18-4 / i)
+                                    :ARG3 (c18-5 / television
+                                                 :ARG1-of (c18-6 / good-02)))))
+
+# ::snt Is she replacing Rinna?!?
+# ::tokens ["Is", "she", "replacing", "Rinna", "?", "!", "?"]
+# ::lemmas ["be", "she", "replace", "Rinna", "?", "!", "?"]
+(c19-2 / replace-01
+       :ARG0 (c19-1 / she)
+       :ARG1 (c19-3 / person
+                    :name (c19-0 / name
+                                 :op1 "Rinna"))
+       :polarity (c19-4 / amr-unknown))
+
+# ::snt Bad ideal to have her on the show
+# ::tokens ["Bad", "ideal", "to", "have", "her", "on", "the", "show"]
+# ::lemmas ["bad", "ideal", "to", "have", "she", "on", "the", "show"]
+(c20-4 / ideal
+       :ARG1-of (c20-1 / bad-07)
+       :domain (c20-3 / have-03
+                      :ARG1 (c20-2 / she
+                                   :location (c20-0 / show-04))))
+
+# ::snt Pleaseeeeeeeee!!
+# ::tokens ["Pleaseeeeeeeee", "!", "!"]
+# ::lemmas ["Pleaseeeeeeeee", "!", "!"]
+(c21-0 / please
+       :polite +)
+
+# ::snt Hmmm
+# ::tokens ["Hmmm"]
+# ::lemmas ["hmmm"]
+(c22-0 / hmm
+       :mode expressive)
+
+# ::snt Please let this be true!!!
+# ::tokens ["Please", "let", "this", "be", "true", "!", "!", "!"]
+# ::lemmas ["please", "let", "this", "be", "true", "!", "!", "!"]
+(c23-1 / let-01
+       :ARG0 (c23-0 / you)
+       :ARG1 (c23-3 / true-01
+                    :ARG1 (c23-2 / this))
+       :mode imperative
+       :polite +)
+
+# ::snt And Camille please.
+# ::tokens ["And", "Camille", "please", "."]
+# ::lemmas ["and", "Camille", "please", "."]
+(c24-2 / and
+       :op2 (c24-1 / person
+                   :name (c24-0 / name
+                                :op1 "Camille")
+                   :polite +))
+
+# ::snt Oh please No!!!
+# ::tokens ["Oh", "please", "No", "!", "!", "!"]
+# ::lemmas ["oh", "please", "no", "!", "!", "!"]
+(c25-1 / no
+       :mod (c25-0 / oh
+                   :mode expressive))
+
+# ::snt Get rid of of fake accent wacko . Anyone will be better than her. She is a Whiny crazy person. Love she needs to dismiss dimwit !
+# ::tokens ["Get", "rid", "of", "of", "fake", "accent", "wacko", ".", "Anyone", "will", "be", "better", "than", "her", ".", "She", "is", "a", "Whiny", "crazy", "person", ".", "Love", "she", "needs", "to", "dismiss", "dimwit", "!"]
+# ::lemmas ["get", "rid", "of", "of", "fake", "accent", "wacko", ".", "anyone", "will", "be", "well", "than", "she", ".", "she", "be", "a", "Whiny", "crazy", "person", ".", "love", "she", "need", "to", "dismiss", "dimwit", "!"]
+(c26-10 / multi-sentence
+        :snt1 (c26-15 / rid-01
+                      :ARG0 (c26-4 / you)
+                      :ARG1 (c26-17 / wacko
+                                    :ARG0-of (c26-13 / fake-02
+                                                     :ARG1 (c26-8 / accent)))
+                      :mode imperative)
+        :snt2 (c26-9 / good-02
+                     :ARG1 (c26-7 / anyone)
+                     :ARG2-of (c26-5 / have-degree-91
+                                     :ARG1 c26-7
+                                     :ARG3 (c26-6 / more)
+                                     :ARG4 (c26-0 / she)))
+        :snt3 (c26-16 / person
+                      :ARG1-of (c26-11 / crazy-03)
+                      :domain (c26-3 / she))
+        :snt4 (c26-1 / love-01
+                     :ARG1 (c26-14 / need-01
+                                   :ARG0 (c26-2 / she)
+                                   :ARG1 (c26-18 / dismiss-01
+                                                 :ARG0 c26-2
+                                                 :ARG1 (c26-12 / dimwit)))))
+
+# ::snt Yeah I like that
+# ::tokens ["Yeah", "I", "like", "that"]
+# ::lemmas ["yeah", "i", "like", "that"]
+(c27-0 / like-01
+       :ARG0 (c27-1 / i)
+       :ARG1 (c27-2 / that))
+
+# ::snt Nah Heather can hold her own! All she has to do is put on her Melrose cap on and she is good to go
+# ::tokens ["Nah", "Heather", "can", "hold", "her", "own", "!", "All", "she", "has", "to", "do", "is", "put", "on", "her", "Melrose", "cap", "on", "and", "she", "is", "good", "to", "go"]
+# ::lemmas ["Nah", "Heather", "can", "hold", "her", "own", "!", "all", "she", "have", "to", "do", "be", "put", "on", "her", "Melrose", "cap", "on", "and", "she", "be", "good", "to", "go"]
+(c28-3 / multi-sentence
+       :snt1 (c28-7 / possible-01
+                    :ARG1 (c28-6 / hold-01
+                                 :ARG0 (c28-4 / person
+                                              :name (c28-2 / name
+                                                           :op1 "Heather"))
+                                 :ARG1 (c28-0 / own-01
+                                              :ARG0 c28-4))
+                    :mod (c28-8 / nah))
+       :snt2 (c28-13 / and
+                     :op1 (c28-16 / put-on-08
+                                  :ARG0 (c28-5 / she)
+                                  :ARG1 (c28-10 / cap
+                                                :mod (c28-11 / product
+                                                             :name (c28-9 / name
+                                                                          :op1 "Melrose"))
+                                                :poss c28-5))
+                     :op2 (c28-14 / good-03
+                                  :ARG1 c28-5
+                                  :ARG2 (c28-12 / go-02
+                                                :ARG0 c28-5))
+                     :mod (c28-15 / all)
+                     :ARG2-of (c28-1 / obligate-01)))
+
+# ::snt Bad idea look what happened to Kim Richards.
+# ::tokens ["Bad", "idea", "look", "what", "happened", "to", "Kim", "Richards", "."]
+# ::lemmas ["bad", "idea", "look", "what", "happen", "to", "Kim", "Richards", "."]
+(c29-5 / look-01
+       :ARG0 (c29-1 / you)
+       :ARG1 (c29-3 / event
+                    :mod (c29-4 / person
+                                :name (c29-2 / name
+                                             :op1 "Kim"
+                                             :op2 "Richards")))
+       :concession (c29-6 / idea
+                          :ARG1-of (c29-0 / bad-07))
+       :mode imperative)
+
+# ::snt They need to get Denise Richards on the show!
+# ::tokens ["They", "need", "to", "get", "Denise", "Richards", "on", "the", "show", "!"]
+# ::lemmas ["they", "need", "to", "get", "Denise", "Richards", "on", "the", "show", "!"]
+(c30-0 / need-01
+       :ARG0 (c30-4 / they)
+       :ARG1 (c30-5 / get-01
+                    :ARG0 c30-4
+                    :ARG1 (c30-3 / person
+                                 :name (c30-2 / name
+                                              :op1 "Denise"
+                                              :op2 "Richards"))
+                    :location (c30-1 / show-04))
+       :mode expressive)
+
+# ::snt She sure meets the train wreck criteria!
+# ::tokens ["She", "sure", "meets", "the", "train", "wreck", "criteria", "!"]
+# ::lemmas ["she", "sure", "meet", "the", "train", "wreck", "criterion", "!"]
+(c31-1 / meet-01
+       :ARG0 (c31-2 / she)
+       :ARG1 (c31-3 / criteria
+                    :topic (c31-4 / wreck-01
+                                  :ARG1 (c31-5 / train)))
+       :ARG1-of (c31-0 / sure-02)
+       :mode expressive)
+
+# ::snt Thats interesting. I think I like it. Ok. I am in
+# ::tokens ["That", "s", "interesting", ".", "I", "think", "I", "like", "it", ".", "Ok", ".", "I", "am", "in"]
+# ::lemmas ["that", "s", "interesting", ".", "i", "think", "i", "like", "it", ".", "ok", ".", "i", "be", "in"]
+(c32-3 / multi-sentence
+       :snt1 (c32-7 / interest-01
+                    :ARG2 (c32-6 / that))
+       :snt2 (c32-8 / think-01
+                    :ARG0 (c32-4 / i)
+                    :ARG1 (c32-5 / like-01
+                                 :ARG0 c32-4
+                                 :ARG1 (c32-9 / it)))
+       :snt3 (c32-0 / okay-01
+                    :ARG1 (c32-1 / i))
+       :snt4 (c32-2 / be-located-at-91
+                    :ARG1 c32-1))
+
+# ::snt Lol
+# ::tokens ["Lol"]
+# ::lemmas ["Lol"]
+(c33-1 / laugh-01
+       :manner (c33-0 / loud)
+       :mode expressive)
+
+# ::snt Dear lord. I see a train wreck if that happens
+# ::tokens ["Dear", "lord", ".", "I", "see", "a", "train", "wreck", "if", "that", "happens"]
+# ::lemmas ["dear", "lord", ".", "i", "see", "a", "train", "wreck", "if", "that", "happen"]
+(c34-0 / multi-sentence
+       :snt1 (c34-3 / lord
+                    :mod (c34-7 / dear))
+       :snt2 (c34-1 / see-01
+                    :ARG0 (c34-5 / i)
+                    :ARG1 (c34-4 / wreck-01
+                                 :ARG1 (c34-6 / train))
+                    :condition (c34-2 / event)))
+
+# ::snt Oh please yes !!!!!!!!
+# ::tokens ["Oh", "please", "yes", "!", "!", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["oh", "please", "yes", "!", "!", "!", "!", "!", "!", "!", "!"]
+(c37-1 / yes
+       :mod (c37-0 / oh
+                   :mode expressive))
+
+# ::snt Locklear would be Awesome and we will definitely have drama
+# ::tokens ["Locklear", "would", "be", "Awesome", "and", "we", "will", "definitely", "have", "drama"]
+# ::lemmas ["Locklear", "would", "be", "Awesome", "and", "we", "will", "definitely", "have", "drama"]
+(c38-6 / and
+       :op1 (c38-5 / awe-01
+                   :ARG0 (c38-2 / product
+                                :name (c38-0 / name
+                                             :op1 "Locklear")))
+       :op2 (c38-1 / have-03
+                   :ARG0 (c38-3 / we)
+                   :ARG1 (c38-7 / drama)
+                   :mod (c38-4 / definite)))
+
+# ::snt YES!
+# ::tokens ["YES", "!"]
+# ::lemmas ["yes", "!"]
+(c39-0 / yes)
+
+# ::snt Please no
+# ::tokens ["Please", "no"]
+# ::lemmas ["please", "no"]
+(c41-0 / no
+       :polite +)
+
+# ::snt She needs to be in a better place mentally
+# ::tokens ["She", "needs", "to", "be", "in", "a", "better", "place", "mentally"]
+# ::lemmas ["she", "need", "to", "be", "in", "a", "well", "place", "mentally"]
+(c42-1 / need-01
+       :ARG0 (c42-3 / she)
+       :ARG1 (c42-0 / be-located-at-91
+                    :ARG1 c42-3
+                    :ARG2 (c42-5 / place
+                                 :ARG1-of (c42-4 / have-degree-91
+                                                 :ARG2 (c42-7 / good-02
+                                                              :ARG1 c42-5)
+                                                 :ARG3 (c42-2 / more)))
+                    :manner (c42-6 / mental)))
+
+# ::snt I wish
+# ::tokens ["I", "wish"]
+# ::lemmas ["i", "wish"]
+(c43-0 / wish-01
+       :ARG0 (c43-1 / i))
+
+# ::snt Oh please no
+# ::tokens ["Oh", "please", "no"]
+# ::lemmas ["oh", "please", "no"]
+(c44-0 / oh
+       :mode expressive
+       :polite +)
+
+# ::snt Im loving this!!
+# ::tokens ["I", "m", "loving", "this", "!", "!"]
+# ::lemmas ["i", "m", "love", "this", "!", "!"]
+(c45-0 / love-01
+       :ARG0 (c45-1 / i)
+       :ARG1 (c45-2 / this))

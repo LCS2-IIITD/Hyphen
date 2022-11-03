@@ -1,0 +1,40 @@
+# ::snt Que locura !
+# ::tokens ["Que", "locura", "!"]
+# ::lemmas ["Que", "locura", "!"]
+(c1-0 / locura
+      :mode expressive)
+
+# ::snt I still cannot believe she did that
+# ::tokens ["I", "still", "can", "not", "believe", "she", "did", "that"]
+# ::lemmas ["i", "still", "can", "not", "believe", "she", "do", "that"]
+(c2-3 / possible-01
+      :ARG1 (c2-1 / believe-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-6 / do-02
+                              :ARG0 (c2-2 / she)
+                              :ARG1 (c2-5 / that)))
+      :mod (c2-0 / still)
+      :polarity -)
+
+# ::snt So should we block her off YouTube? What about the kids and families that didnt want to see that? Nah
+# ::tokens ["So", "should", "we", "block", "her", "off", "YouTube", "?", "What", "about", "the", "kids", "and", "families", "that", "did", "nt", "want", "to", "see", "that", "?", "Nah"]
+# ::lemmas ["so", "should", "we", "block", "she", "off", "YouTube", "?", "what", "about", "the", "kid", "and", "family", "that", "do", "not", "want", "to", "see", "that", "?", "Nah"]
+(c3-3 / multi-sentence
+      :snt1 (c3-11 / cause-01
+                   :ARG1 (c3-6 / recommend-01
+                               :ARG1 (c3-2 / block-01
+                                           :ARG0 (c3-12 / we)
+                                           :ARG1 (c3-5 / she)
+                                           :source (c3-8 / publication
+                                                         :name (c3-4 / name
+                                                                     :op1 "YouTube")))))
+      :snt2 (c3-14 / amr-unknown
+                   :topic (c3-13 / and
+                                 :op1 (c3-9 / kid)
+                                 :op2 (c3-0 / family)
+                                 :ARG0-of (c3-10 / want-01
+                                                 :ARG1 (c3-1 / see-01
+                                                             :ARG0 c3-13)
+                                                 :polarity -)))
+      :snt3 (c3-7 / nah
+                  :mode expressive))

@@ -1,0 +1,29 @@
+# ::snt Israel impose up to 20 years jail term for stone throwing
+# ::tokens ["Israel", "impose", "up", "to", "20", "years", "jail", "term", "for", "stone", "throwing"]
+# ::lemmas ["Israel", "impose", "up", "to", "20", "years", "jail", "term", "for", "stone", "throwing"]
+(c1-8 / impose-01
+      :ARG0 (c1-2 / country
+                  :name (c1-9 / name
+                              :op1 "Israel"))
+      :ARG1 (c1-6 / term
+                  :mod (c1-7 / jail)
+                  :quant (c1-5 / up-to
+                               :op1 (c1-4 / temporal-quantity
+                                          :unit (c1-10 / year)
+                                          :quant 20))
+                  :ARG1-of (c1-0 / cause-01
+                                 :ARG0 (c1-3 / throw-01
+                                             :ARG1 (c1-1 / stone)))))
+
+# ::snt Throwing a stone at a moving vehicle is a felony in the USA, too.
+# ::tokens ["Throwing", "a", "stone", "at", "a", "moving", "vehicle", "is", "a", "felony", "in", "the", "USA", ",", "too", "."]
+# ::lemmas ["throw", "a", "stone", "at", "a", "move", "vehicle", "be", "a", "felony", "in", "the", "USA", ",", "too", "."]
+(c2-1 / felony
+      :domain (c2-5 / throw-01
+                    :ARG1 (c2-0 / stone)
+                    :ARG2 (c2-4 / vehicle
+                                :ARG1-of (c2-6 / move-01)))
+      :location (c2-2 / country
+                      :name (c2-7 / name
+                                  :op1 "USA"))
+      :mod (c2-3 / too))

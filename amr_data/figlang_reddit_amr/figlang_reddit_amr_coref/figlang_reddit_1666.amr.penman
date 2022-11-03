@@ -1,0 +1,41 @@
+# ::snt My son turned 5 Friday and had his party today this is his cake
+# ::tokens ["My", "son", "turned", "5", "Friday", "and", "had", "his", "party", "today", "this", "is", "his", "cake"]
+# ::lemmas ["my", "son", "turn", "5", "Friday", "and", "have", "his", "party", "today", "this", "be", "his", "cake"]
+(c1-2 / and
+      :op1 (c1-11 / turn-02
+                  :ARG1 (c1-12 / person
+                               :ARG0-of (c1-8 / have-rel-role-91
+                                              :ARG1 (c1-4 / i)
+                                              :ARG2 (c1-0 / son)))
+                  :ARG2 (c1-14 / age-01
+                               :ARG1 c1-12
+                               :ARG2 (c1-6 / temporal-quantity
+                                           :unit (c1-13 / year)
+                                           :quant 5))
+                  :time (c1-1 / date-entity
+                              :weekday (c1-3 / friday)))
+      :op2 (c1-10 / party-01
+                  :ARG0 c1-12
+                  :time (c1-5 / today)
+                  :domain (c1-7 / cake
+                                :poss c1-12
+                                :mod (c1-9 / this))))
+
+# ::snt Why are you letting your four year old son play FNaF?
+# ::tokens ["Why", "are", "you", "letting", "your", "four", "year", "old", "son", "play", "FNaF", "?"]
+# ::lemmas ["why", "be", "you", "let", "your", "four", "year", "old", "son", "play", "FNaF", "?"]
+(c2-6 / let-01
+      :ARG0 (c2-10 / you)
+      :ARG1 (c2-8 / play-01
+                  :ARG0 (c2-4 / person
+                              :ARG0-of (c2-3 / have-rel-role-91
+                                             :ARG1 c2-10
+                                             :ARG2 (c2-0 / son))
+                              :age (c2-5 / temporal-quantity
+                                         :unit (c2-11 / year)
+                                         :quant 4))
+                  :ARG1 (c2-7 / game
+                              :name (c2-9 / name
+                                          :op1 "FNaF")))
+      :ARG1-of (c2-2 / cause-01
+                     :ARG0 (c2-1 / amr-unknown)))

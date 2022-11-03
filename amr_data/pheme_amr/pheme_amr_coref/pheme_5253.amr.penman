@@ -1,0 +1,62 @@
+# ::snt Because people are looting, burning down buildings and shooting/killing people. There is a reason that they are armed.
+# ::tokens ["Because", "people", "are", "looting", ",", "burning", "down", "buildings", "and", "shooting", "/", "killing", "people", ".", "There", "is", "a", "reason", "that", "they", "are", "armed", "."]
+# ::lemmas ["because", "people", "be", "loot", ",", "burn", "down", "building", "and", "shoot", "/", "kill", "people", ".", "there", "be", "a", "reason", "that", "they", "be", "armed", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-7 / cause-01
+                  :ARG0 (c1-13 / and
+                               :op1 (c1-0 / loot-01
+                                          :ARG0 (c1-5 / person))
+                               :op2 (c1-2 / burn-01
+                                          :ARG0 c1-5
+                                          :ARG1 (c1-8 / building))
+                               :op3 (c1-9 / slash
+                                          :op1 (c1-3 / shoot-01
+                                                     :ARG0 c1-5
+                                                     :ARG1 (c1-12 / person))
+                                          :op2 (c1-11 / kill-01
+                                                      :ARG0 c1-5
+                                                      :ARG1 c1-12))))
+      :snt2 (c1-6 / reason
+                  :ARG0-of c1-7
+                  :ARG1 (c1-4 / arm-01
+                              :ARG1 (c1-10 / they))))
+
+# ::snt STILL lying!
+# ::tokens ["STILL", "lying", "!"]
+# ::lemmas ["still", "lie", "!"]
+(c2-1 / lie-08
+      :mod (c2-0 / still))
+
+# ::snt i'm praying for you and everyone there. so proud of you
+# ::tokens ["i", "'m", "praying", "for", "you", "and", "everyone", "there", ".", "so", "proud", "of", "you"]
+# ::lemmas ["i", "be", "pray", "for", "you", "and", "everyone", "there", ".", "so", "proud", "of", "you"]
+(c3-1 / multi-sentence
+      :snt1 (c3-4 / pray-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-9 / and
+                              :op1 (c3-0 / you)
+                              :op2 (c3-2 / everyone
+                                         :location (c3-7 / there))))
+      :snt2 (c3-8 / pride-01
+                  :ARG0 (c3-5 / you)
+                  :degree (c3-6 / so)))
+
+# ::snt The police are STILL on the tv LYING about wanting peace and there's military guns and amour trucks here in broad daylight
+# ::tokens ["The", "police", "are", "STILL", "on", "the", "tv", "LYING", "about", "wanting", "peace", "and", "there", "'s", "military", "guns", "and", "amour", "trucks", "here", "in", "broad", "daylight"]
+# ::lemmas ["the", "police", "be", "still", "on", "the", "tv", "lie", "about", "want", "peace", "and", "there", "be", "military", "gun", "and", "amour", "truck", "here", "in", "broad", "daylight"]
+(c4-13 / and
+       :op1 (c4-2 / lie-08
+                  :ARG0 (c4-6 / police)
+                  :ARG3 (c4-1 / want-01
+                              :ARG0 c4-6
+                              :ARG1 (c4-12 / peace))
+                  :medium (c4-11 / television)
+                  :mod (c4-10 / still))
+       :op2 (c4-5 / and
+                  :op1 (c4-8 / gun
+                             :mod (c4-3 / military))
+                  :op2 (c4-9 / truck
+                             :mod c4-3)
+                  :location (c4-0 / here)
+                  :time (c4-7 / daylight
+                              :ARG1-of (c4-4 / broad-02))))

@@ -1,0 +1,51 @@
+# ::snt had animalsdumped all time ***
+# ::tokens ["had", "animalsdumped", "all", "time", "*", "*", "*"]
+# ::lemmas ["have", "animalsdumpe", "all", "time", "*", "*", "*"]
+(c1-1 / stump-01
+      :ARG0 (c1-0 / animal)
+      :time (c1-3 / time
+                  :mod (c1-2 / all)))
+
+# ::snt what a chicken thing to do
+# ::tokens ["what", "a", "chicken", "thing", "to", "do"]
+# ::lemmas ["what", "a", "chicken", "thing", "to", "do"]
+(c2-0 / thing
+      :mod (c2-3 / chicken)
+      :ARG1-of (c2-1 / do-02)
+      :degree (c2-2 / so))
+
+# ::snt how low and disgusting is that !'poor thing xx
+# ::tokens ["how", "low", "and", "disgusting", "is", "that", "!", "'", "poor", "thing", "xx"]
+# ::lemmas ["how", "low", "and", "disgusting", "be", "that", "!", "'", "poor", "thing", "xx"]
+(c3-3 / and
+      :op1 (c3-1 / low-04
+                 :degree (c3-0 / so))
+      :op2 (c3-4 / disgust-01
+                 :degree c3-0)
+      :domain (c3-2 / that))
+
+# ::snt rubbish
+# ::tokens ["rubbish"]
+# ::lemmas ["rubbish"]
+(c4-0 / rubbish)
+
+# ::snt please let us know when you view the security video and find out who did this despicable thing...
+# ::tokens ["please", "let", "us", "know", "when", "you", "view", "the", "security", "video", "and", "find", "out", "who", "did", "this", "despicable", "thing", "..."]
+# ::lemmas ["please", "let", "we", "know", "when", "you", "view", "the", "security", "video", "and", "find", "out", "who", "do", "this", "despicable", "thing", "..."]
+(c5-3 / let-know-07
+      :ARG0 (c5-7 / you)
+      :ARG1 (c5-9 / we)
+      :ARG2 (c5-5 / and
+                  :op1 (c5-11 / view-01
+                              :ARG0 c5-7
+                              :ARG1 (c5-8 / video
+                                          :mod (c5-0 / security)))
+                  :op2 (c5-12 / find-out-03
+                              :ARG0 c5-7
+                              :ARG1 (c5-2 / person
+                                          :ARG0-of (c5-10 / do-02
+                                                          :ARG1 (c5-4 / thing
+                                                                      :mod (c5-1 / despicable)
+                                                                      :mod (c5-6 / this))))))
+      :polite +
+      :mode imperative)

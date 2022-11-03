@@ -1,0 +1,103 @@
+# ::snt depends on the type of battery
+# ::tokens ["depends", "on", "the", "type", "of", "battery"]
+# ::lemmas ["depend", "on", "the", "type", "of", "battery"]
+(c1-0 / depend-01
+      :ARG1 (c1-2 / battery
+                  :mod (c1-1 / type)))
+
+# ::snt What type would this be good for?
+# ::tokens ["What", "type", "would", "this", "be", "good", "for", "?"]
+# ::lemmas ["what", "type", "would", "this", "be", "good", "for", "?"]
+(c2-1 / good-04
+      :ARG1 (c2-3 / this)
+      :ARG2 (c2-2 / type
+                  :mod (c2-0 / amr-unknown)))
+
+# ::snt Nicad
+# ::tokens ["Nicad"]
+# ::lemmas ["Nicad"]
+(c3-1 / person
+      :name (c3-0 / name
+                  :op1 "Nicad"))
+
+# ::snt Ive heard youre supposed to let it fully die then fully charge it
+# ::tokens ["I", "ve", "heard", "you", "re", "supposed", "to", "let", "it", "fully", "die", "then", "fully", "charge", "it"]
+# ::lemmas ["i", "ve", "hear", "you", "re", "suppose", "to", "let", "it", "fully", "die", "then", "fully", "charge", "it"]
+(c4-1 / hear-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-10 / suppose-02
+                   :ARG1 (c4-0 / you)
+                   :ARG2 (c4-7 / let-01
+                               :ARG0 c4-0
+                               :ARG1 (c4-8 / and
+                                           :op1 (c4-4 / die-01
+                                                      :ARG1 (c4-2 / it)
+                                                      :degree (c4-3 / full))
+                                           :op2 (c4-6 / charge-03
+                                                      :ARG0 c4-0
+                                                      :ARG1 c4-2
+                                                      :degree (c4-9 / full))))))
+
+# ::snt This used to be true but not really anymore. Most batteries now have a digital calibration tool built into them so they don't need to be manually "calibrated" by charging it or not charging it a certain way before use.
+# ::tokens ["This", "used", "to", "be", "true", "but", "not", "really", "anymore", ".", "Most", "batteries", "now", "have", "a", "digital", "calibration", "tool", "built", "into", "them", "so", "they", "do", "n't", "need", "to", "be", "manually", "\"", "calibrated", "\"", "by", "charging", "it", "or", "not", "charging", "it", "a", "certain", "way", "before", "use", "."]
+# ::lemmas ["this", "use", "to", "be", "true", "but", "not", "really", "anymore", ".", "most", "battery", "now", "have", "a", "digital", "calibration", "tool", "build", "into", "they", "so", "they", "do", "not", "need", "to", "be", "manually", "\"", "calibrate", "\"", "by", "charge", "it", "or", "not", "charge", "it", "a", "certain", "way", "before", "use", "."]
+(c5-20 / multi-sentence
+       :snt1 (c5-10 / contrast-01
+                    :ARG1 (c5-8 / true-01
+                                :ARG1 (c5-19 / this)
+                                :time (c5-4 / use-03))
+                    :ARG2 (c5-9 / true-01
+                                :ARG1 c5-19
+                                :time (c5-15 / anymore)
+                                :polarity -))
+       :snt2 (c5-1 / have-03
+                   :ARG0 (c5-17 / battery
+                                :quant (c5-23 / most))
+                   :ARG1 (c5-11 / tool
+                                :instrument-of (c5-6 / calibrate-01
+                                                     :ARG1 c5-17
+                                                     :mod (c5-14 / digital))
+                                :ARG1-of (c5-22 / build-01
+                                                :destination c5-17))
+                   :time (c5-12 / now)
+                   :ARG0-of (c5-21 / cause-01
+                                   :ARG1 (c5-3 / need-01
+                                               :ARG0 c5-17
+                                               :ARG1 (c5-16 / or
+                                                            :op1 (c5-7 / charge-01
+                                                                       :ARG0 c5-17
+                                                                       :ARG1 c5-17
+                                                                       :manner (c5-5 / manual))
+                                                            :op2 (c5-13 / charge-01
+                                                                        :ARG0 c5-17
+                                                                        :ARG1 c5-17
+                                                                        :manner (c5-0 / certain)
+                                                                        :time (c5-2 / before
+                                                                                    :op1 (c5-18 / use-01
+                                                                                                :ARG1 c5-17))
+                                                                        :polarity -))
+                                               :polarity -))))
+
+# ::snt Okay cool. I just haven't thought about it in so long I didn't know if it was still relevant.
+# ::tokens ["Okay", "cool", ".", "I", "just", "have", "n't", "thought", "about", "it", "in", "so", "long", "I", "did", "n't", "know", "if", "it", "was", "still", "relevant", "."]
+# ::lemmas ["okay", "cool", ".", "i", "just", "have", "not", "think", "about", "it", "in", "so", "long", "i", "do", "not", "know", "if", "it", "be", "still", "relevant", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-9 / cool-04
+                  :ARG1-of (c6-12 / okay-04))
+      :snt2 (c6-3 / think-01
+                  :ARG0 (c6-8 / i)
+                  :ARG2 (c6-1 / it)
+                  :time (c6-15 / before
+                               :op1 (c6-14 / now)
+                               :duration (c6-10 / long-03
+                                                :ARG2-of (c6-2 / have-degree-91
+                                                               :ARG1 c6-3
+                                                               :ARG3 (c6-13 / so)
+                                                               :ARG6 (c6-0 / know-01
+                                                                           :ARG0 c6-8
+                                                                           :ARG1 (c6-11 / relevant-01
+                                                                                        :ARG1 (c6-5 / it)
+                                                                                        :mod (c6-6 / still))
+                                                                           :polarity -))))
+                  :mod (c6-7 / just)
+                  :polarity -))

@@ -1,0 +1,68 @@
+# ::snt Im sure Siri was excited
+# ::tokens ["I", "m", "sure", "Siri", "was", "excited"]
+# ::lemmas ["i", "m", "sure", "Siri", "be", "excited"]
+(c2-1 / sure-02
+      :ARG0 (c2-4 / i)
+      :ARG1 (c2-2 / excite-01
+                  :ARG1 (c2-3 / person
+                              :name (c2-0 / name
+                                          :op1 "Siri"))))
+
+# ::snt Jajajaja q genia
+# ::tokens ["Jajajaja", "q", "genia"]
+# ::lemmas ["Jajajaja", "q", "genia"]
+(c3-2 / say-01
+      :ARG0 (c3-4 / person
+                  :name (c3-0 / name
+                              :op1 "Jajajaja"))
+      :ARG2 (c3-1 / person
+                  :name (c3-3 / name
+                              :op1 "genia")))
+
+# ::snt suuuuri
+# ::tokens ["suuuuri"]
+# ::lemmas ["suuuuri"]
+(c4-0 / suuuuri)
+
+# ::snt Suri looks just like her dad!
+# ::tokens ["Suri", "looks", "just", "like", "her", "dad", "!"]
+# ::lemmas ["Suri", "look", "just", "like", "her", "dad", "!"]
+(c5-4 / look-02
+      :ARG0 (c5-3 / person
+                  :name (c5-0 / name
+                              :op1 "Suri"))
+      :ARG1 (c5-1 / person
+                  :ARG0-of (c5-2 / have-rel-role-91
+                                 :ARG1 c5-3
+                                 :ARG2 (c5-6 / dad)))
+      :mod (c5-5 / just))
+
+# ::snt You have the opportunity to be a part of the Greatest Comeback in Medical History! Please watch share and donate to the video below thanks
+# ::tokens ["You", "have", "the", "opportunity", "to", "be", "a", "part", "of", "the", "Greatest", "Comeback", "in", "Medical", "History", "!", "Please", "watch", "share", "and", "donate", "to", "the", "video", "below", "thanks"]
+# ::lemmas ["you", "have", "the", "opportunity", "to", "be", "a", "part", "of", "the", "Greatest", "Comeback", "in", "Medical", "History", "!", "please", "watch", "share", "and", "donate", "to", "the", "video", "below", "thank"]
+(c6-12 / multi-sentence
+       :snt1 (c6-5 / have-03
+                   :ARG0 (c6-2 / you)
+                   :ARG1 (c6-1 / opportunity
+                               :purpose (c6-15 / participate-01
+                                               :ARG0 c6-2
+                                               :ARG1 (c6-13 / come-back-19
+                                                            :ARG1-of (c6-17 / have-degree-91
+                                                                            :ARG2 (c6-9 / great)
+                                                                            :ARG3 (c6-6 / most)
+                                                                            :ARG5 (c6-4 / history
+                                                                                        :mod (c6-14 / medicine)))))))
+       :snt2 (c6-8 / and
+                   :op1 (c6-16 / watch-01
+                               :ARG0 (c6-10 / you)
+                               :ARG1 (c6-0 / share-01
+                                           :ARG0 c6-10)
+                               :mode imperative)
+                   :op2 (c6-19 / donate-01
+                               :ARG0 c6-10
+                               :ARG2 (c6-3 / video
+                                           :location (c6-11 / below))
+                               :mode imperative)
+                   :ARG2-of (c6-7 / thank-01
+                                  :ARG0 (c6-18 / i))
+                   :polite +))

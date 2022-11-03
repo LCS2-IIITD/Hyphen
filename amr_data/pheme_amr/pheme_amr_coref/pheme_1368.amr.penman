@@ -1,0 +1,98 @@
+# ::snt power out in Bells Corners! Any connection to today's events?
+# ::tokens ["power", "out", "in", "Bells", "Corners", "!", "Any", "connection", "to", "today", "'s", "events", "?"]
+# ::lemmas ["power", "out", "in", "Bells", "Corners", "!", "any", "connection", "to", "today", "'s", "event", "?"]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / power-out-02
+                  :location (c1-0 / location
+                                  :name (c1-4 / name
+                                              :op1 "Bells"
+                                              :op2 "Corners"))
+                  :mode expressive)
+      :snt2 (c1-6 / connect-01
+                  :ARG2 (c1-2 / event
+                              :time (c1-7 / today))
+                  :polarity (c1-8 / amr-unknown)
+                  :mod (c1-3 / any)))
+
+# ::snt My map app shows tweets from shooting site
+# ::tokens ["My", "map", "app", "shows", "tweets", "from", "shooting", "site"]
+# ::lemmas ["my", "map", "app", "show", "tweet", "from", "shoot", "site"]
+(c2-4 / show-01
+      :ARG0 (c2-6 / app
+                  :mod (c2-1 / map)
+                  :poss (c2-3 / i))
+      :ARG1 (c2-5 / tweet-02
+                  :source (c2-2 / site
+                                :location-of (c2-0 / shoot-02))))
+
+# ::snt Official PD statement : Shooting incidents in Ottawa today: ongoing investigation
+# ::tokens ["Official", "PD", "statement", ":", "Shooting", "incidents", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+# ::lemmas ["official", "PD", "statement", ":", "shoot", "incident", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+(c3-9 / state-01
+      :ARG0 (c3-7 / government-organization
+                  :name (c3-3 / name
+                              :op1 "PD")
+                  :mod (c3-0 / official))
+      :ARG1 (c3-2 / investigate-01
+                  :ARG1 (c3-8 / incident
+                              :mod (c3-1 / shoot-02)
+                              :time (c3-10 / today)
+                              :location (c3-6 / city
+                                              :name (c3-4 / name
+                                                          :op1 "Ottawa")))
+                  :ARG1-of (c3-5 / go-on-15)))
+
+# ::snt News release from : Shooting incidents in Ottawa today: ongoing investigation
+# ::tokens ["News", "release", "from", ":", "Shooting", "incidents", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+# ::lemmas ["news", "release", "from", ":", "shoot", "incident", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+(c4-4 / release-01
+      :ARG0 (c4-3 / publication
+                  :name (c4-1 / name
+                              :op1 "News"))
+      :ARG1 (c4-0 / investigate-01
+                  :ARG1 (c4-6 / incident
+                              :mod (c4-8 / shoot-02)
+                              :time (c4-9 / today)
+                              :location (c4-5 / city
+                                              :name (c4-2 / name
+                                                          :op1 "Ottawa")))
+                  :ARG1-of (c4-7 / go-on-15)))
+
+# ::snt Ottawa Police confirm soldier has died. RT : Shooting incidents in Ottawa today: ongoing investigation
+# ::tokens ["Ottawa", "Police", "confirm", "soldier", "has", "died", ".", "RT", ":", "Shooting", "incidents", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+# ::lemmas ["Ottawa", "Police", "confirm", "soldier", "have", "die", ".", "RT", ":", "shoot", "incident", "in", "Ottawa", "today", ":", "ongoing", "investigation"]
+(c5-0 / multi-sentence
+      :snt1 (c5-7 / confirm-01
+                  :ARG0 (c5-5 / police
+                              :mod (c5-6 / city
+                                         :name (c5-3 / name
+                                                     :op1 "Ottawa")))
+                  :ARG1 (c5-8 / die-01
+                              :ARG1 (c5-11 / soldier)))
+      :snt2 (c5-14 / publication
+                   :name (c5-4 / name
+                               :op1 "RT")
+                   :ARG1-of (c5-9 / mean-01
+                                  :ARG2 (c5-2 / incident
+                                              :mod (c5-1 / shoot-02
+                                                         :time (c5-13 / today))
+                                              :location c5-6
+                                              :ARG1-of (c5-10 / investigate-01
+                                                              :ARG1-of (c5-12 / go-on-15))))))
+
+# ::snt Release from "
+# ::tokens ["Release", "from", "\""]
+# ::lemmas ["release", "from", "\""]
+(c6-0 / release-01
+      :ARG0 (c6-1 / amr-unknown))
+
+# ::snt . release on shooting incidents in Ottawa today:
+# ::tokens [".", "release", "on", "shooting", "incidents", "in", "Ottawa", "today", ":"]
+# ::lemmas [".", "release", "on", "shoot", "incident", "in", "Ottawa", "today", ":"]
+(c7-2 / release-01
+      :ARG1 (c7-0 / incident
+                  :mod (c7-4 / shoot-02)
+                  :location (c7-3 / city
+                                  :name (c7-1 / name
+                                              :op1 "Ottawa")))
+      :time (c7-5 / today))

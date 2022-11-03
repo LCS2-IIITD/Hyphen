@@ -1,0 +1,259 @@
+# ::snt Je suis
+# ::tokens ["Je", "suis"]
+# ::lemmas ["Je", "suis"]
+(c1-0 / Je)
+
+# ::snt Islamic attack
+# ::tokens ["Islamic", "attack"]
+# ::lemmas ["Islamic", "attack"]
+(c2-2 / attack-01
+      :mod (c2-1 / religious-group
+                 :name (c2-0 / name
+                             :op1 "Islam")))
+
+# ::snt are saying the editor is coveting the idea of forgiveness while in heaven
+# ::tokens ["are", "saying", "the", "editor", "is", "coveting", "the", "idea", "of", "forgiveness", "while", "in", "heaven"]
+# ::lemmas ["be", "say", "the", "editor", "be", "covet", "the", "idea", "of", "forgiveness", "while", "in", "heaven"]
+(c3-6 / say-01
+      :ARG1 (c3-5 / covet-01
+                  :ARG0 (c3-3 / editor)
+                  :ARG1 (c3-4 / idea
+                              :topic (c3-1 / forgive-01))
+                  :time (c3-2 / be-located-at-91
+                              :ARG1 c3-3
+                              :ARG2 (c3-0 / heaven))))
+
+# ::snt I strongly condemn this barbaric attack as a Turkish Muslim.
+# ::tokens ["I", "strongly", "condemn", "this", "barbaric", "attack", "as", "a", "Turkish", "Muslim", "."]
+# ::lemmas ["i", "strongly", "condemn", "this", "barbaric", "attack", "as", "a", "Turkish", "Muslim", "."]
+(c4-5 / condemn-01
+      :ARG0 (c4-1 / i
+                  :mod (c4-4 / religious-group
+                             :name (c4-2 / name
+                                         :op1 "Muslim")
+                             :mod (c4-6 / country
+                                        :name (c4-3 / name
+                                                    :op1 "Turkey"))))
+      :ARG1 (c4-9 / attack-01
+                  :mod (c4-0 / barbaric)
+                  :mod (c4-8 / this))
+      :ARG1-of (c4-7 / strong-02))
+
+# ::snt she's apparently the only one in the organization with any courage. Show covers.
+# ::tokens ["she", "'s", "apparently", "the", "only", "one", "in", "the", "organization", "with", "any", "courage", ".", "Show", "covers", "."]
+# ::lemmas ["she", "be", "apparently", "the", "only", "one", "in", "the", "organization", "with", "any", "courage", ".", "show", "cover", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-10 / appear-02
+                   :ARG1 (c5-0 / have-03
+                               :ARG0 (c5-9 / she
+                                           :mod (c5-3 / only)
+                                           :ARG1-of (c5-6 / include-91
+                                                          :ARG2 (c5-1 / organization)))
+                               :ARG1 (c5-8 / courage
+                                           :mod (c5-5 / any))))
+      :snt2 (c5-7 / cover-03
+                  :ARG0 (c5-4 / show-04)))
+
+# ::snt : Editorial cartoonist love's strong than hate
+# ::tokens [":", "Editorial", "cartoonist", "love", "'s", "strong", "than", "hate"]
+# ::lemmas [":", "editorial", "cartoonist", "love", "'s", "strong", "than", "hate"]
+(c6-1 / love-01
+      :ARG0 (c6-4 / cartoonist
+                  :mod (c6-3 / editorial))
+      :ARG1-of (c6-0 / have-degree-91
+                     :ARG2 (c6-5 / strong-02
+                                 :ARG1 c6-1)
+                     :ARG3 (c6-2 / more)
+                     :ARG4 (c6-6 / hate-01)))
+
+# ::snt This depiction would certainly fire up the terrorists. It is also offensive to all the good Muslims.
+# ::tokens ["This", "depiction", "would", "certainly", "fire", "up", "the", "terrorists", ".", "It", "is", "also", "offensive", "to", "all", "the", "good", "Muslims", "."]
+# ::lemmas ["this", "depiction", "would", "certainly", "fire", "up", "the", "terrorist", ".", "it", "be", "also", "offensive", "to", "all", "the", "good", "Muslims", "."]
+(c7-1 / multi-sentence
+      :snt1 (c7-0 / fire-up-02
+                  :ARG0 (c7-7 / depict-01
+                              :mod (c7-12 / this))
+                  :ARG1 (c7-11 / terrorist)
+                  :mod (c7-8 / certain))
+      :snt2 (c7-2 / offend-01
+                  :ARG0 (c7-4 / it)
+                  :ARG1 (c7-6 / person
+                              :mod (c7-9 / religious-group
+                                         :name (c7-5 / name
+                                                     :op1 "Islam"))
+                              :ARG1-of (c7-10 / good-02)
+                              :mod (c7-13 / all))
+                  :mod (c7-3 / also)))
+
+# ::snt try to be a good human.not only a cartoonists.
+# ::tokens ["try", "to", "be", "a", "good", "human.not", "only", "a", "cartoonists", "."]
+# ::lemmas ["try", "to", "be", "a", "good", "human.not", "only", "a", "cartoonist", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-6 / try-01
+                  :ARG0 (c8-1 / you)
+                  :ARG1 (c8-0 / human
+                              :ARG1-of (c8-5 / good-02)
+                              :domain c8-1)
+                  :mode imperative)
+      :snt2 (c8-4 / cartoonist
+                  :mod (c8-3 / only
+                             :polarity -)))
+
+# ::snt Will run the actual cartoons, or just "tribute"?
+# ::tokens ["Will", "run", "the", "actual", "cartoons", ",", "or", "just", "\"", "tribute", "\"", "?"]
+# ::lemmas ["will", "run", "the", "actual", "cartoon", ",", "or", "just", "\"", "tribute", "\"", "?"]
+(c9-5 / amr-choice
+      :op1 (c9-3 / run-01
+                 :ARG1 (c9-4 / cartoon
+                             :ARG1-of (c9-1 / actual-02)))
+      :op2 (c9-2 / ribute-01
+                 :ARG1 c9-4
+                 :mod (c9-0 / just)))
+
+# ::snt not good enough. Sorry. Just not.
+# ::tokens ["not", "good", "enough", ".", "Sorry", ".", "Just", "not", "."]
+# ::lemmas ["not", "good", "enough", ".", "sorry", ".", "just", "not", "."]
+(c10-2 / multi-sentence
+       :snt1 (c10-0 / have-degree-91
+                    :ARG2 (c10-5 / good-02)
+                    :ARG3 (c10-3 / enough)
+                    :polarity -)
+       :snt2 (c10-6 / sorry-01
+                    :ARG1 (c10-4 / i))
+       :snt3 (c10-7 / have-polarity-91
+                    :mod (c10-1 / just)
+                    :ARG2 -))
+
+# ::snt Wouldn't that just be a floating pen?
+# ::tokens ["Would", "n't", "that", "just", "be", "a", "floating", "pen", "?"]
+# ::lemmas ["would", "not", "that", "just", "be", "a", "float", "pen", "?"]
+(c11-2 / pen
+       :ARG1-of (c11-1 / float-01)
+       :domain (c11-4 / that)
+       :mod (c11-0 / just)
+       :ARG1-of (c11-3 / request-confirmation-91))
+
+# ::snt lazy scared art. Want a powerful image. Make it Mohammed holding the pen
+# ::tokens ["lazy", "scared", "art", ".", "Want", "a", "powerful", "image", ".", "Make", "it", "Mohammed", "holding", "the", "pen"]
+# ::lemmas ["lazy", "scared", "art", ".", "want", "a", "powerful", "image", ".", "make", "it", "Mohammed", "hold", "the", "pen"]
+(c12-3 / multi-sentence
+       :snt1 (c12-11 / art
+                     :ARG1-of (c12-9 / scare-01))
+       :snt2 (c12-1 / want-01
+                    :ARG1 (c12-5 / image
+                                 :ARG1-of (c12-7 / powerful-02)))
+       :snt3 (c12-8 / make-02
+                    :ARG0 (c12-2 / you)
+                    :ARG1 (c12-0 / hold-01
+                                 :ARG0 (c12-10 / person
+                                               :name (c12-6 / name
+                                                            :op1 "Mohammed"))
+                                 :ARG1 (c12-4 / pen))
+                    :mode imperative))
+
+# ::snt in defense of the , It was a lot more than I expected
+# ::tokens ["in", "defense", "of", "the", ",", "It", "was", "a", "lot", "more", "than", "I", "expected"]
+# ::lemmas ["in", "defense", "of", "the", ",", "it", "be", "a", "lot", "more", "than", "i", "expect"]
+(c13-0 / have-quant-91
+       :ARG1 (c13-4 / it)
+       :ARG3 (c13-2 / more
+                    :quant (c13-1 / lot))
+       :ARG4 (c13-3 / expect-01
+                    :ARG0 (c13-6 / i))
+       :purpose (c13-5 / defend-01
+                       :ARG1 c13-4))
+
+# ::snt take them alive
+# ::tokens ["take", "them", "alive"]
+# ::lemmas ["take", "they", "alive"]
+(c14-2 / take-04
+       :ARG0 (c14-0 / you)
+       :ARG1 (c14-1 / live-01
+                    :ARG0 (c14-3 / they))
+       :mode imperative)
+
+# ::snt : Editorial cartoonist on the Charlie Hebdo attack
+# ::tokens [":", "Editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+# ::lemmas [":", "editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+(c15-3 / cartoonist
+       :mod (c15-1 / editorial)
+       :topic (c15-4 / attack-01
+                     :ARG1 (c15-0 / magazine
+                                  :name (c15-2 / name
+                                               :op1 "Charlie"
+                                               :op2 "Ch Hebdo"))))
+
+# ::snt :It is true that cartoonist on this photo was murdered?
+# ::tokens [":", "It", "is", "true", "that", "cartoonist", "on", "this", "photo", "was", "murdered", "?"]
+# ::lemmas [":", "it", "be", "true", "that", "cartoonist", "on", "this", "photo", "be", "murder", "?"]
+(c16-4 / true-01
+       :polarity (c16-5 / amr-unknown)
+       :ARG1 (c16-0 / murder-01
+                    :ARG1 (c16-2 / cartoonist
+                                 :topic (c16-1 / photo
+                                               :mod (c16-3 / this)))))
+
+# ::snt Rest in peace : Editorial cartoonist on the Charlie Hebdo attack
+# ::tokens ["Rest", "in", "peace", ":", "Editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+# ::lemmas ["rest", "in", "peace", ":", "editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+(c17-7 / and
+       :op1 (c17-5 / rest-01
+                   :manner (c17-4 / peace))
+       :op2 (c17-6 / cartoonist
+                   :mod (c17-1 / editorial)
+                   :topic (c17-2 / attack-01
+                                 :ARG1 (c17-0 / magazine
+                                              :name (c17-3 / name
+                                                           :op1 "Charlie"
+                                                           :op2 "Ch Hebdo")))))
+
+# ::snt :France/US Armed shooters kill Muslims in are "Good rebels " but same shooters in are terrorist?
+# ::tokens [":", "France", "/", "US", "Armed", "shooters", "kill", "Muslims", "in", "are", "\"", "Good", "rebels", "\"", "but", "same", "shooters", "in", "are", "terrorist", "?"]
+# ::lemmas [":", "France", "/", "US", "Armed", "shooter", "kill", "Muslims", "in", "be", "\"", "good", "rebel", "\"", "but", "same", "shooter", "in", "be", "terrorist", "?"]
+(c18-17 / contrast-01
+        :ARG1 (c18-15 / kill-01
+                      :ARG0 (c18-2 / person
+                                   :ARG0-of (c18-4 / shoot-02)
+                                   :ARG1-of (c18-6 / arm-01)
+                                   :mod (c18-8 / slash
+                                               :op1 (c18-3 / country
+                                                           :name (c18-9 / name
+                                                                        :op1 "France"))
+                                               :op2 (c18-14 / country
+                                                            :name (c18-16 / name
+                                                                          :op1 "US"))))
+                      :ARG1 (c18-5 / person
+                                   :mod (c18-10 / religious-group
+                                                :name (c18-1 / name
+                                                             :op1 "Muslim")))
+                      :prep-in (c18-7 / person
+                                      :ARG0-of (c18-0 / rebel-01)
+                                      :ARG1-of (c18-11 / good-02)))
+        :ARG2 (c18-12 / kill-01
+                      :ARG0 c18-2
+                      :ARG1 c18-5
+                      :prep-in (c18-18 / terrorist
+                                       :domain c18-5)
+                      :polarity (c18-13 / amr-unknown)))
+
+# ::snt : Editorial cartoonist on the Charlie Hebdo attack
+# ::tokens [":", "Editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+# ::lemmas [":", "editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack"]
+(c19-3 / cartoonist
+       :mod (c19-1 / editorial)
+       :topic (c19-4 / attack-01
+                     :ARG1 (c19-0 / magazine
+                                  :name (c19-2 / name
+                                               :op1 "Charlie"
+                                               :op2 "Ch Hebdo"))))
+
+# ::snt  Editorial cartoonist on the Charlie Hebdo attack:
+# ::tokens [" ", "Editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack", ":"]
+# ::lemmas [" ", "editorial", "cartoonist", "on", "the", "Charlie", "Hebdo", "attack", ":"]
+(c21-3 / cartoonist
+       :mod (c21-1 / editorial)
+       :topic (c21-4 / attack-01
+                     :ARG1 (c21-0 / magazine
+                                  :name (c21-2 / name
+                                               :op1 "Charlie"
+                                               :op2 "Ch Hebdo"))))

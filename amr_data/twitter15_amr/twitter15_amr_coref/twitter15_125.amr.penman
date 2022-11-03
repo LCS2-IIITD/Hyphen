@@ -1,0 +1,87 @@
+# ::snt GIVE : This dog was abandoned at a railway station w/ a suitcase of his belongings
+# ::tokens ["GIVE", ":", "This", "dog", "was", "abandoned", "at", "a", "railway", "station", "w/", "a", "suitcase", "of", "his", "belongings"]
+# ::lemmas ["give", ":", "this", "dog", "be", "abandon", "at", "a", "railway", "station", "w/", "a", "suitcase", "of", "his", "belonging"]
+(c1-7 / multi-sentence
+      :snt1 (c1-10 / give-01)
+      :snt2 (c1-8 / abandon-01
+                  :ARG1 (c1-9 / dog
+                              :mod (c1-4 / this))
+                  :location (c1-0 / station
+                                  :mod (c1-5 / railway))
+                  :prep-with (c1-1 / suitcase
+                                   :ARG1-of (c1-2 / include-91
+                                                  :ARG2 (c1-6 / thing
+                                                              :ARG0-of (c1-3 / belong-01
+                                                                             :ARG1 c1-9))))))
+
+# ::snt I hate people! : This dog was abandoned with a suitcase full of his belongings
+# ::tokens ["I", "hate", "people", "!", ":", "This", "dog", "was", "abandoned", "with", "a", "suitcase", "full", "of", "his", "belongings"]
+# ::lemmas ["i", "hate", "people", "!", ":", "this", "dog", "be", "abandon", "with", "a", "suitcase", "full", "of", "his", "belonging"]
+(c2-6 / multi-sentence
+      :snt1 (c2-7 / hate-01
+                  :ARG0 (c2-1 / i)
+                  :ARG1 (c2-3 / person))
+      :snt2 (c2-8 / abandon-01
+                  :ARG1 (c2-9 / dog
+                              :mod (c2-4 / this)
+                              :accompanier (c2-0 / suitcase
+                                                 :ARG1-of (c2-10 / full-09
+                                                                 :ARG2 (c2-5 / thing
+                                                                             :ARG0-of (c2-2 / belong-01
+                                                                                            :ARG1 c2-9)))))))
+
+# ::snt Our year old shar-pei that looked identical to this died Thanksgiving. So sad. Best dog ever
+# ::tokens ["Our", "year", "old", "shar", "-", "pei", "that", "looked", "identical", "to", "this", "died", "Thanksgiving", ".", "So", "sad", ".", "Best", "dog", "ever"]
+# ::lemmas ["Our", "year", "old", "shar", "-", "pei", "that", "look", "identical", "to", "this", "die", "Thanksgiving", ".", "so", "sad", ".", "good", "dog", "ever"]
+(c3-10 / multi-sentence
+       :snt1 (c3-15 / die-01
+                    :ARG1 (c3-5 / person
+                                :name (c3-14 / name
+                                             :op1 " shar-pei")
+                                :age (c3-8 / temporal-quantity
+                                           :unit (c3-11 / year)
+                                           :quant 1)
+                                :poss (c3-1 / we)
+                                :ARG0-of (c3-7 / look-02
+                                               :ARG1 (c3-3 / identical-01
+                                                           :ARG1 c3-5
+                                                           :ARG2 (c3-9 / this))))
+                    :time (c3-17 / festival
+                                 :name c3-14
+                                 :op1 "Thanksgiving"))
+       :snt2 (c3-0 / sad-02
+                   :degree (c3-4 / so))
+       :snt3 (c3-12 / have-degree-91
+                    :ARG1 (c3-2 / dog)
+                    :ARG2 (c3-13 / good-02
+                                 :ARG1 c3-2)
+                    :ARG3 (c3-6 / most)
+                    :time (c3-16 / ever)))
+
+# ::snt My heart cant handle these things STAHP : Dog abandoned at railway station w a suitcase full of his things
+# ::tokens ["My", "heart", "ca", "nt", "handle", "these", "things", "STAHP", ":", "Dog", "abandoned", "at", "railway", "station", "w", "a", "suitcase", "full", "of", "his", "things"]
+# ::lemmas ["my", "heart", "can", "not", "handle", "these", "thing", "stahp", ":", "Dog", "abandon", "at", "railway", "station", "w", "a", "suitcase", "full", "of", "his", "thing"]
+(c4-9 / multi-sentence
+      :snt1 (c4-3 / possible-01
+                  :ARG1 (c4-11 / handle-01
+                               :ARG0 (c4-2 / heart
+                                           :part-of (c4-1 / i))
+                               :ARG1 (c4-6 / thing
+                                           :mod (c4-7 / this)))
+                  :polarity -)
+      :snt2 (c4-0 / say-01
+                  :ARG1 (c4-12 / abandon-01
+                               :ARG1 (c4-13 / dog)
+                               :location (c4-4 / station
+                                               :mod (c4-8 / railway))
+                               :prep-with (c4-10 / suitcase
+                                                 :ARG1-of (c4-14 / full-09
+                                                                 :ARG2 (c4-5 / thing
+                                                                             :poss c4-13))))))
+
+# ::snt you wanted a dog!
+# ::tokens ["you", "wanted", "a", "dog", "!"]
+# ::lemmas ["you", "want", "a", "dog", "!"]
+(c5-0 / want-01
+      :ARG0 (c5-2 / you)
+      :ARG1 (c5-1 / dog))

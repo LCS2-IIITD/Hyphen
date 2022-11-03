@@ -1,0 +1,38 @@
+# ::snt My man
+# ::tokens ["My", "man"]
+# ::lemmas ["my", "man"]
+(c1-1 / man
+      :poss (c1-0 / i))
+
+# ::snt Nice! Just got mine yesterday
+# ::tokens ["Nice", "!", "Just", "got", "mine", "yesterday"]
+# ::lemmas ["nice", "!", "just", "get", "mine", "yesterday"]
+(c2-4 / multi-sentence
+      :snt1 (c2-5 / nice-01)
+      :snt2 (c2-1 / get-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-0 / thing
+                              :poss c2-3)
+                  :time (c2-6 / yesterday)
+                  :mod (c2-2 / just)))
+
+# ::snt Thank you. I am quite proud of having the correct number of thumbs.
+# ::tokens ["Thank", "you", ".", "I", "am", "quite", "proud", "of", "having", "the", "correct", "number", "of", "thumbs", "."]
+# ::lemmas ["thank", "you", ".", "i", "be", "quite", "proud", "of", "have", "the", "correct", "number", "of", "thumb", "."]
+(c3-8 / multi-sentence
+      :snt1 (c3-5 / thank-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-10 / you))
+      :snt2 (c3-6 / pride-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-4 / have-03
+                              :ARG0 c3-3
+                              :ARG1 (c3-9 / number
+                                          :ARG1-of (c3-0 / correct-02)
+                                          :mod (c3-2 / thumb)))
+                  :degree (c3-1 / quite)))
+
+# ::snt congratulations
+# ::tokens ["congratulations"]
+# ::lemmas ["congratulation"]
+(c4-0 / congratulate-01)

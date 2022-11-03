@@ -1,0 +1,203 @@
+# ::snt good god no
+# ::tokens ["good", "god", "no"]
+# ::lemmas ["good", "god", "no"]
+(c1-0 / god
+      :ARG1-of (c1-2 / good-02)
+      :mod (c1-1 / no)
+      :mode expressive)
+
+# ::snt The first part is good but the second
+# ::tokens ["The", "first", "part", "is", "good", "but", "the", "second"]
+# ::lemmas ["the", "first", "part", "be", "good", "but", "the", "second"]
+(c2-4 / contrast-01
+      :ARG1 (c2-5 / good-02
+                  :ARG1 (c2-3 / part
+                              :ord (c2-0 / ordinal-entity
+                                         :value 1))
+                  :ARG2-of c2-4)
+      :ARG1 (c2-2 / part
+                  :ord (c2-1 / ordinal-entity
+                             :value 2)))
+
+# ::snt And I can't forget Springsteen
+# ::tokens ["And", "I", "ca", "n't", "forget", "Springsteen"]
+# ::lemmas ["and", "i", "can", "not", "forget", "Springsteen"]
+(c3-5 / and
+      :op2 (c3-3 / possible-01
+                 :ARG1 (c3-0 / forget-01
+                             :ARG0 (c3-4 / i)
+                             :ARG1 (c3-2 / person
+                                         :name (c3-1 / name
+                                                     :op1 "Springsteen")))
+                 :polarity -))
+
+# ::snt Let me know and I'll buy a copy
+# ::tokens ["Let", "me", "know", "and", "I", "'ll", "buy", "a", "copy"]
+# ::lemmas ["let", "i", "know", "and", "i", "'ll", "buy", "a", "copy"]
+(c4-6 / and
+      :op1 (c4-2 / let-know-07
+                 :ARG0 (c4-1 / you)
+                 :ARG1 (c4-5 / i)
+                 :mode imperative)
+      :op2 (c4-0 / buy-01
+                 :ARG0 c4-5
+                 :ARG1 (c4-4 / thing
+                             :ARG2-of (c4-3 / copy-01))))
+
+# ::snt Definitely. Hopefully in the near future I should be releasing my first solo EP that is inspired by Mayer, Clapton, Bonomassa, and Richards
+# ::tokens ["Definitely", ".", "Hopefully", "in", "the", "near", "future", "I", "should", "be", "releasing", "my", "first", "solo", "EP", "that", "is", "inspired", "by", "Mayer", ",", "Clapton", ",", "Bonomassa", ",", "and", "Richards"]
+# ::lemmas ["definitely", ".", "hopefully", "in", "the", "near", "future", "i", "should", "be", "release", "my", "first", "solo", "EP", "that", "be", "inspire", "by", "Mayer", ",", "Clapton", ",", "Bonomassa", ",", "and", "Richards"]
+(c5-7 / multi-sentence
+      :snt1 (c5-19 / definite)
+      :snt2 (c5-5 / hope-01
+                  :ARG1 (c5-13 / release-01
+                               :ARG0 (c5-18 / i)
+                               :ARG1 (c5-14 / EP
+                                            :poss c5-18
+                                            :ord (c5-3 / ordinal-entity
+                                                       :value 1)
+                                            :mod (c5-0 / solo)
+                                            :ARG1-of (c5-4 / inspire-01
+                                                           :ARG0 (c5-6 / and
+                                                                       :op1 (c5-15 / person
+                                                                                   :name (c5-12 / name
+                                                                                                :op1 "Mayer"))
+                                                                       :op2 (c5-8 / person
+                                                                                  :name (c5-9 / name
+                                                                                              :op1 "Clapton"))
+                                                                       :op3 (c5-2 / person
+                                                                                  :name (c5-16 / name
+                                                                                               :op1 "Bonomassa"))
+                                                                       :op4 (c5-1 / person
+                                                                                  :name (c5-10 / name
+                                                                                               :op1 "Richards")))))
+                               :time (c5-11 / future
+                                            :ARG1-of (c5-17 / near-02)))))
+
+# ::snt Not selfish! But each album he puts out, he follows a unique direction/inspiration for it. I'd like to see a brand new path for him.
+# ::tokens ["Not", "selfish", "!", "But", "each", "album", "he", "puts", "out", ",", "he", "follows", "a", "unique", "direction", "/", "inspiration", "for", "it", ".", "I", "'d", "like", "to", "see", "a", "brand", "new", "path", "for", "him", "."]
+# ::lemmas ["not", "selfish", "!", "but", "each", "album", "he", "put", "out", ",", "he", "follow", "a", "unique", "direction", "/", "inspiration", "for", "it", ".", "i", "would", "like", "to", "see", "a", "brand", "new", "path", "for", "he", "."]
+(c6-9 / multi-sentence
+      :snt1 (c6-0 / selfish
+                  :domain (c6-6 / he)
+                  :polarity -)
+      :snt2 (c6-11 / contrast-01
+                   :ARG2 (c6-13 / follow-02
+                                :ARG0 (c6-17 / he)
+                                :ARG1 (c6-2 / or
+                                            :op1 (c6-19 / direction
+                                                        :ARG1-of (c6-12 / unique-01))
+                                            :op2 (c6-18 / inspire-01
+                                                        :ARG0 c6-17))
+                                :ARG2 (c6-7 / album
+                                            :mod (c6-15 / each)
+                                            :ARG1-of (c6-16 / put-out-10
+                                                            :ARG0 c6-17))))
+      :snt3 (c6-1 / like-02
+                  :ARG0 (c6-4 / i)
+                  :ARG1 (c6-3 / see-01
+                              :ARG0 c6-4
+                              :ARG1 (c6-10 / path
+                                           :ARG1-of (c6-14 / new-01
+                                                           :mod (c6-8 / brand))
+                                           :beneficiary (c6-5 / he)))))
+
+# ::snt Same
+# ::tokens ["Same"]
+# ::lemmas ["same"]
+(c7-0 / same-01)
+
+# ::snt Same
+# ::tokens ["Same"]
+# ::lemmas ["same"]
+(c8-0 / same-01)
+
+# ::snt I WANT JATY BAAACK
+# ::tokens ["I", "WANT", "JATY", "BAAACK"]
+# ::lemmas ["i", "want", "JATY", "BAAACK"]
+(c9-0 / want-01
+      :ARG0 (c9-2 / i)
+      :ARG1 (c9-1 / bAAACK
+                  :mode expressive))
+
+# ::snt they are soulmates
+# ::tokens ["they", "are", "soulmates"]
+# ::lemmas ["they", "be", "soulmate"]
+(c10-1 / soulmate
+       :domain (c10-0 / they))
+
+# ::snt Same but korlando soo waiting Christmas. .ed sheeran concert. Give me hopes
+# ::tokens ["Same", "but", "korlando", "soo", "waiting", "Christmas", ".", ".ed", "sheeran", "concert", ".", "Give", "me", "hopes"]
+# ::lemmas ["same", "but", "korlando", "soo", "wait", "Christmas", ".", ".ed", "sheeran", "concert", ".", "give", "i", "hope"]
+(c11-3 / multi-sentence
+       :snt1 (c11-10 / contrast-01
+                     :ARG1 (c11-5 / same-01)
+                     :ARG2 (c11-11 / wait-01
+                                   :ARG1 (c11-15 / city
+                                                 :name (c11-4 / name
+                                                              :op1 "lando"))
+                                   :ARG2 (c11-0 / festival
+                                                :name (c11-6 / name
+                                                             :op1 "Christmas"))))
+       :snt2 (c11-12 / concert
+                     :mod (c11-1 / sheer)
+                     :mod (c11-7 / person
+                                 :name (c11-8 / name
+                                              :op1 "ed"
+                                              :op2 " sheeran")))
+       :snt3 (c11-14 / give-01
+                     :ARG0 (c11-2 / you)
+                     :ARG1 (c11-9 / hope-01)
+                     :ARG2 (c11-13 / i)
+                     :mode imperative))
+
+# ::snt feel u sis
+# ::tokens ["feel", "u", "sis"]
+# ::lemmas ["feel", "u", "sis"]
+(c12-0 / feel-01
+       :ARG0 (c12-4 / i)
+       :ARG2 (c12-1 / you
+                    :ARG0-of (c12-3 / have-rel-role-91
+                                    :ARG1 c12-4
+                                    :ARG2 (c12-2 / sister))))
+
+# ::snt . And yes, these are the questions I'm thinking about on Wednesday afternoons.
+# ::tokens [".", "And", "yes", ",", "these", "are", "the", "questions", "I", "'m", "thinking", "about", "on", "Wednesday", "afternoons", "."]
+# ::lemmas [".", "and", "yes", ",", "these", "be", "the", "question", "i", "be", "think", "about", "on", "Wednesday", "afternoons", "."]
+(c13-0 / and
+       :op2 (c13-2 / think-01
+                   :ARG0 (c13-5 / i)
+                   :ARG1 (c13-3 / question-01
+                                :mod (c13-4 / this))
+                   :time (c13-6 / date-entity
+                                :weekday (c13-1 / wednesday)
+                                :dayperiod (c13-7 / afternoon))))
+
+# ::snt . ... but are the songs so good because they broke up and that broke John's heart or will the songs get even better if he's happy with her?
+# ::tokens [".", "...", "but", "are", "the", "songs", "so", "good", "because", "they", "broke", "up", "and", "that", "broke", "John", "'s", "heart", "or", "will", "the", "songs", "get", "even", "better", "if", "he", "'s", "happy", "with", "her", "?"]
+# ::lemmas [".", "...", "but", "be", "the", "song", "so", "good", "because", "they", "break", "up", "and", "that", "break", "John", "'s", "heart", "or", "will", "the", "song", "get", "even", "well", "if", "he", "be", "happy", "with", "she", "?"]
+(c14-10 / contrast-01
+        :ARG2 (c14-13 / amr-choice
+                      :op1 (c14-16 / cause-01
+                                   :ARG0 (c14-12 / and
+                                                 :op1 (c14-1 / break-up-08
+                                                             :ARG1 (c14-4 / song))
+                                                 :op2 (c14-6 / break-01
+                                                             :ARG1 (c14-7 / heart
+                                                                          :part-of (c14-8 / person
+                                                                                          :name (c14-2 / name
+                                                                                                       :op1 "John")))))
+                                   :ARG1 (c14-14 / good-02
+                                                 :ARG1 c14-4
+                                                 :degree (c14-0 / so)))
+                      :op2 (c14-15 / get-03
+                                   :ARG1 c14-4
+                                   :ARG2 (c14-11 / have-degree-91
+                                                 :ARG1 c14-4
+                                                 :ARG2 c14-14
+                                                 :ARG1 c14-4
+                                                 :mod (c14-5 / even))
+                                   :ARG3 (c14-3 / more))
+                      :condition (c14-9 / happy-01
+                                        :ARG0 (c14-17 / she)
+                                        :ARG1 c14-8)))

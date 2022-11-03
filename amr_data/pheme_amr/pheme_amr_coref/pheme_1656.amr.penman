@@ -1,0 +1,64 @@
+# ::snt It's true unfortunately and no survivors are expected
+# ::tokens ["It", "'s", "true", "unfortunately", "and", "no", "survivors", "are", "expected"]
+# ::lemmas ["it", "be", "true", "unfortunately", "and", "no", "survivor", "be", "expect"]
+(c1-6 / and
+      :op1 (c1-5 / true-01
+                 :ARG1 (c1-2 / it)
+                 :ARG2-of (c1-0 / fortunate-01
+                                :polarity -))
+      :op2 (c1-1 / expect-01
+                 :ARG1 (c1-3 / person
+                             :ARG0-of (c1-4 / survive-01))
+                 :polarity -))
+
+# ::snt : BREAKING NEWS crashed could be Germanwings flight from Barcelona to Dusseldorf. (140 passengers) Heartbreaking
+# ::tokens [":", "BREAKING", "NEWS", "crashed", "could", "be", "Germanwings", "flight", "from", "Barcelona", "to", "Dusseldorf", ".", "(", "140", "passengers", ")", "Heartbreaking"]
+# ::lemmas [":", "BREAKING", "NEWS", "crash", "could", "be", "germanwing", "flight", "from", "Barcelona", "to", "Dusseldorf", ".", "(", "140", "passenger", ")", "heartbreake"]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / possible-01
+                  :ARG1 (c2-7 / crash-01
+                              :ARG1 (c2-0 / fly-01
+                                          :ARG0 (c2-6 / company
+                                                      :name (c2-3 / name
+                                                                  :op1 "Germanwings"))
+                                          :source (c2-9 / city
+                                                        :name (c2-4 / name
+                                                                    :op1 "Barcelona"))
+                                          :destination (c2-11 / city
+                                                              :name (c2-8 / name
+                                                                          :op1 "Dusseldorf")))
+                              :ARG1-of (c2-2 / break-heart-31
+                                             :snt2-of c2-1)))
+      :ARG1 (c2-10 / passenger
+                   :quant 140))
+
+# ::snt are you sure
+# ::tokens ["are", "you", "sure"]
+# ::lemmas ["be", "you", "sure"]
+(c3-0 / sure-02
+      :polarity (c3-2 / amr-unknown)
+      :ARG0 (c3-1 / you))
+
+# ::snt that's crazy
+# ::tokens ["that", "'s", "crazy"]
+# ::lemmas ["that", "be", "crazy"]
+(c6-1 / crazy-03
+      :ARG1 (c6-0 / that))
+
+# ::snt important to check in
+# ::tokens ["important", "to", "check", "in"]
+# ::lemmas ["important", "to", "check", "in"]
+(c7-2 / important-01
+      :ARG1 (c7-1 / check-in-04
+                  :ARG1 (c7-0 / you)))
+
+# ::snt good
+# ::tokens ["good"]
+# ::lemmas ["good"]
+(c9-0 / good-02)
+
+# ::snt really?
+# ::tokens ["really", "?"]
+# ::lemmas ["really", "?"]
+(c10-0 / real-04
+       :polarity (c10-1 / amr-unknown))

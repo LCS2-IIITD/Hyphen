@@ -1,0 +1,27 @@
+# ::snt They don't have to listen, though, just not penalise you for it.
+# ::tokens ["They", "do", "n't", "have", "to", "listen", ",", "though", ",", "just", "not", "penalise", "you", "for", "it", "."]
+# ::lemmas ["they", "do", "not", "have", "to", "listen", ",", "though", ",", "just", "not", "penalise", "you", "for", "it", "."]
+(c1-5 / contrast-01
+      :ARG1 (c1-3 / obligate-01
+                  :ARG1 (c1-6 / they)
+                  :ARG2 (c1-2 / listen-01
+                              :ARG0 c1-6)
+                  :polarity -)
+      :ARG2 (c1-4 / penalize-01
+                  :ARG0 c1-6
+                  :ARG1 (c1-1 / you)
+                  :ARG2 c1-2
+                  :mod (c1-0 / just)
+                  :polarity -))
+
+# ::snt Liverpool's wealth is founded in slavery and your team is shit.
+# ::tokens ["Liverpool", "'s", "wealth", "is", "founded", "in", "slavery", "and", "your", "team", "is", "shit", "."]
+# ::lemmas ["Liverpool", "'s", "wealth", "be", "found", "in", "slavery", "and", "your", "team", "be", "shit", "."]
+(c2-6 / and
+      :op1 (c2-2 / found-01
+                 :ARG1 (c2-0 / wealth
+                             :poss (c2-5 / team
+                                         :poss (c2-1 / you)))
+                 :ARG2 (c2-4 / slavery))
+      :op2 (c2-3 / shit
+                 :domain c2-5))

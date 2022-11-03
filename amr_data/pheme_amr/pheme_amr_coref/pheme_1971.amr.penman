@@ -1,0 +1,67 @@
+# ::snt awesome
+# ::tokens ["awesome"]
+# ::lemmas ["awesome"]
+(c1-0 / awesome-02)
+
+# ::snt Love it. Stealing it
+# ::tokens ["Love", "it", ".", "Stealing", "it"]
+# ::lemmas ["Love", "it", ".", "steal", "it"]
+(c2-1 / multi-sentence
+      :snt1 (c2-0 / love-01
+                  :ARG1 (c2-2 / it))
+      :snt2 (c2-4 / steal-01
+                  :ARG1 (c2-3 / it)))
+
+# ::snt Add to that that his followers are pathologically ignorant.
+# ::tokens ["Add", "to", "that", "that", "his", "followers", "are", "pathologically", "ignorant", "."]
+# ::lemmas ["add", "to", "that", "that", "his", "follower", "be", "pathologically", "ignorant", "."]
+(c3-6 / add-02
+      :ARG1 (c3-2 / ignorant-02
+                  :ARG1 (c3-3 / person
+                              :ARG0-of (c3-1 / follow-02
+                                             :ARG1 (c3-0 / he)))
+                  :mod (c3-5 / pathologic))
+      :ARG2 (c3-4 / that))
+
+# ::snt thank you-been confronting on that same topic today-my God is big enough to take it-omiscience is good thing
+# ::tokens ["thank", "you", "-", "been", "confronting", "on", "that", "same", "topic", "today", "-", "my", "God", "is", "big", "enough", "to", "take", "it", "-", "omiscience", "is", "good", "thing"]
+# ::lemmas ["thank", "you", "-", "be", "confront", "on", "that", "same", "topic", "today", "-", "my", "God", "be", "big", "enough", "to", "take", "it", "-", "omiscience", "be", "good", "thing"]
+(c4-1 / multi-sentence
+      :snt1 (c4-18 / thank-01
+                   :ARG0 (c4-9 / i)
+                   :ARG1 (c4-13 / you))
+      :snt2 (c4-16 / confront-01
+                   :ARG0 (c4-11 / i)
+                   :ARG2 (c4-12 / topic
+                                :ARG1-of (c4-3 / same-01)
+                                :mod (c4-10 / that))
+                   :time (c4-15 / today))
+      :snt3 (c4-4 / have-degree-91
+                  :ARG1 (c4-2 / person
+                              :name (c4-7 / name
+                                          :op1 "God")
+                              :poss (c4-0 / i))
+                  :ARG2 (c4-5 / big)
+                  :ARG3 (c4-6 / enough)
+                  :ARG6 (c4-17 / take-02
+                               :ARG0 c4-2
+                               :ARG1 c4-12))
+      :snt4 (c4-8 / good-02
+                  :ARG1 (c4-14 / omniscience)))
+
+# ::snt hahahaha well said mate
+# ::tokens ["hahahaha", "well", "said", "mate"]
+# ::lemmas ["hahahaha", "well", "say", "mate"]
+(c5-5 / say-01
+      :ARG0 (c5-4 / i)
+      :ARG1 (c5-3 / say-01
+                  :manner (c5-1 / well-09))
+      :ARG2 (c5-2 / mate)
+      :mod (c5-0 / haha
+                 :mode expressive))
+
+# ::snt I agree
+# ::tokens ["I", "agree"]
+# ::lemmas ["i", "agree"]
+(c6-1 / agree-01
+      :ARG0 (c6-0 / i))

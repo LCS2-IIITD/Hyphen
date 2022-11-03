@@ -1,0 +1,45 @@
+# ::snt Poor poor dog.
+# ::tokens ["Poor", "poor", "dog", "."]
+# ::lemmas ["poor", "poor", "dog", "."]
+(c1-0 / dog
+      :mod (c1-1 / poor
+                 :mod-of c1-0))
+
+# ::snt I don't think there is any excuse good enough
+# ::tokens ["I", "do", "n't", "think", "there", "is", "any", "excuse", "good", "enough"]
+# ::lemmas ["i", "do", "not", "think", "there", "be", "any", "excuse", "good", "enough"]
+(c2-1 / think-01
+      :ARG0 (c2-0 / i)
+      :ARG1 (c2-5 / excuse-02
+                  :mod (c2-4 / any)
+                  :ARG1-of (c2-3 / have-degree-91
+                                 :ARG2 (c2-6 / good-02
+                                             :ARG1 c2-5)
+                                 :ARG3 (c2-2 / enough)))
+      :polarity -)
+
+# ::snt I can't even : Dog found abandoned at Scottish train station with suitcase of belongings (Photo: SPCA)
+# ::tokens ["I", "ca", "n't", "even", ":", "Dog", "found", "abandoned", "at", "Scottish", "train", "station", "with", "suitcase", "of", "belongings", "(", "Photo", ":", "SPCA", ")"]
+# ::lemmas ["i", "can", "not", "even", ":", "Dog", "find", "abandon", "at", "Scottish", "train", "station", "with", "suitcase", "of", "belonging", "(", "photo", ":", "SPCA", ")"]
+(c3-13 / multi-sentence
+       :snt1 (c3-10 / possible-01
+                    :ARG1 (c3-8 / event
+                                :mod (c3-1 / i))
+                    :mod (c3-11 / even)
+                    :polarity -)
+       :snt2 (c3-9 / find-01
+                   :ARG1 (c3-7 / dog
+                               :ARG0-of (c3-18 / have-03
+                                               :ARG1 (c3-0 / suitcase
+                                                           :ARG0-of (c3-2 / contain-01
+                                                                          :ARG1 (c3-16 / thing
+                                                                                       :ARG0-of (c3-3 / belong-01)))))
+                               :ARG1-of (c3-6 / abandon-01
+                                              :location (c3-4 / station
+                                                              :mod (c3-12 / train)
+                                                              :mod (c3-17 / country
+                                                                          :name (c3-15 / name
+                                                                                       :op1 "Scotland")))))
+                   :source (c3-5 / organization
+                                 :name (c3-14 / name
+                                              :op1 "SPCA"))))

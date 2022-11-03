@@ -1,0 +1,87 @@
+# ::snt L'Amrique se tient avec la France.
+# ::tokens ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+# ::lemmas ["L'Amrique", "se", "tient", "avec", "la", "France", "."]
+(c1-4 / tient-of
+      :ARG1 (c1-3 / city
+                  :name (c1-0 / name
+                              :op1 "L'Amrique"))
+      :ARG3 (c1-2 / country
+                  :name (c1-1 / name
+                              :op1 "France")))
+
+# ::snt so sad.
+# ::tokens ["so", "sad", "."]
+# ::lemmas ["so", "sad", "."]
+(c2-0 / sad-02
+      :degree (c2-1 / so))
+
+# ::snt Great! United against terrorism.
+# ::tokens ["Great", "!", "United", "against", "terrorism", "."]
+# ::lemmas ["great", "!", "United", "against", "terrorism", "."]
+(c3-3 / unite-01
+      :ARG3 (c3-0 / oppose-01
+                  :ARG1 (c3-2 / terrorism))
+      :mod (c3-1 / great)
+      :mode expressive)
+
+# ::snt pitty the president of the country couldn't do that
+# ::tokens ["pitty", "the", "president", "of", "the", "country", "could", "n't", "do", "that"]
+# ::lemmas ["pitty", "the", "president", "of", "the", "country", "could", "not", "do", "that"]
+(c5-2 / possible-01
+      :ARG1 (c5-3 / do-02
+                  :ARG0 (c5-7 / person
+                              :ARG0-of (c5-0 / have-org-role-91
+                                             :ARG1 (c5-4 / country)
+                                             :ARG2 (c5-1 / president))
+                              :mod (c5-6 / tit))
+                  :ARG1 (c5-5 / that))
+      :polarity -)
+
+# ::snt Read Raul Castros Memo to Cubas first Military Mission to Algeria, Oct. , . Doc.
+# ::tokens ["Read", "Raul", "Castros", "Memo", "to", "Cubas", "first", "Military", "Mission", "to", "Algeria", ",", "Oct.", ",", ".", "Doc", "."]
+# ::lemmas ["read", "Raul", "Castros", "Memo", "to", "Cubas", "first", "Military", "Mission", "to", "Algeria", ",", "Oct.", ",", ".", "doc", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-6 / read-01
+                  :ARG0 (c6-5 / person
+                              :name (c6-3 / name
+                                          :op1 "Raul"
+                                          :op2 "Castros"
+                                          :op3 "Memo"))
+                  :ARG1 (c6-7 / mission-01
+                              :ARG0 (c6-8 / country
+                                          :name (c6-4 / name
+                                                      :op1 "Cuba"))
+                              :ARG1 (c6-0 / military)
+                              :ord (c6-2 / ordinal-entity
+                                         :value 1)
+                              :destination (c6-9 / country
+                                                 :name (c6-10 / name
+                                                              :op1 "Algeria")))
+                  :time (c6-11 / date-entity
+                               :month 10)
+                  :mode imperative)
+      :snt2 (c6-13 / person
+                   :name (c6-12 / name
+                                :op1 "Doc")))
+
+# ::snt &amp; this should be going on world wide. This happened in France (this time) but is a global war on freedom.
+# ::tokens ["&", "amp", ";", "this", "should", "be", "going", "on", "world", "wide", ".", "This", "happened", "in", "France", "(", "this", "time", ")", "but", "is", "a", "global", "war", "on", "freedom", "."]
+# ::lemmas ["&", "amp", ";", "this", "should", "be", "go", "on", "world", "wide", ".", "this", "happen", "in", "France", "(", "this", "time", ")", "but", "be", "a", "global", "war", "on", "freedom", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-16 / and
+                   :op2 (c7-5 / amp))
+      :snt2 (c7-9 / recommend-01
+                  :ARG1 (c7-11 / go-on-15
+                               :ARG1 (c7-15 / this)
+                               :location (c7-0 / worldwide)))
+      :snt3 (c7-10 / contrast-01
+                   :ARG1 (c7-3 / be-located-at-91
+                               :ARG1 (c7-13 / this)
+                               :ARG2 (c7-12 / country
+                                            :name (c7-7 / name
+                                                        :op1 "France"))
+                               :time (c7-8 / time
+                                           :mod (c7-4 / this)))
+                   :ARG2 (c7-6 / war-01
+                               :ARG1 (c7-1 / free-04)
+                               :mod (c7-14 / globe))))

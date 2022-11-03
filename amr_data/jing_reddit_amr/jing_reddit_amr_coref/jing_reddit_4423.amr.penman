@@ -1,0 +1,80 @@
+# ::snt r/iamatotalpieceofshit
+# ::tokens ["r", "/", "iamatotalpieceofshit"]
+# ::lemmas ["r", "/", "iamatotalpieceofshit"]
+(c1-0 / url-entity
+      :value "r/iamatotalpieceofshit")
+
+# ::snt That's a subreddit, folks.
+# ::tokens ["That", "'s", "a", "subreddit", ",", "folks", "."]
+# ::lemmas ["that", "be", "a", "subreddit", ",", "folk", "."]
+(c2-0 / say-01
+      :ARG0 (c2-4 / i)
+      :ARG1 (c2-3 / publication
+                  :name (c2-5 / name
+                              :op1 "R subreddit")
+                  :domain (c2-2 / that))
+      :ARG2 (c2-1 / folk))
+
+# ::snt But we *didn't* elect John McCain.
+# ::tokens ["But", "we", "*", "did", "n't", "*", "elect", "John", "McCain", "."]
+# ::lemmas ["but", "we", "*", "do", "not", "*", "elect", "John", "McCain", "."]
+(c3-0 / contrast-01
+      :ARG2 (c3-4 / elect-01
+                  :ARG0 (c3-1 / we)
+                  :ARG1 (c3-2 / person
+                              :name (c3-3 / name
+                                          :op1 "John"
+                                          :op2 "McCain"))
+                  :polarity -))
+
+# ::snt Please don't use the r-word. 30 years ago the intellectually disabled were institutionalized. We deserve the right to participate in society
+# ::tokens ["Please", "do", "n't", "use", "the", "r", "-", "word", ".", "30", "years", "ago", "the", "intellectually", "disabled", "were", "institutionalized", ".", "We", "deserve", "the", "right", "to", "participate", "in", "society"]
+# ::lemmas ["please", "do", "not", "use", "the", "r", "-", "word", ".", "30", "years", "ago", "the", "intellectually", "disabled", "be", "institutionalize", ".", "we", "deserve", "the", "right", "to", "participate", "in", "society"]
+(c4-7 / multi-sentence
+      :snt1 (c4-15 / use-01
+                   :ARG0 (c4-13 / you)
+                   :ARG1 (c4-3 / word
+                               :mod (c4-6 / r-word))
+                   :mode imperative
+                   :polite +)
+      :snt2 (c4-2 / institutionalize-02
+                  :ARG1 (c4-18 / person
+                               :ARG1-of (c4-0 / disable-01
+                                              :mod (c4-11 / intellectual)))
+                  :time (c4-17 / before
+                               :op1 (c4-8 / now)
+                               :quant (c4-5 / temporal-quantity
+                                            :unit (c4-14 / year)
+                                            :quant 30)))
+      :snt3 (c4-12 / deserve-01
+                   :ARG0 (c4-9 / we)
+                   :ARG1 (c4-4 / right-05
+                               :ARG1 (c4-1 / we)
+                               :ARG2 (c4-16 / participate-01
+                                            :ARG0 c4-1
+                                            :ARG1 (c4-10 / society)))))
+
+# ::snt 30 years ago we were electing KKK Grand Wizards to Congress. This is nothing new.
+# ::tokens ["30", "years", "ago", "we", "were", "electing", "KKK", "Grand", "Wizards", "to", "Congress", ".", "This", "is", "nothing", "new", "."]
+# ::lemmas ["30", "years", "ago", "we", "be", "elect", "KKK", "Grand", "Wizards", "to", "Congress", ".", "this", "be", "nothing", "new", "."]
+(c5-12 / multi-sentence
+       :snt1 (c5-16 / elect-01
+                    :ARG0 (c5-1 / we)
+                    :ARG1 (c5-11 / person
+                                 :ARG0-of (c5-3 / have-org-role-91
+                                                :ARG1 (c5-5 / organization
+                                                            :name (c5-13 / name
+                                                                         :op1 "KKK"))
+                                                :ARG2 (c5-15 / wizard
+                                                             :mod (c5-10 / grand))))
+                    :ARG2 (c5-14 / government-organization
+                                 :name (c5-8 / name
+                                             :op1 "Congress"))
+                    :time (c5-4 / before
+                                :op1 (c5-6 / now)
+                                :quant (c5-7 / temporal-quantity
+                                             :unit (c5-9 / year)
+                                             :quant 30)))
+       :snt2 (c5-0 / new-01
+                   :ARG1 (c5-2 / this)
+                   :polarity -))

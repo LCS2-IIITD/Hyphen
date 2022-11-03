@@ -1,0 +1,79 @@
+# ::snt Thank you Mr. French for keeping St. Louis informed on the latest news.
+# ::tokens ["Thank", "you", "Mr.", "French", "for", "keeping", "St.", "Louis", "informed", "on", "the", "latest", "news", "."]
+# ::lemmas ["thank", "you", "Mr.", "French", "for", "keep", "St.", "Louis", "inform", "on", "the", "late", "news", "."]
+(c1-8 / thank-01
+      :ARG1 (c1-5 / person
+                  :name (c1-3 / name
+                              :op1 "Mr."
+                              :op2 "French"))
+      :ARG2 (c1-2 / keep-02
+                  :ARG0 c1-5
+                  :ARG1 (c1-1 / inform-01
+                              :ARG1 (c1-7 / city
+                                          :name (c1-4 / name
+                                                      :op1 "St."
+                                                      :op2 "Louis"))
+                              :ARG2 (c1-6 / news
+                                          :mod (c1-0 / last)))))
+
+# ::snt Some crook should be robbing something right now. Police are otherwise occupied.
+# ::tokens ["Some", "crook", "should", "be", "robbing", "something", "right", "now", ".", "Police", "are", "otherwise", "occupied", "."]
+# ::lemmas ["some", "crook", "should", "be", "rob", "something", "right", "now", ".", "police", "be", "otherwise", "occupy", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-8 / recommend-01
+                  :ARG1 (c2-5 / rob-01
+                              :ARG0 (c2-9 / crook
+                                          :mod (c2-10 / some))
+                              :ARG1 (c2-3 / something)
+                              :time (c2-6 / now
+                                          :mod (c2-4 / right))))
+      :snt2 (c2-2 / occupy-01
+                  :ARG1 (c2-7 / police)
+                  :condition (c2-0 / have-polarity-91
+                                   :ARG1 c2-5
+                                   :ARG2 -)))
+
+# ::snt For what!! They have an Army there now!!!
+# ::tokens ["For", "what", "!", "!", "They", "have", "an", "Army", "there", "now", "!", "!", "!"]
+# ::lemmas ["for", "what", "!", "!", "they", "have", "an", "Army", "there", "now", "!", "!", "!"]
+(c3-4 / cause-01
+      :ARG0 (c3-0 / have-03
+                  :ARG0 (c3-6 / they)
+                  :ARG1 (c3-1 / military
+                              :name (c3-2 / name
+                                          :op1 "Army"))
+                  :location (c3-5 / there)
+                  :time (c3-3 / now))
+      :mode expressive)
+
+# ::snt : More police cars heading into
+# ::tokens [":", "More", "police", "cars", "heading", "into"]
+# ::lemmas [":", "more", "police", "car", "head", "into"]
+(c4-0 / head-02
+      :ARG0 (c4-3 / car
+                  :mod (c4-2 / police)
+                  :quant (c4-1 / more)))
+
+# ::snt : More police cars heading into
+# ::tokens [":", "More", "police", "cars", "heading", "into"]
+# ::lemmas [":", "more", "police", "car", "head", "into"]
+(c5-0 / head-02
+      :ARG0 (c5-3 / car
+                  :mod (c5-2 / police)
+                  :quant (c5-1 / more)))
+
+# ::snt : More police cars heading into
+# ::tokens [":", "More", "police", "cars", "heading", "into"]
+# ::lemmas [":", "more", "police", "car", "head", "into"]
+(c6-0 / head-02
+      :ARG0 (c6-3 / car
+                  :mod (c6-2 / police)
+                  :quant (c6-1 / more)))
+
+# ::snt ": More police cars heading into "
+# ::tokens ["\"", ":", "More", "police", "cars", "heading", "into", "\""]
+# ::lemmas ["\"", ":", "more", "police", "car", "head", "into", "\""]
+(c7-0 / head-02
+      :ARG0 (c7-3 / car
+                  :mod (c7-2 / police)
+                  :quant (c7-1 / more)))

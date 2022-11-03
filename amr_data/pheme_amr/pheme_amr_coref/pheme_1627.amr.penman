@@ -1,0 +1,121 @@
+# ::snt ...encounters with the police as "clashes"...
+# ::tokens ["...", "encounters", "with", "the", "police", "as", "\"", "clashes", "\"", "..."]
+# ::lemmas ["...", "encounter", "with", "the", "police", "as", "\"", "clash", "\"", "..."]
+(c1-0 / encounter-01
+      :ARG1 (c1-1 / police)
+      :prep-as (c1-2 / clash-01))
+
+# ::snt ...it gives they impression that they're attacking the police.
+# ::tokens ["...", "it", "gives", "they", "impression", "that", "they", "'re", "attacking", "the", "police", "."]
+# ::lemmas ["...", "it", "give", "they", "impression", "that", "they", "be", "attack", "the", "police", "."]
+(c2-3 / impression-03
+      :ARG0 (c2-2 / they)
+      :ARG1 (c2-1 / attack-01
+                  :ARG0 c2-2
+                  :ARG1 (c2-0 / police)))
+
+# ::snt Confirmed. There has been a second child killed in
+# ::tokens ["Confirmed", ".", "There", "has", "been", "a", "second", "child", "killed", "in"]
+# ::lemmas ["confirm", ".", "there", "have", "be", "a", "second", "child", "kill", "in"]
+(c3-0 / multi-sentence
+      :snt1 (c3-3 / confirm-01)
+      :snt2 (c3-5 / kill-01
+                  :ARG1 (c3-2 / child
+                              :ord (c3-1 / ordinal-entity
+                                         :value 2))
+                  :location (c3-4 / there)))
+
+# ::snt Yeah...see...multiple times..problem?
+# ::tokens ["Yeah", "...", "see", "...", "multiple", "times", "..", "problem", "?"]
+# ::lemmas ["yeah", "...", "see", "...", "multiple", "time", "..", "problem", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-0 / yeah)
+      :snt2 (c4-5 / see-01
+                  :ARG0 (c4-4 / you)
+                  :ARG1 (c4-2 / problem)
+                  :frequency (c4-6 / time
+                                   :quant (c4-3 / multiple))
+                  :polarity (c4-7 / amr-unknown)
+                  :mode imperative))
+
+# ::snt Uh oh RT: . reports shooting victim last night in was y.o. male, shot multiple times by county cops
+# ::tokens ["Uh", "oh", "RT", ":", ".", "reports", "shooting", "victim", "last", "night", "in", "was", "y.o", ".", "male", ",", "shot", "multiple", "times", "by", "county", "cops"]
+# ::lemmas ["uh", "oh", "RT", ":", ".", "report", "shoot", "victim", "last", "night", "in", "be", "y.o", ".", "male", ",", "shoot", "multiple", "time", "by", "county", "cop"]
+(c5-2 / multi-sentence
+      :snt1 (c5-3 / uh-oh
+                  :mode expressive)
+      :snt2 (c5-8 / report-01
+                  :ARG1 (c5-6 / victim
+                              :ARG1-of (c5-12 / shoot-02
+                                              :time (c5-9 / date-entity
+                                                          :dayperiod (c5-5 / night)
+                                                          :mod (c5-0 / yesterday)))
+                              :mod (c5-7 / male)
+                              :ARG1-of (c5-4 / shoot-02
+                                             :ARG0 (c5-10 / cop
+                                                          :mod (c5-11 / county))
+                                             :frequency (c5-1 / multiple)))))
+
+# ::snt "officer shot and critically wounded a man after 'he pointed a gun' at police"
+# ::tokens ["\"", "officer", "shot", "and", "critically", "wounded", "a", "man", "after", "'", "he", "pointed", "a", "gun", "'", "at", "police", "\""]
+# ::lemmas ["\"", "officer", "shoot", "and", "critically", "wound", "a", "man", "after", "'", "he", "point", "a", "gun", "'", "at", "police", "\""]
+(c6-11 / and
+       :op1 (c6-9 / shoot-02
+                  :ARG0 (c6-6 / person
+                              :ARG0-of (c6-0 / have-org-role-91
+                                             :ARG2 (c6-4 / officer)))
+                  :ARG1 (c6-2 / man))
+       :op2 (c6-1 / wound-01
+                  :ARG0 c6-6
+                  :ARG1 c6-2
+                  :mod (c6-7 / critical))
+       :time (c6-5 / after
+                   :op1 (c6-10 / point-01
+                               :ARG0 c6-2
+                               :ARG1 (c6-8 / gun)
+                               :ARG2 (c6-3 / police))))
+
+# ::snt you still shouldn't raise a gun at police. That's stupid
+# ::tokens ["you", "still", "should", "n't", "raise", "a", "gun", "at", "police", ".", "That", "'s", "stupid"]
+# ::lemmas ["you", "still", "should", "not", "raise", "a", "gun", "at", "police", ".", "that", "be", "stupid"]
+(c7-1 / multi-sentence
+      :snt1 (c7-5 / recommend-01
+                  :ARG1 (c7-3 / raise-01
+                              :ARG0 (c7-0 / you)
+                              :ARG1 (c7-6 / gun)
+                              :ARG2 (c7-4 / police))
+                  :mod (c7-7 / still)
+                  :polarity -)
+      :snt2 (c7-2 / stupid
+                  :domain (c7-8 / that)))
+
+# ::snt yes, second shooting. Some details here More in 's feed. She's all over this
+# ::tokens ["yes", ",", "second", "shooting", ".", "Some", "details", "here", "More", "in", "'s", "feed", ".", "She", "'s", "all", "over", "this"]
+# ::lemmas ["yes", ",", "second", "shooting", ".", "some", "detail", "here", "more", "in", "'s", "feed", ".", "she", "be", "all", "over", "this"]
+(c8-2 / multi-sentence
+      :snt1 (c8-9 / shoot-02
+                  :ord (c8-4 / ordinal-entity
+                             :value 2))
+      :snt2 (c8-7 / detail-01
+                  :location (c8-0 / here)
+                  :quant (c8-5 / some)
+                  :location (c8-1 / feed
+                                  :poss (c8-6 / person
+                                              :quant (c8-8 / more))))
+      :snt3 (c8-3 / she
+                  :location (c8-11 / all-over
+                                   :op1 (c8-10 / this))))
+
+# ::snt No offense, but you should stop referring to demonstrators'...
+# ::tokens ["No", "offense", ",", "but", "you", "should", "stop", "referring", "to", "demonstrators", "'", "..."]
+# ::lemmas ["no", "offense", ",", "but", "you", "should", "stop", "refer", "to", "demonstrator", "'", "..."]
+(c9-5 / contrast-01
+      :ARG1 (c9-1 / offend-01
+                  :polarity -)
+      :ARG2 (c9-4 / recommend-01
+                  :ARG1 (c9-7 / stop-01
+                              :ARG0 (c9-0 / you)
+                              :ARG1 (c9-2 / refer-01
+                                          :ARG0 c9-0
+                                          :ARG1 (c9-3 / person
+                                                      :ARG0-of (c9-6 / demonstrate-01))))))

@@ -1,0 +1,31 @@
+# ::snt Half a shark washed up on the shore
+# ::tokens ["Half", "a", "shark", "washed", "up", "on", "the", "shore"]
+# ::lemmas ["Half", "a", "shark", "wash", "up", "on", "the", "shore"]
+(c1-0 / wash-up-02
+      :ARG1 (c1-3 / shark
+                  :quant (c1-2 / half))
+      :location (c1-1 / shore))
+
+# ::snt I want to see what ate the other half.
+# ::tokens ["I", "want", "to", "see", "what", "ate", "the", "other", "half", "."]
+# ::lemmas ["i", "want", "to", "see", "what", "eat", "the", "other", "half", "."]
+(c2-1 / want-01
+      :ARG0 (c2-5 / i)
+      :ARG1 (c2-0 / see-01
+                  :ARG0 c2-5
+                  :ARG1 (c2-4 / thing
+                              :ARG1-of (c2-6 / eat-01
+                                             :ARG0 (c2-2 / half
+                                                         :mod (c2-3 / other))))))
+
+# ::snt Dude was high on bath salts and ate himself.
+# ::tokens ["Dude", "was", "high", "on", "bath", "salts", "and", "ate", "himself", "."]
+# ::lemmas ["dude", "be", "high", "on", "bath", "salt", "and", "eat", "himself", "."]
+(c3-2 / and
+      :op1 (c3-3 / high-02
+                 :ARG1 (c3-0 / dude)
+                 :ARG2 (c3-1 / salt
+                             :mod (c3-4 / bath)))
+      :op2 (c3-5 / eat-01
+                 :ARG0 c3-0
+                 :ARG1 c3-0))

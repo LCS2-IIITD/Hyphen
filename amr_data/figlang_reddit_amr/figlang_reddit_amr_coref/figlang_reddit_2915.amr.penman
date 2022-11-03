@@ -1,0 +1,44 @@
+# ::snt Matthew McConaughey has a youtube channel that nobody watches
+# ::tokens ["Matthew", "McConaughey", "has", "a", "youtube", "channel", "that", "nobody", "watches"]
+# ::lemmas ["Matthew", "McConaughey", "have", "a", "youtube", "channel", "that", "nobody", "watch"]
+(c1-2 / have-03
+      :ARG0 (c1-6 / person
+                  :name (c1-7 / name
+                              :op1 "Matthew"
+                              :op2 "McConaughey"))
+      :ARG1 (c1-0 / channel
+                  :medium (c1-4 / publication
+                                :name (c1-5 / name
+                                            :op1 "YouTube"))
+                  :ARG1-of (c1-1 / watch-01
+                                 :ARG0 (c1-3 / nobody))))
+
+# ::snt That's what I love about the internet, Matthew McConaughey keeps posting and his subscriber amount keeps staying the same.
+# ::tokens ["That", "'s", "what", "I", "love", "about", "the", "internet", ",", "Matthew", "McConaughey", "keeps", "posting", "and", "his", "subscriber", "amount", "keeps", "staying", "the", "same", "."]
+# ::lemmas ["that", "be", "what", "i", "love", "about", "the", "internet", ",", "Matthew", "McConaughey", "keep", "post", "and", "his", "subscriber", "amount", "keep", "stay", "the", "same", "."]
+(c2-8 / love-01
+      :ARG0 (c2-11 / i)
+      :ARG1 (c2-2 / and
+                  :op1 (c2-12 / keep-02
+                              :ARG0 (c2-9 / person
+                                          :name (c2-6 / name
+                                                      :op1 "Matthew"
+                                                      :op2 "McConaughey"))
+                              :ARG1 (c2-7 / post-01
+                                          :ARG0 c2-9))
+                  :op2 (c2-1 / keep-02
+                             :ARG0 (c2-13 / amount
+                                          :quant-of (c2-3 / person
+                                                          :ARG0-of (c2-0 / subscribe-01)
+                                                          :poss c2-9))
+                             :ARG1 (c2-10 / stay-01
+                                          :ARG1 c2-13
+                                          :ARG3 (c2-5 / same-01
+                                                      :ARG1 c2-13))))
+      :topic (c2-4 / internet))
+
+# ::snt Not for long.
+# ::tokens ["Not", "for", "long", "."]
+# ::lemmas ["not", "for", "long", "."]
+(c3-0 / long-03
+      :polarity -)

@@ -1,0 +1,95 @@
+# ::snt Hell yeah congratulations!
+# ::tokens ["Hell", "yeah", "congratulations", "!"]
+# ::lemmas ["hell", "yeah", "congratulation", "!"]
+(c1-2 / congratulate-01
+      :mod (c1-1 / yeah
+                 :mod (c1-0 / hell)
+                 :mode expressive))
+
+# ::snt Not a bad day at all.
+# ::tokens ["Not", "a", "bad", "day", "at", "all", "."]
+# ::lemmas ["not", "a", "bad", "day", "at", "all", "."]
+(c2-0 / bad-07
+      :ARG1 (c2-1 / day)
+      :degree (c2-2 / at-all)
+      :polarity -)
+
+# ::snt Correction, I'm getting the Moderna vaccine!
+# ::tokens ["Correction", ",", "I", "'m", "getting", "the", "Moderna", "vaccine", "!"]
+# ::lemmas ["Correction", ",", "i", "be", "get", "the", "Moderna", "vaccine", "!"]
+(c3-0 / correct-02
+      :ARG1 (c3-2 / get-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-1 / vaccine
+                              :name (c3-4 / name
+                                          :op1 "Moderna"))))
+
+# ::snt ANALogy, LMFAO
+# ::tokens ["ANALogy", ",", "LMFAO"]
+# ::lemmas ["analogy", ",", "LMFAO"]
+(c4-1 / and
+      :op1 (c4-3 / anonymous)
+      :op2 (c4-0 / person
+                 :name (c4-2 / name
+                             :op1 "LMFAO")))
+
+# ::snt lmao bruh I just laughed so hard it hurt my head lol
+# ::tokens ["lmao", "bruh", "I", "just", "laughed", "so", "hard", "it", "hurt", "my", "head", "lol"]
+# ::lemmas ["lmao", "bruh", "i", "just", "laugh", "so", "hard", "it", "hurt", "my", "head", "lol"]
+(c5-7 / laugh-01
+      :ARG0 (c5-11 / i
+                   :part (c5-3 / head))
+      :ARG1-of (c5-10 / hard-02
+                      :ARG2-of (c5-1 / have-degree-91
+                                     :ARG1 c5-7
+                                     :ARG3 (c5-0 / so)
+                                     :ARG6 (c5-5 / hurt-01
+                                                 :ARG0 c5-7
+                                                 :ARG1 c5-3)))
+      :mod (c5-6 / just)
+      :mod (c5-8 / laugh-01
+                 :ARG0 c5-11
+                 :manner (c5-2 / loud)
+                 :manner (c5-4 / loud))
+      :mod (c5-9 / bruh
+                 :mode expressive))
+
+# ::snt Don't say analogy when talking about anal. LOL
+# ::tokens ["Do", "n't", "say", "analogy", "when", "talking", "about", "anal", ".", "LOL"]
+# ::lemmas ["do", "not", "say", "analogy", "when", "talk", "about", "anal", ".", "LOL"]
+(c6-0 / say-01
+      :ARG0 (c6-6 / you)
+      :ARG1 (c6-1 / analogy)
+      :time (c6-2 / talk-01
+                  :ARG0 c6-6
+                  :ARG1 (c6-7 / anal))
+      :ARG2-of (c6-3 / laugh-01
+                     :ARG0 (c6-5 / i)
+                     :manner (c6-4 / loud)
+                     :mode expressive)
+      :polarity -
+      :mode imperative)
+
+# ::snt I just hope they stick it in the right place
+# ::tokens ["I", "just", "hope", "they", "stick", "it", "in", "the", "right", "place"]
+# ::lemmas ["i", "just", "hope", "they", "stick", "it", "in", "the", "right", "place"]
+(c7-1 / hope-01
+      :ARG0 (c7-7 / i)
+      :ARG1 (c7-0 / stick-01
+                  :ARG0 (c7-3 / they)
+                  :ARG1 (c7-2 / it)
+                  :ARG2 (c7-5 / place
+                              :ARG1-of (c7-4 / right-03)))
+      :mod (c7-6 / just))
+
+# ::snt What? No?? I think my analogy is spot on...
+# ::tokens ["What", "?", "No", "?", "?", "I", "think", "my", "analogy", "is", "spot", "on", "..."]
+# ::lemmas ["what", "?", "no", "?", "?", "i", "think", "my", "analogy", "be", "spot", "on", "..."]
+(c9-4 / multi-sentence
+      :snt1 (c9-1 / amr-unknown)
+      :snt2 (c9-5 / no)
+      :snt3 (c9-2 / think-01
+                  :ARG0 (c9-3 / i)
+                  :ARG1 (c9-0 / spot-on
+                              :domain (c9-6 / analogy
+                                            :poss c9-3))))

@@ -1,0 +1,90 @@
+# ::snt Bitch bye
+# ::tokens ["Bitch", "bye"]
+# ::lemmas ["bitch", "bye"]
+(c1-0 / bitch-)
+
+# ::snt So pretty much she wasnt attracted to the weekend I can see why
+# ::tokens ["So", "pretty", "much", "she", "was", "nt", "attracted", "to", "the", "weekend", "I", "can", "see", "why"]
+# ::lemmas ["so", "pretty", "much", "she", "be", "not", "attract", "to", "the", "weekend", "i", "can", "see", "why"]
+(c2-4 / cause-01
+      :ARG0 (c2-8 / attract-01
+                  :ARG1 (c2-2 / she)
+                  :ARG2 (c2-5 / weekend)
+                  :degree (c2-3 / pretty-much)
+                  :polarity -)
+      :ARG1 (c2-1 / possible-01
+                  :ARG1 (c2-0 / see-01
+                              :ARG0 (c2-7 / i)
+                              :ARG1 (c2-6 / thing
+                                          :ARG0-of (c2-9 / cause-01)))))
+
+# ::snt The pop vibes were a change of pace and certainly appreciated but Id like the reckless, deviant man I know to come back now.
+# ::tokens ["The", "pop", "vibes", "were", "a", "change", "of", "pace", "and", "certainly", "appreciated", "but", "I", "d", "like", "the", "reckless", ",", "deviant", "man", "I", "know", "to", "come", "back", "now", "."]
+# ::lemmas ["the", "pop", "vibe", "be", "a", "change", "of", "pace", "and", "certainly", "appreciate", "but", "i", "d", "like", "the", "reckless", ",", "deviant", "man", "i", "know", "to", "come", "back", "now", "."]
+(c3-10 / contrast-01
+       :ARG1 (c3-13 / and
+                    :op1 (c3-16 / change-01
+                                :ARG0 (c3-6 / vibe
+                                            :mod (c3-7 / pop))
+                                :ARG1 (c3-3 / pace))
+                    :op2 (c3-12 / appreciate-02
+                                :ARG1 c3-6
+                                :manner (c3-11 / certain)))
+       :ARG2 (c3-8 / like-01
+                   :ARG0 (c3-14 / i)
+                   :ARG1 (c3-2 / man
+                               :mod (c3-5 / reckless)
+                               :mod (c3-15 / deviant)
+                               :ARG1-of (c3-0 / come-01
+                                              :ARG4 (c3-1 / back)
+                                              :ARG1-of (c3-9 / know-01
+                                                             :ARG0 c3-14)
+                                              :time (c3-4 / now)))))
+
+# ::snt able' next album is gonna something else
+# ::tokens ["able", "'", "next", "album", "is", "gon", "na", "something", "else"]
+# ::lemmas ["able", "'", "next", "album", "be", "going", "to", "something", "else"]
+(c4-1 / something
+      :mod (c4-2 / else)
+      :domain (c4-4 / album
+                    :mod (c4-0 / next)
+                    :ARG1-of (c4-3 / possible-01)))
+
+# ::snt Are you serious Its been years since theyve been together you you still bring them up she gained weight because of lupus not because of justin
+# ::tokens ["Are", "you", "serious", "Its", "been", "years", "since", "they", "ve", "been", "together", "you", "you", "still", "bring", "them", "up", "she", "gained", "weight", "because", "of", "lupus", "not", "because", "of", "justin"]
+# ::lemmas ["be", "you", "serious", "its", "be", "years", "since", "they", "ve", "be", "together", "you", "you", "still", "bring", "they", "up", "she", "gain", "weight", "because", "of", "lupus", "not", "because", "of", "justin"]
+(c5-0 / serious-01
+      :ARG1 (c5-3 / you)
+      :ARG2 (c5-7 / and
+                  :op1 (c5-17 / pass-03
+                              :ARG1 (c5-11 / multiple
+                                           :op1 (c5-5 / temporal-quantity
+                                                      :unit (c5-8 / year)
+                                                      :quant 1))
+                              :ARG2 (c5-15 / together
+                                           :domain (c5-19 / they)))
+                  :op2 (c5-10 / bring-up-02
+                              :ARG0 c5-3
+                              :ARG1 c5-19
+                              :mod (c5-2 / still))
+                  :op3 (c5-6 / gain-02
+                             :ARG0 (c5-1 / she)
+                             :ARG1 (c5-18 / weight)
+                             :ARG1-of (c5-14 / cause-01
+                                             :ARG0 (c5-20 / disease
+                                                          :name (c5-16 / name
+                                                                       :op1 "Lupus")))
+                             :ARG1-of (c5-9 / cause-01
+                                            :ARG0 (c5-12 / person
+                                                         :name (c5-13 / name
+                                                                      :op1 "Justin"))
+                                            :polarity -)))
+      :polarity (c5-4 / amr-unknown))
+
+# ::snt They've broken up again?
+# ::tokens ["They", "'ve", "broken", "up", "again", "?"]
+# ::lemmas ["they", "'ve", "break", "up", "again", "?"]
+(c6-0 / break-up-08
+      :polarity (c6-3 / amr-unknown)
+      :ARG1 (c6-1 / they)
+      :mod (c6-2 / again))

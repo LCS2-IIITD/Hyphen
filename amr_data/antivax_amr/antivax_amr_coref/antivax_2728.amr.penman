@@ -1,0 +1,57 @@
+# ::snt Ahahahaha
+# ::tokens ["Ahahahaha"]
+# ::lemmas ["ahahahaha"]
+(c1-0 / ah
+      :mode expressive)
+
+# ::snt aese tou nhi bolo
+# ::tokens ["aese", "tou", "nhi", "bolo"]
+# ::lemmas ["aese", "tou", "nhi", "bolo"]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / hi
+                  :mode expressive)
+      :snt2 (c2-0 / hi
+                  :mode expressive))
+
+# ::snt Thank God! I was about to did own you
+# ::tokens ["Thank", "God", "!", "I", "was", "about", "to", "did", "own", "you"]
+# ::lemmas ["thank", "God", "!", "i", "be", "about", "to", "do", "own", "you"]
+(c3-6 / multi-sentence
+      :snt1 (c3-3 / thank-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-4 / person
+                              :name (c3-7 / name
+                                          :op1 "God")))
+      :snt2 (c3-2 / own-01
+                  :ARG0 (c3-1 / i)
+                  :ARG1 (c3-8 / you)
+                  :time (c3-0 / about-to)))
+
+# ::snt i DONT. he gives me ptsd
+# ::tokens ["i", "DONT", ".", "he", "gives", "me", "ptsd"]
+# ::lemmas ["i", "dont", ".", "he", "give", "i", "ptsd"]
+(c4-6 / multi-sentence
+      :snt1 (c4-0 / do-02
+                  :ARG0 (c4-5 / i)
+                  :polarity -)
+      :snt2 (c4-4 / give-01
+                  :ARG0 (c4-1 / he)
+                  :ARG1 (c4-3 / point-04
+                              :ARG1 (c4-2 / i
+                                          :ARG2-of c4-4))))
+
+# ::snt Oh no you don't!
+# ::tokens ["Oh", "no", "you", "do", "n't", "!"]
+# ::lemmas ["oh", "no", "you", "do", "not", "!"]
+(c5-0 / do-02
+      :ARG0 (c5-2 / you)
+      :mod (c5-1 / oh-no
+                 :mode expressive)
+      :polarity -)
+
+# ::snt not froggy...
+# ::tokens ["not", "froggy", "..."]
+# ::lemmas ["not", "froggy", "..."]
+(c6-0 / have-polarity-91
+      :mod (c6-1 / froggy)
+      :ARG2 -)

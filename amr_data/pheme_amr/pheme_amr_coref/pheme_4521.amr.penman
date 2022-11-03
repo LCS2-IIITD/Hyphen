@@ -1,0 +1,326 @@
+# ::snt then ready to join charlie hebdo soon Inshallah
+# ::tokens ["then", "ready", "to", "join", "charlie", "hebdo", "soon", "Inshallah"]
+# ::lemmas ["then", "ready", "to", "join", "charlie", "hebdo", "soon", "Inshallah"]
+(c1-5 / ready-02
+      :ARG1 (c1-1 / i)
+      :ARG2 (c1-0 / join-04
+                  :ARG0 c1-1
+                  :ARG1 (c1-4 / person
+                              :name (c1-2 / name
+                                          :op1 "Charlie"
+                                          :op2 "Hebdo"))
+                  :time (c1-7 / soon))
+      :time (c1-8 / then)
+      :location (c1-6 / city
+                      :name (c1-3 / name
+                                  :op1 "Inshallah")))
+
+# ::snt Je suis CHARLIE...you all (I'm southern). Thanks!
+# ::tokens ["Je", "suis", "CHARLIE", "...", "you", "all", "(", "I", "'m", "southern", ")", ".", "Thanks", "!"]
+# ::lemmas ["Je", "suis", "CHARLIE", "...", "you", "all", "(", "i", "be", "southern", ")", ".", "thank", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / say-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-1 / lie-08
+                              :mode expressive)
+                  :ARG2 (c2-0 / you
+                              :mod (c2-9 / all)
+                              :ARG1-of (c2-5 / mean-01
+                                             :ARG2 (c2-3 / southern
+                                                         :domain c2-4))))
+      :snt2 (c2-8 / thank-01
+                  :ARG0 (c2-6 / i)
+                  :ARG1 c2-0
+                  :mode expressive))
+
+# ::snt Thank's for this cartoon , today you made me smile even if I were sad.
+# ::tokens ["Thank", "'s", "for", "this", "cartoon", ",", "today", "you", "made", "me", "smile", "even", "if", "I", "were", "sad", "."]
+# ::lemmas ["thank", "'s", "for", "this", "cartoon", ",", "today", "you", "make", "i", "smile", "even", "if", "i", "be", "sad", "."]
+(c3-10 / thank-01
+       :ARG1 (c3-0 / you)
+       :ARG2 (c3-7 / cartoon
+                   :mod (c3-8 / this))
+       :ARG0-of (c3-6 / cause-01
+                      :ARG1 (c3-1 / make-02
+                                  :ARG0 c3-0
+                                  :ARG1 (c3-9 / smile-01
+                                              :ARG0 (c3-4 / i))
+                                  :time (c3-5 / today)
+                                  :concession (c3-2 / even-if
+                                                    :op1 (c3-3 / sad-02
+                                                               :ARG1 c3-4)))))
+
+# ::snt I'll draw Mohammed if I choose. I am not Muslim and its not my Religion so why should I abide by Muslim Rule?
+# ::tokens ["I", "'ll", "draw", "Mohammed", "if", "I", "choose", ".", "I", "am", "not", "Muslim", "and", "its", "not", "my", "Religion", "so", "why", "should", "I", "abide", "by", "Muslim", "Rule", "?"]
+# ::lemmas ["i", "'ll", "draw", "Mohammed", "if", "i", "choose", ".", "i", "be", "not", "Muslim", "and", "its", "not", "my", "religion", "so", "why", "should", "i", "abide", "by", "Muslim", "Rule", "?"]
+(c4-1 / multi-sentence
+      :snt1 (c4-9 / draw-02
+                  :ARG0 (c4-4 / i)
+                  :ARG1 (c4-8 / person
+                              :name (c4-6 / name
+                                          :op1 "Mohammed"))
+                  :condition (c4-10 / choose-01
+                                    :ARG0 c4-4))
+      :snt2 (c4-16 / and
+                   :op1 (c4-11 / religious-group
+                               :name (c4-7 / name
+                                           :op1 "Muslim")
+                               :domain (c4-12 / i)
+                               :polarity -)
+                   :op2 (c4-5 / religion
+                              :poss c4-12
+                              :polarity -)
+                   :ARG0-of (c4-13 / cause-01
+                                   :ARG1 (c4-2 / recommend-01
+                                               :ARG1 (c4-3 / abide-01
+                                                           :ARG0 c4-12
+                                                           :ARG1 (c4-0 / rule-01
+                                                                       :ARG0 c4-11))
+                                               :ARG1-of (c4-14 / cause-01
+                                                               :ARG0 (c4-15 / amr-unknown))))))
+
+# ::snt why? There is no blasphemy law in France
+# ::tokens ["why", "?", "There", "is", "no", "blasphemy", "law", "in", "France"]
+# ::lemmas ["why", "?", "there", "be", "no", "blasphemy", "law", "in", "France"]
+(c5-1 / multi-sentence
+      :snt1 (c5-5 / cause-01
+                  :ARG0 (c5-6 / amr-unknown))
+      :snt2 (c5-0 / law
+                  :topic (c5-2 / blasphemy)
+                  :location (c5-4 / country
+                                  :name (c5-3 / name
+                                              :op1 "France"))
+                  :polarity -))
+
+# ::snt Now the cartoonist from the Atlanta Journal is standing up aganist fear and intimidation.
+# ::tokens ["Now", "the", "cartoonist", "from", "the", "Atlanta", "Journal", "is", "standing", "up", "aganist", "fear", "and", "intimidation", "."]
+# ::lemmas ["now", "the", "cartoonist", "from", "the", "Atlanta", "Journal", "be", "stand", "up", "aganist", "fear", "and", "intimidation", "."]
+(c6-7 / stand-up-07
+      :ARG1 (c6-6 / cartoonist
+                  :source (c6-3 / newspaper
+                                :name (c6-4 / name
+                                            :op1 "Atlanta"
+                                            :op2 "Journal")))
+      :ARG2 (c6-8 / and
+                  :op1 (c6-0 / fear-01
+                             :mod (c6-1 / aganist))
+                  :op2 (c6-2 / intimidate-01
+                             :ARG1 c6-6))
+      :time (c6-5 / now))
+
+# ::snt I work in the south but from
+# ::tokens ["I", "work", "in", "the", "south", "but", "from"]
+# ::lemmas ["i", "work", "in", "the", "south", "but", "from"]
+(c8-3 / contrast-01
+      :ARG1 (c8-0 / work-01
+                  :ARG0 (c8-2 / i)
+                  :location (c8-4 / south))
+      :ARG2 (c8-1 / be-from-91
+                  :ARG2 c8-4))
+
+# ::snt Hi neighbor!
+# ::tokens ["Hi", "neighbor", "!"]
+# ::lemmas ["hi", "neighbor", "!"]
+(c9-0 / say-01
+      :ARG1 (c9-1 / hi)
+      :ARG2 (c9-2 / neighbor))
+
+# ::snt je suis Charlie
+# ::tokens ["je", "suis", "Charlie"]
+# ::lemmas ["je", "suis", "Charlie"]
+(c10-4 / say-01
+       :ARG0 (c10-1 / i)
+       :ARG1 (c10-0 / je)
+       :ARG2 (c10-3 / person
+                    :name (c10-2 / name
+                                 :op1 "Charlie")))
+
+# ::snt thanks so much for sharing. Just added it to my
+# ::tokens ["thanks", "so", "much", "for", "sharing", ".", "Just", "added", "it", "to", "my"]
+# ::lemmas ["thank", "so", "much", "for", "sharing", ".", "just", "add", "it", "to", "my"]
+(c11-4 / multi-sentence
+       :snt1 (c11-11 / thank-01
+                     :ARG0 (c11-7 / i)
+                     :ARG1 (c11-1 / you)
+                     :ARG2 (c11-10 / share-01
+                                   :ARG0 c11-1)
+                     :ARG1-of (c11-0 / have-quant-91
+                                     :ARG2 (c11-8 / much)
+                                     :ARG3 (c11-6 / so)))
+       :snt2 (c11-12 / add-02
+                     :ARG0 (c11-9 / i)
+                     :ARG1 (c11-3 / it)
+                     :ARG2 (c11-5 / i)
+                     :mod (c11-2 / just)))
+
+# ::snt wait and see the reaction million time more strong.
+# ::tokens ["wait", "and", "see", "the", "reaction", "million", "time", "more", "strong", "."]
+# ::lemmas ["wait", "and", "see", "the", "reaction", "million", "time", "more", "strong", "."]
+(c12-7 / and
+       :op1 (c12-1 / wait-01
+                   :ARG1 (c12-2 / you)
+                   :mode imperative)
+       :op2 (c12-6 / see-01
+                   :ARG0 c12-2
+                   :ARG1 (c12-0 / have-degree-91
+                                :ARG1 (c12-5 / react-01)
+                                :ARG2 (c12-4 / strong-02
+                                             :ARG1 c12-5)
+                                :ARG3 (c12-3 / more))
+                   :mode imperative))
+
+# ::snt This is extraordinary. It embodies the relentlessly irreverent spirit of perfectly.
+# ::tokens ["This", "is", "extraordinary", ".", "It", "embodies", "the", "relentlessly", "irreverent", "spirit", "of", "perfectly", "."]
+# ::lemmas ["this", "be", "extraordinary", ".", "it", "embody", "the", "relentlessly", "irreverent", "spirit", "of", "perfectly", "."]
+(c13-0 / multi-sentence
+       :snt1 (c13-2 / extraordinary
+                    :domain (c13-8 / this))
+       :snt2 (c13-1 / embody-01
+                    :ARG1 (c13-7 / spirit
+                                 :ARG1-of (c13-6 / repair-01
+                                                 :manner (c13-4 / relentless)
+                                                 :polarity -))
+                    :ARG2 (c13-3 / it)
+                    :ARG1-of (c13-5 / perfect-02)))
+
+# ::snt in France they do. Mocking authority figures is one element of the debate because no one is afraid to say what they think.
+# ::tokens ["in", "France", "they", "do", ".", "Mocking", "authority", "figures", "is", "one", "element", "of", "the", "debate", "because", "no", "one", "is", "afraid", "to", "say", "what", "they", "think", "."]
+# ::lemmas ["in", "France", "they", "do", ".", "mocking", "authority", "figure", "be", "one", "element", "of", "the", "debate", "because", "no", "one", "be", "afraid", "to", "say", "what", "they", "think", "."]
+(c14-2 / multi-sentence
+       :snt1 (c14-8 / do-02
+                    :ARG0 (c14-14 / they)
+                    :location (c14-9 / country
+                                     :name (c14-5 / name
+                                                  :op1 "France")))
+       :snt2 (c14-3 / element
+                    :part-of (c14-0 / debate-01)
+                    :domain (c14-7 / murder-01
+                                   :ARG1 (c14-1 / figure
+                                                :mod (c14-15 / authority)))
+                    :ARG1-of (c14-10 / cause-01
+                                     :ARG0 (c14-4 / fear-01
+                                                  :ARG0 (c14-6 / no-one)
+                                                  :ARG1 (c14-13 / say-01
+                                                                :ARG0 c14-6
+                                                                :ARG1 (c14-12 / thing
+                                                                              :ARG1-of (c14-11 / think-01
+                                                                                               :ARG0 c14-6)))))
+                    :quant 1))
+
+# ::snt We all need to stand up to these cowardly bastards!!! &amp; show we are as
+# ::tokens ["We", "all", "need", "to", "stand", "up", "to", "these", "cowardly", "bastards", "!", "!", "!", "&", "amp", ";", "show", "we", "are", "as"]
+# ::lemmas ["we", "all", "need", "to", "stand", "up", "to", "these", "cowardly", "bastard", "!", "!", "!", "&", "amp", ";", "show", "we", "be", "as"]
+(c15-2 / multi-sentence
+       :snt1 (c15-7 / need-01
+                    :ARG0 (c15-0 / we
+                                 :mod (c15-11 / all))
+                    :ARG1 (c15-9 / stand-up-07
+                                 :ARG1 c15-0
+                                 :prep-to (c15-3 / bastard
+                                                 :mod (c15-8 / cowardly)
+                                                 :mod (c15-10 / this)))
+                    :mode expressive)
+       :snt2 (c15-6 / and
+                    :op1 (c15-4 / et-cetera)
+                    :op2 (c15-5 / show-01
+                                :ARG0 (c15-1 / you)
+                                :ARG1 c15-0
+                                :mode imperative)))
+
+# ::snt For the Holy War, Jesus must be acknowledged as the ruler of God's creation, Revelation :14, Matthew :19-20.
+# ::tokens ["For", "the", "Holy", "War", ",", "Jesus", "must", "be", "acknowledged", "as", "the", "ruler", "of", "God", "'s", "creation", ",", "Revelation", ":", "14", ",", "Matthew", ":", "19", "-", "20", "."]
+# ::lemmas ["for", "the", "Holy", "War", ",", "Jesus", "must", "be", "acknowledge", "as", "the", "ruler", "of", "God", "'s", "creation", ",", "Revelation", ":", "14", ",", "Matthew", ":", "19", "-", "20", "."]
+(c16-16 / obligate-01
+        :ARG2 (c16-6 / acknowledge-01
+                     :ARG1 (c16-2 / person
+                                  :name (c16-11 / name
+                                                :op1 "Jesus"))
+                     :ARG2 (c16-5 / person
+                                  :ARG0-of (c16-12 / rule-03
+                                                   :ARG1 (c16-18 / create-01
+                                                                 :ARG0 (c16-8 / person
+                                                                              :name (c16-17 / name
+                                                                                            :op1 "God")))))
+                     :ARG1-of (c16-3 / describe-01
+                                     :ARG0 (c16-15 / and
+                                                   :op1 (c16-13 / publication
+                                                                :part-of (c16-9 / book
+                                                                                :name (c16-0 / name
+                                                                                             :op1 "Revelation"))
+                                                                :mod 14)
+                                                   :op2 (c16-10 / publication
+                                                                :mod c16-10
+                                                                :name (c16-1 / name
+                                                                             :op1 "Matthew"))
+                                                   :part (c16-4 / value-interval
+                                                                :op1 19
+                                                                :op2 20))))
+        :purpose (c16-14 / war-01
+                         :mod (c16-7 / holy)))
+
+# ::snt no one have the ri8 to hurt someone feelings and to lough over others Beloved, give respect get respect,,, blasphemy law.......
+# ::tokens ["no", "one", "have", "the", "ri8", "to", "hurt", "someone", "feelings", "and", "to", "lough", "over", "others", "Beloved", ",", "give", "respect", "get", "respect", ",", ",", ",", "blasphemy", "law", "......."]
+# ::lemmas ["no", "one", "have", "the", "ri8", "to", "hurt", "someone", "feeling", "and", "to", "lough", "over", "other", "Beloved", ",", "give", "respect", "get", "respect", ",", ",", ",", "blasphemy", "law", "......."]
+(c17-0 / have-03
+       :ARG0 (c17-7 / no-one)
+       :ARG1 (c17-9 / right-05
+                    :ARG2 (c17-12 / and
+                                  :op1 (c17-13 / hurt-01
+                                               :ARG0 c17-7
+                                               :ARG1 (c17-2 / feel-01
+                                                            :ARG0 (c17-11 / someone)))
+                                  :op2 (c17-3 / lough-02
+                                              :ARG0 c17-7
+                                              :ARG1 (c17-8 / person
+                                                           :ARG1-of (c17-10 / love-01)
+                                                           :mod (c17-5 / other)))
+                                  :op3 (c17-6 / respect-01
+                                              :ARG0 c17-7
+                                              :ARG1 c17-7)
+                                  :op4 (c17-1 / law
+                                              :mod (c17-4 / blasphemy))))
+       :polarity -)
+
+# ::snt . Charlie hebdo is preparing the next edition, with million copies, a record.
+# ::tokens [".", "Charlie", "hebdo", "is", "preparing", "the", "next", "edition", ",", "with", "million", "copies", ",", "a", "record", "."]
+# ::lemmas [".", "Charlie", "hebdo", "be", "prepare", "the", "next", "edition", ",", "with", "million", "copy", ",", "a", "record", "."]
+(c18-3 / prepare-01
+       :ARG0 (c18-6 / person
+                    :name (c18-1 / name
+                                 :op1 "Charlie"
+                                 :op2 "Hebdo"))
+       :ARG1 (c18-0 / edition
+                    :mod (c18-2 / next)
+                    :prep-with (c18-5 / copy
+                                      :mod (c18-4 / record)
+                                      :quant 1000000)))
+
+# ::snt C'est exactement a Charlie Hebdo.
+# ::tokens ["C'est", "exactement", "a", "Charlie", "Hebdo", "."]
+# ::lemmas ["c'est", "exactement", "a", "Charlie", "Hebdo", "."]
+(c19-0 / have-degree-91
+       :ARG1 (c19-4 / publication
+                    :name (c19-3 / name
+                                 :op1 "Charlie"
+                                 :op2 " Hebdo"))
+       :ARG2 (c19-2 / exact)
+       :ARG3 (c19-1 / most))
+
+# ::snt . publish the Charlie Hebdo Mohammed cartoons, don't let them win
+# ::tokens [".", "publish", "the", "Charlie", "Hebdo", "Mohammed", "cartoons", ",", "do", "n't", "let", "them", "win"]
+# ::lemmas [".", "publish", "the", "Charlie", "Hebdo", "Mohammed", "cartoon", ",", "do", "not", "let", "they", "win"]
+(c20-6 / and
+       :op1 (c20-4 / publish-01
+                   :ARG0 (c20-0 / you)
+                   :ARG1 (c20-5 / cartoon
+                                :name (c20-3 / name
+                                             :op1 "Charlie"
+                                             :op2 " Hebdo"
+                                             :op3 "Mohammed"))
+                   :mode imperative)
+       :op2 (c20-2 / let-01
+                   :ARG0 c20-0
+                   :ARG1 (c20-1 / win-01
+                                :ARG0 c20-5)
+                   :polarity -
+                   :mode imperative))

@@ -1,0 +1,150 @@
+# ::snt : : At least two people have died following the . people are being treated by paramedics. nooooo
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", ".", "nooooo"]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", ".", "nooooo"]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / die-01
+                  :ARG1 (c1-4 / person
+                              :quant (c1-8 / at-least
+                                           :op1 2))
+                  :ARG1-of (c1-0 / follow-01
+                                 :ARG2 (c1-7 / paramedic)))
+      :snt2 (c1-6 / treat-03
+                  :ARG0 c1-7
+                  :ARG1 (c1-2 / person)
+                  :mod (c1-3 / no)))
+
+# ::snt : : At least two people have died following the . people are being treated by paramedics.
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", "."]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / die-01
+                  :ARG1 (c2-2 / person
+                              :quant (c2-6 / at-least
+                                           :op1 2))
+                  :ARG1-of (c2-0 / follow-01
+                                 :ARG2 (c2-5 / paramedic)))
+      :snt2 (c2-4 / treat-03
+                  :ARG0 c2-5
+                  :ARG1 c2-2))
+
+# ::snt : : At least two people have died following the . people are being treated by paramedics. NO PLEASE
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", ".", "NO", "PLEASE"]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", ".", "no", "please"]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / die-01
+                  :ARG1 (c3-4 / person
+                              :quant (c3-8 / at-least
+                                           :op1 2))
+                  :ARG1-of (c3-0 / follow-01
+                                 :ARG2 (c3-7 / paramedic
+                                             :ARG2-of (c3-6 / treat-03
+                                                            :ARG1 (c3-2 / person)))))
+      :snt2 (c3-3 / no
+                  :polite +))
+
+# ::snt fuck fuck fuck no for gods sakes
+# ::tokens ["fuck", "fuck", "fuck", "no", "for", "gods", "sakes"]
+# ::lemmas ["fuck", "fuck", "fuck", "no", "for", "god", "sake"]
+(c4-0 / fuck-01
+      :mod (c4-1 / fuck-01)
+      :mod (c4-2 / no)
+      :purpose (c4-4 / sake
+                     :poss (c4-3 / god))
+      :mode expressive)
+
+# ::snt noooooo
+# ::tokens ["noooooo"]
+# ::lemmas ["noooooo"]
+(c5-0 / no)
+
+# ::snt : : At least two people have died following the . people are being treated by paramedics. Please no
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", ".", "Please", "no"]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", ".", "please", "no"]
+(c6-1 / multi-sentence
+      :snt1 (c6-5 / die-01
+                  :ARG1 (c6-4 / person
+                              :quant (c6-8 / at-least
+                                           :op1 2))
+                  :ARG1-of (c6-0 / follow-01
+                                 :ARG2 (c6-7 / paramedic)))
+      :snt2 (c6-6 / treat-03
+                  :ARG0 c6-7
+                  :ARG1 (c6-2 / person))
+      :snt3 (c6-3 / no
+                  :polite +))
+
+# ::snt ahh no
+# ::tokens ["ahh", "no"]
+# ::lemmas ["ahh", "no"]
+(c7-0 / no
+      :mod (c7-1 / ah
+                 :mode expressive))
+
+# ::snt what's happened to the guy!
+# ::tokens ["what", "'s", "happened", "to", "the", "guy", "!"]
+# ::lemmas ["what", "be", "happen", "to", "the", "guy", "!"]
+(c8-0 / event
+      :mod (c8-1 / guy))
+
+# ::snt NOO..
+# ::tokens ["NOO", ".."]
+# ::lemmas ["NOO", ".."]
+(c10-0 / no)
+
+# ::snt omg no
+# ::tokens ["omg", "no"]
+# ::lemmas ["omg", "no"]
+(c11-0 / oh-my-god
+       :mode expressive)
+
+# ::snt not confirmed
+# ::tokens ["not", "confirmed"]
+# ::lemmas ["not", "confirm"]
+(c12-0 / confirm-01
+       :polarity -)
+
+# ::snt ideally the dead are the ones that were practicing their "Religion of Peace"
+# ::tokens ["ideally", "the", "dead", "are", "the", "ones", "that", "were", "practicing", "their", "\"", "Religion", "of", "Peace", "\""]
+# ::lemmas ["ideally", "the", "dead", "be", "the", "one", "that", "be", "practice", "their", "\"", "Religion", "of", "Peace", "\""]
+(c13-2 / practice-01
+       :ARG0 (c13-5 / person
+                    :ARG1-of (c13-4 / die-01))
+       :ARG1 (c13-3 / religion
+                    :mod (c13-1 / peace)
+                    :poss c13-5)
+       :ARG1-of (c13-0 / hypothetical-02))
+
+# ::snt : : At least two people have died following the . people are being treated by paramedics.
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", "."]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", "."]
+(c14-1 / multi-sentence
+       :snt1 (c14-3 / die-01
+                    :ARG1 (c14-2 / person
+                                 :quant (c14-6 / at-least
+                                               :op1 2))
+                    :ARG1-of (c14-0 / follow-01
+                                    :ARG2 (c14-5 / paramedic)))
+       :snt2 (c14-4 / treat-03
+                    :ARG0 c14-5
+                    :ARG1 c14-2))
+
+# ::snt not good news....
+# ::tokens ["not", "good", "news", "...."]
+# ::lemmas ["not", "good", "news", "...."]
+(c15-0 / news
+       :ARG1-of (c15-1 / good-02)
+       :polarity -)
+
+# ::snt : : At least two people have died following the . people are being treated by paramedics.
+# ::tokens [":", ":", "At", "least", "two", "people", "have", "died", "following", "the", ".", "people", "are", "being", "treated", "by", "paramedics", "."]
+# ::lemmas [":", ":", "At", "least", "two", "people", "have", "die", "follow", "the", ".", "people", "be", "be", "treat", "by", "paramedic", "."]
+(c16-1 / multi-sentence
+       :snt1 (c16-3 / die-01
+                    :ARG1 (c16-2 / person
+                                 :quant (c16-6 / at-least
+                                               :op1 2))
+                    :ARG1-of (c16-0 / follow-01
+                                    :ARG2 (c16-5 / paramedic)))
+       :snt2 (c16-4 / treat-03
+                    :ARG0 c16-5
+                    :ARG1 c16-2))

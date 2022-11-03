@@ -1,0 +1,89 @@
+# ::snt A gore obsessed book worm is an excellent description
+# ::tokens ["A", "gore", "obsessed", "book", "worm", "is", "an", "excellent", "description"]
+# ::lemmas ["a", "gore", "obsess", "book", "worm", "be", "an", "excellent", "description"]
+(c1-0 / describe-01
+      :ARG1 (c1-1 / worm
+                  :ARG0-of (c1-2 / obsess-01
+                                 :ARG1 (c1-3 / gore))
+                  :mod (c1-4 / book))
+      :ARG1-of (c1-5 / excellent-02))
+
+# ::snt Thanks mamakins ! I wrote the bio in negative two seconds . Glad you think it works .
+# ::tokens ["Thanks", "mamakins", "!", "I", "wrote", "the", "bio", "in", "negative", "two", "seconds", ".", "Glad", "you", "think", "it", "works", "."]
+# ::lemmas ["thank", "mamakin", "!", "i", "write", "the", "bio", "in", "negative", "two", "second", ".", "glad", "you", "think", "it", "work", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-3 / thank-01
+                   :ARG0 (c2-9 / i)
+                   :ARG1 (c2-5 / person
+                               :name (c2-11 / name
+                                            :op1 "mamakins")))
+       :snt2 (c2-1 / write-01
+                   :ARG0 c2-9
+                   :ARG1 (c2-7 / bio)
+                   :duration (c2-2 / temporal-quantity
+                                   :unit (c2-0 / second)
+                                   :mod (c2-4 / negative)
+                                   :quant 2)
+                   :ARG2-of (c2-6 / glad-02
+                                  :ARG0 (c2-12 / think-01
+                                               :ARG0 (c2-8 / you)
+                                               :ARG1 (c2-13 / work-09
+                                                            :ARG1 c2-7)))))
+
+# ::snt Are you coming to Portland soon ? Cause you should .
+# ::tokens ["Are", "you", "coming", "to", "Portland", "soon", "?", "Cause", "you", "should", "."]
+# ::lemmas ["be", "you", "come", "to", "Portland", "soon", "?", "cause", "you", "should", "."]
+(c3-3 / come-01
+      :ARG1 (c3-7 / you)
+      :ARG4 (c3-0 / city
+                  :name (c3-6 / name
+                              :op1 "Portland"))
+      :polarity (c3-2 / amr-unknown)
+      :time (c3-1 / soon)
+      :ARG1-of (c3-4 / cause-01
+                     :ARG0 (c3-5 / recommend-01
+                                 :ARG2 c3-7)))
+
+# ::snt Let s plan something for summer . My bf is moving in end of month . Then I have trip with rents coming end of April . But summer could work .
+# ::tokens ["Let", "s", "plan", "something", "for", "summer", ".", "My", "bf", "is", "moving", "in", "end", "of", "month", ".", "Then", "I", "have", "trip", "with", "rents", "coming", "end", "of", "April", ".", "But", "summer", "could", "work", "."]
+# ::lemmas ["let", "s", "plan", "something", "for", "summer", ".", "my", "bf", "be", "move", "in", "end", "of", "month", ".", "then", "i", "have", "trip", "with", "rent", "come", "end", "of", "April", ".", "but", "summer", "could", "work", "."]
+(c4-9 / multi-sentence
+      :snt1 (c4-24 / plan-01
+                   :ARG0 (c4-5 / we)
+                   :ARG1 (c4-12 / something)
+                   :ARG2 (c4-0 / date-entity
+                               :season (c4-23 / summer))
+                   :mode imperative)
+      :snt2 (c4-18 / move-01
+                   :ARG1 (c4-21 / person
+                                :ARG0-of (c4-19 / have-rel-role-91
+                                                :ARG1 (c4-3 / i)
+                                                :ARG2 (c4-22 / boyfriend)))
+                   :time (c4-11 / end-01
+                                :ARG1 (c4-16 / month)))
+      :snt3 (c4-2 / have-03
+                  :ARG0 (c4-14 / i)
+                  :ARG1 (c4-7 / trip-03
+                              :ARG0 c4-14
+                              :accompanier (c4-8 / rent-01
+                                                 :ARG1-of (c4-4 / come-01
+                                                                :time (c4-20 / end-01
+                                                                             :ARG1 (c4-17 / date-entity
+                                                                                          :month 4)))))
+                  :time (c4-6 / then))
+      :snt4 (c4-1 / contrast-01
+                  :ARG2 (c4-13 / possible-01
+                               :ARG1 (c4-10 / work-09
+                                            :ARG1 (c4-15 / summer)))))
+
+# ::snt Let s talk on the phone sometimes soon .
+# ::tokens ["Let", "s", "talk", "on", "the", "phone", "sometimes", "soon", "."]
+# ::lemmas ["let", "s", "talk", "on", "the", "phone", "sometimes", "soon", "."]
+(c5-3 / let-01
+      :ARG0 (c5-1 / we)
+      :ARG1 (c5-2 / talk-01
+                  :ARG0 c5-1
+                  :medium (c5-5 / phone))
+      :time (c5-0 / soon
+                  :mod (c5-4 / sometimes))
+      :mode imperative)

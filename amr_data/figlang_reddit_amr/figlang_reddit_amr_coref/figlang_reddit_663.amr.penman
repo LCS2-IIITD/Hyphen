@@ -1,0 +1,41 @@
+# ::snt This is what you might call a "red flag"
+# ::tokens ["This", "is", "what", "you", "might", "call", "a", "\"", "red", "flag", "\""]
+# ::lemmas ["this", "be", "what", "you", "might", "call", "a", "\"", "red", "flag", "\""]
+(c1-4 / possible-01
+      :ARG1 (c1-1 / call-01
+                  :ARG0 (c1-5 / you)
+                  :ARG1 (c1-2 / this)
+                  :ARG2 (c1-0 / flag
+                              :ARG1-of (c1-3 / red-02))))
+
+# ::snt I need ~~feminism~~ *to learn how to properly communicate with others*.
+# ::tokens ["I", "need", "~~feminism~~", "*", "to", "learn", "how", "to", "properly", "communicate", "with", "others", "*", "."]
+# ::lemmas ["i", "need", "~~feminism~~", "*", "to", "learn", "how", "to", "properly", "communicate", "with", "other", "*", "."]
+(c2-7 / need-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-0 / feminism)
+      :purpose (c2-4 / learn-01
+                     :ARG0 c2-6
+                     :ARG1 (c2-3 / thing
+                                 :manner-of (c2-1 / communicate-01
+                                                  :ARG0 c2-6
+                                                  :ARG2 (c2-2 / other)
+                                                  :manner (c2-5 / proper)))))
+
+# ::snt Actually in this case it's "Feminism is the excuse I need for why I am unable to effectively communicate."
+# ::tokens ["Actually", "in", "this", "case", "it", "'s", "\"", "Feminism", "is", "the", "excuse", "I", "need", "for", "why", "I", "am", "unable", "to", "effectively", "communicate", ".", "\""]
+# ::lemmas ["actually", "in", "this", "case", "it", "be", "\"", "feminism", "be", "the", "excuse", "i", "need", "for", "why", "i", "be", "unable", "to", "effectively", "communicate", ".", "\""]
+(c3-10 / excuse-02
+       :ARG1 (c3-8 / i)
+       :ARG2 (c3-2 / female)
+       :ARG1-of (c3-9 / need-01
+                      :ARG0 c3-8)
+       :ARG1-of (c3-3 / cause-01
+                      :ARG0 (c3-7 / possible-01
+                                  :ARG1 (c3-0 / communicate-01
+                                              :ARG0 c3-8
+                                              :ARG1-of (c3-4 / effective-04))
+                                  :polarity -))
+       :ARG1-of (c3-1 / actual-02)
+       :prep-in (c3-5 / case-04
+                      :ARG1 (c3-6 / this)))

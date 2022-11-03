@@ -1,0 +1,274 @@
+# ::snt What? Wow that was fast!
+# ::tokens ["What", "?", "Wow", "that", "was", "fast", "!"]
+# ::lemmas ["what", "?", "wow", "that", "be", "fast", "!"]
+(c2-1 / multi-sentence
+      :snt1 (c2-2 / amr-unknown)
+      :snt2 (c2-0 / fast-02
+                  :ARG1 (c2-4 / that)
+                  :mod (c2-3 / wow
+                             :mode expressive)))
+
+# ::snt Unconscious uncoupling
+# ::tokens ["Unconscious", "uncoupling"]
+# ::lemmas ["unconscious", "uncoupling"]
+(c3-1 / uncoupling-00
+      :mod (c3-0 / conscious
+                 :polarity -))
+
+# ::snt Sorry the hear this! Jennifer is a strong woman! Wish her all the best!
+# ::tokens ["Sorry", "the", "hear", "this", "!", "Jennifer", "is", "a", "strong", "woman", "!", "Wish", "her", "all", "the", "best", "!"]
+# ::lemmas ["sorry", "the", "hear", "this", "!", "Jennifer", "be", "a", "strong", "woman", "!", "wish", "she", "all", "the", "good", "!"]
+(c5-1 / multi-sentence
+      :snt1 (c5-3 / sorry-01
+                  :ARG2 (c5-4 / hear-01
+                              :ARG1 (c5-10 / this)))
+      :snt2 (c5-8 / woman
+                  :ARG1-of (c5-0 / strong-02)
+                  :domain (c5-5 / person
+                                :name (c5-2 / name
+                                            :op1 "Jennifer")))
+      :snt3 (c5-7 / wish-01
+                  :ARG1 (c5-12 / thing
+                               :ARG1-of (c5-9 / have-degree-91
+                                              :ARG2 (c5-11 / good-02
+                                                           :ARG1 c5-12)
+                                              :ARG3 (c5-6 / most)))
+                  :ARG2 c5-5))
+
+# ::snt Hmm
+# ::tokens ["Hmm"]
+# ::lemmas ["hmm"]
+(c6-0 / hmm)
+
+# ::snt She said the same about me
+# ::tokens ["She", "said", "the", "same", "about", "me"]
+# ::lemmas ["she", "say", "the", "same", "about", "i"]
+(c7-3 / say-01
+      :ARG0 (c7-1 / she)
+      :ARG1 (c7-0 / same-01)
+      :ARG3 (c7-2 / i))
+
+# ::snt Don't get married Go
+# ::tokens ["Do", "n't", "get", "married", "Go"]
+# ::lemmas ["do", "not", "get", "marry", "go"]
+(c8-0 / go-05
+      :ARG0 (c8-1 / you)
+      :ARG1 (c8-2 / marry-01
+                  :ARG1 c8-1
+                  :polarity -)
+      :mode imperative)
+
+# ::snt She just can't seem to get me out of her mind
+# ::tokens ["She", "just", "ca", "n't", "seem", "to", "get", "me", "out", "of", "her", "mind"]
+# ::lemmas ["she", "just", "can", "not", "seem", "to", "get", "i", "out", "of", "her", "mind"]
+(c9-3 / seem-01
+      :ARG1 (c9-4 / possible-01
+                  :ARG1 (c9-7 / get-05
+                              :ARG0 (c9-0 / she
+                                          :part (c9-2 / mind))
+                              :ARG1 (c9-6 / i)
+                              :ARG2 (c9-1 / out-06
+                                          :ARG1 c9-6
+                                          :ARG2 c9-2))
+                  :polarity -)
+      :mod (c9-5 / just))
+
+# ::snt Oh, okay....
+# ::tokens ["Oh", ",", "okay", "...."]
+# ::lemmas ["oh", ",", "okay", "...."]
+(c10-1 / okay-01
+       :mod (c10-0 / oh))
+
+# ::snt Wonder why Hollywood marriages never last? Seems like they go through marriages fast. Its a shame really.
+# ::tokens ["Wonder", "why", "Hollywood", "marriages", "never", "last", "?", "Seems", "like", "they", "go", "through", "marriages", "fast", ".", "Its", "a", "shame", "really", "."]
+# ::lemmas ["wonder", "why", "Hollywood", "marriage", "never", "last", "?", "seem", "like", "they", "go", "through", "marriage", "fast", ".", "its", "a", "shame", "really", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-10 / wonder-01
+                     :ARG1 (c11-12 / thing
+                                   :ARG0-of (c11-11 / cause-01
+                                                    :ARG1 (c11-8 / last-04
+                                                                 :ARG1 (c11-7 / marry-01
+                                                                              :mod (c11-14 / market-sector
+                                                                                           :name (c11-3 / name
+                                                                                                        :op1 "Hollywood")))
+                                                                 :time (c11-6 / ever)
+                                                                 :polarity -))))
+       :snt2 (c11-4 / seem-01
+                    :ARG1 (c11-13 / go-through-20
+                                  :ARG0 (c11-15 / they)
+                                  :ARG1 (c11-9 / marry-01)
+                                  :ARG1-of (c11-0 / fast-02)))
+       :snt3 (c11-1 / shame-02
+                    :ARG1-of (c11-5 / real-04)))
+
+# ::snt We are close to the same age, this didn't happen when we were young. I can't blame games, I blame Parents!
+# ::tokens ["We", "are", "close", "to", "the", "same", "age", ",", "this", "did", "n't", "happen", "when", "we", "were", "young", ".", "I", "ca", "n't", "blame", "games", ",", "I", "blame", "Parents", "!"]
+# ::lemmas ["we", "be", "close", "to", "the", "same", "age", ",", "this", "do", "not", "happen", "when", "we", "be", "young", ".", "i", "can", "not", "blame", "game", ",", "i", "blame", "Parents", "!"]
+(c12-2 / multi-sentence
+       :snt1 (c12-10 / close-10
+                     :ARG1 (c12-14 / age
+                                   :ARG1-of (c12-4 / same-01))
+                     :ARG2 (c12-11 / we))
+       :snt2 (c12-0 / be-temporally-at-91
+                    :ARG1 (c12-12 / this)
+                    :ARG2 (c12-1 / young
+                                 :domain (c12-9 / we))
+                    :polarity -)
+       :snt3 (c12-7 / possible-01
+                    :ARG1 (c12-6 / blame-01
+                                 :ARG0 (c12-13 / i)
+                                 :ARG1 (c12-15 / game))
+                    :polarity -)
+       :snt4 (c12-17 / blame-01
+                     :ARG0 (c12-5 / i)
+                     :ARG1 (c12-3 / person
+                                  :ARG0-of (c12-8 / have-rel-role-91
+                                                  :ARG2 (c12-16 / parent)))))
+
+# ::snt WHATTTTTT
+# ::tokens ["WHATTTTTT"]
+# ::lemmas ["WHATTTTTT"]
+(c13-1 / thing
+       :name (c13-0 / name
+                    :op1 "WHATTTTTT"))
+
+# ::snt I understand but, Please don't make quick judgement to anyone. Life is a challenge with all of the Mentally ill people out there. A very scary time to say the least.
+# ::tokens ["I", "understand", "but", ",", "Please", "do", "n't", "make", "quick", "judgement", "to", "anyone", ".", "Life", "is", "a", "challenge", "with", "all", "of", "the", "Mentally", "ill", "people", "out", "there", ".", "A", "very", "scary", "time", "to", "say", "the", "least", "."]
+# ::lemmas ["i", "understand", "but", ",", "please", "do", "not", "make", "quick", "judgement", "to", "anyone", ".", "life", "be", "a", "challenge", "with", "all", "of", "the", "mentally", "ill", "people", "out", "there", ".", "a", "very", "scary", "time", "to", "say", "the", "least", "."]
+(c14-15 / multi-sentence
+        :snt1 (c14-16 / contrast-01
+                      :ARG1 (c14-17 / understand-01
+                                    :ARG0 (c14-19 / i))
+                      :ARG2 (c14-8 / judge-01
+                                   :ARG0 (c14-4 / you)
+                                   :ARG1 (c14-10 / anyone)
+                                   :ARG1-of (c14-9 / quick-02)
+                                   :mode imperative
+                                   :polite +))
+        :snt2 (c14-14 / challenge-01
+                      :ARG0 (c14-1 / life)
+                      :ARG1 (c14-18 / person
+                                    :mod (c14-11 / all)
+                                    :ARG1-of (c14-5 / ill-01
+                                                    :ARG2 (c14-7 / mental))
+                                    :location (c14-2 / out-there)))
+        :snt3 (c14-12 / time
+                      :ARG0-of (c14-0 / scary-03
+                                      :degree (c14-6 / very))
+                      :ARG1-of (c14-3 / say-01
+                                      :mod (c14-13 / least))))
+
+# ::snt I've got a shot!!!!!
+# ::tokens ["I", "'ve", "got", "a", "shot", "!", "!", "!", "!", "!"]
+# ::lemmas ["i", "'ve", "get", "a", "shot", "!", "!", "!", "!", "!"]
+(c15-0 / have-03
+       :ARG0 (c15-1 / i)
+       :ARG1 (c15-2 / shoot-01)
+       :mode expressive)
+
+# ::snt Everyone has different thoughts exactly what's important. I prefer Family and friends. BTW, I would fight to the death to protect you and everyone else.
+# ::tokens ["Everyone", "has", "different", "thoughts", "exactly", "what", "'s", "important", ".", "I", "prefer", "Family", "and", "friends", ".", "BTW", ",", "I", "would", "fight", "to", "the", "death", "to", "protect", "you", "and", "everyone", "else", "."]
+# ::lemmas ["everyone", "have", "different", "thought", "exactly", "what", "be", "important", ".", "i", "prefer", "Family", "and", "friend", ".", "btw", ",", "i", "would", "fight", "to", "the", "death", "to", "protect", "you", "and", "everyone", "else", "."]
+(c16-10 / multi-sentence
+        :snt1 (c16-6 / think-01
+                     :ARG0 (c16-17 / everyone)
+                     :ARG1 (c16-15 / thing
+                                   :ARG1-of (c16-21 / important-01))
+                     :ARG1-of (c16-22 / differ-02)
+                     :mod (c16-7 / exact))
+        :snt2 (c16-18 / prefer-01
+                      :ARG0 (c16-2 / i)
+                      :ARG1 (c16-5 / and
+                                   :op1 (c16-16 / family)
+                                   :op2 (c16-11 / person
+                                                :ARG0-of (c16-3 / have-rel-role-91
+                                                                :ARG1 c16-2
+                                                                :ARG2 (c16-19 / friend)))))
+        :snt3 (c16-20 / fight-01
+                      :ARG0 (c16-8 / i)
+                      :ARG2 (c16-0 / protect-01
+                                   :ARG0 c16-8
+                                   :ARG1 (c16-4 / and
+                                                :op1 (c16-1 / you)
+                                                :op2 (c16-12 / everyone
+                                                             :mod (c16-14 / else))))
+                      :degree (c16-13 / die-01)
+                      :mod (c16-9 / by-the-way)))
+
+# ::snt And why should we care?
+# ::tokens ["And", "why", "should", "we", "care", "?"]
+# ::lemmas ["and", "why", "should", "we", "care", "?"]
+(c17-4 / and
+       :op2 (c17-1 / cause-01
+                   :ARG0 (c17-3 / amr-unknown)
+                   :ARG1 (c17-0 / recommend-01
+                                :ARG1 (c17-5 / care-01
+                                             :ARG0 (c17-2 / we)))))
+
+# ::snt Good Morning!
+# ::tokens ["Good", "Morning", "!"]
+# ::lemmas ["Good", "Morning", "!"]
+(c18-1 / morning
+       :ARG1-of (c18-0 / good-02))
+
+# ::snt Good morning Ashley James
+# ::tokens ["Good", "morning", "Ashley", "James"]
+# ::lemmas ["good", "morning", "Ashley", "James"]
+(c19-2 / say-01
+       :ARG0 (c19-4 / i)
+       :ARG1 (c19-0 / morning
+                    :ARG1-of (c19-5 / good-02))
+       :ARG2 (c19-3 / person
+                    :name (c19-1 / name
+                                 :op1 "Ashley"
+                                 :op2 "James")))
+
+# ::snt Did he cheat or did she.
+# ::tokens ["Did", "he", "cheat", "or", "did", "she", "."]
+# ::lemmas ["do", "he", "cheat", "or", "do", "she", "."]
+(c20-3 / amr-choice
+       :op1 (c20-1 / cheat-03
+                   :ARG0 (c20-2 / he))
+       :op2 (c20-0 / she))
+
+# ::snt it's also strange to know that her ex husband marriage to Angelina also only lasted years
+# ::tokens ["it", "'s", "also", "strange", "to", "know", "that", "her", "ex", "husband", "marriage", "to", "Angelina", "also", "only", "lasted", "years"]
+# ::lemmas ["it", "be", "also", "strange", "to", "know", "that", "her", "ex", "husband", "marriage", "to", "Angelina", "also", "only", "last", "years"]
+(c21-5 / strange
+       :domain (c21-11 / know-01
+                       :ARG1 (c21-12 / last-01
+                                     :ARG1 (c21-3 / marry-01
+                                                  :ARG1 (c21-10 / person
+                                                                :ARG0-of (c21-9 / have-rel-role-91
+                                                                                :ARG1 (c21-0 / she)
+                                                                                :ARG2 (c21-14 / husband)
+                                                                                :time (c21-8 / ex)))
+                                                  :ARG2 (c21-4 / person
+                                                               :name (c21-6 / name
+                                                                            :op1 "Angelina")))
+                                     :ARG2 (c21-13 / multiple
+                                                   :op1 (c21-15 / temporal-quantity
+                                                                :unit (c21-2 / year)
+                                                                :quant 1))
+                                     :mod (c21-7 / also)
+                                     :mod (c21-1 / only)))
+       :mod c21-7)
+
+# ::snt Think she's a handful like Sandra Bullock. Like them both though.
+# ::tokens ["Think", "she", "'s", "a", "handful", "like", "Sandra", "Bullock", ".", "Like", "them", "both", "though", "."]
+# ::lemmas ["think", "she", "be", "a", "handful", "like", "Sandra", "Bullock", ".", "like", "they", "both", "though", "."]
+(c22-1 / multi-sentence
+       :snt1 (c22-11 / think-01
+                     :ARG0 (c22-10 / i)
+                     :ARG1 (c22-6 / handful
+                                  :domain (c22-3 / she)
+                                  :ARG1-of (c22-5 / resemble-01
+                                                  :ARG2 (c22-7 / person
+                                                               :name (c22-2 / name
+                                                                            :op1 "Sandra"
+                                                                            :op2 "Bullock")))))
+       :snt2 (c22-9 / have-concession-91
+                    :ARG1 (c22-8 / like-01
+                                 :ARG0 (c22-4 / i)
+                                 :ARG1 (c22-12 / they
+                                               :mod (c22-0 / both)))))

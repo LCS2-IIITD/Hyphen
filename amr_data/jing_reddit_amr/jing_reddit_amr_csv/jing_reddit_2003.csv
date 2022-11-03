@@ -1,0 +1,53 @@
+comment,amr
+"""All feminists say X!"" ""Some do, but most say not-X."" ""How dare you say that 'all feminists say not-X'? Don't you see the feminists *right there* saying X?"" ""What.""","# ::snt ""All feminists say X!"" ""Some do, but most say not-X."" ""How dare you say that 'all feminists say not-X'? Don't you see the feminists *right there* saying X?"" ""What.""
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (f / feminist
+                  :mod (a / all))
+            :ARG1 (p / person
+                  :name (n / name
+                        :op1 ""X"")))
+      :snt2 (c / contrast-01
+            :ARG1 (s2 / say-01
+                  :ARG0 (p2 / person
+                        :mod (s3 / some))
+                  :ARG1 p)
+            :ARG2 (s4 / say-01
+                  :polarity -
+                  :ARG0 (p3 / person
+                        :mod (m2 / most)
+                        :ARG0-of (f2 / feminism))
+                  :ARG1 p))
+      :snt3 (d / dare-01
+            :ARG0 (y / you)
+            :ARG2 (s5 / say-01
+                  :ARG0 y
+                  :ARG1 (p4 / person
+                        :polarity -
+                        :name n
+                        :op1 ""X"")))
+      :manner (a2 / amr-unknown)
+      :snt4 (s6 / see-01
+            :polarity -
+            :ARG0 y
+            :ARG1 (f3 / feminist
+                  :mod (a3 / all)
+                  :ARG0-of (s7 / say-01
+                        :ARG1 p4)
+                  :location (t / there
+                        :mod (r / right)))
+            :snt5 a2)
+      :snt6 a2)"
+">""All feminists say X!"" Can't lefty without a strawman!","# ::snt >""All feminists say X!"" Can't lefty without a strawman!
+(m / multi-sentence
+      :snt1 (s / say-01
+            :ARG0 (f / feminist
+                  :mod (a / all))
+            :ARG1 (t / thing
+                  :mod (v / variable
+                        :name (n / name
+                              :op1 ""X""))))
+      :snt2 (p / possible-01
+            :polarity -
+            :ARG1 (l / lefty
+                  :prep-without (s2 / strawman))))"

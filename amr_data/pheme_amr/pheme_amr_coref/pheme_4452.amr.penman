@@ -1,0 +1,30 @@
+# ::snt yes
+# ::tokens ["yes"]
+# ::lemmas ["yes"]
+(c1-0 / yes)
+
+# ::snt is it confirmed?
+# ::tokens ["is", "it", "confirmed", "?"]
+# ::lemmas ["be", "it", "confirm", "?"]
+(c2-0 / confirm-01
+      :polarity (c2-2 / amr-unknown)
+      :ARG1 (c2-1 / it))
+
+# ::snt Good.
+# ::tokens ["Good", "."]
+# ::lemmas ["good", "."]
+(c3-0 / good-02)
+
+# ::snt My niece works there. Hope she's oke.
+# ::tokens ["My", "niece", "works", "there", ".", "Hope", "she", "'s", "oke", "."]
+# ::lemmas ["my", "niece", "work", "there", ".", "hope", "she", "be", "oke", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / work-01
+                  :ARG0 (c4-6 / person
+                              :ARG0-of (c4-0 / have-rel-role-91
+                                             :ARG1 (c4-4 / i)
+                                             :ARG2 (c4-5 / niece)))
+                  :ARG2 (c4-8 / there))
+      :snt2 (c4-9 / hope-01
+                  :ARG1 (c4-3 / oke
+                              :domain (c4-7 / she))))

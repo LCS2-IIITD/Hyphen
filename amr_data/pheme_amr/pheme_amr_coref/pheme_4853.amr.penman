@@ -1,0 +1,87 @@
+# ::snt the*
+# ::tokens ["the", "*"]
+# ::lemmas ["the", "*"]
+(c1-0 / amr-empty)
+
+# ::snt ...and how many times was he shot? Hint: count the bullet holes. Was he shot in the back as well as the front?
+# ::tokens ["...", "and", "how", "many", "times", "was", "he", "shot", "?", "Hint", ":", "count", "the", "bullet", "holes", ".", "Was", "he", "shot", "in", "the", "back", "as", "well", "as", "the", "front", "?"]
+# ::lemmas ["...", "and", "how", "many", "time", "be", "he", "shoot", "?", "hint", ":", "count", "the", "bullet", "hole", ".", "be", "he", "shoot", "in", "the", "back", "as", "well", "as", "the", "front", "?"]
+(c2-2 / multi-sentence
+      :snt1 (c2-14 / and
+                   :op2 (c2-12 / shoot-02
+                               :ARG1 (c2-0 / he)
+                               :frequency (c2-7 / amr-unknown)))
+      :snt2 (c2-1 / hint-01
+                  :ARG1 (c2-10 / count-01
+                               :ARG1 (c2-8 / hole
+                                           :mod (c2-4 / bullet))))
+      :snt3 (c2-6 / shoot-02
+                  :ARG1 (c2-5 / he)
+                  :location (c2-9 / and
+                                  :op1 (c2-11 / back)
+                                  :op2 (c2-3 / front))
+                  :polarity (c2-13 / amr-unknown)))
+
+# ::snt - isn't it time to be knees down and hands up across the nation -
+# ::tokens ["-", "is", "n't", "it", "time", "to", "be", "knees", "down", "and", "hands", "up", "across", "the", "nation", "-"]
+# ::lemmas ["-", "be", "not", "it", "time", "to", "be", "knee", "down", "and", "hand", "up", "across", "the", "nation", "-"]
+(c3-6 / time
+      :time-of (c3-7 / and
+                     :op1 (c3-3 / kneel-01
+                                :direction (c3-5 / down))
+                     :op2 (c3-0 / hand
+                                :direction (c3-1 / up))
+                     :location (c3-2 / across
+                                     :op1 (c3-4 / nation)))
+      :polarity -)
+
+# ::snt Indeed! We all want to know and we want to Full autopsy!
+# ::tokens ["Indeed", "!", "We", "all", "want", "to", "know", "and", "we", "want", "to", "Full", "autopsy", "!"]
+# ::lemmas ["indeed", "!", "we", "all", "want", "to", "know", "and", "we", "want", "to", "full", "autopsy", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / indeed)
+      :snt2 (c4-9 / and
+                  :op1 (c4-0 / want-01
+                             :ARG0 (c4-6 / we
+                                         :mod (c4-4 / all))
+                             :ARG1 (c4-8 / know-01
+                                         :ARG0 c4-6))
+                  :op2 (c4-3 / want-01
+                             :ARG0 c4-6
+                             :ARG1 (c4-7 / autopsy-01
+                                         :ARG1 c4-6
+                                         :ARG1-of (c4-1 / full-09)))))
+
+# ::snt FERGUSON POLICE DEPARTMENT "Justice is not here right now"
+# ::tokens ["FERGUSON", "POLICE", "DEPARTMENT", "\"", "Justice", "is", "not", "here", "right", "now", "\""]
+# ::lemmas ["FERGUSON", "POLICE", "DEPARTMENT", "\"", "Justice", "be", "not", "here", "right", "now", "\""]
+(c5-7 / say-01
+      :ARG0 (c5-6 / government-organization
+                  :name (c5-3 / name
+                              :op1 "Federal"
+                              :op2 "Police"
+                              :op3 "Department"))
+      :ARG1 (c5-2 / be-located-at-91
+                  :ARG1 (c5-0 / justice)
+                  :ARG2 (c5-1 / here)
+                  :time (c5-4 / now
+                              :mod (c5-5 / right))
+                  :polarity -))
+
+# ::snt truth: mike brown is dead. one of your officers did it.
+# ::tokens ["truth", ":", "mike", "brown", "is", "dead", ".", "one", "of", "your", "officers", "did", "it", "."]
+# ::lemmas ["truth", ":", "mike", "brown", "be", "dead", ".", "one", "of", "your", "officer", "do", "it", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-9 / true-01
+                  :ARG1 (c6-8 / die-01
+                              :ARG1 (c6-7 / person
+                                          :name (c6-6 / name
+                                                      :op1 "Mike"
+                                                      :op2 "Brown"))))
+      :snt2 (c6-2 / do-02
+                  :ARG0 (c6-10 / person
+                               :ARG0-of (c6-0 / have-rel-role-91
+                                              :ARG1 (c6-1 / you)
+                                              :ARG2 (c6-4 / officer))
+                               :quant 1)
+                  :ARG1 (c6-5 / it)))

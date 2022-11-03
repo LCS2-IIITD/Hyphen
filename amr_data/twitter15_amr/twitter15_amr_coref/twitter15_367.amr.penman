@@ -1,0 +1,31 @@
+# ::snt : Starbucks Is Testing A New Latte That Tastes Exactly Like Guinness
+# ::tokens [":", "Starbucks", "Is", "Testing", "A", "New", "Latte", "That", "Tastes", "Exactly", "Like", "Guinness"]
+# ::lemmas [":", "Starbucks", "be", "test", "a", "New", "Latte", "that", "taste", "exactly", "like", "Guinness"]
+(c1-1 / test-01
+      :ARG0 (c1-5 / company
+                  :name (c1-8 / name
+                              :op1 "Starbucks"))
+      :ARG1 (c1-0 / Latte
+                  :ARG1-of (c1-7 / new-01)
+                  :ARG0-of (c1-2 / taste-02
+                                 :ARG1-of (c1-3 / resemble-01
+                                                :ARG2 (c1-4 / company
+                                                            :name (c1-6 / name
+                                                                        :op1 "Guinness"))
+                                                :mod (c1-9 / exact)))))
+
+# ::snt :I don't know if this news makes me want a beer or coffee.
+# ::tokens [":", "I", "do", "n't", "know", "if", "this", "news", "makes", "me", "want", "a", "beer", "or", "coffee", "."]
+# ::lemmas [":", "i", "do", "not", "know", "if", "this", "news", "make", "i", "want", "a", "beer", "or", "coffee", "."]
+(c2-9 / know-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-3 / truth-value
+                  :polarity-of (c2-6 / make-02
+                                     :ARG0 (c2-8 / news
+                                                 :mod (c2-4 / this))
+                                     :ARG1 (c2-0 / want-01
+                                                 :ARG0 c2-1
+                                                 :ARG1 (c2-5 / or
+                                                             :op1 (c2-2 / beer)
+                                                             :op2 (c2-7 / coffee)))))
+      :polarity -)

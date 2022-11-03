@@ -1,0 +1,48 @@
+# ::snt No doubt.
+# ::tokens ["No", "doubt", "."]
+# ::lemmas ["no", "doubt", "."]
+(c1-0 / doubt-01
+      :polarity -)
+
+# ::snt Oh. Im more concerned about the fact that new cases are outpacing vaccinations.
+# ::tokens ["Oh", ".", "I", "m", "more", "concerned", "about", "the", "fact", "that", "new", "cases", "are", "outpacing", "vaccinations", "."]
+# ::lemmas ["oh", ".", "i", "m", "more", "concerned", "about", "the", "fact", "that", "new", "case", "be", "outpace", "vaccination", "."]
+(c2-1 / concern-01
+      :ARG0 (c2-5 / outpace-01
+                  :ARG0 (c2-0 / case-04
+                              :ARG1-of (c2-8 / new-01))
+                  :ARG1 (c2-4 / vaccinate-01))
+      :ARG1 (c2-6 / i)
+      :mod (c2-3 / oh
+                 :mode expressive)
+      :ARG2-of (c2-2 / have-degree-91
+                     :ARG1 c2-6
+                     :ARG3 (c2-7 / more)))
+
+# ::snt No. Im just saying there would be complaining either way.
+# ::tokens ["No", ".", "I", "m", "just", "saying", "there", "would", "be", "complaining", "either", "way", "."]
+# ::lemmas ["no", ".", "i", "m", "just", "say", "there", "would", "be", "complain", "either", "way", "."]
+(c3-6 / multi-sentence
+      :snt1 (c3-7 / no)
+      :snt2 (c3-0 / say-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-1 / complain-01
+                              :location (c3-3 / there)
+                              :mod (c3-2 / way
+                                         :mod (c3-8 / either)))
+                  :mod (c3-4 / just)))
+
+# ::snt Are you suggesting the rollout is slow because they are testing the vaccine for side effects?
+# ::tokens ["Are", "you", "suggesting", "the", "rollout", "is", "slow", "because", "they", "are", "testing", "the", "vaccine", "for", "side", "effects", "?"]
+# ::lemmas ["be", "you", "suggest", "the", "rollout", "be", "slow", "because", "they", "be", "test", "the", "vaccine", "for", "side", "effect", "?"]
+(c4-0 / suggest-01
+      :polarity (c4-1 / amr-unknown)
+      :ARG0 (c4-9 / you)
+      :ARG1 (c4-8 / slow-05
+                  :ARG1 (c4-7 / roll-out-02)
+                  :ARG1-of (c4-2 / cause-01
+                                 :ARG0 (c4-6 / test-01
+                                             :ARG0 (c4-3 / they)
+                                             :ARG1 (c4-5 / vaccine)
+                                             :ARG2 (c4-10 / effect-03
+                                                          :mod (c4-4 / side))))))

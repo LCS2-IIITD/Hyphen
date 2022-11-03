@@ -1,0 +1,101 @@
+# ::snt yup. with an "at a boy" to go along with it
+# ::tokens ["yup", ".", "with", "an", "\"", "at", "a", "boy", "\"", "to", "go", "along", "with", "it"]
+# ::lemmas ["yup", ".", "with", "an", "\"", "at", "a", "boy", "\"", "to", "go", "along", "with", "it"]
+(c1-4 / accompany-01
+      :ARG0 (c1-2 / it)
+      :ARG1 (c1-3 / string-entity
+                  :mod (c1-1 / boy)
+                  :value "at")
+      :mod (c1-0 / yup))
+
+# ::snt Notice it's "involved in the shooting" not "killed a child." Notice it's "paid administrative leave" not "has been arrested"
+# ::tokens ["Notice", "it", "'s", "\"", "involved", "in", "the", "shooting", "\"", "not", "\"", "killed", "a", "child", ".", "\"", "Notice", "it", "'s", "\"", "paid", "administrative", "leave", "\"", "not", "\"", "has", "been", "arrested", "\""]
+# ::lemmas ["notice", "it", "be", "\"", "involve", "in", "the", "shooting", "\"", "not", "\"", "kill", "a", "child", ".", "\"", "notice", "it", "be", "\"", "pay", "administrative", "leave", "\"", "not", "\"", "have", "be", "arrest", "\""]
+(c2-2 / multi-sentence
+      :snt1 (c2-5 / notice-01
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-15 / and
+                               :op1 (c2-4 / involve-01
+                                          :ARG1 (c2-10 / it)
+                                          :ARG2 (c2-12 / shoot-02))
+                               :op2 (c2-14 / kill-01
+                                           :ARG0 c2-10
+                                           :ARG1 (c2-9 / child)
+                                           :polarity -))
+                  :mode imperative)
+      :snt2 (c2-6 / notice-01
+                  :ARG0 (c2-11 / you)
+                  :ARG1 (c2-3 / and
+                              :op1 (c2-1 / leave-15
+                                         :ARG1 (c2-7 / administrate-01)
+                                         :ARG2-of (c2-8 / pay-01))
+                              :op2 (c2-13 / arrest-01
+                                          :ARG1 c2-10
+                                          :polarity -))
+                  :mode imperative))
+
+# ::snt And they always "clash" with protestors, never "attack" them.
+# ::tokens ["And", "they", "always", "\"", "clash", "\"", "with", "protestors", ",", "never", "\"", "attack", "\"", "them", "."]
+# ::lemmas ["and", "they", "always", "\"", "clash", "\"", "with", "protestor", ",", "never", "\"", "attack", "\"", "they", "."]
+(c3-8 / and
+      :op2 (c3-1 / and
+                 :op1 (c3-4 / clash-01
+                            :ARG0 (c3-6 / they)
+                            :ARG1 (c3-3 / person
+                                        :ARG0-of (c3-7 / protest-01))
+                            :time (c3-2 / always))
+                 :op2 (c3-5 / attack-01
+                            :ARG0 c3-6
+                            :ARG1 c3-3
+                            :time (c3-0 / ever)
+                            :polarity -)))
+
+# ::snt Nah, they gonna make sure that white man gets his blood money. RT _peech or suspended w/o pay
+# ::tokens ["Nah", ",", "they", "gon", "na", "make", "sure", "that", "white", "man", "gets", "his", "blood", "money", ".", "RT", "_", "peech", "or", "suspended", "w/o", "pay"]
+# ::lemmas ["Nah", ",", "they", "going", "to", "make", "sure", "that", "white", "man", "get", "his", "blood", "money", ".", "RT", "_", "peech", "or", "suspend", "w/o", "pay"]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / ensure-01
+                  :ARG0 (c4-13 / they)
+                  :ARG1 (c4-11 / get-01
+                               :ARG0 (c4-9 / man
+                                           :ARG1-of (c4-0 / white-02))
+                               :ARG1 (c4-1 / money
+                                           :mod (c4-3 / blood)
+                                           :poss c4-9))
+                  :mod (c4-7 / nah))
+      :snt2 (c4-4 / or
+                  :op1 (c4-10 / publication
+                              :name (c4-8 / name
+                                          :op1 "RT"
+                                          :op2 "peech"))
+                  :op2 (c4-12 / suspend-01
+                              :ARG1 c4-10)
+                  :condition (c4-14 / pay-01
+                                    :ARG0 (c4-6 / i)
+                                    :polarity -)))
+
+# ::snt my blood is boiling, just sent an email to the DOJ, something has got to change.
+# ::tokens ["my", "blood", "is", "boiling", ",", "just", "sent", "an", "email", "to", "the", "DOJ", ",", "something", "has", "got", "to", "change", "."]
+# ::lemmas ["my", "blood", "be", "boil", ",", "just", "send", "an", "email", "to", "the", "DOJ", ",", "something", "have", "get", "to", "change", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-2 / boil-01
+                  :ARG1 (c5-8 / blood
+                              :part-of (c5-6 / i)))
+      :snt2 (c5-11 / send-01
+                   :ARG0 c5-6
+                   :ARG1 (c5-4 / email)
+                   :ARG2 (c5-9 / government-organization
+                               :name (c5-7 / name
+                                           :op1 "DOJ"))
+                   :time (c5-0 / just))
+      :snt3 (c5-3 / obligate-01
+                  :ARG2 (c5-10 / change-01
+                               :ARG1 (c5-5 / something))))
+
+# ::snt or suspended w/o pay
+# ::tokens ["or", "suspended", "w/o", "pay"]
+# ::lemmas ["or", "suspend", "w/o", "pay"]
+(c6-0 / or
+      :op2 (c6-2 / suspend-01
+                 :manner (c6-1 / pay-01
+                               :ARG0 (c6-3 / i))))

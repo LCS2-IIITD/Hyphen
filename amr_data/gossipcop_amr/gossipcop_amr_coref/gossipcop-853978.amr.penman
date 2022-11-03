@@ -1,0 +1,49 @@
+# ::snt This man had a beautiful soul. Let's not try to rationalize this.
+# ::tokens ["This", "man", "had", "a", "beautiful", "soul", ".", "Let", "'s", "not", "try", "to", "rationalize", "this", "."]
+# ::lemmas ["this", "man", "have", "a", "beautiful", "soul", ".", "let", "us", "not", "try", "to", "rationalize", "this", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / have-03
+                  :ARG0 (c2-4 / man
+                              :mod (c2-8 / this))
+                  :ARG1 (c2-2 / soul
+                              :ARG1-of (c2-0 / beautiful-02)))
+      :snt2 (c2-9 / try-01
+                  :ARG0 (c2-6 / we)
+                  :ARG1 (c2-3 / rationalize-01
+                              :ARG0 c2-6
+                              :ARG1 (c2-7 / this))
+                  :polarity -
+                  :mode imperative))
+
+# ::snt Flirting with death..
+# ::tokens ["Flirting", "with", "death", ".."]
+# ::lemmas ["flirt", "with", "death", ".."]
+(c4-0 / flirt-01
+      :ARG1 (c4-1 / die-01))
+
+# ::snt he sang that for years...he did not commit suicide...autopsy will prove what other Rx, if any, contributed. Dont spread gossip
+# ::tokens ["he", "sang", "that", "for", "years", "...", "he", "did", "not", "commit", "suicide", "...", "autopsy", "will", "prove", "what", "other", "Rx", ",", "if", "any", ",", "contributed", ".", "Do", "nt", "spread", "gossip"]
+# ::lemmas ["he", "sing", "that", "for", "years", "...", "he", "do", "not", "commit", "suicide", "...", "autopsy", "will", "prove", "what", "other", "Rx", ",", "if", "any", ",", "contribute", ".", "do", "not", "spread", "gossip"]
+(c5-12 / multi-sentence
+       :snt1 (c5-0 / sing-01
+                   :ARG0 (c5-6 / he)
+                   :ARG1 (c5-9 / that)
+                   :duration (c5-5 / multiple
+                                   :op1 (c5-14 / temporal-quantity
+                                               :unit (c5-4 / year)
+                                               :quant 1)))
+       :snt2 (c5-13 / commit-02
+                    :ARG0 (c5-17 / he)
+                    :ARG1 (c5-2 / suicide)
+                    :polarity -)
+       :snt3 (c5-16 / prove-01
+                    :ARG0 (c5-7 / autopsy-01)
+                    :ARG1 (c5-18 / thing
+                                 :mod (c5-3 / other)
+                                 :ARG1-of (c5-11 / contribute-01
+                                                 :ARG0 (c5-15 / Rx))))
+       :snt4 (c5-1 / spread-03
+                   :ARG0 (c5-10 / you)
+                   :ARG1 (c5-8 / gossip-01)
+                   :polarity -
+                   :mode imperative))

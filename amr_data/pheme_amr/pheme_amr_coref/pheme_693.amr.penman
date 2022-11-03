@@ -1,0 +1,110 @@
+# ::snt The men in ski masks pulled guns on cops, right?
+# ::tokens ["The", "men", "in", "ski", "masks", "pulled", "guns", "on", "cops", ",", "right", "?"]
+# ::lemmas ["the", "man", "in", "ski", "mask", "pull", "gun", "on", "cop", ",", "right", "?"]
+(c1-2 / pull-01
+      :ARG0 (c1-1 / man
+                  :ARG0-of (c1-0 / wear-01
+                                 :ARG1 (c1-3 / mask
+                                             :mod (c1-7 / ski-01))))
+      :ARG1 (c1-5 / gun)
+      :ARG2 (c1-4 / cop)
+      :ARG1-of (c1-6 / request-confirmation-91))
+
+# ::snt Al Sharpton "inside to discuss" knowing that these young people are outside being shot at. Nothing new here.
+# ::tokens ["Al", "Sharpton", "\"", "inside", "to", "discuss", "\"", "knowing", "that", "these", "young", "people", "are", "outside", "being", "shot", "at", ".", "Nothing", "new", "here", "."]
+# ::lemmas ["Al", "Sharpton", "\"", "inside", "to", "discuss", "\"", "know", "that", "these", "young", "people", "be", "outside", "be", "shoot", "at", ".", "nothing", "new", "here", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-3 / be-located-at-91
+                  :ARG1 (c2-8 / person
+                              :name (c2-6 / name
+                                          :op1 "Al"
+                                          :op2 "Sharpton"))
+                  :ARG2 (c2-5 / inside)
+                  :purpose (c2-9 / discuss-01
+                                 :ARG0 c2-8
+                                 :ARG1 (c2-14 / know-01
+                                              :ARG0 c2-8
+                                              :ARG1 (c2-10 / be-located-at-91
+                                                           :ARG1 (c2-15 / person
+                                                                        :mod (c2-1 / young)
+                                                                        :mod (c2-13 / this))
+                                                           :ARG2 (c2-4 / outside)
+                                                           :ARG2-of (c2-12 / shoot-01)))))
+      :snt2 (c2-7 / new-01
+                  :ARG1 (c2-11 / nothing)
+                  :location (c2-0 / here)))
+
+# ::snt will get fixed. In meantime here's the link
+# ::tokens ["will", "get", "fixed", ".", "In", "meantime", "here", "'s", "the", "link"]
+# ::lemmas ["will", "get", "fix", ".", "in", "meantime", "here", "be", "the", "link"]
+(c3-2 / multi-sentence
+      :snt1 (c3-1 / fix-02
+                  :ARG1 (c3-5 / thing
+                              :ARG3-of (c3-3 / link-01))
+                  :time (c3-4 / meantime))
+      :snt2 (c3-0 / here
+                  :location-of c3-3))
+
+# ::snt so very sad.
+# ::tokens ["so", "very", "sad", "."]
+# ::lemmas ["so", "very", "sad", "."]
+(c4-0 / sad-02
+      :degree (c4-1 / very
+                    :degree (c4-2 / so)))
+
+# ::snt This is heartbreaking to read.
+# ::tokens ["This", "is", "heartbreaking", "to", "read", "."]
+# ::lemmas ["this", "be", "heartbreaking", "to", "read", "."]
+(c5-2 / break-heart-31
+      :ARG0 (c5-0 / read-01
+                  :ARG1 (c5-1 / this)))
+
+# ::snt the link to the post dispatch story in your story is broken
+# ::tokens ["the", "link", "to", "the", "post", "dispatch", "story", "in", "your", "story", "is", "broken"]
+# ::lemmas ["the", "link", "to", "the", "post", "dispatch", "story", "in", "your", "story", "be", "break"]
+(c6-2 / break-01
+      :ARG1 (c6-1 / link-01
+                  :ARG2 (c6-6 / story
+                              :mod (c6-5 / dispatch-01
+                                         :mod (c6-4 / post))
+                              :location (c6-3 / story
+                                              :poss (c6-0 / you)))))
+
+# ::snt Last night in started with joyous hymns &amp; calls for peace. It ended with another police shooting. My latest
+# ::tokens ["Last", "night", "in", "started", "with", "joyous", "hymns", "&", "amp", ";", "calls", "for", "peace", ".", "It", "ended", "with", "another", "police", "shooting", ".", "My", "latest"]
+# ::lemmas ["Last", "night", "in", "start", "with", "joyous", "hymns", "&", "amp", ";", "call", "for", "peace", ".", "it", "end", "with", "another", "police", "shooting", ".", "my", "late"]
+(c7-1 / multi-sentence
+      :snt1 (c7-4 / start-01
+                  :ARG1 (c7-12 / night
+                               :mod (c7-16 / yesterday))
+                  :ARG2 (c7-6 / and
+                              :op1 (c7-7 / hymn
+                                         :mod (c7-0 / joyous))
+                              :op2 (c7-17 / call-03
+                                          :ARG1 (c7-2 / peace)))
+                  :time (c7-3 / date-entity
+                              :dayperiod c7-12)
+                  :mod c7-16)
+      :snt2 (c7-10 / end-01
+                   :ARG1 (c7-14 / it)
+                   :ARG2 (c7-11 / shoot-02
+                                :ARG0 (c7-5 / police)
+                                :ARG1 (c7-9 / person
+                                            :mod (c7-13 / another))))
+      :snt3 (c7-18 / thing
+                   :mod (c7-8 / last)
+                   :poss (c7-15 / i)))
+
+# ::snt : Last night in started w/ calls for but ended w/ another shooting:
+# ::tokens [":", "Last", "night", "in", "started", "w/", "calls", "for", "but", "ended", "w/", "another", "shooting", ":"]
+# ::lemmas [":", "Last", "night", "in", "start", "w/", "call", "for", "but", "end", "w/", "another", "shooting", ":"]
+(c8-5 / contrast-01
+      :ARG1 (c8-7 / start-01
+                  :ARG1 (c8-4 / date-entity
+                              :dayperiod (c8-3 / night)
+                              :mod (c8-0 / yesterday))
+                  :ARG2 (c8-6 / call-02))
+      :ARG2 (c8-1 / end-01
+                  :ARG1 c8-4
+                  :ARG2 (c8-2 / shoot-02
+                              :mod (c8-8 / another))))

@@ -1,0 +1,36 @@
+# ::snt Right ?!! Crazy
+# ::tokens ["Right", "?", "!", "!", "Crazy"]
+# ::lemmas ["right", "?", "!", "!", "crazy"]
+(c1-1 / crazy-03
+      :ARG1-of (c1-0 / request-confirmation-91)
+      :mode expressive)
+
+# ::snt Good question . The governor ordered it .
+# ::tokens ["Good", "question", ".", "The", "governor", "ordered", "it", "."]
+# ::lemmas ["good", "question", ".", "the", "governor", "order", "it", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / question-01
+                  :ARG1-of (c2-5 / good-02))
+      :snt2 (c2-6 / order-01
+                  :ARG0 (c2-3 / person
+                              :ARG0-of (c2-0 / have-org-role-91
+                                             :ARG2 (c2-1 / governor)))
+                  :ARG2 (c2-4 / it)))
+
+# ::snt Besides preventing the citizens from being able to protect &amp; defend themselves
+# ::tokens ["Besides", "preventing", "the", "citizens", "from", "being", "able", "to", "protect", "&", "amp", ";", "defend", "themselves"]
+# ::lemmas ["besides", "prevent", "the", "citizen", "from", "be", "able", "to", "protect", "&", "amp", ";", "defend", "themselves"]
+(c3-4 / prevent-01
+      :ARG1 (c3-1 / possible-01
+                  :ARG1 (c3-5 / and
+                              :op1 (c3-0 / protect-01
+                                         :ARG0 (c3-3 / citizen
+                                                     :ARG1-of c3-0)
+                                         :op2-of c3-5)
+                              :ARG0 c3-3
+                              :ARG1 c3-3)
+                  :op3 (c3-2 / defend-01
+                             :ARG0 c3-3
+                             :ARG1 c3-3))
+      :ARG2 c3-3
+      :mod (c3-6 / besides))

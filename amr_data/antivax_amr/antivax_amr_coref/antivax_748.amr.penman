@@ -1,0 +1,83 @@
+# ::snt I know the feej g - but so happy we are slowly getting vaccinated
+# ::tokens ["I", "know", "the", "feej", "g", "-", "but", "so", "happy", "we", "are", "slowly", "getting", "vaccinated"]
+# ::lemmas ["i", "know", "the", "feej", "g", "-", "but", "so", "happy", "we", "be", "slowly", "get", "vaccinate"]
+(c1-2 / contrast-01
+      :ARG1 (c1-8 / know-01
+                  :ARG0 (c1-7 / i)
+                  :ARG1 (c1-1 / feej))
+      :ARG2 (c1-4 / happy-01
+                  :ARG0 (c1-5 / vaccinate-01
+                              :ARG1 (c1-3 / we)
+                              :ARG1-of (c1-0 / slow-05))
+                  :ARG1 c1-3
+                  :degree (c1-6 / so)))
+
+# ::snt Very happy for her!
+# ::tokens ["Very", "happy", "for", "her", "!"]
+# ::lemmas ["very", "happy", "for", "she", "!"]
+(c2-2 / happy-01
+      :ARG1 (c2-0 / she)
+      :degree (c2-1 / very))
+
+# ::snt I'm so glad she's getting it!
+# ::tokens ["I", "'m", "so", "glad", "she", "'s", "getting", "it", "!"]
+# ::lemmas ["i", "be", "so", "glad", "she", "be", "get", "it", "!"]
+(c3-2 / glad-02
+      :ARG0 (c3-5 / get-01
+                  :ARG0 (c3-0 / she)
+                  :ARG1 (c3-4 / it))
+      :ARG1 (c3-1 / i)
+      :degree (c3-3 / so))
+
+# ::snt Nice.
+# ::tokens ["Nice", "."]
+# ::lemmas ["nice", "."]
+(c4-0 / nice-01)
+
+# ::snt Shes a massage therapist at a rehab clinic.
+# ::tokens ["She", "s", "a", "massage", "therapist", "at", "a", "rehab", "clinic", "."]
+# ::lemmas ["she", "s", "a", "massage", "therapist", "at", "a", "rehab", "clinic", "."]
+(c5-1 / have-org-role-91
+      :ARG0 (c5-4 / he)
+      :ARG1 (c5-0 / clinic
+                  :mod (c5-3 / rehab))
+      :ARG2 (c5-2 / therapist
+                  :mod (c5-5 / massage-01)))
+
+# ::snt My wife as well. I figure Ill get it in or months when they get to the little people.
+# ::tokens ["My", "wife", "as", "well", ".", "I", "figure", "Ill", "get", "it", "in", "or", "months", "when", "they", "get", "to", "the", "little", "people", "."]
+# ::lemmas ["my", "wife", "as", "well", ".", "i", "figure", "Ill", "get", "it", "in", "or", "months", "when", "they", "get", "to", "the", "little", "people", "."]
+(c6-5 / multi-sentence
+      :snt1 (c6-19 / person
+                   :ARG0-of (c6-15 / have-rel-role-91
+                                   :ARG1 (c6-0 / i)
+                                   :ARG2 (c6-1 / wife))
+                   :mod (c6-12 / as-well))
+      :snt2 (c6-13 / figure-01
+                   :ARG0 (c6-8 / i)
+                   :ARG1 (c6-4 / get-30
+                               :ARG0 (c6-9 / i)
+                               :ARG1 (c6-16 / it)
+                               :time (c6-2 / or
+                                           :op1 (c6-7 / after
+                                                      :op1 (c6-6 / now)
+                                                      :quant (c6-14 / multiple
+                                                                    :op1 (c6-3 / temporal-quantity
+                                                                               :unit (c6-10 / month)
+                                                                               :quant 1)))
+                                           :op2 (c6-11 / get-05
+                                                       :ARG0 c6-9
+                                                       :ARG1 c6-16
+                                                       :ARG2 (c6-17 / person
+                                                                    :mod (c6-18 / little)))))))
+
+# ::snt Is she in the medical field or high risk?
+# ::tokens ["Is", "she", "in", "the", "medical", "field", "or", "high", "risk", "?"]
+# ::lemmas ["be", "she", "in", "the", "medical", "field", "or", "high", "risk", "?"]
+(c7-1 / amr-choice
+      :op1 (c7-0 / she
+                 :location (c7-2 / field
+                                 :mod (c7-5 / medicine)))
+      :op2 (c7-4 / risk-01
+                 :ARG1-of (c7-3 / high-02)
+                 :domain c7-0))

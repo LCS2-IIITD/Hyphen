@@ -1,0 +1,104 @@
+# ::snt Just some stupid cotton and tape
+# ::tokens ["Just", "some", "stupid", "cotton", "and", "tape"]
+# ::lemmas ["just", "some", "stupid", "cotton", "and", "tape"]
+(c1-1 / and
+      :op1 (c1-2 / cotton)
+      :op2 (c1-3 / tape)
+      :mod (c1-0 / stupid)
+      :quant (c1-5 / some)
+      :mod (c1-4 / just))
+
+# ::snt Did you get s cool band aid at least?
+# ::tokens ["Did", "you", "get", "s", "cool", "band", "aid", "at", "least", "?"]
+# ::lemmas ["do", "you", "get", "s", "cool", "band", "aid", "at", "least", "?"]
+(c2-3 / get-01
+      :ARG0 (c2-5 / you)
+      :ARG1 (c2-1 / aid-01
+                  :ARG1 (c2-4 / band)
+                  :ARG1-of (c2-2 / cool-04))
+      :polarity (c2-6 / amr-unknown)
+      :mod (c2-0 / at-least))
+
+# ::snt That's at the discretion if your local public health unit/pharmacy.
+# ::tokens ["That", "'s", "at", "the", "discretion", "if", "your", "local", "public", "health", "unit", "/", "pharmacy", "."]
+# ::lemmas ["that", "be", "at", "the", "discretion", "if", "your", "local", "public", "health", "unit", "/", "pharmacy", "."]
+(c3-0 / discretion
+      :domain (c3-5 / that)
+      :condition (c3-3 / or
+                       :op1 (c3-2 / unit
+                                  :mod (c3-1 / health
+                                             :ARG1-of (c3-7 / public-02))
+                                  :ARG1-of (c3-6 / local-02)
+                                  :poss (c3-8 / you))
+                       :op2 (c3-4 / pharmacy
+                                  :poss c3-8)))
+
+# ::snt Mine is next Friday. Please tell me we at least get dinosaur band aids.
+# ::tokens ["Mine", "is", "next", "Friday", ".", "Please", "tell", "me", "we", "at", "least", "get", "dinosaur", "band", "aids", "."]
+# ::lemmas ["mine", "be", "next", "Friday", ".", "please", "tell", "i", "we", "at", "least", "get", "dinosaur", "band", "aid", "."]
+(c4-11 / multi-sentence
+       :snt1 (c4-9 / be-temporally-at-91
+                   :ARG1 (c4-7 / thing
+                               :poss (c4-10 / i))
+                   :ARG2 (c4-0 / date-entity
+                               :weekday (c4-3 / friday)
+                               :mod (c4-12 / next)))
+       :snt2 (c4-5 / tell-01
+                   :ARG0 (c4-13 / you)
+                   :ARG1 (c4-8 / get-01
+                               :ARG0 (c4-4 / we)
+                               :ARG1 (c4-2 / aid
+                                           :mod (c4-1 / band
+                                                      :mod (c4-6 / dinosaur)))
+                               :mod (c4-14 / at-least))
+                   :ARG2 c4-10
+                   :mode imperative
+                   :polite +))
+
+# ::snt I specifically requested one but the nurse doing the jab was like "I'm a dental nurse. You're getting no such thing"
+# ::tokens ["I", "specifically", "requested", "one", "but", "the", "nurse", "doing", "the", "jab", "was", "like", "\"", "I", "'m", "a", "dental", "nurse", ".", "You", "'re", "getting", "no", "such", "thing", "\""]
+# ::lemmas ["i", "specifically", "request", "one", "but", "the", "nurse", "do", "the", "jab", "be", "like", "\"", "i", "be", "a", "dental", "nurse", ".", "you", "be", "get", "no", "such", "thing", "\""]
+(c5-3 / contrast-01
+      :ARG1 (c5-9 / request-01
+                  :ARG0 (c5-13 / i)
+                  :ARG1 (c5-6 / one)
+                  :ARG1-of (c5-0 / specific-02))
+      :ARG2 (c5-12 / say-01
+                   :ARG0 (c5-14 / nurse
+                                :ARG0-of (c5-4 / have-org-role-91
+                                               :ARG2 (c5-10 / nurse
+                                                            :mod (c5-1 / dental))))
+                   :ARG1 (c5-2 / and
+                               :op1 (c5-11 / get-01
+                                           :ARG0 (c5-15 / you)
+                                           :ARG1 (c5-8 / thing
+                                                       :mod (c5-5 / such))
+                                           :polarity -)
+                               :op2 (c5-7 / nurse
+                                          :mod c5-1
+                                          :domain c5-13))))
+
+# ::snt I was expecting one of those treasure box drawers like at the dentist's office. I was incredibly bummed.
+# ::tokens ["I", "was", "expecting", "one", "of", "those", "treasure", "box", "drawers", "like", "at", "the", "dentist", "'s", "office", ".", "I", "was", "incredibly", "bummed", "."]
+# ::lemmas ["i", "be", "expect", "one", "of", "those", "treasure", "box", "drawer", "like", "at", "the", "dentist", "'s", "office", ".", "i", "be", "incredibly", "bummed", "."]
+(c6-13 / multi-sentence
+       :snt1 (c6-14 / expect-01
+                    :ARG0 (c6-12 / i)
+                    :ARG1 (c6-8 / one
+                                :ARG1-of (c6-4 / include-91
+                                               :ARG2 (c6-0 / drawer
+                                                           :mod (c6-11 / box
+                                                                       :mod (c6-9 / treasure))
+                                                           :mod (c6-2 / that)
+                                                           :ARG1-of (c6-10 / resemble-01
+                                                                           :ARG2 (c6-5 / office
+                                                                                       :poss (c6-3 / dentist)))))))
+       :snt2 (c6-1 / bum-03
+                   :ARG1 (c6-6 / i)
+                   :degree (c6-7 / incredible)))
+
+# ::snt That Is disappointing
+# ::tokens ["That", "Is", "disappointing"]
+# ::lemmas ["that", "be", "disappointing"]
+(c7-0 / disappoint-01
+      :ARG0 (c7-1 / that))

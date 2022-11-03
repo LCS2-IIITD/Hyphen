@@ -1,0 +1,59 @@
+# ::snt You know the drill.
+# ::tokens ["You", "know", "the", "drill", "."]
+# ::lemmas ["you", "know", "the", "drill", "."]
+(c1-1 / know-01
+      :ARG0 (c1-2 / you)
+      :ARG1 (c1-0 / drill-02))
+
+# ::snt Must be some tough steel - I watched that for about 15 minutes and the drill had still hardly gotten anywhere
+# ::tokens ["Must", "be", "some", "tough", "steel", "-", "I", "watched", "that", "for", "about", "15", "minutes", "and", "the", "drill", "had", "still", "hardly", "gotten", "anywhere"]
+# ::lemmas ["must", "be", "some", "tough", "steel", "-", "i", "watch", "that", "for", "about", "15", "minutes", "and", "the", "drill", "have", "still", "hardly", "get", "anywhere"]
+(c2-14 / multi-sentence
+       :snt1 (c2-13 / infer-01
+                    :ARG1 (c2-0 / steel
+                                :ARG1-of (c2-10 / tough-04)
+                                :mod (c2-12 / some)
+                                :domain (c2-6 / that)))
+       :snt2 (c2-3 / and
+                   :op1 (c2-5 / watch-01
+                              :ARG0 (c2-7 / i)
+                              :ARG1 c2-6
+                              :duration (c2-16 / about
+                                               :op1 (c2-15 / temporal-quantity
+                                                           :unit (c2-4 / minute)
+                                                           :quant 15)))
+                   :op2 (c2-11 / get-05
+                               :ARG1 (c2-1 / drill)
+                               :ARG2 (c2-2 / anywhere)
+                               :mod (c2-8 / still)
+                               :degree (c2-9 / hardly))))
+
+# ::snt So satisfying when it finally falls through.
+# ::tokens ["So", "satisfying", "when", "it", "finally", "falls", "through", "."]
+# ::lemmas ["so", "satisfy", "when", "it", "finally", "fall", "through", "."]
+(c3-0 / satisfy-01
+      :degree (c3-3 / so)
+      :time (c3-1 / fall-through-06
+                  :ARG1 (c3-4 / it)
+                  :time (c3-2 / final)))
+
+# ::snt 6 hours in!
+# ::tokens ["6", "hours", "in", "!"]
+# ::lemmas ["6", "hours", "in", "!"]
+(c4-0 / be-temporally-at-91
+      :ARG2 (c4-1 / after
+                  :quant (c4-2 / temporal-quantity
+                               :unit (c4-3 / hour)
+                               :quant 6)))
+
+# ::snt ... but this was submitted 3 hours ago.
+# ::tokens ["...", "but", "this", "was", "submitted", "3", "hours", "ago", "."]
+# ::lemmas ["...", "but", "this", "be", "submit", "3", "hours", "ago", "."]
+(c5-1 / contrast-01
+      :ARG2 (c5-0 / submit-01
+                  :ARG1 (c5-4 / this)
+                  :time (c5-5 / before
+                              :op1 (c5-6 / now)
+                              :quant (c5-2 / temporal-quantity
+                                           :unit (c5-3 / hour)
+                                           :quant 3))))

@@ -1,0 +1,61 @@
+# ::snt DT is crazy.
+# ::tokens ["DT", "is", "crazy", "."]
+# ::lemmas ["DT", "be", "crazy", "."]
+(c1-0 / crazy-03
+      :ARG1 (c1-2 / person
+                  :name (c1-1 / name
+                              :op1 "DT")))
+
+# ::snt Comey lied I was under investigation!
+# ::tokens ["Comey", "lied", "I", "was", "under", "investigation", "!"]
+# ::lemmas ["Comey", "lie", "i", "be", "under", "investigation", "!"]
+(c2-3 / lie-08
+      :ARG0 (c2-2 / person
+                  :name (c2-0 / name
+                              :op1 "Comey"))
+      :ARG1 (c2-4 / investigate-01
+                  :ARG1 (c2-1 / i)))
+
+# ::snt He's like that whinny kid on Xbox live.
+# ::tokens ["He", "'s", "like", "that", "whinny", "kid", "on", "Xbox", "live", "."]
+# ::lemmas ["he", "be", "like", "that", "whinny", "kid", "on", "Xbox", "live", "."]
+(c3-1 / resemble-01
+      :ARG1 (c3-2 / he)
+      :ARG2 (c3-3 / kid
+                  :mod (c3-7 / that)
+                  :mod (c3-6 / whinny)
+                  :medium (c3-4 / live
+                                :mod (c3-5 / product
+                                           :name (c3-0 / name
+                                                       :op1 "Microsoft")))))
+
+# ::snt I can't believe the Former FBI Director said he was stunned. Come on nothing stuns a former prosecuting attorney and FBI Director.
+# ::tokens ["I", "ca", "n't", "believe", "the", "Former", "FBI", "Director", "said", "he", "was", "stunned", ".", "Come", "on", "nothing", "stuns", "a", "former", "prosecuting", "attorney", "and", "FBI", "Director", "."]
+# ::lemmas ["i", "can", "not", "believe", "the", "former", "FBI", "Director", "say", "he", "be", "stun", ".", "come", "on", "nothing", "stun", "a", "former", "prosecute", "attorney", "and", "FBI", "Director", "."]
+(c5-10 / multi-sentence
+       :snt1 (c5-16 / possible-01
+                    :ARG1 (c5-9 / believe-01
+                                :ARG0 (c5-19 / i)
+                                :ARG1 (c5-0 / say-01
+                                            :ARG0 (c5-11 / person
+                                                         :ARG0-of (c5-6 / have-org-role-91
+                                                                        :ARG1 (c5-8 / government-organization
+                                                                                    :name (c5-15 / name
+                                                                                                 :op1 "FBI"))
+                                                                        :ARG2 (c5-20 / director)
+                                                                        :time (c5-14 / former)))
+                                            :ARG1 (c5-4 / stun-01
+                                                        :ARG1 c5-11)))
+                    :polarity -)
+       :snt2 (c5-13 / come-on-25
+                    :ARG1 (c5-3 / stun-01
+                                :ARG0 (c5-12 / nothing)
+                                :ARG1 (c5-2 / person
+                                            :ARG0-of (c5-18 / have-org-role-91
+                                                            :ARG1 c5-8
+                                                            :ARG2 (c5-7 / attorney
+                                                                        :ARG0-of (c5-1 / prosecute-01))
+                                                            :time (c5-17 / former))
+                                            :ARG0-of (c5-5 / have-org-role-91
+                                                           :ARG2 c5-20)))
+                    :mode imperative))

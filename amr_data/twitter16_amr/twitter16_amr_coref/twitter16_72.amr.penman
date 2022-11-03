@@ -1,0 +1,605 @@
+# ::snt it says Microsoft, then shows a Sony controller
+# ::tokens ["it", "says", "Microsoft", ",", "then", "shows", "a", "Sony", "controller"]
+# ::lemmas ["it", "say", "Microsoft", ",", "then", "show", "a", "Sony", "controller"]
+(c1-0 / and
+      :op1 (c1-7 / say-01
+                 :ARG0 (c1-6 / it)
+                 :ARG1 (c1-9 / company
+                             :name (c1-8 / name
+                                         :op1 "Microsoft")))
+      :op2 (c1-1 / show-01
+                 :ARG0 c1-6
+                 :ARG1 (c1-5 / controller
+                             :mod (c1-3 / company
+                                        :name (c1-4 / name
+                                                    :op1 "Sony")))
+                 :time (c1-2 / then)))
+
+# ::snt and says gamecube
+# ::tokens ["and", "says", "gamecube"]
+# ::lemmas ["and", "say", "gamecube"]
+(c2-0 / and
+      :op2 (c2-1 / say-01
+                 :ARG0 (c2-2 / person
+                             :name (c2-3 / name
+                                         :op1 "Gamecube"))))
+
+# ::snt that's from sony, not microsoft, keep trying though.
+# ::tokens ["that", "'s", "from", "sony", ",", "not", "microsoft", ",", "keep", "trying", "though", "."]
+# ::lemmas ["that", "be", "from", "sony", ",", "not", "microsoft", ",", "keep", "try", "though", "."]
+(c3-10 / contrast-01
+       :ARG1 (c3-2 / be-from-91
+                   :ARG1 (c3-0 / that)
+                   :ARG2 (c3-8 / company
+                               :name (c3-9 / name
+                                           :op1 "Sony")))
+       :ARG2 (c3-5 / be-from-91
+                   :ARG1 c3-0
+                   :ARG2 (c3-3 / company
+                               :name (c3-4 / name
+                                           :op1 "Microsoft"))
+                   :polarity -)
+       :ARG0-of (c3-1 / cause-01
+                      :ARG1 (c3-6 / keep-02
+                                  :ARG1 (c3-7 / try-01
+                                              :ARG1 c3-0))))
+
+# ::snt no correlation?
+# ::tokens ["no", "correlation", "?"]
+# ::lemmas ["no", "correlation", "?"]
+(c4-1 / correlate-01
+      :polarity (c4-0 / amr-unknown)
+      :polarity -)
+
+# ::snt really? Cause thats a playstation controller and Nintendo makes gamecube
+# ::tokens ["really", "?", "Cause", "that", "s", "a", "playstation", "controller", "and", "Nintendo", "makes", "gamecube"]
+# ::lemmas ["really", "?", "cause", "that", "s", "a", "playstation", "controller", "and", "Nintendo", "make", "gamecube"]
+(c5-6 / multi-sentence
+      :snt1 (c5-2 / real-04
+                  :polarity (c5-0 / amr-unknown))
+      :snt2 (c5-11 / cause-01
+                   :ARG0 (c5-12 / and
+                                :op1 (c5-1 / thing
+                                           :ARG0-of (c5-8 / control-01
+                                                          :ARG1 (c5-9 / playstation))
+                                           :domain (c5-4 / that))
+                                :op2 (c5-3 / make-01
+                                           :ARG0 (c5-5 / company
+                                                       :name (c5-10 / name
+                                                                    :op1 "Nintendo"))
+                                           :ARG1 (c5-7 / gamecube)))))
+
+# ::snt thats sony lmao
+# ::tokens ["that", "s", "sony", "lmao"]
+# ::lemmas ["that", "s", "sony", "lmao"]
+(c6-1 / say-01
+      :ARG1 (c6-0 / that)
+      :ARG2 (c6-2 / person
+                  :name (c6-3 / name
+                              :op1 "Sony"
+                              :op2 "Lmao")))
+
+# ::snt I see what you did there. Levels, impressive.
+# ::tokens ["I", "see", "what", "you", "did", "there", ".", "Levels", ",", "impressive", "."]
+# ::lemmas ["i", "see", "what", "you", "do", "there", ".", "level", ",", "impressive", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-5 / see-01
+                  :ARG0 (c7-4 / i)
+                  :ARG1 (c7-0 / thing
+                              :ARG1-of (c7-8 / do-02
+                                             :ARG0 (c7-2 / you)
+                                             :location (c7-1 / there))))
+      :snt2 (c7-7 / impress-01
+                  :ARG0 (c7-6 / level)))
+
+# ::snt Gamecube was by nintendo, Microsoft has the xbox, and that's a playstation controller.
+# ::tokens ["Gamecube", "was", "by", "nintendo", ",", "Microsoft", "has", "the", "xbox", ",", "and", "that", "'s", "a", "playstation", "controller", "."]
+# ::lemmas ["Gamecube", "be", "by", "nintendo", ",", "Microsoft", "have", "the", "xbox", ",", "and", "that", "be", "a", "playstation", "controller", "."]
+(c8-0 / and
+      :op1 (c8-4 / byline-91
+                 :ARG0 (c8-13 / company
+                              :name (c8-10 / name
+                                           :op1 "Nintendo"))
+                 :ARG1 (c8-9 / product
+                             :name (c8-5 / name
+                                         :op1 "Gamecube")))
+      :op2 (c8-12 / have-03
+                  :ARG0 (c8-8 / company
+                              :name (c8-11 / name
+                                           :op1 "Microsoft"))
+                  :ARG1 (c8-7 / product
+                              :name (c8-3 / name
+                                          :op1 "Xbox")
+                              :ARG0-of (c8-6 / control-01
+                                             :ARG1 (c8-1 / playstation))))
+      :op3 (c8-2 / thing
+                 :domain c8-9
+                 :ARG0-of c8-6
+                 :ARG1 c8-1))
+
+# ::snt PlayStation ?
+# ::tokens ["PlayStation", "?"]
+# ::lemmas ["PlayStation", "?"]
+(c9-1 / company
+      :name (c9-2 / name
+                  :op1 "PlayStation")
+      :polarity (c9-0 / amr-unknown))
+
+# ::snt it says GameCube but has a PS3 controller
+# ::tokens ["it", "says", "GameCube", "but", "has", "a", "PS3", "controller"]
+# ::lemmas ["it", "say", "GameCube", "but", "have", "a", "PS3", "controller"]
+(c11-9 / contrast-01
+       :ARG1 (c11-5 / say-01
+                    :ARG0 (c11-4 / it)
+                    :ARG1 (c11-1 / game
+                                 :name (c11-6 / name
+                                              :op1 "Game"
+                                              :op2 "Cube")))
+       :ARG2 (c11-8 / have-03
+                    :ARG0 c11-4
+                    :ARG1 (c11-0 / thing
+                                 :ARG0-of (c11-3 / control-01)
+                                 :mod (c11-2 / monetary-quantity
+                                             :unit (c11-7 / pound)
+                                             :quant 3))))
+
+# ::snt There are so many things wrong with this post that I'm not sure where to begin
+# ::tokens ["There", "are", "so", "many", "things", "wrong", "with", "this", "post", "that", "I", "'m", "not", "sure", "where", "to", "begin"]
+# ::lemmas ["there", "be", "so", "many", "thing", "wrong", "with", "this", "post", "that", "i", "be", "not", "sure", "where", "to", "begin"]
+(c14-8 / wrong-02
+       :ARG1 (c14-1 / thing
+                    :quant (c14-4 / many
+                                  :mod (c14-6 / so))
+                    :ARG2-of c14-8)
+       :ARG1-of (c14-7 / post-01
+                       :mod (c14-3 / this))
+       :ARG0-of (c14-10 / cause-01
+                        :ARG1 (c14-0 / sure-02
+                                     :ARG0 (c14-5 / i)
+                                     :ARG1 (c14-9 / location
+                                                  :ARG2-of (c14-2 / begin-01
+                                                                  :ARG0 c14-5))
+                                     :polarity -)))
+
+# ::snt tipu lah lepasni aku takkan sentuhhh huarghh
+# ::tokens ["tipu", "lah", "lepasni", "aku", "takkan", "sentuhhh", "huarghh"]
+# ::lemmas ["tipu", "lah", "lepasni", "aku", "takkan", "sentuhhh", "huarghh"]
+(c15-2 / tipu
+       :mod (c15-3 / string-entity
+                   :value "lepasni aku takkan")
+       :ARG1-of (c15-0 / send-01
+                       :mod (c15-1 / huarghh
+                                   :mode expressive)))
+
+# ::snt Holy. Thats a lot of incorrect company matching.
+# ::tokens ["Holy", ".", "That", "s", "a", "lot", "of", "incorrect", "company", "matching", "."]
+# ::lemmas ["Holy", ".", "that", "s", "a", "lot", "of", "incorrect", "company", "matching", "."]
+(c16-2 / multi-sentence
+       :snt1 (c16-5 / holy)
+       :snt2 (c16-1 / match-01
+                    :ARG1 (c16-6 / company)
+                    :ARG1-of (c16-3 / correct-02
+                                    :polarity -)
+                    :quant (c16-4 / lot)
+                    :domain (c16-0 / that)))
+
+# ::snt that would explain why XD;;
+# ::tokens ["that", "would", "explain", "why", "XD", ";", ";"]
+# ::lemmas ["that", "would", "explain", "why", "XD", ";", ";"]
+(c17-1 / explain-01
+       :ARG0 (c17-0 / that)
+       :ARG1 (c17-2 / thing
+                    :ARG0-of (c17-4 / cause-01))
+       :mod (c17-3 / emoticon
+                   :value " XD"))
+
+# ::snt Yes, and they don't actually use dog noses either XD
+# ::tokens ["Yes", ",", "and", "they", "do", "n't", "actually", "use", "dog", "noses", "either", "XD"]
+# ::lemmas ["yes", ",", "and", "they", "do", "not", "actually", "use", "dog", "nose", "either", "XD"]
+(c18-0 / and
+       :op2 (c18-4 / use-01
+                   :ARG0 (c18-1 / they)
+                   :ARG1 (c18-6 / nose
+                                :part-of (c18-7 / dog))
+                   :mod (c18-2 / either)
+                   :ARG1-of (c18-5 / actual-02)
+                   :mod (c18-3 / yeah
+                               :mode expressive)
+                   :polarity -))
+
+# ::snt ......... oh......... how embarrassing, i didn't noticed it was spelled "worst" instead of "worth" XD;
+# ::tokens [".........", "oh", ".........", "how", "embarrassing", ",", "i", "did", "n't", "noticed", "it", "was", "spelled", "\"", "worst", "\"", "instead", "of", "\"", "worth", "\"", "XD", ";"]
+# ::lemmas [".........", "oh", ".........", "how", "embarrassing", ",", "i", "do", "not", "notice", "it", "be", "spell", "\"", "bad", "\"", "instead", "of", "\"", "worth", "\"", "XD", ";"]
+(c19-7 / notice-01
+       :ARG0 (c19-5 / i)
+       :ARG1 (c19-6 / spell-01
+                    :ARG1 (c19-11 / it)
+                    :ARG2 (c19-2 / bad-07
+                                 :ARG2-of (c19-4 / have-degree-91
+                                                 :ARG1 c19-11
+                                                 :ARG3 (c19-3 / most)))
+                    :ARG1-of (c19-10 / instead-of-91
+                                     :ARG2 (c19-9 / worth-02
+                                                  :ARG2 c19-2)))
+       :ARG0-of (c19-1 / embarrass-01
+                       :degree (c19-0 / so))
+       :mod (c19-8 / oh
+                   :mode expressive)
+       :polarity -)
+
+# ::snt Allaze... it's called "worst fact" for a reason.
+# ::tokens ["Allaze", "...", "it", "'s", "called", "\"", "worst", "fact", "\"", "for", "a", "reason", "."]
+# ::lemmas ["Allaze", "...", "it", "be", "call", "\"", "bad", "fact", "\"", "for", "a", "reason", "."]
+(c20-5 / say-01
+       :ARG1 (c20-10 / call-01
+                     :ARG1 (c20-4 / it)
+                     :ARG2 (c20-8 / fact
+                                  :ARG1-of (c20-9 / have-degree-91
+                                                  :ARG2 (c20-1 / bad-07
+                                                               :ARG1 c20-8)
+                                                  :ARG3 (c20-2 / most)))
+                     :ARG1-of (c20-3 / cause-01
+                                     :ARG0 (c20-0 / reason)))
+       :ARG2 (c20-6 / person
+                    :name (c20-7 / name
+                                 :op1 "Allaze")))
+
+# ::snt you mean Sony.... considering that you're using the DualShock from ...
+# ::tokens ["you", "mean", "Sony", "....", "considering", "that", "you", "'re", "using", "the", "DualShock", "from", "..."]
+# ::lemmas ["you", "mean", "Sony", "....", "consider", "that", "you", "be", "use", "the", "DualShock", "from", "..."]
+(c21-2 / mean-01
+       :ARG0 (c21-1 / you)
+       :ARG2 (c21-7 / company
+                    :name (c21-5 / name
+                                 :op1 "Sony"))
+       :condition (c21-3 / consider-02
+                         :ARG1 (c21-4 / use-01
+                                      :ARG0 c21-1
+                                      :ARG1 (c21-6 / product
+                                                   :name (c21-0 / name
+                                                                :op1 "DualShock")
+                                                   :source-of c21-1))))
+
+# ::snt is it real or just a joke ?!
+# ::tokens ["is", "it", "real", "or", "just", "a", "joke", "?", "!"]
+# ::lemmas ["be", "it", "real", "or", "just", "a", "joke", "?", "!"]
+(c22-0 / amr-choice
+       :op1 (c22-1 / real-04
+                   :ARG1 (c22-4 / it))
+       :op2 (c22-2 / joke-01
+                   :ARG2 c22-4
+                   :mod (c22-3 / just)))
+
+# ::snt j'en tais sr
+# ::tokens ["j'en", "tais", "sr"]
+# ::lemmas ["j'en", "tais", "sr"]
+(c23-0 / person
+       :name (c23-1 / name
+                    :op1 "J'en"
+                    :op2 "tais"
+                    :op3 " sr"))
+
+# ::snt lol. noooo they don't u derp
+# ::tokens ["lol", ".", "noooo", "they", "do", "n't", "u", "derp"]
+# ::lemmas ["lol", ".", "noooo", "they", "do", "not", "u", "derp"]
+(c24-0 / and
+       :op1 (c24-5 / laugh-01
+                   :ARG0 (c24-4 / i)
+                   :manner (c24-2 / loud)
+                   :mode expressive)
+       :op2 (c24-6 / do-02
+                   :ARG0 (c24-1 / they)
+                   :ARG1-of (c24-3 / request-confirmation-91
+                                   :ARG0 c24-4)
+                   :polarity -))
+
+# ::snt this fact talks about Microsoft using Sony product
+# ::tokens ["this", "fact", "talks", "about", "Microsoft", "using", "Sony", "product"]
+# ::lemmas ["this", "fact", "talk", "about", "Microsoft", "use", "Sony", "product"]
+(c25-0 / talk-01
+       :ARG0 (c25-7 / fact
+                    :mod (c25-1 / this))
+       :ARG1 (c25-4 / use-01
+                    :ARG0 (c25-8 / company
+                                 :name (c25-5 / name
+                                              :op1 "Microsoft"))
+                    :ARG1 (c25-6 / product
+                                 :mod (c25-3 / company
+                                             :name (c25-2 / name
+                                                          :op1 "Sony")))))
+
+# ::snt first of all nintendo invented gamecube and second its not a gamecube its a playstation and third its bullshit
+# ::tokens ["first", "of", "all", "nintendo", "invented", "gamecube", "and", "second", "its", "not", "a", "gamecube", "its", "a", "playstation", "and", "third", "its", "bullshit"]
+# ::lemmas ["first", "of", "all", "nintendo", "invent", "gamecube", "and", "second", "its", "not", "a", "gamecube", "its", "a", "playstation", "and", "third", "its", "bullshit"]
+(c26-0 / and
+       :op1 (c26-5 / invent-01
+                   :ARG0 (c26-11 / company
+                                 :name (c26-7 / name
+                                              :op1 "Nintendo"))
+                   :ARG1 (c26-4 / game
+                                :name (c26-2 / name
+                                             :op1 "Game"
+                                             :op2 "Cube"))
+                   :ord (c26-9 / ordinal-entity
+                               :range (c26-6 / all)
+                               :value 1))
+       :op2 (c26-8 / station
+                   :purpose (c26-10 / play-01)
+                   :domain c26-4
+                   :ord (c26-3 / ordinal-entity
+                               :value 2)
+                   :polarity -)
+       :op3 (c26-1 / bullshit-01
+                   :ARG0 c26-4
+                   :li 3))
+
+# ::snt Go home you're drunk
+# ::tokens ["Go", "home", "you", "'re", "drunk"]
+# ::lemmas ["go", "home", "you", "be", "drunk"]
+(c27-1 / go-02
+       :ARG0 (c27-0 / you)
+       :ARG4 (c27-2 / home)
+       :condition (c27-3 / drunk
+                         :domain c27-0)
+       :mode imperative)
+
+# ::snt Te jodes.
+# ::tokens ["Te", "jodes", "."]
+# ::lemmas ["Te", "jode", "."]
+(c28-0 / jodes)
+
+# ::snt that's sony lmao
+# ::tokens ["that", "'s", "sony", "lmao"]
+# ::lemmas ["that", "be", "sony", "lmao"]
+(c29-4 / ony
+       :domain (c29-1 / that)
+       :ARG2-of (c29-5 / laugh-01
+                       :ARG0 (c29-3 / i
+                                    :part (c29-0 / ass))
+                       :manner (c29-2 / loud)))
+
+# ::snt there is so much wrong with that caption. Nice try
+# ::tokens ["there", "is", "so", "much", "wrong", "with", "that", "caption", ".", "Nice", "try"]
+# ::lemmas ["there", "be", "so", "much", "wrong", "with", "that", "caption", ".", "nice", "try"]
+(c30-4 / multi-sentence
+       :snt1 (c30-7 / wrong-02
+                    :ARG1 (c30-1 / much
+                                 :degree (c30-5 / so))
+                    :ARG2 (c30-0 / thing
+                                 :ARG2-of (c30-8 / caption-01)
+                                 :mod (c30-2 / that)))
+       :snt2 (c30-3 / try-01
+                    :ARG1-of (c30-6 / nice-01)))
+
+# ::snt sony*
+# ::tokens ["sony", "*"]
+# ::lemmas ["sony", "*"]
+(c31-0 / sony)
+
+# ::snt what if it was true
+# ::tokens ["what", "if", "it", "was", "true"]
+# ::lemmas ["what", "if", "it", "be", "true"]
+(c32-3 / have-condition-91
+       :ARG1 (c32-0 / amr-unknown)
+       :ARG2 (c32-2 / true-01
+                    :ARG1 (c32-1 / it)))
+
+# ::snt They should use human scrotum
+# ::tokens ["They", "should", "use", "human", "scrotum"]
+# ::lemmas ["they", "should", "use", "human", "scrotum"]
+(c33-1 / recommend-01
+       :ARG1 (c33-2 / use-01
+                    :ARG0 (c33-0 / they)
+                    :ARG1 (c33-3 / scrotum
+                                 :mod (c33-4 / human))))
+
+# ::snt im pretty sure sony makes those
+# ::tokens ["i", "m", "pretty", "sure", "sony", "makes", "those"]
+# ::lemmas ["i", "m", "pretty", "sure", "sony", "make", "those"]
+(c34-4 / sure-02
+       :ARG0 (c34-3 / i)
+       :ARG1 (c34-1 / make-01
+                    :ARG0 (c34-5 / person
+                                 :name (c34-6 / name
+                                              :op1 "Sony"))
+                    :ARG1 (c34-0 / that))
+       :degree (c34-2 / pretty))
+
+# ::snt . Microsoft don't make Sony products
+# ::tokens [".", "Microsoft", "do", "n't", "make", "Sony", "products"]
+# ::lemmas [".", "Microsoft", "do", "not", "make", "Sony", "product"]
+(c35-1 / make-01
+       :ARG0 (c35-5 / company
+                    :name (c35-4 / name
+                                 :op1 "Microsoft"))
+       :ARG1 (c35-3 / product
+                    :poss (c35-2 / company
+                                 :name (c35-0 / name
+                                              :op1 "Sony")))
+       :polarity -)
+
+# ::snt . Microsoft don't make Gamecubes2. The pictures shown are Sony Playstation controllers3. Microsoft don't make Sony prod
+# ::tokens [".", "Microsoft", "do", "n't", "make", "Gamecubes2", ".", "The", "pictures", "shown", "are", "Sony", "Playstation", "controllers3", ".", "Microsoft", "do", "n't", "make", "Sony", "prod"]
+# ::lemmas [".", "Microsoft", "do", "not", "make", "Gamecubes2", ".", "the", "picture", "show", "be", "Sony", "Playstation", "controllers3", ".", "Microsoft", "do", "not", "make", "Sony", "prod"]
+(c36-4 / multi-sentence
+       :snt1 (c36-2 / make-01
+                    :ARG0 (c36-14 / company
+                                  :name (c36-10 / name
+                                                :op1 "Microsoft"))
+                    :ARG1 (c36-9 / product
+                                 :name (c36-3 / name
+                                              :op1 "Gamecubes2"))
+                    :polarity -)
+       :snt2 (c36-8 / show-01
+                    :ARG1 (c36-5 / picture
+                                 :consist-of (c36-0 / product
+                                                    :name (c36-12 / name
+                                                                  :op1 "Sony"
+                                                                  :op2 " Playstation"
+                                                                  :op3 "Controllers"))
+                                 :ord (c36-11 / ordinal-entity
+                                              :value 3)))
+       :snt3 (c36-13 / make-01
+                     :ARG0 (c36-6 / company
+                                  :name (c36-1 / name
+                                               :op1 "Microsoft"))
+                     :ARG1 (c36-7 / prod-01
+                                  :ARG0 c36-6)
+                     :polarity -))
+
+# ::snt absolutely not
+# ::tokens ["absolutely", "not"]
+# ::lemmas ["absolutely", "not"]
+(c37-1 / have-polarity-91
+       :degree (c37-0 / absolute)
+       :ARG2 -)
+
+# ::snt dark!
+# ::tokens ["dark", "!"]
+# ::lemmas ["dark", "!"]
+(c38-0 / dark-03)
+
+# ::snt the more i read this the more and more i just go "...what?"
+# ::tokens ["the", "more", "i", "read", "this", "the", "more", "and", "more", "i", "just", "go", "\"", "...", "what", "?", "\""]
+# ::lemmas ["the", "more", "i", "read", "this", "the", "more", "and", "more", "i", "just", "go", "\"", "...", "what", "?", "\""]
+(c40-9 / correlate-91
+       :ARG1 (c40-5 / more
+                    :ARG3-of (c40-8 / have-quant-91
+                                    :ARG1 (c40-2 / read-01
+                                                 :ARG0 (c40-7 / i)
+                                                 :ARG1 (c40-1 / this))))
+       :ARG2 (c40-4 / more
+                    :ARG3-of c40-8
+                    :ARG1 (c40-6 / go-05
+                                 :ARG0 c40-7
+                                 :ARG1 (c40-0 / amr-unknown)
+                                 :mod (c40-3 / just))))
+
+# ::snt You know how to rile pedants!
+# ::tokens ["You", "know", "how", "to", "rile", "pedants", "!"]
+# ::lemmas ["you", "know", "how", "to", "rile", "pedant", "!"]
+(c42-0 / know-03
+       :ARG0 (c42-1 / you)
+       :ARG1 (c42-3 / rant-01
+                    :ARG3 (c42-2 / pedant)))
+
+# ::snt I. Did. Not. Know. That.
+# ::tokens ["I.", "Did", ".", "Not", ".", "Know", ".", "That", "."]
+# ::lemmas ["I.", "Did", ".", "not", ".", "know", ".", "that", "."]
+(c43-0 / and
+       :op1 (c43-4 / do-02
+                   :ARG0 (c43-3 / i))
+       :op2 (c43-2 / know-01
+                   :ARG0 c43-3
+                   :polarity -)
+       :op3 (c43-1 / that))
+
+# ::snt Except that's a Sony controller... I'm skeptical at this fakery.
+# ::tokens ["Except", "that", "'s", "a", "Sony", "controller", "...", "I", "'m", "skeptical", "at", "this", "fakery", "."]
+# ::lemmas ["except", "that", "be", "a", "Sony", "controller", "...", "i", "be", "skeptical", "at", "this", "fakery", "."]
+(c44-4 / multi-sentence
+       :snt1 (c44-1 / except-01
+                    :ARG1 (c44-0 / thing
+                                 :ARG0-of (c44-10 / control-01)
+                                 :poss (c44-5 / company
+                                              :name (c44-8 / name
+                                                           :op1 "Sony"))
+                                 :domain (c44-2 / that)))
+       :snt2 (c44-7 / skeptical
+                    :domain (c44-6 / i)
+                    :topic (c44-9 / fakery
+                                  :mod (c44-3 / this))))
+
+# ::snt the people who don't realize the disconnect between Microsoft GameCube. I need a drink.
+# ::tokens ["the", "people", "who", "do", "n't", "realize", "the", "disconnect", "between", "Microsoft", "GameCube", ".", "I", "need", "a", "drink", "."]
+# ::lemmas ["the", "people", "who", "do", "not", "realize", "the", "disconnect", "between", "Microsoft", "GameCube", ".", "i", "need", "a", "drink", "."]
+(c45-4 / multi-sentence
+       :snt1 (c45-6 / person
+                    :ARG0-of (c45-1 / realize-01
+                                    :ARG1 (c45-8 / disconnect-01
+                                                 :ARG1 (c45-3 / product
+                                                              :name (c45-7 / name
+                                                                           :op1 "Microsoft"
+                                                                           :op2 "GameCube")
+                                                              :ARG2-of c45-8))
+                                    :polarity -))
+       :snt2 (c45-2 / need-01
+                    :ARG0 (c45-5 / i)
+                    :ARG1 (c45-0 / drink)))
+
+# ::snt are you % certain
+# ::tokens ["are", "you", "%", "certain"]
+# ::lemmas ["be", "you", "%", "certain"]
+(c46-2 / certain
+       :polarity (c46-0 / amr-unknown)
+       :domain (c46-1 / you))
+
+# ::snt % nailed it. This fact is too funny.
+# ::tokens ["%", "nailed", "it", ".", "This", "fact", "is", "too", "funny", "."]
+# ::lemmas ["%", "nail", "it", ".", "this", "fact", "be", "too", "funny", "."]
+(c47-3 / multi-sentence
+       :snt1 (c47-6 / nail-01
+                    :ARG0 (c47-5 / percentage-entity
+                                 :value 90)
+                    :ARG1 (c47-4 / it))
+       :snt2 (c47-8 / have-degree-91
+                    :ARG1 (c47-7 / fact
+                                 :mod (c47-0 / this))
+                    :ARG2 (c47-1 / funny-02
+                                 :ARG1 c47-7)
+                    :ARG3 (c47-2 / too)))
+
+# ::snt Damn' it's Sony not Microsoft !!!
+# ::tokens ["Damn", "'", "it", "'s", "Sony", "not", "Microsoft", "!", "!", "!"]
+# ::lemmas ["damn", "'", "it", "be", "Sony", "not", "Microsoft", "!", "!", "!"]
+(c48-5 / contrast-01
+       :ARG1 (c48-3 / company
+                    :name (c48-4 / name
+                                 :op1 "Sony"))
+       :ARG2 (c48-0 / company
+                    :name (c48-1 / name
+                                 :op1 "Microsoft")
+                    :polarity -)
+       :mod (c48-2 / damn
+                   :mode expressive))
+
+# ::snt O H. M Y. G O S H.
+# ::tokens ["O", "H.", "M", "Y.", "G", "O", "S", "H."]
+# ::lemmas ["o", "H.", "M", "Y.", "G", "O", "S", "h."]
+(c49-0 / and
+       :op1 (c49-4 / person
+                   :name (c49-5 / name
+                                :op1 "O"
+                                :op2 "H."))
+       :op2 (c49-3 / person
+                   :name (c49-2 / name
+                                :op1 "Y."
+                                :op2 "G"))
+       :op3 (c49-1 / person
+                   :name (c49-6 / name
+                                :op1 "H")))
+
+# ::snt The pictures doesn't show a Microsoft controller but a Sony one and gamecube controller are from Nintento ^^
+# ::tokens ["The", "pictures", "does", "n't", "show", "a", "Microsoft", "controller", "but", "a", "Sony", "one", "and", "gamecube", "controller", "are", "from", "Nintento", "^^"]
+# ::lemmas ["the", "picture", "do", "not", "show", "a", "Microsoft", "controller", "but", "a", "Sony", "one", "and", "gamecube", "controller", "be", "from", "Nintento", "^^"]
+(c50-14 / contrast-01
+        :ARG1 (c50-10 / show-01
+                      :ARG0 (c50-11 / picture)
+                      :ARG1 (c50-9 / controller
+                                   :mod (c50-5 / company
+                                               :name (c50-12 / name
+                                                             :op1 "Microsoft")))
+                      :polarity -)
+        :ARG2 (c50-0 / show-01
+                     :ARG0 c50-11
+                     :ARG1 (c50-1 / and
+                                  :op1 (c50-4 / controller
+                                              :mod (c50-2 / company
+                                                          :name (c50-6 / name
+                                                                       :op1 "Sony"))
+                                              :source (c50-3 / company
+                                                             :name (c50-13 / name
+                                                                           :op1 "Nintento")))
+                                  :op2 (c50-7 / controller
+                                              :mod (c50-8 / game)
+                                              :source c50-3))))

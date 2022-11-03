@@ -1,0 +1,641 @@
+# ::snt Children still catch and spread it, and it can mutate in children. If you do not vaccinate them, they can still get very ill and die, and continue to spread it.
+# ::tokens ["Children", "still", "catch", "and", "spread", "it", ",", "and", "it", "can", "mutate", "in", "children", ".", "If", "you", "do", "not", "vaccinate", "them", ",", "they", "can", "still", "get", "very", "ill", "and", "die", ",", "and", "continue", "to", "spread", "it", "."]
+# ::lemmas ["child", "still", "catch", "and", "spread", "it", ",", "and", "it", "can", "mutate", "in", "child", ".", "if", "you", "do", "not", "vaccinate", "they", ",", "they", "can", "still", "get", "very", "ill", "and", "die", ",", "and", "continue", "to", "spread", "it", "."]
+(c1-8 / multi-sentence
+      :snt1 (c1-15 / and
+                   :op1 (c1-3 / catch-03
+                              :ARG0 (c1-0 / child)
+                              :ARG1 (c1-2 / it)
+                              :time (c1-10 / still))
+                   :op2 (c1-19 / spread-03
+                               :ARG0 c1-0
+                               :ARG1 c1-2)
+                   :op3 (c1-20 / possible-01
+                               :ARG1 (c1-17 / mutate-01
+                                            :ARG1 c1-2
+                                            :location (c1-4 / child))))
+      :snt2 (c1-18 / possible-01
+                   :ARG1 (c1-9 / and
+                               :op1 (c1-7 / get-03
+                                          :ARG1 (c1-6 / they)
+                                          :ARG2 (c1-11 / ill-01
+                                                       :ARG1 c1-6
+                                                       :degree (c1-5 / very)))
+                               :op2 (c1-1 / die-01
+                                          :ARG1 c1-6)
+                               :op3 (c1-13 / continue-01
+                                           :ARG0 c1-6
+                                           :ARG1 (c1-12 / spread-03
+                                                        :ARG0 c1-6
+                                                        :ARG1 c1-2)))
+                   :condition (c1-16 / vaccinate-01
+                                     :ARG0 (c1-14 / you)
+                                     :ARG1 c1-6
+                                     :polarity -)))
+
+# ::snt No, those in Norway were not linked to the vaccine. And the US ones are reported after the vaccine, not linked.
+# ::tokens ["No", ",", "those", "in", "Norway", "were", "not", "linked", "to", "the", "vaccine", ".", "And", "the", "US", "ones", "are", "reported", "after", "the", "vaccine", ",", "not", "linked", "."]
+# ::lemmas ["no", ",", "those", "in", "Norway", "be", "not", "link", "to", "the", "vaccine", ".", "and", "the", "US", "one", "be", "report", "after", "the", "vaccine", ",", "not", "link", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-8 / link-01
+                   :ARG1 (c2-6 / that
+                               :location (c2-3 / country
+                                               :name (c2-11 / name
+                                                            :op1 "Norway")))
+                   :ARG2 (c2-4 / vaccine)
+                   :polarity -)
+       :snt2 (c2-2 / and
+                   :op2 (c2-7 / report-01
+                              :ARG1 (c2-5 / one
+                                          :mod (c2-0 / country
+                                                     :name (c2-9 / name
+                                                                 :op1 "US")))
+                              :time (c2-12 / after
+                                           :op1 c2-4)
+                              :ARG1-of (c2-1 / link-01
+                                             :polarity -))))
+
+# ::snt People die all the time - usually they are on medication or had a vaccine in the past. The VAERS system allows regulators to look into all cases and see if any problems are linked or not linked. The '29' deaths in Norway have not been linked to the vaccine.
+# ::tokens ["People", "die", "all", "the", "time", "-", "usually", "they", "are", "on", "medication", "or", "had", "a", "vaccine", "in", "the", "past", ".", "The", "VAERS", "system", "allows", "regulators", "to", "look", "into", "all", "cases", "and", "see", "if", "any", "problems", "are", "linked", "or", "not", "linked", ".", "The", "'", "29", "'", "deaths", "in", "Norway", "have", "not", "been", "linked", "to", "the", "vaccine", "."]
+# ::lemmas ["people", "die", "all", "the", "time", "-", "usually", "they", "be", "on", "medication", "or", "have", "a", "vaccine", "in", "the", "past", ".", "the", "vaer", "system", "allow", "regulator", "to", "look", "into", "all", "case", "and", "see", "if", "any", "problem", "be", "link", "or", "not", "link", ".", "the", "'", "29", "'", "death", "in", "Norway", "have", "not", "be", "link", "to", "the", "vaccine", "."]
+(c3-14 / multi-sentence
+       :snt1 (c3-0 / die-01
+                   :ARG1 (c3-30 / person)
+                   :frequency (c3-12 / time
+                                     :mod (c3-22 / all))
+                   :ARG1-of (c3-23 / mean-01
+                                   :ARG2 (c3-11 / or
+                                                :op1 (c3-20 / medicate-01
+                                                            :ARG1 c3-30)
+                                                :op2 (c3-24 / have-03
+                                                            :ARG0 c3-30
+                                                            :ARG1 (c3-10 / vaccine)
+                                                            :time (c3-27 / past))
+                                                :mod (c3-26 / usual))))
+       :snt2 (c3-16 / allow-01
+                    :ARG0 (c3-17 / system
+                                 :name (c3-15 / name
+                                              :op1 "VAERS"))
+                    :ARG1 (c3-1 / and
+                                :op1 (c3-28 / look-into-11
+                                            :ARG0 (c3-19 / person
+                                                         :ARG0-of (c3-13 / regulate-01))
+                                            :ARG1 (c3-9 / case-04
+                                                        :mod (c3-31 / all)))
+                                :op2 (c3-29 / see-01
+                                            :ARG0 c3-19
+                                            :ARG1 (c3-25 / or
+                                                         :op1 (c3-8 / link-01
+                                                                    :ARG1 (c3-18 / problem
+                                                                                 :mod (c3-5 / any)))
+                                                         :op2 (c3-2 / link-01
+                                                                    :ARG1 c3-18
+                                                                    :polarity -)))))
+       :snt3 (c3-6 / link-01
+                   :ARG1 (c3-21 / die-01
+                                :ARG1 (c3-3 / person
+                                            :quant 29)
+                                :location (c3-4 / country
+                                                :name (c3-7 / name
+                                                            :op1 "Norway")))
+                   :ARG2 c3-10
+                   :polarity -))
+
+# ::snt I agree children don't need to vaccinated unless they have specific medical need. Vaccine safety issues occur early on - things don't suddenly occur years later.
+# ::tokens ["I", "agree", "children", "do", "n't", "need", "to", "vaccinated", "unless", "they", "have", "specific", "medical", "need", ".", "Vaccine", "safety", "issues", "occur", "early", "on", "-", "things", "do", "n't", "suddenly", "occur", "years", "later", "."]
+# ::lemmas ["i", "agree", "child", "do", "not", "need", "to", "vaccinated", "unless", "they", "have", "specific", "medical", "need", ".", "vaccine", "safety", "issue", "occur", "early", "on", "-", "thing", "do", "not", "suddenly", "occur", "years", "later", "."]
+(c4-7 / multi-sentence
+      :snt1 (c4-17 / agree-01
+                   :ARG0 (c4-2 / i)
+                   :ARG1 (c4-8 / need-01
+                               :ARG0 (c4-4 / child)
+                               :ARG1 (c4-5 / vaccinate-01
+                                           :ARG1 c4-4)
+                               :condition (c4-20 / have-03
+                                                 :ARG0 c4-4
+                                                 :ARG1 (c4-1 / need-01
+                                                             :ARG1 (c4-19 / medicine)
+                                                             :ARG1-of (c4-11 / specific-02))
+                                                 :polarity -)
+                               :polarity -))
+      :snt2 (c4-9 / and
+                  :op1 (c4-12 / issue-02
+                              :ARG0 (c4-21 / safe-01
+                                           :ARG1 (c4-18 / vaccine))
+                              :time (c4-10 / early))
+                  :op2 (c4-13 / issue-02
+                              :ARG0 (c4-14 / safe-01
+                                           :ARG1 c4-18)
+                              :time (c4-0 / after
+                                          :quant (c4-15 / multiple
+                                                        :op1 (c4-6 / temporal-quantity
+                                                                   :unit (c4-16 / year)
+                                                                   :quant 1)))
+                              :manner (c4-3 / sudden)
+                              :polarity -)))
+
+# ::snt If you have a specific allergy to any of the ingredients of the vaccine (this is true of any vaccine), you should not have it. As there are different Covid vaccines now, you should be able to find one that is OK for you.
+# ::tokens ["If", "you", "have", "a", "specific", "allergy", "to", "any", "of", "the", "ingredients", "of", "the", "vaccine", "(", "this", "is", "true", "of", "any", "vaccine", ")", ",", "you", "should", "not", "have", "it", ".", "As", "there", "are", "different", "Covid", "vaccines", "now", ",", "you", "should", "be", "able", "to", "find", "one", "that", "is", "OK", "for", "you", "."]
+# ::lemmas ["if", "you", "have", "a", "specific", "allergy", "to", "any", "of", "the", "ingredient", "of", "the", "vaccine", "(", "this", "be", "true", "of", "any", "vaccine", ")", ",", "you", "should", "not", "have", "it", ".", "as", "there", "be", "different", "Covid", "vaccine", "now", ",", "you", "should", "be", "able", "to", "find", "one", "that", "be", "ok", "for", "you", "."]
+(c5-12 / multi-sentence
+       :snt1 (c5-23 / have-condition-91
+                    :ARG1 (c5-11 / recommend-01
+                                 :ARG1 (c5-4 / have-03
+                                             :ARG0 (c5-18 / you)
+                                             :ARG1 (c5-5 / it)
+                                             :polarity -))
+                    :ARG2 (c5-20 / allergy
+                                 :ARG1-of (c5-15 / specific-02)
+                                 :mod (c5-16 / ingredient
+                                             :part-of (c5-8 / vaccine)
+                                             :mod (c5-14 / any))
+                                 :ARG1-of (c5-10 / true-01
+                                                 :ARG2 (c5-21 / vaccine
+                                                              :mod (c5-1 / any)))))
+       :snt2 (c5-6 / cause-01
+                   :ARG0 (c5-0 / differ-02
+                               :ARG1 (c5-17 / vaccine
+                                            :name (c5-13 / name
+                                                         :op1 "Covid"))
+                               :time (c5-2 / now))
+                   :ARG1 (c5-7 / recommend-01
+                               :ARG1 (c5-24 / possible-01
+                                            :ARG1 (c5-22 / find-01
+                                                         :ARG0 (c5-19 / you)
+                                                         :ARG1 (c5-3 / vaccine
+                                                                     :ARG1-of (c5-9 / okay-04
+                                                                                    :ARG2 c5-19)))))))
+
+# ::snt However, efficacy in specific age groups, length of protection afforded, effects on transmission, combination of vaccines, dosing timings, variant effects etc still need further understanding and so studies will continue. But this does not mean the vaccines are experimental.
+# ::tokens ["However", ",", "efficacy", "in", "specific", "age", "groups", ",", "length", "of", "protection", "afforded", ",", "effects", "on", "transmission", ",", "combination", "of", "vaccines", ",", "dosing", "timings", ",", "variant", "effects", "etc", "still", "need", "further", "understanding", "and", "so", "studies", "will", "continue", ".", "But", "this", "does", "not", "mean", "the", "vaccines", "are", "experimental", "."]
+# ::lemmas ["however", ",", "efficacy", "in", "specific", "age", "group", ",", "length", "of", "protection", "afford", ",", "effect", "on", "transmission", ",", "combination", "of", "vaccine", ",", "dose", "timing", ",", "variant", "effect", "etc", "still", "need", "further", "understanding", "and", "so", "study", "will", "continue", ".", "but", "this", "do", "not", "mean", "the", "vaccine", "be", "experimental", "."]
+(c6-10 / multi-sentence
+       :snt1 (c6-4 / contrast-01
+                   :ARG2 (c6-11 / need-01
+                                :ARG0 (c6-20 / and
+                                             :op1 (c6-14 / effective-04
+                                                         :ARG1 (c6-9 / group
+                                                                     :mod (c6-13 / age)
+                                                                     :ARG1-of (c6-15 / specific-02)))
+                                             :op2 (c6-26 / length
+                                                         :degree-of (c6-28 / protect-01)
+                                                         :ARG1-of (c6-1 / afford-02))
+                                             :op3 (c6-29 / affect-01
+                                                         :ARG1 (c6-8 / transmit-01))
+                                             :op4 (c6-0 / combine-01
+                                                        :ARG1 (c6-7 / vaccine))
+                                             :op5 (c6-5 / time
+                                                        :time-of (c6-2 / dose-01))
+                                             :op6 (c6-24 / effect-03
+                                                         :ARG1 (c6-21 / variant))
+                                             :op7 (c6-3 / et-cetera))
+                                :ARG1 (c6-25 / understand-01
+                                             :mod (c6-22 / further))
+                                :mod (c6-27 / still)
+                                :ARG0-of (c6-6 / cause-01
+                                               :ARG1 (c6-18 / continue-01
+                                                            :ARG1 (c6-17 / study-01)))))
+       :snt2 (c6-16 / contrast-01
+                    :ARG2 (c6-23 / mean-01
+                                 :ARG1 (c6-12 / this)
+                                 :ARG2 (c6-19 / experiment-01
+                                              :ARG1 c6-7)
+                                 :polarity -)))
+
+# ::snt My view, is we have enough safety data to say Covid vaccines are safe. We also have enough efficacy data to say that they provide good levels of protection and are worth having. They are not experimental anymore.
+# ::tokens ["My", "view", ",", "is", "we", "have", "enough", "safety", "data", "to", "say", "Covid", "vaccines", "are", "safe", ".", "We", "also", "have", "enough", "efficacy", "data", "to", "say", "that", "they", "provide", "good", "levels", "of", "protection", "and", "are", "worth", "having", ".", "They", "are", "not", "experimental", "anymore", "."]
+# ::lemmas ["my", "view", ",", "be", "we", "have", "enough", "safety", "datum", "to", "say", "Covid", "vaccine", "be", "safe", ".", "we", "also", "have", "enough", "efficacy", "datum", "to", "say", "that", "they", "provide", "good", "level", "of", "protection", "and", "be", "worth", "have", ".", "they", "be", "not", "experimental", "anymore", "."]
+(c7-14 / multi-sentence
+       :snt1 (c7-10 / view-02
+                    :ARG0 (c7-4 / i)
+                    :ARG1 (c7-25 / have-03
+                                 :ARG0 (c7-8 / we)
+                                 :ARG1 (c7-0 / data
+                                             :topic (c7-18 / safe-01)
+                                             :ARG1-of (c7-3 / have-quant-91
+                                                            :ARG3 (c7-17 / enough)
+                                                            :ARG6 (c7-29 / say-01
+                                                                         :ARG0 c7-8
+                                                                         :ARG1 (c7-20 / safe-01
+                                                                                      :ARG1 (c7-24 / vaccine
+                                                                                                   :name (c7-15 / name
+                                                                                                                :op1 "Covid"))))))))
+       :snt2 (c7-7 / have-03
+                   :ARG0 (c7-16 / we)
+                   :ARG1 (c7-21 / data
+                                :topic (c7-26 / effective-04)
+                                :ARG1-of (c7-11 / have-quant-91
+                                                :ARG3 (c7-2 / enough)
+                                                :ARG6 (c7-5 / say-01
+                                                            :ARG0 c7-16
+                                                            :ARG1 (c7-23 / and
+                                                                         :op1 (c7-30 / provide-01
+                                                                                     :ARG0 c7-24
+                                                                                     :ARG1 (c7-28 / level
+                                                                                                  :ARG1-of (c7-13 / good-02)
+                                                                                                  :degree-of (c7-27 / protect-01)))
+                                                                         :op2 (c7-6 / worth-02
+                                                                                    :ARG1 c7-24
+                                                                                    :ARG2 (c7-9 / have-03
+                                                                                                :ARG0 c7-24)))))
+                                :mod (c7-19 / also)))
+       :snt3 (c7-22 / experiment-01
+                    :ARG1 (c7-12 / they)
+                    :time (c7-1 / anymore)
+                    :polarity -))
+
+# ::snt Second type of data is efficacy. Usually, you test 'does it work' in a specific group of people. If it works, you then test it further in wider groups of people to see effects of age, sex, comorbidities, genetic background etc etc etc.
+# ::tokens ["Second", "type", "of", "data", "is", "efficacy", ".", "Usually", ",", "you", "test", "'", "does", "it", "work", "'", "in", "a", "specific", "group", "of", "people", ".", "If", "it", "works", ",", "you", "then", "test", "it", "further", "in", "wider", "groups", "of", "people", "to", "see", "effects", "of", "age", ",", "sex", ",", "comorbidities", ",", "genetic", "background", "etc", "etc", "etc", "."]
+# ::lemmas ["Second", "type", "of", "datum", "be", "efficacy", ".", "usually", ",", "you", "test", "'", "do", "it", "work", "'", "in", "a", "specific", "group", "of", "people", ".", "if", "it", "work", ",", "you", "then", "test", "it", "far", "in", "wide", "group", "of", "people", "to", "see", "effect", "of", "age", ",", "sex", ",", "comorbiditie", ",", "genetic", "background", "etc", "etc", "etc", "."]
+(c8-10 / multi-sentence
+       :snt1 (c8-8 / type
+                   :ord (c8-7 / ordinal-entity
+                              :value 2)
+                   :mod (c8-0 / data))
+       :snt2 (c8-6 / test-01
+                   :ARG0 (c8-18 / you)
+                   :ARG1 (c8-5 / work-09
+                               :ARG1 (c8-3 / it))
+                   :ARG2 (c8-9 / group
+                               :ARG1-of (c8-14 / specific-02)
+                               :consist-of (c8-29 / person))
+                   :mod (c8-25 / usual))
+       :snt3 (c8-11 / test-01
+                    :ARG0 (c8-19 / you)
+                    :ARG1 c8-3
+                    :ARG2 (c8-28 / see-01
+                                 :ARG0 c8-19
+                                 :ARG1 (c8-21 / affect-01
+                                              :ARG0 (c8-12 / and
+                                                           :op1 (c8-1 / age-01)
+                                                           :op2 (c8-16 / sex-01)
+                                                           :op3 (c8-4 / comorbidity)
+                                                           :op4 (c8-27 / background
+                                                                       :mod (c8-20 / genetics))
+                                                           :op5 (c8-13 / et-cetera))))
+                    :mod (c8-22 / further)
+                    :condition c8-5
+                    :ARG1 c8-3)
+       :time (c8-17 / then)
+       :location (c8-2 / group
+                       :consist-of (c8-26 / person)
+                       :ARG1-of (c8-24 / have-degree-91
+                                       :ARG2 (c8-15 / wide-02
+                                                    :ARG1 c8-2)
+                                       :ARG3 (c8-23 / more))))
+
+# ::snt First type of clinical data you get is safety. It is assessed from first dose and you never stop accumulating it *ever* for any medicine through the VAERS/yellow card systems all countries have. We have120M doses worth of this info now - vaccines are safe.
+# ::tokens ["First", "type", "of", "clinical", "data", "you", "get", "is", "safety", ".", "It", "is", "assessed", "from", "first", "dose", "and", "you", "never", "stop", "accumulating", "it", "*", "ever", "*", "for", "any", "medicine", "through", "the", "VAERS", "/", "yellow", "card", "systems", "all", "countries", "have", ".", "We", "have120", "M", "doses", "worth", "of", "this", "info", "now", "-", "vaccines", "are", "safe", "."]
+# ::lemmas ["First", "type", "of", "clinical", "datum", "you", "get", "be", "safety", ".", "it", "be", "assess", "from", "first", "dose", "and", "you", "never", "stop", "accumulate", "it", "*", "ever", "*", "for", "any", "medicine", "through", "the", "VAERS", "/", "yellow", "card", "you", "all", "country", "have", ".", "we", "have120", "M", "dose", "worth", "of", "this", "info", "now", "-", "vaccine", "be", "safe", "."]
+(c9-17 / multi-sentence
+       :snt1 (c9-21 / safe-01
+                    :domain (c9-0 / data
+                                  :mod (c9-9 / clinic)
+                                  :mod (c9-15 / type
+                                              :ord (c9-13 / ordinal-entity
+                                                          :value 1))
+                                  :ARG1-of (c9-16 / get-01
+                                                  :ARG0 (c9-27 / you))))
+       :snt2 (c9-30 / and
+                    :op1 (c9-19 / assess-01
+                                :ARG1 (c9-7 / it)
+                                :time (c9-26 / dose
+                                             :mod c9-13))
+                    :op2 (c9-34 / stop-01
+                                :ARG0 (c9-28 / you)
+                                :ARG1 (c9-1 / accumulate-01
+                                            :ARG0 c9-28
+                                            :ARG1 c9-7
+                                            :time (c9-20 / ever)
+                                            :beneficiary (c9-31 / medicine
+                                                                :mod (c9-35 / any))
+                                            :manner (c9-24 / system
+                                                           :mod (c9-33 / or
+                                                                       :op1 (c9-29 / government-organization
+                                                                                   :name (c9-18 / name
+                                                                                                :op1 "VAERS"))
+                                                                       :op2 (c9-2 / card
+                                                                                  :ARG1-of (c9-3 / yellow-02)))
+                                                           :ARG1-of (c9-32 / have-03
+                                                                           :ARG0 (c9-11 / country
+                                                                                        :mod (c9-4 / all)))))
+                                :polarity -))
+       :snt3 (c9-6 / have-03
+                   :ARG0 (c9-10 / we)
+                   :ARG1 (c9-23 / dose
+                                :ARG1-of (c9-22 / worth-01
+                                                :ARG2 (c9-14 / dose
+                                                             :quant 1200000)))
+                   :time (c9-5 / now)
+                   :ARG0-of (c9-25 / cause-01
+                                   :ARG1 (c9-8 / safe-01
+                                               :ARG1 (c9-12 / vaccine)))))
+
+# ::snt Especially ones who deliberately ignore the science...
+# ::tokens ["Especially", "ones", "who", "deliberately", "ignore", "the", "science", "..."]
+# ::lemmas ["especially", "one", "who", "deliberately", "ignore", "the", "science", "..."]
+(c10-3 / ignore-01
+       :ARG0 (c10-2 / one)
+       :ARG1 (c10-1 / science)
+       :manner (c10-0 / deliberate)
+       :mod (c10-4 / especially))
+
+# ::snt Lots of trials underway on lots of different medicines but it does just take time to get a clear answer. But when a small group of docs push one treatment so heavily when consensus opinion is 'no clear positive evidence', it is concerning. Beware doctors with a God complex.
+# ::tokens ["Lots", "of", "trials", "underway", "on", "lots", "of", "different", "medicines", "but", "it", "does", "just", "take", "time", "to", "get", "a", "clear", "answer", ".", "But", "when", "a", "small", "group", "of", "docs", "push", "one", "treatment", "so", "heavily", "when", "consensus", "opinion", "is", "'", "no", "clear", "positive", "evidence", "'", ",", "it", "is", "concerning", ".", "Beware", "doctors", "with", "a", "God", "complex", "."]
+# ::lemmas ["lot", "of", "trial", "underway", "on", "lot", "of", "different", "medicine", "but", "it", "do", "just", "take", "time", "to", "get", "a", "clear", "answer", ".", "but", "when", "a", "small", "group", "of", "doc", "push", "one", "treatment", "so", "heavily", "when", "consensus", "opinion", "be", "'", "no", "clear", "positive", "evidence", "'", ",", "it", "be", "concern", ".", "beware", "doctor", "with", "a", "God", "complex", "."]
+(c11-12 / multi-sentence
+        :snt1 (c11-6 / contrast-01
+                     :ARG1 (c11-29 / underway
+                                   :domain (c11-10 / try-01
+                                                   :ARG1 (c11-27 / medicine
+                                                                 :ARG1-of (c11-0 / differ-02)
+                                                                 :quant (c11-31 / lot))
+                                                   :quant (c11-3 / lot)))
+                     :ARG2 (c11-7 / take-10
+                                  :ARG0 (c11-11 / get-01
+                                                :ARG1 (c11-25 / answer-01
+                                                              :ARG1-of (c11-1 / clear-06)))
+                                  :ARG1 (c11-14 / time)
+                                  :mod (c11-33 / just)))
+        :snt2 (c11-8 / contrast-01
+                     :ARG2 (c11-20 / concern-01
+                                   :ARG0 (c11-34 / push-02
+                                                 :ARG0 (c11-22 / group
+                                                               :mod (c11-16 / small)
+                                                               :consist-of (c11-21 / doctor))
+                                                 :ARG1 (c11-19 / treat-03
+                                                               :quant 1)
+                                                 :manner (c11-28 / heavy
+                                                                 :degree (c11-24 / so))
+                                                 :time (c11-26 / thing
+                                                               :ARG0-of (c11-15 / evidence-01
+                                                                                :mod (c11-30 / positive)
+                                                                                :ARG1-of (c11-17 / clear-06)
+                                                                                :polarity -)
+                                                               :ARG1-of (c11-9 / opine-01
+                                                                               :ARG0 (c11-5 / consensus))))))
+        :snt3 (c11-32 / beware-01
+                      :ARG0 (c11-23 / you)
+                      :ARG1 c11-21
+                      :ARG0-of (c11-4 / have-03
+                                      :ARG1 (c11-2 / complex
+                                                   :mod (c11-18 / person
+                                                                :name (c11-13 / name
+                                                                              :op1 "God"))))
+                      :mode imperative))
+
+# ::snt Recovery and Project Warp Speed to name but two had made money available to do clinical trials on anything that committees of experts think could work. This is why Dexamthasone was tested and then proved to show benefit.
+# ::tokens ["Recovery", "and", "Project", "Warp", "Speed", "to", "name", "but", "two", "had", "made", "money", "available", "to", "do", "clinical", "trials", "on", "anything", "that", "committees", "of", "experts", "think", "could", "work", ".", "This", "is", "why", "Dexamthasone", "was", "tested", "and", "then", "proved", "to", "show", "benefit", "."]
+# ::lemmas ["Recovery", "and", "Project", "Warp", "Speed", "to", "name", "but", "two", "have", "make", "money", "available", "to", "do", "clinical", "trial", "on", "anything", "that", "committee", "of", "expert", "think", "could", "work", ".", "this", "be", "why", "Dexamthasone", "be", "test", "and", "then", "prove", "to", "show", "benefit", "."]
+(c12-11 / multi-sentence
+        :snt1 (c12-5 / contrast-01
+                     :ARG1 (c12-12 / name-01
+                                   :ARG1 (c12-23 / and
+                                                 :op1 (c12-10 / recover-01)
+                                                 :op2 (c12-28 / program
+                                                              :name (c12-4 / name
+                                                                           :op1 "Project"
+                                                                           :op2 "Warp"
+                                                                           :op3 "Speed"))))
+                     :ARG2 (c12-25 / make-01
+                                   :ARG0 (c12-14 / and
+                                                 :op1 c12-10
+                                                 :op2 c12-28
+                                                 :quant 2)
+                                   :ARG1 (c12-20 / money
+                                                 :ARG2-of (c12-1 / available-02
+                                                                 :purpose (c12-9 / try-02
+                                                                                 :ARG1 (c12-29 / anything
+                                                                                               :ARG1-of (c12-6 / work-09
+                                                                                                               :ARG1-of (c12-7 / think-01
+                                                                                                                               :ARG0 (c12-0 / committee
+                                                                                                                                            :consist-of (c12-26 / person
+                                                                                                                                                                :ARG1-of (c12-15 / expert-01))))
+                                                                                                               :ARG1-of (c12-18 / possible-01))
+                                                                                               :mod (c12-8 / clinic)))))))
+        :snt2 (c12-13 / this
+                      :ARG0-of (c12-22 / cause-01
+                                       :ARG1 (c12-3 / and
+                                                    :op1 (c12-19 / test-01
+                                                                 :ARG1 (c12-17 / product
+                                                                               :name (c12-21 / name
+                                                                                             :op1 "Dexamthasone")))
+                                                    :op2 (c12-2 / prove-01
+                                                                :ARG1 (c12-16 / show-01
+                                                                              :ARG0 c12-17
+                                                                              :ARG1 (c12-27 / benefit-01
+                                                                                            :ARG0 c12-17)
+                                                                              :time (c12-24 / then)))))))
+
+# ::snt They do disagree, but one of them told me that they ignore all of the science, and just go with what they think. That is no way to treat patients.
+# ::tokens ["They", "do", "disagree", ",", "but", "one", "of", "them", "told", "me", "that", "they", "ignore", "all", "of", "the", "science", ",", "and", "just", "go", "with", "what", "they", "think", ".", "That", "is", "no", "way", "to", "treat", "patients", "."]
+# ::lemmas ["they", "do", "disagree", ",", "but", "one", "of", "they", "tell", "i", "that", "they", "ignore", "all", "of", "the", "science", ",", "and", "just", "go", "with", "what", "they", "think", ".", "that", "be", "no", "way", "to", "treat", "patient", "."]
+(c13-9 / multi-sentence
+       :snt1 (c13-2 / contrast-01
+                    :ARG1 (c13-0 / disagree-01
+                                 :ARG0 (c13-7 / they))
+                    :ARG2 (c13-4 / tell-01
+                                 :ARG0 (c13-5 / one
+                                              :ARG1-of (c13-1 / include-91
+                                                              :ARG2 (c13-10 / they)))
+                                 :ARG1 (c13-16 / and
+                                               :op1 (c13-13 / ignore-01
+                                                            :ARG0 c13-10
+                                                            :ARG1 (c13-12 / science
+                                                                          :mod (c13-11 / all)))
+                                               :op2 (c13-8 / go-22
+                                                           :ARG1 c13-10
+                                                           :ARG2 (c13-14 / thing
+                                                                         :ARG1-of (c13-17 / think-01
+                                                                                          :ARG0 c13-10))
+                                                           :mod (c13-19 / just)))
+                                 :ARG2 (c13-15 / i)))
+       :snt2 (c13-3 / way
+                    :manner-of (c13-18 / treat-03
+                                       :ARG1 (c13-20 / patient))
+                    :domain (c13-6 / that)
+                    :polarity -))
+
+# ::snt Well, there are other trials ongoing, but the main problem is that the dose you would need would be so high, it would be almost toxic. And if there are significant side effects and marginal possible benefits...
+# ::tokens ["Well", ",", "there", "are", "other", "trials", "ongoing", ",", "but", "the", "main", "problem", "is", "that", "the", "dose", "you", "would", "need", "would", "be", "so", "high", ",", "it", "would", "be", "almost", "toxic", ".", "And", "if", "there", "are", "significant", "side", "effects", "and", "marginal", "possible", "benefits", "..."]
+# ::lemmas ["well", ",", "there", "be", "other", "trial", "ongoing", ",", "but", "the", "main", "problem", "be", "that", "the", "dose", "you", "would", "need", "would", "be", "so", "high", ",", "it", "would", "be", "almost", "toxic", ".", "and", "if", "there", "be", "significant", "side", "effect", "and", "marginal", "possible", "benefit", "..."]
+(c14-8 / multi-sentence
+       :snt1 (c14-3 / contrast-01
+                    :ARG1 (c14-7 / go-on-15
+                                 :ARG1 (c14-6 / try-01
+                                              :mod (c14-5 / other)))
+                    :ARG2 (c14-23 / problem
+                                  :mod (c14-17 / main)
+                                  :domain (c14-9 / need-01
+                                                 :ARG0 (c14-15 / you)
+                                                 :ARG1 (c14-0 / dose-01
+                                                              :ARG1-of (c14-18 / have-degree-91
+                                                                               :ARG2 (c14-2 / high-02
+                                                                                            :ARG1 c14-0)
+                                                                               :ARG3 (c14-12 / so)
+                                                                               :ARG6 (c14-4 / toxic
+                                                                                            :mod (c14-16 / almost)
+                                                                                            :domain c14-0))))))
+       :snt2 (c14-10 / and
+                     :op2 (c14-1 / and
+                                 :op1 (c14-11 / effect-03
+                                              :ARG1 (c14-19 / event
+                                                            :mod (c14-22 / side)
+                                                            :ARG1-of (c14-13 / significant-02)))
+                                 :op2 (c14-21 / benefit-01
+                                              :ARG1-of (c14-14 / marginal-02)
+                                              :ARG1-of (c14-20 / possible-01)))))
+
+# ::snt No, you are mixing things up here. Germany thinks the Oxford vaccine is not effective against over 's (it is).There are no adverse effects.
+# ::tokens ["No", ",", "you", "are", "mixing", "things", "up", "here", ".", "Germany", "thinks", "the", "Oxford", "vaccine", "is", "not", "effective", "against", "over", "'s", "(", "it", "is).There", "are", "no", "adverse", "effects", "."]
+# ::lemmas ["no", ",", "you", "be", "mix", "thing", "up", "here", ".", "Germany", "think", "the", "Oxford", "vaccine", "be", "not", "effective", "against", "over", "be", "(", "it", "is).there", "be", "no", "adverse", "effect", "."]
+(c15-13 / multi-sentence
+        :snt1 (c15-2 / mix-up-03
+                     :ARG0 (c15-15 / you)
+                     :ARG1 (c15-11 / thing)
+                     :location (c15-5 / here))
+        :snt2 (c15-4 / think-01
+                     :ARG0 (c15-3 / country
+                                  :name (c15-14 / name
+                                                :op1 "Germany"))
+                     :ARG1 (c15-17 / effective-04
+                                   :ARG0 (c15-9 / vaccine
+                                                :mod (c15-7 / university
+                                                            :name (c15-12 / name
+                                                                          :op1 "Oxford")))
+                                   :ARG1 (c15-0 / counter-01
+                                                :ARG0 c15-9
+                                                :ARG1 (c15-10 / over))
+                                   :ARG1-of (c15-8 / mean-01
+                                                   :ARG2 (c15-6 / effective-04
+                                                                :ARG0 c15-9
+                                                                :ARG1 c15-0))
+                                   :polarity -))
+        :snt3 (c15-1 / affect-01
+                     :manner (c15-16 / adverse)
+                     :polarity -))
+
+# ::snt For the Pfizer vaccine, Serious Events are at about in , and no deaths at all out of many millions of vaccinations given.The SAA's that have been seen have all been resolved with no lasting effects.
+# ::tokens ["For", "the", "Pfizer", "vaccine", ",", "Serious", "Events", "are", "at", "about", "in", ",", "and", "no", "deaths", "at", "all", "out", "of", "many", "millions", "of", "vaccinations", "given", ".", "The", "SAA", "'s", "that", "have", "been", "seen", "have", "all", "been", "resolved", "with", "no", "lasting", "effects", "."]
+# ::lemmas ["for", "the", "Pfizer", "vaccine", ",", "Serious", "Events", "be", "at", "about", "in", ",", "and", "no", "death", "at", "all", "out", "of", "many", "millions", "of", "vaccination", "give", ".", "the", "SAA", "'s", "that", "have", "be", "see", "have", "all", "be", "resolve", "with", "no", "last", "effect", "."]
+(c16-3 / and
+       :op1 (c16-9 / be-located-at-91
+                   :ARG1 (c16-15 / event
+                                 :ARG1-of (c16-0 / serious-02))
+                   :ARG2 (c16-14 / about))
+       :op2 (c16-1 / die-01
+                   :mod (c16-2 / at-all)
+                   :ARG1-of (c16-11 / include-91
+                                    :ARG2 (c16-5 / vaccinate-01
+                                                 :quant (c16-12 / many
+                                                                :op1 1000000)
+                                                 :ARG1-of (c16-7 / give-01)))
+                   :polarity -)
+       :topic (c16-8 / product
+                     :name (c16-13 / name
+                                   :op1 "SAA"))
+       :ARG1-of (c16-6 / resolve-01
+                       :ARG2 (c16-4 / effect-03
+                                    :ARG1 c16-8
+                                    :ARG1-of (c16-10 / last-01)
+                                    :polarity -)))
+
+# ::snt No, they are not experimental. They have been in development as a technology for + years, have been used in people before and were tested as normal.And I would not trust that link at all. The official figures have not, as far as I am aware, linked any deaths at all.
+# ::tokens ["No", ",", "they", "are", "not", "experimental", ".", "They", "have", "been", "in", "development", "as", "a", "technology", "for", "+", "years", ",", "have", "been", "used", "in", "people", "before", "and", "were", "tested", "as", "normal", ".", "And", "I", "would", "not", "trust", "that", "link", "at", "all", ".", "The", "official", "figures", "have", "not", ",", "as", "far", "as", "I", "am", "aware", ",", "linked", "any", "deaths", "at", "all", "."]
+# ::lemmas ["no", ",", "they", "be", "not", "experimental", ".", "they", "have", "be", "in", "development", "as", "a", "technology", "for", "+", "years", ",", "have", "be", "use", "in", "people", "before", "and", "be", "test", "as", "normal", ".", "and", "i", "would", "not", "trust", "that", "link", "at", "all", ".", "the", "official", "figure", "have", "not", ",", "as", "far", "as", "i", "be", "aware", ",", "link", "any", "death", "at", "all", "."]
+(c17-9 / multi-sentence
+       :snt1 (c17-13 / experiment-01
+                     :ARG0 (c17-7 / they)
+                     :polarity -)
+       :snt2 (c17-17 / and
+                     :op1 (c17-0 / develop-02
+                                 :ARG1 (c17-4 / they)
+                                 :ARG3 (c17-11 / technology)
+                                 :duration (c17-20 / more-than
+                                                   :op1 (c17-14 / temporal-quantity
+                                                                :unit (c17-16 / year)
+                                                                :quant 1)))
+                     :op2 (c17-21 / use-01
+                                  :ARG1 c17-4
+                                  :ARG2 (c17-25 / person)
+                                  :time (c17-24 / before))
+                     :op3 (c17-18 / test-01
+                                  :ARG1 c17-4
+                                  :ARG1-of (c17-10 / normal-02)))
+       :snt3 (c17-22 / trust-02
+                     :ARG0 (c17-3 / i)
+                     :ARG1 (c17-23 / link
+                                   :mod (c17-6 / that))
+                     :degree (c17-12 / at-all)
+                     :polarity -)
+       :snt4 (c17-2 / link-01
+                    :ARG0 (c17-19 / figure
+                                  :mod (c17-5 / official))
+                    :ARG1 (c17-15 / die-01
+                                  :mod (c17-1 / any))
+                    :mod c17-12
+                    :polarity -)
+       :ARG1-of (c17-8 / realize-01
+                       :ARG0 c17-3))
+
+# ::snt The Manufacturers standing to earn *$$$$* have this to say - compare to when the manufacturers of HCQ RUSHED to donate millions of doses and immediately set up confirmatory trials
+# ::tokens ["The", "Manufacturers", "standing", "to", "earn", "*", "$", "$", "$", "$", "*", "have", "this", "to", "say", "-", "compare", "to", "when", "the", "manufacturers", "of", "HCQ", "RUSHED", "to", "donate", "millions", "of", "doses", "and", "immediately", "set", "up", "confirmatory", "trials"]
+# ::lemmas ["the", "Manufacturers", "stand", "to", "earn", "*", "$", "$", "$", "$", "*", "have", "this", "to", "say", "-", "compare", "to", "when", "the", "manufacturer", "of", "HCQ", "RUSHED", "to", "donate", "millions", "of", "dose", "and", "immediately", "set", "up", "confirmatory", "trial"]
+(c18-9 / multi-sentence
+       :snt1 (c18-16 / have-03
+                     :ARG0 (c18-19 / person
+                                   :ARG0-of (c18-15 / manufacture-01))
+                     :ARG1 (c18-11 / say-01
+                                   :ARG0 c18-19
+                                   :ARG1 (c18-6 / this)))
+       :snt2 (c18-3 / compare-01
+                    :ARG2 (c18-7 / rush-01
+                                 :ARG1 (c18-0 / company
+                                              :ARG0-of (c18-12 / manufacture-01
+                                                               :ARG1 (c18-17 / product
+                                                                             :name (c18-10 / name
+                                                                                           :op1 "HCQ"))))
+                                 :ARG2 (c18-14 / and
+                                               :op1 (c18-1 / donate-01
+                                                           :ARG0 c18-0
+                                                           :ARG1 (c18-13 / dose
+                                                                         :quant (c18-8 / multiple
+                                                                                       :op1 1000000)))
+                                               :op2 (c18-18 / set-up-03
+                                                            :ARG0 c18-0
+                                                            :ARG1 (c18-4 / try-01
+                                                                         :ARG1-of (c18-5 / confirm-01))
+                                                            :time (c18-2 / immediate))))))
+
+# ::snt Only are clinical and those were very small and statistically insignificant.
+# ::tokens ["Only", "are", "clinical", "and", "those", "were", "very", "small", "and", "statistically", "insignificant", "."]
+# ::lemmas ["only", "be", "clinical", "and", "those", "be", "very", "small", "and", "statistically", "insignificant", "."]
+(c19-1 / and
+       :op1 (c19-2 / clinical
+                   :mod (c19-5 / only))
+       :op2 (c19-0 / small
+                   :degree (c19-4 / very)
+                   :domain (c19-6 / that))
+       :op3 (c19-7 / significant-02
+                   :ARG1 c19-6
+                   :manner (c19-3 / statistical)
+                   :polarity -))
+
+# ::snt The same people wanting ivermectin used with little or no trial?
+# ::tokens ["The", "same", "people", "wanting", "ivermectin", "used", "with", "little", "or", "no", "trial", "?"]
+# ::lemmas ["the", "same", "people", "want", "ivermectin", "use", "with", "little", "or", "no", "trial", "?"]
+(c20-2 / want-01
+       :polarity (c20-1 / amr-unknown)
+       :ARG0 (c20-9 / person
+                    :ARG1-of (c20-0 / same-01))
+       :ARG1 (c20-4 / use-01
+                    :ARG1 (c20-6 / product
+                                 :name (c20-10 / name
+                                               :op1 "Ivermectin"))
+                    :manner (c20-5 / or
+                                   :op1 (c20-7 / try-02
+                                               :ARG1 c20-6
+                                               :mod (c20-8 / little))
+                                   :op2 (c20-3 / try-02
+                                               :ARG1 c20-6
+                                               :polarity -))))

@@ -1,0 +1,31 @@
+# ::snt <URL> Someday , may want to keep ; a piece of or s . So <URL>
+# ::tokens ["<", "URL", ">", "Someday", ",", "may", "want", "to", "keep", ";", "a", "piece", "of", "or", "s", ".", "So", "<", "URL", ">"]
+# ::lemmas ["<", "URL", ">", "someday", ",", "may", "want", "to", "keep", ";", "a", "piece", "of", "or", "s", ".", "so", "<", "URL", ">"]
+(c1-6 / infer-01
+      :ARG1 (c1-5 / possible-01
+                  :ARG1 (c1-1 / want-01
+                              :ARG0 (c1-8 / you)
+                              :ARG1 (c1-7 / keep-01
+                                          :ARG0 c1-8
+                                          :ARG1 (c1-3 / or
+                                                      :op1 (c1-4 / piece)
+                                                      :op2 (c1-2 / piece
+                                                                 :mod (c1-0 / s))))
+                              :time (c1-9 / eday))))
+
+# ::snt ' s marching orders are to fight a proxy war with China for Putin
+# ::tokens ["'", "s", "marching", "orders", "are", "to", "fight", "a", "proxy", "war", "with", "China", "for", "Putin"]
+# ::lemmas ["'", "s", "marching", "order", "be", "to", "fight", "a", "proxy", "war", "with", "China", "for", "Putin"]
+(c2-3 / order-01
+      :ARG0 (c2-7 / march-01
+                  :ARG0 (c2-6 / person
+                              :name (c2-8 / name
+                                          :op1 "Putin")))
+      :ARG2 (c2-0 / fight-01
+                  :ARG0 c2-6
+                  :ARG2 (c2-2 / war-01
+                              :ARG0 c2-6
+                              :ARG1 (c2-1 / country
+                                          :name (c2-5 / name
+                                                      :op1 "China"))
+                              :mod (c2-4 / proxy))))

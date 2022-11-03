@@ -1,0 +1,56 @@
+# ::snt Using hateful language doesn't contribute to your point
+# ::tokens ["Using", "hateful", "language", "does", "n't", "contribute", "to", "your", "point"]
+# ::lemmas ["use", "hateful", "language", "do", "not", "contribute", "to", "your", "point"]
+(c2-0 / contribute-01
+      :ARG0 (c2-2 / use-01
+                  :ARG0 (c2-5 / you)
+                  :ARG1 (c2-3 / language
+                              :ARG0-of (c2-1 / hate-01)))
+      :ARG2 (c2-4 / point-04
+                  :ARG0 c2-5)
+      :polarity -)
+
+# ::snt Please state your thoughts in a way that is less offensive to others.
+# ::tokens ["Please", "state", "your", "thoughts", "in", "a", "way", "that", "is", "less", "offensive", "to", "others", "."]
+# ::lemmas ["please", "state", "your", "thought", "in", "a", "way", "that", "be", "less", "offensive", "to", "other", "."]
+(c3-0 / state-01
+      :ARG0 (c3-8 / you)
+      :ARG1 (c3-5 / thing
+                  :ARG1-of (c3-1 / think-01
+                                 :ARG0 c3-8))
+      :manner (c3-2 / have-degree-91
+                    :ARG1 c3-5
+                    :ARG2 (c3-4 / offend-01
+                                :ARG0 c3-5
+                                :ARG1 (c3-7 / person
+                                            :mod (c3-3 / other)))
+                    :ARG3 (c3-6 / less))
+      :mode imperative
+      :polite +)
+
+# ::snt The "n word" and "c--t" offend many and so do not belong in intelligent commentary. Remember our fate ... is avoiding all hate!
+# ::tokens ["The", "\"", "n", "word", "\"", "and", "\"", "c", "--", "t", "\"", "offend", "many", "and", "so", "do", "not", "belong", "in", "intelligent", "commentary", ".", "Remember", "our", "fate", "...", "is", "avoiding", "all", "hate", "!"]
+# ::lemmas ["the", "\"", "n", "word", "\"", "and", "\"", "c", "--", "t", "\"", "offend", "many", "and", "so", "do", "not", "belong", "in", "intelligent", "commentary", ".", "remember", "our", "fate", "...", "be", "avoid", "all", "hate", "!"]
+(c4-14 / multi-sentence
+       :snt1 (c4-9 / offend-01
+                   :ARG0 (c4-3 / and
+                               :op1 (c4-0 / string-entity
+                                          :value "n")
+                               :op2 (c4-12 / string-entity
+                                           :value "c--t"))
+                   :ARG1 (c4-5 / many)
+                   :ARG0-of (c4-6 / cause-01
+                                  :ARG1 (c4-11 / belong-01
+                                               :ARG0 c4-3
+                                               :ARG1 (c4-1 / comment-01
+                                                           :ARG1-of (c4-13 / intelligent-01))
+                                               :polarity -)))
+       :snt2 (c4-10 / remember-01
+                    :ARG0 (c4-15 / you)
+                    :ARG1 (c4-4 / fate
+                                :poss (c4-7 / we)
+                                :domain (c4-16 / avoid-01
+                                               :ARG0 c4-7
+                                               :ARG1 (c4-8 / hate-01
+                                                           :mod (c4-2 / all))))
+                    :mode imperative))

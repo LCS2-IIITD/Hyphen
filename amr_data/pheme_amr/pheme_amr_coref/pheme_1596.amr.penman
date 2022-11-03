@@ -1,0 +1,90 @@
+# ::snt it's my Birthday ohhhh I would love to see my all time fav please get me in!
+# ::tokens ["it", "'s", "my", "Birthday", "ohhhh", "I", "would", "love", "to", "see", "my", "all", "time", "fav", "please", "get", "me", "in", "!"]
+# ::lemmas ["it", "be", "my", "Birthday", "ohhhh", "i", "would", "love", "to", "see", "you", "all", "time", "fav", "please", "get", "i", "in", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-5 / birthday
+                  :poss (c1-6 / i)
+                  :domain (c1-8 / it))
+      :snt2 (c1-1 / love-02
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-10 / see-01
+                               :ARG0 c1-3
+                               :ARG1 (c1-7 / person
+                                           :ARG0-of (c1-4 / favor-01
+                                                          :ARG1 c1-3)
+                                           :time (c1-11 / time
+                                                        :mod (c1-12 / all))))
+                  :mode expressive)
+      :snt3 (c1-9 / get-05
+                  :ARG0 (c1-0 / you)
+                  :ARG1 c1-3
+                  :mode imperative
+                  :polite +))
+
+# ::snt convince Prince to do a London ON show.
+# ::tokens ["convince", "Prince", "to", "do", "a", "London", "ON", "show", "."]
+# ::lemmas ["convince", "Prince", "to", "do", "a", "London", "ON", "show", "."]
+(c2-5 / convince-01
+      :ARG1 (c2-3 / person
+                  :name (c2-1 / name
+                              :op1 "Prince"))
+      :ARG2 (c2-4 / do-02
+                  :ARG0 c2-3
+                  :ARG1 (c2-8 / show-04
+                              :location (c2-6 / city
+                                              :name (c2-2 / name
+                                                          :op1 "London"))
+                              :mod (c2-0 / broadcast-program
+                                         :name (c2-7 / name
+                                                     :op1 "London"
+                                                     :op2 "ON")))))
+
+# ::snt Wish Prince (love him) would understand his fans are now older, employed and need some advance notice
+# ::tokens ["Wish", "Prince", "(", "love", "him", ")", "would", "understand", "his", "fans", "are", "now", "older", ",", "employed", "and", "need", "some", "advance", "notice"]
+# ::lemmas ["Wish", "Prince", "(", "love", "he", ")", "would", "understand", "his", "fan", "be", "now", "old", ",", "employ", "and", "need", "some", "advance", "notice"]
+(c3-1 / wish-01
+      :ARG0 (c3-9 / i)
+      :ARG1 (c3-4 / understand-01
+                  :ARG0 (c3-12 / person
+                               :name (c3-10 / name
+                                            :op1 "Prince"))
+                  :ARG1 (c3-17 / and
+                               :op1 (c3-0 / have-degree-91
+                                          :ARG1 (c3-2 / fan
+                                                      :poss c3-12)
+                                          :ARG2 (c3-6 / old)
+                                          :ARG3 (c3-3 / more))
+                               :op2 (c3-7 / employ-01
+                                          :ARG1 c3-2)
+                               :op3 (c3-11 / need-01
+                                           :ARG0 c3-2
+                                           :ARG1 (c3-13 / notice-03
+                                                        :ARG1-of (c3-8 / advance-01)
+                                                        :mod (c3-16 / some)))
+                               :time (c3-14 / now)))
+      :ARG1-of (c3-15 / cause-01
+                      :ARG0 (c3-5 / love-01
+                                  :ARG0 c3-9
+                                  :ARG1 c3-12)))
+
+# ::snt where? When? Is it surprise free too?!
+# ::tokens ["where", "?", "When", "?", "Is", "it", "surprise", "free", "too", "?", "!"]
+# ::lemmas ["where", "?", "when", "?", "be", "it", "surprise", "free", "too", "?", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-2 / be-located-at-91
+                  :ARG2 (c4-7 / amr-unknown))
+      :snt2 (c4-4 / be-temporally-at-91
+                  :ARG2 c4-7)
+      :snt3 (c4-0 / free-03
+                  :ARG1 (c4-3 / it)
+                  :ARG3 (c4-5 / surprise-01)
+                  :mod (c4-6 / too)))
+
+# ::snt not much of a surprise now, is it?
+# ::tokens ["not", "much", "of", "a", "surprise", "now", ",", "is", "it", "?"]
+# ::lemmas ["not", "much", "of", "a", "surprise", "now", ",", "be", "it", "?"]
+(c5-0 / surprise-01
+      :mod (c5-3 / much)
+      :time (c5-1 / now)
+      :ARG1-of (c5-2 / request-confirmation-91)
+      :polarity -)

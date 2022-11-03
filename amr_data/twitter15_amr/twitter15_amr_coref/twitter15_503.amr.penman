@@ -1,0 +1,134 @@
+# ::snt I like this much more than I should.
+# ::tokens ["I", "like", "this", "much", "more", "than", "I", "should", "."]
+# ::lemmas ["i", "like", "this", "much", "more", "than", "i", "should", "."]
+(c1-5 / have-quant-91
+      :ARG1 (c1-1 / like-01
+                  :ARG0 (c1-0 / i)
+                  :ARG1 (c1-2 / this))
+      :ARG3 (c1-3 / more
+                  :quant (c1-7 / much))
+      :ARG4 (c1-4 / like-01
+                  :ARG0 c1-0
+                  :ARG1 c1-2
+                  :ARG1-of (c1-6 / recommend-01)))
+
+# ::snt . It doesn't change the fact Judd Nelson WILL die. And the date on the Back to the Future screenshot will actually come.
+# ::tokens [".", "It", "does", "n't", "change", "the", "fact", "Judd", "Nelson", "WILL", "die", ".", "And", "the", "date", "on", "the", "Back", "to", "the", "Future", "screenshot", "will", "actually", "come", "."]
+# ::lemmas [".", "it", "do", "not", "change", "the", "fact", "Judd", "Nelson", "will", "die", ".", "and", "the", "date", "on", "the", "back", "to", "the", "Future", "screenshot", "will", "actually", "come", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-9 / change-01
+                  :ARG0 (c2-2 / it)
+                  :ARG1 (c2-12 / fact
+                               :topic (c2-11 / die-01
+                                             :ARG1 (c2-4 / person
+                                                         :name (c2-10 / name
+                                                                      :op1 "Judd"
+                                                                      :op2 "Nelson"))))
+                  :polarity -)
+      :snt2 (c2-5 / and
+                  :op2 (c2-7 / come-01
+                             :ARG1 (c2-0 / date
+                                         :location (c2-1 / screenshot
+                                                         :mod (c2-3 / back-to-the-Future)))
+                             :ARG1-of (c2-8 / actual-02))))
+
+# ::snt maybe he had plastic surgery?
+# ::tokens ["maybe", "he", "had", "plastic", "surgery", "?"]
+# ::lemmas ["maybe", "he", "have", "plastic", "surgery", "?"]
+(c3-1 / possible-01
+      :ARG1 (c3-0 / surgery-01
+                  :ARG1 (c3-2 / he)
+                  :ARG2 (c3-4 / plastic))
+      :polarity (c3-3 / amr-unknown))
+
+# ::snt . Well played. But even If I squint just so, I still don't recognize this guy as Judd Nelson.
+# ::tokens [".", "Well", "played", ".", "But", "even", "If", "I", "squint", "just", "so", ",", "I", "still", "do", "n't", "recognize", "this", "guy", "as", "Judd", "Nelson", "."]
+# ::lemmas [".", "well", "play", ".", "but", "even", "if", "i", "squint", "just", "so", ",", "i", "still", "do", "not", "recognize", "this", "guy", "as", "Judd", "Nelson", "."]
+(c4-6 / multi-sentence
+      :snt1 (c4-3 / play-01
+                  :ARG1-of (c4-12 / well-09))
+      :snt2 (c4-9 / contrast-01
+                  :ARG2 (c4-4 / recognize-01
+                              :ARG0 (c4-1 / i)
+                              :ARG1 (c4-14 / guy
+                                           :mod (c4-5 / this))
+                              :ARG2 (c4-7 / guy
+                                          :name (c4-10 / name
+                                                       :op1 "Judd"
+                                                       :op2 "Nelson"))
+                              :mod (c4-0 / still)
+                              :concession (c4-13 / even-if
+                                                 :op1 (c4-2 / squint-01
+                                                            :ARG0 c4-1
+                                                            :manner (c4-8 / so
+                                                                          :mod (c4-11 / just))))
+                              :polarity -)))
+
+# ::snt what's THAT prove??? Ain't you never heard a TAXIDERMY???....
+# ::tokens ["what", "'s", "THAT", "prove", "?", "?", "?", "Ai", "n't", "you", "never", "heard", "a", "TAXIDERMY", "?", "?", "?", "...."]
+# ::lemmas ["what", "be", "that", "prove", "?", "?", "?", "be", "not", "you", "never", "hear", "a", "TAXIDERMY", "?", "?", "?", "...."]
+(c5-4 / multi-sentence
+      :snt1 (c5-0 / prove-01
+                  :ARG0 (c5-1 / that)
+                  :ARG1 (c5-7 / amr-unknown))
+      :snt2 (c5-5 / hear-01
+                  :ARG0 (c5-6 / you)
+                  :ARG1 (c5-2 / tax-01)
+                  :time (c5-8 / ever)
+                  :ARG1-of (c5-3 / request-confirmation-91)
+                  :polarity -))
+
+# ::snt Judd Nelson or ? RT : Judd Nelson didn't die last night. He sent us this photo to debunk the rumor.
+# ::tokens ["Judd", "Nelson", "or", "?", "RT", ":", "Judd", "Nelson", "did", "n't", "die", "last", "night", ".", "He", "sent", "us", "this", "photo", "to", "debunk", "the", "rumor", "."]
+# ::lemmas ["Judd", "Nelson", "or", "?", "RT", ":", "Judd", "Nelson", "do", "not", "die", "last", "night", ".", "he", "send", "we", "this", "photo", "to", "debunk", "the", "rumor", "."]
+(c6-8 / multi-sentence
+      :snt1 (c6-0 / say-01
+                  :ARG0 (c6-5 / publication
+                              :name (c6-13 / name
+                                           :op1 "RT"))
+                  :ARG1 (c6-14 / die-01
+                               :ARG1 (c6-16 / person
+                                            :name (c6-12 / name
+                                                         :op1 "Judd"
+                                                         :op2 "Nelson"))
+                               :time (c6-1 / date-entity
+                                           :dayperiod (c6-9 / night)
+                                           :mod (c6-10 / yesterday))
+                               :polarity -))
+      :snt2 (c6-3 / send-01
+                  :ARG0 (c6-11 / he)
+                  :ARG1 (c6-15 / photo
+                               :mod (c6-6 / this))
+                  :ARG2 (c6-2 / we)
+                  :purpose (c6-4 / debunk-01
+                                 :ARG0 c6-11
+                                 :ARG1 (c6-7 / rumor-01))))
+
+# ::snt : Judd Nelson didn't die last night. He sent us this photo to debunk the rumor.
+# ::tokens [":", "Judd", "Nelson", "did", "n't", "die", "last", "night", ".", "He", "sent", "us", "this", "photo", "to", "debunk", "the", "rumor", "."]
+# ::lemmas [":", "Judd", "Nelson", "do", "not", "die", "last", "night", ".", "he", "send", "we", "this", "photo", "to", "debunk", "the", "rumor", "."]
+(c8-7 / multi-sentence
+      :snt1 (c8-12 / die-01
+                   :ARG1 (c8-4 / person
+                               :name (c8-11 / name
+                                            :op1 "Judd"
+                                            :op2 "Nelson"))
+                   :time (c8-0 / date-entity
+                               :dayperiod (c8-10 / night)
+                               :mod (c8-8 / yesterday))
+                   :polarity -)
+      :snt2 (c8-1 / send-01
+                  :ARG0 (c8-9 / he)
+                  :ARG1 (c8-13 / photo
+                               :mod (c8-5 / this))
+                  :ARG2 (c8-2 / we)
+                  :purpose (c8-3 / debunk-01
+                                 :ARG0 c8-9
+                                 :ARG1 (c8-6 / rumor-01))))
+
+# ::snt LOL
+# ::tokens ["LOL"]
+# ::lemmas ["LOL"]
+(c9-0 / laugh-01
+      :ARG0 (c9-2 / i)
+      :manner (c9-1 / loud))

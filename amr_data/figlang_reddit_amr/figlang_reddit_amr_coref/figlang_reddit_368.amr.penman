@@ -1,0 +1,37 @@
+# ::snt I Installed an Ipad
+# ::tokens ["I", "Installed", "an", "Ipad"]
+# ::lemmas ["i", "instal", "an", "ipad"]
+(c1-0 / install-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-3 / product
+                  :name (c1-2 / name
+                              :op1 "Ipad")))
+
+# ::snt Why would you replace the mustang logo with the Apple logo?
+# ::tokens ["Why", "would", "you", "replace", "the", "mustang", "logo", "with", "the", "Apple", "logo", "?"]
+# ::lemmas ["why", "would", "you", "replace", "the", "mustang", "logo", "with", "the", "Apple", "logo", "?"]
+(c2-2 / cause-01
+      :ARG0 (c2-1 / amr-unknown)
+      :ARG1 (c2-3 / replace-01
+                  :ARG0 (c2-8 / you)
+                  :ARG1 (c2-4 / logo
+                              :mod (c2-6 / mustang))
+                  :ARG2 (c2-5 / logo
+                              :mod (c2-0 / company
+                                         :name (c2-7 / name
+                                                     :op1 "Apple")))))
+
+# ::snt Took off the Apple logo shortly after... It was super gay.
+# ::tokens ["Took", "off", "the", "Apple", "logo", "shortly", "after", "...", "It", "was", "super", "gay", "."]
+# ::lemmas ["take", "off", "the", "Apple", "logo", "shortly", "after", "...", "it", "be", "super", "gay", "."]
+(c3-8 / multi-sentence
+      :snt1 (c3-3 / take-off-07
+                  :ARG1 (c3-4 / logo
+                              :poss (c3-2 / company
+                                          :name (c3-9 / name
+                                                      :op1 "Apple")))
+                  :time (c3-1 / after
+                              :ARG1-of (c3-0 / short-07)))
+      :snt2 (c3-5 / gay-01
+                  :ARG1 (c3-7 / it)
+                  :degree (c3-6 / super)))

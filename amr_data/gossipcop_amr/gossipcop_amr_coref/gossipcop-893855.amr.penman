@@ -1,0 +1,285 @@
+# ::snt You pay a price when you go up against the big boys.
+# ::tokens ["You", "pay", "a", "price", "when", "you", "go", "up", "against", "the", "big", "boys", "."]
+# ::lemmas ["you", "pay", "a", "price", "when", "you", "go", "up", "against", "the", "big", "boy", "."]
+(c1-5 / pay-01
+      :ARG0 (c1-2 / you)
+      :ARG1 (c1-3 / price)
+      :time (c1-0 / oppose-01
+                  :ARG0 c1-2
+                  :ARG1 (c1-1 / boy
+                              :mod (c1-4 / big))))
+
+# ::snt She turned herself in.. I smell blackmail
+# ::tokens ["She", "turned", "herself", "in", "..", "I", "smell", "blackmail"]
+# ::lemmas ["she", "turn", "herself", "in", "..", "i", "smell", "blackmail"]
+(c2-2 / multi-sentence
+      :snt1 (c2-5 / turn-in-22
+                  :ARG0 (c2-3 / she
+                              :ARG1-of c2-5))
+      :snt2 (c2-0 / smell-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-1 / blackmail-01)))
+
+# ::snt Give that lady some chapstick!
+# ::tokens ["Give", "that", "lady", "some", "chapstick", "!"]
+# ::lemmas ["give", "that", "lady", "some", "chapstick", "!"]
+(c3-5 / give-01
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-3 / chapstick
+                  :quant (c3-1 / some))
+      :ARG2 (c3-2 / lady
+                  :mod (c3-4 / that))
+      :mode imperative)
+
+# ::snt Oh dear sorry about that. Thankyou for putting me right.
+# ::tokens ["Oh", "dear", "sorry", "about", "that", ".", "Thankyou", "for", "putting", "me", "right", "."]
+# ::lemmas ["oh", "dear", "sorry", "about", "that", ".", "Thankyou", "for", "put", "i", "right", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-3 / sorry-01
+                  :ARG1 (c4-7 / i)
+                  :ARG2 (c4-8 / that)
+                  :mod (c4-9 / dear)
+                  :mod (c4-0 / oh))
+      :snt2 (c4-10 / thank-01
+                   :ARG0 (c4-4 / i)
+                   :ARG1 (c4-1 / you)
+                   :ARG2 (c4-6 / put-01
+                               :ARG0 c4-1
+                               :ARG1 c4-4
+                               :ARG2 (c4-5 / right-06
+                                           :ARG1 c4-4))))
+
+# ::snt Jawbreaker
+# ::tokens ["Jawbreaker"]
+# ::lemmas ["Jawbreaker"]
+(c5-1 / person
+      :name (c5-0 / name
+                  :op1 "Jawbreaker"))
+
+# ::snt No thats Shannon, Rose was in a Car Accident that Messed up her Eye. She had to have Cosmetic Surgery to fix.
+# ::tokens ["No", "that", "s", "Shannon", ",", "Rose", "was", "in", "a", "Car", "Accident", "that", "Messed", "up", "her", "Eye", ".", "She", "had", "to", "have", "Cosmetic", "Surgery", "to", "fix", "."]
+# ::lemmas ["no", "that", "s", "Shannon", ",", "Rose", "be", "in", "a", "Car", "Accident", "that", "mess", "up", "her", "Eye", ".", "she", "have", "to", "have", "Cosmetic", "Surgery", "to", "fix", "."]
+(c6-4 / multi-sentence
+      :snt1 (c6-5 / say-01
+                  :ARG1 (c6-13 / that)
+                  :ARG2 (c6-10 / person
+                               :name (c6-3 / name
+                                           :op1 "Shanghai")))
+      :snt2 (c6-7 / accident
+                  :mod (c6-12 / car)
+                  :ARG0-of (c6-9 / mess-up-02
+                                 :ARG1 (c6-8 / eye
+                                             :part-of (c6-6 / person
+                                                            :name (c6-11 / name
+                                                                         :op1 "Rose")
+                                                            :domain-of c6-7))))
+      :snt3 (c6-0 / obligate-01
+                  :ARG1 (c6-1 / she
+                              :part c6-8)
+                  :ARG2 (c6-15 / surgery-01
+                               :ARG1 c6-1
+                               :ARG2 (c6-14 / cosmetic)
+                               :ARG1-of (c6-2 / fix-02
+                                              :ARG0 c6-1))))
+
+# ::snt i dunno
+# ::tokens ["i", "dunno"]
+# ::lemmas ["i", "dunno"]
+(c7-0 / know-01
+      :ARG0 (c7-1 / i)
+      :polarity -)
+
+# ::snt Really ? Or you mean Shannen doherty ?
+# ::tokens ["Really", "?", "Or", "you", "mean", "Shannen", "doherty", "?"]
+# ::lemmas ["really", "?", "or", "you", "mean", "Shannen", "doherty", "?"]
+(c8-2 / multi-sentence
+      :snt1 (c8-4 / real-04)
+      :snt2 (c8-0 / or
+                  :op2 (c8-5 / mean-01
+                             :ARG0 (c8-1 / you)
+                             :ARG2 (c8-6 / person
+                                         :name (c8-3 / name
+                                                     :op1 "Shannen"
+                                                     :op2 "Doherty"))
+                             :polarity (c8-7 / amr-unknown))))
+
+# ::snt Wtf
+# ::tokens ["Wtf"]
+# ::lemmas ["wtf"]
+(c10-1 / amr-unknown
+       :mod (c10-0 / fuck))
+
+# ::snt She's had cancer
+# ::tokens ["She", "'s", "had", "cancer"]
+# ::lemmas ["she", "be", "have", "cancer"]
+(c11-0 / disease
+       :name (c11-1 / name
+                    :op1 "cancer")
+       :poss (c11-2 / she))
+
+# ::snt she looks like lohan
+# ::tokens ["she", "looks", "like", "lohan"]
+# ::lemmas ["she", "look", "like", "lohan"]
+(c12-2 / look-02
+       :ARG0 (c12-3 / she)
+       :ARG1 (c12-0 / person
+                    :name (c12-1 / name
+                                 :op1 "Lindsay")))
+
+# ::snt I pray shes not paying for finally speaking out on her sexual harassment. If so, Hollywood is disgusting.
+# ::tokens ["I", "pray", "she", "s", "not", "paying", "for", "finally", "speaking", "out", "on", "her", "sexual", "harassment", ".", "If", "so", ",", "Hollywood", "is", "disgusting", "."]
+# ::lemmas ["i", "pray", "she", "s", "not", "pay", "for", "finally", "speak", "out", "on", "her", "sexual", "harassment", ".", "if", "so", ",", "Hollywood", "be", "disgusting", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-8 / pray-01
+                    :ARG0 (c13-10 / i)
+                    :ARG1 (c13-3 / pay-01
+                                 :ARG0 (c13-4 / she)
+                                 :ARG3 (c13-0 / speak-out-03
+                                              :ARG0 c13-4
+                                              :ARG1 (c13-7 / harass-01
+                                                           :ARG0 c13-4
+                                                           :ARG1 c13-4
+                                                           :ARG2 (c13-12 / sex-01
+                                                                         :ARG0 c13-4))
+                                              :mod (c13-1 / final))
+                                 :polarity -))
+       :snt2 (c13-11 / disgust-01
+                     :ARG0 (c13-9 / market-sector
+                                  :name (c13-5 / name
+                                               :op1 "Hollywood"))
+                     :condition (c13-6 / so)))
+
+# ::snt Isn't that convenient for
+# ::tokens ["Is", "n't", "that", "convenient", "for"]
+# ::lemmas ["be", "not", "that", "convenient", "for"]
+(c15-0 / convenient
+       :domain (c15-1 / that)
+       :polarity -)
+
+# ::snt Glad she took care of that
+# ::tokens ["Glad", "she", "took", "care", "of", "that"]
+# ::lemmas ["glad", "she", "take", "care", "of", "that"]
+(c16-4 / glad-02
+       :ARG0 (c16-1 / care-03
+                    :ARG0 (c16-0 / she)
+                    :ARG1 (c16-3 / that))
+       :ARG1 (c16-2 / i))
+
+# ::snt She took $100,000. Then when offered $3m, countered with $6m and only changed her mind when the dress got wind. Great role model.
+# ::tokens ["She", "took", "$", "100,000", ".", "Then", "when", "offered", "$", "3", "m", ",", "countered", "with", "$", "6", "m", "and", "only", "changed", "her", "mind", "when", "the", "dress", "got", "wind", ".", "Great", "role", "model", "."]
+# ::lemmas ["she", "take", "$", "100,000", ".", "then", "when", "offer", "$", "3", "m", ",", "counter", "with", "$", "6", "m", "and", "only", "change", "her", "mind", "when", "the", "dress", "get", "wind", ".", "great", "role", "model", "."]
+(c17-9 / multi-sentence
+       :snt1 (c17-6 / take-01
+                    :ARG0 (c17-0 / she)
+                    :ARG1 (c17-4 / monetary-quantity
+                                 :unit (c17-18 / dollar)
+                                 :quant 100000))
+       :snt2 (c17-5 / and
+                    :op1 (c17-12 / counter-01
+                                 :ARG0 (c17-2 / she)
+                                 :ARG2 (c17-15 / monetary-quantity
+                                               :unit (c17-13 / dollar)
+                                               :quant 6000000)
+                                 :time (c17-14 / then))
+                    :op2 (c17-8 / change-01
+                                :ARG0 c17-2
+                                :ARG1 (c17-10 / mind-05
+                                              :ARG0 c17-2)
+                                :mod (c17-3 / only)
+                                :time (c17-7 / get-01
+                                             :ARG0 (c17-11 / dress)
+                                             :ARG1 (c17-17 / wind)))
+                    :snt3 (c17-16 / role-model
+                                  :mod (c17-1 / great))))
+
+# ::snt Wth. This happened way too soon after gaining traction with her allegations against that POS Weinstein to be merely a coincidence.
+# ::tokens ["Wth", ".", "This", "happened", "way", "too", "soon", "after", "gaining", "traction", "with", "her", "allegations", "against", "that", "POS", "Weinstein", "to", "be", "merely", "a", "coincidence", "."]
+# ::lemmas ["Wth", ".", "this", "happen", "way", "too", "soon", "after", "gain", "traction", "with", "her", "allegation", "against", "that", "POS", "Weinstein", "to", "be", "merely", "a", "coincidence", "."]
+(c18-11 / multi-sentence
+        :snt1 (c18-10 / by-the-way)
+        :snt2 (c18-4 / have-degree-91
+                     :ARG1 (c18-8 / this)
+                     :ARG2 (c18-0 / soon)
+                     :ARG3 (c18-13 / too
+                                   :mod (c18-16 / way))
+                     :time (c18-7 / after
+                                  :op1 (c18-9 / gain-02
+                                              :ARG1 (c18-18 / traction)
+                                              :ARG2 (c18-6 / allege-01
+                                                           :ARG0 (c18-3 / she)
+                                                           :ARG1 (c18-17 / harass-01
+                                                                         :ARG1 (c18-15 / person
+                                                                                       :name (c18-14 / name
+                                                                                                     :op1 "Weinstein")
+                                                                                       :mod (c18-2 / sexual)
+                                                                                       :mod (c18-1 / that))))))
+                     :ARG6 (c18-12 / coincidence
+                                   :domain c18-8
+                                   :mod (c18-5 / mere))))
+
+# ::snt Abow kmr du ihg henne det r ju Paige frn frhxad
+# ::tokens ["Abow", "kmr", "du", "ihg", "henne", "det", "r", "ju", "Paige", "frn", "frhxad"]
+# ::lemmas ["Abow", "kmr", "du", "ihg", "henne", "det", "r", "ju", "Paige", "frn", "frhxad"]
+(c19-7 / and
+       :op1 (c19-3 / person
+                   :name (c19-0 / name
+                                :op1 "Abow"
+                                :op2 "Kr"))
+       :op2 (c19-1 / person
+                   :name (c19-2 / name
+                                :op1 "Henne"))
+       :op3 (c19-8 / person
+                   :name (c19-4 / name
+                                :op1 "Paige"))
+       :op4 (c19-5 / person
+                   :name (c19-6 / name
+                                :op1 "Frhxad")))
+
+# ::snt Trying to silence her?
+# ::tokens ["Trying", "to", "silence", "her", "?"]
+# ::lemmas ["try", "to", "silence", "she", "?"]
+(c20-3 / try-01
+       :polarity (c20-1 / amr-unknown)
+       :ARG1 (c20-0 / silence-01
+                    :ARG1 (c20-2 / she)))
+
+# ::snt Witch hunt much?
+# ::tokens ["Witch", "hunt", "much", "?"]
+# ::lemmas ["witch", "hunt", "much", "?"]
+(c21-2 / hunt-01
+       :polarity (c21-4 / amr-unknown)
+       :ARG0 (c21-0 / you)
+       :mod (c21-3 / witch)
+       :quant (c21-1 / much))
+
+# ::snt What's going on with Rosie
+# ::tokens ["What", "'s", "going", "on", "with", "Rosie"]
+# ::lemmas ["what", "be", "go", "on", "with", "Rosie"]
+(c22-1 / event
+       :mod (c22-2 / person
+                   :name (c22-0 / name
+                                :op1 "Rosie"))
+       :mod (c22-3 / amr-unknown))
+
+# ::snt And people keep asking why women wait soo long before reporting sexual harassment.Pure witchcraft.
+# ::tokens ["And", "people", "keep", "asking", "why", "women", "wait", "soo", "long", "before", "reporting", "sexual", "harassment", ".", "Pure", "witchcraft", "."]
+# ::lemmas ["and", "people", "keep", "ask", "why", "woman", "wait", "soo", "long", "before", "report", "sexual", "harassment", ".", "pure", "witchcraft", "."]
+(c23-1 / multi-sentence
+       :snt1 (c23-14 / and
+                     :op2 (c23-6 / keep-02
+                                 :ARG0 (c23-7 / person)
+                                 :ARG1 (c23-13 / ask-01
+                                               :ARG0 c23-7
+                                               :ARG1 (c23-12 / thing
+                                                             :ARG0-of (c23-10 / cause-01
+                                                                              :ARG1 (c23-11 / wait-01
+                                                                                            :ARG1 (c23-8 / woman)
+                                                                                            :ARG2 (c23-4 / report-01
+                                                                                                         :ARG0 c23-8
+                                                                                                         :ARG1 (c23-5 / harass-01
+                                                                                                                      :ARG1 c23-8
+                                                                                                                      :manner (c23-3 / sex-01)))
+                                                                                            :ARG1-of (c23-9 / long-03
+                                                                                                            :degree (c23-0 / so))))))))
+       :snt2 (c23-15 / witchcraft
+                     :ARG1-of (c23-2 / pure-02)))

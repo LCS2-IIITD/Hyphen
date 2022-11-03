@@ -1,0 +1,68 @@
+# ::snt WTH?
+# ::tokens ["WTH", "?"]
+# ::lemmas ["WTH", "?"]
+(c1-1 / amr-unknown
+      :mod (c1-0 / heck
+                 :mode expressive))
+
+# ::snt gestapo?!?
+# ::tokens ["gestapo", "?", "!", "?"]
+# ::lemmas ["gestapo", "?", "!", "?"]
+(c2-0 / huge
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt sick sad sick
+# ::tokens ["sick", "sad", "sick"]
+# ::lemmas ["sick", "sad", "sick"]
+(c4-0 / sick-05
+      :ARG1-of (c4-1 / sad-02)
+      :ARG0-of (c4-2 / sick-05))
+
+# ::snt The pain in her eyes.
+# ::tokens ["The", "pain", "in", "her", "eyes", "."]
+# ::lemmas ["the", "pain", "in", "her", "eye", "."]
+(c5-1 / pain-01
+      :location (c5-2 / eye
+                      :part-of (c5-0 / she)))
+
+# ::snt This is so sick. This poor woman.
+# ::tokens ["This", "is", "so", "sick", ".", "This", "poor", "woman", "."]
+# ::lemmas ["this", "be", "so", "sick", ".", "this", "poor", "woman", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-5 / sick-02
+                  :ARG0 (c6-6 / this)
+                  :degree (c6-2 / so))
+      :snt2 (c6-0 / woman
+                  :mod (c6-3 / poor)
+                  :mod (c6-4 / this)))
+
+# ::snt Wow..we are becoming an endangered species..smh
+# ::tokens ["Wow", "..", "we", "are", "becoming", "an", "endangered", "species", "..", "smh"]
+# ::lemmas ["wow", "..", "we", "be", "become", "an", "endanger", "specie", "..", "smh"]
+(c7-1 / become-01
+      :ARG1 (c7-0 / we)
+      :ARG2 (c7-5 / species
+                  :ARG1-of (c7-2 / endanger-01))
+      :mod (c7-4 / wow
+                 :mode expressive)
+      :mod (c7-3 / smh
+                 :mode expressive))
+
+# ::snt : Interview with mother of victim. The police wouldn't let her ID her own son
+# ::tokens [":", "Interview", "with", "mother", "of", "victim", ".", "The", "police", "would", "n't", "let", "her", "ID", "her", "own", "son"]
+# ::lemmas [":", "interview", "with", "mother", "of", "victim", ".", "the", "police", "would", "not", "let", "she", "ID", "her", "own", "son"]
+(c8-2 / multi-sentence
+      :snt1 (c8-5 / interview-01
+                  :ARG1 (c8-7 / person
+                              :ARG0-of (c8-0 / have-rel-role-91
+                                             :ARG1 (c8-6 / victim)
+                                             :ARG2 (c8-8 / mother))))
+      :snt2 (c8-1 / let-01
+                  :ARG0 (c8-11 / police)
+                  :ARG1 (c8-9 / ID-01
+                              :ARG0 (c8-10 / she)
+                              :ARG1 (c8-3 / person
+                                          :ARG0-of (c8-12 / have-rel-role-91
+                                                          :ARG1 c8-10
+                                                          :ARG2 (c8-4 / son))))
+                  :polarity -))

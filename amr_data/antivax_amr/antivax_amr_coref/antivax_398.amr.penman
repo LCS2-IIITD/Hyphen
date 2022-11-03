@@ -1,0 +1,69 @@
+# ::snt That's what's up!
+# ::tokens ["That", "'s", "what", "'s", "up", "!"]
+# ::lemmas ["that", "be", "what", "be", "up", "!"]
+(c1-1 / event
+      :mod (c1-0 / that))
+
+# ::snt Purrr
+# ::tokens ["Purrr"]
+# ::lemmas ["Purrr"]
+(c2-0 / purr-01)
+
+# ::snt I actually havent felt any side effects from either other than a swore arm. And that happen with all shots I get
+# ::tokens ["I", "actually", "have", "nt", "felt", "any", "side", "effects", "from", "either", "other", "than", "a", "swore", "arm", ".", "And", "that", "happen", "with", "all", "shots", "I", "get"]
+# ::lemmas ["i", "actually", "have", "not", "feel", "any", "side", "effect", "from", "either", "other", "than", "a", "swore", "arm", ".", "and", "that", "happen", "with", "all", "shot", "i", "get"]
+(c3-13 / multi-sentence
+       :snt1 (c3-3 / feel-01
+                   :ARG0 (c3-12 / i)
+                   :ARG1 (c3-15 / effect-03
+                                :ARG0 (c3-5 / either)
+                                :mod (c3-0 / side)
+                                :ARG2-of (c3-6 / except-01
+                                               :ARG1 (c3-2 / arm
+                                                           :ARG1-of (c3-11 / swear-01))))
+                   :ARG1-of (c3-14 / actual-02)
+                   :polarity -)
+       :snt2 (c3-1 / and
+                   :op2 (c3-9 / that
+                              :condition (c3-7 / shoot-02
+                                               :ARG1-of (c3-10 / get-01
+                                                               :ARG0 (c3-4 / i))
+                                               :mod (c3-8 / all)))))
+
+# ::snt Congratulations! Now get ready for the side effects. Lay down and drink plenty of water
+# ::tokens ["Congratulations", "!", "Now", "get", "ready", "for", "the", "side", "effects", ".", "Lay", "down", "and", "drink", "plenty", "of", "water"]
+# ::lemmas ["congratulation", "!", "now", "get", "ready", "for", "the", "side", "effect", ".", "lay", "down", "and", "drink", "plenty", "of", "water"]
+(c4-8 / multi-sentence
+      :snt1 (c4-3 / congratulate-01
+                  :mode expressive)
+      :snt2 (c4-5 / ready-01
+                  :ARG1 (c4-10 / you)
+                  :ARG2 (c4-11 / effect-03
+                               :mod (c4-0 / side))
+                  :time (c4-9 / now))
+      :snt3 (c4-2 / and
+                  :op1 (c4-6 / lay-down-02
+                             :ARG0 c4-10
+                             :mode imperative)
+                  :op2 (c4-1 / drink-01
+                             :ARG0 c4-10
+                             :ARG1 (c4-4 / water
+                                         :quant (c4-7 / plenty))
+                             :mode imperative)))
+
+# ::snt congrats man! i get my second dose this friday!
+# ::tokens ["congrats", "man", "!", "i", "get", "my", "second", "dose", "this", "friday", "!"]
+# ::lemmas ["congrat", "man", "!", "i", "get", "my", "second", "dose", "this", "friday", "!"]
+(c5-10 / multi-sentence
+       :snt1 (c5-3 / congratulate-01
+                   :ARG0 (c5-9 / i)
+                   :ARG1 (c5-2 / man))
+       :snt2 (c5-8 / get-01
+                   :ARG0 (c5-5 / i)
+                   :ARG1 (c5-0 / dose
+                               :ord (c5-6 / ordinal-entity
+                                          :value 2)
+                               :poss c5-5)
+                   :time (c5-4 / date-entity
+                               :weekday (c5-1 / friday)
+                               :mod (c5-7 / this))))

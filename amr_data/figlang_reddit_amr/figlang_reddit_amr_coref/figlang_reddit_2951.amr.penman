@@ -1,0 +1,29 @@
+# ::snt First attempt Beef Wellington
+# ::tokens ["First", "attempt", "Beef", "Wellington"]
+# ::lemmas ["First", "attempt", "Beef", "Wellington"]
+(c1-3 / event
+      :name (c1-2 / name
+                  :op1 "Beef"
+                  :op2 "Wellington")
+      :ARG1-of (c1-1 / attempt-01
+                     :ord (c1-0 / ordinal-entity
+                                :value 1)))
+
+# ::snt Damn, that looks delicious.
+# ::tokens ["Damn", ",", "that", "looks", "delicious", "."]
+# ::lemmas ["damn", ",", "that", "look", "delicious", "."]
+(c2-3 / look-02
+      :ARG0 (c2-2 / that)
+      :ARG1 (c2-0 / delicious)
+      :mod (c2-1 / damn
+                 :mode expressive))
+
+# ::snt That half cooked meat looks nasty.
+# ::tokens ["That", "half", "cooked", "meat", "looks", "nasty", "."]
+# ::lemmas ["that", "half", "cook", "meat", "look", "nasty", "."]
+(c3-3 / look-02
+      :ARG0 (c3-4 / meat
+                  :ARG1-of (c3-0 / cook-01
+                                 :degree (c3-1 / half))
+                  :mod (c3-2 / that))
+      :ARG1 (c3-5 / nasty))

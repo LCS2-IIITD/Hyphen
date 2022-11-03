@@ -1,0 +1,94 @@
+# ::snt Just a reminder that The New York Times hired this vile, racist POS even after reviewing her hate-filled social media posts...
+# ::tokens ["Just", "a", "reminder", "that", "The", "New", "York", "Times", "hired", "this", "vile", ",", "racist", "POS", "even", "after", "reviewing", "her", "hate", "-", "filled", "social", "media", "posts", "..."]
+# ::lemmas ["just", "a", "reminder", "that", "The", "New", "York", "Times", "hire", "this", "vile", ",", "racist", "pos", "even", "after", "review", "her", "hate", "-", "fill", "social", "medium", "post", "..."]
+(c1-7 / remind-01
+      :ARG1 (c1-2 / hire-01
+                  :ARG0 (c1-14 / newspaper
+                               :name (c1-8 / name
+                                           :op1 "The"
+                                           :op2 "New"
+                                           :op3 "York"
+                                           :op4 "Times"))
+                  :ARG1 (c1-12 / person
+                               :mod (c1-3 / racist)
+                               :mod (c1-6 / this)
+                               :ARG1-of (c1-4 / vile-02)
+                               :mod c1-3))
+      :concession (c1-15 / even-when
+                         :op1 (c1-10 / review-01
+                                     :ARG0 c1-14
+                                     :ARG1 (c1-5 / post-01
+                                                 :ARG0 c1-12
+                                                 :medium (c1-13 / media
+                                                                :mod (c1-0 / social))
+                                                 :ARG1-of (c1-1 / fill-01
+                                                                :ARG2 (c1-11 / hate-01)))))
+      :mod (c1-9 / just))
+
+# ::snt Using slander and derogatory comments does not help your position. Please refrain and consider your actions before you post
+# ::tokens ["Using", "slander", "and", "derogatory", "comments", "does", "not", "help", "your", "position", ".", "Please", "refrain", "and", "consider", "your", "actions", "before", "you", "post"]
+# ::lemmas ["use", "slander", "and", "derogatory", "comment", "do", "not", "help", "your", "position", ".", "please", "refrain", "and", "consider", "your", "action", "before", "you", "post"]
+(c2-13 / multi-sentence
+       :snt1 (c2-7 / help-01
+                   :ARG0 (c2-8 / use-01
+                               :ARG1 (c2-3 / and
+                                           :op1 (c2-0 / slander-01)
+                                           :op2 (c2-6 / comment-01
+                                                      :mod (c2-1 / derogatory))))
+                   :ARG1 (c2-12 / position-02
+                                :ARG0 (c2-14 / you))
+                   :polarity -)
+       :snt2 (c2-15 / and
+                    :op1 (c2-10 / refrain-01
+                                :ARG0 (c2-5 / you)
+                                :mode imperative)
+                    :op2 (c2-2 / consider-02
+                               :ARG0 c2-5
+                               :ARG1 (c2-4 / act-02
+                                           :ARG0 c2-5)
+                               :time (c2-11 / before
+                                            :op1 (c2-9 / post-01
+                                                       :ARG0 c2-5))
+                               :mode imperative)
+                    :polite +))
+
+# ::snt You using a person's gender as an insult only shows how narrow minded you are.
+# ::tokens ["You", "using", "a", "person", "'s", "gender", "as", "an", "insult", "only", "shows", "how", "narrow", "minded", "you", "are", "."]
+# ::lemmas ["you", "use", "a", "person", "'s", "gender", "as", "an", "insult", "only", "show", "how", "narrow", "minded", "you", "be", "."]
+(c3-0 / show-01
+      :ARG0 (c3-2 / use-01
+                  :ARG0 (c3-9 / you)
+                  :ARG1 (c3-4 / gender
+                              :poss (c3-6 / person))
+                  :ARG2 (c3-1 / insult-01
+                              :ARG0 c3-9))
+      :ARG1 (c3-8 / narrow-02
+                  :ARG1 (c3-7 / mind
+                              :poss c3-9)
+                  :degree (c3-5 / so))
+      :mod (c3-3 / only))
+
+# ::snt The language and terms you used are very offensive to more people than you think. You should adjust which words you decide to use.
+# ::tokens ["The", "language", "and", "terms", "you", "used", "are", "very", "offensive", "to", "more", "people", "than", "you", "think", ".", "You", "should", "adjust", "which", "words", "you", "decide", "to", "use", "."]
+# ::lemmas ["the", "language", "and", "term", "you", "use", "be", "very", "offensive", "to", "more", "people", "than", "you", "think", ".", "you", "should", "adjust", "which", "word", "you", "decide", "to", "use", "."]
+(c4-14 / multi-sentence
+       :snt1 (c4-9 / offend-01
+                   :ARG0 (c4-1 / and
+                               :op1 (c4-12 / language)
+                               :op2 (c4-10 / term)
+                               :ARG1-of (c4-7 / use-01
+                                              :ARG0 (c4-15 / you)))
+                   :ARG1 (c4-13 / person
+                                :quant (c4-3 / more)
+                                :ARG1-of (c4-5 / think-01
+                                               :ARG0 c4-15))
+                   :degree (c4-8 / very))
+       :snt2 (c4-11 / recommend-01
+                    :ARG1 (c4-16 / adjust-01
+                                 :ARG0 (c4-2 / you)
+                                 :ARG1 (c4-4 / word
+                                             :ARG1-of (c4-6 / use-01
+                                                            :ARG0 c4-2
+                                                            :ARG1-of (c4-0 / decide-01
+                                                                           :ARG0 c4-2))))
+                    :ARG2 c4-2))

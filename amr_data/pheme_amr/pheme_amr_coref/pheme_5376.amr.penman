@@ -1,0 +1,150 @@
+# ::snt Yeah... it's obvious...
+# ::tokens ["Yeah", "...", "it", "'s", "obvious", "..."]
+# ::lemmas ["yeah", "...", "it", "be", "obvious", "..."]
+(c1-0 / obvious-01
+      :ARG1 (c1-1 / it))
+
+# ::snt if i draw you in an insulting way &amp; published it at the main page on famous mag , then u will be happy and astonished!!
+# ::tokens ["if", "i", "draw", "you", "in", "an", "insulting", "way", "&", "amp", ";", "published", "it", "at", "the", "main", "page", "on", "famous", "mag", ",", "then", "u", "will", "be", "happy", "and", "astonished", "!", "!"]
+# ::lemmas ["if", "i", "draw", "you", "in", "an", "insulting", "way", "&", "amp", ";", "publish", "it", "at", "the", "main", "page", "on", "famous", "mag", ",", "then", "u", "will", "be", "happy", "and", "astonish", "!", "!"]
+(c2-13 / and
+       :op1 (c2-0 / happy-01
+                  :ARG1 (c2-1 / you))
+       :op2 (c2-5 / astonish-01
+                  :ARG1 c2-1)
+       :condition (c2-7 / and
+                        :op1 (c2-9 / draw-02
+                                   :ARG0 (c2-6 / i)
+                                   :ARG1 c2-1
+                                   :manner (c2-11 / insult-01))
+                        :op2 (c2-8 / publish-01
+                                   :ARG0 c2-6
+                                   :ARG1 (c2-2 / it)
+                                   :location (c2-12 / page
+                                                    :mod (c2-3 / main)
+                                                    :part-of (c2-10 / magazine
+                                                                    :ARG1-of (c2-4 / fame-01))))))
+
+# ::snt . Is this front page from this week? It says October in the top right hand corner...
+# ::tokens [".", "Is", "this", "front", "page", "from", "this", "week", "?", "It", "says", "October", "in", "the", "top", "right", "hand", "corner", "..."]
+# ::lemmas [".", "be", "this", "front", "page", "from", "this", "week", "?", "it", "say", "October", "in", "the", "top", "right", "hand", "corner", "..."]
+(c3-3 / multi-sentence
+      :snt1 (c3-6 / page
+                  :mod (c3-2 / front)
+                  :mod (c3-12 / this)
+                  :time (c3-1 / week
+                              :mod (c3-10 / this))
+                  :polarity (c3-13 / amr-unknown))
+      :snt2 (c3-11 / say-01
+                   :ARG0 (c3-4 / it)
+                   :ARG1 (c3-7 / date-entity
+                               :month 10)
+                   :location (c3-8 / corner
+                                   :mod (c3-0 / hand
+                                              :ARG1-of (c3-9 / right-04))
+                                   :location (c3-5 / top))))
+
+# ::snt It's that right-wing newspaper that promotes anti-Palestinian racism.
+# ::tokens ["It", "'s", "that", "right", "-", "wing", "newspaper", "that", "promotes", "anti", "-", "Palestinian", "racism", "."]
+# ::lemmas ["it", "be", "that", "right", "-", "wing", "newspaper", "that", "promote", "anti", "-", "Palestinian", "racism", "."]
+(c4-4 / promote-02
+      :ARG0 (c4-2 / newspaper
+                  :mod (c4-7 / that)
+                  :ARG1-of (c4-5 / right-08))
+      :ARG1 (c4-1 / racism
+                  :ARG0-of (c4-0 / oppose-01
+                                 :ARG1 (c4-6 / country
+                                             :name (c4-3 / name
+                                                         :op1 "Palestine")))))
+
+# ::snt Hmm... my mistake. I did not notice the account...
+# ::tokens ["Hmm", "...", "my", "mistake", ".", "I", "did", "not", "notice", "the", "account", "..."]
+# ::lemmas ["hmm", "...", "my", "mistake", ".", "i", "do", "not", "notice", "the", "account", "..."]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / mistake-02
+                  :ARG0 (c5-2 / i)
+                  :mod (c5-0 / hmm
+                             :mode expressive))
+      :snt2 (c5-3 / notice-01
+                  :ARG0 (c5-5 / i)
+                  :ARG1 (c5-6 / account)
+                  :polarity -))
+
+# ::snt let everyone retweet this..after all if you don't beleave in Islam your a target anyway..
+# ::tokens ["let", "everyone", "retweet", "this", "..", "after", "all", "if", "you", "do", "n't", "beleave", "in", "Islam", "your", "a", "target", "anyway", ".."]
+# ::lemmas ["let", "everyone", "retweet", "this", "..", "after", "all", "if", "you", "do", "not", "beleave", "in", "Islam", "your", "a", "target", "anyway", ".."]
+(c6-1 / let-01
+      :ARG0 (c6-0 / you)
+      :ARG1 (c6-6 / retweet-01
+                  :ARG0 (c6-2 / everyone)
+                  :ARG1 (c6-9 / this))
+      :concession (c6-8 / target-01
+                        :ARG1 c6-0
+                        :mod (c6-10 / anyway)
+                        :condition (c6-7 / leave-11
+                                         :ARG0 c6-0
+                                         :ARG1 (c6-4 / religious-group
+                                                     :name (c6-5 / name
+                                                                 :op1 "Islam"))
+                                         :polarity -)
+                        :mod (c6-3 / after-all))
+      :mode imperative)
+
+# ::snt The irony goes to . is every bit as extremist as .
+# ::tokens ["The", "irony", "goes", "to", ".", "is", "every", "bit", "as", "extremist", "as", "."]
+# ::lemmas ["the", "irony", "go", "to", ".", "be", "every", "bit", "as", "extremist", "as", "."]
+(c7-6 / go-16
+      :ARG1 (c7-5 / irony)
+      :ARG2 (c7-0 / have-degree-91
+                  :ARG1 (c7-7 / amr-unknown)
+                  :ARG2 (c7-4 / extremist)
+                  :ARG3 (c7-2 / equal
+                              :mod (c7-3 / bit
+                                         :mod (c7-1 / every)))
+                  :ARG4 c7-7))
+
+# ::snt They're co-opting the events to promote their islamophobia.
+# ::tokens ["They", "'re", "co", "-", "opting", "the", "events", "to", "promote", "their", "islamophobia", "."]
+# ::lemmas ["they", "be", "co", "-", "opt", "the", "event", "to", "promote", "their", "islamophobia", "."]
+(c8-4 / coopt-01
+      :ARG0 (c8-5 / they)
+      :ARG1 (c8-1 / event)
+      :purpose (c8-3 / promote-02
+                     :ARG0 c8-5
+                     :ARG1 (c8-0 / ophobia
+                                 :poss c8-5
+                                 :mod (c8-2 / islam))))
+
+# ::snt eek.
+# ::tokens ["eek", "."]
+# ::lemmas ["eek", "."]
+(c9-0 / eek
+      :mode expressive)
+
+# ::snt I won't go and bring my friends and shoot you.. Or do you think it would be ok if I did...EH ..
+# ::tokens ["I", "wo", "n't", "go", "and", "bring", "my", "friends", "and", "shoot", "you", "..", "Or", "do", "you", "think", "it", "would", "be", "ok", "if", "I", "did", "...", "EH", ".."]
+# ::lemmas ["i", "will", "not", "go", "and", "bring", "my", "friend", "and", "shoot", "you", "..", "or", "do", "you", "think", "it", "would", "be", "ok", "if", "i", "do", "...", "eh", ".."]
+(c10-3 / multi-sentence
+       :snt1 (c10-17 / and
+                     :op1 (c10-12 / go-02
+                                  :ARG0 (c10-9 / i)
+                                  :polarity -)
+                     :op2 (c10-6 / bring-01
+                                 :ARG0 c10-9
+                                 :ARG1 (c10-10 / person
+                                               :ARG0-of (c10-0 / have-rel-role-91
+                                                               :ARG1 c10-9
+                                                               :ARG2 (c10-2 / friend)))
+                                 :polarity -)
+                     :op3 (c10-15 / shoot-02
+                                  :ARG0 c10-9
+                                  :ARG1 (c10-1 / you)
+                                  :polarity -))
+       :snt2 (c10-7 / or
+                    :op2 (c10-16 / think-01
+                                 :ARG0 (c10-14 / you)
+                                 :ARG1 (c10-4 / okay-04
+                                              :ARG1 (c10-13 / it)
+                                              :condition (c10-11 / do-02
+                                                                 :ARG0 (c10-5 / i)))
+                                 :polarity (c10-8 / amr-unknown))))

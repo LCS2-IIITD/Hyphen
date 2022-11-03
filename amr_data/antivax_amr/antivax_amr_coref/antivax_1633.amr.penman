@@ -1,0 +1,32 @@
+# ::snt I understand completely.
+# ::tokens ["I", "understand", "completely", "."]
+# ::lemmas ["i", "understand", "completely", "."]
+(c2-2 / understand-01
+      :ARG0 (c2-1 / i)
+      :ARG1-of (c2-0 / complete-02))
+
+# ::snt Thank you! So relieved as I have underlying health issues.
+# ::tokens ["Thank", "you", "!", "So", "relieved", "as", "I", "have", "underlying", "health", "issues", "."]
+# ::lemmas ["thank", "you", "!", "so", "relieved", "as", "i", "have", "underlie", "health", "issue", "."]
+(c3-9 / multi-sentence
+      :snt1 (c3-5 / thank-01
+                  :ARG0 (c3-8 / i)
+                  :ARG1 (c3-10 / you)
+                  :mode expressive)
+      :snt2 (c3-6 / relieve-01
+                  :ARG0 (c3-1 / have-03
+                              :ARG0 (c3-2 / i)
+                              :ARG1 (c3-3 / issue-02
+                                          :ARG0 (c3-7 / health)
+                                          :ARG0-of (c3-4 / underlie-01)))
+                  :degree (c3-0 / so)))
+
+# ::snt Congratulations, Nadia!
+# ::tokens ["Congratulations", ",", "Nadia", "!"]
+# ::lemmas ["Congratulations", ",", "Nadia", "!"]
+(c4-0 / say-01
+      :ARG1 (c4-3 / congratulate-01
+                  :ARG1 (c4-1 / person
+                              :name (c4-2 / name
+                                          :op1 "Nadia")
+                              :ARG2-of c4-0)))

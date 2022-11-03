@@ -1,0 +1,49 @@
+# ::snt Google has removed the ENTIRE . com website from its index . <URL>
+# ::tokens ["Google", "has", "removed", "the", "ENTIRE", ".", "com", "website", "from", "its", "index", ".", "<", "URL", ">"]
+# ::lemmas ["Google", "have", "remove", "the", "ENTIRE", ".", "com", "website", "from", "its", "index", ".", "<", "URL", ">"]
+(c1-3 / remove-01
+      :ARG0 (c1-0 / company
+                  :name (c1-5 / name
+                              :op1 "Google"))
+      :ARG1 (c1-1 / website
+                  :mod (c1-2 / url-entity
+                             :value " ENTIRE.com"))
+      :ARG2 (c1-4 / index
+                  :poss c1-0))
+
+# ::snt The link gives no explanation outside webmaster rules of why Natural News was removed from Google's seach engine .
+# ::tokens ["The", "link", "gives", "no", "explanation", "outside", "webmaster", "rules", "of", "why", "Natural", "News", "was", "removed", "from", "Google", "'s", "seach", "engine", "."]
+# ::lemmas ["the", "link", "give", "no", "explanation", "outside", "webmaster", "rule", "of", "why", "Natural", "News", "be", "remove", "from", "Google", "'s", "seach", "engine", "."]
+(c2-13 / explain-01
+       :ARG0 (c2-6 / thing
+                   :ARG3-of (c2-8 / link-01))
+       :ARG1 (c2-3 / thing
+                   :ARG0-of (c2-2 / cause-01
+                                  :ARG1 (c2-7 / remove-01
+                                              :ARG1 (c2-10 / publication
+                                                           :name (c2-11 / name
+                                                                        :op1 "Natural"
+                                                                        :op2 "News"))
+                                              :ARG2 (c2-4 / engine
+                                                          :mod (c2-0 / seach)
+                                                          :poss (c2-1 / company
+                                                                      :name (c2-9 / name
+                                                                                  :op1 "Google")))))
+                   :source (c2-12 / thing
+                                  :name (c2-5 / name
+                                              :op1 "Webmaster")))
+       :polarity -)
+
+# ::snt They have here : <URL> & Also posted on the natural news site .
+# ::tokens ["They", "have", "here", ":", "<", "URL", ">", "&", "Also", "posted", "on", "the", "natural", "news", "site", "."]
+# ::lemmas ["they", "have", "here", ":", "<", "URL", ">", "&", "also", "post", "on", "the", "natural", "news", "site", "."]
+(c3-1 / and
+      :op1 (c3-2 / have-03
+                 :ARG0 (c3-3 / they)
+                 :location (c3-5 / here))
+      :op2 (c3-6 / post-01
+                 :ARG0 c3-3
+                 :ARG2 (c3-0 / site
+                             :mod (c3-7 / news
+                                        :ARG1-of (c3-4 / natural-03)))
+                 :mod (c3-8 / also)))

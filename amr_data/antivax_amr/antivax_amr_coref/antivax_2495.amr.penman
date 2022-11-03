@@ -1,0 +1,47 @@
+# ::snt I last tested positive for antibodies after Thanksgiving. I just had my first dose of the Moderna vaccine. Im hoping I have something!
+# ::tokens ["I", "last", "tested", "positive", "for", "antibodies", "after", "Thanksgiving", ".", "I", "just", "had", "my", "first", "dose", "of", "the", "Moderna", "vaccine", ".", "I", "m", "hoping", "I", "have", "something", "!"]
+# ::lemmas ["i", "last", "test", "positive", "for", "antibody", "after", "Thanksgiving", ".", "i", "just", "have", "my", "first", "dose", "of", "the", "Moderna", "vaccine", ".", "i", "m", "hope", "i", "have", "something", "!"]
+(c1-8 / multi-sentence
+      :snt1 (c1-7 / test-01
+                  :ARG1 (c1-3 / i)
+                  :ARG2 (c1-14 / antibody)
+                  :time (c1-10 / after
+                               :op1 (c1-15 / festival
+                                           :name (c1-9 / name
+                                                       :op1 "Thanksgiving")))
+                  :ord (c1-6 / ordinal-entity
+                             :value -1))
+      :snt2 (c1-16 / have-03
+                   :ARG0 (c1-12 / i)
+                   :ARG1 (c1-0 / dose-01
+                               :ARG1 (c1-5 / vaccine
+                                           :name (c1-1 / name
+                                                       :op1 "Moderna"))
+                               :ARG2 c1-12
+                               :ord (c1-17 / ordinal-entity
+                                           :value 1))
+                   :mod (c1-18 / just))
+      :snt3 (c1-2 / hope-01
+                  :ARG0 (c1-13 / i)
+                  :ARG1 (c1-4 / have-03
+                              :ARG0 c1-13
+                              :ARG1 (c1-11 / something))))
+
+# ::snt Youre still close enough to when you had it to have some immunity right?
+# ::tokens ["You", "re", "still", "close", "enough", "to", "when", "you", "had", "it", "to", "have", "some", "immunity", "right", "?"]
+# ::lemmas ["you", "re", "still", "close", "enough", "to", "when", "you", "have", "it", "to", "have", "some", "immunity", "right", "?"]
+(c2-2 / close-06
+      :ARG1 (c2-9 / you)
+      :ARG2 (c2-5 / time
+                  :time-of (c2-3 / have-03
+                                 :ARG0 c2-9
+                                 :ARG1 (c2-8 / it)))
+      :mod (c2-0 / still)
+      :ARG2-of (c2-7 / have-degree-91
+                     :ARG1 c2-9
+                     :ARG3 (c2-10 / enough)
+                     :ARG6 (c2-4 / immune-02
+                                 :ARG1 c2-9
+                                 :quant (c2-1 / some)))
+      :ARG1-of (c2-6 / request-confirmation-91
+                     :ARG2 c2-9))

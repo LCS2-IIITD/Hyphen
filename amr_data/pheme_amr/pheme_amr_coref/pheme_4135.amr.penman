@@ -1,0 +1,210 @@
+# ::snt : The US Consulate in has been evacuated - Statement via
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c1-0 / evacuate-01
+      :ARG1 (c1-3 / consulate
+                  :mod (c1-2 / country
+                             :name (c1-1 / name
+                                         :op1 "US")))
+      :source (c1-4 / statement))
+
+# ::snt : The US Consulate in has been evacuated - Statement via
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c2-0 / evacuate-01
+      :ARG1 (c2-3 / consulate
+                  :mod (c2-2 / country
+                             :name (c2-1 / name
+                                         :op1 "US")))
+      :source (c2-4 / statement))
+
+# ::snt Attention US citizens! : The US Consulate in has been evacuated - Statement via
+# ::tokens ["Attention", "US", "citizens", "!", ":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas ["Attention", "US", "citizen", "!", ":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / citizen
+                  :mod (c3-4 / country
+                             :name (c3-3 / name
+                                         :op1 "US"))
+                  :ARG1-of (c3-8 / attend-02))
+      :snt2 (c3-2 / evacuate-01
+                  :ARG1 (c3-6 / consulate
+                              :location c3-4))
+      :snt3 (c3-7 / state-01
+                  :medium (c3-0 / language
+                                :name c3-3
+                                :op1 "YouTube")))
+
+# ::snt the US Consulate evacuated?
+# ::tokens ["the", "US", "Consulate", "evacuated", "?"]
+# ::lemmas ["the", "US", "Consulate", "evacuate", "?"]
+(c4-0 / evacuate-01
+      :ARG1 (c4-3 / consulate
+                  :mod (c4-2 / country
+                             :name (c4-1 / name
+                                         :op1 "US")))
+      :polarity (c4-4 / amr-unknown))
+
+# ::snt opera house also due to suspect parcel so I heard
+# ::tokens ["opera", "house", "also", "due", "to", "suspect", "parcel", "so", "I", "heard"]
+# ::lemmas ["opera", "house", "also", "due", "to", "suspect", "parcel", "so", "i", "hear"]
+(c5-5 / cause-01
+      :ARG0 (c5-4 / parcel
+                  :ARG2-of (c5-6 / suspect-01))
+      :ARG1 (c5-0 / house
+                  :mod (c5-2 / original))
+      :mod (c5-7 / also)
+      :ARG1-of (c5-1 / hear-01
+                     :ARG0 (c5-3 / i)))
+
+# ::snt not good news hope it is minor incident
+# ::tokens ["not", "good", "news", "hope", "it", "is", "minor", "incident"]
+# ::lemmas ["not", "good", "news", "hope", "it", "be", "minor", "incident"]
+(c6-5 / and
+      :op1 (c6-3 / news
+                 :ARG1-of (c6-4 / good-02)
+                 :polarity -)
+      :op2 (c6-0 / hope-01
+                 :ARG1 (c6-2 / incident
+                             :ARG1-of (c6-1 / minor-01))))
+
+# ::snt : The US Consulate in has been evacuated - Statement via &lt;
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via", "&", "lt", ";"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via", "&", "lt", ";"]
+(c7-0 / multi-sentence
+      :snt1 (c7-1 / evacuate-01
+                  :ARG1 (c7-5 / consulate
+                              :mod (c7-4 / country
+                                         :name (c7-2 / name
+                                                     :op1 "US"))))
+      :snt2 (c7-7 / state-01
+                  :medium (c7-6 / company
+                                :name (c7-3 / name
+                                            :op1 "&lt"))))
+
+# ::snt : The US Consulate in has been evacuated - Statement via hide yo Lindt chocolates
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via", "hide", "yo", "Lindt", "chocolates"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via", "hide", "yo", "Lindt", "chocolate"]
+(c8-0 / multi-sentence
+      :snt1 (c8-1 / evacuate-01
+                  :ARG1 (c8-6 / consulate
+                              :mod (c8-5 / country
+                                         :name (c8-2 / name
+                                                     :op1 "US"))))
+      :snt2 (c8-7 / state-01
+                  :medium (c8-4 / product
+                                :name (c8-3 / name
+                                            :op1 "Hide"
+                                            :op2 "Yo"
+                                            :op3 "Lindt"
+                                            :op4 "Chocolates"))))
+
+# ::snt This notice does not say the US consulate has been evacuated.
+# ::tokens ["This", "notice", "does", "not", "say", "the", "US", "consulate", "has", "been", "evacuated", "."]
+# ::lemmas ["this", "notice", "do", "not", "say", "the", "US", "consulate", "have", "be", "evacuate", "."]
+(c9-5 / say-01
+      :ARG0 (c9-1 / notice-03
+                  :mod (c9-6 / this))
+      :ARG1 (c9-0 / evacuate-01
+                  :ARG1 (c9-4 / consulate
+                              :mod (c9-3 / country
+                                         :name (c9-2 / name
+                                                     :op1 "US"))))
+      :polarity -)
+
+# ::snt : : The US Consulate in has been evacuated - Statement via
+# ::tokens [":", ":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas [":", ":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c10-0 / evacuate-01
+       :ARG1 (c10-3 / consulate
+                    :location (c10-2 / country
+                                     :name (c10-1 / name
+                                                  :op1 "US")))
+       :source (c10-4 / statement-01))
+
+# ::snt : The US Consulate in has been evacuated - Statement via
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c11-0 / evacuate-01
+       :ARG1 (c11-3 / consulate
+                    :mod (c11-2 / country
+                                :name (c11-1 / name
+                                             :op1 "US")))
+       :source (c11-4 / statement))
+
+# ::snt WTF ?
+# ::tokens ["WTF", "?"]
+# ::lemmas ["WTF", "?"]
+(c12-1 / amr-unknown
+       :mod (c12-0 / fuck
+                   :mode expressive))
+
+# ::snt yea, I don't get why this is being reported. I haven't seen it confirmed.
+# ::tokens ["yea", ",", "I", "do", "n't", "get", "why", "this", "is", "being", "reported", ".", "I", "have", "n't", "seen", "it", "confirmed", "."]
+# ::lemmas ["yea", ",", "i", "do", "not", "get", "why", "this", "be", "be", "report", ".", "i", "have", "not", "see", "it", "confirm", "."]
+(c13-1 / multi-sentence
+       :snt1 (c13-5 / get-30
+                    :ARG0 (c13-2 / i)
+                    :ARG1 (c13-10 / thing
+                                  :ARG0-of (c13-4 / cause-01
+                                                  :ARG1 (c13-3 / report-01
+                                                               :ARG1 (c13-7 / this))))
+                    :mod (c13-0 / yea
+                                :mode expressive)
+                    :polarity -)
+       :snt2 (c13-8 / see-01
+                    :ARG0 (c13-6 / i)
+                    :ARG1 (c13-9 / confirm-01
+                                 :ARG1 c13-7)
+                    :polarity -))
+
+# ::snt "We will never be scared" : The US Consulate in has been evacuated - Statement via
+# ::tokens ["\"", "We", "will", "never", "be", "scared", "\"", ":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via"]
+# ::lemmas ["\"", "we", "will", "never", "be", "scare", "\"", ":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via"]
+(c14-1 / multi-sentence
+       :snt1 (c14-9 / scare-01
+                    :ARG1 (c14-0 / we)
+                    :time (c14-3 / ever)
+                    :polarity -)
+       :snt2 (c14-2 / evacuate-01
+                    :ARG1 (c14-8 / consulate
+                                 :location (c14-7 / country
+                                                  :name (c14-6 / name
+                                                               :op1 "US"))))
+       :snt3 (c14-4 / state-01
+                    :medium (c14-5 / website)))
+
+# ::snt : The US Consulate in has been evacuated - Statement via . Prayers for all in Sydney
+# ::tokens [":", "The", "US", "Consulate", "in", "has", "been", "evacuated", "-", "Statement", "via", ".", "Prayers", "for", "all", "in", "Sydney"]
+# ::lemmas [":", "The", "US", "Consulate", "in", "have", "be", "evacuate", "-", "statement", "via", ".", "prayer", "for", "all", "in", "Sydney"]
+(c15-0 / multi-sentence
+       :snt1 (c15-1 / evacuate-01
+                    :ARG1 (c15-6 / consulate
+                                 :mod (c15-5 / country
+                                             :name (c15-2 / name
+                                                          :op1 "US")))
+                    :medium (c15-8 / statement))
+       :snt2 (c15-4 / pray-01
+                    :beneficiary (c15-9 / all)
+                    :location (c15-7 / city
+                                     :name (c15-3 / name
+                                                  :op1 "Sydney"))))
+
+# ::snt RUN AWAY!!RUN AWAY!!
+# ::tokens ["RUN", "AWAY!!RUN", "AWAY", "!", "!"]
+# ::lemmas ["RUN", "away!!run", "away", "!", "!"]
+(c16-1 / rock-03
+       :ARG0 (c16-0 / you)
+       :direction (c16-2 / away)
+       :mode imperative)
+
+# ::snt sound like situation in sydney getting worse?
+# ::tokens ["sound", "like", "situation", "in", "sydney", "getting", "worse", "?"]
+# ::lemmas ["sound", "like", "situation", "in", "sydney", "get", "bad", "?"]
+(c17-4 / sound-01
+       :ARG1 (c17-0 / worsen-01
+                    :ARG1 (c17-1 / situation
+                                 :location (c17-3 / city
+                                                  :name (c17-2 / name
+                                                               :op1 "Sydney"))))
+       :polarity (c17-5 / amr-unknown))

@@ -1,0 +1,41 @@
+# ::snt The Legendary Triple Wallbang
+# ::tokens ["The", "Legendary", "Triple", "Wallbang"]
+# ::lemmas ["the", "Legendary", "Triple", "Wallbang"]
+(c1-1 / thing
+      :name (c1-0 / name
+                  :op1 "The"
+                  :op2 "Triple"
+                  :op3 "Wallbang")
+      :mod (c1-2 / legendary))
+
+# ::snt You see a triple kill, I see a failed ace
+# ::tokens ["You", "see", "a", "triple", "kill", ",", "I", "see", "a", "failed", "ace"]
+# ::lemmas ["you", "see", "a", "triple", "kill", ",", "i", "see", "a", "fail", "ace"]
+(c2-1 / and
+      :op1 (c2-0 / see-01
+                 :ARG0 (c2-7 / you)
+                 :ARG1 (c2-6 / kill-01
+                             :mod (c2-3 / triple)))
+      :op2 (c2-4 / see-01
+                 :ARG0 (c2-5 / i)
+                 :ARG1 (c2-8 / ace
+                             :ARG1-of (c2-2 / fail-01))))
+
+# ::snt I see 2 AWPs, a Scout, a Mac-10, and a deagle
+# ::tokens ["I", "see", "2", "AWPs", ",", "a", "Scout", ",", "a", "Mac-10", ",", "and", "a", "deagle"]
+# ::lemmas ["i", "see", "2", "awp", ",", "a", "Scout", ",", "a", "Mac-10", ",", "and", "a", "deagle"]
+(c3-0 / see-01
+      :ARG0 (c3-8 / i)
+      :ARG1 (c3-2 / and
+                  :op1 (c3-10 / aircraft-type
+                              :name (c3-9 / name
+                                          :op1 "AWP"))
+                  :op2 (c3-1 / aircraft-type
+                             :name (c3-7 / name
+                                         :op1 "Scouts"))
+                  :op3 (c3-5 / aircraft-type
+                             :name (c3-6 / name
+                                         :op1 "Mac-10"))
+                  :op4 (c3-4 / aircraft-type
+                             :name (c3-3 / name
+                                         :op1 "Deagle"))))

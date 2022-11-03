@@ -1,0 +1,49 @@
+# ::snt Touche!
+# ::tokens ["Touche", "!"]
+# ::lemmas ["Touche", "!"]
+(c1-0 / touche
+      :mode expressive)
+
+# ::snt superbbbb thought and act of courage .. Salutes!! Pen is mightier than sword
+# ::tokens ["superbbbb", "thought", "and", "act", "of", "courage", "..", "Salutes", "!", "!", "Pen", "is", "mightier", "than", "sword"]
+# ::lemmas ["superbbbb", "think", "and", "act", "of", "courage", "..", "Salutes", "!", "!", "Pen", "be", "mighty", "than", "sword"]
+(c2-2 / multi-sentence
+      :snt1 (c2-10 / and
+                   :op1 (c2-9 / think-01
+                              :mod (c2-8 / superb))
+                   :op2 (c2-5 / act-02
+                              :mod c2-8))
+      :snt2 (c2-4 / salute-01)
+      :snt3 (c2-0 / have-degree-91
+                  :ARG1 (c2-6 / pen)
+                  :ARG2 (c2-7 / might-01)
+                  :ARG3 (c2-1 / more)
+                  :ARG4 (c2-3 / sword)))
+
+# ::snt : This illustration by says it all. YES - so perfectly
+# ::tokens [":", "This", "illustration", "by", "says", "it", "all", ".", "YES", "-", "so", "perfectly"]
+# ::lemmas [":", "this", "illustration", "by", "say", "it", "all", ".", "yes", "-", "so", "perfectly"]
+(c3-1 / multi-sentence
+      :snt1 (c3-6 / say-01
+                  :ARG0 (c3-3 / illustration
+                              :source (c3-7 / this))
+                  :ARG1 (c3-5 / it
+                              :mod (c3-8 / all)))
+      :snt2 (c3-0 / yes
+                  :ARG1-of (c3-4 / perfect-02
+                                 :degree (c3-2 / so))))
+
+# ::snt thanks for being supportive, us french are very thankful for that
+# ::tokens ["thanks", "for", "being", "supportive", ",", "us", "french", "are", "very", "thankful", "for", "that"]
+# ::lemmas ["thank", "for", "be", "supportive", ",", "we", "french", "be", "very", "thankful", "for", "that"]
+(c4-7 / and
+      :op1 (c4-6 / thank-01
+                 :ARG2 (c4-5 / support-01
+                             :ARG0 (c4-0 / we
+                                         :mod (c4-3 / country
+                                                    :name (c4-1 / name
+                                                                :op1 "France")))))
+      :op2 (c4-4 / thankful-01
+                 :ARG0 c4-0
+                 :ARG2 c4-5
+                 :degree (c4-2 / very)))

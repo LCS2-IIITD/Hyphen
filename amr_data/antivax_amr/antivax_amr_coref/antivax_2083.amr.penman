@@ -1,0 +1,118 @@
+# ::snt Treat* goddamn autocorrect
+# ::tokens ["Treat", "*", "goddamn", "autocorrect"]
+# ::lemmas ["treat", "*", "goddamn", "autocorrect"]
+(c1-1 / and
+      :op1 (c1-2 / treat-01)
+      :op2 (c1-3 / autocorrect-00
+                 :mod (c1-0 / goddamn)
+                 :mode expressive))
+
+# ::snt Oh mate I hope you had a great after! You did a great job!
+# ::tokens ["Oh", "mate", "I", "hope", "you", "had", "a", "great", "after", "!", "You", "did", "a", "great", "job", "!"]
+# ::lemmas ["oh", "mate", "i", "hope", "you", "have", "a", "great", "after", "!", "you", "do", "a", "great", "job", "!"]
+(c2-10 / multi-sentence
+       :snt1 (c2-4 / hope-01
+                   :ARG0 (c2-9 / i)
+                   :ARG1 (c2-8 / have-03
+                               :ARG0 (c2-3 / mate)
+                               :ARG1 (c2-1 / after
+                                           :mod (c2-7 / great)))
+                   :mod (c2-5 / oh
+                              :mode expressive))
+       :snt2 (c2-0 / do-02
+                   :ARG0 (c2-11 / you)
+                   :ARG1 (c2-6 / job
+                               :mod (c2-2 / great))))
+
+# ::snt My wife had to hold me down. I was about to walk out. It's such a shit phobia.
+# ::tokens ["My", "wife", "had", "to", "hold", "me", "down", ".", "I", "was", "about", "to", "walk", "out", ".", "It", "'s", "such", "a", "shit", "phobia", "."]
+# ::lemmas ["my", "wife", "have", "to", "hold", "i", "down", ".", "i", "be", "about", "to", "walk", "out", ".", "it", "be", "such", "a", "shit", "phobia", "."]
+(c3-13 / multi-sentence
+       :snt1 (c3-9 / obligate-01
+                   :ARG1 (c3-12 / person
+                                :ARG0-of (c3-6 / have-rel-role-91
+                                               :ARG1 (c3-4 / i)
+                                               :ARG2 (c3-5 / wife)))
+                   :ARG2 (c3-11 / hold-01
+                                :ARG0 c3-12
+                                :ARG1 c3-4
+                                :ARG3 (c3-0 / down)))
+       :snt2 (c3-14 / walk-01
+                    :ARG0 (c3-7 / i)
+                    :direction (c3-8 / out)
+                    :time (c3-3 / about-to))
+       :snt3 (c3-10 / phobia
+                    :mod (c3-1 / shit)
+                    :mod (c3-2 / such)))
+
+# ::snt I do too! When I went for mine you could see people getting the jab which didnt help. I was so anxious and had to keep my eyes closed the whole time. Luckily I didnt even feel it.
+# ::tokens ["I", "do", "too", "!", "When", "I", "went", "for", "mine", "you", "could", "see", "people", "getting", "the", "jab", "which", "did", "nt", "help", ".", "I", "was", "so", "anxious", "and", "had", "to", "keep", "my", "eyes", "closed", "the", "whole", "time", ".", "Luckily", "I", "did", "nt", "even", "feel", "it", "."]
+# ::lemmas ["i", "do", "too", "!", "when", "i", "go", "for", "mine", "you", "could", "see", "people", "get", "the", "jab", "which", "do", "not", "help", ".", "i", "be", "so", "anxious", "and", "have", "to", "keep", "my", "eye", "close", "the", "whole", "time", ".", "luckily", "i", "do", "not", "even", "feel", "it", "."]
+(c4-9 / multi-sentence
+      :snt1 (c4-0 / do-02
+                  :ARG0 (c4-1 / i)
+                  :mod (c4-7 / too))
+      :snt2 (c4-27 / possible-01
+                   :ARG1 (c4-13 / see-01
+                                :ARG0 (c4-18 / you)
+                                :ARG1 (c4-8 / get-01
+                                            :ARG0 (c4-24 / person)
+                                            :ARG1 (c4-25 / jab-01
+                                                         :ARG1 c4-24)
+                                            :ARG0-of (c4-21 / help-01
+                                                            :polarity -))
+                                :time (c4-17 / go-02
+                                             :ARG0 (c4-14 / i
+                                                          :part (c4-12 / eye))
+                                             :ARG4 (c4-4 / thing
+                                                         :poss c4-14))))
+      :snt3 (c4-19 / and
+                   :op1 (c4-11 / anxious
+                               :domain (c4-15 / i
+                                              :part c4-12)
+                               :degree (c4-26 / so))
+                   :op2 (c4-6 / obligate-01
+                              :ARG1 c4-15
+                              :ARG2 (c4-28 / keep-01
+                                           :ARG0 c4-15
+                                           :ARG1 (c4-2 / close-01
+                                                       :ARG0 c4-15
+                                                       :ARG1 c4-12))
+                              :duration (c4-10 / time
+                                               :mod (c4-3 / whole))))
+      :snt4 (c4-20 / feel-01
+                   :ARG0 (c4-23 / i
+                                :part c4-12)
+                   :ARG1 (c4-5 / it)
+                   :mod (c4-22 / even)
+                   :ARG2-of (c4-16 / thankful-02)
+                   :polarity -))
+
+# ::snt While I'm on the subject, I have next level needle phobias. Shout out the lovely volunteer peeps doing me a solid and not making me feel like a big baby.
+# ::tokens ["While", "I", "'m", "on", "the", "subject", ",", "I", "have", "next", "level", "needle", "phobias", ".", "Shout", "out", "the", "lovely", "volunteer", "peeps", "doing", "me", "a", "solid", "and", "not", "making", "me", "feel", "like", "a", "big", "baby", "."]
+# ::lemmas ["while", "i", "be", "on", "the", "subject", ",", "i", "have", "next", "level", "needle", "phobia", ".", "shout", "out", "the", "lovely", "volunteer", "peep", "do", "i", "a", "solid", "and", "not", "make", "i", "feel", "like", "a", "big", "baby", "."]
+(c5-6 / multi-sentence
+      :snt1 (c5-15 / have-03
+                   :ARG0 (c5-3 / i)
+                   :ARG1 (c5-20 / phobia
+                                :mod (c5-7 / needle)
+                                :mod (c5-17 / level
+                                            :mod (c5-1 / next)))
+                   :time (c5-8 / subject))
+      :snt2 (c5-19 / shout-out-02
+                   :ARG0 (c5-11 / you)
+                   :ARG1 (c5-16 / peep
+                                :ARG0-of (c5-4 / volunteer-01)
+                                :mod (c5-2 / lovely)
+                                :ARG0-of (c5-0 / do-02
+                                               :ARG1 (c5-10 / solid)
+                                               :ARG2 (c5-9 / i))
+                                :ARG0-of (c5-14 / make-02
+                                                :ARG1 (c5-13 / feel-01
+                                                             :ARG0 c5-9
+                                                             :ARG1 (c5-5 / resemble-01
+                                                                         :ARG1 c5-9
+                                                                         :ARG2 (c5-18 / baby
+                                                                                      :mod (c5-12 / big))))
+                                                :polarity -))
+                   :mode imperative))

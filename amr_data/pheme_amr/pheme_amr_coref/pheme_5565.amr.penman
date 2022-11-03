@@ -1,0 +1,172 @@
+# ::snt hi darling
+# ::tokens ["hi", "darling"]
+# ::lemmas ["hi", "darle"]
+(c1-0 / say-01
+      :ARG1 (c1-1 / hi)
+      :ARG2 (c1-2 / darling))
+
+# ::snt I hope they're released soon
+# ::tokens ["I", "hope", "they", "'re", "released", "soon"]
+# ::lemmas ["i", "hope", "they", "be", "release", "soon"]
+(c2-0 / hope-01
+      :ARG0 (c2-1 / i)
+      :ARG1 (c2-2 / release-01
+                  :ARG1 (c2-4 / they)
+                  :time (c2-3 / soon)))
+
+# ::snt please stay safe nate
+# ::tokens ["please", "stay", "safe", "nate"]
+# ::lemmas ["please", "stay", "safe", "nate"]
+(c3-4 / and
+      :op1 (c3-3 / stay-01
+                 :ARG1 (c3-0 / you)
+                 :ARG3 (c3-1 / safe-01
+                             :ARG1 c3-0)
+                 :mode imperative
+                 :polite +)
+      :op2 (c3-2 / nate))
+
+# ::snt Its really sad to know that they haven't been rescued yet
+# ::tokens ["Its", "really", "sad", "to", "know", "that", "they", "have", "n't", "been", "rescued", "yet"]
+# ::lemmas ["its", "really", "sad", "to", "know", "that", "they", "have", "not", "be", "rescue", "yet"]
+(c4-4 / sad-02
+      :ARG0 (c4-1 / know-01
+                  :ARG1 (c4-3 / rescue-01
+                              :ARG1 (c4-5 / they)
+                              :time (c4-0 / yet)
+                              :polarity -))
+      :degree (c4-2 / really))
+
+# ::snt ur amazing
+# ::tokens ["ur", "amazing"]
+# ::lemmas ["ur", "amazing"]
+(c5-1 / amaze-01
+      :ARG0 (c5-0 / they))
+
+# ::snt these things will stop only when people start each other and .
+# ::tokens ["these", "things", "will", "stop", "only", "when", "people", "start", "each", "other", "and", "."]
+# ::lemmas ["these", "thing", "will", "stop", "only", "when", "people", "start", "each", "other", "and", "."]
+(c7-4 / stop-01
+      :ARG1 (c7-5 / thing
+                  :mod (c7-3 / this))
+      :condition (c7-1 / start-01
+                       :ARG0 (c7-2 / person
+                                   :ARG1-of c7-1))
+      :mod (c7-0 / only))
+
+# ::snt people only seem to be capable of hate now a days :/
+# ::tokens ["people", "only", "seem", "to", "be", "capable", "of", "hate", "now", "a", "days", ":/"]
+# ::lemmas ["people", "only", "seem", "to", "be", "capable", "of", "hate", "now", "a", "day", ":/"]
+(c8-7 / seem-01
+      :ARG1 (c8-5 / capable-01
+                  :ARG1 (c8-3 / person)
+                  :ARG2 (c8-0 / hate-01
+                              :ARG0 c8-3))
+      :time (c8-2 / now)
+      :frequency (c8-4 / rate-entity-91
+                       :ARG3 (c8-8 / temporal-quantity
+                                   :unit (c8-6 / day)
+                                   :quant 1))
+      :mod (c8-1 / only))
+
+# ::snt We live in a world of terror. I hope all these people appear healthy.
+# ::tokens ["We", "live", "in", "a", "world", "of", "terror", ".", "I", "hope", "all", "these", "people", "appear", "healthy", "."]
+# ::lemmas ["we", "live", "in", "a", "world", "of", "terror", ".", "i", "hope", "all", "these", "people", "appear", "healthy", "."]
+(c9-3 / multi-sentence
+      :snt1 (c9-2 / live-01
+                  :ARG0 (c9-1 / we)
+                  :location (c9-7 / world
+                                  :mod (c9-10 / terror)))
+      :snt2 (c9-0 / hope-01
+                  :ARG0 (c9-6 / i)
+                  :ARG1 (c9-11 / appear-02
+                               :ARG1 (c9-4 / healthy
+                                           :domain (c9-8 / person
+                                                         :mod (c9-5 / all)
+                                                         :mod (c9-9 / this))))))
+
+# ::snt pace!
+# ::tokens ["pace", "!"]
+# ::lemmas ["pace", "!"]
+(c10-0 / pace
+       :mode expressive)
+
+# ::snt I LOVE U
+# ::tokens ["I", "LOVE", "U"]
+# ::lemmas ["i", "LOVE", "U"]
+(c11-2 / love-01
+       :ARG0 (c11-3 / i)
+       :ARG1 (c11-1 / person
+                    :name (c11-0 / name
+                                 :op1 "U")))
+
+# ::snt you're so sweet...
+# ::tokens ["you", "'re", "so", "sweet", "..."]
+# ::lemmas ["you", "be", "so", "sweet", "..."]
+(c12-0 / sweet-03
+       :ARG1 (c12-1 / you)
+       :degree (c12-2 / so))
+
+# ::snt hi nate
+# ::tokens ["hi", "nate"]
+# ::lemmas ["hi", "nate"]
+(c13-0 / say-01
+       :ARG1 (c13-1 / hi)
+       :ARG2 (c13-2 / person
+                    :name (c13-3 / name
+                                 :op1 "Nate")))
+
+# ::snt The hashtag is beautiful. ://
+# ::tokens ["The", "hashtag", "is", "beautiful", ".", ":", "//"]
+# ::lemmas ["the", "hashtag", "be", "beautiful", ".", ":", "//"]
+(c14-1 / beautiful-02
+       :ARG1 (c14-0 / hashtag))
+
+# ::snt hi love
+# ::tokens ["hi", "love"]
+# ::lemmas ["hi", "love"]
+(c15-1 / love-01
+       :mod (c15-0 / hi))
+
+# ::snt your the best
+# ::tokens ["your", "the", "best"]
+# ::lemmas ["your", "the", "good"]
+(c16-0 / have-degree-91
+       :ARG1 (c16-1 / you)
+       :ARG2 (c16-3 / good-02
+                    :ARG1 c16-1)
+       :ARG3 (c16-2 / most))
+
+# ::snt i love you.
+# ::tokens ["i", "love", "you", "."]
+# ::lemmas ["i", "love", "you", "."]
+(c17-1 / love-01
+       :ARG0 (c17-2 / i)
+       :ARG1 (c17-0 / you))
+
+# ::snt Its so scary. Praying that they'll be okay xx
+# ::tokens ["Its", "so", "scary", ".", "Praying", "that", "they", "'ll", "be", "okay", "xx"]
+# ::lemmas ["its", "so", "scary", ".", "pray", "that", "they", "'ll", "be", "okay", "xx"]
+(c18-0 / multi-sentence
+       :snt1 (c18-5 / scary-03
+                    :ARG0 (c18-3 / it)
+                    :degree (c18-2 / so))
+       :snt2 (c18-4 / pray-01
+                    :ARG1 (c18-1 / okay-03
+                                 :ARG1 (c18-6 / they))))
+
+# ::snt You're so sweet. Please stay safe Nate.
+# ::tokens ["You", "'re", "so", "sweet", ".", "Please", "stay", "safe", "Nate", "."]
+# ::lemmas ["you", "be", "so", "sweet", ".", "please", "stay", "safe", "Nate", "."]
+(c19-2 / multi-sentence
+       :snt1 (c19-7 / sweet-03
+                    :ARG1 (c19-6 / person
+                                 :name (c19-5 / name
+                                              :op1 "Nate"))
+                    :degree (c19-4 / so))
+       :snt2 (c19-1 / stay-01
+                    :ARG1 (c19-0 / you)
+                    :ARG3 (c19-3 / safe-01
+                                 :ARG1 c19-0)
+                    :mode imperative
+                    :polite +))

@@ -1,0 +1,33 @@
+# ::snt TIL 3 out of the 5 tallest statues in the world are of Buddha
+# ::tokens ["TIL", "3", "out", "of", "the", "5", "tallest", "statues", "in", "the", "world", "are", "of", "Buddha"]
+# ::lemmas ["TIL", "3", "out", "of", "the", "5", "tall", "statue", "in", "the", "world", "be", "of", "Buddha"]
+(c1-7 / include-91
+      :ARG1 (c1-0 / statue
+                  :mod (c1-5 / person
+                             :name (c1-9 / name
+                                         :op1 "Buddha"))
+                  :quant 3)
+      :ARG2 (c1-6 / statue
+                  :ARG1-of (c1-2 / have-degree-91
+                                 :ARG2 (c1-4 / tall)
+                                 :ARG3 (c1-8 / most)
+                                 :ARG5 (c1-3 / statue
+                                             :location (c1-1 / world)))
+                  :quant 5))
+
+# ::snt i'm pretty sure it would be 5 out of 5 if the Taliban hadn't blown two up.
+# ::tokens ["i", "'m", "pretty", "sure", "it", "would", "be", "5", "out", "of", "5", "if", "the", "Taliban", "had", "n't", "blown", "two", "up", "."]
+# ::lemmas ["i", "be", "pretty", "sure", "it", "would", "be", "5", "out", "of", "5", "if", "the", "Taliban", "have", "not", "blow", "two", "up", "."]
+(c2-0 / sure-02
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-5 / score-on-scale-91
+                  :condition (c2-4 / blow-up-06
+                                   :ARG0 (c2-1 / criminal-organization
+                                               :name (c2-7 / name
+                                                           :op1 "Taliban"))
+                                   :ARG1 (c2-3 / person
+                                               :quant 2)
+                                   :polarity -)
+                  :ARG1 5
+                  :ARG3 5)
+      :degree (c2-2 / pretty))

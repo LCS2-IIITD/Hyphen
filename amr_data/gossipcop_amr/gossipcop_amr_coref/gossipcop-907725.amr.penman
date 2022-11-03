@@ -1,0 +1,39 @@
+# ::snt Congratulations!
+# ::tokens ["Congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c1-0 / congratulate-01
+      :mode expressive)
+
+# ::snt click for more
+# ::tokens ["click", "for", "more"]
+# ::lemmas ["click", "for", "more"]
+(c3-0 / click-01
+      :ARG0 (c3-1 / you)
+      :purpose (c3-2 / more)
+      :mode imperative)
+
+# ::snt He is so happy and well deserved.
+# ::tokens ["He", "is", "so", "happy", "and", "well", "deserved", "."]
+# ::lemmas ["he", "be", "so", "happy", "and", "well", "deserve", "."]
+(c4-4 / and
+      :op1 (c4-1 / happy-01
+                 :ARG1 (c4-3 / he)
+                 :degree (c4-0 / so))
+      :op2 (c4-5 / deserve-01
+                 :ARG1 c4-3
+                 :degree (c4-2 / well)))
+
+# ::snt Another coming into the world congrats from long way down bloodline Mwah x
+# ::tokens ["Another", "coming", "into", "the", "world", "congrats", "from", "long", "way", "down", "bloodline", "Mwah", "x"]
+# ::lemmas ["another", "come", "into", "the", "world", "congrat", "from", "long", "way", "down", "bloodline", "Mwah", "x"]
+(c5-1 / multi-sentence
+      :snt1 (c5-6 / congratulate-01
+                  :ARG1 (c5-3 / person
+                              :mod (c5-8 / another)
+                              :ARG1-of (c5-9 / come-01
+                                             :ARG4 (c5-7 / world))))
+      :snt2 (c5-0 / bloodline
+                  :mod (c5-5 / way
+                             :ARG1-of (c5-4 / long-03)))
+      :snt3 (c5-2 / hmm
+                  :mode expressive))

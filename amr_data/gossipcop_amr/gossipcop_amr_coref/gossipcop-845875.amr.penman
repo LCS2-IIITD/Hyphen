@@ -1,0 +1,46 @@
+# ::snt Wow
+# ::tokens ["Wow"]
+# ::lemmas ["wow"]
+(c2-0 / wow
+      :mode expressive)
+
+# ::snt Nice try Rupert, I still know your views. This will not make me what FOX TV/Cable or anything else.. .
+# ::tokens ["Nice", "try", "Rupert", ",", "I", "still", "know", "your", "views", ".", "This", "will", "not", "make", "me", "what", "FOX", "TV", "/", "Cable", "or", "anything", "else", "..", "."]
+# ::lemmas ["nice", "try", "Rupert", ",", "i", "still", "know", "your", "view", ".", "this", "will", "not", "make", "i", "what", "FOX", "TV", "/", "Cable", "or", "anything", "else", "..", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-0 / say-01
+                   :ARG1 (c3-8 / try-01
+                               :ARG0 (c3-16 / person
+                                            :name (c3-14 / name
+                                                         :op1 "Rupert"))
+                               :ARG1-of (c3-11 / nice-01))
+                   :ARG2 c3-16)
+       :snt2 (c3-6 / know-01
+                   :ARG0 (c3-18 / i)
+                   :ARG1 (c3-4 / view-02
+                               :ARG0 (c3-3 / you))
+                   :mod (c3-1 / still))
+       :snt3 (c3-5 / make-02
+                   :ARG0 (c3-13 / this)
+                   :ARG1 (c3-2 / or
+                               :op1 (c3-19 / television
+                                           :mod (c3-9 / broadcast-program
+                                                      :name (c3-17 / name
+                                                                   :op1 "FOX")))
+                               :op2 (c3-12 / cable
+                                           :mod c3-9)
+                               :op3 (c3-7 / anything
+                                          :mod (c3-15 / else)))
+                   :ARG2 c3-18
+                   :polarity -))
+
+# ::snt It's just too bad they are on
+# ::tokens ["It", "'s", "just", "too", "bad", "they", "are", "on"]
+# ::lemmas ["it", "be", "just", "too", "bad", "they", "be", "on"]
+(c4-2 / have-degree-91
+      :ARG1 (c4-3 / they
+                  :location (c4-0 / on))
+      :ARG2 (c4-1 / bad-07
+                  :ARG1 c4-3)
+      :ARG3 (c4-5 / too)
+      :mod (c4-4 / just))

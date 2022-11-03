@@ -1,0 +1,622 @@
+# ::snt Bugger. Wrote this by hand on my phone.Owen SMITH. Not Jones. My bad.
+# ::tokens ["Bugger", ".", "Wrote", "this", "by", "hand", "on", "my", "phone", ".", "Owen", "SMITH", ".", "Not", "Jones", ".", "My", "bad", "."]
+# ::lemmas ["Bugger", ".", "write", "this", "by", "hand", "on", "my", "phone", ".", "Owen", "SMITH", ".", "not", "Jones", ".", "my", "bad", "."]
+(c1-4 / multi-sentence
+      :snt1 (c1-12 / bugger)
+      :snt2 (c1-0 / write-01
+                  :ARG0 (c1-8 / i)
+                  :ARG1 (c1-3 / this)
+                  :manner (c1-1 / hand
+                                :location (c1-9 / phone
+                                                :poss c1-8)))
+      :snt3 (c1-6 / person
+                  :name (c1-11 / name
+                               :op1 "Owen"
+                               :op2 "SMITH")
+                  :snt4-of c1-4
+                  :polarity -)
+      :name (c1-7 / name
+                  :op1 "Jones")
+      :snt5 (c1-5 / thing
+                  :ARG1-of (c1-10 / bad-07
+                                  :ARG0 (c1-2 / i)))
+      :polarity -)
+
+# ::snt You should join the government's negotiating team.
+# ::tokens ["You", "should", "join", "the", "government", "'s", "negotiating", "team", "."]
+# ::lemmas ["you", "should", "join", "the", "government", "'s", "negotiating", "team", "."]
+(c2-5 / recommend-01
+      :ARG1 (c2-3 / join-04
+                  :ARG0 (c2-0 / you)
+                  :ARG1 (c2-2 / team
+                              :ARG0-of (c2-6 / negotiate-01
+                                             :ARG1 (c2-4 / government-organization
+                                                         :ARG0-of (c2-1 / govern-01)))))
+      :ARG2 c2-0)
+
+# ::snt I get this wrong % of the time as well.
+# ::tokens ["I", "get", "this", "wrong", "%", "of", "the", "time", "as", "well", "."]
+# ::lemmas ["i", "get", "this", "wrong", "%", "of", "the", "time", "as", "well", "."]
+(c3-4 / get-30
+      :ARG0 (c3-3 / i)
+      :ARG1 (c3-0 / wrong-04
+                  :ARG1 c3-3
+                  :ARG2 (c3-2 / this))
+      :time (c3-1 / time
+                  :mod (c3-5 / as-well)))
+
+# ::snt Owen who?
+# ::tokens ["Owen", "who", "?"]
+# ::lemmas ["Owen", "who", "?"]
+(c4-2 / person
+      :name (c4-1 / name
+                  :op1 "Owen")
+      :mod (c4-0 / amr-unknown))
+
+# ::snt Owen Jones
+# ::tokens ["Owen", "Jones"]
+# ::lemmas ["Owen", "Jones"]
+(c5-1 / person
+      :name (c5-0 / name
+                  :op1 "Owen"
+                  :op2 "Jones"))
+
+# ::snt Owen Jones-Smith
+# ::tokens ["Owen", "Jones", "-", "Smith"]
+# ::lemmas ["Owen", "Jones", "-", "Smith"]
+(c6-1 / person
+      :name (c6-0 / name
+                  :op1 "Owen"
+                  :op2 "Jones-Smith"))
+
+# ::snt Alias Smith, Jones &amp; Owen
+# ::tokens ["Alias", "Smith", ",", "Jones", "&", "amp", ";", "Owen"]
+# ::lemmas ["Alias", "Smith", ",", "Jones", "&", "amp", ";", "Owen"]
+(c7-4 / and
+      :op1 (c7-3 / person
+                 :name (c7-6 / name
+                             :op1 "Alias"
+                             :op2 "Smith"))
+      :op2 (c7-1 / person
+                 :name (c7-2 / name
+                             :op1 "Jones"
+                             :op2 "&amp"))
+      :op3 (c7-0 / person
+                 :name (c7-5 / name
+                             :op1 "Owen")))
+
+# ::snt [Alas Smith and Jones]()
+# ::tokens ["[", "Alas", "Smith", "and", "Jones", "]", "(", ")"]
+# ::lemmas ["[", "Alas", "Smith", "and", "Jones", "]", "(", ")"]
+(c8-5 / byline-91
+      :ARG0 (c8-3 / and
+                  :op1 (c8-2 / person
+                             :name (c8-4 / name
+                                         :op1 "Alas"
+                                         :op2 "Smith"))
+                  :op2 (c8-0 / person
+                             :name (c8-1 / name
+                                         :op1 "Jones"))))
+
+# ::snt He's the Shadow Northern Irish sec yeah?
+# ::tokens ["He", "'s", "the", "Shadow", "Northern", "Irish", "sec", "yeah", "?"]
+# ::lemmas ["he", "be", "the", "Shadow", "Northern", "Irish", "sec", "yeah", "?"]
+(c9-1 / have-org-role-91
+      :ARG0 (c9-3 / he)
+      :ARG1 (c9-2 / military
+                  :name (c9-6 / name
+                              :op1 "Shadow"
+                              :op2 "Northern"
+                              :op3 "Irish"))
+      :ARG2 (c9-5 / security)
+      :polarity (c9-4 / amr-unknown)
+      :mod (c9-0 / yeah
+                 :mode expressive))
+
+# ::snt Bloody Corbynistas getting all the cushy jobs...
+# ::tokens ["Bloody", "Corbynistas", "getting", "all", "the", "cushy", "jobs", "..."]
+# ::lemmas ["Bloody", "Corbynistas", "get", "all", "the", "cushy", "job", "..."]
+(c10-4 / get-01
+       :ARG0 (c10-2 / person
+                    :mod (c10-1 / political-party
+                                :name (c10-6 / name
+                                             :op1 "Corbyn"))
+                    :mod (c10-7 / bloody))
+       :ARG1 (c10-0 / job
+                    :mod (c10-3 / cushy)
+                    :mod (c10-5 / all)))
+
+# ::snt Smith, yes.
+# ::tokens ["Smith", ",", "yes", "."]
+# ::lemmas ["Smith", ",", "yes", "."]
+(c11-0 / yes
+       :domain (c11-2 / person
+                      :name (c11-1 / name
+                                   :op1 "Smith")))
+
+# ::snt [deleted]
+# ::tokens ["[", "deleted", "]"]
+# ::lemmas ["[", "delete", "]"]
+(c12-0 / delete-01)
+
+# ::snt ... Time for another General a Election !
+# ::tokens ["...", "Time", "for", "another", "General", "a", "Election", "!"]
+# ::lemmas ["...", "time", "for", "another", "General", "a", "Election", "!"]
+(c13-3 / be-temporally-at-91
+       :ARG2 (c13-2 / elect-01
+                    :mod (c13-1 / general)
+                    :mod (c13-0 / another)))
+
+# ::snt &gt; May is so irrelevant her own damn partners in Government can't make time for her. The DUP aren't in government.
+# ::tokens ["&", "gt", ";", "May", "is", "so", "irrelevant", "her", "own", "damn", "partners", "in", "Government", "ca", "n't", "make", "time", "for", "her", ".", "The", "DUP", "are", "n't", "in", "government", "."]
+# ::lemmas ["&", "gt", ";", "May", "be", "so", "irrelevant", "her", "own", "damn", "partner", "in", "Government", "can", "not", "make", "time", "for", "she", ".", "the", "DUP", "be", "not", "in", "government", "."]
+(c14-4 / multi-sentence
+       :snt1 (c14-11 / and
+                     :op2 (c14-14 / relevant-01
+                                  :ARG1 (c14-8 / person
+                                               :name (c14-17 / name
+                                                             :op1 "May"))
+                                  :ARG1-of (c14-1 / have-degree-91
+                                                  :ARG1 c14-8)
+                                  :ARG2-of c14-1
+                                  :ARG3 (c14-16 / so)
+                                  :ARG6 (c14-6 / possible-01
+                                               :ARG1 (c14-15 / make-18
+                                                             :ARG0 (c14-0 / person
+                                                                          :ARG0-of (c14-12 / partner-01
+                                                                                           :ARG1 (c14-13 / government-organization
+                                                                                                         :ARG0-of (c14-2 / govern-01)))
+                                                                          :mod (c14-7 / damn
+                                                                                      :mode expressive))
+                                                             :ARG1 (c14-3 / time)
+                                                             :beneficiary c14-8)
+                                               :polarity -)
+                                  :polarity -))
+       :snt2 (c14-5 / have-part-91
+                    :ARG1 (c14-9 / political-party
+                                 :name (c14-10 / name
+                                               :op1 "DUP"))
+                    :ARG2 c14-13
+                    :polarity -))
+
+# ::snt Do you ever take a day off failing to think figuratively? Or do you think about it, know full well that someone means and then just go "fuck it I'm going to be obtuse."
+# ::tokens ["Do", "you", "ever", "take", "a", "day", "off", "failing", "to", "think", "figuratively", "?", "Or", "do", "you", "think", "about", "it", ",", "know", "full", "well", "that", "someone", "means", "and", "then", "just", "go", "\"", "fuck", "it", "I", "'m", "going", "to", "be", "obtuse", ".", "\""]
+# ::lemmas ["do", "you", "ever", "take", "a", "day", "off", "fail", "to", "think", "figuratively", "?", "or", "do", "you", "think", "about", "it", ",", "know", "full", "well", "that", "someone", "mean", "and", "then", "just", "go", "\"", "fuck", "it", "i", "be", "go", "to", "be", "obtuse", ".", "\""]
+(c15-23 / multi-sentence
+        :snt1 (c15-6 / take-01
+                     :polarity (c15-15 / amr-unknown)
+                     :ARG0 (c15-5 / you)
+                     :ARG1 (c15-22 / temporal-quantity
+                                   :unit (c15-13 / day)
+                                   :mod (c15-17 / off)
+                                   :quant 1)
+                     :ARG2 (c15-11 / fail-01
+                                   :ARG1 c15-5
+                                   :ARG2 (c15-7 / think-01
+                                                :ARG0 c15-5
+                                                :manner (c15-2 / literal)))
+                     :time (c15-20 / ever))
+        :snt2 (c15-12 / or
+                      :op2 (c15-3 / and
+                                  :op1 (c15-10 / think-01
+                                               :ARG0 (c15-19 / you)
+                                               :ARG1 (c15-14 / it))
+                                  :op2 (c15-21 / know-01
+                                               :ARG0 c15-19
+                                               :ARG1 (c15-24 / mean-01
+                                                             :ARG0 (c15-9 / someone))
+                                               :degree (c15-0 / well
+                                                              :degree (c15-18 / full)))
+                                  :op3 (c15-16 / go-05
+                                               :ARG0 c15-19
+                                               :ARG1 (c15-4 / fuck-01
+                                                            :ARG0 c15-19
+                                                            :ARG1 c15-14)
+                                               :mod (c15-8 / just)
+                                               :time (c15-1 / then)))))
+
+# ::snt When you lack a material point to make but your feelings have been hurt, why not obfuscate?
+# ::tokens ["When", "you", "lack", "a", "material", "point", "to", "make", "but", "your", "feelings", "have", "been", "hurt", ",", "why", "not", "obfuscate", "?"]
+# ::lemmas ["when", "you", "lack", "a", "material", "point", "to", "make", "but", "your", "feeling", "have", "be", "hurt", ",", "why", "not", "obfuscate", "?"]
+(c16-8 / obfuscate-01
+       :ARG0 (c16-0 / you)
+       :ARG1-of (c16-4 / cause-01
+                       :ARG0 (c16-6 / amr-unknown))
+       :condition (c16-10 / contrast-01
+                          :ARG1 (c16-7 / lack-01
+                                       :ARG0 c16-0
+                                       :ARG1 (c16-5 / point-04
+                                                    :ARG0 c16-0
+                                                    :mod (c16-2 / material)
+                                                    :ARG1-of (c16-9 / make-01
+                                                                    :ARG0 c16-0)))
+                          :ARG2 (c16-1 / hurt-01
+                                       :ARG1 (c16-3 / feel-01
+                                                    :ARG0 c16-0)))
+       :polarity -)
+
+# ::snt They might as well be, considering their position.
+# ::tokens ["They", "might", "as", "well", "be", ",", "considering", "their", "position", "."]
+# ::lemmas ["they", "might", "as", "well", "be", ",", "consider", "their", "position", "."]
+(c17-3 / possible-01
+       :ARG1 (c17-0 / they)
+       :mod (c17-4 / as-well)
+       :condition (c17-2 / consider-02
+                         :ARG1 (c17-1 / position-02
+                                      :ARG0 c17-0)))
+
+# ::snt Which is good for them, if they were in government, they couldn't have it at their beck and call.
+# ::tokens ["Which", "is", "good", "for", "them", ",", "if", "they", "were", "in", "government", ",", "they", "could", "n't", "have", "it", "at", "their", "beck", "and", "call", "."]
+# ::lemmas ["which", "be", "good", "for", "they", ",", "if", "they", "be", "in", "government", ",", "they", "could", "not", "have", "it", "at", "their", "beck", "and", "call", "."]
+(c18-6 / good-04
+       :ARG1 (c18-5 / it)
+       :ARG2 (c18-2 / they)
+       :ARG1-of (c18-3 / cause-01
+                       :ARG0 (c18-4 / possible-01
+                                    :ARG1 (c18-7 / and
+                                                 :op1 (c18-10 / beck-01
+                                                              :ARG0 c18-2
+                                                              :ARG1 c18-5)
+                                                 :op2 (c18-8 / call-02
+                                                             :ARG0 c18-2
+                                                             :ARG1 c18-5))
+                                    :condition (c18-0 / have-org-role-91
+                                                      :ARG0 c18-2
+                                                      :ARG1 (c18-1 / government-organization
+                                                                   :ARG0-of (c18-9 / govern-01)))
+                                    :polarity -)))
+
+# ::snt &gt; Who is running this Government?Starts with M, rhymes with cock.
+# ::tokens ["&", "gt", ";", "Who", "is", "running", "this", "Government?Starts", "with", "M", ",", "rhymes", "with", "cock", "."]
+# ::lemmas ["&", "gt", ";", "who", "be", "run", "this", "government?start", "with", "M", ",", "rhyme", "with", "cock", "."]
+(c19-5 / and
+       :op1 (c19-8 / and
+                   :op2 (c19-7 / run-01
+                               :ARG0 (c19-9 / amr-unknown)
+                               :ARG1 (c19-6 / government-organization
+                                            :ARG0-of (c19-2 / govern-01)
+                                            :mod (c19-4 / this))))
+       :op2 (c19-10 / start-01
+                    :ARG2 (c19-3 / string-entity
+                                 :value "M"))
+       :op3 (c19-0 / rhyme-01
+                   :ARG1 c19-3
+                   :ARG2 (c19-1 / string-entity
+                                :value "cock")))
+
+# ::snt MURDOC!Took me a little while tbh.
+# ::tokens ["MURDOC!Took", "me", "a", "little", "while", "tbh", "."]
+# ::lemmas ["murdoc!took", "i", "a", "little", "while", "tbh", "."]
+(c20-2 / take-10
+       :ARG0 (c20-3 / i)
+       :ARG1 (c20-0 / while
+                    :quant (c20-4 / little))
+       :ARG2-of (c20-1 / honest-01
+                       :ARG0 c20-3))
+
+# ::snt I think you'll find it's actually Murloc.Those damnable, conniving fish-people!
+# ::tokens ["I", "think", "you", "'ll", "find", "it", "'s", "actually", "Murloc", ".", "Those", "damnable", ",", "conniving", "fish", "-", "people", "!"]
+# ::lemmas ["i", "think", "you", "'ll", "find", "it", "be", "actually", "Murloc", ".", "those", "damnable", ",", "connive", "fish", "-", "people", "!"]
+(c21-4 / multi-sentence
+       :snt1 (c21-3 / think-01
+                    :ARG0 (c21-9 / i)
+                    :ARG1 (c21-5 / find-01
+                                 :ARG0 (c21-0 / you)
+                                 :ARG1 (c21-10 / person
+                                               :name (c21-14 / name
+                                                             :op1 "Murloc")
+                                               :domain (c21-2 / it)
+                                               :ARG1-of (c21-12 / actual-02))))
+       :snt2 (c21-7 / person
+                    :mod (c21-13 / fish)
+                    :ARG1-of (c21-8 / damn-01
+                                    :ARG1-of (c21-1 / possible-01))
+                    :ARG0-of (c21-11 / connive-01)
+                    :mod (c21-6 / that)
+                    :mode expressive))
+
+# ::snt *Mrrrlrggll!!*
+# ::tokens ["*", "Mrrrlrggll", "!", "!", "*"]
+# ::lemmas ["*", "Mrrrlrggll", "!", "!", "*"]
+(c22-0 / laugh-01
+       :ARG0 (c22-2 / i)
+       :manner (c22-1 / loud)
+       :mode expressive)
+
+# ::snt I can't fucking wait for Vanilla wow to be released.
+# ::tokens ["I", "ca", "n't", "fucking", "wait", "for", "Vanilla", "wow", "to", "be", "released", "."]
+# ::lemmas ["i", "can", "not", "fucking", "wait", "for", "Vanilla", "wow", "to", "be", "release", "."]
+(c23-4 / possible-01
+       :ARG1 (c23-0 / wait-01
+                    :ARG1 (c23-3 / i)
+                    :ARG2 (c23-5 / release-01
+                                 :ARG1 (c23-2 / product
+                                              :name (c23-6 / name
+                                                           :op1 "Vanilla"
+                                                           :op2 "Wow")))
+                    :mod (c23-1 / fuck))
+       :polarity -)
+
+# ::snt He gets upset when you spell his name wrong !... Murdoch
+# ::tokens ["He", "gets", "upset", "when", "you", "spell", "his", "name", "wrong", "!", "...", "Murdoch"]
+# ::lemmas ["he", "get", "upset", "when", "you", "spell", "his", "name", "wrong", "!", "...", "Murdoch"]
+(c24-3 / upset-01
+       :ARG0 (c24-4 / spell-01
+                    :ARG0 (c24-0 / you)
+                    :ARG1 (c24-5 / name
+                                 :poss (c24-2 / person
+                                              :name c24-5
+                                              :op1 "Murdoch"))
+                    :ARG2-of (c24-1 / wrong-04))
+       :ARG1 c24-2
+       :mode expressive)
+
+# ::snt [removed]
+# ::tokens ["[", "removed", "]"]
+# ::lemmas ["[", "remove", "]"]
+(c25-0 / remove-01)
+
+# ::snt If your cock can't finish anything it starts then maybe.
+# ::tokens ["If", "your", "cock", "ca", "n't", "finish", "anything", "it", "starts", "then", "maybe", "."]
+# ::lemmas ["if", "your", "cock", "can", "not", "finish", "anything", "it", "start", "then", "maybe", "."]
+(c26-7 / start-01
+       :ARG1 (c26-4 / it)
+       :ARG1-of (c26-3 / possible-01)
+       :condition (c26-2 / possible-01
+                         :ARG1 (c26-1 / finish-01
+                                      :ARG0 (c26-5 / cock
+                                                   :part-of (c26-0 / you))
+                                      :ARG1 (c26-6 / anything))
+                         :polarity -))
+
+# ::snt His head looks a bit like a bollock too
+# ::tokens ["His", "head", "looks", "a", "bit", "like", "a", "bollock", "too"]
+# ::lemmas ["his", "head", "look", "a", "bit", "like", "a", "bollock", "too"]
+(c27-3 / look-02
+       :ARG0 (c27-0 / head
+                    :part-of (c27-2 / he))
+       :ARG1 (c27-5 / bollock)
+       :mod (c27-1 / too)
+       :degree (c27-4 / bit))
+
+# ::snt Oy vey!
+# ::tokens ["Oy", "vey", "!"]
+# ::lemmas ["Oy", "vey", "!"]
+(c28-0 / vey
+       :mode expressive)
+
+# ::snt Murdoch !
+# ::tokens ["Murdoch", "!"]
+# ::lemmas ["Murdoch", "!"]
+(c29-1 / person
+       :name (c29-0 / name
+                    :op1 "Murdoch"))
+
+# ::snt She's been talking to the guys from Gibraltar: that just after a retweet of Ruth Davidson's position on the negotiations: think her position on all this is pretty obvious.
+# ::tokens ["She", "'s", "been", "talking", "to", "the", "guys", "from", "Gibraltar", ":", "that", "just", "after", "a", "retweet", "of", "Ruth", "Davidson", "'s", "position", "on", "the", "negotiations", ":", "think", "her", "position", "on", "all", "this", "is", "pretty", "obvious", "."]
+# ::lemmas ["she", "be", "be", "talk", "to", "the", "guy", "from", "Gibraltar", ":", "that", "just", "after", "a", "retweet", "of", "Ruth", "Davidson", "'s", "position", "on", "the", "negotiation", ":", "think", "her", "position", "on", "all", "this", "be", "pretty", "obvious", "."]
+(c30-4 / talk-01
+       :ARG0 (c30-9 / she)
+       :ARG2 (c30-14 / guy
+                     :source (c30-17 / territory
+                                     :name (c30-11 / name
+                                                   :op1 "Gibraltar")))
+       :ARG1-of (c30-7 / cause-01
+                       :ARG0 (c30-5 / think-01
+                                    :ARG0 c30-14
+                                    :ARG1 (c30-16 / obvious-01
+                                                  :ARG1 (c30-13 / position-02
+                                                                :ARG0 c30-9
+                                                                :ARG2 (c30-10 / this
+                                                                              :mod (c30-15 / all)))
+                                                  :degree (c30-18 / pretty))
+                                    :time (c30-3 / after
+                                                 :op1 (c30-2 / retweet-01
+                                                             :ARG1 (c30-12 / position-02
+                                                                           :ARG0 (c30-8 / person
+                                                                                        :name (c30-0 / name
+                                                                                                     :op1 "Ruth"
+                                                                                                     :op2 "Davidson"))
+                                                                           :ARG2 (c30-1 / negotiate-01))
+                                                             :mod (c30-6 / just))))))
+
+# ::snt [deleted]
+# ::tokens ["[", "deleted", "]"]
+# ::lemmas ["[", "delete", "]"]
+(c31-0 / delete-01)
+
+# ::snt She's playing it like a fiddle.If she was running it, she might have to work in its interest.
+# ::tokens ["She", "'s", "playing", "it", "like", "a", "fiddle", ".", "If", "she", "was", "running", "it", ",", "she", "might", "have", "to", "work", "in", "its", "interest", "."]
+# ::lemmas ["she", "be", "play", "it", "like", "a", "fiddle", ".", "if", "she", "be", "run", "it", ",", "she", "might", "have", "to", "work", "in", "its", "interest", "."]
+(c32-4 / multi-sentence
+       :snt1 (c32-9 / play-10
+                    :ARG0 (c32-12 / she)
+                    :ARG1 (c32-8 / it)
+                    :manner (c32-10 / resemble-01
+                                    :ARG2 (c32-5 / fiddle)))
+       :snt2 (c32-7 / possible-01
+                    :ARG1 (c32-11 / obligate-01
+                                  :ARG1 (c32-2 / she)
+                                  :ARG2 (c32-1 / work-01
+                                               :ARG0 c32-2
+                                               :ARG2 (c32-3 / interest-01
+                                                            :ARG1 (c32-6 / it))))
+                    :condition (c32-0 / run-01
+                                      :ARG0 c32-2
+                                      :ARG1 c32-6)))
+
+# ::snt The most inept and pitiful leadership imaginable
+# ::tokens ["The", "most", "inept", "and", "pitiful", "leadership", "imaginable"]
+# ::lemmas ["the", "most", "inept", "and", "pitiful", "leadership", "imaginable"]
+(c33-3 / possible-01
+       :ARG1 (c33-0 / have-degree-91
+                    :ARG1 (c33-5 / lead-02)
+                    :ARG2 (c33-4 / and
+                                 :op1 (c33-6 / apt-04
+                                             :ARG1 c33-5
+                                             :polarity -)
+                                 :op2 (c33-2 / pitiful-02
+                                             :ARG1 c33-5))
+                    :ARG3 (c33-1 / most)))
+
+# ::snt But she said she was strong and stable. Why would she lie?
+# ::tokens ["But", "she", "said", "she", "was", "strong", "and", "stable", ".", "Why", "would", "she", "lie", "?"]
+# ::lemmas ["but", "she", "say", "she", "be", "strong", "and", "stable", ".", "why", "would", "she", "lie", "?"]
+(c34-3 / multi-sentence
+       :snt1 (c34-4 / contrast-01
+                    :ARG2 (c34-10 / say-01
+                                  :ARG0 (c34-1 / she)
+                                  :ARG1 (c34-6 / and
+                                               :op1 (c34-0 / strong-02
+                                                           :ARG1 c34-1)
+                                               :op2 (c34-2 / stable-03
+                                                           :ARG1 c34-1))))
+       :snt2 (c34-7 / lie-08
+                    :ARG0 (c34-5 / she)
+                    :ARG1-of (c34-8 / cause-01
+                                    :ARG0 (c34-9 / amr-unknown))))
+
+# ::snt You really think someone would do that? Just run for the great offices of state and tell lies?
+# ::tokens ["You", "really", "think", "someone", "would", "do", "that", "?", "Just", "run", "for", "the", "great", "offices", "of", "state", "and", "tell", "lies", "?"]
+# ::lemmas ["you", "really", "think", "someone", "would", "do", "that", "?", "just", "run", "for", "the", "great", "office", "of", "state", "and", "tell", "lie", "?"]
+(c35-4 / multi-sentence
+       :snt1 (c35-3 / think-01
+                    :polarity (c35-9 / amr-unknown)
+                    :ARG0 (c35-0 / you)
+                    :ARG1 (c35-8 / do-02
+                                 :ARG0 (c35-15 / someone)
+                                 :ARG1 (c35-5 / that))
+                    :ARG1-of (c35-12 / real-04))
+       :snt2 (c35-14 / and
+                     :op1 (c35-1 / run-02
+                                 :ARG0 (c35-16 / you)
+                                 :ARG1 (c35-13 / office
+                                               :mod (c35-10 / great)
+                                               :poss (c35-2 / state))
+                                 :mod (c35-6 / just))
+                     :op2 (c35-7 / tell-01
+                                 :ARG0 c35-16
+                                 :ARG1 (c35-11 / lie-08
+                                               :ARG0 c35-16))))
+
+# ::snt Well at least the government imploding is pretty funny from the other side. Suppose we should be grateful for small mercies
+# ::tokens ["Well", "at", "least", "the", "government", "imploding", "is", "pretty", "funny", "from", "the", "other", "side", ".", "Suppose", "we", "should", "be", "grateful", "for", "small", "mercies"]
+# ::lemmas ["well", "at", "least", "the", "government", "imploding", "be", "pretty", "funny", "from", "the", "other", "side", ".", "suppose", "we", "should", "be", "grateful", "for", "small", "mercy"]
+(c36-4 / multi-sentence
+       :snt1 (c36-5 / funny
+                    :domain (c36-6 / implode-01
+                                   :ARG1 (c36-9 / government-organization
+                                                :ARG0-of (c36-2 / govern-01)))
+                    :degree (c36-7 / pretty)
+                    :mod (c36-10 / at-least)
+                    :source (c36-15 / side
+                                    :mod (c36-12 / other))
+                    :mod (c36-1 / well))
+       :snt2 (c36-3 / suppose-01
+                    :ARG1 (c36-11 / recommend-01
+                                  :ARG1 (c36-13 / appreciate-02
+                                                :ARG0 (c36-14 / we)
+                                                :ARG1 (c36-8 / mercie
+                                                             :mod (c36-0 / small))))))
+
+# ::snt "Who is running this Government?"I think this week has made it clear that Prime Minister Arlene Foster is running the government. Prime Minister in all but name.....
+# ::tokens ["\"", "Who", "is", "running", "this", "Government?\"I", "think", "this", "week", "has", "made", "it", "clear", "that", "Prime", "Minister", "Arlene", "Foster", "is", "running", "the", "government", ".", "Prime", "Minister", "in", "all", "but", "name", "....."]
+# ::lemmas ["\"", "who", "be", "run", "this", "Government?\"I", "think", "this", "week", "have", "make", "it", "clear", "that", "Prime", "Minister", "Arlene", "Foster", "be", "run", "the", "government", ".", "Prime", "Minister", "in", "all", "but", "name", "....."]
+(c37-16 / multi-sentence
+        :snt1 (c37-8 / think-01
+                     :ARG0 (c37-11 / i)
+                     :ARG1 (c37-18 / make-02
+                                   :ARG0 (c37-0 / week
+                                                :mod (c37-15 / this))
+                                   :ARG1 (c37-9 / clear-06
+                                                :ARG1 (c37-3 / run-01
+                                                             :ARG0 (c37-12 / person
+                                                                           :name (c37-10 / name
+                                                                                         :op1 "Arlene"
+                                                                                         :op2 "Foster")
+                                                                           :ARG0-of (c37-1 / have-org-role-91
+                                                                                           :ARG2 (c37-4 / minister
+                                                                                                        :mod (c37-17 / prime))))
+                                                             :ARG1 (c37-13 / government-organization
+                                                                           :ARG0-of (c37-7 / govern-01))))))
+        :snt2 (c37-6 / run-01
+                     :ARG0 (c37-14 / amr-unknown)
+                     :ARG1 c37-13
+                     :manner (c37-2 / name
+                                    :mod (c37-5 / all-but))))
+
+# ::snt Hyperbole as per usual from the gent. Stumbling blocks like has occurred and will happen over and over again during the negotiations. So much political maneuvering and so little pragmatic action being done, which is a shame to see.
+# ::tokens ["Hyperbole", "as", "per", "usual", "from", "the", "gent", ".", "Stumbling", "blocks", "like", "has", "occurred", "and", "will", "happen", "over", "and", "over", "again", "during", "the", "negotiations", ".", "So", "much", "political", "maneuvering", "and", "so", "little", "pragmatic", "action", "being", "done", ",", "which", "is", "a", "shame", "to", "see", "."]
+# ::lemmas ["hyperbole", "as", "per", "usual", "from", "the", "gent", ".", "stumble", "block", "like", "have", "occur", "and", "will", "happen", "over", "and", "over", "again", "during", "the", "negotiation", ".", "so", "much", "political", "maneuvering", "and", "so", "little", "pragmatic", "action", "be", "do", ",", "which", "be", "a", "shame", "to", "see", "."]
+(c38-23 / multi-sentence
+        :snt1 (c38-0 / hyperbole
+                     :source (c38-18 / gent)
+                     :mod (c38-17 / as-usual))
+        :snt2 (c38-5 / and
+                     :op1 (c38-7 / thing
+                                 :ARG1-of (c38-3 / resemble-01
+                                                 :ARG2 (c38-21 / block
+                                                               :ARG1-of (c38-22 / tumble-01)))
+                                 :time (c38-11 / negotiate-01)
+                                 :mod (c38-20 / again
+                                              :mod (c38-19 / over-and-over)))
+                     :op2 (c38-15 / do-02
+                                  :ARG1 (c38-1 / and
+                                               :op1 (c38-25 / maneuver-01
+                                                            :ARG1 (c38-16 / politics)
+                                                            :ARG1-of (c38-8 / have-quant-91
+                                                                            :ARG2 (c38-4 / much)
+                                                                            :ARG3 (c38-9 / so)))
+                                               :op2 (c38-6 / act-02
+                                                           :mod (c38-24 / pragmatic)
+                                                           :ARG1-of (c38-10 / have-quant-91
+                                                                            :ARG2 (c38-2 / little)
+                                                                            :ARG3 (c38-13 / so)))))
+                     :ARG0-of (c38-12 / shame-02
+                                      :ARG1-of (c38-14 / see-01))))
+
+# ::snt Maybe she was taking a shit?
+# ::tokens ["Maybe", "she", "was", "taking", "a", "shit", "?"]
+# ::lemmas ["maybe", "she", "be", "take", "a", "shit", "?"]
+(c39-3 / possible-01
+       :polarity (c39-1 / amr-unknown)
+       :ARG1 (c39-0 / shit-01
+                    :ARG0 (c39-2 / she)))
+
+# ::snt Taking her face for a shit
+# ::tokens ["Taking", "her", "face", "for", "a", "shit"]
+# ::lemmas ["take", "her", "face", "for", "a", "shit"]
+(c40-3 / take-01
+       :ARG1 (c40-0 / face
+                    :part-of (c40-1 / she))
+       :ARG3 (c40-2 / shit))
+
+# ::snt [I don't know Owen]()
+# ::tokens ["[", "I", "do", "n't", "know", "Owen", "]", "(", ")"]
+# ::lemmas ["[", "i", "do", "not", "know", "Owen", "]", "(", ")"]
+(c41-0 / know-02
+       :ARG0 (c41-3 / i)
+       :ARG1 (c41-2 / person
+                    :name (c41-1 / name
+                                 :op1 "Owen"))
+       :polarity -)
+
+# ::snt This is proof that certain people only need to see his name before they react like petulant children.
+# ::tokens ["This", "is", "proof", "that", "certain", "people", "only", "need", "to", "see", "his", "name", "before", "they", "react", "like", "petulant", "children", "."]
+# ::lemmas ["this", "be", "proof", "that", "certain", "people", "only", "need", "to", "see", "his", "name", "before", "they", "react", "like", "petulant", "child", "."]
+(c42-8 / prove-01
+       :ARG0 (c42-3 / this)
+       :ARG1 (c42-12 / need-01
+                     :ARG0 (c42-5 / person
+                                  :mod (c42-7 / certain))
+                     :ARG1 (c42-11 / see-01
+                                   :ARG0 c42-5
+                                   :ARG1 (c42-6 / name
+                                                :poss (c42-2 / he))
+                                   :time (c42-13 / before
+                                                 :op1 (c42-9 / react-01
+                                                             :ARG0 c42-5
+                                                             :ARG1-of (c42-0 / resemble-01
+                                                                             :ARG2 (c42-10 / child
+                                                                                           :mod (c42-1 / petulant)))))
+                                   :mod (c42-4 / only))))

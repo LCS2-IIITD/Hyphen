@@ -1,0 +1,83 @@
+# ::snt Chambers and W. Florissant right now.
+# ::tokens ["Chambers", "and", "W.", "Florissant", "right", "now", "."]
+# ::lemmas ["Chambers", "and", "W.", "Florissant", "right", "now", "."]
+(c1-6 / and
+      :op1 (c1-2 / person
+                 :name (c1-0 / name
+                             :op1 "Chambers"))
+      :op2 (c1-5 / person
+                 :name (c1-1 / name
+                             :op1 "W."
+                             :op2 "Florissant"))
+      :time (c1-3 / now
+                  :mod (c1-4 / right)))
+
+# ::snt : Chambers and W. Florissant right now.
+# ::tokens [":", "Chambers", "and", "W.", "Florissant", "right", "now", "."]
+# ::lemmas [":", "Chambers", "and", "W.", "Florissant", "right", "now", "."]
+(c2-6 / and
+      :op1 (c2-2 / person
+                 :name (c2-0 / name
+                             :op1 "Chambers"))
+      :op2 (c2-5 / person
+                 :name (c2-1 / name
+                             :op1 "W."
+                             :op2 "Florissant"))
+      :time (c2-3 / now
+                  :mod (c2-4 / right)))
+
+# ::snt You are not helping by posting these pics. You are giving away police tactical info by posting their pictures!
+# ::tokens ["You", "are", "not", "helping", "by", "posting", "these", "pics", ".", "You", "are", "giving", "away", "police", "tactical", "info", "by", "posting", "their", "pictures", "!"]
+# ::lemmas ["you", "be", "not", "help", "by", "post", "these", "pic", ".", "you", "be", "give", "away", "police", "tactical", "info", "by", "post", "their", "picture", "!"]
+(c3-2 / multi-sentence
+      :snt1 (c3-0 / help-01
+                  :ARG0 (c3-1 / you)
+                  :manner (c3-6 / post-01
+                                :ARG0 c3-1
+                                :ARG1 (c3-12 / pic
+                                             :mod (c3-11 / this)))
+                  :polarity -)
+      :snt2 (c3-7 / give-away-02
+                  :ARG0 (c3-8 / you)
+                  :ARG1 (c3-5 / information
+                              :mod (c3-10 / tactic)
+                              :poss (c3-3 / police))
+                  :manner (c3-9 / post-01
+                                :ARG0 c3-8
+                                :ARG1 (c3-4 / picture
+                                            :poss c3-3))))
+
+# ::snt Everyone should travel in groups of . No one should be alone on the streets! Pick your teams. Stay connected!
+# ::tokens ["Everyone", "should", "travel", "in", "groups", "of", ".", "No", "one", "should", "be", "alone", "on", "the", "streets", "!", "Pick", "your", "teams", ".", "Stay", "connected", "!"]
+# ::lemmas ["everyone", "should", "travel", "in", "group", "of", ".", "no", "one", "should", "be", "alone", "on", "the", "street", "!", "pick", "your", "team", ".", "stay", "connected", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-7 / recommend-01
+                  :ARG1 (c4-12 / travel-01
+                               :ARG0 (c4-2 / everyone)
+                               :manner (c4-9 / group)))
+      :snt2 (c4-4 / recommend-01
+                  :ARG1 (c4-13 / alone
+                               :domain (c4-5 / no-one)
+                               :location (c4-11 / street)))
+      :snt3 (c4-6 / pick-01
+                  :ARG0 (c4-0 / you)
+                  :ARG1 (c4-10 / team
+                               :poss c4-0)
+                  :mode imperative)
+      :snt4 (c4-3 / stay-01
+                  :ARG1 c4-0
+                  :ARG3 (c4-8 / connect-01
+                              :ARG1 c4-0)
+                  :mode imperative))
+
+# ::snt - is this in the area of protests and police presence?
+# ::tokens ["-", "is", "this", "in", "the", "area", "of", "protests", "and", "police", "presence", "?"]
+# ::lemmas ["-", "be", "this", "in", "the", "area", "of", "protest", "and", "police", "presence", "?"]
+(c5-1 / be-located-at-91
+      :ARG1 (c5-5 / this)
+      :ARG2 (c5-7 / area
+                  :mod (c5-2 / and
+                             :op1 (c5-4 / protest-01)
+                             :op2 (c5-6 / present-02
+                                        :ARG1 (c5-0 / police))))
+      :polarity (c5-3 / amr-unknown))

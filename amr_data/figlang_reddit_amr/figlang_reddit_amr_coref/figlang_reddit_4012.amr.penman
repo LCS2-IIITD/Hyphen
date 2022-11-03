@@ -1,0 +1,29 @@
+# ::snt Gundamu!
+# ::tokens ["Gundamu", "!"]
+# ::lemmas ["gundamu", "!"]
+(c1-0 / gundamu
+      :mode expressive)
+
+# ::snt Guntank died 0/10
+# ::tokens ["Guntank", "died", "0/10"]
+# ::lemmas ["Guntank", "die", "0/10"]
+(c2-0 / die-01
+      :ARG1 (c2-2 / person
+                  :name (c2-3 / name
+                              :op1 "Guntank"))
+      :time (c2-1 / date-entity
+                  :day 10
+                  :month 0))
+
+# ::snt you must have hated the 08th ms team
+# ::tokens ["you", "must", "have", "hated", "the", "08th", "ms", "team"]
+# ::lemmas ["you", "must", "have", "hate", "the", "08th", "ms", "team"]
+(c3-4 / infer-01
+      :ARG1 (c3-0 / hate-01
+                  :ARG0 (c3-6 / you)
+                  :ARG1 (c3-2 / team
+                              :mod (c3-3 / product
+                                         :name (c3-5 / name
+                                                     :op1 "MS"))
+                              :ord (c3-1 / ordinal-entity
+                                         :value 8))))

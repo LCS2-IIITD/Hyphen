@@ -1,0 +1,152 @@
+# ::snt STOP POSTING PICTURES
+# ::tokens ["STOP", "POSTING", "PICTURES"]
+# ::lemmas ["stop", "post", "PICTURES"]
+(c1-0 / stop-01
+      :ARG0 (c1-1 / you)
+      :ARG1 (c1-2 / post-01
+                  :ARG0 c1-1
+                  :ARG1 (c1-3 / picture))
+      :mode imperative)
+
+# ::snt I think you guys need to stop. Swap to to court sketch artist for images.
+# ::tokens ["I", "think", "you", "guys", "need", "to", "stop", ".", "Swap", "to", "to", "court", "sketch", "artist", "for", "images", "."]
+# ::lemmas ["i", "think", "you", "guy", "need", "to", "stop", ".", "swap", "to", "to", "court", "sketch", "artist", "for", "image", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-10 / think-01
+                   :ARG0 (c2-5 / i)
+                   :ARG1 (c2-3 / obligate-01
+                               :ARG1 (c2-9 / stop-01
+                                           :ARG0 (c2-0 / you
+                                                       :mod (c2-7 / guy)))))
+      :snt2 (c2-4 / swap-01
+                  :ARG2 (c2-11 / artist
+                               :mod (c2-1 / sketch)
+                               :mod (c2-6 / court))
+                  :ARG3 (c2-8 / image)))
+
+# ::snt news photos and updates on sky news
+# ::tokens ["news", "photos", "and", "updates", "on", "sky", "news"]
+# ::lemmas ["news", "photo", "and", "update", "on", "sky", "news"]
+(c3-5 / and
+      :op1 (c3-3 / photograph-01
+                 :ARG1 (c3-1 / news))
+      :op2 (c3-0 / update-02
+                 :ARG2 (c3-2 / news
+                             :mod (c3-4 / sky))))
+
+# ::snt i mean on twitter.
+# ::tokens ["i", "mean", "on", "twitter", "."]
+# ::lemmas ["i", "mean", "on", "twitter", "."]
+(c4-2 / mean-01
+      :ARG0 (c4-3 / i)
+      :location (c4-1 / publication
+                      :name (c4-0 / name
+                                  :op1 "Twitter")))
+
+# ::snt : Follow all of the latest updates on on our blog
+# ::tokens [":", "Follow", "all", "of", "the", "latest", "updates", "on", "on", "our", "blog"]
+# ::lemmas [":", "follow", "all", "of", "the", "late", "update", "on", "on", "our", "blog"]
+(c5-3 / follow-02
+      :ARG0 (c5-0 / you)
+      :ARG1 (c5-4 / update-02
+                  :mod (c5-2 / last)
+                  :mod (c5-6 / all))
+      :location (c5-5 / blog
+                      :poss (c5-1 / we))
+      :mode imperative)
+
+# ::snt Please stop showing what the police are doing... That's like showing your cards in a game of poker!
+# ::tokens ["Please", "stop", "showing", "what", "the", "police", "are", "doing", "...", "That", "'s", "like", "showing", "your", "cards", "in", "a", "game", "of", "poker", "!"]
+# ::lemmas ["please", "stop", "show", "what", "the", "police", "be", "do", "...", "that", "be", "like", "show", "your", "card", "in", "a", "game", "of", "poker", "!"]
+(c6-2 / multi-sentence
+      :snt1 (c6-10 / stop-01
+                   :ARG0 (c6-0 / you)
+                   :ARG1 (c6-3 / show-01
+                               :ARG0 c6-0
+                               :ARG1 (c6-12 / thing
+                                            :ARG1-of (c6-5 / do-02
+                                                           :ARG0 (c6-4 / police))))
+                   :mode imperative
+                   :polite +)
+      :snt2 (c6-6 / resemble-01
+                  :ARG1 (c6-1 / show-01
+                              :ARG1 (c6-7 / card
+                                          :poss (c6-9 / you))
+                              :subevent-of (c6-8 / game
+                                                 :mod (c6-13 / poker)
+                                                 :poss c6-9))
+                  :ARG2 (c6-11 / that)))
+
+# ::snt holy crap it is the making of the new MAX movie
+# ::tokens ["holy", "crap", "it", "is", "the", "making", "of", "the", "new", "MAX", "movie"]
+# ::lemmas ["holy", "crap", "it", "be", "the", "making", "of", "the", "new", "MAX", "movie"]
+(c7-1 / make-01
+      :ARG1 (c7-5 / movie
+                  :name (c7-3 / name
+                              :op1 "Max")
+                  :ARG1-of (c7-4 / new-01))
+      :ARG2 (c7-2 / it
+                  :mod (c7-6 / crap
+                             :mod (c7-0 / holy)
+                             :mode expressive)))
+
+# ::snt We New Yorkers have you guys in our thoughts and prayers.
+# ::tokens ["We", "New", "Yorkers", "have", "you", "guys", "in", "our", "thoughts", "and", "prayers", "."]
+# ::lemmas ["we", "New", "Yorkers", "have", "you", "guy", "in", "our", "thought", "and", "prayer", "."]
+(c8-0 / have-03
+      :ARG0 (c8-1 / we
+                  :mod (c8-5 / city
+                             :name (c8-3 / name
+                                         :op1 "New"
+                                         :op2 "York")))
+      :ARG1 (c8-2 / you
+                  :mod (c8-6 / guy))
+      :location (c8-8 / and
+                      :op1 (c8-7 / think-01
+                                 :ARG0 c8-1
+                                 :ARG1 c8-2)
+                      :op2 (c8-4 / pray-01
+                                 :ARG0 c8-1
+                                 :ARG1 c8-2)))
+
+# ::snt channel staff evacuated
+# ::tokens ["channel", "staff", "evacuated"]
+# ::lemmas ["channel", "staff", "evacuate"]
+(c9-1 / evacuate-01
+      :ARG2 (c9-2 / person
+                  :ARG2-of (c9-0 / staff-01
+                                 :ARG1 (c9-3 / channel))))
+
+# ::snt in the contest for ratings they would unfortunately be the only channel not broadcasting pictures :/
+# ::tokens ["in", "the", "contest", "for", "ratings", "they", "would", "unfortunately", "be", "the", "only", "channel", "not", "broadcasting", "pictures", ":/"]
+# ::lemmas ["in", "the", "contest", "for", "rating", "they", "would", "unfortunately", "be", "the", "only", "channel", "not", "broadcast", "picture", ":/"]
+(c10-5 / channel
+       :mod (c10-2 / only)
+       :ARG0-of (c10-1 / broadcast-01
+                       :ARG1 (c10-3 / picture)
+                       :polarity -)
+       :domain (c10-7 / they)
+       :ARG2-of (c10-0 / fortunate-01
+                       :polarity -)
+       :time (c10-4 / contest-02
+                    :ARG2 (c10-6 / rate-01)))
+
+# ::snt Haven't the Police asked all media outlets to stop tweeting images of the area? C'mon guys...
+# ::tokens ["Have", "n't", "the", "Police", "asked", "all", "media", "outlets", "to", "stop", "tweeting", "images", "of", "the", "area", "?", "C'm", "on", "guys", "..."]
+# ::lemmas ["have", "not", "the", "Police", "ask", "all", "medium", "outlet", "to", "stop", "tweet", "image", "of", "the", "area", "?", "come", "on", "guy", "..."]
+(c11-0 / multi-sentence
+       :snt1 (c11-12 / ask-02
+                     :polarity (c11-2 / amr-unknown)
+                     :ARG0 (c11-5 / police)
+                     :ARG1 (c11-9 / stop-01
+                                  :ARG0 (c11-1 / outlet
+                                               :mod (c11-6 / media)
+                                               :mod (c11-4 / all))
+                                  :ARG1 (c11-11 / tweet-01
+                                                :ARG0 c11-1
+                                                :ARG1 (c11-3 / image
+                                                             :topic (c11-10 / area))))
+                     :ARG2 c11-1)
+       :snt2 (c11-7 / come-on-25
+                    :ARG1 (c11-8 / guy)
+                    :mode imperative))

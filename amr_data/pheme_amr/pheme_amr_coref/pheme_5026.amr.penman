@@ -1,0 +1,446 @@
+# ::snt These maybe ? Or to soon ?
+# ::tokens ["These", "maybe", "?", "Or", "to", "soon", "?"]
+# ::lemmas ["these", "maybe", "?", "or", "to", "soon", "?"]
+(c1-0 / multi-sentence
+      :snt1 (c1-3 / possible-01
+                  :polarity (c1-6 / amr-unknown)
+                  :ARG1 (c1-5 / this))
+      :snt2 (c1-1 / or
+                  :op2 (c1-4 / soon
+                             :polarity (c1-2 / amr-unknown))))
+
+# ::snt FanBLOODYtastic!!!
+# ::tokens ["FanBLOODYtastic", "!", "!", "!"]
+# ::lemmas ["fanbloodytastic", "!", "!", "!"]
+(c2-0 / fantastic-02
+      :mode expressive)
+
+# ::snt if they weren't needed drones wouldn't be there. They do not target children.
+# ::tokens ["if", "they", "were", "n't", "needed", "drones", "would", "n't", "be", "there", ".", "They", "do", "not", "target", "children", "."]
+# ::lemmas ["if", "they", "be", "not", "need", "drone", "would", "not", "be", "there", ".", "they", "do", "not", "target", "child", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-4 / drone
+                  :location (c3-7 / there)
+                  :condition (c3-2 / need-01
+                                   :ARG1 (c3-6 / they)
+                                   :polarity -)
+                  :polarity -)
+      :snt2 (c3-3 / target-01
+                  :ARG0 (c3-1 / they)
+                  :ARG1 (c3-5 / child)
+                  :polarity -))
+
+# ::snt why would people listen to a person hiding her face behind an egg??
+# ::tokens ["why", "would", "people", "listen", "to", "a", "person", "hiding", "her", "face", "behind", "an", "egg", "?", "?"]
+# ::lemmas ["why", "would", "people", "listen", "to", "a", "person", "hide", "her", "face", "behind", "an", "egg", "?", "?"]
+(c4-1 / listen-01
+      :ARG0 (c4-5 / person)
+      :ARG1 (c4-0 / hide-01
+                  :ARG0 (c4-7 / person
+                              :part (c4-2 / face
+                                          :ARG1-of c4-0))
+                  :location (c4-3 / behind
+                                  :op1 (c4-4 / egg)))
+      :ARG1-of (c4-6 / cause-01
+                     :ARG0 (c4-8 / amr-unknown)))
+
+# ::snt Hey, down to insults, spelling mistakes and swear words already!! Marvellous.Have a nice day
+# ::tokens ["Hey", ",", "down", "to", "insults", ",", "spelling", "mistakes", "and", "swear", "words", "already", "!", "!", "Marvellous", ".", "Have", "a", "nice", "day"]
+# ::lemmas ["hey", ",", "down", "to", "insult", ",", "spelling", "mistake", "and", "swear", "word", "already", "!", "!", "marvellous", ".", "have", "a", "nice", "day"]
+(c5-2 / multi-sentence
+      :snt1 (c5-8 / down-03
+                  :ARG2 (c5-10 / and
+                               :op1 (c5-6 / insult-01)
+                               :op2 (c5-7 / mistake-02
+                                          :ARG1 (c5-9 / spell-01))
+                               :op3 (c5-1 / word
+                                          :ARG3-of (c5-4 / swear-01)))
+                  :mod (c5-0 / hey
+                             :mode expressive)
+                  :time (c5-5 / already)
+                  :mode expressive)
+      :snt2 (c5-3 / brilliant-01))
+
+# ::snt : Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c6-0 / be-located-at-91
+      :ARG1 (c6-5 / broadcast-program
+                  :name (c6-1 / name
+                              :op1 "Steve"
+                              :op2 "Bell"))
+      :ARG2 (c6-4 / cartoon
+                  :poss (c6-3 / person
+                              :ARG0-of (c6-7 / attack-01)
+                              :mod (c6-6 / publication
+                                         :name (c6-2 / name
+                                                     :op1 "Charlie"
+                                                     :op2 "Ch Hebdo")))))
+
+# ::snt Brave - what color pencil are U today?
+# ::tokens ["Brave", "-", "what", "color", "pencil", "are", "U", "today", "?"]
+# ::lemmas ["brave", "-", "what", "color", "pencil", "be", "U", "today", "?"]
+(c7-6 / ask-01
+      :ARG1 (c7-3 / pencil
+                  :name (c7-2 / name
+                              :op1 "U")
+                  :ARG1-of (c7-4 / color-01
+                                 :ARG2 (c7-1 / amr-unknown))
+                  :time (c7-5 / today))
+      :ARG2 (c7-0 / Brave))
+
+# ::snt grt one Steve Bell.
+# ::tokens ["grt", "one", "Steve", "Bell", "."]
+# ::lemmas ["grt", "one", "Steve", "Bell", "."]
+(c8-0 / say-01
+      :ARG1 (c8-3 / grateful
+                  :domain (c8-1 / person
+                                :name (c8-2 / name
+                                            :op1 "Steve"
+                                            :op2 "Bell")
+                                :ARG2-of c8-0)))
+
+# ::snt French brothers killed French, nothing to do wth Faith
+# ::tokens ["French", "brothers", "killed", "French", ",", "nothing", "to", "do", "wth", "Faith"]
+# ::lemmas ["French", "brother", "kill", "French", ",", "nothing", "to", "do", "wth", "Faith"]
+(c9-10 / and
+       :op1 (c9-8 / kill-01
+                  :ARG0 (c9-6 / person
+                              :mod (c9-7 / country
+                                         :name (c9-4 / name
+                                                     :op1 "France"))
+                              :ARG0-of (c9-0 / have-rel-role-91
+                                             :ARG1 (c9-9 / person)
+                                             :ARG2 (c9-3 / brother)))
+                  :ARG1 c9-9)
+       :op2 (c9-1 / have-to-do-with-04
+                  :ARG0 c9-8
+                  :ARG1 (c9-2 / faith)
+                  :ARG2 (c9-5 / nothing)))
+
+# ::snt Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens ["Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas ["Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c10-1 / be-located-at-91
+       :ARG1 (c10-4 / person
+                    :name (c10-2 / name
+                                 :op1 "Steve"
+                                 :op2 "Bell"))
+       :ARG2 (c10-5 / cartoon
+                    :poss (c10-6 / person
+                                 :ARG0-of (c10-7 / attack-01)
+                                 :mod (c10-0 / publication
+                                             :name (c10-3 / name
+                                                          :op1 "Charlie"
+                                                          :op2 "Ch Hebdo")))))
+
+# ::snt rubbish!
+# ::tokens ["rubbish", "!"]
+# ::lemmas ["rubbish", "!"]
+(c11-0 / rubbish)
+
+# ::snt love deer but hate those manipulate them. haha
+# ::tokens ["love", "deer", "but", "hate", "those", "manipulate", "them", ".", "haha"]
+# ::lemmas ["love", "deer", "but", "hate", "those", "manipulate", "they", ".", "haha"]
+(c12-5 / contrast-01
+       :ARG1 (c12-1 / love-01
+                    :ARG1 (c12-4 / deer))
+       :ARG2 (c12-0 / hate-01
+                    :ARG1 (c12-2 / manipulate-02
+                                 :ARG0 (c12-3 / person
+                                              :mod (c12-6 / that))
+                                 :ARG1 c12-4))
+       :mod (c12-7 / haha
+                   :mode expressive))
+
+# ::snt would robber shout loud, "i am robber n robbing this bank??" wise thing to say dimorfik
+# ::tokens ["would", "robber", "shout", "loud", ",", "\"", "i", "am", "robber", "n", "robbing", "this", "bank", "?", "?", "\"", "wise", "thing", "to", "say", "dimorfik"]
+# ::lemmas ["would", "robber", "shout", "loud", ",", "\"", "i", "be", "robber", "n", "rob", "this", "bank", "?", "?", "\"", "wise", "thing", "to", "say", "dimorfik"]
+(c13-8 / shout-01
+       :ARG0 (c13-5 / person
+                    :ARG0-of (c13-6 / rob-01
+                                    :ARG1 (c13-2 / bank
+                                                 :mod (c13-9 / this))))
+       :ARG1 (c13-7 / thing
+                    :mod (c13-0 / wise)
+                    :ARG1-of (c13-3 / say-01
+                                    :ARG0 (c13-10 / person
+                                                  :name (c13-4 / name
+                                                               :op1 "Dimorfik"))))
+       :polarity (c13-11 / amr-unknown)
+       :manner (c13-1 / loud))
+
+# ::snt : Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c14-0 / be-located-at-91
+       :ARG1 (c14-5 / broadcast-program
+                    :name (c14-1 / name
+                                 :op1 "Steve"
+                                 :op2 "Bell"))
+       :ARG2 (c14-4 / cartoon
+                    :poss (c14-3 / person
+                                 :ARG0-of (c14-7 / attack-01)
+                                 :mod (c14-6 / publication
+                                             :name (c14-2 / name
+                                                          :op1 "Charlie"
+                                                          :op2 "Ch Hebdo")))))
+
+# ::snt Ms vietas! via : Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens ["Ms", "vietas", "!", "via", ":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas ["m", "vietas", "!", "via", ":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c15-0 / multi-sentence
+       :snt1 (c15-4 / person
+                    :name (c15-2 / name
+                                 :op1 "Ms"
+                                 :op2 "Vietas"))
+       :snt2 (c15-6 / cartoon
+                    :mod (c15-8 / person
+                                :name (c15-3 / name
+                                             :op1 "Steve"
+                                             :op2 "Bell"))
+                    :topic (c15-1 / person
+                                  :ARG0-of (c15-9 / attack-01)
+                                  :mod (c15-7 / publication
+                                              :name (c15-5 / name
+                                                           :op1 "Charlie"
+                                                           :op2 " Hebdo")))))
+
+# ::snt Not as good as
+# ::tokens ["Not", "as", "good", "as"]
+# ::lemmas ["not", "as", "good", "as"]
+(c16-0 / have-degree-91
+       :ARG2 (c16-2 / good-02)
+       :ARG3 (c16-1 / equal)
+       :polarity -)
+
+# ::snt Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens ["Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas ["Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c17-1 / be-located-at-91
+       :ARG1 (c17-4 / person
+                    :name (c17-2 / name
+                                 :op1 "Steve"
+                                 :op2 "Bell"))
+       :ARG2 (c17-5 / cartoon
+                    :poss (c17-6 / person
+                                 :ARG0-of (c17-7 / attack-01)
+                                 :mod (c17-0 / publication
+                                             :name (c17-3 / name
+                                                          :op1 "Charlie"
+                                                          :op2 "Ch Hebdo")))))
+
+# ::snt dont break under pressure egg face
+# ::tokens ["do", "nt", "break", "under", "pressure", "egg", "face"]
+# ::lemmas ["do", "not", "break", "under", "pressure", "egg", "face"]
+(c18-2 / break-01
+       :ARG0 (c18-0 / you)
+       :ARG1 (c18-1 / face
+                    :part-of (c18-3 / egg))
+       :condition (c18-4 / pressure-01)
+       :polarity -
+       :mode imperative)
+
+# ::snt with my regards
+# ::tokens ["with", "my", "regards"]
+# ::lemmas ["with", "my", "regard"]
+(c19-0 / regard-01
+       :ARG0 (c19-1 / i))
+
+# ::snt I see that you know better than that bank robber too. Well done.
+# ::tokens ["I", "see", "that", "you", "know", "better", "than", "that", "bank", "robber", "too", ".", "Well", "done", "."]
+# ::lemmas ["i", "see", "that", "you", "know", "well", "than", "that", "bank", "robber", "too", ".", "well", "do", "."]
+(c21-3 / multi-sentence
+       :snt1 (c21-13 / see-01
+                     :ARG0 (c21-6 / i)
+                     :ARG1 (c21-0 / have-degree-91
+                                  :ARG1 (c21-15 / know-01
+                                                :ARG0 (c21-1 / you))
+                                  :ARG2 (c21-10 / good-02
+                                                :ARG1 c21-15)
+                                  :ARG3 (c21-7 / more)
+                                  :ARG4 (c21-5 / know-01
+                                               :ARG0 (c21-8 / person
+                                                            :ARG0-of (c21-9 / rob-01
+                                                                            :ARG1 (c21-4 / bank))
+                                                            :mod (c21-14 / that))
+                                               :mod (c21-12 / too))))
+       :snt2 (c21-11 / do-02
+                     :ARG1-of (c21-2 / well-09)))
+
+# ::snt yes they made it clear that it is all about their faith.
+# ::tokens ["yes", "they", "made", "it", "clear", "that", "it", "is", "all", "about", "their", "faith", "."]
+# ::lemmas ["yes", "they", "make", "it", "clear", "that", "it", "be", "all", "about", "their", "faith", "."]
+(c22-1 / make-02
+       :ARG0 (c22-5 / they)
+       :ARG1 (c22-4 / clear-06
+                    :ARG1 (c22-3 / concern-02
+                                 :ARG0 (c22-2 / it)
+                                 :ARG1 (c22-0 / faith
+                                              :poss c22-5)
+                                 :mod (c22-6 / all))))
+
+# ::snt But people were killed, not . They all deserve to be honoured.
+# ::tokens ["But", "people", "were", "killed", ",", "not", ".", "They", "all", "deserve", "to", "be", "honoured", "."]
+# ::lemmas ["but", "people", "be", "kill", ",", "not", ".", "you", "all", "deserve", "to", "be", "honour", "."]
+(c23-1 / multi-sentence
+       :snt1 (c23-4 / contrast-01
+                    :ARG2 (c23-6 / kill-01
+                                 :ARG1 (c23-2 / person)
+                                 :polarity -))
+       :snt2 (c23-3 / deserve-01
+                    :ARG0 (c23-5 / they
+                                 :mod (c23-7 / all))
+                    :ARG1 (c23-0 / honor-01
+                                 :ARG1 c23-5)))
+
+# ::snt Alex you a nasty person. Go away and waste someone else's time.
+# ::tokens ["Alex", "you", "a", "nasty", "person", ".", "Go", "away", "and", "waste", "someone", "else", "'s", "time", "."]
+# ::lemmas ["alex", "you", "a", "nasty", "person", ".", "go", "away", "and", "waste", "someone", "else", "'s", "time", "."]
+(c24-2 / multi-sentence
+       :snt1 (c24-9 / person
+                    :mod (c24-7 / nasty)
+                    :domain (c24-0 / you)
+                    :ARG1-of (c24-12 / say-01
+                                     :ARG0 (c24-6 / i)
+                                     :ARG2 (c24-14 / person
+                                                   :name (c24-8 / name
+                                                                :op1 "Alex"))))
+       :snt2 (c24-15 / and
+                     :op1 (c24-10 / go-02
+                                  :ARG0 (c24-11 / you)
+                                  :ARG4 (c24-5 / away)
+                                  :mode imperative)
+                     :op2 (c24-1 / waste-01
+                                 :ARG0 c24-11
+                                 :ARG1 (c24-13 / time
+                                               :poss (c24-3 / someone
+                                                            :mod (c24-4 / else)))
+                                 :mode imperative)))
+
+# ::snt you are a prat.
+# ::tokens ["you", "are", "a", "prat", "."]
+# ::lemmas ["you", "be", "a", "prat", "."]
+(c25-1 / prat
+       :domain (c25-0 / you))
+
+# ::snt werent me responding to your smelly tweet, was an egg concording mine
+# ::tokens ["were", "nt", "me", "responding", "to", "your", "smelly", "tweet", ",", "was", "an", "egg", "concording", "mine"]
+# ::lemmas ["be", "not", "i", "respond", "to", "your", "smelly", "tweet", ",", "be", "an", "egg", "concord", "mine"]
+(c26-3 / respond-01
+       :ARG0 (c26-2 / i)
+       :ARG1 (c26-8 / tweet-01
+                    :ARG0 (c26-0 / you)
+                    :mod (c26-7 / smelly))
+       :ARG0-of (c26-4 / cause-01
+                       :ARG1 (c26-5 / conciliate-01
+                                    :ARG0 c26-2
+                                    :ARG1 (c26-1 / egg)))
+       :ARG2-of (c26-6 / differ-02))
+
+# ::snt The perpetrators say loud &amp; clear that it was everything to do with their faith, but you know better?
+# ::tokens ["The", "perpetrators", "say", "loud", "&", "amp", ";", "clear", "that", "it", "was", "everything", "to", "do", "with", "their", "faith", ",", "but", "you", "know", "better", "?"]
+# ::lemmas ["the", "perpetrator", "say", "loud", "&", "amp", ";", "clear", "that", "it", "be", "everything", "to", "do", "with", "their", "faith", ",", "but", "you", "know", "well", "?"]
+(c27-8 / contrast-01
+       :ARG1 (c27-10 / say-01
+                     :ARG0 (c27-6 / person
+                                  :ARG0-of (c27-13 / perpetrate-01))
+                     :manner (c27-2 / loud
+                                    :manner-of c27-10))
+       :manner (c27-7 / clear-06
+                      :ARG1 (c27-0 / have-to-do-with-04
+                                   :ARG0 (c27-5 / everything)
+                                   :ARG1 (c27-3 / faith
+                                                :poss c27-6)))
+       :ARG2 (c27-12 / know-01
+                     :ARG0 (c27-1 / you)
+                     :ARG1-of (c27-14 / have-degree-91
+                                      :ARG2 (c27-9 / good-02
+                                                   :ARG1 c27-12)
+                                      :ARG3 (c27-4 / more))
+                     :polarity (c27-11 / amr-unknown)))
+
+# ::snt well am not the one hiding my face behind a fucking deer thou
+# ::tokens ["well", "am", "not", "the", "one", "hiding", "my", "face", "behind", "a", "fucking", "deer", "thou"]
+# ::lemmas ["well", "be", "not", "the", "one", "hide", "my", "face", "behind", "a", "fucking", "deer", "thou"]
+(c28-3 / one
+       :ARG0-of (c28-0 / hide-01
+                       :ARG1 (c28-1 / face
+                                    :part-of (c28-4 / i))
+                       :location (c28-2 / behind
+                                        :op1 (c28-6 / deer
+                                                    :mod (c28-5 / fucking
+                                                                :mode expressive))))
+       :domain c28-4
+       :polarity -)
+
+# ::snt : Steve Bell on the Charlie Hebdo attackers cartoon
+# ::tokens [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attackers", "cartoon"]
+# ::lemmas [":", "Steve", "Bell", "on", "the", "Charlie", "Hebdo", "attacker", "cartoon"]
+(c30-0 / be-located-at-91
+       :ARG1 (c30-5 / broadcast-program
+                    :name (c30-1 / name
+                                 :op1 "Steve"
+                                 :op2 "Bell"))
+       :ARG2 (c30-4 / cartoon
+                    :poss (c30-3 / person
+                                 :ARG0-of (c30-7 / attack-01)
+                                 :mod (c30-6 / publication
+                                             :name (c30-2 / name
+                                                          :op1 "Charlie"
+                                                          :op2 "Ch Hebdo")))))
+
+# ::snt Those who were executed were "freedom of press and speech" fanatics. Therefore they entered martyrdom just as Islam fanatics do
+# ::tokens ["Those", "who", "were", "executed", "were", "\"", "freedom", "of", "press", "and", "speech", "\"", "fanatics", ".", "Therefore", "they", "entered", "martyrdom", "just", "as", "Islam", "fanatics", "do"]
+# ::lemmas ["those", "who", "be", "execute", "be", "\"", "freedom", "of", "press", "and", "speech", "\"", "fanatic", ".", "therefore", "they", "enter", "martyrdom", "just", "as", "Islam", "fanatic", "do"]
+(c31-3 / multi-sentence
+       :snt1 (c31-2 / fanatical
+                    :domain (c31-9 / person
+                                   :ARG1-of (c31-5 / execute-01))
+                    :topic (c31-6 / free-04
+                                  :ARG1 (c31-16 / and
+                                                :op1 (c31-15 / press)
+                                                :op2 (c31-13 / speak-01))))
+       :snt2 (c31-11 / cause-01
+                     :ARG1 (c31-4 / enter-01
+                                  :ARG0 (c31-14 / they)
+                                  :ARG1 (c31-10 / martyr-01
+                                                :ARG1 c31-14)
+                                  :ARG1-of (c31-12 / resemble-01
+                                                   :ARG2 (c31-1 / enter-01
+                                                                :ARG0 c31-2
+                                                                :mod (c31-7 / religious-group
+                                                                            :name (c31-8 / name
+                                                                                         :op1 "Islam")))
+                                                   :ARG1 c31-10)
+                                  :mod (c31-0 / just))))
+
+# ::snt Obama/CIA Comic Book"2400 ways to Murder Muslim Baby's with Drones", Zion Laugh at Corpses
+# ::tokens ["Obama", "/", "CIA", "Comic", "Book\"2400", "ways", "to", "Murder", "Muslim", "Baby", "'s", "with", "Drones", "\"", ",", "Zion", "Laugh", "at", "Corpses"]
+# ::lemmas ["Obama", "/", "CIA", "Comic", "book\"2400", "way", "to", "Murder", "Muslim", "Baby", "'s", "with", "Drones", "\"", ",", "Zion", "Laugh", "at", "corpse"]
+(c32-12 / and
+        :op1 (c32-4 / publication
+                    :name (c32-2 / name
+                                 :op1 "Comic"
+                                 :op2 "Book")
+                    :mod (c32-10 / slash
+                                 :op1 (c32-11 / person
+                                              :name (c32-3 / name
+                                                           :op1 "Obama"))
+                                 :op2 (c32-7 / government-organization
+                                             :name (c32-5 / name
+                                                          :op1 "CIA"))))
+        :op2 (c32-1 / publication
+                    :name (c32-6 / name
+                                 :op1 "2400"
+                                 :op2 "How"
+                                 :op3 "To"
+                                 :op4 " Murder"
+                                 :op5 "Baby"
+                                 :op6 "with"
+                                 :op7 "Drones"))
+        :op3 (c32-0 / laugh-01
+                    :ARG0 (c32-8 / religious-group
+                                 :name (c32-13 / name
+                                               :op1 "Zion"))
+                    :location (c32-9 / corps)))

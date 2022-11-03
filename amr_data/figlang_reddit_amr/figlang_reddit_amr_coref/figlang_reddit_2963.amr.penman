@@ -1,0 +1,65 @@
+# ::snt Edgy man disgusted by Fallout 4.
+# ::tokens ["Edgy", "man", "disgusted", "by", "Fallout", "4", "."]
+# ::lemmas ["edgy", "man", "disgust", "by", "Fallout", "4", "."]
+(c1-0 / disgust-01
+      :ARG0 (c1-1 / game
+                  :name (c1-3 / name
+                              :op1 "Fallout"
+                              :op2 4))
+      :ARG1 (c1-2 / man
+                  :mod (c1-4 / edgy)))
+
+# ::snt I'm also confused by one of the other comments - Xbox for the win?
+# ::tokens ["I", "'m", "also", "confused", "by", "one", "of", "the", "other", "comments", "-", "Xbox", "for", "the", "win", "?"]
+# ::lemmas ["i", "be", "also", "confuse", "by", "one", "of", "the", "other", "comment", "-", "Xbox", "for", "the", "win", "?"]
+(c2-2 / confuse-01
+      :ARG0 (c2-0 / comment-01
+                  :ARG1-of (c2-8 / include-91
+                                 :ARG2 (c2-5 / comment-01
+                                             :mod (c2-6 / other)))
+                  :ARG1-of (c2-9 / mean-01
+                                 :ARG2 (c2-7 / product
+                                             :name (c2-10 / name
+                                                          :op1 "Xbox")
+                                             :purpose (c2-3 / win-01)
+                                             :polarity (c2-1 / amr-unknown)))
+                  :quant 1)
+      :ARG1 (c2-4 / i)
+      :mod (c2-11 / also))
+
+# ::snt This person is stupid and has stupid friends
+# ::tokens ["This", "person", "is", "stupid", "and", "has", "stupid", "friends"]
+# ::lemmas ["this", "person", "be", "stupid", "and", "have", "stupid", "friend"]
+(c3-2 / and
+      :op1 (c3-0 / stupid
+                 :domain (c3-8 / person
+                               :mod (c3-6 / this)))
+      :op2 (c3-4 / have-03
+                 :ARG0 c3-8
+                 :ARG1 (c3-5 / person
+                             :ARG0-of (c3-7 / have-rel-role-91
+                                            :ARG1 c3-8
+                                            :ARG2 (c3-3 / friend))
+                             :mod (c3-1 / stupid))))
+
+# ::snt That person has friends and impregnated someone, which puts him like 5 degrees above anyone here.
+# ::tokens ["That", "person", "has", "friends", "and", "impregnated", "someone", ",", "which", "puts", "him", "like", "5", "degrees", "above", "anyone", "here", "."]
+# ::lemmas ["that", "person", "have", "friend", "and", "impregnate", "someone", ",", "which", "put", "he", "like", "5", "degrees", "above", "anyone", "here", "."]
+(c4-2 / and
+      :op1 (c4-8 / have-rel-role-91
+                 :ARG0 (c4-13 / person
+                              :mod (c4-10 / that))
+                 :ARG1 (c4-9 / person)
+                 :ARG2 (c4-3 / friend))
+      :op2 (c4-4 / impregnate-01
+                 :ARG0 c4-13
+                 :ARG1 (c4-0 / someone))
+      :ARG0-of (c4-7 / put-01
+                     :ARG1 c4-13
+                     :ARG2 (c4-14 / above
+                                  :op1 (c4-1 / anyone
+                                             :location (c4-12 / here))
+                                  :quant (c4-6 / temperature-quantity
+                                               :scale (c4-5 / celsius)
+                                               :quant 5)
+                                  :degree (c4-11 / like))))

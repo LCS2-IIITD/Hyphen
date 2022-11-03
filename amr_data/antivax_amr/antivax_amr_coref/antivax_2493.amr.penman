@@ -1,0 +1,95 @@
+# ::snt thank you, Chris
+# ::tokens ["thank", "you", ",", "Chris"]
+# ::lemmas ["thank", "you", ",", "Chris"]
+(c1-0 / say-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-1 / thank-01
+                  :ARG0 c1-3
+                  :ARG1 (c1-2 / person
+                              :name (c1-4 / name
+                                          :op1 "Chris")
+                              :ARG2-of c1-0)))
+
+# ::snt oh no, feel better!
+# ::tokens ["oh", "no", ",", "feel", "better", "!"]
+# ::lemmas ["oh", "no", ",", "feel", "well", "!"]
+(c2-0 / feel-01
+      :ARG0 (c2-5 / you)
+      :ARG1 (c2-1 / well-05
+                  :ARG2-of (c2-2 / have-degree-91
+                                 :ARG1 c2-5
+                                 :ARG3 (c2-4 / more)))
+      :mod (c2-3 / oh-no
+                 :mode expressive)
+      :mode imperative)
+
+# ::snt Glad you got the second, hope you feel better tomorrow.
+# ::tokens ["Glad", "you", "got", "the", "second", ",", "hope", "you", "feel", "better", "tomorrow", "."]
+# ::lemmas ["glad", "you", "get", "the", "second", ",", "hope", "you", "feel", "well", "tomorrow", "."]
+(c3-2 / and
+      :op1 (c3-7 / glad-02
+                 :ARG0 (c3-3 / get-02
+                             :ARG0 (c3-11 / you)
+                             :ARG1 (c3-0 / second))
+                 :ARG1 (c3-9 / i))
+      :op2 (c3-5 / hope-01
+                 :ARG0 c3-9
+                 :ARG1 (c3-4 / feel-01
+                             :ARG0 c3-11
+                             :ARG1 (c3-1 / good-02
+                                         :ARG2-of (c3-8 / have-degree-91
+                                                        :ARG1 c3-4
+                                                        :ARG3 (c3-10 / more)))
+                             :time (c3-6 / tomorrow))))
+
+# ::snt ahh I hope not! maybe you'll get lucky and not have bad symptoms
+# ::tokens ["ahh", "I", "hope", "not", "!", "maybe", "you", "'ll", "get", "lucky", "and", "not", "have", "bad", "symptoms"]
+# ::lemmas ["ahh", "i", "hope", "not", "!", "maybe", "you", "'ll", "get", "lucky", "and", "not", "have", "bad", "symptom"]
+(c4-9 / multi-sentence
+      :snt1 (c4-2 / hope-01
+                  :ARG0 (c4-8 / i)
+                  :ARG1 (c4-3 / thing
+                              :polarity -)
+                  :mod (c4-1 / ah
+                             :mode expressive))
+      :snt2 (c4-4 / possible-01
+                  :ARG1 (c4-12 / and
+                               :op1 (c4-6 / get-03
+                                          :ARG1 (c4-11 / you)
+                                          :ARG2 (c4-5 / lucky))
+                               :op2 (c4-7 / have-03
+                                          :ARG0 c4-11
+                                          :ARG1 (c4-0 / symptom
+                                                      :ARG1-of (c4-10 / bad-07))
+                                          :polarity -))))
+
+# ::snt It's just the immune system going through the boot camp
+# ::tokens ["It", "'s", "just", "the", "immune", "system", "going", "through", "the", "boot", "camp"]
+# ::lemmas ["it", "be", "just", "the", "immune", "system", "go", "through", "the", "boot", "camp"]
+(c5-0 / system
+      :ARG1-of (c5-4 / immune-02)
+      :mod (c5-3 / just)
+      :ARG1-of (c5-1 / go-12
+                     :ARG2 (c5-2 / bootcamp)))
+
+# ::snt Between the surgery recovery and my second Pfizer dose on Friday I am doomed this weekend arent I?
+# ::tokens ["Between", "the", "surgery", "recovery", "and", "my", "second", "Pfizer", "dose", "on", "Friday", "I", "am", "doomed", "this", "weekend", "are", "nt", "I", "?"]
+# ::lemmas ["between", "the", "surgery", "recovery", "and", "my", "second", "Pfizer", "dose", "on", "Friday", "i", "be", "doom", "this", "weekend", "be", "not", "i", "?"]
+(c6-0 / doom-01
+      :ARG1 (c6-12 / i)
+      :time (c6-4 / weekend
+                  :mod (c6-9 / this))
+      :ARG1-of (c6-10 / request-confirmation-91)
+      :time (c6-11 / between
+                   :op1 (c6-7 / recover-01
+                              :ARG1 c6-12
+                              :ARG2 (c6-1 / surgery-01))
+                   :op2 (c6-5 / dose-01
+                              :ARG0 (c6-3 / company
+                                          :name (c6-13 / name
+                                                       :op1 "Pfizer"))
+                              :ARG1 c6-12
+                              :ord (c6-8 / ordinal-entity
+                                         :value 2)
+                              :time (c6-6 / date-entity
+                                          :weekday (c6-2 / friday)))))

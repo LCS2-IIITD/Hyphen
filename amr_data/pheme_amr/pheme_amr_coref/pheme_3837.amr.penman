@@ -1,0 +1,51 @@
+# ::snt Cops are trash everywhere
+# ::tokens ["Cops", "are", "trash", "everywhere"]
+# ::lemmas ["cop", "be", "trash", "everywhere"]
+(c1-2 / trash
+      :location (c1-0 / everywhere)
+      :domain (c1-1 / cop))
+
+# ::snt -OF COURSE IT'S WRONG!!!!!!!
+# ::tokens ["-OF", "COURSE", "IT", "'S", "WRONG", "!", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["-of", "course", "it", "be", "wrong", "!", "!", "!", "!", "!", "!", "!"]
+(c3-1 / wrong-02
+      :ARG1 (c3-2 / it)
+      :mod (c3-0 / of-course))
+
+# ::snt No matter what COLOR you are...the murder by cop in is WRONG. Let's stand together, do NOT let them divide us.
+# ::tokens ["No", "matter", "what", "COLOR", "you", "are", "...", "the", "murder", "by", "cop", "in", "is", "WRONG", ".", "Let", "'s", "stand", "together", ",", "do", "NOT", "let", "them", "divide", "us", "."]
+# ::lemmas ["no", "matter", "what", "color", "you", "be", "...", "the", "murder", "by", "cop", "in", "be", "wrong", ".", "let", "us", "stand", "together", ",", "do", "not", "let", "they", "divide", "we", "."]
+(c4-3 / multi-sentence
+      :snt1 (c4-0 / wrong-02
+                  :ARG1 (c4-6 / murder-01
+                              :ARG0 (c4-8 / cop))
+                  :ARG1-of (c4-7 / regardless-91
+                                 :ARG2 (c4-9 / color
+                                             :domain (c4-1 / you))))
+      :snt2 (c4-14 / and
+                   :op1 (c4-12 / stand-11
+                               :ARG0 (c4-5 / we)
+                               :mod (c4-13 / together)
+                               :mode imperative)
+                   :op2 (c4-2 / let-01
+                              :ARG0 c4-5
+                              :ARG1 (c4-10 / divide-02
+                                           :ARG0 (c4-11 / they)
+                                           :ARG1 (c4-4 / we))
+                              :mode imperative
+                              :polarity -)))
+
+# ::snt then he shouldn't have broken the law and he shouldn't have run from the police.
+# ::tokens ["then", "he", "should", "n't", "have", "broken", "the", "law", "and", "he", "should", "n't", "have", "run", "from", "the", "police", "."]
+# ::lemmas ["then", "he", "should", "not", "have", "break", "the", "law", "and", "he", "should", "not", "have", "run", "from", "the", "police", "."]
+(c5-0 / have-condition-91
+      :ARG1 (c5-5 / recommend-01
+                  :ARG1 (c5-6 / and
+                              :op1 (c5-2 / break-18
+                                         :ARG0 (c5-7 / he)
+                                         :ARG1 (c5-1 / law)
+                                         :polarity -)
+                              :op2 (c5-3 / run-02
+                                         :ARG0 c5-7
+                                         :source (c5-4 / police)
+                                         :polarity -))))

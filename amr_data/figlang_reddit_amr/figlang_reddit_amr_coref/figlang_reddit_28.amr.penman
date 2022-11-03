@@ -1,0 +1,31 @@
+# ::snt Dog receives 210 plastic bottles as a Christmas present.
+# ::tokens ["Dog", "receives", "210", "plastic", "bottles", "as", "a", "Christmas", "present", "."]
+# ::lemmas ["dog", "receive", "210", "plastic", "bottle", "as", "a", "Christmas", "present", "."]
+(c1-3 / receive-01
+      :ARG0 (c1-0 / dog)
+      :ARG1 (c1-4 / bottle
+                  :consist-of (c1-5 / plastic)
+                  :quant 210)
+      :ARG3 (c1-2 / present
+                  :mod (c1-1 / festival
+                             :name (c1-6 / name
+                                         :op1 "Christmas"))))
+
+# ::snt Anyone else think it's not a safe thing to do... If you look they left the caps on the bottle as well.
+# ::tokens ["Anyone", "else", "think", "it", "'s", "not", "a", "safe", "thing", "to", "do", "...", "If", "you", "look", "they", "left", "the", "caps", "on", "the", "bottle", "as", "well", "."]
+# ::lemmas ["anyone", "else", "think", "it", "be", "not", "a", "safe", "thing", "to", "do", "...", "if", "you", "look", "they", "leave", "the", "cap", "on", "the", "bottle", "as", "well", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-5 / think-01
+                   :ARG0 (c2-2 / anyone
+                               :mod (c2-13 / else))
+                   :ARG1 (c2-4 / thing
+                               :ARG1-of (c2-0 / do-02)
+                               :ARG1-of (c2-1 / safe-01
+                                              :polarity -)))
+       :snt2 (c2-7 / leave-14
+                   :ARG0 (c2-11 / they)
+                   :ARG1 (c2-3 / cap)
+                   :ARG2 (c2-9 / bottle)
+                   :mod (c2-12 / as-well)
+                   :condition (c2-8 / look-01
+                                    :ARG0 (c2-6 / you))))

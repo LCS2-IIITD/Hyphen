@@ -1,0 +1,66 @@
+# ::snt only
+# ::tokens ["only"]
+# ::lemmas ["only"]
+(c1-0 / only)
+
+# ::snt the third comes shortly after
+# ::tokens ["the", "third", "comes", "shortly", "after"]
+# ::lemmas ["the", "third", "come", "shortly", "after"]
+(c2-1 / come-03
+      :ARG1 (c2-0 / ordinal-entity
+                  :value 3)
+      :time (c2-3 / after
+                  :ARG1-of (c2-2 / short-07)))
+
+# ::snt New Generations' policies r bringin' positive changes such kingdom-styled brain-conditioning politicking of dark ages.
+# ::tokens ["New", "Generations", "'", "policies", "r", "bringin", "'", "positive", "changes", "such", "kingdom", "-", "styled", "brain", "-", "conditioning", "politicking", "of", "dark", "ages", "."]
+# ::lemmas ["New", "generation", "'", "policy", "r", "bringin", "'", "positive", "change", "such", "kingdom", "-", "style", "brain", "-", "conditioning", "politicking", "of", "dark", "age", "."]
+(c3-1 / bring-01
+      :ARG0 (c3-3 / policy-01
+                  :ARG0 (c3-6 / generation
+                              :ARG1-of (c3-2 / new-01)))
+      :ARG1 (c3-5 / change-01
+                  :mod (c3-11 / positive)
+                  :example (c3-0 / politicking
+                                 :ARG1-of (c3-9 / style-01
+                                                :ARG2 (c3-10 / kingdom))
+                                 :ARG0-of (c3-4 / condition-01
+                                                :ARG2 (c3-7 / brain))
+                                 :time (c3-12 / age
+                                              :mod (c3-8 / dark)))))
+
+# ::snt RT Wow not released ...escaped !!
+# ::tokens ["RT", "Wow", "not", "released", "...", "escaped", "!", "!"]
+# ::lemmas ["RT", "Wow", "not", "release", "...", "escape", "!", "!"]
+(c4-6 / and
+      :op1 (c4-4 / release-01
+                 :ARG1-of (c4-0 / wow-01)
+                 :ARG1-of (c4-3 / publication-91
+                                :ARG4 (c4-5 / publication
+                                            :name (c4-2 / name
+                                                        :op1 "RT")))
+                 :polarity -)
+      :op2 (c4-1 / escape-01
+                 :mode expressive))
+
+# ::snt this made my heart shatter
+# ::tokens ["this", "made", "my", "heart", "shatter"]
+# ::lemmas ["this", "make", "my", "heart", "shatter"]
+(c6-1 / make-02
+      :ARG0 (c6-4 / this)
+      :ARG1 (c6-3 / shatter-01
+                  :ARG0 c6-4
+                  :ARG1 (c6-0 / heart
+                              :part-of (c6-2 / i))))
+
+# ::snt : Here's a vine showing the dramatic moment three hostages escaped the
+# ::tokens [":", "Here", "'s", "a", "vine", "showing", "the", "dramatic", "moment", "three", "hostages", "escaped", "the"]
+# ::lemmas [":", "here", "be", "a", "vine", "show", "the", "dramatic", "moment", "three", "hostage", "escape", "the"]
+(c7-3 / vine
+      :location (c7-0 / here)
+      :ARG0-of (c7-5 / show-01
+                     :ARG1 (c7-1 / moment
+                                 :mod (c7-4 / dramatic)
+                                 :time-of (c7-2 / escape-01
+                                                :ARG0 (c7-6 / hostage
+                                                            :quant 3)))))

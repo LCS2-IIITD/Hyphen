@@ -1,0 +1,156 @@
+# ::snt Damn, this is like a movie RT Reports: suspects killed
+# ::tokens ["Damn", ",", "this", "is", "like", "a", "movie", "RT", "Reports", ":", "suspects", "killed"]
+# ::lemmas ["damn", ",", "this", "be", "like", "a", "movie", "RT", "Reports", ":", "suspect", "kill"]
+(c1-5 / resemble-01
+      :ARG1 (c1-1 / this)
+      :ARG2 (c1-2 / movie
+                  :name (c1-8 / name
+                              :op1 "RT"
+                              :op2 "Reports")
+                  :ARG0-of (c1-6 / mean-01
+                                 :ARG1 (c1-0 / kill-01
+                                             :ARG1 (c1-4 / person
+                                                         :ARG2-of (c1-7 / suspect-01)))))
+      :mod (c1-3 / damn
+                 :mode expressive))
+
+# ::snt : Reports: suspects killed superb simultaneous response by the French tactics unit.
+# ::tokens [":", "Reports", ":", "suspects", "killed", "superb", "simultaneous", "response", "by", "the", "French", "tactics", "unit", "."]
+# ::lemmas [":", "report", ":", "suspect", "kill", "superb", "simultaneous", "response", "by", "the", "French", "tactic", "unit", "."]
+(c2-8 / report-01
+      :ARG1 (c2-0 / kill-01
+                  :ARG0 (c2-5 / person
+                              :ARG2-of (c2-9 / suspect-01))
+                  :ARG1 (c2-1 / respond-01
+                              :ARG0 (c2-7 / unit
+                                          :mod (c2-4 / tactics)
+                                          :mod (c2-6 / country
+                                                     :name (c2-10 / name
+                                                                  :op1 "France")))
+                              :mod (c2-3 / simultaneous)
+                              :mod (c2-2 / superb))))
+
+# ::snt great news! No trial, no taxpayer money spent to support them.
+# ::tokens ["great", "news", "!", "No", "trial", ",", "no", "taxpayer", "money", "spent", "to", "support", "them", "."]
+# ::lemmas ["great", "news", "!", "no", "trial", ",", "no", "taxpayer", "money", "spend", "to", "support", "they", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-11 / news
+                   :mod (c3-8 / great))
+      :snt2 (c3-7 / and
+                  :op1 (c3-1 / try-02
+                             :polarity -)
+                  :op2 (c3-10 / spend-01
+                              :ARG1 (c3-0 / support-01
+                                          :ARG1 (c3-3 / they))
+                              :ARG3 (c3-9 / money
+                                          :source (c3-6 / person
+                                                        :ARG0-of (c3-5 / pay-01
+                                                                       :ARG1 (c3-4 / tax))))
+                              :polarity -)))
+
+# ::snt damnit!!! That's what those fuckers wanted!! Now they will be hailed as martyrs....
+# ::tokens ["damnit", "!", "!", "!", "That", "'s", "what", "those", "fuckers", "wanted", "!", "!", "Now", "they", "will", "be", "hailed", "as", "martyrs", "...."]
+# ::lemmas ["damnit", "!", "!", "!", "that", "be", "what", "those", "fucker", "want", "!", "!", "now", "they", "will", "be", "hail", "as", "martyr", "...."]
+(c4-3 / multi-sentence
+      :snt1 (c4-7 / damn-01
+                  :mode expressive)
+      :snt2 (c4-0 / want-01
+                  :ARG0 (c4-8 / person
+                              :ARG0-of (c4-4 / fuck-01)
+                              :mod (c4-2 / that))
+                  :ARG1 (c4-5 / that))
+      :snt3 (c4-1 / hail-02
+                  :ARG1 (c4-6 / they)
+                  :ARG2 (c4-9 / martyr-01
+                              :ARG1 c4-6)
+                  :time (c4-10 / now)))
+
+# ::snt Can you confirm the reports that those suspects were killed by French police?
+# ::tokens ["Can", "you", "confirm", "the", "reports", "that", "those", "suspects", "were", "killed", "by", "French", "police", "?"]
+# ::lemmas ["can", "you", "confirm", "the", "report", "that", "those", "suspect", "be", "kill", "by", "French", "police", "?"]
+(c5-6 / possible-01
+      :ARG1 (c5-5 / confirm-01
+                  :ARG0 (c5-1 / you)
+                  :ARG1 (c5-9 / report-01
+                              :ARG1 (c5-0 / kill-01
+                                          :ARG0 (c5-4 / police
+                                                      :mod (c5-10 / country
+                                                                  :name (c5-11 / name
+                                                                               :op1 "France")))
+                                          :ARG1 (c5-2 / person
+                                                      :ARG2-of (c5-7 / suspect-01)
+                                                      :mod (c5-3 / that)))))
+      :polarity (c5-8 / amr-unknown))
+
+# ::snt good.
+# ::tokens ["good", "."]
+# ::lemmas ["good", "."]
+(c6-0 / good-02)
+
+# ::snt That's a good start
+# ::tokens ["That", "'s", "a", "good", "start"]
+# ::lemmas ["that", "be", "a", "good", "start"]
+(c7-1 / start-01
+      :ARG1-of (c7-0 / good-02)
+      :domain (c7-2 / that))
+
+# ::snt They got Netanyahu's Mossad agents? GOOD. Don't fuck with the French -- they invented the guillotine!
+# ::tokens ["They", "got", "Netanyahu", "'s", "Mossad", "agents", "?", "GOOD", ".", "Do", "n't", "fuck", "with", "the", "French", "--", "they", "invented", "the", "guillotine", "!"]
+# ::lemmas ["they", "get", "Netanyahu", "'s", "Mossad", "agent", "?", "good", ".", "do", "not", "fuck", "with", "the", "French", "--", "they", "invent", "the", "guillotine", "!"]
+(c8-17 / multi-sentence
+       :snt1 (c8-14 / get-01
+                    :ARG0 (c8-7 / they)
+                    :ARG1 (c8-13 / agent
+                                 :ARG2-of (c8-0 / have-org-role-91
+                                                :ARG0 (c8-11 / person
+                                                             :name (c8-9 / name
+                                                                         :op1 "Netanyahu"))
+                                                :ARG1 (c8-15 / organization
+                                                             :name (c8-1 / name
+                                                                         :op1 "Mossad"))))
+                    :polarity (c8-3 / amr-unknown))
+       :snt2 (c8-10 / fuck-01
+                    :ARG0 (c8-5 / you)
+                    :ARG1 (c8-18 / person
+                                 :mod (c8-8 / country
+                                            :name (c8-2 / name
+                                                        :op1 "France")))
+                    :ARG1-of (c8-4 / cause-01
+                                   :ARG0 (c8-12 / invent-01
+                                                :ARG0 (c8-16 / they)
+                                                :ARG1 (c8-6 / guillotine)))
+                    :polarity -
+                    :mode imperative))
+
+# ::snt Chance lost to bring them to big trial and exposure to the world. A pitty they were not caught alive! Now they are martirs!
+# ::tokens ["Chance", "lost", "to", "bring", "them", "to", "big", "trial", "and", "exposure", "to", "the", "world", ".", "A", "pitty", "they", "were", "not", "caught", "alive", "!", "Now", "they", "are", "martirs", "!"]
+# ::lemmas ["chance", "lose", "to", "bring", "they", "to", "big", "trial", "and", "exposure", "to", "the", "world", ".", "a", "pitty", "they", "be", "not", "catch", "alive", "!", "now", "they", "be", "martir", "!"]
+(c9-2 / multi-sentence
+      :snt1 (c9-9 / lose-02
+                  :ARG1 (c9-6 / chance-02
+                              :purpose (c9-16 / bring-01
+                                              :ARG1 (c9-1 / they)
+                                              :ARG2 (c9-10 / and
+                                                           :op1 (c9-3 / try-02
+                                                                      :ARG1 c9-1
+                                                                      :mod (c9-11 / big))
+                                                           :op2 (c9-15 / expose-01
+                                                                       :ARG1 c9-1
+                                                                       :ARG2 (c9-0 / world))))
+                              :ARG1-of c9-9))
+      :snt2 (c9-12 / catch-02
+                   :ARG1 (c9-4 / they)
+                   :ARG2 (c9-14 / live-01
+                                :ARG0 c9-4)
+                   :mod (c9-7 / pitty)
+                   :polarity -)
+      :snt3 (c9-8 / saint
+                  :domain (c9-13 / they)
+                  :time (c9-5 / now)))
+
+# ::snt Some good news!
+# ::tokens ["Some", "good", "news", "!"]
+# ::lemmas ["some", "good", "news", "!"]
+(c10-2 / news
+       :ARG1-of (c10-1 / good-02)
+       :mod (c10-0 / some))

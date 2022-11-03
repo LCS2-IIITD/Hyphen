@@ -1,0 +1,341 @@
+# ::snt Got my second shot yesterday!
+# ::tokens ["Got", "my", "second", "shot", "yesterday", "!"]
+# ::lemmas ["got", "my", "second", "shot", "yesterday", "!"]
+(c1-2 / get-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-0 / shoot-01
+                  :ARG0 c1-3
+                  :ord (c1-1 / ordinal-entity
+                             :value 2))
+      :time (c1-4 / yesterday))
+
+# ::snt That's great! Good for you!
+# ::tokens ["That", "'s", "great", "!", "Good", "for", "you", "!"]
+# ::lemmas ["that", "be", "great", "!", "good", "for", "you", "!"]
+(c2-3 / multi-sentence
+      :snt1 (c2-2 / great
+                  :domain (c2-0 / that))
+      :snt2 (c2-4 / good-04
+                  :ARG2 (c2-1 / you)))
+
+# ::snt Thanks so much!
+# ::tokens ["Thanks", "so", "much", "!"]
+# ::lemmas ["thank", "so", "much", "!"]
+(c3-1 / thank-01
+      :ARG0 (c3-2 / i)
+      :ARG1 (c3-4 / you)
+      :degree (c3-3 / much
+                    :degree (c3-0 / so)))
+
+# ::snt Im curious too as I get my second moderna shot in a few days. I felt tired and sore for a day after the first but a million times better than Covid!
+# ::tokens ["I", "m", "curious", "too", "as", "I", "get", "my", "second", "moderna", "shot", "in", "a", "few", "days", ".", "I", "felt", "tired", "and", "sore", "for", "a", "day", "after", "the", "first", "but", "a", "million", "times", "better", "than", "Covid", "!"]
+# ::lemmas ["i", "m", "curious", "too", "as", "i", "get", "my", "second", "moderna", "shoot", "in", "a", "few", "days", ".", "i", "feel", "tired", "and", "sore", "for", "a", "day", "after", "the", "first", "but", "a", "million", "time", "well", "than", "Covid", "!"]
+(c4-10 / multi-sentence
+       :snt1 (c4-5 / curious-01
+                   :ARG0 (c4-9 / get-01
+                               :ARG0 (c4-4 / i)
+                               :ARG1 (c4-14 / shoot-02
+                                            :ARG0 c4-4
+                                            :ARG1 (c4-27 / product
+                                                         :name (c4-11 / name
+                                                                      :op1 "Moderna"))
+                                            :ord (c4-7 / ordinal-entity
+                                                       :value 2))
+                               :time (c4-21 / after
+                                            :op1 (c4-26 / shoot-02
+                                                        :ARG0 c4-4
+                                                        :ARG1 c4-27
+                                                        :time (c4-13 / after
+                                                                     :op1 c4-14
+                                                                     :quant (c4-22 / few
+                                                                                   :op1 (c4-8 / temporal-quantity
+                                                                                              :unit (c4-0 / day)
+                                                                                              :quant 1))))))
+                   :ARG1 c4-4
+                   :mod (c4-6 / too))
+       :snt2 (c4-1 / contrast-01
+                   :ARG1 (c4-19 / feel-01
+                                :ARG0 (c4-16 / i)
+                                :ARG1 (c4-2 / and
+                                            :op1 (c4-12 / tire-01
+                                                        :ARG1 c4-16)
+                                            :op2 (c4-17 / sore))
+                                :time (c4-28 / after
+                                             :op1 (c4-25 / product
+                                                         :ord (c4-24 / ordinal-entity
+                                                                     :value 1))))
+                   :ARG2 (c4-20 / good-02
+                                :ARG2-of (c4-23 / have-degree-91
+                                                :ARG1 c4-25
+                                                :ARG3 (c4-18 / times
+                                                             :quant 1000000)
+                                                :ARG4 (c4-15 / product
+                                                             :name (c4-3 / name
+                                                                         :op1 "Covid"))))))
+
+# ::snt Yes Frankie!!!
+# ::tokens ["Yes", "Frankie", "!", "!", "!"]
+# ::lemmas ["yes", "Frankie", "!", "!", "!"]
+(c5-0 / say-01
+      :ARG1 (c5-3 / yes)
+      :ARG2 (c5-1 / person
+                  :name (c5-2 / name
+                              :op1 "Frankie")))
+
+# ::snt Thats great I get my second one next week
+# ::tokens ["That", "s", "great", "I", "get", "my", "second", "one", "next", "week"]
+# ::lemmas ["that", "s", "great", "i", "get", "my", "second", "one", "next", "week"]
+(c6-5 / great
+      :domain (c6-4 / that)
+      :ARG1-of (c6-0 / cause-01
+                     :ARG0 (c6-8 / get-01
+                                 :ARG0 (c6-6 / i)
+                                 :ARG1 (c6-2 / thing
+                                             :ord (c6-3 / ordinal-entity
+                                                        :value 2)
+                                             :poss c6-6)
+                                 :time (c6-1 / week
+                                             :mod (c6-7 / next)))))
+
+# ::snt Second shot is when the body really goes into action
+# ::tokens ["Second", "shot", "is", "when", "the", "body", "really", "goes", "into", "action"]
+# ::lemmas ["Second", "shot", "be", "when", "the", "body", "really", "go", "into", "action"]
+(c7-5 / be-temporally-at-91
+      :ARG1 (c7-0 / shoot-01
+                  :ord (c7-3 / ordinal-entity
+                             :value 2))
+      :ARG2 (c7-2 / act-02
+                  :ARG0 (c7-1 / body)
+                  :ARG1-of (c7-4 / real-04)))
+
+# ::snt Moderna and I will update on any side effects and yes I have heard the same from quite a few people that the second shot is tough
+# ::tokens ["Moderna", "and", "I", "will", "update", "on", "any", "side", "effects", "and", "yes", "I", "have", "heard", "the", "same", "from", "quite", "a", "few", "people", "that", "the", "second", "shot", "is", "tough"]
+# ::lemmas ["Moderna", "and", "i", "will", "update", "on", "any", "side", "effect", "and", "yes", "i", "have", "hear", "the", "same", "from", "quite", "a", "few", "people", "that", "the", "second", "shot", "be", "tough"]
+(c8-2 / and
+      :op1 (c8-6 / update-02
+                 :ARG0 (c8-15 / and
+                              :op1 (c8-11 / person
+                                          :name (c8-13 / name
+                                                       :op1 "Moderna"))
+                              :op2 (c8-3 / i))
+                 :ARG2 (c8-16 / effect-03
+                              :ARG1 (c8-0 / side)
+                              :mod (c8-1 / any)))
+      :op2 (c8-5 / hear-01
+                 :ARG0 c8-3
+                 :ARG1 (c8-9 / tough-03
+                             :ARG1 (c8-10 / shot
+                                          :ord (c8-7 / ordinal-entity
+                                                     :value 2)))
+                 :ARG2 (c8-8 / person
+                             :quant (c8-12 / many
+                                           :degree (c8-4 / quite)))
+                 :mod (c8-14 / yes)))
+
+# ::snt Which one and if you dont mind, please let me know about any side effects you have. I get the second Moderna shot in days and although I generally tolerate vaccinations well some folks have said that they had some issues after the second shot. Thanks in advance!
+# ::tokens ["Which", "one", "and", "if", "you", "do", "nt", "mind", ",", "please", "let", "me", "know", "about", "any", "side", "effects", "you", "have", ".", "I", "get", "the", "second", "Moderna", "shot", "in", "days", "and", "although", "I", "generally", "tolerate", "vaccinations", "well", "some", "folks", "have", "said", "that", "they", "had", "some", "issues", "after", "the", "second", "shot", ".", "Thanks", "in", "advance", "!"]
+# ::lemmas ["which", "one", "and", "if", "you", "do", "nt", "mind", ",", "please", "let", "i", "know", "about", "any", "side", "effect", "you", "have", ".", "i", "get", "the", "second", "Moderna", "shoot", "in", "days", "and", "although", "i", "generally", "tolerate", "vaccination", "well", "some", "folk", "have", "say", "that", "they", "have", "some", "issue", "after", "the", "second", "shot", ".", "thank", "in", "advance", "!"]
+(c9-10 / multi-sentence
+       :snt1 (c9-23 / and
+                    :op1 (c9-31 / let-know-07
+                                :ARG0 (c9-20 / you)
+                                :ARG1 (c9-2 / i)
+                                :ARG2 (c9-14 / effect-03
+                                             :ARG1 (c9-27 / event
+                                                          :mod (c9-15 / side)
+                                                          :mod (c9-13 / any)
+                                                          :ARG1-of (c9-26 / have-03
+                                                                          :ARG0 c9-20)))
+                                :condition (c9-25 / mind-01
+                                                  :ARG0 c9-20
+                                                  :polarity -)
+                                :polite +
+                                :mode imperative))
+       :snt2 (c9-1 / and
+                   :op1 (c9-9 / get-01
+                              :ARG0 (c9-16 / i)
+                              :ARG1 (c9-32 / shot
+                                           :mod (c9-33 / product
+                                                       :name (c9-11 / name
+                                                                    :op1 "Moderna"))
+                                           :ord (c9-7 / ordinal-entity
+                                                      :value 2))
+                              :time (c9-34 / after
+                                           :op1 (c9-17 / shoot
+                                                       :ord (c9-28 / ordinal-entity
+                                                                   :value 2)))
+                              :duration (c9-19 / multiple
+                                               :op1 (c9-8 / temporal-quantity
+                                                          :unit (c9-0 / day)
+                                                          :quant 1)))
+                   :op2 (c9-3 / say-01
+                              :ARG0 (c9-24 / folk
+                                           :quant (c9-4 / some))
+                              :ARG1 (c9-18 / issue-02
+                                           :ARG0 (c9-30 / shot
+                                                        :mod c9-4))
+                              :concession (c9-5 / tolerate-01
+                                                :ARG0 c9-16
+                                                :ARG1 (c9-6 / vaccinate-01)
+                                                :ARG1-of (c9-21 / general-02))))
+       :snt3 (c9-12 / thank-01
+                    :ARG1 (c9-22 / you)
+                    :ARG1-of (c9-29 / in-advance-04)))
+
+# ::snt yayayayay!!!
+# ::tokens ["yayayayay", "!", "!", "!"]
+# ::lemmas ["yayayayay", "!", "!", "!"]
+(c10-0 / yayay
+       :mode expressive)
+
+# ::snt Congratulations to you! And thank you!
+# ::tokens ["Congratulations", "to", "you", "!", "And", "thank", "you", "!"]
+# ::lemmas ["congratulation", "to", "you", "!", "and", "thank", "you", "!"]
+(c11-3 / multi-sentence
+       :snt1 (c11-1 / congratulate-01
+                    :ARG1 (c11-4 / you))
+       :snt2 (c11-0 / and
+                    :op2 (c11-2 / thank-01
+                                :ARG1 (c11-5 / you))))
+
+# ::snt I get my nd one on the
+# ::tokens ["I", "get", "my", "nd", "one", "on", "the"]
+# ::lemmas ["i", "get", "my", "nd", "one", "on", "the"]
+(c12-3 / get-01
+       :ARG0 (c12-4 / i)
+       :ARG1 (c12-2 / one
+                    :mod (c12-0 / dear)
+                    :poss c12-4)
+       :prep-on (c12-1 / computer))
+
+# ::snt Me too, Frankie! (Dayton). Take a Tylenol tonight before bed. And drink lots of water. I am soooooo grateful to science!
+# ::tokens ["Me", "too", ",", "Frankie", "!", "(", "Dayton", ")", ".", "Take", "a", "Tylenol", "tonight", "before", "bed", ".", "And", "drink", "lots", "of", "water", ".", "I", "am", "soooooo", "grateful", "to", "science", "!"]
+# ::lemmas ["i", "too", ",", "Frankie", "!", "(", "Dayton", ")", ".", "take", "a", "Tylenol", "tonight", "before", "bed", ".", "and", "drink", "lot", "of", "water", ".", "i", "be", "soooooo", "grateful", "to", "science", "!"]
+(c13-6 / multi-sentence
+       :snt1 (c13-10 / say-01
+                     :ARG0 (c13-2 / i)
+                     :ARG1 (c13-21 / person
+                                   :name (c13-7 / name
+                                                :op1 "Frankie")
+                                   :mod (c13-5 / too)
+                                   :ARG2-of c13-10)
+                     :name c13-7
+                     :op1 "Dayton")
+       :snt2 (c13-16 / and
+                     :op1 (c13-4 / take-01
+                                 :ARG0 (c13-14 / you)
+                                 :ARG1 (c13-17 / product
+                                               :name c13-7
+                                               :op1 "Tylenol")
+                                 :mode imperative)
+                     :time (c13-0 / date-entity
+                                  :dayperiod (c13-1 / night)
+                                  :mod (c13-8 / today))
+                     :time (c13-19 / before
+                                   :op1 (c13-15 / bed-03
+                                                :ARG1 c13-14)))
+       :op2 (c13-13 / drink-01
+                    :ARG0 c13-14
+                    :ARG1 (c13-3 / water
+                                 :quant (c13-18 / lot))
+                    :mode imperative)
+       :snt3 (c13-9 / appreciate-02
+                    :ARG0 (c13-11 / i)
+                    :ARG1 (c13-20 / science)
+                    :degree (c13-12 / so)))
+
+# ::snt Good to hear! Keep us posted on the side-effects. It seems everyone has a slightly different story.
+# ::tokens ["Good", "to", "hear", "!", "Keep", "us", "posted", "on", "the", "side", "-", "effects", ".", "It", "seems", "everyone", "has", "a", "slightly", "different", "story", "."]
+# ::lemmas ["good", "to", "hear", "!", "keep", "we", "post", "on", "the", "side", "-", "effect", ".", "it", "seem", "everyone", "have", "a", "slightly", "different", "story", "."]
+(c14-11 / multi-sentence
+        :snt1 (c14-8 / good-02
+                     :ARG1 (c14-4 / hear-01))
+        :snt2 (c14-12 / keep-02
+                      :ARG0 (c14-13 / you)
+                      :ARG1 (c14-10 / post-01
+                                    :ARG0 c14-13
+                                    :ARG1 (c14-2 / affect-01
+                                                 :mod (c14-0 / side))
+                                    :ARG2 (c14-3 / we))
+                      :mode imperative)
+        :snt3 (c14-9 / seem-01
+                     :ARG1 (c14-6 / have-03
+                                  :ARG0 (c14-14 / everyone)
+                                  :ARG1 (c14-5 / story
+                                               :ARG1-of (c14-1 / differ-02
+                                                               :degree (c14-7 / slight))))))
+
+# ::snt lucky you!
+# ::tokens ["lucky", "you", "!"]
+# ::lemmas ["lucky", "you", "!"]
+(c15-1 / lucky
+       :domain (c15-0 / you))
+
+# ::snt YUP. The first dose knocked me the hell out so I can only imagine what getting COVID wouldve done to me.
+# ::tokens ["YUP", ".", "The", "first", "dose", "knocked", "me", "the", "hell", "out", "so", "I", "can", "only", "imagine", "what", "getting", "COVID", "would", "ve", "done", "to", "me", "."]
+# ::lemmas ["yup", ".", "the", "first", "dose", "knock", "i", "the", "hell", "out", "so", "i", "can", "only", "imagine", "what", "get", "COVID", "would", "ve", "do", "to", "i", "."]
+(c16-12 / multi-sentence
+        :snt1 (c16-14 / yup)
+        :snt2 (c16-13 / knock-out-03
+                      :ARG0 (c16-0 / dose-01
+                                   :ord (c16-6 / ordinal-entity
+                                               :value 1))
+                      :ARG1 (c16-11 / i)
+                      :degree (c16-3 / hell
+                                     :mode expressive)
+                      :ARG0-of (c16-1 / cause-01
+                                      :ARG1 (c16-8 / possible-01
+                                                   :ARG1 (c16-4 / imagine-01
+                                                                :ARG0 c16-11
+                                                                :ARG1 (c16-7 / thing
+                                                                             :ARG1-of (c16-2 / do-02
+                                                                                             :ARG0 (c16-10 / government-organization
+                                                                                                           :name (c16-9 / name
+                                                                                                                        :op1 "COVID"))
+                                                                                             :ARG2 c16-11))
+                                                                :mod (c16-5 / only))))))
+
+# ::snt Hey!!! Awesome.
+# ::tokens ["Hey", "!", "!", "!", "Awesome", "."]
+# ::lemmas ["hey", "!", "!", "!", "Awesome", "."]
+(c17-1 / multi-sentence
+       :snt1 (c17-2 / hey)
+       :snt2 (c17-0 / awe-01))
+
+# ::snt I heard that second shot can be tough but its better than being in ICU with a tube down my throat!!
+# ::tokens ["I", "heard", "that", "second", "shot", "can", "be", "tough", "but", "its", "better", "than", "being", "in", "ICU", "with", "a", "tube", "down", "my", "throat", "!", "!"]
+# ::lemmas ["i", "hear", "that", "second", "shot", "can", "be", "tough", "but", "its", "well", "than", "be", "in", "ICU", "with", "a", "tube", "down", "my", "throat", "!", "!"]
+(c19-3 / hear-01
+       :ARG0 (c19-9 / i
+                    :part (c19-6 / throat))
+       :ARG1 (c19-2 / tough-02
+                    :ARG1 (c19-0 / shoot-01
+                                 :ord (c19-5 / ordinal-entity
+                                             :value 2))
+                    :concession-of (c19-7 / good-02
+                                          :ARG1 c19-0
+                                          :ARG2-of (c19-8 / have-degree-91
+                                                          :ARG1 c19-0
+                                                          :ARG3 (c19-10 / more)
+                                                          :ARG4 (c19-11 / be-located-at-91
+                                                                        :ARG1 c19-9
+                                                                        :ARG2 (c19-4 / ICU
+                                                                                     :mod (c19-1 / down
+                                                                                                 :op1 c19-6)))))))
+
+# ::snt Congrats!! Hope your symptoms arent too bad.
+# ::tokens ["Congrats", "!", "!", "Hope", "your", "symptoms", "are", "nt", "too", "bad", "."]
+# ::lemmas ["Congrats", "!", "!", "hope", "your", "symptom", "be", "not", "too", "bad", "."]
+(c20-7 / multi-sentence
+       :snt1 (c20-1 / congratulate-01
+                    :ARG0 (c20-6 / i)
+                    :ARG1 (c20-8 / you))
+       :snt2 (c20-2 / hope-01
+                    :ARG0 c20-6
+                    :ARG1 (c20-4 / bad-07
+                                 :ARG1 (c20-0 / symptom
+                                              :poss (c20-9 / you))
+                                 :ARG2-of (c20-5 / have-degree-91
+                                                 :ARG1 c20-0
+                                                 :ARG3 (c20-3 / too))
+                                 :polarity -)))

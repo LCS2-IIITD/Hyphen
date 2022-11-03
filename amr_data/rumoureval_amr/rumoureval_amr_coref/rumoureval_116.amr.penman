@@ -1,0 +1,190 @@
+# ::snt Is this the right link?
+# ::tokens ["Is", "this", "the", "right", "link", "?"]
+# ::lemmas ["be", "this", "the", "right", "link", "?"]
+(c1-1 / link
+      :polarity (c1-0 / amr-unknown)
+      :ARG1-of (c1-2 / right-02)
+      :domain (c1-3 / this))
+
+# ::snt Micheal Brown was a hardened criminal. But , of course, shooting him was wrong and the cop should get the death penalty
+# ::tokens ["Micheal", "Brown", "was", "a", "hardened", "criminal", ".", "But", ",", "of", "course", ",", "shooting", "him", "was", "wrong", "and", "the", "cop", "should", "get", "the", "death", "penalty"]
+# ::lemmas ["Micheal", "Brown", "be", "a", "hardened", "criminal", ".", "but", ",", "of", "course", ",", "shoot", "he", "be", "wrong", "and", "the", "cop", "should", "get", "the", "death", "penalty"]
+(c2-3 / multi-sentence
+      :snt1 (c2-7 / criminal-03
+                  :ARG2 (c2-6 / person
+                              :name (c2-14 / name
+                                           :op1 "Micheal"
+                                           :op2 "Brown"))
+                  :ARG1-of (c2-2 / toughen-01))
+      :snt2 (c2-13 / contrast-01
+                   :ARG2 (c2-10 / and
+                                :op1 (c2-0 / wrong-02
+                                           :ARG1 (c2-8 / shoot-02
+                                                       :ARG1 (c2-1 / he))
+                                           :mod (c2-12 / of-course))
+                                :op2 (c2-11 / recommend-01
+                                            :ARG1 (c2-4 / penalize-01
+                                                        :ARG1 (c2-9 / cop)
+                                                        :manner (c2-5 / die-01))))))
+
+# ::snt hysterical
+# ::tokens ["hysterical"]
+# ::lemmas ["hysterical"]
+(c3-0 / hysterical)
+
+# ::snt URGENT: Darren Wilson is the police officer who shot Mike Brown rt
+# ::tokens ["URGENT", ":", "Darren", "Wilson", "is", "the", "police", "officer", "who", "shot", "Mike", "Brown", "rt"]
+# ::lemmas ["URGENT", ":", "Darren", "Wilson", "be", "the", "police", "officer", "who", "shoot", "Mike", "Brown", "rt"]
+(c4-5 / interview-01
+      :ARG1 (c4-4 / person
+                  :name (c4-8 / name
+                              :op1 "Darren"
+                              :op2 "Wilson")
+                  :ARG0-of (c4-1 / have-org-role-91
+                                 :ARG1 (c4-2 / police)
+                                 :ARG2 (c4-6 / officer))
+                  :ARG0-of (c4-7 / shoot-02
+                                 :ARG1 (c4-0 / person
+                                             :name (c4-3 / name
+                                                         :op1 "Mike"
+                                                         :op2 "Brown")))))
+
+# ::snt deserved what he got. Don't attack police officers!!!!
+# ::tokens ["deserved", "what", "he", "got", ".", "Do", "n't", "attack", "police", "officers", "!", "!", "!", "!"]
+# ::lemmas ["deserve", "what", "he", "get", ".", "do", "not", "attack", "police", "officer", "!", "!", "!", "!"]
+(c5-3 / multi-sentence
+      :snt1 (c5-6 / deserve-01
+                  :ARG0 (c5-1 / he)
+                  :ARG1 (c5-2 / thing
+                              :ARG1-of (c5-8 / get-01
+                                             :ARG0 c5-1)))
+      :snt2 (c5-9 / attack-01
+                  :ARG0 (c5-0 / you)
+                  :ARG1 (c5-7 / person
+                              :ARG0-of (c5-4 / have-org-role-91
+                                             :ARG1 (c5-5 / police)
+                                             :ARG2 (c5-10 / officer)))
+                  :mode imperative
+                  :polarity -))
+
+# ::snt excuses coming thick &amp; fast next
+# ::tokens ["excuses", "coming", "thick", "&", "amp", ";", "fast", "next"]
+# ::lemmas ["excuse", "come", "thick", "&", "amp", ";", "fast", "next"]
+(c6-3 / and
+      :op1 (c6-2 / come-01
+                 :ARG1 (c6-7 / excite-01)
+                 :manner (c6-4 / and
+                               :op1 (c6-0 / thick-03)
+                               :op2 (c6-5 / amp)))
+      :op2 (c6-6 / next
+                 :ARG1-of (c6-1 / fast-02)))
+
+# ::snt More of RT reporting on American news not it's own. hmhmhmhmhm...
+# ::tokens ["More", "of", "RT", "reporting", "on", "American", "news", "not", "it", "'s", "own", ".", "hmhmhmhmhm", "..."]
+# ::lemmas ["more", "of", "RT", "reporting", "on", "American", "news", "not", "it", "be", "own", ".", "hmhmhmhmhm", "..."]
+(c7-2 / multi-sentence
+      :snt1 (c7-8 / report-01
+                  :ARG0 (c7-4 / publication
+                              :name (c7-11 / name
+                                           :op1 "RT")
+                              :quant (c7-9 / more))
+                  :ARG2 (c7-3 / news
+                              :mod (c7-5 / country
+                                         :name (c7-7 / name
+                                                     :op1 "America")))
+                  :ARG1-of (c7-10 / contrast-01
+                                  :ARG2 (c7-0 / report-01
+                                              :ARG0 c7-4
+                                              :ARG1 (c7-6 / news
+                                                          :poss c7-4)
+                                              :polarity -)))
+      :snt2 (c7-1 / hmm
+                  :mode expressive))
+
+# ::snt Because American media is staying incredibly quiet. Call RT propaganda but its more news than CNN, MSNBC or Fox.
+# ::tokens ["Because", "American", "media", "is", "staying", "incredibly", "quiet", ".", "Call", "RT", "propaganda", "but", "its", "more", "news", "than", "CNN", ",", "MSNBC", "or", "Fox", "."]
+# ::lemmas ["because", "American", "medium", "be", "stay", "incredibly", "quiet", ".", "call", "RT", "propaganda", "but", "its", "more", "news", "than", "CNN", ",", "MSNBC", "or", "Fox", "."]
+(c8-18 / multi-sentence
+       :snt1 (c8-8 / cause-01
+                   :ARG0 (c8-10 / stay-01
+                                :ARG1 (c8-22 / media
+                                             :mod (c8-4 / country
+                                                        :name (c8-11 / name
+                                                                     :op1 "America")))
+                                :ARG3 (c8-23 / quiet-04
+                                             :ARG1 c8-22
+                                             :degree (c8-15 / incredible))))
+       :snt2 (c8-20 / contrast-01
+                    :ARG1 (c8-5 / call-01
+                                :ARG0 (c8-6 / you)
+                                :ARG1 (c8-16 / propaganda
+                                             :mod (c8-19 / publication
+                                                         :name (c8-1 / name
+                                                                     :op1 "RT")))
+                                :ARG2 (c8-2 / news
+                                            :ARG1-of (c8-0 / have-quant-91
+                                                           :ARG3 (c8-3 / more)
+                                                           :ARG4 (c8-17 / or
+                                                                        :op1 (c8-13 / publication
+                                                                                    :name (c8-21 / name
+                                                                                                 :op1 "CNN"))
+                                                                        :op2 (c8-9 / publication
+                                                                                   :name (c8-12 / name
+                                                                                                :op1 "MSNBC"))
+                                                                        :op3 (c8-14 / publication
+                                                                                    :name (c8-7 / name
+                                                                                                :op1 "Fox")))))
+                                :mode imperative)))
+
+# ::snt : URGENT: Darren Wilson is the police officer who shot Mike Brown
+# ::tokens [":", "URGENT", ":", "Darren", "Wilson", "is", "the", "police", "officer", "who", "shot", "Mike", "Brown"]
+# ::lemmas [":", "URGENT", ":", "Darren", "Wilson", "be", "the", "police", "officer", "who", "shoot", "Mike", "Brown"]
+(c9-5 / intend-01
+      :ARG1 (c9-4 / person
+                  :name (c9-8 / name
+                              :op1 "Darren"
+                              :op2 "Wilson")
+                  :ARG0-of (c9-1 / have-org-role-91
+                                 :ARG1 (c9-2 / police)
+                                 :ARG2 (c9-6 / officer))
+                  :ARG0-of (c9-7 / shoot-02
+                                 :ARG1 (c9-0 / person
+                                             :name (c9-3 / name
+                                                         :op1 "Mike"
+                                                         :op2 "Brown")))))
+
+# ::snt Urgent: Fearmonger much?
+# ::tokens ["Urgent", ":", "Fearmonger", "much", "?"]
+# ::lemmas ["urgent", ":", "Fearmonger", "much", "?"]
+(c10-3 / Urgent
+       :topic (c10-2 / person
+                     :ARG0-of (c10-0 / fearmonger-01)
+                     :mod (c10-1 / much)
+                     :polarity (c10-4 / amr-unknown)))
+
+# ::snt now US American know and fine! But is he going to pay for it? Stop those BULLIES from murdering again
+# ::tokens ["now", "US", "American", "know", "and", "fine", "!", "But", "is", "he", "going", "to", "pay", "for", "it", "?", "Stop", "those", "BULLIES", "from", "murdering", "again"]
+# ::lemmas ["now", "US", "American", "know", "and", "fine", "!", "but", "be", "he", "go", "to", "pay", "for", "it", "?", "stop", "those", "bully", "from", "murder", "again"]
+(c11-16 / multi-sentence
+        :snt1 (c11-12 / and
+                      :op1 (c11-15 / know-01
+                                   :ARG0 (c11-10 / person
+                                                 :mod (c11-6 / country
+                                                             :name (c11-8 / name
+                                                                          :op1 "US")))
+                                   :time (c11-1 / now))
+                      :op2 (c11-9 / fine-04
+                                  :ARG1 c11-10))
+        :snt2 (c11-3 / contrast-01
+                     :ARG2 (c11-17 / pay-01
+                                   :ARG0 (c11-0 / he)
+                                   :ARG3 (c11-11 / it))
+                     :polarity (c11-2 / amr-unknown))
+        :snt3 (c11-7 / stop-03
+                     :ARG0 (c11-4 / you)
+                     :ARG1 (c11-14 / bastard
+                                   :mod (c11-5 / that))
+                     :ARG2 (c11-18 / murder-01
+                                   :ARG0 c11-14
+                                   :mod (c11-13 / again))
+                     :mode imperative))

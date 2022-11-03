@@ -1,0 +1,48 @@
+# ::snt I do like the double decker trains in Sydney . Plenty of space <URL>
+# ::tokens ["I", "do", "like", "the", "double", "decker", "trains", "in", "Sydney", ".", "Plenty", "of", "space", "<", "URL", ">"]
+# ::lemmas ["i", "do", "like", "the", "double", "decker", "train", "in", "Sydney", ".", "plenty", "of", "space", "<", "URL", ">"]
+(c1-8 / multi-sentence
+      :snt1 (c1-5 / like-01
+                  :ARG0 (c1-7 / i)
+                  :ARG1 (c1-4 / train
+                              :mod (c1-0 / deck
+                                         :mod (c1-3 / double))
+                              :location (c1-2 / city
+                                              :name (c1-9 / name
+                                                          :op1 "Sydney"))))
+      :snt2 (c1-1 / space
+                  :quant (c1-6 / plenty)))
+
+# ::snt weather looks a bit overcast Richard . It's wet and cold here
+# ::tokens ["weather", "looks", "a", "bit", "overcast", "Richard", ".", "It", "'s", "wet", "and", "cold", "here"]
+# ::lemmas ["weather", "look", "a", "bit", "overcast", "Richard", ".", "it", "be", "wet", "and", "cold", "here"]
+(c2-9 / multi-sentence
+      :snt1 (c2-0 / say-01
+                  :ARG1 (c2-6 / look-02
+                              :ARG0 (c2-3 / weather)
+                              :ARG1 (c2-5 / overcast
+                                          :degree (c2-7 / bit)))
+                  :ARG2 (c2-8 / person
+                              :name (c2-10 / name
+                                           :op1 "Richard")))
+      :snt2 (c2-1 / and
+                  :op1 (c2-11 / wet-01)
+                  :op2 (c2-2 / cold-01)
+                  :location (c2-4 / here)))
+
+# ::snt Good morning . Overcast & muggy day , still got to mid s . Rain forecast for tomorrow .
+# ::tokens ["Good", "morning", ".", "Overcast", "&", "muggy", "day", ",", "still", "got", "to", "mid", "s", ".", "Rain", "forecast", "for", "tomorrow", "."]
+# ::lemmas ["good", "morning", ".", "Overcast", "&", "muggy", "day", ",", "still", "get", "to", "mid", "s", ".", "rain", "forecast", "for", "tomorrow", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-3 / morning
+                   :ARG1-of (c3-9 / good-02))
+       :snt2 (c3-1 / and
+                   :op1 (c3-6 / overcast)
+                   :op2 (c3-5 / muggy)
+                   :time-of (c3-12 / get-05
+                                   :ARG2 (c3-10 / mid
+                                                :op1 (c3-7 / temperature))
+                                   :mod (c3-0 / still)))
+       :snt3 (c3-2 / forecast-01
+                   :ARG1 (c3-8 / rain-01)
+                   :time (c3-4 / tomorrow)))

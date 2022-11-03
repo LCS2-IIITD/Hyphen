@@ -1,0 +1,13 @@
+# ::snt How long did it take? I have an appointment on Wednesday!
+# ::tokens ["How", "long", "did", "it", "take", "?", "I", "have", "an", "appointment", "on", "Wednesday", "!"]
+# ::lemmas ["how", "long", "do", "it", "take", "?", "i", "have", "an", "appointment", "on", "Wednesday", "!"]
+(c1-7 / multi-sentence
+      :snt1 (c1-5 / take-10
+                  :ARG0 (c1-6 / it)
+                  :ARG1 (c1-1 / amr-unknown))
+      :snt2 (c1-3 / have-06
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-8 / appointment-02
+                              :ARG0 c1-4
+                              :time (c1-0 / date-entity
+                                          :weekday (c1-2 / wednesday)))))

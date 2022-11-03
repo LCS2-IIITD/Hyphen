@@ -1,0 +1,62 @@
+# ::snt My thoughts exactly!!
+# ::tokens ["My", "thoughts", "exactly", "!", "!"]
+# ::lemmas ["my", "thought", "exactly", "!", "!"]
+(c1-3 / thing
+      :ARG1-of (c1-2 / think-01
+                     :ARG0 (c1-0 / i))
+      :mod (c1-1 / exact))
+
+# ::snt Yes, and IHOP has decided that they want to be a grill master. What a time to be alive.
+# ::tokens ["Yes", ",", "and", "IHOP", "has", "decided", "that", "they", "want", "to", "be", "a", "grill", "master", ".", "What", "a", "time", "to", "be", "alive", "."]
+# ::lemmas ["yes", ",", "and", "IHOP", "have", "decide", "that", "they", "want", "to", "be", "a", "grill", "master", ".", "what", "a", "time", "to", "be", "alive", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-8 / and
+                  :op2 (c2-10 / decide-01
+                              :ARG0 (c2-0 / organization
+                                          :name (c2-1 / name
+                                                      :op1 "IHOP"))
+                              :ARG1 (c2-6 / want-01
+                                          :ARG0 c2-0
+                                          :ARG1 (c2-4 / master-01
+                                                      :ARG0 c2-0
+                                                      :ARG1 (c2-9 / grill)))))
+      :snt2 (c2-7 / time
+                  :time-of (c2-5 / live-01)
+                  :degree (c2-3 / so)))
+
+# ::snt Might be s first girlfriend. Let him enjoy his special moment.
+# ::tokens ["Might", "be", "s", "first", "girlfriend", ".", "Let", "him", "enjoy", "his", "special", "moment", "."]
+# ::lemmas ["might", "be", "s", "first", "girlfriend", ".", "let", "he", "enjoy", "his", "special", "moment", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-7 / possible-01
+                  :ARG1 (c3-3 / person
+                              :ARG0-of (c3-6 / have-rel-role-91
+                                             :ARG1 (c3-11 / i)
+                                             :ARG2 (c3-12 / girlfriend
+                                                          :ord (c3-0 / ordinal-entity
+                                                                     :value 1)))
+                              :domain c3-11))
+      :snt2 (c3-8 / let-01
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-5 / enjoy-01
+                              :ARG0 (c3-10 / he)
+                              :ARG1 (c3-9 / moment
+                                          :ARG1-of (c3-4 / special-02)
+                                          :poss c3-10))
+                  :mode imperative))
+
+# ::snt Make a woman laugh and you're halfway to getting her in bed.
+# ::tokens ["Make", "a", "woman", "laugh", "and", "you", "'re", "halfway", "to", "getting", "her", "in", "bed", "."]
+# ::lemmas ["make", "a", "woman", "laugh", "and", "you", "be", "halfway", "to", "get", "she", "in", "bed", "."]
+(c5-7 / and
+      :op1 (c5-2 / make-02
+                 :ARG0 (c5-1 / you)
+                 :ARG1 (c5-4 / laugh-01
+                             :ARG0 (c5-5 / woman))
+                 :mode imperative)
+      :op2 (c5-3 / halfway
+                 :ARG1-of (c5-6 / include-91
+                                :ARG2 (c5-8 / get-05
+                                            :ARG0 c5-1
+                                            :ARG1 c5-5
+                                            :ARG2 (c5-0 / bed)))))

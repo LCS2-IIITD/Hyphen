@@ -1,0 +1,19 @@
+# ::subgraphs [["c1-0", "c1-1"], ["c2-2", "c2-3", "c2-1", "c2-0"], ["c3-1", "c3-2", "c3-0"]]
+(d / dummy
+   :COMMENT (c1-0 / cat
+                  :name (c1-1 / name
+                              :op1 "Grumpy"
+                              :op2 "Cats"))
+   :COMMENT (c2-2 / look
+                  :ARG0 (c2-3 / they
+                              :SAME c3-2
+                              :COREF c3-2)
+                  :ARG1 (c2-1 / excite
+                              :ARG1 c2-3
+                              :degree (c2-0 / so))
+                  :SAME c3-1)
+   :COMMENT (c3-1 / look
+                  :ARG0 (c3-2 / they)
+                  :ARG1 (c3-0 / happy
+                              :ARG1 c3-2)
+                  :polarity -))

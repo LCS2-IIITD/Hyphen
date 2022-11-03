@@ -1,0 +1,35 @@
+# ::snt This is wrong
+# ::tokens ["This", "is", "wrong"]
+# ::lemmas ["this", "be", "wrong"]
+(c1-0 / wrong-04
+      :ARG2 (c1-1 / this))
+
+# ::snt It sounds like you dont understand what vaccines are or what gene therapy means
+# ::tokens ["It", "sounds", "like", "you", "do", "nt", "understand", "what", "vaccines", "are", "or", "what", "gene", "therapy", "means"]
+# ::lemmas ["it", "sound", "like", "you", "do", "not", "understand", "what", "vaccine", "be", "or", "what", "gene", "therapy", "mean"]
+(c2-0 / sound-01
+      :ARG1 (c2-2 / understand-01
+                  :ARG0 (c2-8 / you)
+                  :ARG1 (c2-4 / or
+                              :op1 (c2-3 / vaccine)
+                              :op2 (c2-5 / thing
+                                         :ARG2-of (c2-7 / mean-01
+                                                        :ARG1 (c2-1 / therapy
+                                                                    :mod (c2-6 / gene)))))
+                  :polarity -))
+
+# ::snt Every medical procedure runs a risk of death. Botox/filler included
+# ::tokens ["Every", "medical", "procedure", "runs", "a", "risk", "of", "death", ".", "Botox", "/", "filler", "included"]
+# ::lemmas ["every", "medical", "procedure", "run", "a", "risk", "of", "death", ".", "Botox", "/", "filler", "include"]
+(c3-8 / multi-sentence
+      :snt1 (c3-5 / risk-01
+                  :ARG2 (c3-0 / die-01)
+                  :ARG3 (c3-7 / procedure
+                              :mod (c3-2 / medicine)
+                              :mod (c3-10 / every)))
+      :snt2 (c3-3 / include-01
+                  :ARG1 (c3-1 / slash
+                              :op1 (c3-6 / botox)
+                              :op2 (c3-4 / product
+                                         :name (c3-9 / name
+                                                     :op1 "Filler")))))

@@ -1,0 +1,47 @@
+# ::snt For all the hate Millennials get, Boomers are a special kind of scumbag
+# ::tokens ["For", "all", "the", "hate", "Millennials", "get", ",", "Boomers", "are", "a", "special", "kind", "of", "scumbag"]
+# ::lemmas ["for", "all", "the", "hate", "Millennials", "get", ",", "Boomers", "be", "a", "special", "kind", "of", "scumbag"]
+(c1-0 / scumbag
+      :mod (c1-8 / kind
+                 :ARG1-of (c1-6 / special-02))
+      :domain (c1-7 / person
+                    :mod (c1-4 / political-movement
+                               :name (c1-5 / name
+                                           :op1 "Boomer")))
+      :concession (c1-3 / hate-01
+                        :ARG1 (c1-2 / person
+                                    :mod (c1-9 / young))
+                        :mod (c1-1 / for-all)))
+
+# ::snt You keep using that word, but it doesn't mean what you think it means.
+# ::tokens ["You", "keep", "using", "that", "word", ",", "but", "it", "does", "n't", "mean", "what", "you", "think", "it", "means", "."]
+# ::lemmas ["you", "keep", "use", "that", "word", ",", "but", "it", "do", "not", "mean", "what", "you", "think", "it", "mean", "."]
+(c2-0 / contrast-01
+      :ARG1 (c2-8 / keep-02
+                  :ARG0 (c2-9 / you)
+                  :ARG1 (c2-5 / use-01
+                              :ARG0 c2-9
+                              :ARG1 (c2-1 / word
+                                          :mod (c2-6 / that))))
+      :ARG2 (c2-7 / mean-01
+                  :ARG1 c2-1
+                  :ARG2 (c2-2 / thing
+                              :ARG2-of (c2-3 / mean-01
+                                             :ARG1 c2-1
+                                             :ARG1-of (c2-4 / think-01
+                                                            :ARG0 c2-9)))
+                  :polarity -))
+
+# ::snt Fascist is just a codeword for people liberals don't agree with.
+# ::tokens ["Fascist", "is", "just", "a", "codeword", "for", "people", "liberals", "do", "n't", "agree", "with", "."]
+# ::lemmas ["Fascist", "be", "just", "a", "codeword", "for", "people", "liberal", "do", "not", "agree", "with", "."]
+(c3-1 / codeword
+      :domain (c3-5 / political-movement
+                    :name (c3-6 / name
+                                :op1 "Fascism"))
+      :beneficiary (c3-2 / person
+                         :ARG1-of (c3-0 / agree-01
+                                        :ARG0 c3-2
+                                        :ARG1-of (c3-3 / liberal-02)
+                                        :polarity -))
+      :mod (c3-4 / just))

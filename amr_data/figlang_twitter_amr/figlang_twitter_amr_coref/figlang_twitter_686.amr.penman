@@ -1,0 +1,63 @@
+# ::snt has started behaving like an Indian company . I ordered a spray pump which was supposed to be delivered to me on th Dec under prime delivery service . I had to call delivery agent to check delivery time , he said hours . Today is st yet no trace of parcel .
+# ::tokens ["has", "started", "behaving", "like", "an", "Indian", "company", ".", "I", "ordered", "a", "spray", "pump", "which", "was", "supposed", "to", "be", "delivered", "to", "me", "on", "th", "Dec", "under", "prime", "delivery", "service", ".", "I", "had", "to", "call", "delivery", "agent", "to", "check", "delivery", "time", ",", "he", "said", "hours", ".", "Today", "is", "st", "yet", "no", "trace", "of", "parcel", "."]
+# ::lemmas ["have", "start", "behave", "like", "an", "Indian", "company", ".", "i", "order", "a", "spray", "pump", "which", "be", "suppose", "to", "be", "deliver", "to", "i", "on", "th", "Dec", "under", "prime", "delivery", "service", ".", "i", "have", "to", "call", "delivery", "agent", "to", "check", "delivery", "time", ",", "he", "say", "hours", ".", "Today", "be", "st", "yet", "no", "trace", "of", "parcel", "."]
+(c1-11 / multi-sentence
+       :snt1 (c1-14 / start-01
+                    :ARG1 (c1-27 / behave-01
+                                 :ARG0 (c1-3 / i)
+                                 :ARG1 (c1-5 / company
+                                             :mod (c1-0 / country
+                                                        :name (c1-12 / name
+                                                                     :op1 "India")))))
+       :snt2 (c1-8 / order-02
+                   :ARG0 (c1-17 / i)
+                   :ARG1 (c1-29 / pump
+                                :ARG0-of (c1-28 / spray-01)
+                                :ARG1-of (c1-1 / deliver-01
+                                               :ARG2 c1-17
+                                               :time (c1-21 / date-entity
+                                                            :month 12
+                                                            :day 12)
+                                               :prep-under (c1-18 / serve-01
+                                                                  :ARG1 (c1-15 / deliver-01)
+                                                                  :mod (c1-26 / prime)))))
+       :snt3 (c1-25 / obligate-01
+                    :ARG1 (c1-19 / i)
+                    :ARG2 (c1-7 / call-02
+                                :ARG0 c1-19
+                                :ARG1 (c1-23 / agent
+                                             :mod c1-15)
+                                :purpose (c1-20 / check-01
+                                                :ARG0 c1-23
+                                                :ARG1 (c1-10 / time
+                                                             :time-of (c1-9 / deliver-01)))))
+       :ARG1-of (c1-4 / say-01
+                      :ARG0 (c1-24 / he)
+                      :time (c1-2 / hour))
+       :snt4 (c1-6 / trace-02
+                   :ARG1 (c1-16 / parcel)
+                   :time (c1-13 / today)
+                   :mod (c1-22 / yet)
+                   :polarity -))
+
+# ::snt Apologies for the delayed delivery of your order . Have you tried reaching out to our support team here : <URL> ^ JS
+# ::tokens ["Apologies", "for", "the", "delayed", "delivery", "of", "your", "order", ".", "Have", "you", "tried", "reaching", "out", "to", "our", "support", "team", "here", ":", "<", "URL", ">", "^", "JS"]
+# ::lemmas ["apology", "for", "the", "delay", "delivery", "of", "your", "order", ".", "have", "you", "try", "reach", "out", "to", "our", "support", "team", "here", ":", "<", "URL", ">", "^", "JS"]
+(c2-12 / multi-sentence
+       :snt1 (c2-2 / apologize-01
+                   :ARG1 (c2-0 / deliver-01
+                               :ARG1 (c2-7 / order-01
+                                           :ARG0 (c2-14 / you))
+                               :ARG1-of (c2-11 / delay-01)))
+       :snt2 (c2-8 / try-01
+                   :ARG0 (c2-15 / you)
+                   :ARG1 (c2-9 / reach-03
+                               :ARG0 c2-15
+                               :ARG2 (c2-4 / team
+                                           :ARG0-of (c2-1 / support-01)
+                                           :poss (c2-3 / we))
+                               :location (c2-5 / here))
+                   :polarity (c2-6 / amr-unknown))
+       :snt3 (c2-10 / person
+                    :name (c2-13 / name
+                                 :op1 "JS")))

@@ -1,0 +1,108 @@
+# ::snt looks like computer problem like few month ago
+# ::tokens ["looks", "like", "computer", "problem", "like", "few", "month", "ago"]
+# ::lemmas ["look", "like", "computer", "problem", "like", "few", "month", "ago"]
+(c1-0 / look-02
+      :ARG1 (c1-5 / problem
+                  :topic (c1-6 / computer))
+      :ARG2 (c1-3 / before
+                  :op1 (c1-4 / now)
+                  :quant (c1-1 / few
+                               :op1 (c1-7 / temporal-quantity
+                                          :unit (c1-2 / month)
+                                          :quant 1))))
+
+# ::snt From what I see this is past Nice and Marseilles
+# ::tokens ["From", "what", "I", "see", "this", "is", "past", "Nice", "and", "Marseilles"]
+# ::lemmas ["from", "what", "i", "see", "this", "be", "past", "Nice", "and", "Marseilles"]
+(c2-0 / be-located-at-91
+      :ARG1 (c2-9 / this)
+      :ARG2 (c2-4 / past
+                  :op1 (c2-10 / and
+                              :op1 (c2-6 / city
+                                         :name (c2-2 / name
+                                                     :op1 "Nice"))
+                              :op2 (c2-5 / city
+                                         :name (c2-3 / name
+                                                     :op1 "Marseilles"))))
+      :source (c2-7 / thing
+                    :ARG1-of (c2-8 / see-01
+                                   :ARG0 (c2-1 / i))))
+
+# ::snt : Ultima posicion geografica del vuelo desde base de datos de
+# ::tokens [":", "Ultima", "posicion", "geografica", "del", "vuelo", "desde", "base", "de", "datos", "de"]
+# ::lemmas [":", "Ultima", "posicion", "geografica", "del", "vuelo", "desde", "base", "de", "datos", "de"]
+(c3-4 / posicion
+      :mod (c3-6 / geografica)
+      :poss (c3-1 / facility
+                  :name (c3-3 / name
+                              :op1 "Ultima"))
+      :mod (c3-5 / desde
+                 :op1 (c3-2 / base
+                            :mod (c3-0 / datos
+                                       :mod (c3-7 / de-facto)))))
+
+# ::snt : Last position data of flight directly from Flightradar24 database
+# ::tokens [":", "Last", "position", "data", "of", "flight", "directly", "from", "Flightradar24", "database"]
+# ::lemmas [":", "last", "position", "datum", "of", "flight", "directly", "from", "Flightradar24", "database"]
+(c4-5 / data
+      :mod (c4-4 / position
+                 :ord (c4-2 / ordinal-entity
+                            :value -1))
+      :topic (c4-1 / fly-01)
+      :source (c4-0 / database
+                    :name (c4-3 / name
+                                :op1 "Flightradar24"))
+      :ARG1-of (c4-6 / direct-02))
+
+# ::snt funny how there wasn't much heading change during descent - is there an airport anywhere on that heading?
+# ::tokens ["funny", "how", "there", "was", "n't", "much", "heading", "change", "during", "descent", "-", "is", "there", "an", "airport", "anywhere", "on", "that", "heading", "?"]
+# ::lemmas ["funny", "how", "there", "be", "not", "much", "head", "change", "during", "descent", "-", "be", "there", "an", "airport", "anywhere", "on", "that", "heading", "?"]
+(c5-10 / and
+       :op1 (c5-1 / funny
+                  :domain (c5-7 / change-01
+                                :ARG1 (c5-0 / heading)
+                                :time (c5-6 / descend-01)
+                                :quant (c5-2 / much)
+                                :polarity -))
+       :op2 (c5-4 / airport
+                  :location (c5-5 / anywhere
+                                  :location-of (c5-3 / heading
+                                                     :mod (c5-9 / that)))
+                  :polarity (c5-8 / amr-unknown)))
+
+# ::snt ft/min is more than just a steep decent.
+# ::tokens ["ft", "/", "min", "is", "more", "than", "just", "a", "steep", "decent", "."]
+# ::lemmas ["ft", "/", "min", "be", "more", "than", "just", "a", "steep", "decent", "."]
+(c6-0 / have-quant-91
+      :ARG1 (c6-5 / rate-entity-91
+                  :ARG1 (c6-6 / distance-quantity
+                              :unit (c6-3 / foot)
+                              :quant 1)
+                  :ARG2 (c6-8 / temporal-quantity
+                              :unit (c6-9 / hour)
+                              :quant 1))
+      :ARG3 (c6-4 / more)
+      :ARG4 (c6-2 / decent
+                  :mod (c6-7 / steep)
+                  :mod (c6-1 / just)))
+
+# ::snt first they gained alt then dropping but steady speed... it's like something was damaged but still quite OK.
+# ::tokens ["first", "they", "gained", "alt", "then", "dropping", "but", "steady", "speed", "...", "it", "'s", "like", "something", "was", "damaged", "but", "still", "quite", "OK", "."]
+# ::lemmas ["first", "they", "gain", "alt", "then", "drop", "but", "steady", "speed", "...", "it", "be", "like", "something", "be", "damage", "but", "still", "quite", "ok", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-9 / gain-01
+                  :ARG0 (c7-13 / they)
+                  :ord (c7-4 / ordinal-entity
+                             :value 1)
+                  :manner (c7-14 / alt)
+                  :time (c7-11 / then))
+      :snt2 (c7-8 / contrast-01
+                  :ARG1 (c7-7 / drop-01
+                              :ARG1 c7-13
+                              :manner (c7-12 / steady))
+                  :ARG2 (c7-10 / contrast-01
+                               :ARG1 (c7-0 / damage-01
+                                           :ARG1 (c7-5 / something))
+                               :ARG2 (c7-1 / okay-04
+                                           :mod (c7-3 / still)
+                                           :degree (c7-6 / quite)))))

@@ -1,0 +1,35 @@
+# ::snt Thanks
+# ::tokens ["Thanks"]
+# ::lemmas ["thank"]
+(c1-1 / thank-01
+      :ARG0 (c1-0 / i)
+      :ARG1 (c1-2 / you))
+
+# ::snt Thanks
+# ::tokens ["Thanks"]
+# ::lemmas ["thank"]
+(c2-1 / thank-01
+      :ARG0 (c2-0 / i)
+      :ARG1 (c2-2 / you))
+
+# ::snt Well done Eric!!
+# ::tokens ["Well", "done", "Eric", "!", "!"]
+# ::lemmas ["well", "do", "Eric", "!", "!"]
+(c3-0 / say-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-1 / do-02
+                  :ARG1-of (c3-2 / well-09))
+      :ARG2 (c3-3 / person
+                  :name (c3-5 / name
+                              :op1 "Eric")))
+
+# ::snt Congrats!! Thats awesome!
+# ::tokens ["Congrats", "!", "!", "That", "s", "awesome", "!"]
+# ::lemmas ["Congrats", "!", "!", "that", "s", "awesome", "!"]
+(c4-3 / multi-sentence
+      :snt1 (c4-1 / congratulate-01
+                  :ARG1 (c4-4 / you)
+                  :mode expressive)
+      :snt2 (c4-0 / awe-01
+                  :ARG0 (c4-2 / that)
+                  :mode expressive))

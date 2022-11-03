@@ -1,0 +1,400 @@
+# ::snt yes, for
+# ::tokens ["yes", ",", "for"]
+# ::lemmas ["yes", ",", "for"]
+(c1-0 / yes)
+
+# ::snt I could tell you but then I'd have to kill you.
+# ::tokens ["I", "could", "tell", "you", "but", "then", "I", "'d", "have", "to", "kill", "you", "."]
+# ::lemmas ["i", "could", "tell", "you", "but", "then", "i", "would", "have", "to", "kill", "you", "."]
+(c2-5 / contrast-01
+      :ARG1 (c2-4 / possible-01
+                  :ARG1 (c2-7 / tell-01
+                              :ARG0 (c2-2 / i)
+                              :ARG2 (c2-0 / you)))
+      :ARG2 (c2-1 / obligate-01
+                  :ARG1 c2-2
+                  :ARG2 (c2-3 / kill-01
+                              :ARG0 c2-2
+                              :ARG1 c2-0)
+                  :time (c2-6 / then)))
+
+# ::snt Try reading my timeline instead of asking me to repeat myself.
+# ::tokens ["Try", "reading", "my", "timeline", "instead", "of", "asking", "me", "to", "repeat", "myself", "."]
+# ::lemmas ["try", "read", "my", "timeline", "instead", "of", "ask", "i", "to", "repeat", "myself", "."]
+(c3-6 / try-01
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-3 / read-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-5 / timeline
+                              :poss (c3-1 / i)))
+      :ARG1-of (c3-4 / instead-of-91
+                     :ARG2 (c3-7 / ask-02
+                                 :ARG0 c3-0
+                                 :ARG1 (c3-2 / repeat-01
+                                             :ARG0 c3-1
+                                             :ARG1 c3-1)
+                                 :ARG2 c3-1))
+      :mode imperative)
+
+# ::snt anyways, thanks for the info.
+# ::tokens ["anyways", ",", "thanks", "for", "the", "info", "."]
+# ::lemmas ["anyways", ",", "thank", "for", "the", "info", "."]
+(c4-3 / thank-01
+      :ARG0 (c4-1 / i)
+      :ARG1 (c4-0 / you)
+      :ARG2 (c4-2 / information)
+      :mod (c4-4 / anyway))
+
+# ::snt BBC News - Mr Merizier said that the attacker was of "Arabic appearance" and had "long dark hair and a beard".
+# ::tokens ["BBC", "News", "-", "Mr", "Merizier", "said", "that", "the", "attacker", "was", "of", "\"", "Arabic", "appearance", "\"", "and", "had", "\"", "long", "dark", "hair", "and", "a", "beard", "\"", "."]
+# ::lemmas ["BBC", "News", "-", "Mr", "Merizier", "say", "that", "the", "attacker", "be", "of", "\"", "Arabic", "appearance", "\"", "and", "have", "\"", "long", "dark", "hair", "and", "a", "beard", "\"", "."]
+(c5-13 / say-01
+       :ARG0 (c5-8 / person
+                   :name (c5-6 / name
+                               :op1 "Mr"
+                               :op2 "Merizier"))
+       :ARG1 (c5-16 / and
+                    :op1 (c5-5 / appear-02
+                               :ARG1 (c5-15 / person
+                                            :ARG0-of (c5-7 / attack-01))
+                               :mod (c5-4 / ethnic-group
+                                          :name (c5-9 / name
+                                                      :op1 "Arabic")))
+                    :op2 (c5-0 / have-03
+                               :ARG0 c5-15
+                               :ARG1 (c5-14 / and
+                                            :op1 (c5-1 / hair
+                                                       :ARG1-of (c5-10 / dark-03))
+                                            :op2 (c5-3 / beard)
+                                            :ARG1-of (c5-2 / long-03))))
+       :medium (c5-11 / broadcast-program
+                      :name (c5-12 / name
+                                   :op1 "BBC"
+                                   :op2 "News")))
+
+# ::snt Which accounts?
+# ::tokens ["Which", "accounts", "?"]
+# ::lemmas ["which", "account", "?"]
+(c6-1 / account-01
+      :ARG0 (c6-0 / amr-unknown))
+
+# ::snt Follow me please. I will DM you.
+# ::tokens ["Follow", "me", "please", ".", "I", "will", "DM", "you", "."]
+# ::lemmas ["follow", "i", "please", ".", "i", "will", "dm", "you", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-1 / follow-02
+                  :ARG0 (c7-0 / you)
+                  :ARG1 (c7-3 / i)
+                  :mode imperative
+                  :polite +)
+      :snt2 (c7-4 / DM-01
+                  :ARG0 (c7-5 / i)
+                  :ARG2 (c7-6 / you)
+                  :polite +))
+
+# ::snt ??????
+# ::tokens ["?", "?", "?", "?", "?", "?"]
+# ::lemmas ["?", "?", "?", "?", "?", "?"]
+(c8-0 / amr-empty)
+
+# ::snt just a coincidence. Obviously a white angry racist
+# ::tokens ["just", "a", "coincidence", ".", "Obviously", "a", "white", "angry", "racist"]
+# ::lemmas ["just", "a", "coincidence", ".", "obviously", "a", "white", "angry", "racist"]
+(c9-2 / multi-sentence
+      :snt1 (c9-5 / coincidence
+                  :mod (c9-0 / just))
+      :snt2 (c9-4 / racist
+                  :ARG1-of (c9-6 / anger-01)
+                  :ARG1-of (c9-1 / white-02)
+                  :ARG1-of (c9-3 / obvious-01)))
+
+# ::snt Hi, can you tell me where you got the picture?
+# ::tokens ["Hi", ",", "can", "you", "tell", "me", "where", "you", "got", "the", "picture", "?"]
+# ::lemmas ["hi", ",", "can", "you", "tell", "i", "where", "you", "get", "the", "picture", "?"]
+(c10-3 / multi-sentence
+       :snt1 (c10-0 / hi)
+       :snt2 (c10-5 / possible-01
+                    :ARG1 (c10-7 / tell-01
+                                 :ARG0 (c10-1 / you)
+                                 :ARG1 (c10-2 / location
+                                              :location-of (c10-6 / get-01
+                                                                  :ARG0 c10-1
+                                                                  :ARG1 (c10-8 / picture)))
+                                 :ARG2 (c10-4 / i))
+                    :polarity (c10-9 / amr-unknown)))
+
+# ::snt He's already suspended.
+# ::tokens ["He", "'s", "already", "suspended", "."]
+# ::lemmas ["he", "be", "already", "suspend", "."]
+(c11-0 / suspend-01
+       :ARG1 (c11-1 / he)
+       :time (c11-2 / already))
+
+# ::snt Many here in Ottawa media looking for the source of this photo.
+# ::tokens ["Many", "here", "in", "Ottawa", "media", "looking", "for", "the", "source", "of", "this", "photo", "."]
+# ::lemmas ["many", "here", "in", "Ottawa", "medium", "look", "for", "the", "source", "of", "this", "photo", "."]
+(c12-9 / search-01
+       :ARG0 (c12-5 / person
+                    :quant (c12-2 / many)
+                    :location (c12-0 / here
+                                     :ARG1-of (c12-6 / mean-01
+                                                     :ARG2 (c12-1 / media
+                                                                  :mod (c12-7 / city
+                                                                              :name (c12-4 / name
+                                                                                           :op1 "Ottawa"))))))
+       :ARG2 (c12-10 / thing
+                     :ARG2-of (c12-3 / source-01
+                                     :ARG1 (c12-11 / photo
+                                                   :mod (c12-8 / this)))))
+
+# ::snt for everyone else who doesn't want to read your whole timeline
+# ::tokens ["for", "everyone", "else", "who", "does", "n't", "want", "to", "read", "your", "whole", "timeline"]
+# ::lemmas ["for", "everyone", "else", "who", "do", "not", "want", "to", "read", "your", "whole", "timeline"]
+(c13-3 / benefit-01
+       :ARG1 (c13-4 / everyone
+                    :mod (c13-2 / else)
+                    :ARG0-of (c13-0 / want-01
+                                    :ARG1 (c13-6 / read-01
+                                                 :ARG0 c13-4
+                                                 :ARG1 (c13-7 / timeline
+                                                              :poss (c13-1 / you)
+                                                              :mod (c13-5 / whole)))
+                                    :polarity -)))
+
+# ::snt Done
+# ::tokens ["Done"]
+# ::lemmas ["do"]
+(c14-0 / do-02)
+
+# ::snt Source?
+# ::tokens ["Source", "?"]
+# ::lemmas ["source", "?"]
+(c15-0 / source
+       :polarity (c15-1 / amr-unknown))
+
+# ::snt Bonjour. tes-vous un journaliste?
+# ::tokens ["Bonjour", ".", "tes", "-", "vous", "un", "journaliste", "?"]
+# ::lemmas ["Bonjour", ".", "tes", "-", "vous", "un", "journaliste", "?"]
+(c16-1 / multi-sentence
+       :snt1 (c16-2 / bonjour)
+       :snt2 (c16-3 / vous
+                    :polarity (c16-4 / amr-unknown)
+                    :domain (c16-0 / journaliste)))
+
+# ::snt Can you DM me the accounts too? I have some choice words
+# ::tokens ["Can", "you", "DM", "me", "the", "accounts", "too", "?", "I", "have", "some", "choice", "words"]
+# ::lemmas ["can", "you", "dm", "i", "the", "account", "too", "?", "i", "have", "some", "choice", "word"]
+(c17-3 / multi-sentence
+       :snt1 (c17-6 / possible-01
+                    :polarity (c17-12 / amr-unknown)
+                    :ARG1 (c17-7 / DM-01
+                                 :ARG0 (c17-1 / you)
+                                 :ARG1 (c17-4 / account)
+                                 :ARG2 (c17-5 / i)
+                                 :mod (c17-11 / too)))
+       :snt2 (c17-0 / have-03
+                    :ARG0 (c17-9 / i)
+                    :ARG1 (c17-2 / word
+                                 :ARG1-of (c17-8 / choose-01)
+                                 :quant (c17-10 / some))))
+
+# ::snt hi, where did you source this pic?
+# ::tokens ["hi", ",", "where", "did", "you", "source", "this", "pic", "?"]
+# ::lemmas ["hi", ",", "where", "do", "you", "source", "this", "pic", "?"]
+(c18-2 / multi-sentence
+       :snt1 (c18-0 / hi)
+       :snt2 (c18-4 / source-01
+                    :ARG0 (c18-1 / you)
+                    :ARG1 (c18-3 / pic
+                                 :mod (c18-5 / this))
+                    :ARG2 (c18-6 / amr-unknown)))
+
+# ::snt gross answer
+# ::tokens ["gross", "answer"]
+# ::lemmas ["gross", "answer"]
+(c19-1 / answer-01
+       :mod (c19-0 / gross))
+
+# ::snt What media account did you get this photo from? What is your confirmation that this is the guy? DM me please
+# ::tokens ["What", "media", "account", "did", "you", "get", "this", "photo", "from", "?", "What", "is", "your", "confirmation", "that", "this", "is", "the", "guy", "?", "DM", "me", "please"]
+# ::lemmas ["what", "medium", "account", "do", "you", "get", "this", "photo", "from", "?", "what", "be", "your", "confirmation", "that", "this", "be", "the", "guy", "?", "DM", "i", "please"]
+(c20-1 / multi-sentence
+       :snt1 (c20-9 / get-01
+                    :ARG0 (c20-0 / you)
+                    :ARG1 (c20-6 / photo
+                                 :mod (c20-14 / this))
+                    :ARG2 (c20-15 / amr-unknown
+                                  :medium (c20-7 / media
+                                                 :mod (c20-3 / amr-unknown))))
+       :snt2 (c20-8 / confirm-01
+                    :ARG0 (c20-11 / you)
+                    :ARG1 (c20-10 / guy
+                                  :domain (c20-13 / this))
+                    :polarity (c20-5 / amr-unknown))
+       :snt3 (c20-12 / DM-01
+                     :ARG0 (c20-2 / you)
+                     :ARG1 (c20-4 / i)
+                     :mode imperative
+                     :polite +))
+
+# ::snt SOURCE plz
+# ::tokens ["SOURCE", "plz"]
+# ::lemmas ["source", "plz"]
+(c21-2 / be-from-91
+       :ARG2 (c21-1 / company
+                    :name (c21-0 / name
+                                 :op1 "plz")))
+
+# ::snt are u full of shit or is this true?
+# ::tokens ["are", "u", "full", "of", "shit", "or", "is", "this", "true", "?"]
+# ::lemmas ["be", "u", "full", "of", "shit", "or", "be", "this", "true", "?"]
+(c22-5 / amr-choice
+       :op1 (c22-1 / fill-01
+                   :ARG1 (c22-0 / you)
+                   :ARG2 (c22-3 / shit))
+       :op2 (c22-4 / true-01
+                   :ARG1 (c22-2 / this)))
+
+# ::snt Hi, my name is Jean Bond. I'm french, could you tell me more??
+# ::tokens ["Hi", ",", "my", "name", "is", "Jean", "Bond", ".", "I", "'m", "french", ",", "could", "you", "tell", "me", "more", "?", "?"]
+# ::lemmas ["hi", ",", "my", "name", "be", "Jean", "Bond", ".", "i", "be", "french", ",", "could", "you", "tell", "i", "more", "?", "?"]
+(c23-3 / multi-sentence
+       :snt1 (c23-0 / hi
+                    :mode expressive)
+       :snt2 (c23-5 / name-01
+                    :ARG1 (c23-4 / i)
+                    :ARG2 (c23-7 / person
+                                 :name (c23-6 / name
+                                              :op1 "Jean"
+                                              :op2 "Bond")))
+       :snt3 (c23-10 / i
+                     :mod (c23-9 / country
+                                 :name (c23-8 / name
+                                              :op1 "France")))
+       :snt4 (c23-13 / possible-01
+                     :ARG1 (c23-12 / tell-01
+                                   :ARG0 (c23-1 / you)
+                                   :ARG1 (c23-11 / more)
+                                   :ARG2 (c23-2 / i))
+                     :polarity (c23-14 / amr-unknown)))
+
+# ::snt Oh, figures! Thanks
+# ::tokens ["Oh", ",", "figures", "!", "Thanks"]
+# ::lemmas ["oh", ",", "figure", "!", "thank"]
+(c25-2 / multi-sentence
+       :snt1 (c25-1 / figure
+                    :mod (c25-3 / oh
+                                :mode expressive))
+       :snt2 (c25-5 / thank-01
+                    :ARG0 (c25-4 / i)
+                    :ARG1 (c25-0 / you)))
+
+# ::snt hi, could you point us to the account? I'm a reporter
+# ::tokens ["hi", ",", "could", "you", "point", "us", "to", "the", "account", "?", "I", "'m", "a", "reporter"]
+# ::lemmas ["hi", ",", "could", "you", "point", "we", "to", "the", "account", "?", "i", "be", "a", "reporter"]
+(c26-3 / multi-sentence
+       :snt1 (c26-0 / hi)
+       :snt2 (c26-7 / possible-01
+                    :polarity (c26-10 / amr-unknown)
+                    :ARG1 (c26-9 / point-01
+                                 :ARG0 (c26-1 / you)
+                                 :ARG1 (c26-2 / we)
+                                 :ARG2 (c26-5 / account)))
+       :snt3 (c26-4 / person
+                    :ARG0-of (c26-8 / report-01)
+                    :domain (c26-6 / i)))
+
+# ::snt Suppose that's real: that guy is carrying a lever action rifle it looks like?
+# ::tokens ["Suppose", "that", "'s", "real", ":", "that", "guy", "is", "carrying", "a", "lever", "action", "rifle", "it", "looks", "like", "?"]
+# ::lemmas ["suppose", "that", "be", "real", ":", "that", "guy", "be", "carry", "a", "lever", "action", "rifle", "it", "look", "like", "?"]
+(c27-8 / suppose-01
+       :polarity (c27-10 / amr-unknown)
+       :ARG1 (c27-5 / real-04
+                    :ARG1 (c27-6 / carry-01
+                                 :ARG0 (c27-7 / guy
+                                              :mod (c27-9 / that))
+                                 :ARG1 (c27-4 / rifle
+                                              :mod (c27-2 / action
+                                                          :mod (c27-0 / lever))
+                                              :ARG1-of (c27-1 / resemble-01
+                                                              :ARG2 (c27-3 / it))))))
+
+# ::snt The glare is right over the trigger guard but the barrel and hammer could be from a lever action.
+# ::tokens ["The", "glare", "is", "right", "over", "the", "trigger", "guard", "but", "the", "barrel", "and", "hammer", "could", "be", "from", "a", "lever", "action", "."]
+# ::lemmas ["the", "glare", "be", "right", "over", "the", "trigger", "guard", "but", "the", "barrel", "and", "hammer", "could", "be", "from", "a", "lever", "action", "."]
+(c28-7 / contrast-01
+       :ARG1 (c28-2 / be-located-at-91
+                    :ARG1 (c28-8 / glare)
+                    :ARG2 (c28-3 / over
+                                 :op1 (c28-6 / guard
+                                             :mod (c28-12 / trigger))
+                                 :mod (c28-9 / right)))
+       :ARG2 (c28-5 / possible-01
+                    :ARG1 (c28-10 / be-from-91
+                                  :ARG1 (c28-13 / and
+                                                :op1 (c28-11 / barrel)
+                                                :op2 (c28-0 / hammer))
+                                  :ARG2 (c28-4 / action
+                                               :mod (c28-1 / lever)))))
+
+# ::snt Could you tell us your source please?
+# ::tokens ["Could", "you", "tell", "us", "your", "source", "please", "?"]
+# ::lemmas ["could", "you", "tell", "we", "your", "source", "please", "?"]
+(c29-4 / tell-01
+       :ARG0 (c29-0 / you)
+       :ARG1 (c29-2 / thing
+                    :ARG2-of (c29-3 / source-01
+                                    :ARG0 c29-0))
+       :ARG2 (c29-1 / we)
+       :polite +
+       :mode imperative)
+
+# ::snt Which accounts?
+# ::tokens ["Which", "accounts", "?"]
+# ::lemmas ["which", "account", "?"]
+(c30-1 / account-01
+       :ARG0 (c30-0 / amr-unknown))
+
+# ::snt so there's no source?
+# ::tokens ["so", "there", "'s", "no", "source", "?"]
+# ::lemmas ["so", "there", "be", "no", "source", "?"]
+(c31-0 / source-01
+       :ARG1-of (c31-1 / request-confirmation-91)
+       :polarity -)
+
+# ::snt its just very juvenile of an answer at an inappropriate time.
+# ::tokens ["its", "just", "very", "juvenile", "of", "an", "answer", "at", "an", "inappropriate", "time", "."]
+# ::lemmas ["its", "just", "very", "juvenile", "of", "an", "answer", "at", "an", "inappropriate", "time", "."]
+(c32-0 / juvenile
+       :domain (c32-5 / answer-01
+                      :time (c32-3 / time
+                                   :ARG1-of (c32-1 / appropriate-02
+                                                   :polarity -)))
+       :degree (c32-2 / very)
+       :mod (c32-4 / just))
+
+# ::snt Do you work for the media?
+# ::tokens ["Do", "you", "work", "for", "the", "media", "?"]
+# ::lemmas ["do", "you", "work", "for", "the", "medium", "?"]
+(c33-0 / work-01
+       :polarity (c33-3 / amr-unknown)
+       :ARG0 (c33-2 / you)
+       :ARG2 (c33-1 / media))
+
+# ::snt It's an old joke. If you don't get it, watch more spy movies.
+# ::tokens ["It", "'s", "an", "old", "joke", ".", "If", "you", "do", "n't", "get", "it", ",", "watch", "more", "spy", "movies", "."]
+# ::lemmas ["it", "be", "an", "old", "joke", ".", "if", "you", "do", "not", "get", "it", ",", "watch", "more", "spy", "movie", "."]
+(c34-4 / multi-sentence
+       :snt1 (c34-0 / joke-01
+                    :mod (c34-5 / old)
+                    :domain (c34-6 / it))
+       :snt2 (c34-1 / watch-01
+                    :ARG0 (c34-2 / you)
+                    :ARG1 (c34-7 / movie
+                                 :mod (c34-10 / spy-01)
+                                 :quant (c34-3 / more))
+                    :condition (c34-8 / get-01
+                                      :ARG0 c34-2
+                                      :ARG1 (c34-9 / it)
+                                      :polarity -)
+                    :mode imperative))

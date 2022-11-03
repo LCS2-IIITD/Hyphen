@@ -1,0 +1,402 @@
+# ::snt Marty McFly would curl up in a ball, sobbing.
+# ::tokens ["Marty", "McFly", "would", "curl", "up", "in", "a", "ball", ",", "sobbing", "."]
+# ::lemmas ["Marty", "McFly", "would", "curl", "up", "in", "a", "ball", ",", "sob", "."]
+(c1-4 / curl-01
+      :ARG1 (c1-3 / person
+                  :name (c1-1 / name
+                              :op1 "Marty"
+                              :op2 "McFly")
+                  :ARG0-of (c1-2 / sob-01))
+      :ARG4 (c1-0 / ball)
+      :manner (c1-5 / up))
+
+# ::snt YUCK
+# ::tokens ["YUCK"]
+# ::lemmas ["YUCK"]
+(c2-0 / yuck
+      :mode expressive)
+
+# ::snt Oh wow, for real? May you live in interesting times.
+# ::tokens ["Oh", "wow", ",", "for", "real", "?", "May", "you", "live", "in", "interesting", "times", "."]
+# ::lemmas ["oh", "wow", ",", "for", "real", "?", "may", "you", "live", "in", "interesting", "time", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-3 / real-04
+                  :polarity (c3-8 / amr-unknown)
+                  :mod (c3-0 / oh-wow
+                             :mode expressive))
+      :snt2 (c3-5 / wish-01
+                  :ARG1 (c3-4 / live-01
+                              :ARG0 (c3-1 / you)
+                              :time (c3-6 / time
+                                          :mod (c3-7 / interesting)))
+                  :ARG2 c3-1))
+
+# ::snt Sounds like I thought about killing you subtlety....
+# ::tokens ["Sounds", "like", "I", "thought", "about", "killing", "you", "subtlety", "...."]
+# ::lemmas ["sound", "like", "i", "think", "about", "kill", "you", "subtlety", "...."]
+(c4-2 / sound-01
+      :ARG2 (c4-5 / think-01
+                  :ARG0 (c4-4 / i)
+                  :ARG2 (c4-3 / kill-01
+                              :ARG0 c4-4
+                              :ARG1 (c4-0 / subtlety
+                                          :domain (c4-1 / you)))))
+
+# ::snt Bitch where
+# ::tokens ["Bitch", "where"]
+# ::lemmas ["bitch", "where"]
+(c6-1 / say-01
+      :ARG0 (c6-3 / i)
+      :ARG2 (c6-2 / person
+                  :name (c6-0 / name
+                              :op1 "Bitch")
+                  :location (c6-4 / amr-unknown)))
+
+# ::snt your Tweet was quoted in an article by
+# ::tokens ["your", "Tweet", "was", "quoted", "in", "an", "article", "by"]
+# ::lemmas ["your", "Tweet", "be", "quote", "in", "an", "article", "by"]
+(c7-3 / quote-01
+      :ARG0 (c7-1 / article)
+      :ARG1 (c7-2 / thing
+                  :ARG1-of (c7-4 / Tweet-01
+                                 :ARG0 (c7-0 / you))))
+
+# ::snt your Tweet was quoted in an article by
+# ::tokens ["your", "Tweet", "was", "quoted", "in", "an", "article", "by"]
+# ::lemmas ["your", "Tweet", "be", "quote", "in", "an", "article", "by"]
+(c8-3 / quote-01
+      :ARG0 (c8-1 / article)
+      :ARG1 (c8-2 / thing
+                  :ARG1-of (c8-4 / Tweet-01
+                                 :ARG0 (c8-0 / you))))
+
+# ::snt Potato, potato.
+# ::tokens ["Potato", ",", "potato", "."]
+# ::lemmas ["Potato", ",", "potato", "."]
+(c9-0 / potato
+      :mod (c9-1 / potato))
+
+# ::snt Not "Arse that broke the interwebs day"?
+# ::tokens ["Not", "\"", "Arse", "that", "broke", "the", "interwebs", "day", "\"", "?"]
+# ::lemmas ["not", "\"", "Arse", "that", "break", "the", "interwebs", "day", "\"", "?"]
+(c10-0 / break-18
+       :ARG0 (c10-2 / country
+                    :name (c10-1 / name
+                                 :op1 "Arse"))
+       :ARG1 (c10-5 / day
+                    :mod (c10-3 / interweb))
+       :polarity (c10-4 / amr-unknown)
+       :polarity -)
+
+# ::snt Elon musk isn't running for office or considering it.... couldn't this be said about basically anyone? Slow news day?
+# ::tokens ["Elon", "musk", "is", "n't", "running", "for", "office", "or", "considering", "it", "....", "could", "n't", "this", "be", "said", "about", "basically", "anyone", "?", "Slow", "news", "day", "?"]
+# ::lemmas ["elon", "musk", "be", "not", "run", "for", "office", "or", "consider", "it", "....", "could", "not", "this", "be", "say", "about", "basically", "anyone", "?", "slow", "news", "day", "?"]
+(c11-5 / multi-sentence
+       :snt1 (c11-0 / or
+                    :op1 (c11-8 / run-02
+                                :ARG0 (c11-11 / person
+                                              :name (c11-4 / name
+                                                           :op1 "Elon"
+                                                           :op2 "Musk"))
+                                :ARG1 (c11-1 / office)
+                                :polarity -)
+                    :op2 (c11-12 / consider-02
+                                 :ARG0 c11-11
+                                 :ARG1 c11-8
+                                 :polarity -))
+       :snt2 (c11-6 / possible-01
+                    :ARG1 (c11-7 / say-01
+                                 :ARG1 (c11-14 / this)
+                                 :ARG3 (c11-9 / anyone
+                                              :mod (c11-2 / basic)))
+                    :polarity (c11-13 / amr-unknown)
+                    :polarity -)
+       :snt3 (c11-15 / day
+                     :mod (c11-10 / news)
+                     :ARG1-of (c11-3 / slow-05)))
+
+# ::snt I just finished the episode.. what a bitch
+# ::tokens ["I", "just", "finished", "the", "episode", "..", "what", "a", "bitch"]
+# ::lemmas ["i", "just", "finish", "the", "episode", "..", "what", "a", "bitch"]
+(c12-0 / finish-01
+       :ARG0 (c12-4 / i)
+       :ARG1 (c12-2 / episode)
+       :time (c12-3 / just)
+       :mod (c12-1 / bitch
+                   :mode expressive))
+
+# ::snt Being an advocate for a better world doesn't require a run for office.
+# ::tokens ["Being", "an", "advocate", "for", "a", "better", "world", "does", "n't", "require", "a", "run", "for", "office", "."]
+# ::lemmas ["be", "an", "advocate", "for", "a", "well", "world", "do", "not", "require", "a", "run", "for", "office", "."]
+(c13-2 / require-01
+       :ARG0 (c13-5 / advocate-01
+                    :ARG1 (c13-4 / world
+                                 :ARG1-of (c13-3 / have-degree-91
+                                                 :ARG2 (c13-6 / good-02
+                                                              :ARG1 c13-4)
+                                                 :ARG3 (c13-1 / more))))
+       :ARG1 (c13-7 / run-02
+                    :ARG1 (c13-0 / office))
+       :polarity -)
+
+# ::snt At the end of the day, family is family. I think theyll make up, its good publicity for their new season, bravo at getting us all to talk about it. But I just find it hard to side w/ Kourts supposed desire for a quiet life when shes been a willing participant for yrs
+# ::tokens ["At", "the", "end", "of", "the", "day", ",", "family", "is", "family", ".", "I", "think", "they", "ll", "make", "up", ",", "its", "good", "publicity", "for", "their", "new", "season", ",", "bravo", "at", "getting", "us", "all", "to", "talk", "about", "it", ".", "But", "I", "just", "find", "it", "hard", "to", "side", "w/", "Kourts", "supposed", "desire", "for", "a", "quiet", "life", "when", "she", "s", "been", "a", "willing", "participant", "for", "yrs"]
+# ::lemmas ["at", "the", "end", "of", "the", "day", ",", "family", "be", "family", ".", "i", "think", "they", "ll", "make", "up", ",", "its", "good", "publicity", "for", "their", "new", "season", ",", "bravo", "at", "get", "we", "all", "to", "talk", "about", "it", ".", "but", "i", "just", "find", "it", "hard", "to", "side", "w/", "Kourts", "suppose", "desire", "for", "a", "quiet", "life", "when", "she", "s", "be", "a", "willing", "participant", "for", "yr"]
+(c14-20 / multi-sentence
+        :snt1 (c14-27 / family
+                      :domain (c14-31 / family)
+                      :time (c14-29 / end-01
+                                    :ARG1 (c14-36 / day)))
+        :snt2 (c14-15 / think-01
+                      :ARG0 (c14-34 / i)
+                      :ARG1 (c14-10 / make-up-10
+                                    :ARG0 (c14-25 / they)
+                                    :ARG1-of (c14-23 / cause-01
+                                                     :ARG0 (c14-30 / publicity
+                                                                   :ARG1-of (c14-16 / good-02)
+                                                                   :beneficiary (c14-0 / season
+                                                                                       :poss c14-25
+                                                                                       :ARG1-of (c14-28 / new-01))))))
+        :snt3 (c14-19 / bravo
+                      :topic (c14-4 / get-04
+                                    :ARG0 c14-25
+                                    :ARG1 (c14-35 / talk-01
+                                                  :ARG0 (c14-33 / we
+                                                                :mod (c14-14 / all))
+                                                  :ARG1 (c14-9 / it))))
+        :snt4 (c14-18 / contrast-01
+                      :ARG2 (c14-32 / find-02
+                                    :ARG0 (c14-17 / i)
+                                    :ARG1 (c14-11 / hard-02
+                                                  :ARG1 (c14-7 / side-01
+                                                               :ARG0 c14-17
+                                                               :ARG1 (c14-24 / desire-01
+                                                                             :ARG0 (c14-21 / person
+                                                                                           :name (c14-22 / name
+                                                                                                         :op1 "Kourts"))
+                                                                             :ARG1 (c14-2 / life
+                                                                                          :ARG1-of (c14-13 / quiet-04))
+                                                                             :ARG1-of (c14-6 / suppose-01)))
+                                                  :time (c14-5 / participate-01
+                                                               :ARG0 c14-21
+                                                               :ARG1-of (c14-3 / will-02
+                                                                               :ARG0 c14-21
+                                                                               :duration (c14-26 / multiple
+                                                                                                 :op1 (c14-1 / temporal-quantity
+                                                                                                             :unit (c14-8 / year)
+                                                                                                             :quant 1)))))
+                                    :mod (c14-12 / just))))
+
+# ::snt And not for nothing but Kourtney can afford to not work because of the brand that etc. built. Their fame is a unit. Their brand is linked, so Kourtney can disavow her sisters but shes where she is bc of their continuing hard work.
+# ::tokens ["And", "not", "for", "nothing", "but", "Kourtney", "can", "afford", "to", "not", "work", "because", "of", "the", "brand", "that", "etc", ".", "built", ".", "Their", "fame", "is", "a", "unit", ".", "Their", "brand", "is", "linked", ",", "so", "Kourtney", "can", "disavow", "her", "sisters", "but", "she", "s", "where", "she", "is", "bc", "of", "their", "continuing", "hard", "work", "."]
+# ::lemmas ["and", "not", "for", "nothing", "but", "Kourtney", "can", "afford", "to", "not", "work", "because", "of", "the", "brand", "that", "etc", ".", "build", ".", "their", "fame", "be", "a", "unit", ".", "their", "brand", "be", "link", ",", "so", "Kourtney", "can", "disavow", "her", "sister", "but", "she", "s", "where", "she", "be", "bc", "of", "their", "continue", "hard", "work", "."]
+(c15-17 / multi-sentence
+        :snt1 (c15-13 / and
+                      :op2 (c15-20 / cause-01
+                                   :ARG0 (c15-25 / nothing)
+                                   :ARG1 (c15-27 / possible-01
+                                                 :ARG1 (c15-11 / afford-01
+                                                               :ARG0 (c15-18 / person
+                                                                             :name (c15-19 / name
+                                                                                           :op1 "Kourtney"))
+                                                               :ARG1 (c15-28 / work-01
+                                                                             :ARG0 c15-18
+                                                                             :polarity -)
+                                                               :ARG1-of (c15-14 / cause-01
+                                                                                :ARG0 (c15-16 / brand
+                                                                                              :ARG1-of (c15-1 / build-01
+                                                                                                              :mod (c15-26 / et-cetera))))))
+                                   :polarity -))
+        :snt2 (c15-22 / unit
+                      :domain (c15-24 / fame-01
+                                      :ARG1 (c15-12 / they)))
+        :snt3 (c15-2 / link-01
+                     :ARG1 (c15-7 / brand
+                                  :poss c15-12)
+                     :ARG0-of (c15-5 / cause-01
+                                     :ARG1 (c15-23 / contrast-01
+                                                   :ARG1 (c15-6 / possible-01
+                                                                :ARG1 (c15-30 / disavow-01
+                                                                              :ARG0 c15-18
+                                                                              :ARG1 (c15-4 / person
+                                                                                           :ARG0-of (c15-9 / have-rel-role-91
+                                                                                                           :ARG1 c15-18
+                                                                                                           :ARG2 (c15-0 / sister)))))
+                                                   :ARG2 (c15-15 / be-located-at-91
+                                                                 :ARG1 c15-18
+                                                                 :ARG2 (c15-10 / amr-unknown)
+                                                                 :ARG1-of (c15-8 / cause-01
+                                                                                 :ARG0 (c15-3 / work-01
+                                                                                              :ARG0 c15-12
+                                                                                              :ARG1-of (c15-21 / continue-01)
+                                                                                              :ARG1-of (c15-29 / hard-02))))))))
+
+# ::snt This is news????? Biased,Fake news station!!!!!!!!!!!
+# ::tokens ["This", "is", "news", "?", "?", "?", "?", "?", "Biased", ",", "Fake", "news", "station", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["this", "be", "news", "?", "?", "?", "?", "?", "biased", ",", "fake", "news", "station", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!", "!"]
+(c16-3 / multi-sentence
+       :snt1 (c16-2 / news
+                    :domain (c16-6 / this)
+                    :polarity (c16-7 / amr-unknown))
+       :snt2 (c16-4 / station
+                    :mod (c16-5 / news)
+                    :ARG1-of (c16-0 / fake-02)
+                    :ARG1-of (c16-1 / bullshit-01)))
+
+# ::snt Maybe Kim could whisper in trump's ear about baby jails.
+# ::tokens ["Maybe", "Kim", "could", "whisper", "in", "trump", "'s", "ear", "about", "baby", "jails", "."]
+# ::lemmas ["maybe", "Kim", "could", "whisper", "in", "trump", "'s", "ear", "about", "baby", "jail", "."]
+(c17-5 / possible-01
+       :ARG1 (c17-6 / whisper-01
+                    :ARG0 (c17-2 / person
+                                 :name (c17-1 / name
+                                              :op1 "Kim"))
+                    :ARG1 (c17-7 / jail
+                                 :mod (c17-0 / baby))
+                    :ARG2 (c17-3 / ear
+                                 :part-of (c17-8 / person
+                                                 :name (c17-4 / name
+                                                              :op1 " trump")))))
+
+# ::snt LOL I'm a big fan of your sense of humor. Hilarious!
+# ::tokens ["LOL", "I", "'m", "a", "big", "fan", "of", "your", "sense", "of", "humor", ".", "Hilarious", "!"]
+# ::lemmas ["LOL", "i", "be", "a", "big", "fan", "of", "your", "sense", "of", "humor", ".", "hilarious", "!"]
+(c19-3 / multi-sentence
+       :snt1 (c19-6 / laugh-01
+                    :ARG0 (c19-8 / i)
+                    :manner (c19-9 / loud)
+                    :mode expressive)
+       :snt2 (c19-0 / fan
+                    :domain c19-8
+                    :mod (c19-1 / big)
+                    :topic (c19-4 / sense-01
+                                  :ARG0 (c19-2 / you)
+                                  :ARG1 (c19-5 / humor)))
+       :snt3 (c19-7 / hilarious))
+
+# ::snt Are you looking for Business Card, Flyer, Latter Head, Google Ad Banner, Roll Up Banner, Photo Editing. Contract Here-
+# ::tokens ["Are", "you", "looking", "for", "Business", "Card", ",", "Flyer", ",", "Latter", "Head", ",", "Google", "Ad", "Banner", ",", "Roll", "Up", "Banner", ",", "Photo", "Editing", ".", "Contract", "Here-"]
+# ::lemmas ["be", "you", "look", "for", "Business", "Card", ",", "Flyer", ",", "Latter", "Head", ",", "Google", "Ad", "Banner", ",", "roll", "up", "Banner", ",", "Photo", "Editing", ".", "contract", "here-"]
+(c20-12 / multi-sentence
+        :snt1 (c20-1 / look-01
+                     :ARG0 (c20-5 / you)
+                     :ARG1 (c20-9 / and
+                                  :op1 (c20-15 / card
+                                               :mod (c20-11 / business))
+                                  :op2 (c20-20 / person
+                                               :ARG0-of (c20-16 / fly-01))
+                                  :op3 (c20-13 / person
+                                               :name (c20-17 / name
+                                                             :op1 "Latter"
+                                                             :op2 "Head"))
+                                  :op4 (c20-0 / banner
+                                              :mod (c20-8 / advertise-01
+                                                          :medium (c20-10 / company
+                                                                          :name (c20-14 / name
+                                                                                        :op1 "Google"))))
+                                  :op5 (c20-4 / banner
+                                              :mod (c20-18 / roll-up-02))
+                                  :op6 (c20-19 / edit-01
+                                               :ARG1 (c20-3 / photo)))
+                     :polarity (c20-7 / amr-unknown))
+        :snt2 (c20-2 / contract-02
+                     :location (c20-6 / here)))
+
+# ::snt "And you know, like, I think it's so important to keep changing and, like, reinventing oneself as one ages. So, like, where empty celebrity has worked for me in the past, I feel like it's time to add some substance to, like, you know, stay relevant...."
+# ::tokens ["\"", "And", "you", "know", ",", "like", ",", "I", "think", "it", "'s", "so", "important", "to", "keep", "changing", "and", ",", "like", ",", "reinventing", "oneself", "as", "one", "ages", ".", "So", ",", "like", ",", "where", "empty", "celebrity", "has", "worked", "for", "me", "in", "the", "past", ",", "I", "feel", "like", "it", "'s", "time", "to", "add", "some", "substance", "to", ",", "like", ",", "you", "know", ",", "stay", "relevant", "....", "\""]
+# ::lemmas ["\"", "and", "you", "know", ",", "like", ",", "i", "think", "it", "be", "so", "important", "to", "keep", "change", "and", ",", "like", ",", "reinvent", "oneself", "as", "one", "age", ".", "so", ",", "like", ",", "where", "empty", "celebrity", "have", "work", "for", "i", "in", "the", "past", ",", "i", "feel", "like", "it", "be", "time", "to", "add", "some", "substance", "to", ",", "like", ",", "you", "know", ",", "stay", "relevant", "....", "\""]
+(c21-15 / multi-sentence
+        :snt1 (c21-11 / and
+                      :op2 (c21-12 / think-01
+                                   :ARG0 (c21-25 / i)
+                                   :ARG1 (c21-6 / important-01
+                                                :ARG1 (c21-8 / keep-02
+                                                             :ARG0 c21-25
+                                                             :ARG1 (c21-10 / and
+                                                                           :op1 (c21-17 / change-01
+                                                                                        :ARG0 c21-25
+                                                                                        :ARG1 c21-25)
+                                                                           :op2 (c21-21 / reinvent-01
+                                                                                        :ARG0 c21-25
+                                                                                        :ARG1 c21-25
+                                                                                        :manner (c21-9 / age-01
+                                                                                                       :ARG1 c21-25))
+                                                                           :ARG1-of (c21-3 / resemble-01)))
+                                                :ARG2-of (c21-7 / have-degree-91
+                                                                :ARG1 c21-8
+                                                                :ARG3 (c21-1 / so)))))
+        :snt2 (c21-14 / cause-01
+                      :ARG1 (c21-19 / feel-06
+                                    :ARG0 (c21-13 / i)
+                                    :ARG1 (c21-18 / time
+                                                  :time-of (c21-26 / add-02
+                                                                   :ARG0 c21-13
+                                                                   :ARG1 (c21-5 / substance
+                                                                                :quant (c21-4 / some))
+                                                                   :ARG2 (c21-20 / stay-01
+                                                                                 :ARG1 c21-13
+                                                                                 :ARG3 (c21-16 / relevant-01
+                                                                                               :ARG1 c21-13))))
+                                    :ARG1-of (c21-0 / resemble-01
+                                                    :ARG2 (c21-24 / work-09
+                                                                  :ARG1 (c21-2 / celebrity
+                                                                               :ARG1-of (c21-22 / empty-02))
+                                                                  :ARG2 c21-13
+                                                                  :time (c21-23 / past))))))
+
+# ::snt Why?
+# ::tokens ["Why", "?"]
+# ::lemmas ["why", "?"]
+(c22-0 / cause-01
+       :ARG0 (c22-1 / amr-unknown))
+
+# ::snt Is ur dealer ur friend???
+# ::tokens ["Is", "ur", "dealer", "ur", "friend", "?", "?", "?"]
+# ::lemmas ["be", "ur", "dealer", "ur", "friend", "?", "?", "?"]
+(c23-3 / person
+       :polarity (c23-4 / amr-unknown)
+       :ARG0-of (c23-5 / deal-01
+                       :ARG2 (c23-1 / you))
+       :ARG0-of (c23-2 / have-rel-role-91
+                       :ARG1 c23-1
+                       :ARG2 (c23-0 / friend)))
+
+# ::snt Good for you
+# ::tokens ["Good", "for", "you"]
+# ::lemmas ["good", "for", "you"]
+(c24-0 / good-04
+       :ARG2 (c24-1 / you))
+
+# ::snt Because the support of a reality star is the way you can get away with your crimes. Ask Manafort.
+# ::tokens ["Because", "the", "support", "of", "a", "reality", "star", "is", "the", "way", "you", "can", "get", "away", "with", "your", "crimes", ".", "Ask", "Manafort", "."]
+# ::lemmas ["because", "the", "support", "of", "a", "reality", "star", "be", "the", "way", "you", "can", "get", "away", "with", "your", "crime", ".", "ask", "Manafort", "."]
+(c25-2 / multi-sentence
+       :snt1 (c25-8 / cause-01
+                    :ARG0 (c25-4 / support-01
+                                 :ARG0 (c25-0 / star
+                                              :mod (c25-6 / reality))
+                                 :ARG1 (c25-1 / you)
+                                 :manner (c25-9 / way
+                                                :manner-of (c25-11 / get-away-08
+                                                                   :ARG0 c25-1
+                                                                   :ARG1 (c25-13 / crime-02
+                                                                                 :ARG0 c25-1))
+                                                :ARG1-of (c25-7 / possible-01))))
+       :snt2 (c25-10 / ask-01
+                     :ARG0 (c25-12 / you)
+                     :ARG2 (c25-3 / person
+                                  :name (c25-5 / name
+                                               :op1 "Manner"))
+                     :mode imperative))
+
+# ::snt Tb to Kenia Kardashian
+# ::tokens ["Tb", "to", "Kenia", "Kardashian"]
+# ::lemmas ["tb", "to", "Kenia", "Kardashian"]
+(c26-1 / byline-91
+       :ARG1 (c26-2 / person
+                    :name (c26-0 / name
+                                 :op1 "Kenia"
+                                 :op2 "Kardashi"))
+       :ARG2 (c26-3 / publication
+                    :name c26-0
+                    :op1 "Tb"))

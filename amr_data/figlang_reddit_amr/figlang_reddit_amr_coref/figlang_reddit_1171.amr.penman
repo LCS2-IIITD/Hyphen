@@ -1,0 +1,53 @@
+# ::snt I AM Edward Snowden, Ask Me Anything.
+# ::tokens ["I", "AM", "Edward", "Snowden", ",", "Ask", "Me", "Anything", "."]
+# ::lemmas ["i", "be", "Edward", "Snowden", ",", "ask", "i", "anything", "."]
+(c1-1 / and
+      :op1 (c1-3 / person
+                 :name (c1-4 / name
+                             :op1 "Edward"
+                             :op2 "Snowden")
+                 :domain (c1-2 / i))
+      :op2 (c1-6 / ask-01
+                 :ARG0 (c1-5 / you)
+                 :ARG1 (c1-0 / anything)
+                 :ARG2 c1-2
+                 :mode imperative))
+
+# ::snt What would happen to you if you just came home?
+# ::tokens ["What", "would", "happen", "to", "you", "if", "you", "just", "came", "home", "?"]
+# ::lemmas ["what", "would", "happen", "to", "you", "if", "you", "just", "come", "home", "?"]
+(c2-2 / have-condition-91
+      :ARG1 (c2-0 / amr-unknown)
+      :ARG2 (c2-1 / come-01
+                  :ARG1 (c2-5 / you)
+                  :ARG4 (c2-4 / home)
+                  :mod (c2-3 / just)))
+
+# ::snt I'd be arrested and tried for treason, if found guilty the punishment ranges from years and prison and thousands of dollars in fines, to death.
+# ::tokens ["I", "'d", "be", "arrested", "and", "tried", "for", "treason", ",", "if", "found", "guilty", "the", "punishment", "ranges", "from", "years", "and", "prison", "and", "thousands", "of", "dollars", "in", "fines", ",", "to", "death", "."]
+# ::lemmas ["i", "would", "be", "arrest", "and", "try", "for", "treason", ",", "if", "find", "guilty", "the", "punishment", "range", "from", "year", "and", "prison", "and", "thousands", "of", "dollars", "in", "fine", ",", "to", "death", "."]
+(c3-14 / and
+       :op1 (c3-9 / and
+                  :op1 (c3-1 / arrest-01
+                             :ARG1 (c3-2 / i)
+                             :ARG2 (c3-4 / treason))
+                  :op2 (c3-3 / try-02
+                             :ARG1 c3-2
+                             :ARG2 c3-4))
+       :op2 (c3-5 / range-01
+                  :ARG1 (c3-18 / punish-01)
+                  :ARG3 (c3-19 / and
+                               :op1 (c3-7 / multiple
+                                          :op1 (c3-8 / temporal-quantity
+                                                     :unit (c3-13 / year)
+                                                     :quant 1))
+                               :op2 (c3-17 / prison)
+                               :op3 (c3-16 / multiple
+                                           :op1 (c3-10 / monetary-quantity
+                                                       :unit (c3-0 / dollar)
+                                                       :quant 1000)
+                                           :ARG3-of (c3-15 / fine-01)))
+                  :ARG4 (c3-12 / die-01)
+                  :condition (c3-11 / find-01
+                                    :ARG1 (c3-6 / guilty-01
+                                                :ARG1 c3-2))))

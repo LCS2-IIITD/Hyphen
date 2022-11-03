@@ -1,0 +1,75 @@
+# ::snt might want to delete that tweet. He was a convert
+# ::tokens ["might", "want", "to", "delete", "that", "tweet", ".", "He", "was", "a", "convert"]
+# ::lemmas ["might", "want", "to", "delete", "that", "tweet", ".", "he", "be", "a", "convert"]
+(c1-2 / multi-sentence
+      :snt1 (c1-4 / possible-01
+                  :ARG1 (c1-1 / want-01
+                              :ARG0 (c1-3 / i)
+                              :ARG1 (c1-5 / delete-01
+                                          :ARG0 c1-3
+                                          :ARG1 (c1-8 / tweet-01
+                                                      :mod (c1-7 / that)))))
+      :snt2 (c1-6 / convert-01
+                  :ARG1 (c1-0 / he)))
+
+# ::snt Unfortunately, today it is a common indicator. For me, if he had a Basque surname I'd also be suspicious.
+# ::tokens ["Unfortunately", ",", "today", "it", "is", "a", "common", "indicator", ".", "For", "me", ",", "if", "he", "had", "a", "Basque", "surname", "I", "'d", "also", "be", "suspicious", "."]
+# ::lemmas ["unfortunately", ",", "today", "it", "be", "a", "common", "indicator", ".", "for", "i", ",", "if", "he", "have", "a", "Basque", "surname", "i", "would", "also", "be", "suspicious", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / it
+                  :ARG0-of (c2-10 / indicate-01
+                                  :mod (c2-9 / common)
+                                  :time (c2-12 / today)
+                                  :ARG2-of (c2-1 / fortunate-01
+                                                 :polarity -)))
+      :snt2 (c2-11 / suspicious-02
+                   :ARG0 (c2-3 / i)
+                   :mod (c2-13 / also)
+                   :condition (c2-0 / have-03
+                                    :ARG0 (c2-4 / he)
+                                    :ARG1 (c2-5 / surname
+                                                :mod (c2-6 / ethnic-group
+                                                           :name (c2-8 / name
+                                                                       :op1 "Basque"))))
+                   :beneficiary c2-3))
+
+# ::snt says who? Can anyone with authority verify that info?
+# ::tokens ["says", "who", "?", "Can", "anyone", "with", "authority", "verify", "that", "info", "?"]
+# ::lemmas ["say", "who", "?", "can", "anyone", "with", "authority", "verify", "that", "info", "?"]
+(c3-1 / multi-sentence
+      :snt1 (c3-7 / say-01
+                  :ARG0 (c3-11 / amr-unknown)
+                  :ARG1 (c3-5 / person))
+      :snt2 (c3-10 / possible-01
+                   :ARG1 (c3-4 / verify-01
+                               :ARG0 (c3-2 / anyone
+                                           :ARG0-of (c3-0 / have-03
+                                                          :ARG1 (c3-6 / authority)))
+                               :ARG1 (c3-3 / information
+                                           :mod (c3-9 / that)))
+                   :polarity (c3-8 / amr-unknown)))
+
+# ::snt : might want delete that tweet.He was a convert no such evidence support allegation.u might wanna delete this
+# ::tokens [":", "might", "want", "delete", "that", "tweet", ".", "He", "was", "a", "convert", "no", "such", "evidence", "support", "allegation.u", "might", "wanna", "delete", "this"]
+# ::lemmas [":", "might", "want", "delete", "that", "tweet", ".", "he", "be", "a", "convert", "no", "such", "evidence", "support", "allegation.u", "might", "wanna", "delete", "this"]
+(c4-4 / multi-sentence
+      :snt1 (c4-9 / possible-01
+                  :ARG1 (c4-1 / want-01
+                              :ARG0 (c4-2 / you)
+                              :ARG1 (c4-10 / delete-01
+                                           :ARG0 c4-2
+                                           :ARG1 (c4-14 / tweet-01
+                                                        :mod (c4-12 / that)))))
+      :snt2 (c4-11 / convert-01
+                   :ARG1 (c4-0 / he)
+                   :concession (c4-16 / allege-01
+                                      :ARG1 (c4-13 / support-01
+                                                   :ARG1 (c4-5 / evidence))
+                                      :mod (c4-6 / such))
+                   :polarity -)
+      :snt3 (c4-15 / possible-01
+                   :ARG1 (c4-7 / want-01
+                               :ARG0 (c4-17 / you)
+                               :ARG1 (c4-3 / delete-01
+                                           :ARG0 c4-17
+                                           :ARG1 (c4-8 / this)))))

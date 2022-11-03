@@ -1,0 +1,65 @@
+# ::snt Catriona and , too!!!
+# ::tokens ["Catriona", "and", ",", "too", "!", "!", "!"]
+# ::lemmas ["Catriona", "and", ",", "too", "!", "!", "!"]
+(c1-1 / and
+      :op1 (c1-0 / person
+                 :name (c1-2 / name
+                             :op1 "Catriona"))
+      :mod (c1-3 / too))
+
+# ::snt Grateful for: nature's beauty, love of family, and kindness from others.
+# ::tokens ["Grateful", "for", ":", "nature", "'s", "beauty", ",", "love", "of", "family", ",", "and", "kindness", "from", "others", "."]
+# ::lemmas ["grateful", "for", ":", "nature", "'s", "beauty", ",", "love", "of", "family", ",", "and", "kindness", "from", "other", "."]
+(c2-6 / grateful
+      :beneficiary (c2-0 / and
+                         :op1 (c2-3 / beautiful-02
+                                    :ARG1 (c2-7 / nature))
+                         :op2 (c2-5 / love-01
+                                    :ARG0 c2-7
+                                    :ARG1 (c2-2 / family))
+                         :op3 (c2-1 / kind-01
+                                    :ARG0 (c2-4 / other))))
+
+# ::snt You are remarkable Angie!! grateful for YOU!
+# ::tokens ["You", "are", "remarkable", "Angie", "!", "!", "grateful", "for", "YOU", "!"]
+# ::lemmas ["you", "be", "remarkable", "Angie", "!", "!", "grateful", "for", "you", "!"]
+(c5-0 / say-01
+      :ARG0 (c5-4 / i)
+      :ARG1 (c5-2 / remarkable-02
+                  :ARG1 (c5-3 / person
+                              :name (c5-5 / name
+                                          :op1 "Angie")
+                              :ARG2-of c5-0))
+      :ARG3 (c5-1 / appreciate-02
+                  :ARG0 c5-3
+                  :ARG1 (c5-6 / you)))
+
+# ::snt Im grateful for you my dear. I hope you have a fabulous Tuesday!
+# ::tokens ["I", "m", "grateful", "for", "you", "my", "dear", ".", "I", "hope", "you", "have", "a", "fabulous", "Tuesday", "!"]
+# ::lemmas ["i", "m", "grateful", "for", "you", "my", "dear", ".", "i", "hope", "you", "have", "a", "fabulous", "Tuesday", "!"]
+(c6-10 / multi-sentence
+       :snt1 (c6-1 / appreciate-02
+                   :ARG0 (c6-9 / i)
+                   :ARG1 (c6-0 / dear
+                               :poss (c6-4 / i)))
+       :snt2 (c6-5 / hope-01
+                   :ARG0 (c6-6 / i)
+                   :ARG1 (c6-8 / have-03
+                               :ARG0 (c6-11 / you)
+                               :ARG1 (c6-3 / date-entity
+                                           :weekday (c6-7 / tuesday)
+                                           :mod (c6-2 / fabulous)))))
+
+# ::snt Have a wonderful day friend
+# ::tokens ["Have", "a", "wonderful", "day", "friend"]
+# ::lemmas ["have", "a", "wonderful", "day", "friend"]
+(c7-3 / have-03
+      :ARG0 (c7-6 / you)
+      :ARG1 (c7-5 / person
+                  :ARG0-of (c7-4 / have-rel-role-91
+                                 :ARG1 c7-6
+                                 :ARG2 (c7-1 / friend))
+                  :ARG1-of (c7-2 / wonderful-03
+                                 :ARG2 c7-6))
+      :time (c7-0 / day)
+      :mode imperative)

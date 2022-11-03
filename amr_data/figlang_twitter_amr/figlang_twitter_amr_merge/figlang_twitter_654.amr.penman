@@ -1,0 +1,53 @@
+# ::subgraphs [["c1-10", "c1-20", "c1-16", "c1-4", "c1-0", "c1-8", "c1-19", "c1-14", "c1-17", "c1-5", "c1-12", "c1-15", "c1-3", "c1-18", "c1-7", "c1-9", "c1-1", "c1-11", "c1-6", "c1-2", "c1-13"], ["c2-9", "c2-2", "c2-0", "c2-7", "c2-8", "c2-5", "c2-3", "c2-1", "c2-11", "c2-4", "c2-6", "c2-10"]]
+(d / dummy
+   :COMMENT (c1-10 / multi
+                   :snt1 (c1-20 / policy
+                                :polarity (c1-16 / amr)
+                                :ARG1 (c1-4 / close
+                                            :ARG1 (c1-0 / door
+                                                        :part-of (c1-8 / train
+                                                                       :SAME c2-7)
+                                                        :SAME c2-0
+                                                        :COREF c2-0)
+                                            :time (c1-19 / before
+                                                         :op1 (c1-14 / depart
+                                                                     :SAME c2-4)
+                                                         :quant (c1-17 / multiple
+                                                                       :op1 (c1-5 / temporal
+                                                                                  :unit (c1-12 / second
+                                                                                               :SAME c2-1)
+                                                                                  :quant 1
+                                                                                  :SAME c2-3))
+                                                         :SAME c2-8)
+                                            :SAME c2-2))
+                   :snt2 (c1-15 / be-located-at
+                                :ARG1 (c1-3 / i)
+                                :ARG2 (c1-18 / platform)
+                                :mod (c1-7 / on
+                                           :SAME c2-6)
+                                :purpose (c1-9 / go
+                                               :ARG0 c1-3
+                                               :ARG4 (c1-1 / city
+                                                           :name (c1-11 / name
+                                                                        :op1 "Haymarket"
+                                                                        :SAME c1-2)
+                                                           :SAME c1-6)
+                                               :ARG4 (c1-6 / city
+                                                           :name (c1-2 / name
+                                                                       :op1 "Polmont"))
+                                               :time (c1-13 / date
+                                                            :time ":42"))))
+   :COMMENT (c2-9 / possible
+                  :ARG1 (c2-2 / close
+                              :ARG1 (c2-0 / door
+                                          :part-of (c2-7 / train))
+                              :time (c2-8 / before)
+                              :quant (c2-5 / up
+                                           :op1 (c2-3 / temporal
+                                                      :unit (c2-1 / second)
+                                                      :quant 1))
+                              :purpose (c2-11 / ensure
+                                              :ARG0 c2-0
+                                              :ARG1 (c2-4 / depart
+                                                          :manner (c2-6 / on))))
+                  :mod (c2-10 / yes)))

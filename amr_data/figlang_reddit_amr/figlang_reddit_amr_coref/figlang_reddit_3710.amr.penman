@@ -1,0 +1,32 @@
+# ::snt Magic rings
+# ::tokens ["Magic", "rings"]
+# ::lemmas ["Magic", "ring"]
+(c1-1 / ring
+      :mod (c1-0 / magic))
+
+# ::snt Would be awesome if they were wearing gloves
+# ::tokens ["Would", "be", "awesome", "if", "they", "were", "wearing", "gloves"]
+# ::lemmas ["would", "be", "awesome", "if", "they", "be", "wear", "glove"]
+(c2-1 / awesome-02
+      :ARG1 (c2-0 / wear-01
+                  :ARG0 (c2-2 / they)
+                  :ARG1 (c2-3 / glove)))
+
+# ::snt I know what you mean, but they would probably loose too much dexterity if they did.
+# ::tokens ["I", "know", "what", "you", "mean", ",", "but", "they", "would", "probably", "loose", "too", "much", "dexterity", "if", "they", "did", "."]
+# ::lemmas ["i", "know", "what", "you", "mean", ",", "but", "they", "would", "probably", "loose", "too", "much", "dexterity", "if", "they", "do", "."]
+(c3-1 / contrast-01
+      :ARG1 (c3-12 / know-01
+                   :ARG0 (c3-10 / i)
+                   :ARG1 (c3-7 / thing
+                               :ARG2-of (c3-11 / mean-01
+                                               :ARG0 (c3-13 / you))))
+      :ARG2 (c3-8 / probable
+                  :domain (c3-9 / lose-02
+                                :ARG0 (c3-3 / they)
+                                :ARG1 (c3-0 / dexterity
+                                            :ARG1-of (c3-5 / have-quant-91
+                                                           :ARG2 (c3-2 / much)
+                                                           :ARG3 (c3-4 / too)))
+                                :condition (c3-6 / do-02
+                                                 :ARG0 c3-3))))

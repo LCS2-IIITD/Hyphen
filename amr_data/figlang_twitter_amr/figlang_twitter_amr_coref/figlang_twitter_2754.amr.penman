@@ -1,0 +1,50 @@
+# ::snt I'm ! What is your favourite movie of all time .. what movie inspires you today ? <URL>
+# ::tokens ["I", "'m", "!", "What", "is", "your", "favourite", "movie", "of", "all", "time", "..", "what", "movie", "inspires", "you", "today", "?", "<", "URL", ">"]
+# ::lemmas ["i", "be", "!", "what", "be", "your", "favourite", "movie", "of", "all", "time", "..", "what", "movie", "inspire", "you", "today", "?", "<", "URL", ">"]
+(c1-5 / multi-sentence
+      :snt1 (c1-4 / i)
+      :snt2 (c1-2 / inspire-01
+                  :ARG0 (c1-1 / movie
+                              :mod (c1-0 / amr-unknown))
+                  :ARG1 (c1-6 / you)
+                  :time (c1-3 / today)
+                  :mode expressive)
+      :snt3 c1-4)
+
+# ::snt Hellraser <URL> The Green Mile , Trainspotting , full of music that I still love <URL> The Pianist , Schindler's List , The boy in the striped pajamas ... My life lesson : share , love and enjoy life
+# ::tokens ["Hellraser", "<", "URL", ">", "The", "Green", "Mile", ",", "Trainspotting", ",", "full", "of", "music", "that", "I", "still", "love", "<", "URL", ">", "The", "Pianist", ",", "Schindler", "'s", "List", ",", "The", "boy", "in", "the", "striped", "pajamas", "...", "My", "life", "lesson", ":", "share", ",", "love", "and", "enjoy", "life"]
+# ::lemmas ["Hellraser", "<", "URL", ">", "the", "Green", "Mile", ",", "Trainspotting", ",", "full", "of", "music", "that", "i", "still", "love", "<", "URL", ">", "the", "Pianist", ",", "Schindler", "'s", "list", ",", "the", "boy", "in", "the", "stripe", "pajama", "...", "my", "life", "lesson", ":", "share", ",", "love", "and", "enjoy", "life"]
+(c2-9 / multi-sentence
+      :snt1 (c2-23 / person
+                   :name (c2-10 / name
+                                :op1 "Hellraser")
+                   :ARG1-of (c2-18 / hyperlink-91
+                                   :ARG3 (c2-16 / and
+                                                :op1 (c2-21 / book
+                                                            :name (c2-1 / name
+                                                                        :op1 "The"
+                                                                        :op2 "Green"
+                                                                        :op3 "Mile"))
+                                                :op2 (c2-15 / book
+                                                            :name (c2-14 / name
+                                                                         :op1 "Trainspotting"))
+                                                :op3 (c2-17 / music
+                                                            :ARG1-of (c2-20 / love-01
+                                                                            :ARG0 (c2-3 / i)
+                                                                            :mod (c2-12 / still))))))
+      :snt2 (c2-11 / and
+                   :op1 (c2-13 / book
+                               :name (c2-5 / name
+                                           :op1 "The"
+                                           :op2 "Pianist"))
+                   :op2 (c2-4 / book
+                              :name (c2-8 / name
+                                          :op1 "Schindler's"
+                                          :op2 "List"))
+                   :op3 (c2-7 / boy
+                              :ARG0-of (c2-6 / wear-01
+                                             :ARG1 (c2-19 / pajamas
+                                                          :ARG1-of (c2-22 / stripe-01))))
+                   :op4 (c2-2 / lesson
+                              :topic (c2-0 / live-01)
+                              :poss c2-3)))

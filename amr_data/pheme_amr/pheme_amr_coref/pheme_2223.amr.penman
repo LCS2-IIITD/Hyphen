@@ -1,0 +1,739 @@
+# ::snt This guy shot people, including a Congresswoman and a judge. He was apprehended alive.
+# ::tokens ["This", "guy", "shot", "people", ",", "including", "a", "Congresswoman", "and", "a", "judge", ".", "He", "was", "apprehended", "alive", "."]
+# ::lemmas ["this", "guy", "shoot", "people", ",", "include", "a", "Congresswoman", "and", "a", "judge", ".", "he", "be", "apprehend", "alive", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-9 / shoot-02
+                  :ARG0 (c1-8 / guy
+                              :mod (c1-10 / this))
+                  :ARG1 (c1-6 / person
+                              :ARG2-of (c1-5 / include-01
+                                             :ARG1 (c1-12 / and
+                                                          :op1 (c1-7 / congresswoman)
+                                                          :op2 (c1-11 / person
+                                                                      :ARG0-of (c1-0 / judge-01))))))
+      :snt2 (c1-4 / apprehend-01
+                  :ARG1 (c1-1 / he)
+                  :manner (c1-2 / live-01
+                                :ARG0 c1-1)))
+
+# ::snt Looks like a family member of Rick Scott's!
+# ::tokens ["Looks", "like", "a", "family", "member", "of", "Rick", "Scott", "'s", "!"]
+# ::lemmas ["look", "like", "a", "family", "member", "of", "Rick", "Scott", "'s", "!"]
+(c2-1 / look-02
+      :ARG1 (c2-5 / person
+                  :ARG0-of (c2-0 / have-org-role-91
+                                 :ARG1 (c2-2 / family
+                                             :ARG1-of (c2-8 / have-org-role-91
+                                                            :ARG0 (c2-7 / person
+                                                                        :name (c2-4 / name
+                                                                                    :op1 "Rick"
+                                                                                    :op2 "Scott"))
+                                                            :ARG2 (c2-3 / member)))
+                                 :ARG2 (c2-6 / member))))
+
+# ::snt - but jaywalking.... Well that's another matter!!
+# ::tokens ["-", "but", "jaywalking", "....", "Well", "that", "'s", "another", "matter", "!", "!"]
+# ::lemmas ["-", "but", "jaywalking", "....", "well", "that", "be", "another", "matter", "!", "!"]
+(c3-3 / contrast-01
+      :ARG2 (c3-0 / jaywalking
+                  :mod (c3-2 / matter
+                             :mod (c3-5 / another)
+                             :domain (c3-4 / that)
+                             :mod (c3-1 / well))))
+
+# ::snt Awareness of over policing of minorities/African Americans does not benefit from misrepresentation.
+# ::tokens ["Awareness", "of", "over", "policing", "of", "minorities", "/", "African", "Americans", "does", "not", "benefit", "from", "misrepresentation", "."]
+# ::lemmas ["awareness", "of", "over", "policing", "of", "minority", "/", "African", "Americans", "do", "not", "benefit", "from", "misrepresentation", "."]
+(c4-1 / benefit-01
+      :ARG0 (c4-5 / realize-01
+                  :ARG1 (c4-4 / police-01
+                              :ARG1 (c4-9 / slash
+                                          :op1 (c4-0 / minority)
+                                          :op2 (c4-10 / person
+                                                      :mod (c4-6 / continent
+                                                                 :name (c4-3 / name
+                                                                             :op1 "Africa"))
+                                                      :mod (c4-7 / country
+                                                                 :name c4-3
+                                                                 :op1 "America")))
+                              :ARG1-of (c4-2 / over-03)))
+      :ARG1 (c4-8 / misrepresent-01)
+      :polarity -)
+
+# ::snt So? Your point?
+# ::tokens ["So", "?", "Your", "point", "?"]
+# ::lemmas ["so", "?", "your", "point", "?"]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / so
+                  :polarity (c5-5 / amr-unknown))
+      :snt2 (c5-3 / point-04
+                  :ARG0 (c5-0 / you)
+                  :polarity (c5-2 / amr-unknown)))
+
+# ::snt Point is white people get to live. Black people are shot dead in the street.
+# ::tokens ["Point", "is", "white", "people", "get", "to", "live", ".", "Black", "people", "are", "shot", "dead", "in", "the", "street", "."]
+# ::lemmas ["point", "be", "white", "people", "get", "to", "live", ".", "black", "people", "be", "shoot", "dead", "in", "the", "street", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-6 / point-03
+                  :ARG1 (c6-9 / get-04
+                              :ARG0 (c6-11 / person
+                                           :ARG1-of (c6-0 / white-02))
+                              :ARG1 (c6-1 / live-01
+                                          :ARG0 c6-11)))
+      :snt2 (c6-10 / shoot-02
+                   :ARG1 (c6-3 / person
+                               :ARG1-of (c6-4 / black-05))
+                   :location (c6-5 / street)
+                   :ARG0-of (c6-8 / cause-01
+                                  :ARG1 (c6-7 / die-01
+                                              :ARG1 c6-3))))
+
+# ::snt is that why he's smiling? SMH
+# ::tokens ["is", "that", "why", "he", "'s", "smiling", "?", "SMH"]
+# ::lemmas ["be", "that", "why", "he", "be", "smile", "?", "smh"]
+(c7-1 / multi-sentence
+      :snt1 (c7-4 / smile-01
+                  :ARG0 (c7-0 / he)
+                  :ARG1-of (c7-3 / cause-01
+                                 :ARG0 (c7-5 / that))
+                  :polarity (c7-6 / amr-unknown))
+      :snt2 (c7-2 / SMH
+                  :mode expressive))
+
+# ::snt HA HA HA
+# ::tokens ["HA", "HA", "HA"]
+# ::lemmas ["ha", "ha", "ha"]
+(c8-0 / ha
+      :mode expressive)
+
+# ::snt That doesnt make any sense at all. Please leave your ignorance else where dear sir
+# ::tokens ["That", "does", "nt", "make", "any", "sense", "at", "all", ".", "Please", "leave", "your", "ignorance", "else", "where", "dear", "sir"]
+# ::lemmas ["that", "do", "not", "make", "any", "sense", "at", "all", ".", "please", "leave", "your", "ignorance", "else", "where", "dear", "sir"]
+(c9-2 / multi-sentence
+      :snt1 (c9-9 / sense-02
+                  :ARG1 (c9-10 / that)
+                  :mod (c9-11 / at-all)
+                  :polarity -)
+      :snt2 (c9-4 / say-01
+                  :ARG1 (c9-1 / leave-15
+                              :ARG0 (c9-0 / you)
+                              :ARG1 (c9-7 / ignorant-02
+                                          :ARG1 c9-0
+                                          :mod (c9-5 / else))
+                              :location (c9-6 / amr-unknown)
+                              :mode imperative
+                              :polite +)
+                  :ARG2 (c9-3 / sir
+                              :mod (c9-8 / dear))))
+
+# ::snt Alive because he was attacked by victims as he failed to reload, read -
+# ::tokens ["Alive", "because", "he", "was", "attacked", "by", "victims", "as", "he", "failed", "to", "reload", ",", "read", "-"]
+# ::lemmas ["alive", "because", "he", "be", "attack", "by", "victim", "as", "he", "fail", "to", "reload", ",", "read", "-"]
+(c10-7 / cause-01
+       :ARG0 (c10-8 / attack-01
+                    :ARG0 (c10-5 / victim)
+                    :ARG1 (c10-0 / he)
+                    :time (c10-1 / fail-01
+                                 :ARG1 c10-0
+                                 :ARG2 (c10-3 / and
+                                              :op1 (c10-6 / reload-01
+                                                          :ARG0 c10-0)
+                                              :op2 (c10-4 / read-01
+                                                          :ARG0 c10-0))))
+       :ARG1 (c10-2 / believe-01))
+
+# ::snt | 'don't shut I don't have a gun'
+# ::tokens ["|", "'", "do", "n't", "shut", "I", "do", "n't", "have", "a", "gun", "'"]
+# ::lemmas ["|", "'", "do", "not", "shut", "i", "do", "not", "have", "a", "gun", "'"]
+(c11-4 / shut-01
+       :ARG0 (c11-1 / you
+                    :ARG1-of c11-4)
+       :ARG1-of (c11-2 / cause-01
+                       :ARG0 (c11-0 / have-03
+                                    :ARG0 c11-1
+                                    :ARG1 (c11-3 / gun)
+                                    :polarity -))
+       :mode imperative
+       :polarity -)
+
+# ::snt dude looks kinda white, though.
+# ::tokens ["dude", "looks", "kinda", "white", ",", "though", "."]
+# ::lemmas ["dude", "look", "kinda", "white", ",", "though", "."]
+(c12-0 / have-concession-91
+       :ARG1 (c12-2 / look-02
+                    :ARG0 (c12-3 / dude)
+                    :ARG1 (c12-1 / white-02
+                                 :ARG1 c12-3
+                                 :degree (c12-4 / kind-of))))
+
+# ::snt Ur stupid / So? ur point? / He shot pple (Congresswoman/Judge) &amp; was apprehended alive
+# ::tokens ["Ur", "stupid", "/", "So", "?", "ur", "point", "?", "/", "He", "shot", "pple", "(", "Congresswoman", "/", "Judge", ")", "&", "amp", ";", "was", "apprehended", "alive"]
+# ::lemmas ["ur", "stupid", "/", "so", "?", "ur", "point", "?", "/", "he", "shoot", "pple", "(", "Congresswoman", "/", "Judge", ")", "&", "amp", ";", "be", "apprehend", "alive"]
+(c13-1 / multi-sentence
+       :snt1 (c13-5 / stupid
+                    :domain (c13-19 / you))
+       :snt2 (c13-8 / amr-unknown
+                    :polarity (c13-18 / amr-unknown))
+       :snt3 (c13-4 / point-04
+                    :ARG0 (c13-24 / you)
+                    :polarity (c13-15 / amr-unknown))
+       :snt4 (c13-25 / and
+                     :op1 (c13-13 / shoot-02
+                                  :ARG0 (c13-9 / he)
+                                  :ARG1 (c13-21 / and
+                                                :op1 (c13-6 / person
+                                                            :name (c13-14 / name
+                                                                          :op1 "Pple")
+                                                            :ARG1-of (c13-16 / mean-01
+                                                                             :ARG2 (c13-20 / slash
+                                                                                           :op1 (c13-11 / person
+                                                                                                        :ARG0-of (c13-7 / have-org-role-91
+                                                                                                                        :ARG2 (c13-23 / congresswoman)))
+                                                                                           :op2 (c13-17 / person
+                                                                                                        :ARG0-of (c13-3 / have-org-role-91
+                                                                                                                        :ARG3 (c13-0 / judge-01))))))
+                                                :op2 (c13-12 / person
+                                                             :name (c13-22 / name
+                                                                           :op1 "amp"))))
+                     :op2 (c13-2 / apprehend-01
+                                 :ARG1 c13-9
+                                 :manner (c13-10 / live-01
+                                                 :ARG0 c13-9))))
+
+# ::snt Theres plenty more where that came from, many of em even cop-shooters
+# ::tokens ["There", "s", "plenty", "more", "where", "that", "came", "from", ",", "many", "of", "em", "even", "cop", "-", "shooters"]
+# ::lemmas ["there", "s", "plenty", "more", "where", "that", "come", "from", ",", "many", "of", "em", "even", "cop", "-", "shooter"]
+(c14-12 / and
+        :op1 (c14-6 / come-01
+                    :ARG1 (c14-10 / that)
+                    :ARG3 (c14-8 / thing
+                                 :mod (c14-0 / more
+                                             :quant (c14-4 / plenty))))
+        :op2 (c14-11 / person
+                     :quant (c14-5 / many)
+                     :ARG1-of (c14-2 / include-91
+                                     :ARG2 (c14-3 / they))
+                     :mod (c14-1 / even)
+                     :ARG0-of (c14-9 / shoot-02
+                                     :ARG2 (c14-7 / cop))))
+
+# ::snt :you're right. This is the first unarmed black man killed by cops recently. Idiot.
+# ::tokens [":", "you", "'re", "right", ".", "This", "is", "the", "first", "unarmed", "black", "man", "killed", "by", "cops", "recently", ".", "Idiot", "."]
+# ::lemmas [":", "you", "be", "right", ".", "this", "be", "the", "first", "unarmed", "black", "man", "kill", "by", "cop", "recently", ".", "Idiot", "."]
+(c15-1 / multi-sentence
+       :snt1 (c15-7 / right-06
+                    :ARG1 (c15-0 / you))
+       :snt2 (c15-10 / kill-01
+                     :ARG0 (c15-8 / cop)
+                     :ARG1 (c15-6 / man
+                                  :ARG1-of (c15-2 / black-05)
+                                  :ARG1-of (c15-11 / arm-01
+                                                   :polarity -)
+                                  :ord (c15-3 / ordinal-entity
+                                              :value 1)
+                                  :domain (c15-9 / this))
+                     :time (c15-5 / recent))
+       :snt3 (c15-4 / idiot))
+
+# ::snt Every single day people are murdered by power hungry fascists with badges. What would you do?
+# ::tokens ["Every", "single", "day", "people", "are", "murdered", "by", "power", "hungry", "fascists", "with", "badges", ".", "What", "would", "you", "do", "?"]
+# ::lemmas ["every", "single", "day", "people", "be", "murder", "by", "power", "hungry", "fascist", "with", "badge", ".", "what", "would", "you", "do", "?"]
+(c16-3 / multi-sentence
+       :snt1 (c16-7 / murder-01
+                    :ARG0 (c16-8 / person
+                                 :mod (c16-15 / political-movement
+                                              :name (c16-6 / name
+                                                           :op1 "Fascism"))
+                                 :ARG0-of (c16-0 / hunger-01
+                                                 :ARG1 (c16-4 / power))
+                                 :ARG0-of (c16-16 / have-03
+                                                  :ARG1 (c16-5 / badge)))
+                    :ARG1 (c16-14 / person)
+                    :frequency (c16-9 / rate-entity-91
+                                      :ARG3 (c16-12 / temporal-quantity
+                                                    :unit (c16-10 / day)
+                                                    :ARG1-of (c16-11 / single-02)
+                                                    :quant 1)))
+       :snt2 (c16-2 / do-02
+                    :ARG0 (c16-1 / you)
+                    :ARG1 (c16-13 / amr-unknown)))
+
+# ::snt "
+# ::tokens ["\""]
+# ::lemmas ["\""]
+(c17-0 / quote-01)
+
+# ::snt as he should have been.
+# ::tokens ["as", "he", "should", "have", "been", "."]
+# ::lemmas ["as", "he", "should", "have", "be", "."]
+(c18-1 / resemble-01
+       :ARG2 (c18-2 / recommend-01
+                    :ARG2 (c18-0 / he)))
+
+# ::snt The soloution is to riot, yes. If i was American I'd fear for my life from police everyday.
+# ::tokens ["The", "soloution", "is", "to", "riot", ",", "yes", ".", "If", "i", "was", "American", "I", "'d", "fear", "for", "my", "life", "from", "police", "everyday", "."]
+# ::lemmas ["the", "soloution", "be", "to", "riot", ",", "yes", ".", "if", "i", "be", "American", "i", "would", "fear", "for", "my", "life", "from", "police", "everyday", "."]
+(c19-1 / multi-sentence
+       :snt1 (c19-7 / riot-01
+                    :domain (c19-10 / soloution))
+       :snt2 (c19-0 / fear-01
+                    :ARG0 (c19-3 / i)
+                    :ARG2 (c19-2 / life
+                                 :poss c19-3)
+                    :condition (c19-6 / person
+                                      :mod (c19-8 / country
+                                                  :name (c19-5 / name
+                                                               :op1 "America"))
+                                      :domain c19-3)
+                    :frequency (c19-4 / rate-entity-91
+                                      :ARG3 (c19-11 / temporal-quantity
+                                                    :unit (c19-9 / day)
+                                                    :quant 1))))
+
+# ::snt There is no doubt some truth in that. Is the solution to rant and riot?
+# ::tokens ["There", "is", "no", "doubt", "some", "truth", "in", "that", ".", "Is", "the", "solution", "to", "rant", "and", "riot", "?"]
+# ::lemmas ["there", "be", "no", "doubt", "some", "truth", "in", "that", ".", "be", "the", "solution", "to", "rant", "and", "riot", "?"]
+(c20-0 / multi-sentence
+       :snt1 (c20-4 / doubt-01
+                    :ARG1 (c20-8 / true-01
+                                 :ARG1 (c20-6 / that)
+                                 :mod (c20-7 / some))
+                    :polarity -)
+       :snt2 (c20-1 / solve-01
+                    :ARG2 (c20-9 / and
+                                 :op1 (c20-5 / rant-01)
+                                 :op2 (c20-3 / riot-01))
+                    :polarity (c20-2 / amr-unknown)))
+
+# ::snt partly due to the heroism of wounded victims who attacked him, wrestled a second mag away from him.
+# ::tokens ["partly", "due", "to", "the", "heroism", "of", "wounded", "victims", "who", "attacked", "him", ",", "wrestled", "a", "second", "mag", "away", "from", "him", "."]
+# ::lemmas ["partly", "due", "to", "the", "heroism", "of", "wound", "victim", "who", "attack", "he", ",", "wrestle", "a", "second", "mag", "away", "from", "he", "."]
+(c21-9 / cause-01
+       :ARG0 (c21-0 / hero
+                    :domain (c21-7 / victim
+                                   :ARG1-of (c21-1 / wound-01)
+                                   :ARG0-of (c21-10 / attack-01
+                                                    :ARG1 (c21-2 / he))
+                                   :ARG0-of (c21-6 / wrest-01
+                                                   :ARG1 (c21-3 / mag
+                                                                :ord (c21-4 / ordinal-entity
+                                                                            :value 2))
+                                                   :ARG2 c21-2
+                                                   :direction (c21-5 / away))))
+       :degree (c21-8 / part))
+
+# ::snt I am happy living elsewhere...But I don't like blanket condemnations of anyone...incl police.
+# ::tokens ["I", "am", "happy", "living", "elsewhere", "...", "But", "I", "do", "n't", "like", "blanket", "condemnations", "of", "anyone", "...", "incl", "police", "."]
+# ::lemmas ["i", "be", "happy", "live", "elsewhere", "...", "but", "i", "do", "not", "like", "blanket", "condemnation", "of", "anyone", "...", "incl", "police", "."]
+(c22-7 / contrast-01
+       :ARG1 (c22-0 / happy-01
+                    :ARG0 (c22-1 / live-01
+                                 :ARG0 (c22-4 / i)
+                                 :location (c22-3 / elsewhere))
+                    :ARG1 c22-4)
+       :ARG2 (c22-6 / dislike-01
+                    :ARG0 c22-4
+                    :ARG1 (c22-8 / condemn-01
+                                 :ARG1 (c22-9 / anyone
+                                              :ARG1-of c22-7
+                                              :ARG2 (c22-5 / police)))
+                    :manner (c22-2 / blanket)))
+
+# ::snt Different place, different time, different circumstances...
+# ::tokens ["Different", "place", ",", "different", "time", ",", "different", "circumstances", "..."]
+# ::lemmas ["different", "place", ",", "different", "time", ",", "different", "circumstance", "..."]
+(c23-4 / and
+       :op1 (c23-0 / place
+                   :ARG1-of (c23-1 / differ-02
+                                   :ARG1 (c23-3 / time
+                                                :op2-of c23-4)))
+       :op3 (c23-2 / circumstance
+                   :ARG1-of c23-1
+                   :ARG1 c23-2))
+
+# ::snt How...?
+# ::tokens ["How", "...", "?"]
+# ::lemmas ["how", "...", "?"]
+(c24-0 / amr-unknown)
+
+# ::snt My Lord! So true! It's so sad how certain shades of life is deemed less valuable! Not so; God gave life!
+# ::tokens ["My", "Lord", "!", "So", "true", "!", "It", "'s", "so", "sad", "how", "certain", "shades", "of", "life", "is", "deemed", "less", "valuable", "!", "Not", "so", ";", "God", "gave", "life", "!"]
+# ::lemmas ["my", "Lord", "!", "so", "true", "!", "it", "be", "so", "sad", "how", "certain", "shade", "of", "life", "be", "deem", "less", "valuable", "!", "not", "so", ";", "God", "give", "life", "!"]
+(c25-1 / multi-sentence
+       :snt1 (c25-19 / true-01
+                     :ARG1 (c25-3 / person
+                                  :name (c25-12 / name
+                                                :op1 "Lord")
+                                  :poss (c25-14 / i))
+                     :mode expressive)
+       :snt2 (c25-6 / sad-02
+                    :ARG0 (c25-4 / deem-01
+                                 :ARG1 (c25-2 / value-02
+                                              :ARG1 (c25-10 / life
+                                                            :mod (c25-11 / shade
+                                                                         :mod (c25-17 / certain)))
+                                              :ARG2-of (c25-9 / have-degree-91
+                                                              :ARG1 c25-10
+                                                              :ARG3 (c25-18 / less))))
+                    :degree (c25-15 / so))
+       :snt3 (c25-5 / contrast-01
+                    :ARG1 (c25-8 / have-polarity-91
+                                 :ARG2 -)
+                    :ARG2 (c25-13 / give-01
+                                  :ARG0 (c25-7 / person
+                                               :name (c25-16 / name
+                                                             :op1 "God"))
+                                  :ARG1 (c25-0 / life))))
+
+# ::snt Is that the best you can do?
+# ::tokens ["Is", "that", "the", "best", "you", "can", "do", "?"]
+# ::lemmas ["be", "that", "the", "good", "you", "can", "do", "?"]
+(c26-3 / possible-01
+       :polarity (c26-7 / amr-unknown)
+       :ARG1 (c26-4 / do-02
+                    :ARG0 (c26-1 / you)
+                    :ARG1 (c26-6 / that)
+                    :ARG1-of (c26-0 / have-degree-91
+                                    :ARG2 (c26-5 / good-02
+                                                 :ARG1 c26-6)
+                                    :ARG3 (c26-2 / most))))
+
+# ::snt that scary face
+# ::tokens ["that", "scary", "face"]
+# ::lemmas ["that", "scary", "face"]
+(c27-1 / face
+       :ARG0-of (c27-0 / scary-03)
+       :mod (c27-2 / that))
+
+# ::snt What is your implication here? Every1 arrested for murder or only teens killed for allegedly stealing ciggies
+# ::tokens ["What", "is", "your", "implication", "here", "?", "Every1", "arrested", "for", "murder", "or", "only", "teens", "killed", "for", "allegedly", "stealing", "ciggies"]
+# ::lemmas ["what", "be", "your", "implication", "here", "?", "Every1", "arrest", "for", "murder", "or", "only", "teen", "kill", "for", "allegedly", "steal", "ciggie"]
+(c28-3 / multi-sentence
+       :snt1 (c28-7 / imply-01
+                    :ARG0 (c28-1 / you)
+                    :ARG1 (c28-15 / amr-unknown)
+                    :location (c28-0 / here))
+       :snt2 (c28-4 / or
+                    :op1 (c28-6 / arrest-01
+                                :ARG1 (c28-5 / every1)
+                                :ARG2 (c28-9 / murder-01))
+                    :op2 (c28-13 / kill-01
+                                 :ARG1 (c28-12 / teen
+                                               :mod (c28-2 / only))
+                                 :ARG1-of (c28-11 / cause-01
+                                                  :ARG0 (c28-14 / steal-01
+                                                                :ARG0 c28-12
+                                                                :ARG1 (c28-10 / ciggie)
+                                                                :ARG1-of (c28-8 / allege-01))))))
+
+# ::snt do you follow the news? All these unarmed people being killed by cops are black. There is more than one example
+# ::tokens ["do", "you", "follow", "the", "news", "?", "All", "these", "unarmed", "people", "being", "killed", "by", "cops", "are", "black", ".", "There", "is", "more", "than", "one", "example"]
+# ::lemmas ["do", "you", "follow", "the", "news", "?", "all", "these", "unarmed", "people", "be", "kill", "by", "cop", "be", "black", ".", "there", "be", "more", "than", "one", "example"]
+(c29-2 / multi-sentence
+       :snt1 (c29-1 / follow-02
+                    :ARG0 (c29-0 / you)
+                    :ARG1 (c29-7 / news)
+                    :polarity (c29-13 / amr-unknown))
+       :snt2 (c29-3 / black-05
+                    :ARG1 (c29-9 / person
+                                 :ARG1-of (c29-5 / arm-01
+                                                 :polarity -)
+                                 :mod (c29-12 / this)
+                                 :mod (c29-8 / all)
+                                 :ARG1-of (c29-6 / kill-01
+                                                 :ARG0 (c29-11 / cop))))
+       :snt3 (c29-4 / exemplify-01
+                    :quant (c29-10 / more-than
+                                   :op1 1)))
+
+# ::snt MT This guy shot ppl, incl a Congresswoman + judge. He was apprehended alive.
+# ::tokens ["MT", "This", "guy", "shot", "ppl", ",", "incl", "a", "Congresswoman", "+", "judge", ".", "He", "was", "apprehended", "alive", "."]
+# ::lemmas ["MT", "this", "guy", "shoot", "ppl", ",", "incl", "a", "Congresswoman", "+", "judge", ".", "he", "be", "apprehend", "alive", "."]
+(c30-3 / multi-sentence
+       :snt1 (c30-14 / shoot-02
+                     :ARG0 (c30-13 / guy
+                                   :mod (c30-15 / this))
+                     :ARG1 (c30-17 / and
+                                   :op1 (c30-10 / person
+                                                :ARG0-of (c30-0 / have-org-role-91
+                                                                :ARG1 (c30-11 / government-organization
+                                                                              :name (c30-8 / name
+                                                                                           :op1 "Congress"))))
+                                   :op2 (c30-16 / person
+                                                :ARG0-of (c30-2 / have-org-role-91
+                                                                :ARG3 (c30-12 / congresswoman)))
+                                   :op3 (c30-5 / person
+                                               :ARG0-of (c30-9 / have-org-role-91
+                                                               :ARG3 (c30-1 / judge-01)))))
+       :snt2 (c30-7 / apprehend-01
+                    :ARG1 (c30-6 / he)
+                    :manner (c30-4 / live-01
+                                   :ARG0 c30-6)))
+
+# ::snt Based on a culture of police racism all over the USA is what i base it on.
+# ::tokens ["Based", "on", "a", "culture", "of", "police", "racism", "all", "over", "the", "USA", "is", "what", "i", "base", "it", "on", "."]
+# ::lemmas ["base", "on", "a", "culture", "of", "police", "racism", "all", "over", "the", "USA", "be", "what", "i", "base", "it", "on", "."]
+(c31-0 / base-02
+       :ARG0 (c31-1 / i)
+       :ARG1 (c31-6 / it)
+       :ARG2 (c31-5 / culture
+                    :mod (c31-4 / racism
+                                :mod (c31-3 / police))
+                    :location (c31-8 / all-over
+                                     :op1 (c31-7 / country
+                                                 :name (c31-2 / name
+                                                              :op1 "USA")))))
+
+# ::snt Yeah call -1-1 it's felony jaywalking in the first degree.What jerkoffs PD
+# ::tokens ["Yeah", "call", "-1", "-", "1", "it", "'s", "felony", "jaywalking", "in", "the", "first", "degree", ".", "What", "jerkoffs", "PD"]
+# ::lemmas ["yeah", "call", "-1", "-", "1", "it", "be", "felony", "jaywalking", "in", "the", "first", "degree", ".", "what", "jerkoff", "PD"]
+(c32-7 / call-01
+       :ARG0 (c32-1 / you)
+       :ARG1 (c32-0 / jaywalking
+                    :mod (c32-2 / felony)
+                    :degree (c32-6 / degree
+                                   :ord (c32-3 / ordinal-entity
+                                               :value 1)))
+       :ARG2 (c32-5 / person
+                    :name (c32-4 / name
+                                 :op1 "PD"))
+       :mod (c32-9 / jerkoff
+                   :mode expressive)
+       :mod (c32-8 / so)
+       :mode imperative)
+
+# ::snt you can say that based on one example?
+# ::tokens ["you", "can", "say", "that", "based", "on", "one", "example", "?"]
+# ::lemmas ["you", "can", "say", "that", "base", "on", "one", "example", "?"]
+(c33-3 / possible-01
+       :polarity (c33-6 / amr-unknown)
+       :ARG1 (c33-4 / say-01
+                    :ARG0 (c33-0 / you)
+                    :ARG1 (c33-5 / that)
+                    :ARG1-of (c33-1 / base-02
+                                    :ARG2 (c33-2 / example
+                                                 :quant 1))))
+
+# ::snt he looks like a psycho
+# ::tokens ["he", "looks", "like", "a", "psycho"]
+# ::lemmas ["he", "look", "like", "a", "psycho"]
+(c34-2 / look-02
+       :ARG0 (c34-0 / he)
+       :ARG1 (c34-1 / psycho))
+
+# ::snt Totally different situation...
+# ::tokens ["Totally", "different", "situation", "..."]
+# ::lemmas ["totally", "different", "situation", "..."]
+(c35-1 / differ-02
+       :ARG1 (c35-0 / situation)
+       :degree (c35-2 / total))
+
+# ::snt Oh my, now that you mention it.....
+# ::tokens ["Oh", "my", ",", "now", "that", "you", "mention", "it", "....."]
+# ::lemmas ["oh", "my", ",", "now", "that", "you", "mention", "it", "....."]
+(c36-1 / mention-01
+       :ARG0 (c36-0 / you)
+       :ARG1 (c36-3 / it)
+       :time (c36-4 / now)
+       :mod (c36-2 / oh-my-god
+                   :mode expressive))
+
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c37-2 / congratulate-01
+       :ARG1 (c37-1 / you)
+       :ARG2 (c37-0 / tweet-01
+                    :ARG0 c37-1))
+
+# ::snt If your white,Your all right. The old song'sStill true.
+# ::tokens ["If", "your", "white", ",", "Your", "all", "right", ".", "The", "old", "song'sStill", "true", "."]
+# ::lemmas ["if", "your", "white", ",", "you", "all", "right", ".", "the", "old", "song'sstill", "true", "."]
+(c38-3 / multi-sentence
+       :snt1 (c38-0 / have-condition-91
+                    :ARG1 (c38-8 / all-right
+                                 :domain (c38-1 / you))
+                    :ARG2 (c38-2 / white-02
+                                 :ARG1 c38-1))
+       :snt2 (c38-7 / true-01
+                    :ARG1 (c38-6 / song
+                                 :mod (c38-4 / old))
+                    :mod (c38-5 / still)))
+
+# ::snt More like Uncle Fester.
+# ::tokens ["More", "like", "Uncle", "Fester", "."]
+# ::lemmas ["more", "like", "Uncle", "Fester", "."]
+(c39-0 / have-degree-of-resemblance-91
+       :ARG2 (c39-1 / person
+                    :name (c39-3 / name
+                                 :op1 "Uncle"
+                                 :op2 "Fester"))
+       :ARG4 (c39-2 / more))
+
+# ::snt MT : This guy shot people, including a Congresswoman and a judge. He was apprehended alive.
+# ::tokens ["MT", ":", "This", "guy", "shot", "people", ",", "including", "a", "Congresswoman", "and", "a", "judge", ".", "He", "was", "apprehended", "alive", "."]
+# ::lemmas ["MT", ":", "this", "guy", "shoot", "people", ",", "include", "a", "Congresswoman", "and", "a", "judge", ".", "he", "be", "apprehend", "alive", "."]
+(c40-3 / multi-sentence
+       :snt1 (c40-12 / say-01
+                     :ARG0 (c40-9 / person
+                                  :name (c40-8 / name
+                                               :op1 "MT"))
+                     :ARG1 (c40-5 / shoot-02
+                                  :ARG0 (c40-11 / guy
+                                                :mod (c40-13 / this))
+                                  :ARG1 (c40-14 / person
+                                                :ARG2-of (c40-7 / include-01
+                                                                :ARG1 (c40-15 / and
+                                                                              :op1 (c40-10 / congresswoman)
+                                                                              :op2 (c40-4 / person
+                                                                                          :ARG0-of (c40-0 / judge-01)))))))
+       :snt2 (c40-6 / apprehend-01
+                    :ARG1 (c40-1 / he)
+                    :manner (c40-2 / live-01
+                                   :ARG0 c40-1)))
+
+# ::snt Unarmed robbery = execution. Yet full out shooting a dozen people and hes apprehended. Thatint.
+# ::tokens ["Unarmed", "robbery", "=", "execution", ".", "Yet", "full", "out", "shooting", "a", "dozen", "people", "and", "he", "s", "apprehended", ".", "Thatint", "."]
+# ::lemmas ["unarmed", "robbery", "=", "execution", ".", "yet", "full", "out", "shoot", "a", "dozen", "people", "and", "he", "s", "apprehend", ".", "thatint", "."]
+(c41-2 / multi-sentence
+       :snt1 (c41-5 / equate-01
+                    :ARG1 (c41-9 / rob-01
+                                 :ARG1-of (c41-12 / arm-01
+                                                  :polarity -))
+                    :ARG2 (c41-4 / execute-01))
+       :snt2 (c41-0 / have-concession-91
+                    :ARG1 (c41-6 / and
+                                 :op1 (c41-10 / shoot-02
+                                              :ARG0 (c41-1 / he)
+                                              :ARG1 (c41-8 / person
+                                                           :quant 12)
+                                              :degree (c41-3 / full-out))
+                                 :op2 (c41-7 / apprehend-01
+                                             :ARG1 c41-1))
+                    :ARG2 (c41-11 / that)))
+
+# ::snt This guy, engineered a dispersal of a sit-in that resulted in deaths, and was elected president
+# ::tokens ["This", "guy", ",", "engineered", "a", "dispersal", "of", "a", "sit", "-", "in", "that", "resulted", "in", "deaths", ",", "and", "was", "elected", "president"]
+# ::lemmas ["this", "guy", ",", "engineer", "a", "dispersal", "of", "a", "sit", "-", "in", "that", "result", "in", "death", ",", "and", "be", "elect", "president"]
+(c42-9 / and
+       :op1 (c42-2 / engineer-01
+                   :ARG0 (c42-6 / guy
+                                :mod (c42-8 / this))
+                   :ARG1 (c42-4 / disperse-01
+                                :ARG1 (c42-7 / sit-in-02
+                                             :ARG1-of (c42-5 / result-01
+                                                             :ARG2 (c42-0 / die-01)))))
+       :op2 (c42-1 / elect-01
+                   :ARG1 c42-6
+                   :ARG2 (c42-3 / president)))
+
+# ::snt The point is that why is this y/o man arrested and an unarmed teenager is shot?
+# ::tokens ["The", "point", "is", "that", "why", "is", "this", "y", "/", "o", "man", "arrested", "and", "an", "unarmed", "teenager", "is", "shot", "?"]
+# ::lemmas ["the", "point", "be", "that", "why", "be", "this", "y", "/", "o", "man", "arrest", "and", "an", "unarmed", "teenager", "be", "shoot", "?"]
+(c43-3 / point-04
+       :ARG1 (c43-4 / cause-01
+                    :ARG0 (c43-9 / amr-unknown)
+                    :ARG1 (c43-1 / and
+                                 :op1 (c43-2 / arrest-01
+                                             :ARG1 (c43-0 / man
+                                                          :mod (c43-8 / this)))
+                                 :op2 (c43-6 / shoot-02
+                                             :ARG1 (c43-5 / teenager
+                                                          :ARG1-of (c43-7 / arm-01
+                                                                          :polarity -))))))
+
+# ::snt I think the point is why shoot an unarmed teen and not an armed adult?
+# ::tokens ["I", "think", "the", "point", "is", "why", "shoot", "an", "unarmed", "teen", "and", "not", "an", "armed", "adult", "?"]
+# ::lemmas ["i", "think", "the", "point", "be", "why", "shoot", "an", "unarmed", "teen", "and", "not", "an", "armed", "adult", "?"]
+(c44-12 / think-01
+        :ARG0 (c44-3 / i)
+        :ARG1 (c44-5 / point-04
+                     :ARG1 (c44-7 / contrast-01
+                                  :ARG1 (c44-9 / shoot-02
+                                               :ARG1 (c44-8 / teen
+                                                            :ARG1-of (c44-13 / arm-01
+                                                                             :polarity -))
+                                               :ARG1-of (c44-6 / cause-01
+                                                               :ARG0 (c44-2 / amr-unknown)))
+                                  :ARG2 (c44-1 / shoot-02
+                                               :ARG1 (c44-4 / adult
+                                                            :ARG1-of (c44-11 / arm-01))
+                                               :ARG1-of (c44-10 / cause-01
+                                                                :ARG0 (c44-0 / amr-unknown))
+                                               :polarity -))))
+
+# ::snt Dont bring your religion into this. ?
+# ::tokens ["Do", "nt", "bring", "your", "religion", "into", "this", ".", "?"]
+# ::lemmas ["do", "not", "bring", "your", "religion", "into", "this", ".", "?"]
+(c45-1 / bring-01
+       :ARG0 (c45-0 / you)
+       :ARG1 (c45-2 / religion
+                    :poss c45-0)
+       :ARG2 (c45-3 / this)
+       :polarity (c45-4 / amr-unknown)
+       :polarity -)
+
+# ::snt Yeah, Google can provide you with any evidence you need bro.
+# ::tokens ["Yeah", ",", "Google", "can", "provide", "you", "with", "any", "evidence", "you", "need", "bro", "."]
+# ::lemmas ["yeah", ",", "Google", "can", "provide", "you", "with", "any", "evidence", "you", "need", "bro", "."]
+(c46-6 / possible-01
+       :ARG1 (c46-9 / provide-01
+                    :ARG0 (c46-7 / company
+                                 :name (c46-4 / name
+                                              :op1 "Google"))
+                    :ARG1 (c46-8 / thing
+                                 :ARG0-of (c46-3 / evidence-01)
+                                 :mod (c46-10 / any)
+                                 :ARG1-of (c46-5 / need-01
+                                                 :ARG0 (c46-1 / you
+                                                              :ARG0-of (c46-0 / have-rel-role-91
+                                                                              :ARG2 (c46-2 / bro))
+                                                              :ARG2-of c46-9)))))
+
+# ::snt - have you not seen the pyramid of crimes???! Jaywalking at the very top!!! It's insidious how bad it is!
+# ::tokens ["-", "have", "you", "not", "seen", "the", "pyramid", "of", "crimes", "?", "?", "?", "!", "Jaywalking", "at", "the", "very", "top", "!", "!", "!", "It", "'s", "insidious", "how", "bad", "it", "is", "!"]
+# ::lemmas ["-", "have", "you", "not", "see", "the", "pyramid", "of", "crime", "?", "?", "?", "!", "jaywalk", "at", "the", "very", "top", "!", "!", "!", "it", "be", "insidious", "how", "bad", "it", "be", "!"]
+(c47-2 / multi-sentence
+       :snt1 (c47-9 / see-01
+                    :ARG0 (c47-0 / you)
+                    :ARG1 (c47-6 / pyramid
+                                 :consist-of (c47-7 / crime-02))
+                    :polarity (c47-11 / amr-unknown)
+                    :polarity -)
+       :snt2 (c47-1 / walk-01
+                    :ARG2 (c47-10 / top
+                                  :mod (c47-5 / very)))
+       :snt3 (c47-4 / insidious
+                    :degree (c47-3 / so)
+                    :domain (c47-8 / it)))
+
+# ::snt Because the mainstream press is giving him exactly what he wanted, ..
+# ::tokens ["Because", "the", "mainstream", "press", "is", "giving", "him", "exactly", "what", "he", "wanted", ",", ".."]
+# ::lemmas ["because", "the", "mainstream", "press", "be", "give", "he", "exactly", "what", "he", "want", ",", ".."]
+(c48-5 / cause-01
+       :ARG0 (c48-6 / give-01
+                    :ARG0 (c48-4 / press
+                                 :ARG1-of (c48-2 / mainstream-02))
+                    :ARG1 (c48-7 / thing
+                                 :ARG1-of (c48-1 / want-01
+                                                 :ARG0 (c48-0 / he))
+                                 :mod (c48-3 / exact))
+                    :ARG2 c48-0))
+
+# ::snt So? What does that prove, anyway?
+# ::tokens ["So", "?", "What", "does", "that", "prove", ",", "anyway", "?"]
+# ::lemmas ["so", "?", "what", "do", "that", "prove", ",", "anyway", "?"]
+(c49-0 / multi-sentence
+       :snt1 (c49-3 / so)
+       :snt2 (c49-2 / prove-01
+                    :ARG0 (c49-4 / that)
+                    :ARG1 (c49-5 / amr-unknown)
+                    :mod (c49-1 / anyway)))
+
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c50-2 / congratulate-01
+       :ARG1 (c50-1 / you)
+       :ARG2 (c50-0 / tweet-01
+                    :ARG0 c50-1))

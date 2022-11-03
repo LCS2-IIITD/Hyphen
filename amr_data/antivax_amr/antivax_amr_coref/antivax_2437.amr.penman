@@ -1,0 +1,127 @@
+# ::snt I took a video too!
+# ::tokens ["I", "took", "a", "video", "too", "!"]
+# ::lemmas ["i", "take", "a", "video", "too", "!"]
+(c1-3 / take-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-0 / video)
+      :mod (c1-2 / too))
+
+# ::snt Update: ~17 hours after first dose, minimal injection site soreness. Still have complete function of my arm (and I slept on it last night)! No other side effects.
+# ::tokens ["Update", ":", "~17", "hours", "after", "first", "dose", ",", "minimal", "injection", "site", "soreness", ".", "Still", "have", "complete", "function", "of", "my", "arm", "(", "and", "I", "slept", "on", "it", "last", "night", ")", "!", "No", "other", "side", "effects", "."]
+# ::lemmas ["update", ":", "~17", "hour", "after", "first", "dose", ",", "minimal", "injection", "site", "soreness", ".", "still", "have", "complete", "function", "of", "my", "arm", "(", "and", "i", "sleep", "on", "it", "last", "night", ")", "!", "no", "other", "side", "effect", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-22 / update-02
+                   :ARG2 (c2-12 / sore-03
+                                :ARG1 (c2-23 / site
+                                             :mod (c2-2 / inject-01))
+                                :ARG1-of (c2-19 / minimal-02)
+                                :time (c2-17 / after
+                                             :op1 (c2-0 / dose-01
+                                                        :ord (c2-6 / ordinal-entity
+                                                                   :value 1))
+                                             :quant (c2-10 / approximately
+                                                           :op1 (c2-7 / temporal-quantity
+                                                                      :unit (c2-20 / hour)
+                                                                      :quant 17)))))
+      :snt2 (c2-1 / and
+                  :op1 (c2-18 / function-01
+                              :ARG0 (c2-24 / arm
+                                           :part-of (c2-13 / i))
+                              :ARG1-of (c2-5 / complete-02)
+                              :mod (c2-14 / still))
+                  :op2 (c2-3 / sleep-01
+                             :ARG0 c2-13
+                             :location c2-24
+                             :time (c2-15 / date-entity
+                                          :dayperiod (c2-9 / night)
+                                          :mod (c2-16 / yesterday)))
+                  :snt3 (c2-11 / effect-03
+                               :mod (c2-4 / side)
+                               :mod (c2-21 / other)
+                               :polarity -)))
+
+# ::snt Update: ~5 hours after first dose, some injection site soreness but VERY minimal. Feeling a-okay!
+# ::tokens ["Update", ":", "~5", "hours", "after", "first", "dose", ",", "some", "injection", "site", "soreness", "but", "VERY", "minimal", ".", "Feeling", "a", "-", "okay", "!"]
+# ::lemmas ["update", ":", "~5", "hours", "after", "first", "dose", ",", "some", "injection", "site", "soreness", "but", "very", "minimal", ".", "feel", "a", "-", "okay", "!"]
+(c3-15 / multi-sentence
+       :snt1 (c3-9 / update-02
+                   :ARG2 (c3-0 / sore-00
+                               :ARG1 (c3-13 / site
+                                            :mod (c3-14 / inject-01))
+                               :quant (c3-7 / some)
+                               :ARG1-of (c3-4 / contrast-01
+                                              :ARG2 (c3-5 / minimal-02
+                                                          :ARG1 c3-0
+                                                          :degree (c3-10 / very)))
+                               :time (c3-2 / after
+                                           :op1 (c3-1 / dose-01
+                                                      :ord (c3-11 / ordinal-entity
+                                                                  :value 1))
+                                           :quant (c3-16 / approximately
+                                                         :op1 (c3-12 / temporal-quantity
+                                                                     :unit (c3-6 / hour)
+                                                                     :quant 5)))))
+       :snt2 (c3-3 / feel-01
+                   :ARG1 (c3-8 / okay-04)))
+
+# ::snt / received my first dose!! Did not hurt at ALL!!! Very fortunate to be one of the first vaccinated!
+# ::tokens ["/", "received", "my", "first", "dose", "!", "!", "Did", "not", "hurt", "at", "ALL", "!", "!", "!", "Very", "fortunate", "to", "be", "one", "of", "the", "first", "vaccinated", "!"]
+# ::lemmas ["/", "receive", "my", "first", "dose", "!", "!", "do", "not", "hurt", "at", "all", "!", "!", "!", "very", "fortunate", "to", "be", "one", "of", "the", "first", "vaccinated", "!"]
+(c4-14 / multi-sentence
+       :snt1 (c4-11 / receive-01
+                    :ARG0 (c4-13 / i)
+                    :ARG1 (c4-0 / dose-01
+                                :ARG1 c4-13
+                                :ord (c4-10 / ordinal-entity
+                                            :value 1)))
+       :snt2 (c4-4 / hurt-01
+                   :ARG1 (c4-5 / i)
+                   :degree (c4-1 / at-all)
+                   :polarity -)
+       :snt3 (c4-2 / fortunate-01
+                   :ARG1 (c4-6 / i
+                               :ARG1-of (c4-8 / include-91
+                                              :ARG2 (c4-12 / person
+                                                           :ARG1-of (c4-9 / vaccinate-01
+                                                                          :ord (c4-7 / ordinal-entity
+                                                                                     :value 1)))))
+                   :degree (c4-3 / very)))
+
+# ::snt / The majority of patients here that Im aware of, work for infectious diseases in some aspect. There has been complaints regarding the wait time... I believe up to an hour. I have no issue with that, but Ive also only been here for minutes.
+# ::tokens ["/", "The", "majority", "of", "patients", "here", "that", "I", "m", "aware", "of", ",", "work", "for", "infectious", "diseases", "in", "some", "aspect", ".", "There", "has", "been", "complaints", "regarding", "the", "wait", "time", "...", "I", "believe", "up", "to", "an", "hour", ".", "I", "have", "no", "issue", "with", "that", ",", "but", "I", "ve", "also", "only", "been", "here", "for", "minutes", "."]
+# ::lemmas ["/", "the", "majority", "of", "patient", "here", "that", "i", "m", "aware", "of", ",", "work", "for", "infectious", "disease", "in", "some", "aspect", ".", "there", "have", "be", "complaint", "regard", "the", "wait", "time", "...", "i", "believe", "up", "to", "an", "hour", ".", "i", "have", "no", "issue", "with", "that", ",", "but", "i", "ve", "also", "only", "be", "here", "for", "minutes", "."]
+(c5-11 / multi-sentence
+       :snt1 (c5-5 / work-01
+                   :ARG0 (c5-28 / patient
+                                :ARG1-of (c5-3 / include-91
+                                               :ARG2 (c5-26 / patient
+                                                            :location (c5-23 / here)
+                                                            :ARG1-of (c5-9 / realize-01
+                                                                           :ARG0 (c5-16 / i)))
+                                               :ARG3 (c5-22 / majority)))
+                   :ARG1 (c5-0 / disease
+                               :ARG0-of (c5-17 / infect-01))
+                   :manner (c5-21 / aspect
+                                  :mod (c5-15 / some)))
+       :snt2 (c5-4 / complain-01
+                   :ARG1 (c5-8 / time
+                               :time-of (c5-13 / wait-01)))
+       :snt3 (c5-27 / believe-01
+                    :ARG0 (c5-24 / i)
+                    :ARG1 (c5-25 / up-to
+                                 :op1 (c5-6 / temporal-quantity
+                                            :unit (c5-2 / hour)
+                                            :quant 1)))
+       :snt4 (c5-1 / contrast-01
+                   :ARG1 (c5-7 / issue-02
+                               :ARG0 (c5-12 / that)
+                               :ARG1 c5-24
+                               :polarity -)
+                   :ARG2 (c5-20 / be-located-at-91
+                                :ARG1 c5-24
+                                :ARG2 c5-23
+                                :mod (c5-14 / also)
+                                :duration (c5-19 / multiple
+                                                 :op1 (c5-18 / temporal-quantity
+                                                             :unit (c5-10 / minute)
+                                                             :quant 1)))))

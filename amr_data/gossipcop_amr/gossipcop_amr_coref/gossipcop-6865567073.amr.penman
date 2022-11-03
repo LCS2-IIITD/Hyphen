@@ -1,0 +1,56 @@
+# ::snt who gives a toss
+# ::tokens ["who", "gives", "a", "toss"]
+# ::lemmas ["who", "give", "a", "toss"]
+(c1-1 / toss-01
+      :ARG0 (c1-0 / amr-unknown))
+
+# ::snt Who cares .
+# ::tokens ["Who", "cares", "."]
+# ::lemmas ["who", "care", "."]
+(c2-0 / care-01
+      :ARG0 (c2-1 / amr-unknown))
+
+# ::snt probably why he's finally letting her go. Because he doesn't need her if he can get all of her money.
+# ::tokens ["probably", "why", "he", "'s", "finally", "letting", "her", "go", ".", "Because", "he", "does", "n't", "need", "her", "if", "he", "can", "get", "all", "of", "her", "money", "."]
+# ::lemmas ["probably", "why", "he", "be", "finally", "let", "she", "go", ".", "because", "he", "do", "not", "need", "she", "if", "he", "can", "get", "all", "of", "her", "money", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-10 / cause-01
+                   :ARG0 (c3-8 / probable)
+                   :ARG1 (c3-7 / let-01
+                               :ARG0 (c3-6 / he)
+                               :ARG1 (c3-14 / go-02
+                                            :ARG0 (c3-4 / she))
+                               :time (c3-0 / final)))
+      :snt2 (c3-15 / cause-01
+                   :ARG0 (c3-3 / need-01
+                               :ARG0 (c3-11 / he)
+                               :ARG1 (c3-1 / she)
+                               :condition (c3-5 / possible-01
+                                                :ARG1 (c3-12 / get-01
+                                                             :ARG0 c3-11
+                                                             :ARG1 (c3-9 / money
+                                                                         :mod (c3-13 / all)
+                                                                         :poss c3-1)))
+                               :polarity -)))
+
+# ::snt he's going to try to sell so many stories on her and the Spice Girls and be such a prick.
+# ::tokens ["he", "'s", "going", "to", "try", "to", "sell", "so", "many", "stories", "on", "her", "and", "the", "Spice", "Girls", "and", "be", "such", "a", "prick", "."]
+# ::lemmas ["he", "be", "go", "to", "try", "to", "sell", "so", "many", "story", "on", "she", "and", "the", "Spice", "Girls", "and", "be", "such", "a", "prick", "."]
+(c4-6 / and
+      :op1 (c4-12 / try-01
+                  :ARG0 (c4-8 / he)
+                  :ARG1 (c4-4 / sell-01
+                              :ARG0 c4-8
+                              :ARG1 (c4-0 / story
+                                          :ARG1-of (c4-10 / have-quant-91
+                                                          :ARG2 (c4-2 / many)
+                                                          :ARG3 (c4-13 / so))
+                                          :topic (c4-11 / and
+                                                        :op1 (c4-5 / she)
+                                                        :op2 (c4-1 / broadcast-program
+                                                                   :name (c4-3 / name
+                                                                               :op1 "Spice"
+                                                                               :op2 "Girls"))))))
+      :op2 (c4-9 / prick
+                 :domain c4-8
+                 :degree (c4-7 / such)))

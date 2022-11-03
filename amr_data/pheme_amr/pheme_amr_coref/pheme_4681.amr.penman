@@ -1,0 +1,80 @@
+# ::snt i love it !
+# ::tokens ["i", "love", "it", "!"]
+# ::lemmas ["i", "love", "it", "!"]
+(c1-0 / love-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-1 / it))
+
+# ::snt So true....
+# ::tokens ["So", "true", "...."]
+# ::lemmas ["so", "true", "...."]
+(c2-1 / true-01
+      :degree (c2-0 / so))
+
+# ::snt spot on
+# ::tokens ["spot", "on"]
+# ::lemmas ["spot", "on"]
+(c3-0 / spot-on-02
+      :ARG0 (c3-1 / you)
+      :mode imperative)
+
+# ::snt well said.....mam
+# ::tokens ["well", "said", ".....", "mam"]
+# ::lemmas ["well", "say", ".....", "mam"]
+(c4-4 / say-01
+      :ARG0 (c4-1 / i)
+      :ARG1-of (c4-0 / well-09)
+      :ARG2 (c4-3 / person
+                  :name (c4-2 / name
+                              :op1 "mam")))
+
+# ::snt lets add kill yourself alone... don t take anyone with you...
+# ::tokens ["lets", "add", "kill", "yourself", "alone", "...", "don", "t", "take", "anyone", "with", "you", "..."]
+# ::lemmas ["let", "add", "kill", "yourself", "alone", "...", "don", "t", "take", "anyone", "with", "you", "..."]
+(c5-7 / and
+      :op1 (c5-2 / add-01
+                 :ARG0 (c5-0 / we)
+                 :ARG1 (c5-6 / kill-01
+                             :ARG0 (c5-1 / you
+                                         :ARG1-of c5-6)
+                             :mod (c5-3 / alone))
+                 :mode imperative)
+      :op2 (c5-4 / take-01
+                 :ARG0 c5-1
+                 :ARG1 (c5-5 / anyone)
+                 :ARG3 c5-1
+                 :polarity -
+                 :mode imperative))
+
+# ::snt agree!!
+# ::tokens ["agree", "!", "!"]
+# ::lemmas ["agree", "!", "!"]
+(c6-0 / agree-01
+      :mode expressive)
+
+# ::snt cc
+# ::tokens ["cc"]
+# ::lemmas ["cc"]
+(c7-1 / person
+      :name (c7-0 / name
+                  :op1 "cc"))
+
+# ::snt religion will.end soon.logic
+# ::tokens ["religion", "will.end", "soon.logic"]
+# ::lemmas ["religion", "will.end", "soon.logic"]
+(c8-1 / end-01
+      :ARG1 (c8-2 / religion)
+      :time (c8-0 / soon)
+      :mod (c8-3 / logic))
+
+# ::snt . we have so many in India ......
+# ::tokens [".", "we", "have", "so", "many", "in", "India", "......"]
+# ::lemmas [".", "we", "have", "so", "many", "in", "India", "......"]
+(c9-0 / have-03
+      :ARG0 (c9-1 / we)
+      :ARG1 (c9-6 / thing
+                  :quant (c9-2 / many
+                               :degree (c9-5 / so)))
+      :location (c9-4 / country
+                      :name (c9-3 / name
+                                  :op1 "India")))

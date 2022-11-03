@@ -1,0 +1,44 @@
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c1-0 / congratulate-01)
+
+# ::snt Congratulations uncle Jesse
+# ::tokens ["Congratulations", "uncle", "Jesse"]
+# ::lemmas ["congratulation", "uncle", "Jesse"]
+(c2-1 / say-01
+      :ARG1 (c2-4 / congratulate-01)
+      :ARG2 (c2-3 / person
+                  :name (c2-0 / name
+                              :op1 "Jesse")
+                  :ARG0-of (c2-2 / have-rel-role-91
+                                 :ARG2 (c2-5 / uncle))))
+
+# ::snt Awesome!! What an amazing gift!
+# ::tokens ["Awesome", "!", "!", "What", "an", "amazing", "gift", "!"]
+# ::lemmas ["Awesome", "!", "!", "what", "an", "amazing", "gift", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-3 / awe-01
+                  :mode expressive)
+      :snt2 (c4-0 / gift
+                  :ARG0-of (c4-2 / amaze-01)))
+
+# ::snt a good example of real love to his child an wife for your family
+# ::tokens ["a", "good", "example", "of", "real", "love", "to", "his", "child", "an", "wife", "for", "your", "family"]
+# ::lemmas ["a", "good", "example", "of", "real", "love", "to", "his", "child", "an", "wife", "for", "your", "family"]
+(c5-4 / exemplify-01
+      :ARG0 (c5-5 / he)
+      :ARG1 (c5-7 / love-01
+                  :ARG1 (c5-6 / person
+                              :ARG0-of (c5-11 / have-rel-role-91
+                                              :ARG1 c5-5
+                                              :ARG2 (c5-9 / child)))
+                  :ARG1-of (c5-3 / real-04))
+      :ARG1-of (c5-12 / good-02)
+      :beneficiary (c5-2 / person
+                         :ARG0-of (c5-8 / have-rel-role-91
+                                        :ARG1 (c5-1 / you)
+                                        :ARG2 (c5-0 / family))
+                         :ARG0-of (c5-13 / have-rel-role-91
+                                         :ARG1 c5-1
+                                         :ARG2 (c5-10 / wife))))

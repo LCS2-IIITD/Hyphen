@@ -1,0 +1,65 @@
+# ::snt Yeah me three
+# ::tokens ["Yeah", "me", "three"]
+# ::lemmas ["yeah", "i", "three"]
+(c1-0 / i
+      :mod (c1-1 / yeah
+                 :mode expressive)
+      :quant 3)
+
+# ::snt Your on your own on that one. Ive never done coke.
+# ::tokens ["Your", "on", "your", "own", "on", "that", "one", ".", "I", "ve", "never", "done", "coke", "."]
+# ::lemmas ["your", "on", "your", "own", "on", "that", "one", ".", "i", "ve", "never", "do", "coke", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-4 / by-oneself
+                  :domain (c2-7 / you)
+                  :topic (c2-2 / one
+                               :mod (c2-3 / that)))
+      :snt2 (c2-0 / do-02
+                  :ARG0 (c2-5 / i)
+                  :ARG1 (c2-1 / coke)
+                  :time (c2-8 / ever)
+                  :polarity -))
+
+# ::snt I said that about the coke but I deleted it
+# ::tokens ["I", "said", "that", "about", "the", "coke", "but", "I", "deleted", "it"]
+# ::lemmas ["i", "say", "that", "about", "the", "coke", "but", "i", "delete", "it"]
+(c3-3 / contrast-01
+      :ARG1 (c3-0 / say-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-4 / that)
+                  :ARG3 (c3-1 / coke))
+      :ARG2 (c3-2 / delete-01
+                  :ARG0 c3-5
+                  :ARG1 c3-4))
+
+# ::snt You worded it wrong. If youve been to sensations your immune. Lol.
+# ::tokens ["You", "worded", "it", "wrong", ".", "If", "you", "ve", "been", "to", "sensations", "your", "immune", ".", "Lol", "."]
+# ::lemmas ["you", "word", "it", "wrong", ".", "if", "you", "ve", "be", "to", "sensation", "your", "immune", ".", "Lol", "."]
+(c4-8 / multi-sentence
+      :snt1 (c4-2 / word-01
+                  :ARG0 (c4-9 / you)
+                  :ARG1 (c4-7 / it)
+                  :ARG2-of (c4-10 / wrong-04))
+      :snt2 (c4-3 / immune-02
+                  :ARG1 (c4-1 / you)
+                  :condition (c4-6 / be-located-at-91
+                                   :ARG1 c4-1
+                                   :ARG2 (c4-0 / sensation)))
+      :snt3 (c4-4 / laugh-01
+                  :manner (c4-5 / loud)
+                  :mode expressive))
+
+# ::snt What if you worked there? Asking for a friend.
+# ::tokens ["What", "if", "you", "worked", "there", "?", "Asking", "for", "a", "friend", "."]
+# ::lemmas ["what", "if", "you", "work", "there", "?", "ask", "for", "a", "friend", "."]
+(c7-8 / multi-sentence
+      :snt1 (c7-4 / have-condition-91
+                  :ARG1 (c7-0 / amr-unknown)
+                  :ARG2 (c7-3 / work-01
+                              :ARG0 (c7-9 / you)
+                              :ARG2 (c7-5 / there)))
+      :snt2 (c7-10 / ask-02
+                   :ARG0 (c7-1 / you)
+                   :ARG2 (c7-7 / person
+                               :ARG0-of (c7-6 / have-rel-role-91
+                                              :ARG2 (c7-2 / friend)))))

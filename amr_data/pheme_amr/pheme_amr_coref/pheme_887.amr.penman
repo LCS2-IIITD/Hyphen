@@ -1,0 +1,248 @@
+# ::snt no it's a terrorist attack
+# ::tokens ["no", "it", "'s", "a", "terrorist", "attack"]
+# ::lemmas ["no", "it", "be", "a", "terrorist", "attack"]
+(c1-1 / attack-01
+      :mod (c1-0 / terrorist))
+
+# ::snt Awful. ": dead in Paris shooting at French satirical newspaper Charlie Hebdo, police say -
+# ::tokens ["Awful", ".", "\"", ":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "say", "-"]
+# ::lemmas ["awful", ".", "\"", ":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "say", "-"]
+(c2-1 / multi-sentence
+      :snt1 (c2-14 / awful)
+      :snt2 (c2-11 / say-01
+                   :ARG0 (c2-5 / police)
+                   :ARG1 (c2-6 / die-01
+                               :ARG1 (c2-13 / person)
+                               :ARG1-of (c2-7 / cause-01
+                                              :ARG0 (c2-2 / shoot-02
+                                                          :ARG1 (c2-3 / newspaper
+                                                                      :name (c2-4 / name
+                                                                                  :op1 "Charlie"
+                                                                                  :op2 "Ch Hebdo")
+                                                                      :mod (c2-0 / satire)
+                                                                      :mod (c2-8 / country
+                                                                                 :name (c2-9 / name
+                                                                                             :op1 "France")))
+                                                          :location (c2-10 / city
+                                                                           :name (c2-12 / name
+                                                                                        :op1 "Paris")))))))
+
+# ::snt : dead in Paris shooting at French satirical newspaper Charlie Hebdo, police official says -
+# ::tokens [":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "says", "-"]
+# ::lemmas [":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "say", "-"]
+(c3-12 / say-01
+       :ARG0 (c3-6 / person
+                   :ARG0-of (c3-0 / have-org-role-91
+                                  :ARG1 (c3-14 / police)
+                                  :ARG2 (c3-2 / official)))
+       :ARG1 (c3-7 / die-01
+                   :ARG1 c3-6
+                   :ARG1-of (c3-8 / cause-01
+                                  :ARG0 (c3-3 / shoot-02
+                                              :ARG1 (c3-4 / newspaper
+                                                          :name (c3-5 / name
+                                                                      :op1 "Charlie"
+                                                                      :op2 "Z Hebdo")
+                                                          :mod (c3-1 / satire)
+                                                          :mod (c3-9 / country
+                                                                     :name (c3-10 / name
+                                                                                  :op1 "France")))
+                                              :location (c3-11 / city
+                                                               :name (c3-13 / name
+                                                                            :op1 "Paris"))))))
+
+# ::snt RT dead in Paris shooting at French satirical newspaper Charlie Hebdo
+# ::tokens ["RT", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo"]
+# ::lemmas ["RT", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo"]
+(c4-4 / die-01
+      :ARG1 (c4-3 / publication
+                  :name (c4-1 / name
+                              :op1 "RT"))
+      :ARG1-of (c4-5 / cause-01
+                     :ARG0 (c4-9 / shoot-02
+                                 :ARG2 (c4-2 / newspaper
+                                             :name (c4-6 / name
+                                                         :op1 "Charlie"
+                                                         :op2 "Ch Hebdo")
+                                             :mod (c4-0 / satire)
+                                             :mod (c4-7 / country
+                                                        :name (c4-8 / name
+                                                                    :op1 "France")))
+                                 :location (c4-10 / city
+                                                  :name (c4-11 / name
+                                                               :op1 "Paris")))))
+
+# ::snt its a very shameful act must be condemned on mass scale.
+# ::tokens ["its", "a", "very", "shameful", "act", "must", "be", "condemned", "on", "mass", "scale", "."]
+# ::lemmas ["its", "a", "very", "shameful", "act", "must", "be", "condemn", "on", "mass", "scale", "."]
+(c5-1 / obligate-01
+      :ARG2 (c5-4 / condemn-01
+                  :ARG1 (c5-6 / act-02
+                              :ARG0-of (c5-5 / shame-02
+                                             :degree (c5-3 / very)))
+                  :manner (c5-2 / scale
+                                :mod (c5-0 / mass))))
+
+# ::snt people died and people between life and death !
+# ::tokens ["people", "died", "and", "people", "between", "life", "and", "death", "!"]
+# ::lemmas ["people", "die", "and", "people", "between", "life", "and", "death", "!"]
+(c6-2 / and
+      :op1 (c6-1 / die-01
+                 :ARG1 (c6-0 / person))
+      :op2 (c6-3 / die-01
+                 :ARG1 c6-0))
+
+# ::snt Shocking!
+# ::tokens ["Shocking", "!"]
+# ::lemmas ["shocking", "!"]
+(c7-0 / shock-01
+      :mode expressive)
+
+# ::snt Horrible. ": dead in Paris shooting at French satirical newspaper Charlie Hebdo, police say -
+# ::tokens ["Horrible", ".", "\"", ":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "say", "-"]
+# ::lemmas ["horrible", ".", "\"", ":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "say", "-"]
+(c8-2 / multi-sentence
+      :snt1 (c8-0 / horrible)
+      :snt2 (c8-12 / say-01
+                   :ARG0 (c8-6 / police)
+                   :ARG1 (c8-7 / die-01
+                               :ARG1 (c8-14 / person)
+                               :ARG1-of (c8-8 / cause-01
+                                              :ARG0 (c8-3 / shoot-02
+                                                          :ARG1 (c8-4 / newspaper
+                                                                      :name (c8-5 / name
+                                                                                  :op1 "Charlie"
+                                                                                  :op2 "Ch Hebdo")
+                                                                      :mod (c8-1 / satire)
+                                                                      :mod (c8-9 / country
+                                                                                 :name (c8-10 / name
+                                                                                              :op1 "France")))
+                                                          :location (c8-11 / city
+                                                                           :name (c8-13 / name
+                                                                                        :op1 "Paris")))))))
+
+# ::snt : dead in Paris shooting at French satirical newspaper Charlie Hebdo, police official says -
+# ::tokens [":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "says", "-"]
+# ::lemmas [":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "say", "-"]
+(c9-12 / say-01
+       :ARG0 (c9-6 / person
+                   :ARG0-of (c9-0 / have-org-role-91
+                                  :ARG1 (c9-14 / police)
+                                  :ARG2 (c9-2 / official)))
+       :ARG1 (c9-7 / die-01
+                   :ARG1 c9-6
+                   :ARG1-of (c9-8 / cause-01
+                                  :ARG0 (c9-3 / shoot-02
+                                              :ARG1 (c9-4 / newspaper
+                                                          :name (c9-5 / name
+                                                                      :op1 "Charlie"
+                                                                      :op2 "Z Hebdo")
+                                                          :mod (c9-1 / satire)
+                                                          :mod (c9-9 / country
+                                                                     :name (c9-10 / name
+                                                                                  :op1 "France")))
+                                              :location (c9-11 / city
+                                                               :name (c9-13 / name
+                                                                            :op1 "Paris"))))))
+
+# ::snt Praying for France and all affected by these deaths.
+# ::tokens ["Praying", "for", "France", "and", "all", "affected", "by", "these", "deaths", "."]
+# ::lemmas ["pray", "for", "France", "and", "all", "affect", "by", "these", "death", "."]
+(c10-3 / pray-01
+       :ARG1 (c10-7 / and
+                    :op1 (c10-5 / country
+                                :name (c10-1 / name
+                                             :op1 "France"))
+                    :op2 (c10-0 / all
+                                :ARG1-of (c10-2 / affect-01
+                                                :ARG0 (c10-4 / die-01
+                                                             :mod (c10-6 / this))))))
+
+# ::snt Terrible news.
+# ::tokens ["Terrible", "news", "."]
+# ::lemmas ["terrible", "news", "."]
+(c11-0 / news
+       :mod (c11-1 / horrible))
+
+# ::snt Yup, that's religion of peace for ya
+# ::tokens ["Yup", ",", "that", "'s", "religion", "of", "peace", "for", "ya"]
+# ::lemmas ["yup", ",", "that", "be", "religion", "of", "peace", "for", "ya"]
+(c12-2 / religion
+       :mod (c12-1 / peace)
+       :domain (c12-4 / that)
+       :beneficiary (c12-0 / you)
+       :mod (c12-3 / yup))
+
+# ::snt This was a hit. Muslims killing those whose speech they dislike. This is how they silence us all.
+# ::tokens ["This", "was", "a", "hit", ".", "Muslims", "killing", "those", "whose", "speech", "they", "dislike", ".", "This", "is", "how", "they", "silence", "us", "all", "."]
+# ::lemmas ["this", "be", "a", "hit", ".", "Muslims", "kill", "those", "whose", "speech", "they", "dislike", ".", "this", "be", "how", "they", "silence", "we", "all", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-0 / hit-01
+                    :domain (c13-12 / this))
+       :snt2 (c13-4 / kill-01
+                    :ARG0 (c13-7 / person
+                                 :mod (c13-8 / religious-group
+                                             :name (c13-5 / name
+                                                          :op1 "Islam")))
+                    :ARG1 (c13-13 / person
+                                  :ARG0-of (c13-11 / speak-01
+                                                   :ARG1-of (c13-9 / dislike-01
+                                                                   :ARG0 c13-13))))
+       :snt3 (c13-10 / this
+                     :manner-of (c13-3 / silence-01
+                                       :ARG0 (c13-6 / they)
+                                       :ARG1 (c13-1 / we
+                                                    :mod (c13-14 / all)))))
+
+# ::snt : dead in Paris shooting at French satirical newspaper , police official says -
+# ::tokens [":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", ",", "police", "official", "says", "-"]
+# ::lemmas [":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", ",", "police", "official", "say", "-"]
+(c14-12 / say-01
+        :ARG0 (c14-6 / person
+                     :ARG0-of (c14-0 / have-org-role-91
+                                     :ARG1 (c14-13 / police)
+                                     :ARG2 (c14-2 / official)))
+        :ARG1 (c14-7 / die-01
+                     :ARG1 c14-6
+                     :ARG1-of (c14-8 / cause-01
+                                     :ARG0 (c14-3 / shoot-02
+                                                  :ARG1 c14-6
+                                                  :location (c14-4 / newspaper
+                                                                   :mod (c14-1 / satire)
+                                                                   :mod (c14-9 / country
+                                                                               :name (c14-5 / name
+                                                                                            :op1 "France")))
+                                                  :location (c14-11 / city
+                                                                    :name (c14-10 / name
+                                                                                  :op1 "Paris"))))))
+
+# ::snt : dead in Paris shooting at French satirical newspaper Charlie Hebdo, police official says -
+# ::tokens [":", "dead", "in", "Paris", "shooting", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "says", "-"]
+# ::lemmas [":", "dead", "in", "Paris", "shoot", "at", "French", "satirical", "newspaper", "Charlie", "Hebdo", ",", "police", "official", "say", "-"]
+(c15-12 / say-01
+        :ARG0 (c15-6 / person
+                     :ARG0-of (c15-0 / have-org-role-91
+                                     :ARG1 (c15-14 / police)
+                                     :ARG2 (c15-2 / official)))
+        :ARG1 (c15-7 / die-01
+                     :ARG1 c15-6
+                     :ARG1-of (c15-8 / cause-01
+                                     :ARG0 (c15-3 / shoot-02
+                                                  :ARG1 (c15-4 / newspaper
+                                                               :name (c15-5 / name
+                                                                            :op1 "Charlie"
+                                                                            :op2 "Z Hebdo")
+                                                               :mod (c15-1 / satire)
+                                                               :mod (c15-9 / country
+                                                                           :name (c15-10 / name
+                                                                                         :op1 "France")))
+                                                  :location (c15-11 / city
+                                                                    :name (c15-13 / name
+                                                                                  :op1 "Paris"))))))
+
+# ::snt some serious stuff !
+# ::tokens ["some", "serious", "stuff", "!"]
+# ::lemmas ["some", "serious", "stuff", "!"]
+(c16-0 / stuff
+       :ARG1-of (c16-1 / serious-02)
+       :mod (c16-2 / some))

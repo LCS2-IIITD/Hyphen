@@ -1,0 +1,65 @@
+# ::snt Awful awful winner
+# ::tokens ["Awful", "awful", "winner"]
+# ::lemmas ["awful", "awful", "winner"]
+(c1-1 / person
+      :ARG0-of (c1-0 / win-01)
+      :mod (c1-2 / awful))
+
+# ::snt I loved Marissa. But I think Ross deserved to win.
+# ::tokens ["I", "loved", "Marissa", ".", "But", "I", "think", "Ross", "deserved", "to", "win", "."]
+# ::lemmas ["i", "love", "Marissa", ".", "but", "i", "think", "Ross", "deserve", "to", "win", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-6 / love-01
+                  :ARG0 (c2-9 / i)
+                  :ARG1 (c2-5 / person
+                              :name (c2-0 / name
+                                          :op1 "Marissa")))
+      :snt2 (c2-7 / contrast-01
+                  :ARG2 (c2-10 / think-01
+                               :ARG0 (c2-3 / i)
+                               :ARG1 (c2-11 / deserve-01
+                                            :ARG0 (c2-2 / person
+                                                        :name (c2-4 / name
+                                                                    :op1 "Ross"))
+                                            :ARG1 (c2-8 / win-01
+                                                        :ARG0 c2-2)))))
+
+# ::snt Worst winner ever. Ross played the game! Marissa was at a slumber party.
+# ::tokens ["Worst", "winner", "ever", ".", "Ross", "played", "the", "game", "!", "Marissa", "was", "at", "a", "slumber", "party", "."]
+# ::lemmas ["bad", "winner", "ever", ".", "Ross", "play", "the", "game", "!", "Marissa", "be", "at", "a", "slumber", "party", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-6 / have-degree-91
+                  :ARG1 (c3-7 / person
+                              :ARG0-of (c3-10 / win-01
+                                              :time (c3-5 / ever)))
+                  :ARG2 (c3-0 / bad-03
+                              :ARG1 c3-7)
+                  :ARG3 (c3-8 / most))
+      :snt2 (c3-2 / play-01
+                  :ARG0 (c3-13 / person
+                               :name (c3-3 / name
+                                           :op1 "Ross"))
+                  :ARG1 (c3-14 / game))
+      :snt3 (c3-11 / party-01
+                   :ARG0 (c3-12 / person
+                                :name (c3-9 / name
+                                            :op1 "Marissa"))
+                   :mod (c3-4 / slumber-01)))
+
+# ::snt Ross deserved to win! Marissa rode his coat tails!
+# ::tokens ["Ross", "deserved", "to", "win", "!", "Marissa", "rode", "his", "coat", "tails", "!"]
+# ::lemmas ["Ross", "deserve", "to", "win", "!", "Marissa", "ride", "his", "coat", "tail", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-9 / deserve-01
+                  :ARG0 (c4-5 / person
+                              :name (c4-0 / name
+                                          :op1 "Ross"))
+                  :ARG1 (c4-6 / win-01
+                              :ARG0 c4-5))
+      :snt2 (c4-3 / ride-01
+                  :ARG0 (c4-2 / person
+                              :name (c4-4 / name
+                                          :op1 "Marissa"))
+                  :ARG1 (c4-8 / tail
+                              :part-of (c4-7 / coat)
+                              :poss c4-5)))

@@ -1,0 +1,55 @@
+# ::snt All my damages were incurred during this parking
+# ::tokens ["All", "my", "damages", "were", "incurred", "during", "this", "parking"]
+# ::lemmas ["all", "my", "damage", "be", "incur", "during", "this", "parking"]
+(c1-5 / incur-01
+      :ARG1 (c1-0 / damages-02
+                  :ARG1 (c1-2 / i)
+                  :mod (c1-1 / all))
+      :time (c1-4 / park-01
+                  :mod (c1-3 / this)))
+
+# ::snt Couldn't you have pulled straight past the spot and then jacked knifed it back and to the right?
+# ::tokens ["Could", "n't", "you", "have", "pulled", "straight", "past", "the", "spot", "and", "then", "jacked", "knifed", "it", "back", "and", "to", "the", "right", "?"]
+# ::lemmas ["could", "not", "you", "have", "pull", "straight", "past", "the", "spot", "and", "then", "jack", "knifed", "it", "back", "and", "to", "the", "right", "?"]
+(c2-11 / possible-01
+       :ARG1 (c2-1 / and
+                   :op1 (c2-5 / pull-01
+                              :ARG0 (c2-12 / you)
+                              :ARG2 (c2-3 / past
+                                          :op1 (c2-0 / spot))
+                              :ARG1-of (c2-10 / straight-04))
+                   :op2 (c2-13 / and
+                               :op1 (c2-7 / jack-01
+                                          :ARG0 c2-12
+                                          :ARG1 (c2-2 / it)
+                                          :direction (c2-9 / back))
+                               :op2 (c2-8 / right-06
+                                          :ARG1 c2-2)
+                               :time (c2-6 / then)))
+       :ARG1-of (c2-4 / request-confirmation-91)
+       :polarity -)
+
+# ::snt My lorry is too long... American cabs are too long, I kept scraping the wall there.
+# ::tokens ["My", "lorry", "is", "too", "long", "...", "American", "cabs", "are", "too", "long", ",", "I", "kept", "scraping", "the", "wall", "there", "."]
+# ::lemmas ["my", "lorry", "be", "too", "long", "...", "American", "cab", "be", "too", "long", ",", "i", "keep", "scrape", "the", "wall", "there", "."]
+(c3-14 / multi-sentence
+       :snt1 (c3-7 / have-degree-91
+                   :ARG1 (c3-10 / lorry
+                                :poss (c3-13 / i))
+                   :ARG2 (c3-11 / long-03
+                                :ARG1 c3-10)
+                   :ARG3 (c3-9 / too))
+       :snt2 (c3-12 / have-degree-91
+                    :ARG1 (c3-4 / cab
+                                :mod (c3-0 / country
+                                           :name (c3-15 / name
+                                                        :op1 "America")))
+                    :ARG2 (c3-1 / long-03
+                                :ARG1 c3-4)
+                    :ARG3 (c3-6 / too))
+       :snt3 (c3-3 / keep-02
+                   :ARG0 (c3-8 / i)
+                   :ARG1 (c3-2 / scrape-01
+                               :ARG0 c3-8
+                               :ARG1 (c3-5 / wall)
+                               :location (c3-16 / there))))

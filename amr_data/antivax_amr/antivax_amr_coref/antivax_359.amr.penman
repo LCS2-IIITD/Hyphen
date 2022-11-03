@@ -1,0 +1,58 @@
+# ::snt Im very happy to hear that
+# ::tokens ["I", "m", "very", "happy", "to", "hear", "that"]
+# ::lemmas ["i", "m", "very", "happy", "to", "hear", "that"]
+(c1-0 / happy-01
+      :ARG0 (c1-3 / hear-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-2 / that))
+      :ARG1 c1-4
+      :degree (c1-1 / very))
+
+# ::snt Haha! I have my second next week
+# ::tokens ["Haha", "!", "I", "have", "my", "second", "next", "week"]
+# ::lemmas ["Haha", "!", "i", "have", "my", "second", "next", "week"]
+(c2-1 / have-03
+      :ARG0 (c2-5 / i)
+      :ARG1 (c2-3 / thing
+                  :ord (c2-2 / ordinal-entity
+                             :value 2)
+                  :poss c2-5)
+      :time (c2-0 / week
+                  :mod (c2-6 / next))
+      :mod (c2-4 / haha
+                 :mode expressive))
+
+# ::snt The th I get my first of two. Did you get your shots?? I feel like a purebred lol. You got papers lol
+# ::tokens ["The", "th", "I", "get", "my", "first", "of", "two", ".", "Did", "you", "get", "your", "shots", "?", "?", "I", "feel", "like", "a", "purebred", "lol", ".", "You", "got", "papers", "lol"]
+# ::lemmas ["the", "th", "i", "get", "my", "first", "of", "two", ".", "do", "you", "get", "your", "shot", "?", "?", "i", "feel", "like", "a", "purebred", "lol", ".", "you", "get", "paper", "lol"]
+(c3-10 / multi-sentence
+       :snt1 (c3-9 / get-01
+                   :ARG0 (c3-4 / i)
+                   :ARG1 (c3-7 / thing
+                               :ord (c3-6 / ordinal-entity
+                                          :value 1)
+                               :ARG1-of (c3-14 / include-91
+                                               :ARG2 (c3-5 / thing
+                                                           :quant 2)))
+                   :mod (c3-11 / th))
+       :snt2 (c3-16 / get-01
+                    :polarity (c3-19 / amr-unknown)
+                    :ARG0 (c3-17 / you)
+                    :ARG1 (c3-12 / shoot-02
+                                 :ARG1 c3-17))
+       :snt3 (c3-20 / feel-01
+                    :ARG0 (c3-15 / i)
+                    :ARG1 (c3-8 / resemble-01
+                                :ARG1 c3-15
+                                :ARG2 (c3-23 / person
+                                             :ARG1-of (c3-21 / pure-02)))
+                    :ARG2-of (c3-22 / laugh-01
+                                    :ARG0 c3-15
+                                    :manner (c3-3 / loud)
+                                    :mode expressive))
+       :snt4 (c3-1 / get-01
+                   :ARG0 (c3-18 / you)
+                   :ARG1 (c3-13 / paper)
+                   :ARG2-of (c3-0 / laugh-01
+                                  :manner (c3-2 / loud)
+                                  :mode expressive)))

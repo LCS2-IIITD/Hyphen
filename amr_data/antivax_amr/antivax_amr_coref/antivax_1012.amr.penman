@@ -1,0 +1,32 @@
+# ::snt See?
+# ::tokens ["See", "?"]
+# ::lemmas ["see", "?"]
+(c1-0 / see-01
+      :polarity (c1-1 / amr-unknown))
+
+# ::snt didn't know i needed this tweet so bad
+# ::tokens ["did", "n't", "know", "i", "needed", "this", "tweet", "so", "bad"]
+# ::lemmas ["do", "not", "know", "i", "need", "this", "tweet", "so", "bad"]
+(c2-6 / know-01
+      :ARG0 (c2-5 / i)
+      :ARG1 (c2-3 / need-01
+                  :ARG0 c2-5
+                  :ARG1 (c2-2 / thing
+                              :ARG1-of (c2-1 / tweet-01)
+                              :mod (c2-7 / this))
+                  :ARG1-of (c2-4 / bad-07
+                                 :degree (c2-0 / so)))
+      :polarity -)
+
+# ::snt I got norovirus there during my first finals week freshman year
+# ::tokens ["I", "got", "norovirus", "there", "during", "my", "first", "finals", "week", "freshman", "year"]
+# ::lemmas ["i", "get", "noroviru", "there", "during", "my", "first", "final", "week", "freshman", "year"]
+(c3-3 / get-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-5 / norovirus)
+      :location (c3-2 / there)
+      :time (c3-6 / year
+                  :mod (c3-0 / freshman)
+                  :ord (c3-1 / ordinal-entity
+                             :value 1)
+                  :poss c3-4))

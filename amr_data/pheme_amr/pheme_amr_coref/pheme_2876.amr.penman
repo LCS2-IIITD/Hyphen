@@ -1,0 +1,73 @@
+# ::snt (COP) GUNS KILL (BLACK) PEOPLE.
+# ::tokens ["(", "COP", ")", "GUNS", "KILL", "(", "BLACK", ")", "PEOPLE", "."]
+# ::lemmas ["(", "COP", ")", "GUNS", "KILL", "(", "BLACK", ")", "people", "."]
+(c1-5 / and
+      :op1 (c1-2 / cop)
+      :op2 (c1-4 / kill-01
+                 :ARG0 (c1-3 / gun)
+                 :ARG1 (c1-1 / person))
+      :op3 (c1-0 / black-05
+                 :ARG1 c1-1))
+
+# ::snt wish some people had dogs also like pits
+# ::tokens ["wish", "some", "people", "had", "dogs", "also", "like", "pits"]
+# ::lemmas ["wish", "some", "people", "have", "dog", "also", "like", "pit"]
+(c2-1 / wish-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-0 / have-03
+                  :ARG0 (c2-3 / person
+                              :mod (c2-6 / some))
+                  :ARG1 (c2-4 / dog
+                              :ARG1-of (c2-5 / resemble-01
+                                             :ARG2 (c2-7 / pit)
+                                             :mod (c2-8 / also)))))
+
+# ::snt Ferguson Police have dogs and shotguns. The unarmed crowd is raising their hands.
+# ::tokens ["Ferguson", "Police", "have", "dogs", "and", "shotguns", ".", "The", "unarmed", "crowd", "is", "raising", "their", "hands", "."]
+# ::lemmas ["Ferguson", "Police", "have", "dog", "and", "shotgun", ".", "the", "unarmed", "crowd", "be", "raise", "their", "hand", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-0 / have-03
+                  :ARG0 (c4-5 / police
+                              :mod (c4-7 / city
+                                         :name (c4-4 / name
+                                                     :op1 "Ferguson")))
+                  :ARG1 (c4-11 / and
+                               :op1 (c4-6 / dog)
+                               :op2 (c4-10 / shotgun)))
+      :snt2 (c4-8 / raise-01
+                  :ARG0 (c4-9 / crowd
+                              :ARG1-of (c4-3 / arm-01
+                                             :polarity -))
+                  :ARG1 (c4-1 / hand
+                              :part-of c4-9)))
+
+# ::snt Horrible. Those brave people.
+# ::tokens ["Horrible", ".", "Those", "brave", "people", "."]
+# ::lemmas ["horrible", ".", "those", "brave", "people", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-0 / horrible)
+      :snt2 (c5-3 / person
+                  :ARG0-of (c5-2 / brave-02)
+                  :mod (c5-4 / that)))
+
+# ::snt Yes. And then they'll kill lighter- and lighter-skinned folk until there's nobody left.
+# ::tokens ["Yes", ".", "And", "then", "they", "'ll", "kill", "lighter-", "and", "lighter", "-", "skinned", "folk", "until", "there", "'s", "nobody", "left", "."]
+# ::lemmas ["yes", ".", "and", "then", "they", "'ll", "kill", "lighter-", "and", "light", "-", "skinned", "folk", "until", "there", "be", "nobody", "leave", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-1 / yes)
+      :snt2 (c6-15 / and
+                   :op2 (c6-8 / kill-01
+                              :ARG0 (c6-14 / they)
+                              :ARG1 (c6-2 / folk
+                                          :ARG1-of (c6-0 / have-degree-91
+                                                         :ARG2 (c6-4 / light-06
+                                                                     :ARG1 c6-2)
+                                                         :ARG3 (c6-10 / more))
+                                          :ARG1-of (c6-5 / have-degree-91
+                                                         :ARG2 (c6-11 / dark-03
+                                                                      :ARG1 c6-2)
+                                                         :ARG3 (c6-6 / more)))
+                              :time (c6-13 / then)
+                              :time (c6-7 / until
+                                          :op1 (c6-12 / leave-17
+                                                      :ARG1 (c6-9 / nobody))))))

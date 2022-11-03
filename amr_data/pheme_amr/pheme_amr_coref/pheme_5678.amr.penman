@@ -1,0 +1,435 @@
+# ::snt Jill, this is a terrible analogy
+# ::tokens ["Jill", ",", "this", "is", "a", "terrible", "analogy"]
+# ::lemmas ["Jill", ",", "this", "be", "a", "terrible", "analogy"]
+(c1-3 / say-01
+      :ARG1 (c1-5 / analogy
+                  :ARG1-of (c1-4 / terrible-01)
+                  :domain (c1-2 / this))
+      :ARG2 (c1-1 / person
+                  :name (c1-0 / name
+                              :op1 "Jill")))
+
+# ::snt this is false equivalency though
+# ::tokens ["this", "is", "false", "equivalency", "though"]
+# ::lemmas ["this", "be", "false", "equivalency", "though"]
+(c2-0 / have-concession-91
+      :ARG1 (c2-1 / equivalency
+                  :mod (c2-2 / false)
+                  :domain (c2-3 / this)))
+
+# ::snt That's purely subjective. My point is: freedom of speech is an essential part of every healthy democracy.
+# ::tokens ["That", "'s", "purely", "subjective", ".", "My", "point", "is", ":", "freedom", "of", "speech", "is", "an", "essential", "part", "of", "every", "healthy", "democracy", "."]
+# ::lemmas ["that", "be", "purely", "subjective", ".", "my", "point", "be", ":", "freedom", "of", "speech", "be", "an", "essential", "part", "of", "every", "healthy", "democracy", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-9 / subjective-03
+                  :ARG1 (c3-10 / that)
+                  :ARG1-of (c3-7 / pure-02))
+      :snt2 (c3-11 / point-04
+                   :ARG0 (c3-6 / i)
+                   :ARG1 (c3-4 / essential
+                               :domain (c3-1 / free-04
+                                             :ARG3 (c3-5 / speak-01))
+                               :part-of (c3-8 / democracy
+                                              :mod (c3-0 / health)
+                                              :mod (c3-3 / every)))))
+
+# ::snt there's a time and a place kerkar people are still under attack as we speak.being held hostage
+# ::tokens ["there", "'s", "a", "time", "and", "a", "place", "kerkar", "people", "are", "still", "under", "attack", "as", "we", "speak.being", "held", "hostage"]
+# ::lemmas ["there", "be", "a", "time", "and", "a", "place", "kerkar", "people", "be", "still", "under", "attack", "as", "we", "speak.bee", "hold", "hostage"]
+(c4-3 / multi-sentence
+      :snt1 (c4-9 / attack-01
+                  :ARG1 (c4-7 / person
+                              :mod (c4-4 / ethnic-group
+                                         :name (c4-6 / name
+                                                     :op1 "Kerkar")))
+                  :mod (c4-8 / still)
+                  :time (c4-5 / speak-01
+                              :ARG0 (c4-1 / we)))
+      :snt2 (c4-0 / hold-01
+                  :ARG1 (c4-2 / hostage)))
+
+# ::snt They are only to this world. have both the WORLDS.
+# ::tokens ["They", "are", "only", "to", "this", "world", ".", "have", "both", "the", "WORLDS", "."]
+# ::lemmas ["they", "be", "only", "to", "this", "world", ".", "have", "both", "the", "WORLDS", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-3 / be-located-at-91
+                  :ARG1 (c5-9 / they)
+                  :ARG2 (c5-1 / world
+                              :mod (c5-8 / this)
+                              :mod (c5-4 / only)))
+      :snt2 (c5-0 / have-03
+                  :ARG0 (c5-6 / they)
+                  :ARG1 (c5-5 / word
+                              :quant (c5-7 / both))))
+
+# ::snt .
+# ::tokens ["."]
+# ::lemmas ["."]
+(c6-0 / amr-empty)
+
+# ::snt I stand with Israel fuk Palestine
+# ::tokens ["I", "stand", "with", "Israel", "fuk", "Palestine"]
+# ::lemmas ["i", "stand", "with", "Israel", "fuk", "Palestine"]
+(c7-7 / and
+      :op1 (c7-6 / stand-11
+                 :ARG0 (c7-1 / i)
+                 :ARG1 (c7-5 / country
+                             :name (c7-2 / name
+                                         :op1 "Israel")))
+      :op2 (c7-0 / stand-11
+                 :ARG0 c7-1
+                 :ARG1 (c7-4 / country
+                             :name (c7-3 / name
+                                         :op1 "Palestine"))))
+
+# ::snt no Hama fire rockets from schools and hide behind children Israel is under attack,
+# ::tokens ["no", "Hama", "fire", "rockets", "from", "schools", "and", "hide", "behind", "children", "Israel", "is", "under", "attack", ","]
+# ::lemmas ["no", "Hama", "fire", "rocket", "from", "school", "and", "hide", "behind", "child", "Israel", "be", "under", "attack", ","]
+(c8-12 / and
+       :op1 (c8-1 / fire-01
+                  :ARG0 (c8-6 / person
+                              :name (c8-4 / name
+                                          :op1 "Hama"))
+                  :ARG1 (c8-7 / rocket)
+                  :destination (c8-11 / school)
+                  :polarity -)
+       :op2 (c8-0 / hide-01
+                  :ARG0 c8-6
+                  :ARG1 c8-6
+                  :location (c8-2 / behind
+                                  :op1 (c8-8 / child))
+                  :polarity -)
+       :ARG1-of (c8-9 / cause-01
+                      :ARG0 (c8-3 / attack-01
+                                  :ARG1 (c8-10 / country
+                                               :name (c8-5 / name
+                                                           :op1 "Israel")))))
+
+# ::snt FoS doesnt imply that you need to like it.So yes, you have the right to post cartoons of holocaust! They are just not funny.
+# ::tokens ["FoS", "does", "nt", "imply", "that", "you", "need", "to", "like", "it", ".", "So", "yes", ",", "you", "have", "the", "right", "to", "post", "cartoons", "of", "holocaust", "!", "They", "are", "just", "not", "funny", "."]
+# ::lemmas ["FoS", "do", "not", "imply", "that", "you", "need", "to", "like", "it", ".", "so", "yes", ",", "you", "have", "the", "right", "to", "post", "cartoon", "of", "holocaust", "!", "they", "be", "just", "not", "funny", "."]
+(c9-4 / multi-sentence
+      :snt1 (c9-7 / imply-01
+                  :ARG0 (c9-10 / publication
+                               :name (c9-8 / name
+                                           :op1 "FoS"))
+                  :ARG1 (c9-9 / need-01
+                              :ARG0 (c9-1 / you)
+                              :ARG1 (c9-3 / like-01
+                                          :ARG0 c9-1
+                                          :ARG1 (c9-13 / it)))
+                  :polarity -)
+      :snt2 (c9-11 / right-05
+                   :ARG1 (c9-14 / you)
+                   :ARG2 (c9-16 / post-01
+                                :ARG0 c9-14
+                                :ARG1 (c9-12 / cartoon
+                                             :topic (c9-0 / holocaust)))
+                   :mod (c9-6 / yes))
+      :snt3 (c9-5 / funny
+                  :domain (c9-15 / they)
+                  :mod (c9-2 / just)
+                  :polarity -))
+
+# ::snt I don't think you get it.
+# ::tokens ["I", "do", "n't", "think", "you", "get", "it", "."]
+# ::lemmas ["i", "do", "not", "think", "you", "get", "it", "."]
+(c10-4 / think-01
+       :ARG0 (c10-1 / i)
+       :ARG1 (c10-3 / get-30
+                    :ARG0 (c10-0 / you)
+                    :ARG1 (c10-2 / it))
+       :polarity -)
+
+# ::snt because the death of millions of peoples ancestors is more important than a man who lived in the desert + years ago?
+# ::tokens ["because", "the", "death", "of", "millions", "of", "peoples", "ancestors", "is", "more", "important", "than", "a", "man", "who", "lived", "in", "the", "desert", "+", "years", "ago", "?"]
+# ::lemmas ["because", "the", "death", "of", "millions", "of", "people", "ancestor", "be", "more", "important", "than", "a", "man", "who", "live", "in", "the", "desert", "+", "years", "ago", "?"]
+(c11-12 / cause-01
+        :ARG0 (c11-0 / have-degree-91
+                     :ARG1 (c11-11 / die-01
+                                   :ARG1 (c11-15 / ancestor
+                                                 :poss (c11-10 / person
+                                                               :quant (c11-4 / multiple
+                                                                             :op1 1000000))))
+                     :ARG2 (c11-8 / important-01
+                                  :ARG1 c11-11)
+                     :ARG3 (c11-13 / more)
+                     :ARG4 (c11-2 / die-01
+                                  :ARG1 (c11-3 / man
+                                               :ARG0-of (c11-5 / live-01
+                                                               :location (c11-16 / desert)
+                                                               :time (c11-6 / before
+                                                                            :op1 (c11-9 / now)
+                                                                            :quant c11-13
+                                                                            :quant c11-4
+                                                                            :op1 (c11-14 / temporal-quantity
+                                                                                         :unit (c11-1 / year)
+                                                                                         :quant 1))))))
+        :polarity (c11-7 / amr-unknown))
+
+# ::snt People are still under attack in Palestine.... standards hey
+# ::tokens ["People", "are", "still", "under", "attack", "in", "Palestine", "....", "standards", "hey"]
+# ::lemmas ["people", "be", "still", "under", "attack", "in", "Palestine", "....", "standard", "hey"]
+(c12-5 / attack-01
+       :ARG1 (c12-2 / person)
+       :mod (c12-4 / still)
+       :location (c12-3 / country
+                        :name (c12-1 / name
+                                     :op1 "Palestine"))
+       :mod (c12-0 / hey
+                   :mode expressive))
+
+# ::snt Dear, u hv impressed me alot;u seem a Pure Pakistani who also loves Islam&ampefends muslims' narrative al over.Lv u bro!
+# ::tokens ["Dear", ",", "u", "hv", "impressed", "me", "alot;u", "seem", "a", "Pure", "Pakistani", "who", "also", "loves", "Islam&ampefends", "muslims", "'", "narrative", "al", "over", ".", "Lv", "u", "bro", "!"]
+# ::lemmas ["dear", ",", "u", "hv", "impress", "i", "alot;u", "seem", "a", "Pure", "Pakistani", "who", "also", "love", "islam&ampefend", "muslims", "'", "narrative", "al", "over", ".", "Lv", "u", "bro", "!"]
+(c13-0 / multi-sentence
+       :snt1 (c13-5 / say-01
+                    :ARG0 (c13-17 / i)
+                    :ARG1 (c13-18 / impress-01
+                                  :ARG0 (c13-3 / person
+                                               :name (c13-12 / name
+                                                             :op1 "v"))
+                                  :ARG1 c13-17
+                                  :quant (c13-8 / lot))
+                    :ARG2 c13-3
+                    :mod (c13-4 / dear))
+       :snt2 (c13-10 / seem-01
+                     :ARG1 (c13-6 / person
+                                  :mod (c13-20 / country
+                                               :name (c13-19 / name
+                                                             :op1 "Pakistan"))
+                                  :ARG1-of (c13-9 / pure-02)
+                                  :ARG0-of (c13-21 / love-01
+                                                   :ARG1 (c13-7 / and
+                                                                :op1 (c13-14 / religious-group
+                                                                             :name (c13-1 / name
+                                                                                          :op1 "Islam"))
+                                                                :op2 (c13-11 / end-01
+                                                                             :ARG0 c13-6
+                                                                             :ARG1 (c13-2 / narrate-01
+                                                                                          :ARG0 (c13-15 / person
+                                                                                                        :mod c13-14))))
+                                                   :mod (c13-16 / also)))
+                     :mod (c13-13 / all-over)))
+
+# ::snt well according to your mentality that's just your opinion
+# ::tokens ["well", "according", "to", "your", "mentality", "that", "'s", "just", "your", "opinion"]
+# ::lemmas ["well", "accord", "to", "your", "mentality", "that", "be", "just", "your", "opinion"]
+(c14-3 / opine-01
+       :ARG0 (c14-1 / you)
+       :ARG1 (c14-5 / that)
+       :mod (c14-0 / just)
+       :ARG1-of (c14-4 / say-01
+                       :ARG0 (c14-2 / mentality
+                                    :poss c14-1)))
+
+# ::snt this cartoon is going to get someone killed
+# ::tokens ["this", "cartoon", "is", "going", "to", "get", "someone", "killed"]
+# ::lemmas ["this", "cartoon", "be", "go", "to", "get", "someone", "kill"]
+(c15-2 / get-04
+       :ARG0 (c15-1 / cartoon
+                    :mod (c15-4 / this))
+       :ARG1 (c15-0 / kill-01
+                    :ARG0 c15-1
+                    :ARG1 (c15-3 / someone)))
+
+# ::snt I fail to see why the death of millions of Jewish people is funny. Enlighten me please
+# ::tokens ["I", "fail", "to", "see", "why", "the", "death", "of", "millions", "of", "Jewish", "people", "is", "funny", ".", "Enlighten", "me", "please"]
+# ::lemmas ["i", "fail", "to", "see", "why", "the", "death", "of", "millions", "of", "Jewish", "people", "be", "funny", ".", "enlighten", "i", "please"]
+(c16-2 / multi-sentence
+       :snt1 (c16-1 / fail-01
+                    :ARG1 (c16-4 / i)
+                    :ARG2 (c16-13 / see-01
+                                  :ARG0 c16-4
+                                  :ARG1 (c16-14 / thing
+                                                :ARG0-of (c16-9 / cause-01
+                                                                :ARG1 (c16-5 / funny-02
+                                                                             :ARG1 (c16-8 / die-01
+                                                                                          :ARG1 (c16-7 / person
+                                                                                                       :mod (c16-10 / religious-group
+                                                                                                                    :name (c16-6 / name
+                                                                                                                                 :op1 "Jew"))
+                                                                                                       :quant (c16-11 / multiple
+                                                                                                                      :op1 1000000))))))))
+       :snt2 (c16-3 / enlighten-01
+                    :ARG0 (c16-0 / you)
+                    :ARG1 (c16-12 / i)
+                    :mode imperative
+                    :polite +))
+
+# ::snt if what you said was true, why did France ban ads depicting Jesus in . Hypocrites much?
+# ::tokens ["if", "what", "you", "said", "was", "true", ",", "why", "did", "France", "ban", "ads", "depicting", "Jesus", "in", ".", "Hypocrites", "much", "?"]
+# ::lemmas ["if", "what", "you", "say", "be", "true", ",", "why", "do", "France", "ban", "ad", "depict", "Jesus", "in", ".", "hypocrite", "much", "?"]
+(c17-2 / multi-sentence
+       :snt1 (c17-3 / ban-01
+                    :ARG0 (c17-9 / country
+                                 :name (c17-5 / name
+                                              :op1 "France"))
+                    :ARG1 (c17-15 / advertise-01
+                                  :ARG0-of (c17-8 / depict-01
+                                                  :ARG1 (c17-7 / person
+                                                               :name (c17-6 / name
+                                                                            :op1 "Jesus"))))
+                    :ARG1-of (c17-10 / cause-01
+                                     :ARG0 (c17-4 / amr-unknown))
+                    :condition (c17-14 / true-01
+                                       :ARG1 (c17-12 / thing
+                                                     :ARG1-of (c17-13 / say-01
+                                                                      :ARG0 (c17-1 / you)))))
+       :snt2 (c17-0 / hypocrite
+                    :degree (c17-11 / much)
+                    :polarity c17-4))
+
+# ::snt i know and islam reject this act. This is not islam.
+# ::tokens ["i", "know", "and", "islam", "reject", "this", "act", ".", "This", "is", "not", "islam", "."]
+# ::lemmas ["i", "know", "and", "islam", "reject", "this", "act", ".", "this", "be", "not", "islam", "."]
+(c18-0 / multi-sentence
+       :snt1 (c18-11 / and
+                     :op1 (c18-10 / know-01
+                                  :ARG0 (c18-3 / i)
+                                  :ARG1 (c18-7 / reject-01
+                                               :ARG0 (c18-4 / religious-group
+                                                            :name (c18-5 / name
+                                                                         :op1 "Islam"))
+                                               :ARG1 (c18-2 / act-02
+                                                            :mod (c18-9 / this))
+                                               :op2-of c18-11)))
+       :snt2 (c18-1 / religious-group
+                    :name (c18-6 / name
+                                 :op1 "Islam")
+                    :domain (c18-8 / this)
+                    :polarity -))
+
+# ::snt everything is not meant to be said/written/drawn.
+# ::tokens ["everything", "is", "not", "meant", "to", "be", "said", "/", "written", "/", "drawn", "."]
+# ::lemmas ["everything", "be", "not", "mean", "to", "be", "say", "/", "write", "/", "draw", "."]
+(c19-1 / mean-02
+       :ARG1 (c19-2 / or
+                    :op1 (c19-5 / say-01
+                                :ARG1 (c19-3 / everything))
+                    :op2 (c19-0 / write-01
+                                :ARG1 c19-3)
+                    :op3 (c19-4 / draw-01
+                                :ARG1 c19-3))
+       :polarity -)
+
+# ::snt dit is totaal niet met elkaar te vergelijken
+# ::tokens ["dit", "is", "totaal", "niet", "met", "elkaar", "te", "vergelijken"]
+# ::lemmas ["dit", "be", "totaal", "niet", "meet", "elkaar", "te", "vergelijken"]
+(c20-8 / and
+       :op1 (c20-7 / totaal
+                   :domain (c20-5 / niet))
+       :op2 (c20-2 / meet-03
+                   :ARG0 c20-5
+                   :ARG1 (c20-4 / elkaar)
+                   :ARG2 c20-5)
+       :op3 (c20-0 / have-03
+                   :ARG0 c20-5
+                   :ARG1 c20-5)
+       :ARG2-of (c20-1 / have-degree-91
+                       :ARG1 c20-5
+                       :ARG3 (c20-3 / equal)
+                       :ARG4 (c20-6 / vergelijken)))
+
+# ::snt FoS doesnt mean that you have to like everything it simply means that everything is ALLOWED to be said/written/drawn.
+# ::tokens ["FoS", "does", "nt", "mean", "that", "you", "have", "to", "like", "everything", "it", "simply", "means", "that", "everything", "is", "ALLOWED", "to", "be", "said", "/", "written", "/", "drawn", "."]
+# ::lemmas ["FoS", "do", "not", "mean", "that", "you", "have", "to", "like", "everything", "it", "simply", "mean", "that", "everything", "be", "ALLOWED", "to", "be", "say", "/", "write", "/", "draw", "."]
+(c21-12 / contrast-01
+        :ARG1 (c21-3 / mean-01
+                     :ARG1 (c21-10 / publication
+                                   :name (c21-9 / name
+                                                :op1 "FoS"))
+                     :ARG2 (c21-6 / obligate-01
+                                  :ARG1 (c21-0 / you)
+                                  :ARG2 (c21-2 / like-01
+                                               :ARG0 c21-0
+                                               :ARG1 (c21-7 / everything)))
+                     :polarity -)
+        :ARG2 (c21-11 / mean-01
+                      :ARG1 c21-10
+                      :ARG2 (c21-15 / allow-01
+                                    :ARG1 (c21-14 / slash
+                                                  :op1 (c21-8 / say-01
+                                                              :ARG1 (c21-5 / everything))
+                                                  :op2 (c21-1 / write-01
+                                                              :ARG1 c21-5)
+                                                  :op3 (c21-13 / draw-01
+                                                               :ARG1 c21-5)))
+                      :ARG1-of (c21-4 / simple-02)))
+
+# ::snt cool we must be together in defeating these attacks in the name of Islam.Its spreading like mad scary times
+# ::tokens ["cool", "we", "must", "be", "together", "in", "defeating", "these", "attacks", "in", "the", "name", "of", "Islam", ".", "Its", "spreading", "like", "mad", "scary", "times"]
+# ::lemmas ["cool", "we", "must", "be", "together", "in", "defeat", "these", "attack", "in", "the", "name", "of", "Islam", ".", "its", "spread", "like", "mad", "scary", "time"]
+(c22-1 / multi-sentence
+       :snt1 (c22-10 / cool-04
+                     :ARG1 (c22-2 / obligate-01
+                                  :ARG1 (c22-0 / we)
+                                  :ARG2 (c22-14 / together
+                                                :domain c22-0
+                                                :purpose (c22-9 / defeat-01
+                                                                :ARG0 c22-0
+                                                                :ARG1 (c22-15 / attack-01
+                                                                              :mod (c22-12 / this))
+                                                                :beneficiary (c22-11 / religious-group
+                                                                                     :name (c22-6 / name
+                                                                                                  :op1 "Islam"))))))
+       :snt2 (c22-13 / spread-02
+                     :ARG1 (c22-4 / it)
+                     :ARG1-of (c22-5 / resemble-01
+                                     :ARG2 (c22-7 / time
+                                                  :ARG0-of (c22-3 / scary-03)
+                                                  :ARG1-of (c22-8 / mad-02)))))
+
+# ::snt Go grasp the English language first you ignorant wally
+# ::tokens ["Go", "grasp", "the", "English", "language", "first", "you", "ignorant", "wally"]
+# ::lemmas ["go", "grasp", "the", "English", "language", "first", "you", "ignorant", "wally"]
+(c23-7 / say-01
+       :ARG0 (c23-3 / i)
+       :ARG1 (c23-6 / grasp-01
+                    :ARG0 (c23-0 / wally
+                                 :ARG1-of (c23-5 / ignorant-02))
+                    :ARG1 (c23-1 / language
+                                 :name (c23-4 / name
+                                              :op1 "English"))
+                    :ord (c23-2 / ordinal-entity
+                                :value 1)
+                    :mode imperative)
+       :ARG2 c23-0)
+
+# ::snt it seems you missed that one among many others
+# ::tokens ["it", "seems", "you", "missed", "that", "one", "among", "many", "others"]
+# ::lemmas ["it", "seem", "you", "miss", "that", "one", "among", "many", "other"]
+(c24-6 / seem-01
+       :ARG1 (c24-2 / miss-02
+                    :ARG0 (c24-0 / you)
+                    :ARG1 (c24-3 / one
+                                 :mod (c24-7 / that)
+                                 :ARG1-of (c24-4 / include-91
+                                                 :ARG2 (c24-1 / other
+                                                              :quant (c24-5 / many))))))
+
+# ::snt :in , Malaysia kuala lumpur tribunal found Israel guilty of war crimes against Israel...Malaysian airplane falls off sky.
+# ::tokens [":", "in", ",", "Malaysia", "kuala", "lumpur", "tribunal", "found", "Israel", "guilty", "of", "war", "crimes", "against", "Israel", "...", "Malaysian", "airplane", "falls", "off", "sky", "."]
+# ::lemmas [":", "in", ",", "Malaysia", "kuala", "lumpur", "tribunal", "find", "Israel", "guilty", "of", "war", "crime", "against", "Israel", "...", "Malaysian", "airplane", "fall", "off", "sky", "."]
+(c25-2 / multi-sentence
+       :snt1 (c25-1 / find-02
+                    :ARG0 (c25-12 / tribunal
+                                  :name (c25-5 / name
+                                               :op1 "Kuala"
+                                               :op2 "Lumpur")
+                                  :mod (c25-9 / country
+                                              :name (c25-6 / name
+                                                           :op1 "Malaysia")))
+                    :ARG1 (c25-10 / guilty-01
+                                  :ARG1 (c25-8 / country
+                                               :name (c25-7 / name
+                                                            :op1 "Israel"))
+                                  :ARG2 (c25-11 / crime-02
+                                                :ARG0 c25-8
+                                                :ARG1 (c25-0 / war-01)
+                                                :ARG2 c25-8))
+                    :location (c25-13 / sky))
+       :snt2 (c25-4 / fall-01
+                    :ARG1 (c25-14 / airplane
+                                  :mod c25-9)
+                    :ARG4 (c25-3 / off)))

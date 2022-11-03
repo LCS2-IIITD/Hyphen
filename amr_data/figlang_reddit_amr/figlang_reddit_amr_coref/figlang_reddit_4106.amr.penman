@@ -1,0 +1,60 @@
+# ::snt I started a little side project last night while working in my dining room table... A mallet
+# ::tokens ["I", "started", "a", "little", "side", "project", "last", "night", "while", "working", "in", "my", "dining", "room", "table", "...", "A", "mallet"]
+# ::lemmas ["i", "start", "a", "little", "side", "project", "last", "night", "while", "work", "in", "my", "dining", "room", "table", "...", "a", "mallet"]
+(c1-0 / start-01
+      :ARG0 (c1-10 / i)
+      :ARG1 (c1-8 / project
+                  :mod (c1-9 / side)
+                  :mod (c1-7 / little)
+                  :ARG1-of (c1-11 / mean-01
+                                  :ARG2 (c1-2 / mallet)))
+      :time (c1-1 / date-entity
+                  :dayperiod (c1-12 / night)
+                  :mod (c1-13 / yesterday))
+      :time (c1-3 / work-01
+                  :ARG0 c1-10
+                  :location (c1-5 / table
+                                  :location (c1-6 / room
+                                                  :location-of (c1-4 / dine-01))
+                                  :poss c1-10)))
+
+# ::snt My ocd is driving me crazy with this...why the offset?
+# ::tokens ["My", "ocd", "is", "driving", "me", "crazy", "with", "this", "...", "why", "the", "offset", "?"]
+# ::lemmas ["my", "ocd", "be", "drive", "i", "crazy", "with", "this", "...", "why", "the", "offset", "?"]
+(c2-0 / drive-02
+      :ARG0 (c2-6 / thing
+                  :name (c2-8 / name
+                              :op1 "Obssessive-Compulsive"
+                              :op2 "Disorder")
+                  :poss (c2-7 / i
+                              :ARG1-of c2-0))
+      :ARG2 (c2-3 / crazy-03
+                  :ARG1 c2-7)
+      :ARG1-of (c2-1 / cause-01
+                     :ARG0 (c2-4 / thing
+                                 :ARG1-of (c2-5 / offset-01)
+                                 :ARG1-of c2-1
+                                 :ARG0 (c2-2 / amr-unknown))))
+
+# ::snt A mistake... I'm still learning.
+# ::tokens ["A", "mistake", "...", "I", "'m", "still", "learning", "."]
+# ::lemmas ["a", "mistake", "...", "i", "be", "still", "learn", "."]
+(c3-1 / and
+      :op1 (c3-4 / mistake-02)
+      :op2 (c3-2 / learn-01
+                 :ARG0 (c3-3 / i)
+                 :mod (c3-0 / still)))
+
+# ::snt Your going to learn why mallet heads are 1 bit of timber next.
+# ::tokens ["Your", "going", "to", "learn", "why", "mallet", "heads", "are", "1", "bit", "of", "timber", "next", "."]
+# ::lemmas ["your", "go", "to", "learn", "why", "mallet", "head", "be", "1", "bit", "of", "timber", "next", "."]
+(c4-4 / learn-01
+      :ARG0 (c4-8 / you)
+      :ARG1 (c4-3 / thing
+                  :ARG0-of (c4-0 / cause-01
+                                 :ARG1 (c4-1 / timber
+                                             :mod (c4-5 / bit
+                                                        :quant 1)
+                                             :domain (c4-2 / head
+                                                           :part-of (c4-6 / mallet))
+                                             :time (c4-7 / next)))))

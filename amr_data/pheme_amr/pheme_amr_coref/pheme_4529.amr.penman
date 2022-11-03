@@ -1,0 +1,88 @@
+# ::snt Ha a prince among thieves
+# ::tokens ["Ha", "a", "prince", "among", "thieves"]
+# ::lemmas ["ha", "a", "prince", "among", "thief"]
+(c1-1 / prince
+      :mod (c1-4 / among
+                 :op1 (c1-3 / person
+                            :ARG0-of (c1-2 / steal-01)))
+      :mod (c1-0 / ha
+                 :mode expressive))
+
+# ::snt oh all those ppl in that line r going to be pissed! hahahaha
+# ::tokens ["oh", "all", "those", "ppl", "in", "that", "line", "r", "going", "to", "be", "pissed", "!", "hahahaha"]
+# ::lemmas ["oh", "all", "those", "ppl", "in", "that", "line", "r", "go", "to", "be", "piss", "!", "hahahaha"]
+(c2-2 / piss-03
+      :ARG1 (c2-4 / person
+                  :mod (c2-5 / all)
+                  :mod (c2-3 / that)
+                  :location (c2-0 / line)
+                  :mod c2-3)
+      :mod (c2-1 / oh
+                 :mode expressive))
+
+# ::snt What did you expect from a "Stuck Up-Little Hobbit Fuck Like Princess?"
+# ::tokens ["What", "did", "you", "expect", "from", "a", "\"", "Stuck", "Up", "-", "Little", "Hobbit", "Fuck", "Like", "Princess", "?", "\""]
+# ::lemmas ["what", "do", "you", "expect", "from", "a", "\"", "stuck", "up", "-", "little", "Hobbit", "Fuck", "like", "Princess", "?", "\""]
+(c3-2 / expect-01
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-7 / amr-unknown)
+      :source (c3-1 / fuck-01
+                    :ARG1 (c3-4 / person
+                                :name (c3-3 / name
+                                            :op1 "Stuck"
+                                            :op2 "Up-Little"
+                                            :op3 "Hobbs"))
+                    :ARG1-of (c3-5 / resemble-01
+                                   :ARG2 (c3-6 / person
+                                               :name c3-3
+                                               :op1 "Princess"))
+                    :mode expressive))
+
+# ::snt It's legendary theatre director HAL Prince performing a monologue tonight. Get there early.
+# ::tokens ["It", "'s", "legendary", "theatre", "director", "HAL", "Prince", "performing", "a", "monologue", "tonight", ".", "Get", "there", "early", "."]
+# ::lemmas ["it", "be", "legendary", "theatre", "director", "HAL", "Prince", "perform", "a", "monologue", "tonight", ".", "get", "there", "early", "."]
+(c4-4 / multi-sentence
+      :snt1 (c4-8 / perform-01
+                  :ARG0 (c4-15 / person
+                               :name (c4-6 / name
+                                           :op1 "Halo"
+                                           :op2 "Prince")
+                               :ARG0-of (c4-0 / have-org-role-91
+                                              :ARG2 (c4-9 / director
+                                                          :topic (c4-14 / theater)))
+                               :mod (c4-3 / legendary))
+                  :ARG1 (c4-10 / monologue)
+                  :time (c4-2 / date-entity
+                              :dayperiod (c4-7 / night)
+                              :mod (c4-13 / today)))
+      :snt2 (c4-11 / get-05
+                   :ARG0 (c4-1 / you
+                               :ARG1-of c4-11)
+                   :ARG2 (c4-12 / there)
+                   :time (c4-5 / early)
+                   :mode imperative))
+
+# ::snt : No Prince concert at Toronto's Massey Hall. DEVELOPING STORY: So glad I didn't stand in the rain.
+# ::tokens [":", "No", "Prince", "concert", "at", "Toronto", "'s", "Massey", "Hall", ".", "DEVELOPING", "STORY", ":", "So", "glad", "I", "did", "n't", "stand", "in", "the", "rain", "."]
+# ::lemmas [":", "no", "Prince", "concert", "at", "Toronto", "'s", "Massey", "Hall", ".", "develop", "STORY", ":", "so", "glad", "i", "do", "not", "stand", "in", "the", "rain", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-8 / concert
+                  :mod (c5-6 / person
+                             :name (c5-4 / name
+                                         :op1 "Prince"))
+                  :location (c5-1 / building
+                                  :name (c5-5 / name
+                                              :op1 "Massey"
+                                              :op2 "Hall")
+                                  :location (c5-7 / city
+                                                  :name (c5-9 / name
+                                                              :op1 "Toronto")))
+                  :polarity -)
+      :snt2 (c5-12 / story
+                   :ARG1-of (c5-10 / develop-01)
+                   :topic-of (c5-11 / glad-02
+                                    :ARG0 (c5-2 / stand-01
+                                                :ARG1 (c5-3 / i)
+                                                :ARG2 (c5-13 / rain-01)
+                                                :polarity -)
+                                    :ARG1 c5-3)))

@@ -1,0 +1,135 @@
+# ::snt I have kids. I can't imagine.
+# ::tokens ["I", "have", "kids", ".", "I", "ca", "n't", "imagine", "."]
+# ::lemmas ["i", "have", "kid", ".", "i", "can", "not", "imagine", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / have-05
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-6 / kid))
+      :snt2 (c1-4 / possible-01
+                  :ARG1 (c1-5 / imagine-01
+                              :ARG0 (c1-1 / i))
+                  :polarity -))
+
+# ::snt : Heading to after rally, 's mother didn't speak, but thanked supporters
+# ::tokens [":", "Heading", "to", "after", "rally", ",", "'s", "mother", "did", "n't", "speak", ",", "but", "thanked", "supporters"]
+# ::lemmas [":", "head", "to", "after", "rally", ",", "'s", "mother", "do", "not", "speak", ",", "but", "thank", "supporter"]
+(c2-6 / contrast-01
+      :ARG1 (c2-8 / speak-01
+                  :ARG0 (c2-4 / person
+                              :ARG0-of (c2-0 / have-rel-role-91
+                                             :ARG1 (c2-5 / child)
+                                             :ARG2 (c2-2 / mother)))
+                  :polarity -)
+      :ARG2 (c2-9 / thank-01
+                  :ARG0 c2-4
+                  :ARG1 (c2-10 / person
+                               :ARG0-of (c2-3 / support-01)))
+      :time (c2-1 / stride-01
+                  :ARG0 c2-4
+                  :time (c2-11 / after
+                               :op1 (c2-7 / rally-01))))
+
+# ::snt Bless her soul. We are all 's mother.
+# ::tokens ["Bless", "her", "soul", ".", "We", "are", "all", "'s", "mother", "."]
+# ::lemmas ["bless", "her", "soul", ".", "we", "be", "all", "'s", "mother", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-4 / bless-01
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-8 / soul
+                              :part-of (c3-5 / she))
+                  :mode imperative)
+      :snt2 (c3-0 / have-rel-role-91
+                  :ARG0 (c3-2 / we
+                              :mod (c3-9 / all))
+                  :ARG1 (c3-6 / person
+                              :ARG1 c3-2
+                              :ARG2 (c3-7 / mother)
+                              :ARG0-of c3-0))
+      :ARG2 c3-7)
+
+# ::snt Indeed... : Bless her soul. We are all 's mother.
+# ::tokens ["Indeed", "...", ":", "Bless", "her", "soul", ".", "We", "are", "all", "'s", "mother", "."]
+# ::lemmas ["indeed", "...", ":", "bless", "her", "soul", ".", "we", "be", "all", "'s", "mother", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-5 / indeed)
+      :snt2 (c4-3 / bless-01
+                  :ARG1 (c4-8 / soul
+                              :part-of (c4-4 / she)))
+      :snt3 (c4-0 / have-rel-role-91
+                  :ARG0 (c4-1 / we
+                              :mod (c4-9 / all))
+                  :ARG1 (c4-6 / person)
+                  :ARG2 (c4-7 / mother)))
+
+# ::snt The police KILLED another unarmed black manVideos
+# ::tokens ["The", "police", "KILLED", "another", "unarmed", "black", "manVideos"]
+# ::lemmas ["the", "police", "kill", "another", "unarmed", "black", "manVideos"]
+(c5-5 / kill-01
+      :ARG0 (c5-4 / police)
+      :ARG1 (c5-0 / man
+                  :ARG1-of (c5-1 / black-05)
+                  :ARG1-of (c5-6 / arm-01
+                                 :polarity -)
+                  :mod (c5-2 / another))
+      :medium (c5-3 / video))
+
+# ::snt Bless her : Heading to after rally, 's mother didn't speak, but thanked supporters
+# ::tokens ["Bless", "her", ":", "Heading", "to", "after", "rally", ",", "'s", "mother", "did", "n't", "speak", ",", "but", "thanked", "supporters"]
+# ::lemmas ["bless", "she", ":", "head", "to", "after", "rally", ",", "'s", "mother", "do", "not", "speak", ",", "but", "thank", "supporter"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / bless-01
+                  :ARG1 (c6-10 / she))
+      :snt2 (c6-6 / speak-01
+                  :ARG0 (c6-7 / person
+                              :ARG0-of (c6-0 / have-rel-role-91
+                                             :ARG1 (c6-12 / person
+                                                          :ARG1 c6-12
+                                                          :ARG2 (c6-8 / mother)
+                                                          :ARG0-of c6-0))
+                              :ARG2 c6-8)
+                  :polarity -)
+      :concession-of (c6-11 / thank-01
+                            :ARG0 c6-7
+                            :ARG1 (c6-3 / person
+                                        :ARG0-of (c6-1 / support-01)))
+      :time (c6-5 / stride-01
+                  :ARG0 c6-12
+                  :ARG2 (c6-9 / rally-01)
+                  :time (c6-13 / after)))
+
+# ::snt Open Let to Pres. Obama, Blueprint for Afrodescendants in US,
+# ::tokens ["Open", "Let", "to", "Pres", ".", "Obama", ",", "Blueprint", "for", "Afrodescendants", "in", "US", ","]
+# ::lemmas ["open", "let", "to", "pre", ".", "Obama", ",", "Blueprint", "for", "Afrodescendants", "in", "US", ","]
+(c7-2 / open-01
+      :ARG1 (c7-5 / program
+                  :name (c7-4 / name
+                              :op1 "Blueprint"
+                              :op2 "for"
+                              :op3 "Afrodescendants")
+                  :topic (c7-8 / person
+                               :name (c7-3 / name
+                                           :op1 "Obama")
+                               :ARG0-of (c7-0 / have-org-role-91
+                                              :ARG2 (c7-1 / president)))
+                  :location (c7-7 / country
+                                  :name (c7-6 / name
+                                              :op1 "US"))))
+
+# ::snt : Heading to after rally, 's mother didn't speak, but thanked supporters
+# ::tokens [":", "Heading", "to", "after", "rally", ",", "'s", "mother", "did", "n't", "speak", ",", "but", "thanked", "supporters"]
+# ::lemmas [":", "head", "to", "after", "rally", ",", "'s", "mother", "do", "not", "speak", ",", "but", "thank", "supporter"]
+(c8-6 / contrast-01
+      :ARG1 (c8-8 / speak-01
+                  :ARG0 (c8-4 / person
+                              :ARG0-of (c8-0 / have-rel-role-91
+                                             :ARG1 (c8-5 / child)
+                                             :ARG2 (c8-2 / mother)))
+                  :polarity -)
+      :ARG2 (c8-9 / thank-01
+                  :ARG0 c8-4
+                  :ARG1 (c8-10 / person
+                               :ARG0-of (c8-3 / support-01)))
+      :time (c8-1 / stride-01
+                  :ARG0 c8-4
+                  :time (c8-11 / after
+                               :op1 (c8-7 / rally-01))))

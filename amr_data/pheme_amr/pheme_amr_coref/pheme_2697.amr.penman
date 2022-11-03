@@ -1,0 +1,216 @@
+# ::snt and it just keeps happening over time
+# ::tokens ["and", "it", "just", "keeps", "happening", "over", "time"]
+# ::lemmas ["and", "it", "just", "keep", "happen", "over", "time"]
+(c1-4 / and
+      :op2 (c1-3 / keep-02
+                 :ARG1 (c1-2 / it)
+                 :mod (c1-1 / over-time)
+                 :mod (c1-0 / just)))
+
+# ::snt police are supposed to protect and help citizens. Not kill innocent people. What the hell?!
+# ::tokens ["police", "are", "supposed", "to", "protect", "and", "help", "citizens", ".", "Not", "kill", "innocent", "people", ".", "What", "the", "hell", "?", "!"]
+# ::lemmas ["police", "be", "suppose", "to", "protect", "and", "help", "citizen", ".", "not", "kill", "innocent", "people", ".", "what", "the", "hell", "?", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-8 / suppose-02
+                  :ARG1 (c2-6 / police)
+                  :ARG2 (c2-11 / and
+                               :op1 (c2-10 / protect-01
+                                           :ARG0 c2-6
+                                           :ARG1 (c2-7 / citizen))
+                               :op2 (c2-0 / help-01
+                                          :ARG0 c2-6
+                                          :ARG1 c2-7)))
+      :snt2 (c2-9 / kill-01
+                  :ARG0 c2-6
+                  :ARG1 (c2-3 / person
+                              :ARG1-of (c2-5 / innocent-01))
+                  :polarity -)
+      :snt3 (c2-4 / amr-unknown
+                  :mod (c2-1 / hell
+                             :mode expressive)))
+
+# ::snt Another day, another shooting of an unarmed black teenager in America by authority figures.
+# ::tokens ["Another", "day", ",", "another", "shooting", "of", "an", "unarmed", "black", "teenager", "in", "America", "by", "authority", "figures", "."]
+# ::lemmas ["Another", "day", ",", "another", "shooting", "of", "an", "unarmed", "black", "teenager", "in", "America", "by", "authority", "figure", "."]
+(c3-7 / shoot-02
+      :ARG0 (c3-0 / figure
+                  :mod (c3-10 / authority))
+      :ARG1 (c3-9 / teenager
+                  :ARG1-of (c3-1 / black-05)
+                  :ARG1-of (c3-2 / arm-01
+                                 :polarity -)
+                  :location (c3-6 / country
+                                  :name (c3-3 / name
+                                              :op1 "America")))
+      :mod (c3-4 / another)
+      :time (c3-5 / day
+                  :mod (c3-8 / another)))
+
+# ::snt . . . authority figures whose Constitutional / Financial bosses are Eric Holder (DOJ) and President Obama (Executive Branch).
+# ::tokens [".", ".", ".", "authority", "figures", "whose", "Constitutional", "/", "Financial", "bosses", "are", "Eric", "Holder", "(", "DOJ", ")", "and", "President", "Obama", "(", "Executive", "Branch", ")", "."]
+# ::lemmas [".", ".", ".", "authority", "figure", "whose", "Constitutional", "/", "Financial", "boss", "be", "Eric", "Holder", "(", "DOJ", ")", "and", "President", "Obama", "(", "Executive", "Branch", ")", "."]
+(c4-8 / figure
+      :mod (c4-6 / authority)
+      :ARG1-of (c4-7 / have-org-role-91
+                     :ARG0 (c4-14 / and
+                                  :op1 (c4-2 / person
+                                             :name (c4-12 / name
+                                                          :op1 "Eric"
+                                                          :op2 "Holder")
+                                             :ARG0-of (c4-5 / have-org-role-91
+                                                            :ARG1 (c4-13 / government-organization
+                                                                         :name (c4-17 / name
+                                                                                      :op1 "DOJ"))
+                                                            :ARG2 (c4-10 / boss)))
+                                  :op2 (c4-4 / person
+                                             :name (c4-0 / name
+                                                         :op1 "Obama")
+                                             :ARG0-of (c4-1 / have-org-role-91
+                                                            :ARG1 (c4-15 / branch
+                                                                         :mod (c4-11 / executive))
+                                                            :ARG2 (c4-9 / president))))
+                     :ARG2 (c4-19 / boss
+                                  :mod (c4-3 / slash
+                                             :op1 (c4-18 / constitution)
+                                             :op2 (c4-16 / finance)))))
+
+# ::snt when are we going to take a stand and no longer accept these types of injustices?
+# ::tokens ["when", "are", "we", "going", "to", "take", "a", "stand", "and", "no", "longer", "accept", "these", "types", "of", "injustices", "?"]
+# ::lemmas ["when", "be", "we", "go", "to", "take", "a", "stand", "and", "no", "long", "accept", "these", "type", "of", "injustice", "?"]
+(c5-1 / be-temporally-at-91
+      :ARG1 (c5-9 / and
+                  :op1 (c5-7 / stand-11
+                             :ARG0 (c5-0 / we))
+                  :op2 (c5-2 / accept-01
+                             :ARG0 c5-0
+                             :ARG1 (c5-3 / injustice
+                                         :mod (c5-8 / type
+                                                    :mod (c5-6 / this)))
+                             :time (c5-4 / no-longer)))
+      :ARG2 (c5-5 / amr-unknown))
+
+# ::snt it's really sad because it happens all the time
+# ::tokens ["it", "'s", "really", "sad", "because", "it", "happens", "all", "the", "time"]
+# ::lemmas ["it", "be", "really", "sad", "because", "it", "happen", "all", "the", "time"]
+(c6-2 / cause-01
+      :ARG0 (c6-0 / it
+                  :frequency (c6-4 / time
+                                   :mod (c6-5 / all)))
+      :ARG1 (c6-3 / sad-02
+                  :ARG0 c6-0
+                  :degree (c6-1 / really)))
+
+# ::snt what happened now?? This world is loosing it's Damn Mind!!!
+# ::tokens ["what", "happened", "now", "?", "?", "This", "world", "is", "loosing", "it", "'s", "Damn", "Mind", "!", "!", "!"]
+# ::lemmas ["what", "happen", "now", "?", "?", "this", "world", "be", "loose", "it", "be", "Damn", "Mind", "!", "!", "!"]
+(c7-2 / multi-sentence
+      :snt1 (c7-3 / event
+                  :time (c7-4 / now))
+      :snt2 (c7-1 / lose-02
+                  :ARG0 (c7-0 / world
+                              :mod (c7-7 / this))
+                  :ARG1 (c7-5 / mind
+                              :ARG1-of (c7-6 / damn-01)
+                              :poss c7-0)))
+
+# ::snt While I'm disgusted, I'm not even shocked. That's the worst part. This shit happens too much.
+# ::tokens ["While", "I", "'m", "disgusted", ",", "I", "'m", "not", "even", "shocked", ".", "That", "'s", "the", "worst", "part", ".", "This", "shit", "happens", "too", "much", "."]
+# ::lemmas ["while", "i", "be", "disgusted", ",", "i", "be", "not", "even", "shocked", ".", "that", "be", "the", "bad", "part", ".", "this", "shit", "happen", "too", "much", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-12 / shock-01
+                   :ARG1 (c8-6 / i)
+                   :mod (c8-4 / even)
+                   :time (c8-9 / disgust-01
+                               :ARG1 c8-6)
+                   :polarity -)
+      :snt2 (c8-8 / part
+                  :ARG1-of (c8-3 / bad-07
+                                 :ARG2-of (c8-0 / have-degree-91
+                                                :ARG1 c8-8
+                                                :ARG3 (c8-10 / most)))
+                  :domain (c8-13 / that))
+      :snt3 (c8-14 / have-frequency-91
+                   :ARG1 (c8-5 / shit
+                               :mod (c8-11 / this))
+                   :ARG2 (c8-1 / much)
+                   :ARG3 (c8-7 / too)))
+
+# ::snt They keep killing us ": Another day, another shooting of an unarmed black teenager in America by authority figures.
+# ::tokens ["They", "keep", "killing", "us", "\"", ":", "Another", "day", ",", "another", "shooting", "of", "an", "unarmed", "black", "teenager", "in", "America", "by", "authority", "figures", "."]
+# ::lemmas ["they", "keep", "kill", "we", "\"", ":", "Another", "day", ",", "another", "shooting", "of", "an", "unarmed", "black", "teenager", "in", "America", "by", "authority", "figure", "."]
+(c9-5 / keep-02
+      :ARG0 (c9-13 / they)
+      :ARG1 (c9-3 / kill-01
+                  :ARG0 c9-13
+                  :ARG1 (c9-0 / we))
+      :time (c9-8 / day
+                  :mod (c9-14 / another))
+      :time-of (c9-11 / shoot-02
+                      :ARG0 (c9-1 / figure
+                                  :mod (c9-4 / authority))
+                      :ARG1 (c9-10 / teenager
+                                   :ARG1-of (c9-2 / black-05)
+                                   :ARG1-of (c9-7 / arm-01
+                                                  :polarity -))
+                      :location (c9-9 / country
+                                      :name (c9-6 / name
+                                                  :op1 "America"))
+                      :mod (c9-12 / another)))
+
+# ::snt change is coming...it has to
+# ::tokens ["change", "is", "coming", "...", "it", "has", "to"]
+# ::lemmas ["change", "be", "come", "...", "it", "have", "to"]
+(c10-2 / come-03
+       :ARG1 (c10-1 / change-01)
+       :ARG2-of (c10-0 / obligate-01))
+
+# ::snt but some one love it =]
+# ::tokens ["but", "some", "one", "love", "it", "=]"]
+# ::lemmas ["but", "some", "one", "love", "it", "=]"]
+(c11-3 / contrast-01
+       :ARG2 (c11-0 / love-01
+                    :ARG0 (c11-4 / someone)
+                    :ARG1 (c11-2 / it))
+       :mod (c11-1 / emoticon
+                   :value "[=]"))
+
+# ::snt I am SO tired. So tired of all of it.
+# ::tokens ["I", "am", "SO", "tired", ".", "So", "tired", "of", "all", "of", "it", "."]
+# ::lemmas ["i", "be", "so", "tired", ".", "so", "tired", "of", "all", "of", "it", "."]
+(c12-1 / multi-sentence
+       :snt1 (c12-7 / tire-01
+                    :ARG1 (c12-3 / i)
+                    :degree (c12-6 / so))
+       :snt2 (c12-5 / tire-01
+                    :ARG0 (c12-4 / it
+                                 :mod (c12-8 / all))
+                    :ARG1 (c12-0 / i)
+                    :degree (c12-2 / so)))
+
+# ::snt breaks my heart that any child dies. There needs to be some major reform asap!!!
+# ::tokens ["breaks", "my", "heart", "that", "any", "child", "dies", ".", "There", "needs", "to", "be", "some", "major", "reform", "asap", "!", "!", "!"]
+# ::lemmas ["break", "my", "heart", "that", "any", "child", "die", ".", "there", "need", "to", "be", "some", "major", "reform", "asap", "!", "!", "!"]
+(c13-1 / multi-sentence
+       :snt1 (c13-2 / break-heart-31
+                    :ARG0 (c13-7 / die-01
+                                 :ARG1 (c13-8 / child
+                                              :mod (c13-11 / any)))
+                    :ARG1 (c13-0 / heart
+                                 :part-of (c13-5 / i)))
+       :snt2 (c13-3 / obligate-01
+                    :ARG2 (c13-9 / reform-01
+                                 :ARG1-of (c13-6 / major-02)
+                                 :mod (c13-10 / some)
+                                 :time (c13-4 / as-ap))))
+
+# ::snt just sad. Really feels like warfare against our youth.
+# ::tokens ["just", "sad", ".", "Really", "feels", "like", "warfare", "against", "our", "youth", "."]
+# ::lemmas ["just", "sad", ".", "really", "feel", "like", "warfare", "against", "our", "youth", "."]
+(c14-4 / multi-sentence
+       :snt1 (c14-7 / sad-02
+                    :mod (c14-0 / just))
+       :snt2 (c14-3 / feel-05
+                    :ARG2 (c14-1 / war-01
+                                 :ARG1 (c14-2 / youth
+                                              :poss (c14-5 / we)))
+                    :ARG1-of (c14-6 / real-04)))

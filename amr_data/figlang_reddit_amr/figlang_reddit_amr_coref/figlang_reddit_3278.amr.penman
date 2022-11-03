@@ -1,0 +1,43 @@
+# ::snt Kentucky Speedway's about to surprise Jeff Gordon with a whole lot of bourbon
+# ::tokens ["Kentucky", "Speedway", "'s", "about", "to", "surprise", "Jeff", "Gordon", "with", "a", "whole", "lot", "of", "bourbon"]
+# ::lemmas ["Kentucky", "Speedway", "'s", "about", "to", "surprise", "Jeff", "Gordon", "with", "a", "whole", "lot", "of", "bourbon"]
+(c1-0 / surprise-01
+      :ARG0 (c1-2 / company
+                  :name (c1-8 / name
+                              :op1 "Kentucky"
+                              :op2 "Speedway"))
+      :ARG1 (c1-7 / person
+                  :name (c1-4 / name
+                              :op1 "Jeff"
+                              :op2 "Gordon"))
+      :ARG2 (c1-6 / bourbon
+                  :quant (c1-5 / lot
+                               :mod (c1-3 / whole)))
+      :time (c1-1 / about-to))
+
+# ::snt First wine from Sonoma, then bourbon from Kentucky... What's up with everyone trying to get Jeff drunk?
+# ::tokens ["First", "wine", "from", "Sonoma", ",", "then", "bourbon", "from", "Kentucky", "...", "What", "'s", "up", "with", "everyone", "trying", "to", "get", "Jeff", "drunk", "?"]
+# ::lemmas ["First", "wine", "from", "Sonoma", ",", "then", "bourbon", "from", "Kentucky", "...", "what", "be", "up", "with", "everyone", "try", "to", "get", "Jeff", "drunk", "?"]
+(c2-14 / multi-sentence
+       :snt1 (c2-2 / and
+                   :op1 (c2-4 / wine
+                              :source (c2-3 / company
+                                            :name (c2-15 / name
+                                                         :op1 "Sonoma"))
+                              :ord (c2-8 / ordinal-entity
+                                         :value 1))
+                   :op2 (c2-16 / wine
+                               :source (c2-0 / state
+                                             :name (c2-11 / name
+                                                          :op1 "Kentucky"))
+                               :time (c2-10 / then)))
+       :snt2 (c2-17 / event
+                    :mod (c2-7 / amr-unknown)
+                    :topic (c2-5 / try-01
+                                 :ARG0 (c2-6 / everyone)
+                                 :ARG1 (c2-12 / get-03
+                                              :ARG0 c2-6
+                                              :ARG1 (c2-1 / drunk
+                                                          :domain (c2-13 / person
+                                                                         :name (c2-9 / name
+                                                                                     :op1 "Jeff")))))))

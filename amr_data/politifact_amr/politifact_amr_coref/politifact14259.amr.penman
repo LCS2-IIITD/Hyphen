@@ -1,0 +1,444 @@
+# ::snt fakenews
+# ::tokens ["fakenews"]
+# ::lemmas ["fakenews"]
+(c1-0 / publication
+      :name (c1-1 / name
+                  :op1 "Fakenews"))
+
+# ::snt Paging Jimmy Hoffa
+# ::tokens ["Paging", "Jimmy", "Hoffa"]
+# ::lemmas ["page", "Jimmy", "Hoffa"]
+(c2-0 / pillage-01
+      :ARG1 (c2-2 / person
+                  :name (c2-1 / name
+                              :op1 "Jimmy"
+                              :op2 "Hoffer")))
+
+# ::snt Was his name Charlie
+# ::tokens ["Was", "his", "name", "Charlie"]
+# ::lemmas ["be", "his", "name", "Charlie"]
+(c3-1 / name-01
+      :ARG1 (c3-3 / he)
+      :ARG2 (c3-0 / person
+                  :name (c3-2 / name
+                              :op1 "Charlie")))
+
+# ::snt hope notjust ate some for lunch today
+# ::tokens ["hope", "notjust", "ate", "some", "for", "lunch", "today"]
+# ::lemmas ["hope", "notjust", "eat", "some", "for", "lunch", "today"]
+(c4-3 / hope-01
+      :ARG0 (c4-5 / i)
+      :ARG1 (c4-0 / eat-01
+                  :ARG0 c4-5
+                  :ARG1 (c4-2 / some)
+                  :time (c4-4 / lunch)
+                  :mod (c4-6 / just)
+                  :time (c4-1 / today))
+      :polarity -)
+
+# ::snt Thank goodness this is not true  I love me some Bumble Bee
+# ::tokens ["Thank", "goodness", "this", "is", "not", "true", " ", "I", "love", "me", "some", "Bumble", "Bee"]
+# ::lemmas ["thank", "goodness", "this", "be", "not", "true", " ", "i", "love", "me", "some", "Bumble", "Bee"]
+(c5-5 / multi-sentence
+      :snt1 (c5-2 / thank-01
+                  :ARG0 (c5-8 / i)
+                  :ARG1 (c5-7 / goodness)
+                  :ARG2 (c5-9 / true-01
+                              :ARG1 (c5-3 / this)
+                              :polarity -))
+      :snt2 (c5-6 / love-01
+                  :ARG0 (c5-0 / i)
+                  :ARG1 (c5-1 / person
+                              :name (c5-10 / name
+                                           :op1 "Bumble"
+                                           :op2 "Bee")
+                              :mod (c5-4 / some))))
+
+# ::snt omfg
+# ::tokens ["omfg"]
+# ::lemmas ["omfg"]
+(c6-0 / amr-unintelligible
+      :value "omfg")
+
+# ::snt OMG
+# ::tokens ["OMG"]
+# ::lemmas ["OMG"]
+(c7-0 / oh-my-god
+      :mode expressive)
+
+# ::snt Bahahaha 86TheTuna
+# ::tokens ["Bahahaha", "86TheTuna"]
+# ::lemmas ["bahahaha", "86thetuna"]
+(c8-0 / person
+      :name (c8-1 / name
+                  :op1 "TheTuna")
+      :mod (c8-2 / haha
+                 :mode expressive))
+
+# ::snt Well Im not Catholic but I know what Im giving up for Lent this year Besides Christianity
+# ::tokens ["Well", "I", "m", "not", "Catholic", "but", "I", "know", "what", "I", "m", "giving", "up", "for", "Lent", "this", "year", "Besides", "Christianity"]
+# ::lemmas ["well", "i", "be", "not", "Catholic", "but", "i", "know", "what", "i", "be", "give", "up", "for", "Lent", "this", "year", "besides", "Christianity"]
+(c9-2 / contrast-01
+      :ARG1 (c9-0 / religious-group
+                  :name (c9-9 / name
+                              :op1 "Catholic")
+                  :domain (c9-10 / i)
+                  :polarity -)
+      :ARG2 (c9-7 / know-01
+                  :ARG0 c9-10
+                  :ARG1 (c9-5 / thing
+                              :ARG1-of (c9-8 / give-up-07
+                                             :ARG0 c9-10
+                                             :purpose (c9-6 / festival
+                                                            :name (c9-3 / name
+                                                                        :op1 "Lent"))
+                                             :time (c9-12 / year
+                                                          :mod (c9-11 / this))
+                                             :ARG2-of (c9-4 / except-01
+                                                            :ARG1 c9-0
+                                                            :name (c9-1 / name
+                                                                        :op1 "Christianity"))))))
+
+# ::snt Im with ya   ChunkLite my arse  I prefer chickenofthesea TunaRecall
+# ::tokens ["I", "m", "with", "ya", "  ", "ChunkLite", "my", "arse", " ", "I", "prefer", "chickenofthesea", "TunaRecall"]
+# ::lemmas ["i", "be", "with", "ya", "  ", "ChunkLite", "my", "arse", " ", "i", "prefer", "chickenofthesea", "TunaRecall"]
+(c10-6 / multi-sentence
+       :snt1 (c10-4 / accompany-01
+                    :ARG0 (c10-8 / i)
+                    :ARG1 (c10-9 / you))
+       :snt2 (c10-5 / say-01
+                    :ARG0 (c10-0 / i
+                                 :part (c10-3 / ass))
+                    :ARG1 (c10-1 / choose-01
+                                 :ARG0 c10-0
+                                 :ARG1 (c10-2 / person
+                                              :name (c10-7 / name
+                                                           :op1 "Chickenofthesea"
+                                                           :op2 "TunaRecall")))
+                    :ARG2 c10-9))
+
+# ::snt Hoping this is fake but still probably tastes better than the cat food they pass off as tuna if not
+# ::tokens ["Hoping", "this", "is", "fake", "but", "still", "probably", "tastes", "better", "than", "the", "cat", "food", "they", "pass", "off", "as", "tuna", "if", "not"]
+# ::lemmas ["hope", "this", "be", "fake", "but", "still", "probably", "taste", "well", "than", "the", "cat", "food", "they", "pass", "off", "as", "tuna", "if", "not"]
+(c11-2 / contrast-01
+       :ARG1 (c11-10 / hope-01
+                     :ARG1 (c11-8 / fake-02
+                                  :ARG1 (c11-6 / this)))
+       :ARG2 (c11-3 / probable
+                    :domain (c11-14 / taste-02
+                                    :ARG1 c11-6
+                                    :ARG2 (c11-13 / good-02
+                                                  :ARG2-of (c11-4 / have-degree-91
+                                                                  :ARG1 c11-14
+                                                                  :ARG3 (c11-11 / more)
+                                                                  :ARG4 (c11-1 / food
+                                                                               :mod (c11-9 / cat)
+                                                                               :ARG1-of (c11-0 / pass-off-18
+                                                                                               :ARG0 (c11-7 / they)
+                                                                                               :prep-as (c11-15 / tuna)
+                                                                                               :condition (c11-5 / have-polarity-91
+                                                                                                                 :ARG2 -)))))
+                                    :mod (c11-12 / still))))
+
+# ::snt ItsNotTheOnion reddit this is a story of an incident from 2012
+# ::tokens ["ItsNotTheOnion", "reddit", "this", "is", "a", "story", "of", "an", "incident", "from", "2012"]
+# ::lemmas ["itsnottheonion", "reddit", "this", "be", "a", "story", "of", "an", "incident", "from", "2012"]
+(c12-5 / say-01
+       :ARG0 (c12-7 / i)
+       :ARG1 (c12-4 / story
+                    :topic (c12-0 / incident
+                                  :time (c12-1 / date-entity
+                                               :year 2012))
+                    :domain (c12-3 / this))
+       :ARG2 (c12-2 / publication
+                    :name (c12-6 / name
+                                 :op1 "ItsNotTheOnion"
+                                 :op2 "R reddit")))
+
+# ::snt KushCobain ParadiseGray
+# ::tokens ["KushCobain", "ParadiseGray"]
+# ::lemmas ["KushCobain", "ParadiseGray"]
+(c13-0 / person
+       :name (c13-1 / name
+                    :op1 "KushCobain"
+                    :op2 "Paradise"))
+
+# ::snt ParadiseGray news4ktla is a fake news outlet
+# ::tokens ["ParadiseGray", "news4ktla", "is", "a", "fake", "news", "outlet"]
+# ::lemmas ["ParadiseGray", "news4ktla", "be", "a", "fake", "news", "outlet"]
+(c14-0 / outlet
+       :mod (c14-4 / news)
+       :ARG1-of (c14-3 / fake-02)
+       :domain (c14-2 / news
+                      :name (c14-1 / name
+                                   :op1 "ParadiseGray"
+                                   :op2 "News4ktla")))
+
+# ::snt what
+# ::tokens ["what"]
+# ::lemmas ["what"]
+(c15-0 / amr-unknown)
+
+# ::snt Hahahaha i was like fuck what are you guys up to over there
+# ::tokens ["Hahahaha", "i", "was", "like", "fuck", "what", "are", "you", "guys", "up", "to", "over", "there"]
+# ::lemmas ["Hahahaha", "i", "be", "like", "fuck", "what", "be", "you", "guy", "up", "to", "over", "there"]
+(c16-0 / cause-01
+       :ARG0 (c16-1 / up-to
+                    :op1 (c16-2 / there)
+                    :domain (c16-7 / you
+                                   :mod (c16-5 / guy)))
+       :ARG1 (c16-4 / like-01
+                    :ARG0 (c16-6 / i)
+                    :ARG1 (c16-3 / fuck
+                                 :mode expressive)))
+
+# ::snt Idk doubt it I googled it  it seems old But the headline on the FB article made me sick  think of Ace Ventura Lol
+# ::tokens ["Idk", "doubt", "it", "I", "googled", "it", " ", "it", "seems", "old", "But", "the", "headline", "on", "the", "FB", "article", "made", "me", "sick", " ", "think", "of", "Ace", "Ventura", "Lol"]
+# ::lemmas ["idk", "doubt", "it", "i", "google", "it", " ", "it", "seem", "old", "but", "the", "headline", "on", "the", "FB", "article", "make", "me", "sick", " ", "think", "of", "Ace", "Ventura", "Lol"]
+(c17-15 / multi-sentence
+        :snt1 (c17-19 / doubt-01
+                      :ARG0 (c17-3 / i)
+                      :ARG1 (c17-11 / it)
+                      :mod (c17-10 / idiot))
+        :snt2 (c17-22 / google-01
+                      :ARG0 (c17-17 / i)
+                      :ARG1 (c17-18 / it
+                                    :mod (c17-0 / old)
+                                    :ARG1-of (c17-21 / seem-01)))
+        :snt3 (c17-6 / contrast-01
+                     :ARG1 (c17-1 / make-02
+                                  :ARG0 (c17-12 / thing
+                                                :ARG2-of (c17-8 / headline-01
+                                                                :location (c17-20 / article
+                                                                                  :mod (c17-2 / publication
+                                                                                              :name (c17-9 / name
+                                                                                                           :op1 "Facebook")))))
+                                  :ARG1 (c17-13 / sick-05
+                                                :ARG0 c17-12
+                                                :ARG1 c17-17))
+                     :ARG2 (c17-4 / think-01
+                                  :ARG0 c17-17
+                                  :ARG1 (c17-5 / person
+                                               :name (c17-7 / name
+                                                            :op1 "Ace"
+                                                            :op2 "Ventura"))
+                                  :ARG2-of (c17-16 / laugh-01
+                                                   :ARG0 c17-17
+                                                   :manner (c17-14 / loud)
+                                                   :mode expressive))))
+
+# ::snt Wait really
+# ::tokens ["Wait", "really"]
+# ::lemmas ["wait", "really"]
+(c18-2 / wait-01
+       :ARG1 (c18-0 / you)
+       :ARG1-of (c18-1 / real-04))
+
+# ::snt right
+# ::tokens ["right"]
+# ::lemmas ["right"]
+(c19-0 / right-06)
+
+# ::snt this is disgusting
+# ::tokens ["this", "is", "disgusting"]
+# ::lemmas ["this", "be", "disgusting"]
+(c20-0 / disgust-01
+       :ARG0 (c20-1 / this))
+
+# ::snt oh my god thats a scary thought
+# ::tokens ["oh", "my", "god", "that", "s", "a", "scary", "thought"]
+# ::lemmas ["oh", "my", "god", "that", "s", "a", "scary", "thought"]
+(c21-2 / think-01
+       :ARG1 (c21-6 / that)
+       :ARG0-of (c21-3 / scary-03)
+       :mod (c21-0 / oh
+                   :op1 (c21-1 / person
+                               :name (c21-4 / name
+                                            :op1 "God")
+                               :poss (c21-5 / i))
+                   :mode expressive))
+
+# ::snt  reckless too I wonder if some of these products are already in supermarkets
+# ::tokens [" ", "reckless", "too", "I", "wonder", "if", "some", "of", "these", "products", "are", "already", "in", "supermarkets"]
+# ::lemmas [" ", "reckless", "too", "i", "wonder", "if", "some", "of", "these", "product", "be", "already", "in", "supermarket"]
+(c22-5 / wonder-01
+       :ARG0 (c22-10 / i)
+       :ARG1 (c22-4 / truth-value
+                    :polarity-of (c22-11 / be-located-at-91
+                                         :ARG1 (c22-2 / product
+                                                      :ARG1-of (c22-0 / include-91
+                                                                      :ARG2 (c22-1 / product
+                                                                                   :mod (c22-3 / this)))
+                                                      :quant (c22-9 / some))
+                                         :ARG2 (c22-6 / supermarket)
+                                         :time (c22-7 / already)))
+       :mod (c22-8 / too))
+
+# ::snt there are no words for how nasty and wrong this is
+# ::tokens ["there", "are", "no", "words", "for", "how", "nasty", "and", "wrong", "this", "is"]
+# ::lemmas ["there", "be", "no", "word", "for", "how", "nasty", "and", "wrong", "this", "be"]
+(c23-2 / word
+       :topic (c23-1 / thing
+                     :degree-of (c23-3 / and
+                                       :op1 (c23-4 / nasty
+                                                   :domain (c23-5 / this))
+                                       :op2 (c23-0 / wrong-02
+                                                   :ARG1 c23-5)))
+       :polarity -)
+
+# ::snt OMg what a horrible way to die and so needless
+# ::tokens ["OMg", "what", "a", "horrible", "way", "to", "die", "and", "so", "needless"]
+# ::lemmas ["omg", "what", "a", "horrible", "way", "to", "die", "and", "so", "needless"]
+(c24-2 / and
+       :op1 (c24-4 / horrible
+                   :manner-of (c24-1 / die-01))
+       :op2 (c24-5 / need-01
+                   :degree (c24-3 / so)
+                   :polarity -)
+       :mod (c24-0 / oh-my-god
+                   :mode expressive))
+
+# ::snt I sure hope not
+# ::tokens ["I", "sure", "hope", "not"]
+# ::lemmas ["i", "sure", "hope", "not"]
+(c25-3 / hope-01
+       :ARG0 (c25-1 / i)
+       :ARG1 (c25-2 / thing
+                    :polarity -)
+       :ARG1-of (c25-0 / sure-02
+                       :ARG0 c25-1))
+
+# ::snt seriously youre telling me I ate a man in my tuna fish
+# ::tokens ["seriously", "you", "re", "telling", "me", "I", "ate", "a", "man", "in", "my", "tuna", "fish"]
+# ::lemmas ["seriously", "you", "be", "tell", "me", "i", "eat", "a", "man", "in", "my", "tuna", "fish"]
+(c26-1 / tell-01
+       :ARG0 (c26-7 / you)
+       :ARG1 (c26-0 / eat-01
+                    :ARG0 (c26-5 / i)
+                    :ARG1 (c26-4 / man)
+                    :location (c26-2 / fish
+                                     :mod (c26-6 / tuna)
+                                     :poss c26-5))
+       :ARG2 c26-5
+       :ARG2-of (c26-3 / serious-01))
+
+# ::snt FYI Its satire
+# ::tokens ["FYI", "Its", "satire"]
+# ::lemmas ["FYI", "its", "satire"]
+(c27-1 / purpose-01
+       :ARG1 (c27-3 / inform-01
+                    :ARG1 (c27-4 / you)
+                    :ARG2 (c27-2 / satire
+                                 :domain (c27-0 / it)))
+       :ARG2 c27-4)
+
+# ::snt Probably never eating tuna again
+# ::tokens ["Probably", "never", "eating", "tuna", "again"]
+# ::lemmas ["probably", "never", "eat", "tuna", "again"]
+(c28-0 / probable
+       :domain (c28-1 / eat-01
+                      :ARG1 (c28-2 / tuna)
+                      :time (c28-4 / ever)
+                      :mod (c28-3 / again)
+                      :polarity -))
+
+# ::snt RickySi16087724   Wtf Seriously
+# ::tokens ["RickySi16087724", "  ", "Wtf", "Seriously"]
+# ::lemmas ["RickySi16087724", "  ", "Wtf", "Seriously"]
+(c29-0 / person
+       :name (c29-1 / name
+                    :op1 "RickySi16087724")
+       :ARG1-of (c29-3 / serious-01
+                       :mod (c29-2 / fuck
+                                   :mode expressive)))
+
+# ::snt semperabsurda ChrisBellNZ Now THATS what I call a paeleo diet
+# ::tokens ["semperabsurda", "ChrisBellNZ", "Now", "THATS", "what", "I", "call", "a", "paeleo", "diet"]
+# ::lemmas ["semperabsurda", "ChrisBellNZ", "now", "THATS", "what", "i", "call", "a", "paeleo", "diet"]
+(c30-8 / say-01
+       :ARG0 (c30-10 / i)
+       :ARG1 (c30-4 / call-01
+                    :ARG0 c30-10
+                    :ARG1 (c30-7 / that)
+                    :ARG2 (c30-3 / diet
+                                 :mod (c30-5 / paeleo)))
+       :ARG2 (c30-1 / person
+                    :name (c30-9 / name
+                                 :op1 "ChrisBellNZ"))
+       :time (c30-6 / now)
+       :mod (c30-0 / publication
+                   :name (c30-2 / name
+                                :op1 "semperabsurda")))
+
+# ::snt semperabsurda Oh THAT old story again yawn
+# ::tokens ["semperabsurda", "Oh", "THAT", "old", "story", "again", "yawn"]
+# ::lemmas ["semperabsurda", "oh", "that", "old", "story", "again", "yawn"]
+(c31-5 / say-01
+       :ARG1 (c31-7 / yawn-01
+                    :ARG0 (c31-3 / story
+                                 :mod (c31-2 / that)
+                                 :mod (c31-0 / old))
+                    :mod (c31-4 / again)
+                    :mode expressive)
+       :ARG2 (c31-1 / person
+                    :name (c31-6 / name
+                                 :op1 "semperabsurda")))
+
+# ::snt yep Lost my biz
+# ::tokens ["yep", "Lost", "my", "biz"]
+# ::lemmas ["yep", "lose", "my", "biz"]
+(c32-3 / lose-02
+       :ARG1 (c32-2 / business
+                    :poss (c32-1 / i))
+       :mod (c32-0 / yep
+                   :mode expressive))
+
+# ::snt wtf and they think just a replacement is good enough maybe for their family
+# ::tokens ["wtf", "and", "they", "think", "just", "a", "replacement", "is", "good", "enough", "maybe", "for", "their", "family"]
+# ::lemmas ["wtf", "and", "they", "think", "just", "a", "replacement", "be", "good", "enough", "maybe", "for", "their", "family"]
+(c33-7 / and
+       :op2 (c33-6 / think-01
+                   :ARG0 (c33-12 / they)
+                   :ARG1 (c33-3 / possible-01
+                                :ARG1 (c33-9 / have-degree-91
+                                             :ARG1 (c33-0 / replace-01
+                                                          :mod (c33-2 / just))
+                                             :ARG2 (c33-11 / good-04
+                                                           :ARG1 c33-0
+                                                           :ARG2 (c33-8 / family
+                                                                        :ARG1-of (c33-5 / have-org-role-91
+                                                                                        :ARG0 c33-12
+                                                                                        :ARG2 (c33-10 / member))))
+                                             :ARG3 (c33-4 / enough)))
+                   :mod (c33-1 / fuck
+                               :mode expressive)))
+
+# ::snt Yeah that was my reaction
+# ::tokens ["Yeah", "that", "was", "my", "reaction"]
+# ::lemmas ["yeah", "that", "be", "my", "reaction"]
+(c34-1 / react-01
+       :ARG0 (c34-0 / i)
+       :ARG2 (c34-2 / that)
+       :mod (c34-3 / yeah
+                   :mode expressive))
+
+# ::snt WHAT
+# ::tokens ["WHAT"]
+# ::lemmas ["what"]
+(c35-0 / amr-unknown)
+
+# ::snt roses are red My shoes are Puma
+# ::tokens ["roses", "are", "red", "My", "shoes", "are", "Puma"]
+# ::lemmas ["rose", "be", "red", "my", "shoe", "be", "Puma"]
+(c36-3 / multi-sentence
+       :snt1 (c36-0 / red-02
+                    :ARG1 (c36-1 / roses))
+       :snt2 (c36-2 / shoe
+                    :name (c36-4 / name
+                                 :op1 "Puma")))
+
+# ::snt httpwwwsnopescombumblebeetunarecallhuman …
+# ::tokens ["httpwwwsnopescombumblebeetunarecallhuman", "\u2026"]
+# ::lemmas ["httpwwwsnopescombumblebeetunarecallhuman", "\u2026"]
+(c37-0 / url-entity
+       :value "httpwwwsnopescombumblebeetunarecallhuman")

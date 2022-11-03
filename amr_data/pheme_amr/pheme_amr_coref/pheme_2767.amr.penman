@@ -1,0 +1,148 @@
+# ::snt please follow me please
+# ::tokens ["please", "follow", "me", "please"]
+# ::lemmas ["please", "follow", "i", "please"]
+(c1-1 / follow-02
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-2 / i)
+      :mode imperative
+      :polite +)
+
+# ::snt praying!
+# ::tokens ["praying", "!"]
+# ::lemmas ["pray", "!"]
+(c2-0 / pay-01
+      :mode expressive)
+
+# ::snt praying
+# ::tokens ["praying"]
+# ::lemmas ["pray"]
+(c3-0 / pay-01)
+
+# ::snt We are with you in Wales..praying for your City
+# ::tokens ["We", "are", "with", "you", "in", "Wales", "..", "praying", "for", "your", "City"]
+# ::lemmas ["we", "be", "with", "you", "in", "Wales", "..", "pray", "for", "your", "city"]
+(c4-6 / accompany-01
+      :ARG0 (c4-0 / we)
+      :ARG1 (c4-1 / you)
+      :location (c4-5 / country
+                      :name (c4-2 / name
+                                  :op1 "Wales"))
+      :purpose (c4-3 / pray-01
+                     :ARG0 c4-0
+                     :beneficiary (c4-4 / city
+                                        :poss c4-1)))
+
+# ::snt : Pray with me for those being held hostage right now in Sydney.. And for the police and those responsible.. May peace prevail
+# ::tokens [":", "Pray", "with", "me", "for", "those", "being", "held", "hostage", "right", "now", "in", "Sydney", "..", "And", "for", "the", "police", "and", "those", "responsible", "..", "May", "peace", "prevail"]
+# ::lemmas [":", "pray", "with", "i", "for", "those", "be", "hold", "hostage", "right", "now", "in", "Sydney", "..", "and", "for", "the", "police", "and", "those", "responsible", "..", "may", "peace", "prevail"]
+(c5-0 / multi-sentence
+      :snt1 (c5-2 / pray-01
+                  :ARG0 (c5-16 / you)
+                  :ARG1 (c5-7 / and
+                              :op1 (c5-5 / person
+                                         :ARG1-of (c5-6 / hold-01
+                                                        :ARG2 (c5-4 / hostage)
+                                                        :time (c5-10 / now
+                                                                     :mod (c5-11 / right))
+                                                        :location (c5-18 / city
+                                                                         :name (c5-17 / name
+                                                                                      :op1 "Sydney"))))
+                              :op2 (c5-14 / and
+                                          :op1 (c5-8 / police)
+                                          :op2 (c5-12 / person
+                                                      :ARG0-of (c5-1 / responsible-01))))
+                  :accompanier (c5-15 / i)
+                  :mode imperative)
+      :snt2 (c5-13 / wish-01
+                   :ARG1 (c5-9 / prevail-01
+                               :ARG0 (c5-3 / peace))))
+
+# ::snt I pray in Jesus' Name for non-violent solution
+# ::tokens ["I", "pray", "in", "Jesus", "'", "Name", "for", "non", "-", "violent", "solution"]
+# ::lemmas ["i", "pray", "in", "Jesus", "'", "Name", "for", "non", "-", "violent", "solution"]
+(c6-3 / pray-01
+      :ARG0 (c6-0 / i)
+      :ARG1 (c6-5 / solve-01
+                  :mod (c6-2 / violent
+                             :polarity -))
+      :manner (c6-1 / name
+                    :poss (c6-6 / person
+                                :name (c6-4 / name
+                                            :op1 "Jesus"))))
+
+# ::snt Amn,
+# ::tokens ["Amn", ","]
+# ::lemmas ["Amn", ","]
+(c7-1 / person
+      :name (c7-0 / name
+                  :op1 "Amn"))
+
+# ::snt declare peace and freedom
+# ::tokens ["declare", "peace", "and", "freedom"]
+# ::lemmas ["declare", "peace", "and", "freedom"]
+(c8-3 / declare-02
+      :ARG0 (c8-0 / you)
+      :ARG1 (c8-4 / and
+                  :op1 (c8-2 / peace)
+                  :op2 (c8-1 / free-04))
+      :mode imperative)
+
+# ::snt praying across the pond for the Spirit's peace to fall upon Sydney
+# ::tokens ["praying", "across", "the", "pond", "for", "the", "Spirit", "'s", "peace", "to", "fall", "upon", "Sydney"]
+# ::lemmas ["pray", "across", "the", "pond", "for", "the", "Spirit", "'s", "peace", "to", "fall", "upon", "Sydney"]
+(c9-3 / pray-01
+      :ARG1 (c9-0 / fall-01
+                  :ARG1 (c9-6 / peace
+                              :poss (c9-5 / Spirit))
+                  :ARG4 (c9-4 / city
+                              :name (c9-2 / name
+                                          :op1 "Sydney")))
+      :path (c9-7 / across
+                  :op1 (c9-1 / pond)))
+
+# ::snt My prayers go with yours on the other side of the world
+# ::tokens ["My", "prayers", "go", "with", "yours", "on", "the", "other", "side", "of", "the", "world"]
+# ::lemmas ["my", "prayer", "go", "with", "your", "on", "the", "other", "side", "of", "the", "world"]
+(c10-5 / go-11
+       :ARG1 (c10-8 / thing
+                    :ARG1-of (c10-4 / pray-01
+                                    :ARG0 (c10-3 / i)))
+       :ARG2 (c10-6 / thing
+                    :ARG1-of (c10-9 / pray-01
+                                    :ARG0 (c10-0 / you))
+                    :location (c10-7 / side
+                                     :mod (c10-2 / other)
+                                     :part-of (c10-1 / world))))
+
+# ::snt thank you Joel, I work not far from , I had heaps of phone calls people inquiring about my safety.
+# ::tokens ["thank", "you", "Joel", ",", "I", "work", "not", "far", "from", ",", "I", "had", "heaps", "of", "phone", "calls", "people", "inquiring", "about", "my", "safety", "."]
+# ::lemmas ["thank", "you", "Joel", ",", "i", "work", "not", "far", "from", ",", "i", "have", "heap", "of", "phone", "call", "people", "inquire", "about", "my", "safety", "."]
+(c11-13 / say-01
+        :ARG0 (c11-6 / i)
+        :ARG1 (c11-14 / thank-01
+                      :ARG0 c11-6
+                      :ARG1 (c11-8 / person
+                                   :name (c11-7 / name
+                                                :op1 "Joel")
+                                   :ARG2-of c11-13))
+        :ARG1-of (c11-10 / cause-01
+                         :ARG0 (c11-16 / and
+                                       :op1 (c11-1 / work-01
+                                                   :ARG0 c11-6
+                                                   :location (c11-9 / relative-position
+                                                                    :op1 (c11-2 / far
+                                                                                :polarity -)))
+                                       :op2 (c11-0 / have-03
+                                                   :ARG0 c11-6
+                                                   :ARG1 (c11-15 / person
+                                                                 :quant (c11-3 / heap)
+                                                                 :ARG1-of (c11-11 / call-02
+                                                                                  :medium (c11-4 / phone)
+                                                                                  :ARG0-of (c11-12 / inquire-01
+                                                                                                   :ARG1 (c11-5 / safe-01
+                                                                                                                :ARG1 c11-6))))))))
+
+# ::snt praying!!
+# ::tokens ["praying", "!", "!"]
+# ::lemmas ["pray", "!", "!"]
+(c12-0 / pray-01)

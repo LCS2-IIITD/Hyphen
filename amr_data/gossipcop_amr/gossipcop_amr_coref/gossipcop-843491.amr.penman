@@ -1,0 +1,57 @@
+# ::snt ebo ! What is happening?
+# ::tokens ["ebo", "!", "What", "is", "happening", "?"]
+# ::lemmas ["ebo", "!", "what", "be", "happen", "?"]
+(c1-2 / multi-sentence
+      :snt1 (c1-1 / emo
+                  :mode expressive)
+      :snt2 (c1-0 / event
+                  :mod (c1-3 / amr-unknown)))
+
+# ::snt Squad
+# ::tokens ["Squad"]
+# ::lemmas ["Squad"]
+(c2-0 / squad)
+
+# ::snt A princesa continua gata e... muito gostosa!
+# ::tokens ["A", "princesa", "continua", "gata", "e", "...", "muito", "gostosa", "!"]
+# ::lemmas ["a", "princesa", "continua", "gata", "e", "...", "muito", "gostosa", "!"]
+(c3-4 / and
+      :op1 (c3-5 / gata-00
+                 :ARG1 (c3-2 / person
+                             :mod (c3-1 / princess))
+                 :mode expressive)
+      :op2 (c3-0 / muito
+                 :op3 (c3-3 / gostosa)
+                 :mode expressive))
+
+# ::snt THE QUEEN NEEDS TO LIGHTEN UP AND COME DOWN OFF HER HIGH HORSE. SHE SHOULD TRY A COLD BEER, IT MAY DO HER A LOT OF GOOD!
+# ::tokens ["THE", "QUEEN", "NEEDS", "TO", "LIGHTEN", "UP", "AND", "COME", "DOWN", "OFF", "HER", "HIGH", "HORSE", ".", "SHE", "SHOULD", "TRY", "A", "COLD", "BEER", ",", "IT", "MAY", "DO", "HER", "A", "LOT", "OF", "GOOD", "!"]
+# ::lemmas ["the", "queen", "need", "to", "LIGHTEN", "up", "and", "come", "down", "off", "her", "high", "horse", ".", "SHE", "should", "try", "a", "COLD", "beer", ",", "IT", "may", "do", "she", "a", "LOT", "of", "good", "!"]
+(c4-11 / multi-sentence
+       :snt1 (c4-16 / need-01
+                    :ARG0 (c4-18 / person
+                                 :name (c4-13 / name
+                                              :op1 "QUEEN"))
+                    :ARG1 (c4-6 / and
+                                :op1 (c4-1 / lighten-up-09
+                                           :ARG0 c4-18)
+                                :op2 (c4-14 / come-01
+                                            :ARG1 c4-18
+                                            :ARG4 (c4-2 / off
+                                                        :op1 (c4-15 / floor
+                                                                    :ARG1-of (c4-3 / high-02)
+                                                                    :poss c4-18)))))
+       :snt2 (c4-17 / recommend-01
+                    :ARG1 (c4-5 / try-01
+                                :ARG0 (c4-0 / she)
+                                :ARG1 c4-18
+                                :ARG1-of (c4-19 / have-degree-91
+                                                :ARG2 (c4-10 / old)
+                                                :ARG3 (c4-4 / more))))
+       :ARG1-of (c4-9 / cause-01
+                      :ARG0 (c4-12 / possible-01
+                                   :ARG1 (c4-20 / do-02
+                                                :ARG0 c4-5
+                                                :ARG1 (c4-7 / good-02
+                                                            :quant (c4-8 / lot))
+                                                :ARG2 c4-0))))

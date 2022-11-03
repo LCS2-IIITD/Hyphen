@@ -1,0 +1,53 @@
+# ::subgraphs [["c1-7", "c1-2", "c1-8", "c1-4", "c1-1", "c1-6", "c1-5", "c1-3", "c1-0"], ["c2-5", "c2-3", "c2-6", "c2-0", "c2-2", "c2-1", "c2-4"], ["c3-2", "c3-1", "c3-0"], ["c4-8", "c4-7", "c4-9", "c4-3", "c4-4", "c4-6", "c4-10", "c4-0", "c4-5", "c4-13", "c4-11", "c4-12", "c4-1", "c4-2"]]
+(d / dummy
+   :COMMENT (c1-7 / plan
+                  :ARG0 (c1-2 / company
+                              :name (c1-8 / name
+                                          :op1 "Comcast")
+                              :COREF c4-12)
+                  :ARG1 (c1-4 / offer
+                              :ARG0 c1-2
+                              :ARG1 (c1-1 / internet
+                                          :mod (c1-6 / gigabit)
+                                          :COREF c4-9)
+                              :location (c1-5 / nationwide)
+                              :time (c1-3 / by
+                                          :op1 (c1-0 / date
+                                                     :year 2018))))
+   :COMMENT (c2-5 / price
+                  :ARG2 (c2-3 / rate-entity
+                              :ARG1 (c2-6 / monetary
+                                          :unit (c2-0 / dollar)
+                                          :quant 100000.00)
+                              :ARG2 (c2-2 / temporal
+                                          :unit (c2-1 / month
+                                                      :SAME c4-10
+                                                      :SAME c3-1)
+                                          :quant 1
+                                          :SAME c4-6
+                                          :SAME c3-2)
+                              :SAME c4-4)
+                  :ARG1-of (c2-4 / low))
+   :COMMENT (c3-2 / temporal
+                  :unit (c3-1 / month)
+                  :ord (c3-0 / ordinal
+                             :value 1)
+                  :quant 3)
+   :COMMENT (c4-8 / begin
+                  :ARG1 (c4-7 / rise
+                              :ARG1 (c4-9 / it)
+                              :ARG1-of (c4-3 / quiet)
+                              :frequency (c4-4 / rate-entity
+                                               :ARG3 (c4-6 / temporal
+                                                           :unit (c4-10 / month)
+                                                           :quant 1)))
+                  :time (c4-0 / after)
+                  :time (c4-5 / until
+                              :op1 (c4-13 / and
+                                          :op1 (c4-11 / notice
+                                                      :ARG0 (c4-12 / you)
+                                                      :ARG1 c4-7
+                                                      :time (c4-1 / final))
+                                          :op2 (c4-2 / call
+                                                     :ARG0 c4-12
+                                                     :ARG1 c4-7)))))

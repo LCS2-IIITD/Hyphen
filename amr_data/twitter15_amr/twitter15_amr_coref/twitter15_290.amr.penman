@@ -1,0 +1,95 @@
+# ::snt I believe he has a year old son
+# ::tokens ["I", "believe", "he", "has", "a", "year", "old", "son"]
+# ::lemmas ["i", "believe", "he", "have", "a", "year", "old", "son"]
+(c1-3 / believe-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-6 / have-rel-role-91
+                  :ARG0 (c1-2 / he)
+                  :ARG1 (c1-4 / person
+                              :age (c1-5 / temporal-quantity
+                                         :unit (c1-7 / year)
+                                         :quant 1))
+                  :ARG2 (c1-0 / son)))
+
+# ::snt prayers sent
+# ::tokens ["prayers", "sent"]
+# ::lemmas ["prayer", "send"]
+(c2-0 / thing
+      :ARG1-of (c2-2 / pray-01)
+      :ARG1-of (c2-1 / send-01))
+
+# ::snt no. honour guards are for show
+# ::tokens ["no", ".", "honour", "guards", "are", "for", "show"]
+# ::lemmas ["no", ".", "honour", "guard", "be", "for", "show"]
+(c3-3 / have-purpose-91
+      :ARG1 (c3-2 / person
+                  :ARG0-of (c3-4 / guard-01
+                                 :ARG1 (c3-1 / honor)))
+      :ARG2 (c3-0 / show-04
+                  :ARG0 c3-2)
+      :polarity -)
+
+# ::snt May God give comfort from their grief to his family and may he rest in peace
+# ::tokens ["May", "God", "give", "comfort", "from", "their", "grief", "to", "his", "family", "and", "may", "he", "rest", "in", "peace"]
+# ::lemmas ["may", "God", "give", "comfort", "from", "their", "grief", "to", "his", "family", "and", "may", "he", "rest", "in", "peace"]
+(c4-10 / and
+       :op1 (c4-0 / wish-01
+                  :ARG1 (c4-13 / give-01
+                               :ARG0 (c4-2 / person
+                                           :name (c4-5 / name
+                                                       :op1 "God"))
+                               :ARG1 (c4-6 / comfort)
+                               :ARG2 (c4-12 / person
+                                            :ARG0-of (c4-9 / have-rel-role-91
+                                                           :ARG1 (c4-1 / he)
+                                                           :ARG2 (c4-11 / family)))
+                               :source (c4-4 / grief
+                                             :poss c4-12))
+                  :ARG2 c4-12)
+       :op2 (c4-7 / wish-01
+                  :ARG1 (c4-3 / rest-01
+                              :ARG1 c4-1
+                              :manner (c4-8 / peace))
+                  :ARG2 c4-2))
+
+# ::snt Rest in peace Cpl. Nathan! These thugs will never win with their hate and insanity!
+# ::tokens ["Rest", "in", "peace", "Cpl", ".", "Nathan", "!", "These", "thugs", "will", "never", "win", "with", "their", "hate", "and", "insanity", "!"]
+# ::lemmas ["rest", "in", "peace", "Cpl", ".", "Nathan", "!", "these", "thug", "will", "never", "win", "with", "their", "hate", "and", "insanity", "!"]
+(c5-6 / multi-sentence
+      :snt1 (c5-9 / rest-01
+                  :ARG1 (c5-2 / person
+                              :name (c5-7 / name
+                                          :op1 "Cpl."
+                                          :op2 "Nathan"))
+                  :manner (c5-11 / peace)
+                  :mode imperative)
+      :snt2 (c5-0 / win-01
+                  :ARG0 (c5-3 / thug
+                              :mod (c5-4 / this))
+                  :time (c5-10 / ever)
+                  :manner (c5-5 / and
+                                :op1 (c5-8 / hate-01
+                                           :ARG0 c5-3)
+                                :op2 (c5-1 / insanity
+                                           :poss c5-3))
+                  :polarity -))
+
+# ::snt my deepest condolences to Cpl Nathan Cirillo family rest in peace
+# ::tokens ["my", "deepest", "condolences", "to", "Cpl", "Nathan", "Cirillo", "family", "rest", "in", "peace"]
+# ::lemmas ["my", "deep", "condolence", "to", "Cpl", "Nathan", "Cirillo", "family", "rest", "in", "peace"]
+(c6-8 / rest-01
+      :ARG1 (c6-5 / condolence
+                  :poss (c6-1 / i)
+                  :beneficiary (c6-11 / family
+                                      :ARG1-of (c6-7 / have-org-role-91
+                                                     :ARG0 (c6-3 / person
+                                                                 :name (c6-6 / name
+                                                                             :op1 "Nathan"
+                                                                             :op2 "Cirillo")
+                                                                 :ARG0-of c6-7
+                                                                 :ARG2 (c6-0 / soldier)))))
+      :ARG1-of (c6-2 / have-degree-91
+                     :ARG2 (c6-9 / deep-02
+                                 :ARG1 c6-5)
+                     :ARG3 (c6-4 / most))
+      :manner (c6-10 / peace))

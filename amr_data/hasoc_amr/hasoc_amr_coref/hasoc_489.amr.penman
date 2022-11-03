@@ -1,0 +1,73 @@
+# ::snt desh aise logo se khatre mei zaroor h
+# ::tokens ["desh", "aise", "logo", "se", "khatre", "mei", "zaroor", "h"]
+# ::lemmas ["desh", "aise", "logo", "se", "khatre", "mei", "zaroor", "h"]
+(c1-1 / and
+      :op1 (c1-3 / logo
+                 :mod (c1-0 / desh
+                            :mode expressive))
+      :op2 (c1-4 / khatre
+                 :mode expressive)
+      :op3 (c1-2 / zaroor
+                 :mode expressive))
+
+# ::snt bhenchod china yaha kaha se agaya
+# ::tokens ["bhenchod", "china", "yaha", "kaha", "se", "agaya"]
+# ::lemmas ["bhenchod", "china", "yaha", "kaha", "se", "agaya"]
+(c2-0 / and
+      :op1 (c2-3 / bhenchod
+                 :mode expressive)
+      :op2 (c2-2 / country
+                 :name (c2-4 / name
+                             :op1 "China"))
+      :op3 (c2-1 / kaha
+                 :mode expressive)
+      :op4 (c2-5 / agaya
+                 :mode expressive))
+
+# ::snt Well china is also an atheist majority country, they condemn religion, you aren't allowed to become a government officials if you follow a religion. I'm up for it, but are you
+# ::tokens ["Well", "china", "is", "also", "an", "atheist", "majority", "country", ",", "they", "condemn", "religion", ",", "you", "are", "n't", "allowed", "to", "become", "a", "government", "officials", "if", "you", "follow", "a", "religion", ".", "I", "'m", "up", "for", "it", ",", "but", "are", "you"]
+# ::lemmas ["well", "china", "be", "also", "an", "atheist", "majority", "country", ",", "they", "condemn", "religion", ",", "you", "be", "not", "allow", "to", "become", "a", "government", "official", "if", "you", "follow", "a", "religion", ".", "i", "be", "up", "for", "it", ",", "but", "be", "you"]
+(c3-10 / multi-sentence
+       :snt1 (c3-3 / country
+                   :mod (c3-17 / atheist)
+                   :mod (c3-19 / majority)
+                   :domain (c3-0 / country
+                                 :name (c3-11 / name
+                                              :op1 "China"))
+                   :mod (c3-12 / also))
+       :snt2 (c3-4 / condemn-01
+                   :ARG0 (c3-7 / they)
+                   :ARG1 (c3-8 / religion))
+       :snt3 (c3-1 / allow-01
+                   :ARG1 (c3-22 / become-01
+                                :ARG1 (c3-16 / you)
+                                :ARG2 (c3-23 / person
+                                             :ARG0-of (c3-20 / have-org-role-91
+                                                             :ARG1 (c3-9 / government-organization
+                                                                         :ARG0-of (c3-15 / govern-01))
+                                                             :ARG2 (c3-6 / official)))
+                                :condition (c3-18 / follow-02
+                                                  :ARG0 c3-16
+                                                  :ARG1 (c3-5 / religion)))
+                   :polarity -)
+       :snt4 (c3-14 / contrast-01
+                    :ARG1 (c3-21 / up-03
+                                 :ARG1 (c3-2 / i)
+                                 :ARG2 (c3-13 / it))
+                    :ARG2 c3-16))
+
+# ::snt China doesn't give importance to religion. Will you do the same?
+# ::tokens ["China", "does", "n't", "give", "importance", "to", "religion", ".", "Will", "you", "do", "the", "same", "?"]
+# ::lemmas ["China", "do", "not", "give", "importance", "to", "religion", ".", "will", "you", "do", "the", "same", "?"]
+(c4-7 / multi-sentence
+      :snt1 (c4-6 / important-01
+                  :ARG1 (c4-3 / country
+                              :name (c4-8 / name
+                                          :op1 "China"))
+                  :ARG2 (c4-5 / religion)
+                  :polarity -)
+      :snt2 (c4-0 / do-02
+                  :ARG0 (c4-9 / you)
+                  :ARG1 (c4-4 / thing
+                              :ARG1-of (c4-1 / same-01))
+                  :polarity (c4-2 / amr-unknown)))

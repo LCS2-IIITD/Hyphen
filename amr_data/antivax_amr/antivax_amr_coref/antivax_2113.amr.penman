@@ -1,0 +1,174 @@
+# ::snt listen to a doctor about spike proteins
+# ::tokens ["listen", "to", "a", "doctor", "about", "spike", "proteins"]
+# ::lemmas ["listen", "to", "a", "doctor", "about", "spike", "protein"]
+(c1-2 / listen-01
+      :ARG0 (c1-4 / you)
+      :ARG1 (c1-0 / doctor)
+      :topic (c1-3 / protein
+                   :ARG1-of (c1-1 / spike-04))
+      :mode imperative)
+
+# ::snt It alters you body's natural functions.
+# ::tokens ["It", "alters", "you", "body", "'s", "natural", "functions", "."]
+# ::lemmas ["it", "alter", "you", "body", "'s", "natural", "function", "."]
+(c2-0 / alter-01
+      :ARG0 (c2-3 / it)
+      :ARG1 (c2-1 / function-01
+                  :ARG0 (c2-2 / body
+                              :poss (c2-5 / you))
+                  :ARG1-of (c2-4 / natural-02)))
+
+# ::snt WOW KEEP POSTING. IS WHERE THE TRUTH IS.
+# ::tokens ["WOW", "KEEP", "POSTING", ".", "IS", "WHERE", "THE", "TRUTH", "IS", "."]
+# ::lemmas ["WOW", "keep", "posting", ".", "be", "where", "the", "truth", "be", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-4 / keep-02
+                  :ARG0 (c3-5 / you)
+                  :ARG1 (c3-2 / post-01
+                              :ARG0 c3-5)
+                  :mode imperative)
+      :snt2 (c3-1 / thing
+                  :location-of (c3-0 / true-01)))
+
+# ::snt I had Covid over a year ago. According to NY Blood bank and my physician, I have T cell memory and antibodies. Why does CDC tell me to get vaccinated anyway. Its insane
+# ::tokens ["I", "had", "Covid", "over", "a", "year", "ago", ".", "According", "to", "NY", "Blood", "bank", "and", "my", "physician", ",", "I", "have", "T", "cell", "memory", "and", "antibodies", ".", "Why", "does", "CDC", "tell", "me", "to", "get", "vaccinated", "anyway", ".", "Its", "insane"]
+# ::lemmas ["i", "have", "Covid", "over", "a", "year", "ago", ".", "accord", "to", "NY", "Blood", "bank", "and", "my", "physician", ",", "i", "have", "t", "cell", "memory", "and", "antibody", ".", "why", "do", "CDC", "tell", "i", "to", "get", "vaccinate", "anyway", ".", "its", "insane"]
+(c4-15 / multi-sentence
+       :snt1 (c4-26 / have-03
+                    :ARG0 (c4-5 / i)
+                    :ARG1 (c4-31 / product
+                                 :name (c4-16 / name
+                                              :op1 "Covid"))
+                    :time (c4-30 / before
+                                 :op1 (c4-3 / now)
+                                 :quant (c4-11 / over
+                                               :op1 (c4-12 / temporal-quantity
+                                                           :unit (c4-23 / year)
+                                                           :quant 1))))
+       :snt2 (c4-18 / say-01
+                    :ARG0 (c4-24 / and
+                                 :op1 (c4-27 / organization
+                                             :name (c4-22 / name
+                                                          :op1 "NY"
+                                                          :op2 "Blood"
+                                                          :op3 "Bank"))
+                                 :op2 (c4-29 / person
+                                             :ARG0-of (c4-4 / have-rel-role-91
+                                                            :ARG1 c4-5
+                                                            :ARG2 (c4-19 / physician))))
+                    :ARG1 (c4-6 / have-03
+                                :ARG0 (c4-20 / i)
+                                :ARG1 (c4-17 / and
+                                             :op1 (c4-25 / memory
+                                                         :mod (c4-8 / cell
+                                                                    :name (c4-7 / name
+                                                                                :op1 "T")))
+                                             :op2 (c4-1 / antibody))))
+       :snt3 (c4-0 / cause-01
+                   :ARG0 (c4-32 / amr-unknown)
+                   :ARG1 (c4-9 / tell-01
+                               :ARG0 (c4-14 / government-organization
+                                            :name (c4-13 / name
+                                                         :op1 "CDC"))
+                               :ARG1 (c4-10 / vaccinate-01
+                                            :ARG1 c4-20
+                                            :mod (c4-2 / anyway))
+                               :ARG2 c4-20))
+       :snt4 (c4-21 / insane
+                    :domain (c4-28 / it)))
+
+# ::snt And its irreversible, can't sue pharma, hack on your natural immunity, leads to possible ADE, still can get Covid-19, still transmit , keep masks on, social distance, not effective against variants, auto immune issues potentially, test stage, not fda approved, gene therapy.
+# ::tokens ["And", "its", "irreversible", ",", "ca", "n't", "sue", "pharma", ",", "hack", "on", "your", "natural", "immunity", ",", "leads", "to", "possible", "ADE", ",", "still", "can", "get", "Covid-19", ",", "still", "transmit", ",", "keep", "masks", "on", ",", "social", "distance", ",", "not", "effective", "against", "variants", ",", "auto", "immune", "issues", "potentially", ",", "test", "stage", ",", "not", "fda", "approved", ",", "gene", "therapy", "."]
+# ::lemmas ["and", "its", "irreversible", ",", "can", "not", "sue", "pharma", ",", "hack", "on", "your", "natural", "immunity", ",", "lead", "to", "possible", "ADE", ",", "still", "can", "get", "Covid-19", ",", "still", "transmit", ",", "keep", "mask", "on", ",", "social", "distance", ",", "not", "effective", "against", "variant", ",", "auto", "immune", "issue", "potentially", ",", "test", "stage", ",", "not", "fda", "approve", ",", "gene", "therapy", "."]
+(c5-27 / and
+       :op2 (c5-16 / and
+                   :op1 (c5-32 / possible-01
+                               :ARG1 (c5-18 / sue-02
+                                            :ARG1 (c5-8 / company
+                                                        :name (c5-15 / name
+                                                                     :op1 "Pharma")))
+                               :polarity -)
+                   :op2 (c5-28 / hack-04
+                               :ARG1 (c5-6 / immunity
+                                           :ARG1-of (c5-5 / natural-03)
+                                           :poss (c5-25 / you)))
+                   :op3 (c5-30 / lead-03
+                               :ARG2 (c5-0 / disease
+                                           :name (c5-23 / name
+                                                        :op1 "ADE")
+                                           :ARG1-of (c5-29 / possible-01)))
+                   :op4 (c5-20 / possible-01
+                               :ARG1 (c5-1 / and
+                                           :op1 (c5-13 / get-01
+                                                       :ARG1 (c5-19 / product
+                                                                    :name (c5-7 / name
+                                                                                :op1 "Covid-19")))
+                                           :op2 (c5-11 / transmit-01
+                                                       :ARG1 c5-19)
+                                           :op3 (c5-33 / keep-on-08
+                                                       :ARG1 (c5-14 / mask))
+                                           :op4 (c5-24 / distance
+                                                       :mod (c5-31 / social))
+                                           :op5 (c5-17 / effective-04
+                                                       :ARG0 c5-19
+                                                       :ARG1 (c5-10 / variant)
+                                                       :polarity -)
+                                           :op6 (c5-21 / issue-02
+                                                       :ARG0 (c5-22 / immune-02
+                                                                    :mod (c5-34 / auto))
+                                                       :mod (c5-2 / potential))
+                                           :op7 (c5-4 / approve-01
+                                                      :ARG0 (c5-26 / government-organization
+                                                                   :name (c5-12 / name
+                                                                                :op1 "FDA"))
+                                                      :ARG1 (c5-9 / therapy
+                                                                  :mod (c5-3 / gene))
+                                                      :polarity -)))))
+
+# ::snt There you have it. Vote .
+# ::tokens ["There", "you", "have", "it", ".", "Vote", "."]
+# ::lemmas ["there", "you", "have", "it", ".", "vote", "."]
+(c7-4 / multi-sentence
+      :snt1 (c7-0 / have-03
+                  :ARG0 (c7-5 / you)
+                  :ARG1 (c7-3 / it)
+                  :location (c7-2 / there))
+      :snt2 (c7-1 / vote-01
+                  :ARG0 (c7-6 / you)
+                  :mode imperative))
+
+# ::snt And they keep promoting it as safe. Yet we are only in the very early human trials! It will be years before enough data is in to prove its effectiveness and safety!
+# ::tokens ["And", "they", "keep", "promoting", "it", "as", "safe", ".", "Yet", "we", "are", "only", "in", "the", "very", "early", "human", "trials", "!", "It", "will", "be", "years", "before", "enough", "data", "is", "in", "to", "prove", "its", "effectiveness", "and", "safety", "!"]
+# ::lemmas ["and", "they", "keep", "promote", "it", "as", "safe", ".", "yet", "we", "be", "only", "in", "the", "very", "early", "human", "trial", "!", "it", "will", "be", "years", "before", "enough", "datum", "be", "in", "to", "prove", "its", "effectiveness", "and", "safety", "!"]
+(c8-10 / multi-sentence
+       :snt1 (c8-18 / and
+                    :op2 (c8-26 / keep-02
+                                :ARG0 (c8-9 / they)
+                                :ARG1 (c8-25 / promote-02
+                                             :ARG0 c8-9
+                                             :ARG1 (c8-3 / it)
+                                             :ARG2 (c8-14 / safe-01
+                                                          :ARG0 c8-3))))
+       :snt2 (c8-20 / have-concession-91
+                    :ARG1 (c8-23 / be-located-at-91
+                                 :ARG1 (c8-5 / we)
+                                 :ARG2 (c8-6 / try-02
+                                             :ARG1 (c8-2 / human)
+                                             :mod (c8-13 / early
+                                                         :degree (c8-7 / very)))
+                                 :mod (c8-8 / only))
+                    :ARG2 (c8-17 / be-temporally-at-91
+                                 :ARG1 (c8-0 / data
+                                             :ARG1-of (c8-4 / have-quant-91
+                                                            :ARG3 (c8-21 / enough)
+                                                            :ARG6 (c8-22 / prove-01
+                                                                         :ARG0 c8-0
+                                                                         :ARG1 (c8-12 / and
+                                                                                      :op1 (c8-1 / effective-04
+                                                                                                 :ARG0 (c8-15 / it))
+                                                                                      :op2 (c8-24 / safe-01
+                                                                                                  :ARG0 c8-15)))))
+                                 :ARG2 (c8-19 / multiple
+                                              :op1 (c8-11 / temporal-quantity
+                                                          :unit (c8-16 / year)
+                                                          :quant 1)))))

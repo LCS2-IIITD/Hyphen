@@ -1,0 +1,337 @@
+# ::snt psycho
+# ::tokens ["psycho"]
+# ::lemmas ["psycho"]
+(c1-0 / psycho)
+
+# ::snt : Sydney hostage-taker has reportedly demanded an ISIS flag surprise there. When will the siege end?
+# ::tokens [":", "Sydney", "hostage", "-", "taker", "has", "reportedly", "demanded", "an", "ISIS", "flag", "surprise", "there", ".", "When", "will", "the", "siege", "end", "?"]
+# ::lemmas [":", "Sydney", "hostage", "-", "taker", "have", "reportedly", "demand", "an", "ISIS", "flag", "surprise", "there", ".", "when", "will", "the", "siege", "end", "?"]
+(c2-2 / multi-sentence
+      :snt1 (c2-8 / demand-01
+                  :ARG0 (c2-7 / person
+                              :ARG0-of (c2-14 / take-01
+                                              :ARG1 (c2-0 / hostage))
+                              :location (c2-9 / city
+                                              :name (c2-5 / name
+                                                          :op1 "Sydney")))
+                  :ARG1 (c2-13 / surprise-01
+                               :ARG0 (c2-1 / flag
+                                           :mod (c2-10 / criminal-organization
+                                                       :name (c2-6 / name
+                                                                   :op1 "Islamic"
+                                                                   :op2 "organization"))))
+                  :ARG1-of (c2-11 / report-01)
+                  :location (c2-12 / there))
+      :snt2 (c2-3 / end-01
+                  :ARG1 (c2-4 / siege-01)
+                  :time (c2-15 / amr-unknown)))
+
+# ::snt It is close to hours now and still the Sydney hostage taker has not made his demands .....
+# ::tokens ["It", "is", "close", "to", "hours", "now", "and", "still", "the", "Sydney", "hostage", "taker", "has", "not", "made", "his", "demands", "....."]
+# ::lemmas ["it", "be", "close", "to", "hours", "now", "and", "still", "the", "Sydney", "hostage", "taker", "have", "not", "make", "his", "demand", "....."]
+(c3-10 / and
+       :op1 (c3-6 / close-to
+                  :op1 (c3-0 / hour)
+                  :time (c3-2 / now))
+       :op2 (c3-5 / demand-01
+                  :ARG0 (c3-4 / person
+                              :ARG0-of (c3-9 / take-01
+                                             :ARG1 (c3-1 / hostage))
+                              :mod (c3-7 / city
+                                         :name (c3-3 / name
+                                                     :op1 "Sydney")))
+                  :mod (c3-8 / still)
+                  :polarity -))
+
+# ::snt Really surprising that there no word yet from you condemning the fact that one hostage is an INDIAN
+# ::tokens ["Really", "surprising", "that", "there", "no", "word", "yet", "from", "you", "condemning", "the", "fact", "that", "one", "hostage", "is", "an", "INDIAN"]
+# ::lemmas ["really", "surprising", "that", "there", "no", "word", "yet", "from", "you", "condemn", "the", "fact", "that", "one", "hostage", "be", "an", "INDIAN"]
+(c4-9 / surprise-01
+      :ARG0 (c4-1 / word-01
+                  :ARG0 (c4-2 / you)
+                  :ARG1 (c4-6 / condemn-01
+                              :ARG0 c4-2
+                              :ARG1 (c4-4 / person
+                                          :mod (c4-5 / country
+                                                     :name (c4-3 / name
+                                                                 :op1 "India"))
+                                          :domain (c4-0 / hostage
+                                                        :quant 1)))
+                  :time (c4-8 / yet)
+                  :polarity -)
+      :degree (c4-7 / really))
+
+# ::snt true
+# ::tokens ["true"]
+# ::lemmas ["true"]
+(c5-0 / true-01)
+
+# ::snt theres your flag - now go home
+# ::tokens ["there", "s", "your", "flag", "-", "now", "go", "home"]
+# ::lemmas ["there", "s", "your", "flag", "-", "now", "go", "home"]
+(c6-3 / multi-sentence
+      :snt1 (c6-2 / flag
+                  :polarity (c6-7 / amr-unknown)
+                  :poss (c6-1 / you))
+      :snt2 (c6-5 / go-02
+                  :ARG0 (c6-6 / you)
+                  :ARG4 (c6-0 / home)
+                  :time (c6-4 / now)
+                  :mode imperative))
+
+# ::snt no isis flags available as they're being used to clean dog shit off the streets.
+# ::tokens ["no", "isis", "flags", "available", "as", "they", "'re", "being", "used", "to", "clean", "dog", "shit", "off", "the", "streets", "."]
+# ::lemmas ["no", "isis", "flag", "available", "as", "they", "be", "be", "use", "to", "clean", "dog", "shit", "off", "the", "street", "."]
+(c7-8 / available-02
+      :ARG2 (c7-0 / flag
+                  :mod (c7-3 / isis))
+      :ARG1-of (c7-5 / cause-01
+                     :ARG0 (c7-1 / use-01
+                                 :ARG1 c7-0
+                                 :ARG2 (c7-4 / clean-off-04
+                                             :ARG1 (c7-7 / shit
+                                                         :topic (c7-6 / dog))
+                                             :location (c7-2 / street)))))
+
+# ::snt : Sydney hostage-taker has reportedly demanded an ISIS flag Whutt
+# ::tokens [":", "Sydney", "hostage", "-", "taker", "has", "reportedly", "demanded", "an", "ISIS", "flag", "Whutt"]
+# ::lemmas [":", "Sydney", "hostage", "-", "taker", "have", "reportedly", "demand", "an", "ISIS", "flag", "Whutt"]
+(c8-6 / demand-01
+      :ARG0 (c8-5 / person
+                  :ARG0-of (c8-10 / take-01
+                                  :ARG1 (c8-0 / hostage))
+                  :location (c8-7 / city
+                                  :name (c8-3 / name
+                                              :op1 "Sydney")))
+      :ARG1 (c8-1 / flag
+                  :mod (c8-2 / organization
+                             :name (c8-4 / name
+                                         :op1 "Islamic"
+                                         :op2 "Space"))
+                  :mod c8-5
+                  :name (c8-8 / name
+                              :op1 "Whutt"))
+      :ARG1-of (c8-9 / report-01))
+
+# ::snt he seems crazy ! Why would any terrorist ask for a flag !
+# ::tokens ["he", "seems", "crazy", "!", "Why", "would", "any", "terrorist", "ask", "for", "a", "flag", "!"]
+# ::lemmas ["he", "seem", "crazy", "!", "why", "would", "any", "terrorist", "ask", "for", "a", "flag", "!"]
+(c9-2 / multi-sentence
+      :snt1 (c9-7 / seem-01
+                  :ARG1 (c9-6 / crazy-03
+                              :ARG1 (c9-0 / he)))
+      :snt2 (c9-9 / ask-02
+                  :ARG0 (c9-8 / terrorist
+                              :mod (c9-3 / any))
+                  :ARG1 (c9-1 / flag)
+                  :ARG1-of (c9-5 / cause-01
+                                 :ARG0 (c9-4 / amr-unknown))))
+
+# ::snt NM - bloody sends electric waves to girls for physical relationships despite having own wife, extrema characterless
+# ::tokens ["NM", "-", "bloody", "sends", "electric", "waves", "to", "girls", "for", "physical", "relationships", "despite", "having", "own", "wife", ",", "extrema", "characterless"]
+# ::lemmas ["NM", "-", "bloody", "send", "electric", "wave", "to", "girl", "for", "physical", "relationship", "despite", "have", "own", "wife", ",", "extrema", "characterless"]
+(c10-12 / send-01
+        :ARG0 (c10-8 / person
+                     :name (c10-7 / name
+                                  :op1 "NM")
+                     :mod (c10-3 / bloody))
+        :ARG1 (c10-1 / wave
+                     :mod (c10-5 / electric))
+        :ARG2 (c10-11 / girl)
+        :purpose (c10-9 / relation-03
+                        :ARG0 c10-11
+                        :ARG1 (c10-13 / physical))
+        :concession (c10-0 / have-03
+                           :ARG0 c10-11
+                           :ARG1 (c10-2 / person
+                                        :ARG0-of (c10-14 / have-rel-role-91
+                                                         :ARG1 c10-11
+                                                         :ARG2 (c10-6 / wife))
+                                        :ARG0-of (c10-4 / extrema-01
+                                                        :ARG1 (c10-10 / character)
+                                                        :polarity -))))
+
+# ::snt why home...go to jail hell
+# ::tokens ["why", "home", "...", "go", "to", "jail", "hell"]
+# ::lemmas ["why", "home", "...", "go", "to", "jail", "hell"]
+(c11-9 / and
+       :op1 (c11-5 / cause-01
+                   :ARG0 (c11-2 / amr-unknown)
+                   :ARG1 (c11-0 / home))
+       :op2 (c11-4 / cause-01
+                   :ARG0 (c11-3 / amr-unknown)
+                   :ARG1 (c11-6 / go-02
+                                :ARG4 (c11-1 / jail)
+                                :ARG1-of (c11-7 / cause-01
+                                                :ARG0 (c11-8 / amr-unknown)))))
+
+# ::snt Sending positive energy to the people in Aus : Sydney hostage-taker has reportedly demanded an ISIS flag
+# ::tokens ["Sending", "positive", "energy", "to", "the", "people", "in", "Aus", ":", "Sydney", "hostage", "-", "taker", "has", "reportedly", "demanded", "an", "ISIS", "flag"]
+# ::lemmas ["send", "positive", "energy", "to", "the", "people", "in", "Aus", ":", "Sydney", "hostage", "-", "taker", "have", "reportedly", "demand", "an", "ISIS", "flag"]
+(c12-16 / and
+        :op1 (c12-12 / send-01
+                     :ARG1 (c12-3 / energy
+                                  :mod (c12-6 / positive))
+                     :ARG2 (c12-15 / person
+                                   :location (c12-8 / country
+                                                    :name (c12-4 / name
+                                                                 :op1 "Australia"))))
+        :op2 (c12-7 / demand-01
+                    :ARG0 (c12-2 / person
+                                 :ARG0-of (c12-14 / take-01
+                                                  :ARG1 (c12-0 / hostage))
+                                 :location (c12-9 / city
+                                                  :name (c12-5 / name
+                                                               :op1 "Sydney")))
+                    :ARG1 (c12-1 / flag
+                                 :mod (c12-11 / criminal-organization
+                                              :name (c12-10 / name
+                                                            :op1 "Islamic"
+                                                            :op2 "organization")))
+                    :ARG1-of (c12-13 / report-01)))
+
+# ::snt is secular and will stay secular
+# ::tokens ["is", "secular", "and", "will", "stay", "secular"]
+# ::lemmas ["be", "secular", "and", "will", "stay", "secular"]
+(c13-3 / and
+       :op1 (c13-0 / secular
+                   :domain (c13-2 / it))
+       :op2 (c13-1 / stay-01
+                   :ARG1 c13-2
+                   :ARG3 c13-0))
+
+# ::snt idiots forgot their flag at home
+# ::tokens ["idiots", "forgot", "their", "flag", "at", "home"]
+# ::lemmas ["idiot", "forget", "their", "flag", "at", "home"]
+(c14-1 / forget-01
+       :ARG0 (c14-2 / idiot)
+       :ARG1 (c14-3 / flag
+                    :poss c14-2)
+       :location (c14-0 / home))
+
+# ::snt coat it in poison st
+# ::tokens ["coat", "it", "in", "poison", "st"]
+# ::lemmas ["coat", "it", "in", "poison", "st"]
+(c15-2 / coat-01
+       :ARG0 (c15-0 / you)
+       :ARG1 (c15-3 / it)
+       :ARG2 (c15-1 / poison-01)
+       :mode imperative)
+
+# ::snt : Sydney hostage-taker has reportedly demanded an ISIS flag demands: Isis flag and talk to PM
+# ::tokens [":", "Sydney", "hostage", "-", "taker", "has", "reportedly", "demanded", "an", "ISIS", "flag", "demands", ":", "Isis", "flag", "and", "talk", "to", "PM"]
+# ::lemmas [":", "Sydney", "hostage", "-", "taker", "have", "reportedly", "demand", "an", "ISIS", "flag", "demand", ":", "isis", "flag", "and", "talk", "to", "pm"]
+(c16-5 / demand-01
+       :ARG0 (c16-4 / person
+                    :ARG0-of (c16-18 / care-01
+                                     :ARG1 (c16-10 / hostage))
+                    :location (c16-6 / city
+                                     :name (c16-13 / name
+                                                   :op1 "Sydney")))
+       :ARG1 (c16-9 / and
+                    :op1 (c16-0 / demand-01
+                                :ARG0 (c16-11 / flag
+                                              :mod (c16-14 / religious-group
+                                                           :name (c16-17 / name
+                                                                         :op1 "Islamic")))
+                                :ARG1 (c16-16 / flag
+                                              :mod (c16-15 / country
+                                                           :name (c16-3 / name
+                                                                        :op1 "Sydney"))))
+                    :op2 (c16-19 / talk-01
+                                 :ARG0 c16-4
+                                 :ARG2 (c16-7 / person
+                                              :ARG0-of (c16-8 / have-org-role-91
+                                                              :ARG2 (c16-1 / minister
+                                                                           :mod (c16-12 / prime))))))
+       :ARG1-of (c16-2 / report-01))
+
+# ::snt this information isn't being reported in Australia so as not to jeopardize nego's, you should remove this post
+# ::tokens ["this", "information", "is", "n't", "being", "reported", "in", "Australia", "so", "as", "not", "to", "jeopardize", "nego", "'s", ",", "you", "should", "remove", "this", "post"]
+# ::lemmas ["this", "information", "be", "not", "be", "report", "in", "Australia", "so", "as", "not", "to", "jeopardize", "nego", "'s", ",", "you", "should", "remove", "this", "post"]
+(c17-9 / report-01
+       :ARG1 (c17-4 / information
+                    :mod (c17-13 / this))
+       :location (c17-10 / country
+                         :name (c17-6 / name
+                                      :op1 "Australia"))
+       :ARG0-of (c17-11 / cause-01
+                        :ARG1 (c17-5 / recommend-01
+                                     :ARG1 (c17-3 / remove-01
+                                                  :ARG0 (c17-1 / you)
+                                                  :ARG1 (c17-12 / thing
+                                                                :ARG1-of (c17-8 / post-01)
+                                                                :mod (c17-7 / this))
+                                                  :purpose (c17-0 / jeopardize-01
+                                                                  :ARG0 c17-4
+                                                                  :ARG1 (c17-2 / environment)
+                                                                  :polarity -))))
+       :polarity -)
+
+# ::snt : Sydney hostage-taker has reportedly demanded an ISIS flag || Terrorism has no religion?!!
+# ::tokens [":", "Sydney", "hostage", "-", "taker", "has", "reportedly", "demanded", "an", "ISIS", "flag", "||", "Terrorism", "has", "no", "religion", "?", "!", "!"]
+# ::lemmas [":", "Sydney", "hostage", "-", "taker", "have", "reportedly", "demand", "an", "ISIS", "flag", "||", "Terrorism", "have", "no", "religion", "?", "!", "!"]
+(c18-2 / multi-sentence
+       :snt1 (c18-8 / demand-01
+                    :ARG0 (c18-7 / person
+                                 :ARG0-of (c18-9 / care-01
+                                                 :ARG1 (c18-0 / hostage))
+                                 :location (c18-10 / city
+                                                   :name (c18-5 / name
+                                                                :op1 "Sydney")))
+                    :ARG1 (c18-1 / flag
+                                 :mod (c18-11 / religious-group
+                                              :name (c18-6 / name
+                                                           :op1 "Islamic")))
+                    :ARG1-of (c18-4 / report-01))
+       :snt2 (c18-3 / religion
+                    :domain (c18-12 / terrorism)
+                    :polarity (c18-13 / amr-unknown)
+                    :polarity -))
+
+# ::snt yeah, like we've just got heaps to spare, just lying around...he couldn't even find one!
+# ::tokens ["yeah", ",", "like", "we", "'ve", "just", "got", "heaps", "to", "spare", ",", "just", "lying", "around", "...", "he", "could", "n't", "even", "find", "one", "!"]
+# ::lemmas ["yeah", ",", "like", "we", "'ve", "just", "get", "heap", "to", "spare", ",", "just", "lie", "around", "...", "he", "could", "not", "even", "find", "one", "!"]
+(c19-14 / and
+        :op1 (c19-11 / resemble-01
+                     :ARG2 (c19-8 / and
+                                  :op1 (c19-12 / spare-01
+                                               :ARG0 (c19-1 / we)
+                                               :ARG1 (c19-0 / heap)
+                                               :mod (c19-2 / just))
+                                  :op2 (c19-3 / lie-07
+                                              :ARG1 c19-1
+                                              :ARG2 (c19-9 / around)
+                                              :mod (c19-13 / just))))
+        :op2 (c19-10 / possible-01
+                     :ARG1 (c19-4 / find-01
+                                  :ARG0 (c19-5 / he)
+                                  :ARG1 c19-0
+                                  :mod (c19-7 / even))
+                     :polarity -)
+        :mod (c19-6 / yeah
+                    :mode expressive))
+
+# ::snt NM - bloody sends electric waves to girls for physical relationships despite having own wife, extrema characterless
+# ::tokens ["NM", "-", "bloody", "sends", "electric", "waves", "to", "girls", "for", "physical", "relationships", "despite", "having", "own", "wife", ",", "extrema", "characterless"]
+# ::lemmas ["NM", "-", "bloody", "send", "electric", "wave", "to", "girl", "for", "physical", "relationship", "despite", "have", "own", "wife", ",", "extrema", "characterless"]
+(c20-12 / send-01
+        :ARG0 (c20-8 / person
+                     :name (c20-7 / name
+                                  :op1 "NM")
+                     :mod (c20-3 / bloody))
+        :ARG1 (c20-1 / wave
+                     :mod (c20-5 / electric))
+        :ARG2 (c20-11 / girl)
+        :purpose (c20-9 / relation-03
+                        :ARG0 c20-11
+                        :ARG1 (c20-13 / physical))
+        :concession (c20-0 / have-03
+                           :ARG0 c20-11
+                           :ARG1 (c20-2 / person
+                                        :ARG0-of (c20-14 / have-rel-role-91
+                                                         :ARG1 c20-11
+                                                         :ARG2 (c20-6 / wife))
+                                        :ARG0-of (c20-4 / extrema-01
+                                                        :ARG1 (c20-10 / character)
+                                                        :polarity -))))

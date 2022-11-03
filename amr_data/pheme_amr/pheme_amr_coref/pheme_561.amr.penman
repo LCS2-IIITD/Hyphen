@@ -1,0 +1,62 @@
+# ::snt WOW
+# ::tokens ["WOW"]
+# ::lemmas ["WOW"]
+(c1-0 / wow
+      :mode expressive)
+
+# ::snt anyone killed so far hope not
+# ::tokens ["anyone", "killed", "so", "far", "hope", "not"]
+# ::lemmas ["anyone", "kill", "so", "far", "hope", "not"]
+(c2-0 / hope-01
+      :ARG0 (c2-4 / anyone
+                  :ARG1-of (c2-1 / kill-01
+                                 :time (c2-2 / so-far)))
+      :ARG1 (c2-3 / thing
+                  :polarity -))
+
+# ::snt Wow This news is late.
+# ::tokens ["Wow", "This", "news", "is", "late", "."]
+# ::lemmas ["wow", "this", "news", "be", "late", "."]
+(c3-2 / late-02
+      :ARG1 (c3-0 / news
+                  :mod (c3-3 / this))
+      :mod (c3-1 / wow
+                 :mode expressive))
+
+# ::snt Aaron Iranian monies who kidnap hostages in Sydney
+# ::tokens ["Aaron", "Iranian", "monies", "who", "kidnap", "hostages", "in", "Sydney"]
+# ::lemmas ["Aaron", "Iranian", "monie", "who", "kidnap", "hostage", "in", "Sydney"]
+(c4-1 / money
+      :source (c4-7 / country
+                    :name (c4-3 / name
+                                :op1 "Iran"))
+      :ARG0-of (c4-10 / kidnap-01
+                      :ARG1 (c4-0 / hostage)
+                      :location (c4-6 / city
+                                      :name (c4-4 / name
+                                                  :op1 "Sydney")))
+      :quant (c4-5 / multiple
+                   :op1 1000000)
+      :ARG2-of (c4-2 / include-91
+                     :ARG1 (c4-8 / person
+                                 :name (c4-9 / name
+                                             :op1 "Aaron"))))
+
+# ::snt VIP paedophile networks 'shut down police investigations which got too close', retired officers claim
+# ::tokens ["VIP", "paedophile", "networks", "'", "shut", "down", "police", "investigations", "which", "got", "too", "close", "'", ",", "retired", "officers", "claim"]
+# ::lemmas ["VIP", "paedophile", "network", "'", "shut", "down", "police", "investigation", "which", "get", "too", "close", "'", ",", "retired", "officer", "claim"]
+(c5-8 / claim-01
+      :ARG0 (c5-6 / person
+                  :ARG0-of (c5-7 / retire-01)
+                  :ARG0-of (c5-0 / have-org-role-91
+                                 :ARG2 (c5-2 / officer)))
+      :ARG1 (c5-10 / shut-down-05
+                   :ARG0 (c5-4 / network
+                               :mod (c5-12 / pedophile)
+                               :mod (c5-5 / virus))
+                   :ARG1 (c5-3 / investigate-01
+                               :ARG0 (c5-1 / police)
+                               :ARG1-of (c5-9 / close-10
+                                              :ARG2-of (c5-13 / have-degree-91
+                                                              :ARG1 c5-3
+                                                              :ARG3 (c5-11 / too))))))

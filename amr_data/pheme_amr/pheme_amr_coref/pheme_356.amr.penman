@@ -1,0 +1,262 @@
+# ::snt DRT, dude! Dead, right, there-yes!
+# ::tokens ["DRT", ",", "dude", "!", "Dead", ",", "right", ",", "there", "-", "yes", "!"]
+# ::lemmas ["DRT", ",", "dude", "!", "dead", ",", "right", ",", "there", "-", "yes", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-7 / say-01
+                  :ARG0 (c1-3 / i)
+                  :ARG1 (c1-5 / person
+                              :name (c1-4 / name
+                                          :op1 "DRT"))
+                  :ARG2 (c1-6 / dude))
+      :snt2 (c1-9 / and
+                  :op1 (c1-1 / die-01
+                             :location (c1-8 / there))
+                  :op2 (c1-0 / yes)))
+
+# ::snt The Louvre or the loo?
+# ::tokens ["The", "Louvre", "or", "the", "loo", "?"]
+# ::lemmas ["the", "Louvre", "or", "the", "loo", "?"]
+(c2-3 / amr-choice
+      :op1 (c2-2 / museum
+                 :name (c2-0 / name
+                             :op1 "Louvre"))
+      :op2 (c2-1 / loo))
+
+# ::snt Also throw in a few male goats and mount them all together in an Orgy for the WORLD TO SEE!
+# ::tokens ["Also", "throw", "in", "a", "few", "male", "goats", "and", "mount", "them", "all", "together", "in", "an", "Orgy", "for", "the", "WORLD", "TO", "SEE", "!"]
+# ::lemmas ["also", "throw", "in", "a", "few", "male", "goat", "and", "mount", "they", "all", "together", "in", "an", "Orgy", "for", "the", "WORLD", "to", "SEE", "!"]
+(c3-11 / and
+       :op1 (c3-10 / throw-in-02
+                   :ARG0 (c3-0 / you)
+                   :ARG1 (c3-7 / goat
+                               :mod (c3-3 / male)
+                               :quant (c3-2 / few))
+                   :mode imperative)
+       :op2 (c3-6 / mount-01
+                  :ARG0 c3-0
+                  :ARG1 c3-7
+                  :mod (c3-8 / together)
+                  :manner (c3-4 / orgy)
+                  :purpose (c3-9 / see-01
+                                 :ARG0 (c3-1 / world)
+                                 :ARG1 c3-7)
+                  :mode imperative)
+       :mod (c3-5 / also))
+
+# ::snt To quote the Vietnamese re: French soldiers in Vietnam "Kill all that come, and they will stop coming" (paraphrased)
+# ::tokens ["To", "quote", "the", "Vietnamese", "re", ":", "French", "soldiers", "in", "Vietnam", "\"", "Kill", "all", "that", "come", ",", "and", "they", "will", "stop", "coming", "\"", "(", "paraphrased", ")"]
+# ::lemmas ["to", "quote", "the", "Vietnamese", "re", ":", "French", "soldier", "in", "Vietnam", "\"", "kill", "all", "that", "come", ",", "and", "they", "will", "stop", "come", "\"", "(", "paraphrase", ")"]
+(c5-1 / quote-01
+      :ARG1 c5-1
+      :ARG1 (c5-13 / and
+                   :op1 (c5-11 / kill-01
+                               :ARG1 (c5-9 / soldier
+                                           :mod (c5-7 / country
+                                                      :name (c5-3 / name
+                                                                  :op1 "France")))
+                               :ARG2 (c5-6 / come-01
+                                           :ARG1 (c5-10 / that
+                                                        :mod (c5-2 / all))))
+                   :op2 (c5-0 / stop-01
+                              :ARG1 (c5-8 / come-01
+                                          :ARG1 c5-9)))
+      :ARG2 (c5-5 / person
+                  :mod (c5-14 / country
+                              :name (c5-4 / name
+                                          :op1 "Vietnam")))
+      :ARG1-of (c5-12 / paraphrase-01)
+      :ARG2 c5-5)
+
+# ::snt Heard of a Romanian fellow who had it right. Vlad, I think his name was....
+# ::tokens ["Heard", "of", "a", "Romanian", "fellow", "who", "had", "it", "right", ".", "Vlad", ",", "I", "think", "his", "name", "was", "...."]
+# ::lemmas ["hear", "of", "a", "Romanian", "fellow", "who", "have", "it", "right", ".", "Vlad", ",", "i", "think", "his", "name", "be", "...."]
+(c6-2 / multi-sentence
+      :snt1 (c6-0 / hear-01
+                  :ARG0 (c6-4 / i)
+                  :ARG1 (c6-1 / fellow
+                              :mod (c6-9 / country
+                                         :name (c6-5 / name
+                                                     :op1 "Romania"))
+                              :ARG0-of (c6-13 / have-03
+                                              :ARG1 (c6-10 / it
+                                                           :ARG2-of (c6-8 / right-06)))))
+      :snt2 (c6-12 / think-01
+                   :ARG0 (c6-3 / i)
+                   :ARG1 (c6-6 / name
+                               :poss (c6-7 / person
+                                           :name (c6-11 / name
+                                                        :op1 "Vlad")))))
+
+# ::snt That would probably work better at the Pompidou, actually.
+# ::tokens ["That", "would", "probably", "work", "better", "at", "the", "Pompidou", ",", "actually", "."]
+# ::lemmas ["that", "would", "probably", "work", "well", "at", "the", "Pompidou", ",", "actually", "."]
+(c7-5 / probable
+      :domain (c7-1 / work-09
+                    :ARG1 (c7-7 / that)
+                    :location (c7-2 / facility
+                                    :name (c7-4 / name
+                                                :op1 "Pompidou"))
+                    :ARG1-of (c7-0 / have-degree-91
+                                   :ARG2 (c7-6 / good-02
+                                               :ARG1 c7-1)
+                                   :ARG3 (c7-3 / more)))
+      :ARG1-of (c7-8 / actual-02))
+
+# ::snt Headline: AVENGED
+# ::tokens ["Headline", ":", "AVENGED"]
+# ::lemmas ["headline", ":", "AVENGED"]
+(c8-0 / headline
+      :ARG1-of (c8-1 / AVENGED-01))
+
+# ::snt Very creative. I like it.
+# ::tokens ["Very", "creative", ".", "I", "like", "it", "."]
+# ::lemmas ["very", "creative", ".", "i", "like", "it", "."]
+(c9-1 / multi-sentence
+      :snt1 (c9-4 / creative
+                  :degree (c9-3 / very))
+      :snt2 (c9-0 / like-01
+                  :ARG0 (c9-2 / i)
+                  :ARG1 (c9-5 / it)))
+
+# ::snt Very. And even more sick of it.
+# ::tokens ["Very", ".", "And", "even", "more", "sick", "of", "it", "."]
+# ::lemmas ["very", ".", "and", "even", "more", "sick", "of", "it", "."]
+(c10-1 / multi-sentence
+       :snt1 (c10-4 / very)
+       :snt2 (c10-8 / and
+                    :op2 (c10-7 / sick-04
+                                :ARG0 (c10-3 / it)
+                                :ARG1 (c10-6 / i)
+                                :ARG2-of (c10-0 / have-degree-91
+                                                :ARG1 c10-6
+                                                :ARG3 (c10-5 / more
+                                                             :mod (c10-2 / even))))))
+
+# ::snt Hope you are being sarcastic.
+# ::tokens ["Hope", "you", "are", "being", "sarcastic", "."]
+# ::lemmas ["hope", "you", "be", "be", "sarcastic", "."]
+(c11-0 / hope-01
+       :ARG0 (c11-3 / i)
+       :ARG1 (c11-2 / sarcastic
+                    :domain (c11-1 / you)))
+
+# ::snt don't u get it David? they a dime a dozen.
+# ::tokens ["do", "n't", "u", "get", "it", "David", "?", "they", "a", "dime", "a", "dozen", "."]
+# ::lemmas ["do", "not", "u", "get", "it", "David", "?", "they", "a", "dime", "a", "dozen", "."]
+(c12-6 / ask-01
+       :ARG0 (c12-0 / i)
+       :ARG1 (c12-4 / get-01
+                    :ARG0 (c12-2 / person
+                                 :name (c12-1 / name
+                                              :op1 "David"))
+                    :ARG1 (c12-5 / it)
+                    :ARG1-of (c12-3 / request-confirmation-91
+                                    :ARG0 c12-0
+                                    :ARG2 c12-2)
+                    :polarity -)
+       :ARG2 c12-2)
+
+# ::snt no sir, it makes you a human being!
+# ::tokens ["no", "sir", ",", "it", "makes", "you", "a", "human", "being", "!"]
+# ::lemmas ["no", "sir", ",", "it", "make", "you", "a", "human", "being", "!"]
+(c14-7 / say-01
+       :ARG0 (c14-5 / i)
+       :ARG1 (c14-2 / make-02
+                    :ARG0 (c14-6 / it)
+                    :ARG1 (c14-3 / being
+                                 :mod (c14-0 / human)
+                                 :domain (c14-1 / you)))
+       :ARG2 (c14-4 / sir))
+
+# ::snt Does it make me "Islamaphobic" if I fist-pumped when I heard they were shot to death by the French Police?
+# ::tokens ["Does", "it", "make", "me", "\"", "Islamaphobic", "\"", "if", "I", "fist", "-", "pumped", "when", "I", "heard", "they", "were", "shot", "to", "death", "by", "the", "French", "Police", "?"]
+# ::lemmas ["do", "it", "make", "i", "\"", "Islamaphobic", "\"", "if", "i", "fist", "-", "pump", "when", "i", "hear", "they", "be", "shoot", "to", "death", "by", "the", "French", "Police", "?"]
+(c15-1 / make-02
+       :ARG0 (c15-0 / hear-01
+                    :ARG0 (c15-2 / i)
+                    :ARG1 (c15-10 / shoot-02
+                                  :ARG0 (c15-4 / police
+                                               :mod (c15-6 / country
+                                                           :name (c15-3 / name
+                                                                        :op1 "France")))
+                                  :ARG1 (c15-11 / they)
+                                  :ARG0-of (c15-5 / cause-01
+                                                  :ARG1 (c15-7 / die-01
+                                                               :ARG1 c15-11))))
+       :ARG1 (c15-9 / claustrophobic
+                    :domain c15-2
+                    :domain (c15-8 / it))
+       :polarity (c15-12 / amr-unknown))
+
+# ::snt "Piss Muslim" because everyone who rallied around "Piss Christ" couldn't possibly object. Right?
+# ::tokens ["\"", "Piss", "Muslim", "\"", "because", "everyone", "who", "rallied", "around", "\"", "Piss", "Christ", "\"", "could", "n't", "possibly", "object", ".", "Right", "?"]
+# ::lemmas ["\"", "Piss", "Muslim", "\"", "because", "everyone", "who", "rally", "around", "\"", "Piss", "Christ", "\"", "could", "not", "possibly", "object", ".", "right", "?"]
+(c16-1 / multi-sentence
+       :snt1 (c16-10 / cause-01
+                     :ARG0 (c16-8 / possible-01
+                                  :ARG1 (c16-2 / object-01
+                                               :ARG0 (c16-3 / everyone
+                                                            :ARG1-of (c16-9 / rally-01
+                                                                            :ARG2 (c16-12 / around
+                                                                                          :op1 (c16-11 / person
+                                                                                                       :name (c16-6 / name
+                                                                                                                    :op1 "Piss"
+                                                                                                                    :op2 "Christ"))))))
+                                  :polarity -)
+                     :ARG1 (c16-5 / religious-group
+                                  :name (c16-7 / name
+                                               :op1 "Islam")))
+       :snt2 (c16-4 / request-confirmation-91
+                    :ARG2 (c16-0 / you)))
+
+# ::snt Hang them from the Eiffel Tower first
+# ::tokens ["Hang", "them", "from", "the", "Eiffel", "Tower", "first"]
+# ::lemmas ["hang", "they", "from", "the", "Eiffel", "Tower", "first"]
+(c17-0 / hanging-07
+       :ARG0 (c17-1 / you)
+       :ARG1 (c17-5 / they)
+       :ARG2 (c17-4 / tower
+                    :name (c17-3 / name
+                                 :op1 "Eiffel"
+                                 :op2 "Tower"))
+       :ord (c17-2 / ordinal-entity
+                   :value 1)
+       :mode imperative)
+
+# ::snt You just don't understand what a tortured life they lived as a minority. Sound familiar? SICK OF IT.
+# ::tokens ["You", "just", "do", "n't", "understand", "what", "a", "tortured", "life", "they", "lived", "as", "a", "minority", ".", "Sound", "familiar", "?", "SICK", "OF", "IT", "."]
+# ::lemmas ["you", "just", "do", "not", "understand", "what", "a", "tortured", "life", "they", "live", "as", "a", "minority", ".", "sound", "familiar", "?", "sick", "of", "IT", "."]
+(c18-3 / multi-sentence
+       :snt1 (c18-4 / understand-01
+                    :ARG0 (c18-1 / you)
+                    :ARG1 (c18-2 / life
+                                 :ARG1-of (c18-12 / torture-01)
+                                 :ARG1-of (c18-9 / live-01
+                                                 :ARG0 (c18-11 / they
+                                                               :mod (c18-8 / minority))))
+                    :mod (c18-0 / just)
+                    :polarity -)
+       :snt2 (c18-10 / sound-01
+                     :ARG2 (c18-5 / familiarize-01)
+                     :polarity (c18-13 / amr-unknown))
+       :snt3 (c18-6 / sick-02
+                    :ARG1 (c18-7 / it)))
+
+# ::snt V: Feed them to pigs.
+# ::tokens ["V", ":", "Feed", "them", "to", "pigs", "."]
+# ::lemmas ["v", ":", "feed", "they", "to", "pig", "."]
+(c19-2 / feed-01
+       :ARG1 (c19-1 / pig)
+       :ARG2 (c19-3 / person
+                    :name (c19-0 / name
+                                 :op1 "V")))
+
+# ::snt Stuffed with pig parts and kissing dogs.
+# ::tokens ["Stuffed", "with", "pig", "parts", "and", "kissing", "dogs", "."]
+# ::lemmas ["stuff", "with", "pig", "part", "and", "kissing", "dog", "."]
+(c20-5 / and
+       :op1 (c20-2 / stuff-01
+                   :ARG2 (c20-0 / part
+                                :part-of (c20-4 / pig)))
+       :op2 (c20-3 / kiss-01
+                   :ARG1 (c20-1 / dog)))

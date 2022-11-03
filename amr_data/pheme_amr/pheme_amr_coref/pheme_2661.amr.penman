@@ -1,0 +1,60 @@
+# ::snt I'm a young angry person smh I'll be writing this later! Hoping to spread awareness!
+# ::tokens ["I", "'m", "a", "young", "angry", "person", "smh", "I", "'ll", "be", "writing", "this", "later", "!", "Hoping", "to", "spread", "awareness", "!"]
+# ::lemmas ["i", "be", "a", "young", "angry", "person", "smh", "i", "'ll", "be", "write", "this", "later", "!", "hope", "to", "spread", "awareness", "!"]
+(c1-4 / multi-sentence
+      :snt1 (c1-10 / person
+                   :mod (c1-1 / young)
+                   :ARG1-of (c1-14 / anger-01)
+                   :domain (c1-7 / i))
+      :snt2 (c1-2 / write-01
+                  :ARG0 (c1-11 / i)
+                  :ARG1 (c1-13 / this)
+                  :time (c1-6 / after
+                              :op1 (c1-8 / now))
+                  :ARG1-of (c1-0 / honest-01))
+      :snt3 (c1-3 / hope-01
+                  :ARG0 (c1-5 / i)
+                  :ARG1 (c1-12 / spread-01
+                               :ARG0 c1-5
+                               :ARG1 (c1-9 / awareness))))
+
+# ::snt Michael Brown was supposed to start classes at Vatterott College on Monday. Instead gunned down in street by police.
+# ::tokens ["Michael", "Brown", "was", "supposed", "to", "start", "classes", "at", "Vatterott", "College", "on", "Monday", ".", "Instead", "gunned", "down", "in", "street", "by", "police", "."]
+# ::lemmas ["Michael", "Brown", "be", "suppose", "to", "start", "class", "at", "Vatterott", "College", "on", "Monday", ".", "instead", "gun", "down", "in", "street", "by", "police", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-12 / suppose-02
+                   :ARG1 (c2-8 / person
+                               :name (c2-6 / name
+                                           :op1 "Michael"
+                                           :op2 "Brown"))
+                   :ARG2 (c2-4 / start-01
+                               :ARG0 c2-8
+                               :ARG1 (c2-10 / class)
+                               :location (c2-2 / university
+                                               :name (c2-7 / name
+                                                           :op1 "Vatterott"
+                                                           :op2 "College"))
+                               :time (c2-9 / date-entity
+                                           :weekday (c2-11 / monday))))
+      :snt2 (c2-0 / shoot-down-05
+                  :ARG0 (c2-13 / police)
+                  :ARG1 c2-8
+                  :location (c2-3 / street)
+                  :ARG1-of (c2-5 / instead-of-91)))
+
+# ::snt if you have any more personal details about him, id love to share it
+# ::tokens ["if", "you", "have", "any", "more", "personal", "details", "about", "him", ",", "i", "d", "love", "to", "share", "it"]
+# ::lemmas ["if", "you", "have", "any", "more", "personal", "detail", "about", "he", ",", "i", "d", "love", "to", "share", "it"]
+(c3-2 / love-02
+      :ARG0 (c3-5 / i)
+      :ARG1 (c3-8 / share-01
+                  :ARG0 c3-5
+                  :ARG1 (c3-7 / detail-01
+                              :ARG0 c3-5
+                              :ARG1 (c3-0 / he)
+                              :mod (c3-3 / more
+                                         :mod (c3-9 / any))
+                              :ARG1-of (c3-6 / personal-02)))
+      :condition (c3-4 / have-03
+                       :ARG0 (c3-1 / you)
+                       :ARG1 c3-7))

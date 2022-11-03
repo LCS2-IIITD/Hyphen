@@ -1,0 +1,45 @@
+# ::snt Jack Black Sings the National Anthem at LA Sparks Game
+# ::tokens ["Jack", "Black", "Sings", "the", "National", "Anthem", "at", "LA", "Sparks", "Game"]
+# ::lemmas ["Jack", "Black", "Sings", "the", "National", "Anthem", "at", "LA", "Sparks", "Game"]
+(c1-0 / sing-01
+      :ARG0 (c1-5 / person
+                  :name (c1-6 / name
+                              :op1 "Jack"
+                              :op2 "Black"))
+      :ARG1 (c1-1 / anthem
+                  :mod (c1-3 / nation))
+      :location (c1-4 / game
+                      :name (c1-2 / name
+                                  :op1 "LA"
+                                  :op2 "Sparks")))
+
+# ::snt Too bad only like 50 people got to hear it in person.
+# ::tokens ["Too", "bad", "only", "like", "50", "people", "got", "to", "hear", "it", "in", "person", "."]
+# ::lemmas ["too", "bad", "only", "like", "50", "people", "get", "to", "hear", "it", "in", "person", "."]
+(c2-6 / bad-07
+      :ARG1 (c2-5 / get-22
+                  :ARG0 (c2-8 / person
+                              :quant 50)
+                  :ARG1 (c2-1 / hear-01
+                              :ARG0 c2-8
+                              :ARG1 (c2-0 / it)
+                              :ARG2 c2-8
+                              :mod (c2-2 / in-person))
+                  :mod (c2-3 / only))
+      :ARG2-of (c2-7 / have-degree-91
+                     :ARG1 c2-5
+                     :ARG3 (c2-4 / too)))
+
+# ::snt False: The average attendance at a Sparks game is approximately 10,000.
+# ::tokens ["False", ":", "The", "average", "attendance", "at", "a", "Sparks", "game", "is", "approximately", "10,000", "."]
+# ::lemmas ["false", ":", "the", "average", "attendance", "at", "a", "Sparks", "game", "be", "approximately", "10,000", "."]
+(c3-2 / false
+      :domain (c3-7 / estimate-01
+                    :ARG1 (c3-1 / attend-01
+                                :ARG1 (c3-4 / game
+                                            :location (c3-3 / city
+                                                            :name (c3-5 / name
+                                                                        :op1 "Sparks")))
+                                :ARG2-of (c3-6 / average-01))
+                    :ARG2 (c3-0 / approximately
+                                :op1 10000)))

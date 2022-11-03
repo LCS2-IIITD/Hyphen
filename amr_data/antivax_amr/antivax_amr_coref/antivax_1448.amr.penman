@@ -1,0 +1,46 @@
+# ::snt Great! I'm expecting to have a sore arm tomorrow but that would be normal after any shot.
+# ::tokens ["Great", "!", "I", "'m", "expecting", "to", "have", "a", "sore", "arm", "tomorrow", "but", "that", "would", "be", "normal", "after", "any", "shot", "."]
+# ::lemmas ["great", "!", "i", "be", "expect", "to", "have", "a", "sore", "arm", "tomorrow", "but", "that", "would", "be", "normal", "after", "any", "shot", "."]
+(c1-7 / multi-sentence
+      :snt1 (c1-4 / great
+                  :mode expressive)
+      :snt2 (c1-10 / expect-01
+                   :ARG0 (c1-6 / i
+                               :part (c1-2 / arm))
+                   :ARG1 (c1-0 / sore
+                               :domain c1-2
+                               :time (c1-3 / tomorrow))
+                   :concession-of (c1-8 / normal-02
+                                        :ARG1 c1-0
+                                        :time (c1-9 / after
+                                                    :op1 (c1-5 / shoot-01
+                                                               :mod (c1-1 / any))))))
+
+# ::snt Yay for you!
+# ::tokens ["Yay", "for", "you", "!"]
+# ::lemmas ["yay", "for", "you", "!"]
+(c2-0 / yay
+      :beneficiary (c2-1 / you)
+      :mode expressive)
+
+# ::snt It's a big relief and a great feeling to know I'm on my way to being able to hug my grandson!
+# ::tokens ["It", "'s", "a", "big", "relief", "and", "a", "great", "feeling", "to", "know", "I", "'m", "on", "my", "way", "to", "being", "able", "to", "hug", "my", "grandson", "!"]
+# ::lemmas ["it", "be", "a", "big", "relief", "and", "a", "great", "feeling", "to", "know", "i", "be", "on", "my", "way", "to", "be", "able", "to", "hug", "my", "grandson", "!"]
+(c3-1 / and
+      :op1 (c3-6 / relieve-01
+                 :ARG0 (c3-12 / know-01
+                              :ARG0 (c3-11 / i)
+                              :ARG1 (c3-9 / be-located-at-91
+                                          :ARG1 c3-11
+                                          :ARG2 (c3-3 / way
+                                                      :direction-of (c3-7 / possible-01
+                                                                          :ARG1 (c3-4 / hug-01
+                                                                                      :ARG0 c3-11
+                                                                                      :ARG1 (c3-5 / person
+                                                                                                  :ARG0-of (c3-10 / have-rel-role-91
+                                                                                                                  :ARG1 c3-11
+                                                                                                                  :ARG2 (c3-8 / grandson))))))))
+                 :mod (c3-0 / big))
+      :op2 (c3-2 / feel-01
+                 :ARG0 c3-11
+                 :ARG1 (c3-13 / great)))

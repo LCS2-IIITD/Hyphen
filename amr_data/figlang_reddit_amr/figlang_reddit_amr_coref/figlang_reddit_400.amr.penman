@@ -1,0 +1,53 @@
+# ::snt Yadier Molina was find $5,000 for pushing Jerry Meals in Game 1 of the NLDS
+# ::tokens ["Yadier", "Molina", "was", "find", "$", "5,000", "for", "pushing", "Jerry", "Meals", "in", "Game", "1", "of", "the", "NLDS"]
+# ::lemmas ["Yadier", "Molina", "be", "find", "$", "5,000", "for", "push", "Jerry", "Meals", "in", "Game", "1", "of", "the", "nlds"]
+(c1-1 / find-01
+      :ARG0 (c1-8 / person
+                  :name (c1-10 / name
+                               :op1 "Yadier"
+                               :op2 "Molina"))
+      :ARG1 (c1-9 / monetary-quantity
+                  :unit (c1-0 / dollar)
+                  :quant 5000)
+      :ARG3 (c1-4 / push-02
+                  :ARG0 c1-8
+                  :ARG1 (c1-2 / person
+                              :name (c1-6 / name
+                                          :op1 "Jerry"
+                                          :op2 "Meals"))
+                  :subevent-of (c1-7 / game
+                                     :ord (c1-3 / ordinal-entity
+                                                :value 1)
+                                     :part c1-7
+                                     :name (c1-5 / name
+                                                 :op1 "National"
+                                                 :op2 "LDS"))))
+
+# ::snt I'm sure he did it the Right Way.
+# ::tokens ["I", "'m", "sure", "he", "did", "it", "the", "Right", "Way", "."]
+# ::lemmas ["i", "be", "sure", "he", "do", "it", "the", "right", "way", "."]
+(c2-0 / sure-02
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-1 / do-02
+                  :ARG0 (c2-3 / he)
+                  :ARG1 (c2-4 / it)
+                  :manner (c2-2 / way
+                                :ARG1-of (c2-5 / right-02))))
+
+# ::snt Cardinals fans such as BrommCJ would defend Hitler if he played for the Cardinals.
+# ::tokens ["Cardinals", "fans", "such", "as", "BrommCJ", "would", "defend", "Hitler", "if", "he", "played", "for", "the", "Cardinals", "."]
+# ::lemmas ["cardinal", "fan", "such", "as", "BrommCJ", "would", "defend", "Hitler", "if", "he", "play", "for", "the", "Cardinals", "."]
+(c3-0 / defend-01
+      :ARG0 (c3-1 / fan
+                  :mod (c3-5 / team
+                             :name (c3-8 / name
+                                         :op1 "Cardinals"))
+                  :example (c3-7 / person
+                                 :name (c3-6 / name
+                                             :op1 "BrommCJ")))
+      :ARG1 (c3-4 / person
+                  :name (c3-3 / name
+                              :op1 "Hitler"))
+      :condition (c3-2 / play-01
+                       :ARG0 c3-4
+                       :ARG2 c3-5))

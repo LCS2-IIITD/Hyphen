@@ -1,0 +1,37 @@
+# ::snt Ugh. The variation between states as far as who is eligible is maddening. :/
+# ::tokens ["Ugh", ".", "The", "variation", "between", "states", "as", "far", "as", "who", "is", "eligible", "is", "maddening", ".", ":/"]
+# ::lemmas ["ugh", ".", "the", "variation", "between", "state", "as", "far", "as", "who", "be", "eligible", "be", "madden", ".", ":/"]
+(c1-6 / multi-sentence
+      :snt1 (c1-3 / ugh
+                  :mode expressive)
+      :snt2 (c1-1 / maddening
+                  :domain (c1-4 / vary-01
+                                :ARG1 (c1-0 / state)
+                                :ARG3 (c1-5 / person
+                                            :ARG1-of (c1-2 / qualify-02)))))
+
+# ::snt Congratulations. I'm not eligible for the foreseeable future.
+# ::tokens ["Congratulations", ".", "I", "'m", "not", "eligible", "for", "the", "foreseeable", "future", "."]
+# ::lemmas ["congratulation", ".", "i", "be", "not", "eligible", "for", "the", "foreseeable", "future", "."]
+(c2-6 / multi-sentence
+      :snt1 (c2-1 / congratulate-01)
+      :snt2 (c2-2 / qualify-02
+                  :ARG1 (c2-5 / i)
+                  :ARG2 (c2-0 / future
+                              :ARG1-of (c2-3 / foresee-01
+                                             :ARG1-of (c2-4 / possible-01)))
+                  :polarity -))
+
+# ::snt Congrats!!!
+# ::tokens ["Congrats", "!", "!", "!"]
+# ::lemmas ["Congrats", "!", "!", "!"]
+(c3-0 / congratulate-01
+      :mode expressive)
+
+# ::snt Oh my gosh, thats wonderful!!!!
+# ::tokens ["Oh", "my", "gosh", ",", "that", "s", "wonderful", "!", "!", "!", "!"]
+# ::lemmas ["oh", "my", "gosh", ",", "that", "s", "wonderful", "!", "!", "!", "!"]
+(c4-0 / wonderful-03
+      :ARG1 (c4-2 / that)
+      :mod (c4-1 / oh-my-god
+                 :mode expressive))

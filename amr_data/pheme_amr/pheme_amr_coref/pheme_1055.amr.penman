@@ -1,0 +1,447 @@
+# ::snt Not everyone agrees with americans , you are not the world thought Police
+# ::tokens ["Not", "everyone", "agrees", "with", "americans", ",", "you", "are", "not", "the", "world", "thought", "Police"]
+# ::lemmas ["not", "everyone", "agree", "with", "americans", ",", "you", "be", "not", "the", "world", "think", "Police"]
+(c1-9 / and
+      :op1 (c1-3 / agree-01
+                 :ARG0 (c1-2 / everyone)
+                 :ARG2 (c1-5 / person
+                             :mod (c1-6 / country
+                                        :name (c1-4 / name
+                                                    :op1 "America")))
+                 :polarity -)
+      :op2 (c1-8 / police
+                 :mod (c1-7 / think-01)
+                 :domain (c1-0 / you)
+                 :location (c1-1 / world)
+                 :polarity -))
+
+# ::snt I'm not arguing against that. I know. I'm just trying to say that USA is not America.
+# ::tokens ["I", "'m", "not", "arguing", "against", "that", ".", "I", "know", ".", "I", "'m", "just", "trying", "to", "say", "that", "USA", "is", "not", "America", "."]
+# ::lemmas ["i", "be", "not", "argue", "against", "that", ".", "i", "know", ".", "i", "be", "just", "try", "to", "say", "that", "USA", "be", "not", "America", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-12 / argue-02
+                   :ARG0 (c2-3 / i)
+                   :ARG1 (c2-2 / against
+                               :domain (c2-11 / that))
+                   :polarity -)
+      :snt2 (c2-4 / know-01
+                  :ARG0 (c2-8 / i))
+      :snt3 (c2-9 / try-01
+                  :ARG0 c2-8
+                  :ARG1 (c2-10 / say-01
+                               :ARG0 c2-8
+                               :ARG1 (c2-7 / country
+                                           :name (c2-5 / name
+                                                       :op1 "America")
+                                           :domain (c2-6 / country
+                                                         :name c2-5
+                                                         :op1 "USA")
+                                           :polarity -)))
+      :mod (c2-0 / just))
+
+# ::snt ...they give us the statue", if i'm spanish, that "us" is referring the spaniards, europeans, or the whole mankind?
+# ::tokens ["...", "they", "give", "us", "the", "statue", "\"", ",", "if", "i", "'m", "spanish", ",", "that", "\"", "us", "\"", "is", "referring", "the", "spaniards", ",", "europeans", ",", "or", "the", "whole", "mankind", "?"]
+# ::lemmas ["...", "they", "give", "we", "the", "statue", "\"", ",", "if", "i", "be", "spanish", ",", "that", "\"", "we", "\"", "be", "refer", "the", "spaniard", ",", "european", ",", "or", "the", "whole", "mankind", "?"]
+(c3-11 / give-01
+       :ARG0 (c3-15 / they)
+       :ARG1 (c3-14 / statue)
+       :ARG2 (c3-0 / we)
+       :polarity (c3-17 / amr-unknown)
+       :condition (c3-9 / refer-01
+                        :ARG0 (c3-4 / i)
+                        :ARG1 (c3-3 / or
+                                    :op1 (c3-8 / person
+                                               :mod (c3-10 / country
+                                                           :name (c3-6 / name
+                                                                       :op1 "Spaniard")))
+                                    :op2 (c3-16 / person
+                                                :mod (c3-12 / continent
+                                                            :name (c3-7 / name
+                                                                        :op1 "Europe")))
+                                    :op3 (c3-2 / mankind
+                                               :mod (c3-5 / whole)))
+                        :manner (c3-1 / language
+                                      :name (c3-13 / name
+                                                   :op1 "Spanish"))))
+
+# ::snt you should have written 'gave America' , we're not all Yanks
+# ::tokens ["you", "should", "have", "written", "'", "gave", "America", "'", ",", "we", "'re", "not", "all", "Yanks"]
+# ::lemmas ["you", "should", "have", "write", "'", "give", "America", "'", ",", "we", "be", "not", "all", "Yanks"]
+(c4-5 / recommend-01
+      :ARG1 (c4-0 / write-01
+                  :ARG0 (c4-1 / you)
+                  :ARG1 (c4-7 / give-01
+                              :ARG1 (c4-6 / country
+                                          :name (c4-3 / name
+                                                      :op1 "America"))))
+      :ARG1-of (c4-8 / cause-01
+                     :ARG0 (c4-4 / person
+                                 :mod (c4-9 / political-party
+                                            :name c4-3
+                                            :op1 "Yanks")
+                                 :polarity -)
+                     :domain (c4-2 / we
+                                   :mod (c4-10 / all))))
+
+# ::snt In fact, when we talk about it, we are not using its true name: "Liberty Enlightening the World". So they give us, us=the world
+# ::tokens ["In", "fact", ",", "when", "we", "talk", "about", "it", ",", "we", "are", "not", "using", "its", "true", "name", ":", "\"", "Liberty", "Enlightening", "the", "World", "\"", ".", "So", "they", "give", "us", ",", "us", "=", "the", "world"]
+# ::lemmas ["in", "fact", ",", "when", "we", "talk", "about", "it", ",", "we", "be", "not", "use", "its", "true", "name", ":", "\"", "Liberty", "Enlightening", "the", "World", "\"", ".", "so", "they", "give", "we", ",", "we", "=", "the", "world"]
+(c5-1 / multi-sentence
+      :snt1 (c5-2 / use-01
+                  :ARG0 (c5-0 / we)
+                  :ARG1 (c5-8 / name-01
+                              :ARG1 (c5-6 / it)
+                              :ARG2 (c5-15 / thing
+                                           :name (c5-9 / name
+                                                       :op1 "Liberty"
+                                                       :op2 "Enlightening"
+                                                       :op3 "the"
+                                                       :op4 "World"))
+                              :ARG1-of (c5-14 / true-01))
+                  :time (c5-10 / talk-01
+                               :ARG0 c5-0
+                               :ARG1 c5-6)
+                  :mod (c5-12 / in-fact)
+                  :polarity -)
+      :snt2 (c5-13 / give-01
+                   :ARG0 (c5-5 / they)
+                   :ARG1 (c5-4 / equal-01
+                               :ARG1 (c5-7 / we)
+                               :ARG2 (c5-3 / world))
+                   :ARG2 (c5-11 / we)))
+
+# ::snt Many other countries had True Liberty of all citizens Long before ALL american citizens did,even when they had the statue in NY
+# ::tokens ["Many", "other", "countries", "had", "True", "Liberty", "of", "all", "citizens", "Long", "before", "ALL", "american", "citizens", "did", ",", "even", "when", "they", "had", "the", "statue", "in", "NY"]
+# ::lemmas ["many", "other", "country", "have", "True", "Liberty", "of", "all", "citizen", "long", "before", "all", "american", "citizen", "do", ",", "even", "when", "they", "have", "the", "statue", "in", "NY"]
+(c6-6 / have-03
+      :ARG0 (c6-18 / country
+                   :quant (c6-0 / many)
+                   :mod (c6-16 / other))
+      :ARG1 (c6-7 / free-04
+                  :ARG1 (c6-2 / citizen
+                              :mod (c6-5 / all))
+                  :ARG1-of (c6-19 / true-01))
+      :time (c6-9 / before
+                  :op1 (c6-4 / have-03
+                             :ARG0 (c6-14 / citizen
+                                          :mod (c6-15 / country
+                                                      :name (c6-12 / name
+                                                                   :op1 "America"))
+                                          :mod (c6-13 / all)))
+                  :ARG1-of (c6-8 / long-03))
+      :concession (c6-10 / even-when
+                         :op1 (c6-1 / have-03
+                                    :ARG0 c6-18
+                                    :ARG1 (c6-3 / statue
+                                                :location (c6-11 / state
+                                                                 :name (c6-17 / name
+                                                                              :op1 "NY"))))))
+
+# ::snt America = North america + Center America + South America; North america = Canada + Mexico + USA
+# ::tokens ["America", "=", "North", "america", "+", "Center", "America", "+", "South", "America", ";", "North", "america", "=", "Canada", "+", "Mexico", "+", "USA"]
+# ::lemmas ["America", "=", "North", "america", "+", "Center", "America", "+", "South", "America", ";", "North", "america", "=", "Canada", "+", "Mexico", "+", "USA"]
+(c7-14 / and
+       :op1 (c7-5 / equal-01
+                  :ARG1 (c7-11 / continent
+                               :name (c7-7 / name
+                                           :op1 "America"))
+                  :ARG2 (c7-10 / continent
+                               :name (c7-8 / name
+                                           :op1 "North"
+                                           :op2 "America")))
+       :op2 (c7-3 / equal-01
+                  :ARG1 c7-10
+                  :ARG2 (c7-13 / continent
+                               :name (c7-9 / name
+                                           :op1 "South"
+                                           :op2 "America")))
+       :op3 (c7-0 / equal-01
+                  :ARG1 c7-11
+                  :ARG2 c7-14
+                  :op1 (c7-15 / country
+                              :name (c7-12 / name
+                                           :op1 "Canada"))
+                  :op2 (c7-2 / country
+                             :name (c7-6 / name
+                                         :op1 "Mexico"))
+                  :op3 (c7-4 / country
+                             :name (c7-1 / name
+                                         :op1 "USA"))))
+
+# ::snt my referal was ' Yanks " meaning in the USA
+# ::tokens ["my", "referal", "was", "'", "Yanks", "\"", "meaning", "in", "the", "USA"]
+# ::lemmas ["my", "referal", "be", "'", "Yanks", "\"", "meaning", "in", "the", "USA"]
+(c8-4 / refer-01
+      :ARG0 (c8-0 / i)
+      :ARG1 (c8-3 / person
+                  :mod (c8-6 / political-movement
+                             :name (c8-1 / name
+                                         :op1 "Yanks")))
+      :ARG2 (c8-5 / country
+                  :name (c8-2 / name
+                              :op1 "USA")))
+
+# ::snt Couldn't have just gone along with the sentiment could we? Heaven forbid...
+# ::tokens ["Could", "n't", "have", "just", "gone", "along", "with", "the", "sentiment", "could", "we", "?", "Heaven", "forbid", "..."]
+# ::lemmas ["could", "not", "have", "just", "go", "along", "with", "the", "sentiment", "could", "we", "?", "Heaven", "forbid", "..."]
+(c9-4 / multi-sentence
+      :snt1 (c9-5 / possible-01
+                  :ARG1 (c9-6 / go-06
+                              :ARG0 (c9-1 / we)
+                              :ARG2 (c9-9 / along
+                                          :op1 (c9-7 / sentiment))
+                              :mod (c9-0 / just))
+                  :ARG1-of (c9-8 / possible-01)
+                  :polarity -)
+      :snt2 (c9-3 / forbid-01
+                  :ARG0 (c9-2 / heaven)
+                  :mode expressive))
+
+# ::snt And they loaned us money and ships to fight the British in the Revolutionary war.
+# ::tokens ["And", "they", "loaned", "us", "money", "and", "ships", "to", "fight", "the", "British", "in", "the", "Revolutionary", "war", "."]
+# ::lemmas ["and", "they", "loan", "we", "money", "and", "ship", "to", "fight", "the", "British", "in", "the", "Revolutionary", "war", "."]
+(c10-11 / and
+        :op2 (c10-1 / loan-01
+                    :ARG0 (c10-10 / they)
+                    :ARG1 (c10-4 / and
+                                 :op1 (c10-2 / money)
+                                 :op2 (c10-9 / ship))
+                    :ARG2 (c10-0 / we)
+                    :purpose (c10-3 / fight-01
+                                    :ARG0 c10-0
+                                    :ARG1 (c10-8 / country
+                                                 :name (c10-6 / name
+                                                              :op1 "Britain"))
+                                    :ARG2 (c10-5 / war
+                                                 :name (c10-7 / name
+                                                              :op1 "Revolutionary"
+                                                              :op2 "War")))))
+
+# ::snt I am outraged that American Media will not show Charlie's cartoon.
+# ::tokens ["I", "am", "outraged", "that", "American", "Media", "will", "not", "show", "Charlie", "'s", "cartoon", "."]
+# ::lemmas ["i", "be", "outraged", "that", "American", "Media", "will", "not", "show", "Charlie", "'s", "cartoon", "."]
+(c11-1 / outrage-01
+       :ARG0 (c11-8 / show-01
+                    :ARG0 (c11-0 / media
+                                 :mod (c11-7 / country
+                                             :name (c11-3 / name
+                                                          :op1 "America")))
+                    :ARG1 (c11-6 / cartoon
+                                 :poss (c11-5 / person
+                                              :name (c11-4 / name
+                                                           :op1 "Charlie")))
+                    :polarity -)
+       :ARG1 (c11-2 / i))
+
+# ::snt And fries - oh wait, those came from Belgium, huh?
+# ::tokens ["And", "fries", "-", "oh", "wait", ",", "those", "came", "from", "Belgium", ",", "huh", "?"]
+# ::lemmas ["and", "fry", "-", "oh", "wait", ",", "those", "come", "from", "Belgium", ",", "huh", "?"]
+(c12-6 / and
+       :op2 (c12-0 / fry-01
+                   :ARG1-of (c12-4 / come-01
+                                   :ARG3 (c12-3 / country
+                                                :name (c12-2 / name
+                                                             :op1 "Belgium"))
+                                   :ARG1-of (c12-5 / request-confirmation-91)))
+       :mod (c12-1 / oh
+                   :mode expressive))
+
+# ::snt And so, a mexican is also (north)american, as a brazilian is (south)american.
+# ::tokens ["And", "so", ",", "a", "mexican", "is", "also", "(", "north)american", ",", "as", "a", "brazilian", "is", "(", "south)american", "."]
+# ::lemmas ["and", "so", ",", "a", "mexican", "be", "also", "(", "north)american", ",", "as", "a", "brazilian", "be", "(", "south)american", "."]
+(c13-9 / and
+       :op2 (c13-5 / cause-01
+                   :op1 (c13-4 / country
+                               :name (c13-1 / name
+                                            :op1 "Mexico")
+                               :location (c13-2 / north)
+                               :mod (c13-0 / also))
+                   :op2 (c13-7 / country
+                               :name (c13-3 / name
+                                            :op1 "Brazil")
+                               :location (c13-8 / south)
+                               :domain (c13-10 / country
+                                               :name (c13-6 / name
+                                                            :op1 "America")))
+                   :ARG1 c13-9))
+
+# ::snt You know, the USAns... Have you seen "The dictator" (from the guy who made "Borat" also)? That speech is priceless.
+# ::tokens ["You", "know", ",", "the", "USAns", "...", "Have", "you", "seen", "\"", "The", "dictator", "\"", "(", "from", "the", "guy", "who", "made", "\"", "Borat", "\"", "also", ")", "?", "That", "speech", "is", "priceless", "."]
+# ::lemmas ["you", "know", ",", "the", "USAns", "...", "have", "you", "see", "\"", "the", "dictator", "\"", "(", "from", "the", "guy", "who", "make", "\"", "Borat", "\"", "also", ")", "?", "that", "speech", "be", "priceless", "."]
+(c14-1 / multi-sentence
+       :snt1 (c14-14 / know-01
+                     :ARG0 (c14-0 / you)
+                     :ARG1 (c14-6 / publication
+                                  :name (c14-4 / name
+                                               :op1 "USAns")))
+       :snt2 (c14-11 / see-01
+                     :ARG0 (c14-10 / you)
+                     :ARG1 (c14-7 / dictator
+                                  :source (c14-9 / guy
+                                                 :ARG0-of (c14-8 / make-01
+                                                                 :ARG1 (c14-12 / thing
+                                                                               :name (c14-5 / name
+                                                                                            :op1 "Borat"))
+                                                                 :mod (c14-16 / also))))
+                     :polarity (c14-3 / amr-unknown))
+       :snt3 (c14-15 / priceless
+                     :domain (c14-2 / speak-01
+                                    :mod (c14-13 / that))))
+
+# ::snt Yeah, that's what i was trying to say. When somebody says "America", it means from Alaska to Tierra de Fuego. But if I say "they
+# ::tokens ["Yeah", ",", "that", "'s", "what", "i", "was", "trying", "to", "say", ".", "When", "somebody", "says", "\"", "America", "\"", ",", "it", "means", "from", "Alaska", "to", "Tierra", "de", "Fuego", ".", "But", "if", "I", "say", "\"", "they"]
+# ::lemmas ["yeah", ",", "that", "be", "what", "i", "be", "try", "to", "say", ".", "when", "somebody", "say", "\"", "America", "\"", ",", "it", "mean", "from", "Alaska", "to", "Tierra", "de", "Fuego", ".", "but", "if", "i", "say", "\"", "they"]
+(c15-0 / multi-sentence
+       :snt1 (c15-18 / try-01
+                     :ARG0 (c15-10 / i)
+                     :ARG1 (c15-3 / say-01
+                                  :ARG0 c15-10
+                                  :ARG1 (c15-17 / that)))
+       :snt2 (c15-9 / mean-01
+                    :ARG1 (c15-7 / say-01
+                                 :ARG0 (c15-14 / somebody)
+                                 :ARG1 (c15-16 / country
+                                               :name (c15-8 / name
+                                                            :op1 "America")))
+                    :ARG2 (c15-5 / be-from-91
+                                 :ARG1 c15-7
+                                 :ARG2 (c15-1 / province
+                                              :name (c15-15 / name
+                                                            :op1 "Tierra"
+                                                            :op2 "de"
+                                                            :op3 "Fuego")))
+                    :time (c15-6 / say-01
+                                 :ARG0 c15-14)
+                    :ARG1 c15-16)
+       :snt3 (c15-2 / contrast-01
+                    :ARG2 (c15-4 / have-condition-91
+                                 :ARG2 (c15-13 / say-01
+                                               :ARG0 (c15-12 / i)
+                                               :ARG1 (c15-11 / they)))))
+
+# ::snt !!!!
+# ::tokens ["!", "!", "!", "!"]
+# ::lemmas ["!", "!", "!", "!"]
+(c16-0 / thing
+       :mode expressive)
+
+# ::snt In fact, if the writer is from the USA, that statement is right; BTW, America includes Chile, Argentina, Mexico...
+# ::tokens ["In", "fact", ",", "if", "the", "writer", "is", "from", "the", "USA", ",", "that", "statement", "is", "right", ";", "BTW", ",", "America", "includes", "Chile", ",", "Argentina", ",", "Mexico", "..."]
+# ::lemmas ["in", "fact", ",", "if", "the", "writer", "be", "from", "the", "USA", ",", "that", "statement", "be", "right", ";", "BTW", ",", "America", "include", "Chile", ",", "Argentina", ",", "Mexico", "..."]
+(c17-1 / multi-sentence
+       :snt1 (c17-10 / right-02
+                     :ARG1 (c17-6 / state-01
+                                  :mod (c17-19 / that))
+                     :condition (c17-8 / be-from-91
+                                       :ARG1 (c17-4 / person
+                                                    :ARG0-of (c17-11 / write-01))
+                                       :ARG2 (c17-18 / country
+                                                     :name (c17-9 / name
+                                                                  :op1 "USA")))
+                     :mod (c17-12 / in-fact))
+       :snt2 (c17-14 / include-01
+                     :ARG1 (c17-7 / and
+                                  :op1 (c17-5 / country
+                                              :name (c17-17 / name
+                                                            :op1 "Chile"))
+                                  :op2 (c17-15 / country
+                                               :name (c17-2 / name
+                                                            :op1 "Argentina"))
+                                  :op3 (c17-16 / country
+                                               :name (c17-3 / name
+                                                            :op1 "Mexico")))
+                     :ARG2 (c17-0 / continent
+                                  :name (c17-20 / name
+                                                :op1 "America"))
+                     :mod (c17-13 / by-the-way)))
+
+# ::snt There are continents of America North and south, and NOT EVERYONE AGREES WITH WHAT THE YANKS SAY
+# ::tokens ["There", "are", "continents", "of", "America", "North", "and", "south", ",", "and", "NOT", "EVERYONE", "AGREES", "WITH", "WHAT", "THE", "YANKS", "SAY"]
+# ::lemmas ["there", "be", "continent", "of", "America", "North", "and", "south", ",", "and", "not", "everyone", "AGREES", "with", "what", "the", "yank", "say"]
+(c18-13 / and
+        :op1 (c18-2 / and
+                    :op1 (c18-7 / continent
+                                :name (c18-3 / name
+                                             :op1 "America")
+                                :part (c18-6 / continent
+                                             :name (c18-4 / name
+                                                          :op1 "North")))
+                    :op2 (c18-10 / continent
+                                 :name (c18-5 / name
+                                              :op1 "South")))
+        :op2 (c18-8 / agree-01
+                    :ARG0 (c18-1 / everyone)
+                    :ARG1 (c18-11 / thing
+                                  :ARG1-of (c18-12 / say-01
+                                                   :ARG0 (c18-0 / family
+                                                                :name (c18-9 / name
+                                                                             :op1 "YANK"))))
+                    :polarity -))
+
+# ::snt : Don't forget: France gave us the Statue of Liberty, our symbol of freedom. STOP OMG
+# ::tokens [":", "Do", "n't", "forget", ":", "France", "gave", "us", "the", "Statue", "of", "Liberty", ",", "our", "symbol", "of", "freedom", ".", "STOP", "OMG"]
+# ::lemmas [":", "do", "not", "forget", ":", "France", "give", "we", "the", "Statue", "of", "Liberty", ",", "our", "symbol", "of", "freedom", ".", "stop", "OMG"]
+(c19-3 / multi-sentence
+       :snt1 (c19-2 / forget-01
+                    :ARG0 (c19-0 / you)
+                    :ARG1 (c19-11 / give-01
+                                  :ARG0 (c19-10 / country
+                                                :name (c19-8 / name
+                                                             :op1 "France"))
+                                  :ARG1 (c19-13 / statue
+                                                :name (c19-9 / name
+                                                             :op1 "Statute"
+                                                             :op2 "of"
+                                                             :op3 "Liberty")
+                                                :ARG0-of (c19-6 / symbolize-01
+                                                                :ARG1 (c19-7 / free-04
+                                                                             :ARG1 (c19-1 / we
+                                                                                          :ARG2-of c19-11)))))
+                    :polarity -
+                    :mode imperative)
+       :snt2 (c19-4 / stop-01
+                    :ARG0 (c19-12 / you)
+                    :ARG1 (c19-5 / oh-my-god
+                                 :mode expressive)
+                    :mode imperative))
+
+# ::snt They gave it to America, but it's a symbol of freedom for us all, for the world.
+# ::tokens ["They", "gave", "it", "to", "America", ",", "but", "it", "'s", "a", "symbol", "of", "freedom", "for", "us", "all", ",", "for", "the", "world", "."]
+# ::lemmas ["they", "give", "it", "to", "America", ",", "but", "it", "be", "a", "symbol", "of", "freedom", "for", "we", "all", ",", "for", "the", "world", "."]
+(c20-6 / contrast-01
+       :ARG1 (c20-7 / give-01
+                    :ARG0 (c20-9 / they)
+                    :ARG1 (c20-2 / it)
+                    :ARG2 (c20-5 / country
+                                 :name (c20-4 / name
+                                              :op1 "America")))
+       :ARG2 (c20-8 / symbolize-01
+                    :ARG1 c20-2
+                    :ARG2 (c20-1 / free-04
+                                 :ARG1 (c20-0 / we
+                                              :mod (c20-10 / all))
+                                 :ARG3 (c20-3 / world))))
+
+# ::snt If it is universal the word "One" in used in English. However America version of freedom is not the entire worlds version.
+# ::tokens ["If", "it", "is", "universal", "the", "word", "\"", "One", "\"", "in", "used", "in", "English", ".", "However", "America", "version", "of", "freedom", "is", "not", "the", "entire", "worlds", "version", "."]
+# ::lemmas ["if", "it", "be", "universal", "the", "word", "\"", "One", "\"", "in", "use", "in", "English", ".", "however", "America", "version", "of", "freedom", "be", "not", "the", "entire", "world", "version", "."]
+(c21-3 / multi-sentence
+       :snt1 (c21-0 / have-condition-91
+                    :ARG1 (c21-4 / use-01
+                                 :ARG1 (c21-1 / word
+                                              :mod (c21-6 / one))
+                                 :medium (c21-2 / language
+                                                :name (c21-11 / name
+                                                              :op1 "English")))
+                    :ARG2 (c21-16 / universal
+                                  :domain (c21-9 / it)))
+       :snt2 (c21-15 / contrast-01
+                     :ARG2 (c21-12 / version
+                                   :mod (c21-8 / entire)
+                                   :poss (c21-10 / world)
+                                   :domain (c21-7 / version
+                                                  :mod (c21-14 / country
+                                                               :name (c21-13 / name
+                                                                             :op1 "America"))
+                                                  :topic (c21-5 / free-04))
+                                   :polarity -)))

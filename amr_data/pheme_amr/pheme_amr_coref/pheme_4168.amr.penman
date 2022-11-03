@@ -1,0 +1,131 @@
+# ::snt mounties are on the scene
+# ::tokens ["mounties", "are", "on", "the", "scene"]
+# ::lemmas ["mountie", "be", "on", "the", "scene"]
+(c1-0 / scene
+      :location-of (c1-1 / mountie))
+
+# ::snt So Canada's strict gun control policies have failed again
+# ::tokens ["So", "Canada", "'s", "strict", "gun", "control", "policies", "have", "failed", "again"]
+# ::lemmas ["so", "Canada", "'s", "strict", "gun", "control", "policy", "have", "fail", "again"]
+(c2-0 / fail-01
+      :ARG1 (c2-3 / policy-01
+                  :ARG0 (c2-5 / country
+                              :name (c2-2 / name
+                                          :op1 "Canada"))
+                  :ARG2 (c2-4 / control-01
+                              :ARG1 (c2-6 / gun))
+                  :mod (c2-7 / strict))
+      :mod (c2-8 / again)
+      :mod (c2-1 / so))
+
+# ::snt Not disagreeing. I was just surprised at the headline.
+# ::tokens ["Not", "disagreeing", ".", "I", "was", "just", "surprised", "at", "the", "headline", "."]
+# ::lemmas ["not", "disagree", ".", "i", "be", "just", "surprised", "at", "the", "headline", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-4 / disagree-01
+                  :polarity -)
+      :snt2 (c3-5 / surprise-01
+                  :ARG0 (c3-6 / thing
+                              :ARG2-of (c3-0 / headline-01))
+                  :ARG1 (c3-3 / i)
+                  :mod (c3-1 / just)))
+
+# ::snt Does Canada have a gun problem that everyone doesn't know about? Educate yourself before commenting BS
+# ::tokens ["Does", "Canada", "have", "a", "gun", "problem", "that", "everyone", "does", "n't", "know", "about", "?", "Educate", "yourself", "before", "commenting", "BS"]
+# ::lemmas ["do", "Canada", "have", "a", "gun", "problem", "that", "everyone", "do", "not", "know", "about", "?", "educate", "yourself", "before", "comment", "BS"]
+(c4-2 / multi-sentence
+      :snt1 (c4-0 / have-03
+                  :ARG0 (c4-9 / country
+                              :name (c4-6 / name
+                                          :op1 "Canada"))
+                  :ARG1 (c4-7 / problem
+                              :topic (c4-10 / gun)
+                              :ARG1-of (c4-12 / know-01
+                                              :ARG0 (c4-5 / everyone)
+                                              :polarity -))
+                  :polarity (c4-13 / amr-unknown))
+      :snt2 (c4-3 / educate-01
+                  :ARG0 (c4-1 / you
+                              :ARG1-of c4-3)
+                  :time (c4-4 / before
+                              :op1 (c4-8 / comment-01
+                                         :ARG0 c4-1
+                                         :ARG3 (c4-11 / bullshit)))))
+
+# ::snt dafuq? Canada is meant to be really boring! :/
+# ::tokens ["dafuq", "?", "Canada", "is", "meant", "to", "be", "really", "boring", "!", ":/"]
+# ::lemmas ["dafuq", "?", "Canada", "be", "mean", "to", "be", "really", "boring", "!", ":/"]
+(c5-0 / multi-sentence
+      :snt1 (c5-4 / daft
+                  :mode expressive)
+      :snt2 (c5-3 / mean-02
+                  :ARG1 (c5-1 / bore-02
+                              :ARG0 (c5-5 / country
+                                          :name (c5-2 / name
+                                                      :op1 "Canada"))
+                              :degree (c5-6 / really))))
+
+# ::snt seriously tho. Glad you said that to him.
+# ::tokens ["seriously", "tho", ".", "Glad", "you", "said", "that", "to", "him", "."]
+# ::lemmas ["seriously", "tho", ".", "Glad", "you", "say", "that", "to", "he", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-0 / have-concession-91
+                  :ARG2 (c6-5 / serious-01))
+      :snt2 (c6-4 / glad-02
+                  :ARG0 (c6-3 / say-01
+                              :ARG0 (c6-1 / you)
+                              :ARG1 (c6-6 / that)
+                              :ARG2 (c6-7 / he))))
+
+# ::snt BUT CANADA CANT HAVE GUN CRIME!!!! RT : BREAKING: Police: Shooting incident reported near Canadian Parliament.
+# ::tokens ["BUT", "CANADA", "CANT", "HAVE", "GUN", "CRIME", "!", "!", "!", "!", "RT", ":", "BREAKING", ":", "Police", ":", "Shooting", "incident", "reported", "near", "Canadian", "Parliament", "."]
+# ::lemmas ["but", "CANADA", "cant", "have", "GUN", "CRIME", "!", "!", "!", "!", "RT", ":", "breaking", ":", "police", ":", "shoot", "incident", "report", "near", "Canadian", "Parliament", "."]
+(c7-1 / multi-sentence
+      :snt1 (c7-8 / contrast-01
+                  :ARG2 (c7-6 / possible-01
+                              :ARG1 (c7-0 / have-03
+                                          :ARG0 (c7-7 / country
+                                                      :name (c7-4 / name
+                                                                  :op1 "Canada"))
+                                          :ARG1 (c7-12 / crime
+                                                       :instrument (c7-9 / gun)))
+                              :polarity -))
+      :snt2 (c7-15 / publication-91
+                   :ARG1 (c7-2 / break-13
+                               :ARG1 (c7-10 / report-01
+                                            :ARG1 (c7-3 / incident
+                                                        :mod (c7-11 / shoot-02)
+                                                        :ARG1-of (c7-5 / near-02
+                                                                       :ARG2 (c7-13 / government-organization
+                                                                                    :name (c7-14 / name
+                                                                                                 :op1 "Canadian"
+                                                                                                 :op2 "Parliament"))))))))
+
+# ::snt Can't be, they have strict laws against such things
+# ::tokens ["Ca", "n't", "be", ",", "they", "have", "strict", "laws", "against", "such", "things"]
+# ::lemmas ["can", "not", "be", ",", "they", "have", "strict", "law", "against", "such", "thing"]
+(c8-5 / cause-01
+      :ARG0 (c8-0 / have-03
+                  :ARG0 (c8-8 / they)
+                  :ARG1 (c8-1 / law
+                              :mod (c8-7 / strict)
+                              :ARG0-of (c8-2 / oppose-01
+                                             :ARG1 (c8-6 / thing
+                                                         :mod (c8-3 / such)))))
+      :ARG1 (c8-4 / possible-01
+                  :polarity -))
+
+# ::snt much safer than here
+# ::tokens ["much", "safer", "than", "here"]
+# ::lemmas ["much", "safe", "than", "here"]
+(c10-0 / have-degree-91
+       :ARG2 (c10-3 / safe-01)
+       :ARG3 (c10-1 / more
+                    :quant (c10-2 / much))
+       :ARG4 (c10-4 / here))
+
+# ::snt hummmmm
+# ::tokens ["hummmmm"]
+# ::lemmas ["hummmmm"]
+(c11-0 / hmm
+       :mode expressive)

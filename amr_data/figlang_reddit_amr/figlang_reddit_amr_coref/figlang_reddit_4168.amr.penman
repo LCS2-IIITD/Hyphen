@@ -1,0 +1,45 @@
+# ::snt TIL that a survey conducted in two southern provinces of Afghanistan found that 92% of respondents had never heard of the events of 9/11
+# ::tokens ["TIL", "that", "a", "survey", "conducted", "in", "two", "southern", "provinces", "of", "Afghanistan", "found", "that", "92", "%", "of", "respondents", "had", "never", "heard", "of", "the", "events", "of", "9/11"]
+# ::lemmas ["TIL", "that", "a", "survey", "conduct", "in", "two", "southern", "province", "of", "Afghanistan", "find", "that", "92", "%", "of", "respondent", "have", "never", "hear", "of", "the", "event", "of", "9/11"]
+(c1-3 / find-01
+      :ARG0 (c1-0 / survey-01
+                  :ARG1-of (c1-4 / conduct-01
+                                 :location (c1-14 / province
+                                                  :location (c1-13 / south
+                                                                   :part-of (c1-1 / country
+                                                                                  :name (c1-15 / name
+                                                                                               :op1 "Afghanistan")))
+                                                  :quant 2)))
+      :ARG1 (c1-8 / hear-01
+                  :ARG0 (c1-11 / person
+                               :ARG0-of (c1-12 / respond-01)
+                               :ARG1-of (c1-5 / include-91
+                                              :ARG2 (c1-7 / person
+                                                          :ARG0-of (c1-10 / respond-01))
+                                              :ARG3 (c1-6 / percentage-entity
+                                                          :value 92)))
+                  :ARG1 (c1-16 / event
+                               :time (c1-2 / date-entity
+                                           :month 9
+                                           :day 11))
+                  :time (c1-9 / ever)
+                  :polarity -))
+
+# ::snt 99% of Americans doesn't know what is going on in Afghanistan.
+# ::tokens ["99", "%", "of", "Americans", "does", "n't", "know", "what", "is", "going", "on", "in", "Afghanistan", "."]
+# ::lemmas ["99", "%", "of", "Americans", "do", "not", "know", "what", "be", "go", "on", "in", "Afghanistan", "."]
+(c2-10 / know-01
+       :ARG0 (c2-9 / person
+                   :ARG1-of (c2-2 / include-91
+                                  :ARG2 (c2-4 / person
+                                              :mod (c2-1 / country
+                                                         :name (c2-7 / name
+                                                                     :op1 "America")))
+                                  :ARG3 (c2-3 / percentage-entity
+                                              :value 99)))
+       :ARG1 (c2-5 / thing
+                   :ARG1-of (c2-8 / go-on-15
+                                  :location (c2-0 / country
+                                                  :name (c2-6 / name
+                                                              :op1 "Afghanistan"))))
+       :polarity -)

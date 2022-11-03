@@ -1,0 +1,105 @@
+# ::snt It's Saturday . It's been a long week . Here's a puppy for you . <URL>
+# ::tokens ["It", "'s", "Saturday", ".", "It", "'s", "been", "a", "long", "week", ".", "Here", "'s", "a", "puppy", "for", "you", ".", "<", "URL", ">"]
+# ::lemmas ["it", "be", "Saturday", ".", "it", "be", "be", "a", "long", "week", ".", "here", "be", "a", "puppy", "for", "you", ".", "<", "URL", ">"]
+(c1-6 / multi-sentence
+      :snt1 (c1-0 / date-entity
+                  :weekday (c1-1 / saturday))
+      :snt2 (c1-2 / week
+                  :ARG1-of (c1-4 / long-03))
+      :snt3 (c1-5 / puppy
+                  :beneficiary (c1-7 / you)
+                  :location (c1-3 / here)))
+
+# ::snt . thank you thank you thank you thank you . Great self care reminder . Going to go find a dog to pet .
+# ::tokens [".", "thank", "you", "thank", "you", "thank", "you", "thank", "you", ".", "Great", "self", "care", "reminder", ".", "Going", "to", "go", "find", "a", "dog", "to", "pet", "."]
+# ::lemmas [".", "thank", "you", "thank", "you", "thank", "you", "thank", "you", ".", "great", "self", "care", "reminder", ".", "go", "to", "go", "find", "a", "dog", "to", "pet", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-6 / thank-01
+                   :ARG1 (c2-12 / you))
+       :snt2 (c2-5 / thank-01
+                   :ARG1 (c2-13 / you))
+       :snt3 (c2-7 / remind-01
+                   :ARG1 (c2-4 / care-03
+                               :ARG1 (c2-0 / self))
+                   :ARG2 c2-13
+                   :mod (c2-9 / great))
+       :snt4 (c2-2 / go-05
+                   :ARG0 (c2-10 / i)
+                   :ARG1 (c2-3 / find-01
+                               :ARG0 c2-10
+                               :ARG1 (c2-1 / dog
+                                           :ARG1-of (c2-8 / pet-01
+                                                          :ARG0 c2-10)))))
+
+# ::snt Met this puppy in the street ! cuddles . We both needed it <URL>
+# ::tokens ["Met", "this", "puppy", "in", "the", "street", "!", "cuddles", ".", "We", "both", "needed", "it", "<", "URL", ">"]
+# ::lemmas ["Met", "this", "puppy", "in", "the", "street", "!", "cuddle", ".", "we", "both", "need", "it", "<", "URL", ">"]
+(c3-10 / multi-sentence
+       :snt1 (c3-1 / and
+                   :op1 (c3-2 / meet-02
+                              :ARG0 (c3-9 / i)
+                              :ARG1 (c3-7 / puppy
+                                          :mod (c3-6 / this))
+                              :location (c3-0 / street)
+                              :mode expressive)
+                   :op2 (c3-3 / cuddle-01
+                              :mode expressive))
+       :snt2 (c3-11 / need-01
+                    :ARG0 (c3-4 / we
+                                :mod (c3-8 / both))
+                    :ARG1 (c3-5 / it)))
+
+# ::snt Fab . great ! Crufts do a special dogs slot , saw a lady say it made a profound impact on her Mh , made her visible
+# ::tokens ["Fab", ".", "great", "!", "Crufts", "do", "a", "special", "dogs", "slot", ",", "saw", "a", "lady", "say", "it", "made", "a", "profound", "impact", "on", "her", "Mh", ",", "made", "her", "visible"]
+# ::lemmas ["fab", ".", "great", "!", "cruft", "do", "a", "special", "dog", "slot", ",", "see", "a", "lady", "say", "it", "make", "a", "profound", "impact", "on", "her", "Mh", ",", "make", "she", "visible"]
+(c4-16 / multi-sentence
+       :snt1 (c4-13 / great
+                    :mode expressive)
+       :snt2 (c4-0 / do-02
+                   :ARG0 (c4-2 / company
+                               :name (c4-17 / name
+                                            :op1 "Crufts"))
+                   :ARG1 (c4-1 / slot
+                               :mod (c4-15 / dog)
+                               :ARG1-of (c4-14 / special-02))
+                   :mode expressive)
+       :snt3 (c4-7 / see-01
+                   :ARG1 (c4-9 / say-01
+                               :ARG0 (c4-11 / lady)
+                               :ARG1 (c4-3 / impact-01
+                                           :ARG0 (c4-6 / it)
+                                           :ARG1 (c4-12 / person
+                                                        :name (c4-10 / name
+                                                                     :op1 "Mh")
+                                                        :poss c4-11)
+                                           :mod (c4-8 / profound))))
+       :snt4 (c4-4 / make-02
+                   :ARG0 c4-6
+                   :ARG1 (c4-5 / possible-01
+                               :ARG1 c4-7
+                               :ARG1 c4-12)))
+
+# ::snt my partner ' S guide dog was the Crufts special friends finalist ! I was there ! k dogs in a hanger !
+# ::tokens ["my", "partner", "'", "S", "guide", "dog", "was", "the", "Crufts", "special", "friends", "finalist", "!", "I", "was", "there", "!", "k", "dogs", "in", "a", "hanger", "!"]
+# ::lemmas ["my", "partner", "'", "S", "guide", "dog", "be", "the", "Crufts", "special", "friend", "finalist", "!", "i", "be", "there", "!", "k", "dog", "in", "a", "hanger", "!"]
+(c5-16 / multi-sentence
+       :snt1 (c5-3 / finalist
+                   :domain (c5-0 / dog
+                                 :name (c5-17 / name
+                                              :op1 "S")
+                                 :ARG0-of (c5-13 / guide-01)
+                                 :poss (c5-15 / person
+                                              :ARG0-of (c5-5 / have-rel-role-91
+                                                             :ARG1 (c5-4 / i)
+                                                             :ARG2 (c5-10 / partner)))
+                                 :poss (c5-9 / organization
+                                             :name (c5-12 / name
+                                                          :op1 "Crufts")))
+                   :mod (c5-8 / friend
+                              :ARG1-of (c5-1 / special-02)))
+       :snt2 (c5-7 / be-located-at-91
+                   :ARG1 (c5-6 / i)
+                   :ARG2 (c5-11 / there)
+                   :mode expressive)
+       :snt3 (c5-2 / kai
+                   :location (c5-14 / hanger)))

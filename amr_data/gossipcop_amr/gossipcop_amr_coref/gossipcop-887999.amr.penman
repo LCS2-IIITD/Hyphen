@@ -1,0 +1,67 @@
+# ::snt No
+# ::tokens ["No"]
+# ::lemmas ["no"]
+(c1-0 / no)
+
+# ::snt Nick, however, is Benjamin Button-ing us.
+# ::tokens ["Nick", ",", "however", ",", "is", "Benjamin", "Button", "-", "ing", "us", "."]
+# ::lemmas ["Nick", ",", "however", ",", "be", "Benjamin", "Button", "-", "e", "we", "."]
+(c3-4 / contrast-01
+      :ARG2 (c3-3 / person
+                  :name (c3-0 / name
+                              :op1 "Benjamin"
+                              :op2 "Button")
+                  :domain (c3-1 / person
+                                :name (c3-2 / name
+                                            :op1 "Nick"))
+                  :beneficiary (c3-5 / we)))
+
+# ::snt not sure if you saw this !
+# ::tokens ["not", "sure", "if", "you", "saw", "this", "!"]
+# ::lemmas ["not", "sure", "if", "you", "see", "this", "!"]
+(c4-2 / sure-02
+      :ARG0 (c4-3 / i)
+      :ARG1 (c4-0 / see-01
+                  :ARG0 (c4-1 / you)
+                  :ARG1 (c4-4 / this))
+      :polarity -
+      :mode expressive)
+
+# ::snt WHY IS HE GROWING UP
+# ::tokens ["WHY", "IS", "HE", "GROWING", "UP"]
+# ::lemmas ["why", "be", "he", "grow", "up"]
+(c5-0 / grow-up-04
+      :ARG1 (c5-2 / he)
+      :ARG1-of (c5-1 / cause-01
+                     :ARG0 (c5-3 / amr-unknown)))
+
+# ::snt que no se convierta en un adulto
+# ::tokens ["que", "no", "se", "convierta", "en", "un", "adulto"]
+# ::lemmas ["que", "no", "se", "convierta", "en", "un", "adulto"]
+(c6-0 / convierta-00
+      :ARG0 (c6-1 / you)
+      :ARG1 (c6-2 / adulto
+                  :polarity -)
+      :polarity -)
+
+# ::snt You have an opportunity to be a part of the Greatest Comeback in Medical History watch the video below...
+# ::tokens ["You", "have", "an", "opportunity", "to", "be", "a", "part", "of", "the", "Greatest", "Comeback", "in", "Medical", "History", "watch", "the", "video", "below", "..."]
+# ::lemmas ["you", "have", "an", "opportunity", "to", "be", "a", "part", "of", "the", "Greatest", "Comeback", "in", "Medical", "History", "watch", "the", "video", "below", "..."]
+(c8-3 / multi-sentence
+      :snt1 (c8-7 / have-03
+                  :ARG0 (c8-2 / you)
+                  :ARG1 (c8-0 / opportunity
+                              :mod (c8-8 / participate-01
+                                         :ARG0 c8-2
+                                         :ARG1 (c8-6 / event
+                                                     :name (c8-4 / name
+                                                                 :op1 "Great"
+                                                                 :op2 "Comeback"
+                                                                 :op3 "in"
+                                                                 :op4 "Medical"
+                                                                 :op5 "History")))))
+      :snt2 (c8-9 / watch-01
+                  :ARG0 c8-2
+                  :mode imperative)
+      :ARG1 (c8-5 / video
+                  :location (c8-1 / below)))

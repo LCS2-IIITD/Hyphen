@@ -1,0 +1,102 @@
+# ::snt Pull up a glass my guy
+# ::tokens ["Pull", "up", "a", "glass", "my", "guy"]
+# ::lemmas ["pull", "up", "a", "glass", "my", "guy"]
+(c1-0 / say-01
+      :ARG0 (c1-3 / i)
+      :ARG1 (c1-1 / pull-up-09
+                  :ARG0 (c1-2 / guy
+                              :poss c1-3)
+                  :ARG1 (c1-4 / glass)
+                  :mode imperative)
+      :ARG2 c1-2)
+
+# ::snt You sharing, brah!? lol!
+# ::tokens ["You", "sharing", ",", "brah", "!", "?", "lol", "!"]
+# ::lemmas ["you", "share", ",", "brah", "!", "?", "lol", "!"]
+(c2-0 / share-01
+      :ARG0 (c2-3 / brah
+                  :mode expressive)
+      :ARG2-of (c2-1 / laugh-01
+                     :ARG0 (c2-4 / i)
+                     :manner (c2-2 / loud))
+      :mode expressive)
+
+# ::snt She lives by herself in Naples. Yep, the city where that viral maskless grocery store video was filmed. Shes barely left her condo in a year. I am so damn relieved.
+# ::tokens ["She", "lives", "by", "herself", "in", "Naples", ".", "Yep", ",", "the", "city", "where", "that", "viral", "maskless", "grocery", "store", "video", "was", "filmed", ".", "She", "s", "barely", "left", "her", "condo", "in", "a", "year", ".", "I", "am", "so", "damn", "relieved", "."]
+# ::lemmas ["she", "live", "by", "herself", "in", "Naples", ".", "Yep", ",", "the", "city", "where", "that", "viral", "maskless", "grocery", "store", "video", "be", "film", ".", "she", "s", "barely", "leave", "her", "condo", "in", "a", "year", ".", "i", "be", "so", "damn", "relieved", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-20 / live-01
+                    :ARG0 (c3-12 / she)
+                    :mod (c3-21 / by-oneself)
+                    :location (c3-5 / city
+                                    :name (c3-11 / name
+                                                 :op1 "Naples")
+                                    :location-of (c3-17 / film-01
+                                                        :ARG1 (c3-6 / video
+                                                                    :topic (c3-22 / store
+                                                                                  :mod (c3-9 / grocery))
+                                                                    :mod (c3-18 / viral)
+                                                                    :ARG0-of (c3-19 / mask-01
+                                                                                    :polarity -)))))
+       :snt2 (c3-3 / leave-11
+                   :ARG0 (c3-13 / she)
+                   :ARG1 (c3-0 / condo
+                               :poss c3-13)
+                   :degree (c3-15 / barely)
+                   :time (c3-16 / after
+                                :op1 (c3-2 / now)
+                                :quant (c3-7 / temporal-quantity
+                                             :unit (c3-14 / year)
+                                             :quant 1)))
+       :snt3 (c3-8 / relieve-01
+                   :ARG1 (c3-4 / i)
+                   :degree (c3-1 / damn)))
+
+# ::snt Shieldaig ! Im definitely more of a bourbon guy, but my grandpa was a big scotch fan and so is she so its a nice connection and way to pay homage
+# ::tokens ["Shieldaig", "!", "I", "m", "definitely", "more", "of", "a", "bourbon", "guy", ",", "but", "my", "grandpa", "was", "a", "big", "scotch", "fan", "and", "so", "is", "she", "so", "its", "a", "nice", "connection", "and", "way", "to", "pay", "homage"]
+# ::lemmas ["Shieldaig", "!", "i", "m", "definitely", "more", "of", "a", "bourbon", "guy", ",", "but", "my", "grandpa", "be", "a", "big", "scotch", "fan", "and", "so", "be", "she", "so", "its", "a", "nice", "connection", "and", "way", "to", "pay", "homage"]
+(c4-9 / multi-sentence
+      :snt1 (c4-22 / person
+                   :name (c4-10 / name
+                                :op1 "Shieldaig")
+                   :mode expressive)
+      :snt2 (c4-6 / contrast-01
+                  :ARG1 (c4-8 / guy
+                              :mod (c4-0 / company
+                                         :name (c4-2 / name
+                                                     :op1 " bourbon"))
+                              :mod (c4-1 / definite)
+                              :ARG2-of (c4-19 / have-degree-91
+                                              :ARG1 (c4-4 / i)
+                                              :ARG3 (c4-18 / more)))
+                  :ARG2 (c4-17 / fan
+                               :mod (c4-21 / big)
+                               :mod (c4-11 / scotch)
+                               :domain (c4-20 / person
+                                              :ARG0-of (c4-3 / have-rel-role-91
+                                                             :ARG1 c4-4
+                                                             :ARG2 (c4-16 / grandpa)))
+                               :ARG0-of (c4-7 / cause-01
+                                              :ARG1 (c4-15 / connect-01
+                                                           :ARG1-of (c4-14 / nice-01)))
+                               :ARG0-of (c4-12 / cause-01
+                                               :ARG1 (c4-13 / pay-01
+                                                            :ARG1 (c4-5 / homage))))))
+
+# ::snt Which scotch?
+# ::tokens ["Which", "scotch", "?"]
+# ::lemmas ["which", "scotch", "?"]
+(c5-0 / scotch
+      :mod (c5-1 / amr-unknown))
+
+# ::snt Pfizer or Moderna single malt?
+# ::tokens ["Pfizer", "or", "Moderna", "single", "malt", "?"]
+# ::lemmas ["Pfizer", "or", "Moderna", "single", "malt", "?"]
+(c6-2 / amr-choice
+      :op1 (c6-3 / company
+                 :name (c6-5 / name
+                             :op1 "Pfizer"))
+      :op2 (c6-0 / company
+                 :name (c6-4 / name
+                             :op1 "Moderna"))
+      :ARG1-of (c6-1 / single-02))

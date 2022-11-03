@@ -1,0 +1,29 @@
+# ::snt true
+# ::tokens ["true"]
+# ::lemmas ["true"]
+(c1-0 / true-01)
+
+# ::snt Outraging is the new job
+# ::tokens ["Outraging", "is", "the", "new", "job"]
+# ::lemmas ["outraging", "be", "the", "new", "job"]
+(c2-1 / anger-01
+      :ARG0 (c2-0 / job
+                  :ARG1-of (c2-2 / new-01)))
+
+# ::snt Uski koi tension nhi..Wo th aise he mil jaeygi
+# ::tokens ["Uski", "koi", "tension", "nhi", "..", "Wo", "th", "aise", "he", "mil", "jaeygi"]
+# ::lemmas ["uski", "koi", "tension", "nhi", "..", "will", "th", "aise", "he", "mil", "jaeygi"]
+(c3-8 / multi-sentence
+      :snt1 (c3-5 / tension
+                  :polarity (c3-0 / amr-unknown)
+                  :domain (c3-7 / person
+                                :name (c3-9 / name
+                                            :op1 "Uski")))
+      :snt2 (c3-2 / wish-01
+                  :ARG0 (c3-1 / i)
+                  :ARG1 (c3-11 / equal-01
+                               :ARG1 (c3-3 / he)
+                               :ARG2 (c3-4 / person
+                                           :name (c3-6 / name
+                                                       :op1 "Jaeygi")))
+                  :mod (c3-10 / Wo)))

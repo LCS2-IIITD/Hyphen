@@ -1,0 +1,25 @@
+# ::snt Chick-Fil-A doesn't charge customers for ingredients that the customers don't want
+# ::tokens ["Chick", "-", "Fil", "-", "A", "does", "n't", "charge", "customers", "for", "ingredients", "that", "the", "customers", "do", "n't", "want"]
+# ::lemmas ["Chick", "-", "Fil", "-", "A", "do", "not", "charge", "customer", "for", "ingredient", "that", "the", "customer", "do", "not", "want"]
+(c1-1 / charge-01
+      :ARG0 (c1-0 / company
+                  :name (c1-5 / name
+                              :op1 "Chick-Fil-A"))
+      :ARG2 (c1-3 / customer)
+      :ARG3 (c1-4 / ingredient
+                  :ARG1-of (c1-2 / want-01
+                                 :ARG0 c1-3
+                                 :polarity -))
+      :polarity -)
+
+# ::snt No Lettuce, No Tomato, plus No Commandments?
+# ::tokens ["No", "Lettuce", ",", "No", "Tomato", ",", "plus", "No", "Commandments", "?"]
+# ::lemmas ["no", "lettuce", ",", "no", "tomato", ",", "plus", "no", "Commandments", "?"]
+(c2-0 / and
+      :op1 (c2-3 / lettuce
+                 :polarity -)
+      :op2 (c2-2 / tomato
+                 :polarity -)
+      :op3 (c2-1 / commandment
+                 :polarity -)
+      :polarity (c2-4 / amr-unknown))

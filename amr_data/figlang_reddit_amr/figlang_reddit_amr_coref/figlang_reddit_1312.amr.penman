@@ -1,0 +1,41 @@
+# ::snt A new method of torture
+# ::tokens ["A", "new", "method", "of", "torture"]
+# ::lemmas ["a", "new", "method", "of", "torture"]
+(c1-1 / method
+      :instrument-of (c1-2 / torture-01)
+      :ARG1-of (c1-0 / new-01))
+
+# ::snt This torture should be reserved for people who buy children Megabloks when they CLEARLY asked for Legos.
+# ::tokens ["This", "torture", "should", "be", "reserved", "for", "people", "who", "buy", "children", "Megabloks", "when", "they", "CLEARLY", "asked", "for", "Legos", "."]
+# ::lemmas ["this", "torture", "should", "be", "reserve", "for", "people", "who", "buy", "child", "Megabloks", "when", "they", "clearly", "ask", "for", "Legos", "."]
+(c2-7 / recommend-01
+      :ARG1 (c2-4 / reserve-01
+                  :ARG1 (c2-6 / torture-01
+                              :mod (c2-3 / this))
+                  :ARG2 (c2-9 / person
+                              :ARG0-of (c2-8 / buy-01
+                                             :ARG1 (c2-2 / child)
+                                             :ARG3 (c2-5 / product
+                                                         :name (c2-10 / name
+                                                                      :op1 "Megabloks"))
+                                             :time (c2-1 / ask-02
+                                                         :ARG0 c2-2
+                                                         :ARG1 (c2-11 / toy)
+                                                         :ARG1-of (c2-0 / clear-06))))))
+
+# ::snt Don't want to be THAT guy, but the plural of Lego is Lego.
+# ::tokens ["Do", "n't", "want", "to", "be", "THAT", "guy", ",", "but", "the", "plural", "of", "Lego", "is", "Lego", "."]
+# ::lemmas ["do", "not", "want", "to", "be", "that", "guy", ",", "but", "the", "plural", "of", "Lego", "be", "Lego", "."]
+(c3-0 / contrast-01
+      :ARG1 (c3-1 / want-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-6 / guy
+                              :mod (c3-3 / that)
+                              :domain c3-7)
+                  :polarity -)
+      :ARG2 (c3-8 / name-01
+                  :ARG1 (c3-5 / product
+                              :name (c3-4 / name
+                                          :op1 "Lego")
+                              :ARG2-of c3-8)
+                  :ARG1-of (c3-2 / pluralize-01)))

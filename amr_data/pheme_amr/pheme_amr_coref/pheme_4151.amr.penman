@@ -1,0 +1,43 @@
+# ::snt You don't have "He has been assassinated".
+# ::tokens ["You", "do", "n't", "have", "\"", "He", "has", "been", "assassinated", "\"", "."]
+# ::lemmas ["you", "do", "not", "have", "\"", "he", "have", "be", "assassinate", "\"", "."]
+(c1-0 / have-03
+      :ARG0 (c1-1 / you)
+      :ARG1 (c1-2 / say-01
+                  :ARG0 c1-1
+                  :ARG1 (c1-3 / assassinate-01
+                              :ARG1 (c1-4 / he)))
+      :polarity -)
+
+# ::snt I've just checked in with North Korea - Putin isn't there ! My nd guess is ....
+# ::tokens ["I", "'ve", "just", "checked", "in", "with", "North", "Korea", "-", "Putin", "is", "n't", "there", "!", "My", "nd", "guess", "is", "...."]
+# ::lemmas ["i", "'ve", "just", "check", "in", "with", "North", "Korea", "-", "Putin", "be", "not", "there", "!", "my", "nd", "guess", "be", "...."]
+(c2-1 / multi-sentence
+      :snt1 (c2-8 / check-in-04
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-7 / country
+                              :name (c2-4 / name
+                                          :op1 "North"
+                                          :op2 "Korea"))
+                  :time (c2-0 / just))
+      :snt2 (c2-2 / be-located-at-91
+                  :ARG1 (c2-6 / person
+                              :name (c2-5 / name
+                                          :op1 "Putin"))
+                  :ARG2 (c2-11 / there)
+                  :ARG1-of (c2-9 / guess-01
+                                 :ARG0 (c2-10 / i))
+                  :polarity -))
+
+# ::snt If he's got that virus - he's still on the crapper !
+# ::tokens ["If", "he", "'s", "got", "that", "virus", "-", "he", "'s", "still", "on", "the", "crapper", "!"]
+# ::lemmas ["if", "he", "be", "get", "that", "virus", "-", "he", "be", "still", "on", "the", "crapper", "!"]
+(c3-0 / have-condition-91
+      :ARG1 (c3-1 / be-located-at-91
+                  :ARG1 (c3-7 / he)
+                  :ARG2 (c3-4 / crapper)
+                  :mod (c3-5 / still))
+      :ARG2 (c3-2 / have-03
+                  :ARG0 c3-7
+                  :ARG1 (c3-3 / virus
+                              :mod (c3-6 / that))))

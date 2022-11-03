@@ -1,0 +1,203 @@
+# ::snt ": We're different, pls understand "
+# ::tokens ["\"", ":", "We", "'re", "different", ",", "pls", "understand", "\""]
+# ::lemmas ["\"", ":", "we", "be", "different", ",", "pls", "understand", "\""]
+(c2-2 / multi-sentence
+      :snt1 (c2-4 / differ-02
+                  :ARG1 (c2-0 / we))
+      :snt2 (c2-3 / understand-01
+                  :ARG0 (c2-1 / you)
+                  :polite +
+                  :mode imperative))
+
+# ::snt does the Koran say that Allah is holy?
+# ::tokens ["does", "the", "Koran", "say", "that", "Allah", "is", "holy", "?"]
+# ::lemmas ["do", "the", "Koran", "say", "that", "Allah", "be", "holy", "?"]
+(c4-5 / say-01
+      :ARG0 (c4-1 / book
+                  :name (c4-2 / name
+                              :op1 "Koran"))
+      :ARG1 (c4-0 / holy
+                  :domain (c4-4 / person
+                                :name (c4-3 / name
+                                            :op1 "Allah")))
+      :polarity (c4-6 / amr-unknown))
+
+# ::snt pls understand and think
+# ::tokens ["pls", "understand", "and", "think"]
+# ::lemmas ["pls", "understand", "and", "think"]
+(c5-3 / and
+      :op1 (c5-2 / understand-01
+                 :ARG0 (c5-0 / we))
+      :op2 (c5-1 / think-01
+                 :ARG0 c5-0))
+
+# ::snt see? We're the real muslim and the murder is not a real muslim. I told to you, pls understand
+# ::tokens ["see", "?", "We", "'re", "the", "real", "muslim", "and", "the", "murder", "is", "not", "a", "real", "muslim", ".", "I", "told", "to", "you", ",", "pls", "understand"]
+# ::lemmas ["see", "?", "we", "be", "the", "real", "muslim", "and", "the", "murder", "be", "not", "a", "real", "muslim", ".", "i", "tell", "to", "you", ",", "pls", "understand"]
+(c6-2 / multi-sentence
+      :snt1 (c6-12 / see-01
+                   :ARG0 (c6-0 / you)
+                   :mode imperative)
+      :snt2 (c6-15 / and
+                   :op1 (c6-8 / person
+                              :mod (c6-9 / religious-group
+                                         :name (c6-7 / name
+                                                     :op1 "Islam"))
+                              :ARG1-of (c6-6 / real-04)
+                              :domain (c6-1 / we))
+                   :op2 (c6-14 / person
+                               :mod c6-9
+                               :ARG1-of (c6-4 / real-04)
+                               :domain (c6-10 / murder-01)
+                               :polarity -))
+      :snt3 (c6-13 / tell-01
+                   :ARG0 (c6-5 / i)
+                   :ARG1 (c6-3 / understand-01
+                               :ARG0 (c6-11 / you
+                                            :ARG2-of c6-13)
+                               :mode imperative
+                               :polite +)))
+
+# ::snt Jesus is the Lord, repent your sins and turn to him. He will forgive you, seek and you shall find
+# ::tokens ["Jesus", "is", "the", "Lord", ",", "repent", "your", "sins", "and", "turn", "to", "him", ".", "He", "will", "forgive", "you", ",", "seek", "and", "you", "shall", "find"]
+# ::lemmas ["Jesus", "be", "the", "Lord", ",", "repent", "your", "sin", "and", "turn", "to", "he", ".", "he", "will", "forgive", "you", ",", "seek", "and", "you", "shall", "find"]
+(c7-3 / multi-sentence
+      :snt1 (c7-8 / person
+                  :name (c7-7 / name
+                              :op1 "Lord")
+                  :domain (c7-14 / person
+                                 :name c7-7
+                                 :op1 "Jesus"))
+      :ARG0-of (c7-10 / cause-01
+                      :ARG1 (c7-15 / and
+                                   :op1 (c7-9 / repent-01
+                                              :ARG0 (c7-1 / you)
+                                              :ARG1 (c7-12 / sin-01
+                                                           :ARG0 c7-1))
+                                   :op2 (c7-13 / turn-01
+                                               :ARG0 c7-1
+                                               :direction c7-14)))
+      :snt2 (c7-5 / and
+                  :op1 (c7-2 / forgive-01
+                             :ARG0 (c7-0 / he)
+                             :ARG1 (c7-11 / you))
+                  :op2 (c7-4 / seek-01
+                             :ARG0 c7-11)
+                  :op3 (c7-6 / find-01
+                             :ARG0 c7-11)))
+
+# ::snt it's a korean lyrics from Epik High - Born Hater. I'm a kpopers
+# ::tokens ["it", "'s", "a", "korean", "lyrics", "from", "Epik", "High", "-", "Born", "Hater", ".", "I", "'m", "a", "kpopers"]
+# ::lemmas ["it", "be", "a", "korean", "lyric", "from", "Epik", "High", "-", "Born", "Hater", ".", "i", "be", "a", "kpoper"]
+(c8-2 / multi-sentence
+      :snt1 (c8-1 / lyric
+                  :mod (c8-7 / country
+                             :name (c8-4 / name
+                                         :op1 "Korea"))
+                  :domain (c8-3 / it)
+                  :source (c8-0 / work-of-art
+                                :name (c8-5 / name
+                                            :op1 "Epik"
+                                            :op2 "High"
+                                            :op3 "Born"
+                                            :op4 "Hater")))
+      :snt2 (c8-6 / person
+                  :mod (c8-9 / kpop)
+                  :domain (c8-8 / i)))
+
+# ::snt : We're different, pls understand
+# ::tokens [":", "We", "'re", "different", ",", "pls", "understand"]
+# ::lemmas [":", "we", "be", "different", ",", "pls", "understand"]
+(c10-3 / understand-01
+       :ARG0 (c10-1 / you)
+       :ARG1 (c10-2 / differ-02
+                    :ARG1 (c10-0 / we))
+       :mode imperative
+       :polite +)
+
+# ::snt ohmygod thanks for your understand. I'm so glad
+# ::tokens ["ohmygod", "thanks", "for", "your", "understand", ".", "I", "'m", "so", "glad"]
+# ::lemmas ["ohmygod", "thank", "for", "your", "understand", ".", "i", "be", "so", "glad"]
+(c14-1 / multi-sentence
+       :snt1 (c14-9 / thank-01
+                    :ARG0 (c14-3 / i)
+                    :ARG1 (c14-5 / person
+                                 :name (c14-4 / name
+                                              :op1 "ohmygod"))
+                    :ARG2 (c14-2 / understand-01
+                                 :ARG0 (c14-0 / you)))
+       :snt2 (c14-6 / glad-02
+                    :ARG1 (c14-7 / i)
+                    :degree (c14-8 / so)))
+
+# ::snt lies
+# ::tokens ["lies"]
+# ::lemmas ["lie"]
+(c15-0 / lie-08)
+
+# ::snt do you believe Allah gave humanity free will?
+# ::tokens ["do", "you", "believe", "Allah", "gave", "humanity", "free", "will", "?"]
+# ::lemmas ["do", "you", "believe", "Allah", "give", "humanity", "free", "will", "?"]
+(c16-4 / believe-01
+       :ARG0 (c16-1 / you)
+       :ARG1 (c16-7 / give-01
+                    :ARG0 (c16-6 / person
+                                 :name (c16-5 / name
+                                              :op1 "Allah"))
+                    :ARG1 (c16-2 / will-02
+                                 :ARG0 (c16-0 / humanity)
+                                 :ARG1-of (c16-3 / free-04))
+                    :ARG2 c16-0)
+       :polarity (c16-8 / amr-unknown))
+
+# ::snt insyaallah
+# ::tokens ["insyaallah"]
+# ::lemmas ["insyaallah"]
+(c18-0 / insyaallah)
+
+# ::snt that's what you need to do. Your God is the great deceiver so what's stopping you from attempting to deceive
+# ::tokens ["that", "'s", "what", "you", "need", "to", "do", ".", "Your", "God", "is", "the", "great", "deceiver", "so", "what", "'s", "stopping", "you", "from", "attempting", "to", "deceive"]
+# ::lemmas ["that", "be", "what", "you", "need", "to", "do", ".", "your", "God", "be", "the", "great", "deceiver", "so", "what", "be", "stop", "you", "from", "attempt", "to", "deceive"]
+(c19-2 / multi-sentence
+       :snt1 (c19-4 / need-01
+                    :ARG0 (c19-0 / you)
+                    :ARG1 (c19-7 / do-02
+                                 :ARG0 c19-0
+                                 :ARG1 (c19-12 / that)))
+       :snt2 (c19-1 / deceiver-01
+                    :ARG0 (c19-6 / person
+                                 :name (c19-5 / name
+                                              :op1 "God")
+                                 :poss (c19-10 / you))
+                    :mod (c19-9 / great)
+                    :ARG0-of (c19-8 / cause-01
+                                    :ARG1 (c19-11 / stop-03
+                                                  :ARG0 (c19-13 / amr-unknown)
+                                                  :ARG1 c19-10
+                                                  :ARG2 (c19-3 / attempt-01
+                                                               :ARG0 c19-10
+                                                               :ARG1 (c19-14 / deceive-01
+                                                                             :ARG0 c19-10))))))
+
+# ::snt born hater? Well, I can't day I'm surprised. If your born into Islam that's standard
+# ::tokens ["born", "hater", "?", "Well", ",", "I", "ca", "n't", "day", "I", "'m", "surprised", ".", "If", "your", "born", "into", "Islam", "that", "'s", "standard"]
+# ::lemmas ["bear", "hater", "?", "well", ",", "i", "can", "not", "day", "i", "be", "surprised", ".", "if", "your", "bear", "into", "Islam", "that", "be", "standard"]
+(c20-3 / multi-sentence
+       :snt1 (c20-8 / person
+                    :polarity (c20-14 / amr-unknown)
+                    :ARG0-of (c20-0 / hate-01)
+                    :ARG1-of (c20-4 / bear-02))
+       :snt2 (c20-13 / possible-01
+                     :ARG1 (c20-11 / surprise-01
+                                   :ARG1 (c20-6 / i))
+                     :mod (c20-1 / well)
+                     :polarity -)
+       :snt3 (c20-5 / standard-02
+                    :ARG1 (c20-10 / bear-02
+                                  :ARG1 (c20-2 / you)
+                                  :prep-into (c20-9 / religious-group
+                                                    :name (c20-7 / name
+                                                                 :op1 "Islam")))
+                    :condition (c20-12 / bear-02
+                                       :ARG1 c20-2
+                                       :prep-into c20-9)))

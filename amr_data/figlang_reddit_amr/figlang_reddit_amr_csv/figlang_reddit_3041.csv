@@ -1,0 +1,63 @@
+comment,amr
+"Help, there's a Call of Duty in my PlanetSide","# ::snt Help, there's a Call of Duty in my PlanetSide
+(h / help-01
+      :ARG0 (ii / i)
+      :ARG1 (b / be-located-at-91
+            :ARG1 (b2 / broadcast-program
+                  :name (n / name
+                        :op1 ""Call""
+                        :op2 ""Of""
+                        :op3 ""Duty""))
+            :ARG2 (p / planetSide
+                  :poss ii)))"
+"So if NC gets Wrel's bandana and TR gets CoD Ghost's bandana, does VS get a purple bandana tied 2Pac style?","# ::snt So if NC gets Wrel's bandana and TR gets CoD Ghost's bandana, does VS get a purple bandana tied 2Pac style?
+(g / get-01
+      :ARG0 (p / person
+            :name (n / name
+                  :op1 ""Violet""
+                  :op2 ""Violet""))
+      :ARG1 (b / bandana
+            :ARG1-of (t / tie-01
+                  :ARG2 (s / style
+                        :mod (p2 / person
+                              :name (n2 / name
+                                    :op1 ""2Pac""))))
+            :ARG1-of (p3 / purple-02))
+      :polarity (a / amr-unknown)
+      :condition (a2 / and
+            :op1 (g2 / get-01
+                  :ARG0 (s2 / state
+                        :name (n3 / name
+                              :op1 ""NC""))
+                  :ARG1 (b2 / bandana
+                        :poss (p4 / person
+                              :name (n4 / name
+                                    :op1 ""Wrel""))))
+            :op2 (g3 / get-01
+                  :ARG0 s2
+                  :ARG1 (b3 / bandana
+                        :poss (p5 / person
+                              :name (n5 / name
+                                    :op1 ""CoD""
+                                    :op2 ""Ghost""))))))"
+It actually looks like all factions get the skull face.,"# ::snt It actually looks like all factions get the skull face.
+(l / look-02
+      :ARG0 (ii / it)
+      :ARG1 (g / get-01
+            :ARG0 (f / faction
+                  :mod (a / all))
+            :ARG1 (f2 / face
+                  :part-of (s / skull)))
+      :ARG1-of (a2 / actual-02))"
+We can't have the TR having something unique can we?,"# ::snt We can't have the TR having something unique can we?
+(p / possible-01
+      :polarity -
+      :ARG1 (c / capable-01
+            :ARG1 (w / we)
+            :ARG2 (c2 / capable-01
+                  :ARG1 w
+                  :ARG2 (h / have-03
+                        :ARG0 w
+                        :ARG1 (s / something
+                              :ARG1-of (u / unique-01)))))
+      :ARG1-of (r / request-confirmation-91))"

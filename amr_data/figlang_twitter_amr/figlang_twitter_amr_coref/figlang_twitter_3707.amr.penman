@@ -1,0 +1,95 @@
+# ::snt I can't wait to get this ! I am so thankful ! <URL>
+# ::tokens ["I", "ca", "n't", "wait", "to", "get", "this", "!", "I", "am", "so", "thankful", "!", "<", "URL", ">"]
+# ::lemmas ["i", "can", "not", "wait", "to", "get", "this", "!", "i", "be", "so", "thankful", "!", "<", "URL", ">"]
+(c1-7 / multi-sentence
+      :snt1 (c1-1 / wait-01
+                  :ARG1 (c1-6 / i)
+                  :ARG2 (c1-5 / get-01
+                              :ARG0 c1-6
+                              :ARG1 (c1-4 / this))
+                  :polarity -)
+      :snt2 (c1-2 / thankful-02
+                  :ARG0 (c1-3 / i)
+                  :degree (c1-0 / so)))
+
+# ::snt OMG , If i can buy that in my country i will buy that immediately :')
+# ::tokens ["OMG", ",", "If", "i", "can", "buy", "that", "in", "my", "country", "i", "will", "buy", "that", "immediately", ":')"]
+# ::lemmas ["OMG", ",", "if", "i", "can", "buy", "that", "in", "my", "country", "i", "will", "buy", "that", "immediately", ":')"]
+(c2-6 / buy-01
+      :ARG0 (c2-7 / i)
+      :ARG1 (c2-4 / that)
+      :time (c2-2 / immediate)
+      :condition (c2-5 / possible-01
+                       :ARG1 (c2-0 / buy-01
+                                   :ARG0 c2-7
+                                   :ARG1 c2-4
+                                   :location (c2-1 / country
+                                                   :poss c2-7)))
+      :mod (c2-3 / oh-my-god
+                 :mode expressive))
+
+# ::snt Someone just actually helped me on buying this , I was kinda desperate that time hehe
+# ::tokens ["Someone", "just", "actually", "helped", "me", "on", "buying", "this", ",", "I", "was", "kinda", "desperate", "that", "time", "hehe"]
+# ::lemmas ["someone", "just", "actually", "help", "i", "on", "buy", "this", ",", "i", "be", "kinda", "desperate", "that", "time", "hehe"]
+(c3-2 / and
+      :op1 (c3-4 / help-01
+                 :ARG0 (c3-0 / someone)
+                 :ARG1 (c3-7 / buy-01
+                             :ARG0 (c3-9 / i)
+                             :ARG1 (c3-6 / this))
+                 :ARG2 c3-9
+                 :ARG1-of (c3-12 / actual-02)
+                 :mod (c3-8 / just))
+      :op2 (c3-1 / desperate-02
+                 :ARG0 c3-9
+                 :degree (c3-10 / kind-of)
+                 :time (c3-3 / time
+                             :mod (c3-11 / that))
+                 :mod (c3-5 / hehe
+                            :mode expressive)))
+
+# ::snt the price for the shoes was alright but the shipping fee is kinda rip off hahaha
+# ::tokens ["the", "price", "for", "the", "shoes", "was", "alright", "but", "the", "shipping", "fee", "is", "kinda", "rip", "off", "hahaha"]
+# ::lemmas ["the", "price", "for", "the", "shoe", "be", "alright", "but", "the", "shipping", "fee", "be", "kinda", "rip", "off", "hahaha"]
+(c4-3 / contrast-01
+      :ARG1 (c4-7 / price-01
+                  :ARG1 (c4-0 / shoe)
+                  :ARG2 (c4-1 / all-right))
+      :ARG2 (c4-5 / rip-off-02
+                  :ARG1 (c4-2 / fee
+                              :mod (c4-6 / ship-01))
+                  :degree (c4-8 / kind-of)
+                  :mod (c4-4 / haha
+                             :mode expressive)))
+
+# ::snt Shipping fee .. every international online shop buyer nightmare ~
+# ::tokens ["Shipping", "fee", "..", "every", "international", "online", "shop", "buyer", "nightmare", "~"]
+# ::lemmas ["shipping", "fee", "..", "every", "international", "online", "shop", "buyer", "nightmare", "~"]
+(c5-7 / multi-sentence
+      :snt1 (c5-1 / fee
+                  :source (c5-0 / ship-01))
+      :snt2 (c5-8 / nightmare
+                  :domain (c5-6 / person
+                                :ARG0-of (c5-4 / buy-01
+                                               :ARG1 (c5-5 / shop
+                                                           :mod (c5-3 / online)))
+                                :mod (c5-2 / international)
+                                :mod (c5-9 / every))))
+
+# ::snt IKR ! You pay more than the item lol
+# ::tokens ["IKR", "!", "You", "pay", "more", "than", "the", "item", "lol"]
+# ::lemmas ["IKR", "!", "you", "pay", "more", "than", "the", "item", "lol"]
+(c6-0 / say-01
+      :ARG1 (c6-7 / pay-01
+                  :ARG0 (c6-10 / you)
+                  :ARG1-of (c6-2 / have-quant-91
+                                 :ARG3 (c6-8 / more)
+                                 :ARG4 (c6-1 / item))
+                  :ARG2-of (c6-5 / laugh-01
+                                 :ARG0 (c6-3 / i)
+                                 :manner (c6-6 / loud)
+                                 :mode expressive))
+      :ARG2 (c6-4 / person
+                  :name (c6-9 / name
+                              :op1 "IKR"))
+      :mode expressive)

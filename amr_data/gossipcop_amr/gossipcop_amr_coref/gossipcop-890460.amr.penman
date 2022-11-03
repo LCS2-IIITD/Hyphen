@@ -1,0 +1,57 @@
+# ::snt Congratulations! I'm glad somebody's got a lot of energy!
+# ::tokens ["Congratulations", "!", "I", "'m", "glad", "somebody", "'s", "got", "a", "lot", "of", "energy", "!"]
+# ::lemmas ["congratulation", "!", "i", "be", "glad", "somebody", "be", "get", "a", "lot", "of", "energy", "!"]
+(c2-0 / multi-sentence
+      :snt1 (c2-4 / congratulate-01
+                  :mode expressive)
+      :snt2 (c2-7 / glad-02
+                  :ARG0 (c2-5 / get-02
+                              :ARG0 (c2-1 / somebody)
+                              :ARG1 (c2-2 / energy
+                                          :quant (c2-3 / lot)))
+                  :ARG1 (c2-6 / i)))
+
+# ::snt FANTASTIC!!!
+# ::tokens ["FANTASTIC", "!", "!", "!"]
+# ::lemmas ["FANTASTIC", "!", "!", "!"]
+(c3-0 / fabulous
+      :mode expressive)
+
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c4-0 / congratulate-01)
+
+# ::snt She lookin old as fuck
+# ::tokens ["She", "lookin", "old", "as", "fuck"]
+# ::lemmas ["she", "lookin", "old", "as", "fuck"]
+(c5-2 / look-02
+      :ARG0 (c5-3 / she)
+      :ARG1 (c5-1 / old
+                  :degree (c5-0 / as-fuck)))
+
+# ::snt Congrats!
+# ::tokens ["Congrats", "!"]
+# ::lemmas ["Congrats", "!"]
+(c6-0 / congratulate-01
+      :mode expressive)
+
+# ::snt Sad incident in NYC right now, and you're tweeting this garbage. Unfollowed.
+# ::tokens ["Sad", "incident", "in", "NYC", "right", "now", ",", "and", "you", "'re", "tweeting", "this", "garbage", ".", "Unfollowed", "."]
+# ::lemmas ["sad", "incident", "in", "NYC", "right", "now", ",", "and", "you", "be", "tweet", "this", "garbage", ".", "Unfollowed", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-10 / and
+                   :op1 (c7-9 / incident
+                              :location (c7-7 / city
+                                              :name (c7-2 / name
+                                                          :op1 "NYC"))
+                              :ARG0-of (c7-4 / sad-02)
+                              :time (c7-6 / now
+                                          :mod (c7-5 / right)))
+                   :op2 (c7-8 / tweet-01
+                              :ARG0 (c7-1 / you)
+                              :ARG1 (c7-11 / garbage
+                                           :mod (c7-12 / this))))
+      :snt2 (c7-0 / follow-01
+                  :ARG1 c7-1
+                  :polarity -))

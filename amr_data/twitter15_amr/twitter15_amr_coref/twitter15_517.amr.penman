@@ -1,0 +1,480 @@
+# ::snt Hellooo his name is Aragog you stoopaaaad
+# ::tokens ["Hellooo", "his", "name", "is", "Aragog", "you", "stoopaaaad"]
+# ::lemmas ["Hellooo", "his", "name", "be", "Aragog", "you", "stoopaaaad"]
+(c1-0 / say-01
+      :ARG1 (c1-7 / name-01
+                  :ARG1 (c1-4 / he)
+                  :ARG2 (c1-3 / person
+                              :name (c1-6 / name
+                                          :op1 "Aragog"))
+                  :mod (c1-1 / hell
+                             :mode expressive))
+      :ARG2 (c1-5 / you
+                  :mod (c1-2 / stoopad)))
+
+# ::snt that got my fears for spiders high!!
+# ::tokens ["that", "got", "my", "fears", "for", "spiders", "high", "!", "!"]
+# ::lemmas ["that", "get", "my", "fear", "for", "spider", "high", "!", "!"]
+(c2-4 / get-04
+      :ARG0 (c2-2 / that)
+      :ARG1 (c2-3 / high-02
+                  :ARG1 (c2-5 / fear-01
+                              :ARG0 (c2-1 / i)
+                              :ARG1 (c2-0 / spiders))))
+
+# ::snt yes that is true
+# ::tokens ["yes", "that", "is", "true"]
+# ::lemmas ["yes", "that", "be", "true"]
+(c3-0 / true-01
+      :ARG1 (c3-1 / that))
+
+# ::snt get out
+# ::tokens ["get", "out"]
+# ::lemmas ["get", "out"]
+(c4-2 / get-05
+      :ARG0 (c4-1 / you)
+      :ARG2 (c4-0 / out)
+      :mode imperative)
+
+# ::snt : A puppy-sized spider was found ... 'South American Goliath Birdeater.' BYEADIOSSAYONARA
+# ::tokens [":", "A", "puppy", "-", "sized", "spider", "was", "found", "...", "'", "South", "American", "Goliath", "Birdeater", ".", "'", "BYEADIOSSAYONARA"]
+# ::lemmas [":", "a", "puppy", "-", "sized", "spider", "be", "find", "...", "'", "South", "American", "Goliath", "Birdeater", ".", "'", "BYEADIOSSAYONARA"]
+(c5-4 / multi-sentence
+      :snt1 (c5-7 / find-01
+                  :ARG1 (c5-0 / spider
+                              :ARG1-of (c5-1 / size-01
+                                             :ARG2 (c5-3 / puppy))
+                              :mod (c5-5 / species
+                                         :name (c5-6 / name
+                                                     :op1 "South"
+                                                     :op2 "American"
+                                                     :op3 "Goliath"
+                                                     :op4 "Birdeater"))))
+      :snt2 (c5-2 / byeadiussayonara))
+
+# ::snt If you look closely, I did not swear at all, my vocabulary is beautiful
+# ::tokens ["If", "you", "look", "closely", ",", "I", "did", "not", "swear", "at", "all", ",", "my", "vocabulary", "is", "beautiful"]
+# ::lemmas ["if", "you", "look", "closely", ",", "i", "do", "not", "swear", "at", "all", ",", "my", "vocabulary", "be", "beautiful"]
+(c6-0 / swear-01
+      :ARG0 (c6-2 / i)
+      :ARG1 (c6-1 / beautiful-02
+                  :ARG1 (c6-7 / vocabulary
+                              :poss c6-2))
+      :mod (c6-6 / at-all)
+      :condition (c6-3 / look-01
+                       :ARG0 (c6-5 / you)
+                       :ARG1-of (c6-4 / close-10))
+      :polarity -)
+
+# ::snt NOPE. THATS IT. IM DONE WITH PLANET EARTH.
+# ::tokens ["NOPE", ".", "THATS", "IT", ".", "IM", "DONE", "WITH", "PLANET", "EARTH", "."]
+# ::lemmas ["NOPE", ".", "THATS", "IT", ".", "IM", "do", "with", "PLANET", "earth", "."]
+(c7-4 / multi-sentence
+      :snt1 (c7-7 / nope)
+      :snt2 (c7-0 / be-it-07
+                  :ARG1 (c7-3 / that))
+      :snt3 (c7-5 / be-done-08
+                  :ARG0 (c7-1 / i)
+                  :ARG1 (c7-2 / planet
+                              :name (c7-6 / name
+                                          :op1 "Planet"
+                                          :op2 "Earth"))))
+
+# ::snt well I know not going there to see that spider
+# ::tokens ["well", "I", "know", "not", "going", "there", "to", "see", "that", "spider"]
+# ::lemmas ["well", "i", "know", "not", "go", "there", "to", "see", "that", "spider"]
+(c8-7 / know-01
+      :ARG0 (c8-2 / i)
+      :ARG1 (c8-8 / go-02
+                  :ARG4 (c8-4 / there)
+                  :purpose (c8-0 / see-01
+                                 :ARG0 c8-2
+                                 :ARG1 (c8-3 / person
+                                             :name (c8-6 / name
+                                                         :op1 "Spider")
+                                             :mod (c8-5 / that)))
+                  :polarity -)
+      :mod (c8-1 / well))
+
+# ::snt Found this sucker a few weeks ago. Needless to say, I'm planning on moving.
+# ::tokens ["Found", "this", "sucker", "a", "few", "weeks", "ago", ".", "Needless", "to", "say", ",", "I", "'m", "planning", "on", "moving", "."]
+# ::lemmas ["find", "this", "sucker", "a", "few", "weeks", "ago", ".", "needless", "to", "say", ",", "i", "be", "plan", "on", "move", "."]
+(c10-9 / multi-sentence
+       :snt1 (c10-14 / find-01
+                     :ARG0 (c10-3 / i)
+                     :ARG1 (c10-1 / sucker
+                                  :mod (c10-7 / this))
+                     :time (c10-4 / before
+                                  :op1 (c10-12 / now)
+                                  :quant (c10-0 / few
+                                                :op1 (c10-8 / temporal-quantity
+                                                            :unit (c10-2 / week)
+                                                            :quant 1))))
+       :snt2 (c10-5 / plan-01
+                    :ARG0 (c10-10 / i)
+                    :ARG1 (c10-13 / move-01
+                                  :ARG1 c10-10)
+                    :ARG1-of (c10-6 / say-01
+                                    :ARG0 c10-10
+                                    :ARG1-of (c10-11 / need-01
+                                                     :polarity -))))
+
+# ::snt dude tomorrow is going to be so dope
+# ::tokens ["dude", "tomorrow", "is", "going", "to", "be", "so", "dope"]
+# ::lemmas ["dude", "tomorrow", "be", "go", "to", "be", "so", "dope"]
+(c11-1 / dope
+       :domain (c11-0 / tomorrow)
+       :degree (c11-2 / so))
+
+# ::snt : A puppy-sized spider was found in South America and is known as the 'Goliath Birdeater.' Super nope.
+# ::tokens [":", "A", "puppy", "-", "sized", "spider", "was", "found", "in", "South", "America", "and", "is", "known", "as", "the", "'", "Goliath", "Birdeater", ".", "'", "Super", "nope", "."]
+# ::lemmas [":", "a", "puppy", "-", "sized", "spider", "be", "find", "in", "South", "America", "and", "be", "know", "as", "the", "'", "Goliath", "Birdeater", ".", "'", "Super", "nope", "."]
+(c12-5 / multi-sentence
+       :snt1 (c12-10 / and
+                     :op1 (c12-12 / find-01
+                                  :ARG1 (c12-0 / spider
+                                               :ARG1-of (c12-2 / size-01
+                                                               :ARG2 (c12-4 / puppy)))
+                                  :location (c12-1 / world-region
+                                                   :name (c12-7 / name
+                                                                :op1 "South"
+                                                                :op2 "America")))
+                     :op2 (c12-11 / know-02
+                                  :ARG1 c12-0
+                                  :ARG2 (c12-3 / birdeater
+                                               :name (c12-9 / name
+                                                            :op1 "Goliath"
+                                                            :op2 "Birdeater"))))
+       :snt2 (c12-8 / nope
+                    :mod (c12-6 / super)))
+
+# ::snt umm shall we not
+# ::tokens ["umm", "shall", "we", "not"]
+# ::lemmas ["umm", "shall", "we", "not"]
+(c13-0 / request-confirmation-91
+       :ARG1 (c13-1 / we))
+
+# ::snt I feel like I kinda hate you right now
+# ::tokens ["I", "feel", "like", "I", "kinda", "hate", "you", "right", "now"]
+# ::lemmas ["i", "feel", "like", "i", "kinda", "hate", "you", "right", "now"]
+(c15-6 / feel-01
+       :ARG0 (c15-0 / i)
+       :ARG1 (c15-3 / hate-01
+                    :ARG0 c15-0
+                    :ARG1 (c15-2 / you)
+                    :degree (c15-5 / kind-of)
+                    :time (c15-4 / now
+                                 :mod (c15-1 / right))))
+
+# ::snt : A puppy-sized spider found in South America known as 'South American Goliath Birdeater.'
+# ::tokens [":", "A", "puppy", "-", "sized", "spider", "found", "in", "South", "America", "known", "as", "'", "South", "American", "Goliath", "Birdeater", ".", "'"]
+# ::lemmas [":", "a", "puppy", "-", "sized", "spider", "find", "in", "South", "America", "know", "as", "'", "South", "American", "Goliath", "Birdeater", ".", "'"]
+(c17-3 / thing
+       :ARG1-of (c17-8 / find-01
+                       :location (c17-4 / continent
+                                        :name (c17-6 / name
+                                                     :op1 "South"
+                                                     :op2 "America")))
+       :ARG1-of (c17-7 / know-02
+                       :ARG2 (c17-0 / species
+                                    :name (c17-5 / name
+                                                 :op1 "South"
+                                                 :op2 "American"
+                                                 :op3 "Goliath"
+                                                 :op4 "Birdeater")))
+       :ARG1-of (c17-1 / size-01
+                       :ARG2 (c17-2 / puppy)))
+
+# ::snt Harry potter films coming to life
+# ::tokens ["Harry", "potter", "films", "coming", "to", "life"]
+# ::lemmas ["Harry", "potter", "film", "come", "to", "life"]
+(c18-3 / come-04
+       :ARG1 (c18-2 / film
+                    :name (c18-0 / name
+                                 :op1 "Harry"
+                                 :op2 "Potter"))
+       :ARG2 (c18-1 / life))
+
+# ::snt : A puppy-sized spider was found in South America is Aragog from Harry Potter, feel old yet?
+# ::tokens [":", "A", "puppy", "-", "sized", "spider", "was", "found", "in", "South", "America", "is", "Aragog", "from", "Harry", "Potter", ",", "feel", "old", "yet", "?"]
+# ::lemmas [":", "a", "puppy", "-", "sized", "spider", "be", "find", "in", "South", "America", "be", "Aragog", "from", "Harry", "Potter", ",", "feel", "old", "yet", "?"]
+(c20-9 / multi-sentence
+       :snt1 (c20-15 / find-01
+                     :ARG1 (c20-1 / spider
+                                  :ARG1-of (c20-4 / size-01
+                                                  :ARG2 (c20-6 / puppy))
+                                  :domain (c20-14 / person
+                                                  :name (c20-13 / name
+                                                                :op1 "Aragog")
+                                                  :source (c20-5 / book
+                                                                 :name (c20-12 / name
+                                                                               :op1 "Harry"
+                                                                               :op2 "Potter"))))
+                     :location (c20-2 / world-region
+                                      :name (c20-10 / name
+                                                    :op1 "South"
+                                                    :op2 "America")))
+       :snt2 (c20-0 / feel-01
+                    :ARG0 (c20-11 / you)
+                    :ARG1 (c20-7 / old)
+                    :time (c20-3 / yet)
+                    :polarity (c20-8 / amr-unknown)))
+
+# ::snt if you aren't a friend of spiders, then you aren't a friend of mine!!!
+# ::tokens ["if", "you", "are", "n't", "a", "friend", "of", "spiders", ",", "then", "you", "are", "n't", "a", "friend", "of", "mine", "!", "!", "!"]
+# ::lemmas ["if", "you", "be", "not", "a", "friend", "of", "spider", ",", "then", "you", "be", "not", "a", "friend", "of", "mine", "!", "!", "!"]
+(c21-3 / have-condition-91
+       :ARG1 (c21-2 / have-rel-role-91
+                    :ARG0 (c21-4 / you)
+                    :ARG1 (c21-1 / i)
+                    :ARG2 (c21-5 / friend)
+                    :polarity -)
+       :ARG2 (c21-6 / have-rel-role-91
+                    :ARG0 c21-4
+                    :ARG1 c21-1
+                    :ARG2 (c21-0 / friend)
+                    :polarity -))
+
+# ::snt Like I couldn't catch of them
+# ::tokens ["Like", "I", "could", "n't", "catch", "of", "them"]
+# ::lemmas ["like", "i", "could", "not", "catch", "of", "they"]
+(c22-4 / resemble-01
+       :ARG2 (c22-1 / possible-01
+                    :ARG1 (c22-3 / catch-01
+                                 :ARG0 (c22-0 / i)
+                                 :ARG1 (c22-2 / they))
+                    :polarity -))
+
+# ::snt nah but seriously
+# ::tokens ["nah", "but", "seriously"]
+# ::lemmas ["nah", "but", "seriously"]
+(c23-2 / contrast-01
+       :ARG1 (c23-0 / nah)
+       :ARG2 (c23-1 / serious-01))
+
+# ::snt Afraid not! Apparently its harmless to humans. After you? Ladies first.
+# ::tokens ["Afraid", "not", "!", "Apparently", "its", "harmless", "to", "humans", ".", "After", "you", "?", "Ladies", "first", "."]
+# ::lemmas ["afraid", "not", "!", "apparently", "its", "harmless", "to", "human", ".", "after", "you", "?", "lady", "first", "."]
+(c25-6 / multi-sentence
+       :snt1 (c25-12 / fear-01
+                     :polarity -)
+       :snt2 (c25-11 / appear-02
+                     :ARG1 (c25-8 / harmful-02
+                                  :ARG0 (c25-1 / it)
+                                  :ARG1 (c25-2 / human)
+                                  :polarity -))
+       :snt3 (c25-7 / after
+                    :op1 (c25-9 / you)
+                    :polarity (c25-5 / amr-unknown)
+                    :ord (c25-4 / ordinal-entity
+                                :value 1))
+       :snt4 (c25-0 / say-01
+                    :ARG0 (c25-10 / i)
+                    :ARG2 (c25-3 / lady)))
+
+# ::snt they're seriously so cute!! I want to cuddle one
+# ::tokens ["they", "'re", "seriously", "so", "cute", "!", "!", "I", "want", "to", "cuddle", "one"]
+# ::lemmas ["they", "be", "seriously", "so", "cute", "!", "!", "i", "want", "to", "cuddle", "one"]
+(c28-5 / multi-sentence
+       :snt1 (c28-7 / cute
+                    :domain (c28-3 / they)
+                    :ARG2-of (c28-0 / serious-01)
+                    :degree (c28-1 / so))
+       :snt2 (c28-8 / want-01
+                    :ARG0 (c28-2 / i)
+                    :ARG1 (c28-6 / cuddle-01
+                                 :ARG0 c28-2
+                                 :ARG1 (c28-4 / one))))
+
+# ::snt yeah when I light it up in flames
+# ::tokens ["yeah", "when", "I", "light", "it", "up", "in", "flames"]
+# ::lemmas ["yeah", "when", "i", "light", "it", "up", "in", "flame"]
+(c29-1 / light-up-09
+       :ARG0 (c29-0 / i)
+       :ARG1 (c29-3 / it)
+       :manner (c29-4 / flame-01
+                      :ARG1 c29-3)
+       :mod (c29-2 / yeah
+                   :mode expressive))
+
+# ::snt this some Harry Potter bullshit
+# ::tokens ["this", "some", "Harry", "Potter", "bullshit"]
+# ::lemmas ["this", "some", "Harry", "Potter", "bullshit"]
+(c30-1 / bullshit-01
+       :ARG1 (c30-2 / this)
+       :mod (c30-3 / book
+                   :name (c30-4 / name
+                                :op1 "Harry"
+                                :op2 "Potter"))
+       :mod (c30-0 / some))
+
+# ::snt Jajajajajajajajajajajajaja ahora q me acuerdo, me levante a las :00am iba a enviarte el screenshot a esa hora, sea la madre
+# ::tokens ["Jajajajajajajajajajajajaja", "ahora", "q", "me", "acuerdo", ",", "me", "levante", "a", "las", ":", "00am", "iba", "a", "enviarte", "el", "screenshot", "a", "esa", "hora", ",", "sea", "la", "madre"]
+# ::lemmas ["Jajajajajajajajajajajajaja", "ahora", "q", "me", "acuerdo", ",", "i", "levante", "a", "las", ":", "00am", "iba", "a", "enviarte", "el", "screenshot", "a", "esa", "hora", ",", "sea", "la", "madre"]
+(c31-1 / multi-sentence
+       :snt1 (c31-0 / ahora
+                    :mod (c31-2 / person
+                                :name (c31-3 / name))
+                    :mode expressive))
+
+# ::snt : A puppy-sized spider was found in South America will never see me in South America ever
+# ::tokens [":", "A", "puppy", "-", "sized", "spider", "was", "found", "in", "South", "America", "will", "never", "see", "me", "in", "South", "America", "ever"]
+# ::lemmas [":", "a", "puppy", "-", "sized", "spider", "be", "find", "in", "South", "America", "will", "never", "see", "i", "in", "South", "America", "ever"]
+(c32-0 / see-01
+       :ARG0 (c32-6 / you)
+       :ARG1 (c32-1 / i)
+       :location (c32-5 / continent
+                        :name (c32-7 / name
+                                     :op1 "South"
+                                     :op2 "America"))
+       :time (c32-8 / ever)
+       :time (c32-9 / find-01
+                    :ARG1 (c32-2 / spider
+                                 :ARG1-of (c32-4 / size-01
+                                                 :ARG2 (c32-3 / puppy))))
+       :polarity -)
+
+# ::snt Reasons I don't fuck w/ South America : A puppy-sized spider was found in South America
+# ::tokens ["Reasons", "I", "do", "n't", "fuck", "w/", "South", "America", ":", "A", "puppy", "-", "sized", "spider", "was", "found", "in", "South", "America"]
+# ::lemmas ["reason", "i", "do", "not", "fuck", "w/", "South", "America", ":", "a", "puppy", "-", "sized", "spider", "be", "find", "in", "South", "America"]
+(c33-6 / cause-01
+       :ARG0 (c33-9 / find-01
+                    :ARG1 (c33-1 / spider
+                                 :ARG1-of (c33-2 / size-01
+                                                 :ARG2 (c33-4 / puppy)))
+                    :location (c33-8 / world-region
+                                     :name (c33-7 / name
+                                                  :op1 "South"
+                                                  :op2 "America")))
+       :ARG1 (c33-5 / reason
+                    :ARG1-of (c33-0 / fuck-01
+                                    :ARG0 (c33-3 / i)
+                                    :polarity -)))
+
+# ::snt omg!!! Look at that mother fucker!!! It's a fucking radioactive goliath spiderdevil!!! It is literally the spawn of satan
+# ::tokens ["omg", "!", "!", "!", "Look", "at", "that", "mother", "fucker", "!", "!", "!", "It", "'s", "a", "fucking", "radioactive", "goliath", "spiderdevil", "!", "!", "!", "It", "is", "literally", "the", "spawn", "of", "satan"]
+# ::lemmas ["omg", "!", "!", "!", "look", "at", "that", "mother", "fucker", "!", "!", "!", "it", "be", "a", "fucking", "radioactive", "goliath", "spiderdevil", "!", "!", "!", "it", "be", "literally", "the", "spawn", "of", "satan"]
+(c34-7 / multi-sentence
+       :snt1 (c34-6 / oh-my-god
+                    :mode expressive)
+       :snt2 (c34-5 / look-01
+                    :ARG0 (c34-9 / you)
+                    :ARG1 (c34-4 / person
+                                 :ARG0-of (c34-16 / fuck-01
+                                                  :ARG1 (c34-15 / person
+                                                                :ARG0-of (c34-10 / have-rel-role-91
+                                                                                 :ARG2 (c34-14 / mother)))))
+                    :mode imperative)
+       :snt3 (c34-11 / goliath
+                     :mod (c34-13 / radioactive)
+                     :mod (c34-0 / fucking)
+                     :domain (c34-2 / it))
+       :snt4 (c34-1 / spawn
+                    :poss (c34-3 / satan)
+                    :mod (c34-8 / literal)
+                    :domain (c34-12 / it)))
+
+# ::snt mate that thing would end wars.
+# ::tokens ["mate", "that", "thing", "would", "end", "wars", "."]
+# ::lemmas ["mate", "that", "thing", "would", "end", "war", "."]
+(c35-5 / end-01
+       :ARG0 (c35-2 / mate-01
+                    :ARG0 (c35-3 / you)
+                    :ARG1 (c35-0 / thing
+                                 :mod (c35-1 / that))
+                    :mode imperative)
+       :ARG1 (c35-4 / war))
+
+# ::snt THATS NOT REAL.
+# ::tokens ["THATS", "NOT", "REAL", "."]
+# ::lemmas ["that", "not", "REAL", "."]
+(c38-0 / real-04
+       :ARG1 (c38-1 / that)
+       :polarity -)
+
+# ::snt Same here - the pic is bad enough!
+# ::tokens ["Same", "here", "-", "the", "pic", "is", "bad", "enough", "!"]
+# ::lemmas ["same", "here", "-", "the", "pic", "be", "bad", "enough", "!"]
+(c39-4 / multi-sentence
+       :snt1 (c39-0 / same-01
+                    :location (c39-5 / here))
+       :snt2 (c39-1 / bad-07
+                    :ARG1 (c39-3 / pic)
+                    :ARG2-of (c39-2 / have-degree-91
+                                    :ARG1 c39-3
+                                    :ARG3 (c39-6 / enough))))
+
+# ::snt thought you should know
+# ::tokens ["thought", "you", "should", "know"]
+# ::lemmas ["think", "you", "should", "know"]
+(c40-1 / think-01
+       :ARG1 (c40-0 / recommend-01
+                    :ARG1 (c40-2 / know-01
+                                 :ARG0 (c40-3 / you
+                                              :ARG2-of c40-0))))
+
+# ::snt absolutely not
+# ::tokens ["absolutely", "not"]
+# ::lemmas ["absolutely", "not"]
+(c44-1 / have-polarity-91
+       :degree (c44-0 / absolute)
+       :ARG2 -)
+
+# ::snt right... I hope that isn't real...
+# ::tokens ["right", "...", "I", "hope", "that", "is", "n't", "real", "..."]
+# ::lemmas ["right", "...", "i", "hope", "that", "be", "not", "real", "..."]
+(c46-3 / multi-sentence
+       :snt1 (c46-5 / right-06)
+       :snt2 (c46-4 / hope-01
+                    :ARG0 (c46-0 / i)
+                    :ARG1 (c46-1 / real-04
+                                 :ARG1 (c46-2 / that)
+                                 :polarity -)))
+
+# ::snt I've never seen so much nope in one picture.
+# ::tokens ["I", "'ve", "never", "seen", "so", "much", "nope", "in", "one", "picture", "."]
+# ::lemmas ["i", "'ve", "never", "see", "so", "much", "nope", "in", "one", "picture", "."]
+(c47-0 / see-01
+       :ARG0 (c47-2 / i)
+       :ARG1 (c47-5 / nope
+                    :quant (c47-4 / much
+                                  :degree (c47-1 / so)))
+       :time (c47-6 / ever)
+       :location (c47-3 / picture
+                        :quant 1)
+       :polarity -)
+
+# ::snt that's PROB under your bed with the rest of the spiders
+# ::tokens ["that", "'s", "PROB", "under", "your", "bed", "with", "the", "rest", "of", "the", "spiders"]
+# ::lemmas ["that", "be", "PROB", "under", "your", "bed", "with", "the", "rest", "of", "the", "spider"]
+(c49-1 / be-located-at-91
+       :ARG1 (c49-9 / and
+                    :op1 (c49-4 / reputation
+                                :domain (c49-5 / that))
+                    :op2 (c49-3 / rest
+                                :ARG1-of (c49-2 / include-91
+                                                :ARG2 (c49-0 / spider))))
+       :ARG2 (c49-6 / under
+                    :op1 (c49-7 / bed
+                                :poss (c49-8 / you))))
+
+# ::snt You should get one as a pet and walk it down the street on a leash to freak out your neighbors
+# ::tokens ["You", "should", "get", "one", "as", "a", "pet", "and", "walk", "it", "down", "the", "street", "on", "a", "leash", "to", "freak", "out", "your", "neighbors"]
+# ::lemmas ["you", "should", "get", "one", "as", "a", "pet", "and", "walk", "it", "down", "the", "street", "on", "a", "leash", "to", "freak", "out", "your", "neighbor"]
+(c50-8 / recommend-01
+       :ARG1 (c50-5 / and
+                    :op1 (c50-11 / get-01
+                                 :ARG0 (c50-7 / you)
+                                 :ARG1 (c50-4 / one)
+                                 :prep-as (c50-2 / pet))
+                    :op2 (c50-1 / walk-01
+                                :ARG0 c50-7
+                                :ARG1 c50-4
+                                :ARG2 (c50-0 / street)
+                                :direction (c50-9 / down)
+                                :manner (c50-3 / leash-01
+                                               :ARG1 c50-4)
+                                :purpose (c50-10 / freak-out-02
+                                                 :ARG1 (c50-6 / neighbor
+                                                              :poss c50-7))))
+       :ARG2 c50-7)

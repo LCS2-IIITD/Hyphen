@@ -1,0 +1,86 @@
+# ::snt Really ? If some strange dude did that to you you telling me you wouldn't sock him ?
+# ::tokens ["Really", "?", "If", "some", "strange", "dude", "did", "that", "to", "you", "you", "telling", "me", "you", "would", "n't", "sock", "him", "?"]
+# ::lemmas ["really", "?", "if", "some", "strange", "dude", "do", "that", "to", "you", "you", "tell", "i", "you", "would", "not", "sock", "he", "?"]
+(c1-10 / multi-sentence
+       :snt1 (c1-7 / real-04)
+       :snt2 (c1-6 / tell-01
+                   :ARG0 (c1-11 / you)
+                   :ARG1 (c1-0 / sock-01
+                               :ARG0 (c1-12 / you)
+                               :ARG1 (c1-1 / dude
+                                           :mod (c1-8 / strange)
+                                           :mod (c1-5 / some))
+                               :polarity -)
+                   :ARG2 (c1-9 / i)
+                   :polarity (c1-2 / amr-unknown)
+                   :condition (c1-3 / do-02
+                                    :ARG0 c1-1
+                                    :ARG1 (c1-4 / that)
+                                    :ARG2 c1-12)))
+
+# ::snt I'm a bloke so it would be a woman doing it . In which case I'd dine out on that for a week . If it was a bloke I'd pull a face and have a good laugh .
+# ::tokens ["I", "'m", "a", "bloke", "so", "it", "would", "be", "a", "woman", "doing", "it", ".", "In", "which", "case", "I", "'d", "dine", "out", "on", "that", "for", "a", "week", ".", "If", "it", "was", "a", "bloke", "I", "'d", "pull", "a", "face", "and", "have", "a", "good", "laugh", "."]
+# ::lemmas ["i", "be", "a", "bloke", "so", "it", "would", "be", "a", "woman", "do", "it", ".", "in", "which", "case", "i", "would", "dine", "out", "on", "that", "for", "a", "week", ".", "if", "it", "be", "a", "bloke", "i", "would", "pull", "a", "face", "and", "have", "a", "good", "laugh", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-2 / cause-01
+                  :ARG0 (c2-19 / bloke
+                               :domain (c2-1 / i))
+                  :ARG1 (c2-3 / woman
+                              :ARG0-of (c2-0 / do-02
+                                             :ARG1 (c2-11 / it))))
+      :snt2 (c2-13 / dine-out-03
+                   :ARG0 (c2-12 / i)
+                   :ARG1 (c2-6 / that)
+                   :duration (c2-4 / temporal-quantity
+                                   :unit (c2-9 / week)
+                                   :quant 1)
+                   :condition (c2-14 / bloke
+                                     :domain c2-12))
+      :snt3 (c2-15 / and
+                   :op1 (c2-20 / pull-06
+                               :ARG0 (c2-17 / i)
+                               :ARG1 (c2-16 / face))
+                   :op2 (c2-18 / laugh-01
+                               :ARG0 c2-17
+                               :ARG1-of (c2-7 / good-02))
+                   :condition (c2-10 / bloke
+                                     :domain (c2-5 / it))))
+
+# ::snt I wouldn't be that amused , people need to learn to keep their hands to themselves .
+# ::tokens ["I", "would", "n't", "be", "that", "amused", ",", "people", "need", "to", "learn", "to", "keep", "their", "hands", "to", "themselves", "."]
+# ::lemmas ["i", "would", "not", "be", "that", "amuse", ",", "people", "need", "to", "learn", "to", "keep", "their", "hand", "to", "themselves", "."]
+(c3-0 / amuse-01
+      :ARG0 (c3-7 / need-01
+                  :ARG0 (c3-6 / person
+                              :part (c3-3 / hand))
+                  :ARG1 (c3-5 / learn-01
+                              :ARG0 c3-6
+                              :ARG1 (c3-1 / keep-01
+                                          :ARG0 c3-6
+                                          :ARG1 c3-3
+                                          :direction c3-6)))
+      :ARG1 (c3-2 / i)
+      :degree (c3-4 / that)
+      :polarity -)
+
+# ::snt It was nothing . Dude was happy . We need to understand not everyone is Donald Trump . We've lost nuance .
+# ::tokens ["It", "was", "nothing", ".", "Dude", "was", "happy", ".", "We", "need", "to", "understand", "not", "everyone", "is", "Donald", "Trump", ".", "We", "'ve", "lost", "nuance", "."]
+# ::lemmas ["it", "be", "nothing", ".", "dude", "be", "happy", ".", "we", "need", "to", "understand", "not", "everyone", "be", "Donald", "Trump", ".", "we", "'ve", "lose", "nuance", "."]
+(c4-10 / multi-sentence
+       :snt1 (c4-11 / nothing
+                    :domain (c4-9 / it))
+       :snt2 (c4-3 / happy-01
+                   :ARG1 (c4-0 / dude))
+       :snt3 (c4-6 / need-01
+                   :ARG0 (c4-2 / we)
+                   :ARG1 (c4-4 / understand-01
+                               :ARG0 c4-2
+                               :ARG1 (c4-13 / everyone
+                                            :domain (c4-7 / person
+                                                          :name (c4-5 / name
+                                                                      :op1 "Donald"
+                                                                      :op2 "Trump"))
+                                            :polarity -)))
+       :snt4 (c4-8 / lose-02
+                   :ARG0 (c4-12 / we)
+                   :ARG1 (c4-1 / nuance)))

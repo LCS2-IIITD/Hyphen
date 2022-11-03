@@ -1,0 +1,35 @@
+# ::snt Forest Hill 'stabbing': Attacker shouted 'I want to kill a Muslim' while chasing passengers
+# ::tokens ["Forest", "Hill", "'", "stabbing", "'", ":", "Attacker", "shouted", "'", "I", "want", "to", "kill", "a", "Muslim", "'", "while", "chasing", "passengers"]
+# ::lemmas ["Forest", "Hill", "'", "stab", "'", ":", "Attacker", "shout", "'", "i", "want", "to", "kill", "a", "Muslim", "'", "while", "chase", "passenger"]
+(c1-1 / and
+      :op1 (c1-0 / stab-01
+                 :location (c1-8 / location
+                                 :name (c1-12 / name
+                                              :op1 "Forest"
+                                              :op2 "Hill")))
+      :op2 (c1-10 / shout-01
+                  :ARG0 (c1-11 / person
+                               :ARG0-of (c1-13 / attack-01))
+                  :ARG1 (c1-4 / want-01
+                              :ARG0 c1-11
+                              :ARG1 (c1-2 / kill-01
+                                          :ARG0 c1-11
+                                          :ARG1 (c1-6 / person
+                                                      :mod (c1-7 / religious-group
+                                                                 :name (c1-9 / name
+                                                                             :op1 "Muslim")))))
+                  :time (c1-3 / chase-01
+                              :ARG0 c1-11
+                              :ARG1 (c1-5 / passenger))))
+
+# ::snt We may never know his true motive.
+# ::tokens ["We", "may", "never", "know", "his", "true", "motive", "."]
+# ::lemmas ["we", "may", "never", "know", "his", "true", "motive", "."]
+(c2-3 / possible-01
+      :ARG1 (c2-5 / know-01
+                  :ARG0 (c2-0 / we)
+                  :ARG1 (c2-4 / motive
+                              :poss (c2-1 / he)
+                              :ARG1-of (c2-2 / true-01))
+                  :time (c2-6 / ever)
+                  :polarity -))

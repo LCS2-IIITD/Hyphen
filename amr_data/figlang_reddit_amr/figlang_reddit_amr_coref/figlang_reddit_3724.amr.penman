@@ -1,0 +1,27 @@
+# ::snt George Orwell must be rolling in his grave about this
+# ::tokens ["George", "Orwell", "must", "be", "rolling", "in", "his", "grave", "about", "this"]
+# ::lemmas ["George", "Orwell", "must", "be", "roll", "in", "his", "grave", "about", "this"]
+(c1-4 / infer-01
+      :ARG1 (c1-1 / roll-01
+                  :ARG1 (c1-2 / person
+                              :name (c1-5 / name
+                                          :op1 "George"
+                                          :op2 "Orwell"))
+                  :ARG2 (c1-3 / grave
+                              :poss c1-2)
+                  :topic (c1-0 / this)))
+
+# ::snt Maybe we should put a camera in his grave and find out
+# ::tokens ["Maybe", "we", "should", "put", "a", "camera", "in", "his", "grave", "and", "find", "out"]
+# ::lemmas ["maybe", "we", "should", "put", "a", "camera", "in", "his", "grave", "and", "find", "out"]
+(c2-8 / possible-01
+      :ARG1 (c2-6 / recommend-01
+                  :ARG1 (c2-0 / and
+                              :op1 (c2-5 / put-01
+                                         :ARG0 (c2-3 / we)
+                                         :ARG1 (c2-2 / camera)
+                                         :ARG2 (c2-7 / grave
+                                                     :poss (c2-4 / he)))
+                              :op2 (c2-1 / find-out-03
+                                         :ARG0 c2-3))
+                  :ARG2 c2-3))

@@ -1,0 +1,156 @@
+# ::snt this was so beautiful.
+# ::tokens ["this", "was", "so", "beautiful", "."]
+# ::lemmas ["this", "be", "so", "beautiful", "."]
+(c1-2 / beautiful-02
+      :ARG1 (c1-1 / this)
+      :degree (c1-0 / so))
+
+# ::snt from Canada
+# ::tokens ["from", "Canada"]
+# ::lemmas ["from", "Canada"]
+(c2-2 / come-01
+      :ARG3 (c2-1 / country
+                  :name (c2-0 / name
+                              :op1 "Canada")))
+
+# ::snt nice read, Bob. Thanks for sharing!
+# ::tokens ["nice", "read", ",", "Bob", ".", "Thanks", "for", "sharing", "!"]
+# ::lemmas ["nice", "read", ",", "Bob", ".", "thank", "for", "sharing", "!"]
+(c3-0 / multi-sentence
+      :snt1 (c3-7 / say-01
+                  :ARG1 (c3-6 / read-01
+                              :ARG0 (c3-5 / person
+                                          :name (c3-3 / name
+                                                      :op1 "Bob"))
+                              :ARG1-of (c3-4 / nice-01))
+                  :ARG2 c3-5)
+      :snt2 (c3-8 / thank-01
+                  :ARG0 (c3-2 / i)
+                  :ARG1 c3-5
+                  :ARG2 (c3-1 / share-01
+                              :ARG0 c3-5)))
+
+# ::snt good job Bob
+# ::tokens ["good", "job", "Bob"]
+# ::lemmas ["good", "job", "Bob"]
+(c4-5 / say-01
+      :ARG0 (c4-1 / i)
+      :ARG1 (c4-0 / job
+                  :ARG1-of (c4-4 / good-02))
+      :ARG2 (c4-3 / person
+                  :name (c4-2 / name
+                              :op1 "Bob")))
+
+# ::snt A very thoughtful essay. Thanks for sharing.
+# ::tokens ["A", "very", "thoughtful", "essay", ".", "Thanks", "for", "sharing", "."]
+# ::lemmas ["a", "very", "thoughtful", "essay", ".", "thank", "for", "sharing", "."]
+(c5-1 / multi-sentence
+      :snt1 (c5-2 / essay
+                  :mod (c5-7 / thoughtful
+                             :degree (c5-4 / very)))
+      :snt2 (c5-5 / thank-01
+                  :ARG0 (c5-3 / i)
+                  :ARG1 (c5-0 / you)
+                  :ARG2 (c5-6 / share-01
+                              :ARG0 c5-0)))
+
+# ::snt Thanks for this, Bob.
+# ::tokens ["Thanks", "for", "this", ",", "Bob", "."]
+# ::lemmas ["thank", "for", "this", ",", "Bob", "."]
+(c6-4 / thank-01
+      :ARG0 (c6-0 / i)
+      :ARG1 (c6-2 / person
+                  :name (c6-1 / name
+                              :op1 "Bob"))
+      :ARG2 (c6-3 / this))
+
+# ::snt : Some personal thoughts on a tragic day in Ottawa: Absolutely!
+# ::tokens [":", "Some", "personal", "thoughts", "on", "a", "tragic", "day", "in", "Ottawa", ":", "Absolutely", "!"]
+# ::lemmas [":", "some", "personal", "thought", "on", "a", "tragic", "day", "in", "Ottawa", ":", "absolutely", "!"]
+(c7-7 / thing
+      :ARG1-of (c7-5 / think-01
+                     :ARG2 (c7-3 / day
+                                 :mod (c7-1 / tragic)
+                                 :location (c7-4 / city
+                                                 :name (c7-0 / name
+                                                             :op1 "Ottawa"))))
+      :ARG1-of (c7-2 / personal-02)
+      :quant (c7-6 / some)
+      :degree (c7-8 / absolute))
+
+# ::snt Bob nails it as always ": Some personal thoughts on a tragic day in Ottawa
+# ::tokens ["Bob", "nails", "it", "as", "always", "\"", ":", "Some", "personal", "thoughts", "on", "a", "tragic", "day", "in", "Ottawa"]
+# ::lemmas ["Bob", "nail", "it", "as", "always", "\"", ":", "some", "personal", "thought", "on", "a", "tragic", "day", "in", "Ottawa"]
+(c8-0 / nail-01
+      :ARG0 (c8-2 / person
+                  :name (c8-1 / name
+                              :op1 "Bob"))
+      :ARG1 (c8-9 / thing
+                  :ARG1-of (c8-7 / think-01
+                                 :ARG0 c8-2
+                                 :ARG2 (c8-3 / day
+                                             :mod (c8-4 / tragic)
+                                             :location (c8-5 / city
+                                                             :name (c8-6 / name
+                                                                         :op1 "Ottawa"))))
+                  :ARG1-of (c8-10 / personal-02)
+                  :quant (c8-8 / some))
+      :time (c8-11 / always))
+
+# ::snt :nice column Mr. McKenzie
+# ::tokens [":", "nice", "column", "Mr.", "McKenzie"]
+# ::lemmas [":", "nice", "column", "Mr.", "McKenzie"]
+(c9-4 / say-01
+      :ARG1 (c9-3 / column
+                  :ARG1-of (c9-0 / nice-01))
+      :ARG2 (c9-2 / person
+                  :name (c9-1 / name
+                              :op1 "Mr."
+                              :op2 "McKenzie")))
+
+# ::snt Amazing read, Bob. That was deep.
+# ::tokens ["Amazing", "read", ",", "Bob", ".", "That", "was", "deep", "."]
+# ::lemmas ["amazing", "read", ",", "Bob", ".", "that", "be", "deep", "."]
+(c10-0 / multi-sentence
+       :snt1 (c10-3 / read-01
+                    :ARG0 (c10-2 / person
+                                 :name (c10-1 / name
+                                              :op1 "Bob"))
+                    :ARG0-of (c10-6 / amaze-01))
+       :snt2 (c10-4 / deep-02
+                    :ARG1 (c10-5 / that)))
+
+# ::snt Thanks for your thoughts. So true. We lived in for months years ago. It was the kindest city ever.
+# ::tokens ["Thanks", "for", "your", "thoughts", ".", "So", "true", ".", "We", "lived", "in", "for", "months", "years", "ago", ".", "It", "was", "the", "kindest", "city", "ever", "."]
+# ::lemmas ["thank", "for", "your", "thought", ".", "so", "true", ".", "we", "live", "in", "for", "months", "years", "ago", ".", "it", "be", "the", "kind", "city", "ever", "."]
+(c11-0 / multi-sentence
+       :snt1 (c11-21 / thank-01
+                     :ARG2 (c11-15 / thing
+                                   :ARG1-of (c11-12 / think-01
+                                                    :ARG0 (c11-17 / you))))
+       :snt2 (c11-18 / true-01
+                     :degree (c11-2 / so))
+       :snt3 (c11-4 / live-01
+                    :ARG0 (c11-10 / we)
+                    :location (c11-19 / city)
+                    :time (c11-6 / before
+                                 :op1 (c11-8 / now)
+                                 :quant (c11-9 / multiple
+                                               :op1 (c11-20 / temporal-quantity
+                                                            :unit (c11-5 / month)
+                                                            :quant 1))))
+       :snt4 (c11-3 / have-degree-91
+                    :ARG1 (c11-1 / city
+                                 :domain (c11-11 / it))
+                    :ARG2 (c11-16 / kind-01)
+                    :ARG3 (c11-13 / most)
+                    :ARG5 (c11-14 / city
+                                  :time (c11-7 / ever))))
+
+# ::snt As always, very well said.
+# ::tokens ["As", "always", ",", "very", "well", "said", "."]
+# ::lemmas ["as", "always", ",", "very", "well", "say", "."]
+(c12-0 / say-01
+       :ARG1-of (c12-1 / well-09
+                       :degree (c12-3 / very))
+       :time (c12-2 / always))

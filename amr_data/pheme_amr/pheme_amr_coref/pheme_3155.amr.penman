@@ -1,0 +1,43 @@
+# ::snt WE ARE!
+# ::tokens ["WE", "ARE", "!"]
+# ::lemmas ["we", "be", "!"]
+(c1-0 / we)
+
+# ::snt I stand FOR all ppl's free right to comics. Some maybe in poor taste but done anyway. None are a need of death
+# ::tokens ["I", "stand", "FOR", "all", "ppl", "'s", "free", "right", "to", "comics", ".", "Some", "maybe", "in", "poor", "taste", "but", "done", "anyway", ".", "None", "are", "a", "need", "of", "death"]
+# ::lemmas ["i", "stand", "for", "all", "ppl", "'s", "free", "right", "to", "comic_strip", ".", "some", "maybe", "in", "poor", "taste", "but", "do", "anyway", ".", "none", "be", "a", "need", "of", "death"]
+(c2-1 / multi-sentence
+      :snt1 (c2-5 / stand-08
+                  :ARG0 (c2-15 / i)
+                  :ARG2 (c2-12 / right-05
+                               :ARG1 (c2-2 / person
+                                           :mod (c2-7 / all)
+                                           :ARG0-of (c2-6 / post-01))
+                               :ARG2 (c2-18 / comic)
+                               :ARG3-of (c2-8 / free-04)))
+      :snt2 (c2-3 / contrast-01
+                  :ARG1 (c2-9 / possible-01
+                              :ARG1 (c2-19 / taste
+                                           :mod (c2-13 / poor)
+                                           :domain (c2-10 / some)))
+                  :ARG2 (c2-4 / do-02
+                              :ARG0 (c2-16 / i)
+                              :mod (c2-14 / anyway)))
+      :snt3 (c2-11 / need-01
+                   :ARG0 (c2-17 / none)
+                   :ARG1 (c2-0 / die-01)
+                   :polarity -))
+
+# ::snt :History of Charlie Hebdo, the magazine targeted in Wednesday's terrorist attack
+# ::tokens [":", "History", "of", "Charlie", "Hebdo", ",", "the", "magazine", "targeted", "in", "Wednesday", "'s", "terrorist", "attack"]
+# ::lemmas [":", "history", "of", "Charlie", "Hebdo", ",", "the", "magazine", "target", "in", "Wednesday", "'s", "terrorist", "attack"]
+(c3-0 / history
+      :poss (c3-2 / magazine
+                  :name (c3-3 / name
+                              :op1 "Charlie"
+                              :op2 "Be Hebdo")
+                  :ARG1-of (c3-6 / target-01
+                                 :time (c3-7 / attack-01
+                                             :mod (c3-5 / terrorist)
+                                             :time (c3-4 / date-entity
+                                                         :weekday (c3-1 / wednesday))))))

@@ -1,0 +1,28 @@
+# ::snt United Airlines gets approval for Houston-Havana flights
+# ::tokens ["United", "Airlines", "gets", "approval", "for", "Houston", "-", "Havana", "flights"]
+# ::lemmas ["United", "Airlines", "get", "approval", "for", "Houston", "-", "Havana", "flight"]
+(c1-1 / approve-01
+      :ARG0 (c1-3 / company
+                  :name (c1-7 / name
+                              :op1 "United"
+                              :op2 "Airlines"))
+      :ARG1 (c1-2 / fly-01
+                  :ARG3 (c1-0 / city
+                              :name (c1-6 / name
+                                          :op1 "Houston"))
+                  :ARG4 (c1-4 / city
+                              :name (c1-5 / name
+                                          :op1 "Havana"))))
+
+# ::snt It still isn't approved for tourist travel though is it?
+# ::tokens ["It", "still", "is", "n't", "approved", "for", "tourist", "travel", "though", "is", "it", "?"]
+# ::lemmas ["it", "still", "be", "not", "approve", "for", "tourist", "travel", "though", "be", "it", "?"]
+(c2-4 / have-concession-91
+      :ARG1 (c2-1 / approve-01
+                  :ARG1 (c2-2 / it)
+                  :ARG2 (c2-5 / travel-01
+                              :ARG0 (c2-7 / person
+                                          :ARG0-of (c2-3 / tour-01)))
+                  :mod (c2-0 / still)
+                  :ARG1-of (c2-6 / request-confirmation-91)
+                  :polarity -))

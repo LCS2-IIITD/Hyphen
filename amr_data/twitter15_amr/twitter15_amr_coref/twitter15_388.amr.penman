@@ -1,0 +1,43 @@
+# ::snt Maybe this will help you lil' bit.
+# ::tokens ["Maybe", "this", "will", "help", "you", "lil", "'", "bit", "."]
+# ::lemmas ["maybe", "this", "will", "help", "you", "lil", "'", "bit", "."]
+(c1-1 / possible-01
+      :ARG1 (c1-5 / help-01
+                  :ARG0 (c1-3 / this)
+                  :ARG2 (c1-4 / you
+                              :mod (c1-0 / bit
+                                         :mod (c1-2 / little)))))
+
+# ::snt Obama is in charge of getting British hostages home?
+# ::tokens ["Obama", "is", "in", "charge", "of", "getting", "British", "hostages", "home", "?"]
+# ::lemmas ["Obama", "be", "in", "charge", "of", "get", "British", "hostage", "home", "?"]
+(c2-4 / charge-05
+      :ARG1 (c2-1 / person
+                  :name (c2-7 / name
+                              :op1 "Obama"))
+      :ARG2 (c2-8 / get-05
+                  :ARG0 c2-1
+                  :ARG1 (c2-5 / hostage
+                              :mod (c2-3 / country
+                                         :name (c2-6 / name
+                                                     :op1 "Great"
+                                                     :op2 "Britain")))
+                  :ARG2 (c2-0 / home))
+      :polarity (c2-2 / amr-unknown))
+
+# ::snt Time to send in the jets &amp; drones. Bomb em back to hell.
+# ::tokens ["Time", "to", "send", "in", "the", "jets", "&", "amp", ";", "drones", ".", "Bomb", "em", "back", "to", "hell", "."]
+# ::lemmas ["time", "to", "send", "in", "the", "jet", "&", "amp", ";", "drone", ".", "bomb", "em", "back", "to", "hell", "."]
+(c3-4 / multi-sentence
+      :snt1 (c3-2 / time
+                  :time-of (c3-0 / send-03
+                                 :ARG1 (c3-10 / and
+                                              :op1 (c3-7 / jet)
+                                              :op2 (c3-5 / amp)
+                                              :op3 (c3-11 / drone))
+                                 :ARG4 (c3-8 / hell)))
+      :snt2 (c3-1 / bomb-01
+                  :ARG0 (c3-9 / you)
+                  :ARG1 (c3-3 / they)
+                  :direction (c3-6 / back)
+                  :mode imperative))

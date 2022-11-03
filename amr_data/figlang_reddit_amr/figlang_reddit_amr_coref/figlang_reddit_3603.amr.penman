@@ -1,0 +1,39 @@
+# ::snt How tall are you?
+# ::tokens ["How", "tall", "are", "you", "?"]
+# ::lemmas ["how", "tall", "be", "you", "?"]
+(c1-1 / tall
+      :quant (c1-0 / amr-unknown)
+      :domain (c1-2 / you))
+
+# ::snt 2 metres I am an EU rebel ain't using that crappy system of yours stupid americanos
+# ::tokens ["2", "metres", "I", "am", "an", "EU", "rebel", "ai", "n't", "using", "that", "crappy", "system", "of", "yours", "stupid", "americanos"]
+# ::lemmas ["2", "metres", "i", "be", "an", "EU", "rebel", "be", "not", "use", "that", "crappy", "system", "of", "yours", "stupid", "americanos"]
+(c2-4 / use-01
+      :ARG0 (c2-6 / person
+                  :mod (c2-3 / country
+                             :name (c2-8 / name
+                                         :op1 "America"))
+                  :mod (c2-0 / stupid)
+                  :ARG0-of c2-4
+                  :ARG1 (c2-5 / system
+                              :ARG1-of (c2-1 / crap-01)
+                              :poss (c2-9 / you)))
+      :quant (c2-2 / distance-quantity
+                   :unit (c2-7 / meter)
+                   :quant 2)
+      :ARG1 c2-5
+      :polarity -)
+
+# ::snt Some European countries use feet and inches too
+# ::tokens ["Some", "European", "countries", "use", "feet", "and", "inches", "too"]
+# ::lemmas ["some", "European", "country", "use", "foot", "and", "inch", "too"]
+(c3-5 / use-01
+      :ARG0 (c3-4 / country
+                  :location (c3-0 / continent
+                                  :name (c3-8 / name
+                                              :op1 "Europe"))
+                  :quant (c3-1 / some))
+      :ARG1 (c3-2 / and
+                  :op1 (c3-3 / foot)
+                  :op2 (c3-7 / inch))
+      :mod (c3-6 / too))

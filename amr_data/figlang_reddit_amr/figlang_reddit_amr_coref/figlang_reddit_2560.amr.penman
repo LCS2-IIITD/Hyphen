@@ -1,0 +1,39 @@
+# ::snt What is love?
+# ::tokens ["What", "is", "love", "?"]
+# ::lemmas ["what", "be", "love", "?"]
+(c1-1 / love-01
+      :mod (c1-0 / amr-unknown))
+
+# ::snt So, is this a facepalm because he wouldn't go against his beliefs?
+# ::tokens ["So", ",", "is", "this", "a", "facepalm", "because", "he", "would", "n't", "go", "against", "his", "beliefs", "?"]
+# ::lemmas ["so", ",", "be", "this", "a", "facepalm", "because", "he", "would", "not", "go", "against", "his", "belief", "?"]
+(c2-2 / cause-01
+      :ARG0 (c2-5 / oppose-01
+                  :ARG0 (c2-4 / he)
+                  :ARG1 (c2-6 / thing
+                              :ARG1-of (c2-7 / believe-01
+                                             :ARG0 c2-4))
+                  :polarity -)
+      :ARG1 (c2-1 / facepalm
+                  :domain (c2-3 / this)
+                  :polarity (c2-0 / amr-unknown)))
+
+# ::snt More because of his belief
+# ::tokens ["More", "because", "of", "his", "belief"]
+# ::lemmas ["more", "because", "of", "his", "belief"]
+(c3-3 / cause-01
+      :ARG0 (c3-0 / believe-01
+                  :ARG0 (c3-2 / he))
+      :ARG1 (c3-1 / more))
+
+# ::snt So, it's a facepalm because he's a Christian?
+# ::tokens ["So", ",", "it", "'s", "a", "facepalm", "because", "he", "'s", "a", "Christian", "?"]
+# ::lemmas ["so", ",", "it", "be", "a", "facepalm", "because", "he", "be", "a", "Christian", "?"]
+(c4-2 / cause-01
+      :ARG0 (c4-4 / religious-group
+                  :name (c4-6 / name
+                              :op1 "Christian")
+                  :domain (c4-3 / he))
+      :ARG1 (c4-1 / facepalm
+                  :domain (c4-5 / it))
+      :polarity (c4-0 / amr-unknown))

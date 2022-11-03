@@ -1,0 +1,96 @@
+# ::snt Meryl Streep slams Donald Trump in speech at Golden Globes <URL>
+# ::tokens ["Meryl", "Streep", "slams", "Donald", "Trump", "in", "speech", "at", "Golden", "Globes", "<", "URL", ">"]
+# ::lemmas ["Meryl", "Streep", "slam", "Donald", "Trump", "in", "speech", "at", "Golden", "Globes", "<", "URL", ">"]
+(c1-0 / slam-02
+      :ARG0 (c1-5 / person
+                  :name (c1-6 / name
+                              :op1 "Meryl"
+                              :op2 "Step"))
+      :ARG1 (c1-2 / person
+                  :name (c1-3 / name
+                              :op1 "Donald"
+                              :op2 "Trump"))
+      :subevent-of (c1-4 / speak-01
+                         :ARG0 c1-5
+                         :location (c1-7 / event
+                                         :name (c1-1 / name
+                                                     :op1 "Golden"
+                                                     :op2 "Globes"))))
+
+# ::snt Maybe more accurate - " Meryl Streep speaks the truth at Golden Globes "
+# ::tokens ["Maybe", "more", "accurate", "-", "\"", "Meryl", "Streep", "speaks", "the", "truth", "at", "Golden", "Globes", "\""]
+# ::lemmas ["maybe", "more", "accurate", "-", "\"", "Meryl", "Streep", "speak", "the", "truth", "at", "Golden", "Globes", "\""]
+(c2-6 / possible-01
+      :ARG1 (c2-1 / accurate
+                  :domain (c2-0 / speak-01
+                                :ARG0 (c2-3 / person
+                                            :name (c2-8 / name
+                                                        :op1 "Meryl"
+                                                        :op2 "Step"))
+                                :ARG1 (c2-4 / truth)
+                                :location (c2-9 / event
+                                                :name (c2-5 / name
+                                                            :op1 "Golden"
+                                                            :op2 "Globes")))
+                  :ARG2-of (c2-2 / have-degree-91
+                                 :ARG1 c2-0
+                                 :ARG3 (c2-7 / more))))
+
+# ::snt maybe more accurate - " Streep cries on stage because she didn't get her way . "
+# ::tokens ["maybe", "more", "accurate", "-", "\"", "Streep", "cries", "on", "stage", "because", "she", "did", "n't", "get", "her", "way", ".", "\""]
+# ::lemmas ["maybe", "more", "accurate", "-", "\"", "Streep", "cry", "on", "stage", "because", "she", "do", "not", "get", "her", "way", ".", "\""]
+(c3-8 / possible-01
+      :ARG1 (c3-2 / accurate
+                  :domain (c3-3 / cry-02
+                                :ARG0 (c3-6 / person
+                                            :name (c3-10 / name
+                                                         :op1 "Streep"))
+                                :location (c3-0 / stage)
+                                :ARG1-of (c3-1 / cause-01
+                                               :ARG0 (c3-7 / get-01
+                                                           :ARG0 c3-6
+                                                           :ARG1 (c3-4 / way
+                                                                       :poss c3-6)
+                                                           :polarity -)))
+                  :ARG2-of (c3-5 / have-degree-91
+                                 :ARG1 c3-3
+                                 :ARG3 (c3-9 / more))))
+
+# ::snt She didn't cry although it's pretty sad to ridicule a disabled person .
+# ::tokens ["She", "did", "n't", "cry", "although", "it", "'s", "pretty", "sad", "to", "ridicule", "a", "disabled", "person", "."]
+# ::lemmas ["she", "do", "not", "cry", "although", "it", "be", "pretty", "sad", "to", "ridicule", "a", "disabled", "person", "."]
+(c4-2 / cry-02
+      :ARG0 (c4-0 / she)
+      :concession (c4-5 / sad-02
+                        :ARG0 (c4-4 / ridicule-01
+                                    :ARG1 (c4-6 / person
+                                                :ARG1-of (c4-1 / disable-01)))
+                        :degree (c4-3 / pretty))
+      :polarity -)
+
+# ::snt I didn't know she is disabled . I don't follow celebs History . It's pretty sad they try to tell us what to think all the time
+# ::tokens ["I", "did", "n't", "know", "she", "is", "disabled", ".", "I", "do", "n't", "follow", "celebs", "History", ".", "It", "'s", "pretty", "sad", "they", "try", "to", "tell", "us", "what", "to", "think", "all", "the", "time"]
+# ::lemmas ["i", "do", "not", "know", "she", "be", "disabled", ".", "i", "do", "not", "follow", "celebs", "history", ".", "it", "be", "pretty", "sad", "they", "try", "to", "tell", "we", "what", "to", "think", "all", "the", "time"]
+(c5-6 / multi-sentence
+      :snt1 (c5-18 / know-01
+                   :ARG0 (c5-1 / i)
+                   :ARG1 (c5-0 / disable-01
+                               :ARG1 (c5-8 / she))
+                   :polarity -)
+      :snt2 (c5-13 / follow-02
+                   :ARG0 (c5-9 / i)
+                   :ARG1 (c5-14 / history
+                                :mod (c5-2 / celebrity))
+                   :polarity -)
+      :snt3 (c5-16 / sad-02
+                   :ARG1 (c5-5 / try-01
+                               :ARG0 (c5-4 / they)
+                               :ARG1 (c5-7 / tell-01
+                                           :ARG0 c5-4
+                                           :ARG1 (c5-10 / thing
+                                                        :ARG1-of (c5-12 / think-01
+                                                                        :ARG0 (c5-3 / we
+                                                                                    :ARG2-of c5-7))))
+                               :frequency (c5-15 / time
+                                                 :mod (c5-11 / all)))
+                   :degree (c5-17 / pretty)))

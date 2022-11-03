@@ -1,0 +1,59 @@
+# ::snt Paid for sim card but no delivery , waited days already , no respond . Did I get scam from ording online ?
+# ::tokens ["Paid", "for", "sim", "card", "but", "no", "delivery", ",", "waited", "days", "already", ",", "no", "respond", ".", "Did", "I", "get", "scam", "from", "ording", "online", "?"]
+# ::lemmas ["pay", "for", "sim", "card", "but", "no", "delivery", ",", "wait", "days", "already", ",", "no", "respond", ".", "do", "i", "get", "scam", "from", "orde", "online", "?"]
+(c1-9 / multi-sentence
+      :snt1 (c1-14 / and
+                   :op1 (c1-4 / contrast-01
+                              :ARG1 (c1-18 / pay-01
+                                           :ARG0 (c1-3 / i)
+                                           :ARG3 (c1-0 / card
+                                                       :mod (c1-11 / sim)))
+                              :ARG2 (c1-1 / deliver-01
+                                          :polarity -))
+                   :op2 (c1-5 / wait-01
+                              :ARG1 c1-3
+                              :time (c1-10 / already
+                                           :quant (c1-15 / multiple
+                                                         :op1 (c1-7 / temporal-quantity
+                                                                    :unit (c1-13 / day)
+                                                                    :quant 1))))
+                   :op3 (c1-8 / respond-01
+                              :ARG0 c1-3
+                              :polarity -))
+      :snt2 (c1-17 / scam-01
+                   :ARG0 (c1-6 / ordain-01
+                               :medium (c1-16 / online))
+                   :ARG1 (c1-12 / i)
+                   :polarity (c1-2 / amr-unknown)))
+
+# ::snt Hey you must receive an email from with an order If you did follow up using the If you haven t so no order made
+# ::tokens ["Hey", "you", "must", "receive", "an", "email", "from", "with", "an", "order", "If", "you", "did", "follow", "up", "using", "the", "If", "you", "haven", "t", "so", "no", "order", "made"]
+# ::lemmas ["hey", "you", "must", "receive", "an", "email", "from", "with", "an", "order", "if", "you", "do", "follow", "up", "use", "the", "if", "you", "haven", "t", "so", "no", "order", "make"]
+(c2-11 / multi-sentence
+       :snt1 (c2-8 / obligate-01
+                   :ARG1 (c2-13 / you)
+                   :ARG2 (c2-9 / receive-01
+                               :ARG0 c2-13
+                               :ARG1 (c2-15 / email)
+                               :instrument (c2-5 / order)))
+       :snt2 (c2-1 / follow-up-03
+                   :ARG0 (c2-14 / you)
+                   :ARG1 (c2-6 / use-01
+                               :ARG0 c2-14
+                               :ARG1 (c2-10 / product
+                                            :name (c2-12 / name
+                                                         :op1 "The"
+                                                         :op2 "US"
+                                                         :op3 "Computer"
+                                                         :op4 "System")))
+                   :condition (c2-7 / follow-up-03
+                                    :ARG0 c2-14
+                                    :ARG1 (c2-3 / use-01
+                                                :ARG0 c2-14
+                                                :ARG1 c2-10)
+                                    :polarity -))
+       :snt3 (c2-2 / make-01
+                   :ARG1 (c2-0 / order)
+                   :polarity -)
+       :mod (c2-4 / hey
+                  :mode expressive))

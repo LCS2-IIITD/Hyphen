@@ -1,0 +1,63 @@
+# ::snt Ichiro just tied Babe Ruth on the all time hit list
+# ::tokens ["Ichiro", "just", "tied", "Babe", "Ruth", "on", "the", "all", "time", "hit", "list"]
+# ::lemmas ["Ichiro", "just", "tie", "Babe", "Ruth", "on", "the", "all", "time", "hit", "list"]
+(c1-4 / tie-03
+      :ARG0 (c1-8 / person
+                  :name (c1-9 / name
+                              :op1 "Ichiro"))
+      :ARG1 (c1-3 / person
+                  :name (c1-5 / name
+                              :op1 "Babe"
+                              :op2 "Ruth"))
+      :ARG2 (c1-6 / list
+                  :topic (c1-2 / hit-01)
+                  :time (c1-1 / time
+                              :mod (c1-0 / all)))
+      :mod (c1-7 / just))
+
+# ::snt To me Ruth hitting over .300 his entire career and not getting 3,000 hits is up there on the list of surprising baseball facts with Nolan Ryan never winning a Cy Young.
+# ::tokens ["To", "me", "Ruth", "hitting", "over", ".300", "his", "entire", "career", "and", "not", "getting", "3,000", "hits", "is", "up", "there", "on", "the", "list", "of", "surprising", "baseball", "facts", "with", "Nolan", "Ryan", "never", "winning", "a", "Cy", "Young", "."]
+# ::lemmas ["to", "i", "Ruth", "hit", "over", ".300", "his", "entire", "career", "and", "not", "get", "3,000", "hit", "be", "up", "there", "on", "the", "list", "of", "surprising", "baseball", "fact", "with", "Nolan", "Ryan", "never", "win", "a", "Cy", "Young", "."]
+(c2-7 / opine-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-14 / and
+                   :op1 (c2-16 / hit-01
+                               :ARG0 (c2-23 / person
+                                            :name (c2-8 / name
+                                                        :op1 "Ruth"))
+                               :ARG1 (c2-17 / over
+                                            :op1 (c2-20 / percentage-entity
+                                                        :value 300))
+                               :duration (c2-5 / career
+                                               :poss c2-23
+                                               :mod (c2-10 / entire)))
+                   :op2 (c2-2 / hit-01
+                              :ARG0 c2-23
+                              :ARG1 (c2-4 / hit-01
+                                          :quant 3000)
+                              :polarity -)
+                   :location (c2-19 / up-03
+                                    :ARG1 c2-23
+                                    :ARG2 (c2-21 / list
+                                                 :consist-of (c2-15 / fact
+                                                                    :topic (c2-22 / baseball)
+                                                                    :ARG0-of (c2-11 / surprise-01)
+                                                                    :ARG1-of (c2-0 / cause-01
+                                                                                   :ARG0 (c2-6 / win-01
+                                                                                               :ARG0 (c2-12 / person
+                                                                                                            :name (c2-1 / name
+                                                                                                                        :op1 "Nolan"
+                                                                                                                        :op2 "Ryan"))
+                                                                                               :ARG1 (c2-9 / award
+                                                                                                           :name (c2-13 / name
+                                                                                                                        :op1 "Cy"
+                                                                                                                        :op2 "Young"))
+                                                                                               :time (c2-18 / ever)
+                                                                                               :polarity -)))))))
+
+# ::snt He walked a lot.
+# ::tokens ["He", "walked", "a", "lot", "."]
+# ::lemmas ["he", "walk", "a", "lot", "."]
+(c3-0 / walk-01
+      :ARG0 (c3-1 / he)
+      :quant (c3-2 / lot))

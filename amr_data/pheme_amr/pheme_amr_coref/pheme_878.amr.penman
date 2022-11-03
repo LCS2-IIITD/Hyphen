@@ -1,0 +1,136 @@
+# ::snt Examples please
+# ::tokens ["Examples", "please"]
+# ::lemmas ["example", "please"]
+(c1-0 / example
+      :polite +)
+
+# ::snt But... There was something leading up to the shooting? Or what?
+# ::tokens ["But", "...", "There", "was", "something", "leading", "up", "to", "the", "shooting", "?", "Or", "what", "?"]
+# ::lemmas ["but", "...", "there", "be", "something", "lead", "up", "to", "the", "shooting", "?", "or", "what", "?"]
+(c2-1 / multi-sentence
+      :snt1 (c2-4 / contrast-01)
+      :snt2 c2-1
+      :snt3 (c2-5 / something
+                  :ARG0-of (c2-0 / lead-up-05
+                                 :ARG2 (c2-3 / shoot-02)))
+      :snt4 (c2-2 / or
+                  :op2 (c2-6 / amr-unknown)))
+
+# ::snt Walking in the street while
+# ::tokens ["Walking", "in", "the", "street", "while"]
+# ::lemmas ["walk", "in", "the", "street", "while"]
+(c3-1 / walk-01
+      :ARG2 (c3-0 / street)
+      :duration (c3-2 / while))
+
+# ::snt : But... There was something leading up to the shooting? Or what?-&gt; soon they'll say officer felt a gun onMike
+# ::tokens [":", "But", "...", "There", "was", "something", "leading", "up", "to", "the", "shooting", "?", "Or", "what?-&gt", ";", "soon", "they", "'ll", "say", "officer", "felt", "a", "gun", "onMike"]
+# ::lemmas [":", "but", "...", "there", "be", "something", "lead", "up", "to", "the", "shooting", "?", "or", "what?-&gt", ";", "soon", "they", "'ll", "say", "officer", "feel", "a", "gun", "onmike"]
+(c4-1 / multi-sentence
+      :snt1 (c4-11 / contrast-01
+                   :ARG2 (c4-13 / something
+                                :polarity (c4-15 / amr-unknown)
+                                :ARG0-of (c4-0 / lead-up-05
+                                               :ARG2 (c4-7 / shoot-02))))
+      :snt2 (c4-5 / or
+                  :op2 (c4-8 / amr-unknown)
+                  :op3 (c4-2 / say-01
+                             :ARG0 (c4-14 / they)
+                             :ARG1 (c4-3 / feel-01
+                                         :ARG0 (c4-4 / officer)
+                                         :ARG1 (c4-12 / gun)
+                                         :ARG2 (c4-10 / person
+                                                      :name (c4-9 / name
+                                                                  :op1 "Mike")))
+                             :time (c4-6 / soon))))
+
+# ::snt The police chief just basically confirmed was gunned to death for the crime of walking in the street?Horrific.
+# ::tokens ["The", "police", "chief", "just", "basically", "confirmed", "was", "gunned", "to", "death", "for", "the", "crime", "of", "walking", "in", "the", "street?Horrific", "."]
+# ::lemmas ["the", "police", "chief", "just", "basically", "confirm", "be", "gun", "to", "death", "for", "the", "crime", "of", "walk", "in", "the", "street?horrific", "."]
+(c5-7 / confirm-01
+      :polarity (c5-12 / amr-unknown)
+      :ARG1 (c5-10 / shoot-02
+                   :ARG1 (c5-5 / person
+                               :ARG0-of (c5-0 / have-org-role-91
+                                              :ARG1 (c5-11 / police)
+                                              :ARG2 (c5-6 / chief)))
+                   :ARG0-of (c5-9 / cause-01
+                                  :ARG1 (c5-13 / crime-02
+                                               :ARG0 c5-5
+                                               :ARG1 (c5-1 / walk-01
+                                                           :ARG0 c5-5
+                                                           :ARG2 (c5-4 / street))))
+                   :degree (c5-8 / die-01))
+      :mod (c5-2 / just)
+      :mod (c5-3 / basic))
+
+# ::snt if he was not a suspect why was inside the police car in the first place? Or was he ever near the police car?
+# ::tokens ["if", "he", "was", "not", "a", "suspect", "why", "was", "inside", "the", "police", "car", "in", "the", "first", "place", "?", "Or", "was", "he", "ever", "near", "the", "police", "car", "?"]
+# ::lemmas ["if", "he", "be", "not", "a", "suspect", "why", "be", "inside", "the", "police", "car", "in", "the", "first", "place", "?", "or", "be", "he", "ever", "near", "the", "police", "car", "?"]
+(c6-1 / multi-sentence
+      :snt1 (c6-0 / have-condition-91
+                  :ARG1 (c6-2 / be-located-at-91
+                              :ARG1 (c6-15 / he)
+                              :ARG2 (c6-6 / inside
+                                          :op1 (c6-11 / car
+                                                      :mod (c6-9 / police)))
+                              :ARG1-of (c6-10 / cause-01
+                                              :ARG0 (c6-14 / amr-unknown))
+                              :mod (c6-12 / in-the-first-place))
+                  :ARG2 (c6-13 / suspect-01
+                               :ARG0 c6-15
+                               :polarity -))
+      :snt2 (c6-3 / or
+                  :op2 (c6-7 / near-02
+                             :ARG1 (c6-8 / he)
+                             :ARG2 c6-11
+                             :time (c6-4 / ever)
+                             :polarity (c6-5 / amr-unknown))))
+
+# ::snt Hmm. That's not what I heard at all. What's your source and quote?
+# ::tokens ["Hmm", ".", "That", "'s", "not", "what", "I", "heard", "at", "all", ".", "What", "'s", "your", "source", "and", "quote", "?"]
+# ::lemmas ["hmm", ".", "that", "be", "not", "what", "i", "hear", "at", "all", ".", "what", "be", "your", "source", "and", "quote", "?"]
+(c7-2 / multi-sentence
+      :snt1 (c7-0 / hmm
+                  :mode expressive)
+      :snt2 (c7-11 / hear-01
+                   :ARG0 (c7-5 / i)
+                   :ARG1 (c7-10 / that)
+                   :degree (c7-9 / at-all)
+                   :polarity -)
+      :snt3 (c7-4 / and
+                  :op1 (c7-6 / amr-unknown
+                             :ARG2-of (c7-7 / source-01
+                                            :ARG0 (c7-1 / you)))
+                  :op2 (c7-8 / amr-unknown
+                             :ARG2-of (c7-3 / quote-01
+                                            :ARG0 c7-1))))
+
+# ::snt no they did not
+# ::tokens ["no", "they", "did", "not"]
+# ::lemmas ["no", "they", "do", "not"]
+(c8-0 / do-02
+      :ARG0 (c8-1 / they)
+      :polarity -)
+
+# ::snt Wrong. The violent assault committed makes it more likely he attacked the cops minutes later.
+# ::tokens ["Wrong", ".", "The", "violent", "assault", "committed", "makes", "it", "more", "likely", "he", "attacked", "the", "cops", "minutes", "later", "."]
+# ::lemmas ["wrong", ".", "the", "violent", "assault", "commit", "make", "it", "more", "likely", "he", "attack", "the", "cop", "minute", "later", "."]
+(c9-3 / multi-sentence
+      :snt1 (c9-1 / wrong-04)
+      :snt2 (c9-8 / make-02
+                  :ARG0 (c9-15 / assault-01
+                               :manner (c9-7 / violent)
+                               :ARG1-of (c9-10 / commit-02))
+                  :ARG1 (c9-2 / likely-01
+                              :ARG1 (c9-6 / attack-01
+                                          :ARG0 (c9-0 / he)
+                                          :ARG1 (c9-9 / cop)
+                                          :time (c9-11 / after
+                                                       :quant (c9-4 / multiple
+                                                                    :op1 (c9-14 / temporal-quantity
+                                                                                :unit (c9-12 / minute)
+                                                                                :quant 1))))
+                              :ARG2-of (c9-5 / have-degree-91
+                                             :ARG1 c9-6
+                                             :ARG3 (c9-13 / more)))))

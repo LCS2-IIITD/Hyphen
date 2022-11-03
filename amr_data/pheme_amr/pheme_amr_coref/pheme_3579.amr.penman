@@ -1,0 +1,103 @@
+# ::snt I'm so scared
+# ::tokens ["I", "'m", "so", "scared"]
+# ::lemmas ["i", "be", "so", "scared"]
+(c1-0 / scare-01
+      :ARG1 (c1-2 / i)
+      :degree (c1-1 / so))
+
+# ::snt yes for sure
+# ::tokens ["yes", "for", "sure"]
+# ::lemmas ["yes", "for", "sure"]
+(c4-0 / sure-02)
+
+# ::snt PLEASE FOLLOW ME.
+# ::tokens ["PLEASE", "FOLLOW", "ME", "."]
+# ::lemmas ["please", "follow", "ME", "."]
+(c7-1 / follow-02
+      :ARG0 (c7-0 / you)
+      :ARG1 (c7-2 / i)
+      :mode imperative
+      :polite +)
+
+# ::snt I cried when the st came out and then I cried again when the girls got out. It's been a very emotional day
+# ::tokens ["I", "cried", "when", "the", "st", "came", "out", "and", "then", "I", "cried", "again", "when", "the", "girls", "got", "out", ".", "It", "'s", "been", "a", "very", "emotional", "day"]
+# ::lemmas ["i", "cry", "when", "the", "st", "come", "out", "and", "then", "i", "cry", "again", "when", "the", "girl", "get", "out", ".", "it", "be", "be", "a", "very", "emotional", "day"]
+(c8-0 / multi-sentence
+      :snt1 (c8-13 / and
+                   :op1 (c8-6 / cry-02
+                              :ARG0 (c8-3 / i)
+                              :time (c8-5 / come-out-09
+                                          :ARG1 (c8-10 / st)))
+                   :op2 (c8-9 / cry-02
+                              :ARG0 c8-3
+                              :mod (c8-2 / again)
+                              :time (c8-14 / come-out-09
+                                           :ARG1 (c8-7 / girl))
+                              :time (c8-12 / then)))
+      :snt2 (c8-8 / day
+                  :ARG0-of (c8-1 / emotional-02
+                                 :degree (c8-4 / very))
+                  :domain (c8-11 / it)))
+
+# ::snt it's so scary, especially when it's your home town
+# ::tokens ["it", "'s", "so", "scary", ",", "especially", "when", "it", "'s", "your", "home", "town"]
+# ::lemmas ["it", "be", "so", "scary", ",", "especially", "when", "it", "be", "your", "home", "town"]
+(c9-5 / scary-03
+      :ARG0 (c9-4 / it)
+      :degree (c9-2 / so)
+      :ARG1-of (c9-0 / have-condition-91
+                     :ARG2 (c9-6 / town
+                                 :mod (c9-7 / home)
+                                 :poss (c9-1 / you))
+                     :degree (c9-3 / especially)))
+
+# ::snt in really scared there's gonna be more attacks
+# ::tokens ["in", "really", "scared", "there", "'s", "gon", "na", "be", "more", "attacks"]
+# ::lemmas ["in", "really", "scared", "there", "be", "going", "to", "be", "more", "attack"]
+(c10-0 / scare-01
+       :ARG0 (c10-3 / attack-01
+                    :quant (c10-2 / more))
+       :degree (c10-1 / really))
+
+# ::snt just seen it on English tv so sad
+# ::tokens ["just", "seen", "it", "on", "English", "tv", "so", "sad"]
+# ::lemmas ["just", "see", "it", "on", "English", "tv", "so", "sad"]
+(c11-8 / see-01
+       :ARG0 (c11-3 / i)
+       :ARG1 (c11-7 / it)
+       :medium (c11-9 / television
+                      :mod (c11-6 / country
+                                  :name (c11-4 / name
+                                               :op1 "England")))
+       :ARG0-of (c11-5 / cause-01
+                       :ARG1 (c11-2 / sad-02
+                                    :ARG1 c11-3
+                                    :degree (c11-1 / so)))
+       :mod (c11-0 / just))
+
+# ::snt is nonna okay?
+# ::tokens ["is", "nonna", "okay", "?"]
+# ::lemmas ["be", "nonna", "okay", "?"]
+(c13-0 / okay-04
+       :ARG1 (c13-1 / event)
+       :polarity (c13-2 / amr-unknown)
+       :polarity -)
+
+# ::snt amen Gina !
+# ::tokens ["amen", "Gina", "!"]
+# ::lemmas ["amen", "Gina", "!"]
+(c14-0 / say-01
+       :ARG1 (c14-3 / amen)
+       :ARG2 (c14-1 / person
+                    :name (c14-2 / name
+                                 :op1 "Gina"))
+       :mode expressive)
+
+# ::snt bless your soul
+# ::tokens ["bless", "your", "soul"]
+# ::lemmas ["bless", "your", "soul"]
+(c17-2 / bless-01
+       :ARG0 (c17-1 / you
+                    :part (c17-0 / soul
+                                 :ARG1-of c17-2))
+       :mode imperative)

@@ -1,0 +1,410 @@
+# ::snt I hate to speculate but what they are reporting on the news is not consistent with that data...
+# ::tokens ["I", "hate", "to", "speculate", "but", "what", "they", "are", "reporting", "on", "the", "news", "is", "not", "consistent", "with", "that", "data", "..."]
+# ::lemmas ["i", "hate", "to", "speculate", "but", "what", "they", "be", "report", "on", "the", "news", "be", "not", "consistent", "with", "that", "datum", "..."]
+(c1-5 / contrast-01
+      :ARG1 (c1-0 / hate-01
+                  :ARG0 (c1-1 / i)
+                  :ARG1 (c1-9 / speculate-01
+                              :ARG0 c1-1))
+      :ARG2 (c1-4 / consistent-01
+                  :ARG1 (c1-10 / thing
+                               :ARG1-of (c1-6 / report-01
+                                              :ARG0 (c1-8 / they)
+                                              :medium (c1-2 / news)))
+                  :ARG2 (c1-7 / data
+                              :mod (c1-3 / that))
+                  :polarity -))
+
+# ::snt Altitude is assigned by ATC and ' is completely normal cruising altitude.
+# ::tokens ["Altitude", "is", "assigned", "by", "ATC", "and", "'", "is", "completely", "normal", "cruising", "altitude", "."]
+# ::lemmas ["altitude", "be", "assign", "by", "ATC", "and", "'", "be", "completely", "normal", "cruise", "altitude", "."]
+(c2-8 / and
+      :op1 (c2-1 / assign-01
+                 :ARG0 (c2-0 / organization
+                             :name (c2-2 / name
+                                         :op1 "ATC"))
+                 :ARG1 (c2-3 / altitude))
+      :op2 (c2-4 / normal-02
+                 :ARG1 (c2-7 / altitude
+                             :mod (c2-6 / cruise-01))
+                 :ARG1-of (c2-5 / complete-02)))
+
+# ::snt Actually,no heading change and speed is just like the pilots were,at least,unconscious
+# ::tokens ["Actually", ",", "no", "heading", "change", "and", "speed", "is", "just", "like", "the", "pilots", "were", ",", "at", "least", ",", "unconscious"]
+# ::lemmas ["actually", ",", "no", "head", "change", "and", "speed", "be", "just", "like", "the", "pilot", "be", ",", "at", "least", ",", "unconscious"]
+(c3-4 / resemble-01
+      :ARG1 (c3-9 / and
+                  :op1 (c3-5 / change-01
+                             :ARG1 (c3-0 / heading))
+                  :op2 (c3-7 / speed)
+                  :polarity -)
+      :ARG2 (c3-6 / conscious
+                  :domain (c3-3 / person
+                                :ARG0-of (c3-8 / pilot-01))
+                  :mod (c3-1 / at-least)
+                  :polarity -)
+      :ARG1-of (c3-2 / actual-02))
+
+# ::snt Huhu Huhu Huhu Huhu Huhu Huhu Huhu
+# ::tokens ["Huhu", "Huhu", "Huhu", "Huhu", "Huhu", "Huhu", "Huhu"]
+# ::lemmas ["Huhu", "Huhu", "Huhu", "Huhu", "Huhu", "Huhu", "Huhu"]
+(c4-4 / and
+      :op1 (c4-0 / heyu
+                 :mode expressive)
+      :op2 (c4-5 / heyu
+                 :mode expressive)
+      :op3 (c4-2 / heyu
+                 :mode expressive)
+      :op4 (c4-3 / heyu
+                 :mode expressive)
+      :op5 (c4-1 / heyu
+                 :mode expressive))
+
+# ::snt Not for the first time either. Is it really so hard to find a PILOT to explain the data to them ?
+# ::tokens ["Not", "for", "the", "first", "time", "either", ".", "Is", "it", "really", "so", "hard", "to", "find", "a", "PILOT", "to", "explain", "the", "data", "to", "them", "?"]
+# ::lemmas ["not", "for", "the", "first", "time", "either", ".", "be", "it", "really", "so", "hard", "to", "find", "a", "PILOT", "to", "explain", "the", "datum", "to", "they", "?"]
+(c5-2 / multi-sentence
+      :snt1 (c5-10 / time
+                   :ord (c5-4 / ordinal-entity
+                              :value 1)
+                   :mod (c5-5 / either)
+                   :polarity -)
+      :snt2 (c5-0 / hard-02
+                  :ARG1 (c5-1 / find-01
+                              :ARG1 (c5-6 / pipeline)
+                              :purpose (c5-3 / explain-01
+                                             :ARG0 c5-6
+                                             :ARG1 (c5-7 / data)
+                                             :ARG2 (c5-9 / they)))
+                  :ARG1-of (c5-8 / real-04)
+                  :polarity (c5-11 / amr-unknown)))
+
+# ::snt Abeam LFTH descending from FL380 heading No change until this tragic crash...Multiple failures of the flight controls ?
+# ::tokens ["Abeam", "LFTH", "descending", "from", "FL380", "heading", "No", "change", "until", "this", "tragic", "crash", "...", "Multiple", "failures", "of", "the", "flight", "controls", "?"]
+# ::lemmas ["Abeam", "lfth", "descend", "from", "fl380", "head", "no", "change", "until", "this", "tragic", "crash", "...", "multiple", "failure", "of", "the", "flight", "control", "?"]
+(c6-2 / multi-sentence
+      :snt1 (c6-9 / descend-01
+                  :ARG0 (c6-16 / aircraft-type
+                               :name (c6-6 / name
+                                           :op1 "Abeam"
+                                           :op2 "LFTH"))
+                  :source (c6-4 / aircraft-type
+                                :name (c6-7 / name
+                                            :op1 "FL380"))
+                  :ARG0-of (c6-0 / head-02
+                                 :polarity -))
+      :snt2 (c6-10 / change-01
+                   :time (c6-3 / until
+                               :op1 (c6-11 / crash-01
+                                           :mod (c6-15 / this)
+                                           :mod (c6-13 / tragic)))
+                   :polarity (c6-8 / amr-unknown)
+                   :polarity -)
+      :snt3 (c6-1 / fail-01
+                  :ARG1 (c6-14 / control-01
+                               :ARG1 (c6-5 / fly-01))
+                  :quant (c6-12 / multiple)))
+
+# ::snt Ab ca. :27 begann der Sinkflug von Fu (11.6 km) bis auf Fu (2.07 km). Autsch...
+# ::tokens ["Ab", "ca", ".", ":", "27", "begann", "der", "Sinkflug", "von", "Fu", "(", "11.6", "km", ")", "bis", "auf", "Fu", "(", "2.07", "km", ")", ".", "Autsch", "..."]
+# ::lemmas ["Ab", "can", ".", ":", "27", "begann", "der", "Sinkflug", "von", "Fu", "(", "11.6", "km", ")", "bis", "auf", "Fu", "(", "2.07", "km", ")", ".", "Autsch", "..."]
+(c7-0 / multi-sentence
+      :snt1 (c7-1 / begin-01
+                  :ARG1 (c7-2 / event
+                              :name (c7-3 / name
+                                          :op1 "Sinkflug"
+                                          :op2 "von"
+                                          :op3 "Fu")
+                              :quant (c7-5 / distance-quantity
+                                           :unit (c7-6 / kilometer)
+                                           :quant 11.6)
+                              :snt2-of c7-0))
+      :name (c7-4 / name
+                  :op1 "Autsch"))
+
+# ::snt Don't let the facts get in the way of a top news story...
+# ::tokens ["Do", "n't", "let", "the", "facts", "get", "in", "the", "way", "of", "a", "top", "news", "story", "..."]
+# ::lemmas ["do", "not", "let", "the", "fact", "get", "in", "the", "way", "of", "a", "top", "news", "story", "..."]
+(c8-2 / let-01
+      :ARG0 (c8-1 / you)
+      :ARG1 (c8-0 / hinder-01
+                  :ARG0 (c8-3 / fact)
+                  :ARG1 (c8-5 / story
+                              :mod (c8-4 / news)
+                              :ARG1-of (c8-6 / top-01)))
+      :polarity -
+      :mode imperative)
+
+# ::snt Hypoxia cannot be ruled out ...
+# ::tokens ["Hypoxia", "can", "not", "be", "ruled", "out", "..."]
+# ::lemmas ["Hypoxia", "can", "not", "be", "rule", "out", "..."]
+(c9-1 / possible-01
+      :ARG1 (c9-2 / rule-out-02
+                  :ARG1 (c9-0 / hypoxia))
+      :polarity -)
+
+# ::snt And these people KEEP their jobs !!?
+# ::tokens ["And", "these", "people", "KEEP", "their", "jobs", "!", "!", "?"]
+# ::lemmas ["and", "these", "people", "keep", "their", "job", "!", "!", "?"]
+(c10-5 / and
+       :op2 (c10-2 / keep-01
+                   :ARG0 (c10-3 / person
+                                :mod (c10-4 / this))
+                   :ARG1 (c10-0 / job
+                                :poss c10-3)
+                   :polarity (c10-1 / amr-unknown)))
+
+# ::snt and same course, not turning towards an airport.
+# ::tokens ["and", "same", "course", ",", "not", "turning", "towards", "an", "airport", "."]
+# ::lemmas ["and", "same", "course", ",", "not", "turn", "towards", "an", "airport", "."]
+(c11-4 / and
+       :op2 (c11-3 / turn-01
+                   :direction (c11-1 / airport)
+                   :mod (c11-0 / of-course
+                               :ARG1-of (c11-2 / same-01))
+                   :polarity -))
+
+# ::snt Is the data exactly as logged from your network of receivers or has any processing been performed prior to CSV extract?
+# ::tokens ["Is", "the", "data", "exactly", "as", "logged", "from", "your", "network", "of", "receivers", "or", "has", "any", "processing", "been", "performed", "prior", "to", "CSV", "extract", "?"]
+# ::lemmas ["be", "the", "datum", "exactly", "as", "log", "from", "your", "network", "of", "receiver", "or", "have", "any", "processing", "be", "perform", "prior", "to", "CSV", "extract", "?"]
+(c12-12 / amr-choice
+        :op1 (c12-1 / log-01
+                    :ARG1 (c12-8 / data)
+                    :source (c12-5 / network
+                                   :consist-of (c12-9 / receiver)
+                                   :poss (c12-0 / you))
+                    :manner (c12-3 / exact))
+        :op2 (c12-7 / process-01
+                    :time (c12-11 / prior
+                                  :op1 (c12-2 / extract-01
+                                              :ARG1 (c12-10 / thing
+                                                            :name (c12-6 / name
+                                                                         :op1 "CSV"))))
+                    :mod (c12-4 / any)))
+
+# ::snt It consistent isn't it?
+# ::tokens ["It", "consistent", "is", "n't", "it", "?"]
+# ::lemmas ["it", "consistent", "be", "not", "it", "?"]
+(c13-1 / consistent-02
+       :ARG1 (c13-2 / it)
+       :ARG1-of (c13-0 / request-confirmation-91))
+
+# ::snt una disgrazia riposate in pace
+# ::tokens ["una", "disgrazia", "riposate", "in", "pace"]
+# ::lemmas ["una", "disgrazia", "riposate", "in", "pace"]
+(c14-1 / pace-01
+       :ARG1 (c14-3 / product
+                    :name (c14-0 / name
+                                 :op1 "La"
+                                 :op2 "G disgrazia")
+                    :ARG1-of (c14-2 / rip-01)))
+
+# ::snt Nearly every flight I've been on has reached
+# ::tokens ["Nearly", "every", "flight", "I", "'ve", "been", "on", "has", "reached"]
+# ::lemmas ["nearly", "every", "flight", "i", "'ve", "be", "on", "have", "reach"]
+(c15-5 / reach-01
+       :ARG0 (c15-0 / fly-01
+                    :ARG1 (c15-2 / i)
+                    :frequency (c15-3 / rate-entity-91
+                                      :ARG1 c15-2)
+                    :ARG4-of c15-3)
+       :mod (c15-1 / every
+                   :mod (c15-4 / near)))
+
+# ::snt RT : Full csv file with positions and altitude of flight
+# ::tokens ["RT", ":", "Full", "csv", "file", "with", "positions", "and", "altitude", "of", "flight"]
+# ::lemmas ["RT", ":", "Full", "csv", "file", "with", "position", "and", "altitude", "of", "flight"]
+(c17-9 / and
+       :op1 (c17-6 / publication
+                   :name (c17-4 / name
+                                :op1 "RT"))
+       :op2 (c17-0 / file
+                   :mod (c17-7 / thing
+                               :name c17-4
+                               :op1 "Csv"))
+       :ARG1-of (c17-3 / full-09)
+       :topic (c17-2 / and
+                     :op1 (c17-8 / position-01
+                                 :ARG1 (c17-1 / fly-01))
+                     :op2 (c17-5 / altitude
+                                 :poss c17-1)))
+
+# ::snt Haven't seen one yet but I think it's "raw" as logged from different receivers
+# ::tokens ["Have", "n't", "seen", "one", "yet", "but", "I", "think", "it", "'s", "\"", "raw", "\"", "as", "logged", "from", "different", "receivers"]
+# ::lemmas ["have", "not", "see", "one", "yet", "but", "i", "think", "it", "be", "\"", "raw", "\"", "as", "log", "from", "different", "receiver"]
+(c18-6 / contrast-01
+       :ARG1 (c18-9 / see-01
+                    :ARG0 (c18-3 / i)
+                    :ARG1 (c18-2 / one)
+                    :time (c18-0 / yet)
+                    :polarity -)
+       :ARG2 (c18-10 / think-01
+                     :ARG0 c18-3
+                     :ARG1 (c18-5 / raw
+                                  :domain c18-2
+                                  :ARG1-of (c18-7 / cause-01
+                                                  :ARG0 (c18-1 / log-03
+                                                               :ARG1 c18-2
+                                                               :source (c18-4 / receiver
+                                                                              :ARG1-of (c18-8 / differ-02)))))))
+
+# ::snt The earlier reported image showing fpm is incorrect if I look at this CSV file, right?
+# ::tokens ["The", "earlier", "reported", "image", "showing", "fpm", "is", "incorrect", "if", "I", "look", "at", "this", "CSV", "file", ",", "right", "?"]
+# ::lemmas ["the", "early", "report", "image", "show", "fpm", "be", "incorrect", "if", "i", "look", "at", "this", "CSV", "file", ",", "right", "?"]
+(c19-9 / correct-02
+       :ARG1 (c19-3 / image
+                    :ARG1-of (c19-8 / report-01
+                                    :time (c19-2 / before))
+                    :ARG0-of (c19-12 / show-01
+                                     :ARG1 (c19-13 / thing
+                                                   :name (c19-5 / name
+                                                                :op1 "FPM"))))
+       :condition (c19-0 / look-01
+                         :ARG0 (c19-10 / i)
+                         :ARG1 (c19-1 / file
+                                      :mod (c19-4 / format
+                                                  :name (c19-6 / name
+                                                               :op1 "Scovaria"))
+                                      :mod (c19-11 / this)))
+       :ARG1-of (c19-7 / request-confirmation-91
+                       :ARG2 c19-10)
+       :polarity -)
+
+# ::snt Wonder why was it at ft? Previous flights never went above , usually .
+# ::tokens ["Wonder", "why", "was", "it", "at", "ft", "?", "Previous", "flights", "never", "went", "above", ",", "usually", "."]
+# ::lemmas ["wonder", "why", "be", "it", "at", "ft", "?", "previous", "flight", "never", "go", "above", ",", "usually", "."]
+(c20-2 / multi-sentence
+       :snt1 (c20-0 / wonder-01
+                    :ARG1 (c20-11 / thing
+                                  :ARG0-of (c20-9 / cause-01
+                                                  :ARG1 (c20-4 / be-located-at-91
+                                                               :ARG1 (c20-6 / it)
+                                                               :ARG2 (c20-1 / foot)))))
+       :snt2 (c20-10 / go-01
+                     :ARG1 (c20-7 / fly-01
+                                  :time (c20-8 / previous))
+                     :ARG4 (c20-12 / above)
+                     :time (c20-5 / ever)
+                     :mod (c20-3 / usual)
+                     :polarity -))
+
+# ::snt Squawk was never shown !!!
+# ::tokens ["Squawk", "was", "never", "shown", "!", "!", "!"]
+# ::lemmas ["Squawk", "be", "never", "show", "!", "!", "!"]
+(c21-0 / show-01
+       :ARG1 (c21-1 / Squawk)
+       :time (c21-2 / ever)
+       :polarity -)
+
+# ::snt Apparently some other news station has questioned whether its normal to fly over mountains! HELP
+# ::tokens ["Apparently", "some", "other", "news", "station", "has", "questioned", "whether", "its", "normal", "to", "fly", "over", "mountains", "!", "HELP"]
+# ::lemmas ["apparently", "some", "other", "news", "station", "have", "question", "whether", "its", "normal", "to", "fly", "over", "mountain", "!", "help"]
+(c22-3 / multi-sentence
+       :snt1 (c22-7 / question-03
+                    :ARG0 (c22-11 / station
+                                  :mod (c22-8 / news)
+                                  :mod (c22-5 / other)
+                                  :mod (c22-6 / some))
+                    :ARG1 (c22-12 / truth-value
+                                  :polarity-of (c22-9 / normal-02
+                                                      :ARG1 (c22-2 / fly-01
+                                                                   :path (c22-4 / over
+                                                                                :op1 (c22-10 / mountain)))))
+                    :ARG1-of (c22-13 / appear-02))
+       :snt2 (c22-0 / help-01
+                    :ARG0 (c22-1 / you)
+                    :mode imperative))
+
+# ::snt did you receive a reply to that?
+# ::tokens ["did", "you", "receive", "a", "reply", "to", "that", "?"]
+# ::lemmas ["do", "you", "receive", "a", "reply", "to", "that", "?"]
+(c23-2 / receive-01
+       :ARG0 (c23-0 / you)
+       :ARG1 (c23-1 / reply-01
+                    :ARG1 (c23-3 / that))
+       :polarity (c23-4 / amr-unknown))
+
+# ::snt any squawks?
+# ::tokens ["any", "squawks", "?"]
+# ::lemmas ["any", "squawks", "?"]
+(c24-0 / squawk-01
+       :polarity (c24-2 / amr-unknown)
+       :mod (c24-1 / any))
+
+# ::snt : Full csv file with positions and altitude of flight
+# ::tokens [":", "Full", "csv", "file", "with", "positions", "and", "altitude", "of", "flight"]
+# ::lemmas [":", "full", "csv", "file", "with", "position", "and", "altitude", "of", "flight"]
+(c25-0 / file
+       :mod (c25-7 / thing
+                   :name (c25-4 / name
+                                :op1 "Csv"))
+       :ARG1-of (c25-3 / full-09)
+       :ARG0-of (c25-8 / accompany-01
+                       :ARG1 (c25-2 / and
+                                    :op1 (c25-6 / position-01
+                                                :ARG1 (c25-1 / fly-01))
+                                    :op2 (c25-5 / altitude
+                                                :poss c25-1))))
+
+# ::snt haha
+# ::tokens ["haha"]
+# ::lemmas ["haha"]
+(c26-0 / haha
+       :mode expressive)
+
+# ::snt . look at this, NO emergency squawk, consistent rate of descent and speed. Hypoxia?
+# ::tokens [".", "look", "at", "this", ",", "NO", "emergency", "squawk", ",", "consistent", "rate", "of", "descent", "and", "speed", ".", "Hypoxia", "?"]
+# ::lemmas [".", "look", "at", "this", ",", "no", "emergency", "squawk", ",", "consistent", "rate", "of", "descent", "and", "speed", ".", "hypoxia", "?"]
+(c27-3 / multi-sentence
+       :snt1 (c27-2 / look-01
+                    :ARG0 (c27-1 / you)
+                    :ARG1 (c27-13 / and
+                                  :op1 (c27-12 / this)
+                                  :op2 (c27-11 / squawk-01
+                                               :mod (c27-4 / emergency)
+                                               :polarity -)
+                                  :op3 (c27-8 / rate-01
+                                              :ARG1 (c27-6 / and
+                                                           :op1 (c27-9 / descend-01)
+                                                           :op2 (c27-5 / speed-01))
+                                              :ARG1-of (c27-10 / consistent-01)))
+                    :mode imperative)
+       :snt2 (c27-0 / hypoxia
+                    :polarity (c27-7 / amr-unknown)))
+
+# ::snt No course deviation away from mountains after descent started. Appears like total loss of pilot control!
+# ::tokens ["No", "course", "deviation", "away", "from", "mountains", "after", "descent", "started", ".", "Appears", "like", "total", "loss", "of", "pilot", "control", "!"]
+# ::lemmas ["no", "course", "deviation", "away", "from", "mountain", "after", "descent", "start", ".", "appear", "like", "total", "loss", "of", "pilot", "control", "!"]
+(c28-2 / multi-sentence
+       :snt1 (c28-5 / deviate-01
+                    :ARG1 (c28-4 / mountain)
+                    :mod (c28-6 / course)
+                    :time (c28-12 / after
+                                  :op1 (c28-9 / start-01
+                                              :ARG1 (c28-0 / descend-01)))
+                    :polarity -)
+       :snt2 (c28-3 / appear-02
+                    :ARG1 (c28-1 / lose-02
+                                 :ARG1 (c28-7 / control-01
+                                              :ARG0 (c28-8 / person
+                                                           :ARG0-of (c28-11 / pilot-01)))
+                                 :degree (c28-10 / total))))
+
+# ::snt All the hallmarks right there. AP disengagement would explain the comparitively steady ROD.
+# ::tokens ["All", "the", "hallmarks", "right", "there", ".", "AP", "disengagement", "would", "explain", "the", "comparitively", "steady", "ROD", "."]
+# ::lemmas ["all", "the", "hallmark", "right", "there", ".", "AP", "disengagement", "would", "explain", "the", "comparitively", "steady", "ROD", "."]
+(c29-1 / multi-sentence
+       :snt1 (c29-0 / hallmark
+                    :mod (c29-11 / all)
+                    :location (c29-10 / there
+                                      :mod (c29-5 / right)))
+       :snt2 (c29-2 / explain-01
+                    :ARG0 (c29-6 / disengage-01
+                                 :ARG0 (c29-4 / military
+                                              :name (c29-3 / name
+                                                           :op1 "AP")))
+                    :ARG1 (c29-7 / product
+                                 :name c29-3
+                                 :op1 "ROD")
+                    :ARG1-of (c29-9 / steady-01
+                                    :ARG1-of (c29-8 / compare-01))))

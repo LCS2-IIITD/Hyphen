@@ -1,0 +1,27 @@
+# ::snt Beb!!!!! congrats!!!!!
+# ::tokens ["Beb", "!", "!", "!", "!", "!", "congrats", "!", "!", "!", "!", "!"]
+# ::lemmas ["Beb", "!", "!", "!", "!", "!", "congrat", "!", "!", "!", "!", "!"]
+(c1-2 / congratulate-01
+      :ARG1 (c1-0 / person
+                  :name (c1-1 / name
+                              :op1 "Beb"))
+      :mode expressive)
+
+# ::snt Congrats Cristina!
+# ::tokens ["Congrats", "Cristina", "!"]
+# ::lemmas ["Congrats", "Cristina", "!"]
+(c2-0 / say-01
+      :ARG1 (c2-3 / congratulate-01
+                  :ARG1 (c2-1 / person
+                              :name (c2-2 / name
+                                          :op1 "Cristina")
+                              :ARG2-of c2-0)))
+
+# ::snt Yay! And congrats on the baby!
+# ::tokens ["Yay", "!", "And", "congrats", "on", "the", "baby", "!"]
+# ::lemmas ["yay", "!", "and", "congrat", "on", "the", "baby", "!"]
+(c3-3 / multi-sentence
+      :snt1 (c3-4 / yay)
+      :snt2 (c3-0 / and
+                  :op2 (c3-1 / congratulate-01
+                             :ARG1 (c3-2 / baby))))

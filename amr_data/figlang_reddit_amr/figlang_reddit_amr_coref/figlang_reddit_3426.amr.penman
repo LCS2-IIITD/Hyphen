@@ -1,0 +1,50 @@
+# ::snt This morning's backup on SH130 was brought to us by: Two 18-Wheelers Trying to Pass Each Other at 60mph
+# ::tokens ["This", "morning", "'s", "backup", "on", "SH130", "was", "brought", "to", "us", "by", ":", "Two", "18", "-", "Wheelers", "Trying", "to", "Pass", "Each", "Other", "at", "60", "mph"]
+# ::lemmas ["this", "morning", "'s", "backup", "on", "SH130", "be", "bring", "to", "we", "by", ":", "Two", "18", "-", "wheeler", "try", "to", "pass", "each", "other", "at", "60", "mph"]
+(c1-10 / bring-01
+       :ARG0 (c1-9 / try-01
+                   :ARG0 (c1-11 / person
+                                :part (c1-4 / wheel
+                                            :quant 18)
+                                :quant 2)
+                   :ARG1 (c1-8 / pass-02
+                               :ARG0 c1-11
+                               :ARG1 (c1-7 / other
+                                           :mod (c1-16 / each))
+                               :manner (c1-0 / speed-quantity
+                                             :unit (c1-12 / mile-per-hour)
+                                             :quant 60)))
+       :ARG1 (c1-5 / thing
+                   :ARG2-of (c1-1 / back-up-04
+                                  :ARG1 (c1-6 / product
+                                              :name (c1-13 / name
+                                                           :op1 "SH130")))
+                   :time (c1-2 / date-entity
+                               :dayperiod (c1-3 / morning)
+                               :mod (c1-14 / today)))
+       :ARG2 (c1-15 / we))
+
+# ::snt Hey at least somebody is using 130... trucks too!
+# ::tokens ["Hey", "at", "least", "somebody", "is", "using", "130", "...", "trucks", "too", "!"]
+# ::lemmas ["hey", "at", "least", "somebody", "be", "use", "130", "...", "truck", "too", "!"]
+(c2-4 / use-01
+      :ARG0 (c2-0 / somebody)
+      :ARG1 (c2-5 / truck
+                  :mod (c2-2 / too))
+      :mod (c2-3 / hey
+                 :mode expressive)
+      :mod (c2-1 / at-least))
+
+# ::snt I guess someone has to pay for the privilege of sitting in traffic.
+# ::tokens ["I", "guess", "someone", "has", "to", "pay", "for", "the", "privilege", "of", "sitting", "in", "traffic", "."]
+# ::lemmas ["i", "guess", "someone", "have", "to", "pay", "for", "the", "privilege", "of", "sit", "in", "traffic", "."]
+(c3-5 / guess-01
+      :ARG0 (c3-7 / i)
+      :ARG1 (c3-1 / obligate-01
+                  :ARG2 (c3-4 / pay-01
+                              :ARG0 (c3-0 / someone)
+                              :ARG3 (c3-2 / privilege-01
+                                          :ARG1 c3-0
+                                          :ARG2 (c3-6 / sit-01
+                                                      :ARG1 c3-0
+                                                      :ARG2 (c3-3 / traffic))))))

@@ -1,0 +1,221 @@
+# ::snt as you should be. It's quite good
+# ::tokens ["as", "you", "should", "be", ".", "It", "'s", "quite", "good"]
+# ::lemmas ["as", "you", "should", "be", ".", "it", "be", "quite", "good"]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / resemble-01
+                  :ARG2 (c1-4 / recommend-01
+                              :ARG2 (c1-0 / you)))
+      :snt2 (c1-6 / good-02
+                  :ARG1 (c1-3 / it)
+                  :degree (c1-2 / quite)))
+
+# ::snt Also, state-sponsored CBC doesn't have same pressure as U.S.'s many private news stations.
+# ::tokens ["Also", ",", "state", "-", "sponsored", "CBC", "does", "n't", "have", "same", "pressure", "as", "U.S.", "'s", "many", "private", "news", "stations", "."]
+# ::lemmas ["also", ",", "state", "-", "sponsor", "CBC", "do", "not", "have", "same", "pressure", "as", "U.S.", "'s", "many", "private", "news", "station", "."]
+(c2-7 / pressure-01
+      :ARG1 (c2-11 / publication
+                   :name (c2-5 / name
+                               :op1 "CBC")
+                   :ARG1-of (c2-10 / sponsor-01
+                                   :ARG0 (c2-4 / state)))
+      :ARG1-of (c2-0 / same-01
+                     :ARG2 (c2-3 / station
+                                 :mod (c2-6 / news)
+                                 :ARG1-of (c2-2 / private-03)
+                                 :quant (c2-1 / many)
+                                 :poss (c2-9 / country
+                                             :name (c2-8 / name
+                                                         :op1 "U.S."))))
+      :mod (c2-12 / also)
+      :polarity -)
+
+# ::snt too bad the conservatives are dismantling CBC
+# ::tokens ["too", "bad", "the", "conservatives", "are", "dismantling", "CBC"]
+# ::lemmas ["too", "bad", "the", "conservative", "be", "dismantle", "CBC"]
+(c3-0 / have-degree-91
+      :ARG1 (c3-4 / dismantle-01
+                  :ARG0 (c3-3 / person
+                              :mod (c3-5 / conservative))
+                  :ARG1 (c3-7 / publication
+                              :name (c3-2 / name
+                                          :op1 "CBC")))
+      :ARG2 (c3-1 / bad-07
+                  :ARG1 c3-4)
+      :ARG3 (c3-6 / too))
+
+# ::snt of course! I love watching news when i'm there - their media seeks inform their populace -
+# ::tokens ["of", "course", "!", "I", "love", "watching", "news", "when", "i", "'m", "there", "-", "their", "media", "seeks", "inform", "their", "populace", "-"]
+# ::lemmas ["of", "course", "!", "i", "love", "watch", "news", "when", "i", "be", "there", "-", "their", "medium", "seek", "inform", "their", "populace", "-"]
+(c4-1 / love-01
+      :ARG0 (c4-4 / i)
+      :ARG1 (c4-0 / watch-01
+                  :ARG0 c4-4
+                  :ARG1 (c4-5 / news)
+                  :time (c4-3 / be-located-at-91
+                              :ARG1 c4-4
+                              :ARG2 (c4-11 / there)))
+      :ARG1-of (c4-7 / cause-01
+                     :ARG0 (c4-10 / seek-01
+                                  :ARG0 (c4-2 / media
+                                              :poss (c4-9 / they))
+                                  :ARG1 (c4-8 / inform-01
+                                              :ARG0 c4-2
+                                              :ARG1 (c4-6 / populace
+                                                          :poss c4-9)))))
+
+# ::snt most of CBC board are Conservative contributors. And this happened
+# ::tokens ["most", "of", "CBC", "board", "are", "Conservative", "contributors", ".", "And", "this", "happened"]
+# ::lemmas ["most", "of", "CBC", "board", "be", "Conservative", "contributor", ".", "and", "this", "happen"]
+(c5-0 / multi-sentence
+      :snt1 (c5-3 / include-91
+                  :ARG1 (c5-5 / person
+                              :ARG0-of (c5-7 / contribute-01
+                                             :ARG2 (c5-2 / board
+                                                         :mod (c5-10 / publication
+                                                                     :name (c5-4 / name
+                                                                                 :op1 "CBC")))))
+                  :ARG2 (c5-1 / person
+                              :ARG0-of (c5-6 / contribute-01
+                                             :ARG2 c5-2))
+                  :ARG3 (c5-8 / most))
+      :snt2 (c5-11 / and
+                   :op2 (c5-9 / this)))
+
+# ::snt To be fair, American cable news sets a reeeallyy low bar.
+# ::tokens ["To", "be", "fair", ",", "American", "cable", "news", "sets", "a", "reeeallyy", "low", "bar", "."]
+# ::lemmas ["to", "be", "fair", ",", "American", "cable", "news", "set", "a", "reeeallyy", "low", "bar", "."]
+(c6-8 / set-02
+      :ARG0 (c6-3 / news
+                  :mod (c6-6 / cable)
+                  :mod (c6-5 / country
+                             :name (c6-4 / name
+                                         :op1 "America")))
+      :ARG1 (c6-2 / bar
+                  :ARG1-of (c6-0 / low-04
+                                 :mod (c6-7 / reeeally)))
+      :ARG1-of (c6-1 / fair-01))
+
+# ::snt It's certainly not the FIRST time.
+# ::tokens ["It", "'s", "certainly", "not", "the", "FIRST", "time", "."]
+# ::lemmas ["it", "be", "certainly", "not", "the", "FIRST", "time", "."]
+(c7-0 / ordinal-entity
+      :mod (c7-1 / certain)
+      :value 1
+      :polarity -)
+
+# ::snt You're judging CBC against the entire U.S. cable network field? One org errors, who field blamed
+# ::tokens ["You", "'re", "judging", "CBC", "against", "the", "entire", "U.S.", "cable", "network", "field", "?", "One", "org", "errors", ",", "who", "field", "blamed"]
+# ::lemmas ["you", "be", "judge", "CBC", "against", "the", "entire", "U.S.", "cable", "network", "field", "?", "One", "org", "error", ",", "who", "field", "blame"]
+(c8-3 / multi-sentence
+      :snt1 (c8-0 / judge-01
+                  :ARG0 (c8-1 / you)
+                  :ARG1 (c8-9 / publication
+                              :name (c8-7 / name
+                                          :op1 "CBC"))
+                  :ARG2 (c8-2 / field
+                              :mod (c8-8 / network
+                                         :mod (c8-11 / cable))
+                              :mod (c8-5 / entire)
+                              :location (c8-10 / country
+                                               :name (c8-12 / name
+                                                            :op1 "U.S."))))
+      :snt2 (c8-4 / blame-01
+                  :ARG0 (c8-6 / field
+                              :quant 1)
+                  :ARG1 (c8-13 / amr-unknown)))
+
+# ::snt on vaca in NYC-Watched a bit of coverage on CNN in NYC. U hit the nail on the head.Missed CBC today.
+# ::tokens ["on", "vaca", "in", "NYC", "-", "Watched", "a", "bit", "of", "coverage", "on", "CNN", "in", "NYC", ".", "U", "hit", "the", "nail", "on", "the", "head", ".", "Missed", "CBC", "today", "."]
+# ::lemmas ["on", "vaca", "in", "NYC", "-", "Watched", "a", "bit", "of", "coverage", "on", "CNN", "in", "NYC", ".", "u", "hit", "the", "nail", "on", "the", "head", ".", "miss", "CBC", "today", "."]
+(c9-0 / multi-sentence
+      :snt1 (c9-11 / watch-01
+                   :ARG0 (c9-12 / i)
+                   :ARG1 (c9-16 / cover-03
+                                :ARG0 (c9-3 / publication
+                                            :name (c9-9 / name
+                                                        :op1 "CNN"))
+                                :location (c9-4 / city
+                                                :name (c9-15 / name
+                                                             :op1 "NYC"))
+                                :quant (c9-8 / bit)))
+      :snt2 (c9-7 / hit-01
+                  :ARG0 (c9-13 / country
+                               :name (c9-1 / name
+                                           :op1 "U"))
+                  :ARG1 (c9-2 / nail)
+                  :location (c9-6 / head)
+                  :time (c9-17 / today))
+      :snt3 (c9-10 / miss-02
+                   :ARG0 (c9-14 / you)
+                   :ARG1 (c9-5 / publication
+                               :name (c9-18 / name
+                                            :op1 "CBC"))
+                   :time c9-17))
+
+# ::snt As a relocated Canadian, this is why I still insist on getting my news through .
+# ::tokens ["As", "a", "relocated", "Canadian", ",", "this", "is", "why", "I", "still", "insist", "on", "getting", "my", "news", "through", "."]
+# ::lemmas ["as", "a", "relocate", "Canadian", ",", "this", "be", "why", "i", "still", "insist", "on", "get", "my", "news", "through", "."]
+(c10-5 / cause-01
+       :ARG0 (c10-4 / relocate-01
+                    :ARG1 (c10-0 / i
+                                 :mod (c10-3 / country
+                                             :name (c10-1 / name
+                                                          :op1 "Canada"))))
+       :ARG1 (c10-6 / insist-01
+                    :ARG0 c10-0
+                    :ARG1 (c10-7 / get-through-12
+                                 :ARG0 c10-0
+                                 :ARG1 (c10-2 / news
+                                              :poss c10-0))
+                    :mod (c10-8 / still)))
+
+# ::snt That said, I'll admit there is something icky ab U.S. cable news. But there are logic fallacies in piece.
+# ::tokens ["That", "said", ",", "I", "'ll", "admit", "there", "is", "something", "icky", "ab", "U.S.", "cable", "news", ".", "But", "there", "are", "logic", "fallacies", "in", "piece", "."]
+# ::lemmas ["that", "say", ",", "i", "'ll", "admit", "there", "be", "something", "icky", "ab", "U.S.", "cable", "news", ".", "but", "there", "be", "logic", "fallacy", "in", "piece", "."]
+(c11-1 / multi-sentence
+       :snt1 (c11-12 / say-01
+                     :ARG1 (c11-13 / that)
+                     :concession-of (c11-14 / admit-01
+                                            :ARG0 (c11-4 / i)
+                                            :ARG1 (c11-3 / something
+                                                         :mod (c11-10 / icky)
+                                                         :topic (c11-5 / news
+                                                                       :mod (c11-9 / cable)
+                                                                       :mod (c11-8 / country
+                                                                                   :name (c11-6 / name
+                                                                                                :op1 "U.S."))))))
+       :snt2 (c11-11 / contrast-01
+                     :ARG2 (c11-0 / fallacy
+                                  :mod (c11-2 / logic)
+                                  :manner (c11-7 / piece))))
+
+# ::snt consciousness deserts a skilled act.
+# ::tokens ["consciousness", "deserts", "a", "skilled", "act", "."]
+# ::lemmas ["consciousness", "desert", "a", "skilled", "act", "."]
+(c12-1 / desert-01
+       :ARG0 (c12-2 / conscious)
+       :ARG1 (c12-3 / act-02
+                    :mod (c12-0 / skill)))
+
+# ::snt . indeed, though feel proud of Canadian's reporting rather than that of US outlets
+# ::tokens [".", "indeed", ",", "though", "feel", "proud", "of", "Canadian", "'s", "reporting", "rather", "than", "that", "of", "US", "outlets"]
+# ::lemmas [".", "indeed", ",", "though", "feel", "proud", "of", "Canadian", "'s", "reporting", "rather", "than", "that", "of", "US", "outlet"]
+(c13-0 / have-concession-91
+       :ARG2 (c13-1 / feel-01
+                    :ARG0 (c13-5 / i)
+                    :ARG1 (c13-9 / pride-01
+                                 :ARG0 c13-5
+                                 :ARG1 (c13-10 / report-01
+                                               :ARG0 (c13-14 / person
+                                                             :mod (c13-11 / country
+                                                                          :name (c13-7 / name
+                                                                                       :op1 "Canada"))))
+                                 :ARG1-of (c13-12 / instead-of-91
+                                                  :ARG2 (c13-3 / pride-01
+                                                               :ARG0 c13-5
+                                                               :ARG1 (c13-6 / report-01
+                                                                            :ARG0 (c13-4 / outlet
+                                                                                         :mod (c13-13 / country
+                                                                                                      :name (c13-8 / name
+                                                                                                                   :op1 "US")))))))
+                    :mod (c13-2 / indeed)))

@@ -1,0 +1,36 @@
+# ::snt Craigslist ads offer plastic bags for sale filled with 'free' marijuana
+# ::tokens ["Craigslist", "ads", "offer", "plastic", "bags", "for", "sale", "filled", "with", "'", "free", "'", "marijuana"]
+# ::lemmas ["Craigslist", "ad", "offer", "plastic", "bag", "for", "sale", "fill", "with", "'", "free", "'", "marijuana"]
+(c1-4 / offer-01
+      :ARG0 (c1-1 / advertise-01
+                  :medium (c1-7 / publication
+                                :name (c1-9 / name
+                                            :op1 "Craigslist")))
+      :ARG1 (c1-6 / bag
+                  :consist-of (c1-5 / plastic)
+                  :ARG1-of (c1-2 / fill-01
+                                 :ARG2 (c1-8 / marijuana
+                                             :ARG1-of (c1-3 / free-03))))
+      :ARG3 (c1-0 / sell-01
+                  :ARG1 c1-6))
+
+# ::snt just decorate the bags, it becomes art for sale.
+# ::tokens ["just", "decorate", "the", "bags", ",", "it", "becomes", "art", "for", "sale", "."]
+# ::lemmas ["just", "decorate", "the", "bag", ",", "it", "become", "art", "for", "sale", "."]
+(c2-4 / have-condition-91
+      :ARG1 (c2-5 / become-01
+                  :ARG1 (c2-7 / it)
+                  :ARG2 (c2-3 / art
+                              :purpose (c2-0 / sell-01
+                                             :ARG1 c2-7)))
+      :ARG2 (c2-1 / decorate-01
+                  :ARG1 (c2-2 / bag)
+                  :mod (c2-6 / just)))
+
+# ::snt Except it doesn't
+# ::tokens ["Except", "it", "does", "n't"]
+# ::lemmas ["except", "it", "do", "not"]
+(c3-2 / except-01
+      :ARG1 (c3-0 / do-02
+                  :ARG0 (c3-1 / it)
+                  :polarity -))

@@ -1,0 +1,89 @@
+# ::snt before that ..they leave cart at end of aisle and then walk down the aisle and back. That is something I have yet to figure out any reasonable explanation.....must be just maga
+# ::tokens ["before", "that", "..", "they", "leave", "cart", "at", "end", "of", "aisle", "and", "then", "walk", "down", "the", "aisle", "and", "back", ".", "That", "is", "something", "I", "have", "yet", "to", "figure", "out", "any", "reasonable", "explanation", ".....", "must", "be", "just", "maga"]
+# ::lemmas ["before", "that", "..", "they", "leave", "cart", "at", "end", "of", "aisle", "and", "then", "walk", "down", "the", "aisle", "and", "back", ".", "that", "be", "something", "i", "have", "yet", "to", "figure", "out", "any", "reasonable", "explanation", ".....", "must", "be", "just", "maga"]
+(c1-9 / multi-sentence
+      :snt1 (c1-17 / and
+                   :op1 (c1-22 / leave-11
+                               :ARG0 (c1-7 / they)
+                               :ARG1 (c1-4 / cart)
+                               :location (c1-12 / end
+                                                :part-of (c1-11 / aisle)))
+                   :op2 (c1-5 / walk-01
+                              :ARG0 c1-7
+                              :ARG2 (c1-1 / and
+                                          :op1 (c1-0 / down
+                                                     :op1 (c1-25 / aisle))
+                                          :op2 (c1-23 / back))
+                              :time (c1-6 / then))
+                   :time (c1-16 / before
+                                :op1 (c1-10 / that)))
+      :snt2 (c1-2 / and
+                  :op1 (c1-20 / have-11
+                              :ARG0 (c1-3 / i)
+                              :ARG1 (c1-15 / yet)
+                              :ARG2 (c1-18 / figure-out-05
+                                           :ARG0 c1-3
+                                           :ARG1 (c1-21 / explain-01
+                                                        :ARG1-of (c1-8 / reasonable-02)
+                                                        :mod (c1-14 / any))))
+                  :op2 (c1-13 / infer-01
+                              :ARG1 (c1-19 / maga
+                                           :mod (c1-24 / just)
+                                           :domain c1-7))))
+
+# ::snt Same people that drive their Cadillac Escalade MPH in the left lane and complain about gas prices...
+# ::tokens ["Same", "people", "that", "drive", "their", "Cadillac", "Escalade", "MPH", "in", "the", "left", "lane", "and", "complain", "about", "gas", "prices", "..."]
+# ::lemmas ["same", "people", "that", "drive", "their", "Cadillac", "Escalade", "MPH", "in", "the", "left", "lane", "and", "complain", "about", "gas", "price", "..."]
+(c2-12 / person
+       :ARG1-of (c2-0 / same-01
+                      :ARG2 (c2-6 / person
+                                  :ARG0-of (c2-1 / drive-01
+                                                 :ARG1 (c2-3 / car-make
+                                                             :name (c2-13 / name
+                                                                          :op1 "Cadillac"
+                                                                          :op2 "Escalade")
+                                                             :poss c2-6
+                                                             :manner (c2-11 / speed-quantity
+                                                                            :degree (c2-5 / very)
+                                                                            :quant 1))
+                                                 :location (c2-8 / lane
+                                                                 :ARG1-of (c2-9 / left-20)))
+                                  :ARG0-of (c2-2 / complain-01
+                                                 :ARG1 (c2-7 / thing
+                                                             :ARG2-of (c2-4 / price-01
+                                                                            :ARG1 (c2-10 / gas)))))))
+
+# ::snt YES. I love using the analogy of the shopping carts. It's absolutely true.
+# ::tokens ["YES", ".", "I", "love", "using", "the", "analogy", "of", "the", "shopping", "carts", ".", "It", "'s", "absolutely", "true", "."]
+# ::lemmas ["yes", ".", "i", "love", "use", "the", "analogy", "of", "the", "shopping", "cart", ".", "it", "be", "absolutely", "true", "."]
+(c3-8 / multi-sentence
+      :snt1 (c3-9 / yes)
+      :snt2 (c3-6 / love-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-4 / use-01
+                              :ARG0 c3-7
+                              :ARG1 (c3-1 / analogy
+                                          :mod (c3-2 / cart
+                                                     :purpose (c3-0 / shop-01)))))
+      :snt3 (c3-5 / true-01
+                  :ARG1 (c3-3 / it)
+                  :degree (c3-10 / absolute)))
+
+# ::snt On a windy day so the carts get blown onto cars!
+# ::tokens ["On", "a", "windy", "day", "so", "the", "carts", "get", "blown", "onto", "cars", "!"]
+# ::lemmas ["on", "a", "windy", "day", "so", "the", "cart", "get", "blow", "onto", "car", "!"]
+(c4-4 / blow-01
+      :ARG1 (c4-2 / cart)
+      :ARG2 (c4-1 / car)
+      :time (c4-0 / day
+                  :mod (c4-3 / windy)))
+
+# ::snt ... and throw trash out of a moving car's window.
+# ::tokens ["...", "and", "throw", "trash", "out", "of", "a", "moving", "car", "'s", "window", "."]
+# ::lemmas ["...", "and", "throw", "trash", "out", "of", "a", "move", "car", "'s", "window", "."]
+(c5-0 / and
+      :op2 (c5-4 / throw-01
+                 :ARG1 (c5-3 / trash)
+                 :ARG2 (c5-2 / window
+                             :part-of (c5-1 / car
+                                            :ARG1-of (c5-5 / move-01)))))

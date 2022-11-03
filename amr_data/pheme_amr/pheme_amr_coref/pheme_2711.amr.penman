@@ -1,0 +1,81 @@
+# ::snt France is a very beautiful country
+# ::tokens ["France", "is", "a", "very", "beautiful", "country"]
+# ::lemmas ["France", "be", "a", "very", "beautiful", "country"]
+(c1-4 / country
+      :ARG1-of (c1-0 / beautiful-02
+                     :degree (c1-2 / very))
+      :domain (c1-3 / country
+                    :name (c1-1 / name
+                                :op1 "France")))
+
+# ::snt Only time I was in France, traveled from Switzerland to the UK. Dirty country, terrible roads. People jammed together. Won't visit
+# ::tokens ["Only", "time", "I", "was", "in", "France", ",", "traveled", "from", "Switzerland", "to", "the", "UK", ".", "Dirty", "country", ",", "terrible", "roads", ".", "People", "jammed", "together", ".", "Wo", "n't", "visit"]
+# ::lemmas ["only", "time", "i", "be", "in", "France", ",", "travel", "from", "Switzerland", "to", "the", "UK", ".", "dirty", "country", ",", "terrible", "road", ".", "people", "jam", "together", ".", "will", "not", "visit"]
+(c2-1 / multi-sentence
+      :snt1 (c2-7 / and
+                  :op1 (c2-8 / be-located-at-91
+                             :ARG1 (c2-13 / i)
+                             :ARG2 (c2-19 / country
+                                          :name (c2-9 / name
+                                                      :op1 "France"))
+                             :mod (c2-17 / only))
+                  :op2 (c2-21 / travel-01
+                              :ARG0 c2-13
+                              :ARG3 (c2-5 / country
+                                          :name (c2-18 / name
+                                                       :op1 "Switzerland"))
+                              :ARG4 (c2-15 / country
+                                           :name (c2-2 / name
+                                                       :op1 "UK"))))
+      :snt2 (c2-12 / and
+                   :op1 (c2-16 / country
+                               :mod (c2-6 / dirty))
+                   :op2 (c2-11 / road
+                               :ARG1-of (c2-20 / terrible-01)))
+      :snt3 (c2-10 / and
+                   :op1 (c2-0 / jam-01
+                              :ARG1 (c2-4 / person)
+                              :manner (c2-14 / together))
+                   :op2 (c2-3 / visit-01
+                              :ARG0 c2-13
+                              :polarity -)))
+
+# ::snt At least dead in shooting at HQ of in (police source)
+# ::tokens ["At", "least", "dead", "in", "shooting", "at", "HQ", "of", "in", "(", "police", "source", ")"]
+# ::lemmas ["at", "least", "dead", "in", "shoot", "at", "HQ", "of", "in", "(", "police", "source", ")"]
+(c3-3 / die-01
+      :ARG1 (c3-2 / person)
+      :mod (c3-7 / at-least)
+      :ARG1-of (c3-4 / cause-01
+                     :ARG0 (c3-5 / shoot-02
+                                 :ARG0 c3-2
+                                 :location (c3-0 / headquarters
+                                                 :poss (c3-6 / police))))
+      :ARG1-of (c3-1 / source-01))
+
+# ::snt This is the future of Europe. Thank you...
+# ::tokens ["This", "is", "the", "future", "of", "Europe", ".", "Thank", "you", "..."]
+# ::lemmas ["this", "be", "the", "future", "of", "Europe", ".", "thank", "you", "..."]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / future
+                  :poss (c4-5 / continent
+                              :name (c4-4 / name
+                                          :op1 "Europe"))
+                  :domain (c4-7 / this))
+      :snt2 (c4-6 / thank-01
+                  :ARG0 (c4-3 / i)
+                  :ARG1 (c4-0 / you)))
+
+# ::snt : At least dead in shooting at HQ of in (police source)
+# ::tokens [":", "At", "least", "dead", "in", "shooting", "at", "HQ", "of", "in", "(", "police", "source", ")"]
+# ::lemmas [":", "at", "least", "dead", "in", "shoot", "at", "HQ", "of", "in", "(", "police", "source", ")"]
+(c5-4 / die-01
+      :ARG1 (c5-3 / person
+                  :quant (c5-8 / at-least
+                               :op1 (c5-1 / multiple
+                                          :op1 100)))
+      :ARG1-of (c5-5 / cause-01
+                     :ARG0 (c5-6 / shoot-02
+                                 :location (c5-0 / headquarters
+                                                 :poss (c5-7 / police))))
+      :ARG1-of (c5-2 / source-01))

@@ -1,0 +1,645 @@
+# ::snt That's so nice!
+# ::tokens ["That", "'s", "so", "nice", "!"]
+# ::lemmas ["that", "be", "so", "nice", "!"]
+(c1-1 / nice-01
+      :ARG1 (c1-2 / that)
+      :degree (c1-0 / so))
+
+# ::snt Yeah, like that's gonna work.
+# ::tokens ["Yeah", ",", "like", "that", "'s", "gon", "na", "work", "."]
+# ::lemmas ["yeah", ",", "like", "that", "be", "going", "to", "work", "."]
+(c2-0 / resemble-01
+      :ARG2 (c2-3 / work-09
+                  :ARG1 (c2-2 / that))
+      :mod (c2-1 / yeah
+                 :mode expressive))
+
+# ::snt Trump was right again,damn!!
+# ::tokens ["Trump", "was", "right", "again", ",", "damn", "!", "!"]
+# ::lemmas ["Trump", "be", "right", "again", ",", "damn", "!", "!"]
+(c3-1 / right-06
+      :ARG1 (c3-2 / person
+                  :name (c3-0 / name
+                              :op1 "Trump"))
+      :mod (c3-3 / again)
+      :mod (c3-4 / damn
+                 :mode expressive))
+
+# ::snt They deserve each other
+# ::tokens ["They", "deserve", "each", "other"]
+# ::lemmas ["they", "deserve", "each", "other"]
+(c4-0 / deserve-01
+      :ARG0 (c4-3 / they)
+      :ARG1 (c4-2 / other
+                  :mod (c4-1 / each)))
+
+# ::snt I knew it! Congratulations!
+# ::tokens ["I", "knew", "it", "!", "Congratulations", "!"]
+# ::lemmas ["i", "know", "it", "!", "congratulation", "!"]
+(c5-1 / multi-sentence
+      :snt1 (c5-3 / know-01
+                  :ARG0 (c5-5 / i)
+                  :ARG1 (c5-2 / it))
+      :snt2 (c5-4 / congratulate-01
+                  :ARG0 (c5-0 / you)
+                  :mode expressive))
+
+# ::snt Funniest things I've heard in a while
+# ::tokens ["Funniest", "things", "I", "'ve", "heard", "in", "a", "while"]
+# ::lemmas ["funniest", "thing", "i", "'ve", "hear", "in", "a", "while"]
+(c6-6 / thing
+      :ARG1-of (c6-3 / hear-01
+                     :ARG0 (c6-7 / i)
+                     :time (c6-8 / after
+                                 :op1 (c6-1 / now)
+                                 :quant (c6-4 / while)))
+      :ARG1-of (c6-5 / have-degree-91
+                     :ARG2 (c6-0 / funny-02
+                                 :ARG1 c6-6)
+                     :ARG3 (c6-2 / most)))
+
+# ::snt I must be WAY out of the loop. I thought this was a JOKE. How bizarre.
+# ::tokens ["I", "must", "be", "WAY", "out", "of", "the", "loop", ".", "I", "thought", "this", "was", "a", "JOKE", ".", "How", "bizarre", "."]
+# ::lemmas ["i", "must", "be", "WAY", "out", "of", "the", "loop", ".", "i", "think", "this", "be", "a", "joke", ".", "how", "bizarre", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-1 / obligate-01
+                  :ARG1 (c7-8 / i)
+                  :ARG2 (c7-0 / out-06
+                              :ARG1 c7-8
+                              :ARG2 (c7-5 / loop)
+                              :degree (c7-6 / way)))
+      :snt2 (c7-9 / think-01
+                  :ARG0 c7-8
+                  :ARG1 (c7-7 / job
+                              :domain (c7-10 / this)))
+      :snt3 (c7-2 / bizarre
+                  :degree (c7-4 / so)))
+
+# ::snt News media WHORES!!!!
+# ::tokens ["News", "media", "WHORES", "!", "!", "!", "!"]
+# ::lemmas ["news", "media", "WHORES", "!", "!", "!", "!"]
+(c8-1 / hysteria
+      :mod (c8-2 / media
+                 :mod (c8-0 / news))
+      :mode expressive)
+
+# ::snt How many people actually watch show would be guests at wedding could fit in a phone booth
+# ::tokens ["How", "many", "people", "actually", "watch", "show", "would", "be", "guests", "at", "wedding", "could", "fit", "in", "a", "phone", "booth"]
+# ::lemmas ["how", "many", "people", "actually", "watch", "show", "would", "be", "guest", "at", "wedding", "could", "fit", "in", "a", "phone", "booth"]
+(c9-5 / possible-01
+      :ARG1 (c9-0 / fit-01
+                  :ARG1 (c9-10 / guest
+                               :ARG0-of (c9-4 / have-org-role-91
+                                              :ARG1 (c9-7 / wed-01))
+                               :domain (c9-2 / person
+                                             :quant (c9-9 / amr-unknown)
+                                             :ARG0-of (c9-6 / watch-01
+                                                            :ARG1 (c9-3 / show-04)
+                                                            :ARG1-of (c9-8 / actual-02))))
+                  :ARG2 (c9-1 / booth
+                              :mod (c9-11 / phone))))
+
+# ::snt At Fox that would be sexual harassment.
+# ::tokens ["At", "Fox", "that", "would", "be", "sexual", "harassment", "."]
+# ::lemmas ["at", "Fox", "that", "would", "be", "sexual", "harassment", "."]
+(c10-3 / harass-01
+       :manner (c10-2 / sex-01)
+       :domain (c10-4 / that)
+       :location (c10-0 / broadcast-program
+                        :name (c10-1 / name
+                                     :op1 "Fox")))
+
+# ::snt And this is news because ?
+# ::tokens ["And", "this", "is", "news", "because", "?"]
+# ::lemmas ["and", "this", "be", "news", "because", "?"]
+(c11-1 / and
+       :op2 (c11-2 / cause-01
+                   :ARG0 (c11-3 / amr-unknown)
+                   :ARG1 (c11-0 / news
+                                :domain (c11-4 / this))))
+
+# ::snt Do me a favor though, stop cutting her off every time she goes to say something, please.
+# ::tokens ["Do", "me", "a", "favor", "though", ",", "stop", "cutting", "her", "off", "every", "time", "she", "goes", "to", "say", "something", ",", "please", "."]
+# ::lemmas ["do", "i", "a", "favor", "though", ",", "stop", "cut", "she", "off", "every", "time", "she", "go", "to", "say", "something", ",", "please", "."]
+(c12-6 / have-concession-91
+       :ARG2 (c12-10 / do-02
+                     :ARG0 (c12-2 / you)
+                     :ARG1 (c12-0 / favor)
+                     :ARG2 (c12-8 / i)
+                     :ARG1-of (c12-7 / cause-01
+                                     :ARG0 (c12-3 / stop-01
+                                                  :ARG0 c12-2
+                                                  :ARG1 (c12-11 / cut-off-04
+                                                                :ARG0 c12-2
+                                                                :ARG1 (c12-1 / she)
+                                                                :frequency (c12-5 / rate-entity-91
+                                                                                  :ARG4 (c12-9 / go-02
+                                                                                               :ARG0 c12-1
+                                                                                               :ARG4 (c12-12 / say-01
+                                                                                                             :ARG0 c12-1
+                                                                                                             :ARG1 (c12-4 / something)))))))
+                     :mode imperative
+                     :polite +))
+
+# ::snt Congratulations!
+# ::tokens ["Congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c13-0 / congratulate-01
+       :mode expressive)
+
+# ::snt I'm not surprised, congrats she's beautiful, joe, you lucky dog!
+# ::tokens ["I", "'m", "not", "surprised", ",", "congrats", "she", "'s", "beautiful", ",", "joe", ",", "you", "lucky", "dog", "!"]
+# ::lemmas ["i", "be", "not", "surprised", ",", "congrat", "she", "be", "beautiful", ",", "joe", ",", "you", "lucky", "dog", "!"]
+(c14-2 / multi-sentence
+       :snt1 (c14-4 / surprise-01
+                    :ARG0 (c14-1 / beautiful-02
+                                 :ARG1 (c14-0 / she))
+                    :ARG1 (c14-8 / i)
+                    :polarity -)
+       :snt2 (c14-10 / say-01
+                     :ARG0 c14-8)
+       :ARG1 (c14-7 / congratulate-01
+                    :ARG0 c14-8
+                    :ARG1 (c14-5 / person
+                                 :name (c14-3 / name
+                                              :op1 "Joe"))
+                    :ARG2 (c14-9 / dog
+                                 :mod (c14-6 / lucky)
+                                 :domain c14-5))
+       :ARG2 c14-5)
+
+# ::snt temper temper.
+# ::tokens ["temper", "temper", "."]
+# ::lemmas ["temper", "temper", "."]
+(c15-1 / temper
+       :mod c15-1
+       :mod (c15-0 / temporary))
+
+# ::snt Oh ok you know..I guess you were there! Ohhh I forgot..you mean bill Clinton rape charge and how many women he cheated with? Hypocrite
+# ::tokens ["Oh", "ok", "you", "know", "..", "I", "guess", "you", "were", "there", "!", "Ohhh", "I", "forgot", "..", "you", "mean", "bill", "Clinton", "rape", "charge", "and", "how", "many", "women", "he", "cheated", "with", "?", "Hypocrite"]
+# ::lemmas ["oh", "ok", "you", "know", "..", "i", "guess", "you", "be", "there", "!", "ohhh", "i", "forget", "..", "you", "mean", "bill", "Clinton", "rape", "charge", "and", "how", "many", "woman", "he", "cheat", "with", "?", "hypocrite"]
+(c16-15 / multi-sentence
+        :snt1 (c16-1 / okay-01
+                     :ARG1 (c16-5 / know-01
+                                  :ARG0 (c16-2 / you)))
+        :snt2 (c16-10 / guess-01
+                      :ARG0 (c16-23 / i)
+                      :ARG1 (c16-14 / be-located-at-91
+                                    :ARG1 (c16-11 / you)
+                                    :ARG2 (c16-9 / there)))
+        :snt3 (c16-18 / forget-01
+                      :ARG0 (c16-3 / i)
+                      :mod (c16-13 / oh
+                                   :mode expressive)
+                      :ARG1-of (c16-4 / mean-01
+                                      :ARG0 (c16-0 / you)
+                                      :ARG2 (c16-8 / and
+                                                   :op1 (c16-17 / charge-05
+                                                                :ARG1 (c16-21 / person
+                                                                              :name (c16-19 / name
+                                                                                            :op1 "Bill"
+                                                                                            :op2 "Clinton"))
+                                                                :ARG2 (c16-20 / rape-01))
+                                                   :op2 (c16-16 / number
+                                                                :quant-of (c16-22 / woman
+                                                                                  :ARG1-of (c16-12 / cheat-03
+                                                                                                   :ARG0 c16-21)))))
+                      :polarity (c16-7 / amr-unknown)
+                      :mode expressive)
+        :snt4 (c16-6 / hypocrite))
+
+# ::snt Nice- they can carpool to work! Congrats!
+# ::tokens ["Nice-", "they", "can", "carpool", "to", "work", "!", "Congrats", "!"]
+# ::lemmas ["Nice-", "they", "can", "carpool", "to", "work", "!", "congrat", "!"]
+(c17-2 / multi-sentence
+       :snt1 (c17-1 / nice-01
+                    :ARG1 (c17-3 / possible-01
+                                 :ARG1 (c17-4 / carpool-01
+                                              :ARG0 (c17-6 / they)
+                                              :purpose (c17-5 / work-01))))
+       :snt2 (c17-7 / congratulate-01
+                    :ARG1 (c17-0 / you)
+                    :mode expressive))
+
+# ::snt Must have been the only way to apologize after verbally bitch slapping her on air the other day
+# ::tokens ["Must", "have", "been", "the", "only", "way", "to", "apologize", "after", "verbally", "bitch", "slapping", "her", "on", "air", "the", "other", "day"]
+# ::lemmas ["must", "have", "be", "the", "only", "way", "to", "apologize", "after", "verbally", "bitch", "slap", "she", "on", "air", "the", "other", "day"]
+(c18-6 / possible-01
+       :ARG1 (c18-7 / way
+                    :mod (c18-0 / only)
+                    :manner-of (c18-10 / apologize-01
+                                       :time (c18-9 / after
+                                                    :op1 (c18-4 / slap-01
+                                                                :ARG1 (c18-1 / she)
+                                                                :ARG2 (c18-2 / bitch)
+                                                                :medium (c18-8 / air)
+                                                                :manner (c18-5 / verbal)
+                                                                :time (c18-11 / day
+                                                                              :mod (c18-3 / other))))
+                                       :domain-of c18-7)))
+
+# ::snt Congrats! My favorite pair!
+# ::tokens ["Congrats", "!", "My", "favorite", "pair", "!"]
+# ::lemmas ["Congrats", "!", "my", "favorite", "pair", "!"]
+(c19-2 / multi-sentence
+       :snt1 (c19-4 / congratulate-01
+                    :ARG1 (c19-1 / you))
+       :snt2 (c19-3 / pair
+                    :mod (c19-0 / favorite)
+                    :poss (c19-5 / i)))
+
+# ::snt No
+# ::tokens ["No"]
+# ::lemmas ["no"]
+(c20-0 / no)
+
+# ::snt Poor Joe.
+# ::tokens ["Poor", "Joe", "."]
+# ::lemmas ["poor", "Joe", "."]
+(c21-1 / person
+       :name (c21-0 / name
+                    :op1 "Joe")
+       :mod (c21-2 / poor))
+
+# ::snt Congratulations
+# ::tokens ["Congratulations"]
+# ::lemmas ["congratulation"]
+(c22-0 / congratulate-01)
+
+# ::snt no, i meant trump-cheated on all wives, you know the pgrabber.
+# ::tokens ["no", ",", "i", "meant", "trump", "-", "cheated", "on", "all", "wives", ",", "you", "know", "the", "pgrabber", "."]
+# ::lemmas ["no", ",", "i", "mean", "trump", "-", "cheat", "on", "all", "wife", ",", "you", "know", "the", "pgrabber", "."]
+(c23-1 / mean-01
+       :ARG0 (c23-9 / i)
+       :ARG2 (c23-6 / cheat-03
+                    :ARG0 c23-9
+                    :ARG1 (c23-4 / person
+                                 :ARG0-of (c23-3 / have-rel-role-91
+                                                 :ARG2 (c23-7 / wife))
+                                 :mod (c23-10 / all))
+                    :manner (c23-8 / trump-01)
+                    :ARG0-of c23-1
+                    :ARG1 (c23-0 / you
+                                 :ARG0-of (c23-5 / know-02
+                                                 :ARG1 (c23-2 / person
+                                                              :ARG0-of (c23-11 / grab-01))))))
+
+# ::snt Is this part of some plan to write a book about how women shouldn't fall from r their obnoxious, abusive bosses?
+# ::tokens ["Is", "this", "part", "of", "some", "plan", "to", "write", "a", "book", "about", "how", "women", "should", "n't", "fall", "from", "r", "their", "obnoxious", ",", "abusive", "bosses", "?"]
+# ::lemmas ["be", "this", "part", "of", "some", "plan", "to", "write", "a", "book", "about", "how", "woman", "should", "not", "fall", "from", "r", "their", "obnoxious", ",", "abusive", "boss", "?"]
+(c24-6 / have-part-91
+       :ARG1 (c24-7 / plan-01
+                    :ARG0 (c24-4 / some)
+                    :ARG1 (c24-10 / write-01
+                                  :ARG0 c24-4
+                                  :ARG1 (c24-2 / book
+                                               :topic (c24-5 / recommend-01
+                                                             :ARG1 (c24-0 / fall-10
+                                                                          :ARG1 (c24-9 / woman)
+                                                                          :ARG2 (c24-3 / person
+                                                                                       :ARG0-of (c24-11 / have-rel-role-91
+                                                                                                        :ARG1 c24-9
+                                                                                                        :ARG2 (c24-8 / boss))
+                                                                                       :ARG0-of (c24-1 / obnoxious-00)
+                                                                                       :ARG0-of (c24-14 / abuse-01)))
+                                                             :polarity -))))
+       :ARG2 (c24-12 / this)
+       :polarity (c24-13 / amr-unknown))
+
+# ::snt Puke emoji please!
+# ::tokens ["Puke", "emoji", "please", "!"]
+# ::lemmas ["puke", "emoji", "please", "!"]
+(c25-0 / emote-01
+       :ARG0 (c25-1 / you)
+       :ARG2 (c25-2 / puke-01)
+       :mode imperative
+       :polite +)
+
+# ::snt I did not see that brewing
+# ::tokens ["I", "did", "not", "see", "that", "brewing"]
+# ::lemmas ["i", "do", "not", "see", "that", "brewing"]
+(c26-3 / see-01
+       :ARG0 (c26-2 / i)
+       :ARG1 (c26-0 / brew-01
+                    :ARG1 (c26-1 / that))
+       :polarity -)
+
+# ::snt Yuck.
+# ::tokens ["Yuck", "."]
+# ::lemmas ["Yuck", "."]
+(c27-0 / yuck
+       :mode expressive)
+
+# ::snt Oh...you mean like BILL CLINTON LOL
+# ::tokens ["Oh", "...", "you", "mean", "like", "BILL", "CLINTON", "LOL"]
+# ::lemmas ["oh", "...", "you", "mean", "like", "BILL", "CLINTON", "LOL"]
+(c28-3 / mean-01
+       :ARG0 (c28-1 / you)
+       :ARG2 (c28-4 / person
+                    :name (c28-2 / name
+                                 :op1 "Bill"
+                                 :op2 "Clinton"))
+       :mod (c28-0 / oh
+                   :mode expressive)
+       :ARG2-of (c28-5 / laugh-01
+                       :ARG0 (c28-6 / i)
+                       :manner (c28-7 / loud)
+                       :mode expressive))
+
+# ::snt explains the values conversion of over last couple of yrs - enjoy the 'dark side' Joe - the sex must be great
+# ::tokens ["explains", "the", "values", "conversion", "of", "over", "last", "couple", "of", "yrs", "-", "enjoy", "the", "'", "dark", "side", "'", "Joe", "-", "the", "sex", "must", "be", "great"]
+# ::lemmas ["explain", "the", "value", "conversion", "of", "over", "last", "couple", "of", "yrs", "-", "enjoy", "the", "'", "dark", "side", "'", "Joe", "-", "the", "sex", "must", "be", "great"]
+(c29-11 / multi-sentence
+        :snt1 (c29-15 / explain-01
+                      :ARG1 (c29-13 / convert-01
+                                    :ARG1 (c29-5 / value)
+                                    :time (c29-10 / before
+                                                  :op1 (c29-14 / now)
+                                                  :duration (c29-9 / couple
+                                                                   :op1 (c29-6 / temporal-quantity
+                                                                               :unit (c29-3 / year)
+                                                                               :quant 1)))))
+        :snt2 (c29-0 / say-01
+                     :ARG0 (c29-17 / i)
+                     :ARG1 (c29-8 / enjoy-01
+                                  :ARG0 (c29-16 / person
+                                                :name (c29-12 / name
+                                                              :op1 "Joe"))
+                                  :ARG1 (c29-2 / side
+                                               :ARG1-of (c29-18 / dark-02))
+                                  :mode imperative)
+                     :ARG2 c29-16)
+        :snt3 (c29-4 / infer-01
+                     :ARG1 (c29-7 / great
+                                  :domain (c29-1 / sex-01))))
+
+# ::snt What a stupid pair and they will be even worse. Vomit
+# ::tokens ["What", "a", "stupid", "pair", "and", "they", "will", "be", "even", "worse", ".", "Vomit"]
+# ::lemmas ["what", "a", "stupid", "pair", "and", "they", "will", "be", "even", "bad", ".", "vomit"]
+(c30-2 / multi-sentence
+       :snt1 (c30-10 / and
+                     :op1 (c30-7 / pair
+                                 :mod (c30-3 / stupid
+                                             :degree (c30-0 / so)))
+                     :op2 (c30-6 / have-degree-91
+                                 :ARG1 (c30-9 / they)
+                                 :ARG2 (c30-1 / bad-07
+                                              :ARG1 c30-9
+                                              :mod (c30-5 / even))
+                                 :ARG3 (c30-8 / more)))
+       :snt2 (c30-4 / vomit))
+
+# ::snt congratulations!
+# ::tokens ["congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c31-0 / congratulate-01)
+
+# ::snt Congratulations guys. Couldn't happen to better people.
+# ::tokens ["Congratulations", "guys", ".", "Could", "n't", "happen", "to", "better", "people", "."]
+# ::lemmas ["congratulation", "guy", ".", "could", "not", "happen", "to", "well", "people", "."]
+(c32-0 / multi-sentence
+       :snt1 (c32-2 / say-01
+                    :ARG1 (c32-7 / congratulate-01)
+                    :ARG2 (c32-9 / guy))
+       :snt2 (c32-5 / possible-01
+                    :ARG1 (c32-3 / event
+                                 :beneficiary (c32-1 / person
+                                                     :ARG1-of (c32-4 / have-degree-91
+                                                                     :ARG2 (c32-8 / good-02
+                                                                                  :ARG1 c32-1)
+                                                                     :ARG3 (c32-6 / more))))
+                    :polarity -))
+
+# ::snt This answers the question "why the hell does he keep her on the show?"
+# ::tokens ["This", "answers", "the", "question", "\"", "why", "the", "hell", "does", "he", "keep", "her", "on", "the", "show", "?", "\""]
+# ::lemmas ["this", "answer", "the", "question", "\"", "why", "the", "hell", "do", "he", "keep", "she", "on", "the", "show", "?", "\""]
+(c33-2 / answer-01
+       :ARG0 (c33-8 / this)
+       :ARG1 (c33-9 / question-01
+                    :ARG1 (c33-5 / cause-01
+                                 :ARG0 (c33-7 / amr-unknown)
+                                 :ARG1 (c33-4 / keep-01
+                                              :ARG0 (c33-3 / he)
+                                              :ARG1 (c33-1 / she)
+                                              :location (c33-0 / show-04))
+                                 :mod (c33-6 / hell
+                                             :mode expressive))))
+
+# ::snt Pure Hypocrisy criticized B Clinton mercilessly4 being unfaithful- They were married to other people&amp; having an affair yrs
+# ::tokens ["Pure", "Hypocrisy", "criticized", "B", "Clinton", "mercilessly4", "being", "unfaithful-", "They", "were", "married", "to", "other", "people&amp", ";", "having", "an", "affair", "yrs"]
+# ::lemmas ["Pure", "Hypocrisy", "criticize", "B", "Clinton", "mercilessly4", "be", "unfaithful-", "they", "be", "married", "to", "other", "people&amp", ";", "have", "an", "affair", "yr"]
+(c34-9 / criticize-01
+       :ARG0 (c34-6 / hypocrisy
+                    :ARG1-of (c34-7 / pure-02))
+       :ARG1 (c34-4 / person
+                    :name (c34-3 / name
+                                 :op1 "B"
+                                 :op2 "Clinton"))
+       :ARG2 (c34-0 / faithful
+                    :polarity -)
+       :ARG1-of (c34-17 / cause-01
+                        :ARG0 (c34-14 / and
+                                      :op1 (c34-5 / marry-01
+                                                  :ARG1 (c34-12 / they)
+                                                  :ARG2 (c34-13 / and
+                                                                :op1 (c34-16 / person
+                                                                             :mod (c34-1 / other))
+                                                                :op2 (c34-10 / person
+                                                                             :ARG0-of (c34-11 / affair-01
+                                                                                              :op2-of c34-14))))
+                                      :ARG0 c34-12
+                                      :duration (c34-8 / multiple
+                                                       :op1 (c34-15 / temporal-quantity
+                                                                    :unit (c34-2 / year)
+                                                                    :quant 1)))))
+
+# ::snt Can't wait to watch this divorce unfold on air
+# ::tokens ["Ca", "n't", "wait", "to", "watch", "this", "divorce", "unfold", "on", "air"]
+# ::lemmas ["can", "not", "wait", "to", "watch", "this", "divorce", "unfold", "on", "air"]
+(c35-2 / wait-01
+       :ARG1 (c35-3 / i)
+       :ARG2 (c35-1 / watch-01
+                    :ARG0 c35-3
+                    :ARG1 (c35-6 / unfold-02
+                                 :ARG1 (c35-5 / divorce-01
+                                              :mod (c35-4 / this))
+                                 :medium (c35-0 / air))))
+
+# ::snt And they deserve each other
+# ::tokens ["And", "they", "deserve", "each", "other"]
+# ::lemmas ["and", "they", "deserve", "each", "other"]
+(c37-1 / and
+       :op2 (c37-4 / deserve-01
+                   :ARG0 (c37-3 / they)
+                   :ARG1 (c37-0 / other
+                                :mod (c37-2 / each))))
+
+# ::snt Is it me or does she look like she would tie you to the bed while dressed in leather...???
+# ::tokens ["Is", "it", "me", "or", "does", "she", "look", "like", "she", "would", "tie", "you", "to", "the", "bed", "while", "dressed", "in", "leather", "...", "?", "?", "?"]
+# ::lemmas ["be", "it", "i", "or", "do", "she", "look", "like", "she", "would", "tie", "you", "to", "the", "bed", "while", "dress", "in", "leather", "...", "?", "?", "?"]
+(c38-3 / amr-choice
+       :op1 (c38-5 / i)
+       :op2 (c38-4 / look-02
+                   :ARG0 (c38-2 / she)
+                   :ARG1 (c38-6 / tie-01
+                                :ARG0 c38-2
+                                :ARG1 (c38-1 / you)
+                                :ARG4 (c38-0 / bed)
+                                :time (c38-7 / dress-01
+                                             :ARG0 c38-2
+                                             :ARG1 c38-1
+                                             :ARG2 (c38-8 / leather)))))
+
+# ::snt ....
+# ::tokens ["...."]
+# ::lemmas ["...."]
+(c39-0 / amr-empty)
+
+# ::snt Stop lying!!!! He's so rude to her on air!!! He interrupts her n cuts her off so much! Me no likely!!
+# ::tokens ["Stop", "lying", "!", "!", "!", "!", "He", "'s", "so", "rude", "to", "her", "on", "air", "!", "!", "!", "He", "interrupts", "her", "n", "cuts", "her", "off", "so", "much", "!", "Me", "no", "likely", "!", "!"]
+# ::lemmas ["stop", "lie", "!", "!", "!", "!", "he", "be", "so", "rude", "to", "she", "on", "air", "!", "!", "!", "he", "interrupt", "she", "n", "cut", "she", "off", "so", "much", "!", "i", "no", "likely", "!", "!"]
+(c40-2 / multi-sentence
+       :snt1 (c40-3 / stop-01
+                    :ARG0 (c40-1 / you)
+                    :ARG1 (c40-9 / lie-08
+                                 :ARG0 c40-1)
+                    :mode imperative)
+       :snt2 (c40-5 / rude-01
+                    :ARG0 (c40-8 / he)
+                    :ARG1 (c40-0 / she)
+                    :medium (c40-14 / air)
+                    :degree (c40-17 / so))
+       :snt3 (c40-13 / and
+                     :op1 (c40-15 / interrupt-01
+                                  :ARG0 (c40-12 / he)
+                                  :ARG1 (c40-4 / she))
+                     :op2 (c40-11 / cut-off-04
+                                  :ARG0 c40-12
+                                  :ARG1 c40-4
+                                  :degree (c40-10 / much
+                                                  :degree (c40-7 / so))))
+       :snt4 (c40-16 / likely-01
+                     :ARG1 (c40-6 / i)
+                     :polarity -))
+
+# ::snt They really, really, really deserve each other.
+# ::tokens ["They", "really", ",", "really", ",", "really", "deserve", "each", "other", "."]
+# ::lemmas ["they", "really", ",", "really", ",", "really", "deserve", "each", "other", "."]
+(c41-0 / deserve-01
+       :ARG0 (c41-3 / they
+                    :ARG1-of c41-0)
+       :degree (c41-2 / really)
+       :degree (c41-1 / really))
+
+# ::snt BFD
+# ::tokens ["BFD"]
+# ::lemmas ["BFD"]
+(c43-1 / have-org-role-91
+       :ARG1 (c43-0 / government-organization
+                    :name (c43-2 / name
+                                 :op1 "BFD")))
+
+# ::snt I'd heard rumors &amp; accusations about the time of Mika's divorce, but I'm still SO confused!! Just Eww! But then again, it explains a lot.
+# ::tokens ["I", "'d", "heard", "rumors", "&", "amp", ";", "accusations", "about", "the", "time", "of", "Mika", "'s", "divorce", ",", "but", "I", "'m", "still", "SO", "confused", "!", "!", "Just", "Eww", "!", "But", "then", "again", ",", "it", "explains", "a", "lot", "."]
+# ::lemmas ["i", "would", "hear", "rumor", "&", "amp", ";", "accusation", "about", "the", "time", "of", "Mika", "'s", "divorce", ",", "but", "i", "be", "still", "so", "confused", "!", "!", "just", "Eww", "!", "but", "then", "again", ",", "it", "explain", "a", "lot", "."]
+(c44-13 / multi-sentence
+        :snt1 (c44-14 / contrast-01
+                      :ARG1 (c44-5 / hear-01
+                                   :ARG0 (c44-20 / i)
+                                   :ARG1 (c44-10 / and
+                                                 :op1 (c44-17 / rumor-01)
+                                                 :op2 (c44-8 / accuse-01
+                                                             :ARG2 (c44-9 / time
+                                                                          :time-of (c44-21 / divorce-01
+                                                                                           :ARG0 (c44-19 / person
+                                                                                                         :name (c44-16 / name
+                                                                                                                       :op1 "Mika")))))))
+                      :ARG2 (c44-12 / confuse-01
+                                    :ARG1 c44-20
+                                    :degree (c44-0 / so)
+                                    :mod (c44-3 / still)))
+        :snt2 (c44-18 / ewww
+                      :mod (c44-7 / just)
+                      :mode expressive)
+        :snt3 (c44-2 / contrast-01
+                     :ARG2 (c44-11 / explain-01
+                                   :ARG0 (c44-4 / it)
+                                   :ARG1 (c44-1 / lot)
+                                   :mod (c44-6 / again
+                                               :mod (c44-15 / then)))))
+
+# ::snt He Better Remember To Strap B Board To His Ass So He Doesn't Fall In...
+# ::tokens ["He", "Better", "Remember", "To", "Strap", "B", "Board", "To", "His", "Ass", "So", "He", "Does", "n't", "Fall", "In", "..."]
+# ::lemmas ["he", "well", "remember", "to", "Strap", "B", "Board", "to", "his", "Ass", "so", "he", "do", "not", "fall", "in", "..."]
+(c47-5 / have-degree-91
+       :ARG1 (c47-4 / remember-01
+                    :ARG0 (c47-6 / he
+                                 :part (c47-7 / ass))
+                    :ARG1 (c47-3 / strap-01
+                                 :ARG0 c47-6
+                                 :ARG1 (c47-1 / board
+                                              :mod c47-1))
+                    :ARG2 c47-7
+                    :purpose (c47-0 / fall-01
+                                    :ARG1 c47-6
+                                    :ARG4 c47-7
+                                    :polarity -))
+       :ARG2 (c47-8 / good-02
+                    :ARG1 c47-4)
+       :ARG3 (c47-2 / more))
+
+# ::snt Devil marrying the devil's daughter.
+# ::tokens ["Devil", "marrying", "the", "devil", "'s", "daughter", "."]
+# ::lemmas ["devil", "marry", "the", "devil", "'s", "daughter", "."]
+(c48-0 / marry-01
+       :ARG1 (c48-3 / person
+                    :ARG0-of (c48-2 / have-rel-role-91
+                                    :ARG1 (c48-6 / devil)
+                                    :ARG2 (c48-4 / daughter)))
+       :ARG2 (c48-1 / person
+                    :ARG0-of (c48-5 / have-rel-role-91
+                                    :ARG1 c48-6
+                                    :ARG2 c48-4)))
+
+# ::snt So a good wife holds the opinion of her husband or a husband in this case obeys his wife and can't hold his own opinion? Show is the same.
+# ::tokens ["So", "a", "good", "wife", "holds", "the", "opinion", "of", "her", "husband", "or", "a", "husband", "in", "this", "case", "obeys", "his", "wife", "and", "ca", "n't", "hold", "his", "own", "opinion", "?", "Show", "is", "the", "same", "."]
+# ::lemmas ["so", "a", "good", "wife", "hold", "the", "opinion", "of", "her", "husband", "or", "a", "husband", "in", "this", "case", "obey", "his", "wife", "and", "can", "not", "hold", "his", "own", "opinion", "?", "show", "be", "the", "same", "."]
+(c49-14 / multi-sentence
+        :snt1 (c49-16 / cause-01
+                      :ARG1 (c49-10 / and
+                                    :op1 (c49-6 / hold-01
+                                                :ARG0 (c49-20 / person
+                                                              :ARG0-of (c49-22 / have-rel-role-91
+                                                                               :ARG2 (c49-21 / wife
+                                                                                             :ARG1-of (c49-11 / good-02))))
+                                                :ARG1 (c49-9 / thing
+                                                             :ARG1-of (c49-3 / opine-01
+                                                                             :ARG0 c49-20)
+                                                             :topic (c49-13 / or
+                                                                            :op1 (c49-15 / person
+                                                                                         :ARG0-of (c49-5 / have-rel-role-91
+                                                                                                         :ARG1 c49-20
+                                                                                                         :ARG2 (c49-19 / husband)))
+                                                                            :op2 (c49-2 / person
+                                                                                        :ARG0-of (c49-7 / have-rel-role-91
+                                                                                                        :ARG1 c49-20
+                                                                                                        :ARG2 (c49-8 / husband))))
+                                                             :condition (c49-12 / case-04
+                                                                                :ARG1 (c49-18 / this))))
+                                    :op2 (c49-1 / possible-01
+                                                :ARG1 (c49-17 / hold-01
+                                                              :ARG0 c49-20
+                                                              :ARG1 c49-9
+                                                              :ARG1-of (c49-23 / opine-01
+                                                                               :ARG0 c49-20))
+                                                :polarity -)))
+        :snt2 (c49-0 / same-01
+                     :ARG1 (c49-4 / show-04)))
+
+# ::snt Well congrats!
+# ::tokens ["Well", "congrats", "!"]
+# ::lemmas ["well", "congrat", "!"]
+(c50-0 / congratulate-01
+       :ARG1 (c50-1 / you)
+       :mod (c50-2 / well)
+       :mode expressive)

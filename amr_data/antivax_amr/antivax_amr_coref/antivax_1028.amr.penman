@@ -1,0 +1,67 @@
+# ::snt Few a few!!1-4% A few just a million or so far!
+# ::tokens ["Few", "a", "few!!1", "-", "4", "%", "A", "few", "just", "a", "million", "or", "so", "far", "!"]
+# ::lemmas ["few", "a", "few!!1", "-", "4", "%", "a", "few", "just", "a", "million", "or", "so", "far", "!"]
+(c1-9 / multi-sentence
+      :snt1 (c1-1 / few
+                  :quant (c1-2 / few))
+      :snt2 (c1-6 / between
+                  :op1 (c1-8 / percentage-entity
+                             :value 1)
+                  :op2 (c1-4 / percentage-entity
+                             :value 4))
+      :snt3 (c1-3 / or
+                  :op1 (c1-5 / few
+                             :mod (c1-7 / just)
+                             :quant 1000000)
+                  :op2 (c1-0 / so-far)))
+
+# ::snt Holy crap, I already have this damn disorder.. For it to show up that quickly it had to be an extremely severe case. That's some scary sh!t. These poor people!!
+# ::tokens ["Holy", "crap", ",", "I", "already", "have", "this", "damn", "disorder", "..", "For", "it", "to", "show", "up", "that", "quickly", "it", "had", "to", "be", "an", "extremely", "severe", "case", ".", "That", "'s", "some", "scary", "sh!t", ".", "These", "poor", "people", "!", "!"]
+# ::lemmas ["Holy", "crap", ",", "i", "already", "have", "this", "damn", "disorder", "..", "for", "it", "to", "show", "up", "that", "quickly", "it", "have", "to", "be", "an", "extremely", "severe", "case", ".", "that", "be", "some", "scary", "sh!t", ".", "these", "poor", "people", "!", "!"]
+(c2-11 / multi-sentence
+       :snt1 (c2-19 / have-03
+                    :ARG0 (c2-4 / i)
+                    :ARG1 (c2-0 / disorder
+                                :mod (c2-17 / damn)
+                                :mod (c2-10 / this))
+                    :time (c2-18 / already)
+                    :mod (c2-7 / crap
+                               :mod (c2-3 / holy)
+                               :mode expressive))
+       :snt2 (c2-9 / obligate-01
+                   :ARG2 (c2-1 / case-04
+                               :mod (c2-14 / severe
+                                           :degree (c2-13 / extreme))
+                               :condition (c2-21 / show-up-02
+                                                 :ARG1 (c2-15 / it)
+                                                 :ARG1-of (c2-2 / quick-02))))
+       :snt3 (c2-16 / shit
+                    :ARG0-of (c2-5 / scary-03)
+                    :mod (c2-6 / some)
+                    :domain (c2-8 / that))
+       :snt4 (c2-22 / person
+                    :mod (c2-20 / poor)
+                    :mod (c2-12 / this)))
+
+# ::snt I see a lot of people rushing for the stupid Vaccine. They listen what the stupid Media saying I feel sorry for the little kids.
+# ::tokens ["I", "see", "a", "lot", "of", "people", "rushing", "for", "the", "stupid", "Vaccine", ".", "They", "listen", "what", "the", "stupid", "Media", "saying", "I", "feel", "sorry", "for", "the", "little", "kids", "."]
+# ::lemmas ["i", "see", "a", "lot", "of", "people", "rush", "for", "the", "stupid", "Vaccine", ".", "they", "listen", "what", "the", "stupid", "medium", "say", "i", "feel", "sorry", "for", "the", "little", "kid", "."]
+(c3-15 / multi-sentence
+       :snt1 (c3-0 / see-01
+                   :ARG0 (c3-14 / i)
+                   :ARG1 (c3-9 / rush-01
+                               :ARG1 (c3-10 / person
+                                            :quant (c3-11 / lot))
+                               :ARG2 (c3-7 / vaccinate-01
+                                           :mod (c3-13 / stupid))))
+       :snt2 (c3-1 / listen-01
+                   :ARG0 (c3-8 / they)
+                   :ARG1 (c3-6 / say-01
+                               :ARG0 (c3-4 / media
+                                           :mod (c3-12 / stupid))
+                               :ARG1 (c3-3 / feel-01
+                                           :ARG0 (c3-5 / i)
+                                           :ARG1 (c3-17 / sorry-01
+                                                        :ARG1 c3-5
+                                                        :ARG2 (c3-16 / kid
+                                                                     :mod (c3-2 / little)))))))

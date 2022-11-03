@@ -1,0 +1,46 @@
+# ::snt Our obsession with predictions
+# ::tokens ["Our", "obsession", "with", "predictions"]
+# ::lemmas ["our", "obsession", "with", "prediction"]
+(c1-0 / obsess-01
+      :ARG0 (c1-1 / we)
+      :ARG1 (c1-2 / predict-01))
+
+# ::snt : "10 'Back to the Future' predictions that came true " in
+# ::tokens [":", "\"", "10", "'", "Back", "to", "the", "Future", "'", "predictions", "that", "came", "true", "\"", "in"]
+# ::lemmas [":", "\"", "10", "'", "back", "to", "the", "Future", "'", "prediction", "that", "come", "true", "\"", "in"]
+(c2-2 / predict-01
+      :ARG1 (c2-0 / book
+                  :name (c2-3 / name
+                              :op1 "Back"
+                              :op2 "to"
+                              :op3 "the"
+                              :op4 "Future"))
+      :ARG1-of (c2-1 / true-01)
+      :quant 10)
+
+# ::snt : Back to the Future predictions that came true
+# ::tokens [":", "Back", "to", "the", "Future", "predictions", "that", "came", "true"]
+# ::lemmas [":", "back", "to", "the", "future", "prediction", "that", "come", "true"]
+(c3-2 / predict-01
+      :ARG1 (c3-0 / book
+                  :name (c3-3 / name
+                              :op1 "Back"
+                              :op2 "to"
+                              :op3 "the"
+                              :op4 "Future"))
+      :ARG1-of (c3-1 / true-01))
+
+# ::snt one that didnt: cubs aren't winning anything this year. LETS GO METS!!!
+# ::tokens ["one", "that", "did", "nt", ":", "cubs", "are", "n't", "winning", "anything", "this", "year", ".", "LETS", "GO", "METS", "!", "!", "!"]
+# ::lemmas ["one", "that", "do", "nt", ":", "cub", "be", "not", "win", "anything", "this", "year", ".", "LETS", "GO", "METS", "!", "!", "!"]
+(c4-5 / multi-sentence
+      :snt1 (c4-7 / win-01
+                  :ARG0 (c4-8 / cub)
+                  :ARG2 (c4-0 / anything)
+                  :time (c4-4 / year
+                              :mod (c4-1 / this))
+                  :polarity -)
+      :snt2 (c4-6 / get-05
+                  :ARG0 (c4-2 / you)
+                  :ARG1 (c4-3 / mass)
+                  :mode imperative))

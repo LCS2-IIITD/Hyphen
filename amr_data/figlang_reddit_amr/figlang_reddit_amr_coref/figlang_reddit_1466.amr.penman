@@ -1,0 +1,46 @@
+# ::snt "Gimme that uncooked ramen look fam"
+# ::tokens ["\"", "Gimme", "that", "uncooked", "ramen", "look", "fam", "\""]
+# ::lemmas ["\"", "Gimme", "that", "uncooked", "raman", "look", "fam", "\""]
+(c1-4 / look-02
+      :ARG0 (c1-5 / you)
+      :ARG1 (c1-0 / fam)
+      :ARG2 (c1-3 / ramen
+                  :ARG1-of (c1-1 / cook-01
+                                 :polarity -)
+                  :mod (c1-2 / that))
+      :mode imperative)
+
+# ::snt bruh I know this exact store too she lives in my hometown :(
+# ::tokens ["bruh", "I", "know", "this", "exact", "store", "too", "she", "lives", "in", "my", "hometown", ":("]
+# ::lemmas ["bruh", "i", "know", "this", "exact", "store", "too", "she", "live", "in", "my", "hometown", ":("]
+(c2-9 / multi-sentence
+      :snt1 (c2-10 / know-02
+                   :ARG0 (c2-8 / i)
+                   :ARG1 (c2-0 / store
+                               :mod (c2-11 / exact)
+                               :mod (c2-4 / this))
+                   :mod (c2-6 / bruh
+                              :mode expressive)
+                   :mod (c2-1 / too))
+      :snt2 (c2-5 / live-01
+                  :ARG0 (c2-7 / she)
+                  :location (c2-2 / hometown
+                                  :poss (c2-3 / i))))
+
+# ::snt That's a Publix deli, how on earth do you know that it's YOUR local Publix deli?
+# ::tokens ["That", "'s", "a", "Publix", "deli", ",", "how", "on", "earth", "do", "you", "know", "that", "it", "'s", "YOUR", "local", "Publix", "deli", "?"]
+# ::lemmas ["that", "be", "a", "Publix", "deli", ",", "how", "on", "earth", "do", "you", "know", "that", "it", "be", "your", "local", "Publix", "deli", "?"]
+(c3-1 / and
+      :op1 (c3-0 / deli
+                 :mod (c3-3 / company
+                            :name (c3-7 / name
+                                        :op1 "Publix"))
+                 :domain (c3-4 / that))
+      :op2 (c3-2 / know-01
+                 :ARG0 (c3-8 / you)
+                 :ARG1 (c3-6 / deli
+                             :ARG1-of (c3-5 / local-02
+                                            :ARG2 c3-8)
+                             :domain c3-4)
+                 :manner (c3-9 / amr-unknown
+                               :prep-on (c3-10 / earth))))

@@ -1,0 +1,92 @@
+# ::snt What I said has nothing to do with what Mike Brown thought they were doing. I said the police changed their story
+# ::tokens ["What", "I", "said", "has", "nothing", "to", "do", "with", "what", "Mike", "Brown", "thought", "they", "were", "doing", ".", "I", "said", "the", "police", "changed", "their", "story"]
+# ::lemmas ["what", "i", "say", "have", "nothing", "to", "do", "with", "what", "Mike", "Brown", "think", "they", "be", "do", ".", "i", "say", "the", "police", "change", "their", "story"]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / have-to-do-with-04
+                  :ARG0 (c1-14 / thing
+                               :ARG1-of (c1-13 / say-01
+                                               :ARG0 (c1-4 / i)))
+                  :ARG1 (c1-12 / thing
+                               :ARG1-of (c1-8 / do-02
+                                              :ARG0 (c1-7 / person
+                                                          :name (c1-5 / name
+                                                                      :op1 "Mike"
+                                                                      :op2 "Brown"))
+                                              :ARG1-of (c1-6 / think-01
+                                                             :ARG0 c1-7)))
+                  :ARG2 (c1-9 / nothing))
+      :snt2 (c1-3 / say-01
+                  :ARG0 (c1-10 / i)
+                  :ARG1 (c1-11 / change-01
+                               :ARG0 (c1-15 / police)
+                               :ARG1 (c1-1 / story
+                                           :poss c1-15))))
+
+# ::snt So? The police originally said he was stopped on a routine patrol. Now it's cause of a robbery.
+# ::tokens ["So", "?", "The", "police", "originally", "said", "he", "was", "stopped", "on", "a", "routine", "patrol", ".", "Now", "it", "'s", "cause", "of", "a", "robbery", "."]
+# ::lemmas ["so", "?", "the", "police", "originally", "say", "he", "be", "stop", "on", "a", "routine", "patrol", ".", "now", "it", "be", "cause", "of", "a", "robbery", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-11 / so
+                   :polarity (c2-13 / amr-unknown))
+      :snt2 (c2-4 / say-01
+                  :ARG0 (c2-8 / police)
+                  :ARG1 (c2-1 / stop-01
+                              :ARG1 (c2-0 / he)
+                              :subevent-of (c2-12 / patrol-01
+                                                  :ARG0 c2-8
+                                                  :mod (c2-9 / routine)))
+                  :time (c2-3 / original))
+      :snt3 (c2-10 / cause-01
+                   :ARG0 (c2-5 / it)
+                   :ARG1 (c2-6 / rob-01)
+                   :time (c2-7 / now)))
+
+# ::snt If they stopped him for the robbery, why didn't they mentioned that days ago instead of saying it was routine?
+# ::tokens ["If", "they", "stopped", "him", "for", "the", "robbery", ",", "why", "did", "n't", "they", "mentioned", "that", "days", "ago", "instead", "of", "saying", "it", "was", "routine", "?"]
+# ::lemmas ["if", "they", "stop", "he", "for", "the", "robbery", ",", "why", "do", "not", "they", "mention", "that", "days", "ago", "instead", "of", "say", "it", "be", "routine", "?"]
+(c3-10 / cause-01
+       :ARG0 (c3-15 / amr-unknown)
+       :ARG1 (c3-1 / mention-01
+                   :ARG0 (c3-14 / they)
+                   :ARG1 (c3-12 / that)
+                   :time (c3-2 / before
+                               :op1 (c3-6 / now)
+                               :quant (c3-8 / multiple
+                                            :op1 (c3-7 / temporal-quantity
+                                                       :unit (c3-9 / day)
+                                                       :quant 1)))
+                   :ARG1-of (c3-4 / instead-of-91
+                                  :ARG2 (c3-13 / say-01
+                                               :ARG0 c3-14
+                                               :ARG1 (c3-11 / routine
+                                                            :domain c3-12)))
+                   :polarity -)
+       :condition (c3-3 / stop-01
+                        :ARG0 c3-14
+                        :ARG1 (c3-0 / he)
+                        :ARG2 (c3-5 / rob-01
+                                    :ARG0 c3-0)))
+
+# ::snt You are witnessing the genesis of a crafted cover story designed to protect yet another murdering copy.
+# ::tokens ["You", "are", "witnessing", "the", "genesis", "of", "a", "crafted", "cover", "story", "designed", "to", "protect", "yet", "another", "murdering", "copy", "."]
+# ::lemmas ["you", "be", "witness", "the", "genesis", "of", "a", "craft", "cover", "story", "design", "to", "protect", "yet", "another", "murdering", "copy", "."]
+(c4-0 / witness-01
+      :ARG0 (c4-1 / you)
+      :ARG1 (c4-6 / genesis
+                  :poss (c4-9 / story
+                              :ARG1-of (c4-5 / craft-01)
+                              :ARG1-of (c4-4 / design-01
+                                             :ARG3 (c4-3 / protect-01
+                                                         :ARG0 c4-9
+                                                         :ARG1 (c4-7 / copy-01
+                                                                     :ARG0-of (c4-2 / murder-01)
+                                                                     :mod (c4-11 / another
+                                                                                 :mod (c4-8 / yet)))))
+                              :ARG2-of (c4-10 / cover-01))))
+
+# ::snt Sounds like the Fix is on!
+# ::tokens ["Sounds", "like", "the", "Fix", "is", "on", "!"]
+# ::lemmas ["sound", "like", "the", "Fix", "be", "on", "!"]
+(c5-0 / sound-01
+      :ARG2 (c5-2 / on-01
+                  :ARG1 (c5-1 / fix-02)))

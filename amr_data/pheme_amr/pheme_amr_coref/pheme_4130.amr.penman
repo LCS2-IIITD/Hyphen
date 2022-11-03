@@ -1,0 +1,346 @@
+# ::snt ARE YOU ??
+# ::tokens ["ARE", "YOU", "?", "?"]
+# ::lemmas ["be", "you", "?", "?"]
+(c1-1 / event
+      :polarity (c1-2 / amr-unknown)
+      :mod (c1-0 / you))
+
+# ::snt are u fucking stupid ?
+# ::tokens ["are", "u", "fucking", "stupid", "?"]
+# ::lemmas ["be", "u", "fucking", "stupid", "?"]
+(c2-0 / stupid
+      :polarity (c2-3 / amr-unknown)
+      :domain (c2-1 / you)
+      :mod (c2-2 / fucking))
+
+# ::snt Thanks for being my th follower hahah
+# ::tokens ["Thanks", "for", "being", "my", "th", "follower", "hahah"]
+# ::lemmas ["thank", "for", "be", "my", "th", "follower", "hahah"]
+(c3-5 / thank-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-1 / you)
+      :ARG2 (c3-2 / follow-02
+                  :ARG0 c3-1
+                  :ARG1 c3-4
+                  :mod (c3-3 / only))
+      :mod (c3-0 / hahah
+                 :mode expressive))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c4-7 / attack-01
+      :ARG1 (c4-5 / government-organization
+                  :name (c4-2 / name
+                              :op1 "Hill"))
+      :ARG2 (c4-1 / and
+                  :op1 (c4-6 / safe-01
+                             :ARG1 (c4-4 / city
+                                         :name (c4-3 / name
+                                                     :op1 "Ottawa")))
+                  :op2 (c4-0 / smart-06
+                             :ARG1 c4-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c5-7 / attack-01
+      :ARG1 (c5-5 / government-organization
+                  :name (c5-2 / name
+                              :op1 "Hill"))
+      :ARG2 (c5-1 / and
+                  :op1 (c5-6 / safe-01
+                             :ARG1 (c5-4 / city
+                                         :name (c5-3 / name
+                                                     :op1 "Ottawa")))
+                  :op2 (c5-0 / smart-06
+                             :ARG1 c5-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack baby
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack", "baby"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack", "baby"]
+(c6-1 / multi-sentence
+      :snt1 (c6-9 / and
+                  :op1 (c6-8 / safe-01
+                             :ARG0 (c6-0 / you)
+                             :mode imperative)
+                  :op2 (c6-3 / smart-06
+                             :ARG0 c6-0
+                             :mode imperative))
+      :snt2 (c6-4 / attack-01
+                  :ARG1 (c6-7 / city
+                              :name (c6-5 / name
+                                          :op1 "Hill")))
+      :snt3 (c6-2 / baby
+                  :domain c6-7
+                  :name (c6-6 / name
+                              :op1 "Ottawa")))
+
+# ::snt Fuck twitter I just got this shit. You will know who I am in a month trust that.
+# ::tokens ["Fuck", "twitter", "I", "just", "got", "this", "shit", ".", "You", "will", "know", "who", "I", "am", "in", "a", "month", "trust", "that", "."]
+# ::lemmas ["fuck", "twitter", "i", "just", "get", "this", "shit", ".", "you", "will", "know", "who", "i", "be", "in", "a", "month", "trust", "that", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-2 / fuck-01
+                  :ARG1 (c7-9 / publication
+                              :name (c7-7 / name
+                                          :op1 "Twitter"))
+                  :mode expressive)
+      :snt2 (c7-12 / get-01
+                   :ARG0 (c7-5 / i)
+                   :ARG1 (c7-15 / shit
+                                :mod (c7-16 / this))
+                   :time (c7-0 / just))
+      :snt3 (c7-6 / know-01
+                  :ARG0 (c7-1 / you)
+                  :ARG1 (c7-13 / i
+                               :time (c7-17 / after
+                                            :op1 (c7-8 / now)
+                                            :quant (c7-14 / temporal-quantity
+                                                          :unit (c7-10 / month)
+                                                          :quant 1)))
+                  :condition (c7-11 / trust-02
+                                    :ARG0 c7-1
+                                    :ARG1 (c7-4 / that))))
+
+# ::snt I used to hate on Belly for skipping the city. But now that I'm in the game I understand why he had to.
+# ::tokens ["I", "used", "to", "hate", "on", "Belly", "for", "skipping", "the", "city", ".", "But", "now", "that", "I", "'m", "in", "the", "game", "I", "understand", "why", "he", "had", "to", "."]
+# ::lemmas ["i", "use", "to", "hate", "on", "Belly", "for", "skip", "the", "city", ".", "but", "now", "that", "i", "be", "in", "the", "game", "i", "understand", "why", "he", "have", "to", "."]
+(c8-1 / multi-sentence
+      :snt1 (c8-0 / hate-01
+                  :ARG0 (c8-5 / i)
+                  :ARG1 (c8-8 / person
+                              :name (c8-6 / name
+                                          :op1 "Belly"))
+                  :ARG2 (c8-14 / skip-01
+                               :ARG0 c8-8
+                               :ARG1 (c8-10 / city))
+                  :time (c8-2 / use-03))
+      :snt2 (c8-9 / contrast-01
+                  :ARG2 (c8-15 / understand-01
+                               :ARG0 (c8-11 / i)
+                               :ARG1 (c8-16 / thing
+                                            :ARG0-of (c8-13 / cause-01
+                                                            :ARG1 (c8-4 / obligate-01
+                                                                        :ARG1 (c8-17 / he))))
+                               :time (c8-7 / now
+                                           :time-of (c8-3 / be-located-at-91
+                                                          :ARG1 c8-11
+                                                          :ARG2 (c8-12 / game))))))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c9-7 / attack-01
+      :ARG1 (c9-5 / government-organization
+                  :name (c9-2 / name
+                              :op1 "Hill"))
+      :ARG2 (c9-1 / and
+                  :op1 (c9-6 / safe-01
+                             :ARG1 (c9-4 / city
+                                         :name (c9-3 / name
+                                                     :op1 "Ottawa")))
+                  :op2 (c9-0 / smart-06
+                             :ARG1 c9-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c10-7 / attack-01
+       :ARG1 (c10-5 / government-organization
+                    :name (c10-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c10-1 / and
+                    :op1 (c10-6 / safe-01
+                                :ARG1 (c10-4 / city
+                                             :name (c10-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c10-0 / smart-06
+                                :ARG1 c10-4)))
+
+# ::snt im dead
+# ::tokens ["i", "m", "dead"]
+# ::lemmas ["i", "m", "dead"]
+(c11-0 / die-01
+       :ARG1 (c11-1 / i))
+
+# ::snt loooooool
+# ::tokens ["loooooool"]
+# ::lemmas ["loooooool"]
+(c12-0 / ool
+       :mode expressive)
+
+# ::snt : I used to hate on Belly for skipping the city." Stfu nigga you have followers, who are you ?
+# ::tokens [":", "I", "used", "to", "hate", "on", "Belly", "for", "skipping", "the", "city", ".", "\"", "Stfu", "nigga", "you", "have", "followers", ",", "who", "are", "you", "?"]
+# ::lemmas [":", "i", "use", "to", "hate", "on", "Belly", "for", "skip", "the", "city", ".", "\"", "Stfu", "nigga", "you", "have", "follower", ",", "who", "be", "you", "?"]
+(c13-3 / multi-sentence
+       :snt1 (c13-0 / hate-01
+                    :ARG0 (c13-6 / i)
+                    :ARG1 (c13-9 / person
+                                 :name (c13-7 / name
+                                              :op1 "Belly"))
+                    :ARG2 (c13-11 / skip-01
+                                  :ARG0 c13-9
+                                  :ARG1 (c13-10 / city))
+                    :time (c13-4 / use-03))
+       :snt2 (c13-14 / have-03
+                     :ARG0 (c13-1 / you
+                                  :mod (c13-13 / person
+                                               :name (c13-8 / name
+                                                            :op1 "Stfu"
+                                                            :op2 "Nigga")))
+                     :ARG1 (c13-5 / person
+                                  :ARG0-of (c13-2 / follow-02
+                                                  :ARG1 c13-1)
+                                  :domain (c13-12 / amr-unknown))))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c14-7 / attack-01
+       :ARG1 (c14-5 / government-organization
+                    :name (c14-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c14-1 / and
+                    :op1 (c14-6 / safe-01
+                                :ARG1 (c14-4 / city
+                                             :name (c14-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c14-0 / smart-06
+                                :ARG1 c14-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c15-7 / attack-01
+       :ARG1 (c15-5 / government-organization
+                    :name (c15-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c15-1 / and
+                    :op1 (c15-6 / safe-01
+                                :ARG1 (c15-4 / city
+                                             :name (c15-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c15-0 / smart-06
+                                :ARG1 c15-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack fuck you. you fat fuck you never put on when you had the chance to
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack", "fuck", "you", ".", "you", "fat", "fuck", "you", "never", "put", "on", "when", "you", "had", "the", "chance", "to"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack", "fuck", "you", ".", "you", "fat", "fuck", "you", "never", "put", "on", "when", "you", "have", "the", "chance", "to"]
+(c16-2 / multi-sentence
+       :snt1 (c16-15 / and
+                     :op1 (c16-13 / safe-01
+                                  :ARG0 (c16-0 / you)
+                                  :mode imperative)
+                     :op2 (c16-4 / smart-06
+                                 :ARG1 c16-0
+                                 :mode imperative))
+       :snt2 (c16-6 / attack-01
+                    :ARG1 (c16-11 / government-organization
+                                  :name (c16-8 / name
+                                               :op1 "Hill")))
+       :snt3 (c16-1 / fuck
+                    :ARG1-of (c16-9 / put-on-08
+                                    :ARG0 (c16-12 / you)
+                                    :time (c16-5 / ever)
+                                    :time (c16-10 / chance-02
+                                                  :ARG0 c16-12
+                                                  :ARG1 (c16-14 / put-on-08
+                                                                :ARG0 c16-12
+                                                                :ARG1 (c16-7 / fuck
+                                                                             :ARG1-of (c16-3 / fat-03))))
+                                    :polarity -)
+                    :mode expressive))
+
+# ::snt sent the CP family the "We Da (4tothe6)" project. I hope fck with it g.
+# ::tokens ["sent", "the", "CP", "family", "the", "\"", "We", "Da", "(", "4tothe6", ")", "\"", "project", ".", "I", "hope", "fck", "with", "it", "g."]
+# ::lemmas ["send", "the", "CP", "family", "the", "\"", "we", "Da", "(", "4tothe6", ")", "\"", "project", ".", "i", "hope", "fck", "with", "it", "g."]
+(c17-2 / multi-sentence
+       :snt1 (c17-11 / send-01
+                     :ARG1 (c17-7 / project
+                                  :name (c17-5 / name
+                                               :op1 "We"
+                                               :op2 "Da"
+                                               :op3 "4tothe6"))
+                     :ARG2 (c17-1 / family
+                                  :ARG0-of (c17-0 / have-org-role-91
+                                                  :ARG1 (c17-12 / political-party
+                                                                :name (c17-6 / name
+                                                                             :op1 "Conservative"
+                                                                             :op2 "Party"))
+                                                  :ARG2 (c17-8 / member))))
+       :snt2 (c17-13 / hope-01
+                     :ARG0 (c17-3 / i)
+                     :ARG1 (c17-4 / fuck-01
+                                  :ARG0 (c17-9 / g)
+                                  :ARG1 (c17-10 / it))))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c18-7 / attack-01
+       :ARG1 (c18-5 / government-organization
+                    :name (c18-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c18-1 / and
+                    :op1 (c18-6 / safe-01
+                                :ARG1 (c18-4 / city
+                                             :name (c18-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c18-0 / smart-06
+                                :ARG1 c18-4)))
+
+# ::snt BELLLY!! Aha it's all good, cap city's fine
+# ::tokens ["BELLLY", "!", "!", "Aha", "it", "'s", "all", "good", ",", "cap", "city", "'s", "fine"]
+# ::lemmas ["bellly", "!", "!", "aha", "it", "be", "all", "good", ",", "cap", "city", "'s", "fine"]
+(c19-1 / multi-sentence
+       :snt1 (c19-2 / beautiful-02
+                    :mode expressive)
+       :snt2 (c19-7 / good-02
+                    :ARG1 (c19-4 / it
+                                 :mod (c19-9 / all))
+                    :mod (c19-3 / aha
+                                :mode expressive)
+                    :ARG1-of (c19-6 / cause-01
+                                    :ARG0 (c19-0 / fine-03
+                                                 :ARG1 (c19-5 / city
+                                                              :mod (c19-8 / cap))))))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c20-7 / attack-01
+       :ARG1 (c20-5 / government-organization
+                    :name (c20-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c20-1 / and
+                    :op1 (c20-6 / safe-01
+                                :ARG1 (c20-4 / city
+                                             :name (c20-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c20-0 / smart-06
+                                :ARG1 c20-4)))
+
+# ::snt lmao truuuue
+# ::tokens ["lmao", "truuuue"]
+# ::lemmas ["lmao", "truuuue"]
+(c22-0 / laugh-01
+       :ARG0 (c22-2 / i
+                    :part (c22-4 / ass))
+       :ARG0-of (c22-3 / cause-01
+                       :ARG1 (c22-1 / off
+                                    :domain c22-4)))
+
+# ::snt : Ottawa, be safe, be smart.. The Hill is under attack
+# ::tokens [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "The", "Hill", "is", "under", "attack"]
+# ::lemmas [":", "Ottawa", ",", "be", "safe", ",", "be", "smart", "..", "the", "Hill", "be", "under", "attack"]
+(c23-7 / attack-01
+       :ARG1 (c23-5 / government-organization
+                    :name (c23-2 / name
+                                 :op1 "Hill"))
+       :ARG2 (c23-1 / and
+                    :op1 (c23-6 / safe-01
+                                :ARG1 (c23-4 / city
+                                             :name (c23-3 / name
+                                                          :op1 "Ottawa")))
+                    :op2 (c23-0 / smart-06
+                                :ARG1 c23-4)))

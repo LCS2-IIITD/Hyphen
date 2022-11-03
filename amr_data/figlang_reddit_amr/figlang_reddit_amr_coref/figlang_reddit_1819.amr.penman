@@ -1,0 +1,35 @@
+# ::snt Evidence suggests Trump is not receiving Presidential intelligence briefings
+# ::tokens ["Evidence", "suggests", "Trump", "is", "not", "receiving", "Presidential", "intelligence", "briefings"]
+# ::lemmas ["evidence", "suggest", "Trump", "be", "not", "receive", "presidential", "intelligence", "briefing"]
+(c1-0 / suggest-01
+      :ARG0 (c1-7 / evidence-01)
+      :ARG1 (c1-3 / receive-01
+                  :ARG0 (c1-5 / person
+                              :name (c1-6 / name
+                                          :op1 "Trump"))
+                  :ARG1 (c1-4 / brief-01
+                              :ARG1 c1-5
+                              :ARG2 (c1-1 / intelligence)
+                              :mod (c1-2 / president))
+                  :polarity -))
+
+# ::snt CIA = consistently ignored by Trump Fox News = monitored by Trump all day
+# ::tokens ["CIA", "=", "consistently", "ignored", "by", "Trump", "Fox", "News", "=", "monitored", "by", "Trump", "all", "day"]
+# ::lemmas ["CIA", "=", "consistently", "ignore", "by", "Trump", "Fox", "News", "=", "monitor", "by", "Trump", "all", "day"]
+(c2-1 / and
+      :op1 (c2-8 / ignore-01
+                 :ARG0 (c2-6 / person
+                             :name (c2-10 / name
+                                          :op1 "Trump"))
+                 :ARG1 (c2-7 / government-organization
+                             :name (c2-5 / name
+                                         :op1 "CIA"))
+                 :ARG1-of (c2-2 / consistent-02))
+      :op2 (c2-9 / monitor-01
+                 :ARG0 c2-6
+                 :ARG1 (c2-3 / broadcast-program
+                             :name (c2-4 / name
+                                         :op1 "Fox"
+                                         :op2 "News"))
+                 :duration (c2-0 / day
+                                 :mod (c2-11 / all))))

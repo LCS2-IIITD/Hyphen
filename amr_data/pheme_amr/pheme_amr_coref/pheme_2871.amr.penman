@@ -1,0 +1,127 @@
+# ::snt yes it does.
+# ::tokens ["yes", "it", "does", "."]
+# ::lemmas ["yes", "it", "do", "."]
+(c1-0 / do-02
+      :ARG0 (c1-1 / it))
+
+# ::snt It's a good one!
+# ::tokens ["It", "'s", "a", "good", "one", "!"]
+# ::lemmas ["it", "be", "a", "good", "one", "!"]
+(c2-0 / good-02
+      :ARG1 (c2-1 / it)
+      :mode expressive)
+
+# ::snt Only slightly brilliant.
+# ::tokens ["Only", "slightly", "brilliant", "."]
+# ::lemmas ["only", "slightly", "brilliant", "."]
+(c3-2 / brilliant-01
+      :degree (c3-0 / slight)
+      :mod (c3-1 / only))
+
+# ::snt Man needs not religion to kill. Ask the Chinese, the Russians, the Cubans about what a godless man is capable of.
+# ::tokens ["Man", "needs", "not", "religion", "to", "kill", ".", "Ask", "the", "Chinese", ",", "the", "Russians", ",", "the", "Cubans", "about", "what", "a", "godless", "man", "is", "capable", "of", "."]
+# ::lemmas ["man", "need", "not", "religion", "to", "kill", ".", "ask", "the", "Chinese", ",", "the", "Russians", ",", "the", "Cubans", "about", "what", "a", "godless", "man", "be", "capable", "of", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-9 / need-01
+                  :ARG0 (c5-10 / man)
+                  :ARG1 (c5-11 / religion)
+                  :purpose (c5-15 / kill-01
+                                  :ARG0 c5-10)
+                  :polarity -)
+      :snt2 (c5-6 / ask-01
+                  :ARG0 (c5-17 / you)
+                  :ARG1 (c5-20 / thing
+                               :ARG2-of (c5-19 / capable-01
+                                               :ARG1 (c5-7 / man
+                                                           :mod (c5-12 / god
+                                                                       :polarity -))))
+                  :ARG2 (c5-13 / and
+                               :op1 (c5-3 / person
+                                          :mod (c5-4 / country
+                                                     :name (c5-18 / name
+                                                                  :op1 "China")))
+                               :op2 (c5-5 / person
+                                          :mod (c5-14 / country
+                                                      :name (c5-1 / name
+                                                                  :op1 "Russia")))
+                               :op3 (c5-8 / person
+                                          :mod (c5-16 / country
+                                                      :name (c5-2 / name
+                                                                  :op1 "Cuba"))))
+                  :mode imperative))
+
+# ::snt May not need religion but plenty of people have been killed in the name of one god or another
+# ::tokens ["May", "not", "need", "religion", "but", "plenty", "of", "people", "have", "been", "killed", "in", "the", "name", "of", "one", "god", "or", "another"]
+# ::lemmas ["may", "not", "need", "religion", "but", "plenty", "of", "people", "have", "be", "kill", "in", "the", "name", "of", "one", "god", "or", "another"]
+(c6-6 / contrast-01
+      :ARG1 (c6-4 / possible-01
+                  :ARG1 (c6-3 / need-01
+                              :ARG1 (c6-5 / religion)
+                              :polarity -))
+      :ARG2 (c6-9 / kill-01
+                  :ARG1 (c6-10 / person
+                               :quant (c6-1 / plenty))
+                  :beneficiary (c6-2 / or
+                                     :op1 (c6-7 / god
+                                                :mod (c6-0 / one))
+                                     :op2 (c6-8 / god
+                                                :mod (c6-11 / another)))))
+
+# ::snt wow...
+# ::tokens ["wow", "..."]
+# ::lemmas ["wow", "..."]
+(c7-0 / wow
+      :mode expressive)
+
+# ::snt wow,the amount of retards.....
+# ::tokens ["wow", ",", "the", "amount", "of", "retards", "....."]
+# ::lemmas ["wow", ",", "the", "amount", "of", "retard", "....."]
+(c8-2 / amount
+      :quant-of (c8-1 / retard)
+      :mod (c8-0 / wow
+                 :mode expressive))
+
+# ::snt absolutely brilliant
+# ::tokens ["absolutely", "brilliant"]
+# ::lemmas ["absolutely", "brilliant"]
+(c9-1 / brilliant-01
+      :degree (c9-0 / absolute))
+
+# ::snt True, what he *does* need though is an ideology of "unquestionable" truths to manipulate masses.
+# ::tokens ["True", ",", "what", "he", "*", "does", "*", "need", "though", "is", "an", "ideology", "of", "\"", "unquestionable", "\"", "truths", "to", "manipulate", "masses", "."]
+# ::lemmas ["true", ",", "what", "he", "*", "do", "*", "need", "though", "be", "an", "ideology", "of", "\"", "unquestionable", "\"", "truth", "to", "manipulate", "masse", "."]
+(c10-8 / true-01
+       :ARG1 (c10-4 / need-01
+                    :ARG0 (c10-0 / he)
+                    :ARG1 (c10-3 / ideology
+                                 :consist-of (c10-7 / truth
+                                                    :ARG1-of (c10-2 / question-03
+                                                                    :ARG1-of (c10-5 / possible-01
+                                                                                    :polarity -)))
+                                 :purpose (c10-1 / manipulate-02
+                                                 :ARG0 c10-0
+                                                 :ARG1 (c10-6 / mass)))
+                    :ARG1-of (c10-9 / have-concession-91)))
+
+# ::snt The flags of the other side should be Rabbits, not Ducks. Like this it does not make much sense...
+# ::tokens ["The", "flags", "of", "the", "other", "side", "should", "be", "Rabbits", ",", "not", "Ducks", ".", "Like", "this", "it", "does", "not", "make", "much", "sense", "..."]
+# ::lemmas ["the", "flag", "of", "the", "other", "side", "should", "be", "Rabbits", ",", "not", "Ducks", ".", "like", "this", "it", "do", "not", "make", "much", "sense", "..."]
+(c11-1 / multi-sentence
+       :snt1 (c11-11 / recommend-01
+                     :ARG1 (c11-15 / and
+                                   :op1 (c11-7 / Rabbit
+                                               :domain (c11-0 / flag
+                                                              :poss (c11-13 / side
+                                                                            :mod (c11-2 / other))))
+                                   :op2 (c11-8 / flag
+                                               :poss (c11-5 / animal
+                                                            :name (c11-9 / name
+                                                                         :op1 "Duck"))
+                                               :ARG1-of (c11-6 / instead-of-91
+                                                               :ARG2 c11-0))))
+       :snt2 (c11-3 / sense-02
+                    :ARG1 (c11-12 / it)
+                    :degree (c11-10 / much)
+                    :ARG1-of (c11-4 / resemble-01
+                                    :ARG2 (c11-14 / this))
+                    :polarity -))

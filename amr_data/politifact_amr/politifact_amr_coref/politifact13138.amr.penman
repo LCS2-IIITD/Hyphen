@@ -1,0 +1,51 @@
+# ::snt
+# ::tokens []
+# ::lemmas []
+(c1-0 / amr-empty)
+
+# ::snt Oh I’d be honored
+# ::tokens ["Oh", "I", "\u2019d", "be", "honored"]
+# ::lemmas ["oh", "i", "\u2019d", "be", "honor"]
+(c2-2 / honor-01
+      :ARG1 (c2-1 / i)
+      :mod (c2-0 / oh
+                 :mode expressive))
+
+# ::snt Thanks Keah  Would love to have you on when the book is out No pressure of course
+# ::tokens ["Thanks", "Keah", " ", "Would", "love", "to", "have", "you", "on", "when", "the", "book", "is", "out", "No", "pressure", "of", "course"]
+# ::lemmas ["thank", "Keah", " ", "would", "love", "to", "have", "you", "on", "when", "the", "book", "be", "out", "no", "pressure", "of", "course"]
+(c3-7 / multi-sentence
+      :snt1 (c3-5 / thank-01
+                  :ARG0 (c3-11 / i)
+                  :ARG1 (c3-4 / person
+                              :name (c3-10 / name
+                                           :op1 "Keah")))
+      :snt2 (c3-6 / and
+                  :op1 (c3-8 / love-02
+                             :ARG0 (c3-1 / i)
+                             :ARG1 (c3-9 / have-06
+                                         :ARG0 c3-1
+                                         :ARG1 (c3-13 / you)
+                                         :time (c3-0 / out-03
+                                                     :ARG1 (c3-12 / book))))
+                  :op2 (c3-2 / pressure-01
+                             :mod (c3-3 / of-course)
+                             :polarity -)))
+
+# ::snt Yay
+# ::tokens ["Yay"]
+# ::lemmas ["Yay"]
+(c4-0 / yay)
+
+# ::snt I literally said that in the tweet lol
+# ::tokens ["I", "literally", "said", "that", "in", "the", "tweet", "lol"]
+# ::lemmas ["i", "literally", "say", "that", "in", "the", "tweet", "lol"]
+(c5-3 / say-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-0 / that)
+      :manner (c5-4 / literal)
+      :medium (c5-6 / tweet-01)
+      :ARG2-of (c5-1 / laugh-01
+                     :ARG0 c5-5
+                     :manner (c5-2 / loud)
+                     :mode expressive))

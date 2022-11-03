@@ -1,0 +1,352 @@
+# ::snt The answer to everything
+# ::tokens ["The", "answer", "to", "everything"]
+# ::lemmas ["the", "answer", "to", "everything"]
+(c1-1 / answer-01
+      :ARG1 (c1-0 / everything))
+
+# ::snt Seeking treatment actually means going to a spa on a lush and serene island.
+# ::tokens ["Seeking", "treatment", "actually", "means", "going", "to", "a", "spa", "on", "a", "lush", "and", "serene", "island", "."]
+# ::lemmas ["seek", "treatment", "actually", "mean", "go", "to", "a", "spa", "on", "a", "lush", "and", "serene", "island", "."]
+(c2-1 / mean-01
+      :ARG1 (c2-2 / seek-01
+                  :ARG1 (c2-6 / treat-03))
+      :ARG2 (c2-7 / go-02
+                  :ARG4 (c2-0 / spa
+                              :location (c2-5 / island
+                                              :mod (c2-4 / lush)
+                                              :mod (c2-8 / serene))))
+      :ARG1-of (c2-3 / actual-02))
+
+# ::snt What for week like Weinstein.
+# ::tokens ["What", "for", "week", "like", "Weinstein", "."]
+# ::lemmas ["what", "for", "week", "like", "Weinstein", "."]
+(c3-1 / event
+      :mod (c3-2 / person
+                 :name (c3-0 / name
+                             :op1 "Weinstein"))
+      :time (c3-3 / week))
+
+# ::snt Some things never stay in the closet.
+# ::tokens ["Some", "things", "never", "stay", "in", "the", "closet", "."]
+# ::lemmas ["some", "thing", "never", "stay", "in", "the", "closet", "."]
+(c4-1 / stay-01
+      :ARG1 (c4-4 / thing
+                  :mod (c4-0 / some))
+      :location (c4-3 / closet)
+      :time (c4-2 / ever)
+      :polarity -)
+
+# ::snt Treatment Years later??? How does that work
+# ::tokens ["Treatment", "Years", "later", "?", "?", "?", "How", "does", "that", "work"]
+# ::lemmas ["treatment", "Years", "later", "?", "?", "?", "how", "do", "that", "work"]
+(c5-1 / multi-sentence
+      :snt1 (c5-4 / treat-03
+                  :time (c5-6 / after
+                              :quant (c5-2 / multiple
+                                           :op1 (c5-8 / temporal-quantity
+                                                      :unit (c5-0 / year)
+                                                      :quant 1))))
+      :snt2 (c5-3 / work-09
+                  :ARG1 (c5-5 / that)
+                  :manner (c5-7 / amr-unknown)))
+
+# ::snt Oh please! He just ruined it for one of my favorite shows. Damn him!
+# ::tokens ["Oh", "please", "!", "He", "just", "ruined", "it", "for", "one", "of", "my", "favorite", "shows", ".", "Damn", "him", "!"]
+# ::lemmas ["oh", "please", "!", "he", "just", "ruin", "it", "for", "one", "of", "my", "favorite", "show", ".", "damn", "he", "!"]
+(c6-3 / multi-sentence
+      :snt1 (c6-8 / please-01
+                  :mod (c6-0 / oh)
+                  :mode expressive)
+      :snt2 (c6-6 / ruin-01
+                  :ARG0 (c6-7 / he)
+                  :ARG1 (c6-4 / show
+                              :ARG1-of (c6-11 / include-91
+                                              :ARG2 (c6-1 / show
+                                                          :ARG1-of (c6-2 / favor-01
+                                                                         :ARG0 (c6-5 / i))))
+                              :quant 1)
+                  :time (c6-10 / just))
+      :snt3 (c6-12 / damn-01
+                   :ARG1 (c6-9 / he)
+                   :mode expressive))
+
+# ::snt Liar
+# ::tokens ["Liar"]
+# ::lemmas ["liar"]
+(c7-0 / person
+      :ARG0-of (c7-1 / lie-08))
+
+# ::snt A leopard doesn't change his spots.
+# ::tokens ["A", "leopard", "does", "n't", "change", "his", "spots", "."]
+# ::lemmas ["a", "leopard", "do", "not", "change", "his", "spot", "."]
+(c8-0 / change-01
+      :ARG0 (c8-1 / leopard)
+      :ARG1 (c8-2 / spot
+                  :poss c8-1)
+      :polarity -)
+
+# ::snt Wow so disappointed. Never supporting his movies ever again. No matter how good of an actor he is!
+# ::tokens ["Wow", "so", "disappointed", ".", "Never", "supporting", "his", "movies", "ever", "again", ".", "No", "matter", "how", "good", "of", "an", "actor", "he", "is", "!"]
+# ::lemmas ["wow", "so", "disappointed", ".", "never", "support", "his", "movie", "ever", "again", ".", "no", "matter", "how", "good", "of", "an", "actor", "he", "be", "!"]
+(c9-1 / multi-sentence
+      :snt1 (c9-13 / disappoint-01
+                   :ARG0 (c9-2 / support-01
+                               :ARG1 (c9-5 / movie
+                                           :poss (c9-6 / he))
+                               :time (c9-4 / ever)
+                               :mod (c9-11 / again)
+                               :polarity -)
+                   :degree (c9-0 / so)
+                   :mod (c9-8 / wow
+                              :mode expressive))
+      :snt2 (c9-3 / regardless-91
+                  :ARG2 (c9-12 / good-03
+                               :ARG1 (c9-9 / he)
+                               :ARG2 (c9-7 / person
+                                           :ARG0-of (c9-10 / act-01)))))
+
+# ::snt And his victim?
+# ::tokens ["And", "his", "victim", "?"]
+# ::lemmas ["and", "his", "victim", "?"]
+(c10-4 / and
+       :op2 (c10-2 / person
+                   :polarity (c10-3 / amr-unknown)
+                   :ARG1-of (c10-0 / victimize-01
+                                   :ARG0 (c10-1 / he))))
+
+# ::snt He was fine for years. Now he needs treatment after this man exposed him? Typical predatory behavior. Hes a piece of shit!
+# ::tokens ["He", "was", "fine", "for", "years", ".", "Now", "he", "needs", "treatment", "after", "this", "man", "exposed", "him", "?", "Typical", "predatory", "behavior", ".", "He", "s", "a", "piece", "of", "shit", "!"]
+# ::lemmas ["he", "be", "fine", "for", "years", ".", "now", "he", "need", "treatment", "after", "this", "man", "expose", "he", "?", "typical", "predatory", "behavior", ".", "he", "s", "a", "piece", "of", "shit", "!"]
+(c11-10 / multi-sentence
+        :snt1 (c11-16 / fine-04
+                      :ARG1 (c11-5 / he)
+                      :duration (c11-4 / multiple
+                                       :op1 (c11-8 / temporal-quantity
+                                                   :unit (c11-2 / year)
+                                                   :quant 1)))
+        :snt2 (c11-17 / need-01
+                      :ARG0 (c11-20 / he)
+                      :ARG1 (c11-13 / treat-03
+                                    :ARG1 c11-20)
+                      :time (c11-12 / now)
+                      :time (c11-7 / after
+                                   :op1 (c11-18 / expose-01
+                                                :ARG0 (c11-15 / man
+                                                              :mod (c11-21 / this))
+                                                :ARG1 c11-20))
+                      :polarity (c11-6 / amr-unknown))
+        :snt3 (c11-9 / behave-01
+                     :ARG0 (c11-3 / he)
+                     :ARG1 (c11-19 / predatory)
+                     :ARG1-of (c11-1 / typical-02))
+        :snt4 (c11-11 / piece
+                      :consist-of (c11-0 / shit)
+                      :domain (c11-14 / he)))
+
+# ::snt This therapy crap is nothing more than a cop out for these sickos,give them therapy in jail where they belong!!!
+# ::tokens ["This", "therapy", "crap", "is", "nothing", "more", "than", "a", "cop", "out", "for", "these", "sickos", ",", "give", "them", "therapy", "in", "jail", "where", "they", "belong", "!", "!", "!"]
+# ::lemmas ["this", "therapy", "crap", "be", "nothing", "more", "than", "a", "cop", "out", "for", "these", "sickos", ",", "give", "they", "therapy", "in", "jail", "where", "they", "belong", "!", "!", "!"]
+(c12-4 / and
+       :op1 (c12-6 / cop-out-02
+                   :ARG1 (c12-3 / sicko
+                                :mod (c12-9 / this))
+                   :mod (c12-2 / more
+                               :polarity -))
+       :op2 (c12-10 / give-01
+                    :ARG0 (c12-1 / you)
+                    :ARG1 (c12-12 / therapy)
+                    :ARG2 c12-3
+                    :location (c12-7 / jail
+                                     :location-of (c12-0 / belong-01
+                                                         :ARG0 c12-3))
+                    :mode imperative)
+       :domain (c12-11 / crap-01
+                       :ARG1 (c12-8 / therapy)
+                       :mod (c12-5 / this)))
+
+# ::snt Wtf is with this so called treatment? Dont criminals usually get prosecuted?
+# ::tokens ["Wtf", "is", "with", "this", "so", "called", "treatment", "?", "Do", "nt", "criminals", "usually", "get", "prosecuted", "?"]
+# ::lemmas ["Wtf", "be", "with", "this", "so", "call", "treatment", "?", "do", "nt", "criminal", "usually", "get", "prosecute", "?"]
+(c13-1 / multi-sentence
+       :snt1 (c13-7 / treat-03
+                    :mod (c13-8 / this)
+                    :mod (c13-3 / so-called)
+                    :mod (c13-0 / fuck
+                                :mode expressive))
+       :snt2 (c13-5 / prosecute-01
+                    :ARG1 (c13-2 / person
+                                 :ARG2-of (c13-6 / criminal-03))
+                    :mod (c13-9 / usual)
+                    :polarity (c13-4 / amr-unknown)
+                    :polarity -))
+
+# ::snt WTF!!!!!
+# ::tokens ["WTF", "!", "!", "!", "!", "!"]
+# ::lemmas ["WTF", "!", "!", "!", "!", "!"]
+(c14-1 / amr-unknown
+       :mod (c14-0 / fuck
+                   :mode expressive))
+
+# ::snt Ridiculous.
+# ::tokens ["Ridiculous", "."]
+# ::lemmas ["ridiculous", "."]
+(c16-0 / ridiculous-02)
+
+# ::snt Kind of late.
+# ::tokens ["Kind", "of", "late", "."]
+# ::lemmas ["kind", "of", "late", "."]
+(c17-0 / late
+       :degree (c17-1 / kind-of))
+
+# ::snt " seek treatment" hmm... how about a criminal charge and prison time?
+# ::tokens ["\"", "seek", "treatment", "\"", "hmm", "...", "how", "about", "a", "criminal", "charge", "and", "prison", "time", "?"]
+# ::lemmas ["\"", "seek", "treatment", "\"", "hmm", "...", "how", "about", "a", "criminal", "charge", "and", "prison", "time", "?"]
+(c18-1 / and
+       :op1 (c18-0 / seek-01
+                   :ARG1 (c18-7 / treat-03))
+       :op2 (c18-6 / and
+                   :op1 (c18-4 / charge-05
+                               :ARG2 (c18-9 / criminal-03))
+                   :op2 (c18-8 / time
+                               :location (c18-3 / prison))
+                   :mod (c18-5 / amr-unknown))
+       :mod (c18-2 / hmm
+                   :mode expressive))
+
+# ::snt must have been whoever was in his basement
+# ::tokens ["must", "have", "been", "whoever", "was", "in", "his", "basement"]
+# ::lemmas ["must", "have", "be", "whoever", "be", "in", "his", "basement"]
+(c19-4 / infer-01
+       :ARG1 (c19-0 / be-located-at-91
+                    :ARG1 (c19-3 / person)
+                    :ARG2 (c19-2 / basement
+                                 :poss (c19-1 / he))))
+
+# ::snt Hes a child rapist.
+# ::tokens ["He", "s", "a", "child", "rapist", "."]
+# ::lemmas ["he", "s", "a", "child", "rapist", "."]
+(c20-0 / child
+       :ARG0-of (c20-2 / rape-01)
+       :domain (c20-1 / he))
+
+# ::snt Gosh, it was years ago
+# ::tokens ["Gosh", ",", "it", "was", "years", "ago"]
+# ::lemmas ["gosh", ",", "it", "be", "years", "ago"]
+(c21-0 / be-temporally-at-91
+       :ARG1 (c21-5 / it)
+       :ARG2 (c21-4 / before
+                    :op1 (c21-3 / now)
+                    :quant (c21-2 / multiple
+                                  :op1 (c21-6 / temporal-quantity
+                                              :unit (c21-1 / year)
+                                              :quant 1)))
+       :mod (c21-7 / gosh
+                   :mode expressive))
+
+# ::snt Probs a good idea
+# ::tokens ["Probs", "a", "good", "idea"]
+# ::lemmas ["prob", "a", "good", "idea"]
+(c22-1 / prove-01
+       :ARG1 (c22-2 / idea
+                    :ARG1-of (c22-0 / good-02)))
+
+# ::snt What an older man that likes younger men, shocking! Sex addiction or whatever u want to call it is a waste of time! Hes one of many pervs!
+# ::tokens ["What", "an", "older", "man", "that", "likes", "younger", "men", ",", "shocking", "!", "Sex", "addiction", "or", "whatever", "u", "want", "to", "call", "it", "is", "a", "waste", "of", "time", "!", "He", "s", "one", "of", "many", "pervs", "!"]
+# ::lemmas ["what", "an", "old", "man", "that", "like", "young", "man", ",", "shocking", "!", "sex", "addiction", "or", "whatever", "u", "want", "to", "call", "it", "be", "a", "waste", "of", "time", "!", "he", "s", "one", "of", "many", "pervs", "!"]
+(c23-12 / multi-sentence
+        :snt1 (c23-1 / like-01
+                     :ARG0 (c23-8 / man
+                                  :ARG1-of (c23-7 / have-degree-91
+                                                  :ARG2 (c23-3 / old)
+                                                  :ARG3 (c23-16 / more)))
+                     :ARG1 (c23-13 / man
+                                   :ARG1-of (c23-21 / have-degree-91
+                                                    :ARG2 (c23-5 / young)
+                                                    :ARG3 (c23-15 / more)))
+                     :ARG0-of (c23-0 / shock-01))
+        :snt2 (c23-20 / waste-01
+                      :ARG0 (c23-10 / addict-01
+                                    :ARG2 (c23-4 / sex-01)
+                                    :ARG1-of (c23-14 / call-01
+                                                     :ARG0 (c23-11 / you)
+                                                     :ARG2 (c23-2 / whatever
+                                                                  :ARG1-of (c23-18 / want-01
+                                                                                   :ARG0 c23-11))))
+                      :ARG1 (c23-9 / time))
+        :snt3 (c23-22 / include-91
+                      :ARG1 (c23-6 / he)
+                      :ARG2 (c23-19 / perv
+                                    :quant (c23-17 / many))))
+
+# ::snt - Evaluation and treatment cannot cure someone of being Keyser Soze.
+# ::tokens ["-", "Evaluation", "and", "treatment", "can", "not", "cure", "someone", "of", "being", "Keyser", "Soze", "."]
+# ::lemmas ["-", "evaluation", "and", "treatment", "can", "not", "cure", "someone", "of", "be", "Keyser", "Soze", "."]
+(c24-5 / possible-01
+       :ARG1 (c24-6 / cure-01
+                    :ARG0 (c24-3 / and
+                                 :op1 (c24-4 / evaluate-01)
+                                 :op2 (c24-7 / treat-03))
+                    :ARG1 (c24-2 / someone)
+                    :ARG2 (c24-1 / person
+                                 :name (c24-0 / name
+                                              :op1 "Keyser"
+                                              :op2 "Soze")
+                                 :domain c24-2))
+       :polarity -)
+
+# ::snt Should a man his age really need rehab to know not to touch another man's junk without consent?
+# ::tokens ["Should", "a", "man", "his", "age", "really", "need", "rehab", "to", "know", "not", "to", "touch", "another", "man", "'s", "junk", "without", "consent", "?"]
+# ::lemmas ["should", "a", "man", "his", "age", "really", "need", "rehab", "to", "know", "not", "to", "touch", "another", "man", "'s", "junk", "without", "consent", "?"]
+(c25-2 / recommend-01
+       :polarity (c25-3 / amr-unknown)
+       :ARG1 (c25-1 / need-01
+                    :ARG0 (c25-0 / man
+                                 :age (c25-10 / temporal-quantity
+                                              :age-of (c25-4 / man
+                                                             :mod (c25-9 / another))))
+                    :ARG1 (c25-11 / rehab)
+                    :purpose (c25-5 / know-01
+                                    :ARG0 c25-0
+                                    :ARG1 (c25-12 / touch-01
+                                                  :ARG0 c25-0
+                                                  :ARG1 (c25-8 / junk
+                                                               :poss c25-4)
+                                                  :ARG1-of (c25-7 / consent-01
+                                                                  :ARG0 c25-0
+                                                                  :polarity -)
+                                                  :polarity -))
+                    :ARG1-of (c25-6 / real-04)))
+
+# ::snt I thought he didnt remember doing this? Apparently theres a lot more than meets The eye!
+# ::tokens ["I", "thought", "he", "did", "nt", "remember", "doing", "this", "?", "Apparently", "there", "s", "a", "lot", "more", "than", "meets", "The", "eye", "!"]
+# ::lemmas ["i", "think", "he", "do", "not", "remember", "do", "this", "?", "apparently", "there", "s", "a", "lot", "more", "than", "meet", "the", "eye", "!"]
+(c26-0 / multi-sentence
+       :snt1 (c26-10 / think-01
+                     :ARG0 (c26-9 / i)
+                     :ARG1 (c26-1 / remember-01
+                                  :ARG0 (c26-4 / he)
+                                  :ARG1 (c26-11 / do-02
+                                                :ARG0 c26-4
+                                                :ARG1 (c26-13 / this))
+                                  :polarity -))
+       :snt2 (c26-2 / appear-02
+                    :ARG1 (c26-8 / have-quant-91
+                                 :ARG1 (c26-3 / he)
+                                 :ARG3 (c26-5 / more
+                                              :quant (c26-6 / lot))
+                                 :ARG4 (c26-12 / meet-01
+                                               :ARG0 c26-3
+                                               :ARG1 (c26-7 / eye)))))
+
+# ::snt Bullshit He And Harvey Needs To Be In Jail
+# ::tokens ["Bullshit", "He", "And", "Harvey", "Needs", "To", "Be", "In", "Jail"]
+# ::lemmas ["Bullshit", "He", "and", "Harvey", "need", "to", "be", "in", "jail"]
+(c27-1 / need-01
+       :ARG0 (c27-6 / and
+                    :op1 (c27-4 / he)
+                    :op2 (c27-3 / person
+                                :name (c27-2 / name
+                                             :op1 "Harvey")))
+       :ARG1 (c27-5 / jail-01
+                    :ARG1 c27-6)
+       :ARG1-of (c27-0 / bullshit-01))

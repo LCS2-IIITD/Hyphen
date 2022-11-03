@@ -1,0 +1,29 @@
+# ::snt I have an empty laundry basket for the first time since the start of December . I m feeling very pleased with myself .
+# ::tokens ["I", "have", "an", "empty", "laundry", "basket", "for", "the", "first", "time", "since", "the", "start", "of", "December", ".", "I", "m", "feeling", "very", "pleased", "with", "myself", "."]
+# ::lemmas ["i", "have", "an", "empty", "laundry", "basket", "for", "the", "first", "time", "since", "the", "start", "of", "December", ".", "i", "m", "feel", "very", "pleased", "with", "myself", "."]
+(c1-12 / multi-sentence
+       :snt1 (c1-3 / have-03
+                   :ARG0 (c1-11 / i)
+                   :ARG1 (c1-9 / basket
+                               :purpose (c1-7 / laundry)
+                               :ARG1-of (c1-13 / empty-02))
+                   :ord (c1-6 / ordinal-entity
+                              :range (c1-0 / since
+                                           :op1 (c1-10 / start-01
+                                                       :ARG1 (c1-1 / date-entity
+                                                                   :month 12)))
+                              :value 1))
+       :snt2 (c1-2 / feel-01
+                   :ARG0 (c1-4 / i)
+                   :ARG1 (c1-8 / please-01
+                               :ARG1 c1-4
+                               :degree (c1-5 / very))))
+
+# ::snt Tipping it on the floor doesn t count ...
+# ::tokens ["Tipping", "it", "on", "the", "floor", "doesn", "t", "count", "..."]
+# ::lemmas ["tip", "it", "on", "the", "floor", "doesn", "t", "count", "..."]
+(c2-3 / count-04
+      :ARG1 (c2-1 / tip-01
+                  :ARG1 (c2-0 / it)
+                  :ARG2 (c2-2 / floor))
+      :polarity -)

@@ -1,0 +1,62 @@
+# ::snt look like the build up to an impending battle...against a well trained enemy
+# ::tokens ["look", "like", "the", "build", "up", "to", "an", "impending", "battle", "...", "against", "a", "well", "trained", "enemy"]
+# ::lemmas ["look", "like", "the", "build", "up", "to", "an", "impending", "battle", "...", "against", "a", "well", "train", "enemy"]
+(c1-1 / look-02
+      :ARG1 (c1-2 / build-up-05
+                  :ARG2 (c1-5 / battle-01
+                              :ARG1 (c1-3 / enemy
+                                          :ARG2-of (c1-6 / train-01
+                                                         :ARG1-of (c1-0 / well-09)))
+                              :ARG1-of (c1-4 / impend-01))))
+
+# ::snt Just stay in your house. But damn they'll just drive through your walls. I wonder
+# ::tokens ["Just", "stay", "in", "your", "house", ".", "But", "damn", "they", "'ll", "just", "drive", "through", "your", "walls", ".", "I", "wonder"]
+# ::lemmas ["just", "stay", "in", "your", "house", ".", "but", "damn", "they", "'ll", "just", "drive", "through", "your", "wall", ".", "i", "wonder"]
+(c2-4 / multi-sentence
+      :snt1 (c2-12 / stay-01
+                   :ARG1 (c2-1 / you)
+                   :ARG3 (c2-6 / be-located-at-91
+                               :ARG1 c2-1
+                               :ARG2 (c2-0 / house
+                                           :poss c2-1))
+                   :mod (c2-2 / just))
+      :snt2 (c2-10 / contrast-01
+                   :ARG2 (c2-9 / drive-01
+                               :ARG0 (c2-13 / they)
+                               :ARG1 (c2-11 / through
+                                            :op1 (c2-3 / wall
+                                                       :poss (c2-15 / you)))
+                               :mod (c2-14 / just)
+                               :mod (c2-5 / damn
+                                          :mode expressive)))
+      :snt3 (c2-8 / wonder-01
+                  :ARG0 (c2-7 / i)))
+
+# ::snt If there's even a point living in this country anymore.
+# ::tokens ["If", "there", "'s", "even", "a", "point", "living", "in", "this", "country", "anymore", "."]
+# ::lemmas ["if", "there", "be", "even", "a", "point", "live", "in", "this", "country", "anymore", "."]
+(c3-0 / have-condition-91
+      :ARG2 (c3-3 / point
+                  :mod (c3-1 / live-01
+                             :location (c3-4 / country
+                                             :mod (c3-5 / this))
+                             :time (c3-6 / anymore))
+                  :mod (c3-2 / even)))
+
+# ::snt What is it with cops and armored cars? Media are already calling them (incorrectly) "Tanks."
+# ::tokens ["What", "is", "it", "with", "cops", "and", "armored", "cars", "?", "Media", "are", "already", "calling", "them", "(", "incorrectly", ")", "\"", "Tanks", ".", "\""]
+# ::lemmas ["what", "be", "it", "with", "cop", "and", "armored", "car", "?", "medium", "be", "already", "call", "they", "(", "incorrectly", ")", "\"", "tank", ".", "\""]
+(c4-1 / multi-sentence
+      :snt1 (c4-0 / have-03
+                  :ARG0 (c4-11 / amr-unknown)
+                  :ARG1 (c4-2 / and
+                              :op1 (c4-6 / cop)
+                              :op2 (c4-5 / car
+                                         :ARG1-of (c4-3 / armor-01))))
+      :snt2 (c4-8 / call-01
+                  :ARG0 (c4-4 / media)
+                  :ARG1 (c4-10 / they)
+                  :ARG2 (c4-7 / tank)
+                  :ARG1-of (c4-12 / correct-02
+                                  :polarity -)
+                  :time (c4-9 / already)))

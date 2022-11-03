@@ -1,0 +1,24 @@
+# ::snt This is news??
+# ::tokens ["This", "is", "news", "?", "?"]
+# ::lemmas ["this", "be", "news", "?", "?"]
+(c1-1 / news
+      :polarity (c1-2 / amr-unknown)
+      :domain (c1-0 / this))
+
+# ::snt He doesn't look like he's into her...
+# ::tokens ["He", "does", "n't", "look", "like", "he", "'s", "into", "her", "..."]
+# ::lemmas ["he", "do", "not", "look", "like", "he", "be", "into", "she", "..."]
+(c2-1 / look-02
+      :ARG0 (c2-0 / he)
+      :ARG1 (c2-2 / into
+                  :op1 (c2-3 / she)
+                  :domain c2-0)
+      :polarity -)
+
+# ::snt And smoothies are newsworthy???
+# ::tokens ["And", "smoothies", "are", "newsworthy", "?", "?", "?"]
+# ::lemmas ["and", "smoothie", "be", "newsworthy", "?", "?", "?"]
+(c3-3 / and
+      :op2 (c3-1 / newsworthy
+                 :polarity (c3-2 / amr-unknown)
+                 :domain (c3-0 / smoothie)))

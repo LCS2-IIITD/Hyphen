@@ -1,0 +1,358 @@
+# ::snt it hurts...
+# ::tokens ["it", "hurts", "..."]
+# ::lemmas ["it", "hurt", "..."]
+(c1-0 / hurt-02
+      :ARG0 (c1-1 / it))
+
+# ::snt so sorry to hear..
+# ::tokens ["so", "sorry", "to", "hear", ".."]
+# ::lemmas ["so", "sorry", "to", "hear", ".."]
+(c2-0 / sorry-01
+      :ARG2 (c2-1 / hear-01)
+      :degree (c2-2 / so))
+
+# ::snt Ja, es ist berall jetzt.... mir wird schlecht...
+# ::tokens ["Ja", ",", "es", "ist", "berall", "jetzt", "....", "mir", "wird", "schlecht", "..."]
+# ::lemmas ["Ja", ",", "es", "ist", "berall", "jetzt", "....", "mir", "wird", "schlecht", "..."]
+(c3-2 / multi-sentence
+      :snt1 (c3-9 / say-01
+                  :ARG0 (c3-5 / i)
+                  :ARG1 (c3-3 / berall
+                              :domain (c3-0 / jetzt))
+                  :ARG2 (c3-7 / person
+                              :name (c3-6 / name
+                                          :op1 "Ja")))
+      :snt2 (c3-1 / wird-01
+                  :ARG1 (c3-8 / mir)
+                  :ARG2 (c3-4 / schlecht)))
+
+# ::snt : reports about an Germanwings crash. Flight lost at ft near Digne France. -&gt;not good reading after landed in Stassburg
+# ::tokens [":", "reports", "about", "an", "Germanwings", "crash", ".", "Flight", "lost", "at", "ft", "near", "Digne", "France", ".", "-&gt;not", "good", "reading", "after", "landed", "in", "Stassburg"]
+# ::lemmas [":", "report", "about", "an", "Germanwings", "crash", ".", "flight", "lose", "at", "ft", "near", "Digne", "France", ".", "-&gt;not", "good", "reading", "after", "land", "in", "Stassburg"]
+(c5-1 / multi-sentence
+      :snt1 (c5-9 / report-01
+                  :ARG1 (c5-10 / crash-01
+                               :ARG1 (c5-16 / aircraft-type
+                                            :name (c5-6 / name
+                                                        :op1 "Germanwings"))))
+      :snt2 (c5-0 / lose-02
+                  :ARG1 (c5-2 / fly-01)
+                  :location (c5-7 / near-02
+                                  :ARG2 (c5-5 / facility
+                                              :name (c5-8 / name
+                                                          :op1 "Digne"
+                                                          :op2 "France")))
+                  :manner (c5-3 / foot))
+      :snt3 (c5-11 / read-01
+                   :ARG1-of (c5-12 / good-02)
+                   :time (c5-4 / after
+                               :op1 (c5-13 / land-01
+                                           :ARG1 c5-2
+                                           :location (c5-14 / city
+                                                            :name (c5-15 / name
+                                                                         :op1 "Stassburg"))))
+                   :polarity -))
+
+# ::snt ZDZ einscalten
+# ::tokens ["ZDZ", "einscalten"]
+# ::lemmas ["zdz", "einscalten"]
+(c6-1 / zdZ
+      :mod (c6-0 / einscalter))
+
+# ::snt ich weiss, tut mir so leid
+# ::tokens ["ich", "weiss", ",", "tut", "mir", "so", "leid"]
+# ::lemmas ["ich", "weiss", ",", "tut", "mir", "so", "leid"]
+(c7-5 / and
+      :op1 (c7-0 / weiss-01
+                 :ARG0 (c7-3 / i))
+      :op2 (c7-1 / leid
+                 :degree (c7-4 / so)
+                 :domain (c7-2 / mir)))
+
+# ::snt flight log
+# ::tokens ["flight", "log"]
+# ::lemmas ["flight", "log"]
+(c8-0 / log
+      :mod (c8-1 / fly-01))
+
+# ::snt that's what i meant...
+# ::tokens ["that", "'s", "what", "i", "meant", "..."]
+# ::lemmas ["that", "be", "what", "i", "mean", "..."]
+(c9-1 / mean-02
+      :ARG0 (c9-2 / i)
+      :ARG1 (c9-0 / that))
+
+# ::snt Is possible to post a link to flight history?
+# ::tokens ["Is", "possible", "to", "post", "a", "link", "to", "flight", "history", "?"]
+# ::lemmas ["be", "possible", "to", "post", "a", "link", "to", "flight", "history", "?"]
+(c10-3 / possible-01
+       :polarity (c10-5 / amr-unknown)
+       :ARG1 (c10-4 / post-01
+                    :ARG1 (c10-1 / link-01
+                                 :ARG2 (c10-0 / history
+                                              :topic (c10-2 / fly-01)))))
+
+# ::snt It's about min away from where I live, and close to where I ski. Hits hard.
+# ::tokens ["It", "'s", "about", "min", "away", "from", "where", "I", "live", ",", "and", "close", "to", "where", "I", "ski", ".", "Hits", "hard", "."]
+# ::lemmas ["it", "be", "about", "min", "away", "from", "where", "i", "live", ",", "and", "close", "to", "where", "i", "ski", ".", "hit", "hard", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-15 / and
+                     :op1 (c13-8 / relative-position
+                                 :op1 (c13-14 / thing
+                                              :location-of (c13-1 / live-01
+                                                                  :ARG0 (c13-5 / i)))
+                                 :direction (c13-4 / away)
+                                 :quant (c13-6 / about
+                                               :op1 (c13-9 / distance-quantity
+                                                           :unit (c13-7 / min)
+                                                           :quant 1)))
+                     :op2 (c13-10 / close-10
+                                  :ARG1 (c13-11 / it)
+                                  :ARG2 (c13-12 / thing
+                                                :location-of (c13-13 / ski-01
+                                                                     :ARG0 c13-5))))
+       :snt2 (c13-0 / hit-01
+                    :ARG1-of (c13-3 / hard-02)))
+
+# ::snt Crash confirmed by French authorities.
+# ::tokens ["Crash", "confirmed", "by", "French", "authorities", "."]
+# ::lemmas ["crash", "confirm", "by", "French", "authority", "."]
+(c14-2 / confirm-01
+       :ARG0 (c14-4 / authority
+                    :mod (c14-1 / country
+                                :name (c14-0 / name
+                                             :op1 "France")))
+       :ARG1 (c14-3 / crash-01))
+
+# ::snt That's mountain country, with plenty of peaks over m (6500ft).
+# ::tokens ["That", "'s", "mountain", "country", ",", "with", "plenty", "of", "peaks", "over", "m", "(", "6500", "ft", ")", "."]
+# ::lemmas ["that", "'s", "mountain", "country", ",", "with", "plenty", "of", "peak", "over", "m", "(", "6500", "ft", ")", "."]
+(c16-5 / country
+       :mod (c16-1 / mountain)
+       :domain (c16-7 / that)
+       :location-of (c16-3 / peak
+                           :quant (c16-8 / plenty)
+                           :location (c16-2 / over
+                                            :op1 (c16-4 / distance-quantity
+                                                        :quant (c16-6 / m
+                                                                      :unit (c16-0 / meter))))))
+
+# ::snt so sorry
+# ::tokens ["so", "sorry"]
+# ::lemmas ["so", "sorry"]
+(c18-0 / sorry-01
+       :degree (c18-1 / so))
+
+# ::snt on dirait qu'il a percut la montagne vu son altitude de vol
+# ::tokens ["on", "dirait", "qu'il", "a", "percut", "la", "montagne", "vu", "son", "altitude", "de", "vol"]
+# ::lemmas ["on", "dirait", "qu'il", "a", "percut", "la", "montagne", "vu", "son", "altitude", "de", "vol"]
+(c19-7 / and
+       :op1 (c19-0 / have-polarity-91
+                   :degree (c19-4 / percut)
+                   :location (c19-5 / country-region
+                                    :name (c19-2 / name
+                                                 :op1 "La"
+                                                 :op2 "Montagne"))
+                   :ARG2 -)
+       :op2 (c19-6 / son-01
+                   :ARG1 (c19-1 / altitude
+                                :mod (c19-3 / vol))))
+
+# ::snt : We get reports about an Germanwings A320 crash. Flight U9525 was lost from Flightradar24 at feet near Digne. OMG
+# ::tokens [":", "We", "get", "reports", "about", "an", "Germanwings", "A320", "crash", ".", "Flight", "U9525", "was", "lost", "from", "Flightradar24", "at", "feet", "near", "Digne", ".", "OMG"]
+# ::lemmas [":", "we", "get", "report", "about", "an", "Germanwings", "A320", "crash", ".", "Flight", "U9525", "be", "lose", "from", "Flightradar24", "at", "foot", "near", "Digne", ".", "OMG"]
+(c20-2 / multi-sentence
+       :snt1 (c20-11 / get-01
+                     :ARG0 (c20-0 / we)
+                     :ARG1 (c20-9 / report-01
+                                  :ARG1 (c20-10 / crash-01
+                                                :ARG1 (c20-15 / aircraft-type
+                                                              :name (c20-6 / name
+                                                                           :op1 "Germanwings"
+                                                                           :op2 "A320")))))
+       :snt2 (c20-1 / lose-02
+                    :ARG1 (c20-5 / aircraft-type
+                                 :name (c20-7 / name
+                                              :op1 "Flight"
+                                              :op2 "U9525"))
+                    :ARG2 (c20-12 / company
+                                  :name (c20-8 / name
+                                               :op1 "Flightradar24"))
+                    :location (c20-13 / near-02
+                                      :ARG2 (c20-14 / city
+                                                    :name (c20-16 / name
+                                                                  :op1 "Digne"))
+                                      :quant (c20-3 / foot)))
+       :snt3 (c20-4 / oh-my-god
+                    :mode expressive))
+
+# ::snt Da haben sie uns neulich noch erzhlt, dass wir statistisch fr einen Absturz eigentlich lngst berfllig sind...
+# ::tokens ["Da", "haben", "sie", "uns", "neulich", "noch", "erzhlt", ",", "dass", "wir", "statistisch", "fr", "einen", "Absturz", "eigentlich", "lngst", "berfllig", "sind", "..."]
+# ::lemmas ["Da", "haben", "sie", "un", "neulich", "noch", "erzhlt", ",", "dass", "wir", "statistisch", "fr", "einen", "Absturz", "eigentlich", "lngst", "berfllig", "sind", "..."]
+(c21-12 / cause-01
+        :ARG0 (c21-15 / amr-unknown)
+        :ARG1 (c21-0 / have-mod-91
+                     :ARG1 (c21-1 / we)
+                     :ARG2 (c21-11 / person
+                                   :mod (c21-13 / statist)
+                                   :example (c21-14 / person
+                                                    :ARG0-of (c21-2 / have-rel-role-91
+                                                                    :ARG1 c21-1
+                                                                    :ARG2 (c21-8 / Absturz)))
+                                   :mod (c21-7 / eigentlich
+                                               :mod (c21-3 / lngst))
+                                   :ARG1-of (c21-10 / have-degree-91
+                                                    :ARG2 (c21-5 / berfllig)
+                                                    :ARG3 (c21-4 / most)))
+                     :ARG1-of (c21-9 / instead-of-91
+                                     :ARG2 (c21-6 / erzhlt
+                                                  :domain c21-1))))
+
+# ::snt no p, very sad..
+# ::tokens ["no", "p", ",", "very", "sad", ".."]
+# ::lemmas ["no", "p", ",", "very", "sad", ".."]
+(c22-0 / sad-02
+       :degree (c22-1 / very))
+
+# ::snt ? low...
+# ::tokens ["?", "low", "..."]
+# ::lemmas ["?", "low", "..."]
+(c23-0 / low-04
+       :polarity (c23-1 / amr-unknown))
+
+# ::snt nicht an solchen Sch.... glauben! Solch tragische Unglcke kann man NICHT vorhersehen!!!
+# ::tokens ["nicht", "an", "solchen", "Sch", "....", "glauben", "!", "Solch", "tragische", "Unglcke", "kann", "man", "NICHT", "vorhersehen", "!", "!", "!"]
+# ::lemmas ["nicht", "an", "solchen", "Sch", "....", "glauben", "!", "Solch", "tragische", "Unglcke", "kann", "man", "NICHT", "vorhersehen", "!", "!", "!"]
+(c24-1 / multi-sentence
+       :snt1 (c24-3 / nicht
+                    :mod (c24-5 / person
+                                :name (c24-4 / name
+                                             :op1 "Sch"))
+                    :mode expressive)
+       :snt2 (c24-8 / glauben
+                    :mode expressive)
+       :snt3 (c24-10 / say-01
+                     :ARG1 (c24-0 / have-mod-91
+                                  :ARG1 (c24-12 / person
+                                                :mod (c24-11 / tragische)
+                                                :name (c24-6 / name
+                                                             :op1 "Unglcke"))
+                                  :ARG2 (c24-7 / nast))
+                     :ARG2 (c24-2 / person
+                                  :ARG0-of (c24-13 / have-org-role-91
+                                                   :ARG2 (c24-14 / nurse-01)))
+                     :ARG3 (c24-9 / vorhersehen)))
+
+# ::snt Ja, es luft auf allen Programmen. Ich muss erst mal bei uns im Forum gucken, dahintersteckt mehr Infos. Ist LH Tochter
+# ::tokens ["Ja", ",", "es", "luft", "auf", "allen", "Programmen", ".", "Ich", "muss", "erst", "mal", "bei", "uns", "i", "m", "Forum", "gucken", ",", "dahintersteckt", "mehr", "Infos", ".", "Ist", "LH", "Tochter"]
+# ::lemmas ["Ja", ",", "es", "luft", "auf", "allen", "Programmen", ".", "Ich", "muss", "erst", "mal", "bei", "un", "i", "m", "Forum", "gucken", ",", "dahintersteckt", "mehr", "Infos", ".", "Ist", "LH", "Tochter"]
+(c25-1 / multi-sentence
+       :snt1 (c25-5 / say-01
+                    :ARG0 (c25-23 / i)
+                    :ARG1 (c25-10 / luft-01
+                                  :ARG0 (c25-4 / person
+                                               :name (c25-17 / name
+                                                             :op1 "Ja"))
+                                  :ARG1 (c25-6 / person
+                                               :ARG0-of (c25-9 / have-org-role-91
+                                                               :ARG2 (c25-13 / programman))
+                                               :mod (c25-8 / all))
+                                  :mod (c25-26 / oh-my-god
+                                               :mode expressive)))
+       :snt2 (c25-22 / and
+                     :op1 (c25-14 / be-located-at-91
+                                  :ARG1 (c25-25 / i)
+                                  :ARG2 (c25-11 / forum)
+                                  :ARG1-of (c25-7 / have-degree-91
+                                                  :ARG2 (c25-18 / mal)
+                                                  :ARG3 (c25-12 / most)))
+                     :op2 (c25-24 / be-located-at-91
+                                  :ARG1 (c25-20 / we)
+                                  :ARG2 c25-11
+                                  :ARG1-of c25-7
+                                  :ARG2 (c25-2 / wunderlich)
+                                  :ARG3 (c25-16 / equal)
+                                  :ARG4 (c25-19 / person
+                                                :name (c25-27 / name
+                                                              :op1 "Infos"))))
+       :op3 (c25-28 / be-located-at-91
+                    :ARG1 c25-25
+                    :ARG2 (c25-21 / under
+                                  :op1 c25-11))
+       :op4 (c25-29 / be-located-at-91
+                    :ARG1 c25-25
+                    :ARG2 c25-21)
+       :snt3 (c25-15 / person
+                     :name (c25-3 / name
+                                  :op1 "L LH"
+                                  :op2 "Tochter")
+                     :mod (c25-0 / i)))
+
+# ::snt Oops. Sorry; misunderstood.
+# ::tokens ["Oops", ".", "Sorry", ";", "misunderstood", "."]
+# ::lemmas ["oop", ".", "sorry", ";", "misunderstood", "."]
+(c26-0 / multi-sentence
+       :snt1 (c26-1 / oops
+                    :mode expressive)
+       :snt2 (c26-4 / and
+                    :op1 (c26-3 / sorry-01)
+                    :op2 (c26-2 / misunderstand-01)))
+
+# ::snt sad news..so sorry for all the families
+# ::tokens ["sad", "news", "..", "so", "sorry", "for", "all", "the", "families"]
+# ::lemmas ["sad", "news", "..", "so", "sorry", "for", "all", "the", "family"]
+(c27-1 / multi-sentence
+       :snt1 (c27-6 / sad-02
+                    :ARG1 (c27-5 / news))
+       :snt2 (c27-3 / sorry-01
+                    :ARG1 (c27-4 / i)
+                    :ARG2 (c27-0 / family
+                                 :mod (c27-7 / all))
+                    :degree (c27-2 / so)))
+
+# ::snt : : reports about an Germanwings crash. -&gt;not good reading after landed in Stassburg &lt;-
+# ::tokens [":", ":", "reports", "about", "an", "Germanwings", "crash", ".", "-&gt;not", "good", "reading", "after", "landed", "in", "Stassburg", "&", "lt;-"]
+# ::lemmas [":", ":", "report", "about", "an", "Germanwings", "crash", ".", "-&gt;not", "good", "reading", "after", "land", "in", "Stassburg", "&", "lt;-"]
+(c29-5 / report-01
+       :ARG1 (c29-6 / crash-01
+                    :ARG1 (c29-9 / aircraft-type
+                                 :name (c29-3 / name
+                                              :op1 "Germanwings")))
+       :ARG1-of (c29-2 / read-01
+                       :ARG1-of (c29-7 / good-02)
+                       :time (c29-1 / after
+                                    :op1 (c29-0 / land-01
+                                                :ARG1 c29-9
+                                                :location (c29-8 / city
+                                                                 :name (c29-4 / name
+                                                                              :op1 "Stassburg"))))
+                       :polarity -))
+
+# ::snt We get reports about an Germanwings A320 . Flight U9525 was lost from Flightradar24 f near Digne southern FR
+# ::tokens ["We", "get", "reports", "about", "an", "Germanwings", "A320", ".", "Flight", "U9525", "was", "lost", "from", "Flightradar24", "f", "near", "Digne", "southern", "FR"]
+# ::lemmas ["we", "get", "report", "about", "an", "Germanwings", "a320", ".", "Flight", "U9525", "be", "lose", "from", "Flightradar24", "f", "near", "Digne", "southern", "fr"]
+(c30-3 / multi-sentence
+       :snt1 (c30-10 / get-01
+                     :ARG0 (c30-0 / we)
+                     :ARG1 (c30-8 / report-01
+                                  :ARG1 (c30-15 / aircraft-type
+                                                :name (c30-5 / name
+                                                             :op1 "Germanwings"
+                                                             :op2 "A320"))))
+       :snt2 (c30-2 / lose-02
+                    :ARG1 (c30-4 / aircraft-type
+                                 :name (c30-6 / name
+                                              :op1 "Flight"
+                                              :op2 "U9525"))
+                    :source (c30-7 / aircraft-type
+                                   :name (c30-9 / name
+                                                :op1 "Flightradar24"))
+                    :location (c30-11 / near-02
+                                      :ARG1 c30-4
+                                      :ARG2 (c30-12 / city
+                                                    :name (c30-16 / name
+                                                                  :op1 "Digne")
+                                                    :location (c30-13 / south
+                                                                      :part-of (c30-14 / country
+                                                                                       :name (c30-1 / name
+                                                                                                    :op1 "France")))))))

@@ -1,0 +1,53 @@
+# ::snt Ohh myyy goodness. Prayers.Sent.
+# ::tokens ["Ohh", "myyy", "goodness", ".", "Prayers", ".", "Sent", "."]
+# ::lemmas ["Ohh", "myyy", "goodness", ".", "prayer", ".", "send", "."]
+(c1-1 / multi-sentence
+      :snt1 (c1-5 / goodness
+                  :mod (c1-0 / oh
+                             :mode expressive)
+                  :poss (c1-4 / i))
+      :snt2 (c1-3 / pray-01)
+      :snt3 (c1-2 / sentence-01))
+
+# ::snt Lol after she whooped his ass
+# ::tokens ["Lol", "after", "she", "whooped", "his", "ass"]
+# ::lemmas ["Lol", "after", "she", "whoop", "his", "ass"]
+(c2-5 / after
+      :op1 (c2-3 / whoop-01
+                 :ARG0 (c2-0 / she)
+                 :ARG1 (c2-4 / ass
+                             :part-of (c2-1 / he)))
+      :mod (c2-2 / laugh-01
+                 :manner (c2-6 / loud)
+                 :mode expressive))
+
+# ::snt This isn't surprising
+# ::tokens ["This", "is", "n't", "surprising"]
+# ::lemmas ["this", "be", "not", "surprising"]
+(c3-1 / surprise-01
+      :ARG0 (c3-0 / this)
+      :polarity -)
+
+# ::snt This is my legitimate question? Given what took place would she be given custody of the child? Wonder what she is citing on the papers?
+# ::tokens ["This", "is", "my", "legitimate", "question", "?", "Given", "what", "took", "place", "would", "she", "be", "given", "custody", "of", "the", "child", "?", "Wonder", "what", "she", "is", "citing", "on", "the", "papers", "?"]
+# ::lemmas ["this", "be", "my", "legitimate", "question", "?", "give", "what", "take", "place", "would", "she", "be", "give", "custody", "of", "the", "child", "?", "wonder", "what", "she", "be", "cite", "on", "the", "paper", "?"]
+(c4-2 / multi-sentence
+      :snt1 (c4-14 / question-01
+                   :polarity (c4-5 / amr-unknown)
+                   :ARG0 (c4-12 / i)
+                   :ARG1 (c4-13 / this)
+                   :ARG1-of (c4-7 / legitimate-02))
+      :snt2 (c4-3 / give-01
+                  :ARG1 (c4-9 / custody
+                              :poss (c4-4 / she)
+                              :ARG2 (c4-17 / child))
+                  :ARG2 c4-4
+                  :ARG1 c4-3
+                  :ARG2 (c4-6 / event))
+      :snt3 (c4-10 / wonder-01
+                   :ARG0 (c4-1 / you)
+                   :ARG1 (c4-15 / thing
+                                :ARG1-of (c4-11 / cite-01
+                                                :ARG0 (c4-0 / she)
+                                                :medium (c4-8 / paper)))
+                   :polarity (c4-16 / amr-unknown)))

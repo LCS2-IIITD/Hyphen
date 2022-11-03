@@ -1,0 +1,61 @@
+# ::snt this is so so so true. Brilliant!
+# ::tokens ["this", "is", "so", "so", "so", "true", ".", "Brilliant", "!"]
+# ::lemmas ["this", "be", "so", "so", "so", "true", ".", "brilliant", "!"]
+(c1-0 / multi-sentence
+      :snt1 (c1-5 / true-01
+                  :ARG1 (c1-3 / this)
+                  :degree (c1-4 / so)
+                  :degree (c1-2 / so))
+      :snt2 (c1-1 / brilliant-01
+                  :mode expressive))
+
+# ::snt Isn't that called a suicide bomber?
+# ::tokens ["Is", "n't", "that", "called", "a", "suicide", "bomber", "?"]
+# ::lemmas ["be", "not", "that", "call", "a", "suicide", "bomber", "?"]
+(c2-2 / call-01
+      :ARG1 (c2-4 / that)
+      :ARG2 (c2-1 / person
+                  :ARG0-of (c2-0 / bomb-01
+                                 :mod (c2-3 / suicide)))
+      :polarity (c2-5 / amr-unknown)
+      :polarity -)
+
+# ::snt I love this : And do it GoT style, please RT : Life advice.
+# ::tokens ["I", "love", "this", ":", "And", "do", "it", "GoT", "style", ",", "please", "RT", ":", "Life", "advice", "."]
+# ::lemmas ["i", "love", "this", ":", "and", "do", "it", "get", "style", ",", "please", "RT", ":", "life", "advice", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-0 / love-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-11 / this))
+      :snt2 (c3-13 / and
+                   :op2 (c3-7 / do-02
+                              :ARG0 (c3-6 / person
+                                          :name (c3-4 / name
+                                                      :op1 "RT"))
+                              :ARG1 (c3-8 / it)
+                              :manner (c3-10 / style
+                                             :mod (c3-12 / person
+                                                         :name (c3-5 / name
+                                                                     :op1 "GoT")))
+                              :mode imperative
+                              :polite +))
+      :snt3 (c3-2 / advise-01
+                  :ARG2 (c3-9 / life)))
+
+# ::snt exactly what I was thinking, albeit a split second before they kill everyone else.
+# ::tokens ["exactly", "what", "I", "was", "thinking", ",", "albeit", "a", "split", "second", "before", "they", "kill", "everyone", "else", "."]
+# ::lemmas ["exactly", "what", "i", "be", "think", ",", "albeit", "a", "split", "second", "before", "they", "kill", "everyone", "else", "."]
+(c4-12 / think-01
+       :ARG0 (c4-6 / i)
+       :ARG1 (c4-10 / thing
+                    :mod (c4-3 / exact))
+       :concession (c4-1 / be-temporally-at-91
+                         :ARG2 (c4-9 / before
+                                     :op1 (c4-7 / kill-01
+                                                :ARG0 (c4-8 / they)
+                                                :ARG1 (c4-2 / everyone
+                                                            :mod (c4-0 / else)))
+                                     :quant (c4-5 / temporal-quantity
+                                                  :unit (c4-11 / second)
+                                                  :ARG1-of (c4-4 / split-01)
+                                                  :quant 1))))

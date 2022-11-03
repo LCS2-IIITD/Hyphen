@@ -1,0 +1,35 @@
+# ::snt i told u theyd not tolerate it!
+# ::tokens ["i", "told", "u", "they", "d", "not", "tolerate", "it", "!"]
+# ::lemmas ["i", "tell", "u", "they", "d", "not", "tolerate", "it", "!"]
+(c1-5 / tell-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-4 / tolerate-01
+                  :ARG0 (c1-2 / they)
+                  :ARG1 (c1-3 / it)
+                  :polarity -)
+      :ARG2 (c1-0 / you))
+
+# ::snt France may want to rethink their stance on an armed citizenry. An armed society is a polite society.
+# ::tokens ["France", "may", "want", "to", "rethink", "their", "stance", "on", "an", "armed", "citizenry", ".", "An", "armed", "society", "is", "a", "polite", "society", "."]
+# ::lemmas ["France", "may", "want", "to", "rethink", "their", "stance", "on", "an", "armed", "citizenry", ".", "an", "armed", "society", "be", "a", "polite", "society", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-6 / possible-01
+                  :ARG1 (c3-0 / want-01
+                              :ARG0 (c3-8 / country
+                                          :name (c3-5 / name
+                                                      :op1 "France"))
+                              :ARG1 (c3-7 / rethink-01
+                                          :ARG0 c3-8
+                                          :ARG1 (c3-10 / stand-11
+                                                       :ARG0 c3-8
+                                                       :ARG2 (c3-9 / citizenry
+                                                                   :ARG1-of (c3-12 / arm-01))))))
+      :snt2 (c3-3 / society
+                  :ARG1-of (c3-11 / polite-01)
+                  :domain (c3-1 / society
+                                :ARG1-of (c3-4 / arm-01))))
+
+# ::snt .......
+# ::tokens ["......."]
+# ::lemmas ["......."]
+(c4-0 / amr-empty)

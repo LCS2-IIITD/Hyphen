@@ -1,0 +1,52 @@
+# ::snt Kick it back
+# ::tokens ["Kick", "it", "back"]
+# ::lemmas ["Kick", "it", "back"]
+(c1-2 / kick-01
+      :ARG0 (c1-3 / you)
+      :ARG1 (c1-1 / it)
+      :direction (c1-0 / back)
+      :mode imperative)
+
+# ::snt If you are able to, try to take some Tylenol... I took the day of my shot and the next morning and I managed to get by with just a sore arm for a bit...Hope you feel better, Though...
+# ::tokens ["If", "you", "are", "able", "to", ",", "try", "to", "take", "some", "Tylenol", "...", "I", "took", "the", "day", "of", "my", "shot", "and", "the", "next", "morning", "and", "I", "managed", "to", "get", "by", "with", "just", "a", "sore", "arm", "for", "a", "bit", "...", "Hope", "you", "feel", "better", ",", "Though", "..."]
+# ::lemmas ["if", "you", "be", "able", "to", ",", "try", "to", "take", "some", "Tylenol", "...", "i", "take", "the", "day", "of", "my", "shot", "and", "the", "next", "morning", "and", "i", "manage", "to", "get", "by", "with", "just", "a", "sore", "arm", "for", "a", "bit", "...", "hope", "you", "feel", "well", ",", "Though", "..."]
+(c2-9 / multi-sentence
+      :snt1 (c2-6 / try-01
+                  :ARG0 (c2-19 / you)
+                  :ARG1 (c2-5 / take-01
+                              :ARG0 c2-19
+                              :ARG1 (c2-30 / product
+                                           :name (c2-10 / name
+                                                        :op1 "Tylenol")
+                                           :mod (c2-13 / some)))
+                  :condition (c2-27 / possible-01
+                                    :ARG1 (c2-11 / take-01
+                                                 :ARG0 (c2-20 / you)
+                                                 :ARG1 c2-30))
+                  :mode imperative)
+      :snt2 (c2-23 / and
+                   :op1 (c2-15 / take-01
+                               :ARG0 (c2-3 / i)
+                               :ARG1 (c2-0 / day
+                                           :time-of (c2-22 / shoot-02
+                                                           :ARG0 c2-3)))
+                   :op2 (c2-25 / manage-02
+                               :ARG0 c2-3
+                               :ARG1 (c2-7 / get-by-17
+                                           :ARG0 c2-3
+                                           :manner (c2-16 / sore
+                                                          :mod (c2-29 / just)
+                                                          :mod (c2-12 / arm))
+                                           :duration (c2-28 / bit)))
+                   :time (c2-18 / date-entity
+                                :dayperiod (c2-17 / morning)
+                                :mod c2-0))
+      :snt3 (c2-26 / have-concession-91
+                   :ARG1 (c2-2 / hope-01
+                               :ARG0 (c2-14 / i)
+                               :ARG1 (c2-24 / feel-01
+                                            :ARG0 (c2-1 / you)
+                                            :ARG1 (c2-21 / good-02
+                                                         :ARG2-of (c2-4 / have-degree-91
+                                                                        :ARG1 c2-24
+                                                                        :ARG3 (c2-8 / more)))))))

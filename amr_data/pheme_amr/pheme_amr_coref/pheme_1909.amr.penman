@@ -1,0 +1,107 @@
+# ::snt FALSE FLAG ATTACK. DON'T BE STUPID.
+# ::tokens ["FALSE", "FLAG", "ATTACK", ".", "DON'T", "BE", "STUPID", "."]
+# ::lemmas ["false", "flag", "attack", ".", "don't", "be", "STUPID", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-5 / attack-01
+                  :mod (c1-1 / flag)
+                  :mod (c1-3 / false))
+      :snt2 (c1-4 / stupid
+                  :domain (c1-0 / you)
+                  :mode imperative
+                  :polarity -))
+
+# ::snt Exactly... I feel bad for them
+# ::tokens ["Exactly", "...", "I", "feel", "bad", "for", "them"]
+# ::lemmas ["exactly", "...", "i", "feel", "bad", "for", "they"]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / exact)
+      :snt2 (c2-0 / feel-01
+                  :ARG0 (c2-4 / i)
+                  :ARG1 (c2-2 / bad-07)
+                  :ARG2 (c2-5 / they)))
+
+# ::snt dont forget Quebec City!
+# ::tokens ["do", "nt", "forget", "Quebec", "City", "!"]
+# ::lemmas ["do", "not", "forget", "Quebec", "City", "!"]
+(c3-1 / forget-01
+      :ARG1 (c3-2 / city
+                  :name (c3-0 / name
+                              :op1 "Quebec"
+                              :op2 "City"))
+      :polarity -)
+
+# ::snt We in Chicago show support for our nation before every game during the National anthem
+# ::tokens ["We", "in", "Chicago", "show", "support", "for", "our", "nation", "before", "every", "game", "during", "the", "National", "anthem"]
+# ::lemmas ["we", "in", "Chicago", "show", "support", "for", "our", "nation", "before", "every", "game", "during", "the", "national", "anthem"]
+(c4-8 / show-01
+      :ARG0 (c4-0 / we
+                  :location (c4-6 / city
+                                  :name (c4-4 / name
+                                              :op1 "Chicago")))
+      :ARG1 (c4-2 / support-01
+                  :ARG0 c4-0
+                  :ARG1 (c4-5 / nation
+                              :poss c4-0))
+      :time (c4-1 / before
+                  :op1 (c4-7 / game
+                             :mod (c4-3 / every)
+                             :time-of (c4-9 / anthem
+                                            :mod c4-5))))
+
+# ::snt So Anaheim will be only place not to play Canadian anthem tonight... shame
+# ::tokens ["So", "Anaheim", "will", "be", "only", "place", "not", "to", "play", "Canadian", "anthem", "tonight", "...", "shame"]
+# ::lemmas ["so", "Anaheim", "will", "be", "only", "place", "not", "to", "play", "Canadian", "anthem", "tonight", "...", "shame"]
+(c5-5 / cause-01
+      :ARG1 (c5-3 / place
+                  :mod (c5-0 / only)
+                  :domain (c5-4 / city
+                                :name (c5-1 / name
+                                            :op1 "Anaheim"))
+                  :location-of (c5-11 / play-01
+                                      :ARG1 (c5-12 / anthem
+                                                   :mod (c5-9 / country
+                                                              :name (c5-2 / name
+                                                                          :op1 "Canada")))
+                                      :time (c5-6 / date-entity
+                                                  :dayperiod (c5-7 / night)
+                                                  :mod (c5-10 / today))
+                                      :polarity -)
+                  :ARG2-of (c5-8 / shame-01)))
+
+# ::snt Especially since they have a lot of Canadian players.
+# ::tokens ["Especially", "since", "they", "have", "a", "lot", "of", "Canadian", "players", "."]
+# ::lemmas ["especially", "since", "they", "have", "a", "lot", "of", "Canadian", "player", "."]
+(c6-6 / cause-01
+      :ARG0 (c6-0 / have-03
+                  :ARG0 (c6-7 / they)
+                  :ARG1 (c6-4 / person
+                              :ARG0-of (c6-8 / play-01)
+                              :mod (c6-5 / country
+                                         :name (c6-3 / name
+                                                     :op1 "Canada"))
+                              :quant (c6-1 / lot)))
+      :mod (c6-2 / especially))
+
+# ::snt I'm assuming Edmonton will be doing the same, but haven't heard any confirmation. Any word on what they have planned?
+# ::tokens ["I", "'m", "assuming", "Edmonton", "will", "be", "doing", "the", "same", ",", "but", "have", "n't", "heard", "any", "confirmation", ".", "Any", "word", "on", "what", "they", "have", "planned", "?"]
+# ::lemmas ["i", "be", "assume", "Edmonton", "will", "be", "do", "the", "same", ",", "but", "have", "not", "hear", "any", "confirmation", ".", "any", "word", "on", "what", "they", "have", "plan", "?"]
+(c7-2 / multi-sentence
+      :snt1 (c7-9 / contrast-01
+                  :ARG1 (c7-16 / assume-02
+                               :ARG0 (c7-4 / i)
+                               :ARG1 (c7-8 / do-02
+                                           :ARG0 (c7-10 / city
+                                                        :name (c7-5 / name
+                                                                    :op1 "Edmonton"))
+                                           :ARG1 (c7-15 / thing
+                                                        :ARG1-of (c7-13 / same-01))))
+                  :ARG2 (c7-0 / hear-01
+                              :ARG0 c7-4
+                              :ARG1 (c7-12 / confirm-01
+                                           :mod (c7-3 / any))
+                              :polarity -))
+      :snt2 (c7-1 / word-01
+                  :ARG1 (c7-14 / thing
+                               :ARG1-of (c7-7 / plan-01
+                                              :ARG0 (c7-6 / they)))
+                  :polarity (c7-11 / amr-unknown)))

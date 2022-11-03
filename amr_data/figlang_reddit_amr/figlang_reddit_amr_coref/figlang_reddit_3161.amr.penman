@@ -1,0 +1,79 @@
+# ::snt TIL: There is an island known as "Just Room Enough Island" that has just enough room for a tree and a house.
+# ::tokens ["TIL", ":", "There", "is", "an", "island", "known", "as", "\"", "Just", "Room", "Enough", "Island", "\"", "that", "has", "just", "enough", "room", "for", "a", "tree", "and", "a", "house", "."]
+# ::lemmas ["TIL", ":", "there", "be", "an", "island", "know", "as", "\"", "Just", "Room", "Enough", "Island", "\"", "that", "have", "just", "enough", "room", "for", "a", "tree", "and", "a", "house", "."]
+(c1-9 / island
+      :ARG1-of (c1-10 / know-02
+                      :ARG2 (c1-2 / island
+                                  :name (c1-7 / name
+                                              :op1 "Just"
+                                              :op2 "Room"
+                                              :op3 "Enough"
+                                              :op4 "Island")))
+      :ARG0-of (c1-3 / have-03
+                     :ARG1 (c1-5 / room
+                                 :ARG1-of (c1-8 / have-quant-91
+                                                :ARG3 (c1-11 / enough)
+                                                :ARG6 (c1-1 / and
+                                                            :op1 (c1-4 / tree)
+                                                            :op2 (c1-0 / house))
+                                                :mod (c1-6 / just)))))
+
+# ::snt Kame's House
+# ::tokens ["Kame", "'s", "House"]
+# ::lemmas ["Kame", "'s", "House"]
+(c2-1 / house
+      :poss (c2-0 / person
+                  :name (c2-2 / name
+                              :op1 "Kame")))
+
+# ::snt Is it Kame house or Kame house?
+# ::tokens ["Is", "it", "Kame", "house", "or", "Kame", "house", "?"]
+# ::lemmas ["be", "it", "Kame", "house", "or", "Kame", "house", "?"]
+(c3-1 / amr-choice
+      :op1 (c3-3 / house
+                 :name (c3-2 / name
+                             :op1 "Kame"))
+      :op2 (c3-0 / house
+                 :name c3-2
+                 :op1 "Kame"))
+
+# ::snt Kanye house
+# ::tokens ["Kanye", "house"]
+# ::lemmas ["Kanye", "house"]
+(c4-1 / house
+      :poss (c4-0 / person
+                  :name (c4-2 / name
+                              :op1 "Kanye")))
+
+# ::snt I miss the old Kanye house.
+# ::tokens ["I", "miss", "the", "old", "Kanye", "house", "."]
+# ::lemmas ["i", "miss", "the", "old", "Kanye", "house", "."]
+(c5-4 / miss-01
+      :ARG0 (c5-3 / i)
+      :ARG1 (c5-0 / house
+                  :mod (c5-2 / person
+                             :name (c5-5 / name
+                                         :op1 "Kanye"))
+                  :mod (c5-1 / old)))
+
+# ::snt Straight from the 'Go Kanye house
+# ::tokens ["Straight", "from", "the", "'", "Go", "Kanye", "house"]
+# ::lemmas ["straight", "from", "the", "'", "go", "Kanye", "house"]
+(c6-0 / straight-06
+      :ARG2 (c6-1 / house
+                  :poss (c6-3 / person
+                              :name (c6-4 / name
+                                          :op1 "Kanye"))
+                  :ARG1-of (c6-2 / go-01)))
+
+# ::snt Chop up the soul Kanye house
+# ::tokens ["Chop", "up", "the", "soul", "Kanye", "house"]
+# ::lemmas ["chop", "up", "the", "soul", "Kanye", "house"]
+(c7-1 / chop-up-03
+      :ARG0 (c7-5 / you)
+      :ARG1 (c7-2 / house
+                  :mod (c7-3 / person
+                             :name (c7-4 / name
+                                         :op1 "Kanye"))
+                  :mod (c7-0 / soul))
+      :mode imperative)

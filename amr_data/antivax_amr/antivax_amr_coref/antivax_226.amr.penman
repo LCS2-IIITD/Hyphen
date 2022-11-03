@@ -1,0 +1,73 @@
+# ::snt Good
+# ::tokens ["Good"]
+# ::lemmas ["good"]
+(c1-0 / good-02)
+
+# ::snt i tried that and its funny asf. I cant blame you
+# ::tokens ["i", "tried", "that", "and", "its", "funny", "asf", ".", "I", "ca", "nt", "blame", "you"]
+# ::lemmas ["i", "try", "that", "and", "its", "funny", "asf", ".", "i", "can", "not", "blame", "you"]
+(c3-8 / multi-sentence
+      :snt1 (c3-0 / and
+                  :op1 (c3-4 / try-01
+                             :ARG0 (c3-7 / i)
+                             :ARG1 (c3-2 / that))
+                  :op2 (c3-1 / funny-02
+                             :ARG1 c3-2)
+                  :mod (c3-10 / asf))
+      :snt2 (c3-5 / possible-01
+                  :ARG1 (c3-6 / blame-01
+                              :ARG0 (c3-3 / i)
+                              :ARG1 (c3-9 / you))
+                  :polarity -))
+
+# ::snt Idk why its so funny to me. I just read the tweet in a really soft depressing voice
+# ::tokens ["Idk", "why", "its", "so", "funny", "to", "me", ".", "I", "just", "read", "the", "tweet", "in", "a", "really", "soft", "depressing", "voice"]
+# ::lemmas ["Idk", "why", "its", "so", "funny", "to", "i", ".", "i", "just", "read", "the", "tweet", "in", "a", "really", "soft", "depressing", "voice"]
+(c4-14 / multi-sentence
+       :snt1 (c4-15 / know-01
+                    :ARG0 (c4-13 / i)
+                    :ARG1 (c4-9 / thing
+                                :ARG0-of (c4-3 / cause-01
+                                               :ARG1 (c4-2 / funny-02
+                                                           :ARG1 (c4-5 / it)
+                                                           :degree (c4-0 / so)
+                                                           :beneficiary c4-13)))
+                    :polarity -)
+       :snt2 (c4-10 / read-01
+                    :ARG0 (c4-6 / i)
+                    :ARG1 c4-9
+                    :ARG1-of (c4-4 / tweet-01))
+       :ARG3 (c4-8 / voice
+                   :ARG0-of (c4-1 / depress-01)
+                   :ARG1-of (c4-12 / soft-02
+                                   :degree (c4-7 / really)))
+       :time (c4-11 / just))
+
+# ::snt I have a checkup on Monday or Tuesday and they said they should have more by then tho
+# ::tokens ["I", "have", "a", "checkup", "on", "Monday", "or", "Tuesday", "and", "they", "said", "they", "should", "have", "more", "by", "then", "tho"]
+# ::lemmas ["i", "have", "a", "checkup", "on", "Monday", "or", "Tuesday", "and", "they", "say", "they", "should", "have", "more", "by", "then", "tho"]
+(c6-7 / have-concession-91
+      :ARG1 (c6-2 / and
+                  :op1 (c6-3 / check-up-06
+                             :ARG1 (c6-13 / i)
+                             :time (c6-8 / or
+                                         :op1 (c6-0 / date-entity
+                                                    :weekday (c6-14 / monday))
+                                         :op2 (c6-5 / date-entity
+                                                    :weekday (c6-9 / tuesday))))
+                  :op2 (c6-1 / say-01
+                             :ARG0 (c6-6 / they)
+                             :ARG1 (c6-10 / recommend-01
+                                          :ARG1 (c6-12 / have-quant-91
+                                                       :ARG1 (c6-4 / more)
+                                                       :ARG3 (c6-11 / by
+                                                                    :op1 c6-0))))))
+
+# ::snt lmao
+# ::tokens ["lmao"]
+# ::lemmas ["lmao"]
+(c7-3 / laugh-01
+      :ARG0 (c7-1 / i
+                  :part (c7-2 / ass))
+      :ARG3 (c7-0 / off
+                  :op1 c7-2))

@@ -1,0 +1,74 @@
+# ::snt Is very better
+# ::tokens ["Is", "very", "better"]
+# ::lemmas ["be", "very", "well"]
+(c1-2 / have-degree-91
+      :ARG2 (c1-0 / good-02)
+      :ARG3 (c1-3 / more
+                  :degree (c1-1 / very)))
+
+# ::snt I am a sick man with a sick mind
+# ::tokens ["I", "am", "a", "sick", "man", "with", "a", "sick", "mind"]
+# ::lemmas ["i", "be", "a", "sick", "man", "with", "a", "sick", "mind"]
+(c2-1 / man
+      :ARG1-of (c2-2 / sick-05)
+      :ARG0-of (c2-4 / have-03
+                     :ARG1 (c2-3 / mind
+                                 :ARG1-of (c2-0 / sick-05)))
+      :domain (c2-5 / i))
+
+# ::snt LMAO WHY ARE YOU THIS WAY.
+# ::tokens ["LMAO", "WHY", "ARE", "YOU", "THIS", "WAY", "."]
+# ::lemmas ["lmao", "why", "be", "you", "this", "way", "."]
+(c3-3 / cause-01
+      :ARG0 (c3-1 / amr-unknown)
+      :ARG1 (c3-4 / way
+                  :mod (c3-6 / this)
+                  :domain (c3-0 / you))
+      :mod (c3-2 / laugh-01
+                 :ARG0 (c3-5 / i)
+                 :manner (c3-7 / loud)
+                 :mode expressive))
+
+# ::snt On cover of OK magazine
+# ::tokens ["On", "cover", "of", "OK", "magazine"]
+# ::lemmas ["on", "cover", "of", "ok", "magazine"]
+(c4-1 / be-located-at-91
+      :ARG2 (c4-0 / cover
+                  :poss (c4-2 / magazine
+                              :name (c4-3 / name
+                                          :op1 "OK"))))
+
+# ::snt Where did you read this?
+# ::tokens ["Where", "did", "you", "read", "this", "?"]
+# ::lemmas ["where", "do", "you", "read", "this", "?"]
+(c5-0 / read-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-3 / this)
+      :location (c5-2 / amr-unknown))
+
+# ::snt no, it's over, brad pitt does not loves angelina jolie and she after the split she behaved horribly, now i'm at war for custody
+# ::tokens ["no", ",", "it", "'s", "over", ",", "brad", "pitt", "does", "not", "loves", "angelina", "jolie", "and", "she", "after", "the", "split", "she", "behaved", "horribly", ",", "now", "i", "'m", "at", "war", "for", "custody"]
+# ::lemmas ["no", ",", "it", "be", "over", ",", "brad", "pitt", "do", "not", "love", "angelina", "jolie", "and", "she", "after", "the", "split", "she", "behave", "horribly", ",", "now", "i", "be", "at", "war", "for", "custody"]
+(c6-2 / multi-sentence
+      :snt1 (c6-0 / over-01
+                  :ARG1 (c6-14 / it))
+      :snt2 (c6-15 / and
+                   :op1 (c6-8 / love-01
+                              :ARG0 (c6-9 / person
+                                          :name (c6-3 / name
+                                                      :op1 "Brent"
+                                                      :op2 "Pitt"))
+                              :ARG1 (c6-4 / person
+                                          :name (c6-7 / name
+                                                      :op1 "Angelina"
+                                                      :op2 "Jolie"))
+                              :polarity -)
+                   :op2 (c6-1 / behave-01
+                              :ARG0 c6-4
+                              :ARG1 (c6-10 / horrible)
+                              :time (c6-16 / after
+                                           :op1 (c6-5 / split-01)))
+                   :op3 (c6-12 / war-01
+                               :ARG0 (c6-6 / i)
+                               :ARG1 (c6-13 / custody)
+                               :time (c6-11 / now))))

@@ -1,0 +1,51 @@
+# ::snt In case of queries abt Indian nationals following events in Sydney contact Dr Viond Bahade Dy Consul General at ph: +61
+# ::tokens ["In", "case", "of", "queries", "abt", "Indian", "nationals", "following", "events", "in", "Sydney", "contact", "Dr", "Viond", "Bahade", "Dy", "Consul", "General", "at", "ph", ":", "+61"]
+# ::lemmas ["in", "case", "of", "query", "abt", "Indian", "national", "follow", "event", "in", "Sydney", "contact", "Dr", "Viond", "Bahade", "Dy", "Consul", "General", "at", "ph", ":", "+61"]
+(c1-8 / contact-01
+      :ARG0 (c1-0 / you)
+      :ARG1 (c1-7 / doctor
+                  :name (c1-4 / name
+                              :op1 "Viond"
+                              :op2 "Bahade"
+                              :op3 "Dy"
+                              :op4 "Consul"
+                              :op5 "General"))
+      :ARG2 (c1-6 / phone-number-entity
+                  :value +61)
+      :condition (c1-3 / query-01
+                       :ARG1 (c1-13 / person
+                                    :mod (c1-5 / nation)
+                                    :mod (c1-9 / country
+                                               :name (c1-10 / name
+                                                            :op1 "India"))
+                                    :ARG1-of (c1-1 / follow-01
+                                                   :ARG2 (c1-2 / event
+                                                               :location (c1-12 / city
+                                                                                :name (c1-11 / name
+                                                                                             :op1 "Sydney")))))))
+
+# ::snt In case of queries abt Indians following events in Sydney contact Dr Viond Bahade Dy Consul General phone +61 via "
+# ::tokens ["In", "case", "of", "queries", "abt", "Indians", "following", "events", "in", "Sydney", "contact", "Dr", "Viond", "Bahade", "Dy", "Consul", "General", "phone", "+61", "via", "\""]
+# ::lemmas ["in", "case", "of", "query", "abt", "Indians", "follow", "event", "in", "Sydney", "contact", "Dr", "Viond", "Bahade", "Dy", "Consul", "General", "phone", "+61", "via", "\""]
+(c2-8 / contact-01
+      :ARG0 (c2-0 / you)
+      :ARG1 (c2-7 / doctor
+                  :name (c2-4 / name
+                              :op1 "Viond"
+                              :op2 "Bahade"
+                              :op3 "Dy"
+                              :op4 "Consul")
+                  :mod (c2-9 / general))
+      :ARG2 (c2-6 / phone-number-entity
+                  :value +61)
+      :condition (c2-3 / query-01
+                       :ARG2 (c2-1 / follow-01
+                                   :ARG1 (c2-2 / event
+                                               :location (c2-10 / city
+                                                                :name (c2-5 / name
+                                                                            :op1 "Sydney")))
+                                   :ARG2 (c2-13 / person
+                                                :mod (c2-12 / country
+                                                            :name (c2-11 / name
+                                                                         :op1 "India")))))
+      :mode imperative)

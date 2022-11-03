@@ -1,0 +1,431 @@
+# ::snt Tout est vrai.
+# ::tokens ["Tout", "est", "vrai", "."]
+# ::lemmas ["tout", "est", "vrai", "."]
+(c1-1 / vrai-00
+      :ARG1 (c1-0 / out))
+
+# ::snt Mon bb ! Il devient quoi ?
+# ::tokens ["Mon", "bb", "!", "Il", "devient", "quoi", "?"]
+# ::lemmas ["Mon", "bb", "!", "il", "devient", "quoi", "?"]
+(c2-1 / multi-sentence
+      :snt1 (c2-3 / amr-unintelligible
+                  :value "Mon"
+                  :mode expressive)
+      :snt2 (c2-0 / devient
+                  :polarity (c2-2 / amr-unknown)
+                  :domain c2-3))
+
+# ::snt she does deserve one tbf
+# ::tokens ["she", "does", "deserve", "one", "tbf"]
+# ::lemmas ["she", "do", "deserve", "one", "tbf"]
+(c4-0 / deserve-01
+      :ARG0 (c4-3 / she)
+      :ARG1 (c4-2 / thing
+                  :name (c4-1 / name
+                              :op1 "TSBF")
+                  :quant 1))
+
+# ::snt all it takes is someone who likes her character enough. an old friend of mine used to write very, very obscure Wikipedia pages for a hobby, and I would imagine he can't be the only person of that sort kicking around
+# ::tokens ["all", "it", "takes", "is", "someone", "who", "likes", "her", "character", "enough", ".", "an", "old", "friend", "of", "mine", "used", "to", "write", "very", ",", "very", "obscure", "Wikipedia", "pages", "for", "a", "hobby", ",", "and", "I", "would", "imagine", "he", "ca", "n't", "be", "the", "only", "person", "of", "that", "sort", "kicking", "around"]
+# ::lemmas ["all", "it", "take", "be", "someone", "who", "like", "her", "character", "enough", ".", "an", "old", "friend", "of", "mine", "use", "to", "write", "very", ",", "very", "obscure", "Wikipedia", "page", "for", "a", "hobby", ",", "and", "i", "would", "imagine", "he", "can", "not", "be", "the", "only", "person", "of", "that", "sort", "kick", "around"]
+(c5-17 / multi-sentence
+       :snt1 (c5-14 / take-10
+                    :ARG1 (c5-0 / someone
+                                :ARG0-of (c5-1 / like-01
+                                               :ARG1 (c5-19 / character
+                                                            :poss (c5-5 / she))
+                                               :ARG2-of (c5-10 / have-degree-91
+                                                               :ARG1 c5-19
+                                                               :ARG3 (c5-24 / enough))))
+                    :mod (c5-13 / all))
+       :snt2 (c5-12 / and
+                    :op1 (c5-26 / write-01
+                                :ARG0 (c5-25 / person
+                                             :ARG0-of (c5-27 / have-rel-role-91
+                                                             :ARG1 (c5-28 / i)
+                                                             :ARG2 (c5-22 / friend)
+                                                             :mod (c5-6 / old)))
+                                :ARG1 (c5-18 / page
+                                             :mod (c5-3 / publication
+                                                        :name (c5-23 / name
+                                                                     :op1 "Wikipedia"))
+                                             :ARG1-of (c5-16 / obscure-02
+                                                             :degree (c5-8 / very)))
+                                :purpose (c5-9 / hobby)
+                                :time (c5-21 / use-03))
+                    :op2 (c5-7 / imagine-01
+                               :ARG0 c5-28
+                               :ARG1 (c5-2 / possible-01
+                                           :ARG1 (c5-15 / person
+                                                        :mod (c5-29 / only)
+                                                        :mod (c5-4 / sort
+                                                                   :mod (c5-20 / that))
+                                                        :ARG0-of (c5-11 / kick-around-04)
+                                                        :domain c5-25)
+                                           :polarity -))))
+
+# ::snt I agree "generalized associativity" doesn't need to be introduced, but associativity is introduced in elementary school. We should be using the word almost every day in high school. (same thing with identity, inverse, and commutivity.) Just like we used distribution regularly!
+# ::tokens ["I", "agree", "\"", "generalized", "associativity", "\"", "does", "n't", "need", "to", "be", "introduced", ",", "but", "associativity", "is", "introduced", "in", "elementary", "school", ".", "We", "should", "be", "using", "the", "word", "almost", "every", "day", "in", "high", "school", ".", "(", "same", "thing", "with", "identity", ",", "inverse", ",", "and", "commutivity", ".", ")", "Just", "like", "we", "used", "distribution", "regularly", "!"]
+# ::lemmas ["i", "agree", "\"", "generalized", "associativity", "\"", "do", "not", "need", "to", "be", "introduce", ",", "but", "associativity", "be", "introduce", "in", "elementary", "school", ".", "we", "should", "be", "use", "the", "word", "almost", "every", "day", "in", "high", "school", ".", "(", "same", "thing", "with", "identity", ",", "inverse", ",", "and", "commutivity", ".", ")", "just", "like", "we", "use", "distribution", "regularly", "!"]
+(c6-15 / multi-sentence
+       :snt1 (c6-18 / contrast-01
+                    :ARG1 (c6-12 / agree-01
+                                 :ARG0 (c6-29 / i)
+                                 :ARG1 (c6-24 / need-01
+                                              :ARG1 (c6-6 / introduce-02
+                                                          :ARG1 (c6-9 / associate-01
+                                                                      :ARG1-of (c6-11 / generalize-01)))
+                                              :polarity -))
+                    :ARG2 (c6-13 / introduce-02
+                                 :ARG1 (c6-8 / associate-01)
+                                 :location (c6-2 / school
+                                                 :mod (c6-26 / elementary))))
+       :snt2 (c6-25 / recommend-01
+                    :ARG1 (c6-23 / use-01
+                                 :ARG0 (c6-27 / we)
+                                 :ARG1 (c6-3 / word)
+                                 :frequency (c6-4 / rate-entity-91
+                                                  :ARG3 (c6-10 / temporal-quantity
+                                                               :unit (c6-31 / day)
+                                                               :quant 1)
+                                                  :mod (c6-16 / almost))
+                                 :time (c6-7 / high-school)))
+       :snt3 (c6-21 / thing
+                    :ARG1-of (c6-5 / same-01
+                                   :ARG2 (c6-30 / thing
+                                                :topic (c6-28 / and
+                                                              :op1 (c6-0 / identity)
+                                                              :op2 (c6-22 / inverse)
+                                                              :op3 (c6-14 / commutivity))))
+                    :ARG1-of (c6-17 / resemble-01
+                                    :ARG2 (c6-19 / use-01
+                                                 :ARG0 c6-27
+                                                 :ARG1 (c6-20 / distribute-01)
+                                                 :ARG1-of (c6-1 / regular-02)))))
+
+# ::snt I can never remember what collate means when submitting copies.
+# ::tokens ["I", "can", "never", "remember", "what", "collate", "means", "when", "submitting", "copies", "."]
+# ::lemmas ["i", "can", "never", "remember", "what", "collate", "mean", "when", "submit", "copy", "."]
+(c7-4 / possible-01
+      :ARG1 (c7-2 / remember-01
+                  :ARG0 (c7-6 / i)
+                  :ARG1 (c7-7 / thing
+                              :ARG2-of (c7-0 / mean-01
+                                             :ARG1 (c7-5 / collate-01)
+                                             :time (c7-1 / submit-01
+                                                         :ARG1 c7-7
+                                                         :ARG1-of (c7-8 / copy-01)))))
+      :time (c7-3 / ever)
+      :polarity -)
+
+# ::snt + I rarely broach "generalized associativity," which I saw only as a math major in a first course on abstract algebra, and for which the proof proceeded by [strong?] induction. Rigor mortis for my present purposes...
+# ::tokens ["+", "I", "rarely", "broach", "\"", "generalized", "associativity", ",", "\"", "which", "I", "saw", "only", "as", "a", "math", "major", "in", "a", "first", "course", "on", "abstract", "algebra", ",", "and", "for", "which", "the", "proof", "proceeded", "by", "[", "strong", "?", "]", "induction", ".", "Rigor", "mortis", "for", "my", "present", "purposes", "..."]
+# ::lemmas ["+", "i", "rarely", "broach", "\"", "generalized", "associativity", ",", "\"", "which", "i", "see", "only", "as", "a", "math", "major", "in", "a", "first", "course", "on", "abstract", "algebra", ",", "and", "for", "which", "the", "proof", "proceed", "by", "[", "strong", "?", "]", "induction", ".", "rigor", "mortis", "for", "my", "present", "purpose", "..."]
+(c8-16 / multi-sentence
+       :snt1 (c8-15 / broach-01
+                    :ARG0 (c8-23 / i)
+                    :ARG1 (c8-10 / associativity
+                                 :ARG1-of (c8-11 / generalize-01)
+                                 :ARG1-of (c8-0 / see-01
+                                                :ARG0 c8-23
+                                                :ARG2 (c8-7 / major
+                                                            :topic (c8-20 / mathematics)
+                                                            :mod (c8-4 / only)
+                                                            :prep-in (c8-19 / course
+                                                                            :topic c8-20)
+                                                            :ord (c8-14 / ordinal-entity
+                                                                        :value 1)
+                                                            :topic (c8-9 / abstract)))))
+       :ARG1-of (c8-13 / cause-01
+                       :ARG0 (c8-22 / proceed-01
+                                    :ARG0 (c8-6 / induct-02
+                                                :ARG1 c8-23
+                                                :ARG1-of (c8-5 / strong-02
+                                                               :ARG1-of (c8-8 / have-degree-91
+                                                                              :ARG3 (c8-18 / more)
+                                                                              :ARG2 c8-5)))
+                                    :ARG1 (c8-17 / prove-01)))
+       :ARG1-of (c8-21 / rare-02)
+       :snt2 (c8-3 / rigor-mortis
+                   :purpose (c8-2 / purpose
+                                  :time (c8-1 / present)
+                                  :poss (c8-12 / i))))
+
+# ::snt I call "commutativity" ... "reordering" &amp; "associativity" ... "regrouping"I'll still use the formal names for completeness. But, I think those terms - which I first saw preparing to teach math content courses for elementary school preservice teachers - are more descriptive!
+# ::tokens ["I", "call", "\"", "commutativity", "\"", "...", "\"", "reordering", "\"", "&", "amp", ";", "\"", "associativity", "\"", "...", "\"", "regrouping\"I'll", "still", "use", "the", "formal", "names", "for", "completeness", ".", "But", ",", "I", "think", "those", "terms", "-", "which", "I", "first", "saw", "preparing", "to", "teach", "math", "content", "courses", "for", "elementary", "school", "preservice", "teachers", "-", "are", "more", "descriptive", "!"]
+# ::lemmas ["i", "call", "\"", "commutativity", "\"", "...", "\"", "reorder", "\"", "&", "amp", ";", "\"", "associativity", "\"", "...", "\"", "regrouping\"i'll", "still", "use", "the", "formal", "name", "for", "completeness", ".", "but", ",", "i", "think", "those", "term", "-", "which", "i", "first", "see", "prepare", "to", "teach", "math", "content", "course", "for", "elementary", "school", "preservice", "teacher", "-", "be", "more", "descriptive", "!"]
+(c9-16 / multi-sentence
+       :snt1 (c9-18 / contrast-01
+                    :ARG1 (c9-15 / call-01
+                                 :ARG0 (c9-27 / i)
+                                 :ARG1 (c9-12 / term
+                                              :mod (c9-19 / that)
+                                              :ARG1-of (c9-0 / see-01
+                                                             :ARG0 c9-27
+                                                             :time (c9-23 / first))
+                                              :ARG0-of (c9-26 / prepare-02
+                                                              :ARG1 (c9-28 / teach-01
+                                                                           :ARG0 c9-12
+                                                                           :ARG1 (c9-3 / course-91
+                                                                                       :ARG1 (c9-22 / content-02
+                                                                                                    :ARG1 (c9-9 / mathematics)))
+                                                                           :ARG2 (c9-17 / person
+                                                                                        :ARG0-of (c9-1 / teach-01
+                                                                                                       :ARG2 (c9-4 / person
+                                                                                                                   :ARG0-of (c9-2 / preservice-00)
+                                                                                                                   :mod (c9-6 / school
+                                                                                                                              :mod (c9-25 / elementary))))))))
+                                 :ARG2 (c9-13 / and
+                                              :op1 (c9-11 / prioritize-01)
+                                              :op2 (c9-24 / regroup-01))
+                                 :mod (c9-5 / still))
+                    :ARG2 (c9-20 / use-01
+                                 :ARG0 c9-27
+                                 :ARG1 c9-12
+                                 :ARG2 (c9-7 / completeness))
+                    :snt2-of c9-16)
+       :ARG2 (c9-14 / think-01
+                    :ARG0 (c9-8 / i)
+                    :ARG1 (c9-29 / describe-01
+                                 :ARG0 c9-12
+                                 :ARG2-of (c9-10 / have-degree-91
+                                                 :ARG1 c9-12
+                                                 :ARG3 (c9-21 / more)))))
+
+# ::snt It shows EXCITEMENT! and Emotion!
+# ::tokens ["It", "shows", "EXCITEMENT", "!", "and", "Emotion", "!"]
+# ::lemmas ["it", "show", "EXCITEMENT", "!", "and", "Emotion", "!"]
+(c10-0 / show-01
+       :ARG0 (c10-2 / it)
+       :ARG1 (c10-3 / and
+                    :op1 (c10-1 / explain-01)
+                    :op2 (c10-4 / emote-01))
+       :mode expressive)
+
+# ::snt That interjection song tho
+# ::tokens ["That", "interjection", "song", "tho"]
+# ::lemmas ["that", "interjection", "song", "tho"]
+(c11-0 / have-concession-91
+       :ARG1 (c11-3 / song
+                    :mod (c11-2 / interject-01)
+                    :mod (c11-1 / that)))
+
+# ::snt I have to look that one up. I know there was once but its not ingrained like Conjuction Junction or Lolly Lolly Lolly
+# ::tokens ["I", "have", "to", "look", "that", "one", "up", ".", "I", "know", "there", "was", "once", "but", "its", "not", "ingrained", "like", "Conjuction", "Junction", "or", "Lolly", "Lolly", "Lolly"]
+# ::lemmas ["i", "have", "to", "look", "that", "one", "up", ".", "i", "know", "there", "be", "once", "but", "its", "not", "ingrained", "like", "Conjuction", "Junction", "or", "Lolly", "Lolly", "lolly"]
+(c12-3 / multi-sentence
+       :snt1 (c12-1 / obligate-01
+                    :ARG2 (c12-7 / look-up-05
+                                 :ARG0 (c12-10 / i)
+                                 :ARG1 (c12-0 / one
+                                              :mod (c12-11 / that))))
+       :snt2 (c12-9 / contrast-01
+                    :ARG1 (c12-8 / know-01
+                                 :ARG0 (c12-5 / i)
+                                 :ARG1 (c12-6 / exist-01
+                                              :time (c12-15 / once)))
+                    :ARG2 (c12-13 / ingrain-01
+                                  :ARG1 (c12-2 / it)
+                                  :ARG2 (c12-12 / or
+                                                :op1 (c12-14 / location
+                                                             :name (c12-4 / name
+                                                                          :op1 "Conjuction"
+                                                                          :op2 "Junction")
+                                                             :op2-of c12-12)
+                                                :name c12-4
+                                                :op1 "Lolly"
+                                                :op2 "Lolly")
+                                  :polarity -)))
+
+# ::snt What did you search that you found it? Curious minds...
+# ::tokens ["What", "did", "you", "search", "that", "you", "found", "it", "?", "Curious", "minds", "..."]
+# ::lemmas ["what", "do", "you", "search", "that", "you", "find", "it", "?", "curious", "mind", "..."]
+(c13-2 / multi-sentence
+       :snt1 (c13-3 / search-01
+                    :ARG0 (c13-1 / you)
+                    :ARG2 (c13-0 / find-01
+                                 :ARG0 c13-1
+                                 :ARG1 (c13-6 / it)))
+       :snt2 (c13-4 / mind
+                    :ARG1-of (c13-5 / curious-01)))
+
+# ::snt I think articles are briefly mentioned in the adjective song.
+# ::tokens ["I", "think", "articles", "are", "briefly", "mentioned", "in", "the", "adjective", "song", "."]
+# ::lemmas ["i", "think", "article", "be", "briefly", "mention", "in", "the", "adjective", "song", "."]
+(c14-3 / think-01
+       :ARG0 (c14-4 / i)
+       :ARG1 (c14-1 / mention-01
+                    :ARG1 (c14-5 / article)
+                    :location (c14-2 / song
+                                     :mod (c14-6 / adjective))
+                    :duration (c14-0 / brief)))
+
+# ::snt I thought they were "indefinite articles?"
+# ::tokens ["I", "thought", "they", "were", "\"", "indefinite", "articles", "?", "\""]
+# ::lemmas ["i", "think", "they", "be", "\"", "indefinite", "article", "?", "\""]
+(c15-1 / think-01
+       :polarity (c15-3 / amr-unknown)
+       :ARG0 (c15-4 / i)
+       :ARG1 (c15-2 / article
+                    :duration (c15-0 / indefinite)
+                    :domain (c15-5 / they)))
+
+# ::snt Schoolhouse Rock never did a song on Articles, did they?Verbs, adverbs, nouns, Interjections!But not articles.
+# ::tokens ["Schoolhouse", "Rock", "never", "did", "a", "song", "on", "Articles", ",", "did", "they?Verbs", ",", "adverbs", ",", "nouns", ",", "Interjections!But", "not", "articles", "."]
+# ::lemmas ["Schoolhouse", "Rock", "never", "do", "a", "song", "on", "Articles", ",", "do", "they?Verbs", ",", "adverb", ",", "noun", ",", "Interjections!But", "not", "article", "."]
+(c16-5 / contrast-01
+       :ARG1 (c16-8 / do-02
+                    :ARG0 (c16-0 / organization
+                                 :name (c16-1 / name
+                                              :op1 "Schoolhouse"
+                                              :op2 "Rock"))
+                    :ARG1 (c16-2 / song
+                                 :topic (c16-7 / article))
+                    :time (c16-4 / ever)
+                    :ARG1-of (c16-3 / request-confirmation-91)
+                    :polarity -)
+       :ARG2 c16-5
+       :ARG2 (c16-6 / article
+                    :polarity -))
+
+# ::snt But how could you look it up if you forgot what it was? Christ, it's just like when your elementary school teacher would tell you to look up a word in the dictionary if you didn't know how to spell it...
+# ::tokens ["But", "how", "could", "you", "look", "it", "up", "if", "you", "forgot", "what", "it", "was", "?", "Christ", ",", "it", "'s", "just", "like", "when", "your", "elementary", "school", "teacher", "would", "tell", "you", "to", "look", "up", "a", "word", "in", "the", "dictionary", "if", "you", "did", "n't", "know", "how", "to", "spell", "it", "..."]
+# ::lemmas ["but", "how", "could", "you", "look", "it", "up", "if", "you", "forget", "what", "it", "be", "?", "Christ", ",", "it", "be", "just", "like", "when", "your", "elementary", "school", "teacher", "would", "tell", "you", "to", "look", "up", "a", "word", "in", "the", "dictionary", "if", "you", "do", "not", "know", "how", "to", "spell", "it", "..."]
+(c17-13 / multi-sentence
+        :snt1 (c17-15 / contrast-01
+                      :ARG2 (c17-21 / possible-01
+                                    :ARG1 (c17-1 / look-up-05
+                                                 :ARG0 (c17-4 / you)
+                                                 :ARG1 (c17-23 / it)
+                                                 :condition (c17-17 / forget-01
+                                                                    :ARG0 c17-4
+                                                                    :ARG1 (c17-10 / thing
+                                                                                  :domain (c17-5 / it)))
+                                                 :manner (c17-9 / amr-unknown))))
+        :snt2 (c17-14 / person
+                      :name (c17-18 / name
+                                    :op1 "Christ")
+                      :ARG1-of (c17-19 / resemble-01
+                                       :ARG2 (c17-16 / tell-01
+                                                     :ARG0 (c17-2 / person
+                                                                  :ARG0-of (c17-6 / have-org-role-91
+                                                                                  :ARG1 (c17-0 / school
+                                                                                               :mod (c17-20 / elementary))
+                                                                                  :ARG2 (c17-24 / teach-01
+                                                                                                :ARG0 c17-2)))
+                                                     :ARG1 (c17-12 / look-up-05
+                                                                   :ARG0 (c17-11 / you)
+                                                                   :ARG1 (c17-22 / word
+                                                                                 :location (c17-25 / dictionary))
+                                                                   :condition (c17-7 / know-01
+                                                                                     :ARG0 c17-11
+                                                                                     :ARG1 c17-10
+                                                                                     :manner-of (c17-3 / spell-01
+                                                                                                       :ARG0 c17-11
+                                                                                                       :ARG1 c17-5)
+                                                                                     :polarity -)))
+                                       :ARG2 c17-11)
+                      :mod (c17-8 / just)
+                      :mode expressive))
+
+# ::snt Sometimes I forget the term for a, an, and the.... something adjectives.... Theyre article adjectives. Nobody calls them that. Just articles. Its like remembering Dwayne Johnson and not The Rock.
+# ::tokens ["Sometimes", "I", "forget", "the", "term", "for", "a", ",", "an", ",", "and", "the", "....", "something", "adjectives", "....", "They", "re", "article", "adjectives", ".", "Nobody", "calls", "them", "that", ".", "Just", "articles", ".", "Its", "like", "remembering", "Dwayne", "Johnson", "and", "not", "The", "Rock", "."]
+# ::lemmas ["sometimes", "i", "forget", "the", "term", "for", "a", ",", "an", ",", "and", "the", "....", "something", "adjective", "....", "they", "re", "article", "adjective", ".", "nobody", "call", "they", "that", ".", "just", "article", ".", "its", "like", "remember", "Dwayne", "Johnson", "and", "not", "the", "Rock", "."]
+(c18-10 / multi-sentence
+        :snt1 (c18-16 / forget-01
+                      :ARG0 (c18-22 / i)
+                      :ARG1 (c18-7 / term-01
+                                   :ARG3 (c18-8 / and
+                                                :op1 (c18-0 / string-entity
+                                                            :value "a")
+                                                :op2 (c18-3 / string-entity
+                                                            :value "a")
+                                                :op3 (c18-2 / string-entity
+                                                            :value "a")))
+                      :frequency (c18-18 / sometimes))
+        :snt2 (c18-17 / noun
+                      :mod (c18-6 / article)
+                      :domain (c18-15 / they))
+        :snt3 (c18-13 / call-01
+                      :ARG0 (c18-11 / nobody)
+                      :ARG1 c18-15
+                      :ARG2 (c18-5 / article))
+        :snt4 (c18-19 / resemble-01
+                      :ARG1 (c18-4 / it)
+                      :ARG2 (c18-1 / remember-01
+                                   :ARG1 (c18-20 / person
+                                                 :name (c18-21 / name
+                                                               :op1 "Dwayne"
+                                                               :op2 "Johnson"))
+                                   :ARG1-of (c18-9 / contrast-01
+                                                   :ARG2 (c18-12 / remember-01
+                                                                 :ARG1 c18-20
+                                                                 :name (c18-14 / name
+                                                                               :op1 "The"
+                                                                               :op2 "Rock")
+                                                                 :polarity -)))))
+
+# ::snt I love you all.
+# ::tokens ["I", "love", "you", "all", "."]
+# ::lemmas ["i", "love", "you", "all", "."]
+(c19-1 / love-01
+       :ARG0 (c19-2 / i)
+       :ARG1 (c19-0 / you
+                    :mod (c19-3 / all)))
+
+# ::snt I regularly mix up the words reflexive and reflective for the geometry property, and have to look it up every year before teaching it.
+# ::tokens ["I", "regularly", "mix", "up", "the", "words", "reflexive", "and", "reflective", "for", "the", "geometry", "property", ",", "and", "have", "to", "look", "it", "up", "every", "year", "before", "teaching", "it", "."]
+# ::lemmas ["i", "regularly", "mix", "up", "the", "word", "reflexive", "and", "reflective", "for", "the", "geometry", "property", ",", "and", "have", "to", "look", "it", "up", "every", "year", "before", "teach", "it", "."]
+(c20-12 / and
+        :op1 (c20-3 / mix-up-03
+                    :ARG0 (c20-11 / i)
+                    :ARG1 (c20-9 / word
+                                 :mod (c20-5 / reflexive)
+                                 :ARG1-of (c20-14 / reflect-01))
+                    :ARG3 (c20-6 / property
+                                 :mod (c20-13 / geometry))
+                    :ARG1-of (c20-8 / regular-02))
+        :op2 (c20-0 / obligate-01
+                    :ARG1 c20-11
+                    :ARG2 (c20-7 / look-up-05
+                                 :ARG0 c20-11
+                                 :ARG1 c20-9
+                                 :time (c20-1 / before
+                                              :op1 (c20-10 / teach-01
+                                                           :ARG0 c20-11
+                                                           :ARG1 c20-6))
+                                 :frequency (c20-2 / rate-entity-91
+                                                   :ARG3 (c20-15 / temporal-quantity
+                                                                 :unit (c20-4 / year)
+                                                                 :quant 1)))))
+
+# ::snt What do you mean you use binary operators everyday without thinking of each and every property they have?
+# ::tokens ["What", "do", "you", "mean", "you", "use", "binary", "operators", "everyday", "without", "thinking", "of", "each", "and", "every", "property", "they", "have", "?"]
+# ::lemmas ["what", "do", "you", "mean", "you", "use", "binary", "operator", "everyday", "without", "think", "of", "each", "and", "every", "property", "they", "have", "?"]
+(c21-3 / mean-01
+       :ARG0 (c21-2 / you)
+       :ARG2 (c21-13 / use-01
+                     :ARG0 c21-2
+                     :ARG1 (c21-10 / person
+                                   :ARG0-of (c21-0 / operate-01)
+                                   :mod (c21-1 / binary))
+                     :frequency (c21-6 / rate-entity-91
+                                       :ARG3 (c21-11 / temporal-quantity
+                                                     :unit (c21-12 / day)
+                                                     :quant 1))
+                     :manner (c21-14 / think-01
+                                     :ARG0 c21-2
+                                     :ARG1 (c21-4 / property
+                                                  :mod (c21-8 / each)
+                                                  :mod (c21-5 / every)
+                                                  :ARG1-of (c21-9 / have-03
+                                                                  :ARG0 c21-10))
+                                     :polarity -))
+       :polarity (c21-7 / amr-unknown))
+
+# ::snt F
+# ::tokens ["F"]
+# ::lemmas ["F"]
+(c23-1 / person
+       :name (c23-0 / name
+                    :op1 "F"))

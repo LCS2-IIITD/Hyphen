@@ -1,0 +1,69 @@
+# ::snt heros
+# ::tokens ["heros"]
+# ::lemmas ["heros"]
+(c1-0 / heros)
+
+# ::snt So where's the third?
+# ::tokens ["So", "where", "'s", "the", "third", "?"]
+# ::lemmas ["so", "where", "be", "the", "third", "?"]
+(c2-0 / ordinal-entity
+      :location (c2-1 / amr-unknown)
+      :value 3)
+
+# ::snt Wake Up EU. This is the results of supporting the terrorists in the Middle East. Hope this will end soon with minimal casualty
+# ::tokens ["Wake", "Up", "EU", ".", "This", "is", "the", "results", "of", "supporting", "the", "terrorists", "in", "the", "Middle", "East", ".", "Hope", "this", "will", "end", "soon", "with", "minimal", "casualty"]
+# ::lemmas ["wake", "up", "EU", ".", "this", "be", "the", "result", "of", "support", "the", "terrorist", "in", "the", "Middle", "East", ".", "hope", "this", "will", "end", "soon", "with", "minimal", "casualty"]
+(c3-3 / multi-sentence
+      :snt1 (c3-1 / wake-up-02
+                  :ARG0 (c3-2 / you)
+                  :ARG1 (c3-4 / organization
+                              :name (c3-8 / name
+                                          :op1 "EU"))
+                  :mode imperative)
+      :snt2 (c3-11 / result-01
+                   :ARG1 (c3-14 / support-01
+                                :ARG1 (c3-15 / terrorist
+                                             :location (c3-7 / world-region
+                                                             :name (c3-9 / name
+                                                                         :op1 "Middle"
+                                                                         :op2 "East"))))
+                   :ARG2 (c3-13 / this))
+      :snt3 (c3-0 / hope-01
+                  :ARG1 (c3-5 / end-01
+                              :ARG1 c3-13)
+                  :ARG2 (c3-12 / casualty
+                               :ARG1-of (c3-10 / minimal-02))
+                  :time (c3-6 / soon)))
+
+# ::snt No shit? After murdering people, they didn't just lay down their weapons?
+# ::tokens ["No", "shit", "?", "After", "murdering", "people", ",", "they", "did", "n't", "just", "lay", "down", "their", "weapons", "?"]
+# ::lemmas ["no", "shit", "?", "after", "murder", "people", ",", "they", "do", "not", "just", "lay", "down", "their", "weapon", "?"]
+(c4-3 / multi-sentence
+      :snt1 (c4-8 / shit-01
+                  :polarity -)
+      :snt2 (c4-2 / lay-01
+                  :ARG0 (c4-9 / they)
+                  :ARG1 (c4-1 / weapon
+                              :poss c4-9)
+                  :ARG2 (c4-6 / down)
+                  :mod (c4-0 / just)
+                  :time (c4-10 / after
+                               :op1 (c4-5 / murder-01
+                                          :ARG0 c4-9
+                                          :ARG1 (c4-7 / person)))
+                  :polarity (c4-4 / amr-unknown)
+                  :polarity -))
+
+# ::snt Please help fund this documentary against religious homophobia in
+# ::tokens ["Please", "help", "fund", "this", "documentary", "against", "religious", "homophobia", "in"]
+# ::lemmas ["please", "help", "fund", "this", "documentary", "against", "religious", "homophobia", "in"]
+(c5-0 / help-01
+      :ARG0 (c5-1 / you)
+      :ARG1 (c5-2 / fund-01
+                  :ARG1 (c5-4 / documentary
+                              :mod (c5-6 / this)
+                              :ARG0-of (c5-3 / oppose-01
+                                             :ARG1 (c5-7 / homophobia
+                                                         :mod (c5-5 / religious)))))
+      :mode imperative
+      :polite +)

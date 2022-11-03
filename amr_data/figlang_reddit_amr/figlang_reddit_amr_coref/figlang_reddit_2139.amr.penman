@@ -1,0 +1,42 @@
+# ::snt Bojack taught me alot about life and how to handle it.
+# ::tokens ["Bojack", "taught", "me", "alot", "about", "life", "and", "how", "to", "handle", "it", "."]
+# ::lemmas ["Bojack", "teach", "i", "alot", "about", "life", "and", "how", "to", "handle", "it", "."]
+(c1-4 / teach-01
+      :ARG0 (c1-7 / person
+                  :name (c1-8 / name
+                              :op1 "Bojack"))
+      :ARG1 (c1-0 / and
+                  :op1 (c1-2 / thing
+                             :topic (c1-5 / life))
+                  :op2 (c1-9 / thing
+                             :manner-of (c1-3 / handle-01
+                                              :ARG0 (c1-1 / i)
+                                              :ARG1 c1-5))
+                  :quant (c1-6 / lot))
+      :ARG2 c1-1)
+
+# ::snt And probably equally how not to handle it.
+# ::tokens ["And", "probably", "equally", "how", "not", "to", "handle", "it", "."]
+# ::lemmas ["and", "probably", "equally", "how", "not", "to", "handle", "it", "."]
+(c2-0 / and
+      :op2 (c2-2 / thing
+                 :manner-of (c2-1 / handle-01
+                                  :ARG1 (c2-4 / it)
+                                  :polarity -)
+                 :ARG1-of (c2-5 / equal-01
+                                :mod (c2-3 / probable))))
+
+# ::snt The drugs and alcohol are fine, it's the planetariums you need to avoid.
+# ::tokens ["The", "drugs", "and", "alcohol", "are", "fine", ",", "it", "'s", "the", "planetariums", "you", "need", "to", "avoid", "."]
+# ::lemmas ["the", "drug", "and", "alcohol", "be", "fine", ",", "it", "be", "the", "planetarium", "you", "need", "to", "avoid", "."]
+(c3-6 / multi-sentence
+      :snt1 (c3-3 / fine-04
+                  :ARG1 (c3-2 / and
+                              :op1 (c3-0 / drug)
+                              :op2 (c3-9 / alcohol)))
+      :snt2 (c3-5 / planetarium
+                  :domain (c3-4 / it)
+                  :ARG1-of (c3-1 / avoid-01
+                                 :ARG0 (c3-8 / you)
+                                 :ARG1-of (c3-7 / need-01
+                                                :ARG0 c3-8))))

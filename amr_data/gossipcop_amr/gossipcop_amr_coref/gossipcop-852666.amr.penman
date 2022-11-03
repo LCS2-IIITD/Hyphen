@@ -1,0 +1,869 @@
+# ::snt Does this mean they've given up?
+# ::tokens ["Does", "this", "mean", "they", "'ve", "given", "up", "?"]
+# ::lemmas ["do", "this", "mean", "they", "'ve", "give", "up", "?"]
+(c1-0 / mean-01
+      :polarity (c1-1 / amr-unknown)
+      :ARG1 (c1-2 / this)
+      :ARG2 (c1-3 / give-up-07
+                  :ARG0 (c1-4 / they)))
+
+# ::snt yawn
+# ::tokens ["yawn"]
+# ::lemmas ["yawn"]
+(c2-0 / yawn-01)
+
+# ::snt Kimmel is DELUSIONAL. He'd be off the Air without trashing Trump..totally untalented! Only knows how to bully and mock.
+# ::tokens ["Kimmel", "is", "DELUSIONAL", ".", "He", "'d", "be", "off", "the", "Air", "without", "trashing", "Trump", "..", "totally", "untalented", "!", "Only", "knows", "how", "to", "bully", "and", "mock", "."]
+# ::lemmas ["Kimmel", "be", "DELUSIONAL", ".", "he", "would", "be", "off", "the", "Air", "without", "trash", "Trump", "..", "totally", "untalente", "!", "only", "know", "how", "to", "bully", "and", "mock", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-12 / democratic
+                   :domain (c3-7 / person
+                                 :name (c3-2 / name
+                                             :op1 "Kimmel")))
+      :snt2 (c3-11 / trash-01
+                   :ARG0 (c3-6 / he)
+                   :ARG1 (c3-4 / person
+                               :name (c3-8 / name
+                                           :op1 "Trump"))
+                   :ARG1-of (c3-9 / mean-01
+                                  :ARG2 (c3-10 / know-03
+                                               :ARG0 c3-6
+                                               :ARG1 (c3-5 / and
+                                                           :op1 (c3-1 / bully-01
+                                                                      :ARG0 c3-6)
+                                                           :op2 (c3-13 / mock-01
+                                                                       :ARG0 c3-6))
+                                               :mod (c3-0 / only)))
+                   :polarity -))
+
+# ::snt Humor left late night when Leno retired.
+# ::tokens ["Humor", "left", "late", "night", "when", "Leno", "retired", "."]
+# ::lemmas ["Humor", "leave", "late", "night", "when", "Leno", "retire", "."]
+(c5-5 / leave-11
+      :ARG0 (c5-4 / person
+                  :name (c5-0 / name
+                              :op1 "Humor"))
+      :time (c5-7 / late
+                  :op1 (c5-3 / night))
+      :time (c5-2 / retire-01
+                  :ARG0 (c5-1 / person
+                              :name (c5-6 / name
+                                          :op1 "Leno"))))
+
+# ::snt Hope marches up to the White House. Hope resides in our hearts. HHx3 pick up sticks. HHx3 she ain't from the sticks. HHx3 she can sure take her licks. HHx3 she's going to be our next president.
+# ::tokens ["Hope", "marches", "up", "to", "the", "White", "House", ".", "Hope", "resides", "in", "our", "hearts", ".", "HHx3", "pick", "up", "sticks", ".", "HHx3", "she", "ai", "n't", "from", "the", "sticks", ".", "HHx3", "she", "can", "sure", "take", "her", "licks", ".", "HHx3", "she", "'s", "going", "to", "be", "our", "next", "president", "."]
+# ::lemmas ["hope", "march", "up", "to", "the", "White", "House", ".", "hope", "reside", "in", "our", "heart", ".", "HHx3", "pick", "up", "stick", ".", "hhx3", "she", "be", "not", "from", "the", "stick", ".", "hhx3", "she", "can", "sure", "take", "her", "lick", ".", "hhx3", "she", "be", "go", "to", "be", "our", "next", "president", "."]
+(c6-11 / multi-sentence
+       :snt1 (c6-5 / march-01
+                   :ARG0 (c6-6 / hope-01)
+                   :direction (c6-16 / up)
+                   :destination (c6-9 / government-organization
+                                      :name (c6-18 / name
+                                                   :op1 "White"
+                                                   :op2 "House")))
+       :snt2 (c6-19 / reside-01
+                    :ARG0 (c6-24 / hope-01)
+                    :ARG1 (c6-4 / heart
+                                :part-of (c6-23 / we)))
+       :snt3 (c6-21 / pick-up-04
+                    :ARG0 (c6-12 / person
+                                 :name (c6-13 / name
+                                              :op1 " HHx3"))
+                    :ARG1 (c6-0 / stick))
+       :snt4 (c6-10 / be-from-91
+                    :ARG1 (c6-2 / person
+                                :name (c6-22 / name
+                                             :op1 " HHx3"))
+                    :ARG2 c6-0
+                    :polarity -)
+       :snt5 (c6-1 / possible-01
+                   :ARG1 (c6-8 / take-01
+                               :ARG0 (c6-7 / person
+                                           :name (c6-14 / name
+                                                        :op1 " HHx3"))
+                               :ARG1 (c6-26 / dick
+                                            :poss c6-7)
+                               :ARG1-of (c6-3 / sure-02)))
+       :snt6 (c6-15 / have-org-role-91
+                    :ARG0 (c6-27 / person
+                                 :name (c6-25 / name
+                                              :op1 " HHx3"))
+                    :ARG2 (c6-17 / president
+                                 :mod (c6-20 / next)
+                                 :poss c6-23)))
+
+# ::snt Not impressed with Jimmy. Just another Hollywood elite taking advantage of his position. But the people will be heard and little Jimmy is still only one voice. Screw You Hollywood.
+# ::tokens ["Not", "impressed", "with", "Jimmy", ".", "Just", "another", "Hollywood", "elite", "taking", "advantage", "of", "his", "position", ".", "But", "the", "people", "will", "be", "heard", "and", "little", "Jimmy", "is", "still", "only", "one", "voice", ".", "Screw", "You", "Hollywood", "."]
+# ::lemmas ["not", "impressed", "with", "Jimmy", ".", "just", "another", "Hollywood", "elite", "take", "advantage", "of", "his", "position", ".", "but", "the", "people", "will", "be", "hear", "and", "little", "Jimmy", "be", "still", "only", "one", "voice", ".", "Screw", "You", "Hollywood", "."]
+(c7-13 / multi-sentence
+       :snt1 (c7-22 / impress-01
+                    :ARG0 (c7-20 / person
+                                 :name (c7-18 / name
+                                              :op1 "Jimmy"))
+                    :polarity -)
+       :snt2 (c7-12 / take-advantage-02
+                    :ARG0 (c7-19 / elite
+                                 :mod (c7-7 / market-sector
+                                            :name (c7-15 / name
+                                                         :op1 "Hollywood"))
+                                 :mod (c7-11 / another)
+                                 :mod (c7-9 / just))
+                    :ARG1 (c7-14 / position-02
+                                 :ARG0 c7-20))
+       :snt3 (c7-16 / contrast-01
+                    :ARG2 (c7-10 / and
+                                 :op1 (c7-8 / hear-01
+                                            :ARG2 (c7-2 / person))
+                                 :op2 (c7-6 / voice
+                                            :mod (c7-3 / only)
+                                            :domain (c7-1 / person
+                                                          :name (c7-21 / name
+                                                                       :op1 "Little"
+                                                                       :op2 "Jimmy"))
+                                            :mod (c7-0 / still)
+                                            :quant 1)))
+       :snt4 (c7-4 / screw-02
+                   :ARG0 (c7-5 / you)
+                   :ARG1 c7-7
+                   :name (c7-17 / name
+                                :op1 "Hollywood")
+                   :mode imperative))
+
+# ::snt You can't find any real news to report.. Or can't make up any so let's pick on Jimmy.. What loosers
+# ::tokens ["You", "ca", "n't", "find", "any", "real", "news", "to", "report", "..", "Or", "ca", "n't", "make", "up", "any", "so", "let", "'s", "pick", "on", "Jimmy", "..", "What", "loosers"]
+# ::lemmas ["you", "can", "not", "find", "any", "real", "news", "to", "report", "..", "or", "can", "not", "make", "up", "any", "so", "let", "us", "pick", "on", "Jimmy", "..", "what", "looser"]
+(c8-10 / multi-sentence
+       :snt1 (c8-9 / and
+                   :op1 (c8-17 / possible-01
+                               :ARG1 (c8-14 / find-01
+                                            :ARG0 (c8-5 / you)
+                                            :ARG1 (c8-15 / news
+                                                         :ARG1-of (c8-16 / real-04)
+                                                         :ARG1-of (c8-3 / report-01
+                                                                        :ARG0 c8-5)))
+                               :polarity -)
+                   :op2 (c8-4 / or
+                              :op2 (c8-11 / possible-01
+                                          :ARG1 (c8-6 / make-up-10
+                                                      :ARG0 c8-5
+                                                      :ARG1 c8-15)
+                                          :polarity -)
+                              :ARG0-of (c8-13 / cause-01
+                                              :ARG1 (c8-2 / pick-on-02
+                                                          :ARG0 (c8-18 / we)
+                                                          :ARG1 (c8-1 / person
+                                                                      :name (c8-12 / name
+                                                                                   :op1 "Jimmy"))
+                                                          :mode imperative))))
+       :snt2 (c8-8 / thing
+                   :ARG0-of (c8-0 / loosen-01)
+                   :domain (c8-7 / amr-unknown)))
+
+# ::snt What a disgrace
+# ::tokens ["What", "a", "disgrace"]
+# ::lemmas ["what", "a", "disgrace"]
+(c9-0 / disgrace-01
+      :degree (c9-1 / so))
+
+# ::snt Yuk yuk yuk!Douche!
+# ::tokens ["Yuk", "yuk", "yuk!Douche", "!"]
+# ::lemmas ["Yuk", "yuk", "yuk!Douche", "!"]
+(c10-0 / yuk
+       :mode expressive)
+
+# ::snt And this is why millions of Us turned U off.
+# ::tokens ["And", "this", "is", "why", "millions", "of", "Us", "turned", "U", "off", "."]
+# ::lemmas ["and", "this", "be", "why", "millions", "of", "Us", "turn", "U", "off", "."]
+(c11-2 / and
+       :op2 (c11-4 / cause-01
+                   :ARG0 (c11-5 / this)
+                   :ARG1 (c11-7 / turn-off-07
+                                :ARG0 (c11-3 / person
+                                             :quant (c11-0 / multiple
+                                                           :op1 1000000)
+                                             :mod (c11-6 / country
+                                                         :name (c11-1 / name
+                                                                      :op1 "United"
+                                                                      :op2 "States")
+                                                         :ARG1-of c11-7)))))
+
+# ::snt Good joke.
+# ::tokens ["Good", "joke", "."]
+# ::lemmas ["good", "joke", "."]
+(c12-1 / joke-01
+       :ARG1-of (c12-0 / good-02))
+
+# ::snt Jimmy, you got a pass for your Man Show in the 's. Most demeaning show ever! Women jumping on trampolines and the Juggies. Its shameful to have allowed you to host. DON'T you get it. Lowest ratings ever and your a major cause. Clean up your act the lunch box a lame joke
+# ::tokens ["Jimmy", ",", "you", "got", "a", "pass", "for", "your", "Man", "Show", "in", "the", "'", "s.", "Most", "demeaning", "show", "ever", "!", "Women", "jumping", "on", "trampolines", "and", "the", "Juggies", ".", "Its", "shameful", "to", "have", "allowed", "you", "to", "host", ".", "DON'T", "you", "get", "it", ".", "Lowest", "ratings", "ever", "and", "your", "a", "major", "cause", ".", "Clean", "up", "your", "act", "the", "lunch", "box", "a", "lame", "joke"]
+# ::lemmas ["Jimmy", ",", "you", "get", "a", "pass", "for", "your", "Man", "Show", "in", "the", "'", "s.", "most", "demeaning", "show", "ever", "!", "woman", "jump", "on", "trampoline", "and", "the", "Juggies", ".", "its", "shameful", "to", "have", "allow", "you", "to", "host", ".", "don't", "you", "get", "it", ".", "low", "rating", "ever", "and", "your", "a", "major", "cause", ".", "clean", "up", "your", "act", "the", "lunch", "box", "a", "lame", "joke"]
+(c13-25 / multi-sentence
+        :snt1 (c13-0 / say-01
+                     :ARG0 (c13-40 / i)
+                     :ARG1 (c13-18 / get-01
+                                   :ARG0 (c13-37 / person
+                                                 :name (c13-33 / name
+                                                               :op1 "Jimmy"))
+                                   :ARG1 (c13-26 / pass)
+                                   :ARG3 (c13-8 / show
+                                                :mod (c13-11 / man)
+                                                :poss c13-37
+                                                :time (c13-41 / date-entity
+                                                              :decade 1980)))
+                     :ARG2 c13-37)
+        :snt2 (c13-12 / have-degree-91
+                      :ARG1 (c13-6 / show
+                                   :time (c13-36 / ever))
+                      :ARG2 (c13-30 / demean-01
+                                    :ARG0 c13-6)
+                      :ARG3 (c13-31 / most))
+        :snt3 (c13-34 / shame-02
+                      :ARG0 (c13-17 / allow-01
+                                    :ARG0 (c13-10 / i)
+                                    :ARG1 (c13-39 / host-01
+                                                  :ARG0 (c13-9 / you))
+                                    :ARG1-of c13-34)
+                      :ARG0 c13-10
+                      :ARG1 (c13-15 / jump-03
+                                    :ARG0 (c13-38 / woman)
+                                    :ARG1 (c13-16 / and
+                                                  :op1 (c13-19 / trampoline)
+                                                  :op2 (c13-3 / person
+                                                              :mod (c13-35 / religious-group
+                                                                           :name c13-33
+                                                                           :op1 "J Juggie")))))
+        :snt4 (c13-14 / and
+                      :op1 (c13-2 / get-01
+                                  :ARG0 (c13-20 / you)
+                                  :ARG1 (c13-21 / it)
+                                  :polarity -)
+                      :op2 (c13-5 / get-01
+                                  :ARG0 c13-20
+                                  :ARG1 c13-21
+                                  :polarity -))
+        :snt5 (c13-27 / and
+                      :op1 c13-12
+                      :ARG1 (c13-4 / rate-01
+                                   :time c13-36))
+        :ARG2 (c13-1 / low-04
+                     :ARG1 c13-4)
+        :ARG3 c13-31
+        :op2 (c13-29 / cause
+                     :ARG1-of (c13-28 / major-02)
+                     :domain c13-20)
+        :snt6 (c13-23 / clean-up-02
+                      :ARG0 (c13-7 / you)
+                      :ARG1 (c13-24 / box
+                                    :mod (c13-22 / lunch))
+                      :ARG2-of (c13-32 / joke-01
+                                       :mod (c13-13 / lame))))
+
+# ::snt Worst ratings ever!
+# ::tokens ["Worst", "ratings", "ever", "!"]
+# ::lemmas ["bad", "rating", "ever", "!"]
+(c15-2 / rate-01
+       :ARG1-of (c15-4 / have-degree-91
+                       :ARG2 (c15-0 / bad-07
+                                    :ARG1 c15-2)
+                       :ARG3 (c15-1 / most)
+                       :time (c15-3 / ever)))
+
+# ::snt We DVR'd the and after seeing the stupidity that occurred.
+# ::tokens ["We", "DVR'd", "the", "and", "after", "seeing", "the", "stupidity", "that", "occurred", "."]
+# ::lemmas ["we", "dvr'd", "the", "and", "after", "see", "the", "stupidity", "that", "occur", "."]
+(c16-2 / and
+       :op1 (c16-6 / deny-01
+                   :ARG0 (c16-3 / we)
+                   :ARG1 (c16-5 / television))
+       :op2 (c16-4 / after
+                   :op1 (c16-1 / see-01
+                               :ARG0 c16-3
+                               :ARG1 (c16-0 / stupidity))))
+
+# ::snt Always have to put politics in everything Hollywood sorry its that way
+# ::tokens ["Always", "have", "to", "put", "politics", "in", "everything", "Hollywood", "sorry", "its", "that", "way"]
+# ::lemmas ["always", "have", "to", "put", "politic", "in", "everything", "Hollywood", "sorry", "its", "that", "way"]
+(c17-1 / multi-sentence
+       :snt1 (c17-0 / obligate-01
+                    :ARG2 (c17-7 / put-01
+                                 :ARG1 (c17-2 / politics)
+                                 :ARG2 (c17-5 / everything
+                                              :mod (c17-6 / market-sector
+                                                          :name (c17-3 / name
+                                                                       :op1 "Hollywood"))))
+                    :time (c17-11 / always))
+       :snt2 (c17-4 / sorry-01
+                    :ARG1 (c17-10 / i)
+                    :ARG2 (c17-8 / way
+                                 :mod (c17-9 / that))))
+
+# ::snt Hope left the White House in
+# ::tokens ["Hope", "left", "the", "White", "House", "in"]
+# ::lemmas ["Hope", "leave", "the", "White", "House", "in"]
+(c18-3 / leave-12
+       :ARG0 (c18-2 / hopeful-03)
+       :ARG1 (c18-0 / government-organization
+                    :name (c18-1 / name
+                                 :op1 "White"
+                                 :op2 "House")))
+
+# ::snt Kimmel is among the worse of the worse. The Oscar ratings were down a bunch, mostly because of this POS. I spent the weekend with a whole lot of people and not one watched the annual display of hypocrisy by the most self serving bunch of no talent jerks on the planet.
+# ::tokens ["Kimmel", "is", "among", "the", "worse", "of", "the", "worse", ".", "The", "Oscar", "ratings", "were", "down", "a", "bunch", ",", "mostly", "because", "of", "this", "POS", ".", "I", "spent", "the", "weekend", "with", "a", "whole", "lot", "of", "people", "and", "not", "one", "watched", "the", "annual", "display", "of", "hypocrisy", "by", "the", "most", "self", "serving", "bunch", "of", "no", "talent", "jerks", "on", "the", "planet", "."]
+# ::lemmas ["Kimmel", "be", "among", "the", "bad", "of", "the", "bad", ".", "the", "Oscar", "rating", "be", "down", "a", "bunch", ",", "mostly", "because", "of", "this", "POS", ".", "i", "spend", "the", "weekend", "with", "a", "whole", "lot", "of", "people", "and", "not", "one", "watch", "the", "annual", "display", "of", "hypocrisy", "by", "the", "most", "self", "serve", "bunch", "of", "no", "talent", "jerk", "on", "the", "planet", "."]
+(c19-23 / multi-sentence
+        :snt1 (c19-39 / include-91
+                      :ARG1 (c19-36 / person
+                                    :name (c19-33 / name
+                                                  :op1 "Kimmel"))
+                      :ARG2 (c19-24 / person
+                                    :ARG1-of (c19-13 / have-degree-91
+                                                     :ARG2 (c19-22 / bad-07
+                                                                   :ARG1 c19-24)
+                                                     :ARG3 (c19-14 / most)
+                                                     :ARG5 (c19-5 / person
+                                                                  :ARG1-of (c19-38 / have-degree-91
+                                                                                   :ARG2 (c19-1 / bad-07
+                                                                                                :ARG1 c19-5)
+                                                                                   :ARG3 (c19-31 / more))))))
+        :snt2 (c19-27 / cause-01
+                      :ARG0 (c19-0 / shit
+                                   :mod (c19-19 / this))
+                      :ARG1 (c19-40 / down-03
+                                    :ARG1 (c19-35 / rate-01
+                                                  :ARG1 (c19-18 / award
+                                                                :name (c19-25 / name
+                                                                              :op1 "Oscar")))
+                                    :quant (c19-7 / bunch))
+                      :quant (c19-21 / bunch))
+        :snt3 (c19-17 / and
+                      :op1 (c19-9 / spend-02
+                                  :ARG0 (c19-11 / i)
+                                  :ARG1 (c19-37 / weekend)
+                                  :accompanier (c19-4 / person
+                                                      :quant (c19-2 / lot
+                                                                    :mod (c19-3 / whole))))
+                      :op2 (c19-32 / watch-01
+                                   :ARG0 c19-11
+                                   :ARG1 (c19-28 / display-01
+                                                 :ARG0 (c19-15 / bunch
+                                                               :consist-of (c19-16 / jerk
+                                                                                   :ARG0-of (c19-8 / serve-01
+                                                                                                   :ARG1 (c19-34 / self))
+                                                                                   :ARG1-of (c19-12 / have-degree-91
+                                                                                                    :ARG2 c19-34)
+                                                                                   :ARG3 (c19-26 / most)
+                                                                                   :ARG5 (c19-20 / planet)))
+                                                 :ARG1 (c19-30 / hypocrisy)
+                                                 :frequency (c19-6 / rate-entity-91
+                                                                   :ARG3 (c19-29 / temporal-quantity
+                                                                                 :unit (c19-10 / year)
+                                                                                 :quant 1)))
+                                   :polarity -)))
+
+# ::snt Is that English!? I don't speak liberal!
+# ::tokens ["Is", "that", "English", "!", "?", "I", "do", "n't", "speak", "liberal", "!"]
+# ::lemmas ["be", "that", "English", "!", "?", "i", "do", "not", "speak", "liberal", "!"]
+(c20-1 / multi-sentence
+       :snt1 (c20-3 / language
+                    :name (c20-0 / name
+                                 :op1 "English")
+                    :domain (c20-4 / that)
+                    :polarity (c20-6 / amr-unknown))
+       :snt2 (c20-2 / speak-01
+                    :ARG0 (c20-5 / i)
+                    :ARG3 (c20-7 / liberal-02)
+                    :polarity -))
+
+# ::snt will some one day find himself with ya bodyguard. LOL
+# ::tokens ["will", "some", "one", "day", "find", "himself", "with", "ya", "bodyguard", ".", "LOL"]
+# ::lemmas ["will", "some", "one", "day", "find", "himself", "with", "ya", "bodyguard", ".", "LOL"]
+(c21-0 / find-01
+       :ARG0 (c21-4 / he
+                    :ARG1-of c21-0)
+       :accompanier (c21-2 / you
+                           :mod (c21-1 / bodyguard))
+       :time (c21-7 / day
+                    :mod (c21-3 / some))
+       :ARG2-of (c21-5 / laugh-01
+                       :ARG0 (c21-6 / i)
+                       :manner (c21-8 / loud)
+                       :mode expressive))
+
+# ::snt Wouldn't waste my power on a bunch of liberal idiots , Mr Kimble don't have a brain God give a Jacka**, the Oscars should have a jacka** and idiot award Mr Kimble would win it hands down
+# ::tokens ["Would", "n't", "waste", "my", "power", "on", "a", "bunch", "of", "liberal", "idiots", ",", "Mr", "Kimble", "do", "n't", "have", "a", "brain", "God", "give", "a", "Jacka", "*", "*", ",", "the", "Oscars", "should", "have", "a", "jacka", "*", "*", "and", "idiot", "award", "Mr", "Kimble", "would", "win", "it", "hands", "down"]
+# ::lemmas ["would", "not", "waste", "my", "power", "on", "a", "bunch", "of", "liberal", "idiot", ",", "Mr", "Kimble", "do", "not", "have", "a", "brain", "God", "give", "a", "Jacka", "*", "*", ",", "the", "Oscars", "should", "have", "a", "jacka", "*", "*", "and", "idiot", "award", "Mr", "Kimble", "would", "win", "it", "hand", "down"]
+(c22-8 / and
+       :op1 (c22-20 / waste-01
+                    :ARG0 (c22-22 / i)
+                    :ARG1 (c22-18 / power
+                                  :poss c22-22)
+                    :ARG2 (c22-11 / bunch
+                                  :consist-of (c22-3 / idiot
+                                                     :ARG1-of (c22-1 / liberal-02)))
+                    :polarity -)
+       :op2 (c22-4 / have-03
+                   :ARG0 (c22-12 / person
+                                 :name (c22-15 / name
+                                               :op1 "Mr"
+                                               :op2 "Kimble"))
+                   :ARG1 (c22-0 / brain)
+                   :polarity -)
+       :op3 (c22-9 / give-16
+                   :ARG0 (c22-2 / person
+                                :name (c22-13 / name
+                                              :op1 "God"))
+                   :ARG1 (c22-6 / jackass)
+                   :ARG2 c22-12
+                   :mode imperative)
+       :op4 (c22-16 / recommend-01
+                    :ARG1 (c22-21 / have-03
+                                  :ARG0 (c22-17 / event
+                                                :name (c22-19 / name
+                                                              :op1 "The"
+                                                              :op2 "Oscars"))
+                                  :ARG1 (c22-7 / and
+                                               :op1 (c22-14 / jackass)
+                                               :op2 (c22-5 / award-01
+                                                           :ARG1 (c22-10 / idiot))))))
+
+# ::snt So very sad to see the actors act like spoiled children! I look for them to get down on the floor and kick and scream!
+# ::tokens ["So", "very", "sad", "to", "see", "the", "actors", "act", "like", "spoiled", "children", "!", "I", "look", "for", "them", "to", "get", "down", "on", "the", "floor", "and", "kick", "and", "scream", "!"]
+# ::lemmas ["so", "very", "sad", "to", "see", "the", "actor", "act", "like", "spoil", "child", "!", "i", "look", "for", "they", "to", "get", "down", "on", "the", "floor", "and", "kick", "and", "scream", "!"]
+(c23-2 / multi-sentence
+       :snt1 (c23-4 / sad-02
+                    :ARG0 (c23-0 / see-01
+                                 :ARG0 (c23-13 / i)
+                                 :ARG1 (c23-14 / act-01
+                                               :ARG0 (c23-8 / person
+                                                            :ARG0-of c23-14))
+                                 :ARG1 (c23-11 / child
+                                               :ARG1-of (c23-17 / spoil-01)))
+                    :degree (c23-7 / very))
+       :snt2 (c23-9 / look-04
+                    :ARG0 (c23-5 / i)
+                    :ARG1 (c23-15 / and
+                                  :op1 (c23-3 / get-05
+                                              :ARG1 (c23-12 / they)
+                                              :ARG2 (c23-16 / down
+                                                            :op1 (c23-1 / floor)))
+                                  :op2 (c23-10 / kick-01
+                                               :ARG0 c23-12)
+                                  :op3 (c23-6 / scream-01
+                                              :ARG0 c23-12))))
+
+# ::snt Kimmelidiot.
+# ::tokens ["Kimmelidiot", "."]
+# ::lemmas ["Kimmelidiot", "."]
+(c26-0 / person
+       :mod (c26-1 / idiot))
+
+# ::snt Hey how are the ratings...HA! More than armed guards at the Oscars guarding the hypocrites with the orange gun control pins on. What a joke!
+# ::tokens ["Hey", "how", "are", "the", "ratings", "...", "HA", "!", "More", "than", "armed", "guards", "at", "the", "Oscars", "guarding", "the", "hypocrites", "with", "the", "orange", "gun", "control", "pins", "on", ".", "What", "a", "joke", "!"]
+# ::lemmas ["hey", "how", "be", "the", "rating", "...", "ha", "!", "more", "than", "armed", "guard", "at", "the", "Oscars", "guard", "the", "hypocrite", "with", "the", "orange", "gun", "control", "pin", "on", ".", "what", "a", "joke", "!"]
+(c27-11 / multi-sentence
+        :snt1 (c27-16 / rate-01
+                      :manner (c27-9 / amr-unknown)
+                      :mod (c27-5 / hey
+                                  :mode expressive))
+        :snt2 (c27-19 / have-quant-91
+                      :ARG3 (c27-6 / more)
+                      :ARG4 (c27-10 / guard-01
+                                    :ARG0 (c27-18 / person
+                                                  :ARG1-of (c27-8 / arm-01)
+                                                  :ARG0-of c27-10
+                                                  :ARG1 (c27-12 / person
+                                                                :mod (c27-4 / hypocrite)
+                                                                :ARG0-of (c27-14 / have-03
+                                                                                 :ARG1 (c27-2 / pin
+                                                                                              :mod (c27-3 / orange)
+                                                                                              :ARG0-of (c27-13 / control-01
+                                                                                                               :ARG1 (c27-1 / gun))))))
+                                    :location (c27-17 / event
+                                                      :name (c27-15 / name
+                                                                    :op1 "The"
+                                                                    :op2 "Oscars"))))
+        :snt3 (c27-7 / joke-01
+                     :degree (c27-0 / so)
+                     :mode expressive))
+
+# ::snt Funny how they need Trump to keep their event relevant!
+# ::tokens ["Funny", "how", "they", "need", "Trump", "to", "keep", "their", "event", "relevant", "!"]
+# ::lemmas ["funny", "how", "they", "need", "Trump", "to", "keep", "their", "event", "relevant", "!"]
+(c28-0 / funny
+       :domain (c28-7 / thing
+                      :manner-of (c28-1 / need-01
+                                        :ARG0 (c28-8 / they)
+                                        :ARG1 (c28-5 / keep-02
+                                                     :ARG0 (c28-6 / person
+                                                                  :name (c28-4 / name
+                                                                               :op1 "Trump"))
+                                                     :ARG1 (c28-2 / relevant-01
+                                                                  :ARG1 (c28-3 / event
+                                                                               :poss c28-8))))))
+
+# ::snt Kimmel had the nerve to lecture on sexual harassment when he makes things like this
+# ::tokens ["Kimmel", "had", "the", "nerve", "to", "lecture", "on", "sexual", "harassment", "when", "he", "makes", "things", "like", "this"]
+# ::lemmas ["Kimmel", "have", "the", "nerve", "to", "lecture", "on", "sexual", "harassment", "when", "he", "make", "thing", "like", "this"]
+(c29-4 / have-03
+       :ARG0 (c29-5 / person
+                    :name (c29-0 / name
+                                 :op1 "Kimmel"))
+       :ARG1 (c29-7 / nerve
+                    :purpose (c29-6 / lecture-01
+                                    :ARG0 c29-5
+                                    :ARG2 (c29-8 / harass-01
+                                                 :ARG2 (c29-2 / sex-01))))
+       :time (c29-1 / make-01
+                    :ARG0 c29-5
+                    :ARG1 (c29-9 / thing
+                                 :ARG1-of (c29-3 / resemble-01
+                                                 :ARG2 (c29-10 / this)))))
+
+# ::snt :I think he is a racist. James that is
+# ::tokens [":", "I", "think", "he", "is", "a", "racist", ".", "James", "that", "is"]
+# ::lemmas [":", "i", "think", "he", "be", "a", "racist", ".", "James", "that", "be"]
+(c30-0 / multi-sentence
+       :snt1 (c30-6 / think-01
+                    :ARG0 (c30-5 / i)
+                    :ARG1 (c30-2 / racist
+                                 :domain (c30-3 / he)))
+       :snt2 (c30-4 / person
+                    :name (c30-1 / name
+                                 :op1 "James")))
+
+# ::snt Its not a freaking Jab. It was a clever joke. Cmon guys!!! We cant even joke about anything today? Seriously?
+# ::tokens ["Its", "not", "a", "freaking", "Jab", ".", "It", "was", "a", "clever", "joke", ".", "Cmon", "guys", "!", "!", "!", "We", "ca", "nt", "even", "joke", "about", "anything", "today", "?", "Seriously", "?"]
+# ::lemmas ["its", "not", "a", "freak", "Jab", ".", "it", "be", "a", "clever", "joke", ".", "Cmon", "guy", "!", "!", "!", "we", "can", "not", "even", "joke", "about", "anything", "today", "?", "seriously", "?"]
+(c31-9 / multi-sentence
+       :snt1 (c31-17 / person
+                     :name (c31-14 / name
+                                   :op1 "Jab")
+                     :domain (c31-19 / it)
+                     :mod (c31-13 / freaking
+                                  :mode expressive))
+       :snt2 (c31-3 / joke-01
+                    :ARG1-of (c31-11 / clever-01)
+                    :domain (c31-2 / it))
+       :snt3 (c31-0 / say-01
+                    :ARG1 (c31-8 / cmon)
+                    :ARG2 (c31-6 / guy))
+       :snt4 (c31-10 / possible-01
+                     :ARG1 (c31-12 / joke-01
+                                   :ARG0 (c31-18 / we)
+                                   :ARG2 (c31-5 / anything)
+                                   :time (c31-7 / today)
+                                   :mod (c31-16 / even))
+                     :polarity (c31-4 / amr-unknown)
+                     :polarity -)
+       :snt5 (c31-1 / serious-01
+                    :ARG1-of (c31-15 / request-confirmation-91)))
+
+# ::snt So, based on your statement, the WH can see again.
+# ::tokens ["So", ",", "based", "on", "your", "statement", ",", "the", "WH", "can", "see", "again", "."]
+# ::lemmas ["so", ",", "base", "on", "your", "statement", ",", "the", "WH", "can", "see", "again", "."]
+(c33-6 / cause-01
+       :ARG1 (c33-1 / base-02
+                    :ARG1 (c33-5 / possible-01
+                                 :ARG1 (c33-4 / see-01
+                                              :ARG0 (c33-8 / government-organization
+                                                           :name (c33-3 / name
+                                                                        :op1 "WH"))
+                                              :mod (c33-7 / again)))
+                    :ARG2 (c33-0 / state-01
+                                 :ARG0 (c33-2 / you))))
+
+# ::snt That is the best part those trash followers dont even notice it.
+# ::tokens ["That", "is", "the", "best", "part", "those", "trash", "followers", "do", "nt", "even", "notice", "it", "."]
+# ::lemmas ["that", "be", "the", "good", "part", "those", "trash", "follower", "do", "not", "even", "notice", "it", "."]
+(c34-6 / part
+       :domain (c34-8 / that)
+       :ARG1-of (c34-5 / have-degree-91
+                       :ARG2 (c34-9 / good-02
+                                    :ARG1 c34-6)
+                       :ARG3 (c34-1 / most))
+       :ARG1-of (c34-7 / cause-01
+                       :ARG0 (c34-2 / notice-01
+                                    :ARG0 (c34-3 / person
+                                                 :ARG0-of (c34-0 / follow-02
+                                                                 :ARG1 c34-8
+                                                                 :mod (c34-10 / trash)))
+                                    :ARG1 c34-6
+                                    :mod (c34-4 / even)
+                                    :polarity -)))
+
+# ::snt Trashing everybody that thinks different its funny to some idiots and worse when they think thats a talent.
+# ::tokens ["Trashing", "everybody", "that", "thinks", "different", "its", "funny", "to", "some", "idiots", "and", "worse", "when", "they", "think", "that", "s", "a", "talent", "."]
+# ::lemmas ["trash", "everybody", "that", "think", "different", "its", "funny", "to", "some", "idiot", "and", "bad", "when", "they", "think", "that", "s", "a", "talent", "."]
+(c35-5 / and
+       :op1 (c35-0 / funny
+                   :domain (c35-10 / trash-01
+                                   :ARG1 (c35-6 / everybody
+                                                :ARG0-of (c35-13 / think-01
+                                                                 :ARG1 (c35-9 / thing
+                                                                              :ARG1-of (c35-12 / differ-02)))))
+                   :prep-to (c35-11 / idiot
+                                    :mod (c35-4 / some)))
+       :op2 (c35-1 / bad-07
+                   :ARG1 c35-10
+                   :time (c35-7 / think-01
+                                :ARG0 c35-11
+                                :ARG1 (c35-3 / talent
+                                             :domain c35-10))
+                   :ARG2-of (c35-8 / have-degree-91
+                                   :ARG1 c35-10
+                                   :ARG3 (c35-2 / more))))
+
+# ::snt These idiots keep it up no one will watch them or the movies I want to be entertained not the dancing monkey like you want to be!Hollywood has gone away from entertainment!
+# ::tokens ["These", "idiots", "keep", "it", "up", "no", "one", "will", "watch", "them", "or", "the", "movies", "I", "want", "to", "be", "entertained", "not", "the", "dancing", "monkey", "like", "you", "want", "to", "be!Hollywood", "has", "gone", "away", "from", "entertainment", "!"]
+# ::lemmas ["these", "idiot", "keep", "it", "up", "no", "one", "will", "watch", "they", "or", "the", "movie", "i", "want", "to", "be", "entertain", "not", "the", "dancing", "monkey", "like", "you", "want", "to", "be!hollywood", "have", "go", "away", "from", "entertainment", "!"]
+(c36-11 / multi-sentence
+        :snt1 (c36-5 / keep-up-10
+                     :ARG0 (c36-20 / idiot
+                                   :mod (c36-6 / this))
+                     :ARG1 (c36-3 / it))
+        :snt2 (c36-14 / contrast-01
+                      :ARG1 (c36-19 / watch-01
+                                    :ARG0 (c36-17 / no-one)
+                                    :ARG1 (c36-1 / or
+                                                 :op1 (c36-4 / movie
+                                                             :ARG2-of (c36-18 / entertain-01
+                                                                              :ARG1 (c36-10 / i)
+                                                                              :ARG1-of (c36-0 / want-01
+                                                                                              :ARG0 c36-10)))
+                                                 :op2 c36-4
+                                                 :ARG2-of (c36-8 / entertain-01
+                                                                 :ARG1 c36-10
+                                                                 :ARG1-of (c36-16 / want-01
+                                                                                  :ARG0 (c36-2 / you)
+                                                                                  :polarity -)))))
+        :ARG2 (c36-7 / go-02
+                     :ARG0 (c36-15 / market-sector
+                                   :name (c36-12 / name
+                                                 :op1 "Hollywood"))
+                     :ARG1 (c36-9 / away
+                                  :op1 (c36-13 / entertain-01))))
+
+# ::snt That's funny. Chill everyone.
+# ::tokens ["That", "'s", "funny", ".", "Chill", "everyone", "."]
+# ::lemmas ["that", "be", "funny", ".", "chill", "everyone", "."]
+(c37-2 / multi-sentence
+       :snt1 (c37-0 / funny
+                    :domain (c37-5 / that))
+       :snt2 (c37-4 / chill-01
+                    :ARG0 (c37-1 / you)
+                    :ARG1 (c37-3 / everyone)
+                    :mode imperative))
+
+# ::snt Ingest a shot of this, troll.
+# ::tokens ["Ingest", "a", "shot", "of", "this", ",", "troll", "."]
+# ::lemmas ["ingest", "a", "shot", "of", "this", ",", "troll", "."]
+(c38-1 / say-01
+       :ARG0 (c38-3 / i)
+       :ARG1 (c38-2 / envy-01
+                    :ARG0 (c38-4 / troll)
+                    :ARG1 (c38-0 / shoot-01
+                                 :ARG1 (c38-5 / this)))
+       :ARG2 c38-4)
+
+# ::snt And Trump deserved so much more!
+# ::tokens ["And", "Trump", "deserved", "so", "much", "more", "!"]
+# ::lemmas ["and", "Trump", "deserve", "so", "much", "more", "!"]
+(c39-6 / and
+       :op2 (c39-7 / deserve-01
+                   :ARG0 (c39-4 / person
+                                :name (c39-1 / name
+                                             :op1 "Trump"))
+                   :ARG1 (c39-0 / more
+                                :ARG1-of (c39-3 / have-quant-91
+                                                :ARG2 (c39-5 / much)
+                                                :ARG3 (c39-2 / so)))))
+
+# ::snt Your jokes aware dry and
+# ::tokens ["Your", "jokes", "aware", "dry", "and"]
+# ::lemmas ["your", "joke", "aware", "dry", "and"]
+(c40-3 / and
+       :op1 (c40-4 / dry-08
+                   :ARG1 (c40-2 / joke-01
+                                :ARG0 (c40-0 / you)))
+       :op2 (c40-1 / realize-01
+                   :ARG1 c40-2))
+
+# ::snt I didnt call you a troll either ... just providing possible reasons. Lol
+# ::tokens ["I", "did", "nt", "call", "you", "a", "troll", "either", "...", "just", "providing", "possible", "reasons", ".", "Lol"]
+# ::lemmas ["i", "do", "not", "call", "you", "a", "troll", "either", "...", "just", "provide", "possible", "reason", ".", "Lol"]
+(c41-6 / contrast-01
+       :ARG1 (c41-11 / call-01
+                     :ARG0 (c41-8 / i)
+                     :ARG1 (c41-0 / you)
+                     :ARG2 (c41-9 / troll)
+                     :mod (c41-3 / either)
+                     :polarity -)
+       :ARG2 (c41-4 / provide-01
+                    :ARG0 c41-8
+                    :ARG1 (c41-2 / reason
+                                 :ARG1-of (c41-1 / possible-01))
+                    :mod (c41-7 / just))
+       :ARG2-of (c41-5 / laugh-01
+                       :manner (c41-10 / loud)
+                       :mode expressive))
+
+# ::snt *Kimmel is an idiot. Fixed it for you.
+# ::tokens ["*", "Kimmel", "is", "an", "idiot", ".", "Fixed", "it", "for", "you", "."]
+# ::lemmas ["*", "Kimmel", "be", "an", "idiot", ".", "fix", "it", "for", "you", "."]
+(c42-3 / multi-sentence
+       :snt1 (c42-6 / idiot
+                    :domain (c42-5 / person
+                                   :name (c42-2 / name
+                                                :op1 "Kimmel")))
+       :snt2 (c42-0 / fix-02
+                    :ARG1 (c42-4 / it)
+                    :beneficiary (c42-1 / you)))
+
+# ::snt Didn't watch it &amp; don't want to read about it!
+# ::tokens ["Did", "n't", "watch", "it", "&", "amp", ";", "do", "n't", "want", "to", "read", "about", "it", "!"]
+# ::lemmas ["do", "not", "watch", "it", "&", "amp", ";", "do", "not", "want", "to", "read", "about", "it", "!"]
+(c43-0 / multi-sentence
+       :snt1 (c43-4 / watch-01
+                    :ARG0 (c43-5 / i)
+                    :ARG1 (c43-6 / and
+                                 :op1 (c43-1 / it)
+                                 :op2 (c43-7 / amp))
+                    :polarity -)
+       :snt2 (c43-3 / want-01
+                    :ARG0 c43-5
+                    :ARG1 (c43-2 / read-01
+                                 :ARG0 c43-5
+                                 :ARG3 (c43-8 / it))
+                    :polarity -))
+
+# ::snt Probably your response... missing the point... lack of twitter activity and random baseless attack. Who knows
+# ::tokens ["Probably", "your", "response", "...", "missing", "the", "point", "...", "lack", "of", "twitter", "activity", "and", "random", "baseless", "attack", ".", "Who", "knows"]
+# ::lemmas ["probably", "your", "response", "...", "miss", "the", "point", "...", "lack", "of", "twitter", "activity", "and", "random", "baseless", "attack", ".", "who", "know"]
+(c44-2 / multi-sentence
+       :snt1 (c44-8 / probable
+                    :domain (c44-13 / thing
+                                    :ARG2-of (c44-5 / respond-01
+                                                    :ARG0 (c44-1 / you))
+                                    :ARG1-of (c44-7 / miss-02
+                                                    :ARG0 c44-1)
+                                    :ARG1-of (c44-16 / mean-01
+                                                     :ARG2 (c44-6 / and
+                                                                  :op1 (c44-9 / lack-01
+                                                                              :ARG1 (c44-12 / activity-06
+                                                                                            :ARG0 (c44-3 / publication
+                                                                                                         :name (c44-4 / name
+                                                                                                                      :op1 "Twitter"))))
+                                                                  :op2 (c44-11 / attack-01
+                                                                               :ARG1-of (c44-0 / base-02
+                                                                                               :polarity -)
+                                                                               :mod (c44-15 / random))))))
+       :snt2 (c44-10 / know-01
+                     :ARG0 (c44-14 / amr-unknown)))
+
+# ::snt Apparently you didn'tactually watch. Since thatwas theonly thinghe saidabout theWH.
+# ::tokens ["Apparently", "you", "didn'tactually", "watch", ".", "Since", "thatwas", "theonly", "thinghe", "saidabout", "theWH", "."]
+# ::lemmas ["apparently", "you", "didn'tactually", "watch", ".", "since", "thatwas", "theonly", "thinghe", "saidabout", "theWH", "."]
+(c45-2 / multi-sentence
+       :snt1 (c45-7 / watch-01
+                    :ARG0 (c45-1 / you)
+                    :ARG1-of (c45-11 / actual-02)
+                    :manner (c45-10 / apparent)
+                    :polarity -)
+       :snt2 (c45-8 / cause-01
+                    :ARG0 (c45-9 / thing
+                                 :mod (c45-0 / only)
+                                 :ARG1-of (c45-4 / say-01
+                                                 :ARG0 (c45-5 / he)
+                                                 :topic (c45-6 / war
+                                                               :name (c45-3 / name
+                                                                            :op1 "WH")))
+                                 :domain (c45-12 / that))))
+
+# ::snt Jimmy your such a untalented! News flash once again rating down !!!
+# ::tokens ["Jimmy", "your", "such", "a", "untalented", "!", "News", "flash", "once", "again", "rating", "down", "!", "!", "!"]
+# ::lemmas ["Jimmy", "your", "such", "a", "untalented", "!", "news", "flash", "once", "again", "rate", "down", "!", "!", "!"]
+(c46-3 / multi-sentence
+       :snt1 (c46-5 / say-01
+                    :ARG0 (c46-11 / i)
+                    :ARG1 (c46-12 / Talented
+                                  :domain (c46-9 / person
+                                                 :name (c46-4 / name
+                                                              :op1 "Jimmy"))
+                                  :degree (c46-0 / such)
+                                  :polarity -)
+                    :ARG2 c46-9)
+       :snt2 (c46-1 / flash-01
+                    :ARG1 (c46-8 / news)
+                    :mod (c46-6 / again
+                                :mod (c46-2 / once))
+                    :ARG0-of (c46-10 / cause-01
+                                     :ARG1 (c46-7 / rate-01
+                                                  :ARG1 (c46-13 / down-03)))))
+
+# ::snt Are you looking for a eye catching modern stylish logo for your company?
+# ::tokens ["Are", "you", "looking", "for", "a", "eye", "catching", "modern", "stylish", "logo", "for", "your", "company", "?"]
+# ::lemmas ["be", "you", "look", "for", "a", "eye", "catch", "modern", "stylish", "logo", "for", "your", "company", "?"]
+(c47-4 / look-01
+       :ARG0 (c47-0 / you)
+       :ARG1 (c47-7 / logo
+                    :ARG1-of (c47-1 / modern-02)
+                    :ARG0-of (c47-5 / catch-01
+                                    :ARG1 (c47-3 / eye))
+                    :mod (c47-2 / stylish))
+       :polarity (c47-6 / amr-unknown)
+       :beneficiary (c47-8 / company
+                           :poss c47-0))
+
+# ::snt Gee no Harvey W jokes? Go figure
+# ::tokens ["Gee", "no", "Harvey", "W", "jokes", "?", "Go", "figure"]
+# ::lemmas ["Gee", "no", "Harvey", "W", "joke", "?", "go", "figure"]
+(c48-1 / multi-sentence
+       :snt1 (c48-4 / joke-01
+                    :ARG2 (c48-3 / person
+                                 :name (c48-2 / name
+                                              :op1 "Harvey"
+                                              :op2 "W"))
+                    :mod (c48-6 / gee
+                                :mode expressive)
+                    :polarity -)
+       :snt2 (c48-5 / go-03
+                    :ARG1 (c48-0 / figure-01)))
+
+# ::snt Kimmel join Bob Hope he will be glad to see you there...
+# ::tokens ["Kimmel", "join", "Bob", "Hope", "he", "will", "be", "glad", "to", "see", "you", "there", "..."]
+# ::lemmas ["Kimmel", "join", "Bob", "Hope", "he", "will", "be", "glad", "to", "see", "you", "there", "..."]
+(c49-7 / join-04
+       :ARG0 (c49-5 / person
+                    :name (c49-1 / name
+                                 :op1 "Kimmel"))
+       :ARG1 (c49-2 / person
+                    :name (c49-4 / name
+                                 :op1 "Bob"))
+       :ARG0-of (c49-6 / hope-01
+                       :ARG1 (c49-9 / glad-02
+                                    :ARG0 (c49-3 / see-01
+                                                 :ARG0 c49-2
+                                                 :ARG1 (c49-0 / you)
+                                                 :location (c49-8 / there))
+                                    :ARG1 c49-5)))
+
+# ::snt I was wrong he is a very SICK,I dont know what to call a nothing comes to mindhead now thats sounds right
+# ::tokens ["I", "was", "wrong", "he", "is", "a", "very", "SICK", ",", "I", "do", "nt", "know", "what", "to", "call", "a", "nothing", "comes", "to", "mindhead", "now", "that", "s", "sounds", "right"]
+# ::lemmas ["i", "be", "wrong", "he", "be", "a", "very", "sick", ",", "i", "do", "not", "know", "what", "to", "call", "a", "nothing", "come", "to", "mindhead", "now", "that", "s", "sound", "right"]
+(c50-12 / and
+        :op1 (c50-8 / wrong-04
+                    :ARG1 (c50-11 / i)
+                    :ARG2 (c50-2 / sick-02
+                                 :ARG1 (c50-5 / he)
+                                 :degree (c50-4 / very)))
+        :op2 (c50-6 / know-01
+                    :ARG0 c50-11
+                    :ARG1 (c50-10 / thing
+                                  :ARG2-of (c50-9 / call-01
+                                                  :ARG1 (c50-1 / nothing
+                                                               :ARG1-of (c50-14 / come-to-mind-09))))
+                    :polarity -)
+        :op3 (c50-0 / sound-01
+                    :ARG1 (c50-13 / that)
+                    :ARG2 (c50-3 / right-06
+                                 :ARG1 c50-13)
+                    :time (c50-7 / now)))

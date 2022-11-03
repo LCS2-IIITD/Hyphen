@@ -1,0 +1,84 @@
+# ::snt Physician told to take, and as told he took. Called so many doctors but some are saying it is ok and some denied.. confused..!
+# ::tokens ["Physician", "told", "to", "take", ",", "and", "as", "told", "he", "took", ".", "Called", "so", "many", "doctors", "but", "some", "are", "saying", "it", "is", "ok", "and", "some", "denied", "..", "confused", "..", "!"]
+# ::lemmas ["Physician", "tell", "to", "take", ",", "and", "as", "tell", "he", "take", ".", "call", "so", "many", "doctor", "but", "some", "be", "say", "it", "be", "ok", "and", "some", "deny", "..", "confuse", "..", "!"]
+(c1-9 / multi-sentence
+      :snt1 (c1-19 / and
+                   :op1 (c1-8 / tell-01
+                              :ARG1 (c1-5 / take-01
+                                          :ARG0 (c1-0 / doctor
+                                                      :ARG2-of c1-8)))
+                   :op2 (c1-10 / tell-01
+                               :ARG1 (c1-15 / take-01
+                                            :ARG0 c1-0)
+                               :ARG2 c1-0))
+      :snt2 (c1-4 / contrast-01
+                  :ARG1 (c1-1 / call-02
+                              :ARG1 (c1-18 / doctor
+                                           :quant (c1-20 / many
+                                                         :degree (c1-12 / so))))
+                  :ARG2 (c1-11 / and
+                               :op1 (c1-21 / say-01
+                                           :ARG0 (c1-16 / some)
+                                           :ARG1 (c1-7 / okay-04
+                                                       :ARG1 (c1-2 / it)))
+                               :op2 (c1-13 / deny-01
+                                           :ARG0 (c1-3 / some)))
+                  :ARG0-of (c1-6 / cause-01
+                                 :ARG1 (c1-17 / confuse-01
+                                              :ARG1 (c1-14 / i)))))
+
+# ::snt Please see a doctor. Don't take any medicines on your own. Also get him tested.
+# ::tokens ["Please", "see", "a", "doctor", ".", "Do", "n't", "take", "any", "medicines", "on", "your", "own", ".", "Also", "get", "him", "tested", "."]
+# ::lemmas ["please", "see", "a", "doctor", ".", "do", "not", "take", "any", "medicine", "on", "your", "own", ".", "also", "get", "he", "test", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-0 / see-01
+                   :ARG0 (c2-11 / you)
+                   :ARG1 (c2-1 / doctor)
+                   :mode imperative
+                   :polite +)
+       :snt2 (c2-7 / take-01
+                   :ARG0 (c2-12 / you)
+                   :ARG1 (c2-3 / medicine
+                               :mod (c2-2 / any))
+                   :mod (c2-9 / by-oneself)
+                   :polarity -
+                   :mode imperative)
+       :snt3 (c2-8 / get-04
+                   :ARG0 c2-12
+                   :ARG1 (c2-4 / test-01
+                               :ARG1 (c2-5 / he))
+                   :mod (c2-6 / also)
+                   :mode imperative))
+
+# ::snt They only told to take the antibiotic.. Looking at FILs condition we are getting worried.
+# ::tokens ["They", "only", "told", "to", "take", "the", "antibiotic", "..", "Looking", "at", "FILs", "condition", "we", "are", "getting", "worried", "."]
+# ::lemmas ["they", "only", "tell", "to", "take", "the", "antibiotic", "..", "look", "at", "fil", "condition", "we", "be", "get", "worried", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-7 / tell-01
+                   :ARG1 (c3-4 / take-01
+                               :ARG0 (c3-12 / they)
+                               :ARG1 (c3-0 / antibiotic))
+                   :ARG2 c3-12
+                   :mod (c3-6 / only))
+       :snt2 (c3-9 / get-03
+                   :ARG1 (c3-3 / worry-01
+                               :ARG0 (c3-8 / look-01
+                                           :ARG0 (c3-13 / we)
+                                           :ARG1 (c3-2 / condition
+                                                       :poss (c3-10 / person
+                                                                    :ARG0-of (c3-5 / have-rel-role-91
+                                                                                   :ARG2 (c3-1 / father)))))
+                               :ARG1 c3-13)))
+
+# ::snt Better consult physician near you
+# ::tokens ["Better", "consult", "physician", "near", "you"]
+# ::lemmas ["well", "consult", "physician", "near", "you"]
+(c4-0 / consult-01
+      :ARG0 (c4-6 / you)
+      :ARG1 (c4-3 / physician
+                  :ARG1-of (c4-5 / near-02
+                                 :ARG2 c4-6))
+      :ARG1-of (c4-1 / have-degree-91
+                     :ARG2 (c4-2 / good-02
+                                 :ARG1 c4-0)
+                     :ARG3 (c4-4 / more)))

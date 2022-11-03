@@ -1,0 +1,38 @@
+# ::snt Dividing by zero on a mechanical calculator
+# ::tokens ["Dividing", "by", "zero", "on", "a", "mechanical", "calculator"]
+# ::lemmas ["dividing", "by", "zero", "on", "a", "mechanical", "calculator"]
+(c1-0 / deduct-01
+      :ARG1 (c1-2 / thing
+                  :quant 0)
+      :ARG2 (c1-3 / calculator
+                  :mod (c1-1 / mechanical)))
+
+# ::snt For anyone curious as to why this happens, it divides using iterative subtraction; it keeps just trying to subtract zero and gets nowhere.
+# ::tokens ["For", "anyone", "curious", "as", "to", "why", "this", "happens", ",", "it", "divides", "using", "iterative", "subtraction", ";", "it", "keeps", "just", "trying", "to", "subtract", "zero", "and", "gets", "nowhere", "."]
+# ::lemmas ["for", "anyone", "curious", "as", "to", "why", "this", "happen", ",", "it", "divide", "use", "iterative", "subtraction", ";", "it", "keep", "just", "try", "to", "subtract", "zero", "and", "get", "nowhere", "."]
+(c2-9 / multi-sentence
+      :snt1 (c2-0 / divide-02
+                  :ARG0 (c2-2 / it)
+                  :manner (c2-18 / use-01
+                                 :ARG1 (c2-6 / thing
+                                             :ARG2-of (c2-7 / reduce-01
+                                                            :manner (c2-13 / iterate-01))))
+                  :beneficiary (c2-16 / anyone
+                                      :ARG0-of (c2-3 / curious-01
+                                                     :topic (c2-4 / thing
+                                                                  :ARG0-of (c2-1 / cause-01
+                                                                                 :ARG1 (c2-11 / this)))
+                                                     :ARG1 c2-16)))
+      :snt2 (c2-12 / and
+                   :op1 (c2-20 / keep-02
+                               :ARG0 (c2-14 / it)
+                               :ARG1 (c2-15 / try-01
+                                            :ARG0 c2-14
+                                            :ARG1 (c2-5 / remove-01
+                                                        :ARG0 c2-14
+                                                        :ARG1 (c2-17 / thing
+                                                                     :quant 0))
+                                            :mod (c2-19 / just)))
+                   :op2 (c2-8 / get-05
+                              :ARG1 c2-14
+                              :ARG2 (c2-10 / nowhere))))

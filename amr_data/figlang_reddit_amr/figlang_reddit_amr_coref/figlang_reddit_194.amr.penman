@@ -1,0 +1,29 @@
+# ::snt Huge crash in the first F3 race at Red Bull Ring today
+# ::tokens ["Huge", "crash", "in", "the", "first", "F3", "race", "at", "Red", "Bull", "Ring", "today"]
+# ::lemmas ["huge", "crash", "in", "the", "first", "f3", "race", "at", "Red", "Bull", "Ring", "today"]
+(c1-2 / crash-01
+      :mod (c1-3 / huge)
+      :subevent-of (c1-6 / race-02
+                         :ARG3 (c1-0 / car-make
+                                     :name (c1-8 / name
+                                                 :op1 "F3"))
+                         :ord (c1-4 / ordinal-entity
+                                    :value 1)
+                         :location (c1-1 / facility
+                                         :name (c1-7 / name
+                                                     :op1 "Red"
+                                                     :op2 "Bull"
+                                                     :op3 "Rang"))
+                         :time (c1-5 / today)))
+
+# ::snt Yet another crash that could have been avoided by a tarmac run-off.
+# ::tokens ["Yet", "another", "crash", "that", "could", "have", "been", "avoided", "by", "a", "tarmac", "run", "-", "off", "."]
+# ::lemmas ["yet", "another", "crash", "that", "could", "have", "be", "avoid", "by", "a", "tarmac", "run", "-", "off", "."]
+(c2-2 / crash-01
+      :mod (c2-1 / another)
+      :ARG1-of (c2-7 / avoid-01
+                     :ARG1-of (c2-5 / possible-01)
+                     :ARG1-of (c2-0 / cause-01
+                                    :ARG0 (c2-4 / run-off-24
+                                                :ARG1 (c2-3 / tarmac))))
+      :mod (c2-6 / yet))

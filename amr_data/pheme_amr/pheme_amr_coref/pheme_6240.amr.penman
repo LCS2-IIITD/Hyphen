@@ -1,0 +1,305 @@
+# ::snt Weds th of Jan :00pm Buncer Lane, Blackburn BB2 SE
+# ::tokens ["Weds", "th", "of", "Jan", ":", "00pm", "Buncer", "Lane", ",", "Blackburn", "BB2", "SE"]
+# ::lemmas ["wed", "th", "of", "Jan", ":", "00pm", "Buncer", "Lane", ",", "Blackburn", "BB2", "SE"]
+(c1-0 / warm-01
+      :time (c1-5 / date-entity
+                  :dayperiod (c1-2 / night)
+                  :month 1
+                  :time "Buncer"
+                  :timezone "Lane")
+      :location (c1-6 / city
+                      :name (c1-3 / name
+                                  :op1 "Blackburn")
+                      :part-of (c1-1 / district
+                                     :name (c1-4 / name
+                                                 :op1 "BB2"))))
+
+# ::snt I dont feel as though Im killing someone with a pen" Stephane Charbonnier -2015
+# ::tokens ["I", "do", "nt", "feel", "as", "though", "I", "m", "killing", "someone", "with", "a", "pen", "\"", "Stephane", "Charbonnier", "-2015"]
+# ::lemmas ["i", "do", "not", "feel", "as", "though", "i", "m", "kill", "someone", "with", "a", "pen", "\"", "Stephane", "Charbonnier", "-2015"]
+(c2-5 / say-01
+      :ARG0 (c2-3 / person
+                  :name (c2-2 / name
+                              :op1 "Stephane"
+                              :op2 "Charbonnier"))
+      :ARG1 (c2-0 / feel-02
+                  :ARG0 c2-3
+                  :ARG1 (c2-6 / kill-01
+                              :ARG0 c2-3
+                              :ARG1 (c2-1 / someone)
+                              :instrument (c2-7 / pen))
+                  :polarity -)
+      :time (c2-4 / date-entity
+                  :year 2015))
+
+# ::snt Lines have apparently been drawn. We know that neither side will yield what they believe. I fear for the future of our planet
+# ::tokens ["Lines", "have", "apparently", "been", "drawn", ".", "We", "know", "that", "neither", "side", "will", "yield", "what", "they", "believe", ".", "I", "fear", "for", "the", "future", "of", "our", "planet"]
+# ::lemmas ["line", "have", "apparently", "be", "draw", ".", "we", "know", "that", "neither", "side", "will", "yield", "what", "they", "believe", ".", "i", "fear", "for", "the", "future", "of", "our", "planet"]
+(c3-3 / multi-sentence
+      :snt1 (c3-11 / draw-02
+                   :ARG1 (c3-2 / line)
+                   :manner (c3-15 / apparent))
+      :snt2 (c3-14 / know-01
+                   :ARG0 (c3-0 / we)
+                   :ARG1 (c3-1 / yield-01
+                               :ARG0 (c3-12 / side
+                                            :mod (c3-6 / either))
+                               :ARG1 (c3-13 / thing
+                                            :ARG1-of (c3-5 / believe-01
+                                                           :ARG0 c3-12))
+                               :polarity -))
+      :snt3 (c3-4 / fear-01
+                  :ARG0 (c3-7 / i)
+                  :ARG1 (c3-8 / future
+                              :poss (c3-10 / planet
+                                           :poss (c3-9 / we)))))
+
+# ::snt No matarn la cultura y la libertad. Mataron a , , , y otros ms... otros vendrn!
+# ::tokens ["No", "matarn", "la", "cultura", "y", "la", "libertad", ".", "Mataron", "a", ",", ",", ",", "y", "otros", "ms", "...", "otros", "vendrn", "!"]
+# ::lemmas ["no", "matarn", "la", "cultura", "y", "la", "libertad", ".", "Mataron", "a", ",", ",", ",", "y", "otros", "ms", "...", "otros", "vendrn", "!"]
+(c4-1 / multi-sentence
+      :snt1 (c4-11 / say-01
+                   :ARG0 (c4-3 / i)
+                   :ARG1 (c4-6 / matarn-00
+                               :ARG1 (c4-14 / and
+                                            :op1 (c4-8 / cultura)
+                                            :op2 (c4-0 / libertad))
+                               :polarity -)
+                   :ARG2 (c4-7 / person
+                               :name (c4-4 / name
+                                           :op1 "Mataron")))
+      :snt2 c4-14
+      :op1 (c4-13 / person
+                  :name (c4-5 / name
+                              :op1 "Ms"))
+      :op2 (c4-2 / person
+                 :name (c4-9 / name
+                             :op1 " otros"
+                             :op2 "MSN"))
+      :op3 (c4-10 / vendr-00
+                  :ARG0 (c4-12 / person)))
+
+# ::snt Apparently they didn't think so.
+# ::tokens ["Apparently", "they", "did", "n't", "think", "so", "."]
+# ::lemmas ["apparently", "they", "do", "not", "think", "so", "."]
+(c6-2 / appear-01
+      :ARG1 (c6-1 / think-01
+                  :ARG0 (c6-3 / they)
+                  :ARG1 (c6-0 / so)
+                  :polarity -))
+
+# ::snt . The offices, &amp; some cartoonists, were under police protection. Police were killed by the gunmen.
+# ::tokens [".", "The", "offices", ",", "&", "amp", ";", "some", "cartoonists", ",", "were", "under", "police", "protection", ".", "Police", "were", "killed", "by", "the", "gunmen", "."]
+# ::lemmas [".", "the", "office", ",", "&", "amp", ";", "some", "cartoonist", ",", "be", "under", "police", "protection", ".", "police", "be", "kill", "by", "the", "gunman", "."]
+(c7-0 / multi-sentence
+      :snt1 (c7-3 / protect-01
+                  :ARG0 (c7-8 / police)
+                  :ARG1 (c7-9 / and
+                              :op1 (c7-2 / office)
+                              :op2 (c7-4 / cartoonist
+                                         :quant (c7-6 / some))))
+      :snt2 (c7-7 / kill-01
+                  :ARG0 (c7-5 / gunman)
+                  :ARG1 (c7-1 / police)))
+
+# ::snt makes me cry.
+# ::tokens ["makes", "me", "cry", "."]
+# ::lemmas ["make", "i", "cry", "."]
+(c8-1 / make-02
+      :ARG1 (c8-0 / cry-02
+                  :ARG0 (c8-2 / i)))
+
+# ::snt Some pitiful people are clearly frightened of the pen.
+# ::tokens ["Some", "pitiful", "people", "are", "clearly", "frightened", "of", "the", "pen", "."]
+# ::lemmas ["some", "pitiful", "people", "be", "clearly", "frightened", "of", "the", "pen", "."]
+(c9-0 / frighten-01
+      :ARG0 (c9-2 / pen)
+      :ARG1 (c9-5 / person
+                  :mod (c9-1 / pitiful-02)
+                  :mod (c9-4 / some))
+      :ARG1-of (c9-3 / clear-06))
+
+# ::snt We will defeat the enemies of freedom. I'm certain
+# ::tokens ["We", "will", "defeat", "the", "enemies", "of", "freedom", ".", "I", "'m", "certain"]
+# ::lemmas ["we", "will", "defeat", "the", "enemy", "of", "freedom", ".", "i", "be", "certain"]
+(c10-3 / multi-sentence
+       :snt1 (c10-7 / defeat-01
+                    :ARG0 (c10-1 / we)
+                    :ARG1 (c10-6 / person
+                                 :ARG0-of (c10-0 / have-rel-role-91
+                                                 :ARG1 (c10-2 / free-04)
+                                                 :ARG2 (c10-4 / enemy))))
+       :snt2 (c10-8 / certain
+                    :domain (c10-5 / i)))
+
+# ::snt No there were not enough
+# ::tokens ["No", "there", "were", "not", "enough"]
+# ::lemmas ["no", "there", "be", "not", "enough"]
+(c11-0 / have-quant-91
+       :ARG3 (c11-1 / enough)
+       :mod (c11-2 / no)
+       :polarity -)
+
+# ::snt these journos were some of the MOST at risk in all of france - this is incompetence
+# ::tokens ["these", "journos", "were", "some", "of", "the", "MOST", "at", "risk", "in", "all", "of", "france", "-", "this", "is", "incompetence"]
+# ::lemmas ["these", "journo", "be", "some", "of", "the", "MOST", "at", "risk", "in", "all", "of", "france", "-", "this", "be", "incompetence"]
+(c12-2 / multi-sentence
+       :snt1 (c12-4 / include-91
+                    :ARG1 (c12-0 / journo
+                                 :mod (c12-12 / this))
+                    :ARG2 (c12-6 / person
+                                 :ARG1-of (c12-1 / have-degree-91
+                                                 :ARG2 (c12-3 / endanger-01
+                                                              :ARG1 c12-6)
+                                                 :ARG3 (c12-7 / most)
+                                                 :ARG5 (c12-8 / country
+                                                              :name (c12-5 / name
+                                                                           :op1 "France")
+                                                              :mod (c12-13 / all))))
+                    :ARG3 (c12-11 / some))
+       :snt2 (c12-9 / competent-01
+                    :ARG1 (c12-10 / this)
+                    :polarity -))
+
+# ::snt "I don't feel as though I'm killing someone with a pen." -Stephane Charbonnier
+# ::tokens ["\"", "I", "do", "n't", "feel", "as", "though", "I", "'m", "killing", "someone", "with", "a", "pen", ".", "\"", "-Stephane", "Charbonnier"]
+# ::lemmas ["\"", "i", "do", "not", "feel", "as", "though", "i", "be", "kill", "someone", "with", "a", "pen", ".", "\"", "-stephane", "charbonnier"]
+(c13-4 / say-01
+       :ARG0 (c13-3 / person
+                    :name (c13-2 / name
+                                 :op1 "Stephane"
+                                 :op2 "Charbonnier"))
+       :ARG1 (c13-0 / feel-01
+                    :ARG0 c13-3
+                    :ARG1 (c13-5 / kill-01
+                                 :ARG0 c13-3
+                                 :ARG1 (c13-1 / someone)
+                                 :instrument (c13-6 / pen))
+                    :polarity -))
+
+# ::snt then sadly they were not given the necessary resources considering the risks
+# ::tokens ["then", "sadly", "they", "were", "not", "given", "the", "necessary", "resources", "considering", "the", "risks"]
+# ::lemmas ["then", "sadly", "they", "be", "not", "give", "the", "necessary", "resource", "consider", "the", "risk"]
+(c14-4 / give-01
+       :ARG1 (c14-2 / resource
+                    :ARG1-of (c14-1 / need-01))
+       :ARG2 (c14-7 / they)
+       :ARG0-of (c14-6 / sad-02)
+       :time (c14-5 / then)
+       :manner (c14-3 / consider-02
+                      :ARG1 (c14-0 / risk-01))
+       :polarity -)
+
+# ::snt Congrats on your tweet!
+# ::tokens ["Congrats", "on", "your", "tweet", "!"]
+# ::lemmas ["congrat", "on", "your", "tweet", "!"]
+(c15-2 / congratulate-01
+       :ARG1 (c15-1 / you)
+       :ARG2 (c15-0 / tweet-01
+                    :ARG0 c15-1))
+
+# ::snt RIP
+# ::tokens ["RIP"]
+# ::lemmas ["RIP"]
+(c16-2 / rest-01
+       :ARG1 (c16-0 / you)
+       :manner (c16-1 / peace))
+
+# ::snt damn. This is brutal. WTF were the police and security services? This seems like a no brainer to protect
+# ::tokens ["damn", ".", "This", "is", "brutal", ".", "WTF", "were", "the", "police", "and", "security", "services", "?", "This", "seems", "like", "a", "no", "brainer", "to", "protect"]
+# ::lemmas ["damn", ".", "this", "be", "brutal", ".", "WTF", "be", "the", "police", "and", "security", "service", "?", "this", "seem", "like", "a", "no", "brainer", "to", "protect"]
+(c17-1 / multi-sentence
+       :snt1 (c17-8 / damn-01
+                    :mode expressive)
+       :snt2 (c17-3 / brutal-02
+                    :ARG1 (c17-11 / this))
+       :snt3 (c17-13 / amr-unknown
+                     :domain (c17-5 / and
+                                    :op1 (c17-7 / police)
+                                    :op2 (c17-10 / service
+                                                 :mod (c17-4 / security)))
+                     :mod (c17-0 / fuck
+                                 :mode expressive))
+       :snt4 (c17-2 / seem-01
+                    :ARG1 (c17-6 / no-brainer
+                                 :domain (c17-9 / this)
+                                 :ARG1-of (c17-12 / protect-01))))
+
+# ::snt I dont feel as though Im killing someone with a pen." -Stephane Charbonnier -2015
+# ::tokens ["I", "do", "nt", "feel", "as", "though", "I", "m", "killing", "someone", "with", "a", "pen", ".", "\"", "-Stephane", "Charbonnier", "-2015"]
+# ::lemmas ["i", "do", "not", "feel", "as", "though", "i", "m", "kill", "someone", "with", "a", "pen", ".", "\"", "-stephane", "Charbonnier", "-2015"]
+(c18-0 / feel-02
+       :ARG0 (c18-1 / i)
+       :ARG1 (c18-6 / kill-01
+                    :ARG0 c18-1
+                    :ARG1 (c18-5 / someone)
+                    :instrument (c18-3 / pen))
+       :time (c18-4 / date-entity
+                    :year 2015)
+       :source (c18-7 / person
+                      :name (c18-2 / name
+                                   :op1 "Stephane"
+                                   :op2 "Charbonnier"))
+       :polarity -)
+
+# ::snt RIP. MT :"I dont feel as though Im killing someone with a pen."-Stephane Charbonnier.
+# ::tokens ["RIP", ".", "MT", ":", "\"", "I", "do", "nt", "feel", "as", "though", "I", "m", "killing", "someone", "with", "a", "pen", ".", "\"-Stephane", "Charbonnier", "."]
+# ::lemmas ["RIP", ".", "MT", ":", "\"", "i", "do", "not", "feel", "as", "though", "i", "m", "kill", "someone", "with", "a", "pen", ".", "\"-stephane", "Charbonnier", "."]
+(c19-2 / quote-01
+       :ARG1 (c19-0 / feel-01
+                    :ARG0 (c19-3 / i)
+                    :ARG1 (c19-8 / kill-01
+                                 :ARG0 c19-3
+                                 :ARG1 (c19-7 / someone)
+                                 :instrument (c19-5 / pen))
+                    :polarity -)
+       :ARG2 (c19-9 / person
+                    :name (c19-4 / name
+                                 :op1 "Stephane"
+                                 :op2 "Charbonnier"))
+       :ARG1-of (c19-6 / rest-01
+                       :manner (c19-1 / peace)))
+
+# ::snt : I dont feel as though Im killing someone with a pen" Stephane Charbonnier -2015
+# ::tokens [":", "I", "do", "nt", "feel", "as", "though", "I", "m", "killing", "someone", "with", "a", "pen", "\"", "Stephane", "Charbonnier", "-2015"]
+# ::lemmas [":", "i", "do", "not", "feel", "as", "though", "i", "m", "kill", "someone", "with", "a", "pen", "\"", "Stephane", "Charbonnier", "-2015"]
+(c20-5 / say-01
+       :ARG0 (c20-3 / person
+                    :name (c20-2 / name
+                                 :op1 "Stephane"
+                                 :op2 "Charbonnier"))
+       :ARG1 (c20-0 / feel-01
+                    :ARG0 c20-3
+                    :ARG1 (c20-6 / kill-01
+                                 :ARG0 c20-3
+                                 :ARG1 (c20-1 / someone)
+                                 :instrument (c20-7 / pen))
+                    :polarity -)
+       :time (c20-4 / date-entity
+                    :year 2015))
+
+# ::snt I dont feel as though Im killing someone with a pen." -Stephane Charbonnier -2015
+# ::tokens ["I", "do", "nt", "feel", "as", "though", "I", "m", "killing", "someone", "with", "a", "pen", ".", "\"", "-Stephane", "Charbonnier", "-2015"]
+# ::lemmas ["i", "do", "not", "feel", "as", "though", "i", "m", "kill", "someone", "with", "a", "pen", ".", "\"", "-stephane", "Charbonnier", "-2015"]
+(c21-0 / feel-02
+       :ARG0 (c21-1 / i)
+       :ARG1 (c21-6 / kill-01
+                    :ARG0 c21-1
+                    :ARG1 (c21-5 / someone)
+                    :instrument (c21-3 / pen))
+       :time (c21-4 / date-entity
+                    :year 2015)
+       :source (c21-7 / person
+                      :name (c21-2 / name
+                                   :op1 "Stephane"
+                                   :op2 "Charbonnier"))
+       :polarity -)
+
+# ::snt The police officers that were there were killed also
+# ::tokens ["The", "police", "officers", "that", "were", "there", "were", "killed", "also"]
+# ::lemmas ["the", "police", "officer", "that", "be", "there", "be", "kill", "also"]
+(c22-1 / kill-01
+       :ARG1 (c22-0 / officer
+                    :mod (c22-2 / police)
+                    :location (c22-3 / there))
+       :mod (c22-4 / also))

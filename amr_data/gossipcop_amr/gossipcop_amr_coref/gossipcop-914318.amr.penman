@@ -1,0 +1,128 @@
+# ::snt How sad is that.
+# ::tokens ["How", "sad", "is", "that", "."]
+# ::lemmas ["how", "sad", "be", "that", "."]
+(c1-2 / sad-02
+      :ARG0 (c1-1 / that)
+      :degree (c1-0 / so))
+
+# ::snt She two face.
+# ::tokens ["She", "two", "face", "."]
+# ::lemmas ["she", "two", "face", "."]
+(c2-0 / face
+      :part-of (c2-1 / she)
+      :quant 2)
+
+# ::snt tbh i dont know how to react to this
+# ::tokens ["tbh", "i", "do", "nt", "know", "how", "to", "react", "to", "this"]
+# ::lemmas ["tbh", "i", "do", "not", "know", "how", "to", "react", "to", "this"]
+(c3-2 / know-01
+      :ARG0 (c3-4 / i)
+      :ARG1 (c3-3 / thing
+                  :manner-of (c3-0 / react-01
+                                   :ARG0 c3-4
+                                   :ARG1 (c3-5 / this)))
+      :ARG1-of (c3-1 / honest-01
+                     :ARG0 c3-4)
+      :polarity -)
+
+# ::snt Well shit, come on Ma!
+# ::tokens ["Well", "shit", ",", "come", "on", "Ma", "!"]
+# ::lemmas ["well", "shit", ",", "come", "on", "Ma", "!"]
+(c4-3 / come-on-25
+      :ARG1 (c4-2 / person
+                  :name (c4-0 / name
+                              :op1 "Ma"))
+      :mod (c4-1 / shit
+                 :mod (c4-4 / well)
+                 :mode expressive)
+      :mode imperative)
+
+# ::snt Jennifer Justin?!?!! What the hell, how could yoouuuu
+# ::tokens ["Jennifer", "Justin", "?", "!", "?", "!", "!", "What", "the", "hell", ",", "how", "could", "yoouuuu"]
+# ::lemmas ["Jennifer", "Justin", "?", "!", "?", "!", "!", "what", "the", "hell", ",", "how", "could", "yoouuuu"]
+(c5-2 / multi-sentence
+      :snt1 (c5-5 / person
+                  :name (c5-1 / name
+                              :op1 "Jennifer"
+                              :op2 "Justin")
+                  :polarity (c5-7 / amr-unknown)
+                  :mode expressive)
+      :snt2 (c5-3 / possible-01
+                  :ARG1 (c5-0 / yoouuuu
+                              :mode expressive)
+                  :manner (c5-6 / amr-unknown
+                                :mod (c5-4 / hell
+                                           :mode expressive))))
+
+# ::snt Was he also cheating with Angelina
+# ::tokens ["Was", "he", "also", "cheating", "with", "Angelina"]
+# ::lemmas ["be", "he", "also", "cheat", "with", "Angelina"]
+(c6-3 / cheat-03
+      :ARG0 (c6-1 / he)
+      :ARG1 (c6-2 / person
+                  :name (c6-0 / name
+                              :op1 "Angelina"))
+      :polarity (c6-5 / amr-unknown)
+      :mod (c6-4 / also))
+
+# ::snt Cerlebrity relationships don't last. Few last more than years.
+# ::tokens ["Cerlebrity", "relationships", "do", "n't", "last", ".", "Few", "last", "more", "than", "years", "."]
+# ::lemmas ["Cerlebrity", "relationship", "do", "not", "last", ".", "few", "last", "more", "than", "years", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-6 / last-04
+                  :ARG1 (c7-4 / relation-03
+                              :ARG1 (c7-7 / commodity))
+                  :polarity -)
+      :snt2 (c7-9 / last-04
+                  :ARG1 (c7-3 / relation-03
+                              :ARG1 (c7-0 / few))
+                  :ARG2 (c7-5 / more-than
+                              :op1 (c7-10 / multiple
+                                          :op1 (c7-8 / temporal-quantity
+                                                     :unit (c7-1 / year)
+                                                     :quant 1)))))
+
+# ::snt Bet all you entertainment sites are desperate to see if Jennifer will get back with Brad. I can't wait to see what happens down the road.
+# ::tokens ["Bet", "all", "you", "entertainment", "sites", "are", "desperate", "to", "see", "if", "Jennifer", "will", "get", "back", "with", "Brad", ".", "I", "ca", "n't", "wait", "to", "see", "what", "happens", "down", "the", "road", "."]
+# ::lemmas ["Bet", "all", "you", "entertainment", "site", "be", "desperate", "to", "see", "if", "Jennifer", "will", "get", "back", "with", "Brad", ".", "i", "can", "not", "wait", "to", "see", "what", "happen", "down", "the", "road", "."]
+(c8-10 / multi-sentence
+       :snt1 (c8-9 / bet-01
+                   :ARG0 (c8-19 / i)
+                   :ARG2 (c8-20 / desperate-02
+                                :ARG0 (c8-0 / site
+                                            :mod (c8-16 / entertainment)
+                                            :mod (c8-6 / all)
+                                            :poss (c8-3 / you))
+                                :ARG1 (c8-2 / see-01
+                                            :ARG0 c8-0
+                                            :ARG1 (c8-5 / truth-value
+                                                        :polarity-of (c8-8 / get-back-10
+                                                                           :ARG0 (c8-17 / person
+                                                                                        :name (c8-14 / name
+                                                                                                     :op1 "Jennifer"))
+                                                                           :ARG1 (c8-11 / person
+                                                                                        :name (c8-12 / name
+                                                                                                     :op1 "Brad")))))))
+       :snt2 (c8-18 / wait-01
+                    :ARG1 (c8-4 / i)
+                    :ARG2 (c8-1 / see-01
+                                :ARG0 c8-4
+                                :ARG1 (c8-7 / event
+                                            :location (c8-13 / down
+                                                             :op1 (c8-15 / road))))
+                    :polarity -))
+
+# ::snt Nooo!!!! Awww
+# ::tokens ["Nooo", "!", "!", "!", "!", "Awww"]
+# ::lemmas ["Nooo", "!", "!", "!", "!", "Awww"]
+(c9-0 / awww
+      :mode expressive)
+
+# ::snt Well that didnt last long did it
+# ::tokens ["Well", "that", "did", "nt", "last", "long", "did", "it"]
+# ::lemmas ["well", "that", "do", "nt", "last", "long", "do", "it"]
+(c10-2 / last-04
+       :ARG1 (c10-3 / that)
+       :ARG2 (c10-1 / long-03)
+       :ARG1-of (c10-0 / request-confirmation-91)
+       :polarity -)

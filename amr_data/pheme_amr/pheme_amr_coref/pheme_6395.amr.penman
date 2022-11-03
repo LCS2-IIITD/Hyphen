@@ -1,0 +1,276 @@
+# ::snt I'm no fan of Ray but he's been very good today. He's not the worry. Commercial tv is.
+# ::tokens ["I", "'m", "no", "fan", "of", "Ray", "but", "he", "'s", "been", "very", "good", "today", ".", "He", "'s", "not", "the", "worry", ".", "Commercial", "tv", "is", "."]
+# ::lemmas ["i", "be", "no", "fan", "of", "Ray", "but", "he", "be", "be", "very", "good", "today", ".", "he", "be", "not", "the", "worry", ".", "commercial", "tv", "be", "."]
+(c1-3 / multi-sentence
+      :snt1 (c1-9 / contrast-01
+                  :ARG1 (c1-2 / fan
+                              :domain (c1-4 / i)
+                              :topic (c1-7 / person
+                                           :name (c1-5 / name
+                                                       :op1 "Ray"))
+                              :polarity -)
+                  :ARG2 (c1-10 / good-02
+                               :ARG1 c1-7
+                               :degree (c1-6 / very)
+                               :time (c1-12 / today)))
+      :snt2 (c1-1 / worry-02
+                  :ARG0 (c1-0 / he)
+                  :polarity -)
+      :snt3 (c1-11 / television
+                   :mod (c1-8 / commercial)))
+
+# ::snt I hope they can keep Ray Hadley on the leash
+# ::tokens ["I", "hope", "they", "can", "keep", "Ray", "Hadley", "on", "the", "leash"]
+# ::lemmas ["i", "hope", "they", "can", "keep", "Ray", "Hadley", "on", "the", "leash"]
+(c2-0 / hope-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-5 / possible-01
+                  :ARG1 (c2-3 / keep-02
+                              :ARG0 (c2-6 / they)
+                              :ARG1 (c2-1 / leash-01
+                                          :ARG1 (c2-7 / person
+                                                      :name (c2-4 / name
+                                                                  :op1 "Ray"
+                                                                  :op2 "Hadley"))))))
+
+# ::snt identify him awsum
+# ::tokens ["identify", "him", "awsum"]
+# ::lemmas ["identify", "he", "awsum"]
+(c3-2 / identify-01
+      :ARG1 (c3-0 / he)
+      :ARG2 (c3-1 / awsum))
+
+# ::snt Do your Job abc.
+# ::tokens ["Do", "your", "Job", "abc", "."]
+# ::lemmas ["do", "your", "Job", "abc", "."]
+(c4-2 / do-02
+      :ARG0 (c4-1 / you)
+      :ARG1 (c4-0 / job
+                  :poss c4-1)
+      :mod (c4-3 / abc)
+      :mode imperative)
+
+# ::snt Then it would be criminal if the did identify him.
+# ::tokens ["Then", "it", "would", "be", "criminal", "if", "the", "did", "identify", "him", "."]
+# ::lemmas ["then", "it", "would", "be", "criminal", "if", "the", "do", "identify", "he", "."]
+(c5-3 / criminal-03
+      :ARG2 (c5-1 / identify-01
+                  :ARG0 (c5-2 / police)
+                  :ARG1 (c5-0 / he)
+                  :condition-of c5-3)
+      :time (c5-4 / then))
+
+# ::snt Good. Don't. You can when it's all over.
+# ::tokens ["Good", ".", "Do", "n't", ".", "You", "can", "when", "it", "'s", "all", "over", "."]
+# ::lemmas ["good", ".", "do", "not", ".", "you", "can", "when", "it", "be", "all", "over", "."]
+(c6-1 / multi-sentence
+      :snt1 (c6-6 / good-02)
+      :snt2 (c6-5 / do-02
+                  :ARG0 (c6-0 / you)
+                  :polarity -
+                  :mode imperative)
+      :snt3 (c6-4 / possible-01
+                  :ARG1 c6-5
+                  :ARG0 (c6-7 / you)
+                  :time (c6-2 / over-01
+                              :ARG1 (c6-3 / it)
+                              :degree (c6-8 / all))))
+
+# ::snt go to his house and take his family hostage?
+# ::tokens ["go", "to", "his", "house", "and", "take", "his", "family", "hostage", "?"]
+# ::lemmas ["go", "to", "his", "house", "and", "take", "his", "family", "hostage", "?"]
+(c7-10 / and
+       :polarity (c7-5 / amr-unknown)
+       :op1 (c7-7 / go-02
+                  :ARG0 (c7-1 / you)
+                  :ARG4 (c7-0 / house
+                              :poss (c7-2 / he)))
+       :op2 (c7-9 / take-01
+                  :ARG0 c7-1
+                  :ARG1 (c7-6 / hostage
+                              :domain (c7-3 / family
+                                            :ARG1-of (c7-8 / have-org-role-91
+                                                           :ARG0 c7-2
+                                                           :ARG2 (c7-4 / member))))))
+
+# ::snt ": Police have identified who the gunman is. Police asked the ABC not to identify him
+# ::tokens ["\"", ":", "Police", "have", "identified", "who", "the", "gunman", "is", ".", "Police", "asked", "the", "ABC", "not", "to", "identify", "him"]
+# ::lemmas ["\"", ":", "police", "have", "identify", "who", "the", "gunman", "be", ".", "police", "ask", "the", "ABC", "not", "to", "identify", "he"]
+(c8-0 / multi-sentence
+      :snt1 (c8-2 / identify-01
+                  :ARG0 (c8-4 / police)
+                  :ARG1 (c8-5 / gunman))
+      :snt2 (c8-8 / ask-02
+                  :ARG0 (c8-7 / police)
+                  :ARG1 (c8-6 / identify-01
+                              :ARG0 (c8-1 / publication
+                                          :name (c8-3 / name
+                                                      :op1 "ABC"))
+                              :ARG1 c8-5
+                              :polarity -)
+                  :ARG2 c8-1))
+
+# ::snt and he has a shot gun...he obviously wasn't that well known.
+# ::tokens ["and", "he", "has", "a", "shot", "gun", "...", "he", "obviously", "was", "n't", "that", "well", "known", "."]
+# ::lemmas ["and", "he", "have", "a", "shot", "gun", "...", "he", "obviously", "be", "not", "that", "well", "know", "."]
+(c9-6 / and
+      :op2 (c9-0 / have-03
+                 :ARG0 (c9-8 / he)
+                 :ARG1 (c9-3 / gun
+                             :instrument-of (c9-4 / shoot-02)))
+      :op3 (c9-7 / know-02
+                 :ARG1 c9-8
+                 :degree (c9-1 / well
+                               :degree (c9-5 / that))
+                 :ARG1-of (c9-2 / obvious-01)
+                 :polarity -))
+
+# ::snt Can we learn from past mistakes? Will temptation of making big $ overrule logic. More news at8
+# ::tokens ["Can", "we", "learn", "from", "past", "mistakes", "?", "Will", "temptation", "of", "making", "big", "$", "overrule", "logic", ".", "More", "news", "at8"]
+# ::lemmas ["can", "we", "learn", "from", "past", "mistake", "?", "will", "temptation", "of", "make", "big", "$", "overrule", "logic", ".", "more", "news", "at8"]
+(c10-3 / multi-sentence
+       :snt1 (c10-8 / possible-01
+                    :ARG1 (c10-2 / learn-01
+                                 :ARG0 (c10-0 / we)
+                                 :ARG2 (c10-9 / mistake-02
+                                              :ARG0 c10-0
+                                              :time (c10-15 / past))))
+       :snt2 (c10-6 / overrule-01
+                    :ARG0 (c10-14 / tempt-01
+                                  :ARG2 (c10-4 / make-05
+                                               :ARG1 (c10-10 / monetary-quantity
+                                                             :unit (c10-11 / dollar)
+                                                             :mod (c10-5 / big)
+                                                             :quant 1)))
+                    :ARG1 (c10-13 / logic))
+       :snt3 (c10-7 / news
+                    :time (c10-1 / date-entity
+                                 :day 8)
+                    :mod (c10-12 / more)))
+
+# ::snt don't worry the morons will do that for you
+# ::tokens ["do", "n't", "worry", "the", "morons", "will", "do", "that", "for", "you"]
+# ::lemmas ["do", "not", "worry", "the", "moron", "will", "do", "that", "for", "you"]
+(c11-0 / worry-01
+       :ARG0 (c11-1 / you)
+       :ARG1 (c11-3 / do-02
+                    :ARG0 (c11-2 / moron)
+                    :ARG1 (c11-4 / that)
+                    :ARG2 c11-1)
+       :polarity -
+       :mode imperative)
+
+# ::snt Thank god. Let's wait for police to execute.
+# ::tokens ["Thank", "god", ".", "Let", "'s", "wait", "for", "police", "to", "execute", "."]
+# ::lemmas ["thank", "god", ".", "let", "us", "wait", "for", "police", "to", "execute", "."]
+(c12-1 / multi-sentence
+       :snt1 (c12-6 / thank-01
+                    :ARG1 (c12-5 / person
+                                 :name (c12-4 / name
+                                              :op1 "God")))
+       :snt2 (c12-0 / wait-01
+                    :ARG1 (c12-3 / we)
+                    :ARG2 (c12-2 / execute-01
+                                 :ARG0 (c12-7 / police))
+                    :mode imperative))
+
+# ::snt why are they protecting the scum
+# ::tokens ["why", "are", "they", "protecting", "the", "scum"]
+# ::lemmas ["why", "be", "they", "protect", "the", "scum"]
+(c13-1 / cause-01
+       :ARG0 (c13-4 / amr-unknown)
+       :ARG1 (c13-0 / protect-01
+                    :ARG0 (c13-3 / they)
+                    :ARG1 (c13-2 / scum)))
+
+# ::snt La polica australiana conoce la identidad del secuestrador pero pide que no se divulgue -
+# ::tokens ["La", "polica", "australiana", "conoce", "la", "identidad", "del", "secuestrador", "pero", "pide", "que", "no", "se", "divulgue", "-"]
+# ::lemmas ["La", "polica", "australiana", "conoce", "la", "identidad", "del", "secuestrador", "pero", "pide", "que", "no", "se", "divulgue", "-"]
+(c14-5 / conoce-00
+       :ARG0 (c14-3 / police
+                    :mod (c14-4 / country
+                                :name (c14-1 / name
+                                             :op1 "Australia")))
+       :ARG1 (c14-0 / identify-01
+                    :ARG1 (c14-8 / territory
+                                 :name (c14-2 / name
+                                              :op1 "Secuestrador")))
+       :ARG1-of (c14-7 / cause-01
+                       :ARG0 (c14-9 / presume-01
+                                    :ARG0 c14-3
+                                    :ARG1 (c14-6 / divulge-01
+                                                 :ARG0 c14-3
+                                                 :ARG1 c14-0
+                                                 :polarity -))))
+
+# ::snt are they capable of restraining? Tough times these days at ABC
+# ::tokens ["are", "they", "capable", "of", "restraining", "?", "Tough", "times", "these", "days", "at", "ABC"]
+# ::lemmas ["be", "they", "capable", "of", "restrain", "?", "tough", "time", "these", "days", "at", "ABC"]
+(c15-0 / multi-sentence
+       :snt1 (c15-5 / capable-01
+                    :polarity (c15-9 / amr-unknown)
+                    :ARG1 (c15-8 / they)
+                    :ARG2 (c15-4 / restrain-01
+                                 :ARG0 c15-8
+                                 :ARG1 c15-8))
+       :snt2 (c15-7 / tough-02
+                    :time (c15-6 / day
+                                 :mod (c15-2 / this))
+                    :location (c15-3 / publication
+                                     :name (c15-1 / name
+                                                  :op1 "ABC"))))
+
+# ::snt for god's sake, nobody glorify him. There's enough vitriol swirling around tonight.
+# ::tokens ["for", "god", "'s", "sake", ",", "nobody", "glorify", "him", ".", "There", "'s", "enough", "vitriol", "swirling", "around", "tonight", "."]
+# ::lemmas ["for", "god", "'s", "sake", ",", "nobody", "glorify", "he", ".", "there", "be", "enough", "vitriol", "swirl", "around", "tonight", "."]
+(c16-1 / multi-sentence
+       :snt1 (c16-9 / glorify-01
+                    :ARG0 (c16-4 / nobody)
+                    :ARG1 (c16-0 / he)
+                    :purpose (c16-11 / sake
+                                     :poss (c16-6 / person
+                                                  :name (c16-5 / name
+                                                               :op1 "God"))))
+       :snt2 (c16-2 / swirl-01
+                    :ARG1 (c16-7 / vitriol
+                                 :ARG1-of (c16-14 / have-quant-91
+                                                  :ARG3 (c16-3 / enough)))
+                    :location (c16-12 / around)
+                    :time (c16-8 / date-entity
+                                 :dayperiod (c16-10 / night)
+                                 :mod (c16-13 / today))))
+
+# ::snt they're protecting the people in there! Think about it. Who he is is not of consequence to the public
+# ::tokens ["they", "'re", "protecting", "the", "people", "in", "there", "!", "Think", "about", "it", ".", "Who", "he", "is", "is", "not", "of", "consequence", "to", "the", "public"]
+# ::lemmas ["they", "be", "protect", "the", "people", "in", "there", "!", "think", "about", "it", ".", "who", "he", "be", "be", "not", "of", "consequence", "to", "the", "public"]
+(c17-2 / multi-sentence
+       :snt1 (c17-6 / protect-01
+                    :ARG0 (c17-9 / they)
+                    :ARG1 (c17-10 / person
+                                  :location (c17-8 / there)))
+       :snt2 (c17-5 / think-01
+                    :ARG0 (c17-1 / you)
+                    :ARG1 (c17-4 / it)
+                    :mode imperative)
+       :snt3 (c17-7 / consequence-03
+                    :ARG1 (c17-0 / he)
+                    :ARG2 (c17-3 / public)
+                    :polarity -))
+
+# ::snt police and emergency response units working well with responsible media- thankfully this cooperation exists.
+# ::tokens ["police", "and", "emergency", "response", "units", "working", "well", "with", "responsible", "media-", "thankfully", "this", "cooperation", "exists", "."]
+# ::lemmas ["police", "and", "emergency", "response", "unit", "work", "well", "with", "responsible", "media-", "thankfully", "this", "cooperation", "exist", "."]
+(c18-13 / and
+        :op1 (c18-0 / work-09
+                    :ARG1 (c18-4 / and
+                                 :op1 (c18-2 / unit
+                                             :mod (c18-7 / police))
+                                 :op2 (c18-11 / unit
+                                              :ARG0-of (c18-8 / respond-01
+                                                              :ARG1 (c18-3 / emergency))))
+                    :ARG2 (c18-1 / media
+                                 :ARG1-of (c18-5 / responsible-02))
+                    :ARG1-of (c18-6 / well-09))
+        :op2 (c18-9 / cooperate-01
+                    :mod (c18-12 / this)
+                    :ARG2-of (c18-10 / thankful-02)))

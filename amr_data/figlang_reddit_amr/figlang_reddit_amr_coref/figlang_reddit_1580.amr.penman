@@ -1,0 +1,40 @@
+# ::snt First image from the Deep Space Climate Observatory Satellite (DSCOVR) 1 million miles from Earth at Lagrange point 1 - NASA
+# ::tokens ["First", "image", "from", "the", "Deep", "Space", "Climate", "Observatory", "Satellite", "(", "DSCOVR", ")", "1", "million", "miles", "from", "Earth", "at", "Lagrange", "point", "1", "-", "NASA"]
+# ::lemmas ["First", "image", "from", "the", "Deep", "Space", "Climate", "Observatory", "Satellite", "(", "DSCOVR", ")", "1", "million", "miles", "from", "Earth", "at", "Lagrange", "point", "1", "-", "NASA"]
+(c1-10 / image
+       :ord (c1-4 / ordinal-entity
+                  :value 1)
+       :source (c1-0 / satellite
+                     :name (c1-12 / name
+                                  :op1 "Deep"
+                                  :op2 "Space"
+                                  :op3 "Climate"
+                                  :op4 "Observer"
+                                  :op5 "Satellite"))
+       :location (c1-7 / relative-position
+                       :op1 (c1-8 / planet
+                                  :name (c1-9 / name
+                                              :op1 "Earth"))
+                       :quant (c1-1 / distance-quantity
+                                    :unit (c1-11 / mile)
+                                    :quant 1000000))
+       :location (c1-5 / point
+                       :name (c1-6 / name
+                                   :op1 "Lagos")
+                       :mod 1)
+       :source (c1-3 / research-institute
+                     :name (c1-2 / name
+                                 :op1 "NASA")))
+
+# ::snt so how far is Earth in the past in this picture?
+# ::tokens ["so", "how", "far", "is", "Earth", "in", "the", "past", "in", "this", "picture", "?"]
+# ::lemmas ["so", "how", "far", "be", "Earth", "in", "the", "past", "in", "this", "picture", "?"]
+(c2-6 / infer-01
+      :ARG1 (c2-5 / be-located-at-91
+                  :ARG1 (c2-4 / planet
+                              :name (c2-7 / name
+                                          :op1 "Earth"))
+                  :ARG2 (c2-0 / amr-unknown)
+                  :time (c2-2 / past)
+                  :location (c2-1 / picture
+                                  :mod (c2-3 / this))))

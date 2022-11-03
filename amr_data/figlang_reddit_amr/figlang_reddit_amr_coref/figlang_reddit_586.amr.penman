@@ -1,0 +1,38 @@
+# ::snt The Emperor 200 - the ultimate computer workstation
+# ::tokens ["The", "Emperor", "200", "-", "the", "ultimate", "computer", "workstation"]
+# ::lemmas ["the", "Emperor", "200", "-", "the", "ultimate", "computer", "workstation"]
+(c1-0 / workstation
+      :name (c1-2 / name
+                  :op1 "The"
+                  :op2 "Emperor"
+                  :op3 200)
+      :mod (c1-3 / computer)
+      :mod (c1-1 / ultimate))
+
+# ::snt I don't think I'd get any work done on that workstation.
+# ::tokens ["I", "do", "n't", "think", "I", "'d", "get", "any", "work", "done", "on", "that", "workstation", "."]
+# ::lemmas ["i", "do", "not", "think", "i", "would", "get", "any", "work", "do", "on", "that", "workstation", "."]
+(c2-4 / think-01
+      :ARG0 (c2-6 / i)
+      :ARG1 (c2-5 / get-04
+                  :ARG0 c2-6
+                  :ARG1 (c2-0 / do-02
+                              :ARG0 c2-6
+                              :ARG1 (c2-2 / work-01
+                                          :ARG0 c2-6
+                                          :ARG2 (c2-1 / station
+                                                      :mod (c2-7 / work-01)
+                                                      :mod (c2-3 / that))))
+                  :polarity -))
+
+# ::snt Yeah, it's more like a PlayStation.
+# ::tokens ["Yeah", ",", "it", "'s", "more", "like", "a", "PlayStation", "."]
+# ::lemmas ["yeah", ",", "it", "be", "more", "like", "a", "PlayStation", "."]
+(c3-0 / resemble-01
+      :ARG1 (c3-2 / it)
+      :ARG2 (c3-1 / game
+                  :name (c3-4 / name
+                              :op1 "PlayStation"))
+      :mod (c3-5 / yeah
+                 :mode expressive)
+      :mod (c3-3 / more))

@@ -1,0 +1,71 @@
+# ::snt Thank you UNICEFBD
+# ::tokens ["Thank", "you", "UNICEFBD"]
+# ::lemmas ["thank", "you", "UNICEFBD"]
+(c1-2 / thank-01
+      :ARG0 (c1-1 / i)
+      :ARG1 (c1-0 / organization
+                  :name (c1-3 / name
+                              :op1 "UNICEFBD")))
+
+# ::snt Are you looking for an Article , content ,translator, script, speech writer &amp; copy pastespecialist?please contact here
+# ::tokens ["Are", "you", "looking", "for", "an", "Article", ",", "content", ",", "translator", ",", "script", ",", "speech", "writer", "&", "amp", ";", "copy", "pastespecialist?please", "contact", "here"]
+# ::lemmas ["be", "you", "look", "for", "an", "article", ",", "content", ",", "translator", ",", "script", ",", "speech", "writer", "&", "amp", ";", "copy", "pastespecialist?please", "contact", "here"]
+(c2-5 / multi-sentence
+      :snt1 (c2-16 / look-01
+                   :polarity (c2-13 / amr-unknown)
+                   :ARG0 (c2-11 / you)
+                   :ARG1 (c2-7 / and
+                               :op1 (c2-1 / article)
+                               :op2 (c2-2 / content)
+                               :op3 (c2-18 / person
+                                           :ARG0-of (c2-4 / translate-01))
+                               :op4 (c2-8 / script-01)
+                               :op5 (c2-15 / person
+                                           :ARG0-of (c2-3 / write-01
+                                                          :ARG1 (c2-17 / speak-01)))
+                               :op6 (c2-10 / person
+                                           :name (c2-6 / name
+                                                       :op1 "&amp"))))
+      :snt2 (c2-0 / contact-01
+                  :ARG0 (c2-12 / you)
+                  :ARG1 (c2-9 / person
+                              :name c2-6
+                              :op1 "Pastespecialist")
+                  :polite +
+                  :mode imperative)
+      :location (c2-14 / here))
+
+# ::snt :Masallah
+# ::tokens [":", "Masallah"]
+# ::lemmas [":", "Masallah"]
+(c3-0 / person
+      :name (c3-1 / name
+                  :op1 "Masallah"))
+
+# ::snt I want to be vaccinated NOW... private hospitals need to be authorized to administer the shot... EVERYONE needs to be vaccinated including foreigners now in Bangladesh.
+# ::tokens ["I", "want", "to", "be", "vaccinated", "NOW", "...", "private", "hospitals", "need", "to", "be", "authorized", "to", "administer", "the", "shot", "...", "EVERYONE", "needs", "to", "be", "vaccinated", "including", "foreigners", "now", "in", "Bangladesh", "."]
+# ::lemmas ["i", "want", "to", "be", "vaccinate", "NOW", "...", "private", "hospital", "need", "to", "be", "authorize", "to", "administer", "the", "shot", "...", "everyone", "need", "to", "be", "vaccinate", "include", "foreigner", "now", "in", "Bangladesh", "."]
+(c4-7 / multi-sentence
+      :snt1 (c4-4 / want-01
+                  :ARG0 (c4-1 / i)
+                  :ARG1 (c4-5 / vaccinate-01
+                              :ARG1 c4-1
+                              :time (c4-8 / now)))
+      :snt2 (c4-0 / need-01
+                  :ARG0 (c4-17 / hospital
+                               :ARG1-of (c4-18 / private-03))
+                  :ARG1 (c4-14 / authorize-01
+                               :ARG1 (c4-9 / administer-01
+                                           :ARG0 c4-17
+                                           :ARG1 (c4-11 / shoot-01))
+                               :ARG2 c4-17))
+      :snt3 (c4-13 / need-01
+                   :ARG0 (c4-10 / everyone
+                                :ARG2-of (c4-12 / include-91
+                                                :ARG1 (c4-15 / foreign
+                                                             :location (c4-3 / country
+                                                                             :name (c4-2 / name
+                                                                                         :op1 "Bangladesh"))
+                                                             :time (c4-6 / now))))
+                   :ARG1 (c4-16 / vaccinate-01
+                                :ARG1 c4-10)))

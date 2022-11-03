@@ -1,0 +1,136 @@
+# ::snt Yes, a couple of them!
+# ::tokens ["Yes", ",", "a", "couple", "of", "them", "!"]
+# ::lemmas ["yes", ",", "a", "couple", "of", "they", "!"]
+(c1-1 / thing
+      :quant (c1-0 / couple)
+      :ARG1-of (c1-2 / include-91
+                     :ARG2 (c1-3 / they)))
+
+# ::snt Police are demanding protesters disperse. "this is not up for discussion. Return to your vehicles. Return to your homes."
+# ::tokens ["Police", "are", "demanding", "protesters", "disperse", ".", "\"", "this", "is", "not", "up", "for", "discussion", ".", "Return", "to", "your", "vehicles", ".", "Return", "to", "your", "homes", ".", "\""]
+# ::lemmas ["police", "be", "demand", "protester", "disperse", ".", "\"", "this", "be", "not", "up", "for", "discussion", ".", "return", "to", "your", "vehicle", ".", "return", "to", "your", "home", ".", "\""]
+(c2-3 / multi-sentence
+      :snt1 (c2-8 / demand-01
+                  :ARG0 (c2-7 / police)
+                  :ARG1 (c2-2 / disperse-01
+                              :ARG0 (c2-11 / person
+                                           :ARG0-of (c2-4 / protest-01))))
+      :snt2 (c2-12 / discuss-01
+                   :ARG1 (c2-10 / this)
+                   :polarity -)
+      :snt3 (c2-9 / return-01
+                  :ARG1 (c2-1 / you)
+                  :ARG4 (c2-6 / vehicle
+                              :poss c2-1))
+      :snt4 (c2-5 / return-01
+                  :ARG1 c2-1
+                  :ARG4 (c2-0 / home
+                              :poss c2-1)))
+
+# ::snt but wouldn't that violate their first amendment rights?
+# ::tokens ["but", "would", "n't", "that", "violate", "their", "first", "amendment", "rights", "?"]
+# ::lemmas ["but", "would", "not", "that", "violate", "their", "first", "amendment", "right", "?"]
+(c3-4 / contrast-01
+      :ARG2 (c3-2 / violate-01
+                  :ARG0 (c3-6 / that)
+                  :ARG1 (c3-3 / right-05
+                              :ARG1 (c3-5 / they)
+                              :ARG2 (c3-0 / law
+                                          :name (c3-1 / name
+                                                      :op1 "first"
+                                                      :op2 "amendment")))
+                  :polarity (c3-7 / amr-unknown)
+                  :polarity -))
+
+# ::snt And yet we saw the police chief say they could protest earlier today. They're setting people up.
+# ::tokens ["And", "yet", "we", "saw", "the", "police", "chief", "say", "they", "could", "protest", "earlier", "today", ".", "They", "'re", "setting", "people", "up", "."]
+# ::lemmas ["and", "yet", "we", "see", "the", "police", "chief", "say", "they", "could", "protest", "earlier", "today", ".", "they", "be", "set", "people", "up", "."]
+(c4-4 / multi-sentence
+      :snt1 (c4-16 / and
+                   :op2 (c4-12 / see-01
+                               :ARG0 (c4-1 / we)
+                               :ARG1 (c4-8 / say-01
+                                           :ARG0 (c4-9 / person
+                                                       :ARG0-of (c4-0 / have-org-role-91
+                                                                      :ARG1 (c4-15 / police)
+                                                                      :ARG2 (c4-10 / chief)))
+                                           :ARG1 (c4-5 / possible-01
+                                                       :ARG1 (c4-14 / protest-01
+                                                                    :ARG0 c4-15
+                                                                    :time (c4-6 / before
+                                                                                :op1 (c4-13 / today)))))
+                               :mod (c4-2 / yet)))
+      :snt2 (c4-3 / set-up-15
+                  :ARG0 (c4-11 / they)
+                  :ARG1 (c4-7 / person)))
+
+# ::snt Can a city grounded and sent to the their rooms?
+# ::tokens ["Can", "a", "city", "grounded", "and", "sent", "to", "the", "their", "rooms", "?"]
+# ::lemmas ["can", "a", "city", "ground", "and", "send", "to", "the", "their", "room", "?"]
+(c5-1 / possible-01
+      :polarity (c5-6 / amr-unknown)
+      :ARG1 (c5-0 / and
+                  :op1 (c5-4 / ground-01
+                             :ARG1 (c5-3 / city))
+                  :op2 (c5-5 / send-01
+                             :ARG1 c5-3
+                             :ARG4 (c5-2 / room
+                                         :poss c5-3))))
+
+# ::snt oh, don't worry, I'm sure the GOP will also sue for this "constitutional violation". Right, GOP guys? Guys???
+# ::tokens ["oh", ",", "do", "n't", "worry", ",", "I", "'m", "sure", "the", "GOP", "will", "also", "sue", "for", "this", "\"", "constitutional", "violation", "\"", ".", "Right", ",", "GOP", "guys", "?", "Guys", "?", "?", "?"]
+# ::lemmas ["oh", ",", "do", "not", "worry", ",", "i", "be", "sure", "the", "GOP", "will", "also", "sue", "for", "this", "\"", "constitutional", "violation", "\"", ".", "right", ",", "GOP", "guy", "?", "guy", "?", "?", "?"]
+(c6-2 / multi-sentence
+      :snt1 (c6-0 / worry-01
+                  :ARG0 (c6-1 / you)
+                  :ARG1-of (c6-11 / cause-01
+                                  :ARG0 (c6-15 / sure-02
+                                               :ARG0 (c6-6 / i)
+                                               :ARG1 (c6-4 / sue-02
+                                                           :ARG0 (c6-9 / political-party
+                                                                       :name (c6-7 / name
+                                                                                   :op1 "GOP"))
+                                                           :ARG2 (c6-8 / violate-01
+                                                                       :ARG0 c6-9
+                                                                       :ARG1 (c6-10 / constitution)
+                                                                       :mod (c6-16 / this))
+                                                           :mod (c6-17 / also))))
+                  :mod (c6-3 / oh)
+                  :polarity -
+                  :mode imperative)
+      :snt2 (c6-12 / right-06
+                   :ARG1 (c6-14 / you
+                                :mod (c6-13 / guy))
+                   :polarity (c6-5 / amr-unknown)))
+
+# ::snt Does DOJ consider these threats of arrest legal? Or are they threats to violate civil rights?
+# ::tokens ["Does", "DOJ", "consider", "these", "threats", "of", "arrest", "legal", "?", "Or", "are", "they", "threats", "to", "violate", "civil", "rights", "?"]
+# ::lemmas ["do", "DOJ", "consider", "these", "threat", "of", "arrest", "legal", "?", "or", "be", "they", "threat", "to", "violate", "civil", "right", "?"]
+(c7-1 / multi-sentence
+      :snt1 (c7-9 / consider-01
+                  :ARG0 (c7-10 / government-organization
+                               :name (c7-5 / name
+                                           :op1 "DOJ"))
+                  :ARG1 (c7-0 / legal-02
+                              :ARG1 (c7-14 / threaten-01
+                                           :ARG1 (c7-15 / arrest-01)
+                                           :mod (c7-12 / this)))
+                  :polarity (c7-4 / amr-unknown))
+      :snt2 (c7-2 / or
+                  :op2 (c7-6 / threaten-01
+                             :ARG0 (c7-3 / they)
+                             :ARG1 (c7-7 / violate-01
+                                         :ARG0 c7-3
+                                         :ARG1 (c7-8 / right-05
+                                                     :mod (c7-11 / civil)))
+                             :polarity (c7-13 / amr-unknown))))
+
+# ::snt . the really need to take their own advice
+# ::tokens [".", "the", "really", "need", "to", "take", "their", "own", "advice"]
+# ::lemmas [".", "the", "really", "need", "to", "take", "their", "own", "advice"]
+(c8-0 / need-01
+      :ARG1 (c8-3 / take-01
+                  :ARG0 (c8-2 / they)
+                  :ARG1 (c8-4 / advise-01
+                              :ARG0 c8-2))
+      :degree (c8-1 / really))

@@ -1,0 +1,49 @@
+# ::snt My buddy has a sister that worked on the Moderna team. I don't know all the details, but that was very reassuring to know.
+# ::tokens ["My", "buddy", "has", "a", "sister", "that", "worked", "on", "the", "Moderna", "team", ".", "I", "do", "n't", "know", "all", "the", "details", ",", "but", "that", "was", "very", "reassuring", "to", "know", "."]
+# ::lemmas ["my", "buddy", "have", "a", "sister", "that", "work", "on", "the", "Moderna", "team", ".", "i", "do", "not", "know", "all", "the", "detail", ",", "but", "that", "be", "very", "reassuring", "to", "know", "."]
+(c1-11 / multi-sentence
+       :snt1 (c1-16 / have-03
+                    :ARG0 (c1-19 / person
+                                 :ARG0-of (c1-1 / have-rel-role-91
+                                                :ARG1 (c1-2 / i)
+                                                :ARG2 (c1-18 / buddy)))
+                    :ARG1 (c1-17 / person
+                                 :ARG0-of (c1-3 / have-rel-role-91
+                                                :ARG1 c1-2
+                                                :ARG2 (c1-13 / sister))
+                                 :ARG0-of (c1-6 / work-01
+                                                :ARG2 (c1-9 / team
+                                                            :name (c1-12 / name
+                                                                         :op1 "Moderna")))))
+       :snt2 (c1-5 / contrast-01
+                   :ARG1 (c1-20 / know-01
+                                :ARG0 (c1-14 / i)
+                                :ARG1 (c1-0 / detail
+                                            :mod (c1-15 / all))
+                                :polarity -)
+                   :ARG2 (c1-10 / reassure-01
+                                :ARG0 (c1-4 / know-01
+                                            :ARG1 (c1-7 / that))
+                                :degree (c1-8 / very))))
+
+# ::snt Moderna
+# ::tokens ["Moderna"]
+# ::lemmas ["Moderna"]
+(c2-0 / person
+      :name (c2-1 / name
+                  :op1 "Moderna"))
+
+# ::snt Since you say first part, is it the Pfizer vaccine?
+# ::tokens ["Since", "you", "say", "first", "part", ",", "is", "it", "the", "Pfizer", "vaccine", "?"]
+# ::lemmas ["since", "you", "say", "first", "part", ",", "be", "it", "the", "Pfizer", "vaccine", "?"]
+(c3-3 / vaccine
+      :polarity (c3-1 / amr-unknown)
+      :name (c3-7 / name
+                  :op1 "Pfizer")
+      :domain (c3-6 / it)
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-0 / say-01
+                                 :ARG0 (c3-8 / you)
+                                 :ARG1 (c3-5 / part
+                                             :ord (c3-4 / ordinal-entity
+                                                        :value 1)))))

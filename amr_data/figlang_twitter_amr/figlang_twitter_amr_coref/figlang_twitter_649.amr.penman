@@ -1,0 +1,44 @@
+# ::snt Can anyone tell me the difference between normal Big Brother & ' Celebrity ' Big Brother ?
+# ::tokens ["Can", "anyone", "tell", "me", "the", "difference", "between", "normal", "Big", "Brother", "&", "'", "Celebrity", "'", "Big", "Brother", "?"]
+# ::lemmas ["can", "anyone", "tell", "i", "the", "difference", "between", "normal", "Big", "Brother", "&", "'", "celebrity", "'", "big", "brother", "?"]
+(c1-8 / possible-01
+      :ARG1 (c1-5 / tell-01
+                  :ARG0 (c1-2 / anyone)
+                  :ARG1 (c1-0 / differ-02
+                              :ARG1 (c1-7 / broadcast-program
+                                          :name (c1-9 / name
+                                                      :op1 "Big"
+                                                      :op2 "Brother")
+                                          :ARG1-of (c1-6 / normal-02))
+                              :ARG2 (c1-1 / broadcast-program
+                                          :name (c1-4 / name
+                                                      :op1 "Celebrity"
+                                                      :op2 "Big"
+                                                      :op3 "Brother")))
+                  :ARG2 (c1-3 / i))
+      :polarity (c1-10 / amr-unknown))
+
+# ::snt this current one there's no difference because apart from Callum I don't know the rest . thought celebrity is someone we know
+# ::tokens ["this", "current", "one", "there", "'s", "no", "difference", "because", "apart", "from", "Callum", "I", "do", "n't", "know", "the", "rest", ".", "thought", "celebrity", "is", "someone", "we", "know"]
+# ::lemmas ["this", "current", "one", "there", "be", "no", "difference", "because", "apart", "from", "Callum", "i", "do", "not", "know", "the", "rest", ".", "think", "celebrity", "be", "someone", "we", "know"]
+(c2-0 / differ-02
+      :ARG1 (c2-9 / one
+                  :mod (c2-10 / this)
+                  :time (c2-5 / current))
+      :ARG1-of (c2-1 / cause-01
+                     :ARG0 (c2-3 / and
+                                 :op1 (c2-15 / know-01
+                                             :ARG0 (c2-14 / i)
+                                             :ARG1 (c2-11 / rest)
+                                             :ARG2-of (c2-16 / except-01
+                                                             :ARG1 (c2-12 / person
+                                                                          :name (c2-13 / name
+                                                                                       :op1 "Callum")))
+                                             :polarity -)
+                                 :op2 (c2-7 / think-01
+                                            :ARG0 c2-14
+                                            :ARG1 (c2-2 / someone
+                                                        :ARG1-of (c2-4 / know-01
+                                                                       :ARG0 (c2-6 / we))
+                                                        :domain (c2-8 / celebrity)))))
+      :polarity -)

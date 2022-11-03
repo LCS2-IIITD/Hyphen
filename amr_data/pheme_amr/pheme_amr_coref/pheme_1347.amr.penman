@@ -1,0 +1,93 @@
+# ::snt Police have clarified that there were two shootings in Ottawa today, not three: at the War Memorial and Parliament Hill.
+# ::tokens ["Police", "have", "clarified", "that", "there", "were", "two", "shootings", "in", "Ottawa", "today", ",", "not", "three", ":", "at", "the", "War", "Memorial", "and", "Parliament", "Hill", "."]
+# ::lemmas ["police", "have", "clarify", "that", "there", "be", "two", "shooting", "in", "Ottawa", "today", ",", "not", "three", ":", "at", "the", "War", "Memorial", "and", "Parliament", "Hill", "."]
+(c1-6 / clarify-10
+      :ARG0 (c1-4 / police)
+      :ARG1 (c1-10 / shoot-02
+                   :location (c1-5 / city
+                                   :name (c1-2 / name
+                                               :op1 "Ottawa"))
+                   :time (c1-11 / today)
+                   :ARG1-of (c1-9 / contrast-01
+                                  :ARG2 (c1-1 / shoot-02
+                                              :location (c1-12 / and
+                                                               :op1 (c1-0 / building
+                                                                          :name (c1-3 / name
+                                                                                      :op1 "War"
+                                                                                      :op2 "Memorial"))
+                                                               :op2 (c1-7 / building
+                                                                          :name (c1-8 / name
+                                                                                      :op1 "Parliament"
+                                                                                      :op2 "Hill")))
+                                              :quant 3))
+                   :quant 2))
+
+# ::snt : Police have clarified that there were two shootings in Ottawa today, not three: at the War Memorial and Parliament Hill. wow
+# ::tokens [":", "Police", "have", "clarified", "that", "there", "were", "two", "shootings", "in", "Ottawa", "today", ",", "not", "three", ":", "at", "the", "War", "Memorial", "and", "Parliament", "Hill", ".", "wow"]
+# ::lemmas [":", "police", "have", "clarify", "that", "there", "be", "two", "shooting", "in", "Ottawa", "today", ",", "not", "three", ":", "at", "the", "War", "Memorial", "and", "Parliament", "Hill", ".", "wow"]
+(c2-1 / multi-sentence
+      :snt1 (c2-8 / clarify-10
+                  :ARG0 (c2-6 / police)
+                  :ARG1 (c2-12 / shoot-02
+                               :location (c2-7 / city
+                                               :name (c2-4 / name
+                                                           :op1 "Ottawa"))
+                               :time (c2-13 / today)
+                               :ARG1-of (c2-11 / contrast-01
+                                               :ARG2 (c2-3 / shoot-02
+                                                           :location (c2-14 / and
+                                                                            :op1 (c2-2 / building
+                                                                                       :name (c2-5 / name
+                                                                                                   :op1 "War"
+                                                                                                   :op2 "Memorial"))
+                                                                            :op2 (c2-9 / building
+                                                                                       :name (c2-10 / name
+                                                                                                    :op1 "Parliament"
+                                                                                                    :op2 "Hill")))
+                                                           :quant 3))
+                               :quant 2))
+      :snt2 (c2-0 / wow
+                  :mode expressive))
+
+# ::snt get it right.
+# ::tokens ["get", "it", "right", "."]
+# ::lemmas ["get", "it", "right", "."]
+(c3-2 / get-02
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-3 / it)
+      :ARG2-of (c3-1 / right-06)
+      :mode imperative)
+
+# ::snt so what happened at Rideau? Nothing?
+# ::tokens ["so", "what", "happened", "at", "Rideau", "?", "Nothing", "?"]
+# ::lemmas ["so", "what", "happen", "at", "Rideau", "?", "nothing", "?"]
+(c4-0 / multi-sentence
+      :snt1 (c4-1 / event
+                  :mod (c4-5 / so)
+                  :location (c4-4 / city
+                                  :name (c4-2 / name
+                                              :op1 "R rideau")))
+      :snt2 (c4-3 / nothing
+                  :polarity (c4-6 / amr-unknown)))
+
+# ::snt you guys "confirmed" there were shootings not long ago. How about you wait for official reports before saying things.
+# ::tokens ["you", "guys", "\"", "confirmed", "\"", "there", "were", "shootings", "not", "long", "ago", ".", "How", "about", "you", "wait", "for", "official", "reports", "before", "saying", "things", "."]
+# ::lemmas ["you", "guy", "\"", "confirm", "\"", "there", "be", "shooting", "not", "long", "ago", ".", "how", "about", "you", "wait", "for", "official", "report", "before", "say", "thing", "."]
+(c5-3 / multi-sentence
+      :snt1 (c5-10 / confirm-01
+                   :ARG0 (c5-0 / you
+                               :mod (c5-11 / guy))
+                   :ARG1 (c5-13 / shoot-02
+                                :time (c5-5 / before
+                                            :op1 (c5-8 / now)
+                                            :ARG1-of (c5-2 / long-03
+                                                           :polarity -))))
+      :snt2 (c5-7 / suggest-01
+                  :ARG1 (c5-1 / wait-01
+                              :ARG1 (c5-12 / you)
+                              :ARG2 (c5-9 / report-01
+                                          :mod (c5-6 / official))
+                              :time c5-5
+                              :op1 (c5-4 / say-01
+                                         :ARG0 c5-12
+                                         :ARG1 (c5-14 / thing)))))

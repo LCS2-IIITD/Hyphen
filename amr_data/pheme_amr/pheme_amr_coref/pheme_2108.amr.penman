@@ -1,0 +1,85 @@
+# ::snt Credit goes to
+# ::tokens ["Credit", "goes", "to"]
+# ::lemmas ["credit", "go", "to"]
+(c1-1 / go-10
+      :ARG1 (c1-0 / credit))
+
+# ::snt Awesome.
+# ::tokens ["Awesome", "."]
+# ::lemmas ["Awesome", "."]
+(c2-0 / awe-01)
+
+# ::snt How to defeat an idea? Challenge the idea. I learned that last night
+# ::tokens ["How", "to", "defeat", "an", "idea", "?", "Challenge", "the", "idea", ".", "I", "learned", "that", "last", "night"]
+# ::lemmas ["how", "to", "defeat", "an", "idea", "?", "challenge", "the", "idea", ".", "i", "learn", "that", "last", "night"]
+(c3-3 / multi-sentence
+      :snt1 (c3-12 / and
+                   :op1 (c3-11 / thing
+                               :manner-of (c3-7 / defeat-01
+                                                :ARG1 (c3-5 / idea)))
+                   :op2 (c3-8 / challenge-01
+                              :ARG1 (c3-9 / idea)))
+      :snt2 (c3-2 / learn-01
+                  :ARG0 (c3-4 / i)
+                  :ARG1 (c3-10 / that)
+                  :time (c3-1 / date-entity
+                              :dayperiod (c3-6 / night)
+                              :mod (c3-0 / yesterday))))
+
+# ::snt Stop Lying This Attack Was Nothing To Do With Free Speech
+# ::tokens ["Stop", "Lying", "This", "Attack", "Was", "Nothing", "To", "Do", "With", "Free", "Speech"]
+# ::lemmas ["stop", "lie", "this", "Attack", "be", "nothing", "to", "do", "with", "Free", "Speech"]
+(c4-6 / stop-01
+      :ARG0 (c4-1 / you)
+      :ARG1 (c4-2 / lie-08
+                  :ARG0 c4-1
+                  :ARG1 (c4-8 / attack-01
+                              :mod (c4-7 / this))
+                  :ARG2-of (c4-0 / have-to-do-with-04
+                                 :ARG1 (c4-4 / speak-01
+                                             :ARG3-of (c4-3 / free-04))
+                                 :ARG2 (c4-5 / nothing)))
+      :mode imperative)
+
+# ::snt Thanks. I always prefer to tweet the original so people actually get credit for their work and talent.
+# ::tokens ["Thanks", ".", "I", "always", "prefer", "to", "tweet", "the", "original", "so", "people", "actually", "get", "credit", "for", "their", "work", "and", "talent", "."]
+# ::lemmas ["thank", ".", "i", "always", "prefer", "to", "tweet", "the", "original", "so", "people", "actually", "get", "credit", "for", "their", "work", "and", "talent", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-12 / thank-01
+                   :ARG0 (c5-5 / i)
+                   :ARG1 (c5-0 / you))
+      :snt2 (c5-7 / prefer-01
+                  :ARG0 c5-5
+                  :ARG1 (c5-11 / tweet-02
+                               :ARG0 c5-5
+                               :ARG1 (c5-3 / original)
+                               :time (c5-14 / always)
+                               :purpose (c5-10 / get-01
+                                               :ARG0 (c5-13 / person)
+                                               :ARG1 (c5-9 / credit-01
+                                                           :ARG1 c5-13
+                                                           :ARG2 (c5-4 / and
+                                                                       :op1 (c5-1 / work-01
+                                                                                  :ARG0 c5-13)
+                                                                       :op2 (c5-6 / talent
+                                                                                  :poss c5-13))
+                                                           :ARG1-of (c5-8 / actual-02))))))
+
+# ::snt Utterly Brilliant!
+# ::tokens ["Utterly", "Brilliant", "!"]
+# ::lemmas ["Utterly", "Brilliant", "!"]
+(c6-1 / brilliant-01
+      :degree (c6-0 / utter)
+      :mode expressive)
+
+# ::snt Charlie Hebdo shooting: Who are the suspects?
+# ::tokens ["Charlie", "Hebdo", "shooting", ":", "Who", "are", "the", "suspects", "?"]
+# ::lemmas ["Charlie", "Hebdo", "shoot", ":", "who", "be", "the", "suspect", "?"]
+(c7-5 / and
+      :op1 (c7-4 / shoot-02
+                 :ARG2 (c7-0 / magazine
+                             :name (c7-3 / name
+                                         :op1 "Charlie"
+                                         :op2 "Ch Hebdo")))
+      :op2 (c7-1 / suspect-01
+                 :ARG1 (c7-2 / amr-unknown)))

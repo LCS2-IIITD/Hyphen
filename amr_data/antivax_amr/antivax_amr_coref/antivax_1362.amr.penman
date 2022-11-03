@@ -1,0 +1,74 @@
+# ::snt yes, it isn't even listed as a vaccine at the parent company.
+# ::tokens ["yes", ",", "it", "is", "n't", "even", "listed", "as", "a", "vaccine", "at", "the", "parent", "company", "."]
+# ::lemmas ["yes", ",", "it", "be", "not", "even", "list", "as", "a", "vaccine", "at", "the", "parent", "company", "."]
+(c2-3 / list-01
+      :ARG1 (c2-5 / it)
+      :ARG2 (c2-2 / vaccine)
+      :mod (c2-6 / even)
+      :location (c2-0 / company
+                      :ARG0-of (c2-1 / have-rel-role-91
+                                     :ARG2 (c2-4 / parent)))
+      :polarity -)
+
+# ::snt So, it is more about chemotherapy instead of a Covid vaccine?
+# ::tokens ["So", ",", "it", "is", "more", "about", "chemotherapy", "instead", "of", "a", "Covid", "vaccine", "?"]
+# ::lemmas ["so", ",", "it", "be", "more", "about", "chemotherapy", "instead", "of", "a", "Covid", "vaccine", "?"]
+(c3-2 / cause-01
+      :ARG1 (c3-0 / concern-02
+                  :ARG1 (c3-5 / chemotherapy
+                              :ARG1-of (c3-7 / instead-of-91
+                                             :ARG2 (c3-6 / vaccine
+                                                         :name (c3-9 / name
+                                                                     :op1 "Covid"))))
+                  :ARG2-of (c3-3 / have-degree-91
+                                 :ARG1 (c3-4 / it)
+                                 :ARG3 (c3-8 / more))
+                  :polarity (c3-1 / amr-unknown)))
+
+# ::snt So it will damage your immune system like chemo does.
+# ::tokens ["So", "it", "will", "damage", "your", "immune", "system", "like", "chemo", "does", "."]
+# ::lemmas ["so", "it", "will", "damage", "your", "immune", "system", "like", "chemo", "do", "."]
+(c4-7 / infer-01
+      :ARG1 (c4-0 / damage-01
+                  :ARG0 (c4-4 / it)
+                  :ARG1 (c4-1 / system
+                              :ARG1-of (c4-5 / immune-02)
+                              :poss (c4-8 / you))
+                  :ARG1-of (c4-6 / resemble-01
+                                 :ARG2 (c4-3 / damage-01
+                                             :ARG0 (c4-2 / chemo)
+                                             :ARG1 c4-1))))
+
+# ::snt Wow!
+# ::tokens ["Wow", "!"]
+# ::lemmas ["wow", "!"]
+(c5-0 / wow-01
+      :mode expressive)
+
+# ::snt Yes but it isnt a vaccine at all, it is gene therapy and chemotherapy
+# ::tokens ["Yes", "but", "it", "is", "nt", "a", "vaccine", "at", "all", ",", "it", "is", "gene", "therapy", "and", "chemotherapy"]
+# ::lemmas ["yes", "but", "it", "be", "not", "a", "vaccine", "at", "all", ",", "it", "be", "gene", "therapy", "and", "chemotherapy"]
+(c6-2 / contrast-01
+      :ARG1 (c6-3 / vaccine
+                  :domain (c6-6 / it)
+                  :mod (c6-1 / at-all)
+                  :polarity -)
+      :ARG2 (c6-7 / and
+                  :op1 (c6-4 / therapy
+                             :mod (c6-5 / gene))
+                  :op2 (c6-0 / chemotherapy)
+                  :domain c6-6))
+
+# ::snt Wait, this is their Covid vaccine?
+# ::tokens ["Wait", ",", "this", "is", "their", "Covid", "vaccine", "?"]
+# ::lemmas ["wait", ",", "this", "be", "their", "Covid", "vaccine", "?"]
+(c7-0 / and
+      :op1 (c7-1 / wait-01
+                 :ARG1 (c7-6 / you)
+                 :mode imperative)
+      :op2 (c7-3 / vaccine
+                 :name (c7-5 / name
+                             :op1 "Covid")
+                 :domain (c7-4 / this)
+                 :poss (c7-2 / they)
+                 :polarity (c7-7 / amr-unknown)))

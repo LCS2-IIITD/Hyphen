@@ -1,0 +1,35 @@
+# ::snt This is TD in a nutshell
+# ::tokens ["This", "is", "TD", "in", "a", "nutshell"]
+# ::lemmas ["this", "be", "TD", "in", "a", "nutshell"]
+(c1-0 / person
+      :name (c1-1 / name
+                  :op1 "TD")
+      :domain (c1-3 / this)
+      :prep-in (c1-2 / nutshell))
+
+# ::snt This is unsettling
+# ::tokens ["This", "is", "unsettling"]
+# ::lemmas ["this", "be", "unsettling"]
+(c2-1 / unsettle-01
+      :ARG0 (c2-0 / this))
+
+# ::snt you can see the moobs through his shirt!
+# ::tokens ["you", "can", "see", "the", "moobs", "through", "his", "shirt", "!"]
+# ::lemmas ["you", "can", "see", "the", "moob", "through", "his", "shirt", "!"]
+(c3-4 / possible-01
+      :ARG1 (c3-0 / see-01
+                  :ARG0 (c3-6 / you)
+                  :ARG1 (c3-5 / moob)
+                  :location (c3-2 / through
+                                  :op1 (c3-3 / shirt
+                                             :poss (c3-1 / he)))))
+
+# ::snt So.. making fun of someone because they're fat is cool
+# ::tokens ["So", "..", "making", "fun", "of", "someone", "because", "they", "'re", "fat", "is", "cool"]
+# ::lemmas ["so", "..", "make", "fun", "of", "someone", "because", "they", "be", "fat", "be", "cool"]
+(c4-3 / cause-01
+      :ARG0 (c4-2 / fat-03
+                  :ARG1 (c4-0 / someone))
+      :ARG1 (c4-1 / cool-04
+                  :ARG1 (c4-4 / make-fun-04
+                              :ARG1 c4-0)))

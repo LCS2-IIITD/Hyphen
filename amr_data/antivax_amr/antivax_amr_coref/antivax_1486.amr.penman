@@ -1,0 +1,81 @@
+# ::snt Same to you Andrew. Be well!
+# ::tokens ["Same", "to", "you", "Andrew", ".", "Be", "well", "!"]
+# ::lemmas ["same", "to", "you", "Andrew", ".", "be", "well", "!"]
+(c1-4 / multi-sentence
+      :snt1 (c1-0 / say-01
+                  :ARG1 (c1-2 / same-01
+                              :ARG2 (c1-3 / person
+                                          :name (c1-5 / name
+                                                      :op1 "Andrew")
+                                          :ARG2-of c1-0)))
+      :snt2 (c1-1 / well-05
+                  :ARG1 (c1-6 / you)
+                  :mode imperative))
+
+# ::snt Thats awesome! Word of advice: take some ibuprofen before bed that night so that your sore arm doesnt keep you awake
+# ::tokens ["That", "s", "awesome", "!", "Word", "of", "advice", ":", "take", "some", "ibuprofen", "before", "bed", "that", "night", "so", "that", "your", "sore", "arm", "does", "nt", "keep", "you", "awake"]
+# ::lemmas ["that", "s", "awesome", "!", "word", "of", "advice", ":", "take", "some", "ibuprofen", "before", "bed", "that", "night", "so", "that", "your", "sore", "arm", "do", "not", "keep", "you", "awake"]
+(c2-13 / multi-sentence
+       :snt1 (c2-3 / awesome-03
+                   :ARG1 (c2-9 / that))
+       :snt2 (c2-16 / advise-01
+                    :ARG2 (c2-7 / take-01
+                                :ARG0 (c2-15 / you
+                                             :part (c2-1 / arm
+                                                         :mod (c2-0 / sore)))
+                                :ARG1 (c2-12 / ibuprofen
+                                             :quant (c2-11 / some))
+                                :time (c2-10 / before
+                                             :op1 (c2-2 / bed-01
+                                                        :ARG1 c2-15
+                                                        :time (c2-4 / date-entity
+                                                                    :dayperiod (c2-14 / night)
+                                                                    :mod c2-9)))
+                                :mode imperative)
+                    :purpose (c2-5 / keep-02
+                                   :ARG0 c2-12
+                                   :ARG1 (c2-8 / awake-03
+                                               :ARG1 c2-15)
+                                   :polarity -))
+       :mod (c2-6 / word))
+
+# ::snt Very jealous and very happy for you. We will be waiting for months. I don't expect ours until nd half of the year. PS, Happy New Year to you, the family and your loved ones. Have a great .
+# ::tokens ["Very", "jealous", "and", "very", "happy", "for", "you", ".", "We", "will", "be", "waiting", "for", "months", ".", "I", "do", "n't", "expect", "ours", "until", "nd", "half", "of", "the", "year", ".", "PS", ",", "Happy", "New", "Year", "to", "you", ",", "the", "family", "and", "your", "loved", "ones", ".", "Have", "a", "great", "."]
+# ::lemmas ["very", "jealous", "and", "very", "happy", "for", "you", ".", "we", "will", "be", "wait", "for", "months", ".", "i", "do", "not", "expect", "ours", "until", "nd", "half", "of", "the", "year", ".", "PS", ",", "Happy", "New", "Year", "to", "you", ",", "the", "family", "and", "your", "love", "one", ".", "have", "a", "great", "."]
+(c3-12 / multi-sentence
+       :snt1 (c3-22 / and
+                    :op1 (c3-29 / jealous-02
+                                :ARG0 (c3-4 / i)
+                                :ARG1 (c3-20 / you)
+                                :degree (c3-8 / very))
+                    :op2 (c3-26 / happy-01
+                                :ARG1 c3-4
+                                :degree (c3-23 / very)))
+       :snt2 (c3-6 / wait-01
+                   :ARG1 (c3-14 / we)
+                   :duration (c3-24 / multiple
+                                    :op1 (c3-10 / temporal-quantity
+                                                :unit (c3-19 / month)
+                                                :quant 1)))
+       :snt3 (c3-15 / expect-01
+                    :ARG0 (c3-18 / i)
+                    :ARG1 (c3-7 / thing
+                                :poss (c3-3 / we))
+                    :time (c3-27 / until
+                                 :op1 (c3-2 / half
+                                            :part-of (c3-21 / year)))
+                    :polarity -)
+       :snt4 (c3-30 / post-scriptum
+                    :domain c3-26
+                    :ARG1 (c3-0 / year
+                                :mod (c3-13 / new))
+                    :beneficiary (c3-16 / and
+                                        :op1 (c3-17 / you)
+                                        :op2 (c3-25 / family)
+                                        :op3 (c3-9 / one
+                                                   :ARG1-of (c3-28 / love-01
+                                                                   :ARG0 c3-17))))
+       :snt5 (c3-5 / have-03
+                   :ARG0 (c3-1 / you)
+                   :ARG1 (c3-11 / great)
+                   :mode imperative))

@@ -1,0 +1,30 @@
+# ::snt Hashem yerachem. : An -month old baby is among the hostages at the Kosher supermarket in Paris.
+# ::tokens ["Hashem", "yerachem", ".", ":", "An", "-month", "old", "baby", "is", "among", "the", "hostages", "at", "the", "Kosher", "supermarket", "in", "Paris", "."]
+# ::lemmas ["Hashem", "yerachem", ".", ":", "an", "-month", "old", "baby", "be", "among", "the", "hostage", "at", "the", "Kosher", "supermarket", "in", "Paris", "."]
+(c1-4 / multi-sentence
+      :snt1 (c1-7 / person
+                  :name (c1-8 / name
+                              :op1 "Hashem"
+                              :op2 "Yerachem"))
+      :snt2 (c1-5 / include-91
+                  :ARG1 (c1-1 / baby
+                              :age (c1-0 / temporal-quantity
+                                         :unit (c1-2 / month)
+                                         :quant 1))
+                  :ARG2 (c1-10 / hostage
+                               :location (c1-6 / supermarket
+                                               :name (c1-3 / name
+                                                           :op1 "Kosher")
+                                               :location (c1-11 / city
+                                                                :name (c1-9 / name
+                                                                            :op1 "Paris"))))))
+
+# ::snt rumors say hostages are women and childrens---
+# ::tokens ["rumors", "say", "hostages", "are", "women", "and", "childrens---"]
+# ::lemmas ["rumor", "say", "hostage", "be", "woman", "and", "childrens---"]
+(c2-2 / say-01
+      :ARG0 (c2-1 / rumor-01)
+      :ARG1 (c2-0 / and
+                  :op1 (c2-3 / woman)
+                  :op2 (c2-5 / child)
+                  :domain (c2-4 / hostage)))

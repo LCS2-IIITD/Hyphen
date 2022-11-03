@@ -1,0 +1,240 @@
+# ::snt I think that's the point
+# ::tokens ["I", "think", "that", "'s", "the", "point"]
+# ::lemmas ["i", "think", "that", "be", "the", "point"]
+(c1-3 / think-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-1 / point-03
+                  :ARG2 (c1-0 / that)))
+
+# ::snt Yey!!! happy Friday!! I so can't wait for this tour!!
+# ::tokens ["Yey", "!", "!", "!", "happy", "Friday", "!", "!", "I", "so", "ca", "n't", "wait", "for", "this", "tour", "!", "!"]
+# ::lemmas ["yey", "!", "!", "!", "happy", "Friday", "!", "!", "i", "so", "can", "not", "wait", "for", "this", "tour", "!", "!"]
+(c2-2 / multi-sentence
+      :snt1 (c2-1 / yey
+                  :mode expressive)
+      :snt2 (c2-4 / happy-01
+                  :ARG1 (c2-8 / date-entity
+                              :weekday (c2-0 / friday)))
+      :snt3 (c2-5 / wait-01
+                  :ARG1 (c2-6 / i)
+                  :ARG2 (c2-7 / tour-01
+                              :mod (c2-9 / this))
+                  :degree (c2-3 / so)
+                  :polarity -))
+
+# ::snt Tour announced
+# ::tokens ["Tour", "announced"]
+# ::lemmas ["Tour", "announce"]
+(c3-1 / announce-01
+      :ARG1 (c3-0 / tour))
+
+# ::snt We are shook
+# ::tokens ["We", "are", "shook"]
+# ::lemmas ["we", "be", "shake"]
+(c10-1 / shake-01
+       :ARG1 (c10-0 / we))
+
+# ::snt because they hate Katy
+# ::tokens ["because", "they", "hate", "Katy"]
+# ::lemmas ["because", "they", "hate", "Katy"]
+(c12-3 / cause-01
+       :ARG0 (c12-1 / hate-01
+                    :ARG0 (c12-4 / they)
+                    :ARG1 (c12-2 / person
+                                 :name (c12-0 / name
+                                              :op1 "Katy"))))
+
+# ::snt why is every Taylor Swift headline so flamboyant and every Katy Perry one so basic??
+# ::tokens ["why", "is", "every", "Taylor", "Swift", "headline", "so", "flamboyant", "and", "every", "Katy", "Perry", "one", "so", "basic", "?", "?"]
+# ::lemmas ["why", "be", "every", "Taylor", "Swift", "headline", "so", "flamboyant", "and", "every", "Katy", "Perry", "one", "so", "basic", "?", "?"]
+(c13-10 / cause-01
+        :ARG0 (c13-13 / amr-unknown)
+        :ARG1 (c13-12 / and
+                      :op1 (c13-7 / headline
+                                  :mod (c13-8 / person
+                                              :name (c13-3 / name
+                                                           :op1 "Taylor"
+                                                           :op2 "Swift"))
+                                  :mod (c13-6 / every)
+                                  :ARG1-of (c13-0 / flamboyant-00
+                                                  :degree (c13-5 / so)))
+                      :op2 (c13-11 / headline
+                                   :mod (c13-4 / person
+                                               :name (c13-9 / name
+                                                            :op1 "Katy"
+                                                            :op2 "Perry"))
+                                   :mod (c13-14 / every)
+                                   :mod (c13-2 / basic
+                                               :degree (c13-1 / so)))))
+
+# ::snt Yeah, in the future but not right now, I like her but to be a "legend" require more than just some , u know just saying
+# ::tokens ["Yeah", ",", "in", "the", "future", "but", "not", "right", "now", ",", "I", "like", "her", "but", "to", "be", "a", "\"", "legend", "\"", "require", "more", "than", "just", "some", ",", "u", "know", "just", "saying"]
+# ::lemmas ["yeah", ",", "in", "the", "future", "but", "not", "right", "now", ",", "i", "like", "she", "but", "to", "be", "a", "\"", "legend", "\"", "require", "more", "than", "just", "some", ",", "u", "know", "just", "say"]
+(c14-10 / contrast-01
+        :ARG1 (c14-8 / like-01
+                     :ARG0 (c14-12 / i)
+                     :ARG1 (c14-5 / she)
+                     :time (c14-0 / future)
+                     :ARG1-of (c14-15 / contrast-01
+                                      :ARG2 (c14-3 / now
+                                                   :mod (c14-6 / right)
+                                                   :polarity -)))
+        :ARG2 (c14-13 / require-01
+                      :ARG0 c14-5
+                      :ARG1 (c14-7 / have-quant-91
+                                   :ARG1 c14-5
+                                   :ARG3 (c14-4 / more)
+                                   :ARG4 (c14-1 / some
+                                                :mod (c14-11 / just)))
+                      :purpose (c14-14 / legacy
+                                       :domain c14-5)
+                      :ARG1-of (c14-16 / say-01
+                                       :ARG0 (c14-2 / you)
+                                       :mod (c14-9 / just))))
+
+# ::snt thats not a funny joke. You didnt learn nothing with rw
+# ::tokens ["that", "s", "not", "a", "funny", "joke", ".", "You", "did", "nt", "learn", "nothing", "with", "rw"]
+# ::lemmas ["that", "s", "not", "a", "funny", "joke", ".", "you", "do", "not", "learn", "nothing", "with", "rw"]
+(c15-2 / multi-sentence
+       :snt1 (c15-7 / joke-01
+                    :ARG2 (c15-8 / that)
+                    :mod (c15-0 / funny)
+                    :polarity -)
+       :snt2 (c15-5 / learn-01
+                    :ARG0 (c15-1 / you)
+                    :ARG1 (c15-3 / nothing)
+                    :ARG2 (c15-6 / person
+                                 :name (c15-4 / name
+                                              :op1 "rw"))
+                    :polarity -))
+
+# ::snt Its really sad that you had to dig more deeper to ease yer triggered ass
+# ::tokens ["Its", "really", "sad", "that", "you", "had", "to", "dig", "more", "deeper", "to", "ease", "yer", "triggered", "ass"]
+# ::lemmas ["its", "really", "sad", "that", "you", "have", "to", "dig", "more", "deep", "to", "ease", "yer", "trigger", "ass"]
+(c16-3 / sad-02
+       :ARG0 (c16-0 / obligate-01
+                    :ARG1 (c16-1 / you)
+                    :ARG2 (c16-10 / dig-01
+                                  :ARG0 c16-1
+                                  :ARG1-of (c16-7 / have-degree-91
+                                                  :ARG2 (c16-8 / deep-02
+                                                               :ARG1 c16-10)
+                                                  :ARG3 (c16-2 / more))
+                                  :purpose (c16-6 / ease-02
+                                                  :ARG0 c16-1
+                                                  :ARG1 (c16-9 / trigger-01
+                                                               :ARG0 c16-1
+                                                               :ARG1 (c16-4 / ass)))))
+       :degree (c16-5 / really))
+
+# ::snt Qu bonito despertar as
+# ::tokens ["Qu", "bonito", "despertar", "as"]
+# ::lemmas ["Qu", "bonito", "despertar", "as"]
+(c17-1 / person
+       :name (c17-0 / name
+                    :op1 "Quito"
+                    :op2 " despertar"))
+
+# ::snt Way tooooo far from a legend
+# ::tokens ["Way", "tooooo", "far", "from", "a", "legend"]
+# ::lemmas ["way", "tooooo", "far", "from", "a", "legend"]
+(c18-0 / far
+       :ARG2-of (c18-1 / have-degree-91
+                       :ARG3 (c18-4 / too
+                                    :quant (c18-3 / way)))
+       :direction (c18-2 / legend))
+
+# ::snt Seriously? I thought that was just the name of the tour. Can't wait for it.
+# ::tokens ["Seriously", "?", "I", "thought", "that", "was", "just", "the", "name", "of", "the", "tour", ".", "Ca", "n't", "wait", "for", "it", "."]
+# ::lemmas ["seriously", "?", "i", "think", "that", "be", "just", "the", "name", "of", "the", "tour", ".", "can", "not", "wait", "for", "it", "."]
+(c19-0 / multi-sentence
+       :snt1 (c19-2 / serious-01
+                    :polarity (c19-7 / amr-unknown)
+                    :ARG2 (c19-5 / think-01
+                                 :ARG0 (c19-6 / i)
+                                 :ARG1 (c19-1 / name-01
+                                              :ARG1 (c19-10 / tour)
+                                              :ARG2 (c19-8 / that)
+                                              :mod (c19-9 / just))))
+       :snt2 (c19-4 / wait-01
+                    :ARG1 c19-6
+                    :ARG2 (c19-3 / it)))
+
+# ::snt She is ok, she is not a "legend" yet
+# ::tokens ["She", "is", "ok", ",", "she", "is", "not", "a", "\"", "legend", "\"", "yet"]
+# ::lemmas ["she", "be", "ok", ",", "she", "be", "not", "a", "\"", "legend", "\"", "yet"]
+(c20-4 / and
+       :op1 (c20-0 / okay-04
+                   :ARG1 (c20-2 / she))
+       :op2 (c20-3 / legend
+                   :domain c20-2
+                   :time (c20-1 / yet)
+                   :polarity -))
+
+# ::snt me right now!!!!
+# ::tokens ["me", "right", "now", "!", "!", "!", "!"]
+# ::lemmas ["i", "right", "now", "!", "!", "!", "!"]
+(c21-2 / i
+       :time (c21-1 / now
+                    :mod (c21-0 / right)))
+
+# ::snt Can see her flopping deeper than
+# ::tokens ["Can", "see", "her", "flopping", "deeper", "than"]
+# ::lemmas ["can", "see", "she", "flopping", "deep", "than"]
+(c23-5 / possible-01
+       :ARG1 (c23-3 / see-01
+                    :ARG1 (c23-0 / floor-01
+                                 :ARG1 (c23-1 / she)
+                                 :ARG1-of (c23-4 / have-degree-91
+                                                 :ARG2 (c23-6 / deep-02
+                                                              :ARG1 c23-0)
+                                                 :ARG3 (c23-2 / more)))))
+
+# ::snt LEGEND
+# ::tokens ["LEGEND"]
+# ::lemmas ["LEGEND"]
+(c24-1 / law
+       :name (c24-0 / name
+                    :op1 "Lords"))
+
+# ::snt She hasn't dropped the album yet and still she's announcing a tour? Wtf
+# ::tokens ["She", "has", "n't", "dropped", "the", "album", "yet", "and", "still", "she", "'s", "announcing", "a", "tour", "?", "Wtf"]
+# ::lemmas ["she", "have", "not", "drop", "the", "album", "yet", "and", "still", "she", "be", "announce", "a", "tour", "?", "wtf"]
+(c25-3 / multi-sentence
+       :snt1 (c25-10 / and
+                     :op1 (c25-11 / drop-05
+                                  :ARG0 (c25-5 / she)
+                                  :ARG1 (c25-9 / album)
+                                  :time (c25-2 / yet)
+                                  :polarity -)
+                     :op2 (c25-7 / announce-01
+                                 :ARG0 (c25-0 / she)
+                                 :ARG1 (c25-8 / tour-01
+                                              :ARG0 c25-0)
+                                 :mod (c25-12 / still))
+                     :polarity (c25-4 / amr-unknown)
+                     :snt2 (c25-6 / amr-unknown
+                                  :mod (c25-1 / fuck
+                                              :mode expressive))))
+
+# ::snt PRE ORDER THIS FRIDAY
+# ::tokens ["PRE", "ORDER", "THIS", "FRIDAY"]
+# ::lemmas ["PRE", "ORDER", "this", "FRIDAY"]
+(c26-0 / order-02
+       :ARG0 (c26-2 / you)
+       :time (c26-3 / date-entity
+                    :weekday (c26-1 / friday))
+       :mode imperative)
+
+# ::snt flop
+# ::tokens ["flop"]
+# ::lemmas ["flop"]
+(c28-1 / person
+       :name (c28-0 / name
+                    :op1 "Flop"))
+
+# ::snt I'm dying
+# ::tokens ["I", "'m", "dying"]
+# ::lemmas ["i", "be", "die"]
+(c29-0 / die-01
+       :ARG1 (c29-1 / i))

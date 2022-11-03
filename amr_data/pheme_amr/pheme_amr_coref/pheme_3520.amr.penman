@@ -1,0 +1,44 @@
+# ::snt that is interesting, since they are always quick to respond
+# ::tokens ["that", "is", "interesting", ",", "since", "they", "are", "always", "quick", "to", "respond"]
+# ::lemmas ["that", "be", "interesting", ",", "since", "they", "be", "always", "quick", "to", "respond"]
+(c1-1 / interest-01
+      :ARG0 (c1-3 / cause-01
+                  :ARG0 (c1-0 / quick-02
+                              :ARG1 (c1-2 / respond-01
+                                          :ARG0 (c1-5 / they))
+                              :time (c1-6 / always))
+                  :ARG1 (c1-4 / that)))
+
+# ::snt For all they know they've got a new boss. Don't want to say anything out of line until new orders received.
+# ::tokens ["For", "all", "they", "know", "they", "'ve", "got", "a", "new", "boss", ".", "Do", "n't", "want", "to", "say", "anything", "out", "of", "line", "until", "new", "orders", "received", "."]
+# ::lemmas ["for", "all", "they", "know", "they", "'ve", "get", "a", "new", "boss", ".", "do", "not", "want", "to", "say", "anything", "out", "of", "line", "until", "new", "order", "receive", "."]
+(c2-3 / multi-sentence
+      :snt1 (c2-0 / have-03
+                  :ARG0 (c2-13 / they)
+                  :ARG1 (c2-5 / boss
+                              :ARG1-of (c2-9 / new-01))
+                  :concession (c2-2 / for-all
+                                    :op1 (c2-8 / know-01
+                                               :ARG0 c2-13)))
+      :snt2 (c2-1 / want-01
+                  :ARG1 (c2-12 / say-01
+                               :ARG1 (c2-14 / anything
+                                            :ARG1-of (c2-7 / in-line-04
+                                                           :polarity -))
+                               :time (c2-4 / until
+                                           :op1 (c2-11 / receive-01
+                                                       :ARG1 (c2-6 / order
+                                                                   :ARG1-of (c2-10 / new-01)))))
+                  :polarity -))
+
+# ::snt Exactly. They're not there. I've been watching.
+# ::tokens ["Exactly", ".", "They", "'re", "not", "there", ".", "I", "'ve", "been", "watching", "."]
+# ::lemmas ["exactly", ".", "they", "be", "not", "there", ".", "i", "'ve", "be", "watch", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-3 / exact)
+      :snt2 (c3-2 / be-located-at-91
+                  :ARG1 (c3-6 / they)
+                  :ARG2 (c3-5 / there)
+                  :polarity -)
+      :snt3 (c3-0 / watch-01
+                  :ARG0 (c3-4 / i)))

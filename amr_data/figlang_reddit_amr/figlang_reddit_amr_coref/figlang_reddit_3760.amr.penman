@@ -1,0 +1,68 @@
+# ::snt Kim Jong Un on my train today.
+# ::tokens ["Kim", "Jong", "Un", "on", "my", "train", "today", "."]
+# ::lemmas ["Kim", "Jong", "Un", "on", "my", "train", "today", "."]
+(c1-3 / person
+      :name (c1-4 / name
+                  :op1 "Kim"
+                  :op2 "Jong"
+                  :op3 "Un")
+      :location (c1-2 / train
+                      :poss (c1-0 / i))
+      :time (c1-1 / today))
+
+# ::snt 99% this dude was interviewed on the WGN chicago local morning news program on 11/06 and he is a student from U of I in Champlain, IL He was wearing the same black jacket in his interview on TV when i saw it.
+# ::tokens ["99", "%", "this", "dude", "was", "interviewed", "on", "the", "WGN", "chicago", "local", "morning", "news", "program", "on", "11/06", "and", "he", "is", "a", "student", "from", "U", "of", "I", "in", "Champlain", ",", "IL", "He", "was", "wearing", "the", "same", "black", "jacket", "in", "his", "interview", "on", "TV", "when", "i", "saw", "it", "."]
+# ::lemmas ["99", "%", "this", "dude", "be", "interview", "on", "the", "WGN", "chicago", "local", "morning", "news", "program", "on", "11/06", "and", "he", "be", "a", "student", "from", "U", "of", "i", "in", "Champlain", ",", "IL", "he", "be", "wear", "the", "same", "black", "jacket", "in", "his", "interview", "on", "tv", "when", "i", "see", "it", "."]
+(c2-11 / multi-sentence
+       :snt1 (c2-20 / and
+                    :op1 (c2-3 / interview-01
+                               :ARG1 (c2-0 / dude
+                                           :mod (c2-9 / this))
+                               :medium (c2-25 / broadcast-program
+                                              :name (c2-12 / name
+                                                           :op1 "WGN")
+                                              :location (c2-6 / city
+                                                              :name (c2-2 / name
+                                                                          :op1 "Chicago"))
+                                              :mod (c2-17 / news)
+                                              :ARG1-of (c2-24 / local-02))
+                               :time (c2-18 / date-entity
+                                            :month 11
+                                            :day 6))
+                    :op2 (c2-27 / person
+                                :ARG0-of (c2-13 / study-01)
+                                :source (c2-22 / university
+                                               :name (c2-5 / name
+                                                           :op1 "U"
+                                                           :op2 "of"
+                                                           :op3 "I")
+                                               :location (c2-1 / city
+                                                               :name (c2-10 / name
+                                                                            :op1 "Champlain")
+                                                               :location (c2-26 / state
+                                                                                :name (c2-21 / name
+                                                                                             :op1 "Illinois"))))
+                                :domain c2-0))
+       :snt2 (c2-7 / wear-01
+                   :ARG0 (c2-14 / i)
+                   :ARG1 (c2-23 / jacket
+                                :ARG1-of (c2-19 / black-04)
+                                :ARG1-of (c2-15 / same-01))
+                   :time (c2-16 / interview-01
+                                :ARG1 c2-0
+                                :medium (c2-8 / television))
+                   :time (c2-4 / see-01
+                               :ARG0 c2-14
+                               :ARG1 c2-23)))
+
+# ::snt Just watched the interview, I believe it's him.
+# ::tokens ["Just", "watched", "the", "interview", ",", "I", "believe", "it", "'s", "him", "."]
+# ::lemmas ["just", "watch", "the", "interview", ",", "i", "believe", "it", "be", "he", "."]
+(c3-0 / and
+      :op1 (c3-1 / watch-01
+                 :ARG0 (c3-6 / i)
+                 :ARG1 (c3-2 / interview-01)
+                 :time (c3-5 / just))
+      :op2 (c3-4 / believe-01
+                 :ARG0 c3-6
+                 :ARG1 (c3-3 / he)))

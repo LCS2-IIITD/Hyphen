@@ -1,0 +1,33 @@
+# ::snt Wind farm in Denmark creating fog.
+# ::tokens ["Wind", "farm", "in", "Denmark", "creating", "fog", "."]
+# ::lemmas ["wind", "farm", "in", "Denmark", "create", "fog", "."]
+(c1-2 / create-01
+      :ARG0 (c1-1 / farm
+                  :mod (c1-3 / wind)
+                  :location (c1-0 / country
+                                  :name (c1-5 / name
+                                              :op1 "Denmark")))
+      :ARG1 (c1-4 / fog))
+
+# ::snt Is it creating fog or is it simply foggy out and the wind farm is creating turbulence, which is visible in the fog?
+# ::tokens ["Is", "it", "creating", "fog", "or", "is", "it", "simply", "foggy", "out", "and", "the", "wind", "farm", "is", "creating", "turbulence", ",", "which", "is", "visible", "in", "the", "fog", "?"]
+# ::lemmas ["be", "it", "create", "fog", "or", "be", "it", "simply", "foggy", "out", "and", "the", "wind", "farm", "be", "create", "turbulence", ",", "which", "be", "visible", "in", "the", "fog", "?"]
+(c2-2 / amr-choice
+      :op1 (c2-4 / create-01
+                 :ARG0 (c2-11 / it)
+                 :ARG1 (c2-3 / fog))
+      :op2 (c2-12 / and
+                  :op1 (c2-6 / fog
+                             :direction (c2-7 / out)
+                             :ARG1-of (c2-0 / simple-02))
+                  :op2 (c2-1 / create-01
+                             :ARG0 (c2-9 / farm-01
+                                         :ARG2 (c2-5 / wind))
+                             :ARG1 (c2-8 / turbulence
+                                         :ARG1-of (c2-10 / see-01
+                                                         :ARG0 c2-6)))))
+
+# ::snt Yes.
+# ::tokens ["Yes", "."]
+# ::lemmas ["yes", "."]
+(c3-0 / yes)

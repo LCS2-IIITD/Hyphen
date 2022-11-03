@@ -1,0 +1,94 @@
+# ::snt You from American or the vaccine will be published all over?
+# ::tokens ["You", "from", "American", "or", "the", "vaccine", "will", "be", "published", "all", "over", "?"]
+# ::lemmas ["you", "from", "American", "or", "the", "vaccine", "will", "be", "publish", "all", "over", "?"]
+(c1-3 / or
+      :op1 (c1-6 / you
+                 :source (c1-1 / country
+                               :name (c1-5 / name
+                                           :op1 "America")))
+      :op2 (c1-4 / publish-01
+                 :ARG1 (c1-2 / vaccine)
+                 :location (c1-0 / all-over))
+      :polarity (c1-7 / amr-unknown))
+
+# ::snt Mmmh okay I hear you
+# ::tokens ["Mmmh", "okay", "I", "hear", "you"]
+# ::lemmas ["Mmmh", "okay", "i", "hear", "you"]
+(c2-0 / hear-01
+      :ARG0 (c2-3 / i)
+      :ARG2 (c2-4 / you)
+      :ARG1-of (c2-1 / okay-01)
+      :mod (c2-2 / hmm
+                 :mode expressive))
+
+# ::snt Bill Gates vaccines kills fertility because he's busy with depopulation
+# ::tokens ["Bill", "Gates", "vaccines", "kills", "fertility", "because", "he", "'s", "busy", "with", "depopulation"]
+# ::lemmas ["Bill", "Gates", "vaccine", "kill", "fertility", "because", "he", "be", "busy", "with", "depopulation"]
+(c3-7 / kill-01
+      :ARG0 (c3-3 / vaccine
+                  :poss (c3-6 / person
+                              :name (c3-4 / name
+                                          :op1 "Bill"
+                                          :op2 "Gates")))
+      :ARG1 (c3-1 / fertility)
+      :ARG1-of (c3-2 / cause-01
+                     :ARG0 (c3-5 / busy-01
+                                 :ARG1 c3-6
+                                 :ARG2 (c3-0 / depopulate-01))))
+
+# ::snt I meant to ask who said your fertility will be no more if you vaccinate ?
+# ::tokens ["I", "meant", "to", "ask", "who", "said", "your", "fertility", "will", "be", "no", "more", "if", "you", "vaccinate", "?"]
+# ::lemmas ["i", "mean", "to", "ask", "who", "say", "your", "fertility", "will", "be", "no", "more", "if", "you", "vaccinate", "?"]
+(c4-7 / mean-02
+      :ARG0 (c4-6 / i)
+      :ARG1 (c4-1 / ask-01
+                  :ARG0 c4-6
+                  :ARG1 (c4-5 / person
+                              :ARG0-of (c4-0 / say-01
+                                             :ARG1 (c4-2 / fertility
+                                                         :poss (c4-8 / you)
+                                                         :mod (c4-3 / more)
+                                                         :condition (c4-4 / vaccinate-01
+                                                                          :ARG0 c4-8)
+                                                         :polarity -)))
+                  :ARG2 c4-8))
+
+# ::snt You clearly didn't read what I've posted. Peace out
+# ::tokens ["You", "clearly", "did", "n't", "read", "what", "I", "'ve", "posted", ".", "Peace", "out"]
+# ::lemmas ["you", "clearly", "do", "not", "read", "what", "i", "'ve", "post", ".", "peace", "out"]
+(c5-7 / multi-sentence
+      :snt1 (c5-5 / read-01
+                  :ARG0 (c5-8 / you)
+                  :ARG1 (c5-4 / thing
+                              :ARG1-of (c5-6 / post-01
+                                             :ARG0 (c5-0 / i)))
+                  :ARG1-of (c5-1 / clear-06)
+                  :polarity -)
+      :snt2 (c5-3 / peace
+                  :direction (c5-2 / out)))
+
+# ::snt Ubani othe uzofa if you vaccinated
+# ::tokens ["Ubani", "othe", "uzofa", "if", "you", "vaccinated"]
+# ::lemmas ["ubani", "othe", "uzofa", "if", "you", "vaccinate"]
+(c6-1 / have-condition-91
+      :ARG1 (c6-0 / disease
+                  :name (c6-4 / name
+                              :op1 "Uzofa")
+                  :mod (c6-2 / ubani))
+      :ARG2 (c6-3 / vaccinate-01
+                  :ARG1 (c6-5 / you)))
+
+# ::snt Ngizothini?
+# ::tokens ["Ngizothini", "?"]
+# ::lemmas ["Ngizothini", "?"]
+(c7-0 / person
+      :polarity (c7-1 / amr-unknown)
+      :name (c7-2 / name
+                  :op1 "Ngizothini"))
+
+# ::snt Hawu
+# ::tokens ["Hawu"]
+# ::lemmas ["hawu"]
+(c8-0 / state
+      :name (c8-1 / name
+                  :op1 "Hawu"))

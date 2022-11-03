@@ -1,0 +1,85 @@
+# ::snt Chinese firms pumping $1 billion into Paramount movies
+# ::tokens ["Chinese", "firms", "pumping", "$", "1", "billion", "into", "Paramount", "movies"]
+# ::lemmas ["Chinese", "firm", "pump", "$", "1", "billion", "into", "Paramount", "movie"]
+(c1-6 / pump-01
+      :ARG0 (c1-2 / firm
+                  :mod (c1-3 / country
+                             :name (c1-8 / name
+                                         :op1 "China")))
+      :ARG1 (c1-7 / movie
+                  :poss (c1-0 / company
+                              :name (c1-5 / name
+                                          :op1 "Paramount")))
+      :ARG2 (c1-4 / monetary-quantity
+                  :unit (c1-1 / dollar)
+                  :quant 1000000000))
+
+# ::snt Does this mean we are going to get more Chinese Kung Fu Movies?
+# ::tokens ["Does", "this", "mean", "we", "are", "going", "to", "get", "more", "Chinese", "Kung", "Fu", "Movies", "?"]
+# ::lemmas ["do", "this", "mean", "we", "be", "go", "to", "get", "more", "chinese", "Kung", "Fu", "Movies", "?"]
+(c2-6 / mean-01
+      :ARG1 (c2-4 / this)
+      :ARG2 (c2-5 / get-01
+                  :ARG0 (c2-2 / we)
+                  :ARG1 (c2-1 / movie
+                              :name (c2-7 / name
+                                          :op1 "Chinese"
+                                          :op2 "Kung"
+                                          :op3 "Fu"
+                                          :op4 "Movies")
+                              :quant (c2-3 / more)))
+      :polarity (c2-0 / amr-unknown))
+
+# ::snt No, Transformer films.
+# ::tokens ["No", ",", "Transformer", "films", "."]
+# ::lemmas ["no", ",", "Transformer", "film", "."]
+(c3-0 / and
+      :op1 (c3-1 / no)
+      :op2 (c3-3 / film
+                 :name (c3-2 / name
+                             :op1 "Transformer")))
+
+# ::snt Where Chinese technology saves the day, like in The Martian and Gravity.
+# ::tokens ["Where", "Chinese", "technology", "saves", "the", "day", ",", "like", "in", "The", "Martian", "and", "Gravity", "."]
+# ::lemmas ["where", "Chinese", "technology", "save", "the", "day", ",", "like", "in", "the", "Martian", "and", "Gravity", "."]
+(c4-7 / thing
+      :location-of (c4-0 / save-02
+                         :ARG0 (c4-5 / technology
+                                     :mod (c4-4 / country
+                                                :name (c4-11 / name
+                                                             :op1 "China")))
+                         :ARG1 (c4-1 / day)
+                         :ARG1-of (c4-8 / resemble-01
+                                        :ARG2 (c4-3 / and
+                                                    :op1 (c4-10 / book
+                                                                :name (c4-9 / name
+                                                                            :op1 "The"
+                                                                            :op2 "Mars"))
+                                                    :op2 (c4-2 / book
+                                                               :name (c4-6 / name
+                                                                           :op1 "Gravity"))))))
+
+# ::snt I thought it was Russia in Gravity?
+# ::tokens ["I", "thought", "it", "was", "Russia", "in", "Gravity", "?"]
+# ::lemmas ["i", "think", "it", "be", "Russia", "in", "Gravity", "?"]
+(c5-3 / think-01
+      :ARG0 (c5-5 / i)
+      :ARG1 (c5-1 / country
+                  :name (c5-6 / name
+                              :op1 "Russia")
+                  :location (c5-2 / work-of-art
+                                  :name (c5-4 / name
+                                              :op1 "Gravity")))
+      :polarity (c5-0 / amr-unknown))
+
+# ::snt It was a Chinese capsule I thought?
+# ::tokens ["It", "was", "a", "Chinese", "capsule", "I", "thought", "?"]
+# ::lemmas ["it", "be", "a", "Chinese", "capsule", "i", "think", "?"]
+(c6-4 / think-01
+      :ARG0 (c6-5 / i)
+      :ARG1 (c6-2 / capsule
+                  :mod (c6-0 / country
+                             :name (c6-6 / name
+                                         :op1 "China"))
+                  :domain (c6-3 / it))
+      :polarity (c6-1 / amr-unknown))

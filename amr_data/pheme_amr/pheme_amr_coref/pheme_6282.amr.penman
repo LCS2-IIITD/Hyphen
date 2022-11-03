@@ -1,0 +1,56 @@
+# ::snt One pilot was in theflight deck. One was not -- just stepped out and couldn't get back in.
+# ::tokens ["One", "pilot", "was", "in", "theflight", "deck", ".", "One", "was", "not", "--", "just", "stepped", "out", "and", "could", "n't", "get", "back", "in", "."]
+# ::lemmas ["One", "pilot", "be", "in", "theflight", "deck", ".", "One", "be", "not", "--", "just", "step", "out", "and", "could", "not", "get", "back", "in", "."]
+(c1-2 / multi-sentence
+      :snt1 (c1-5 / be-located-at-91
+                  :ARG1 (c1-7 / person
+                              :ARG0-of (c1-12 / pilot-01)
+                              :quant 1)
+                  :ARG2 (c1-8 / deck
+                              :purpose (c1-1 / fly-01)))
+      :snt2 (c1-13 / and
+                   :op1 (c1-10 / step-01
+                               :ARG0 (c1-4 / person
+                                           :domain (c1-6 / one
+                                                         :polarity -)
+                                           :quant 1)
+                               :direction (c1-3 / out)
+                               :mod (c1-0 / just))
+                   :op2 (c1-11 / possible-01
+                               :ARG1 (c1-9 / get-back-10
+                                           :ARG1 c1-4
+                                           :ARG2 c1-8)
+                               :polarity -)))
+
+# ::snt No kidding. Medical, suicide? Who knows?
+# ::tokens ["No", "kidding", ".", "Medical", ",", "suicide", "?", "Who", "knows", "?"]
+# ::lemmas ["no", "kidding", ".", "medical", ",", "suicide", "?", "who", "know", "?"]
+(c2-0 / multi-sentence
+      :snt1 (c2-6 / kid-01
+                  :polarity -)
+      :snt2 (c2-7 / and
+                  :op1 (c2-4 / medical)
+                  :op2 (c2-5 / suicide)
+                  :polarity (c2-2 / amr-unknown))
+      :snt3 (c2-1 / know-01
+                  :ARG0 (c2-3 / amr-unknown)))
+
+# ::snt wow
+# ::tokens ["wow"]
+# ::lemmas ["wow"]
+(c3-0 / wow
+      :mode expressive)
+
+# ::snt so suspicion may fall on copilot? Wonder who he is..
+# ::tokens ["so", "suspicion", "may", "fall", "on", "copilot", "?", "Wonder", "who", "he", "is", ".."]
+# ::lemmas ["so", "suspicion", "may", "fall", "on", "copilot", "?", "wonder", "who", "he", "be", ".."]
+(c4-4 / multi-sentence
+      :snt1 (c4-5 / possible-01
+                  :ARG1 (c4-3 / fall-01
+                              :ARG1 (c4-7 / suspect-01)
+                              :ARG4 (c4-6 / copilot))
+                  :polarity (c4-9 / amr-unknown))
+      :snt2 (c4-1 / wonder-01
+                  :ARG0 (c4-2 / you)
+                  :ARG1 (c4-8 / thing
+                              :domain (c4-0 / he))))

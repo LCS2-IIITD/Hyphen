@@ -1,0 +1,57 @@
+# ::snt the moment the paint touches the wallit becomes art. whether it's a crime or not is irrelevant.
+# ::tokens ["the", "moment", "the", "paint", "touches", "the", "wallit", "becomes", "art", ".", "whether", "it", "'s", "a", "crime", "or", "not", "is", "irrelevant", "."]
+# ::lemmas ["the", "moment", "the", "paint", "touch", "the", "wallit", "become", "art", ".", "whether", "it", "be", "a", "crime", "or", "not", "be", "irrelevant", "."]
+(c1-6 / multi-sentence
+      :snt1 (c1-1 / become-01
+                  :ARG1 (c1-2 / paint)
+                  :ARG2 (c1-9 / art)
+                  :time (c1-3 / touch-01
+                              :ARG0 c1-2
+                              :ARG1 (c1-0 / wall)))
+      :snt2 (c1-4 / relevant-01
+                  :ARG1 (c1-5 / or
+                              :op1 (c1-8 / crime-02)
+                              :op2 (c1-7 / crime-02
+                                         :polarity -))
+                  :polarity -))
+
+# ::snt Or when art is even innovative like this
+# ::tokens ["Or", "when", "art", "is", "even", "innovative", "like", "this"]
+# ::lemmas ["or", "when", "art", "be", "even", "innovative", "like", "this"]
+(c2-2 / or
+      :op2 (c2-0 / be-temporally-at-91
+                 :ARG2 (c2-1 / innovate-01
+                             :ARG1 (c2-5 / art)
+                             :mod (c2-6 / even)
+                             :ARG1-of (c2-3 / resemble-01
+                                            :ARG2 (c2-4 / this)))))
+
+# ::snt :When it's a cement plant that needs an upgrade: trucks painted.
+# ::tokens [":", "When", "it", "'s", "a", "cement", "plant", "that", "needs", "an", "upgrade", ":", "trucks", "painted", "."]
+# ::lemmas [":", "when", "it", "be", "a", "cement", "plant", "that", "need", "an", "upgrade", ":", "truck", "paint", "."]
+(c3-0 / paint-02
+      :ARG1 (c3-1 / truck)
+      :time (c3-5 / plant
+                  :mod (c3-2 / cement)
+                  :ARG0-of (c3-4 / need-01
+                                 :ARG1 (c3-3 / upgrade-02
+                                             :ARG1 c3-5))))
+
+# ::snt I'm the real banksi
+# ::tokens ["I", "'m", "the", "real", "banksi"]
+# ::lemmas ["i", "be", "the", "real", "banksi"]
+(c4-2 / banki
+      :ARG1-of (c4-0 / real-04)
+      :domain (c4-1 / i))
+
+# ::snt i've known who it was for years
+# ::tokens ["i", "'ve", "known", "who", "it", "was", "for", "years"]
+# ::lemmas ["i", "'ve", "know", "who", "it", "be", "for", "years"]
+(c5-6 / know-01
+      :ARG0 (c5-0 / i)
+      :ARG1 (c5-1 / person
+                  :domain (c5-5 / it))
+      :duration (c5-3 / multiple
+                      :op1 (c5-2 / temporal-quantity
+                                 :unit (c5-4 / year)
+                                 :quant 1)))

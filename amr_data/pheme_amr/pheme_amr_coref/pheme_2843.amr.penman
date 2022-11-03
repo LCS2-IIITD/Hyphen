@@ -1,0 +1,61 @@
+# ::snt un lance grenade en plus
+# ::tokens ["un", "lance", "grenade", "en", "plus"]
+# ::lemmas ["un", "lance", "grenade", "en", "plus"]
+(c1-3 / grenade
+      :mod (c1-2 / country
+                 :name (c1-0 / name
+                             :op1 "France"))
+      :mod (c1-1 / plus))
+
+# ::snt I strongly condemn this terrorist attack as a Turkish Muslim.I love my Prophet.But my Prophet rejects terrorism.
+# ::tokens ["I", "strongly", "condemn", "this", "terrorist", "attack", "as", "a", "Turkish", "Muslim", ".", "I", "love", "my", "Prophet", ".", "But", "my", "Prophet", "rejects", "terrorism", "."]
+# ::lemmas ["i", "strongly", "condemn", "this", "terrorist", "attack", "as", "a", "Turkish", "Muslim", ".", "i", "love", "my", "Prophet", ".", "but", "my", "Prophet", "reject", "terrorism", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-8 / condemn-01
+                  :ARG0 (c2-2 / i)
+                  :ARG1 (c2-16 / attack-01
+                               :mod (c2-15 / terrorist))
+                  :ARG1-of (c2-12 / strong-02)
+                  :manner (c2-7 / religious-group
+                                :name (c2-4 / name
+                                            :op1 "Muslim")
+                                :mod (c2-9 / country
+                                           :name (c2-5 / name
+                                                       :op1 "Turkey"))))
+      :snt2 (c2-11 / contrast-01
+                   :ARG1 (c2-0 / love-01
+                               :ARG0 (c2-10 / i)
+                               :ARG1 (c2-6 / person
+                                           :name (c2-13 / name
+                                                        :op1 "Prophet")
+                                           :poss c2-10))
+                   :ARG2 (c2-3 / reject-01
+                               :ARG0 c2-6
+                               :ARG1 (c2-14 / terrorism))))
+
+# ::snt "Strike terror into their hearts"- AllahTime to get real on who your prophet was and not who you think he was.
+# ::tokens ["\"", "Strike", "terror", "into", "their", "hearts\"-", "AllahTime", "to", "get", "real", "on", "who", "your", "prophet", "was", "and", "not", "who", "you", "think", "he", "was", "."]
+# ::lemmas ["\"", "strike", "terror", "into", "their", "hearts\"-", "AllahTime", "to", "get", "real", "on", "who", "your", "prophet", "be", "and", "not", "who", "you", "think", "he", "be", "."]
+(c3-10 / strike-01
+       :ARG0 (c3-1 / you)
+       :ARG1 (c3-12 / terror)
+       :location (c3-0 / heart
+                       :part-of (c3-9 / they))
+       :ARG1-of (c3-3 / say-01
+                      :ARG0 (c3-6 / person
+                                  :name (c3-4 / name
+                                              :op1 "Allah")))
+       :time (c3-8 / get-03
+                   :ARG1 c3-1
+                   :ARG2 (c3-7 / real-04
+                               :ARG1 c3-1
+                               :ARG2 (c3-14 / and
+                                            :op1 (c3-13 / person
+                                                        :domain (c3-2 / prophet
+                                                                      :poss c3-1))
+                                            :op2 (c3-11 / person
+                                                        :domain c3-2
+                                                        :ARG1-of (c3-5 / think-01
+                                                                       :ARG0 c3-1)
+                                                        :polarity -))))
+       :mode imperative)

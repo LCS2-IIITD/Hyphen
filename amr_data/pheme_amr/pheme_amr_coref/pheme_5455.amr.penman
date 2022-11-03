@@ -1,0 +1,366 @@
+# ::snt It should be the norm. Sad that it isn't.
+# ::tokens ["It", "should", "be", "the", "norm", ".", "Sad", "that", "it", "is", "n't", "."]
+# ::lemmas ["it", "should", "be", "the", "norm", ".", "sad", "that", "it", "be", "not", "."]
+(c1-0 / multi-sentence
+      :snt1 (c1-4 / recommend-01
+                  :ARG1 (c1-2 / norm
+                              :domain (c1-1 / it)))
+      :snt2 (c1-6 / sad-02
+                  :ARG0 (c1-3 / norm
+                              :domain (c1-5 / it)
+                              :polarity -)))
+
+# ::snt zee news is also doing it.
+# ::tokens ["zee", "news", "is", "also", "doing", "it", "."]
+# ::lemmas ["zee", "news", "be", "also", "do", "it", "."]
+(c2-3 / do-02
+      :ARG0 (c2-0 / broadcast-program
+                  :name (c2-2 / name
+                              :op1 "Zzee"
+                              :op2 "News"))
+      :ARG1 (c2-1 / it)
+      :mod (c2-4 / also))
+
+# ::snt Do you also believe in the truth fairy?
+# ::tokens ["Do", "you", "also", "believe", "in", "the", "truth", "fairy", "?"]
+# ::lemmas ["do", "you", "also", "believe", "in", "the", "truth", "fairy", "?"]
+(c3-2 / believe-01
+      :polarity (c3-5 / amr-unknown)
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-1 / fairy
+                  :mod (c3-4 / truth))
+      :mod (c3-3 / also))
+
+# ::snt actually it says "Coran is piece of shit"So Yes it is provocative.
+# ::tokens ["actually", "it", "says", "\"", "Coran", "is", "piece", "of", "shit\"So", "Yes", "it", "is", "provocative", "."]
+# ::lemmas ["actually", "it", "say", "\"", "Coran", "be", "piece", "of", "shit\"So", "yes", "it", "be", "provocative", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-8 / say-01
+                  :ARG0 (c4-4 / it)
+                  :ARG1 (c4-6 / piece
+                              :consist-of (c4-3 / shit)
+                              :domain (c4-9 / person
+                                            :name (c4-5 / name
+                                                        :op1 "Coran")))
+                  :ARG1-of (c4-10 / actual-02))
+      :snt2 (c4-2 / provoke-01
+                  :ARG0 (c4-7 / it)
+                  :mod (c4-0 / yes)))
+
+# ::snt don't want anyone else hurt but I hope MSM worldwide reprints the Mohammed cartoons h/t
+# ::tokens ["do", "n't", "want", "anyone", "else", "hurt", "but", "I", "hope", "MSM", "worldwide", "reprints", "the", "Mohammed", "cartoons", "h", "/", "t"]
+# ::lemmas ["do", "not", "want", "anyone", "else", "hurt", "but", "i", "hope", "MSM", "worldwide", "reprint", "the", "Mohammed", "cartoon", "h", "/", "t"]
+(c5-11 / contrast-01
+       :ARG1 (c5-1 / want-01
+                   :ARG0 (c5-5 / i)
+                   :ARG1 (c5-0 / hurt-01
+                               :ARG1 (c5-16 / anyone
+                                            :mod (c5-4 / else)))
+                   :polarity -)
+       :ARG2 (c5-2 / hope-01
+                   :ARG0 c5-5
+                   :ARG1 (c5-10 / recreate-01
+                                :ARG0 (c5-9 / publication
+                                            :name (c5-7 / name
+                                                        :op1 "MSM")
+                                            :mod (c5-6 / worldwide))
+                                :ARG1 (c5-12 / cartoon
+                                             :topic (c5-15 / person
+                                                           :name (c5-8 / name
+                                                                       :op1 "Mohammed")))))
+       :ARG1-of (c5-14 / cause-01
+                       :ARG0 (c5-3 / work-of-art
+                                   :name (c5-13 / name
+                                                :op1 "H/t"))))
+
+# ::snt provocation is bad,so let's talk abt unprovoked ethnic cleansing of KPandits,not d hit taken by provocative Guj Muslims
+# ::tokens ["provocation", "is", "bad", ",", "so", "let", "'s", "talk", "abt", "unprovoked", "ethnic", "cleansing", "of", "KPandits", ",", "not", "d", "hit", "taken", "by", "provocative", "Guj", "Muslims"]
+# ::lemmas ["provocation", "be", "bad", ",", "so", "let", "us", "talk", "abt", "unprovoked", "ethnic", "cleansing", "of", "kpandit", ",", "not", "d", "hit", "take", "by", "provocative", "Guj", "Muslims"]
+(c6-16 / cause-01
+       :ARG0 (c6-7 / bad-07
+                   :ARG1 (c6-2 / provoke-01))
+       :ARG1 (c6-3 / contrast-01
+                   :ARG1 (c6-18 / talk-01
+                                :ARG0 (c6-13 / we)
+                                :ARG1 (c6-14 / cleanse-01
+                                             :ARG1 (c6-9 / ethnic-group
+                                                         :name (c6-10 / name
+                                                                      :op1 "Kandit"))
+                                             :ARG1-of (c6-4 / provoke-01
+                                                            :polarity -)
+                                             :mod (c6-8 / ethnic))
+                                :mode imperative)
+                   :ARG2 (c6-17 / talk-01
+                                :ARG0 c6-13
+                                :ARG1 (c6-5 / hit-01
+                                            :ARG0 (c6-6 / person
+                                                        :mod (c6-11 / religious-group
+                                                                    :name (c6-15 / name
+                                                                                 :op1 "Guj"))
+                                                        :mod (c6-0 / religious-group
+                                                                   :name (c6-1 / name
+                                                                               :op1 "Muslim"))
+                                                        :ARG0-of (c6-12 / provoke-01)))
+                                :mode imperative
+                                :polarity -)))
+
+# ::snt Ha...ha...ho... Now let's see the PK lovers walk the talk
+# ::tokens ["Ha", "...", "ha", "...", "ho", "...", "Now", "let", "'s", "see", "the", "PK", "lovers", "walk", "the", "talk"]
+# ::lemmas ["ha", "...", "ha", "...", "ho", "...", "now", "let", "us", "see", "the", "PK", "lover", "walk", "the", "talk"]
+(c7-3 / multi-sentence
+      :snt1 (c7-0 / ha
+                  :mode expressive)
+      :snt2 (c7-9 / hmm
+                  :mode expressive)
+      :snt3 (c7-7 / see-01
+                  :ARG0 (c7-1 / we)
+                  :ARG1 (c7-4 / walk-01
+                              :ARG0 (c7-2 / lover
+                                          :name (c7-5 / name
+                                                      :op1 "PK"))
+                              :ARG2 (c7-8 / talk-01))
+                  :time (c7-6 / now)
+                  :mode imperative))
+
+# ::snt Terrorist spotted!
+# ::tokens ["Terrorist", "spotted", "!"]
+# ::lemmas ["terrorist", "spot", "!"]
+(c8-0 / spot-01
+      :ARG1 (c8-1 / terrorist))
+
+# ::snt Al ave de paso, caazo.
+# ::tokens ["Al", "ave", "de", "paso", ",", "caazo", "."]
+# ::lemmas ["Al", "ave", "de", "paso", ",", "caazo", "."]
+(c9-1 / ave-de-paso
+      :mod (c9-0 / amr-unintelligible
+                 :value "cazazo"))
+
+# ::snt removed now
+# ::tokens ["removed", "now"]
+# ::lemmas ["remove", "now"]
+(c10-1 / remove-01
+       :time (c10-0 / now))
+
+# ::snt how is it unthinkable it is great because it is telling anyone who can't take a joke to FUCK OFF
+# ::tokens ["how", "is", "it", "unthinkable", "it", "is", "great", "because", "it", "is", "telling", "anyone", "who", "ca", "n't", "take", "a", "joke", "to", "FUCK", "OFF"]
+# ::lemmas ["how", "be", "it", "unthinkable", "it", "be", "great", "because", "it", "be", "tell", "anyone", "who", "can", "not", "take", "a", "joke", "to", "fuck", "off"]
+(c11-4 / possible-01
+       :ARG1 (c11-3 / imagine-01
+                    :ARG1 (c11-7 / great
+                                 :domain (c11-6 / it)
+                                 :ARG1-of (c11-5 / cause-01
+                                                 :ARG0 (c11-9 / tell-01
+                                                              :ARG0 c11-6
+                                                              :ARG1 (c11-1 / fuck-off-00
+                                                                           :ARG0 c11-6
+                                                                           :ARG1 (c11-11 / anyone
+                                                                                         :ARG0-of (c11-8 / take-01
+                                                                                                         :ARG1 (c11-0 / joke-01)
+                                                                                                         :ARG1-of (c11-10 / possible-01
+                                                                                                                          :polarity -))
+                                                                                         :ARG2-of c11-9))))))
+       :manner (c11-2 / amr-unknown)
+       :polarity -)
+
+# ::snt Yeah I think so
+# ::tokens ["Yeah", "I", "think", "so"]
+# ::lemmas ["yeah", "i", "think", "so"]
+(c12-1 / think-01
+       :ARG0 (c12-2 / i)
+       :ARG1 (c12-0 / so))
+
+# ::snt fear of backlash may be!
+# ::tokens ["fear", "of", "backlash", "may", "be", "!"]
+# ::lemmas ["fear", "of", "backlash", "may", "be", "!"]
+(c13-0 / possible-01
+       :ARG1 (c13-1 / fear-01
+                    :ARG1 (c13-2 / backlash-01)))
+
+# ::snt cc
+# ::tokens ["cc"]
+# ::lemmas ["cc"]
+(c15-1 / person
+       :name (c15-0 / name
+                    :op1 "cc"))
+
+# ::snt religion is a mental illness.logic is the cure
+# ::tokens ["religion", "is", "a", "mental", "illness.logic", "is", "the", "cure"]
+# ::lemmas ["religion", "be", "a", "mental", "illness.logic", "be", "the", "cure"]
+(c16-1 / multi-sentence
+       :snt1 (c16-2 / ill-01
+                    :ARG1 (c16-4 / religion)
+                    :ARG2 (c16-3 / mind))
+       :snt2 (c16-5 / cure-01
+                    :ARG2 (c16-0 / logic)))
+
+# ::snt Why don't you get a profile pic first
+# ::tokens ["Why", "do", "n't", "you", "get", "a", "profile", "pic", "first"]
+# ::lemmas ["why", "do", "not", "you", "get", "a", "profile", "pic", "first"]
+(c17-4 / get-01
+       :ARG0 (c17-0 / you)
+       :ARG1 (c17-2 / picture
+                    :mod (c17-5 / profile))
+       :ord (c17-1 / ordinal-entity
+                   :value 1)
+       :ARG1-of (c17-3 / cause-01
+                       :ARG0 (c17-6 / amr-unknown))
+       :polarity -)
+
+# ::snt deleted after hrs of fake bravery
+# ::tokens ["deleted", "after", "hrs", "of", "fake", "bravery"]
+# ::lemmas ["delete", "after", "hrs", "of", "fake", "bravery"]
+(c18-4 / delete-01
+       :time (c18-6 / after
+                    :op1 (c18-3 / brave-02
+                                :ARG1-of (c18-1 / fake-02)
+                                :duration (c18-2 / multiple
+                                                 :op1 (c18-5 / temporal-quantity
+                                                             :unit (c18-0 / hour)
+                                                             :quant 1)))))
+
+# ::snt You have no Right to say A Word about India, Untill and Unless you tell us what has happened to % Hindus in
+# ::tokens ["You", "have", "no", "Right", "to", "say", "A", "Word", "about", "India", ",", "Untill", "and", "Unless", "you", "tell", "us", "what", "has", "happened", "to", "%", "Hindus", "in"]
+# ::lemmas ["you", "have", "no", "right", "to", "say", "a", "Word", "about", "India", ",", "Untill", "and", "unless", "you", "tell", "we", "what", "have", "happen", "to", "%", "Hindus", "in"]
+(c19-15 / and
+        :op1 (c19-8 / right-05
+                    :ARG1 (c19-1 / you)
+                    :ARG2 (c19-13 / say-01
+                                  :ARG0 c19-1
+                                  :ARG1 (c19-2 / word
+                                               :topic (c19-9 / country
+                                                             :name (c19-5 / name
+                                                                          :op1 "India")))
+                                  :manner (c19-14 / thing
+                                                  :ARG1-of (c19-4 / know-01
+                                                                  :polarity -)))
+                    :polarity -)
+        :op2 (c19-0 / have-condition-91
+                    :ARG2 (c19-12 / tell-01
+                                  :ARG0 c19-1
+                                  :ARG1 (c19-3 / event
+                                               :beneficiary (c19-7 / person
+                                                                   :mod (c19-6 / religious-group
+                                                                               :name (c19-10 / name
+                                                                                             :op1 "Hindu"))))
+                                  :ARG2 (c19-11 / we)
+                                  :polarity -)))
+
+# ::snt In a country where they raped and killed thousands of muslims in Gujrat under the watch of the current prime minister?
+# ::tokens ["In", "a", "country", "where", "they", "raped", "and", "killed", "thousands", "of", "muslims", "in", "Gujrat", "under", "the", "watch", "of", "the", "current", "prime", "minister", "?"]
+# ::lemmas ["in", "a", "country", "where", "they", "rape", "and", "kill", "thousands", "of", "muslims", "in", "Gujrat", "under", "the", "watch", "of", "the", "current", "prime", "minister", "?"]
+(c20-8 / be-located-at-91
+       :ARG2 (c20-17 / country
+                     :location-of (c20-5 / and
+                                         :op1 (c20-11 / rape-01
+                                                      :ARG0 (c20-18 / they)
+                                                      :ARG1 (c20-2 / person
+                                                                   :mod (c20-1 / religious-group
+                                                                               :name (c20-9 / name
+                                                                                            :op1 "Islam"))
+                                                                   :quant (c20-0 / multiple
+                                                                                 :op1 1000)))
+                                         :op2 (c20-15 / kill-01
+                                                      :ARG0 c20-18
+                                                      :ARG1 c20-2)
+                                         :location (c20-3 / city
+                                                          :name (c20-16 / name
+                                                                        :op1 "Gujrat"))
+                                         :prep-under (c20-12 / watch-01
+                                                             :ARG0 (c20-4 / person
+                                                                          :ARG0-of (c20-6 / have-org-role-91
+                                                                                          :ARG2 (c20-10 / minister
+                                                                                                        :mod (c20-7 / prime))
+                                                                                          :time (c20-14 / current)))
+                                                             :ARG1 c20-18)))
+       :polarity (c20-13 / amr-unknown))
+
+# ::snt guess they don't understand French nor expect their readers do
+# ::tokens ["guess", "they", "do", "n't", "understand", "French", "nor", "expect", "their", "readers", "do"]
+# ::lemmas ["guess", "they", "do", "not", "understand", "French", "nor", "expect", "their", "reader", "do"]
+(c21-6 / guess-01
+       :ARG1 (c21-9 / and
+                    :op1 (c21-1 / understand-01
+                                :ARG0 (c21-8 / they)
+                                :ARG1 (c21-0 / language
+                                             :name (c21-3 / name
+                                                          :op1 "French"))
+                                :polarity -)
+                    :op2 (c21-2 / expect-01
+                                :ARG0 c21-8
+                                :ARG1 (c21-7 / understand-01
+                                             :ARG0 (c21-4 / person
+                                                          :ARG0-of (c21-5 / read-01
+                                                                          :ARG1 c21-8))
+                                             :ARG1 c21-0)
+                                :polarity -)))
+
+# ::snt it mocked , not . there was NOTHING wrong with what published. and NOTHING wrong with reposting it.
+# ::tokens ["it", "mocked", ",", "not", ".", "there", "was", "NOTHING", "wrong", "with", "what", "published", ".", "and", "NOTHING", "wrong", "with", "reposting", "it", "."]
+# ::lemmas ["it", "mock", ",", "not", ".", "there", "be", "nothing", "wrong", "with", "what", "publish", ".", "and", "nothing", "wrong", "with", "reposte", "it", "."]
+(c22-1 / multi-sentence
+       :snt1 (c22-5 / mock-01
+                    :ARG0 (c22-2 / it)
+                    :polarity -)
+       :snt2 (c22-10 / and
+                     :op1 (c22-0 / wrong-02
+                                 :ARG1 (c22-4 / nothing)
+                                 :ARG2 (c22-9 / thing
+                                              :ARG1-of (c22-6 / publish-01)))
+                     :op2 (c22-3 / wrong-02
+                                 :ARG1 (c22-7 / repost-01
+                                              :ARG1 (c22-8 / it)
+                                              :ARG2-of c22-3))))
+
+# ::snt MSM shud ask themselves y has this time come and how much they r responsible for ills in this nation
+# ::tokens ["MSM", "shud", "ask", "themselves", "y", "has", "this", "time", "come", "and", "how", "much", "they", "r", "responsible", "for", "ills", "in", "this", "nation"]
+# ::lemmas ["MSM", "shud", "ask", "themselves", "y", "have", "this", "time", "come", "and", "how", "much", "they", "r", "responsible", "for", "ill", "in", "this", "nation"]
+(c23-12 / ask-01
+        :ARG0 (c23-5 / person
+                     :name (c23-3 / name
+                                  :op1 "MSM"))
+        :ARG1 (c23-1 / and
+                     :op1 (c23-7 / come-01
+                                 :ARG1 (c23-11 / time
+                                               :mod (c23-10 / this)))
+                     :op2 (c23-6 / responsible-01
+                                 :ARG0 (c23-4 / they)
+                                 :ARG1 (c23-2 / ill-01
+                                              :location (c23-8 / nation
+                                                               :mod (c23-0 / this)))
+                                 :ARG2 (c23-9 / amr-unknown)))
+        :ARG2 c23-4)
+
+# ::snt have you killed them, them, and don't tell me there is no force Conversion, I can relate from
+# ::tokens ["have", "you", "killed", "them", ",", "them", ",", "and", "do", "n't", "tell", "me", "there", "is", "no", "force", "Conversion", ",", "I", "can", "relate", "from"]
+# ::lemmas ["have", "you", "kill", "they", ",", "they", ",", "and", "do", "not", "tell", "i", "there", "be", "no", "force", "Conversion", ",", "i", "can", "relate", "from"]
+(c24-5 / possible-01
+       :ARG1 (c24-6 / relate-01
+                    :ARG0 (c24-3 / i)
+                    :ARG2 (c24-11 / and
+                                  :op1 (c24-10 / kill-01
+                                               :ARG0 (c24-0 / you)
+                                               :ARG1 (c24-2 / and
+                                                            :op1 (c24-9 / they
+                                                                        :op2-of c24-2)))
+                                  :op2 (c24-8 / tell-01
+                                              :ARG0 c24-0
+                                              :ARG1 (c24-7 / convert-01
+                                                           :manner (c24-1 / force-04)
+                                                           :polarity -)
+                                              :ARG2 c24-3
+                                              :polarity -)))
+       :polarity (c24-4 / amr-unknown))
+
+# ::snt Yeah Im sure thats a gutsy move lol....
+# ::tokens ["Yeah", "I", "m", "sure", "that", "s", "a", "gutsy", "move", "lol", "...."]
+# ::lemmas ["yeah", "i", "m", "sure", "that", "s", "a", "gutsy", "move", "lol", "...."]
+(c25-6 / sure-02
+       :ARG0 (c25-3 / i)
+       :ARG1 (c25-2 / move-02
+                    :mod (c25-4 / gutsy)
+                    :domain (c25-7 / that))
+       :mod (c25-0 / yeah
+                   :mode expressive)
+       :ARG2-of (c25-1 / laugh-01
+                       :ARG0 c25-3
+                       :manner (c25-5 / loud)))

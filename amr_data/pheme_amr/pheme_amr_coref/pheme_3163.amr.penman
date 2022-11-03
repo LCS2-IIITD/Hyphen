@@ -1,0 +1,88 @@
+# ::snt Bots will conquest all the world.
+# ::tokens ["Bots", "will", "conquest", "all", "the", "world", "."]
+# ::lemmas ["bot", "will", "conquest", "all", "the", "world", "."]
+(c1-1 / conquer-01
+      :ARG0 (c1-3 / bigot)
+      :ARG1 (c1-0 / world
+                  :mod (c1-2 / all)))
+
+# ::snt Bots will conquest all the world.
+# ::tokens ["Bots", "will", "conquest", "all", "the", "world", "."]
+# ::lemmas ["bot", "will", "conquest", "all", "the", "world", "."]
+(c2-1 / conquer-01
+      :ARG0 (c2-3 / bigot)
+      :ARG1 (c2-0 / world
+                  :mod (c2-2 / all)))
+
+# ::snt france must crack down really hard on these muslim fundamentalists the russian way
+# ::tokens ["france", "must", "crack", "down", "really", "hard", "on", "these", "muslim", "fundamentalists", "the", "russian", "way"]
+# ::lemmas ["france", "must", "crack", "down", "really", "hard", "on", "these", "muslim", "fundamentalist", "the", "russian", "way"]
+(c3-3 / obligate-01
+      :ARG2 (c3-9 / crack-down-06
+                  :ARG0 (c3-8 / country
+                              :name (c3-5 / name
+                                          :op1 "France"))
+                  :ARG1 (c3-2 / fundamentalist
+                              :mod (c3-10 / religious-group
+                                          :name (c3-6 / name
+                                                      :op1 "Islam"))
+                              :mod (c3-12 / this))
+                  :ARG1-of (c3-0 / hard-02
+                                 :degree (c3-4 / really))
+                  :manner (c3-1 / way
+                                :mod (c3-11 / country
+                                            :name (c3-7 / name
+                                                        :op1 "Russia")))))
+
+# ::snt : AFP reports another shooting and hostage taken at kosher grocery in eastern Paris live updates
+# ::tokens [":", "AFP", "reports", "another", "shooting", "and", "hostage", "taken", "at", "kosher", "grocery", "in", "eastern", "Paris", "live", "updates"]
+# ::lemmas [":", "AFP", "report", "another", "shooting", "and", "hostage", "take", "at", "kosher", "grocery", "in", "eastern", "Paris", "live", "update"]
+(c4-9 / report-01
+      :ARG0 (c4-8 / publication
+                  :name (c4-6 / name
+                              :op1 "AFP"))
+      :ARG1 (c4-14 / and
+                   :op1 (c4-12 / shoot-02
+                               :mod (c4-4 / another))
+                   :op2 (c4-13 / take-01
+                               :ARG1 (c4-0 / hostage))
+                   :location (c4-11 / grocery
+                                    :mod (c4-5 / kosher)
+                                    :location (c4-3 / east
+                                                    :part-of (c4-10 / city
+                                                                    :name (c4-7 / name
+                                                                                :op1 "Paris")))))
+      :time (c4-2 / update-02
+                  :manner (c4-1 / live)))
+
+# ::snt Depressing day : Charlie Hebdo: AFP reports another shooting and hostage taken in Paris live updates
+# ::tokens ["Depressing", "day", ":", "Charlie", "Hebdo", ":", "AFP", "reports", "another", "shooting", "and", "hostage", "taken", "in", "Paris", "live", "updates"]
+# ::lemmas ["depressing", "day", ":", "Charlie", "Hebdo", ":", "AFP", "report", "another", "shooting", "and", "hostage", "take", "in", "Paris", "live", "update"]
+(c5-8 / report-01
+      :ARG0 (c5-7 / publication
+                  :name (c5-5 / name
+                              :op1 "AFP"))
+      :ARG1 (c5-13 / take-01
+                   :ARG1 (c5-14 / and
+                                :op1 (c5-12 / shoot-02)
+                                :op2 (c5-0 / hostage)
+                                :mod (c5-4 / another))
+                   :location (c5-9 / city
+                                   :name (c5-6 / name
+                                               :op1 "Paris"))
+                   :time (c5-3 / update-02
+                               :manner (c5-2 / live)))
+      :time (c5-10 / day
+                   :ARG0-of (c5-1 / depress-01)
+                   :mod c5-7
+                   :name (c5-11 / name
+                                :op1 "Charlie"
+                                :op2 "He Hebdo")))
+
+# ::snt a Jewish grocery
+# ::tokens ["a", "Jewish", "grocery"]
+# ::lemmas ["a", "Jewish", "grocery"]
+(c6-2 / grocery
+      :mod (c6-1 / religious-group
+                 :name (c6-0 / name
+                             :op1 "Jew")))

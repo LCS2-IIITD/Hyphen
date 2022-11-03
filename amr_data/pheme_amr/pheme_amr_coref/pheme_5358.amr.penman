@@ -1,0 +1,85 @@
+# ::snt Tal el tiempo, tal el tiento.
+# ::tokens ["Tal", "el", "tiempo", ",", "tal", "el", "tiento", "."]
+# ::lemmas ["Tal", "el", "tiempo", ",", "tal", "el", "tiento", "."]
+(c2-4 / and
+      :op1 (c2-3 / tal
+                 :op1 (c2-2 / tiempo))
+      :op2 (c2-1 / tal
+                 :op1 (c2-0 / tiento)))
+
+# ::snt : BREAKING: French police convoy, helicopters rush to scene of operation to detain shooting suspects, AP says
+# ::tokens [":", "BREAKING", ":", "French", "police", "convoy", ",", "helicopters", "rush", "to", "scene", "of", "operation", "to", "detain", "shooting", "suspects", ",", "AP", "says"]
+# ::lemmas [":", "breaking", ":", "French", "police", "convoy", ",", "helicopter", "rush", "to", "scene", "of", "operation", "to", "detain", "shooting", "suspect", ",", "AP", "say"]
+(c3-14 / say-01
+       :ARG0 (c3-9 / publication
+                   :name (c3-7 / name
+                               :op1 "AP"))
+       :ARG1 (c3-3 / break-13
+                   :ARG1 (c3-10 / rush-01
+                                :ARG1 (c3-16 / and
+                                             :op1 (c3-11 / convoy
+                                                         :mod (c3-15 / police)
+                                                         :mod (c3-12 / country
+                                                                     :name (c3-8 / name
+                                                                                 :op1 "France")))
+                                             :op2 (c3-0 / helicopter))
+                                :ARG2 (c3-6 / scene
+                                            :location-of (c3-4 / operate-01))
+                                :purpose (c3-13 / detain-01
+                                                :ARG0 c3-16
+                                                :ARG1 (c3-2 / person
+                                                            :ARG2-of (c3-1 / suspect-01
+                                                                           :ARG1 (c3-5 / shoot-02)))))))
+
+# ::snt A live suspect is of more value than a dead terrorist.
+# ::tokens ["A", "live", "suspect", "is", "of", "more", "value", "than", "a", "dead", "terrorist", "."]
+# ::lemmas ["a", "live", "suspect", "be", "of", "more", "value", "than", "a", "dead", "terrorist", "."]
+(c4-0 / have-degree-91
+      :ARG1 (c4-4 / person
+                  :ARG2-of (c4-6 / suspect-01)
+                  :ARG0-of (c4-1 / live-01))
+      :ARG2 (c4-3 / value-01
+                  :ARG1 c4-4)
+      :ARG3 (c4-2 / more)
+      :ARG4 (c4-7 / terrorist
+                  :ARG1-of (c4-5 / die-01)))
+
+# ::snt don't bring them in alive shoot to kill ,kill the bastards
+# ::tokens ["do", "n't", "bring", "them", "in", "alive", "shoot", "to", "kill", ",", "kill", "the", "bastards"]
+# ::lemmas ["do", "not", "bring", "they", "in", "alive", "shoot", "to", "kill", ",", "kill", "the", "bastard"]
+(c5-2 / multi-sentence
+      :snt1 (c5-3 / bring-01
+                  :ARG0 (c5-0 / you)
+                  :ARG1 (c5-9 / they)
+                  :manner (c5-1 / live-01
+                                :ARG0 c5-9)
+                  :polarity -
+                  :mode imperative)
+      :snt2 (c5-10 / and
+                   :op1 (c5-8 / shoot-02
+                              :ARG0 (c5-7 / you)
+                              :purpose (c5-5 / kill-01
+                                             :ARG0 c5-7
+                                             :ARG1 (c5-6 / bastard))
+                              :mode imperative)
+                   :op2 (c5-4 / kill-01
+                              :ARG0 c5-7
+                              :ARG1 c5-6
+                              :mode imperative)))
+
+# ::snt more reasons to remove all muslims from all western nations
+# ::tokens ["more", "reasons", "to", "remove", "all", "muslims", "from", "all", "western", "nations"]
+# ::lemmas ["more", "reason", "to", "remove", "all", "muslim", "from", "all", "western", "nation"]
+(c6-8 / reason
+      :mod (c6-1 / more)
+      :purpose (c6-4 / remove-01
+                     :ARG1 (c6-7 / person
+                                 :mod (c6-2 / religious-group
+                                            :name (c6-5 / name
+                                                        :op1 "Islam"))
+                                 :mod (c6-10 / all))
+                     :ARG2 (c6-6 / nation
+                                 :location (c6-0 / world-region
+                                                 :name (c6-9 / name
+                                                             :op1 "West"))
+                                 :mod (c6-3 / all))))

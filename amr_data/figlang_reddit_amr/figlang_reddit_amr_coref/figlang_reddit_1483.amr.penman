@@ -1,0 +1,54 @@
+# ::snt Gladstone gets Google Fiber!
+# ::tokens ["Gladstone", "gets", "Google", "Fiber", "!"]
+# ::lemmas ["Gladstone", "get", "Google", "Fiber", "!"]
+(c1-2 / get-01
+      :ARG0 (c1-3 / person
+                  :name (c1-4 / name
+                              :op1 "Gladstone"))
+      :ARG1 (c1-0 / company
+                  :name (c1-1 / name
+                              :op1 "Google"
+                              :op2 "Fiber"))
+      :mode expressive)
+
+# ::snt Well, I'm locked in for another 17 months with Comcast, if I cancel I have to pay 75% of my bill for the remaining months... this makes me cry.
+# ::tokens ["Well", ",", "I", "'m", "locked", "in", "for", "another", "17", "months", "with", "Comcast", ",", "if", "I", "cancel", "I", "have", "to", "pay", "75", "%", "of", "my", "bill", "for", "the", "remaining", "months", "...", "this", "makes", "me", "cry", "."]
+# ::lemmas ["well", ",", "i", "be", "lock", "in", "for", "another", "17", "months", "with", "Comcast", ",", "if", "i", "cancel", "i", "have", "to", "pay", "75", "%", "of", "my", "bill", "for", "the", "remaining", "months", "...", "this", "make", "i", "cry", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-18 / lock-in-02
+                    :ARG1 (c2-1 / i)
+                    :ARG2 (c2-2 / company
+                                :name (c2-11 / name
+                                             :op1 "Comcast"))
+                    :duration (c2-7 / temporal-quantity
+                                    :unit (c2-16 / month)
+                                    :mod (c2-15 / another)
+                                    :quant 17))
+       :snt2 (c2-6 / obligate-01
+                   :ARG1 (c2-12 / i)
+                   :ARG2 (c2-20 / pay-01
+                                :ARG0 c2-12
+                                :ARG1 (c2-17 / percentage-entity
+                                             :ARG1-of (c2-13 / include-91
+                                                             :ARG2 (c2-19 / bill
+                                                                          :poss c2-12))
+                                             :value 75)
+                                :condition (c2-0 / cancel-01
+                                                 :ARG0 c2-12)
+                                :duration (c2-4 / temporal-quantity
+                                                :unit (c2-14 / month)
+                                                :ARG1-of (c2-8 / remain-01)
+                                                :quant 1))
+                   :ARG0-of (c2-9 / make-02
+                                  :ARG1 (c2-5 / cry-02
+                                              :ARG0 c2-12)))
+       :mod (c2-3 / well))
+
+# ::snt Why would you agree to that?
+# ::tokens ["Why", "would", "you", "agree", "to", "that", "?"]
+# ::lemmas ["why", "would", "you", "agree", "to", "that", "?"]
+(c3-0 / agree-01
+      :ARG0 (c3-3 / you)
+      :ARG1 (c3-2 / that)
+      :ARG1-of (c3-1 / cause-01
+                     :ARG0 (c3-4 / amr-unknown)))

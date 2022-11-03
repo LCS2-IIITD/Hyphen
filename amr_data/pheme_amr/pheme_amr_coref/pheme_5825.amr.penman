@@ -1,0 +1,54 @@
+# ::snt terrible news.
+# ::tokens ["terrible", "news", "."]
+# ::lemmas ["terrible", "news", "."]
+(c1-0 / news
+      :mod (c1-1 / horrible))
+
+# ::snt "Ich dachte es wren wie so oft hier Kampfjets
+# ::tokens ["\"", "Ich", "dachte", "es", "wren", "wie", "so", "oft", "hier", "Kampfjets"]
+# ::lemmas ["\"", "Ich", "dachte", "es", "wren", "wie", "so", "oft", "hi", "Kampfjets"]
+(c2-9 / say-01
+      :ARG0 (c2-4 / i)
+      :ARG1 (c2-7 / dachte
+                  :ARG1-of (c2-8 / cause-01
+                                 :ARG0 (c2-2 / event
+                                             :name (c2-5 / name
+                                                         :op1 "Kampfjets")
+                                             :frequency (c2-1 / oft
+                                                              :degree (c2-3 / so))
+                                             :mod (c2-0 / hier))))
+      :ARG2 (c2-6 / person
+                  :name c2-5
+                  :op1 "Ich"))
+
+# ::snt the st and only tweet I've seen referencing the ICAO identifier
+# ::tokens ["the", "st", "and", "only", "tweet", "I", "'ve", "seen", "referencing", "the", "ICAO", "identifier"]
+# ::lemmas ["the", "st", "and", "only", "tweet", "i", "'ve", "see", "reference", "the", "ICAO", "identifier"]
+(c3-8 / tweet-01
+      :mod (c3-7 / string-entity
+                 :value "st")
+      :ARG0-of (c3-5 / reference-04
+                     :ARG1 (c3-3 / identifier
+                                 :mod (c3-1 / organization
+                                            :name (c3-4 / name
+                                                        :op1 "IAEAO")))
+                     :ARG1-of (c3-2 / see-01
+                                    :ARG0 (c3-6 / i)))
+      :mod (c3-0 / only))
+
+# ::snt : Accident aircraft looks to be Germanwings (Airline code U or GWI) flight , Barcelona to Dusseldorf.
+# ::tokens [":", "Accident", "aircraft", "looks", "to", "be", "Germanwings", "(", "Airline", "code", "U", "or", "GWI", ")", "flight", ",", "Barcelona", "to", "Dusseldorf", "."]
+# ::lemmas [":", "accident", "aircraft", "look", "to", "be", "Germanwings", "(", "airline", "code", "u", "or", "GWI", ")", "flight", ",", "Barcelona", "to", "Dusseldorf", "."]
+(c4-1 / look-02
+      :ARG0 (c4-9 / aircraft
+                  :ARG1-of (c4-2 / accident-01))
+      :ARG1 (c4-0 / fly-01
+                  :ARG2 (c4-7 / company
+                              :name (c4-3 / name
+                                          :op1 "Germanwings"))
+                  :location (c4-6 / city
+                                  :name (c4-4 / name
+                                              :op1 "Barcelona"))
+                  :destination (c4-8 / city
+                                     :name (c4-5 / name
+                                                 :op1 "Dusseldorf"))))

@@ -1,0 +1,31 @@
+# ::subgraphs [["c1-0", "c1-3", "c1-4", "c1-2", "c1-1"], ["c2-3", "c2-0", "c2-2", "c2-4", "c2-1"], ["c3-3", "c3-6", "c3-4", "c3-2", "c3-5", "c3-0", "c3-1"]]
+(d / dummy
+   :COMMENT (c1-0 / update
+                  :ARG0 (c1-3 / person
+                              :name (c1-4 / name
+                                          :op1 "Justin"
+                                          :op2 "Upton"
+                                          :SAME c2-4)
+                              :SAME c3-6)
+                  :ARG1 (c1-2 / list
+                              :topic (c1-1 / trade
+                                           :polarity -
+                                           :SAME c2-1)
+                              :poss c1-3
+                              :SAME c2-3))
+   :COMMENT (c2-3 / list
+                  :polarity (c2-0 / amr)
+                  :ARG1 (c2-2 / team
+                              :name (c2-4 / name
+                                          :op1 "Blue"
+                                          :op2 "Jays"))
+                  :ARG2 (c2-1 / trade
+                              :polarity -))
+   :COMMENT (c3-3 / hate
+                  :ARG0 (c3-6 / person
+                              :ARG0-of (c3-4 / play))
+                  :ARG1 (c3-2 / country
+                              :mod (c3-5 / this))
+                  :ARG1-of (c3-0 / cause
+                                 :ARG0 (c3-1 / amr
+                                             :SAME-of c2-0))))

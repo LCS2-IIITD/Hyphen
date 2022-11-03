@@ -1,0 +1,323 @@
+# ::snt and?
+# ::tokens ["and", "?"]
+# ::lemmas ["and", "?"]
+(c1-1 / and
+      :polarity (c1-0 / amr-unknown))
+
+# ::snt I'm in San Jose in th Jan for the week, and probably again in Feb. March will be in Boston.
+# ::tokens ["I", "'m", "in", "San", "Jose", "in", "th", "Jan", "for", "the", "week", ",", "and", "probably", "again", "in", "Feb.", "March", "will", "be", "in", "Boston", "."]
+# ::lemmas ["i", "be", "in", "San", "Jose", "in", "th", "Jan", "for", "the", "week", ",", "and", "probably", "again", "in", "Feb.", "March", "will", "be", "in", "Boston", "."]
+(c2-12 / and
+       :op1 (c2-2 / be-located-at-91
+                  :ARG1 (c2-4 / i)
+                  :ARG2 (c2-9 / city
+                              :name (c2-5 / name
+                                          :op1 "San"
+                                          :op2 "Jose"))
+                  :time (c2-8 / date-entity
+                              :mod (c2-0 / week)
+                              :month 1))
+       :op2 (c2-10 / be-located-at-91
+                   :ARG1 c2-4
+                   :ARG2 (c2-11 / city
+                                :name (c2-6 / name
+                                            :op1 "Boston"))
+                   :time (c2-1 / date-entity
+                               :mod (c2-3 / again)
+                               :mod (c2-7 / probable)
+                               :month 3)))
+
+# ::snt there's a hell of a lot of "she shouldn't have been dressed like that, officer" going about today
+# ::tokens ["there", "'s", "a", "hell", "of", "a", "lot", "of", "\"", "she", "should", "n't", "have", "been", "dressed", "like", "that", ",", "officer", "\"", "going", "about", "today"]
+# ::lemmas ["there", "be", "a", "hell", "of", "a", "lot", "of", "\"", "she", "should", "not", "have", "be", "dress", "like", "that", ",", "officer", "\"", "go", "about", "today"]
+(c3-6 / go-about-30
+      :ARG1 (c3-8 / say-01
+                  :ARG1 (c3-5 / recommend-01
+                              :ARG0 (c3-2 / officer)
+                              :ARG1 (c3-4 / dress-01
+                                          :ARG1 (c3-3 / she)
+                                          :ARG2 (c3-9 / that))
+                              :polarity -)
+                  :quant (c3-1 / lot
+                               :degree (c3-0 / hell)))
+      :time (c3-7 / today))
+
+# ::snt Well done that man - that's the way to do it.
+# ::tokens ["Well", "done", "that", "man", "-", "that", "'s", "the", "way", "to", "do", "it", "."]
+# ::lemmas ["well", "do", "that", "man", "-", "that", "be", "the", "way", "to", "do", "it", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-8 / say-01
+                  :ARG1 (c4-6 / do-02
+                              :ARG1 (c4-9 / that)
+                              :ARG1-of (c4-0 / well-09))
+                  :ARG2 (c4-5 / man))
+      :snt2 (c4-4 / way
+                  :manner-of (c4-1 / do-02
+                                   :ARG1 (c4-3 / it))
+                  :domain (c4-7 / that)))
+
+# ::snt You misunderstand x2. Charlie Hebdo is magazine; died. And there's no excuse; comparison is with rape apologists
+# ::tokens ["You", "misunderstand", "x2", ".", "Charlie", "Hebdo", "is", "magazine", ";", "died", ".", "And", "there", "'s", "no", "excuse", ";", "comparison", "is", "with", "rape", "apologists"]
+# ::lemmas ["you", "misunderstand", "x2", ".", "Charlie", "Hebdo", "be", "magazine", ";", "die", ".", "and", "there", "be", "no", "excuse", ";", "comparison", "be", "with", "rape", "apologist"]
+(c5-2 / multi-sentence
+      :snt1 (c5-7 / misunderstand-01
+                  :ARG0 (c5-0 / you)
+                  :li 2)
+      :snt2 (c5-13 / and
+                   :op1 (c5-1 / magazine
+                              :domain (c5-8 / publication
+                                            :name (c5-5 / name
+                                                        :op1 "Charlie"
+                                                        :op2 " Hebdo")))
+                   :op2 (c5-9 / die-01
+                              :ARG1 c5-8))
+      :snt3 (c5-4 / and
+                  :op2 (c5-3 / excuse-02
+                             :polarity -)
+                  :op4 (c5-10 / compare-01
+                              :ARG2 (c5-12 / person
+                                           :ARG0-of (c5-6 / apologize-01
+                                                          :ARG1 (c5-11 / rape-01))))))
+
+# ::snt ??? I can't work out if you're agreeing or disagreeing with me. Whatever, the clip tweeted is wrong.
+# ::tokens ["?", "?", "?", "I", "ca", "n't", "work", "out", "if", "you", "'re", "agreeing", "or", "disagreeing", "with", "me", ".", "Whatever", ",", "the", "clip", "tweeted", "is", "wrong", "."]
+# ::lemmas ["?", "?", "?", "i", "can", "not", "work", "out", "if", "you", "be", "agree", "or", "disagree", "with", "i", ".", "Whatever", ",", "the", "clip", "tweet", "be", "wrong", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-7 / possible-01
+                  :ARG1 (c6-0 / work-out-02
+                              :ARG0 (c6-5 / i)
+                              :ARG1 (c6-12 / amr-choice
+                                           :op1 (c6-4 / agree-01
+                                                      :ARG0 (c6-1 / you)
+                                                      :ARG2 c6-5)
+                                           :op2 (c6-8 / disagree-01
+                                                      :ARG0 c6-1
+                                                      :ARG1 c6-5)))
+                  :polarity -)
+      :snt2 (c6-6 / wrong-02
+                  :ARG1 (c6-11 / thing
+                               :ARG1-of (c6-9 / clip-01
+                                              :ARG1-of (c6-10 / tweet-01)))
+                  :mod (c6-3 / whatever)))
+
+# ::snt fuck. Ing. Right.
+# ::tokens ["fuck", ".", "Ing", ".", "Right", "."]
+# ::lemmas ["fuck", ".", "ing", ".", "right", "."]
+(c7-1 / multi-sentence
+      :snt1 (c7-0 / fuck-01)
+      :snt2 (c7-3 / person
+                  :name (c7-2 / name
+                              :op1 "Ing"))
+      :snt3 (c7-4 / right-06))
+
+# ::snt superbly put by the way. You are totally correct about this. FT at its arrogant worst.
+# ::tokens ["superbly", "put", "by", "the", "way", ".", "You", "are", "totally", "correct", "about", "this", ".", "FT", "at", "its", "arrogant", "worst", "."]
+# ::lemmas ["superbly", "put", "by", "the", "way", ".", "you", "be", "totally", "correct", "about", "this", ".", "FT", "at", "its", "arrogant", "bad", "."]
+(c8-3 / multi-sentence
+      :snt1 (c8-5 / put-02
+                  :manner (c8-9 / sincere)
+                  :mod (c8-4 / by-the-way))
+      :snt2 (c8-7 / correct-02
+                  :ARG1 (c8-1 / you)
+                  :topic (c8-10 / this)
+                  :degree (c8-8 / total))
+      :snt3 (c8-2 / FT
+                  :manner (c8-11 / arrogant
+                                 :ARG2-of (c8-0 / have-degree-91
+                                                :ARG1 c8-2
+                                                :ARG3 (c8-6 / most)))))
+
+# ::snt Here's the FT's editorial on Charlie Hebdo
+# ::tokens ["Here", "'s", "the", "FT", "'s", "editorial", "on", "Charlie", "Hebdo"]
+# ::lemmas ["here", "be", "the", "FT", "'s", "editorial", "on", "Charlie", "Hebdo"]
+(c9-2 / editorial
+      :poss (c9-3 / newspaper
+                  :name (c9-4 / name
+                              :op1 "FT"))
+      :topic (c9-1 / magazine
+                   :name (c9-5 / name
+                               :op1 "Charlie"
+                               :op2 " Hebdo"))
+      :medium (c9-0 / here))
+
+# ::snt :The has one of the worst arguments ever
+# ::tokens [":", "The", "has", "one", "of", "the", "worst", "arguments", "ever"]
+# ::lemmas [":", "the", "have", "one", "of", "the", "bad", "argument", "ever"]
+(c10-7 / argue-01
+       :ARG0 (c10-6 / they)
+       :ARG1-of (c10-5 / include-91
+                       :ARG2 (c10-4 / argue-01
+                                    :time (c10-3 / ever)
+                                    :ARG1-of (c10-0 / have-degree-91
+                                                    :ARG2 (c10-2 / bad-07
+                                                                 :ARG1 c10-4)
+                                                    :ARG3 (c10-1 / most)))))
+
+# ::snt If you have time, let's have a beer and chat. I love a good conversation. I'll buy.
+# ::tokens ["If", "you", "have", "time", ",", "let", "'s", "have", "a", "beer", "and", "chat", ".", "I", "love", "a", "good", "conversation", ".", "I", "'ll", "buy", "."]
+# ::lemmas ["if", "you", "have", "time", ",", "let", "us", "have", "a", "beer", "and", "chat", ".", "i", "love", "a", "good", "conversation", ".", "i", "'ll", "buy", "."]
+(c11-4 / multi-sentence
+       :snt1 (c11-14 / and
+                     :op1 (c11-0 / have-06
+                                 :ARG0 (c11-1 / we)
+                                 :ARG1 (c11-6 / beer)
+                                 :mode imperative)
+                     :op2 (c11-9 / chat-01
+                                 :ARG0 c11-1
+                                 :mode imperative)
+                     :condition (c11-3 / have-06
+                                       :ARG0 (c11-2 / you)
+                                       :ARG1 (c11-13 / time)))
+       :snt2 (c11-5 / love-01
+                    :ARG0 (c11-7 / i)
+                    :ARG1 (c11-8 / converse-01
+                                 :ARG1-of (c11-10 / good-02)))
+       :snt3 (c11-11 / buy-01
+                     :ARG0 (c11-12 / i)))
+
+# ::snt Sadly I do know &amp; understand.My perspective's that violence is never ok in responding to to verbal stupidity.That is all.
+# ::tokens ["Sadly", "I", "do", "know", "&", "amp", ";", "understand", ".", "My", "perspective", "'s", "that", "violence", "is", "never", "ok", "in", "responding", "to", "to", "verbal", "stupidity", ".", "That", "is", "all", "."]
+# ::lemmas ["sadly", "i", "do", "know", "&", "amp", ";", "understand", ".", "my", "perspective", "be", "that", "violence", "be", "never", "ok", "in", "respond", "to", "to", "verbal", "stupidity", ".", "that", "be", "all", "."]
+(c12-0 / multi-sentence
+       :snt1 (c12-13 / and
+                     :op1 (c12-12 / know-01
+                                  :ARG0 (c12-6 / i))
+                     :op2 (c12-1 / understand-01
+                                 :ARG0 c12-6)
+                     :ARG0-of (c12-11 / sad-02))
+       :snt2 (c12-8 / perspective
+                    :poss (c12-10 / i)
+                    :topic (c12-2 / okay-04
+                                  :ARG1 (c12-9 / respond-01
+                                               :ARG1 (c12-3 / stupidity
+                                                            :mod (c12-7 / verbal)))
+                                  :time (c12-4 / ever)
+                                  :polarity -)
+                    :mod (c12-5 / all)))
+
+# ::snt That may be true and still his killing was an unacceptable response.
+# ::tokens ["That", "may", "be", "true", "and", "still", "his", "killing", "was", "an", "unacceptable", "response", "."]
+# ::lemmas ["that", "may", "be", "true", "and", "still", "his", "killing", "be", "an", "unacceptable", "response", "."]
+(c13-8 / and
+       :op1 (c13-3 / possible-01
+                   :ARG1 (c13-7 / true-01
+                                :ARG1 (c13-5 / that)))
+       :op2 (c13-4 / respond-01
+                   :ARG2 (c13-2 / kill-01
+                                :ARG1 (c13-0 / he))
+                   :mod (c13-6 / still)
+                   :ARG1-of (c13-1 / accept-01
+                                   :ARG1-of c13-3
+                                   :polarity -)))
+
+# ::snt chilling. "I'm not condoning murder, but you made them REALLY mad......"
+# ::tokens ["chilling", ".", "\"", "I", "'m", "not", "condoning", "murder", ",", "but", "you", "made", "them", "REALLY", "mad", "......", "\""]
+# ::lemmas ["chilling", ".", "\"", "i", "be", "not", "condone", "murder", ",", "but", "you", "make", "they", "really", "mad", "......", "\""]
+(c14-2 / multi-sentence
+       :snt1 (c14-6 / chill-01)
+       :snt2 (c14-5 / contrast-01
+                    :ARG1 (c14-9 / condoning-01
+                                 :ARG0 (c14-3 / i)
+                                 :ARG1 (c14-4 / murder-01)
+                                 :polarity -)
+                    :ARG2 (c14-1 / make-02
+                                 :ARG0 (c14-0 / you)
+                                 :ARG1 (c14-7 / mad-04
+                                              :ARG1 (c14-10 / they)
+                                              :degree (c14-8 / really)))))
+
+# ::snt /10!!!
+# ::tokens ["/10", "!", "!", "!"]
+# ::lemmas ["/10", "!", "!", "!"]
+(c15-0 / score-01
+       :mode expressive
+       :ARG2 10)
+
+# ::snt All done it
+# ::tokens ["All", "done", "it"]
+# ::lemmas ["all", "do", "it"]
+(c16-0 / do-02
+       :ARG0 (c16-2 / all)
+       :ARG1 (c16-1 / it))
+
+# ::snt You got it exactly right. It's only a few hours, but has already got the "most stupid editorial award" all sewed up..
+# ::tokens ["You", "got", "it", "exactly", "right", ".", "It", "'s", "only", "a", "few", "hours", ",", "but", "has", "already", "got", "the", "\"", "most", "stupid", "editorial", "award", "\"", "all", "sewed", "up", ".."]
+# ::lemmas ["you", "get", "it", "exactly", "right", ".", "it", "be", "only", "a", "few", "hours", ",", "but", "have", "already", "get", "the", "\"", "most", "stupid", "editorial", "award", "\"", "all", "sew", "up", ".."]
+(c17-0 / multi-sentence
+       :snt1 (c17-13 / get-02
+                     :ARG0 (c17-17 / you)
+                     :ARG1 (c17-15 / it)
+                     :ARG2-of (c17-12 / right-06
+                                      :ARG1 c17-17
+                                      :mod (c17-8 / exact)))
+       :snt2 (c17-19 / contrast-01
+                     :ARG1 (c17-6 / few
+                                  :op1 (c17-20 / temporal-quantity
+                                               :unit (c17-5 / hour)
+                                               :quant 1)
+                                  :mod (c17-18 / only))
+                     :ARG2 (c17-1 / get-02
+                                  :ARG0 (c17-16 / it)
+                                  :ARG1 (c17-2 / seethe-01
+                                               :ARG1 (c17-4 / award-01
+                                                            :ARG3 (c17-7 / editorial)
+                                                            :ARG1-of (c17-3 / have-degree-91
+                                                                            :ARG2 (c17-9 / stupid)
+                                                                            :ARG3 (c17-11 / most)))
+                                               :mod (c17-14 / all))
+                                  :time (c17-10 / already))))
+
+# ::snt Needling French Muslims is the fucking point; to show they aren't civilized enough to sit back and take it
+# ::tokens ["Needling", "French", "Muslims", "is", "the", "fucking", "point", ";", "to", "show", "they", "are", "n't", "civilized", "enough", "to", "sit", "back", "and", "take", "it"]
+# ::lemmas ["Needling", "French", "Muslims", "be", "the", "fucking", "point", ";", "to", "show", "they", "be", "not", "civilized", "enough", "to", "sit", "back", "and", "take", "it"]
+(c18-8 / point-03
+       :ARG1 (c18-6 / need-01
+                    :ARG1 (c18-14 / person
+                                  :mod (c18-10 / country
+                                               :name (c18-7 / name
+                                                            :op1 "France"))
+                                  :mod (c18-9 / religious-group
+                                              :name c18-7
+                                              :op1 "Islam")))
+       :purpose (c18-12 / show-01
+                        :ARG1 (c18-11 / civilize-01
+                                      :ARG1 c18-14
+                                      :ARG2-of (c18-0 / have-degree-91
+                                                      :ARG1 c18-14
+                                                      :ARG3 (c18-3 / enough)
+                                                      :ARG6 (c18-15 / and
+                                                                    :op1 (c18-4 / sit-01
+                                                                                :ARG1 c18-14
+                                                                                :mod (c18-2 / back))
+                                                                    :op2 (c18-13 / take-01
+                                                                                 :ARG0 c18-14
+                                                                                 :ARG1 (c18-5 / it))))
+                                      :polarity -))
+       :mod (c18-1 / fucking))
+
+# ::snt Fair enough. characters &amp; monologue to monologue is challenging. Hope to be in your area in March. Beer?
+# ::tokens ["Fair", "enough", ".", "characters", "&", "amp", ";", "monologue", "to", "monologue", "is", "challenging", ".", "Hope", "to", "be", "in", "your", "area", "in", "March", ".", "Beer", "?"]
+# ::lemmas ["fair", "enough", ".", "characters", "&", "amp", ";", "monologue", "to", "monologue", "be", "challenge", ".", "hope", "to", "be", "in", "your", "area", "in", "March", ".", "beer", "?"]
+(c19-0 / multi-sentence
+       :snt1 (c19-7 / fair-01
+                    :ARG1 (c19-5 / and
+                                 :op1 (c19-18 / character)
+                                 :op2 (c19-1 / person
+                                             :name (c19-11 / name
+                                                           :op1 "amp")))
+                    :ARG2-of (c19-6 / have-degree-91
+                                    :ARG1 c19-5
+                                    :ARG3 (c19-10 / enough)))
+       :snt2 (c19-2 / challenge-01
+                    :ARG0 (c19-13 / monologue
+                                  :destination (c19-8 / monologue)))
+       :snt3 (c19-4 / hope-01
+                    :ARG0 (c19-15 / i)
+                    :ARG1 (c19-9 / be-located-at-91
+                                 :ARG1 c19-15
+                                 :ARG2 (c19-14 / area
+                                               :poss (c19-17 / you))
+                                 :time (c19-3 / date-entity
+                                              :month 3)))
+       :snt4 (c19-16 / beer
+                     :polarity (c19-12 / amr-unknown)))

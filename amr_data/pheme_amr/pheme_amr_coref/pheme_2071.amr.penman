@@ -1,0 +1,114 @@
+# ::snt I support
+# ::tokens ["I", "support"]
+# ::lemmas ["i", "support"]
+(c1-0 / support-01
+      :ARG0 (c1-1 / i))
+
+# ::snt thank you so much for your well expressed sentiments.
+# ::tokens ["thank", "you", "so", "much", "for", "your", "well", "expressed", "sentiments", "."]
+# ::lemmas ["thank", "you", "so", "much", "for", "your", "well", "express", "sentiment", "."]
+(c2-7 / thank-01
+      :ARG1 (c2-1 / you)
+      :ARG2 (c2-6 / sentiment
+                  :ARG1-of (c2-4 / express-01
+                                 :ARG0 c2-1
+                                 :ARG1-of (c2-2 / well-09)))
+      :ARG1-of (c2-0 / have-quant-91
+                     :ARG2 (c2-3 / much)
+                     :ARG3 (c2-5 / so)))
+
+# ::snt don't hold your breath too long
+# ::tokens ["do", "n't", "hold", "your", "breath", "too", "long"]
+# ::lemmas ["do", "not", "hold", "your", "breath", "too", "long"]
+(c3-0 / hold-01
+      :ARG0 (c3-1 / you)
+      :ARG1 (c3-3 / breathe-01
+                  :ARG0 c3-1)
+      :ARG1-of (c3-2 / long-03
+                     :ARG2-of (c3-5 / have-degree-91
+                                    :ARG1 c3-0
+                                    :ARG3 (c3-4 / too)))
+      :polarity -
+      :mode imperative)
+
+# ::snt You are right, but sadly it wont happen. Shabbat shalom
+# ::tokens ["You", "are", "right", ",", "but", "sadly", "it", "wo", "nt", "happen", ".", "Shabbat", "shalom"]
+# ::lemmas ["you", "be", "right", ",", "but", "sadly", "it", "will", "not", "happen", ".", "Shabbat", "shalom"]
+(c4-2 / multi-sentence
+      :snt1 (c4-6 / right-06
+                  :ARG1 (c4-1 / you))
+      :snt2 (c4-0 / have-concession-91
+                  :ARG1 (c4-4 / it
+                              :mod (c4-7 / sad)
+                              :polarity -)
+                  :ARG2 (c4-3 / event
+                              :name (c4-5 / name
+                                          :op1 "Shabbat"
+                                          :op2 "Shalom"))))
+
+# ::snt will never happen
+# ::tokens ["will", "never", "happen"]
+# ::lemmas ["will", "never", "happen"]
+(c5-0 / event
+      :time (c5-1 / ever)
+      :polarity -)
+
+# ::snt Only strengthens my resolve not to compromise my identity: Je suis juive.
+# ::tokens ["Only", "strengthens", "my", "resolve", "not", "to", "compromise", "my", "identity", ":", "Je", "suis", "juive", "."]
+# ::lemmas ["only", "strengthen", "my", "resolve", "not", "to", "compromise", "my", "identity", ":", "Je", "suis", "juive", "."]
+(c6-7 / strengthen-01
+      :ARG0 (c6-3 / i)
+      :ARG1 (c6-4 / resolve-01
+                  :ARG0 c6-3
+                  :ARG1 (c6-5 / compromise-02
+                              :ARG0 c6-3
+                              :ARG1 (c6-6 / identity
+                                          :poss c6-3)
+                              :polarity -))
+      :mod (c6-2 / only)
+      :ARG1-of (c6-1 / mean-01
+                     :ARG2 (c6-0 / Je
+                                 :mode expressive)))
+
+# ::snt good suggestion from Just works - we are all one &amp; all human lives are ... human lives, the same
+# ::tokens ["good", "suggestion", "from", "Just", "works", "-", "we", "are", "all", "one", "&", "amp", ";", "all", "human", "lives", "are", "...", "human", "lives", ",", "the", "same"]
+# ::lemmas ["good", "suggestion", "from", "just", "work", "-", "we", "be", "all", "one", "&", "amp", ";", "all", "human", "life", "be", "...", "human", "life", ",", "the", "same"]
+(c7-14 / suggest-01
+       :ARG0 (c7-1 / work-01
+                   :mod (c7-0 / just))
+       :ARG1 (c7-16 / and
+                    :op1 (c7-9 / and
+                               :op1 (c7-5 / one
+                                          :domain (c7-10 / we
+                                                         :mod (c7-11 / all)))
+                               :op2 (c7-15 / amp
+                                           :domain c7-10))
+                    :op2 (c7-6 / and
+                               :op1 (c7-3 / life
+                                          :mod (c7-2 / human)
+                                          :mod (c7-7 / all))
+                               :op2 (c7-13 / life
+                                           :mod (c7-4 / human)
+                                           :ARG1-of (c7-8 / same-01))))
+       :ARG1-of (c7-12 / good-02))
+
+# ::snt we should all support Jews whether we are or not. The world needs to wake up
+# ::tokens ["we", "should", "all", "support", "Jews", "whether", "we", "are", "or", "not", ".", "The", "world", "needs", "to", "wake", "up"]
+# ::lemmas ["we", "should", "all", "support", "Jews", "whether", "we", "be", "or", "not", ".", "the", "world", "need", "to", "wake", "up"]
+(c8-1 / multi-sentence
+      :snt1 (c8-9 / recommend-01
+                  :ARG1 (c8-11 / support-01
+                               :ARG0 (c8-0 / we
+                                           :mod (c8-12 / all))
+                               :ARG1 (c8-8 / person
+                                           :mod (c8-5 / religious-group
+                                                      :name (c8-6 / name
+                                                                  :op1 "Jew")))
+                               :ARG1-of (c8-4 / regardless-91
+                                              :ARG2 (c8-3 / or
+                                                          :op1 c8-11
+                                                          :op2 c8-11))))
+      :snt2 (c8-7 / need-01
+                  :ARG0 (c8-10 / world)
+                  :ARG1 (c8-2 / wake-up-02
+                              :ARG1 c8-10)))

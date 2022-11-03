@@ -1,0 +1,39 @@
+# ::snt Nobody cares
+# ::tokens ["Nobody", "cares"]
+# ::lemmas ["nobody", "care"]
+(c1-1 / care-01
+      :ARG0 (c1-0 / nobody))
+
+# ::snt The c-word is not acceptable--it is hurtful and offensive towards women.
+# ::tokens ["The", "c", "-", "word", "is", "not", "acceptable", "--", "it", "is", "hurtful", "and", "offensive", "towards", "women", "."]
+# ::lemmas ["the", "c", "-", "word", "be", "not", "acceptable", "--", "it", "be", "hurtful", "and", "offensive", "towards", "woman", "."]
+(c2-8 / multi-sentence
+      :snt1 (c2-7 / possible-01
+                  :ARG1 (c2-1 / accept-01
+                              :ARG1 (c2-3 / word
+                                          :mod (c2-0 / string-entity
+                                                     :value "c-word")))
+                  :polarity -)
+      :snt2 (c2-9 / and
+                  :op1 (c2-5 / hurt-01
+                             :ARG0 (c2-2 / it)
+                             :ARG1 (c2-4 / woman))
+                  :op2 (c2-6 / offend-01
+                             :ARG0 c2-2
+                             :ARG1 c2-4)))
+
+# ::snt The use of the word "cunt" is unnecessary and unacceptable in this forum.
+# ::tokens ["The", "use", "of", "the", "word", "\"", "cunt", "\"", "is", "unnecessary", "and", "unacceptable", "in", "this", "forum", "."]
+# ::lemmas ["the", "use", "of", "the", "word", "\"", "cunt", "\"", "be", "unnecessary", "and", "unacceptable", "in", "this", "forum", "."]
+(c3-0 / and
+      :op1 (c3-7 / need-01
+                 :ARG1 (c3-4 / use-01
+                             :ARG1 (c3-3 / word
+                                         :mod (c3-2 / cunt)))
+                 :polarity -)
+      :op2 (c3-6 / possible-01
+                 :ARG1 (c3-8 / accept-01
+                             :ARG1 c3-4)
+                 :polarity -)
+      :location (c3-1 / forum
+                      :mod (c3-5 / this)))

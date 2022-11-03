@@ -1,0 +1,99 @@
+# ::snt Only Muslims kill over a cartoon.
+# ::tokens ["Only", "Muslims", "kill", "over", "a", "cartoon", "."]
+# ::lemmas ["only", "Muslims", "kill", "over", "a", "cartoon", "."]
+(c1-6 / kill-01
+      :ARG0 (c1-2 / person
+                  :mod (c1-3 / religious-group
+                             :name (c1-1 / name
+                                         :op1 "Islam"))
+                  :mod (c1-0 / only))
+      :ARG1-of (c1-4 / cause-01
+                     :ARG0 (c1-5 / cartoon)))
+
+# ::snt No. Only extremist idiots kill over a cartoon.
+# ::tokens ["No", ".", "Only", "extremist", "idiots", "kill", "over", "a", "cartoon", "."]
+# ::lemmas ["no", ".", "only", "extremist", "idiot", "kill", "over", "a", "cartoon", "."]
+(c2-0 / multi-sentence
+      :snt1 (c2-4 / no)
+      :snt2 (c2-7 / kill-01
+                  :ARG0 (c2-3 / idiot
+                              :mod (c2-2 / extremism)
+                              :mod (c2-1 / only))
+                  :ARG1-of (c2-6 / cause-01
+                                 :ARG0 (c2-5 / cartoon))))
+
+# ::snt Charlie Hebdo shooting: Who are the suspects?
+# ::tokens ["Charlie", "Hebdo", "shooting", ":", "Who", "are", "the", "suspects", "?"]
+# ::lemmas ["Charlie", "Hebdo", "shoot", ":", "who", "be", "the", "suspect", "?"]
+(c3-5 / and
+      :op1 (c3-4 / shoot-02
+                 :ARG2 (c3-0 / magazine
+                             :name (c3-3 / name
+                                         :op1 "Charlie"
+                                         :op2 "Ch Hebdo")))
+      :op2 (c3-1 / suspect-01
+                 :ARG1 (c3-2 / amr-unknown)))
+
+# ::snt All cartoons. All the time. Until their heads explode.
+# ::tokens ["All", "cartoons", ".", "All", "the", "time", ".", "Until", "their", "heads", "explode", "."]
+# ::lemmas ["all", "cartoon", ".", "all", "the", "time", ".", "until", "their", "head", "explode", "."]
+(c4-1 / multi-sentence
+      :snt1 (c4-5 / cartoon
+                  :mod (c4-8 / all))
+      :snt2 (c4-7 / time
+                  :mod (c4-4 / all))
+      :snt3 (c4-2 / until
+                  :op1 (c4-3 / explode-01
+                             :ARG1 (c4-0 / head
+                                         :part-of (c4-6 / they)))))
+
+# ::snt and with cowardice, they should be drawing Muhammad
+# ::tokens ["and", "with", "cowardice", ",", "they", "should", "be", "drawing", "Muhammad"]
+# ::lemmas ["and", "with", "cowardice", ",", "they", "should", "be", "draw", "Muhammad"]
+(c5-6 / and
+      :op2 (c5-3 / recommend-01
+                 :ARG1 (c5-2 / draw-02
+                             :ARG0 (c5-5 / they)
+                             :ARG1 (c5-1 / person
+                                         :name (c5-0 / name
+                                                     :op1 "Muhammad"))
+                             :manner (c5-4 / cowardice))))
+
+# ::snt My fav is the th one
+# ::tokens ["My", "fav", "is", "the", "th", "one"]
+# ::lemmas ["my", "fav", "be", "the", "th", "one"]
+(c6-1 / favor-01
+      :ARG0 (c6-3 / i)
+      :ARG1 (c6-0 / one
+                  :mod (c6-2 / th)))
+
+# ::snt I particularly like the rd one.
+# ::tokens ["I", "particularly", "like", "the", "rd", "one", "."]
+# ::lemmas ["i", "particularly", "like", "the", "rd", "one", "."]
+(c7-0 / like-01
+      :ARG0 (c7-2 / i)
+      :ARG1 (c7-1 / one
+                  :mod (c7-4 / product
+                             :name (c7-3 / name
+                                         :op1 "rd")))
+      :degree (c7-5 / particular))
+
+# ::snt the pen is mightier then the sword. With Pens we sign these bogus policies, that create these wars
+# ::tokens ["the", "pen", "is", "mightier", "then", "the", "sword", ".", "With", "Pens", "we", "sign", "these", "bogus", "policies", ",", "that", "create", "these", "wars"]
+# ::lemmas ["the", "pen", "be", "mighty", "then", "the", "sword", ".", "with", "Pens", "we", "sign", "these", "bogus", "policy", ",", "that", "create", "these", "war"]
+(c8-3 / multi-sentence
+      :snt1 (c8-0 / have-degree-91
+                  :ARG1 (c8-8 / pen)
+                  :ARG2 (c8-9 / might-01
+                              :ARG1 c8-8)
+                  :ARG3 (c8-2 / more)
+                  :ARG4 (c8-12 / sword))
+      :snt2 (c8-6 / sign-01
+                  :ARG0 (c8-1 / we)
+                  :ARG1 (c8-14 / policy-01
+                               :mod (c8-5 / bogus)
+                               :mod (c8-13 / this)
+                               :ARG0-of (c8-10 / create-01
+                                               :ARG1 (c8-7 / war
+                                                           :mod (c8-11 / this))))
+                  :instrument (c8-4 / pen)))

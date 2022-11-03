@@ -1,0 +1,49 @@
+# ::snt May I ask which vaccine you received? I'm looking into Frontline Doctors
+# ::tokens ["May", "I", "ask", "which", "vaccine", "you", "received", "?", "I", "'m", "looking", "into", "Frontline", "Doctors"]
+# ::lemmas ["may", "i", "ask", "which", "vaccine", "you", "receive", "?", "i", "be", "look", "into", "Frontline", "Doctors"]
+(c1-8 / multi-sentence
+      :snt1 (c1-7 / permit-01
+                  :polarity (c1-0 / amr-unknown)
+                  :ARG1 (c1-11 / ask-01
+                               :ARG0 (c1-1 / i)
+                               :ARG1 (c1-3 / vaccine
+                                           :ARG1-of (c1-5 / receive-01
+                                                          :ARG0 (c1-10 / you))))
+                  :ARG2 c1-1)
+      :snt2 (c1-6 / look-into-11
+                  :ARG0 (c1-2 / i)
+                  :ARG1 (c1-4 / person
+                              :name (c1-9 / name
+                                          :op1 "Frontline"
+                                          :op2 "Doctors"))))
+
+# ::snt Sounds like COVID
+# ::tokens ["Sounds", "like", "COVID"]
+# ::lemmas ["sound", "like", "covid"]
+(c2-0 / sound-01
+      :ARG2 (c2-2 / thing
+                  :name (c2-1 / name
+                              :op1 "COVID")))
+
+# ::snt Im the same right now. I got the Moderna second dose yesterday and Ive been a mess all day.
+# ::tokens ["I", "m", "the", "same", "right", "now", ".", "I", "got", "the", "Moderna", "second", "dose", "yesterday", "and", "I", "ve", "been", "a", "mess", "all", "day", "."]
+# ::lemmas ["i", "m", "the", "same", "right", "now", ".", "i", "get", "the", "Moderna", "second", "dose", "yesterday", "and", "i", "ve", "be", "a", "mess", "all", "day", "."]
+(c3-12 / multi-sentence
+       :snt1 (c3-0 / same-01
+                   :ARG1 (c3-11 / i)
+                   :time (c3-13 / now
+                                :mod (c3-7 / right)))
+       :snt2 (c3-2 / and
+                   :op1 (c3-10 / get-01
+                               :ARG0 (c3-5 / i)
+                               :ARG1 (c3-1 / dose-01
+                                           :ARG1 (c3-8 / product
+                                                       :name (c3-9 / name
+                                                                   :op1 "Moderna"))
+                                           :ord (c3-6 / ordinal-entity
+                                                      :value 2))
+                               :time (c3-14 / yesterday))
+                   :op2 (c3-3 / mess-up-02
+                              :ARG1 c3-5
+                              :duration (c3-4 / day
+                                              :mod (c3-15 / all)))))

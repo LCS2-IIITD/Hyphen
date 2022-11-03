@@ -1,0 +1,101 @@
+# ::snt NOOOOO!!!! Can't let them Win... GAME ON!!!
+# ::tokens ["NOOOOO", "!", "!", "!", "!", "Ca", "n't", "let", "them", "Win", "...", "GAME", "ON", "!", "!", "!"]
+# ::lemmas ["NOOOOO", "!", "!", "!", "!", "can", "not", "let", "they", "win", "...", "GAME", "ON", "!", "!", "!"]
+(c1-2 / multi-sentence
+      :snt1 (c1-4 / no)
+      :snt2 (c1-5 / possible-01
+                  :ARG1 (c1-1 / let-01
+                              :ARG1 (c1-0 / win-01
+                                          :ARG0 (c1-7 / they)))
+                  :polarity -)
+      :snt3 (c1-3 / on-01
+                  :ARG1 (c1-6 / game)))
+
+# ::snt How could the consciously go ahead with tonight's Leafs-Sens game?
+# ::tokens ["How", "could", "the", "consciously", "go", "ahead", "with", "tonight", "'s", "Leafs", "-", "Sens", "game", "?"]
+# ::lemmas ["how", "could", "the", "consciously", "go", "ahead", "with", "tonight", "'s", "Leafs", "-", "Sens", "game", "?"]
+(c2-3 / possible-01
+      :ARG1 (c2-6 / go-06
+                  :ARG0 (c2-10 / team
+                               :name (c2-1 / name
+                                           :op1 "Le Leafs"))
+                  :ARG2 (c2-4 / game
+                              :time (c2-5 / date-entity
+                                          :dayperiod (c2-2 / night)
+                                          :mod (c2-8 / today))
+                              :mod (c2-7 / team
+                                         :name (c2-9 / name
+                                                     :op1 "Sens")))
+                  :manner (c2-11 / amr-unknown)
+                  :direction (c2-0 / ahead)))
+
+# ::snt it's been postponed already
+# ::tokens ["it", "'s", "been", "postponed", "already"]
+# ::lemmas ["it", "be", "be", "postpone", "already"]
+(c3-0 / postpone-01
+      :ARG1 (c3-2 / it)
+      :time (c3-1 / already))
+
+# ::snt I saw postpone it to be safe
+# ::tokens ["I", "saw", "postpone", "it", "to", "be", "safe"]
+# ::lemmas ["i", "saw", "postpone", "it", "to", "be", "safe"]
+(c4-4 / see-01
+      :ARG0 (c4-1 / i)
+      :ARG1 (c4-2 / postpone-01
+                  :ARG1 (c4-3 / it)
+                  :purpose (c4-0 / safe-01
+                                 :ARG1 c4-3)))
+
+# ::snt not could , SHOULD!
+# ::tokens ["not", "could", ",", "SHOULD", "!"]
+# ::lemmas ["not", "could", ",", "SHOULD", "!"]
+(c5-2 / and
+      :op1 (c5-0 / possible-01
+                 :polarity -)
+      :op2 (c5-1 / recommend-01
+                 :polarity -))
+
+# ::snt for safety postpone no big deal live at stake
+# ::tokens ["for", "safety", "postpone", "no", "big", "deal", "live", "at", "stake"]
+# ::lemmas ["for", "safety", "postpone", "no", "big", "deal", "live", "at", "stake"]
+(c6-4 / postpone-01
+      :ARG0 (c6-0 / you)
+      :ARG1 (c6-5 / deal-03
+                  :mod (c6-2 / big)
+                  :ARG1-of (c6-6 / stake-01
+                                 :ARG2 (c6-1 / live-01))
+                  :polarity -)
+      :purpose (c6-3 / safe-01)
+      :mode imperative)
+
+# ::snt no could. It should be postponed
+# ::tokens ["no", "could", ".", "It", "should", "be", "postponed"]
+# ::lemmas ["no", "could", ".", "it", "should", "be", "postpone"]
+(c7-0 / multi-sentence
+      :snt1 (c7-2 / possible-01
+                  :polarity -)
+      :snt2 (c7-3 / recommend-01
+                  :ARG1 (c7-4 / postpone-01
+                              :ARG1 (c7-1 / it))))
+
+# ::snt Agree % RT the NHL must postpone this game tonight. C'mon!
+# ::tokens ["Agree", "%", "RT", "the", "NHL", "must", "postpone", "this", "game", "tonight", ".", "C'm", "on", "!"]
+# ::lemmas ["Agree", "%", "RT", "the", "NHL", "must", "postpone", "this", "game", "tonight", ".", "come", "on", "!"]
+(c8-2 / multi-sentence
+      :snt1 (c8-14 / agree-01
+                   :ARG0 (c8-4 / i)
+                   :ARG1 (c8-7 / publication-91
+                               :ARG1 (c8-3 / obligate-01
+                                           :ARG1 (c8-1 / organization
+                                                       :name (c8-5 / name
+                                                                   :op1 "NHL"))
+                                           :ARG2 (c8-13 / postpone-01
+                                                        :ARG0 c8-1
+                                                        :ARG1 (c8-10 / game
+                                                                     :mod (c8-12 / this)
+                                                                     :time (c8-8 / date-entity
+                                                                                 :dayperiod (c8-6 / night)
+                                                                                 :mod (c8-11 / today)))))))
+      :snt2 (c8-9 / come-on-25
+                  :ARG1 (c8-0 / you)
+                  :mode imperative))

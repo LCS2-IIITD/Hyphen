@@ -1,0 +1,27 @@
+# ::snt The House just voted to defund Planned Parenthood
+# ::tokens ["The", "House", "just", "voted", "to", "defund", "Planned", "Parenthood"]
+# ::lemmas ["the", "House", "just", "vote", "to", "defund", "Planned", "Parenthood"]
+(c1-1 / vote-01
+      :ARG0 (c1-3 / government-organization
+                  :name (c1-6 / name
+                              :op1 "House"))
+      :ARG1 (c1-0 / defund-01
+                  :ARG0 c1-3
+                  :ARG1 (c1-5 / parenthood
+                              :ARG1-of (c1-2 / plan-01)))
+      :time (c1-4 / just))
+
+# ::snt PP literally kills little babies that haven't even been born yet :/
+# ::tokens ["PP", "literally", "kills", "little", "babies", "that", "have", "n't", "even", "been", "born", "yet", ":/"]
+# ::lemmas ["PP", "literally", "kill", "little", "baby", "that", "have", "not", "even", "be", "bear", "yet", ":/"]
+(c2-6 / kill-01
+      :ARG0 (c2-5 / person
+                  :name (c2-3 / name
+                              :op1 "PP"))
+      :ARG1 (c2-4 / baby
+                  :mod (c2-2 / little)
+                  :ARG1-of (c2-1 / bear-02
+                                 :time (c2-7 / yet)
+                                 :mod (c2-8 / even)
+                                 :polarity -))
+      :manner (c2-0 / literal))

@@ -1,0 +1,55 @@
+# ::snt awful.
+# ::tokens ["awful", "."]
+# ::lemmas ["awful", "."]
+(c1-0 / wonderful-03)
+
+# ::snt Where on earth do you get these commentators from? They know nothing about aviation or A320. Embarrassing
+# ::tokens ["Where", "on", "earth", "do", "you", "get", "these", "commentators", "from", "?", "They", "know", "nothing", "about", "aviation", "or", "A320", ".", "Embarrassing"]
+# ::lemmas ["where", "on", "earth", "do", "you", "get", "these", "commentator", "from", "?", "they", "know", "nothing", "about", "aviation", "or", "A320", ".", "embarrassing"]
+(c2-1 / multi-sentence
+      :snt1 (c2-12 / get-01
+                   :ARG0 (c2-0 / you)
+                   :ARG1 (c2-11 / commentator
+                                :mod (c2-14 / this))
+                   :ARG2 (c2-15 / amr-unknown
+                                :location (c2-4 / earth)))
+      :snt2 (c2-6 / know-01
+                  :ARG0 (c2-13 / they)
+                  :ARG1 (c2-7 / nothing
+                              :topic (c2-3 / or
+                                           :op1 (c2-5 / aviation)
+                                           :op2 (c2-8 / aircraft-type
+                                                      :name (c2-9 / name
+                                                                  :op1 "A320")))))
+      :snt3 (c2-10 / thing
+                   :ARG0-of (c2-2 / embarrass-01)))
+
+# ::snt President Hollande says it's likely not to find survivors ....
+# ::tokens ["President", "Hollande", "says", "it", "'s", "likely", "not", "to", "find", "survivors", "...."]
+# ::lemmas ["President", "Hollande", "say", "it", "be", "likely", "not", "to", "find", "survivor", "...."]
+(c3-7 / say-01
+      :ARG0 (c3-6 / person
+                  :name (c3-5 / name
+                              :op1 "Holland")
+                  :ARG0-of (c3-0 / have-org-role-91
+                                 :ARG2 (c3-8 / president)))
+      :ARG1 (c3-1 / likely-01
+                  :ARG1 (c3-2 / find-01
+                              :ARG1 (c3-3 / person
+                                          :ARG0-of (c3-4 / survive-01))
+                              :polarity -)))
+
+# ::snt terrifying news .we continue to pray for their relatives!
+# ::tokens ["terrifying", "news", ".we", "continue", "to", "pray", "for", "their", "relatives", "!"]
+# ::lemmas ["terrifying", "news", ".we", "continue", "to", "pray", "for", "their", "relative", "!"]
+(c4-2 / multi-sentence
+      :snt1 (c4-3 / news
+                  :ARG0-of (c4-8 / terrify-01))
+      :snt2 (c4-6 / continue-01
+                  :ARG0 (c4-1 / we)
+                  :ARG1 (c4-4 / pray-01
+                              :ARG0 c4-1
+                              :beneficiary (c4-9 / person
+                                                 :ARG0-of (c4-0 / have-rel-role-91
+                                                                :ARG1 (c4-7 / they)
+                                                                :ARG2 (c4-5 / relative))))))

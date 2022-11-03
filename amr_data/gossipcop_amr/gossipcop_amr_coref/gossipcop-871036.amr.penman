@@ -1,0 +1,371 @@
+# ::snt So happy for you.
+# ::tokens ["So", "happy", "for", "you", "."]
+# ::lemmas ["so", "happy", "for", "you", "."]
+(c1-0 / happy-01
+      :ARG1 (c1-1 / you)
+      :degree (c1-2 / so))
+
+# ::snt It's only been years! Feels like forever
+# ::tokens ["It", "'s", "only", "been", "years", "!", "Feels", "like", "forever"]
+# ::lemmas ["it", "be", "only", "be", "years", "!", "feel", "like", "forever"]
+(c2-3 / multi-sentence
+      :snt1 (c2-5 / pass-03
+                  :ARG1 (c2-4 / multiple
+                              :op1 (c2-7 / temporal-quantity
+                                         :unit (c2-2 / year)
+                                         :quant 1))
+                  :mod (c2-0 / only))
+      :snt2 (c2-1 / feel-05
+                  :ARG2 (c2-6 / forever)))
+
+# ::snt Who cares ???????
+# ::tokens ["Who", "cares", "?", "?", "?", "?", "?", "?", "?"]
+# ::lemmas ["who", "care", "?", "?", "?", "?", "?", "?", "?"]
+(c3-0 / care-01
+      :ARG0 (c3-1 / amr-unknown))
+
+# ::snt Ha! You can forget about the NFL. You're going apple picking.
+# ::tokens ["Ha", "!", "You", "can", "forget", "about", "the", "NFL", ".", "You", "'re", "going", "apple", "picking", "."]
+# ::lemmas ["ha", "!", "you", "can", "forget", "about", "the", "NFL", ".", "you", "be", "go", "apple", "picking", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-6 / possible-01
+                  :ARG1 (c4-0 / forget-01
+                              :ARG0 (c4-1 / you)
+                              :ARG1 (c4-7 / league
+                                          :name (c4-3 / name
+                                                      :op1 "NFL")))
+                  :mod (c4-5 / ha
+                             :mode expressive))
+      :snt2 (c4-9 / go-05
+                  :ARG0 (c4-10 / you)
+                  :ARG1 (c4-4 / pick-01
+                              :ARG0 c4-10
+                              :ARG1 (c4-8 / apple))))
+
+# ::snt Only two years? Seems like forever though... Here's to many more years to them
+# ::tokens ["Only", "two", "years", "?", "Seems", "like", "forever", "though", "...", "Here", "'s", "to", "many", "more", "years", "to", "them"]
+# ::lemmas ["Only", "two", "years", "?", "seem", "like", "forever", "though", "...", "here", "be", "to", "many", "more", "year", "to", "they"]
+(c5-4 / multi-sentence
+      :snt1 (c5-5 / seem-01
+                  :ARG1 (c5-7 / last-01
+                              :ARG2 (c5-10 / temporal-quantity
+                                           :unit (c5-3 / year)
+                                           :quant 2)
+                              :mod (c5-0 / only))
+                  :ARG2 (c5-1 / forever)
+                  :ARG1-of (c5-6 / have-concession-91))
+      :snt2 (c5-2 / be-temporally-at-91
+                  :ARG1 (c5-11 / year
+                               :quant (c5-8 / more
+                                            :quant (c5-12 / many)))
+                  :ARG2 (c5-9 / here)))
+
+# ::snt nice !
+# ::tokens ["nice", "!"]
+# ::lemmas ["nice", "!"]
+(c6-0 / nice-01)
+
+# ::snt Neither of them look happy about it, she looks startled and he looks crazy
+# ::tokens ["Neither", "of", "them", "look", "happy", "about", "it", ",", "she", "looks", "startled", "and", "he", "looks", "crazy"]
+# ::lemmas ["neither", "of", "they", "look", "happy", "about", "it", ",", "she", "look", "startled", "and", "he", "look", "crazy"]
+(c7-2 / and
+      :op1 (c7-4 / look-02
+                 :ARG0 (c7-9 / they)
+                 :ARG1 (c7-3 / happy-01
+                             :ARG0 (c7-8 / it)
+                             :ARG1 c7-9)
+                 :polarity -)
+      :op2 (c7-11 / look-02
+                  :ARG0 (c7-10 / and
+                               :op1 (c7-1 / she)
+                               :op2 (c7-7 / he))
+                  :ARG1 (c7-0 / surprise-01
+                              :ARG1 c7-1))
+      :op3 (c7-5 / look-02
+                 :ARG0 c7-7
+                 :ARG1 (c7-6 / crazy-03
+                             :ARG1 c7-7)))
+
+# ::snt was that you on the bench?
+# ::tokens ["was", "that", "you", "on", "the", "bench", "?"]
+# ::lemmas ["be", "that", "you", "on", "the", "bench", "?"]
+(c8-0 / bench-01
+      :polarity (c8-2 / amr-unknown)
+      :ARG1 (c8-1 / you))
+
+# ::snt He looks soooo happy... Like a deer in headlights
+# ::tokens ["He", "looks", "soooo", "happy", "...", "Like", "a", "deer", "in", "headlights"]
+# ::lemmas ["he", "look", "soooo", "happy", "...", "like", "a", "deer", "in", "headlight"]
+(c9-4 / look-02
+      :ARG0 (c9-3 / he)
+      :ARG1 (c9-5 / happy-01
+                  :ARG1 c9-3
+                  :degree (c9-0 / so))
+      :ARG1-of (c9-1 / resemble-01
+                     :ARG2 (c9-6 / deer
+                                 :ARG0-of (c9-2 / headlights-01))))
+
+# ::snt Person who posted this is clearly upset that these two are still together.
+# ::tokens ["Person", "who", "posted", "this", "is", "clearly", "upset", "that", "these", "two", "are", "still", "together", "."]
+# ::lemmas ["person", "who", "post", "this", "be", "clearly", "upset", "that", "these", "two", "be", "still", "together", "."]
+(c10-6 / upset-01
+       :ARG0 (c10-4 / together
+                    :domain (c10-2 / person
+                                   :ARG0-of (c10-0 / post-01
+                                                   :ARG1 (c10-5 / this))
+                                   :quant 2)
+                    :mod (c10-1 / still))
+       :ARG1 c10-2
+       :ARG1-of (c10-3 / clear-06))
+
+# ::snt Fellas, is it just me or does Aniston seem like the type of lady who would throw your Xbox in the garbage, the day you moved in together?
+# ::tokens ["Fellas", ",", "is", "it", "just", "me", "or", "does", "Aniston", "seem", "like", "the", "type", "of", "lady", "who", "would", "throw", "your", "Xbox", "in", "the", "garbage", ",", "the", "day", "you", "moved", "in", "together", "?"]
+# ::lemmas ["Fellas", ",", "be", "it", "just", "i", "or", "do", "Aniston", "seem", "like", "the", "type", "of", "lady", "who", "would", "throw", "your", "Xbox", "in", "the", "garbage", ",", "the", "day", "you", "move", "in", "together", "?"]
+(c11-7 / ask-01
+       :ARG1 (c11-6 / amr-choice
+                    :op1 (c11-17 / i
+                                 :mod (c11-5 / just))
+                    :op2 (c11-0 / seem-01
+                                :ARG1 (c11-15 / person
+                                              :name (c11-14 / name
+                                                            :op1 "Aniston"))
+                                :ARG2 (c11-1 / lady
+                                             :ARG0-of (c11-9 / throw-01
+                                                             :ARG1 (c11-11 / product
+                                                                           :name (c11-12 / name
+                                                                                         :op1 "Xbox")
+                                                                           :poss (c11-3 / you))
+                                                             :ARG2 (c11-8 / garbage)
+                                                             :time (c11-18 / day
+                                                                           :time-of (c11-10 / move-01
+                                                                                            :ARG0 c11-3
+                                                                                            :ARG2 (c11-4 / inside)
+                                                                                            :manner (c11-13 / together))))
+                                             :domain c11-15)))
+       :ARG2 (c11-2 / person
+                    :name (c11-16 / name
+                                  :op1 "Fellas")))
+
+# ::snt Looking at her wiki I can't see anything bad, what did u hear? Always liked her.
+# ::tokens ["Looking", "at", "her", "wiki", "I", "ca", "n't", "see", "anything", "bad", ",", "what", "did", "u", "hear", "?", "Always", "liked", "her", "."]
+# ::lemmas ["look", "at", "her", "wiki", "i", "can", "not", "see", "anything", "bad", ",", "what", "do", "u", "hear", "?", "always", "like", "she", "."]
+(c12-3 / multi-sentence
+       :snt1 (c12-6 / possible-01
+                    :ARG1 (c12-4 / see-01
+                                 :ARG0 (c12-11 / i)
+                                 :ARG1 (c12-12 / anything
+                                               :ARG1-of (c12-1 / bad-07)))
+                    :ARG1-of (c12-8 / cause-01
+                                    :ARG0 (c12-7 / look-01
+                                                 :ARG0 c12-11
+                                                 :ARG1 (c12-9 / wiki
+                                                              :poss (c12-0 / she))))
+                    :polarity -)
+       :snt2 (c12-5 / hear-01
+                    :ARG0 (c12-2 / you)
+                    :ARG1 c12-5
+                    :ARG0 c12-2
+                    :ARG1 (c12-13 / amr-unknown))
+       :snt3 (c12-14 / like-01
+                     :ARG0 c12-11)
+       :ARG1 (c12-15 / she)
+       :time (c12-10 / always))
+
+# ::snt Best pic ever!
+# ::tokens ["Best", "pic", "ever", "!"]
+# ::lemmas ["good", "pic", "ever", "!"]
+(c13-2 / have-degree-91
+       :ARG1 (c13-3 / pic)
+       :ARG2 (c13-4 / good-02
+                    :ARG1 c13-3
+                    :time (c13-1 / ever))
+       :ARG3 (c13-0 / most)
+       :mode expressive)
+
+# ::snt I ever knew she had a bad past.
+# ::tokens ["I", "ever", "knew", "she", "had", "a", "bad", "past", "."]
+# ::lemmas ["i", "ever", "know", "she", "have", "a", "bad", "past", "."]
+(c14-5 / know-01
+       :ARG0 (c14-6 / i)
+       :ARG1 (c14-3 / have-03
+                    :ARG0 (c14-1 / she)
+                    :ARG1 (c14-4 / past
+                                 :ARG1-of (c14-0 / bad-07)))
+       :time (c14-2 / ever))
+
+# ::snt do some reseach and you might be surprised about what you find out. Sick its very evil
+# ::tokens ["do", "some", "reseach", "and", "you", "might", "be", "surprised", "about", "what", "you", "find", "out", ".", "Sick", "its", "very", "evil"]
+# ::lemmas ["do", "some", "reseach", "and", "you", "might", "be", "surprised", "about", "what", "you", "find", "out", ".", "sick", "its", "very", "evil"]
+(c15-3 / multi-sentence
+       :snt1 (c15-7 / have-condition-91
+                    :ARG1 (c15-8 / possible-01
+                                 :ARG1 (c15-4 / surprise-01
+                                              :ARG0 (c15-10 / thing
+                                                            :ARG1-of (c15-0 / find-out-03
+                                                                            :ARG0 (c15-2 / you
+                                                                                         :ARG1-of c15-4)))))
+                    :ARG2 (c15-12 / do-02
+                                  :ARG0 c15-2
+                                  :ARG1 (c15-5 / reseach-01
+                                               :ARG0 c15-2
+                                               :mod (c15-1 / some))))
+       :snt2 (c15-13 / sick-02
+                     :ARG0 (c15-9 / it)
+                     :ARG1 (c15-11 / you)
+                     :degree (c15-6 / very)))
+
+# ::snt You didn't have a better pic of her!? She should not talk to y'all again damn y'all acting like in touch or something
+# ::tokens ["You", "did", "n't", "have", "a", "better", "pic", "of", "her", "!", "?", "She", "should", "not", "talk", "to", "y'", "all", "again", "damn", "y'", "all", "acting", "like", "in", "touch", "or", "something"]
+# ::lemmas ["you", "do", "not", "have", "a", "well", "pic", "of", "she", "!", "?", "she", "should", "not", "talk", "to", "you", "all", "again", "damn", "you", "all", "act", "like", "in", "touch", "or", "something"]
+(c16-13 / multi-sentence
+        :snt1 (c16-5 / have-03
+                     :ARG0 (c16-4 / you)
+                     :ARG1 (c16-15 / pic
+                                   :topic (c16-0 / she)
+                                   :ARG1-of (c16-16 / have-degree-91
+                                                    :ARG2 (c16-11 / good-02
+                                                                  :ARG1 c16-15)
+                                                    :ARG3 (c16-6 / more)))
+                     :polarity -)
+        :snt2 (c16-14 / recommend-01
+                      :ARG1 (c16-10 / talk-01
+                                    :ARG0 (c16-2 / she)
+                                    :ARG2 (c16-12 / you
+                                                  :mod (c16-9 / all))
+                                    :mod (c16-8 / again)
+                                    :manner (c16-7 / act-01
+                                                   :ARG0 c16-12
+                                                   :ARG1 (c16-3 / or
+                                                                :op1 (c16-17 / in-touch-12
+                                                                             :ARG1 c16-12)
+                                                                :op2 (c16-1 / something)))
+                                    :ARG1-of (c16-18 / damn-01
+                                                     :mode expressive)
+                                    :polarity -)))
+
+# ::snt I still see Brad down the road.
+# ::tokens ["I", "still", "see", "Brad", "down", "the", "road", "."]
+# ::lemmas ["i", "still", "see", "Brad", "down", "the", "road", "."]
+(c17-2 / see-01
+       :ARG0 (c17-5 / i)
+       :ARG1 (c17-4 / person
+                    :name (c17-1 / name
+                                 :op1 "Brad"))
+       :mod (c17-0 / still)
+       :direction (c17-6 / down
+                         :op1 (c17-3 / road)))
+
+# ::snt Why?
+# ::tokens ["Why", "?"]
+# ::lemmas ["why", "?"]
+(c18-0 / cause-01
+       :ARG0 (c18-1 / amr-unknown))
+
+# ::snt sick evil people they are!
+# ::tokens ["sick", "evil", "people", "they", "are", "!"]
+# ::lemmas ["sick", "evil", "people", "they", "be", "!"]
+(c19-2 / person
+       :mod (c19-1 / evil)
+       :domain (c19-3 / they)
+       :ARG0-of (c19-0 / sick-02)
+       :mode expressive)
+
+# ::snt May God bless their union though!
+# ::tokens ["May", "God", "bless", "their", "union", "though", "!"]
+# ::lemmas ["may", "God", "bless", "their", "union", "though", "!"]
+(c20-2 / have-concession-91
+       :ARG2 (c20-4 / wish-01
+                    :ARG0 (c20-5 / i)
+                    :ARG1 (c20-0 / bless-01
+                                 :ARG0 (c20-3 / person
+                                              :name (c20-1 / name
+                                                           :op1 "God"))
+                                 :ARG1 (c20-7 / union-02
+                                              :ARG1 (c20-6 / they)))))
+
+# ::snt best wishes down the romance road
+# ::tokens ["best", "wishes", "down", "the", "romance", "road"]
+# ::lemmas ["good", "wish", "down", "the", "romance", "road"]
+(c21-3 / wish-01
+       :direction (c21-5 / down
+                         :op1 (c21-1 / road
+                                     :mod (c21-6 / romance-01)))
+       :ARG1-of (c21-2 / have-degree-91
+                       :ARG2 (c21-4 / good-02
+                                    :ARG1 c21-3)
+                       :ARG3 (c21-0 / most)))
+
+# ::snt nd anniversary.... this is only news because ya'll expected them not to last past a year
+# ::tokens ["nd", "anniversary", "....", "this", "is", "only", "news", "because", "ya'll", "expected", "them", "not", "to", "last", "past", "a", "year"]
+# ::lemmas ["nd", "anniversary", "....", "this", "be", "only", "news", "because", "ya'll", "expect", "they", "not", "to", "last", "past", "a", "year"]
+(c22-4 / multi-sentence
+       :snt1 (c22-5 / anniversary
+                    :ord (c22-0 / ordinal-entity
+                                :value 2))
+       :snt2 (c22-3 / news
+                    :domain (c22-10 / this)
+                    :mod (c22-1 / only)
+                    :ARG1-of (c22-8 / cause-01
+                                    :ARG0 (c22-6 / expect-01
+                                                 :ARG0 (c22-2 / you)
+                                                 :ARG1 (c22-7 / last-04
+                                                              :ARG1 (c22-12 / they)
+                                                              :ARG2 (c22-9 / temporal-quantity
+                                                                           :unit (c22-11 / year)
+                                                                           :quant 1)
+                                                              :polarity -)))))
+
+# ::snt Sorry but he is really a big time down grade
+# ::tokens ["Sorry", "but", "he", "is", "really", "a", "big", "time", "down", "grade"]
+# ::lemmas ["sorry", "but", "he", "be", "really", "a", "big", "time", "down", "grade"]
+(c23-4 / contrast-01
+       :ARG1 (c23-1 / sorry-01
+                    :ARG1 (c23-5 / i))
+       :ARG2 (c23-6 / grade
+                    :mod (c23-7 / down)
+                    :degree (c23-0 / big-time)
+                    :ARG1-of (c23-2 / real-04)
+                    :domain (c23-3 / he)))
+
+# ::snt You couldn't get a better picture of them?
+# ::tokens ["You", "could", "n't", "get", "a", "better", "picture", "of", "them", "?"]
+# ::lemmas ["you", "could", "not", "get", "a", "well", "picture", "of", "they", "?"]
+(c24-5 / possible-01
+       :ARG1 (c24-8 / get-01
+                    :ARG0 (c24-0 / you)
+                    :ARG1 (c24-2 / picture-01
+                                 :ARG1 (c24-7 / they)
+                                 :ARG1-of (c24-4 / have-degree-91
+                                                 :ARG2 (c24-6 / good-02
+                                                              :ARG1 c24-2)
+                                                 :ARG3 (c24-1 / more))))
+       :polarity (c24-3 / amr-unknown)
+       :polarity -)
+
+# ::snt My poor husband. His dream girl is celebrating her nd anniversary!
+# ::tokens ["My", "poor", "husband", ".", "His", "dream", "girl", "is", "celebrating", "her", "nd", "anniversary", "!"]
+# ::lemmas ["my", "poor", "husband", ".", "his", "dream", "girl", "be", "celebrate", "her", "nd", "anniversary", "!"]
+(c25-1 / multi-sentence
+       :snt1 (c25-5 / person
+                    :mod (c25-2 / poor)
+                    :ARG0-of (c25-4 / have-rel-role-91
+                                    :ARG1 (c25-8 / i)
+                                    :ARG2 (c25-7 / husband)))
+       :snt2 (c25-6 / celebrate-02
+                    :ARG0 (c25-10 / girl
+                                  :ARG1-of (c25-11 / dream-01
+                                                   :ARG0 (c25-3 / he)))
+                    :ARG1 (c25-9 / anniversary
+                                 :poss c25-10
+                                 :ord (c25-0 / ordinal-entity
+                                             :value 2))))
+
+# ::snt Really? Just years?
+# ::tokens ["Really", "?", "Just", "years", "?"]
+# ::lemmas ["really", "?", "Just", "years", "?"]
+(c26-1 / multi-sentence
+       :snt1 (c26-2 / real-04
+                    :polarity (c26-5 / amr-unknown))
+       :snt2 (c26-0 / year
+                    :polarity (c26-4 / amr-unknown)
+                    :mod (c26-3 / just)))

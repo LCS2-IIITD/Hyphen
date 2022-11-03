@@ -1,0 +1,461 @@
+# ::snt DON'T BE LIKE THIS PLEASE.
+# ::tokens ["DON'T", "BE", "LIKE", "THIS", "PLEASE", "."]
+# ::lemmas ["don't", "be", "like", "this", "please", "."]
+(c1-1 / resemble-01
+      :ARG1 (c1-0 / you)
+      :ARG2 (c1-2 / this)
+      :polarity -
+      :mode imperative
+      :polite +)
+
+# ::snt what on earth is that graphic? What are you Fox News now?
+# ::tokens ["what", "on", "earth", "is", "that", "graphic", "?", "What", "are", "you", "Fox", "News", "now", "?"]
+# ::lemmas ["what", "on", "earth", "be", "that", "graphic", "?", "what", "be", "you", "Fox", "News", "now", "?"]
+(c2-1 / multi-sentence
+      :snt1 (c2-7 / graphic
+                  :mod (c2-8 / that)
+                  :location (c2-3 / earth)
+                  :mod (c2-9 / amr-unknown))
+      :snt2 (c2-2 / broadcast-program
+                  :name (c2-5 / name
+                              :op1 "Fox"
+                              :op2 "News")
+                  :domain (c2-0 / you)
+                  :time (c2-6 / now)
+                  :polarity (c2-4 / amr-unknown)))
+
+# ::snt this is unnecessary. We are not CNN. Please do not use fear mongering in our Country. Shame on you.
+# ::tokens ["this", "is", "unnecessary", ".", "We", "are", "not", "CNN", ".", "Please", "do", "not", "use", "fear", "mongering", "in", "our", "Country", ".", "Shame", "on", "you", "."]
+# ::lemmas ["this", "be", "unnecessary", ".", "we", "be", "not", "CNN", ".", "please", "do", "not", "use", "fear", "monger", "in", "our", "Country", ".", "shame", "on", "you", "."]
+(c3-3 / multi-sentence
+      :snt1 (c3-6 / need-01
+                  :ARG1 (c3-13 / this)
+                  :polarity -)
+      :snt2 (c3-8 / publication
+                  :name (c3-7 / name
+                              :op1 "CNN")
+                  :domain (c3-0 / we)
+                  :polarity -)
+      :snt3 (c3-4 / use-01
+                  :ARG0 (c3-1 / you)
+                  :ARG1 (c3-9 / monger
+                              :instrument-of (c3-2 / fear-01))
+                  :location (c3-10 / country
+                                   :poss (c3-5 / we))
+                  :mode imperative
+                  :polite +)
+      :snt4 (c3-12 / shame-01
+                   :ARG1 (c3-11 / you)))
+
+# ::snt that is intensely offensive. Extremely bad taste.
+# ::tokens ["that", "is", "intensely", "offensive", ".", "Extremely", "bad", "taste", "."]
+# ::lemmas ["that", "be", "intensely", "offensive", ".", "extremely", "bad", "taste", "."]
+(c4-0 / multi-sentence
+      :snt1 (c4-2 / offend-01
+                  :ARG0 (c4-6 / that)
+                  :ARG1-of (c4-4 / intense-02))
+      :snt2 (c4-5 / taste
+                  :ARG1-of (c4-1 / bad-07
+                                 :degree (c4-3 / extreme))))
+
+# ::snt It's City, so don't hold your breath.
+# ::tokens ["It", "'s", "City", ",", "so", "do", "n't", "hold", "your", "breath", "."]
+# ::lemmas ["it", "be", "city", ",", "so", "do", "not", "hold", "your", "breath", "."]
+(c5-5 / city
+      :domain (c5-3 / it)
+      :ARG0-of (c5-4 / cause-01
+                     :ARG1 (c5-0 / hold-01
+                                 :ARG0 (c5-1 / you)
+                                 :ARG1 (c5-2 / breathe-01
+                                             :ARG0 c5-1)
+                                 :polarity -
+                                 :mode imperative)))
+
+# ::snt I know...
+# ::tokens ["I", "know", "..."]
+# ::lemmas ["i", "know", "..."]
+(c6-0 / know-01
+      :ARG0 (c6-1 / i))
+
+# ::snt I love that every reply is taking a steaming dump on the hyperbole.
+# ::tokens ["I", "love", "that", "every", "reply", "is", "taking", "a", "steaming", "dump", "on", "the", "hyperbole", "."]
+# ::lemmas ["i", "love", "that", "every", "reply", "be", "take", "a", "steaming", "dump", "on", "the", "hyperbole", "."]
+(c7-1 / love-01
+      :ARG0 (c7-3 / i)
+      :ARG1 (c7-7 / take-01
+                  :ARG0 (c7-4 / reply-01
+                              :mod (c7-2 / every))
+                  :ARG1 (c7-5 / dump-01
+                              :ARG0 c7-4
+                              :ARG1 (c7-0 / hyperbole)
+                              :ARG1-of (c7-6 / steam-02))))
+
+# ::snt That's a pretty intense picture!
+# ::tokens ["That", "'s", "a", "pretty", "intense", "picture", "!"]
+# ::lemmas ["that", "be", "a", "pretty", "intense", "picture", "!"]
+(c8-0 / picture
+      :ARG1-of (c8-3 / intense-02
+                     :degree (c8-2 / pretty))
+      :domain (c8-1 / that))
+
+# ::snt Murica news so crazy ohwait RT : airing newscasts dedicated to LIVE
+# ::tokens ["Murica", "news", "so", "crazy", "ohwait", "RT", ":", "airing", "newscasts", "dedicated", "to", "LIVE"]
+# ::lemmas ["Murica", "news", "so", "crazy", "ohwait", "RT", ":", "air", "newscast", "dedicate", "to", "live"]
+(c9-2 / multi-sentence
+      :snt1 (c9-9 / crazy-03
+                  :ARG1 (c9-5 / news
+                              :mod (c9-8 / country
+                                         :name (c9-6 / name
+                                                     :op1 "Murica")))
+                  :degree (c9-12 / so))
+      :snt2 (c9-4 / say-01
+                  :ARG1 (c9-0 / wait-01
+                              :ARG1 (c9-7 / publication
+                                          :name (c9-10 / name
+                                                       :op1 "RT"))
+                              :ARG2 (c9-13 / air-01
+                                           :ARG1 (c9-3 / broadcast-program
+                                                       :ARG1-of (c9-11 / dedicate-01
+                                                                       :ARG2 (c9-1 / live))))
+                              :mode imperative)
+                  :ARG2 c9-7))
+
+# ::snt Pathetic pic. Deserves an
+# ::tokens ["Pathetic", "pic", ".", "Deserves", "an"]
+# ::lemmas ["Pathetic", "pic", ".", "deserve", "an"]
+(c10-0 / multi-sentence
+       :snt1 (c10-1 / pic
+                    :mod (c10-3 / pathetic))
+       :snt2 (c10-2 / deserve-01
+                    :ARG1 (c10-4 / an)))
+
+# ::snt . You're not fucking CNN or FOX. There is no need for shit like this.
+# ::tokens [".", "You", "'re", "not", "fucking", "CNN", "or", "FOX", ".", "There", "is", "no", "need", "for", "shit", "like", "this", "."]
+# ::lemmas [".", "you", "be", "not", "fuck", "CNN", "or", "FOX", ".", "there", "be", "no", "need", "for", "shit", "like", "this", "."]
+(c11-2 / multi-sentence
+       :snt1 (c11-1 / fuck-01
+                    :ARG0 (c11-0 / you)
+                    :ARG1 (c11-3 / or
+                                 :op1 (c11-6 / publication
+                                             :name (c11-4 / name
+                                                          :op1 "CNN"))
+                                 :op2 (c11-11 / publication
+                                              :name (c11-5 / name
+                                                           :op1 "FOX")))
+                    :polarity -)
+       :snt2 (c11-7 / need-01
+                    :ARG1 (c11-9 / shit
+                                 :ARG1-of (c11-8 / resemble-01
+                                                 :ARG2 (c11-10 / this)))
+                    :polarity -))
+
+# ::snt . Terror in Canada? Yeah, thats not completely over the top, is it?
+# ::tokens [".", "Terror", "in", "Canada", "?", "Yeah", ",", "that", "s", "not", "completely", "over", "the", "top", ",", "is", "it", "?"]
+# ::lemmas [".", "Terror", "in", "Canada", "?", "yeah", ",", "that", "s", "not", "completely", "over", "the", "top", ",", "be", "it", "?"]
+(c12-1 / multi-sentence
+       :snt1 (c12-8 / terror
+                    :location (c12-5 / country
+                                     :name (c12-3 / name
+                                                  :op1 "Canada"))
+                    :polarity (c12-9 / amr-unknown))
+       :snt2 (c12-2 / over-the-top
+                    :domain (c12-7 / that)
+                    :ARG1-of (c12-4 / complete-02
+                                    :polarity -)
+                    :mod (c12-0 / yeah)
+                    :ARG1-of (c12-6 / request-confirmation-91)))
+
+# ::snt That graphic and tag-line is so Fox and CNN esque it's disgusting. For real. Enough.
+# ::tokens ["That", "graphic", "and", "tag", "-", "line", "is", "so", "Fox", "and", "CNN", "esque", "it", "'s", "disgusting", ".", "For", "real", ".", "Enough", "."]
+# ::lemmas ["that", "graphic", "and", "tag", "-", "line", "be", "so", "Fox", "and", "CNN", "esque", "it", "be", "disgusting", ".", "for", "real", ".", "enough", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-0 / have-degree-91
+                    :ARG1 (c13-14 / and
+                                  :op1 (c13-10 / graphic)
+                                  :op2 (c13-13 / tagline)
+                                  :mod (c13-11 / that))
+                    :ARG2 (c13-5 / esque
+                                 :mod (c13-3 / broadcast-program
+                                             :name (c13-6 / name
+                                                          :op1 "Fox"))
+                                 :mod (c13-8 / publication
+                                             :name (c13-7 / name
+                                                          :op1 "CNN")))
+                    :ARG3 (c13-12 / so)
+                    :ARG6 (c13-9 / disgust-01
+                                 :ARG0 c13-14))
+       :snt2 (c13-1 / for-real-04)
+       :snt3 (c13-4 / enough))
+
+# ::snt innit though? I mean who approved that?
+# ::tokens ["innit", "though", "?", "I", "mean", "who", "approved", "that", "?"]
+# ::lemmas ["innit", "though", "?", "i", "mean", "who", "approve", "that", "?"]
+(c14-1 / multi-sentence
+       :snt1 (c14-0 / have-concession-91
+                    :ARG2 (c14-3 / it)
+                    :polarity (c14-8 / amr-unknown))
+       :snt2 (c14-5 / mean-01
+                    :ARG0 (c14-6 / i)
+                    :ARG2 (c14-2 / approve-01
+                                 :ARG0 (c14-4 / amr-unknown)
+                                 :ARG1 (c14-7 / that))))
+
+# ::snt You nailed it!
+# ::tokens ["You", "nailed", "it", "!"]
+# ::lemmas ["you", "nail", "it", "!"]
+(c15-0 / nail-01
+       :ARG0 (c15-1 / you)
+       :ARG1 (c15-2 / it)
+       :mode expressive)
+
+# ::snt wow even the weather is terrifying....
+# ::tokens ["wow", "even", "the", "weather", "is", "terrifying", "...."]
+# ::lemmas ["wow", "even", "the", "weather", "be", "terrify", "...."]
+(c16-2 / terrify-01
+       :ARG0 (c16-0 / weather
+                    :mod (c16-1 / even))
+       :mod (c16-3 / wow
+                   :mode expressive))
+
+# ::snt CNN. What a joke. Betty Hope for real.
+# ::tokens ["CNN", ".", "What", "a", "joke", ".", "Betty", "Hope", "for", "real", "."]
+# ::lemmas ["CNN", ".", "what", "a", "joke", ".", "Betty", "Hope", "for", "real", "."]
+(c17-2 / multi-sentence
+       :snt1 (c17-0 / joke-01
+                    :ARG0 (c17-5 / publication
+                                 :name (c17-3 / name
+                                              :op1 "CNN"))
+                    :degree (c17-7 / so))
+       :snt2 (c17-1 / hope-01
+                    :ARG0 (c17-8 / person
+                                 :name (c17-4 / name
+                                              :op1 "Betty"))
+                    :ARG1 (c17-6 / real-04)))
+
+# ::snt TERROR IN CANADA... as media hijack isolated incident to scaremonger &amp; distract from ongoing injustice everywhere
+# ::tokens ["TERROR", "IN", "CANADA", "...", "as", "media", "hijack", "isolated", "incident", "to", "scaremonger", "&", "amp", ";", "distract", "from", "ongoing", "injustice", "everywhere"]
+# ::lemmas ["TERROR", "in", "CANADA", "...", "as", "medium", "hijack", "isolated", "incident", "to", "scaremonger", "&", "amp", ";", "distract", "from", "ongoing", "injustice", "everywhere"]
+(c18-13 / and
+        :op1 (c18-0 / horror
+                    :location (c18-9 / country
+                                     :name (c18-6 / name
+                                                  :op1 "Canada"))
+                    :time (c18-14 / hijack-01
+                                  :ARG0 (c18-2 / media)
+                                  :ARG1 (c18-5 / incident
+                                               :ARG1-of (c18-10 / isolate-01))
+                                  :purpose (c18-4 / and
+                                                  :op1 (c18-12 / scaremonger)
+                                                  :op2 (c18-7 / amp))))
+        :op2 (c18-8 / distract-01
+                    :ARG2 (c18-1 / justice
+                                 :ARG1-of (c18-11 / go-on-15)
+                                 :polarity -)
+                    :location (c18-3 / everywhere)))
+
+# ::snt you'd think Michael Bay was the news director...
+# ::tokens ["you", "'d", "think", "Michael", "Bay", "was", "the", "news", "director", "..."]
+# ::lemmas ["you", "would", "think", "Michael", "Bay", "be", "the", "news", "director", "..."]
+(c19-6 / think-01
+       :ARG0 (c19-1 / you)
+       :ARG1 (c19-0 / have-org-role-91
+                    :ARG0 (c19-4 / person
+                                 :name (c19-2 / name
+                                              :op1 "Michael"
+                                              :op2 "Bay"))
+                    :ARG2 (c19-5 / director
+                                 :topic (c19-3 / news))))
+
+# ::snt what the f*ck is that graphic, seriously. We don't need a baiting headline thanks. Hope your coverage is better
+# ::tokens ["what", "the", "f*ck", "is", "that", "graphic", ",", "seriously", ".", "We", "do", "n't", "need", "a", "baiting", "headline", "thanks", ".", "Hope", "your", "coverage", "is", "better"]
+# ::lemmas ["what", "the", "f*ck", "be", "that", "graphic", ",", "seriously", ".", "we", "do", "not", "need", "a", "bait", "headline", "thank", ".", "hope", "your", "coverage", "be", "well"]
+(c20-4 / multi-sentence
+       :snt1 (c20-12 / graphic
+                     :mod (c20-16 / that)
+                     :ARG1-of (c20-15 / serious-01
+                                      :mod (c20-3 / fucking
+                                                  :mode expressive)))
+       :snt2 (c20-7 / need-01
+                    :ARG0 (c20-1 / we)
+                    :ARG1 (c20-14 / thing
+                                  :ARG2-of (c20-0 / headline-01)
+                                  :ARG0-of (c20-5 / bait-02))
+                    :ARG2-of (c20-8 / thank-01
+                                    :ARG1 (c20-2 / you))
+                    :polarity -)
+       :snt3 (c20-17 / hope-01
+                     :ARG0 (c20-6 / i)
+                     :ARG1 (c20-11 / cover-03
+                                   :ARG0 c20-2
+                                   :ARG1-of (c20-9 / have-degree-91
+                                                   :ARG2 (c20-10 / good-02
+                                                                 :ARG1 c20-11)
+                                                   :ARG3 (c20-13 / more)))))
+
+# ::snt really? You're starting to kinda look like Fox news.. Jus sayin.
+# ::tokens ["really", "?", "You", "'re", "starting", "to", "kinda", "look", "like", "Fox", "news", "..", "Jus", "sayin", "."]
+# ::lemmas ["really", "?", "you", "be", "start", "to", "kinda", "look", "like", "Fox", "news", "..", "Jus", "sayin", "."]
+(c21-1 / multi-sentence
+       :snt1 (c21-8 / real-04
+                    :polarity (c21-11 / amr-unknown))
+       :snt2 (c21-9 / start-01
+                    :ARG0 (c21-0 / you)
+                    :ARG1 (c21-4 / resemble-01
+                                 :ARG1 c21-0
+                                 :ARG2 (c21-2 / broadcast-program
+                                              :name (c21-5 / name
+                                                           :op1 "Fox"
+                                                           :op2 "News"))
+                                 :degree (c21-10 / kind-of)))
+       :snt3 (c21-3 / say-01
+                    :ARG0 (c21-7 / person
+                                 :name (c21-6 / name
+                                              :op1 "Jus"))))
+
+# ::snt just...no
+# ::tokens ["just", "...", "no"]
+# ::lemmas ["just", "...", "no"]
+(c22-0 / no
+       :mod (c22-1 / just))
+
+# ::snt that's going slightly over the top
+# ::tokens ["that", "'s", "going", "slightly", "over", "the", "top"]
+# ::lemmas ["that", "be", "go", "slightly", "over", "the", "top"]
+(c23-2 / go-08
+       :ARG1 (c23-1 / that)
+       :ARG2 (c23-0 / over-the-top
+                    :degree (c23-3 / slight)))
+
+# ::snt I can't even MT : CityNews airing newscasts dedicated to . LIVE
+# ::tokens ["I", "ca", "n't", "even", "MT", ":", "CityNews", "airing", "newscasts", "dedicated", "to", ".", "LIVE"]
+# ::lemmas ["i", "can", "not", "even", "MT", ":", "citynew", "air", "newscast", "dedicate", "to", ".", "live"]
+(c24-4 / possible-01
+       :ARG1 (c24-0 / broadcast-program
+                    :name (c24-2 / name
+                                 :op1 "MT")
+                    :mod (c24-1 / even)
+                    :domain (c24-8 / air-01
+                                   :ARG0 (c24-6 / broadcast-program
+                                                :name (c24-3 / name
+                                                             :op1 "CityNews"))
+                                   :ARG1 (c24-7 / broadcast-program
+                                                :ARG1-of (c24-5 / dedicate-01
+                                                                :ARG2 c24-7))))
+       :polarity -)
+
+# ::snt :That is quite something.
+# ::tokens [":", "That", "is", "quite", "something", "."]
+# ::lemmas [":", "that", "be", "quite", "something", "."]
+(c25-0 / something
+       :domain (c25-2 / that)
+       :degree (c25-1 / quite))
+
+# ::snt The picture tells you shit got real. RT : CityNews airing newscasts dedicated to .
+# ::tokens ["The", "picture", "tells", "you", "shit", "got", "real", ".", "RT", ":", "CityNews", "airing", "newscasts", "dedicated", "to", "."]
+# ::lemmas ["the", "picture", "tell", "you", "shit", "get", "real", ".", "RT", ":", "citynew", "air", "newscast", "dedicate", "to", "."]
+(c26-1 / multi-sentence
+       :snt1 (c26-12 / tell-01
+                     :ARG0 (c26-5 / picture)
+                     :ARG1 (c26-8 / get-03
+                                  :ARG1 (c26-11 / shit)
+                                  :ARG2 (c26-6 / real-04
+                                               :ARG1 c26-11))
+                     :ARG2 (c26-0 / you))
+       :snt2 (c26-2 / broadcast-program
+                    :name (c26-3 / name
+                                 :op1 "RT")
+                    :ARG0-of (c26-13 / air-01
+                                     :ARG1 (c26-7 / broadcast-program
+                                                  :name (c26-4 / name
+                                                               :op1 "CityNews"))
+                                     :ARG3 (c26-9 / newscast
+                                                  :ARG1-of (c26-10 / dedicate-01
+                                                                   :ARG2 c26-7)))))
+
+# ::snt Amen, sister!
+# ::tokens ["Amen", ",", "sister", "!"]
+# ::lemmas ["amen", ",", "sister", "!"]
+(c27-1 / multi-sentence
+       :snt1 (c27-4 / amen)
+       :snt2 (c27-2 / person
+                    :ARG0-of (c27-0 / have-rel-role-91
+                                    :ARG2 (c27-3 / sister))))
+
+# ::snt OH PLEASE WITH THE GRAPHIC. Who are you, CNN?
+# ::tokens ["OH", "PLEASE", "WITH", "THE", "GRAPHIC", ".", "Who", "are", "you", ",", "CNN", "?"]
+# ::lemmas ["OH", "please", "with", "the", "GRAPHIC", ".", "who", "be", "you", ",", "CNN", "?"]
+(c28-1 / multi-sentence
+       :snt1 (c28-2 / oh
+                    :accompanier (c28-5 / publication
+                                        :name (c28-4 / name
+                                                     :op1 "GRAPHIC"))
+                    :mode expressive
+                    :polite +)
+       :snt2 (c28-6 / say-01
+                    :ARG0 (c28-3 / i)
+                    :ARG1 (c28-0 / you
+                                 :domain (c28-7 / amr-unknown))
+                    :ARG2 c28-5))
+
+# ::snt or worse, sun news
+# ::tokens ["or", "worse", ",", "sun", "news"]
+# ::lemmas ["or", "bad", ",", "sun", "news"]
+(c29-3 / or
+       :op2 (c29-4 / news
+                   :topic (c29-5 / sun)
+                   :ARG1-of (c29-0 / have-degree-91
+                                   :ARG2 (c29-2 / bad-07
+                                                :ARG1 c29-4)
+                                   :ARG3 (c29-1 / more))))
+
+# ::snt Brutal. Grow up.
+# ::tokens ["Brutal", ".", "Grow", "up", "."]
+# ::lemmas ["Brutal", ".", "grow", "up", "."]
+(c30-1 / multi-sentence
+       :snt1 (c30-3 / Brutal)
+       :snt2 (c30-2 / grow-up-04
+                    :ARG1 (c30-0 / you)
+                    :mode imperative))
+
+# ::snt Giant floating silver letters? FRINGE IS COMING BACK!? Wait, no. Wrong font.
+# ::tokens ["Giant", "floating", "silver", "letters", "?", "FRINGE", "IS", "COMING", "BACK", "!", "?", "Wait", ",", "no", ".", "Wrong", "font", "."]
+# ::lemmas ["giant", "float", "silver", "letter", "?", "FRINGE", "be", "come", "back", "!", "?", "wait", ",", "no", ".", "wrong", "font", "."]
+(c31-3 / multi-sentence
+       :snt1 (c31-2 / letter
+                    :polarity (c31-13 / amr-unknown)
+                    :mod (c31-11 / giant)
+                    :ARG1-of (c31-1 / float-01)
+                    :mod (c31-12 / silver))
+       :snt2 (c31-10 / come-01
+                     :ARG1 (c31-7 / free-04)
+                     :direction (c31-4 / back))
+       :snt3 (c31-6 / and
+                    :op1 (c31-0 / wait-01)
+                    :op2 (c31-8 / no))
+       :snt4 (c31-5 / font
+                    :ARG1-of (c31-9 / wrong-04)))
+
+# ::snt You have the power to change the way we interpret the news by demonstrating un-bias views... "Terror in Canada" ? Really ?
+# ::tokens ["You", "have", "the", "power", "to", "change", "the", "way", "we", "interpret", "the", "news", "by", "demonstrating", "un", "-", "bias", "views", "...", "\"", "Terror", "in", "Canada", "\"", "?", "Really", "?"]
+# ::lemmas ["you", "have", "the", "power", "to", "change", "the", "way", "we", "interpret", "the", "news", "by", "demonstrating", "un", "-", "bias", "view", "...", "\"", "Terror", "in", "Canada", "\"", "?", "really", "?"]
+(c32-3 / multi-sentence
+       :snt1 (c32-0 / have-03
+                    :ARG0 (c32-1 / you)
+                    :ARG1 (c32-8 / power-01
+                                 :ARG1 c32-1
+                                 :ARG2 (c32-10 / change-01
+                                               :ARG0 c32-1
+                                               :ARG1 (c32-5 / interpret-01
+                                                            :ARG0 (c32-2 / we)
+                                                            :ARG1 (c32-6 / news)
+                                                            :ARG2 (c32-9 / demonstrate-01
+                                                                         :ARG0 c32-1
+                                                                         :ARG1 (c32-7 / view
+                                                                                      :mod (c32-4 / bias
+                                                                                                  :polarity -)))))))
+       :snt2 (c32-14 / terrorism
+                     :location (c32-11 / country
+                                       :name (c32-12 / name
+                                                     :op1 "Canada"))
+                     :ARG1-of (c32-13 / real-04
+                                      :polarity (c32-15 / amr-unknown))))

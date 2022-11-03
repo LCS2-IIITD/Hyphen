@@ -1,0 +1,88 @@
+# ::snt Yeah it is a little this morning but I feel fine still tho
+# ::tokens ["Yeah", "it", "is", "a", "little", "this", "morning", "but", "I", "feel", "fine", "still", "tho"]
+# ::lemmas ["yeah", "it", "be", "a", "little", "this", "morning", "but", "i", "feel", "fine", "still", "tho"]
+(c1-3 / contrast-01
+      :ARG1 (c1-7 / little
+                  :domain (c1-8 / it)
+                  :time (c1-0 / date-entity
+                              :dayperiod (c1-9 / morning)
+                              :mod (c1-6 / today)))
+      :ARG2 (c1-2 / feel-01
+                  :ARG0 (c1-4 / i)
+                  :ARG1 (c1-5 / fine-04
+                              :ARG1 c1-4)
+                  :mod (c1-1 / still))
+      :mod (c1-10 / yeah))
+
+# ::snt Lol I am getting my nd dose April my arm is a little sore but other than that no arm yet lol
+# ::tokens ["Lol", "I", "am", "getting", "my", "nd", "dose", "April", "my", "arm", "is", "a", "little", "sore", "but", "other", "than", "that", "no", "arm", "yet", "lol"]
+# ::lemmas ["Lol", "i", "be", "get", "my", "nd", "dose", "April", "my", "arm", "be", "a", "little", "sore", "but", "other", "than", "that", "no", "arm", "yet", "lol"]
+(c2-4 / contrast-01
+      :ARG1 (c2-10 / get-01
+                   :ARG0 (c2-11 / i
+                                :part (c2-3 / arm))
+                   :ARG1 (c2-0 / dose-01
+                               :ARG1 c2-11
+                               :ARG2 (c2-12 / medication
+                                            :name (c2-13 / name
+                                                         :op1 "ND")))
+                   :time (c2-5 / date-entity
+                               :month 4)
+                   :mod (c2-8 / laugh-01
+                              :ARG0 c2-11
+                              :manner (c2-9 / loud)
+                              :mode expressive))
+      :ARG2 (c2-1 / sore
+                  :mod (c2-2 / little)
+                  :domain c2-3
+                  :concession-of (c2-15 / arm
+                                        :time (c2-14 / yet)
+                                        :ARG2-of (c2-16 / except-01
+                                                        :ARG1 c2-10)
+                                        :polarity -))
+      :ARG2-of (c2-6 / laugh-01
+                     :manner (c2-7 / loud)
+                     :mode expressive))
+
+# ::snt Great! Your arm will be sore though
+# ::tokens ["Great", "!", "Your", "arm", "will", "be", "sore", "though"]
+# ::lemmas ["great", "!", "your", "arm", "will", "be", "sore", "though"]
+(c3-0 / sore
+      :domain (c3-1 / arm
+                    :part-of (c3-4 / you))
+      :ARG1-of (c3-2 / have-concession-91)
+      :mod (c3-3 / great
+                 :mode expressive))
+
+# ::snt I get my nd April rdkinda upset though. I read somewhere if you take the vaccine you will grow a third arm I think I need it lol
+# ::tokens ["I", "get", "my", "nd", "April", "rdkinda", "upset", "though", ".", "I", "read", "somewhere", "if", "you", "take", "the", "vaccine", "you", "will", "grow", "a", "third", "arm", "I", "think", "I", "need", "it", "lol"]
+# ::lemmas ["i", "get", "my", "nd", "April", "rdkinda", "upset", "though", ".", "i", "read", "somewhere", "if", "you", "take", "the", "vaccine", "you", "will", "grow", "a", "third", "arm", "i", "think", "i", "need", "it", "lol"]
+(c4-12 / multi-sentence
+       :snt1 (c4-18 / have-concession-91
+                    :ARG1 (c4-19 / upset-01
+                                 :ARG0 (c4-20 / person
+                                              :ARG0-of (c4-2 / have-rel-role-91
+                                                             :ARG1 (c4-3 / i)
+                                                             :ARG2 (c4-13 / nd))
+                                              :time (c4-0 / date-entity
+                                                          :month 4))
+                                 :ARG1 c4-3
+                                 :degree (c4-21 / kind-of)))
+       :snt2 (c4-10 / read-01
+                    :ARG0 (c4-15 / i)
+                    :ARG1 (c4-14 / somewhere)
+                    :ARG3 (c4-4 / have-condition-91
+                                :ARG1 (c4-11 / grow-01
+                                             :ARG1 (c4-16 / you)
+                                             :ARG2 (c4-17 / arm
+                                                          :ord (c4-8 / ordinal-entity
+                                                                     :value 3))
+                                             :ARG0-of (c4-5 / cause-01
+                                                            :ARG1 (c4-9 / think-01
+                                                                        :ARG0 c4-15
+                                                                        :ARG1 (c4-1 / need-01
+                                                                                    :ARG0 c4-15
+                                                                                    :ARG1 c4-17))))
+                                :ARG2 (c4-6 / take-01
+                                            :ARG0 c4-16
+                                            :ARG1 (c4-7 / vaccine)))))

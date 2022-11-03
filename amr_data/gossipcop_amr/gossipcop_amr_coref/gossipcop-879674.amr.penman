@@ -1,0 +1,598 @@
+# ::snt Good. You're not likeable
+# ::tokens ["Good", ".", "You", "'re", "not", "likeable"]
+# ::lemmas ["good", ".", "you", "be", "not", "likeable"]
+(c1-2 / multi-sentence
+      :snt1 (c1-0 / good-02)
+      :snt2 (c1-3 / likable
+                  :domain (c1-1 / you)
+                  :polarity -))
+
+# ::snt She's got to feel like weird , how humiliating for her !
+# ::tokens ["She", "'s", "got", "to", "feel", "like", "weird", ",", "how", "humiliating", "for", "her", "!"]
+# ::lemmas ["she", "be", "get", "to", "feel", "like", "weird", ",", "how", "humiliating", "for", "she", "!"]
+(c2-3 / multi-sentence
+      :snt1 (c2-0 / obligate-01
+                  :ARG1 (c2-4 / she)
+                  :ARG2 (c2-1 / feel-01
+                              :ARG0 c2-4
+                              :ARG1 (c2-6 / weird)))
+      :snt2 (c2-5 / humiliate-01
+                  :ARG1 (c2-2 / she)
+                  :degree (c2-7 / so)
+                  :mode expressive))
+
+# ::snt That'll work. Run again!
+# ::tokens ["That", "'ll", "work", ".", "Run", "again", "!"]
+# ::lemmas ["that", "'ll", "work", ".", "run", "again", "!"]
+(c3-1 / multi-sentence
+      :snt1 (c3-4 / work-09
+                  :ARG1 (c3-5 / that))
+      :snt2 (c3-2 / run-02
+                  :ARG0 (c3-0 / you)
+                  :mod (c3-3 / again)
+                  :mode imperative))
+
+# ::snt Lol she was never likeable in the first place
+# ::tokens ["Lol", "she", "was", "never", "likeable", "in", "the", "first", "place"]
+# ::lemmas ["Lol", "she", "be", "never", "likeable", "in", "the", "first", "place"]
+(c5-2 / like-01
+      :ARG1 (c5-0 / she)
+      :time (c5-1 / ever)
+      :mod (c5-4 / in-the-first-place)
+      :ARG2-of (c5-5 / laugh-01
+                     :manner (c5-3 / loud)
+                     :mode expressive)
+      :polarity -)
+
+# ::snt I like her but I feel that some ppl felt she was fake and she wasn't relatable. She had my vote. This election cycle was a sh*t show.
+# ::tokens ["I", "like", "her", "but", "I", "feel", "that", "some", "ppl", "felt", "she", "was", "fake", "and", "she", "was", "n't", "relatable", ".", "She", "had", "my", "vote", ".", "This", "election", "cycle", "was", "a", "sh*t", "show", "."]
+# ::lemmas ["i", "like", "she", "but", "i", "feel", "that", "some", "ppl", "feel", "she", "be", "fake", "and", "she", "be", "not", "relatable", ".", "she", "have", "my", "vote", ".", "this", "election", "cycle", "be", "a", "sh*t", "show", "."]
+(c6-11 / multi-sentence
+       :snt1 (c6-13 / contrast-01
+                    :ARG1 (c6-2 / like-01
+                                :ARG0 (c6-21 / i)
+                                :ARG1 (c6-0 / she))
+                    :ARG2 (c6-14 / feel-02
+                                 :ARG0 c6-21
+                                 :ARG1 (c6-19 / feel-02
+                                              :ARG0 (c6-18 / person
+                                                           :mod (c6-4 / some)
+                                                           :ARG0-of (c6-12 / post-01))
+                                              :ARG1 (c6-7 / and
+                                                          :op1 (c6-20 / fake-02
+                                                                      :ARG1 (c6-3 / she))
+                                                          :op2 (c6-16 / relatable
+                                                                      :domain c6-3
+                                                                      :polarity -)))))
+       :snt2 (c6-6 / vote-01
+                   :ARG0 (c6-5 / i)
+                   :ARG1 (c6-15 / she))
+       :snt3 (c6-1 / show-04
+                   :ARG1 (c6-10 / shit)
+                   :time (c6-9 / cycle
+                               :mod (c6-8 / this)
+                               :mod (c6-17 / elect-01))))
+
+# ::snt She should be in jail !!!!!
+# ::tokens ["She", "should", "be", "in", "jail", "!", "!", "!", "!", "!"]
+# ::lemmas ["she", "should", "be", "in", "jail", "!", "!", "!", "!", "!"]
+(c7-0 / recommend-01
+      :ARG1 (c7-1 / jail-01
+                  :ARG1 (c7-2 / she)))
+
+# ::snt Comment bait
+# ::tokens ["Comment", "bait"]
+# ::lemmas ["comment", "bait"]
+(c8-1 / bait-01
+      :ARG2 (c8-0 / comment-01))
+
+# ::snt I will always like and respect Hillary!
+# ::tokens ["I", "will", "always", "like", "and", "respect", "Hillary", "!"]
+# ::lemmas ["i", "will", "always", "like", "and", "respect", "Hillary", "!"]
+(c9-5 / and
+      :op1 (c9-3 / like-01
+                 :ARG0 (c9-4 / i)
+                 :ARG1 (c9-2 / person
+                             :name (c9-0 / name
+                                         :op1 "Hillary")))
+      :op2 (c9-1 / respect-01
+                 :ARG0 c9-4
+                 :ARG1 c9-2)
+      :time (c9-6 / always))
+
+# ::snt Hate to see her NOT trying.
+# ::tokens ["Hate", "to", "see", "her", "NOT", "trying", "."]
+# ::lemmas ["hate", "to", "see", "she", "not", "try", "."]
+(c10-1 / hate-01
+       :ARG1 (c10-3 / see-01
+                    :ARG1 (c10-2 / try-01
+                                 :ARG0 (c10-0 / she)
+                                 :polarity -)))
+
+# ::snt girlie getting everyone bothered by a bookdamn
+# ::tokens ["girlie", "getting", "everyone", "bothered", "by", "a", "bookdamn"]
+# ::lemmas ["girlie", "get", "everyone", "bother", "by", "a", "bookdamn"]
+(c11-4 / get-04
+       :ARG0 (c11-3 / girlie)
+       :ARG1 (c11-0 / bother-01
+                    :ARG0 (c11-2 / bookdamn)
+                    :ARG1 (c11-1 / everyone)))
+
+# ::snt *Hilary trying to be likable*
+# ::tokens ["*", "Hilary", "trying", "to", "be", "likable", "*"]
+# ::lemmas ["*", "Hilary", "try", "to", "be", "likable", "*"]
+(c13-3 / try-01
+       :ARG0 (c13-1 / person
+                    :name (c13-0 / name
+                                 :op1 "Hilary"))
+       :ARG1 (c13-2 / likable
+                    :domain c13-1))
+
+# ::snt That's good, no way I'll ever like that liar.
+# ::tokens ["That", "'s", "good", ",", "no", "way", "I", "'ll", "ever", "like", "that", "liar", "."]
+# ::lemmas ["that", "be", "good", ",", "no", "way", "i", "'ll", "ever", "like", "that", "liar", "."]
+(c14-0 / and
+       :op1 (c14-7 / good-02
+                   :ARG1 (c14-6 / that))
+       :op2 (c14-2 / like-01
+                   :ARG0 (c14-5 / i)
+                   :ARG1 (c14-3 / person
+                                :ARG0-of (c14-8 / lie-08)
+                                :mod (c14-9 / that))
+                   :time (c14-1 / ever)
+                   :manner (c14-4 / way)
+                   :polarity -))
+
+# ::snt She should have adopted this earlier bc being a giant asshole certainly worked the Donald.
+# ::tokens ["She", "should", "have", "adopted", "this", "earlier", "bc", "being", "a", "giant", "asshole", "certainly", "worked", "the", "Donald", "."]
+# ::lemmas ["she", "should", "have", "adopt", "this", "early", "bc", "be", "a", "giant", "asshole", "certainly", "work", "the", "Donald", "."]
+(c15-3 / recommend-01
+       :ARG1 (c15-4 / adopt-01
+                    :ARG0 (c15-2 / she)
+                    :ARG1 (c15-9 / this)
+                    :time (c15-0 / before))
+       :ARG1-of (c15-6 / cause-01
+                       :ARG0 (c15-7 / work-09
+                                    :ARG0 (c15-8 / asshole
+                                                 :mod (c15-10 / giant))
+                                    :ARG2 (c15-5 / person
+                                                 :name (c15-1 / name
+                                                              :op1 "Donald"))
+                                    :manner (c15-11 / certain))))
+
+# ::snt It's obvious by all the tea she's spilling in her new book.
+# ::tokens ["It", "'s", "obvious", "by", "all", "the", "tea", "she", "'s", "spilling", "in", "her", "new", "book", "."]
+# ::lemmas ["it", "be", "obvious", "you", "all", "the", "tea", "she", "be", "spill", "in", "her", "new", "book", "."]
+(c16-0 / obvious-01
+       :ARG0 (c16-5 / tea
+                    :mod (c16-6 / all)
+                    :ARG1-of (c16-4 / spill-01
+                                    :ARG0 (c16-1 / she)
+                                    :location (c16-2 / book
+                                                     :ARG1-of (c16-3 / new-01)
+                                                     :poss c16-1))))
+
+# ::snt Fake
+# ::tokens ["Fake"]
+# ::lemmas ["fake"]
+(c17-0 / fake-02)
+
+# ::snt Wow this post is handed to us on a platter.... who freaking cares what's she's NOT trying to do. She will always try to be relevant
+# ::tokens ["Wow", "this", "post", "is", "handed", "to", "us", "on", "a", "platter", "....", "who", "freaking", "cares", "what", "'s", "she", "'s", "NOT", "trying", "to", "do", ".", "She", "will", "always", "try", "to", "be", "relevant"]
+# ::lemmas ["wow", "this", "post", "be", "hand", "to", "we", "on", "a", "platter", "....", "who", "freak", "care", "what", "be", "she", "be", "not", "try", "to", "do", ".", "she", "will", "always", "try", "to", "be", "relevant"]
+(c19-1 / multi-sentence
+       :snt1 (c19-7 / hand-01
+                    :ARG1 (c19-8 / post-01
+                                 :mod (c19-13 / this))
+                    :ARG2 (c19-10 / we)
+                    :prep-on (c19-2 / platter)
+                    :mod (c19-9 / wow
+                                :mode expressive))
+       :snt2 (c19-11 / care-01
+                     :ARG0 (c19-4 / amr-unknown)
+                     :ARG1 (c19-16 / thing
+                                   :ARG1-of (c19-15 / do-02
+                                                    :ARG0 (c19-3 / she)
+                                                    :ARG1-of (c19-12 / try-01
+                                                                     :ARG0 c19-3)
+                                                    :polarity -))
+                     :mod (c19-0 / freaking
+                                 :mode expressive))
+       :snt3 (c19-6 / try-01
+                    :ARG0 c19-3
+                    :ARG1 (c19-5 / relevant-01
+                                 :ARG1 c19-3)
+                    :time (c19-14 / always)))
+
+# ::snt Good! Because people can tell when you are being fake.
+# ::tokens ["Good", "!", "Because", "people", "can", "tell", "when", "you", "are", "being", "fake", "."]
+# ::lemmas ["good", "!", "because", "people", "can", "tell", "when", "you", "be", "be", "fake", "."]
+(c20-7 / good-02
+       :ARG1-of (c20-5 / cause-01
+                       :ARG0 (c20-3 / possible-01
+                                    :ARG1 (c20-4 / know-01
+                                                 :ARG0 (c20-2 / person)
+                                                 :ARG1 (c20-6 / time
+                                                              :time-of (c20-0 / fake-02
+                                                                              :ARG1 (c20-1 / you))))))
+       :mode expressive)
+
+# ::snt Running still running.. bet we see her try to emerge and run
+# ::tokens ["Running", "still", "running", "..", "bet", "we", "see", "her", "try", "to", "emerge", "and", "run"]
+# ::lemmas ["run", "still", "run", "..", "bet", "we", "see", "she", "try", "to", "emerge", "and", "run"]
+(c21-3 / multi-sentence
+       :snt1 (c21-5 / run-02
+                    :mod (c21-4 / still))
+       :snt2 (c21-1 / bet-01
+                    :ARG0 (c21-2 / you)
+                    :ARG2 (c21-0 / see-01
+                                 :ARG0 (c21-8 / we)
+                                 :ARG1 (c21-9 / try-01
+                                              :ARG0 (c21-11 / she)
+                                              :ARG1 (c21-6 / and
+                                                           :op1 (c21-7 / emerge-02
+                                                                       :ARG0 c21-11)
+                                                           :op2 (c21-10 / run-02
+                                                                        :ARG0 c21-11))))
+                    :mode imperative))
+
+# ::snt Can she be just done?
+# ::tokens ["Can", "she", "be", "just", "done", "?"]
+# ::lemmas ["can", "she", "be", "just", "do", "?"]
+(c22-1 / possible-01
+       :polarity (c22-3 / amr-unknown)
+       :ARG1 (c22-4 / do-02
+                    :ARG0 (c22-0 / she)
+                    :mod (c22-2 / just)))
+
+# ::snt No big deal
+# ::tokens ["No", "big", "deal"]
+# ::lemmas ["no", "big", "deal"]
+(c23-0 / deal-03
+       :mod (c23-1 / big
+                   :polarity -))
+
+# ::snt I can't really understand how she's considered that though, mostly cus I don't get politics
+# ::tokens ["I", "ca", "n't", "really", "understand", "how", "she", "'s", "considered", "that", "though", ",", "mostly", "cus", "I", "do", "n't", "get", "politics"]
+# ::lemmas ["i", "can", "not", "really", "understand", "how", "she", "be", "consider", "that", "though", ",", "mostly", "cus", "i", "do", "not", "get", "politic"]
+(c25-4 / possible-01
+       :ARG1 (c25-8 / understand-01
+                    :ARG0 (c25-6 / i)
+                    :ARG1 (c25-5 / consider-02
+                                 :ARG0 (c25-2 / she)
+                                 :ARG1 (c25-7 / that))
+                    :ARG1-of (c25-9 / cause-01
+                                    :ARG0 c25-6
+                                    :ARG1 (c25-1 / politics)
+                                    :mod (c25-0 / most)
+                                    :ARG0 c25-8
+                                    :polarity -))
+       :ARG1-of (c25-3 / real-04)
+       :polarity -)
+
+# ::snt She's a cunt.
+# ::tokens ["She", "'s", "a", "cunt", "."]
+# ::lemmas ["she", "be", "a", "cunt", "."]
+(c26-0 / cunt
+       :domain (c26-1 / she))
+
+# ::snt Was she ever likable?
+# ::tokens ["Was", "she", "ever", "likable", "?"]
+# ::lemmas ["be", "she", "ever", "likable", "?"]
+(c27-2 / likable
+       :polarity (c27-3 / amr-unknown)
+       :domain (c27-0 / she)
+       :time (c27-1 / ever))
+
+# ::snt Go away and dont come back
+# ::tokens ["Go", "away", "and", "do", "nt", "come", "back"]
+# ::lemmas ["go", "away", "and", "do", "not", "come", "back"]
+(c28-4 / and
+       :op1 (c28-5 / go-02
+                   :ARG0 (c28-1 / you)
+                   :ARG4 (c28-3 / away)
+                   :mode imperative)
+       :op2 (c28-2 / come-01
+                   :ARG1 c28-1
+                   :direction (c28-0 / back)
+                   :mode imperative
+                   :polarity -))
+
+# ::snt She never was "likeable",
+# ::tokens ["She", "never", "was", "\"", "likeable", "\"", ","]
+# ::lemmas ["she", "never", "be", "\"", "likeable", "\"", ","]
+(c29-1 / possible-01
+       :ARG1 (c29-2 / like-01
+                    :ARG1 (c29-3 / she))
+       :time (c29-0 / ever)
+       :polarity -)
+
+# ::snt She actually thinks she's relevant...!!!
+# ::tokens ["She", "actually", "thinks", "she", "'s", "relevant", "...", "!", "!", "!"]
+# ::lemmas ["she", "actually", "think", "she", "be", "relevant", "...", "!", "!", "!"]
+(c30-3 / think-01
+       :ARG0 (c30-0 / she)
+       :ARG1 (c30-1 / relevant-01
+                    :ARG1 c30-0)
+       :ARG1-of (c30-2 / actual-02)
+       :mode expressive)
+
+# ::snt Nailed it...
+# ::tokens ["Nailed", "it", "..."]
+# ::lemmas ["nail", "it", "..."]
+(c31-0 / nail-01
+       :ARG1 (c31-1 / it))
+
+# ::snt Well it didn't work anyway. Nobody found Hillary likable. She's a bristly woman, out of touch with real people. Go away please.
+# ::tokens ["Well", "it", "did", "n't", "work", "anyway", ".", "Nobody", "found", "Hillary", "likable", ".", "She", "'s", "a", "bristly", "woman", ",", "out", "of", "touch", "with", "real", "people", ".", "Go", "away", "please", "."]
+# ::lemmas ["well", "it", "do", "not", "work", "anyway", ".", "nobody", "find", "Hillary", "likable", ".", "she", "be", "a", "bristly", "woman", ",", "out", "of", "touch", "with", "real", "people", ".", "go", "away", "please", "."]
+(c32-3 / multi-sentence
+       :snt1 (c32-12 / work-09
+                     :ARG1 (c32-13 / it)
+                     :mod (c32-11 / well)
+                     :mod (c32-14 / anyway)
+                     :polarity -)
+       :snt2 (c32-0 / find-02
+                    :ARG0 (c32-4 / nobody)
+                    :ARG1 (c32-9 / likable
+                                 :domain (c32-10 / person
+                                                 :name (c32-8 / name
+                                                              :op1 "Hillary"))))
+       :snt3 (c32-17 / woman
+                     :mod (c32-1 / bristly)
+                     :ARG1-of (c32-6 / in-touch-11
+                                     :ARG2 (c32-5 / person
+                                                  :ARG1-of (c32-7 / real-04))
+                                     :polarity -))
+       :snt4 (c32-15 / go-02
+                     :ARG0 (c32-2 / you)
+                     :ARG4 (c32-16 / away)
+                     :mode imperative
+                     :polite +))
+
+# ::snt But if the situation were reversed, they would tell him to move on already.
+# ::tokens ["But", "if", "the", "situation", "were", "reversed", ",", "they", "would", "tell", "him", "to", "move", "on", "already", "."]
+# ::lemmas ["but", "if", "the", "situation", "be", "reverse", ",", "they", "would", "tell", "he", "to", "move", "on", "already", "."]
+(c33-6 / contrast-01
+       :ARG2 (c33-7 / tell-01
+                    :ARG0 (c33-8 / they)
+                    :ARG1 (c33-1 / move-01
+                                 :ARG0 (c33-5 / he)
+                                 :direction (c33-0 / on)
+                                 :time (c33-3 / already))
+                    :ARG2 c33-5
+                    :condition (c33-4 / reverse-01
+                                      :ARG1 (c33-2 / situation))))
+
+# ::snt Likeable? Lol. No one likes her. Lmao!
+# ::tokens ["Likeable", "?", "Lol", ".", "No", "one", "likes", "her", ".", "Lmao", "!"]
+# ::lemmas ["likeable", "?", "Lol", ".", "no", "one", "like", "she", ".", "Lmao", "!"]
+(c34-1 / multi-sentence
+       :snt1 (c34-5 / like-01
+                    :polarity (c34-9 / amr-unknown)
+                    :ARG1 (c34-3 / she)
+                    :ARG1-of (c34-4 / possible-01)
+                    :ARG2-of (c34-10 / laugh-01
+                                     :ARG0 (c34-8 / i)
+                                     :manner (c34-6 / loud)
+                                     :mode expressive))
+       :snt2 (c34-7 / like-01
+                    :ARG0 (c34-2 / no-one)
+                    :ARG1 (c34-0 / she))
+       :snt3 c34-10
+       :ARG0 c34-8
+       :manner c34-6
+       :mode expressive)
+
+# ::snt Because likability and a dollar will get you a cup of coffee
+# ::tokens ["Because", "likability", "and", "a", "dollar", "will", "get", "you", "a", "cup", "of", "coffee"]
+# ::lemmas ["because", "likability", "and", "a", "dollar", "will", "get", "you", "a", "cup", "of", "coffee"]
+(c35-3 / cause-01
+       :ARG0 (c35-6 / get-01
+                    :ARG0 (c35-5 / and
+                                 :op1 (c35-2 / likability)
+                                 :op2 (c35-7 / dollar))
+                    :ARG1 (c35-8 / coffee
+                                 :quant (c35-1 / volume-quantity
+                                               :unit (c35-4 / cup)
+                                               :quant 1))
+                    :ARG2 (c35-0 / you)))
+
+# ::snt When did she start?
+# ::tokens ["When", "did", "she", "start", "?"]
+# ::lemmas ["when", "do", "she", "start", "?"]
+(c36-2 / start-01
+       :ARG0 (c36-0 / she)
+       :time (c36-1 / amr-unknown))
+
+# ::snt &amp; Trump won cus he's likable?
+# ::tokens ["&", "amp", ";", "Trump", "won", "cus", "he", "'s", "likable", "?"]
+# ::lemmas ["&", "amp", ";", "Trump", "win", "cus", "he", "be", "likable", "?"]
+(c37-6 / and
+       :op2 (c37-3 / win-01
+                   :ARG0 (c37-1 / person
+                                :name (c37-0 / name
+                                             :op1 "Trump"))
+                   :ARG1-of (c37-4 / cause-01
+                                   :ARG0 (c37-2 / likable
+                                                :domain c37-1)
+                                   :polarity (c37-5 / amr-unknown))))
+
+# ::snt As if she really ever sincerely tried. And if you have to try, you aren't really likeable. People can see thru that BS.
+# ::tokens ["As", "if", "she", "really", "ever", "sincerely", "tried", ".", "And", "if", "you", "have", "to", "try", ",", "you", "are", "n't", "really", "likeable", ".", "People", "can", "see", "thru", "that", "BS", "."]
+# ::lemmas ["as", "if", "she", "really", "ever", "sincerely", "try", ".", "and", "if", "you", "have", "to", "try", ",", "you", "be", "not", "really", "likeable", ".", "people", "can", "see", "thru", "that", "BS", "."]
+(c38-4 / multi-sentence
+       :snt1 (c38-10 / have-manner-91
+                     :ARG2 (c38-6 / sincere
+                                  :domain (c38-14 / try-01
+                                                  :ARG0 (c38-0 / she)
+                                                  :time (c38-9 / ever)
+                                                  :ARG1-of (c38-7 / real-04))))
+       :snt2 (c38-8 / and
+                    :op2 (c38-11 / likable
+                                 :ARG1-of (c38-15 / real-04)
+                                 :domain (c38-3 / you)
+                                 :condition (c38-1 / obligate-01
+                                                   :ARG1 c38-3
+                                                   :ARG2 (c38-16 / try-01
+                                                                 :ARG0 c38-3))
+                                 :polarity -))
+       :snt3 (c38-12 / possible-01
+                     :ARG1 (c38-17 / see-01
+                                   :ARG0 (c38-5 / person)
+                                   :ARG1 (c38-2 / bullshit
+                                                :mod (c38-13 / that)))))
+
+# ::snt Hardly any in politics are
+# ::tokens ["Hardly", "any", "in", "politics", "are"]
+# ::lemmas ["hardly", "any", "in", "politic", "be"]
+(c39-2 / any
+       :location (c39-1 / politics)
+       :degree (c39-0 / hardly))
+
+# ::snt They preach tolerance~ but only if you agree with their point of view. Have a different opinion and that goes out the window.
+# ::tokens ["They", "preach", "tolerance~", "but", "only", "if", "you", "agree", "with", "their", "point", "of", "view", ".", "Have", "a", "different", "opinion", "and", "that", "goes", "out", "the", "window", "."]
+# ::lemmas ["they", "preach", "tolerance~", "but", "only", "if", "you", "agree", "with", "their", "point", "of", "view", ".", "have", "a", "different", "opinion", "and", "that", "go", "out", "the", "window", "."]
+(c40-3 / multi-sentence
+       :snt1 (c40-8 / preach-01
+                    :ARG0 (c40-12 / they)
+                    :ARG1 (c40-14 / tolerate-01)
+                    :concession (c40-7 / have-condition-91
+                                       :ARG1 (c40-5 / agree-01
+                                                    :ARG0 (c40-2 / you)
+                                                    :ARG1 (c40-11 / have-point-of-view-08
+                                                                  :ARG0 (c40-13 / they))
+                                                    :mod (c40-0 / only))
+                                       :ARG2 c40-8))
+       :snt2 (c40-15 / and
+                     :op1 (c40-6 / have-03
+                                 :ARG0 c40-2)
+                     :ARG1 (c40-9 / thing
+                                  :ARG1-of (c40-1 / opine-01
+                                                  :ARG0 c40-2)
+                                  :ARG1-of (c40-16 / differ-02)))
+       :op2 (c40-4 / go-01
+                   :ARG1 c40-6
+                   :ARG4 (c40-17 / out-06
+                                 :ARG2 (c40-10 / window))))
+
+# ::snt Yes, and whether or not a person voted for Trump, what happened to respect for the office? Not seeing that this year.
+# ::tokens ["Yes", ",", "and", "whether", "or", "not", "a", "person", "voted", "for", "Trump", ",", "what", "happened", "to", "respect", "for", "the", "office", "?", "Not", "seeing", "that", "this", "year", "."]
+# ::lemmas ["yes", ",", "and", "whether", "or", "not", "a", "person", "vote", "for", "Trump", ",", "what", "happen", "to", "respect", "for", "the", "office", "?", "not", "see", "that", "this", "year", "."]
+(c41-1 / multi-sentence
+       :snt1 (c41-10 / and
+                     :op2 (c41-9 / amr-choice
+                                 :op1 (c41-5 / vote-01
+                                             :ARG0 (c41-6 / person)
+                                             :ARG1 (c41-2 / person
+                                                          :name (c41-3 / name
+                                                                       :op1 "Trump")))
+                                 :op2 (c41-7 / vote-01
+                                             :ARG0 c41-6
+                                             :ARG1 c41-2
+                                             :polarity -)))
+       :snt2 (c41-4 / see-01
+                    :ARG1 (c41-8 / that)
+                    :time (c41-0 / year
+                                 :mod (c41-11 / this))
+                    :polarity -))
+
+# ::snt I know people who no longer speak to each other because of this election. Absurd.
+# ::tokens ["I", "know", "people", "who", "no", "longer", "speak", "to", "each", "other", "because", "of", "this", "election", ".", "Absurd", "."]
+# ::lemmas ["i", "know", "people", "who", "no", "long", "speak", "to", "each", "other", "because", "of", "this", "election", ".", "Absurd", "."]
+(c42-0 / multi-sentence
+       :snt1 (c42-6 / know-02
+                    :ARG0 (c42-8 / i)
+                    :ARG1 (c42-5 / person
+                                 :ARG0-of (c42-2 / speak-01
+                                                 :time (c42-1 / no-longer)
+                                                 :ARG1-of (c42-7 / cause-01
+                                                                 :ARG0 (c42-4 / elect-01
+                                                                              :mod (c42-9 / this)))
+                                                 :ARG2 c42-5)))
+       :snt2 (c42-3 / absurd))
+
+# ::snt Damn right. Fuck the haters
+# ::tokens ["Damn", "right", ".", "Fuck", "the", "haters"]
+# ::lemmas ["damn", "right", ".", "fuck", "the", "hater"]
+(c43-1 / multi-sentence
+       :snt1 (c43-2 / right-06
+                    :mod (c43-5 / damn))
+       :snt2 (c43-0 / fuck-01
+                    :ARG1 (c43-4 / person
+                                 :ARG0-of (c43-3 / hate-01))
+                    :mode expressive))
+
+# ::snt Agree~ and so very, very, very, very, tired of her.
+# ::tokens ["Agree~", "and", "so", "very", ",", "very", ",", "very", ",", "very", ",", "tired", "of", "her", "."]
+# ::lemmas ["Agree~", "and", "so", "very", ",", "very", ",", "very", ",", "very", ",", "tired", "of", "she", "."]
+(c44-1 / and
+       :op1 (c44-5 / agree-01
+                   :mode expressive)
+       :op2 (c44-4 / tire-01
+                   :ARG0 (c44-0 / she)
+                   :ARG1 (c44-3 / i)
+                   :degree (c44-2 / very
+                                  :degree c44-2)))
+
+# ::snt Haha, when was she ever likable?
+# ::tokens ["Haha", ",", "when", "was", "she", "ever", "likable", "?"]
+# ::lemmas ["Haha", ",", "when", "be", "she", "ever", "likable", "?"]
+(c45-3 / likable
+       :domain (c45-0 / she)
+       :time (c45-1 / ever)
+       :time (c45-2 / haha
+                    :mode expressive)
+       :time (c45-4 / amr-unknown))
+
+# ::snt She was trying to be likable ?? Like when
+# ::tokens ["She", "was", "trying", "to", "be", "likable", "?", "?", "Like", "when"]
+# ::lemmas ["she", "be", "try", "to", "be", "likable", "?", "?", "like", "when"]
+(c46-3 / try-01
+       :ARG0 (c46-0 / she)
+       :ARG1 (c46-2 / likable
+                    :domain c46-0)
+       :ARG1-of (c46-1 / resemble-01
+                       :ARG2 (c46-4 / time)))
+
+# ::snt How can she be done being something she never was?
+# ::tokens ["How", "can", "she", "be", "done", "being", "something", "she", "never", "was", "?"]
+# ::lemmas ["how", "can", "she", "be", "do", "be", "something", "she", "never", "be", "?"]
+(c47-3 / possible-01
+       :ARG1 (c47-5 / do-02
+                    :ARG1 (c47-1 / something
+                                 :domain (c47-0 / she)
+                                 :time (c47-2 / ever)))
+       :manner (c47-4 / amr-unknown))
+
+# ::snt Look at that hip smile
+# ::tokens ["Look", "at", "that", "hip", "smile"]
+# ::lemmas ["look", "at", "that", "hip", "smile"]
+(c48-3 / look-01
+       :ARG0 (c48-0 / you)
+       :ARG1 (c48-1 / smile-01
+                    :mod (c48-2 / hip)
+                    :mod (c48-4 / that))
+       :mode imperative)
+
+# ::snt I think she's cool
+# ::tokens ["I", "think", "she", "'s", "cool"]
+# ::lemmas ["i", "think", "she", "be", "cool"]
+(c49-3 / think-01
+       :ARG0 (c49-2 / i)
+       :ARG1 (c49-1 / cool-04
+                    :ARG1 (c49-0 / she)))
+
+# ::snt Good she was never very good at being likeable anyway?
+# ::tokens ["Good", "she", "was", "never", "very", "good", "at", "being", "likeable", "anyway", "?"]
+# ::lemmas ["good", "she", "be", "never", "very", "good", "at", "be", "likeable", "anyway", "?"]
+(c50-6 / good-03
+       :polarity (c50-5 / amr-unknown)
+       :ARG1 (c50-4 / good-03
+                    :ARG1 (c50-0 / she)
+                    :ARG2 (c50-3 / like-01
+                                 :ARG0 c50-0)
+                    :time (c50-2 / ever)
+                    :degree (c50-1 / very)
+                    :mod (c50-7 / anyway)
+                    :polarity -))

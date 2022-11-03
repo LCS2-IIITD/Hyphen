@@ -1,0 +1,33 @@
+# ::snt You're transphobic if you don't want to date a transgender
+# ::tokens ["You", "'re", "transphobic", "if", "you", "do", "n't", "want", "to", "date", "a", "transgender"]
+# ::lemmas ["you", "be", "transphobic", "if", "you", "do", "not", "want", "to", "date", "a", "transgender"]
+(c1-3 / transphobic
+      :domain (c1-4 / you)
+      :condition (c1-1 / want-01
+                       :ARG0 c1-4
+                       :ARG1 (c1-0 / date-02
+                                   :ARG0 c1-4
+                                   :ARG1 (c1-2 / transgender))
+                       :polarity -))
+
+# ::snt Or you could want kids someday.
+# ::tokens ["Or", "you", "could", "want", "kids", "someday", "."]
+# ::lemmas ["or", "you", "could", "want", "kid", "someday", "."]
+(c2-2 / or
+      :op2 (c2-3 / possible-01
+                 :ARG1 (c2-1 / want-01
+                             :ARG0 (c2-5 / you)
+                             :ARG1 (c2-4 / kid)
+                             :time (c2-0 / someday))))
+
+# ::snt Well, that's a different reason, and a completely reasonable one.
+# ::tokens ["Well", ",", "that", "'s", "a", "different", "reason", ",", "and", "a", "completely", "reasonable", "one", "."]
+# ::lemmas ["well", ",", "that", "be", "a", "different", "reason", ",", "and", "a", "completely", "reasonable", "one", "."]
+(c3-1 / and
+      :op1 (c3-0 / differ-02
+                 :ARG1 (c3-6 / reason
+                             :domain (c3-5 / that)))
+      :op2 (c3-4 / reasonable-02
+                 :ARG1 c3-6
+                 :ARG1-of (c3-2 / complete-02))
+      :mod (c3-3 / well))

@@ -1,0 +1,31 @@
+# ::snt Yo developers, what's going on?
+# ::tokens ["Yo", "developers", ",", "what", "'s", "going", "on", "?"]
+# ::lemmas ["Yo", "developer", ",", "what", "be", "go", "on", "?"]
+(c1-1 / ask-01
+      :ARG0 (c1-2 / i)
+      :ARG1 (c1-5 / amr-unknown
+                  :mod (c1-6 / event))
+      :ARG2 (c1-3 / person
+                  :ARG0-of (c1-0 / develop-02)
+                  :mod (c1-4 / yo)))
+
+# ::snt We got an update a few days ago.
+# ::tokens ["We", "got", "an", "update", "a", "few", "days", "ago", "."]
+# ::lemmas ["we", "get", "an", "update", "a", "few", "days", "ago", "."]
+(c2-2 / update-02
+      :time (c2-4 / before
+                  :op1 (c2-5 / now)
+                  :quant (c2-1 / few
+                               :op1 (c2-3 / temporal-quantity
+                                          :unit (c2-0 / day)
+                                          :quant 1))))
+
+# ::snt that was no update, that was trash
+# ::tokens ["that", "was", "no", "update", ",", "that", "was", "trash"]
+# ::lemmas ["that", "be", "no", "update", ",", "that", "be", "trash"]
+(c3-1 / and
+      :op1 (c3-3 / update-01
+                 :domain (c3-2 / that)
+                 :polarity -)
+      :op2 (c3-0 / trash
+                 :domain c3-2))

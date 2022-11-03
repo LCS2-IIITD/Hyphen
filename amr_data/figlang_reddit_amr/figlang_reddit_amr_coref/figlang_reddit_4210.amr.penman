@@ -1,0 +1,30 @@
+# ::snt Which videos ruined the image of a famous person?
+# ::tokens ["Which", "videos", "ruined", "the", "image", "of", "a", "famous", "person", "?"]
+# ::lemmas ["which", "video", "ruin", "the", "image", "of", "a", "famous", "person", "?"]
+(c1-3 / ruin-01
+      :ARG0 (c1-2 / video
+                  :mod (c1-0 / amr-unknown))
+      :ARG1 (c1-5 / image
+                  :poss (c1-4 / person
+                              :ARG1-of (c1-1 / fame-01))))
+
+# ::snt Kanye West interrupting Taylor Swift at the music awards really made him look more of a douchebag
+# ::tokens ["Kanye", "West", "interrupting", "Taylor", "Swift", "at", "the", "music", "awards", "really", "made", "him", "look", "more", "of", "a", "douchebag"]
+# ::lemmas ["Kanye", "West", "interrupt", "Taylor", "Swift", "at", "the", "music", "award", "really", "make", "he", "look", "more", "of", "a", "douchebag"]
+(c2-10 / make-02
+       :ARG0 (c2-9 / interrupt-01
+                   :ARG0 (c2-6 / person
+                               :name (c2-11 / name
+                                            :op1 "Kanye"
+                                            :op2 "West"))
+                   :ARG1 (c2-4 / person
+                               :name (c2-5 / name
+                                           :op1 "Taylor"
+                                           :op2 "Sw Swift"))
+                   :location (c2-1 / award-01
+                                   :ARG1 (c2-2 / music)))
+       :ARG1 (c2-7 / look-02
+                   :ARG0 c2-6
+                   :ARG1 (c2-0 / douchebag
+                               :mod (c2-3 / more)))
+       :ARG1-of (c2-8 / real-04))

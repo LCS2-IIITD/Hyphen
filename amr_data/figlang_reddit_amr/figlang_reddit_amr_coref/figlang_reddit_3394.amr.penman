@@ -1,0 +1,63 @@
+# ::snt US removes Iran and Hezbollah from list of terror threats
+# ::tokens ["US", "removes", "Iran", "and", "Hezbollah", "from", "list", "of", "terror", "threats"]
+# ::lemmas ["US", "remove", "Iran", "and", "Hezbollah", "from", "list", "of", "terror", "threat"]
+(c1-6 / remove-01
+      :ARG0 (c1-2 / country
+                  :name (c1-10 / name
+                               :op1 "US"))
+      :ARG1 (c1-1 / and
+                  :op1 (c1-0 / country
+                             :name (c1-7 / name
+                                         :op1 "Iran"))
+                  :op2 (c1-9 / political-party
+                             :name (c1-4 / name
+                                         :op1 "Hezbollah")))
+      :ARG2 (c1-8 / list-01
+                  :ARG1 c1-1
+                  :ARG2 (c1-5 / threaten-01
+                              :ARG1 (c1-3 / terror))))
+
+# ::snt *That's* how badly we've fucked up the Middle East: Iran is now our beacon of stability.
+# ::tokens ["*", "That", "'s", "*", "how", "badly", "we", "'ve", "fucked", "up", "the", "Middle", "East", ":", "Iran", "is", "now", "our", "beacon", "of", "stability", "."]
+# ::lemmas ["*", "that", "be", "*", "how", "badly", "we", "'ve", "fuck", "up", "the", "Middle", "East", ":", "Iran", "be", "now", "our", "beacon", "of", "stability", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-2 / fuck-up-02
+                   :ARG0 (c2-4 / we)
+                   :ARG1 (c2-12 / world-region
+                                :name (c2-11 / name
+                                             :op1 "Middle"
+                                             :op2 "East"))
+                   :ARG1-of (c2-7 / bad-05
+                                  :degree (c2-0 / so)))
+       :snt2 (c2-1 / beacon
+                   :mod (c2-8 / stability)
+                   :poss (c2-9 / we)
+                   :time (c2-6 / now)
+                   :domain (c2-3 / country
+                                 :name (c2-5 / name
+                                             :op1 "Iran"))))
+
+# ::snt Iran has been the most stable country in the middle east since the 90s.
+# ::tokens ["Iran", "has", "been", "the", "most", "stable", "country", "in", "the", "middle", "east", "since", "the", "90s", "."]
+# ::lemmas ["Iran", "have", "be", "the", "most", "stable", "country", "in", "the", "middle", "east", "since", "the", "90s", "."]
+(c3-5 / have-degree-91
+      :ARG1 (c3-3 / country
+                  :name (c3-9 / name
+                              :op1 "Iran"))
+      :ARG2 (c3-0 / stable-03
+                  :ARG1 c3-3)
+      :ARG3 (c3-8 / most)
+      :ARG5 (c3-1 / country
+                  :location (c3-4 / world-region
+                                  :name (c3-6 / name
+                                              :op1 "Middle"
+                                              :op2 "East")))
+      :time (c3-7 / since
+                  :op1 (c3-2 / date-entity
+                             :decade 1990)))
+
+# ::snt *1790s
+# ::tokens ["*", "1790s"]
+# ::lemmas ["*", "1790s"]
+(c4-0 / date-entity
+      :decade 1790)

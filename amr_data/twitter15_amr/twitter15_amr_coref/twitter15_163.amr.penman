@@ -1,0 +1,68 @@
+# ::snt : Paul Walker died shortly after attending a charity event for his organization Reach Out Worldwide
+# ::tokens [":", "Paul", "Walker", "died", "shortly", "after", "attending", "a", "charity", "event", "for", "his", "organization", "Reach", "Out", "Worldwide"]
+# ::lemmas [":", "Paul", "Walker", "die", "shortly", "after", "attend", "a", "charity", "event", "for", "his", "organization", "Reach", "Out", "Worldwide"]
+(c1-8 / die-01
+      :ARG1 (c1-1 / person
+                  :name (c1-7 / name
+                              :op1 "Paul"
+                              :op2 "Walker"))
+      :time (c1-3 / after
+                  :op1 (c1-4 / attend-01
+                             :ARG0 c1-1
+                             :ARG1 (c1-9 / event
+                                         :mod (c1-5 / charity)
+                                         :beneficiary (c1-2 / organization
+                                                            :name (c1-6 / name
+                                                                        :op1 "Reach"
+                                                                        :op2 "Out"
+                                                                        :op3 "Worldwide")
+                                                            :poss c1-1)))
+                  :ARG1-of (c1-0 / short-07)))
+
+# ::snt Such a tragic loss. Paul Walker died shortly after charity event for his organization Reach Out Worldwide via
+# ::tokens ["Such", "a", "tragic", "loss", ".", "Paul", "Walker", "died", "shortly", "after", "charity", "event", "for", "his", "organization", "Reach", "Out", "Worldwide", "via"]
+# ::lemmas ["such", "a", "tragic", "loss", ".", "Paul", "Walker", "die", "shortly", "after", "charity", "event", "for", "his", "organization", "Reach", "Out", "Worldwide", "via"]
+(c2-7 / multi-sentence
+      :snt1 (c2-3 / lose-02
+                  :mod (c2-4 / tragic
+                             :mod (c2-0 / such)))
+      :snt2 (c2-11 / die-01
+                   :ARG1 (c2-2 / person
+                               :name (c2-10 / name
+                                            :op1 "Paul"
+                                            :op2 "Walker"))
+                   :time (c2-5 / after
+                               :op1 (c2-12 / event
+                                           :mod (c2-8 / charity))
+                               :ARG1-of (c2-1 / short-07))
+                   :beneficiary (c2-6 / organization
+                                      :name (c2-9 / name
+                                                  :op1 "Reach"
+                                                  :op2 "Out"
+                                                  :op3 "Worldwide")
+                                      :poss c2-2)))
+
+# ::snt : died shortly after attending a event for his organization
+# ::tokens [":", "died", "shortly", "after", "attending", "a", "event", "for", "his", "organization"]
+# ::lemmas [":", "die", "shortly", "after", "attend", "a", "event", "for", "his", "organization"]
+(c3-5 / die-01
+      :ARG1 (c3-3 / he)
+      :time (c3-4 / after
+                  :op1 (c3-2 / attend-01
+                             :ARG0 c3-3
+                             :ARG1 (c3-6 / event
+                                         :beneficiary (c3-1 / organization
+                                                            :poss c3-3)))
+                  :ARG1-of (c3-0 / short-07)))
+
+# ::snt So sad he will be missed, but his legacy live on.
+# ::tokens ["So", "sad", "he", "will", "be", "missed", ",", "but", "his", "legacy", "live", "on", "."]
+# ::lemmas ["so", "sad", "he", "will", "be", "miss", ",", "but", "his", "legacy", "live", "on", "."]
+(c4-4 / contrast-01
+      :ARG1 (c4-0 / sad-02
+                  :ARG0 (c4-3 / miss-01
+                              :ARG1 (c4-6 / he))
+                  :degree (c4-1 / so))
+      :ARG2 (c4-2 / live-on-03
+                  :ARG1 (c4-5 / legacy
+                              :poss c4-6)))

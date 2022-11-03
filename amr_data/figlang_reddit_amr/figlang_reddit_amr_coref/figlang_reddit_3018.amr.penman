@@ -1,0 +1,39 @@
+# ::snt This is how you advertise.
+# ::tokens ["This", "is", "how", "you", "advertise", "."]
+# ::lemmas ["this", "be", "how", "you", "advertise", "."]
+(c1-0 / advertise-01
+      :ARG0 (c1-2 / you)
+      :manner (c1-1 / this))
+
+# ::snt ...did I just see domestic violence used to sell an ab machine?
+# ::tokens ["...", "did", "I", "just", "see", "domestic", "violence", "used", "to", "sell", "an", "ab", "machine", "?"]
+# ::lemmas ["...", "do", "i", "just", "see", "domestic", "violence", "use", "to", "sell", "an", "ab", "machine", "?"]
+(c2-0 / see-01
+      :polarity (c2-2 / amr-unknown)
+      :ARG0 (c2-7 / i)
+      :ARG1 (c2-4 / violence
+                  :mod (c2-1 / domestic)
+                  :ARG1-of (c2-3 / use-01
+                                 :ARG2 (c2-6 / sell-01
+                                             :ARG1 (c2-8 / machine
+                                                         :mod (c2-9 / ab)))))
+      :mod (c2-5 / just))
+
+# ::snt I think he was a thief, not her husband as evidenced by the purse snatching.
+# ::tokens ["I", "think", "he", "was", "a", "thief", ",", "not", "her", "husband", "as", "evidenced", "by", "the", "purse", "snatching", "."]
+# ::lemmas ["i", "think", "he", "be", "a", "thief", ",", "not", "her", "husband", "as", "evidence", "by", "the", "purse", "snatching", "."]
+(c3-7 / think-01
+      :ARG0 (c3-10 / i)
+      :ARG1 (c3-3 / and
+                  :op1 (c3-8 / person
+                             :ARG0-of (c3-0 / steal-01)
+                             :domain (c3-5 / he))
+                  :op2 (c3-6 / person
+                             :ARG0-of (c3-9 / have-rel-role-91
+                                            :ARG1 c3-5
+                                            :ARG2 (c3-1 / husband))
+                             :domain c3-5
+                             :polarity -)
+                  :ARG1-of (c3-11 / evidence-01
+                                  :ARG0 (c3-2 / snatch-01
+                                              :ARG1 (c3-4 / purse)))))

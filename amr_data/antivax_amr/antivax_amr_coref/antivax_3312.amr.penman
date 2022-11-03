@@ -1,0 +1,62 @@
+# ::snt Please say this, please.
+# ::tokens ["Please", "say", "this", ",", "please", "."]
+# ::lemmas ["please", "say", "this", ",", "please", "."]
+(c1-0 / say-01
+      :ARG0 (c1-2 / you)
+      :ARG1 (c1-1 / this)
+      :mode imperative
+      :polite +)
+
+# ::snt Oh I doubt I will. By the time I've had mine the volunteers will be extremely done.
+# ::tokens ["Oh", "I", "doubt", "I", "will", ".", "By", "the", "time", "I", "'ve", "had", "mine", "the", "volunteers", "will", "be", "extremely", "done", "."]
+# ::lemmas ["oh", "i", "doubt", "i", "will", ".", "by", "the", "time", "i", "'ve", "have", "mine", "the", "volunteer", "will", "be", "extremely", "do", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-0 / doubt-01
+                   :ARG0 (c2-1 / i)
+                   :ARG1 (c2-9 / do-02
+                               :ARG0 c2-1)
+                   :mod (c2-5 / oh
+                              :mode expressive))
+       :snt2 (c2-8 / be-done-08
+                   :ARG1 (c2-7 / person
+                               :ARG0-of (c2-4 / volunteer-01))
+                   :degree (c2-11 / extreme)
+                   :time (c2-2 / have-03
+                               :ARG0 (c2-3 / i)
+                               :ARG1 (c2-6 / thing
+                                           :poss c2-3))))
+
+# ::snt "I am here for a reason. Now jab me, peasant."
+# ::tokens ["\"", "I", "am", "here", "for", "a", "reason", ".", "Now", "jab", "me", ",", "peasant", ".", "\""]
+# ::lemmas ["\"", "i", "be", "here", "for", "a", "reason", ".", "now", "jab", "i", ",", "peasant", ".", "\""]
+(c3-9 / multi-sentence
+      :snt1 (c3-6 / be-located-at-91
+                  :ARG1 (c3-8 / i)
+                  :ARG2 (c3-2 / here)
+                  :ARG1-of (c3-1 / cause-01
+                                 :ARG0 (c3-4 / reason)))
+      :snt2 (c3-0 / say-01
+                  :ARG0 (c3-3 / i)
+                  :ARG1 (c3-7 / jab-01
+                              :ARG0 (c3-5 / peasant)
+                              :ARG1 c3-3
+                              :time (c3-10 / now)
+                              :mode imperative)
+                  :ARG2 c3-5))
+
+# ::snt I vote dominatrix, it just has such fuck it, yes vibes.
+# ::tokens ["I", "vote", "dominatrix", ",", "it", "just", "has", "such", "fuck", "it", ",", "yes", "vibes", "."]
+# ::lemmas ["i", "vote", "dominatrix", ",", "it", "just", "have", "such", "fuck", "it", ",", "yes", "vibe", "."]
+(c4-6 / vote-01
+      :ARG0 (c4-8 / i)
+      :ARG1 (c4-3 / company
+                  :name (c4-9 / name
+                              :op1 "Dominatrix"))
+      :ARG1-of (c4-0 / cause-01
+                     :ARG0 (c4-5 / have-03
+                                 :ARG0 c4-3
+                                 :ARG1 (c4-2 / vibe
+                                             :mod (c4-4 / fuck-01
+                                                        :degree (c4-1 / such)
+                                                        :mode expressive))
+                                 :mod (c4-7 / just))))

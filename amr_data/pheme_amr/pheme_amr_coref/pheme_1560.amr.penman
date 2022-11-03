@@ -1,0 +1,183 @@
+# ::snt *
+# ::tokens ["*"]
+# ::lemmas ["*"]
+(c1-0 / amr-empty)
+
+# ::snt Same thing when was killed by the wanna-be cop. yrs old teen is a man to them.
+# ::tokens ["Same", "thing", "when", "was", "killed", "by", "the", "wanna", "-", "be", "cop", ".", "yrs", "old", "teen", "is", "a", "man", "to", "them", "."]
+# ::lemmas ["same", "thing", "when", "be", "kill", "by", "the", "wanna", "-", "be", "cop", ".", "yrs", "old", "teen", "be", "a", "man", "to", "they", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-10 / thing
+                   :ARG1-of (c2-9 / same-01)
+                   :time (c2-4 / kill-01
+                               :ARG0 (c2-7 / cop
+                                           :ARG1-of (c2-0 / want-01
+                                                          :ARG0 c2-7))
+                               :ARG1 (c2-8 / teen
+                                           :age (c2-5 / temporal-quantity
+                                                      :unit (c2-1 / year)
+                                                      :quant 18))))
+      :snt2 (c2-6 / man
+                  :prep-to (c2-3 / they)
+                  :domain c2-8))
+
+# ::snt such talk from a lady(?). senseless, so u r blocked
+# ::tokens ["such", "talk", "from", "a", "lady", "(", "?", ")", ".", "senseless", ",", "so", "u", "r", "blocked"]
+# ::lemmas ["such", "talk", "from", "a", "lady", "(", "?", ")", ".", "senseless", ",", "so", "u", "r", "block"]
+(c3-4 / cause-01
+      :ARG0 (c3-6 / talk-01
+                  :ARG0 (c3-1 / lady)
+                  :mod (c3-5 / such)
+                  :ARG1-of (c3-3 / sense-02
+                                 :polarity -))
+      :ARG1 (c3-2 / block-01
+                  :ARG0 (c3-0 / you)))
+
+# ::snt fuck. Off.
+# ::tokens ["fuck", ".", "Off", "."]
+# ::lemmas ["fuck", ".", "off", "."]
+(c4-2 / multi-sentence
+      :snt1 (c4-1 / fuck-01)
+      :snt2 (c4-0 / off))
+
+# ::snt Black teenage boys are not men. They are children. Stop referring to a year old as a man. You are killing children.
+# ::tokens ["Black", "teenage", "boys", "are", "not", "men", ".", "They", "are", "children", ".", "Stop", "referring", "to", "a", "year", "old", "as", "a", "man", ".", "You", "are", "killing", "children", "."]
+# ::lemmas ["black", "teenage", "boy", "be", "not", "man", ".", "they", "be", "child", ".", "stop", "refer", "to", "a", "year", "old", "as", "a", "man", ".", "you", "be", "kill", "child", "."]
+(c5-2 / multi-sentence
+      :snt1 (c5-6 / man
+                  :domain (c5-3 / boy
+                                :ARG1-of (c5-8 / black-05)
+                                :mod (c5-14 / teenage))
+                  :polarity -)
+      :snt2 (c5-9 / child
+                  :domain c5-3)
+      :snt3 (c5-12 / stop-01
+                   :ARG0 (c5-0 / you)
+                   :ARG1 (c5-7 / refer-01
+                               :ARG0 c5-0
+                               :ARG1 (c5-10 / person
+                                            :age (c5-11 / temporal-quantity
+                                                        :unit (c5-15 / year)
+                                                        :quant 1))
+                               :ARG2 (c5-1 / man))
+                   :mode imperative)
+      :snt4 (c5-5 / kill-01
+                  :ARG0 (c5-4 / you)
+                  :ARG1 (c5-13 / child)))
+
+# ::snt after several hours someone noticed
+# ::tokens ["after", "several", "hours", "someone", "noticed"]
+# ::lemmas ["after", "several", "hours", "someone", "notice"]
+(c6-2 / notice-01
+      :ARG0 (c6-3 / someone)
+      :time (c6-5 / after
+                  :quant (c6-1 / several
+                               :op1 (c6-4 / temporal-quantity
+                                          :unit (c6-0 / hour)
+                                          :quant 1))))
+
+# ::snt yeah that tweet was written before that was clarified. Sentiment still holds. Thanks.
+# ::tokens ["yeah", "that", "tweet", "was", "written", "before", "that", "was", "clarified", ".", "Sentiment", "still", "holds", ".", "Thanks", "."]
+# ::lemmas ["yeah", "that", "tweet", "be", "write", "before", "that", "be", "clarify", ".", "sentiment", "still", "hold", ".", "thank", "."]
+(c7-3 / multi-sentence
+      :snt1 (c7-1 / write-01
+                  :ARG1 (c7-12 / tweet-01
+                               :mod (c7-10 / that))
+                  :time (c7-4 / before
+                              :op1 (c7-9 / clarify-10
+                                         :ARG1 (c7-8 / that)))
+                  :mod (c7-2 / yeah
+                             :mode expressive))
+      :snt2 (c7-0 / hold-13
+                  :ARG1 (c7-11 / sentiment)
+                  :mod (c7-5 / still))
+      :snt3 (c7-6 / thank-01
+                  :ARG0 (c7-7 / i)
+                  :ARG1 (c7-13 / you)))
+
+# ::snt : Soooo wonderfully said! Thank you for your tweet! I'm RTing!
+# ::tokens [":", "Soooo", "wonderfully", "said", "!", "Thank", "you", "for", "your", "tweet", "!", "I", "'m", "RTing", "!"]
+# ::lemmas [":", "Soooo", "wonderfully", "say", "!", "thank", "you", "for", "your", "tweet", "!", "i", "be", "rte", "!"]
+(c8-2 / multi-sentence
+      :snt1 (c8-8 / say-01
+                  :ARG1-of (c8-0 / wonderful-03
+                                 :degree (c8-3 / so)))
+      :snt2 (c8-9 / thank-01
+                  :ARG0 (c8-4 / i)
+                  :ARG1 (c8-1 / you)
+                  :ARG2 (c8-7 / tweet-02
+                              :ARG0 c8-1))
+      :snt3 (c8-5 / RT-01
+                  :ARG0 (c8-6 / i)))
+
+# ::snt goes back to Dave Chappelle's "how old is really?" bit
+# ::tokens ["goes", "back", "to", "Dave", "Chappelle", "'s", "\"", "how", "old", "is", "really", "?", "\"", "bit"]
+# ::lemmas ["go", "back", "to", "Dave", "Chappelle", "'s", "\"", "how", "old", "be", "really", "?", "\"", "bit"]
+(c9-5 / go-back-19
+      :ARG2 (c9-0 / bit
+                  :mod (c9-6 / amr-unknown)
+                  :poss (c9-3 / person
+                              :name (c9-2 / name
+                                          :op1 "Dave"
+                                          :op2 "Chappelle"))
+                  :topic (c9-1 / old
+                               :ARG1-of (c9-4 / real-04))))
+
+# ::snt well, he damn sure ain't a child
+# ::tokens ["well", ",", "he", "damn", "sure", "ai", "n't", "a", "child"]
+# ::lemmas ["well", ",", "he", "damn", "sure", "be", "not", "a", "child"]
+(c11-2 / child
+       :domain (c11-0 / he)
+       :ARG1-of (c11-3 / sure-02
+                       :degree (c11-1 / damn))
+       :polarity -)
+
+# ::snt We have to take action to stop this insanity.
+# ::tokens ["We", "have", "to", "take", "action", "to", "stop", "this", "insanity", "."]
+# ::lemmas ["we", "have", "to", "take", "action", "to", "stop", "this", "insanity", "."]
+(c12-1 / obligate-01
+       :ARG1 (c12-0 / we)
+       :ARG2 (c12-5 / act-02
+                    :ARG0 c12-0
+                    :purpose (c12-3 / stop-01
+                                    :ARG0 c12-0
+                                    :ARG1 (c12-2 / insanity
+                                                 :mod (c12-4 / this)))))
+
+# ::snt year olds can be prosecuted as adults, regardless of color. Sorry, but try again.
+# ::tokens ["year", "olds", "can", "be", "prosecuted", "as", "adults", ",", "regardless", "of", "color", ".", "Sorry", ",", "but", "try", "again", "."]
+# ::lemmas ["year", "olds", "can", "be", "prosecute", "as", "adult", ",", "regardless", "of", "color", ".", "sorry", ",", "but", "try", "again", "."]
+(c13-1 / multi-sentence
+       :snt1 (c13-5 / possible-01
+                    :ARG1 (c13-12 / prosecute-01
+                                  :ARG1 (c13-2 / person
+                                               :age (c13-11 / temporal-quantity
+                                                            :unit (c13-0 / year)
+                                                            :quant 1))
+                                  :prep-as (c13-13 / adult)
+                                  :ARG1-of (c13-6 / regardless-91
+                                                  :ARG2 (c13-7 / color))))
+       :snt2 (c13-8 / contrast-01
+                    :ARG1 (c13-10 / sorry-01
+                                  :ARG1 (c13-4 / i))
+                    :ARG2 (c13-9 / try-01
+                                 :ARG0 (c13-14 / you)
+                                 :mod (c13-3 / again)
+                                 :mode imperative)))
+
+# ::snt the response of a leftist toker. it's just like stuttering w/ u ppl.
+# ::tokens ["the", "response", "of", "a", "leftist", "toker", ".", "it", "'s", "just", "like", "stuttering", "w/", "u", "ppl", "."]
+# ::lemmas ["the", "response", "of", "a", "leftist", "toker", ".", "it", "be", "just", "like", "stutter", "w/", "u", "ppl", "."]
+(c14-3 / multi-sentence
+       :snt1 (c14-11 / thing
+                     :ARG2-of (c14-8 / respond-01
+                                     :ARG0 (c14-9 / toker
+                                                  :ARG1-of (c14-2 / left-19))))
+       :snt2 (c14-6 / resemble-01
+                    :ARG1 (c14-5 / it)
+                    :ARG2 (c14-10 / stutter-01
+                                  :ARG0 (c14-1 / you)
+                                  :beneficiary (c14-7 / person
+                                                      :ARG0-of (c14-12 / post-01
+                                                                       :mod (c14-4 / original))))
+                    :mod (c14-0 / just)))

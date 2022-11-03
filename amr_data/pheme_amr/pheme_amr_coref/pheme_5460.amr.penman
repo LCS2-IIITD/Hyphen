@@ -1,0 +1,103 @@
+# ::snt cause suspending operations would be an act of cowardice?
+# ::tokens ["cause", "suspending", "operations", "would", "be", "an", "act", "of", "cowardice", "?"]
+# ::lemmas ["cause", "suspend", "operation", "would", "be", "an", "act", "of", "cowardice", "?"]
+(c1-3 / cause-01
+      :ARG1 (c1-5 / act-02
+                  :ARG1 (c1-4 / suspend-01
+                              :ARG1 (c1-0 / operate-01))
+                  :mod (c1-2 / cowardice)
+                  :polarity (c1-1 / amr-unknown)))
+
+# ::snt agree - I want to buy one too.
+# ::tokens ["agree", "-", "I", "want", "to", "buy", "one", "too", "."]
+# ::lemmas ["agree", "-", "i", "want", "to", "buy", "one", "too", "."]
+(c2-5 / agree-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-0 / want-01
+                  :ARG0 c2-3
+                  :ARG1 (c2-1 / buy-01
+                              :ARG0 c2-3
+                              :ARG1 (c2-2 / one)
+                              :mod (c2-4 / too))))
+
+# ::snt If you are for free speech then this is for you support buy it now
+# ::tokens ["If", "you", "are", "for", "free", "speech", "then", "this", "is", "for", "you", "support", "buy", "it", "now"]
+# ::lemmas ["if", "you", "be", "for", "free", "speech", "then", "this", "be", "for", "you", "support", "buy", "it", "now"]
+(c3-5 / support-01
+      :ARG0 (c3-0 / you)
+      :ARG1 (c3-2 / buy-01
+                  :ARG0 c3-0
+                  :ARG1 (c3-6 / this)
+                  :time (c3-4 / now)
+                  :mode imperative)
+      :condition c3-5
+      :ARG0 c3-0
+      :ARG1 (c3-3 / speak-01
+                  :ARG3-of (c3-1 / free-04)))
+
+# ::snt If you are for free speech then this is for you support buy it now
+# ::tokens ["If", "you", "are", "for", "free", "speech", "then", "this", "is", "for", "you", "support", "buy", "it", "now"]
+# ::lemmas ["if", "you", "be", "for", "free", "speech", "then", "this", "be", "for", "you", "support", "buy", "it", "now"]
+(c4-5 / support-01
+      :ARG0 (c4-0 / you)
+      :ARG1 (c4-2 / buy-01
+                  :ARG0 c4-0
+                  :ARG1 (c4-6 / this)
+                  :time (c4-4 / now)
+                  :mode imperative)
+      :condition c4-5
+      :ARG0 c4-0
+      :ARG1 (c4-3 / speak-01
+                  :ARG3-of (c4-1 / free-04)))
+
+# ::snt where can you get copies in the Uk. Will buy it to show my solidarity with the purveyours of free speech
+# ::tokens ["where", "can", "you", "get", "copies", "in", "the", "Uk", ".", "Will", "buy", "it", "to", "show", "my", "solidarity", "with", "the", "purveyours", "of", "free", "speech"]
+# ::lemmas ["where", "can", "you", "get", "copy", "in", "the", "Uk", ".", "will", "buy", "it", "to", "show", "my", "solidarity", "with", "the", "purveyour", "of", "free", "speech"]
+(c5-2 / multi-sentence
+      :snt1 (c5-8 / possible-01
+                  :ARG1 (c5-11 / get-01
+                               :ARG0 (c5-0 / you)
+                               :ARG1 (c5-10 / copy)
+                               :location (c5-9 / country
+                                               :name (c5-7 / name
+                                                           :op1 "U Uk"))))
+      :snt2 (c5-4 / buy-01
+                  :ARG0 (c5-6 / i)
+                  :ARG1 (c5-12 / it)
+                  :purpose (c5-13 / show-01
+                                  :ARG0 c5-6
+                                  :ARG1 (c5-5 / solidarity
+                                              :prep-with (c5-14 / purveyor
+                                                                :mod (c5-1 / speak-01
+                                                                           :ARG3-of (c5-3 / free-04))))
+                                  :ARG2 c5-6)))
+
+# ::snt Will you buy it? MT will be published Wednesday as usual says magazine lawyer. Print run: million copies.
+# ::tokens ["Will", "you", "buy", "it", "?", "MT", "will", "be", "published", "Wednesday", "as", "usual", "says", "magazine", "lawyer", ".", "Print", "run", ":", "million", "copies", "."]
+# ::lemmas ["will", "you", "buy", "it", "?", "MT", "will", "be", "publish", "Wednesday", "as", "usual", "say", "magazine", "lawyer", ".", "print", "run", ":", "million", "copy", "."]
+(c6-3 / multi-sentence
+      :snt1 (c6-4 / buy-01
+                  :polarity (c6-15 / amr-unknown)
+                  :ARG0 (c6-0 / you)
+                  :ARG1 (c6-6 / it))
+      :snt2 (c6-13 / say-01
+                   :ARG0 (c6-2 / lawyer
+                               :mod (c6-9 / magazine))
+                   :ARG1 (c6-10 / publish-01
+                                :ARG1 (c6-7 / newspaper
+                                            :name (c6-8 / name
+                                                        :op1 "MT"))
+                                :time (c6-11 / date-entity
+                                             :weekday (c6-1 / wednesday))
+                                :mod (c6-5 / as-usual)))
+      :snt3 (c6-12 / copy-01
+                   :ARG1-of (c6-14 / print-01)
+                   :quant 1000000))
+
+# ::snt whose the lawyer, just out of curiosity?
+# ::tokens ["whose", "the", "lawyer", ",", "just", "out", "of", "curiosity", "?"]
+# ::lemmas ["whose", "the", "lawyer", ",", "just", "out", "of", "curiosity", "?"]
+(c7-1 / lawyer
+      :domain (c7-3 / amr-unknown)
+      :ARG1-of (c7-2 / curious-01
+                     :mod (c7-0 / just)))

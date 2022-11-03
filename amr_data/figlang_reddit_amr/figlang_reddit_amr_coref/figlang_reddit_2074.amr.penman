@@ -1,0 +1,32 @@
+# ::snt Trump says he'll sue sexual misconduct accusers
+# ::tokens ["Trump", "says", "he", "'ll", "sue", "sexual", "misconduct", "accusers"]
+# ::lemmas ["Trump", "say", "he", "'ll", "sue", "sexual", "misconduct", "accuser"]
+(c1-0 / say-01
+      :ARG0 (c1-5 / person
+                  :name (c1-7 / name
+                              :op1 "Trump"))
+      :ARG1 (c1-4 / sue-02
+                  :ARG0 c1-5
+                  :ARG1 (c1-3 / person
+                              :ARG0-of (c1-1 / accuse-01
+                                             :ARG1 c1-5
+                                             :ARG2 (c1-6 / misconduct-01
+                                                         :ARG0 c1-3
+                                                         :ARG1 (c1-2 / sex-01))))))
+
+# ::snt Trumps says he'll sue anyone who says anything negative about him, this isn't news.
+# ::tokens ["Trumps", "says", "he", "'ll", "sue", "anyone", "who", "says", "anything", "negative", "about", "him", ",", "this", "is", "n't", "news", "."]
+# ::lemmas ["Trumps", "say", "he", "'ll", "sue", "anyone", "who", "say", "anything", "negative", "about", "he", ",", "this", "be", "not", "news", "."]
+(c2-0 / say-01
+      :ARG0 (c2-6 / person
+                  :name (c2-7 / name
+                              :op1 "Trumps"))
+      :ARG1 (c2-5 / sue-02
+                  :ARG0 c2-6
+                  :ARG1 (c2-1 / anyone
+                              :ARG0-of (c2-2 / say-01
+                                             :ARG1 (c2-8 / anything
+                                                         :ARG0-of (c2-4 / negative-02
+                                                                        :ARG1 c2-6)))))
+      :mod (c2-3 / news
+                 :polarity -))

@@ -1,0 +1,114 @@
+# ::snt Idk, worth reading this?
+# ::tokens ["Idk", ",", "worth", "reading", "this", "?"]
+# ::lemmas ["Idk", ",", "worth", "read", "this", "?"]
+(c1-4 / worth-02
+      :ARG2 (c1-2 / read-01
+                  :ARG1 (c1-1 / this))
+      :polarity (c1-0 / amr-unknown)
+      :mod (c1-3 / idiot))
+
+# ::snt Also, excluding the comma: "the founder of Apple was a refugee from Syria".
+# ::tokens ["Also", ",", "excluding", "the", "comma", ":", "\"", "the", "founder", "of", "Apple", "was", "a", "refugee", "from", "Syria", "\"", "."]
+# ::lemmas ["also", ",", "exclude", "the", "comma", ":", "\"", "the", "founder", "of", "Apple", "be", "a", "refugee", "from", "Syria", "\"", "."]
+(c2-2 / exclude-01
+      :ARG1 (c2-9 / comma)
+      :ARG2 (c2-1 / refugee
+                  :domain (c2-6 / person
+                                :ARG0-of (c2-8 / found-01
+                                               :ARG1 (c2-5 / company
+                                                           :name (c2-7 / name
+                                                                       :op1 "Apple"))))
+                  :source (c2-3 / country
+                                :name (c2-4 / name
+                                            :op1 "Syria")))
+      :mod (c2-0 / also))
+
+# ::snt subliminal messages; refugees [can] make good outcomes like Steve Jobs (&amp; jobs), and Steve Jobs fled Assad.
+# ::tokens ["subliminal", "messages", ";", "refugees", "[", "can", "]", "make", "good", "outcomes", "like", "Steve", "Jobs", "(", "&", "amp", ";", "jobs", ")", ",", "and", "Steve", "Jobs", "fled", "Assad", "."]
+# ::lemmas ["subliminal", "message", ";", "refugee", "[", "can", "]", "make", "good", "outcome", "like", "Steve", "Jobs", "(", "&", "amp", ";", "job", ")", ",", "and", "Steve", "Jobs", "flee", "Assad", "."]
+(c3-0 / and
+      :op1 (c3-6 / message-01
+                 :mod (c3-10 / subliminal))
+      :op2 (c3-11 / possible-01
+                  :ARG1 (c3-4 / make-02
+                              :ARG0 (c3-2 / refugee)
+                              :ARG1 (c3-13 / outcome
+                                           :ARG1-of (c3-7 / good-02)
+                                           :example (c3-16 / and
+                                                           :op1 (c3-8 / person
+                                                                      :name (c3-12 / name
+                                                                                   :op1 "Steve"
+                                                                                   :op2 "Jobs"))
+                                                           :op2 (c3-1 / person
+                                                                      :name (c3-5 / name
+                                                                                  :op1 "amp"))
+                                                           :op3 (c3-3 / job)))))
+      :op3 (c3-15 / flee-05
+                  :ARG0 c3-8
+                  :ARG1 (c3-9 / person
+                              :name (c3-14 / name
+                                           :op1 "Assad"))))
+
+# ::snt Steve Jobs, refugee, Happy moderate children waiving flags symbolizing what conflict? There's at least two ...
+# ::tokens ["Steve", "Jobs", ",", "refugee", ",", "Happy", "moderate", "children", "waiving", "flags", "symbolizing", "what", "conflict", "?", "There", "'s", "at", "least", "two", "..."]
+# ::lemmas ["Steve", "Jobs", ",", "refugee", ",", "happy", "moderate", "child", "waive", "flag", "symbolize", "what", "conflict", "?", "there", "be", "at", "least", "two", "..."]
+(c4-3 / multi-sentence
+      :snt1 (c4-0 / and
+                  :op1 (c4-7 / person
+                             :name (c4-8 / name
+                                         :op1 "Steve"
+                                         :op2 "Jobs"))
+                  :op2 (c4-1 / refugee)
+                  :op3 (c4-12 / child
+                              :ARG1-of (c4-11 / happy-01)
+                              :ARG1-of (c4-2 / moderate-03)
+                              :ARG0-of (c4-9 / waive-01
+                                             :ARG1 (c4-10 / flag
+                                                          :ARG0-of (c4-6 / symbolize-01
+                                                                         :ARG1 (c4-4 / conflict-01
+                                                                                     :snt2-of c4-0)))))
+                  :quant (c4-5 / at-least
+                               :op1 2)))
+
+# ::snt you keep putting this title that is very unfair to the Jobs. His genitor was Syrian not his father.
+# ::tokens ["you", "keep", "putting", "this", "title", "that", "is", "very", "unfair", "to", "the", "Jobs", ".", "His", "genitor", "was", "Syrian", "not", "his", "father", "."]
+# ::lemmas ["you", "keep", "put", "this", "title", "that", "be", "very", "unfair", "to", "the", "Jobs", ".", "his", "genitor", "be", "Syrian", "not", "his", "father", "."]
+(c5-18 / multi-sentence
+       :snt1 (c5-7 / keep-02
+                   :ARG0 (c5-17 / you)
+                   :ARG1 (c5-14 / put-01
+                                :ARG0 c5-17
+                                :ARG1 (c5-0 / title
+                                            :mod (c5-2 / this)
+                                            :ARG1-of (c5-6 / fair-01
+                                                           :ARG2 (c5-1 / job)
+                                                           :degree (c5-5 / very)
+                                                           :polarity -))))
+       :snt2 (c5-10 / contrast-01
+                    :ARG1 (c5-11 / person
+                                 :ARG0-of (c5-9 / have-rel-role-91
+                                                :ARG1 (c5-13 / he)
+                                                :ARG2 (c5-8 / genitor))
+                                 :mod (c5-12 / country
+                                             :name (c5-4 / name
+                                                         :op1 "Syria")))
+                    :ARG2 (c5-15 / person
+                                 :ARG0-of (c5-3 / have-rel-role-91
+                                                :ARG1 c5-13
+                                                :ARG2 (c5-16 / father)
+                                                :polarity -))))
+
+# ::snt somebody should try to explain this to Donald Trump.
+# ::tokens ["somebody", "should", "try", "to", "explain", "this", "to", "Donald", "Trump", "."]
+# ::lemmas ["somebody", "should", "try", "to", "explain", "this", "to", "Donald", "Trump", "."]
+(c6-1 / recommend-01
+      :ARG1 (c6-0 / try-01
+                  :ARG0 (c6-4 / somebody)
+                  :ARG1 (c6-2 / explain-01
+                              :ARG0 c6-4
+                              :ARG1 (c6-3 / this)
+                              :ARG2 (c6-5 / person
+                                          :name (c6-6 / name
+                                                      :op1 "Donald"
+                                                      :op2 "Trump"))))
+      :ARG2 c6-4)

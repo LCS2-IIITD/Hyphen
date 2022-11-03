@@ -1,0 +1,48 @@
+# ::snt *facepalm*
+# ::tokens ["*", "facepalm", "*"]
+# ::lemmas ["*", "facepalm", "*"]
+(c1-0 / facepalm)
+
+# ::snt I really hate this type of shit.. its like religious faux wit that makes you want to grind a golf pencil through your arm every time you read something like it
+# ::tokens ["I", "really", "hate", "this", "type", "of", "shit", "..", "its", "like", "religious", "faux", "wit", "that", "makes", "you", "want", "to", "grind", "a", "golf", "pencil", "through", "your", "arm", "every", "time", "you", "read", "something", "like", "it"]
+# ::lemmas ["i", "really", "hate", "this", "type", "of", "shit", "..", "its", "like", "religious", "faux", "wit", "that", "make", "you", "want", "to", "grind", "a", "golf", "pencil", "through", "your", "arm", "every", "time", "you", "read", "something", "like", "it"]
+(c2-9 / multi-sentence
+      :snt1 (c2-19 / hate-01
+                   :ARG0 (c2-0 / i)
+                   :ARG1 (c2-11 / shit
+                                :mod (c2-5 / type
+                                           :mod (c2-2 / this)))
+                   :degree (c2-6 / really))
+      :snt2 (c2-3 / resemble-01
+                  :ARG1 (c2-13 / it)
+                  :ARG2 (c2-1 / wit
+                              :mod (c2-17 / faux)
+                              :mod (c2-8 / religion)
+                              :ARG0-of (c2-18 / make-02
+                                              :ARG1 (c2-10 / want-01
+                                                           :ARG0 (c2-15 / you
+                                                                        :part (c2-16 / arm))
+                                                           :ARG1 (c2-7 / grind-01
+                                                                       :ARG0 c2-15
+                                                                       :ARG1 (c2-21 / pencil
+                                                                                    :mod (c2-14 / golf))
+                                                                       :path c2-16
+                                                                       :frequency (c2-4 / rate-entity-91
+                                                                                        :ARG4 (c2-12 / read-01
+                                                                                                     :ARG0 c2-15
+                                                                                                     :ARG1 (c2-20 / something
+                                                                                                                  :ARG1-of c2-3
+                                                                                                                  :ARG2 c2-13)))))))))
+
+# ::snt Stop carrying pencils, dude.
+# ::tokens ["Stop", "carrying", "pencils", ",", "dude", "."]
+# ::lemmas ["stop", "carry", "pencil", ",", "dude", "."]
+(c3-0 / say-01
+      :ARG0 (c3-5 / i)
+      :ARG1 (c3-4 / stop-01
+                  :ARG0 (c3-1 / dude)
+                  :ARG1 (c3-2 / carry-01
+                              :ARG0 c3-1
+                              :ARG1 (c3-3 / pencil))
+                  :mode imperative)
+      :ARG2 c3-1)

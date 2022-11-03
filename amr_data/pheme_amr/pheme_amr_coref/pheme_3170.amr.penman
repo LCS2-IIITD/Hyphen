@@ -1,0 +1,79 @@
+# ::snt thanks Fox News.
+# ::tokens ["thanks", "Fox", "News", "."]
+# ::lemmas ["thank", "Fox", "News", "."]
+(c1-1 / thank-01
+      :ARG1 (c1-2 / broadcast-program
+                  :name (c1-0 / name
+                              :op1 "Fox"
+                              :op2 "News")))
+
+# ::snt No.
+# ::tokens ["No", "."]
+# ::lemmas ["no", "."]
+(c2-0 / no)
+
+# ::snt Cops are usually too lazy/busy to actually confont for jaywalking unless something suspicious happens after contact.
+# ::tokens ["Cops", "are", "usually", "too", "lazy", "/", "busy", "to", "actually", "confont", "for", "jaywalking", "unless", "something", "suspicious", "happens", "after", "contact", "."]
+# ::lemmas ["cop", "be", "usually", "too", "lazy", "/", "busy", "to", "actually", "confont", "for", "jaywalk", "unless", "something", "suspicious", "happen", "after", "contact", "."]
+(c3-0 / have-degree-91
+      :ARG1 (c3-9 / cop)
+      :ARG2 (c3-11 / slash
+                   :op1 (c3-2 / lazy)
+                   :op2 (c3-5 / busy))
+      :ARG3 (c3-12 / too)
+      :ARG6 (c3-8 / confont-01
+                  :ARG0 c3-9
+                  :ARG1 (c3-1 / jog-01
+                              :ARG0 c3-9)
+                  :ARG1-of (c3-13 / actual-02)
+                  :condition (c3-6 / something
+                                   :ARG1-of (c3-3 / suspicious-03)
+                                   :time (c3-7 / after
+                                               :op1 (c3-10 / contact-01
+                                                           :ARG0 c3-9))))
+      :mod (c3-4 / usual))
+
+# ::snt perfect
+# ::tokens ["perfect"]
+# ::lemmas ["perfect"]
+(c4-0 / perfect-02)
+
+# ::snt This "aw shucks" routine out of the PD is such crap. They know exactly what they're doing.
+# ::tokens ["This", "\"", "aw", "shucks", "\"", "routine", "out", "of", "the", "PD", "is", "such", "crap", ".", "They", "know", "exactly", "what", "they", "'re", "doing", "."]
+# ::lemmas ["this", "\"", "aw", "shuck", "\"", "routine", "out", "of", "the", "PD", "be", "such", "crap", ".", "they", "know", "exactly", "what", "they", "be", "do", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-7 / crap-01
+                  :ARG1 (c5-6 / routine
+                              :mod (c5-12 / this)
+                              :mod (c5-11 / shit
+                                          :mod (c5-13 / aw
+                                                      :mode expressive)
+                                          :mode expressive)
+                              :source (c5-8 / government-organization
+                                            :name (c5-4 / name
+                                                        :op1 "PD")))
+                  :degree (c5-1 / such))
+      :snt2 (c5-3 / know-01
+                  :ARG0 (c5-10 / they)
+                  :ARG1 (c5-5 / thing
+                              :ARG1-of (c5-9 / do-02
+                                             :ARG0 c5-10)
+                              :mod (c5-2 / exact))))
+
+# ::snt Could still have been the reason the stop was prolonged past initial contact, though. Still a gap in the story.
+# ::tokens ["Could", "still", "have", "been", "the", "reason", "the", "stop", "was", "prolonged", "past", "initial", "contact", ",", "though", ".", "Still", "a", "gap", "in", "the", "story", "."]
+# ::lemmas ["could", "still", "have", "be", "the", "reason", "the", "stop", "be", "prolong", "past", "initial", "contact", ",", "though", ".", "still", "a", "gap", "in", "the", "story", "."]
+(c6-2 / multi-sentence
+      :snt1 (c6-7 / possible-01
+                  :ARG1 (c6-12 / thing
+                               :ARG0-of (c6-9 / cause-01
+                                              :ARG1 (c6-13 / prolong-01
+                                                           :ARG1 (c6-11 / stop-01)
+                                                           :time (c6-3 / past
+                                                                       :op1 (c6-8 / contact-01
+                                                                                  :time (c6-6 / initial))))))
+                  :mod (c6-5 / still)
+                  :ARG1-of (c6-0 / have-concession-91))
+      :snt2 (c6-10 / gap
+                   :location (c6-1 / story)
+                   :mod (c6-4 / still)))

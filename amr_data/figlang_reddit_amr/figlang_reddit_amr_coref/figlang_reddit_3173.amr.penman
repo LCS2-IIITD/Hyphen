@@ -1,0 +1,58 @@
+# ::snt New Hearthstone Hero: Alleria Windrunner
+# ::tokens ["New", "Hearthstone", "Hero", ":", "Alleria", "Windrunner"]
+# ::lemmas ["New", "Hearthstone", "Hero", ":", "Alleria", "Windrunner"]
+(c1-0 / game
+      :name (c1-1 / name
+                  :op1 "New"
+                  :op2 "H Hearthstone"
+                  :op3 "Hero:"
+                  :op4 "Alleria"
+                  :op5 "Windrunner"))
+
+# ::snt Blizzard seems to *really* like the phrase "one shot, one kill".
+# ::tokens ["Blizzard", "seems", "to", "*", "really", "*", "like", "the", "phrase", "\"", "one", "shot", ",", "one", "kill", "\"", "."]
+# ::lemmas ["Blizzard", "seem", "to", "*", "really", "*", "like", "the", "phrase", "\"", "one", "shot", ",", "one", "kill", "\"", "."]
+(c2-0 / seem-01
+      :ARG1 (c2-5 / like-01
+                  :ARG0 (c2-7 / person
+                              :name (c2-8 / name
+                                          :op1 "Blizzard"))
+                  :ARG1 (c2-3 / phrase-01
+                              :ARG1 (c2-1 / and
+                                          :op1 (c2-6 / shoot-02
+                                                     :quant 1)
+                                          :op2 (c2-2 / kill-01
+                                                     :quant 1)))
+                  :degree (c2-4 / really)))
+
+# ::snt Elven Archer, Alleria Windrunner and Widowmaker from Overwatch off the top of my head.
+# ::tokens ["Elven", "Archer", ",", "Alleria", "Windrunner", "and", "Widowmaker", "from", "Overwatch", "off", "the", "top", "of", "my", "head", "."]
+# ::lemmas ["Elven", "Archer", ",", "Alleria", "Windrunner", "and", "Widowmaker", "from", "Overwatch", "off", "the", "top", "of", "my", "head", "."]
+(c3-0 / and
+      :op1 (c3-10 / person
+                  :name (c3-11 / name
+                               :op1 "Elven"
+                               :op2 "Archer"))
+      :op2 (c3-6 / person
+                 :name (c3-8 / name
+                             :op1 "Alleria"
+                             :op2 "Windrunner"))
+      :op3 (c3-3 / person
+                 :name (c3-5 / name
+                             :op1 "Widowmaker"))
+      :source (c3-9 / game
+                    :name (c3-1 / name
+                                :op1 "Overwatch"))
+      :source (c3-7 / top
+                    :part-of (c3-4 / head
+                                   :part-of (c3-2 / i))))
+
+# ::snt Also Nova in Heroes.
+# ::tokens ["Also", "Nova", "in", "Heroes", "."]
+# ::lemmas ["also", "Nova", "in", "Heroes", "."]
+(c4-0 / broadcast-program
+      :name (c4-2 / name
+                  :op1 "Nova"
+                  :op2 "in"
+                  :op3 "Heroes")
+      :mod (c4-1 / also))

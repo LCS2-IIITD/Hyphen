@@ -1,0 +1,152 @@
+# ::snt : . The two terrorists are dead. The hostage is alive. HELL YA
+# ::tokens [":", ".", "The", "two", "terrorists", "are", "dead", ".", "The", "hostage", "is", "alive", ".", "HELL", "YA"]
+# ::lemmas [":", ".", "the", "two", "terrorist", "be", "dead", ".", "the", "hostage", "be", "alive", ".", "HELL", "YA"]
+(c1-2 / multi-sentence
+      :snt1 (c1-3 / die-01
+                  :ARG1 (c1-4 / terrorist
+                              :quant 2))
+      :snt2 (c1-1 / live-01
+                  :ARG0 (c1-0 / hostage))
+      :snt3 (c1-5 / hell
+                  :mode expressive))
+
+# ::snt : . The two terrorists are dead. The hostage is alive. Good. That's exactly what every terrorist needs to be.
+# ::tokens [":", ".", "The", "two", "terrorists", "are", "dead", ".", "The", "hostage", "is", "alive", ".", "Good", ".", "That", "'s", "exactly", "what", "every", "terrorist", "needs", "to", "be", "."]
+# ::lemmas [":", ".", "the", "two", "terrorist", "be", "dead", ".", "the", "hostage", "be", "alive", ".", "good", ".", "that", "be", "exactly", "what", "every", "terrorist", "need", "to", "be", "."]
+(c2-2 / multi-sentence
+      :snt1 (c2-7 / die-01
+                  :ARG1 (c2-10 / terrorist
+                               :quant 2))
+      :snt2 (c2-1 / live-01
+                  :ARG0 (c2-0 / hostage))
+      :snt3 (c2-8 / good-02)
+      :snt4 (c2-5 / need-01
+                  :ARG0 (c2-9 / terrorist
+                              :mod (c2-4 / every))
+                  :ARG1 (c2-6 / that)
+                  :mod (c2-3 / exact)))
+
+# ::snt love you.
+# ::tokens ["love", "you", "."]
+# ::lemmas ["love", "you", "."]
+(c3-1 / love-01
+      :ARG1 (c3-0 / you))
+
+# ::snt I strongly condemn this barbaric attack against humankind as a Turkish Muslim
+# ::tokens ["I", "strongly", "condemn", "this", "barbaric", "attack", "against", "humankind", "as", "a", "Turkish", "Muslim"]
+# ::lemmas ["i", "strongly", "condemn", "this", "barbaric", "attack", "against", "humankind", "as", "a", "Turkish", "Muslim"]
+(c4-6 / condemn-01
+      :ARG0 (c4-2 / i
+                  :mod (c4-5 / religious-group
+                             :name (c4-3 / name
+                                         :op1 "Muslim")
+                             :mod (c4-7 / country
+                                        :name (c4-4 / name
+                                                    :op1 "Turkey"))))
+      :ARG1 (c4-10 / attack-01
+                   :ARG1 (c4-0 / humankind)
+                   :mod (c4-1 / barbaric)
+                   :mod (c4-9 / this))
+      :ARG1-of (c4-8 / strong-02)
+      :manner c4-5)
+
+# ::snt Yay! Vive la !
+# ::tokens ["Yay", "!", "Vive", "la", "!"]
+# ::lemmas ["Yay", "!", "Vive", "la", "!"]
+(c5-1 / multi-sentence
+      :snt1 (c5-0 / yay)
+      :snt2 (c5-2 / vive-la
+                  :mode expressive))
+
+# ::snt How nice it would have been to aprehend the terrorists and squeeze vital information out of them.
+# ::tokens ["How", "nice", "it", "would", "have", "been", "to", "aprehend", "the", "terrorists", "and", "squeeze", "vital", "information", "out", "of", "them", "."]
+# ::lemmas ["how", "nice", "it", "would", "have", "be", "to", "aprehend", "the", "terrorist", "and", "squeeze", "vital", "information", "out", "of", "they", "."]
+(c6-3 / nice-01
+      :ARG1 (c6-7 / and
+                  :op1 (c6-1 / apprehend-01
+                             :ARG1 (c6-6 / terrorist))
+                  :op2 (c6-5 / squeeze-01
+                             :ARG1 (c6-2 / information
+                                         :mod (c6-4 / vital))
+                             :ARG2 c6-6))
+      :degree (c6-0 / so))
+
+# ::snt Great work by GIGN! I hope the injured officer recovers and the French people have a return to normalcy.
+# ::tokens ["Great", "work", "by", "GIGN", "!", "I", "hope", "the", "injured", "officer", "recovers", "and", "the", "French", "people", "have", "a", "return", "to", "normalcy", "."]
+# ::lemmas ["great", "work", "by", "GIGN", "!", "i", "hope", "the", "injure", "officer", "recover", "and", "the", "French", "people", "have", "a", "return", "to", "normalcy", "."]
+(c7-2 / multi-sentence
+      :snt1 (c7-1 / work-01
+                  :ARG0 (c7-8 / person
+                              :name (c7-6 / name
+                                          :op1 "GIGN"))
+                  :mod (c7-11 / great))
+      :snt2 (c7-0 / hope-01
+                  :ARG0 (c7-4 / i)
+                  :ARG1 (c7-15 / and
+                               :op1 (c7-9 / recover-01
+                                          :ARG1 (c7-3 / officer
+                                                      :ARG1-of (c7-12 / injure-01)))
+                               :op2 (c7-5 / return-01
+                                          :ARG1 (c7-14 / person
+                                                       :mod (c7-10 / country
+                                                                   :name (c7-7 / name
+                                                                               :op1 "France")))
+                                          :ARG4 (c7-13 / normalcy)))))
+
+# ::snt The French Ambassador to the US, official source: : . The two terrorists are dead. The hostage is alive.
+# ::tokens ["The", "French", "Ambassador", "to", "the", "US", ",", "official", "source", ":", ":", ".", "The", "two", "terrorists", "are", "dead", ".", "The", "hostage", "is", "alive", "."]
+# ::lemmas ["the", "French", "Ambassador", "to", "the", "US", ",", "official", "source", ":", ":", ".", "the", "two", "terrorist", "be", "dead", ".", "the", "hostage", "be", "alive", "."]
+(c8-2 / multi-sentence
+      :snt1 (c8-7 / person
+                  :ARG0-of (c8-0 / have-org-role-91
+                                 :ARG1 (c8-9 / country
+                                             :name (c8-5 / name
+                                                         :op1 "France"))
+                                 :ARG2 (c8-12 / ambassador
+                                              :location (c8-8 / country
+                                                              :name (c8-6 / name
+                                                                          :op1 "US"))))
+                  :mod (c8-4 / official))
+      :snt2 (c8-10 / die-01
+                   :ARG1 (c8-11 / terrorist
+                                :quant 2))
+      :snt3 (c8-1 / live-01
+                  :ARG0 (c8-3 / hostage)))
+
+# ::snt Glory to the GIGN.
+# ::tokens ["Glory", "to", "the", "GIGN", "."]
+# ::lemmas ["glory", "to", "the", "GIGN", "."]
+(c9-2 / glory
+      :beneficiary (c9-1 / person
+                         :name (c9-0 / name
+                                     :op1 "GIGN")))
+
+# ::snt If you are for free speech then this is for you support buy it now
+# ::tokens ["If", "you", "are", "for", "free", "speech", "then", "this", "is", "for", "you", "support", "buy", "it", "now"]
+# ::lemmas ["if", "you", "be", "for", "free", "speech", "then", "this", "be", "for", "you", "support", "buy", "it", "now"]
+(c10-5 / support-01
+       :ARG0 (c10-0 / you)
+       :ARG1 (c10-2 / buy-01
+                    :ARG0 c10-0
+                    :ARG1 (c10-6 / this)
+                    :time (c10-4 / now)
+                    :mode imperative)
+       :condition c10-5
+       :ARG0 c10-0
+       :ARG1 (c10-3 / speak-01
+                    :ARG3-of (c10-1 / free-04)))
+
+# ::snt If you are for free speech then this is for you support buy it now
+# ::tokens ["If", "you", "are", "for", "free", "speech", "then", "this", "is", "for", "you", "support", "buy", "it", "now"]
+# ::lemmas ["if", "you", "be", "for", "free", "speech", "then", "this", "be", "for", "you", "support", "buy", "it", "now"]
+(c11-5 / support-01
+       :ARG0 (c11-0 / you)
+       :ARG1 (c11-2 / buy-01
+                    :ARG0 c11-0
+                    :ARG1 (c11-6 / this)
+                    :time (c11-4 / now)
+                    :mode imperative)
+       :condition c11-5
+       :ARG0 c11-0
+       :ARG1 (c11-3 / speak-01
+                    :ARG3-of (c11-1 / free-04)))

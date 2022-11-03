@@ -1,0 +1,29 @@
+# ::subgraphs [["c1-1", "c1-0", "c1-2"], ["c2-0", "c2-1", "c2-2"], ["c3-1", "c3-0", "c3-2"], ["c4-3", "c4-1", "c4-2", "c4-0"], ["c5-0", "c5-1", "c5-2", "c5-3"]]
+(d / dummy
+   :COMMENT (c1-1 / live
+                  :ARG0 (c1-0 / you
+                              :SAME c3-0
+                              :SAME c2-1
+                              :COREF c3-0
+                              :COREF c2-1)
+                  :location (c1-2 / amr
+                                  :SAME c3-2
+                                  :SAME c2-2))
+   :COMMENT (c2-0 / have-manner
+                  :ARG1 (c2-1 / you)
+                  :ARG2 (c2-2 / amr))
+   :COMMENT (c3-1 / name
+                  :ARG1 (c3-0 / you)
+                  :ARG2 (c3-2 / amr)
+                  :SAME c4-0)
+   :COMMENT (c4-3 / say
+                  :ARG1 (c4-1 / hello)
+                  :ARG2 (c4-2 / person
+                              :name (c4-0 / name
+                                          :op1 "Mister"
+                                          :op2 "DiCaprio")))
+   :COMMENT (c5-0 / contrast
+                  :ARG2 (c5-1 / bad
+                              :ARG1 (c5-2 / it)
+                              :ARG1-of (c5-3 / request-confirmation)
+                              :polarity -)))

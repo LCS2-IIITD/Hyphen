@@ -1,0 +1,52 @@
+# ::snt Hooray !!!!!!
+# ::tokens ["Hooray", "!", "!", "!", "!", "!", "!"]
+# ::lemmas ["Hooray", "!", "!", "!", "!", "!", "!"]
+(c1-0 / hooray
+      :mode expressive)
+
+# ::snt Well, w/ &amp; promoting the Slow Streets event in the Richmond this Saturday. If youre up, listen in!
+# ::tokens ["Well", ",", "w/", "&", "amp", ";", "promoting", "the", "Slow", "Streets", "event", "in", "the", "Richmond", "this", "Saturday", ".", "If", "you", "re", "up", ",", "listen", "in", "!"]
+# ::lemmas ["well", ",", "w/", "&", "amp", ";", "promote", "the", "Slow", "Streets", "event", "in", "the", "Richmond", "this", "Saturday", ".", "if", "you", "re", "up", ",", "listen", "in", "!"]
+(c2-9 / multi-sentence
+      :snt1 (c2-8 / promote-02
+                  :ARG1 (c2-12 / event
+                               :name (c2-10 / name
+                                            :op1 " Slow"
+                                            :op2 "Street"))
+                  :location (c2-2 / city-district
+                                  :name (c2-6 / name
+                                              :op1 "Richmond"))
+                  :time (c2-0 / date-entity
+                              :weekday (c2-1 / saturday)
+                              :mod (c2-5 / this))
+                  :mod (c2-3 / well))
+      :snt2 (c2-7 / listen-01
+                  :ARG0 (c2-11 / you)
+                  :condition (c2-4 / up-03
+                                   :ARG1 c2-11)
+                  :mode imperative))
+
+# ::snt You!?
+# ::tokens ["You", "!", "?"]
+# ::lemmas ["you", "!", "?"]
+(c3-1 / you
+      :polarity (c3-0 / amr-unknown))
+
+# ::snt And guess whos going to be on tomorrow morning?
+# ::tokens ["And", "guess", "who", "s", "going", "to", "be", "on", "tomorrow", "morning", "?"]
+# ::lemmas ["and", "guess", "who", "s", "go", "to", "be", "on", "tomorrow", "morning", "?"]
+(c4-1 / and
+      :op2 (c4-3 / guess-01
+                 :ARG0 (c4-7 / you)
+                 :ARG1 (c4-4 / person
+                             :ARG1-of (c4-6 / be-temporally-at-91
+                                            :ARG2 (c4-0 / date-entity
+                                                        :dayperiod (c4-5 / morning)
+                                                        :mod (c4-2 / tomorrow))))
+                 :mode imperative))
+
+# ::snt Congratulations!
+# ::tokens ["Congratulations", "!"]
+# ::lemmas ["congratulation", "!"]
+(c5-0 / congratulate-01
+      :mode expressive)

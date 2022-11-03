@@ -1,0 +1,41 @@
+# ::snt Compatible with spiderose''..
+# ::tokens ["Compatible", "with", "spiderose", "''", ".."]
+# ::lemmas ["compatible", "with", "spiderose", "''", ".."]
+(c1-0 / compatible
+      :prep-with (c1-2 / product
+                       :name (c1-1 / name
+                                   :op1 "Spiderose")))
+
+# ::snt Prune o
+# ::tokens ["Prune", "o"]
+# ::lemmas ["prune", "o"]
+(c2-1 / person
+      :name (c2-0 / name
+                  :op1 "Prune"))
+
+# ::snt Ilov'' man''..
+# ::tokens ["Ilov", "''", "man", "''", ".."]
+# ::lemmas ["Ilov", "''", "man", "''", ".."]
+(c4-2 / say-01
+      :ARG1 (c4-0 / amr-unintelligible
+                  :value "Ilov")
+      :ARG2 (c4-1 / man))
+
+# ::snt She looks beautiful
+# ::tokens ["She", "looks", "beautiful"]
+# ::lemmas ["she", "look", "beautiful"]
+(c5-1 / look-02
+      :ARG0 (c5-2 / she)
+      :ARG1 (c5-0 / beautiful-02
+                  :ARG1 c5-2))
+
+# ::snt She looks so Beautiful &amp; Glowing
+# ::tokens ["She", "looks", "so", "Beautiful", "&", "amp", ";", "Glowing"]
+# ::lemmas ["she", "look", "so", "Beautiful", "&", "amp", ";", "glow"]
+(c6-4 / and
+      :op1 (c6-3 / look-02
+                 :ARG0 (c6-2 / she)
+                 :ARG1 (c6-1 / beautiful-02
+                             :degree (c6-0 / so)))
+      :op2 (c6-5 / glitter-01
+                 :ARG1 c6-2))

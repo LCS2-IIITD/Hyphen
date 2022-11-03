@@ -1,0 +1,64 @@
+# ::snt Sorry for the loss of your comrade
+# ::tokens ["Sorry", "for", "the", "loss", "of", "your", "comrade"]
+# ::lemmas ["sorry", "for", "the", "loss", "of", "your", "comrade"]
+(c1-0 / sorry-01
+      :ARG1 (c1-1 / you)
+      :ARG2 (c1-2 / lose-02
+                  :ARG0 c1-1
+                  :ARG1 (c1-3 / comrade
+                              :poss c1-1)))
+
+# ::snt I live in Hamilton, but was born in Ottawa. Two of my cities have been attacked today. Praying for everyone.
+# ::tokens ["I", "live", "in", "Hamilton", ",", "but", "was", "born", "in", "Ottawa", ".", "Two", "of", "my", "cities", "have", "been", "attacked", "today", ".", "Praying", "for", "everyone", "."]
+# ::lemmas ["i", "live", "in", "Hamilton", ",", "but", "be", "bear", "in", "Ottawa", ".", "Two", "of", "my", "city", "have", "be", "attack", "today", ".", "pray", "for", "everyone", "."]
+(c2-1 / multi-sentence
+      :snt1 (c2-11 / contrast-01
+                   :ARG1 (c2-0 / live-01
+                               :ARG0 (c2-6 / i)
+                               :location (c2-10 / city
+                                                :name (c2-7 / name
+                                                            :op1 "Hamilton")))
+                   :ARG2 (c2-4 / bear-02
+                               :ARG1 c2-6
+                               :location (c2-13 / city
+                                                :name (c2-8 / name
+                                                            :op1 "Ottawa"))))
+      :snt2 (c2-15 / attack-01
+                   :ARG1 (c2-16 / city
+                                :ARG1-of (c2-12 / include-91
+                                                :ARG2 (c2-2 / city
+                                                            :poss c2-6))
+                                :quant 2)
+                   :time (c2-14 / today))
+      :snt3 (c2-9 / pray-01
+                  :ARG0 (c2-3 / i)
+                  :ARG2 (c2-5 / everyone)))
+
+# ::snt So sorry for the loss of your comrade. Sending prayers to his family and friends, may he rest in peace.
+# ::tokens ["So", "sorry", "for", "the", "loss", "of", "your", "comrade", ".", "Sending", "prayers", "to", "his", "family", "and", "friends", ",", "may", "he", "rest", "in", "peace", "."]
+# ::lemmas ["so", "sorry", "for", "the", "loss", "of", "your", "comrade", ".", "send", "prayer", "to", "his", "family", "and", "friend", ",", "may", "he", "rest", "in", "peace", "."]
+(c3-0 / multi-sentence
+      :snt1 (c3-2 / sorry-01
+                  :ARG1 (c3-15 / you)
+                  :ARG2 (c3-7 / lose-02
+                              :ARG0 c3-15
+                              :ARG1 (c3-18 / comrade
+                                           :poss c3-15))
+                  :degree (c3-10 / so))
+      :snt2 (c3-16 / send-01
+                   :ARG0 (c3-14 / i)
+                   :ARG1 (c3-1 / pray-01)
+                   :ARG2 (c3-5 / and
+                               :op1 (c3-8 / family
+                                          :ARG1-of (c3-6 / have-org-role-91
+                                                         :ARG0 c3-18
+                                                         :ARG2 (c3-11 / member)))
+                               :op2 (c3-3 / person
+                                          :ARG0-of (c3-4 / have-rel-role-91
+                                                         :ARG1 c3-18
+                                                         :ARG2 (c3-17 / friend))))
+                   :ARG1-of (c3-13 / wish-01
+                                   :ARG0 c3-14
+                                   :ARG2 (c3-12 / rest-01
+                                                :ARG1 c3-18
+                                                :manner (c3-9 / peace)))))

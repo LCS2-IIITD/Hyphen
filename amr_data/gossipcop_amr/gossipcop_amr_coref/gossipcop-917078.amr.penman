@@ -1,0 +1,998 @@
+# ::snt Berita lama, cuma baru tahu
+# ::tokens ["Berita", "lama", ",", "cuma", "baru", "tahu"]
+# ::lemmas ["Berita", "lama", ",", "cuma", "baru", "tahu"]
+(c1-4 / and
+      :op1 (c1-3 / person
+                 :name (c1-0 / name
+                             :op1 "Berita"
+                             :op2 "Lama"))
+      :op2 (c1-1 / person
+                 :name (c1-2 / name
+                             :op1 "Cuma"
+                             :op2 "Baru"
+                             :op3 "Tahu")))
+
+# ::snt Still a rumour, but seems legit.
+# ::tokens ["Still", "a", "rumour", ",", "but", "seems", "legit", "."]
+# ::lemmas ["still", "a", "rumour", ",", "but", "seem", "legit", "."]
+(c2-4 / contrast-01
+      :ARG1 (c2-2 / rumor-01
+                  :mod (c2-1 / still))
+      :ARG2 (c2-0 / seem-01
+                  :ARG1 (c2-3 / legitimate-02
+                              :ARG1 c2-2)))
+
+# ::snt Successful does not mean good. The Crazy Frog for example, that was number in the charts - mind boggling.50 shades of grey - pile of wank but made popular by unfulfilled women everywhere.Cest la vie.
+# ::tokens ["Successful", "does", "not", "mean", "good", ".", "The", "Crazy", "Frog", "for", "example", ",", "that", "was", "number", "in", "the", "charts", "-", "mind", "boggling.50", "shades", "of", "grey", "-", "pile", "of", "wank", "but", "made", "popular", "by", "unfulfilled", "women", "everywhere", ".", "Cest", "la", "vie", "."]
+# ::lemmas ["Successful", "do", "not", "mean", "good", ".", "The", "Crazy", "Frog", "for", "example", ",", "that", "be", "number", "in", "the", "chart", "-", "mind", "boggling.50", "shade", "of", "grey", "-", "pile", "of", "wank", "but", "make", "popular", "by", "unfulfilled", "woman", "everywhere", ".", "Cest", "la", "vie", "."]
+(c3-9 / multi-sentence
+      :snt1 (c3-4 / mean-01
+                  :ARG1 (c3-0 / succeed-01)
+                  :ARG2 (c3-5 / good-02)
+                  :polarity -)
+      :snt2 (c3-18 / exemplify-01
+                   :ARG0 (c3-17 / number
+                                :location (c3-13 / chart)
+                                :ARG1-of (c3-8 / boggle-01
+                                               :ARG0 (c3-14 / mind))
+                                :domain (c3-20 / work-of-art
+                                               :name (c3-11 / name
+                                                            :op1 "The"
+                                                            :op2 "Crazy"
+                                                            :op3 "Frog")
+                                               :mod (c3-19 / pile
+                                                           :consist-of (c3-1 / wank))
+                                               :ARG1-of (c3-7 / contrast-01
+                                                              :ARG2 (c3-12 / make-02
+                                                                           :ARG0 (c3-15 / woman
+                                                                                        :ARG1-of (c3-16 / fill-01
+                                                                                                        :polarity -)
+                                                                                        :location (c3-6 / everywhere))
+                                                                           :ARG1 (c3-10 / popular-02
+                                                                                        :ARG1 c3-20)))
+                                               :quant (c3-3 / shade
+                                                            :ARG1-of (c3-2 / gray-02)
+                                                            :quant 50)))))
+
+# ::snt *hypocritical Huh, so I'm a child now? Really?
+# ::tokens ["*", "hypocritical", "Huh", ",", "so", "I", "'m", "a", "child", "now", "?", "Really", "?"]
+# ::lemmas ["*", "hypocritical", "Huh", ",", "so", "i", "be", "a", "child", "now", "?", "really", "?"]
+(c7-0 / multi-sentence
+      :snt1 (c7-3 / hypocrisy
+                  :domain (c7-4 / person
+                                :ARG0-of (c7-6 / have-rel-role-91
+                                               :ARG1 (c7-7 / i)
+                                               :ARG2 (c7-5 / child))
+                                :time (c7-1 / now)))
+      :snt2 (c7-2 / real-04
+                  :polarity (c7-8 / amr-unknown)))
+
+# ::snt tweet back when you have grown up. i don't do well with hypocrite childish people
+# ::tokens ["tweet", "back", "when", "you", "have", "grown", "up", ".", "i", "do", "n't", "do", "well", "with", "hypocrite", "childish", "people"]
+# ::lemmas ["tweet", "back", "when", "you", "have", "grow", "up", ".", "i", "do", "not", "do", "well", "with", "hypocrite", "childish", "people"]
+(c8-2 / multi-sentence
+      :snt1 (c8-8 / tweet-01
+                  :ARG0 (c8-1 / you)
+                  :direction (c8-0 / back)
+                  :time (c8-9 / grow-up-04
+                              :ARG1 c8-1)
+                  :mode imperative)
+      :snt2 (c8-10 / do-02
+                   :ARG0 (c8-7 / i)
+                   :ARG1 (c8-5 / well-09)
+                   :ARG2 (c8-4 / person
+                               :mod (c8-6 / childish)
+                               :mod (c8-3 / hypocrite))
+                   :polarity -))
+
+# ::snt I sorry that I dislike those who are still stuck in the s and think they'll be respected
+# ::tokens ["I", "sorry", "that", "I", "dislike", "those", "who", "are", "still", "stuck", "in", "the", "s", "and", "think", "they", "'ll", "be", "respected"]
+# ::lemmas ["i", "sorry", "that", "i", "dislike", "those", "who", "be", "still", "stuck", "in", "the", "s", "and", "think", "they", "'ll", "be", "respect"]
+(c9-1 / sorry-01
+      :ARG1 (c9-5 / i)
+      :ARG2 (c9-7 / dislike-01
+                  :ARG0 c9-5
+                  :ARG1 (c9-4 / person
+                              :ARG1-of (c9-0 / stick-01
+                                             :ARG2 (c9-8 / s)
+                                             :mod (c9-2 / still))
+                              :ARG0-of (c9-6 / think-01
+                                             :ARG1 (c9-3 / respect-01
+                                                         :ARG1 c9-4)))))
+
+# ::snt i tweeted my opinion and you are not mature enough to deal wih it. I'm not the immature one here.
+# ::tokens ["i", "tweeted", "my", "opinion", "and", "you", "are", "not", "mature", "enough", "to", "deal", "wih", "it", ".", "I", "'m", "not", "the", "immature", "one", "here", "."]
+# ::lemmas ["i", "tweet", "my", "opinion", "and", "you", "be", "not", "mature", "enough", "to", "deal", "wih", "it", ".", "i", "be", "not", "the", "immature", "one", "here", "."]
+(c10-2 / multi-sentence
+       :snt1 (c10-4 / and
+                    :op1 (c10-9 / tweet-01
+                                :ARG0 (c10-10 / i)
+                                :ARG1 (c10-11 / thing
+                                              :ARG1-of (c10-0 / opine-01
+                                                              :ARG0 c10-10)))
+                    :op2 (c10-6 / mature-02
+                                :ARG1 (c10-1 / you)
+                                :ARG2-of (c10-7 / have-degree-91
+                                                :ARG1 c10-1
+                                                :ARG3 (c10-5 / enough)
+                                                :ARG6 (c10-12 / deal-01
+                                                              :ARG0 c10-1
+                                                              :ARG2 c10-11))
+                                :polarity -))
+       :snt2 (c10-13 / mature-02
+                     :ARG1 (c10-3 / i
+                                  :domain c10-3)
+                     :location (c10-8 / here)
+                     :polarity -))
+
+# ::snt Eh, you turned it into this so you know, I don't care how childish it is
+# ::tokens ["Eh", ",", "you", "turned", "it", "into", "this", "so", "you", "know", ",", "I", "do", "n't", "care", "how", "childish", "it", "is"]
+# ::lemmas ["eh", ",", "you", "turn", "it", "into", "this", "so", "you", "know", ",", "i", "do", "not", "care", "how", "childish", "it", "be"]
+(c11-6 / turn-02
+       :ARG0 (c11-0 / you)
+       :ARG1 (c11-7 / it)
+       :ARG2 (c11-8 / this)
+       :purpose (c11-4 / know-01
+                       :ARG0 c11-0
+                       :ARG1 (c11-5 / care-01
+                                    :ARG0 (c11-2 / i)
+                                    :ARG1 (c11-9 / childish
+                                                 :domain c11-7
+                                                 :degree (c11-1 / so))
+                                    :polarity -))
+       :mod (c11-3 / eh
+                   :mode expressive))
+
+# ::snt i am not the one attacking people for not thinking the same way as me, which by the way is childish.
+# ::tokens ["i", "am", "not", "the", "one", "attacking", "people", "for", "not", "thinking", "the", "same", "way", "as", "me", ",", "which", "by", "the", "way", "is", "childish", "."]
+# ::lemmas ["i", "be", "not", "the", "one", "attack", "people", "for", "not", "think", "the", "same", "way", "as", "i", ",", "which", "by", "the", "way", "be", "childish", "."]
+(c12-2 / attack-01
+       :ARG0 (c12-6 / i)
+       :ARG1 (c12-3 / person)
+       :ARG2 (c12-7 / think-01
+                    :ARG0 c12-3
+                    :manner (c12-4 / way
+                                   :ARG1-of (c12-1 / same-01
+                                                   :ARG2 c12-6))
+                    :polarity -)
+       :mod (c12-5 / childish
+                   :mod (c12-0 / by-the-way))
+       :polarity -)
+
+# ::snt Yeah, not tolerant of bullshit. You on the other hand are worse.
+# ::tokens ["Yeah", ",", "not", "tolerant", "of", "bullshit", ".", "You", "on", "the", "other", "hand", "are", "worse", "."]
+# ::lemmas ["yeah", ",", "not", "tolerant", "of", "bullshit", ".", "you", "on", "the", "other", "hand", "be", "bad", "."]
+(c13-2 / multi-sentence
+       :snt1 (c13-7 / tolerate-01
+                    :ARG1 (c13-0 / bullshit-01)
+                    :mod (c13-1 / yeah
+                                :mode expressive)
+                    :polarity -)
+       :snt2 (c13-6 / contrast-01
+                    :ARG2 (c13-3 / have-degree-91
+                                 :ARG1 (c13-8 / you)
+                                 :ARG2 (c13-4 / bad-07
+                                              :ARG1 c13-8)
+                                 :ARG3 (c13-5 / more))))
+
+# ::snt you said it yourself, you are not a tolerant person. At least you admit it
+# ::tokens ["you", "said", "it", "yourself", ",", "you", "are", "not", "a", "tolerant", "person", ".", "At", "least", "you", "admit", "it"]
+# ::lemmas ["you", "say", "it", "yourself", ",", "you", "be", "not", "a", "tolerant", "person", ".", "at", "least", "you", "admit", "it"]
+(c14-2 / multi-sentence
+       :snt1 (c14-3 / say-01
+                    :ARG0 (c14-1 / you)
+                    :ARG1 (c14-6 / it)
+                    :ARG3 c14-1)
+       :snt2 (c14-5 / person
+                    :ARG0-of (c14-7 / tolerate-01)
+                    :domain (c14-8 / you)
+                    :polarity -)
+       :snt3 (c14-4 / admit-01
+                    :ARG0 (c14-0 / you)
+                    :ARG1 c14-6
+                    :mod (c14-9 / at-least)))
+
+# ::snt I do understand that people don't have the same opinions as I do, and depending on what those opinions are, I can decide if ill tolerate them or not. Not supporting homosexuality is a shitty thing to do, homophobe or not, so no I'm not tolerant of your bullshit.
+# ::tokens ["I", "do", "understand", "that", "people", "do", "n't", "have", "the", "same", "opinions", "as", "I", "do", ",", "and", "depending", "on", "what", "those", "opinions", "are", ",", "I", "can", "decide", "if", "ill", "tolerate", "them", "or", "not", ".", "Not", "supporting", "homosexuality", "is", "a", "shitty", "thing", "to", "do", ",", "homophobe", "or", "not", ",", "so", "no", "I", "'m", "not", "tolerant", "of", "your", "bullshit", "."]
+# ::lemmas ["i", "do", "understand", "that", "people", "do", "not", "have", "the", "same", "opinion", "as", "i", "do", ",", "and", "depend", "on", "what", "those", "opinion", "be", ",", "i", "can", "decide", "if", "ill", "tolerate", "they", "or", "not", ".", "not", "support", "homosexuality", "be", "a", "shitty", "thing", "to", "do", ",", "homophobe", "or", "not", ",", "so", "no", "i", "be", "not", "tolerant", "of", "your", "bullshit", "."]
+(c15-14 / multi-sentence
+        :snt1 (c15-9 / and
+                     :op1 (c15-20 / understand-01
+                                  :ARG0 (c15-24 / i)
+                                  :ARG1 (c15-2 / opine-01
+                                               :ARG0 (c15-22 / person)
+                                               :ARG1-of (c15-0 / same-01
+                                                               :ARG2 (c15-12 / opine-01
+                                                                             :ARG0 c15-24)
+                                                               :polarity -)))
+                     :op2 (c15-15 / possible-01
+                                  :ARG1 (c15-26 / decide-01
+                                                :ARG0 c15-24
+                                                :ARG1 (c15-8 / truth-value
+                                                             :polarity-of (c15-19 / tolerate-01
+                                                                                  :ARG0 c15-22
+                                                                                  :ARG1 c15-2
+                                                                                  :ARG1-of (c15-5 / ill-02))))
+                                  :ARG0-of (c15-18 / depend-01
+                                                   :ARG1 (c15-25 / thing
+                                                                 :domain c15-12))))
+        :snt2 (c15-1 / tolerate-01
+                     :ARG0 (c15-11 / i)
+                     :ARG1 (c15-7 / homosexuality)
+                     :mod c15-25
+                     :mod (c15-3 / shitty)
+                     :ARG1-of (c15-16 / do-02)
+                     :ARG1-of (c15-21 / regardless-91
+                                      :ARG2 (c15-27 / or
+                                                    :op1 (c15-23 / homophobe)
+                                                    :op2 (c15-6 / homophobe
+                                                                :polarity -)))
+                     :ARG0-of (c15-17 / cause-01
+                                      :ARG1 (c15-10 / tolerate-01
+                                                    :ARG0 c15-11
+                                                    :ARG1 (c15-13 / bullshit-01
+                                                                  :ARG0 (c15-4 / you))
+                                                    :polarity -))
+                     :polarity -))
+
+# ::snt there's no law that forces me to support homosexuality, i never said i hate gay people so no, i am not homophobic. You just can't understand not everyone thinks like you, that's really lame.
+# ::tokens ["there", "'s", "no", "law", "that", "forces", "me", "to", "support", "homosexuality", ",", "i", "never", "said", "i", "hate", "gay", "people", "so", "no", ",", "i", "am", "not", "homophobic", ".", "You", "just", "ca", "n't", "understand", "not", "everyone", "thinks", "like", "you", ",", "that", "'s", "really", "lame", "."]
+# ::lemmas ["there", "be", "no", "law", "that", "force", "i", "to", "support", "homosexuality", ",", "i", "never", "say", "i", "hate", "gay", "people", "so", "no", ",", "i", "be", "not", "homophobic", ".", "you", "just", "can", "not", "understand", "not", "everyone", "think", "like", "you", ",", "that", "be", "really", "lame", "."]
+(c16-14 / multi-sentence
+        :snt1 (c16-19 / force-01
+                      :ARG0 (c16-1 / law)
+                      :ARG1 (c16-24 / i)
+                      :ARG2 (c16-0 / support-01
+                                   :ARG0 c16-24
+                                   :ARG1 (c16-7 / homosexuality))
+                      :polarity -)
+        :snt2 (c16-3 / say-01
+                     :ARG0 (c16-5 / i)
+                     :ARG1 (c16-23 / hate-01
+                                   :ARG0 c16-5
+                                   :ARG1 (c16-22 / person
+                                                 :mod (c16-10 / gay-01)))
+                     :time (c16-21 / ever)
+                     :ARG0-of (c16-16 / cause-01
+                                      :ARG1 (c16-6 / homophobia
+                                                   :domain c16-5
+                                                   :polarity -))
+                     :polarity -)
+        :snt3 (c16-15 / possible-01
+                      :ARG1 (c16-18 / understand-01
+                                    :ARG0 (c16-4 / you)
+                                    :ARG1 (c16-9 / think-01
+                                                 :ARG0 (c16-11 / everyone
+                                                               :ARG1-of (c16-20 / resemble-01
+                                                                                :ARG2 (c16-12 / you)))
+                                                 :polarity -)
+                                    :mod (c16-8 / just))
+                      :snt4 (c16-13 / lame
+                                    :degree (c16-2 / really)
+                                    :domain (c16-17 / that))
+                      :polarity -))
+
+# ::snt "I don't support homosexuality" that's damaging on so many levels. How can you not support human happiness? Not supporting it makes you homophobic, since you don't support it. Its not rocket science.
+# ::tokens ["\"", "I", "do", "n't", "support", "homosexuality", "\"", "that", "'s", "damaging", "on", "so", "many", "levels", ".", "How", "can", "you", "not", "support", "human", "happiness", "?", "Not", "supporting", "it", "makes", "you", "homophobic", ",", "since", "you", "do", "n't", "support", "it", ".", "Its", "not", "rocket", "science", "."]
+# ::lemmas ["\"", "i", "do", "not", "support", "homosexuality", "\"", "that", "be", "damaging", "on", "so", "many", "level", ".", "how", "can", "you", "not", "support", "human", "happiness", "?", "not", "support", "it", "make", "you", "homophobic", ",", "since", "you", "do", "not", "support", "it", ".", "its", "not", "rocket", "science", "."]
+(c17-13 / multi-sentence
+        :snt1 (c17-0 / support-01
+                     :ARG0 (c17-21 / i)
+                     :ARG1 (c17-8 / homosexuality)
+                     :ARG0-of (c17-22 / damage-01
+                                      :prep-on (c17-2 / level
+                                                      :quant (c17-9 / many
+                                                                    :mod (c17-4 / so))))
+                     :polarity -)
+        :snt2 (c17-19 / possible-01
+                      :ARG1 (c17-3 / support-01
+                                   :ARG0 (c17-5 / you)
+                                   :ARG1 (c17-20 / happy-01
+                                                 :ARG1 (c17-7 / human))
+                                   :polarity -)
+                      :manner (c17-10 / amr-unknown))
+        :snt3 (c17-16 / make-02
+                      :ARG0 (c17-17 / support-01
+                                    :ARG0 (c17-11 / you)
+                                    :ARG1 (c17-6 / it)
+                                    :polarity -)
+                      :ARG1 (c17-15 / homophobia
+                                    :domain c17-11)
+                      :ARG1-of (c17-14 / cause-01
+                                       :ARG0 (c17-1 / support-01
+                                                    :ARG0 c17-11
+                                                    :ARG1 c17-6
+                                                    :polarity -)))
+        :snt4 (c17-12 / science
+                      :mod (c17-18 / rocket)
+                      :domain c17-6))
+
+# ::snt as i said i'm not homophobic,as i don't hate them. Either you have no right to call me intolerant when you yourself are making a fuss just because i don't support homosexuality.
+# ::tokens ["as", "i", "said", "i", "'m", "not", "homophobic", ",", "as", "i", "do", "n't", "hate", "them", ".", "Either", "you", "have", "no", "right", "to", "call", "me", "intolerant", "when", "you", "yourself", "are", "making", "a", "fuss", "just", "because", "i", "do", "n't", "support", "homosexuality", "."]
+# ::lemmas ["as", "i", "say", "i", "be", "not", "homophobic", ",", "as", "i", "do", "not", "hate", "they", ".", "either", "you", "have", "no", "right", "to", "call", "i", "intolerant", "when", "you", "yourself", "be", "make", "a", "fuss", "just", "because", "i", "do", "not", "support", "homosexuality", "."]
+(c18-3 / multi-sentence
+       :snt1 (c18-4 / say-01
+                    :ARG0 (c18-13 / i)
+                    :ARG1 (c18-8 / homophobia
+                                 :domain c18-13
+                                 :ARG1-of (c18-10 / cause-01
+                                                  :ARG0 (c18-11 / hate-01
+                                                                :ARG0 c18-13
+                                                                :ARG1 (c18-14 / they)
+                                                                :polarity -))
+                                 :polarity -))
+       :snt2 (c18-6 / right-05
+                    :ARG1 (c18-2 / you)
+                    :ARG2 (c18-16 / call-01
+                                  :ARG0 c18-2
+                                  :ARG1 (c18-5 / i)
+                                  :ARG2 (c18-15 / tolerate-01
+                                                :ARG0 c18-5
+                                                :polarity -)
+                                  :time (c18-0 / fuss-01
+                                               :ARG0 c18-2
+                                               :time (c18-1 / support-01
+                                                            :ARG0 c18-2
+                                                            :ARG1 (c18-7 / homosexuality)
+                                                            :mod (c18-12 / just)
+                                                            :polarity -)))
+                    :mod (c18-9 / either)
+                    :polarity -))
+
+# ::snt Ya seem pretty homophobic to me, you didn't even explain why you don't want Elsa to have a gf. But please do go on how I'm the intolerant one
+# ::tokens ["Ya", "seem", "pretty", "homophobic", "to", "me", ",", "you", "did", "n't", "even", "explain", "why", "you", "do", "n't", "want", "Elsa", "to", "have", "a", "gf", ".", "But", "please", "do", "go", "on", "how", "I", "'m", "the", "intolerant", "one"]
+# ::lemmas ["ya", "seem", "pretty", "homophobic", "to", "i", ",", "you", "do", "not", "even", "explain", "why", "you", "do", "not", "want", "Elsa", "to", "have", "a", "gf", ".", "but", "please", "do", "go", "on", "how", "i", "be", "the", "intolerant", "one"]
+(c19-13 / multi-sentence
+        :snt1 (c19-0 / seem-01
+                     :ARG1 (c19-7 / homophobia
+                                  :domain (c19-4 / you)
+                                  :degree (c19-19 / pretty))
+                     :ARG2 (c19-22 / i))
+        :snt2 (c19-18 / explain-01
+                      :ARG0 (c19-10 / you)
+                      :ARG1 (c19-8 / thing
+                                   :ARG0-of (c19-15 / cause-01
+                                                    :ARG1 (c19-20 / want-01
+                                                                  :ARG0 c19-10
+                                                                  :ARG1 (c19-21 / have-03
+                                                                                :ARG0 (c19-14 / person
+                                                                                              :name (c19-17 / name
+                                                                                                            :op1 "Elsa"))
+                                                                                :ARG1 (c19-2 / person
+                                                                                             :ARG0-of (c19-6 / have-rel-role-91
+                                                                                                             :ARG1 c19-14
+                                                                                                             :ARG2 (c19-9 / girlfriend))))
+                                                                  :polarity -))
+                                   :mod (c19-11 / even))
+                      :snt3 (c19-12 / contrast-01
+                                    :ARG2 (c19-1 / go-on-25
+                                                 :ARG0 (c19-3 / you)
+                                                 :ARG1 c19-8
+                                                 :manner-of (c19-16 / tolerate-01
+                                                                    :ARG0 (c19-5 / i)
+                                                                    :polarity -)
+                                                 :mode imperative
+                                                 :polite +))
+                      :polarity -))
+
+# ::snt i'm not a homophobic person, as i don't hate gay people. You don't know me to say such crap. You are the least indicated person to be talking about tolerance right now.
+# ::tokens ["i", "'m", "not", "a", "homophobic", "person", ",", "as", "i", "do", "n't", "hate", "gay", "people", ".", "You", "do", "n't", "know", "me", "to", "say", "such", "crap", ".", "You", "are", "the", "least", "indicated", "person", "to", "be", "talking", "about", "tolerance", "right", "now", "."]
+# ::lemmas ["i", "be", "not", "a", "homophobic", "person", ",", "as", "i", "do", "not", "hate", "gay", "people", ".", "you", "do", "not", "know", "i", "to", "say", "such", "crap", ".", "you", "be", "the", "least", "indicate", "person", "to", "be", "talk", "about", "tolerance", "right", "now", "."]
+(c20-14 / multi-sentence
+        :snt1 (c20-20 / person
+                      :mod (c20-7 / homophobia)
+                      :domain (c20-22 / i)
+                      :ARG1-of (c20-16 / cause-01
+                                       :ARG0 (c20-21 / hate-01
+                                                     :ARG0 c20-22
+                                                     :ARG1 (c20-15 / person
+                                                                   :ARG1-of (c20-10 / gay-01))
+                                                     :polarity -))
+                      :polarity -)
+        :snt2 (c20-8 / know-02
+                     :ARG0 (c20-4 / you)
+                     :ARG1 (c20-0 / say-01
+                                  :ARG0 (c20-5 / i)
+                                  :ARG1 (c20-13 / crap
+                                                :mod (c20-3 / such)))
+                     :polarity -)
+        :snt3 (c20-6 / have-degree-91
+                     :ARG1 (c20-11 / you)
+                     :ARG2 (c20-12 / indicate-01
+                                   :ARG1 (c20-9 / talk-01
+                                                :ARG0 c20-11
+                                                :ARG1 (c20-17 / tolerate-01))
+                                   :time (c20-18 / now
+                                                 :mod (c20-19 / right)))
+                     :ARG3 (c20-1 / least)
+                     :ARG5 (c20-2 / person
+                                  :ARG0-of c20-9
+                                  :ARG1 c20-17)))
+
+# ::snt Intolerant of homophobic people? Yeah im pretty intolerant, considering you're not answering the damn question and instead turning the convo on me.
+# ::tokens ["Intolerant", "of", "homophobic", "people", "?", "Yeah", "i", "m", "pretty", "intolerant", ",", "considering", "you", "'re", "not", "answering", "the", "damn", "question", "and", "instead", "turning", "the", "convo", "on", "me", "."]
+# ::lemmas ["intolerant", "of", "homophobic", "people", "?", "yeah", "i", "m", "pretty", "intolerant", ",", "consider", "you", "be", "not", "answer", "the", "damn", "question", "and", "instead", "turn", "the", "convo", "on", "i", "."]
+(c21-12 / multi-sentence
+        :snt1 (c21-8 / tolerate-01
+                     :polarity (c21-9 / amr-unknown)
+                     :ARG0 (c21-16 / person)
+                     :ARG1 (c21-13 / person
+                                   :mod (c21-5 / homophobia)))
+        :snt2 (c21-15 / tolerate-01
+                      :ARG0 (c21-17 / i)
+                      :degree (c21-2 / pretty)
+                      :ARG1-of (c21-14 / cause-01
+                                       :ARG0 (c21-11 / consider-01
+                                                     :ARG1 (c21-7 / and
+                                                                  :op1 (c21-6 / answer-01
+                                                                              :ARG0 (c21-3 / you)
+                                                                              :ARG1 (c21-18 / thing
+                                                                                            :ARG1-of (c21-10 / question-01)
+                                                                                            :mod (c21-19 / damn))
+                                                                              :polarity -)
+                                                                  :op2 (c21-0 / turn-18
+                                                                              :ARG0 c21-3
+                                                                              :ARG1 (c21-1 / convo)
+                                                                              :ARG2 c21-17
+                                                                              :ARG1-of (c21-4 / instead-of-91
+                                                                                              :ARG2 c21-6)))))))
+
+# ::snt you are one acting high and mighty judging me as if you are better than me, don't talk about me being intolerant when you are intolerant yourself.
+# ::tokens ["you", "are", "one", "acting", "high", "and", "mighty", "judging", "me", "as", "if", "you", "are", "better", "than", "me", ",", "do", "n't", "talk", "about", "me", "being", "intolerant", "when", "you", "are", "intolerant", "yourself", "."]
+# ::lemmas ["you", "be", "one", "act", "high", "and", "mighty", "judge", "i", "as", "if", "you", "be", "well", "than", "i", ",", "do", "not", "talk", "about", "i", "be", "intolerant", "when", "you", "be", "intolerant", "yourself", "."]
+(c22-1 / multi-sentence
+       :snt1 (c22-9 / act-01
+                    :ARG0 (c22-0 / you)
+                    :ARG1 (c22-8 / and
+                                 :op1 (c22-4 / high-02)
+                                 :op2 (c22-5 / mighty))
+                    :manner (c22-7 / judge-01
+                                   :ARG0 c22-0
+                                   :ARG1 (c22-10 / i)
+                                   :manner (c22-2 / good-02
+                                                  :ARG2-of (c22-6 / have-degree-91
+                                                                  :ARG1 c22-0
+                                                                  :ARG3 (c22-14 / more)
+                                                                  :ARG4 c22-10))))
+       :snt2 (c22-11 / talk-01
+                     :ARG0 (c22-12 / you)
+                     :ARG1 (c22-15 / tolerate-01
+                                   :ARG0 (c22-3 / i)
+                                   :polarity -)
+                     :time (c22-13 / tolerate-01
+                                   :ARG0 c22-12
+                                   :ARG1 c22-12)
+                     :polarity -
+                     :mode imperative))
+
+# ::snt What's not wrong that you're so high and mighty then? And people dont need to die for it to be damaging
+# ::tokens ["What", "'s", "not", "wrong", "that", "you", "'re", "so", "high", "and", "mighty", "then", "?", "And", "people", "do", "nt", "need", "to", "die", "for", "it", "to", "be", "damaging"]
+# ::lemmas ["what", "be", "not", "wrong", "that", "you", "be", "so", "high", "and", "mighty", "then", "?", "and", "people", "do", "not", "need", "to", "die", "for", "it", "to", "be", "damage"]
+(c23-1 / multi-sentence
+       :snt1 (c23-7 / wrong-02
+                    :ARG1 (c23-13 / amr-unknown)
+                    :ARG2 (c23-4 / have-degree-91
+                                 :ARG1 (c23-0 / you)
+                                 :ARG2 (c23-12 / and
+                                               :op1 (c23-10 / high-02)
+                                               :op2 (c23-5 / mighty))
+                                 :ARG3 (c23-3 / so))
+                    :mod (c23-11 / then)
+                    :polarity -)
+       :snt2 (c23-8 / and
+                    :op2 (c23-2 / need-01
+                                :ARG0 (c23-6 / person)
+                                :ARG1 (c23-14 / die-01
+                                              :ARG1 c23-6)
+                                :purpose (c23-9 / damage-01
+                                                :ARG0 c23-14
+                                                :ARG1 c23-6)
+                                :polarity -)))
+
+# ::snt No one was killed by what i said, either it's my opinin. If you disagree fine but don't tell me i'm wrong because i'm not.
+# ::tokens ["No", "one", "was", "killed", "by", "what", "i", "said", ",", "either", "it", "'s", "my", "opinin", ".", "If", "you", "disagree", "fine", "but", "do", "n't", "tell", "me", "i", "'m", "wrong", "because", "i", "'m", "not", "."]
+# ::lemmas ["no", "one", "be", "kill", "by", "what", "i", "say", ",", "either", "it", "be", "my", "opinin", ".", "if", "you", "disagree", "fine", "but", "do", "not", "tell", "i", "i", "be", "wrong", "because", "i", "be", "not", "."]
+(c24-9 / multi-sentence
+       :snt1 (c24-6 / kill-01
+                    :ARG0 (c24-7 / thing
+                                 :ARG1-of (c24-0 / say-01
+                                                 :ARG0 (c24-16 / i)))
+                    :ARG1 (c24-13 / no-one)
+                    :ARG1-of (c24-5 / mean-01
+                                    :ARG2 (c24-11 / thing
+                                                  :ARG1-of (c24-2 / opine-01
+                                                                  :ARG0 c24-16)
+                                                  :mod (c24-14 / either))))
+       :snt2 (c24-10 / contrast-01
+                     :ARG1 (c24-12 / fine-04
+                                   :condition (c24-18 / disagree-01
+                                                      :ARG0 (c24-3 / you)
+                                                      :ARG1-of c24-12)))
+       :ARG2 (c24-17 / tell-01
+                     :ARG0 c24-3
+                     :ARG1 (c24-15 / wrong-04
+                                   :ARG1 (c24-4 / i)
+                                   :ARG1-of (c24-8 / cause-01
+                                                   :ARG0 (c24-1 / wrong-04
+                                                                :ARG1 c24-4
+                                                                :polarity -)))
+                     :ARG2 c24-4
+                     :polarity -
+                     :mode imperative))
+
+# ::snt That you dislike LGBTQ+ people? That you wish to not see them in a movie? That's damaging
+# ::tokens ["That", "you", "dislike", "LGBTQ+", "people", "?", "That", "you", "wish", "to", "not", "see", "them", "in", "a", "movie", "?", "That", "'s", "damaging"]
+# ::lemmas ["that", "you", "dislike", "lgbtq+", "people", "?", "that", "you", "wish", "to", "not", "see", "they", "in", "a", "movie", "?", "that", "be", "damage"]
+(c25-3 / multi-sentence
+       :snt1 (c25-14 / dislike-01
+                     :ARG0 (c25-2 / you)
+                     :ARG1 (c25-7 / person
+                                  :mod (c25-0 / or
+                                              :op1 (c25-8 / lesbian)
+                                              :op2 (c25-13 / gay-01)
+                                              :op3 (c25-1 / bisexual)
+                                              :op4 (c25-12 / transgender)))
+                     :polarity (c25-5 / amr-unknown))
+       :snt2 (c25-9 / wish-01
+                    :ARG0 (c25-15 / you)
+                    :ARG1 (c25-4 / see-01
+                                 :ARG0 c25-15
+                                 :ARG1 (c25-16 / they)
+                                 :location (c25-6 / movie)
+                                 :polarity -)
+                    :polarity (c25-11 / amr-unknown)
+                    :ARG0-of (c25-10 / damage-01)))
+
+# ::snt I'm not hurting anyone, i'm free to express my opinion after all.
+# ::tokens ["I", "'m", "not", "hurting", "anyone", ",", "i", "'m", "free", "to", "express", "my", "opinion", "after", "all", "."]
+# ::lemmas ["i", "be", "not", "hurt", "anyone", ",", "i", "be", "free", "to", "express", "my", "opinion", "after", "all", "."]
+(c26-2 / and
+       :op1 (c26-4 / hurt-01
+                   :ARG0 (c26-7 / i)
+                   :ARG1 (c26-6 / anyone)
+                   :polarity -)
+       :op2 (c26-0 / free-04
+                   :ARG1 c26-7
+                   :ARG3 (c26-3 / express-01
+                                :ARG0 c26-7
+                                :ARG1 (c26-1 / opine-01
+                                             :ARG0 c26-7))
+                   :mod (c26-5 / after-all)))
+
+# ::snt Im a hypocrite then. I won't tolerate intolerance if it hurts others.
+# ::tokens ["I", "m", "a", "hypocrite", "then", ".", "I", "wo", "n't", "tolerate", "intolerance", "if", "it", "hurts", "others", "."]
+# ::lemmas ["i", "m", "a", "hypocrite", "then", ".", "i", "will", "not", "tolerate", "intolerance", "if", "it", "hurt", "other", "."]
+(c27-1 / multi-sentence
+       :snt1 (c27-3 / hypocrite
+                    :domain (c27-7 / i)
+                    :mod (c27-6 / then))
+       :snt2 (c27-8 / tolerate-01
+                    :ARG0 (c27-2 / i)
+                    :ARG1 c27-8
+                    :ARG0 c27-2
+                    :ARG1 c27-8
+                    :ARG0 c27-2
+                    :polarity -
+                    :polarity -)
+       :condition (c27-5 / hurt-01
+                         :ARG0 c27-8
+                         :ARG1 (c27-4 / person
+                                      :mod (c27-0 / other))))
+
+# ::snt Then you are being a hypocrite. You can't expect everyone to share your thoughts.
+# ::tokens ["Then", "you", "are", "being", "a", "hypocrite", ".", "You", "ca", "n't", "expect", "everyone", "to", "share", "your", "thoughts", "."]
+# ::lemmas ["then", "you", "be", "be", "a", "hypocrite", ".", "you", "can", "not", "expect", "everyone", "to", "share", "your", "thought", "."]
+(c28-1 / multi-sentence
+       :snt1 (c28-4 / hypocrite
+                    :domain (c28-0 / you)
+                    :time (c28-7 / then))
+       :snt2 (c28-5 / possible-01
+                    :ARG1 (c28-3 / expect-01
+                                 :ARG0 (c28-8 / you)
+                                 :ARG1 (c28-2 / share-01
+                                              :ARG0 (c28-9 / everyone)
+                                              :ARG1 (c28-10 / thing
+                                                            :ARG1-of (c28-6 / think-01
+                                                                            :ARG0 c28-8))))
+                    :polarity -))
+
+# ::snt I dislike your intolerance of gay people in media. Intolerance should not be respected.
+# ::tokens ["I", "dislike", "your", "intolerance", "of", "gay", "people", "in", "media", ".", "Intolerance", "should", "not", "be", "respected", "."]
+# ::lemmas ["i", "dislike", "your", "intolerance", "of", "gay", "people", "in", "medium", ".", "intolerance", "should", "not", "be", "respect", "."]
+(c29-1 / multi-sentence
+       :snt1 (c29-8 / dislike-01
+                    :ARG0 (c29-5 / i)
+                    :ARG1 (c29-6 / tolerate-01
+                                 :ARG0 (c29-0 / you)
+                                 :ARG1 (c29-4 / person
+                                              :ARG1-of (c29-7 / gay-01))
+                                 :location (c29-3 / media)))
+       :snt2 (c29-2 / recommend-01
+                    :ARG1 (c29-9 / respect-01
+                                 :ARG1 (c29-10 / tolerate-01)
+                                 :polarity -)))
+
+# ::snt Your intolerance against my opinion.
+# ::tokens ["Your", "intolerance", "against", "my", "opinion", "."]
+# ::lemmas ["your", "intolerance", "against", "my", "opinion", "."]
+(c30-2 / tolerate-01
+       :ARG0 (c30-1 / you)
+       :ARG1 (c30-4 / thing
+                    :ARG1-of (c30-0 / opine-01
+                                    :ARG0 (c30-3 / i)))
+       :polarity -)
+
+# ::snt Yes, I do know that "they" is me, thank you very much. I am referring to the fact that you said you were never rude, yet you keep trying to dismiss my words and being condescending.
+# ::tokens ["Yes", ",", "I", "do", "know", "that", "\"", "they", "\"", "is", "me", ",", "thank", "you", "very", "much", ".", "I", "am", "referring", "to", "the", "fact", "that", "you", "said", "you", "were", "never", "rude", ",", "yet", "you", "keep", "trying", "to", "dismiss", "my", "words", "and", "being", "condescending", "."]
+# ::lemmas ["yes", ",", "i", "do", "know", "that", "\"", "they", "\"", "be", "i", ",", "thank", "you", "very", "much", ".", "i", "be", "refer", "to", "the", "fact", "that", "you", "say", "you", "be", "never", "rude", ",", "yet", "you", "keep", "try", "to", "dismiss", "my", "word", "and", "be", "condescend", "."]
+(c31-10 / multi-sentence
+        :snt1 (c31-7 / know-01
+                     :ARG0 (c31-17 / i)
+                     :ARG1 (c31-8 / they
+                                  :domain c31-17)
+                     :mod (c31-3 / yes)
+                     :ARG2-of (c31-12 / thank-01
+                                      :ARG0 c31-17
+                                      :ARG1 (c31-9 / you)
+                                      :mod (c31-6 / much
+                                                  :degree (c31-5 / very))))
+        :snt2 (c31-14 / refer-01
+                      :ARG0 (c31-4 / i)
+                      :ARG1 (c31-0 / say-01
+                                   :ARG0 (c31-2 / you)
+                                   :ARG1 (c31-1 / rude-01
+                                                :ARG1 c31-2
+                                                :time (c31-15 / ever)
+                                                :polarity -)
+                                   :concession-of (c31-13 / keep-02
+                                                          :ARG0 c31-2
+                                                          :ARG1 (c31-18 / try-01
+                                                                        :ARG0 c31-2
+                                                                        :ARG1 (c31-19 / dismiss-01
+                                                                                      :ARG0 c31-2
+                                                                                      :ARG1 (c31-16 / word
+                                                                                                    :poss c31-4)))
+                                                          :manner (c31-11 / condescend-01
+                                                                          :ARG0 c31-2)))))
+
+# ::snt "They call names and tell you to screw off! Neither of which, if you look back, Ive done to you!" Yes you did claim to be better so stop trying to seem innocent.
+# ::tokens ["\"", "They", "call", "names", "and", "tell", "you", "to", "screw", "off", "!", "Neither", "of", "which", ",", "if", "you", "look", "back", ",", "I", "ve", "done", "to", "you", "!", "\"", "Yes", "you", "did", "claim", "to", "be", "better", "so", "stop", "trying", "to", "seem", "innocent", "."]
+# ::lemmas ["\"", "they", "call", "name", "and", "tell", "you", "to", "screw", "off", "!", "neither", "of", "which", ",", "if", "you", "look", "back", ",", "i", "ve", "do", "to", "you", "!", "\"", "yes", "you", "do", "claim", "to", "be", "well", "so", "stop", "try", "to", "seem", "innocent", "."]
+(c32-17 / multi-sentence
+        :snt1 (c32-11 / and
+                      :op1 (c32-18 / call-01
+                                   :ARG0 (c32-13 / they)
+                                   :ARG1 (c32-20 / name))
+                      :op2 (c32-19 / tell-01
+                                   :ARG0 c32-13
+                                   :ARG1 (c32-0 / screw-off-05
+                                                :ARG0 (c32-7 / you
+                                                             :ARG2-of c32-19))))
+        :snt2 (c32-24 / do-02
+                      :ARG0 (c32-22 / i)
+                      :ARG1 (c32-23 / thing
+                                    :mod (c32-21 / either))
+                      :ARG2 c32-7
+                      :condition (c32-2 / look-01
+                                        :ARG0 c32-7
+                                        :ARG1 (c32-16 / back))
+                      :polarity -)
+        :snt3 (c32-15 / claim-01
+                      :ARG0 (c32-14 / you)
+                      :ARG1 (c32-9 / have-degree-91
+                                   :ARG1 c32-14
+                                   :ARG2 (c32-12 / good-03
+                                                 :ARG1 c32-14)
+                                   :ARG3 (c32-10 / more))
+                      :ARG0-of (c32-3 / cause-01
+                                      :ARG1 (c32-6 / stop-01
+                                                   :ARG0 c32-14
+                                                   :ARG1 (c32-1 / try-01
+                                                                :ARG0 c32-14
+                                                                :ARG1 (c32-4 / seem-01
+                                                                             :ARG1 (c32-8 / innocent-01
+                                                                                          :ARG1 c32-14)))))
+                      :mod (c32-5 / yes)))
+
+# ::snt I'm not a liberal and frankly, you're no better
+# ::tokens ["I", "'m", "not", "a", "liberal", "and", "frankly", ",", "you", "'re", "no", "better"]
+# ::lemmas ["i", "be", "not", "a", "liberal", "and", "frankly", ",", "you", "be", "no", "well"]
+(c33-6 / and
+       :op1 (c33-4 / liberal-02
+                   :ARG1 (c33-5 / i)
+                   :polarity -)
+       :op2 (c33-7 / good-02
+                   :ARG1 (c33-1 / you)
+                   :mod (c33-0 / frank)
+                   :ARG2-of (c33-3 / have-degree-91
+                                   :ARG1 c33-1
+                                   :ARG3 (c33-2 / more))
+                   :polarity -))
+
+# ::snt Ok Mrs. Homophobe
+# ::tokens ["Ok", "Mrs.", "Homophobe"]
+# ::lemmas ["Ok", "Mrs.", "Homophobe"]
+(c34-3 / say-01
+       :ARG1 (c34-0 / ok)
+       :ARG2 (c34-2 / person
+                    :name (c34-1 / name
+                                 :op1 "Mrs."
+                                 :op2 "Homophobe")))
+
+# ::snt Nah, just done with you jumping on every little thing instead of defending yourself
+# ::tokens ["Nah", ",", "just", "done", "with", "you", "jumping", "on", "every", "little", "thing", "instead", "of", "defending", "yourself"]
+# ::lemmas ["Nah", ",", "just", "do", "with", "you", "jump", "on", "every", "little", "thing", "instead", "of", "defend", "yourself"]
+(c35-0 / be-done-08
+       :ARG1 (c35-1 / you)
+       :ARG2 (c35-5 / jump-03
+                    :ARG0 c35-1
+                    :ARG1 (c35-7 / thing
+                                 :mod (c35-3 / every)
+                                 :mod (c35-4 / little))
+                    :ARG1-of (c35-6 / instead-of-91
+                                    :ARG2 (c35-8 / defend-01
+                                                 :ARG0 c35-1
+                                                 :ARG1 c35-1)))
+       :mod (c35-9 / just)
+       :mod (c35-2 / nah))
+
+# ::snt I mean
+# ::tokens ["I", "mean"]
+# ::lemmas ["i", "mean"]
+(c36-0 / mean-01
+       :ARG0 (c36-1 / i))
+
+# ::snt Unless you're gonna be serious, please screw off Brenda
+# ::tokens ["Unless", "you", "'re", "gon", "na", "be", "serious", ",", "please", "screw", "off", "Brenda"]
+# ::lemmas ["unless", "you", "be", "going", "to", "be", "serious", ",", "please", "screw", "off", "Brenda"]
+(c37-3 / screw-off-05
+       :ARG0 (c37-1 / you)
+       :ARG1 (c37-4 / person
+                    :name (c37-2 / name
+                                 :op1 "Brenda"))
+       :condition (c37-0 / serious-01
+                         :ARG1 c37-1
+                         :polarity -)
+       :mode imperative
+       :polite +)
+
+# ::snt I never said that. And i don't hate straight people, I'm just tired of them.
+# ::tokens ["I", "never", "said", "that", ".", "And", "i", "do", "n't", "hate", "straight", "people", ",", "I", "'m", "just", "tired", "of", "them", "."]
+# ::lemmas ["i", "never", "say", "that", ".", "and", "i", "do", "not", "hate", "straight", "people", ",", "i", "be", "just", "tired", "of", "they", "."]
+(c38-1 / multi-sentence
+       :snt1 (c38-2 / say-01
+                    :ARG0 (c38-10 / i)
+                    :ARG1 (c38-11 / that)
+                    :time (c38-5 / ever)
+                    :polarity -)
+       :snt2 (c38-4 / and
+                    :op2 (c38-8 / contrast-01
+                                :ARG1 (c38-6 / hate-01
+                                             :ARG0 (c38-3 / i)
+                                             :ARG1 (c38-7 / person
+                                                          :ARG1-of (c38-0 / straight-05))
+                                             :polarity -)
+                                :ARG2 (c38-12 / tire-03
+                                              :ARG0 c38-7
+                                              :ARG1 c38-3
+                                              :mod (c38-9 / just)))))
+
+# ::snt Its a cartoon and these are fictional characters. Obviously it was meant as a joke because who tf actually cares?
+# ::tokens ["Its", "a", "cartoon", "and", "these", "are", "fictional", "characters", ".", "Obviously", "it", "was", "meant", "as", "a", "joke", "because", "who", "tf", "actually", "cares", "?"]
+# ::lemmas ["its", "a", "cartoon", "and", "these", "be", "fictional", "character", ".", "obviously", "it", "be", "mean", "as", "a", "joke", "because", "who", "tf", "actually", "care", "?"]
+(c39-3 / multi-sentence
+       :snt1 (c39-12 / and
+                     :op1 (c39-7 / cartoon
+                                 :domain (c39-11 / it))
+                     :op2 (c39-15 / character
+                                  :mod (c39-1 / fictional)
+                                  :domain (c39-10 / this)))
+       :snt2 (c39-5 / mean-02
+                    :ARG1 (c39-4 / it)
+                    :ARG2 (c39-13 / joke-01)
+                    :ARG1-of (c39-2 / obvious-01)
+                    :ARG1-of (c39-9 / cause-01
+                                    :ARG0 (c39-0 / care-01
+                                                 :ARG0 (c39-14 / amr-unknown)
+                                                 :ARG1-of (c39-8 / actual-02)
+                                                 :mod (c39-6 / fuck
+                                                             :mode expressive)))))
+
+# ::snt Ok honey
+# ::tokens ["Ok", "honey"]
+# ::lemmas ["ok", "honey"]
+(c40-2 / say-01
+       :ARG1 (c40-0 / okay-01)
+       :ARG2 (c40-1 / honey))
+
+# ::snt Cause its LGBTQ+ so we're represented??? Any ONE who hates isn't part of that community. You seem misinformed
+# ::tokens ["Cause", "its", "LGBTQ+", "so", "we", "'re", "represented", "?", "?", "?", "Any", "ONE", "who", "hates", "is", "n't", "part", "of", "that", "community", ".", "You", "seem", "misinformed"]
+# ::lemmas ["cause", "its", "lgbtq+", "so", "we", "be", "represent", "?", "?", "?", "any", "one", "who", "hate", "be", "not", "part", "of", "that", "community", ".", "you", "seem", "misinformed"]
+(c41-2 / multi-sentence
+       :snt1 (c41-7 / cause-01
+                    :ARG0 (c41-10 / include-91
+                                  :ARG1 (c41-0 / one
+                                               :ARG0-of (c41-5 / hate-01)
+                                               :mod (c41-11 / any))
+                                  :ARG2 (c41-13 / community
+                                                :mod (c41-9 / that))
+                                  :polarity -)
+                    :ARG1 (c41-4 / represent-01
+                                 :ARG1 (c41-8 / we))
+                    :polarity (c41-12 / amr-unknown))
+       :snt2 (c41-3 / seem-01
+                    :ARG1 (c41-6 / misinform-01
+                                 :ARG1 (c41-1 / you))))
+
+# ::snt "Tons of gay friends" the weakest excuse.And if we straight couples, gay couples should be no different. Its not like kids really care
+# ::tokens ["\"", "Tons", "of", "gay", "friends", "\"", "the", "weakest", "excuse", ".", "And", "if", "we", "straight", "couples", ",", "gay", "couples", "should", "be", "no", "different", ".", "Its", "not", "like", "kids", "really", "care"]
+# ::lemmas ["\"", "ton", "of", "gay", "friend", "\"", "the", "weak", "excuse", ".", "and", "if", "we", "straight", "couple", ",", "gay", "couple", "should", "be", "no", "different", ".", "its", "not", "like", "kid", "really", "care"]
+(c42-10 / multi-sentence
+        :snt1 (c42-15 / excuse-02
+                      :ARG2 (c42-13 / friend
+                                    :ARG1-of (c42-8 / gay-01)
+                                    :quant (c42-7 / ton))
+                      :ARG1-of (c42-16 / weak-02
+                                       :ARG2-of (c42-4 / have-degree-91
+                                                       :ARG1 c42-15
+                                                       :ARG3 (c42-5 / most))))
+        :snt2 (c42-14 / recommend-01
+                      :ARG1 (c42-18 / differ-02
+                                    :ARG1 (c42-12 / couple
+                                                  :ARG1-of (c42-0 / straight-05)
+                                                  :domain (c42-1 / we))
+                                    :polarity -)
+                      :condition (c42-9 / couple
+                                        :ARG1-of c42-0)
+                      :domain c42-1)
+        :snt3 (c42-3 / resemble-01
+                     :ARG1 (c42-17 / it)
+                     :ARG2 (c42-2 / care-01
+                                  :ARG0 (c42-6 / kid)
+                                  :ARG1-of (c42-11 / real-04))
+                     :polarity -))
+
+# ::snt He's like and she's
+# ::tokens ["He", "'s", "like", "and", "she", "'s"]
+# ::lemmas ["he", "be", "like", "and", "she", "be"]
+(c43-3 / and
+       :op1 (c43-2 / like-01
+                   :ARG0 (c43-1 / he))
+       :op2 (c43-0 / she))
+
+# ::snt Let me dream.
+# ::tokens ["Let", "me", "dream", "."]
+# ::lemmas ["let", "i", "dream", "."]
+(c44-2 / let-01
+       :ARG0 (c44-1 / you)
+       :ARG1 (c44-0 / dream-01
+                    :ARG0 (c44-3 / i)))
+
+# ::snt uh no, you said we would be forcing it on kids. I'm accepting but straight people always want to dump us of cliffs
+# ::tokens ["uh", "no", ",", "you", "said", "we", "would", "be", "forcing", "it", "on", "kids", ".", "I", "'m", "accepting", "but", "straight", "people", "always", "want", "to", "dump", "us", "of", "cliffs"]
+# ::lemmas ["uh", "no", ",", "you", "say", "we", "would", "be", "force", "it", "on", "kid", ".", "i", "be", "accept", "but", "straight", "people", "always", "want", "to", "dump", "we", "of", "cliff"]
+(c45-3 / multi-sentence
+       :snt1 (c45-4 / say-01
+                    :ARG0 (c45-2 / you)
+                    :ARG1 (c45-0 / force-01
+                                 :ARG0 (c45-9 / we)
+                                 :ARG1 (c45-11 / it)
+                                 :ARG2 (c45-6 / kid))
+                    :mod (c45-15 / u-no))
+       :snt2 (c45-10 / contrast-01
+                     :ARG1 (c45-12 / accept-01
+                                   :ARG0 (c45-5 / i))
+                     :ARG2 (c45-8 / want-01
+                                  :ARG0 (c45-7 / person
+                                               :ARG1-of (c45-1 / straight-05))
+                                  :ARG1 (c45-14 / dump-01
+                                                :ARG0 c45-7
+                                                :ARG1 (c45-17 / we)
+                                                :ARG2 (c45-16 / cliff))
+                                  :time (c45-13 / always))))
+
+# ::snt So you're not gonna explain your homophobic comment, yet get on my ass cause I'm tired of straight people?
+# ::tokens ["So", "you", "'re", "not", "gon", "na", "explain", "your", "homophobic", "comment", ",", "yet", "get", "on", "my", "ass", "cause", "I", "'m", "tired", "of", "straight", "people", "?"]
+# ::lemmas ["so", "you", "be", "not", "going", "to", "explain", "your", "homophobic", "comment", ",", "yet", "get", "on", "my", "ass", "cause", "i", "be", "tired", "of", "straight", "people", "?"]
+(c46-3 / explain-01
+       :ARG0 (c46-0 / you)
+       :ARG1 (c46-6 / comment-01
+                    :ARG0 c46-0
+                    :ARG3 (c46-4 / homophobia))
+       :concession-of (c46-10 / get-05
+                              :ARG0 c46-0
+                              :ARG1 c46-0
+                              :ARG2 (c46-9 / ass
+                                           :part-of (c46-8 / i))
+                              :ARG1-of (c46-11 / cause-01
+                                               :ARG0 (c46-7 / tire-01
+                                                            :ARG0 (c46-5 / person
+                                                                         :ARG1-of (c46-1 / straight-05))
+                                                            :ARG1 c46-8))
+                              :mode imperative)
+       :ARG1-of (c46-2 / request-confirmation-91)
+       :polarity -)
+
+# ::snt Never said you couldn't? Was only annoyed at you saying it would be forced upon kids.
+# ::tokens ["Never", "said", "you", "could", "n't", "?", "Was", "only", "annoyed", "at", "you", "saying", "it", "would", "be", "forced", "upon", "kids", "."]
+# ::lemmas ["never", "say", "you", "could", "not", "?", "be", "only", "annoy", "at", "you", "say", "it", "would", "be", "force", "upon", "kid", "."]
+(c47-4 / multi-sentence
+       :snt1 (c47-5 / say-01
+                    :ARG0 (c47-3 / you)
+                    :ARG1 (c47-8 / possible-01
+                                 :ARG1 (c47-13 / do-02
+                                               :ARG0 c47-3)
+                                 :polarity -)
+                    :time (c47-7 / ever)
+                    :polarity -)
+       :snt2 (c47-11 / annoy-01
+                     :ARG0 (c47-0 / say-01
+                                  :ARG0 (c47-12 / you)
+                                  :ARG1 (c47-1 / force-01
+                                               :ARG1 (c47-10 / it)
+                                               :ARG2 (c47-9 / kid)))
+                     :ARG1 (c47-6 / i)
+                     :mod (c47-2 / only)))
+
+# ::snt A broken clock should be replaced or fixed
+# ::tokens ["A", "broken", "clock", "should", "be", "replaced", "or", "fixed"]
+# ::lemmas ["a", "broken", "clock", "should", "be", "replace", "or", "fix"]
+(c48-3 / recommend-01
+       :ARG1 (c48-0 / or
+                    :op1 (c48-5 / replace-01
+                                :ARG1 (c48-4 / clock
+                                             :ARG1-of (c48-2 / break-01)))
+                    :op2 (c48-1 / fix-02
+                                :ARG1 c48-4)))
+
+# ::snt ??? Merida is single? And unless she's Aro ace she's gonna need some companionship and love. It won't hurt anyone if she gets someone.
+# ::tokens ["?", "?", "?", "Merida", "is", "single", "?", "And", "unless", "she", "'s", "Aro", "ace", "she", "'s", "gon", "na", "need", "some", "companionship", "and", "love", ".", "It", "wo", "n't", "hurt", "anyone", "if", "she", "gets", "someone", "."]
+# ::lemmas ["?", "?", "?", "Merida", "be", "single", "?", "and", "unless", "she", "be", "Aro", "ace", "she", "be", "going", "to", "need", "some", "companionship", "and", "love", ".", "it", "will", "not", "hurt", "anyone", "if", "she", "get", "someone", "."]
+(c49-10 / multi-sentence
+        :snt1 (c49-8 / and
+                     :op1 (c49-0 / single-03
+                                 :ARG1 (c49-17 / person
+                                               :name (c49-14 / name
+                                                             :op1 "Merida"))
+                                 :polarity (c49-7 / amr-unknown))
+                     :op2 (c49-11 / need-01
+                                  :ARG0 c49-17
+                                  :ARG1 (c49-6 / and
+                                               :op1 (c49-12 / companionship
+                                                            :mod (c49-4 / some))
+                                               :op2 (c49-2 / love-01
+                                                           :mod (c49-3 / some)))
+                                  :condition (c49-20 / ass
+                                                     :mod (c49-16 / ethnic-group
+                                                                  :name (c49-18 / name
+                                                                                :op1 "Aro"))
+                                                     :domain c49-17))
+                     :polarity (c49-19 / amr-unknown))
+        :snt2 (c49-5 / hurt-01
+                     :ARG1 (c49-13 / anyone)
+                     :condition (c49-9 / get-01
+                                       :ARG0 (c49-15 / she)
+                                       :ARG1 (c49-1 / someone))
+                     :polarity -))
+
+# ::snt Hell if I know. All i know is that you for some reason don't want Elsa to be gay
+# ::tokens ["Hell", "if", "I", "know", ".", "All", "i", "know", "is", "that", "you", "for", "some", "reason", "do", "n't", "want", "Elsa", "to", "be", "gay"]
+# ::lemmas ["hell", "if", "i", "know", ".", "all", "i", "know", "be", "that", "you", "for", "some", "reason", "do", "not", "want", "Elsa", "to", "be", "gay"]
+(c50-1 / multi-sentence
+       :snt1 (c50-6 / have-condition-91
+                    :ARG2 (c50-7 / know-01
+                                 :ARG0 (c50-12 / i)
+                                 :mod (c50-11 / hell)))
+       :snt2 (c50-15 / know-01
+                     :ARG0 (c50-4 / i)
+                     :ARG1 (c50-9 / want-01
+                                  :ARG0 (c50-0 / you)
+                                  :ARG1 (c50-14 / gay-01
+                                                :ARG1 (c50-8 / person
+                                                             :name (c50-2 / name
+                                                                          :op1 "Elsa")))
+                                  :ARG1-of (c50-10 / cause-01
+                                                   :ARG0 (c50-5 / reason
+                                                                :mod (c50-3 / some)))
+                                  :polarity -)
+                     :mod (c50-13 / all)))

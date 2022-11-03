@@ -1,0 +1,29 @@
+# ::snt Talked to her this afternoon. She said she's a little sore but otherwise doing fine. They booked her follow-up appointment for next month while she was there.
+# ::tokens ["Talked", "to", "her", "this", "afternoon", ".", "She", "said", "she", "'s", "a", "little", "sore", "but", "otherwise", "doing", "fine", ".", "They", "booked", "her", "follow", "-", "up", "appointment", "for", "next", "month", "while", "she", "was", "there", "."]
+# ::lemmas ["talk", "to", "she", "this", "afternoon", ".", "she", "say", "she", "be", "a", "little", "sore", "but", "otherwise", "do", "fine", ".", "they", "book", "her", "follow", "-", "up", "appointment", "for", "next", "month", "while", "she", "be", "there", "."]
+(c1-6 / multi-sentence
+      :snt1 (c1-5 / talk-01
+                  :ARG0 (c1-1 / i)
+                  :ARG2 (c1-10 / she)
+                  :time (c1-0 / date-entity
+                              :dayperiod (c1-15 / afternoon)
+                              :mod (c1-4 / today)))
+      :snt2 (c1-20 / say-01
+                   :ARG0 (c1-11 / she)
+                   :ARG1 (c1-3 / contrast-01
+                               :ARG1 (c1-2 / sore
+                                           :domain c1-11
+                                           :mod (c1-18 / little))
+                               :ARG2 (c1-16 / fine-04
+                                            :ARG1 c1-11)))
+      :snt3 (c1-19 / book-03
+                   :ARG0 (c1-8 / they)
+                   :ARG1 (c1-9 / appointment-02
+                               :ARG0 c1-8
+                               :ARG1 c1-11
+                               :mod (c1-13 / follow-up-03)
+                               :time (c1-17 / month
+                                            :mod (c1-7 / next)))
+                   :time (c1-14 / be-located-at-91
+                                :ARG1 c1-11
+                                :ARG2 (c1-12 / there))))

@@ -1,0 +1,56 @@
+# ::snt Indeed
+# ::tokens ["Indeed"]
+# ::lemmas ["indeed"]
+(c1-0 / indeed)
+
+# ::snt G will be awesome around you then!!!!
+# ::tokens ["G", "will", "be", "awesome", "around", "you", "then", "!", "!", "!", "!"]
+# ::lemmas ["g", "will", "be", "awesome", "around", "you", "then", "!", "!", "!", "!"]
+(c2-0 / awesome-03
+      :ARG1 (c2-2 / person
+                  :name (c2-3 / name
+                              :op1 "G"))
+      :location (c2-5 / around
+                      :op1 (c2-4 / you))
+      :mod (c2-1 / then)
+      :mode expressive)
+
+# ::snt Its a great feeling to get that certificate!
+# ::tokens ["Its", "a", "great", "feeling", "to", "get", "that", "certificate", "!"]
+# ::lemmas ["its", "a", "great", "feeling", "to", "get", "that", "certificate", "!"]
+(c3-0 / feel-01
+      :ARG1 (c3-3 / get-01
+                  :ARG1 (c3-1 / certificate
+                              :mod (c3-2 / that)))
+      :mod (c3-4 / great))
+
+# ::snt Good luck! The vaxx doesnt knock you around anywhere near like Covid does.
+# ::tokens ["Good", "luck", "!", "The", "vaxx", "does", "nt", "knock", "you", "around", "anywhere", "near", "like", "Covid", "does", "."]
+# ::lemmas ["good", "luck", "!", "the", "vaxx", "do", "not", "knock", "you", "around", "anywhere", "near", "like", "Covid", "do", "."]
+(c4-9 / multi-sentence
+      :snt1 (c4-5 / luck
+                  :ARG1-of (c4-7 / good-02))
+      :snt2 (c4-10 / knock-01
+                   :ARG0 (c4-3 / vaxx)
+                   :ARG1 (c4-11 / you)
+                   :direction (c4-1 / around)
+                   :ARG1-of (c4-4 / resemble-01
+                                  :ARG2 (c4-0 / knock-01
+                                              :ARG0 (c4-2 / city
+                                                          :name (c4-8 / name
+                                                                      :op1 "Covid"))
+                                              :ARG1 c4-11
+                                              :location (c4-12 / anywhere
+                                                               :ARG1-of (c4-6 / near-02))))
+                   :polarity -))
+
+# ::snt It's a good feeling to get the second dose behind you
+# ::tokens ["It", "'s", "a", "good", "feeling", "to", "get", "the", "second", "dose", "behind", "you"]
+# ::lemmas ["it", "be", "a", "good", "feeling", "to", "get", "the", "second", "dose", "behind", "you"]
+(c5-1 / feel-01
+      :ARG1 (c5-4 / behind
+                  :op1 (c5-5 / you)
+                  :domain (c5-0 / dose
+                                :ord (c5-2 / ordinal-entity
+                                           :value 2)))
+      :ARG1-of (c5-3 / good-02))

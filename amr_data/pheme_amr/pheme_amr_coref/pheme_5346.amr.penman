@@ -1,0 +1,59 @@
+# ::snt The information evolving just gets more and more heinous
+# ::tokens ["The", "information", "evolving", "just", "gets", "more", "and", "more", "heinous"]
+# ::lemmas ["the", "information", "evolve", "just", "get", "more", "and", "more", "heinous"]
+(c1-3 / increase-01
+      :ARG1 (c1-0 / heinous
+                  :domain (c1-4 / information
+                                :ARG1-of (c1-2 / evolve-01)))
+      :mod (c1-1 / just))
+
+# ::snt Just another day in America.
+# ::tokens ["Just", "another", "day", "in", "America", "."]
+# ::lemmas ["Just", "another", "day", "in", "America", "."]
+(c2-2 / day
+      :mod (c2-4 / another)
+      :location (c2-3 / country
+                      :name (c2-1 / name
+                                  :op1 "America"))
+      :mod (c2-0 / just))
+
+# ::snt released radio runs of murder in . Cops call backup, not EMS
+# ::tokens ["released", "radio", "runs", "of", "murder", "in", ".", "Cops", "call", "backup", ",", "not", "EMS"]
+# ::lemmas ["release", "radio", "run", "of", "murder", "in", ".", "cop", "call", "backup", ",", "not", "EMS"]
+(c4-0 / multi-sentence
+      :snt1 (c4-5 / release-01
+                  :ARG1 (c4-3 / run-13
+                              :ARG1 (c4-4 / murder-01)
+                              :medium (c4-2 / radio)))
+      :snt2 (c4-6 / contrast-01
+                  :ARG1 (c4-7 / call-02
+                              :ARG0 (c4-8 / cop)
+                              :ARG1 (c4-1 / backup))
+                  :ARG2 (c4-10 / call-02
+                               :ARG0 c4-8
+                               :ARG1 (c4-9 / ambulance)
+                               :polarity -)))
+
+# ::snt :Ferguson police chief should b held accountable he know/should have known what was going on and did NOTHING STOP IT!
+# ::tokens [":", "Ferguson", "police", "chief", "should", "b", "held", "accountable", "he", "know", "/", "should", "have", "known", "what", "was", "going", "on", "and", "did", "NOTHING", "STOP", "IT", "!"]
+# ::lemmas [":", "Ferguson", "police", "chief", "should", "b", "hold", "accountable", "he", "know", "/", "should", "have", "know", "what", "be", "go", "on", "and", "do", "nothing", "stop", "IT", "!"]
+(c5-15 / and
+       :op1 (c5-7 / recommend-01
+                  :ARG1 (c5-0 / hold-02
+                              :ARG1 (c5-2 / accountable-02
+                                          :ARG0 (c5-6 / person
+                                                      :ARG0-of (c5-1 / have-org-role-91
+                                                                     :ARG1 (c5-14 / police
+                                                                                  :mod (c5-8 / city
+                                                                                             :name (c5-4 / name
+                                                                                                         :op1 "Ferguson")))
+                                                                     :ARG2 (c5-9 / chief))))))
+       :op2 (c5-3 / recommend-01
+                  :ARG1 (c5-13 / know-01
+                               :ARG0 c5-6
+                               :ARG1 (c5-12 / thing
+                                            :ARG1-of (c5-10 / go-on-15))))
+       :op3 (c5-11 / stop-01
+                   :ARG0 c5-6
+                   :ARG1 c5-12
+                   :mod (c5-5 / nothing)))

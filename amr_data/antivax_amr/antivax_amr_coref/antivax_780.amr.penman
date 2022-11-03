@@ -1,0 +1,94 @@
+# ::snt Exactly
+# ::tokens ["Exactly"]
+# ::lemmas ["exactly"]
+(c1-0 / exact)
+
+# ::snt And they get mad if we dont ask for more too!
+# ::tokens ["And", "they", "get", "mad", "if", "we", "do", "nt", "ask", "for", "more", "too", "!"]
+# ::lemmas ["and", "they", "get", "mad", "if", "we", "do", "not", "ask", "for", "more", "too", "!"]
+(c2-0 / and
+      :op2 (c2-5 / get-03
+                 :ARG1 (c2-4 / they)
+                 :ARG2 (c2-6 / mad-04
+                             :ARG0 (c2-7 / ask-02
+                                         :ARG0 (c2-2 / we)
+                                         :ARG1 (c2-1 / more)
+                                         :mod (c2-3 / too)
+                                         :polarity -)
+                             :ARG1 c2-4)))
+
+# ::snt I respect anyone's right. I want no part of that poison. I don't trust it's long term effects. Masks don't work. They are stripping our freedom and most bend over willingly and ask for more.
+# ::tokens ["I", "respect", "anyone", "'s", "right", ".", "I", "want", "no", "part", "of", "that", "poison", ".", "I", "do", "n't", "trust", "it", "'s", "long", "term", "effects", ".", "Masks", "do", "n't", "work", ".", "They", "are", "stripping", "our", "freedom", "and", "most", "bend", "over", "willingly", "and", "ask", "for", "more", "."]
+# ::lemmas ["i", "respect", "anyone", "'s", "right", ".", "i", "want", "no", "part", "of", "that", "poison", ".", "i", "do", "not", "trust", "it", "be", "long", "term", "effect", ".", "mask", "do", "not", "work", ".", "they", "be", "strip", "our", "freedom", "and", "most", "bend", "over", "willingly", "and", "ask", "for", "more", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-8 / respect-01
+                   :ARG0 (c3-2 / i)
+                   :ARG1 (c3-6 / right-05
+                               :ARG1 (c3-18 / anyone)))
+       :snt2 (c3-4 / want-01
+                   :ARG0 (c3-15 / i)
+                   :ARG1 (c3-24 / part
+                                :subevent-of (c3-21 / poison-02
+                                                    :mod (c3-7 / that)))
+                   :polarity -)
+       :snt3 (c3-5 / trust-02
+                   :ARG0 (c3-16 / i)
+                   :ARG1 (c3-13 / affect-01
+                                :ARG0 c3-21
+                                :ARG1 c3-16
+                                :ARG1-of (c3-22 / long-03))
+                   :polarity -)
+       :snt4 (c3-12 / work-09
+                    :ARG1 (c3-20 / masks)
+                    :polarity -)
+       :snt5 (c3-14 / strip-01
+                    :ARG0 (c3-11 / they)
+                    :ARG1 (c3-19 / free-04
+                                 :ARG1 (c3-3 / we)))
+       :snt6 (c3-0 / and
+                   :op1 (c3-23 / bend-01
+                               :ARG0 (c3-17 / most)
+                               :manner (c3-1 / will-02
+                                             :ARG0 c3-17))
+                   :op2 (c3-25 / ask-02
+                               :ARG0 c3-17
+                               :ARG1 (c3-9 / more))))
+
+# ::snt This "pandemic" needs to be solved to the satisfaction of all for us to get back to normal. A vaccine is needed to accomplish that. Lets just not question the logic and take the medicine and throw away the damn masks if thats what it takes...
+# ::tokens ["This", "\"", "pandemic", "\"", "needs", "to", "be", "solved", "to", "the", "satisfaction", "of", "all", "for", "us", "to", "get", "back", "to", "normal", ".", "A", "vaccine", "is", "needed", "to", "accomplish", "that", ".", "Lets", "just", "not", "question", "the", "logic", "and", "take", "the", "medicine", "and", "throw", "away", "the", "damn", "masks", "if", "that", "s", "what", "it", "takes", "..."]
+# ::lemmas ["this", "\"", "pandemic", "\"", "need", "to", "be", "solve", "to", "the", "satisfaction", "of", "all", "for", "we", "to", "get", "back", "to", "normal", ".", "a", "vaccine", "be", "need", "to", "accomplish", "that", ".", "let", "just", "not", "question", "the", "logic", "and", "take", "the", "medicine", "and", "throw", "away", "the", "damn", "mask", "if", "that", "s", "what", "it", "take", "..."]
+(c4-9 / multi-sentence
+      :snt1 (c4-10 / need-01
+                   :ARG1 (c4-14 / solve-01
+                                :ARG1 (c4-24 / pandemic
+                                             :mod (c4-7 / this))
+                                :purpose (c4-23 / satisfy-01
+                                                :ARG0 (c4-8 / get-back-10
+                                                            :ARG1 (c4-4 / we)
+                                                            :ARG2 (c4-2 / normal-02
+                                                                        :ARG1 c4-4))
+                                                :ARG1 c4-4)))
+      :snt2 (c4-17 / need-01
+                   :ARG1 (c4-6 / vaccine)
+                   :purpose (c4-18 / accomplish-01
+                                   :ARG0 c4-6
+                                   :ARG1 c4-14))
+      :snt3 (c4-13 / and
+                   :op1 (c4-1 / question-03
+                              :ARG0 (c4-12 / we)
+                              :ARG1 (c4-22 / logic)
+                              :polarity -
+                              :mode imperative)
+                   :op2 (c4-5 / take-01
+                              :ARG0 c4-12
+                              :ARG1 (c4-20 / medicine)
+                              :mode imperative)
+                   :op3 (c4-11 / throw-away-07
+                               :ARG0 c4-12
+                               :ARG1 (c4-16 / mask
+                                            :mod (c4-0 / damn))
+                               :condition (c4-15 / take-01
+                                                 :ARG0 (c4-3 / it)
+                                                 :ARG1 (c4-19 / that))
+                               :mode imperative)
+                   :mod (c4-21 / just)))

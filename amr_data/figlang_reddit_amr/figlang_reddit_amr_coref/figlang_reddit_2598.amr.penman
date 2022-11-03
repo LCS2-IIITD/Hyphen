@@ -1,0 +1,67 @@
+# ::snt Instant Karma IRL for me tonight
+# ::tokens ["Instant", "Karma", "IRL", "for", "me", "tonight"]
+# ::lemmas ["Instant", "Karma", "IRL", "for", "i", "tonight"]
+(c1-5 / person
+      :name (c1-6 / name
+                  :op1 "Instant"
+                  :op2 "Karma")
+      :beneficiary (c1-1 / i)
+      :time (c1-0 / date-entity
+                  :dayperiod (c1-3 / night)
+                  :mod (c1-2 / today))
+      :ARG1-of (c1-4 / RL-00))
+
+# ::snt Let's *really* test it... Give me $10,000 OP.
+# ::tokens ["Let", "'s", "*", "really", "*", "test", "it", "...", "Give", "me", "$", "10,000", "OP", "."]
+# ::lemmas ["let", "us", "*", "really", "*", "test", "it", "...", "give", "i", "$", "10,000", "op", "."]
+(c2-10 / multi-sentence
+       :snt1 (c2-5 / test-01
+                   :ARG0 (c2-2 / we)
+                   :ARG1 (c2-9 / it)
+                   :ARG1-of (c2-6 / real-04)
+                   :mode imperative)
+       :snt2 (c2-8 / give-01
+                   :ARG0 (c2-11 / you)
+                   :ARG1 (c2-1 / monetary-quantity
+                               :unit (c2-0 / dollar)
+                               :ARG1-of (c2-7 / post-01
+                                              :mod (c2-4 / original))
+                               :quant 10000)
+                   :ARG2 (c2-3 / i)
+                   :mode imperative))
+
+# ::snt He's gonna be able to do soooooo much laundry
+# ::tokens ["He", "'s", "gon", "na", "be", "able", "to", "do", "soooooo", "much", "laundry"]
+# ::lemmas ["he", "be", "going", "to", "be", "able", "to", "do", "soooooo", "much", "laundry"]
+(c3-4 / possible-01
+      :ARG1 (c3-0 / do-02
+                  :ARG0 (c3-2 / he)
+                  :ARG1 (c3-3 / laundry
+                              :quant (c3-5 / much
+                                           :degree (c3-1 / so)))))
+
+# ::snt With that level of generosity OP'll end up owning the laundromat soon.
+# ::tokens ["With", "that", "level", "of", "generosity", "OP'll", "end", "up", "owning", "the", "laundromat", "soon", "."]
+# ::lemmas ["with", "that", "level", "of", "generosity", "OP'll", "end", "up", "own", "the", "laundromat", "soon", "."]
+(c4-10 / end-up-03
+       :ARG1 (c4-9 / person
+                   :ARG0-of (c4-4 / post-01)
+                   :mod (c4-3 / original))
+       :ARG2 (c4-2 / own-01
+                   :ARG0 c4-9
+                   :ARG1 (c4-6 / laundromat)
+                   :time (c4-0 / soon))
+       :ARG1-of (c4-1 / cause-01
+                      :ARG0 (c4-7 / level
+                                  :mod (c4-8 / generosity)
+                                  :mod (c4-5 / that))))
+
+# ::snt does it have a secret room underneath?
+# ::tokens ["does", "it", "have", "a", "secret", "room", "underneath", "?"]
+# ::lemmas ["do", "it", "have", "a", "secret", "room", "underneath", "?"]
+(c5-2 / have-03
+      :polarity (c5-1 / amr-unknown)
+      :ARG0 (c5-5 / it)
+      :ARG1 (c5-4 / room
+                  :mod (c5-0 / secret)
+                  :location (c5-3 / underneath)))

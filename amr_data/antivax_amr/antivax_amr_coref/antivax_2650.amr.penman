@@ -1,0 +1,85 @@
+# ::snt If you ever used the bathroom in CBGB you don't even need the vaccine.
+# ::tokens ["If", "you", "ever", "used", "the", "bathroom", "in", "CBGB", "you", "do", "n't", "even", "need", "the", "vaccine", "."]
+# ::lemmas ["if", "you", "ever", "use", "the", "bathroom", "in", "CBGB", "you", "do", "not", "even", "need", "the", "vaccine", "."]
+(c1-6 / need-01
+      :ARG0 (c1-7 / you)
+      :ARG1 (c1-3 / vaccine)
+      :mod (c1-8 / even)
+      :condition (c1-2 / use-01
+                       :ARG0 c1-7
+                       :ARG1 (c1-5 / bathroom
+                                   :location (c1-0 / facility
+                                                   :name (c1-4 / name
+                                                               :op1 "CBGB")))
+                       :time (c1-1 / ever))
+      :polarity -)
+
+# ::snt Fresh catfish, yum.
+# ::tokens ["Fresh", "catfish", ",", "yum", "."]
+# ::lemmas ["fresh", "catfish", ",", "yum", "."]
+(c2-0 / and
+      :op1 (c2-3 / catfish
+                 :ARG1-of (c2-2 / fresh-04))
+      :op2 (c2-1 / yum))
+
+# ::snt like half of what I ate growing up
+# ::tokens ["like", "half", "of", "what", "I", "ate", "growing", "up"]
+# ::lemmas ["like", "half", "of", "what", "i", "eat", "grow", "up"]
+(c3-4 / resemble-01
+      :ARG2 (c3-3 / thing
+                  :ARG1-of (c3-6 / include-91
+                                 :ARG2 (c3-0 / thing
+                                             :ARG1-of (c3-7 / eat-01
+                                                            :ARG0 (c3-1 / i)
+                                                            :time (c3-5 / grow-up-04
+                                                                        :ARG1 c3-1)))
+                                 :ARG3 (c3-2 / half))))
+
+# ::snt Ive been saying to everyone, if youve eaten fast food, you dont have to worry about what is in the vaccine.
+# ::tokens ["I", "ve", "been", "saying", "to", "everyone", ",", "if", "you", "ve", "eaten", "fast", "food", ",", "you", "do", "nt", "have", "to", "worry", "about", "what", "is", "in", "the", "vaccine", "."]
+# ::lemmas ["i", "ve", "be", "say", "to", "everyone", ",", "if", "you", "ve", "eat", "fast", "food", ",", "you", "do", "not", "have", "to", "worry", "about", "what", "be", "in", "the", "vaccine", "."]
+(c4-0 / say-01
+      :ARG0 (c4-7 / i)
+      :ARG1 (c4-6 / obligate-01
+                  :ARG1 (c4-8 / you)
+                  :ARG2 (c4-2 / worry-01
+                              :ARG0 (c4-5 / vaccine)
+                              :ARG1 c4-8)
+                  :condition (c4-9 / eat-01
+                                   :ARG0 c4-8
+                                   :ARG1 (c4-1 / food
+                                               :ARG1-of (c4-4 / fast-02)))
+                  :polarity -)
+      :ARG2 (c4-3 / everyone))
+
+# ::snt I've told many relatives this. We all ate fish from Lake Erie growing up.
+# ::tokens ["I", "'ve", "told", "many", "relatives", "this", ".", "We", "all", "ate", "fish", "from", "Lake", "Erie", "growing", "up", "."]
+# ::lemmas ["i", "'ve", "tell", "many", "relative", "this", ".", "we", "all", "eat", "fish", "from", "Lake", "Erie", "grow", "up", "."]
+(c5-12 / multi-sentence
+       :snt1 (c5-6 / tell-01
+                   :ARG0 (c5-11 / i)
+                   :ARG1 (c5-4 / this)
+                   :ARG2 (c5-8 / person
+                               :ARG0-of (c5-5 / have-rel-role-91
+                                              :ARG1 c5-11
+                                              :ARG2 (c5-7 / relative))
+                               :quant (c5-2 / many)))
+       :snt2 (c5-14 / eat-01
+                    :ARG0 (c5-3 / we
+                                :mod (c5-0 / all))
+                    :ARG1 (c5-1 / fish)
+                    :source (c5-9 / lake
+                                  :name (c5-13 / name
+                                               :op1 "Lake"
+                                               :op2 "Erie"))
+                    :time (c5-10 / grow-up-04
+                                 :ARG1 c5-3)))
+
+# ::snt Hot Crabcake Summer
+# ::tokens ["Hot", "Crabcake", "Summer"]
+# ::lemmas ["Hot", "Crabcake", "Summer"]
+(c6-0 / summer
+      :mod (c6-2 / event
+                 :name (c6-1 / name
+                             :op1 "Hot"
+                             :op2 "Crabcake")))

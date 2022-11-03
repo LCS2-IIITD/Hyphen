@@ -1,0 +1,130 @@
+# ::snt Vaccine efficacy: In trials, Pfizer and Moderna vaccines were over % effective. The AstraZeneca vaccine was % effective with two full doses, but % effective in a small group of trial subjects who received first a half dose, then a full dose.
+# ::tokens ["Vaccine", "efficacy", ":", "In", "trials", ",", "Pfizer", "and", "Moderna", "vaccines", "were", "over", "%", "effective", ".", "The", "AstraZeneca", "vaccine", "was", "%", "effective", "with", "two", "full", "doses", ",", "but", "%", "effective", "in", "a", "small", "group", "of", "trial", "subjects", "who", "received", "first", "a", "half", "dose", ",", "then", "a", "full", "dose", "."]
+# ::lemmas ["Vaccine", "efficacy", ":", "in", "trial", ",", "Pfizer", "and", "Moderna", "vaccine", "be", "over", "%", "effective", ".", "the", "AstraZeneca", "vaccine", "be", "%", "effective", "with", "two", "full", "dose", ",", "but", "%", "effective", "in", "a", "small", "group", "of", "trial", "subject", "who", "receive", "first", "a", "half", "dose", ",", "then", "a", "full", "dose", "."]
+(c2-14 / multi-sentence
+       :snt1 (c2-16 / effective-04
+                    :ARG0 (c2-8 / vaccine
+                                :mod (c2-31 / vaccine
+                                            :mod (c2-6 / company
+                                                       :name (c2-15 / name
+                                                                    :op1 "Pfizer")))
+                                :mod (c2-0 / company
+                                           :name (c2-3 / name
+                                                       :op1 "Moderna")))
+                    :mod (c2-9 / over
+                               :op1 (c2-38 / percentage-entity))
+                    :snt2 (c2-7 / contrast-01
+                                :ARG1 (c2-34 / effective-04
+                                             :ARG0 (c2-22 / vaccine
+                                                          :mod (c2-26 / company
+                                                                      :name (c2-24 / name
+                                                                                   :op1 "AstraZeneca")))
+                                             :ARG1 (c2-1 / dose-01
+                                                         :mod (c2-32 / full)
+                                                         :quant 2))
+                                :ARG2 (c2-2 / effective-04
+                                            :ARG0 c2-22
+                                            :ARG1 (c2-13 / group
+                                                         :mod (c2-17 / small)
+                                                         :consist-of (c2-37 / subject
+                                                                            :ARG0-of (c2-12 / receive-01
+                                                                                            :ARG1 (c2-29 / and
+                                                                                                         :op1 (c2-27 / dose-01
+                                                                                                                     :mod (c2-33 / half
+                                                                                                                                 :ord (c2-35 / ordinal-entity
+                                                                                                                                             :value 1)))
+                                                                                                         :op2 (c2-18 / dose-01
+                                                                                                                     :mod (c2-23 / full)
+                                                                                                                     :time (c2-11 / then))))))))
+                    :snt3 (c2-28 / effective-04
+                                 :ARG0 (c2-4 / vaccine
+                                             :mod (c2-19 / company
+                                                         :name (c2-5 / name
+                                                                     :op1 "AstraZeneca")))
+                                 :mod (c2-36 / percentage-entity
+                                             :value 2))
+                    :snt4 c2-7
+                    :ARG1 (c2-20 / percentage-entity
+                                 :value-of (c2-30 / effective-04
+                                                  :ARG0 c2-4))
+                    :ARG2 (c2-21 / percentage-entity
+                                 :value-of c2-12
+                                 :ARG0 c2-13
+                                 :ARG1 (c2-10 / dose-01
+                                              :mod (c2-25 / full)))))
+
+# ::snt Awaiting vaccination: Vaccines can be removed from their long-term, temperature-controlled environments anytime before the six-month expiry date. But once refrigerated or in room temperature, the time of stability becomes shorter.
+# ::tokens ["Awaiting", "vaccination", ":", "Vaccines", "can", "be", "removed", "from", "their", "long", "-", "term", ",", "temperature", "-", "controlled", "environments", "anytime", "before", "the", "six", "-", "month", "expiry", "date", ".", "But", "once", "refrigerated", "or", "in", "room", "temperature", ",", "the", "time", "of", "stability", "becomes", "shorter", "."]
+# ::lemmas ["await", "vaccination", ":", "vaccine", "can", "be", "remove", "from", "their", "long", "-", "term", ",", "temperature", "-", "control", "environment", "anytime", "before", "the", "six", "-", "month", "expiry", "date", ".", "but", "once", "refrigerate", "or", "in", "room", "temperature", ",", "the", "time", "of", "stability", "become", "short", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-5 / vaccinate-01
+                   :ARG1-of (c3-2 / wait-01))
+       :snt2 (c3-22 / possible-01
+                    :ARG1 (c3-8 / remove-01
+                                :ARG1 (c3-17 / vaccinate-01)
+                                :ARG2 (c3-12 / environment
+                                             :ARG1-of (c3-1 / control-01
+                                                            :ARG0 (c3-7 / temperature))
+                                             :poss c3-17)
+                                :time (c3-16 / anytime
+                                             :time (c3-20 / before
+                                                          :op1 (c3-19 / expire-01
+                                                                      :ARG1 (c3-3 / temporal-quantity
+                                                                                  :unit (c3-18 / month)
+                                                                                  :quant 6))))))
+       :snt3 (c3-0 / contrast-01
+                   :ARG2 (c3-15 / become-01
+                                :ARG1 (c3-11 / time
+                                             :duration-of (c3-13 / stable-03))
+                                :ARG2 (c3-21 / short-07
+                                             :ARG1 c3-11)
+                                :time (c3-6 / or
+                                            :op1 (c3-4 / refrigerate-01
+                                                       :ARG1 c3-17)
+                                            :op2 (c3-14 / temperature
+                                                        :mod (c3-9 / room))))))
+
+# ::snt Pfizer's bespoke ultra-cold containers: Thermal shippers maintained at C using dry-ice, and GPS enabled temperature trackers help monitor vaccine stability.
+# ::tokens ["Pfizer", "'s", "bespoke", "ultra", "-", "cold", "containers", ":", "Thermal", "shippers", "maintained", "at", "C", "using", "dry", "-", "ice", ",", "and", "GPS", "enabled", "temperature", "trackers", "help", "monitor", "vaccine", "stability", "."]
+# ::lemmas ["Pfizer", "'s", "bespoke", "ultra", "-", "cold", "container", ":", "thermal", "shipper", "maintain", "at", "C", "use", "dry", "-", "ice", ",", "and", "GPS", "enable", "temperature", "tracker", "help", "monitor", "vaccine", "stability", "."]
+(c4-10 / multi-sentence
+       :snt1 (c4-5 / container
+                   :ARG1-of (c4-21 / bespoke-00)
+                   :poss (c4-0 / company
+                               :name (c4-11 / name
+                                            :op1 "Pfizer"))
+                   :ARG1-of (c4-7 / cold-01
+                                  :degree (c4-20 / ultra)))
+       :snt2 (c4-17 / and
+                    :op1 (c4-18 / maintain-01
+                                :ARG1 (c4-14 / shippers
+                                             :mod (c4-9 / thermal))
+                                :location (c4-6 / temperature)
+                                :manner (c4-2 / use-01
+                                              :ARG1 (c4-4 / ice
+                                                          :ARG1-of (c4-1 / dry-08))))
+                    :op2 (c4-19 / help-01
+                                :ARG0 (c4-12 / track-01
+                                             :ARG1 (c4-15 / temperature)
+                                             :ARG1-of (c4-13 / enable-01
+                                                             :ARG0 (c4-23 / product
+                                                                          :name (c4-3 / name
+                                                                                      :op1 "GPS"))))
+                                :ARG1 (c4-16 / monitor-01
+                                             :ARG1 (c4-22 / stability
+                                                          :mod (c4-8 / vaccine))))))
+
+# ::snt Source of the vaccine: Some vaccines are gambling on promising technologies, while others are relying on approaches that have proven successful in the past
+# ::tokens ["Source", "of", "the", "vaccine", ":", "Some", "vaccines", "are", "gambling", "on", "promising", "technologies", ",", "while", "others", "are", "relying", "on", "approaches", "that", "have", "proven", "successful", "in", "the", "past"]
+# ::lemmas ["source", "of", "the", "vaccine", ":", "some", "vaccine", "be", "gamble", "on", "promise", "technology", ",", "while", "other", "be", "rely", "on", "approach", "that", "have", "prove", "successful", "in", "the", "past"]
+(c5-0 / source-01
+      :ARG1 (c5-5 / vaccine
+                  :quant (c5-9 / some)
+                  :ARG1-of (c5-3 / contrast-01
+                                 :ARG2 (c5-8 / rely-01
+                                             :ARG0 (c5-6 / other)
+                                             :ARG1 (c5-1 / approach-02
+                                                         :ARG1-of (c5-4 / succeed-01
+                                                                        :ARG1-of (c5-10 / prove-01
+                                                                                        :time (c5-7 / past)))))))
+      :ARG2 (c5-2 / vaccine))

@@ -1,0 +1,76 @@
+# ::snt Didnt get it after my st. Got nd dose yesterday afternoon woke up and have it. Checking around to see what is anything I should do so just took Tylenol.
+# ::tokens ["Did", "nt", "get", "it", "after", "my", "st", ".", "Got", "nd", "dose", "yesterday", "afternoon", "woke", "up", "and", "have", "it", ".", "Checking", "around", "to", "see", "what", "is", "anything", "I", "should", "do", "so", "just", "took", "Tylenol", "."]
+# ::lemmas ["do", "nt", "get", "it", "after", "my", "st", ".", "Got", "nd", "dose", "yesterday", "afternoon", "wake", "up", "and", "have", "it", ".", "check", "around", "to", "see", "what", "be", "anything", "i", "should", "do", "so", "just", "take", "Tylenol", "."]
+(c1-11 / multi-sentence
+       :snt1 (c1-10 / get-01
+                    :ARG0 (c1-4 / i)
+                    :ARG1 (c1-15 / it)
+                    :time (c1-19 / after
+                                 :op1 (c1-20 / medical-condition
+                                             :name (c1-12 / name
+                                                          :op1 "st")
+                                             :poss c1-4))
+                    :polarity -)
+       :snt2 (c1-13 / and
+                    :op1 (c1-6 / wake-up-02
+                               :ARG1 (c1-16 / i)
+                               :time (c1-0 / date-entity
+                                           :dayperiod (c1-1 / afternoon)
+                                           :mod (c1-18 / yesterday)))
+                    :op2 (c1-21 / have-03
+                                :ARG0 c1-16
+                                :ARG1 (c1-22 / it)))
+       :snt3 (c1-5 / check-01
+                   :ARG0 (c1-7 / i)
+                   :location (c1-25 / around)
+                   :purpose (c1-14 / see-01
+                                   :ARG0 c1-7
+                                   :ARG1 (c1-3 / anything
+                                               :ARG1-of (c1-17 / do-02
+                                                               :ARG0 c1-7
+                                                               :ARG1-of (c1-9 / recommend-01))))
+                   :ARG0-of (c1-2 / cause-01
+                                  :ARG1 (c1-8 / take-01
+                                              :ARG0 c1-7
+                                              :ARG1 (c1-24 / product
+                                                           :name c1-12
+                                                           :op1 "Tylenol"))
+                                  :mod (c1-23 / just))))
+
+# ::snt Good idea! I wonder if youll have it happen again!
+# ::tokens ["Good", "idea", "!", "I", "wonder", "if", "you", "ll", "have", "it", "happen", "again", "!"]
+# ::lemmas ["good", "idea", "!", "i", "wonder", "if", "you", "ll", "have", "it", "happen", "again", "!"]
+(c2-8 / multi-sentence
+      :snt1 (c2-7 / idea
+                  :ARG1-of (c2-6 / good-02))
+      :snt2 (c2-1 / wonder-01
+                  :ARG0 (c2-2 / i)
+                  :ARG1 (c2-5 / truth-value
+                              :polarity-of (c2-3 / have-06
+                                                 :ARG0 (c2-9 / you)
+                                                 :ARG1 (c2-4 / it)
+                                                 :mod (c2-0 / again)))))
+
+# ::snt I had the same weird delayed covid arm thing so switched arms for the nd dose today.
+# ::tokens ["I", "had", "the", "same", "weird", "delayed", "covid", "arm", "thing", "so", "switched", "arms", "for", "the", "nd", "dose", "today", "."]
+# ::lemmas ["i", "have", "the", "same", "weird", "delay", "covid", "arm", "thing", "so", "switch", "arm", "for", "the", "nd", "dose", "today", "."]
+(c3-3 / cause-01
+      :ARG0 (c3-7 / have-03
+                  :ARG0 (c3-11 / i)
+                  :ARG1 (c3-8 / thing
+                              :ARG1-of (c3-0 / same-01)
+                              :mod (c3-4 / weird)
+                              :topic (c3-2 / arm
+                                           :ARG1-of (c3-1 / delay-01)
+                                           :mod (c3-9 / product
+                                                      :name (c3-13 / name
+                                                                   :op1 "Covid"
+                                                                   :op2 "Arm")))))
+      :ARG1 (c3-10 / switch-01
+                   :ARG0 c3-11
+                   :ARG1 (c3-14 / arm)
+                   :purpose (c3-5 / dose-01
+                                  :ARG2 (c3-12 / medication
+                                               :name c3-13
+                                               :op1 "ND")))
+      :time (c3-6 / today))

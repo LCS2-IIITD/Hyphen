@@ -1,0 +1,71 @@
+# ::snt : Ottawa police confirm a shooting at Canada's National War Memorial - ironic
+# ::tokens [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "-", "ironic"]
+# ::lemmas [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "-", "ironic"]
+(c1-6 / confirm-01
+      :ARG0 (c1-4 / police
+                  :mod (c1-5 / city
+                             :name (c1-2 / name
+                                         :op1 "Ottawa")))
+      :ARG1 (c1-9 / shoot-02
+                  :location (c1-0 / building
+                                  :name (c1-3 / name
+                                              :op1 "National"
+                                              :op2 "War"
+                                              :op3 "Memorial")
+                                  :mod (c1-8 / country
+                                             :name (c1-7 / name
+                                                         :op1 "Canada"))))
+      :mod (c1-1 / ironic))
+
+# ::snt they told me Canada has "very polite" people....
+# ::tokens ["they", "told", "me", "Canada", "has", "\"", "very", "polite", "\"", "people", "...."]
+# ::lemmas ["they", "tell", "i", "Canada", "have", "\"", "very", "polite", "\"", "people", "...."]
+(c2-7 / tell-01
+      :ARG0 (c2-6 / they)
+      :ARG1 (c2-0 / have-03
+                  :ARG0 (c2-5 / country
+                              :name (c2-2 / name
+                                          :op1 "Canada"))
+                  :ARG1 (c2-4 / person
+                              :ARG1-of (c2-8 / polite-01
+                                             :degree (c2-3 / very))))
+      :ARG2 (c2-1 / i))
+
+# ::snt : Ottawa police confirm a shooting at Canada's National War Memorial -
+# ::tokens [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "-"]
+# ::lemmas [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "-"]
+(c3-5 / confirm-01
+      :ARG0 (c3-3 / police
+                  :mod (c3-4 / city
+                             :name (c3-1 / name
+                                         :op1 "Ottawa")))
+      :ARG1 (c3-8 / shoot-02
+                  :location (c3-0 / building
+                                  :name (c3-2 / name
+                                              :op1 "National"
+                                              :op2 "War"
+                                              :op3 "Memorial")
+                                  :mod (c3-7 / country
+                                             :name (c3-6 / name
+                                                         :op1 "Canada")))))
+
+# ::snt : Ottawa police confirm a shooting at Canada's National War Memorial" This is disgusting.
+# ::tokens [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "\"", "This", "is", "disgusting", "."]
+# ::lemmas [":", "Ottawa", "police", "confirm", "a", "shooting", "at", "Canada", "'s", "National", "War", "Memorial", "\"", "this", "be", "disgusting", "."]
+(c5-0 / multi-sentence
+      :snt1 (c5-6 / confirm-01
+                  :ARG0 (c5-4 / police
+                              :mod (c5-5 / city
+                                         :name (c5-2 / name
+                                                     :op1 "Ottawa")))
+                  :ARG1 (c5-10 / shoot-02
+                               :location (c5-1 / building
+                                               :name (c5-3 / name
+                                                           :op1 "National"
+                                                           :op2 "War"
+                                                           :op3 "Memorial")
+                                               :mod (c5-9 / country
+                                                          :name (c5-7 / name
+                                                                      :op1 "Canada")))))
+      :snt2 (c5-8 / disgust-01
+                  :ARG0 (c5-11 / this)))

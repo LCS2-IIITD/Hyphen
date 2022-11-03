@@ -1,0 +1,70 @@
+# ::snt Thank you
+# ::tokens ["Thank", "you"]
+# ::lemmas ["thank", "you"]
+(c2-1 / thank-01
+      :ARG0 (c2-2 / i)
+      :ARG1 (c2-0 / you))
+
+# ::snt it's been a scary and very sad day for sure!
+# ::tokens ["it", "'s", "been", "a", "scary", "and", "very", "sad", "day", "for", "sure", "!"]
+# ::lemmas ["it", "be", "be", "a", "scary", "and", "very", "sad", "day", "for", "sure", "!"]
+(c3-5 / and
+      :op1 (c3-4 / scary-03
+                 :ARG0 (c3-3 / day))
+      :op2 (c3-1 / sad-02
+                 :ARG0 c3-3
+                 :degree (c3-2 / very))
+      :ARG1-of (c3-0 / sure-02))
+
+# ::snt much love Tim!
+# ::tokens ["much", "love", "Tim", "!"]
+# ::lemmas ["much", "love", "Tim", "!"]
+(c4-2 / love-01
+      :ARG1 (c4-1 / person
+                  :name (c4-0 / name
+                              :op1 "Tim"))
+      :degree (c4-3 / much))
+
+# ::snt : Hearts and prayers go out to everyone affected by the shootings in Ottawa today.
+# ::tokens [":", "Hearts", "and", "prayers", "go", "out", "to", "everyone", "affected", "by", "the", "shootings", "in", "Ottawa", "today", "."]
+# ::lemmas [":", "heart", "and", "prayer", "go", "out", "to", "everyone", "affect", "by", "the", "shooting", "in", "Ottawa", "today", "."]
+(c5-6 / go-out-17
+      :ARG1 (c5-9 / and
+                  :op1 (c5-0 / heart)
+                  :op2 (c5-4 / pray-01))
+      :ARG2 (c5-1 / everyone
+                  :ARG1-of (c5-2 / affect-01
+                                 :ARG0 (c5-7 / shoot-02
+                                             :location (c5-5 / city
+                                                             :name (c5-3 / name
+                                                                         :op1 "Ottawa"))
+                                             :time (c5-8 / today)))))
+
+# ::snt Amen.
+# ::tokens ["Amen", "."]
+# ::lemmas ["amen", "."]
+(c6-0 / man)
+
+# ::snt so sad one of the guards was from Hamilton armoury! Too close to home! Prayers to all
+# ::tokens ["so", "sad", "one", "of", "the", "guards", "was", "from", "Hamilton", "armoury", "!", "Too", "close", "to", "home", "!", "Prayers", "to", "all"]
+# ::lemmas ["so", "sad", "one", "of", "the", "guard", "be", "from", "Hamilton", "armoury", "!", "too", "close", "to", "home", "!", "prayer", "to", "all"]
+(c7-2 / multi-sentence
+      :snt1 (c7-12 / sad-02
+                   :ARG0 (c7-8 / person
+                               :ARG1-of (c7-6 / include-91
+                                              :ARG2 (c7-15 / person
+                                                           :ARG0-of (c7-11 / guard-01)))
+                               :source (c7-16 / armoury
+                                              :location (c7-10 / city
+                                                               :name (c7-7 / name
+                                                                           :op1 "Hamilton")))
+                               :quant 1)
+                   :degree (c7-4 / so))
+      :snt2 (c7-0 / have-degree-91
+                  :ARG1 (c7-1 / home)
+                  :ARG2 (c7-9 / close-10
+                              :ARG1 c7-1)
+                  :ARG3 (c7-14 / too))
+      :snt3 (c7-3 / pray-01
+                  :ARG0 (c7-13 / person
+                               :mod (c7-5 / all))))

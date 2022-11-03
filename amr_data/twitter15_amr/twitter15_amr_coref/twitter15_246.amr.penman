@@ -1,0 +1,76 @@
+# ::snt fake af , knowin he was on the bet new years eve .
+# ::tokens ["fake", "af", ",", "knowin", "he", "was", "on", "the", "bet", "new", "years", "eve", "."]
+# ::lemmas ["fake", "af", ",", "knowin", "he", "be", "on", "the", "bet", "new", "year", "eve", "."]
+(c1-6 / and
+      :op1 (c1-9 / fake-02
+                 :ARG1 (c1-2 / af))
+      :op2 (c1-7 / know-01
+                 :ARG0 (c1-0 / i)
+                 :ARG1 (c1-1 / bet-01
+                             :ARG0 (c1-4 / he)
+                             :time (c1-8 / eve
+                                         :op1 (c1-3 / new-01
+                                                    :ARG1 (c1-5 / year))))))
+
+# ::snt I don't believe it
+# ::tokens ["I", "do", "n't", "believe", "it"]
+# ::lemmas ["i", "do", "not", "believe", "it"]
+(c2-1 / believe-01
+      :ARG0 (c2-0 / i)
+      :ARG1 (c2-2 / it)
+      :polarity -)
+
+# ::snt Oh k
+# ::tokens ["Oh", "k"]
+# ::lemmas ["Oh", "k"]
+(c3-0 / oh-k
+      :mode expressive)
+
+# ::snt my freestyle has k views + likes PLEASE comment like &amp; SUBSCRIBE! new ery tues RT
+# ::tokens ["my", "freestyle", "has", "k", "views", "+", "likes", "PLEASE", "comment", "like", "&", "amp", ";", "SUBSCRIBE", "!", "new", "ery", "tues", "RT"]
+# ::lemmas ["my", "freestyle", "have", "k", "view", "+", "like", "please", "comment", "like", "&", "amp", ";", "SUBSCRIBE", "!", "new", "ery", "tue", "RT"]
+(c4-12 / multi-sentence
+       :snt1 (c4-21 / have-03
+                    :ARG0 (c4-10 / freestyle
+                                 :poss (c4-1 / i))
+                    :ARG1 (c4-8 / and
+                                :op1 (c4-16 / view-01
+                                            :ARG0 c4-1)
+                                :op2 (c4-2 / like-01
+                                           :ARG0 c4-1)))
+       :snt2 (c4-4 / comment-01
+                   :ARG0 (c4-13 / you)
+                   :ARG1-of (c4-5 / resemble-01
+                                  :ARG2 (c4-3 / and
+                                              :op1 (c4-17 / thing
+                                                          :name (c4-15 / name
+                                                                       :op1 "&amp"))
+                                              :op2 (c4-11 / thing
+                                                          :ARG1-of (c4-19 / comment-01))))
+                   :mode imperative
+                   :polite +)
+       :snt3 (c4-0 / SUBSCRIBE-01
+                   :ARG0 c4-13
+                   :mode imperative)
+       :snt4 (c4-18 / and
+                    :op1 (c4-6 / thing
+                               :ARG1-of (c4-14 / new-01)
+                               :mod (c4-9 / ery))
+                    :op2 (c4-20 / thing
+                                :name (c4-7 / name
+                                            :op1 "RT"))))
+
+# ::snt that the same news feed that brought you the exclusive on Crip Santa ?
+# ::tokens ["that", "the", "same", "news", "feed", "that", "brought", "you", "the", "exclusive", "on", "Crip", "Santa", "?"]
+# ::lemmas ["that", "the", "same", "news", "feed", "that", "bring", "you", "the", "exclusive", "on", "Crip", "Santa", "?"]
+(c7-8 / feed-01
+      :ARG1 (c7-6 / news)
+      :ARG1-of (c7-0 / same-01)
+      :ARG0-of (c7-1 / bring-01
+                     :ARG1 (c7-7 / exclusive
+                                 :topic (c7-2 / person
+                                              :name (c7-5 / name
+                                                          :op1 "Crip"
+                                                          :op2 "Santa")))
+                     :ARG2 (c7-4 / you))
+      :polarity (c7-3 / amr-unknown))

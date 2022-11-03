@@ -1,0 +1,506 @@
+# ::snt That's because they vote all night
+# ::tokens ["That", "'s", "because", "they", "vote", "all", "night"]
+# ::lemmas ["that", "be", "because", "they", "vote", "all", "night"]
+(c2-2 / cause-01
+      :ARG0 (c2-1 / vote-01
+                  :ARG0 (c2-3 / they)
+                  :time (c2-0 / night
+                              :mod (c2-4 / all)))
+      :ARG1 (c2-5 / that))
+
+# ::snt Vote Vote Vote!
+# ::tokens ["Vote", "Vote", "Vote", "!"]
+# ::lemmas ["Vote", "Vote", "Vote", "!"]
+(c3-0 / vote-01
+      :ARG0 (c3-1 / you)
+      :ARG1 c3-0
+      :mode imperative)
+
+# ::snt sam is down to % please vote
+# ::tokens ["sam", "is", "down", "to", "%", "please", "vote"]
+# ::lemmas ["sam", "be", "down", "to", "%", "please", "vote"]
+(c4-3 / vote-01
+      :ARG0 (c4-0 / you)
+      :ARG1 (c4-5 / down-03
+                  :ARG1 (c4-4 / person
+                              :name (c4-1 / name
+                                          :op1 "Sam"))
+                  :ARG3 (c4-2 / percentage-entity
+                              :value 40))
+      :mode imperative
+      :polite +)
+
+# ::snt keep voting!!!! % to % favor to Sam but too close for comfort!!!!
+# ::tokens ["keep", "voting", "!", "!", "!", "!", "%", "to", "%", "favor", "to", "Sam", "but", "too", "close", "for", "comfort", "!", "!", "!", "!"]
+# ::lemmas ["keep", "vote", "!", "!", "!", "!", "%", "to", "%", "favor", "to", "Sam", "but", "too", "close", "for", "comfort", "!", "!", "!", "!"]
+(c5-4 / keep-02
+      :ARG0 (c5-0 / you)
+      :ARG1 (c5-2 / vote-01
+                  :ARG0 c5-0)
+      :ARG1-of (c5-6 / contrast-01
+                     :ARG2 (c5-9 / close-10
+                                 :ARG2 (c5-5 / person
+                                             :name (c5-1 / name
+                                                         :op1 "Sam"))
+                                 :ARG2-of (c5-3 / have-degree-91
+                                                :ARG1 c5-5
+                                                :ARG3 (c5-8 / too)
+                                                :ARG6 (c5-7 / comfort))))
+      :mode imperative)
+
+# ::snt voted. Sam at %. Keep voting!
+# ::tokens ["voted", ".", "Sam", "at", "%", ".", "Keep", "voting", "!"]
+# ::lemmas ["vote", ".", "Sam", "at", "%", ".", "keep", "vote", "!"]
+(c6-2 / multi-sentence
+      :snt1 (c6-4 / vote-01)
+      :snt2 (c6-7 / vote-01
+                  :ARG0 (c6-5 / person
+                              :name (c6-1 / name
+                                          :op1 "Sam"))
+                  :degree (c6-3 / percentage-entity))
+      :snt3 (c6-6 / keep-02
+                  :ARG0 (c6-0 / you)
+                  :ARG1 (c6-8 / vote-01
+                              :ARG0 c6-0)
+                  :mode imperative))
+
+# ::snt Vote now to move Sam ahead. It's / right now and it ends in /2 hours
+# ::tokens ["Vote", "now", "to", "move", "Sam", "ahead", ".", "It", "'s", "/", "right", "now", "and", "it", "ends", "in", "/2", "hours"]
+# ::lemmas ["vote", "now", "to", "move", "Sam", "ahead", ".", "it", "be", "/", "right", "now", "and", "it", "end", "in", "/2", "hours"]
+(c7-1 / multi-sentence
+      :snt1 (c7-4 / vote-01
+                  :ARG0 (c7-0 / you)
+                  :ARG1 (c7-6 / move-01
+                              :ARG0 c7-0
+                              :ARG1 (c7-7 / person
+                                          :name (c7-2 / name
+                                                      :op1 "Sam"))
+                              :ARG2 (c7-15 / ahead))
+                  :time (c7-8 / now
+                              :mod (c7-3 / right))
+                  :mode imperative)
+      :snt2 (c7-14 / and
+                   :op1 (c7-9 / now
+                              :mod c7-3))
+      :op2 (c7-5 / end-01
+                 :ARG1 (c7-16 / it)
+                 :time (c7-11 / after
+                              :op1 (c7-12 / now
+                                          :quant (c7-13 / temporal-quantity
+                                                        :unit (c7-10 / hour)
+                                                        :quant 2)))))
+
+# ::snt Fire hydrants thats new
+# ::tokens ["Fire", "hydrants", "that", "s", "new"]
+# ::lemmas ["fire", "hydrant", "that", "s", "new"]
+(c8-2 / new-01
+      :ARG1 (c8-1 / hydrant
+                  :purpose (c8-0 / fire-04)))
+
+# ::snt Been at work &amp; didnt see the time!!
+# ::tokens ["Been", "at", "work", "&", "amp", ";", "did", "nt", "see", "the", "time", "!", "!"]
+# ::lemmas ["be", "at", "work", "&", "amp", ";", "do", "not", "see", "the", "time", "!", "!"]
+(c9-5 / and
+      :op1 (c9-0 / be-located-at-91
+                 :op1 (c9-2 / work-01)
+                 :op2 (c9-4 / amp)
+                 :ARG2 c9-5)
+      :op2 (c9-1 / see-01
+                 :ARG0 (c9-6 / i)
+                 :ARG1 (c9-3 / time)
+                 :polarity -))
+
+# ::snt We will see!
+# ::tokens ["We", "will", "see", "!"]
+# ::lemmas ["we", "will", "see", "!"]
+(c10-1 / see-01
+       :ARG0 (c10-0 / we))
+
+# ::snt Guess we did not make it.
+# ::tokens ["Guess", "we", "did", "not", "make", "it", "."]
+# ::lemmas ["guess", "we", "do", "not", "make", "it", "."]
+(c11-0 / guess-01
+       :ARG1 (c11-2 / make-it-14
+                    :ARG0 (c11-1 / we)
+                    :polarity -))
+
+# ::snt Eastern time.
+# ::tokens ["Eastern", "time", "."]
+# ::lemmas ["Eastern", "time", "."]
+(c12-1 / time
+       :mod (c12-0 / east))
+
+# ::snt Guess got the time wrong
+# ::tokens ["Guess", "got", "the", "time", "wrong"]
+# ::lemmas ["Guess", "get", "the", "time", "wrong"]
+(c13-0 / guess-01
+       :ARG1 (c13-2 / get-02
+                    :ARG1 (c13-1 / wrong-04
+                                 :ARG1 (c13-3 / time))))
+
+# ::snt I thought it was to stay open until PM
+# ::tokens ["I", "thought", "it", "was", "to", "stay", "open", "until", "PM"]
+# ::lemmas ["i", "think", "it", "be", "to", "stay", "open", "until", "PM"]
+(c14-4 / think-01
+       :ARG0 (c14-3 / i)
+       :ARG1 (c14-1 / stay-01
+                    :ARG1 (c14-2 / it)
+                    :ARG3 (c14-0 / open-09
+                                 :ARG1 c14-2)
+                    :time (c14-6 / until
+                                 :op1 (c14-5 / date-entity
+                                             :time "PM"))))
+
+# ::snt voting ended at pm. that was minutes ago
+# ::tokens ["voting", "ended", "at", "pm", ".", "that", "was", "minutes", "ago"]
+# ::lemmas ["voting", "end", "at", "pm", ".", "that", "be", "minutes", "ago"]
+(c15-1 / multi-sentence
+       :snt1 (c15-4 / end-01
+                    :ARG1 (c15-3 / vote-01)
+                    :time (c15-8 / date-entity
+                                 :time " pm"))
+       :snt2 (c15-0 / be-temporally-at-91
+                    :ARG1 c15-4
+                    :ARG2 (c15-5 / before
+                                 :op1 (c15-2 / now)
+                                 :quant (c15-6 / multiple
+                                               :op1 (c15-7 / temporal-quantity
+                                                           :unit (c15-9 / minute)
+                                                           :quant 1)))))
+
+# ::snt Has the site gone down!! Refusing all of a sudden to let me vote!
+# ::tokens ["Has", "the", "site", "gone", "down", "!", "!", "Refusing", "all", "of", "a", "sudden", "to", "let", "me", "vote", "!"]
+# ::lemmas ["have", "the", "site", "go", "down", "!", "!", "refuse", "all", "of", "a", "sudden", "to", "let", "i", "vote", "!"]
+(c16-1 / multi-sentence
+       :snt1 (c16-9 / down-03
+                    :polarity (c16-7 / amr-unknown)
+                    :ARG1 (c16-2 / site))
+       :snt2 (c16-3 / refuse-01
+                    :ARG1 (c16-5 / let-01
+                                 :ARG1 (c16-4 / vote-01
+                                              :ARG0 (c16-6 / i)))
+                    :manner (c16-0 / sudden
+                                   :mod (c16-8 / all))))
+
+# ::snt Yes, we definitely need voters
+# ::tokens ["Yes", ",", "we", "definitely", "need", "voters"]
+# ::lemmas ["yes", ",", "we", "definitely", "need", "voter"]
+(c17-0 / need-01
+       :ARG0 (c17-3 / we)
+       :ARG1 (c17-2 / person
+                    :ARG0-of (c17-1 / vote-01))
+       :mod (c17-4 / definite))
+
+# ::snt holy cow. It's literally /50 right now! less than hours to go!
+# ::tokens ["holy", "cow", ".", "It", "'s", "literally", "/50", "right", "now", "!", "less", "than", "hours", "to", "go", "!"]
+# ::lemmas ["holy", "cow", ".", "it", "be", "literally", "/50", "right", "now", "!", "less", "than", "hours", "to", "go", "!"]
+(c18-0 / multi-sentence
+       :snt1 (c18-6 / cow
+                    :mod (c18-4 / holy)
+                    :mode expressive)
+       :snt2 (c18-3 / equal-01
+                    :mod (c18-5 / literal)
+                    :time (c18-1 / now
+                                 :mod (c18-2 / right))
+                    :ARG2 50)
+       :snt3 (c18-10 / less-than
+                     :op1 (c18-8 / temporal-quantity
+                                 :unit (c18-7 / hour)
+                                 :quant 1)
+                     :ARG2-of (c18-9 / go-01)))
+
+# ::snt Yes it is. We need voters Pronto! Vote for Sam!
+# ::tokens ["Yes", "it", "is", ".", "We", "need", "voters", "Pronto", "!", "Vote", "for", "Sam", "!"]
+# ::lemmas ["yes", "it", "be", ".", "we", "need", "voter", "Pronto", "!", "vote", "for", "Sam", "!"]
+(c19-2 / multi-sentence
+       :snt1 (c19-0 / yes)
+       :snt2 (c19-1 / need-01
+                    :ARG0 (c19-7 / we)
+                    :ARG1 (c19-6 / person
+                                 :ARG0-of (c19-4 / vote-01))
+                    :mod (c19-3 / pronto))
+       :snt3 (c19-8 / vote-01
+                    :ARG0 (c19-10 / you)
+                    :ARG1 (c19-9 / person
+                                 :name (c19-5 / name
+                                              :op1 "Sam"))
+                    :mode imperative))
+
+# ::snt Its so close.
+# ::tokens ["Its", "so", "close", "."]
+# ::lemmas ["its", "so", "close", "."]
+(c20-0 / close-10
+       :ARG1 (c20-1 / it)
+       :degree (c20-2 / so))
+
+# ::snt Please vote as much as you can. Sam seems to be stuck at % We need all the voters we can get one day left!
+# ::tokens ["Please", "vote", "as", "much", "as", "you", "can", ".", "Sam", "seems", "to", "be", "stuck", "at", "%", "We", "need", "all", "the", "voters", "we", "can", "get", "one", "day", "left", "!"]
+# ::lemmas ["please", "vote", "as", "much", "as", "you", "can", ".", "Sam", "seem", "to", "be", "stick", "at", "%", "we", "need", "all", "the", "voter", "we", "can", "get", "one", "day", "leave", "!"]
+(c21-14 / multi-sentence
+        :snt1 (c21-7 / vote-01
+                     :ARG0 (c21-6 / you)
+                     :ARG1-of (c21-9 / have-quant-91
+                                     :ARG2 (c21-8 / much)
+                                     :ARG3 (c21-18 / equal)
+                                     :ARG4 (c21-19 / possible-01
+                                                   :ARG1 (c21-1 / vote-01
+                                                                :ARG0 c21-6)))
+                     :mode imperative
+                     :polite +)
+        :snt2 (c21-0 / seem-01
+                     :ARG1 (c21-4 / stick-01
+                                  :ARG1 (c21-15 / person
+                                                :name (c21-17 / name
+                                                              :op1 "Sam"))
+                                  :ARG2 (c21-3 / percentage)))
+        :snt3 (c21-16 / need-01
+                      :ARG0 (c21-20 / we)
+                      :ARG1 (c21-2 / person
+                                   :ARG0-of (c21-13 / vote-01)
+                                   :mod (c21-11 / all)
+                                   :ARG1-of (c21-12 / get-01
+                                                    :ARG0 c21-20
+                                                    :ARG1-of (c21-10 / possible-01)
+                                                    :time (c21-21 / day
+                                                                  :mod (c21-5 / one))))))
+
+# ::snt I know. Same thing happened last year!!
+# ::tokens ["I", "know", ".", "Same", "thing", "happened", "last", "year", "!", "!"]
+# ::lemmas ["i", "know", ".", "same", "thing", "happen", "last", "year", "!", "!"]
+(c22-1 / multi-sentence
+       :snt1 (c22-4 / know-01
+                    :ARG0 (c22-6 / i))
+       :snt2 (c22-3 / event
+                    :ARG1-of (c22-2 / same-01)
+                    :time (c22-0 / year
+                                 :mod (c22-5 / last))))
+
+# ::snt Keep voting but % is not budging
+# ::tokens ["Keep", "voting", "but", "%", "is", "not", "budging"]
+# ::lemmas ["keep", "voting", "but", "%", "be", "not", "budge"]
+(c23-5 / contrast-01
+       :ARG1 (c23-3 / keep-02
+                    :ARG0 (c23-1 / you)
+                    :ARG1 (c23-2 / vote-01
+                                 :ARG0 c23-1)
+                    :mode imperative)
+       :ARG2 (c23-0 / budge-01
+                    :ARG0 (c23-4 / percentage-entity)
+                    :polarity -))
+
+# ::snt Need to vote for Sam as much as we can Sam us now under % Let's do this clan!
+# ::tokens ["Need", "to", "vote", "for", "Sam", "as", "much", "as", "we", "can", "Sam", "us", "now", "under", "%", "Let", "'s", "do", "this", "clan", "!"]
+# ::lemmas ["need", "to", "vote", "for", "Sam", "as", "much", "as", "we", "can", "Sam", "us", "now", "under", "%", "let", "us", "do", "this", "clan", "!"]
+(c25-1 / multi-sentence
+       :snt1 (c25-0 / need-01
+                    :ARG0 (c25-10 / we)
+                    :ARG1 (c25-3 / vote-01
+                                 :ARG0 c25-10
+                                 :ARG1 (c25-6 / person
+                                              :name (c25-5 / name
+                                                           :op1 "Sam"))
+                                 :ARG1-of (c25-7 / have-quant-91
+                                                 :ARG2 (c25-8 / much)
+                                                 :ARG3 (c25-4 / equal)
+                                                 :ARG4 (c25-2 / possible-01
+                                                              :ARG1 (c25-11 / vote-01
+                                                                            :ARG0 c25-10
+                                                                            :ARG1 c25-6)))))
+       :snt2 (c25-14 / do-02
+                     :ARG0 (c25-9 / we)
+                     :ARG1 (c25-12 / clan
+                                   :mod (c25-13 / this))
+                     :mode imperative))
+
+# ::snt No longer the case! He is behind now!!
+# ::tokens ["No", "longer", "the", "case", "!", "He", "is", "behind", "now", "!", "!"]
+# ::lemmas ["no", "long", "the", "case", "!", "he", "be", "behind", "now", "!", "!"]
+(c26-2 / multi-sentence
+       :snt1 (c26-5 / case-04
+                    :ARG1 (c26-6 / it)
+                    :time (c26-1 / no-longer))
+       :snt2 (c26-0 / behind
+                    :domain (c26-3 / he)
+                    :time (c26-4 / now)))
+
+# ::snt Sam has a slight edge!
+# ::tokens ["Sam", "has", "a", "slight", "edge", "!"]
+# ::lemmas ["Sam", "have", "a", "slight", "edge", "!"]
+(c27-3 / have-03
+       :ARG0 (c27-4 / person
+                    :name (c27-0 / name
+                                 :op1 "Sam"))
+       :ARG1 (c27-2 / edge-03
+                    :degree (c27-1 / slight))
+       :mode expressive)
+
+# ::snt I keep voting!!
+# ::tokens ["I", "keep", "voting", "!", "!"]
+# ::lemmas ["i", "keep", "vote", "!", "!"]
+(c30-1 / keep-02
+       :ARG0 (c30-2 / i)
+       :ARG1 (c30-0 / vote-01
+                    :ARG0 c30-2)
+       :mode expressive)
+
+# ::snt Just did
+# ::tokens ["Just", "did"]
+# ::lemmas ["just", "do"]
+(c32-0 / event
+       :mod (c32-2 / i)
+       :mod (c32-1 / just))
+
+# ::snt People in the east should know voting is still open
+# ::tokens ["People", "in", "the", "east", "should", "know", "voting", "is", "still", "open"]
+# ::lemmas ["people", "in", "the", "east", "should", "know", "voting", "be", "still", "open"]
+(c33-2 / recommend-01
+       :ARG1 (c33-5 / know-01
+                    :ARG0 (c33-6 / person
+                                 :location (c33-4 / east))
+                    :ARG1 (c33-0 / open-07
+                                 :ARG1 (c33-3 / vote-01)
+                                 :mod (c33-1 / still))))
+
+# ::snt Had to get on the computer for voting madness.. then it wanted to update all my S?!t
+# ::tokens ["Had", "to", "get", "on", "the", "computer", "for", "voting", "madness", "..", "then", "it", "wanted", "to", "update", "all", "my", "S?!t"]
+# ::lemmas ["have", "to", "get", "on", "the", "computer", "for", "vote", "madness", "..", "then", "it", "want", "to", "update", "all", "my", "s?!t"]
+(c36-1 / multi-sentence
+       :snt1 (c36-0 / obligate-01
+                    :ARG2 (c36-11 / get-05
+                                  :ARG2 (c36-6 / computer)
+                                  :purpose (c36-5 / madness
+                                                  :mod (c36-4 / vote-01))))
+       :snt2 (c36-7 / want-01
+                    :ARG0 (c36-9 / it)
+                    :ARG1 (c36-12 / update-01
+                                  :ARG0 c36-9
+                                  :ARG1 (c36-2 / shit
+                                               :mod (c36-10 / all)
+                                               :poss (c36-3 / i)
+                                               :mode expressive))
+                    :time (c36-8 / then)))
+
+# ::snt I'm voting on my phone and computer and I see exactly what you're talking about
+# ::tokens ["I", "'m", "voting", "on", "my", "phone", "and", "computer", "and", "I", "see", "exactly", "what", "you", "'re", "talking", "about"]
+# ::lemmas ["i", "be", "vote", "on", "my", "phone", "and", "computer", "and", "i", "see", "exactly", "what", "you", "be", "talk", "about"]
+(c37-2 / and
+       :op1 (c37-3 / vote-01
+                   :ARG0 (c37-9 / i)
+                   :medium (c37-8 / and
+                                  :op1 (c37-5 / phone)
+                                  :op2 (c37-6 / computer)
+                                  :poss c37-9))
+       :op2 (c37-1 / see-01
+                   :ARG0 c37-9
+                   :ARG1 (c37-7 / thing
+                                :ARG1-of (c37-10 / talk-01
+                                                 :ARG0 (c37-0 / you))
+                                :mod (c37-4 / exact))))
+
+# ::snt Oh, no! I hope it's better.
+# ::tokens ["Oh", ",", "no", "!", "I", "hope", "it", "'s", "better", "."]
+# ::lemmas ["oh", ",", "no", "!", "i", "hope", "it", "be", "well", "."]
+(c38-2 / multi-sentence
+       :snt1 (c38-0 / oh
+                    :mod (c38-1 / no)
+                    :mode expressive)
+       :snt2 (c38-4 / hope-01
+                    :ARG0 (c38-7 / i)
+                    :ARG1 (c38-6 / have-degree-91
+                                 :ARG1 (c38-3 / it)
+                                 :ARG2 (c38-8 / good-02
+                                              :ARG1 c38-3)
+                                 :ARG3 (c38-5 / more))))
+
+# ::snt And of course my internet is screwing up
+# ::tokens ["And", "of", "course", "my", "internet", "is", "screwing", "up"]
+# ::lemmas ["and", "of", "course", "my", "internet", "be", "screw", "up"]
+(c39-4 / and
+       :op2 (c39-1 / screw-up-01
+                   :ARG0 (c39-3 / internet
+                                :poss (c39-2 / i))
+                   :mod (c39-0 / of-course)))
+
+# ::snt lol trying girl
+# ::tokens ["lol", "trying", "girl"]
+# ::lemmas ["lol", "try", "girl"]
+(c41-0 / say-01
+       :ARG0 (c41-2 / i)
+       :ARG1 (c41-3 / try-01
+                    :ARG0 (c41-4 / girl)
+                    :ARG0-of (c41-1 / laugh-01
+                                    :manner (c41-5 / loud)))
+       :ARG2 c41-4)
+
+# ::snt I know. You are a trooper.
+# ::tokens ["I", "know", ".", "You", "are", "a", "trooper", "."]
+# ::lemmas ["i", "know", ".", "you", "be", "a", "trooper", "."]
+(c42-1 / multi-sentence
+       :snt1 (c42-4 / know-01
+                    :ARG0 (c42-5 / i))
+       :snt2 (c42-3 / person
+                    :ARG0-of (c42-2 / have-org-role-91
+                                    :ARG2 (c42-6 / trooper))
+                    :domain (c42-0 / you)))
+
+# ::snt he going down
+# ::tokens ["he", "going", "down"]
+# ::lemmas ["he", "go", "down"]
+(c43-0 / go-02
+       :ARG0 (c43-2 / he)
+       :ARG4 (c43-1 / down))
+
+# ::snt I'm here
+# ::tokens ["I", "'m", "here"]
+# ::lemmas ["i", "be", "here"]
+(c45-0 / be-located-at-91
+       :ARG1 (c45-2 / i)
+       :ARG2 (c45-1 / here))
+
+# ::snt Lol killing the robot slowing Down my voting for Sam Heughan
+# ::tokens ["Lol", "killing", "the", "robot", "slowing", "Down", "my", "voting", "for", "Sam", "Heughan"]
+# ::lemmas ["Lol", "kill", "the", "robot", "slow", "Down", "my", "voting", "for", "Sam", "Heughan"]
+(c46-4 / kill-01
+       :ARG1 (c46-2 / robot)
+       :ARG0-of (c46-1 / slow-down-03
+                       :ARG1 (c46-3 / vote-01
+                                    :ARG0 (c46-7 / i)
+                                    :ARG1 (c46-5 / person
+                                                 :name (c46-0 / name
+                                                              :op1 "Sam"
+                                                              :op2 "Heughan"))))
+       :mod (c46-6 / laugh-01
+                   :manner (c46-8 / loud)
+                   :mode expressive))
+
+# ::snt just kill it!
+# ::tokens ["just", "kill", "it", "!"]
+# ::lemmas ["just", "kill", "it", "!"]
+(c47-2 / kill-01
+       :ARG0 (c47-1 / you)
+       :ARG1 (c47-3 / it)
+       :mod (c47-0 / just)
+       :mode imperative)
+
+# ::snt Where is the Fanmily?Down another %
+# ::tokens ["Where", "is", "the", "Fanmily?Down", "another", "%"]
+# ::lemmas ["where", "be", "the", "fanmily?down", "another", "%"]
+(c48-0 / fanmily
+       :location (c48-3 / amr-unknown)
+       :direction (c48-2 / down
+                         :op1 (c48-1 / percentage-entity
+                                     :value "-2")))
+
+# ::snt Me too!
+# ::tokens ["Me", "too", "!"]
+# ::lemmas ["i", "too", "!"]
+(c49-0 / i
+       :mod (c49-1 / too))
+
+# ::snt God so am I
+# ::tokens ["God", "so", "am", "I"]
+# ::lemmas ["God", "so", "be", "i"]
+(c50-1 / person
+       :name (c50-0 / name
+                    :op1 "God")
+       :domain (c50-2 / i))

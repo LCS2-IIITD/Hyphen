@@ -1,0 +1,62 @@
+# ::snt But I was able to charge my Amazon order to your chip so its all good
+# ::tokens ["But", "I", "was", "able", "to", "charge", "my", "Amazon", "order", "to", "your", "chip", "so", "its", "all", "good"]
+# ::lemmas ["but", "i", "be", "able", "to", "charge", "my", "Amazon", "order", "to", "your", "chip", "so", "its", "all", "good"]
+(c1-3 / contrast-01
+      :ARG2 (c1-9 / possible-01
+                  :ARG1 (c1-0 / charge-03
+                              :ARG0 (c1-2 / i)
+                              :ARG1 (c1-6 / order-02
+                                          :ARG0 c1-2
+                                          :ARG3 (c1-5 / company
+                                                      :name (c1-10 / name
+                                                                   :op1 "Amazon")))
+                              :ARG2 (c1-8 / chip
+                                          :poss (c1-11 / you)))
+                  :ARG0-of (c1-4 / cause-01
+                                 :ARG1 (c1-7 / good-02
+                                             :ARG1 (c1-1 / all)))))
+
+# ::snt same. I feel cheated.
+# ::tokens ["same", ".", "I", "feel", "cheated", "."]
+# ::lemmas ["same", ".", "i", "feel", "cheat", "."]
+(c2-4 / multi-sentence
+      :snt1 (c2-0 / same-01)
+      :snt2 (c2-1 / feel-01
+                  :ARG0 (c2-3 / i)
+                  :ARG1 (c2-2 / cheat-03
+                              :ARG1 c2-3)))
+
+# ::snt We got ours yesterday. Our Wi-Fi reception has yet to improve, but we're not feeling any unusual side effects so far.
+# ::tokens ["We", "got", "ours", "yesterday", ".", "Our", "Wi", "-", "Fi", "reception", "has", "yet", "to", "improve", ",", "but", "we", "'re", "not", "feeling", "any", "unusual", "side", "effects", "so", "far", "."]
+# ::lemmas ["we", "get", "ours", "yesterday", ".", "our", "Wi", "-", "Fi", "reception", "have", "yet", "to", "improve", ",", "but", "we", "be", "not", "feel", "any", "unusual", "side", "effect", "so", "far", "."]
+(c3-12 / multi-sentence
+       :snt1 (c3-9 / get-01
+                   :ARG0 (c3-3 / we)
+                   :ARG1 (c3-6 / thing
+                               :poss c3-3)
+                   :time (c3-13 / yesterday))
+       :snt2 (c3-4 / have-concession-91
+                   :ARG1 (c3-2 / feel-01
+                               :ARG0 (c3-14 / we)
+                               :ARG1 (c3-15 / effect
+                                            :mod (c3-0 / side)
+                                            :mod (c3-5 / usual
+                                                       :polarity -))
+                               :time (c3-10 / so-far)
+                               :polarity -)
+                   :ARG2 (c3-11 / improve-01
+                                :ARG1 (c3-7 / reception
+                                            :mod (c3-8 / phone-number-entity
+                                                       :value "Wi-Fi")
+                                            :poss c3-14)
+                                :mod (c3-1 / yet))))
+
+# ::snt Ban covid!
+# ::tokens ["Ban", "covid", "!"]
+# ::lemmas ["Ban", "covid", "!"]
+(c4-0 / ban-01
+      :ARG0 (c4-3 / you)
+      :ARG1 (c4-2 / thing
+                  :name (c4-1 / name
+                              :op1 " covid"))
+      :mode imperative)

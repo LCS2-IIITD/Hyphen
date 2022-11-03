@@ -1,0 +1,37 @@
+# ::snt That's so good to hear!
+# ::tokens ["That", "'s", "so", "good", "to", "hear", "!"]
+# ::lemmas ["that", "be", "so", "good", "to", "hear", "!"]
+(c1-0 / good-02
+      :ARG1 (c1-1 / hear-01)
+      :degree (c1-2 / so))
+
+# ::snt That's brilliant news, great to hear!
+# ::tokens ["That", "'s", "brilliant", "news", ",", "great", "to", "hear", "!"]
+# ::lemmas ["that", "be", "brilliant", "news", ",", "great", "to", "hear", "!"]
+(c2-3 / great
+      :domain (c2-0 / hear-01
+                    :ARG1 (c2-4 / news
+                                :ARG1-of (c2-1 / brilliant-01)
+                                :domain (c2-2 / that))))
+
+# ::snt YAAAY!
+# ::tokens ["YAAAY", "!"]
+# ::lemmas ["yaaay", "!"]
+(c3-0 / yay
+      :mode expressive)
+
+# ::snt Woot! Some good news!
+# ::tokens ["Woot", "!", "Some", "good", "news", "!"]
+# ::lemmas ["Woot", "!", "some", "good", "news", "!"]
+(c4-3 / multi-sentence
+      :snt1 (c4-1 / oot
+                  :mode expressive)
+      :snt2 (c4-4 / news
+                  :ARG1-of (c4-2 / good-02)
+                  :quant (c4-0 / some)))
+
+# ::snt Woo!
+# ::tokens ["Woo", "!"]
+# ::lemmas ["woo", "!"]
+(c5-0 / woo
+      :mode expressive)

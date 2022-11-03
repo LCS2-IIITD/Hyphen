@@ -1,0 +1,27 @@
+# ::snt So they DID send a mayday call?!
+# ::tokens ["So", "they", "DID", "send", "a", "mayday", "call", "?", "!"]
+# ::lemmas ["so", "they", "do", "send", "a", "mayday", "call", "?", "!"]
+(c1-2 / send-01
+      :polarity (c1-4 / amr-unknown)
+      :ARG0 (c1-3 / they)
+      :ARG1 (c1-1 / call-02
+                  :mod (c1-0 / mayday)))
+
+# ::snt nice! followed
+# ::tokens ["nice", "!", "followed"]
+# ::lemmas ["nice", "!", "follow"]
+(c2-2 / and
+      :op1 (c2-0 / nice-01)
+      :op2 (c2-1 / follow-02))
+
+# ::snt devastating. Prayers to all the families who lost loved ones.
+# ::tokens ["devastating", ".", "Prayers", "to", "all", "the", "families", "who", "lost", "loved", "ones", "."]
+# ::lemmas ["devastating", ".", "prayer", "to", "all", "the", "family", "who", "lose", "love", "one", "."]
+(c3-1 / multi-sentence
+      :snt1 (c3-5 / devastate-01)
+      :snt2 (c3-4 / pray-01
+                  :ARG2 (c3-0 / family
+                              :mod (c3-7 / all)
+                              :ARG0-of (c3-2 / lose-02
+                                             :ARG1 (c3-3 / one
+                                                         :ARG1-of (c3-6 / love-01))))))

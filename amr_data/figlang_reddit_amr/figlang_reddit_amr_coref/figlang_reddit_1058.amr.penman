@@ -1,0 +1,44 @@
+# ::snt anime_irl
+# ::tokens ["anime_irl"]
+# ::lemmas ["anime_irl"]
+(c1-0 / person
+      :name (c1-1 / name
+                  :op1 "anime_irl"))
+
+# ::snt If my parents don't understand, what hope do I have in explaining it to a dog :(
+# ::tokens ["If", "my", "parents", "do", "n't", "understand", ",", "what", "hope", "do", "I", "have", "in", "explaining", "it", "to", "a", "dog", ":("]
+# ::lemmas ["if", "my", "parent", "do", "not", "understand", ",", "what", "hope", "do", "i", "have", "in", "explain", "it", "to", "a", "dog", ":("]
+(c2-3 / hope-01
+      :ARG0 (c2-9 / i)
+      :ARG1 (c2-8 / have-03
+                  :ARG0 c2-9
+                  :ARG1 (c2-10 / explain-01
+                               :ARG0 c2-9
+                               :ARG1 (c2-4 / it)
+                               :ARG2 (c2-0 / dog)))
+      :condition (c2-5 / understand-01
+                       :ARG0 (c2-7 / person
+                                   :ARG0-of (c2-1 / have-rel-role-91
+                                                  :ARG1 c2-9
+                                                  :ARG2 (c2-6 / parent)))
+                       :polarity -)
+      :mod (c2-2 / amr-unknown))
+
+# ::snt Dogs are men best friend, he will still love you no matter what.
+# ::tokens ["Dogs", "are", "men", "best", "friend", ",", "he", "will", "still", "love", "you", "no", "matter", "what", "."]
+# ::lemmas ["dog", "be", "man", "good", "friend", ",", "he", "will", "still", "love", "you", "no", "matter", "what", "."]
+(c3-11 / multi-sentence
+       :snt1 (c3-5 / have-rel-role-91
+                   :ARG0 (c3-0 / dog)
+                   :ARG1 (c3-4 / man)
+                   :ARG2 (c3-3 / friend
+                               :ARG1-of (c3-10 / have-degree-91
+                                               :ARG2 (c3-9 / good-02
+                                                           :ARG1 c3-3)
+                                               :ARG3 (c3-7 / most))))
+       :snt2 (c3-8 / love-01
+                   :ARG0 (c3-1 / he)
+                   :ARG1 (c3-12 / you)
+                   :mod (c3-2 / still)
+                   :concession (c3-6 / matter-01
+                                     :polarity -)))

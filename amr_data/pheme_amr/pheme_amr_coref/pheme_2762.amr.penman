@@ -1,0 +1,78 @@
+# ::snt : Rumours that Prince is playing Massey Hall tonight - listen for details in mins
+# ::tokens [":", "Rumours", "that", "Prince", "is", "playing", "Massey", "Hall", "tonight", "-", "listen", "for", "details", "in", "mins"]
+# ::lemmas [":", "rumour", "that", "Prince", "be", "play", "Massey", "Hall", "tonight", "-", "listen", "for", "detail", "in", "min"]
+(c1-3 / multi-sentence
+      :snt1 (c1-8 / rumor-01
+                  :ARG1 (c1-7 / play-11
+                              :ARG0 (c1-15 / person
+                                           :name (c1-5 / name
+                                                       :op1 "Prince"))
+                              :location (c1-4 / building
+                                              :name (c1-6 / name
+                                                          :op1 "Massey"
+                                                          :op2 "Hall"))
+                              :time (c1-9 / date-entity
+                                          :dayperiod (c1-10 / night)
+                                          :mod (c1-14 / today))))
+      :snt2 (c1-2 / listen-01
+                  :ARG0 (c1-0 / you)
+                  :ARG1 (c1-1 / detail
+                              :time (c1-16 / after
+                                           :op1 (c1-11 / now)
+                                           :quant (c1-12 / temporal-quantity
+                                                         :unit (c1-13 / minute)
+                                                         :quant 1)))
+                  :mode imperative))
+
+# ::snt :Thanks Jen Been hearing rumbling since yesterday...ahhh.
+# ::tokens [":", "Thanks", "Jen", "Been", "hearing", "rumbling", "since", "yesterday", "...", "ahhh", "."]
+# ::lemmas [":", "thank", "Jen", "been", "hear", "rumble", "since", "yesterday", "...", "ahhh", "."]
+(c2-8 / say-01
+      :ARG0 (c2-3 / i)
+      :ARG1 (c2-9 / thank-01
+                  :ARG0 c2-3
+                  :ARG1 (c2-5 / person
+                              :name (c2-4 / name
+                                          :op1 "Jen")
+                              :ARG2-of c2-8))
+      :ARG1-of (c2-7 / cause-01
+                     :ARG0 (c2-0 / hear-01
+                                 :ARG0 c2-3
+                                 :ARG1 (c2-6 / rumble-01)
+                                 :time (c2-2 / since
+                                             :op1 (c2-1 / yesterday))
+                                 :mod (c2-10 / ah
+                                             :mode expressive))))
+
+# ::snt damn not near a radio!
+# ::tokens ["damn", "not", "near", "a", "radio", "!"]
+# ::lemmas ["damn", "not", "near", "a", "radio", "!"]
+(c3-0 / near-02
+      :ARG2 (c3-1 / radio)
+      :ARG1-of (c3-2 / damn-01)
+      :polarity -)
+
+# ::snt : Rumours that Prince is playing Massey Hall tonight - listen for details in mins: what
+# ::tokens [":", "Rumours", "that", "Prince", "is", "playing", "Massey", "Hall", "tonight", "-", "listen", "for", "details", "in", "mins", ":", "what"]
+# ::lemmas [":", "rumour", "that", "Prince", "be", "play", "Massey", "Hall", "tonight", "-", "listen", "for", "detail", "in", "min", ":", "what"]
+(c4-3 / multi-sentence
+      :snt1 (c4-8 / rumor-01
+                  :ARG1 (c4-7 / play-11
+                              :ARG0 (c4-14 / person
+                                           :name (c4-5 / name
+                                                       :op1 "Prince"))
+                              :location (c4-4 / building
+                                              :name (c4-6 / name
+                                                          :op1 "Massey"
+                                                          :op2 "Hall"))
+                              :time (c4-9 / date-entity
+                                          :dayperiod (c4-10 / night)
+                                          :mod (c4-13 / today))))
+      :snt2 (c4-2 / listen-01
+                  :ARG0 (c4-0 / you)
+                  :purpose (c4-1 / detail
+                                 :duration (c4-12 / temporal-quantity
+                                                  :unit (c4-11 / minute)
+                                                  :quant 1))
+                  :mode imperative)
+      :snt3 (c4-15 / amr-unknown))

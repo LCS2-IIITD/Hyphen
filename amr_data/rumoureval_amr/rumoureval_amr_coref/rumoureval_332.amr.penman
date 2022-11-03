@@ -1,0 +1,67 @@
+# ::snt He didn't start the fire. It was always burning, Since the world's been turning. He didn't start the fire. No he didn't light it,But he tried to fight it
+# ::tokens ["He", "did", "n't", "start", "the", "fire", ".", "It", "was", "always", "burning", ",", "Since", "the", "world", "'s", "been", "turning", ".", "He", "did", "n't", "start", "the", "fire", ".", "No", "he", "did", "n't", "light", "it", ",", "But", "he", "tried", "to", "fight", "it"]
+# ::lemmas ["he", "do", "not", "start", "the", "fire", ".", "it", "be", "always", "burn", ",", "since", "the", "world", "be", "be", "turn", ".", "he", "do", "not", "start", "the", "fire", ".", "no", "he", "do", "not", "light", "it", ",", "but", "he", "try", "to", "fight", "it"]
+(c1-17 / multi-sentence
+       :snt1 (c1-7 / start-01
+                   :ARG0 (c1-1 / he)
+                   :ARG1 (c1-11 / fire)
+                   :polarity -)
+       :snt2 (c1-15 / burn-01
+                    :ARG1 (c1-14 / fire)
+                    :time (c1-13 / always)
+                    :time (c1-10 / since
+                                 :op1 (c1-4 / turn-02
+                                            :ARG1 (c1-0 / world))))
+       :snt3 (c1-9 / start-01
+                   :ARG0 (c1-5 / he)
+                   :ARG1 (c1-3 / fire)
+                   :polarity -)
+       :snt4 (c1-6 / contrast-01
+                   :ARG1 (c1-2 / light-04
+                               :ARG0 (c1-8 / he)
+                               :ARG1 (c1-12 / fire)
+                               :polarity -)
+                   :ARG2 (c1-16 / try-01
+                                :ARG0 c1-8
+                                :ARG1 (c1-18 / fight-01
+                                             :ARG0 c1-8
+                                             :ARG1 c1-12))))
+
+# ::snt He *did* kinda start the fire on the USS Forrestal (allegedly)
+# ::tokens ["He", "*", "did", "*", "kinda", "start", "the", "fire", "on", "the", "USS", "Forrestal", "(", "allegedly", ")"]
+# ::lemmas ["he", "*", "do", "*", "kinda", "start", "the", "fire", "on", "the", "USS", "Forrestal", "(", "allegedly", ")"]
+(c2-5 / start-01
+      :ARG0 (c2-2 / he)
+      :ARG1 (c2-3 / fire-01
+                  :ARG1 (c2-1 / ship
+                              :name (c2-6 / name
+                                          :op1 "USS"
+                                          :op2 "Forrestal")))
+      :degree (c2-0 / kind-of)
+      :ARG1-of (c2-4 / allege-01))
+
+# ::snt Epic response.
+# ::tokens ["Epic", "response", "."]
+# ::lemmas ["epic", "response", "."]
+(c3-0 / respond-01
+      :mod (c3-1 / epic))
+
+# ::snt It's clear now that, one way or another, TPTB were getting their Manchurian Candidate in .
+# ::tokens ["It", "'s", "clear", "now", "that", ",", "one", "way", "or", "another", ",", "TPTB", "were", "getting", "their", "Manchurian", "Candidate", "in", "."]
+# ::lemmas ["it", "be", "clear", "now", "that", ",", "one", "way", "or", "another", ",", "TPTB", "be", "get", "their", "Manchurian", "Candidate", "in", "."]
+(c4-4 / clear-06
+      :ARG1 (c4-6 / get-04
+                  :ARG0 (c4-3 / publication
+                              :name (c4-11 / name
+                                           :op1 "TPTB"))
+                  :ARG1 (c4-1 / person
+                              :name (c4-2 / name
+                                          :op1 "Manchurian"
+                                          :op2 "Candidate")
+                              :poss c4-3)
+                  :manner (c4-9 / or
+                                :op1 (c4-0 / way
+                                           :mod (c4-5 / one))
+                                :op2 (c4-10 / way
+                                            :mod (c4-7 / another))))
+      :time (c4-8 / now))

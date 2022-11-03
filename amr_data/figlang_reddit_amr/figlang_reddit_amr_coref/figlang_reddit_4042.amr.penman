@@ -1,0 +1,37 @@
+# ::snt Something else is just around the corner.
+# ::tokens ["Something", "else", "is", "just", "around", "the", "corner", "."]
+# ::lemmas ["something", "else", "be", "just", "around", "the", "corner", "."]
+(c1-0 / something
+      :mod (c1-4 / else)
+      :location (c1-1 / around
+                      :op1 (c1-2 / corner)
+                      :mod (c1-3 / just)))
+
+# ::snt Is it the new Mccree skins that we were mentioned to get?
+# ::tokens ["Is", "it", "the", "new", "Mccree", "skins", "that", "we", "were", "mentioned", "to", "get", "?"]
+# ::lemmas ["be", "it", "the", "new", "Mccree", "skin", "that", "we", "be", "mention", "to", "get", "?"]
+(c2-6 / mention-01
+      :ARG1 (c2-5 / get-01
+                  :ARG0 (c2-3 / we)
+                  :ARG1 (c2-0 / skin
+                              :ARG1-of (c2-7 / new-01)
+                              :mod (c2-2 / company
+                                         :name (c2-4 / name
+                                                     :op1 "Mccree"))))
+      :polarity (c2-1 / amr-unknown))
+
+# ::snt Yes for fucks sake, mccree mains unite, we will no longer be silenced
+# ::tokens ["Yes", "for", "fucks", "sake", ",", "mccree", "mains", "unite", ",", "we", "will", "no", "longer", "be", "silenced"]
+# ::lemmas ["yes", "for", "fuck", "sake", ",", "mccree", "main", "unite", ",", "we", "will", "no", "long", "be", "silence"]
+(c3-2 / cause-01
+      :ARG0 (c3-0 / silence-01
+                  :ARG1 (c3-3 / we)
+                  :time (c3-7 / no-longer))
+      :ARG1 (c3-8 / yes)
+      :purpose (c3-5 / sake
+                     :mod (c3-1 / fuck
+                                :mode expressive)
+                     :poss (c3-6 / person
+                                 :name (c3-4 / name
+                                             :op1 "McCree"
+                                             :op2 "Mains"))))

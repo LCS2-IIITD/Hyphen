@@ -1,0 +1,51 @@
+# ::snt Yes.
+# ::tokens ["Yes", "."]
+# ::lemmas ["yes", "."]
+(c1-0 / yes)
+
+# ::snt I am more afraid of not living my life to the fullest.
+# ::tokens ["I", "am", "more", "afraid", "of", "not", "living", "my", "life", "to", "the", "fullest", "."]
+# ::lemmas ["i", "be", "more", "afraid", "of", "not", "live", "my", "life", "to", "the", "full", "."]
+(c2-0 / fear-01
+      :ARG0 (c2-5 / i)
+      :ARG1 (c2-3 / live-01
+                  :ARG0 c2-5
+                  :ARG1 (c2-4 / life
+                              :poss c2-5)
+                  :manner (c2-2 / full-09
+                                :ARG2 c2-5
+                                :ARG3 (c2-6 / more))
+                  :polarity -)
+      :ARG2-of (c2-1 / have-degree-91
+                     :ARG1 c2-5
+                     :ARG3 c2-6))
+
+# ::snt My husband and I were talking about people's fear of death. We think it's a large reason why this virus seems bigger than it actually is.
+# ::tokens ["My", "husband", "and", "I", "were", "talking", "about", "people", "'s", "fear", "of", "death", ".", "We", "think", "it", "'s", "a", "large", "reason", "why", "this", "virus", "seems", "bigger", "than", "it", "actually", "is", "."]
+# ::lemmas ["my", "husband", "and", "i", "be", "talk", "about", "people", "'s", "fear", "of", "death", ".", "we", "think", "it", "be", "a", "large", "reason", "why", "this", "virus", "seem", "big", "than", "it", "actually", "be", "."]
+(c3-10 / multi-sentence
+       :snt1 (c3-8 / talk-01
+                   :ARG0 (c3-15 / and
+                                :op1 (c3-22 / person
+                                            :ARG0-of (c3-18 / have-rel-role-91
+                                                            :ARG1 (c3-2 / i)
+                                                            :ARG2 (c3-1 / husband)))
+                                :op2 c3-2)
+                   :ARG1 (c3-16 / fear-01
+                                :ARG0 (c3-19 / person)
+                                :ARG1 (c3-0 / die-01
+                                            :ARG1 c3-19)))
+       :snt2 (c3-6 / think-01
+                   :ARG0 (c3-5 / we)
+                   :ARG1 (c3-9 / reason
+                               :mod (c3-20 / large)
+                               :domain (c3-14 / it)
+                               :ARG0-of (c3-4 / cause-01
+                                              :ARG1 (c3-13 / seem-01
+                                                           :ARG1 (c3-3 / have-degree-91
+                                                                       :ARG1 (c3-7 / virus
+                                                                                   :mod (c3-11 / this))
+                                                                       :ARG2 (c3-21 / big)
+                                                                       :ARG3 (c3-17 / more)
+                                                                       :ARG4 (c3-12 / actual-02
+                                                                                    :ARG1 c3-7)))))))

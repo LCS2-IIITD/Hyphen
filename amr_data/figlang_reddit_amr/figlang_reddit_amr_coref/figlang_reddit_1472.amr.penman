@@ -1,0 +1,37 @@
+# ::snt The new tavern brawl: Heart of the sunwell Start at 10 mana
+# ::tokens ["The", "new", "tavern", "brawl", ":", "Heart", "of", "the", "sunwell", "Start", "at", "10", "mana"]
+# ::lemmas ["the", "new", "tavern", "brawl", ":", "heart", "of", "the", "sunwell", "Start", "at", "10", "mana"]
+(c1-0 / start-01
+      :ARG1 (c1-4 / brawl-01
+                  :location (c1-2 / tavern)
+                  :ARG1-of (c1-7 / new-01)
+                  :mod (c1-5 / product
+                             :name (c1-3 / name
+                                         :op1 "Heart"
+                                         :op2 "of"
+                                         :op3 "the"
+                                         :op4 "Sunwell")))
+      :ARG2 (c1-6 / monetary-quantity
+                  :unit (c1-1 / mana)
+                  :quant 10))
+
+# ::snt I don't understand why they bother with these boring brawls when there's a lot of interesting repeats they could choose from.
+# ::tokens ["I", "do", "n't", "understand", "why", "they", "bother", "with", "these", "boring", "brawls", "when", "there", "'s", "a", "lot", "of", "interesting", "repeats", "they", "could", "choose", "from", "."]
+# ::lemmas ["i", "do", "not", "understand", "why", "they", "bother", "with", "these", "boring", "brawl", "when", "there", "be", "a", "lot", "of", "interesting", "repeat", "they", "could", "choose", "from", "."]
+(c2-7 / understand-01
+      :ARG0 (c2-13 / i)
+      :ARG1 (c2-3 / cause-01
+                  :ARG0 (c2-2 / amr-unknown)
+                  :ARG1 (c2-12 / bother-02
+                               :ARG0 (c2-8 / they)
+                               :ARG1 (c2-1 / brawl-01
+                                           :ARG0 c2-8
+                                           :ARG0-of (c2-4 / bore-02)
+                                           :mod (c2-5 / this))
+                               :condition (c2-9 / repeat-01
+                                                :ARG1-of (c2-6 / interest-01)
+                                                :quant (c2-10 / lot)
+                                                :ARG1-of (c2-0 / choose-01
+                                                               :ARG0 c2-8
+                                                               :ARG1-of (c2-11 / possible-01)))))
+      :polarity -)

@@ -1,0 +1,382 @@
+# ::snt that's true.
+# ::tokens ["that", "'s", "true", "."]
+# ::lemmas ["that", "be", "true", "."]
+(c1-0 / true-01
+      :ARG1 (c1-1 / that))
+
+# ::snt Viva la Charlie! Love your enemys, They want to die for their religion thats the least Justice can do for them
+# ::tokens ["Viva", "la", "Charlie", "!", "Love", "your", "enemys", ",", "They", "want", "to", "die", "for", "their", "religion", "that", "s", "the", "least", "Justice", "can", "do", "for", "them"]
+# ::lemmas ["Viva", "la", "Charlie", "!", "love", "your", "enemys", ",", "they", "want", "to", "die", "for", "their", "religion", "that", "s", "the", "least", "Justice", "can", "do", "for", "they"]
+(c2-2 / multi-sentence
+      :snt1 (c2-6 / say-01
+                  :ARG0 (c2-17 / i)
+                  :ARG1 (c2-3 / viva
+                              :mode expressive)
+                  :ARG2 (c2-4 / person
+                              :name (c2-14 / name
+                                           :op1 "Charlie")))
+      :snt2 (c2-9 / and
+                  :op1 (c2-11 / love-01
+                              :ARG0 (c2-18 / i)
+                              :ARG1 (c2-7 / person
+                                          :ARG0-of (c2-10 / have-rel-role-91
+                                                          :ARG1 c2-18
+                                                          :ARG2 (c2-13 / enemy))))
+                  :op2 (c2-16 / want-01
+                              :ARG0 c2-7
+                              :ARG1 (c2-5 / die-01
+                                          :ARG1 c2-7
+                                          :purpose (c2-15 / religion
+                                                          :poss c2-7))
+                              :ARG1-of (c2-8 / have-quant-91
+                                             :ARG3 (c2-19 / least)
+                                             :ARG5 (c2-0 / justice
+                                                         :ARG1-of (c2-1 / do-02
+                                                                        :ARG2 c2-7
+                                                                        :ARG1-of (c2-12 / possible-01)))))))
+
+# ::snt well if it serves an agenda, it probably is one huh
+# ::tokens ["well", "if", "it", "serves", "an", "agenda", ",", "it", "probably", "is", "one", "huh"]
+# ::lemmas ["well", "if", "it", "serve", "an", "agenda", ",", "it", "probably", "be", "one", "huh"]
+(c3-2 / probable
+      :domain (c3-0 / one
+                    :domain (c3-1 / it))
+      :ARG1-of (c3-3 / request-confirmation-91)
+      :condition (c3-4 / serve-01
+                       :ARG0 c3-1
+                       :ARG1 (c3-5 / agenda)))
+
+# ::snt Hallelujah! RT. : brothers responsible for massacre have been killed in , according to multiple reports
+# ::tokens ["Hallelujah", "!", "RT", ".", ":", "brothers", "responsible", "for", "massacre", "have", "been", "killed", "in", ",", "according", "to", "multiple", "reports"]
+# ::lemmas ["Hallelujah", "!", "RT", ".", ":", "brother", "responsible", "for", "massacre", "have", "be", "kill", "in", ",", "accord", "to", "multiple", "report"]
+(c4-2 / multi-sentence
+      :snt1 (c4-0 / hallelujah
+                  :mode expressive)
+      :snt2 (c4-9 / say-01
+                  :ARG0 (c4-7 / report
+                              :quant (c4-6 / multiple))
+                  :ARG1 (c4-10 / kill-01
+                               :ARG1 (c4-3 / brother
+                                           :ARG0-of (c4-4 / responsible-01
+                                                          :ARG1 (c4-1 / massacre-01))))
+                  :snt3-of c4-2)
+      :ARG0 (c4-8 / publication
+                  :name (c4-5 / name
+                              :op1 "RT"))
+      :ARG1 c4-0)
+
+# ::snt JUST IN: Two brothers responsible for Charlie Hebdo massacre have been killed in Dammartin standoff, according to multiple reports
+# ::tokens ["JUST", "IN", ":", "Two", "brothers", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "been", "killed", "in", "Dammartin", "standoff", ",", "according", "to", "multiple", "reports"]
+# ::lemmas ["just", "in", ":", "Two", "brother", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "be", "kill", "in", "Dammartin", "standoff", ",", "accord", "to", "multiple", "report"]
+(c5-11 / say-01
+       :ARG0 (c5-8 / report-01
+                   :quant (c5-1 / multiple))
+       :ARG1 (c5-12 / kill-01
+                    :ARG1 (c5-2 / brother
+                                :ARG0-of (c5-4 / responsible-01
+                                               :ARG1 (c5-7 / massacre-01
+                                                           :ARG0 (c5-9 / publication
+                                                                       :name (c5-5 / name
+                                                                                   :op1 "Charlie"
+                                                                                   :op2 " Hebdo"))))
+                                :quant 2)
+                    :time (c5-3 / standoff
+                                :location (c5-10 / city
+                                                 :name (c5-6 / name
+                                                             :op1 "Dammartin"))))
+       :mod (c5-0 / just-in))
+
+# ::snt Viva la France!
+# ::tokens ["Viva", "la", "France", "!"]
+# ::lemmas ["Viva", "la", "France", "!"]
+(c6-1 / viva
+      :mod (c6-2 / country
+                 :name (c6-0 / name
+                             :op1 "France"))
+      :mode expressive)
+
+# ::snt yep...boston...
+# ::tokens ["yep", "...", "boston", "..."]
+# ::lemmas ["yep", "...", "boston", "..."]
+(c7-2 / city
+      :name (c7-0 / name
+                  :op1 "Boston")
+      :mod (c7-1 / yep
+                 :mode expressive))
+
+# ::snt Seems they got what they wanted afterall.....
+# ::tokens ["Seems", "they", "got", "what", "they", "wanted", "afterall", "....."]
+# ::lemmas ["seem", "they", "get", "what", "they", "want", "afterall", "....."]
+(c8-3 / seem-01
+      :ARG1 (c8-1 / get-01
+                  :ARG0 (c8-4 / they)
+                  :ARG1 (c8-2 / thing
+                              :ARG1-of (c8-0 / want-01
+                                             :ARG0 c8-4))
+                  :mod (c8-5 / after-all)))
+
+# ::snt It went well because the French police refused media from getting too much info.
+# ::tokens ["It", "went", "well", "because", "the", "French", "police", "refused", "media", "from", "getting", "too", "much", "info", "."]
+# ::lemmas ["it", "go", "well", "because", "the", "French", "police", "refuse", "medium", "from", "get", "too", "much", "info", "."]
+(c9-8 / cause-01
+      :ARG0 (c9-7 / refuse-01
+                  :ARG0 (c9-5 / police
+                              :mod (c9-6 / country
+                                         :name (c9-4 / name
+                                                     :op1 "France")))
+                  :ARG1 (c9-9 / get-01
+                              :ARG0 (c9-2 / media)
+                              :ARG1 (c9-3 / information
+                                          :ARG1-of (c9-0 / have-quant-91
+                                                         :ARG2 (c9-10 / much)
+                                                         :ARG3 (c9-13 / too)))))
+      :ARG1 (c9-11 / go-09
+                   :ARG1 (c9-12 / it)
+                   :ARG1-of (c9-1 / well-09)))
+
+# ::snt via : JUST IN: Two brothers responsible for massacre killed in standoff, according to multiple reports.
+# ::tokens ["via", ":", "JUST", "IN", ":", "Two", "brothers", "responsible", "for", "massacre", "killed", "in", "standoff", ",", "according", "to", "multiple", "reports", "."]
+# ::lemmas ["via", ":", "just", "in", ":", "Two", "brother", "responsible", "for", "massacre", "kill", "in", "standoff", ",", "accord", "to", "multiple", "report", "."]
+(c10-9 / say-01
+       :ARG0 (c10-7 / report-01
+                    :quant (c10-1 / multiple))
+       :ARG1 (c10-10 / kill-01
+                     :ARG1 (c10-2 / brother
+                                  :ARG0-of (c10-5 / responsible-01
+                                                  :ARG1 (c10-6 / massacre-01))
+                                  :quant 2)
+                     :time (c10-3 / standoff))
+       :source (c10-8 / be-located-at-91
+                      :ARG2 (c10-4 / inside)
+                      :mod (c10-0 / just)))
+
+# ::snt There is not blog I have seen that is not saying this was a false flag op like .
+# ::tokens ["There", "is", "not", "blog", "I", "have", "seen", "that", "is", "not", "saying", "this", "was", "a", "false", "flag", "op", "like", "."]
+# ::lemmas ["there", "be", "not", "blog", "i", "have", "see", "that", "be", "not", "say", "this", "be", "a", "false", "flag", "op", "like", "."]
+(c11-1 / blog-01
+       :ARG1-of (c11-7 / see-01
+                       :ARG0 (c11-4 / i))
+       :ARG0-of (c11-3 / say-01
+                       :ARG1 (c11-6 / resemble-01
+                                    :ARG1 (c11-8 / this)
+                                    :ARG2 (c11-2 / operate-01
+                                                 :mod (c11-0 / flag
+                                                             :mod (c11-5 / false))))
+                       :polarity -)
+       :polarity -)
+
+# ::snt They will never be eulogized as Martyrs but, rather, merely as murderers, thugs &amp; disenfranchised societal outcasts.
+# ::tokens ["They", "will", "never", "be", "eulogized", "as", "Martyrs", "but", ",", "rather", ",", "merely", "as", "murderers", ",", "thugs", "&", "amp", ";", "disenfranchised", "societal", "outcasts", "."]
+# ::lemmas ["they", "will", "never", "be", "eulogize", "as", "Martyrs", "but", ",", "rather", ",", "merely", "as", "murderer", ",", "thugs", "&", "amp", ";", "disenfranchise", "societal", "outcast", "."]
+(c12-8 / contrast-01
+       :ARG1 (c12-4 / eulogize-01
+                    :ARG1 (c12-12 / they)
+                    :ARG2 (c12-2 / Martyr)
+                    :time (c12-3 / ever)
+                    :polarity -)
+       :ARG2 (c12-0 / eulogize-01
+                    :ARG1 c12-12
+                    :ARG2 (c12-14 / and
+                                  :op1 (c12-6 / person
+                                              :ARG0-of (c12-7 / murder-01))
+                                  :op2 (c12-10 / thug)
+                                  :op3 (c12-13 / person
+                                               :ARG1-of (c12-5 / amp-00))
+                                  :ARG1-of (c12-9 / disenfranchise-01)
+                                  :mod (c12-11 / society))
+                    :mod (c12-1 / mere)))
+
+# ::snt : JUST IN:Two brothers responsible for CharlieHebdo massacre have been killed in Dammartin standoff,according to multiple reports
+# ::tokens [":", "JUST", "IN", ":", "Two", "brothers", "responsible", "for", "CharlieHebdo", "massacre", "have", "been", "killed", "in", "Dammartin", "standoff", ",", "according", "to", "multiple", "reports"]
+# ::lemmas [":", "just", "in", ":", "Two", "brother", "responsible", "for", "CharlieHebdo", "massacre", "have", "be", "kill", "in", "Dammartin", "standoff", ",", "accord", "to", "multiple", "report"]
+(c13-11 / say-01
+        :ARG0 (c13-8 / report-01
+                     :quant (c13-1 / multiple))
+        :ARG1 (c13-12 / kill-01
+                      :ARG1 (c13-2 / brother
+                                   :ARG0-of (c13-4 / responsible-01
+                                                   :ARG1 (c13-7 / massacre-01
+                                                                :ARG1 (c13-9 / person
+                                                                             :name (c13-5 / name
+                                                                                          :op1 "CharlieHebdo"))))
+                                   :quant 2)
+                      :time (c13-3 / standoff
+                                   :location (c13-10 / city
+                                                     :name (c13-6 / name
+                                                                  :op1 "Dammartin"))))
+        :mod (c13-0 / just))
+
+# ::snt hwy's painted in black tar genocides icing up Acts of God!
+# ::tokens ["hwy", "'s", "painted", "in", "black", "tar", "genocides", "icing", "up", "Acts", "of", "God", "!"]
+# ::lemmas ["hwy", "'s", "paint", "in", "black", "tar", "genocide", "ice", "up", "act", "of", "God", "!"]
+(c14-4 / paint-02
+       :ARG1 (c14-0 / highway)
+       :ARG2 (c14-5 / genocide
+                    :ARG1-of (c14-1 / black-04)
+                    :mod (c14-6 / tar)
+                    :ARG0-of (c14-2 / icing-up-02
+                                    :ARG1 (c14-8 / act-02
+                                                 :ARG0 (c14-7 / person
+                                                              :name (c14-3 / name
+                                                                           :op1 "God"))))))
+
+# ::snt :JUST IN:Two brothers responsible for Charlie Hebdo massacre have been killed in Dammartin standoff, according to multiple reports
+# ::tokens [":", "JUST", "IN", ":", "Two", "brothers", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "been", "killed", "in", "Dammartin", "standoff", ",", "according", "to", "multiple", "reports"]
+# ::lemmas [":", "just", "in", ":", "Two", "brother", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "be", "kill", "in", "Dammartin", "standoff", ",", "accord", "to", "multiple", "report"]
+(c15-11 / say-01
+        :ARG0 (c15-8 / report-01
+                     :quant (c15-1 / multiple))
+        :ARG1 (c15-12 / kill-01
+                      :ARG1 (c15-2 / brother
+                                   :ARG0-of (c15-4 / responsible-01
+                                                   :ARG1 (c15-7 / massacre-01
+                                                                :ARG0 (c15-9 / publication
+                                                                             :name (c15-5 / name
+                                                                                          :op1 "Charlie"
+                                                                                          :op2 "Ch Hebdo"))))
+                                   :quant 2)
+                      :location (c15-3 / standoff
+                                       :location (c15-10 / city
+                                                         :name (c15-6 / name
+                                                                      :op1 "Dammartin"))))
+        :mod (c15-0 / just-in))
+
+# ::snt anybody know whether this print shop made the magazines? Maybe this location part of the hit?
+# ::tokens ["anybody", "know", "whether", "this", "print", "shop", "made", "the", "magazines", "?", "Maybe", "this", "location", "part", "of", "the", "hit", "?"]
+# ::lemmas ["anybody", "know", "whether", "this", "print", "shop", "make", "the", "magazine", "?", "maybe", "this", "location", "part", "of", "the", "hit", "?"]
+(c16-2 / multi-sentence
+       :snt1 (c16-6 / know-01
+                    :ARG0 (c16-14 / anybody)
+                    :ARG1 (c16-12 / truth-value
+                                  :polarity-of (c16-8 / make-01
+                                                      :ARG0 (c16-11 / shop
+                                                                    :mod (c16-9 / print-01)
+                                                                    :mod (c16-10 / this))
+                                                      :ARG1 (c16-1 / magazine))))
+       :snt2 (c16-13 / possible-01
+                     :ARG1 (c16-4 / part
+                                  :part-of (c16-0 / hit-05)
+                                  :domain (c16-3 / location
+                                                 :mod (c16-7 / this)))
+                     :polarity (c16-5 / amr-unknown)))
+
+# ::snt :JUST IN:Two brothers responsible for Charlie Hebdo massacre have been killed in Dammartin standoff, according to multiple reports
+# ::tokens [":", "JUST", "IN", ":", "Two", "brothers", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "been", "killed", "in", "Dammartin", "standoff", ",", "according", "to", "multiple", "reports"]
+# ::lemmas [":", "just", "in", ":", "Two", "brother", "responsible", "for", "Charlie", "Hebdo", "massacre", "have", "be", "kill", "in", "Dammartin", "standoff", ",", "accord", "to", "multiple", "report"]
+(c17-11 / say-01
+        :ARG0 (c17-8 / report-01
+                     :quant (c17-1 / multiple))
+        :ARG1 (c17-12 / kill-01
+                      :ARG1 (c17-2 / brother
+                                   :ARG0-of (c17-4 / responsible-01
+                                                   :ARG1 (c17-7 / massacre-01
+                                                                :ARG0 (c17-9 / publication
+                                                                             :name (c17-5 / name
+                                                                                          :op1 "Charlie"
+                                                                                          :op2 "Ch Hebdo"))))
+                                   :quant 2)
+                      :location (c17-3 / standoff
+                                       :location (c17-10 / city
+                                                         :name (c17-6 / name
+                                                                      :op1 "Dammartin"))))
+        :mod (c17-0 / just-in))
+
+# ::snt Those French know how to get shit done.
+# ::tokens ["Those", "French", "know", "how", "to", "get", "shit", "done", "."]
+# ::lemmas ["those", "French", "know", "how", "to", "get", "shit", "do", "."]
+(c18-5 / know-03
+       :ARG0 (c18-1 / person
+                    :mod (c18-3 / country
+                                :name (c18-0 / name
+                                             :op1 "France"))
+                    :mod (c18-4 / that))
+       :ARG1 (c18-2 / do-02
+                    :ARG0 c18-1
+                    :ARG1 (c18-6 / shit)))
+
+# ::snt thank the lord!
+# ::tokens ["thank", "the", "lord", "!"]
+# ::lemmas ["thank", "the", "lord", "!"]
+(c19-1 / thank-01
+       :ARG1 (c19-0 / lord)
+       :mode expressive)
+
+# ::snt we will see how many civil rights French are now willing to give up in the name of safety
+# ::tokens ["we", "will", "see", "how", "many", "civil", "rights", "French", "are", "now", "willing", "to", "give", "up", "in", "the", "name", "of", "safety"]
+# ::lemmas ["we", "will", "see", "how", "many", "civil", "right", "French", "be", "now", "willing", "to", "give", "up", "in", "the", "name", "of", "safety"]
+(c20-9 / see-01
+       :ARG0 (c20-0 / we)
+       :ARG1 (c20-3 / number
+                    :quant-of (c20-2 / will-02
+                                     :ARG0 (c20-5 / person
+                                                  :mod (c20-7 / country
+                                                              :name (c20-4 / name
+                                                                           :op1 "France")))
+                                     :ARG1 (c20-8 / give-up-07
+                                                  :ARG0 c20-5
+                                                  :purpose (c20-1 / safe-01
+                                                                  :ARG1 c20-5)))
+                    :time (c20-6 / now)))
+
+# ::snt ": Pray terrorism will end at peace. Brave police, brave soldiers, brave Parisians deepest gratitude and grief for dear innocents.
+# ::tokens ["\"", ":", "Pray", "terrorism", "will", "end", "at", "peace", ".", "Brave", "police", ",", "brave", "soldiers", ",", "brave", "Parisians", "deepest", "gratitude", "and", "grief", "for", "dear", "innocents", "."]
+# ::lemmas ["\"", ":", "pray", "terrorism", "will", "end", "at", "peace", ".", "brave", "police", ",", "brave", "soldier", ",", "brave", "Parisians", "deepest", "gratitude", "and", "grief", "for", "dear", "innocent", "."]
+(c21-1 / multi-sentence
+       :snt1 (c21-2 / pray-01
+                    :ARG0 (c21-18 / you)
+                    :ARG1 (c21-11 / end-01
+                                  :ARG1 (c21-21 / terrorism)
+                                  :manner (c21-5 / peace))
+                    :mode imperative)
+       :snt2 (c21-6 / and
+                    :op1 (c21-8 / police
+                                :ARG0-of (c21-9 / brave-02))
+                    :op2 (c21-4 / soldier
+                                :ARG0-of (c21-17 / brave-02))
+                    :op3 (c21-15 / person
+                                 :mod (c21-19 / city
+                                              :name (c21-12 / name
+                                                            :op1 "Paris"))
+                                 :ARG0-of (c21-20 / brave-02))
+                    :op4 (c21-14 / gratitude
+                                 :beneficiary (c21-10 / person
+                                                      :ARG1-of (c21-16 / innocent-01)
+                                                      :mod (c21-3 / dear))
+                                 :ARG1-of (c21-7 / have-degree-91
+                                                 :ARG2 (c21-0 / deep-02
+                                                              :ARG1 c21-14)
+                                                 :ARG3 (c21-13 / most)))))
+
+# ::snt Could the two brainwashed murderers have perceived the cartoons as bullying?
+# ::tokens ["Could", "the", "two", "brainwashed", "murderers", "have", "perceived", "the", "cartoons", "as", "bullying", "?"]
+# ::lemmas ["could", "the", "two", "brainwash", "murderer", "have", "perceive", "the", "cartoon", "as", "bully", "?"]
+(c22-3 / possible-01
+       :ARG1 (c22-6 / perceive-01
+                    :ARG0 (c22-1 / person
+                                 :ARG1-of (c22-2 / brainwash-01)
+                                 :ARG0-of (c22-0 / murder-01)
+                                 :quant 2)
+                    :ARG1 (c22-4 / cartoon)
+                    :ARG2 (c22-5 / bully-01))
+       :polarity (c22-7 / amr-unknown))
+
+# ::snt Quick justice with a gun in this really dangerous world where minorities rule rather than appreciate "Law and Order".
+# ::tokens ["Quick", "justice", "with", "a", "gun", "in", "this", "really", "dangerous", "world", "where", "minorities", "rule", "rather", "than", "appreciate", "\"", "Law", "and", "Order", "\"", "."]
+# ::lemmas ["quick", "justice", "with", "a", "gun", "in", "this", "really", "dangerous", "world", "where", "minority", "rule", "rather", "than", "appreciate", "\"", "Law", "and", "Order", "\"", "."]
+(c23-0 / justice
+       :ARG1-of (c23-5 / quick-02)
+       :instrument (c23-10 / gun)
+       :location (c23-1 / world
+                        :mod (c23-11 / this)
+                        :ARG0-of (c23-4 / endanger-01
+                                        :ARG1-of (c23-9 / real-04))
+                        :location-of (c23-7 / rule-03
+                                            :ARG0 (c23-2 / minority)
+                                            :ARG1-of (c23-6 / instead-of-91
+                                                            :ARG2 (c23-12 / appreciate-02
+                                                                          :ARG0 c23-2
+                                                                          :ARG1 (c23-3 / book
+                                                                                       :name (c23-8 / name
+                                                                                                    :op1 "Law"
+                                                                                                    :op2 "and"
+                                                                                                    :op3 "Order")))))))

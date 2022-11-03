@@ -1,0 +1,144 @@
+# ::snt and?
+# ::tokens ["and", "?"]
+# ::lemmas ["and", "?"]
+(c1-1 / and
+      :polarity (c1-0 / amr-unknown))
+
+# ::snt not only in Sydney but all over the world.
+# ::tokens ["not", "only", "in", "Sydney", "but", "all", "over", "the", "world", "."]
+# ::lemmas ["not", "only", "in", "Sydney", "but", "all", "over", "the", "world", "."]
+(c2-5 / and
+      :op1 (c2-1 / be-located-at-91
+                 :ARG2 (c2-4 / city
+                             :name (c2-3 / name
+                                         :op1 "Sydney")))
+      :op2 (c2-2 / all-over
+                 :op1 (c2-0 / world)))
+
+# ::snt This flag is popular throughout the extreme Muslim world. The Shahada is on the Saudi Arabian Flag as well.
+# ::tokens ["This", "flag", "is", "popular", "throughout", "the", "extreme", "Muslim", "world", ".", "The", "Shahada", "is", "on", "the", "Saudi", "Arabian", "Flag", "as", "well", "."]
+# ::lemmas ["this", "flag", "be", "popular", "throughout", "the", "extreme", "Muslim", "world", ".", "the", "Shahada", "be", "on", "the", "Saudi", "Arabian", "Flag", "as", "well", "."]
+(c3-2 / multi-sentence
+      :snt1 (c3-8 / popular-02
+                  :ARG1 (c3-1 / flag
+                              :mod (c3-13 / this))
+                  :location (c3-11 / throughout
+                                   :op1 (c3-0 / world
+                                              :mod (c3-9 / religious-group
+                                                         :name (c3-6 / name
+                                                                     :op1 "Islam")
+                                                         :degree (c3-4 / extreme)))))
+      :snt2 (c3-3 / be-located-at-91
+                  :ARG1 (c3-12 / shahada)
+                  :ARG2 (c3-5 / flag
+                              :mod (c3-10 / country
+                                          :name (c3-7 / name
+                                                      :op1 "Saudi"
+                                                      :op2 "Arabia")))
+                  :mod (c3-14 / as-well)))
+
+# ::snt Back Flag also used by Al Nusra, who the IDF helped capture border checkpoint on the Golan.
+# ::tokens ["Back", "Flag", "also", "used", "by", "Al", "Nusra", ",", "who", "the", "IDF", "helped", "capture", "border", "checkpoint", "on", "the", "Golan", "."]
+# ::lemmas ["back", "Flag", "also", "use", "by", "Al", "Nusra", ",", "who", "the", "IDF", "help", "capture", "border", "checkpoint", "on", "the", "Golan", "."]
+(c4-3 / use-01
+      :ARG0 (c4-9 / criminal-organization
+                  :name (c4-5 / name
+                              :op1 "al"
+                              :op2 "Nusra")
+                  :ARG2-of (c4-0 / help-01
+                                 :ARG0 (c4-2 / military
+                                             :name (c4-6 / name
+                                                         :op1 "IDF"))
+                                 :ARG1 (c4-8 / capture-01
+                                             :ARG0 c4-9
+                                             :ARG1 (c4-11 / checkpoint
+                                                          :location (c4-4 / border-01))
+                                             :location (c4-13 / country-region
+                                                              :name (c4-7 / name
+                                                                          :op1 "Golan")))))
+      :ARG1 (c4-1 / flag
+                  :mod (c4-10 / back))
+      :mod (c4-12 / also))
+
+# ::snt So could be anything from domestic dispute to Gaza to who knows what?
+# ::tokens ["So", "could", "be", "anything", "from", "domestic", "dispute", "to", "Gaza", "to", "who", "knows", "what", "?"]
+# ::lemmas ["so", "could", "be", "anything", "from", "domestic", "dispute", "to", "Gaza", "to", "who", "know", "what", "?"]
+(c5-2 / possible-01
+      :ARG1 (c5-4 / range-01
+                  :ARG1 (c5-3 / dispute-01
+                              :mod (c5-0 / domestic))
+                  :ARG3 (c5-5 / country-region
+                              :name (c5-1 / name
+                                          :op1 "Gaza"))
+                  :ARG4 (c5-7 / know-01
+                              :ARG0 (c5-9 / amr-unknown)
+                              :ARG1 (c5-6 / thing)))
+      :mod (c5-8 / so))
+
+# ::snt /2 been around a lot longer than the Gaza protests. I just like my hate groups informed
+# ::tokens ["/2", "been", "around", "a", "lot", "longer", "than", "the", "Gaza", "protests", ".", "I", "just", "like", "my", "hate", "groups", "informed"]
+# ::lemmas ["/2", "be", "around", "a", "lot", "long", "than", "the", "Gaza", "protest", ".", "i", "just", "like", "my", "hate", "group", "inform"]
+(c6-4 / multi-sentence
+      :snt1 (c6-6 / be-located-at-91
+                  :ARG2 (c6-15 / around)
+                  :ARG1-of (c6-0 / have-degree-91
+                                 :ARG2 (c6-3 / long-03
+                                             :ARG1 c6-6)
+                                 :ARG3 (c6-9 / more
+                                             :quant (c6-14 / lot))
+                                 :ARG4 (c6-10 / protest-01
+                                              :location (c6-11 / country-region
+                                                               :name (c6-8 / name
+                                                                           :op1 "Gaza")))))
+      :snt2 (c6-1 / like-01
+                  :ARG0 (c6-7 / i)
+                  :ARG1 (c6-12 / inform-01
+                               :ARG1 (c6-13 / group
+                                            :ARG0-of (c6-5 / hate-01)
+                                            :poss c6-7))
+                  :mod (c6-2 / just)))
+
+# ::snt If the black flag seems familiar, it's because it was also flying during Gaza protests in Sydney
+# ::tokens ["If", "the", "black", "flag", "seems", "familiar", ",", "it", "'s", "because", "it", "was", "also", "flying", "during", "Gaza", "protests", "in", "Sydney"]
+# ::lemmas ["if", "the", "black", "flag", "seem", "familiar", ",", "it", "be", "because", "it", "be", "also", "fly", "during", "Gaza", "protest", "in", "Sydney"]
+(c7-8 / cause-01
+      :ARG0 (c7-0 / fly-01
+                  :ARG1 (c7-3 / flag
+                              :ARG1-of (c7-1 / black-04))
+                  :time (c7-6 / protest-01
+                              :location (c7-7 / city
+                                              :name (c7-4 / name
+                                                          :op1 "Sydney"))
+                              :location (c7-9 / country-region
+                                              :name (c7-5 / name
+                                                          :op1 "Gaza")))
+                  :mod (c7-11 / also))
+      :ARG1 (c7-10 / seem-01
+                   :ARG1 (c7-2 / familiarize-01
+                               :ARG2 c7-3)))
+
+# ::snt Not to spoil your fun but the Black Standard is a flag that has been hijacked by jihadists. /2
+# ::tokens ["Not", "to", "spoil", "your", "fun", "but", "the", "Black", "Standard", "is", "a", "flag", "that", "has", "been", "hijacked", "by", "jihadists", ".", "/2"]
+# ::lemmas ["not", "to", "spoil", "your", "fun", "but", "the", "Black", "Standard", "be", "a", "flag", "that", "have", "be", "hijack", "by", "jihadists", ".", "/2"]
+(c8-4 / multi-sentence
+      :snt1 (c8-8 / spoil-01
+                  :ARG1 (c8-3 / fun-01
+                              :ARG0 (c8-1 / you))
+                  :concession (c8-5 / flag
+                                    :ARG1-of (c8-0 / hijack-01
+                                                   :ARG0 (c8-2 / jihadist))
+                                    :domain (c8-7 / product
+                                                  :name (c8-6 / name
+                                                              :op1 "Black"
+                                                              :op2 "Standard")))
+                  :polarity -)
+      :snt2 2)
+
+# ::snt They should have at least washed the flag.
+# ::tokens ["They", "should", "have", "at", "least", "washed", "the", "flag", "."]
+# ::lemmas ["they", "should", "have", "at", "least", "wash", "the", "flag", "."]
+(c9-2 / recommend-01
+      :ARG1 (c9-0 / wash-01
+                  :ARG0 (c9-3 / they)
+                  :ARG1 (c9-1 / flag)
+                  :mod (c9-4 / at-least)))
