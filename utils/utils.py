@@ -1,6 +1,3 @@
-"""
-@author: Viet Nguyen <nhviet1009@gmail.com>
-"""
 import torch
 import sys
 import csv
