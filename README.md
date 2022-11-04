@@ -59,8 +59,8 @@ To run `Hyphen-euclidean w/o Content`, use the following script:
 ```python
 CUDA_VISIBLE_DEVICES=2 python3 run.py --no-content --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
-
-## 📚 Hyphen Explainability - Annotated dataset release!
+## 📚 Sentence-level Fact-checked Annotated dataset
+### Hyphen fine-grained explainability - Annotated dataset *release*! 💿
  
 We hereby release the annotated Politifact dataset. The dataset is present [here](annotation). Find more details about the released dataset, format and the annotation details in the [ReadMe](annotation/annotation.md) file. 
 
