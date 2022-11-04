@@ -6,7 +6,7 @@ Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-
   <img width="600px" src="img/model.png" >
 </p>
 
-## Dataset processing
+## Custom dataset processing
 
 Generate the Abstract Meaning Representations for all user comments in a dataset:
 ```python
@@ -35,8 +35,30 @@ python3 amr/amr_dgl.py --dataset politifact --test-split 0.1
 ## Run
 
 ```python
-CUDA_VISIBLE_DEVICES=2 python3 run.py --lr 0.001 --dataset politifact --manifold PoincareBall --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+CUDA_VISIBLE_DEVICES=2 python3 run.py --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+```
 
+To run `Hyphen-euclidean`, use the following script:
+
+```python
+CUDA_VISIBLE_DEVICES=2 python3 run.py --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+```
+
+To run `Hyphen-euclidean w/o Fourier`, use the following script:
+
+```python
+CUDA_VISIBLE_DEVICES=2 python3 run.py --no-fourier --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+```
+
+To run `Hyphen-euclidean w/o Comments`, use the following script:
+
+```python
+CUDA_VISIBLE_DEVICES=2 python3 run.py --no-comments --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+```
+To run `Hyphen-euclidean w/o Content`, use the following script:
+
+```python
+CUDA_VISIBLE_DEVICES=2 python3 run.py --no-content --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
 
 ## ✏️ Citation
