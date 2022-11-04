@@ -7,17 +7,19 @@ Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-
 </p>
 
 ## Custom dataset processing
+
+### Abstract Meaning Representation (AMR) merging
 Generate the Abstract Meaning Representations for all user comments in a dataset:
 ```python
-CUDA_VISIBLE_DEVICES=2 python3 amr/amr_gen.py --dataset politifact --max-comments 50
+python3 amr/amr_gen.py --dataset politifact --max-comments 50
 ```
-
-Modify attributes and instances variable names across all AMRs.
+This generates the AMR graphs for all the user comments mentioned during the input, and saves them at `politifact_amr/politifact_amr_csv/` in the form of `dataset_{post_id}.csv` files, where each `csv` files contains the generated AMR graphs for `max-comments` number of comments, for each social media post. Next, modify attributes and instances variable names across all AMRs.
 ```python
 python3 amr/amr_var.py --dataset politifact
 ```
 
-Coreference resolution.
+This will save the resultant AMR graphs in the form of their Penman notation `politifact.amr.penman` at `politifact_amr/politifact_amr_coref/`. Each `.penman` file contains the relabelled AMR graphs. Next, we perform inter-comment coreference resolution across AMR graphs of multiple comments corresponding to one social media post.
+
 ```python
 python3 amr/amr_coref/amr_coref.py --dataset politifact
 ```
