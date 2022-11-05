@@ -3,8 +3,25 @@
 Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social-Text Classification](https://arxiv.org/abs/2209.13017), accepted at NeurIPS 2022, as an Oral (Spotlight) paper. 
 
 <p align="center">
-  <img width="600px" src="img/model.png" >
+  <img width="800px" src="img/model.png" >
 </p>
+
+## Dependencies and Installation
+
+- torch `1.11.0`
+- geoopt `0.1.1`
+- Penman `1.2.1`
+- dgl_cu111 `0.8.1`
+- Other required packages in `requirements.txt`
+
+```python
+# git clone this repository
+git clone https://github.com/LCS2-IIITD/Hyphen
+cd Hyphen
+
+# install python dependencies
+pip3 install -r requirements.txt
+```
 
 ## Custom dataset processing
 
