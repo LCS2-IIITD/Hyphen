@@ -22,6 +22,21 @@ cd Hyphen
 # install python dependencies
 pip3 install -r requirements.txt
 ```
+## Quick inference
+
+We have performed extensive experimentation and ablation studies across 10 datasets i.e. `antivax`, `politifact`, `gossipcop`, `figlang_twitter`, `figlang_reddit`, `twitter16`, `rumoureval`, `pheme`, `twitter15`, and `hasoc`. 
+
+Download the final preprocessed dataset Pickle files from [here]() for all 10 datasets, and save them as `data/{dataset_name}_preprocessed.pkl`. Next, to run the complete `Hyphen-hyperbolic` model on `politifact` dataset, use the following script:
+
+```python
+python3 run.py --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+```
+
+Finally, to track the evolution of loss, accuracy, and other metrics throughout the training process, use tensorboard as follows:
+
+```python
+tensorboard --logdir logging/run
+```
 
 ## Custom dataset processing
 
@@ -58,7 +73,7 @@ Once you have prepared the desired dataset in the previous section, pass it thro
 python3 preprocess.py --dataset politifact
 ```
 
-This will creat the final dataset pickle file as `data/preprocessed_politifact.pkl`. Next, to run `Hyphen-hyperbolic`, use the following script:
+This will create the final dataset pickle file as `data/preprocessed_politifact.pkl`. Next, to run `Hyphen-hyperbolic`, use the following script:
 
 ```python
 python3 run.py --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
