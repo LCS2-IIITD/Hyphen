@@ -2,6 +2,8 @@
 
 Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social-Text Classification](https://arxiv.org/abs/2209.13017), accepted at NeurIPS 2022, as an **Oral (Spotlight)** paper. 
 
+**Authors**: [Karish Grover](https://karish-grover.github.io/), [S.M. Phaneendra Angara](https://www.linkedin.com/in/s-m-phaneendra-angara-9b94266), [Md. Shad Akhtar](http://faculty.iiitd.ac.in/~shad.akhtar/), [Tanmoy Chakraborty](https://www.tanmoychak.com/)
+
 <p align="center">
   <img width="800px" src="img/model.png" >
 </p>
