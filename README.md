@@ -1,12 +1,12 @@
 # Hyphen
 
-Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social-Text Classification](https://arxiv.org/abs/2209.13017), accepted at NeurIPS 2022, as an Oral (Spotlight) paper. 
+Implementation of [Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social-Text Classification](https://arxiv.org/abs/2209.13017), accepted at NeurIPS 2022, as an **Oral (Spotlight)** paper. 
 
 <p align="center">
   <img width="800px" src="img/model.png" >
 </p>
 
-## Dependencies and Installation
+## 🛠 Dependencies and Installation
 
 - torch `1.11.0`
 - geoopt `0.1.1` (Hyperbolic optimization and Maths)
@@ -22,7 +22,7 @@ cd Hyphen
 # install python dependencies
 pip3 install -r requirements.txt
 ```
-## Quick inference
+## ⚡️ Quick inference
 
 We have performed extensive experimentation and ablation studies across 10 datasets i.e. `antivax`, `politifact`, `gossipcop`, `figlang_twitter`, `figlang_reddit`, `twitter16`, `rumoureval`, `pheme`, `twitter15`, and `hasoc`. 
 
@@ -38,7 +38,7 @@ Finally, to track the evolution of loss, accuracy, and other metrics throughout 
 tensorboard --logdir logging/run
 ```
 
-## Custom dataset processing
+## 🛃 Custom dataset processing
 
 ### Abstract Meaning Representation (AMR) merging
 Generate the Abstract Meaning Representations for all user comments in a dataset:
@@ -65,7 +65,7 @@ Convert the generated macro-amr to subgraphs in DGL format
 ```python
 python3 amr/amr_dgl.py --dataset politifact --test-split 0.1
 ```
-# Training
+## 🔂 Training
 
 Once you have prepared the desired dataset in the previous section, pass it through one last preprocessing step:
 
