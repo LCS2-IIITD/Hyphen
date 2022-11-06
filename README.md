@@ -56,27 +56,32 @@ This will save the resultant AMR graphs in the form of their Penman notation `po
 python3 amr/amr_coref/amr_coref.py --dataset politifact
 ```
 
-Adding the dummy node, and egdes and final step in merging AMRs to form macro-AMR.
+After coreference resolution, we get the file `politifact_amr/politifact_amr_coref.json`. Finally, we add the dummy node, and egdes and complete the final step in merging AMRs to form the macro-AMR. 
+
 ```python
 python3 amr/amr_dummy.py --dataset politifact
 ```
 
-Convert the generated macro-amr to subgraphs in DGL format
+Convert the generated macro-AMRs to subgraphs in `DGL` format using:
 ```python
 python3 amr/amr_dgl.py --dataset politifact --test-split 0.1
 ```
-## 🔂 Training
 
-Once you have prepared the desired dataset in the previous section, pass it through one last preprocessing step:
+### Final dataset preprocessing
+Once you have prepared the AMR graphs, we bring the news sentences and AMRs together, and pass it through one last preprocessing step:
 
 ```python
 python3 preprocess.py --dataset politifact
 ```
 
-This will create the final dataset pickle file as `data/preprocessed_politifact.pkl`. Next, to run `Hyphen-hyperbolic`, use the following script:
+This will create the final dataset pickle file as `data/preprocessed_politifact.pkl`. 
+
+## 🔂 Training
+
+Next, to run `Hyphen-hyperbolic`, use the following script:
 
 ```python
-python3 run.py --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+python3 run.py --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
 
 You may also try various ablations of `Hyphen`. To run `Hyphen-euclidean w/o Fourier`, use the following script:
@@ -85,18 +90,18 @@ You may also try various ablations of `Hyphen`. To run `Hyphen-euclidean w/o Fou
 python3 run.py --no-fourier --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
 
-To run `Hyphen-euclidean w/o Comments`, use the following script:
+To run `Hyphen-hyperbolic w/o Comments`, use the following script:
 
 ```python
-python3 run.py --no-comments --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+python3 run.py --no-comments --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
-To run `Hyphen-euclidean w/o Content`, use the following script:
+To run `Hyphen-hyperbolic w/o Content`, use the following script:
 
 ```python
-python3 run.py --no-content --manifold Euclidean --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
+python3 run.py --no-content --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
 ```
 
-Use the command-line arguments specified in [run.py](run.py) for experimenting with various ablations of `Hyphen`, and specifying the hyperparameters. Finally, to track the evolution of loss, accuracy, and other metrics throughout the training process, use tensorboard as follows:
+Use the command-line arguments specified in [run.py](run.py) for experimenting with various ablations of `Hyphen`, and specifying the hyperparameters. Similarly, feel free to try other ablations of `Hyphen`, using the command-line arguments. Finally, to track the evolution of loss, accuracy, and other metrics throughout the training process, use tensorboard as follows:
 
 ```python
 tensorboard --logdir logging/run
