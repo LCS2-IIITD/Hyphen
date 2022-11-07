@@ -26,8 +26,8 @@ parser.add_argument('--test-split', type = float, default= 0.1, help = "Specify 
 # Parse the argument
 args = parser.parse_args()
 
-merged_amr = glob.glob(f"{args.dataset}_amr/{args.dataset}_amr_merge/*.amr.penman")
-df = pd.read_csv(f'{args.dataset}_amr/{args.dataset}.csv')
+merged_amr = glob.glob(f"data/{args.dataset}/{args.dataset}_amr_merge/*.amr.penman")
+df = pd.read_csv(f'data/{args.dataset}/{args.dataset}.csv')
 
 def var2word(p_graph):
     v2w = {}
@@ -37,7 +37,7 @@ def var2word(p_graph):
 
 def get_glove():
     glove = {}
-    f = open('/home/karish19471/glove/glove.6B.100d.txt')
+    f = open('{GLOVE_EMBEDDING_PATH}')#**************Specify glove embedding path*************
     for line in f:
         values = line.split()
         word = values[0]
@@ -84,16 +84,17 @@ for curr in merged_amr:
     sample = {'label':label, 'graph': dgl_graph, 'content': content, 'id': name, 'subgraphs':subgraphs}
     dataset.append(sample)
     lv+=1
+    print("done")
 
-with open(f"{args.dataset}_amr/{args.dataset}.pkl", "wb") as f:
+with open(f"data/{args.dataset}/{args.dataset}.pkl", "wb") as f:
     pickle.dump(dataset, f)
 
-with open(f"{args.dataset}_amr/{args.dataset}.pkl", "rb") as f:
+with open(f"data/{args.dataset}/{args.dataset}.pkl", "rb") as f:
     d =pickle.load(f)
 
 train, test = train_test_split(d, stratify=np.array([i['label'] for i in d]), test_size=args.test_split)
 
-with open(f"{args.dataset}_amr/{args.dataset}_train.pkl", "wb") as f:
+with open(f"data/{args.dataset}/{args.dataset}_train.pkl", "wb") as f:
     pickle.dump(train, f)
-with open(f"{args.dataset}_amr/{args.dataset}_test.pkl", "wb") as f:
+with open(f"data/{args.dataset}/{args.dataset}_test.pkl", "wb") as f:
     pickle.dump(test, f)

@@ -35,14 +35,14 @@ if __name__ == '__main__':
 
     args = parse_default_args()
 
-    model_dir = 'amr_coref/data/model_coref-v0.1.0/'
+    model_dir = 'amr/amr_coref/data/model_coref-v0.1.0/'
 
-    json.dump({}, open(f'{args.dataset}_amr/{args.dataset}_amr_coref.json','w'), indent = 4)
+    json.dump({}, open(f'data/{args.dataset}/{args.dataset}_amr_coref.json','w'), indent = 4)
 
     # Load the model and test data
     print('Loading model from %s' % model_dir)
     
-    amr_list = glob.glob(f"{args.dataset}_amr/{args.dataset}_amr_coref/{args.dataset}*.amr.penman")
+    amr_list = glob.glob(f"data/{args.dataset}/{args.dataset}_amr_coref/{args.dataset}*.amr.penman")
 
     print(f"Found{len(amr_list)} files")
 
@@ -70,6 +70,6 @@ if __name__ == '__main__':
         # Print out the clusters
         print('Clusters')
 
-        write_json(cluster_dict, amr_list[i], filename = f'{args.dataset}_amr/{args.dataset}_amr_coref.json')
+        write_json(cluster_dict, amr_list[i], filename = f'data/{args.dataset}/{args.dataset}_amr_coref.json')
 
         print("DONE", i)

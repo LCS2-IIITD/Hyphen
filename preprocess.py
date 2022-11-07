@@ -9,7 +9,7 @@ from sklearn import preprocessing
 
 # Adding the required arguments
 parser.add_argument('--dataset', choices = ['antivax', 'politifact', 'gossipcop', 'figlang_twitter', 'figlang_reddit', 'twitter16', 'rumoureval', 'pheme', 'twitter15', 'hasoc'], help='Specify the dataset for which you want to run the experiments.')
-glove = '/home/karish19471/glove/glove.6B.100d.txt'
+glove = '/home/karish19471/glove/glove.6B.100d.txt' # ********************** specify glove embdding path
 # Parse the argument
 args = parser.parse_args()
 
@@ -36,8 +36,8 @@ def get_data(DATA):
         return contents, comments, labels, ids, subgraphs
 
     # dataset used for training
-    train = pickle.load(open(f"data/{DATA}/{DATA}_train.pkl", 'rb'))
-    test = pickle.load(open(f"data/{DATA}/{DATA}_test.pkl", 'rb'))
+    train = pickle.load(open(f"data/{args.dataset}/{args.dataset}_train.pkl", 'rb'))
+    test = pickle.load(open(f"data/{args.dataset}/{args.dataset}_test.pkl", 'rb'))
     
     #add shuffling 
     np.random.shuffle(train)
@@ -49,5 +49,5 @@ def get_data(DATA):
     return {'train': {'id': id_train, 'x':x_train, 'c': c_train, 'y': y_train, 'subgraphs':sub_train}, 'val': {'id': id_val, 'x':x_val, 'c': c_val, 'y': y_val, 'subgraphs':sub_val}}
 
 props = get_data(args.dataset)
-file = open(f'data/{args.dataset}_preprocessed.pkl', 'wb')
+file = open(f'data/{args.dataset}/{args.dataset}_preprocessed.pkl', 'wb')
 pickle.dump(props, file)

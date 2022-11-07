@@ -89,9 +89,9 @@ def normalise_graph(modified):
     normalised_graph = penman.Graph(normalised_instances + modified.edges() + modified.attributes())
     return normalised_graph
 
-amr_list = glob.glob(f"{args.dataset}_amr/{args.dataset}_amr_csv/{args.dataset}*.csv")
+amr_list = glob.glob(f"data/{args.dataset}/{args.dataset}_amr_csv/{args.dataset}*.csv")
 
-amr_coref = json.load(open(f"{args.dataset}_amr/{args.dataset}_amr_coref.json", "r"))#load the coref json with cluster information
+amr_coref = json.load(open(f"data/{args.dataset}/{args.dataset}_amr_coref.json", "r"))#load the coref json with cluster information
 amr_coref_names = [i[:i.find(".")] for i in list(amr_coref.keys())]
 lv=0
 for q in amr_list:
@@ -104,7 +104,7 @@ for q in amr_list:
         continue
 
     #reading the modified amrs passed as input for coreference resolution
-    modified_amr_list = penman.load(f"{args.dataset}_amr/{args.dataset}_amr_coref/{name}.amr.penman", model = NoOpModel())
+    modified_amr_list = penman.load(f"data/{args.dataset}/{args.dataset}_amr_coref/{name}.amr.penman", model = NoOpModel())
 
     #adding dummy node and :COMMENT edges
     instances, edges, attributes = [('d', ':instance', 'dummy')], [], []
@@ -152,7 +152,7 @@ for q in amr_list:
 
     # print(penman.encode(modified))
     #storing the final AMR graph (merged + coreference + concept merging)
-    dst_dir = f"{args.dataset}_amr/{args.dataset}_amr_merge/{name}.amr.penman"
+    dst_dir = f"data/{args.dataset}/{args.dataset}_amr_merge/{name}.amr.penman"
     os.makedirs(os.path.dirname(dst_dir), exist_ok=True)
     penman.dump([modified], dst_dir, model = NoOpModel())
 

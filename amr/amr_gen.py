@@ -19,7 +19,7 @@ args = parser.parse_args()
 
 stog = amrlib.load_stog_model()
 print("Loaded stog")
-df = pd.read_csv(f'amr_data/{args.dataset}_amr/{args.dataset}.csv')
+df = pd.read_csv(f'data/{args.dataset}/{args.dataset}.csv')
 df['comments'] = df['comments'].fillna(" ")
 total = df.shape[0]
 comments = [df.iloc[i]['comments'].split('::')[:args.max_comments] for i in range(df.shape[0])]
@@ -31,7 +31,7 @@ for lv in range(len(ids)):
     data = pd.DataFrame()
     data['comment'] = np.array(comments[lv])
     data['amr'] = np.array(graphs)
-    dest_dir = f"amr_data/{args.dataset}_amr/{args.dataset}_amr_csv/"
+    dest_dir = f"data/{args.dataset}/{args.dataset}_amr_csv/"
     os.makedirs(dest_dir, exist_ok = True)
     data.to_csv(dest_dir+ ids[lv]+'.csv', index = False)
     done_comments+=len(comments[lv])

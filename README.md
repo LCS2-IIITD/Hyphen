@@ -42,11 +42,14 @@ tensorboard --logdir logging/run
 
 ## 🛃 Custom dataset processing
 
-Start with a `CSV` file of your custom dataset, named `d_name`, containing the columns - `id`, `text`, `comments`, and `labels`. Each sample of this CSV file corresponds to a news post identified by `id`, containing content `text`, belonging to the class `label`, and having public discourse `comments` where individual comments are separated by `::`. The comments are present in a string format, similar to `{comm_1}::{comm_2}:: ... ::{comm_n}`. Save this CSV file in the  `data` folder as: `data/{d_name}/{d_name}.csv`. We have provided these raw dataset files for all the 10 datasets in the [data](data/) folder (Eg. `data/politifact/politifact.csv`), feel free to check them out for understanding the format better.
+Start with a `CSV` file of your custom dataset, named `d_name`, containing the columns - `id`, `text`, `comments`, and `labels`. 
+- Each sample of this CSV file corresponds to a news post identified by `id`, containing content `text`, belonging to the class `label`, and having public discourse `comments` where individual comments are separated by `::`. 
+- The comments are present in a string format, similar to `{comm_1}::{comm_2}:: ... ::{comm_n}`. Save this CSV file in the  `data` folder as: `data/{d_name}/{d_name}.csv`.
+- We have provided these raw dataset files for all the 10 datasets in the [data](data/) folder (Eg. `data/politifact/politifact.csv`), feel free to check them out for understanding the format better.
 
 ### Abstract Meaning Representation (AMR) creation and merging
 
-Firstly, we need to convert the user comments into AMRs. Generate the Abstract Meaning Representations for all user comments in a dataset, by running the following script from the root folder, `Hyphen`:
+Firstly, we need to convert the user comments into AMRs. Generate the Abstract Meaning Representations for all user comments in a dataset, by running the following script from the root folder, `Hyphen`. Run AMR generation on a GPU for faster generation:
 ```python
 python3 amr/amr_gen.py --dataset {d_name} --max-comments 50
 ```
@@ -67,7 +70,7 @@ After coreference resolution, we get the file `{d_name}_amr/{d_name}_amr_coref.j
 python3 amr/amr_dummy.py --dataset {d_name}
 ```
 
-This gives us the final merged AMRs for all the news posts at `{d_name}_amr/{d_name}_amr_merge/{d_name}_{id}.amr.penman`. Read the [paper](https://arxiv.org/abs/2209.13017) for more details on the AMR merging process. Convert the generated macro-AMRs to subgraphs in `DGL` format using:
+This gives us the final merged AMRs for all the news posts at `{d_name}_amr/{d_name}_amr_merge/{d_name}_{id}.amr.penman`. Read the [paper](https://arxiv.org/abs/2209.13017) for more details on the AMR merging process. Specify the glove_embedding_path in `amr_dgl.py`. Convert the generated macro-AMRs to subgraphs in `DGL` format using:
 ```python
 python3 amr/amr_dgl.py --dataset {d_name} --test-split 0.1
 ```
@@ -78,7 +81,7 @@ This creates `{d_name}.pkl`, `{d_name}_train.pkl` and `{d_name}_test.pkl` files,
 ```
 
 ### Final dataset preprocessing
-Once you have prepared the AMR graphs, we bring the news sentences and AMRs together, and pass it through one last preprocessing step, which mainly includes shuffling, a few transformations and train-test splits:
+Once you have prepared the AMR graphs, we bring the news sentences and AMRs together, and pass it through one last preprocessing step, which mainly includes shuffling, a few transformations and train-test splits. Specify the glove_embedding_path in `preprocess.py`. :
 
 ```python
 python3 preprocess.py --dataset {d_name}

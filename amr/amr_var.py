@@ -85,7 +85,7 @@ def modify_variables(amr, i):
     return modified
 
 
-amr_list = glob.glob(f"{args.dataset}_amr/{args.dataset}_amr_csv/{args.dataset}*.csv")
+amr_list = glob.glob(f"data/{args.dataset}/{args.dataset}_amr_csv/{args.dataset}*.csv")
 
 lv, ignored = 1, []
 for q in amr_list:
@@ -101,7 +101,7 @@ for q in amr_list:
             name = q[q.rfind('/')+1:q.rfind('.')]
             modified_amr_list.append(var_mod)
         
-        dst_dir = f'{args.dataset}_amr/{args.dataset}_amr_coref/{name}.amr.penman'
+        dst_dir = f'data/{args.dataset}/{args.dataset}_amr_coref/{name}.amr.penman'
         os.makedirs(os.path.dirname(dst_dir), exist_ok=True)
         penman.dump(modified_amr_list, dst_dir, model = NoOpModel())
     
