@@ -9,7 +9,7 @@ from sklearn import preprocessing
 
 # Adding the required arguments
 parser.add_argument('--dataset', choices = ['antivax', 'politifact', 'gossipcop', 'figlang_twitter', 'figlang_reddit', 'twitter16', 'rumoureval', 'pheme', 'twitter15', 'hasoc'], help='Specify the dataset for which you want to run the experiments.')
-glove = '/home/karish19471/glove/glove.6B.100d.txt' # ********************** specify glove embdding path
+glove = '{GLOVE_EMBEDDING_PATH}' # ********************** specify glove embdding path
 # Parse the argument
 args = parser.parse_args()
 
