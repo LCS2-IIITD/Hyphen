@@ -28,7 +28,7 @@ pip3 install -r requirements.txt
 
 We have performed extensive experimentation and ablation studies across 4 tasks and 10 datasets i.e. **Fake news** detection (`antivax`, `politifact`, `gossipcop`), **Hate speech** detection (`hasoc`), **Sarcasm** detection (`figlang_twitter`, `figlang_reddit`), and **Rumour** detection (`twitter16`, `rumoureval`, `pheme`, `twitter15`). 
 
-Download the final preprocessed dataset Pickle files from [here](https://drive.google.com/drive/folders/13bhShv0sgzpoUpkStJG4VAsHUZHzKPer?usp=sharing) for all 10 datasets, and save them as `data/{d_name}_preprocessed.pkl` by creating a new folder `data` in the root directory. Next, to run the complete `Hyphen-hyperbolic` model on `politifact` dataset, use the following script:
+Download the final preprocessed dataset Pickle files from [here](https://drive.google.com/drive/folders/13bhShv0sgzpoUpkStJG4VAsHUZHzKPer?usp=sharing) for all 10 datasets, and save them as `data/{d_name}_preprocessed.pkl`. Next, to run the complete `Hyphen-hyperbolic` model on `politifact` dataset, use the following script:
 
 ```python
 python3 run.py --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
