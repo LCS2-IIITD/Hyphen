@@ -78,7 +78,7 @@ class HyphenModel():
         '''
         embeddings_index = {}
 
-        self.glove_dir = "/home/karish19471/glove/glove.6B.100d.txt"
+        self.glove_dir = "{GLOVE EMBEDDING PATH}"# modify glove embedding path
 
         f = open(self.glove_dir, encoding="utf-8")
         for line in f:

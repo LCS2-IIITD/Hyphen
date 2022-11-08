@@ -22,7 +22,6 @@ parser.add_argument('--epochs', type = int, default= 5, help='The number of epoc
 
 args = parser.parse_args()
 
-GLOVE_PATH = '/home/karish19471/glove/glove.6B.100d.txt'
 file = open(f'data/{args.dataset}_preprocessed.pkl', 'rb')
 props = pickle.load(file)
 

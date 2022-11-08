@@ -70,7 +70,7 @@ After coreference resolution, we get the file `{d_name}_amr/{d_name}_amr_coref.j
 python3 amr/amr_dummy.py --dataset {d_name}
 ```
 
-This gives us the final merged AMRs for all the news posts at `{d_name}_amr/{d_name}_amr_merge/{d_name}_{id}.amr.penman`. Read the [paper](https://arxiv.org/abs/2209.13017) for more details on the AMR merging process. Specify the glove_embedding_path in `amr_dgl.py`. Convert the generated macro-AMRs to subgraphs in `DGL` format using:
+This gives us the final merged AMRs for all the news posts at `{d_name}_amr/{d_name}_amr_merge/{d_name}_{id}.amr.penman`. Read the [paper](https://arxiv.org/abs/2209.13017) for more details on the AMR merging process. Specify the glove embedding path in `amr_dgl.py`. Convert the generated macro-AMRs to subgraphs in `DGL` format using:
 ```python
 python3 amr/amr_dgl.py --dataset {d_name} --test-split 0.1
 ```
@@ -81,7 +81,7 @@ This creates `{d_name}.pkl`, `{d_name}_train.pkl` and `{d_name}_test.pkl` files,
 ```
 
 ### Final dataset preprocessing
-Once you have prepared the AMR graphs, we bring the news sentences and AMRs together, and pass it through one last preprocessing step, which mainly includes shuffling, a few transformations and train-test splits. Specify the glove_embedding_path in `preprocess.py`. :
+Once you have prepared the AMR graphs, we bring the news sentences and AMRs together, and pass it through one last preprocessing step, which mainly includes shuffling, a few transformations and train-test splits. Specify the glove embedding path in `preprocess.py`. :
 
 ```python
 python3 preprocess.py --dataset {d_name}
@@ -91,7 +91,7 @@ This will create the final dataset pickle file as `data/preprocessed_{d_name}.pk
 
 ## 🔂 Training
 
-Next, to run `Hyphen-hyperbolic` on  `politifact` dataset, use the following script:
+Specify the glove embedding path in `main.py`. Next, to run `Hyphen-hyperbolic` on  `politifact` dataset, use the following script.
 
 ```python
 python3 run.py --manifold PoincareBall --lr 0.001 --dataset politifact  --batch-size 32 --epochs 5 --max-sents 20 --max-coms 10 --max-com-len 10 --max-sent-len 10 --log-path logging/run
