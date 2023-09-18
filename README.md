@@ -136,9 +136,11 @@ If you think that this work is helpful, please feel free to leave a star ⭐️ 
 
 ```
 @article{grover2022public,
-  title={Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social-Text Classification},
-  author={Grover, Karish and Angara, SM and Akhtar, Md and Chakraborty, Tanmoy and others},
-  journal={arXiv preprint arXiv:2209.13017},
+  title={Public Wisdom Matters! Discourse-Aware Hyperbolic Fourier Co-Attention for Social Text Classification},
+  author={Grover, Karish and Angara, SM and Akhtar, Md Shad and Chakraborty, Tanmoy},
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={9417--9431},
   year={2022}
 }
 ```
